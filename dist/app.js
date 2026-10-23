@@ -39,8 +39,8 @@
   const map=L.map('map',{preferCanvas:true,zoomControl:false,attributionControl:true,worldCopyJump:false,minZoom:.25,maxZoom:14,zoomSnap:.25}).setView([17,5],2);
   L.control.zoom({position:'topleft'}).addTo(map);
   const scaleControl=L.control.scale({imperial:false,position:'bottomleft'}).addTo(map),labelToggle=document.createElement('button');
-  labelToggle.type='button';labelToggle.className='country-label-toggle';labelToggle.textContent='Country label';
-  labelToggle.setAttribute('aria-label','Country label');labelToggle.setAttribute('aria-pressed','false');labelToggle.title='Show country labels';
+  labelToggle.type='button';labelToggle.className='country-label-toggle';labelToggle.textContent='Country labels';
+  labelToggle.setAttribute('aria-label','Country labels');labelToggle.setAttribute('aria-pressed','false');labelToggle.title='Show country labels';
   labelToggle.addEventListener('click',()=>{labelsVisible=!labelsVisible;labelToggle.setAttribute('aria-pressed',String(labelsVisible));labelToggle.title=labelsVisible?'Hide country labels':'Show country labels';renderLabels();});
   L.DomEvent.disableClickPropagation(labelToggle);L.DomEvent.disableScrollPropagation(labelToggle);scaleControl.getContainer().append(labelToggle);
   map.attributionControl.addAttribution('Base geometry: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a> · Locations: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a> (<a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener noreferrer">ODbL</a>)');
@@ -179,13 +179,13 @@
     $('record-count').textContent=visible.length.toLocaleString('en-GB');$('count-label').textContent=visible.length===1?'record':'records';$('mapped-count').textContent=mappedRecords+' with geography · '+unlocatedCount+' unlocated'+(excludedCount?' · '+excludedCount+' excluded':'');
     const modeLabel=state.mode==='all'?'Matching records across the full study period, including those without confirmed dates. These closures did not all happen at once.':state.mode==='onsets'?'Recorded starts in the selected month.':'Dated evidence overlapping part of this month. Ordered windows and intermittent regimes do not establish continuous closure. Possible date overlap is labelled.';
     $('result-context').textContent=modeLabel+(state.mode==='intervals'?' '+Number(data.meta.atlas_summary?.duration_reviewed_unresolved||0)+' records have no dated phase. Disputed evidence appears only at its recorded dates.':'')+' Coloured lines locate the matching records; they do not show approved closure extents. Unmarked borders are not necessarily open.';
-    $('map-note').textContent=(state.continent||'World')+' · '+(state.mode==='all'?'all recorded closures':state.mode==='onsets'?'starts · '+monthLabel(state.month):'border restrictions · '+monthLabel(state.month));
+    $('map-note').textContent=(state.continent||'World')+' · '+(state.mode==='all'?'all recorded closures':state.mode==='onsets'?'starts · '+monthLabel(state.month):'Border Restrictions · '+monthLabel(state.month));
     $('month-label').textContent=state.mode==='all'?data.meta.window_start.slice(0,4)+'–'+data.meta.window_end.slice(0,4):monthLabel(state.month);$('month-slider').value=state.month;$('month-slider').setAttribute('aria-valuetext',monthLabel(state.month));
     const progress=100*(state.month-Number($('month-slider').min))/(Number($('month-slider').max)-Number($('month-slider').min)||1);
     $('month-slider').style.setProperty('--timeline-progress',progress+'%');
     $('month-slider').disabled=state.mode==='all';$('previous-button').disabled=state.mode==='all'||state.month<=Number($('month-slider').min);$('next-button').disabled=state.mode==='all'||state.month>=Number($('month-slider').max);
     $('include-excluded').disabled=state.mode!=='all';$('excluded-note').textContent=state.mode==='all'?'Excluded records are list-only and never animated.':'Excluded records are unavailable in timeline views.';
-    $('time-note').textContent=state.mode==='all'?'Full study period · Play to explore by month':state.mode==='onsets'?'Recorded starts in this month':'Border restrictions · Unmarked does not mean open';
+    $('time-note').textContent=state.mode==='all'?'Full study period · Play to explore by month':state.mode==='onsets'?'Recorded starts in this month':'Border Restrictions · Unmarked does not mean open';
     $('location-filter').hidden=!state.location;$('location-filter-label').textContent=state.location?'Linked to '+(locations.get(state.location)?.properties?.label||locations.get(state.location)?.properties?.name||state.location):'';
     const activeFilters=[state.region,state.rationale,state.measureType?C.measureLabel(state.measureType):'',({crossing_reference:'Sourced geography',context:'Context geography',unlocated:'Without a mapped location'})[state.precision],state.includeExcluded&&state.mode==='all'?'Including excluded records':''].filter(Boolean);
     $('filter-summary').textContent=activeFilters.join(' · ');$('filter-summary').hidden=!activeFilters.length;
@@ -333,7 +333,7 @@
     const location=locations.get(state.location);
     const scope=location?locationTitle(location.properties,state.location):state.query.trim()?'Search: “'+state.query.trim()+'”':state.continent||'World';
     $('records-heading').textContent=scope;
-    $('records-caption').textContent=visible.length+' matching record'+(visible.length===1?'':'s')+' · '+(state.mode==='all'?'All recorded closures':(state.mode==='onsets'?'Closures beginning':'Border restrictions')+' · '+monthLabel(state.month));
+    $('records-caption').textContent=visible.length+' matching record'+(visible.length===1?'':'s')+' · '+(state.mode==='all'?'All recorded closures':(state.mode==='onsets'?'Closures beginning':'Border Restrictions')+' · '+monthLabel(state.month));
   }
   function openRecords(){
     if(!data)return;stop();map.closePopup();

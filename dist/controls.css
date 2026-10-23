@@ -1,0 +1,26 @@
+/* Mobile map controls: coordinated sizing with an unobtrusive speed selector. */
+:root{--atlas-control-edge:#c7d7cc;--atlas-control-radius:8px;--atlas-control-shadow:0 2px 7px #244e4618}
+.map-status,.panel-toggle,.timeline-date,.step-button{border-radius:var(--atlas-control-radius);border:1px solid var(--atlas-control-edge)}
+.map-status,.panel-toggle{min-height:42px;box-shadow:var(--atlas-control-shadow)}
+.map-status{display:flex;align-items:center;line-height:1.35;padding:6px 10px}
+.timeline-date{display:flex;align-items:center;justify-content:center;min-height:32px;padding:5px 11px;border-color:#d6e5dc;box-shadow:0 1px 3px #244e4610}
+.country-label-toggle{font-size:11px;padding-inline:8px}
+.country-label-toggle::before{border-color:var(--atlas-control-edge);border-radius:var(--atlas-control-radius);box-shadow:var(--atlas-control-shadow)}
+.timeline-speed-control{display:block;position:relative;isolation:isolate;width:56px;height:34px;justify-self:center}
+.timeline-speed-control::before{content:'';position:absolute;z-index:-1;inset:1px 0;border:1px solid var(--atlas-control-edge);background:#f8faf8;border-radius:var(--atlas-control-radius)}
+.timeline-speed-control::after{content:'';position:absolute;top:calc(50% - 4px);right:9px;width:6px;height:6px;border-right:1.5px solid #62746a;border-bottom:1.5px solid #62746a;transform:rotate(45deg);pointer-events:none}
+#playback-speed{appearance:none;-webkit-appearance:none;display:block;width:100%;height:34px;min-height:34px;margin:0;padding:0 18px 0 9px;border:0;border-radius:var(--atlas-control-radius);background:transparent;color:var(--ink);font:500 14px/1.2 Atlas,Arial,sans-serif;font-variant-numeric:tabular-nums;cursor:pointer}
+@media(max-width:760px), (max-width:950px) and (max-height:500px){
+ .map-status,.panel-toggle{min-height:44px}
+ .timeline-controls,.detail-open .timeline-controls{grid-template-columns:44px 44px minmax(0,1fr) 44px 44px;grid-template-areas:'date date date date date' 'play speed slider previous next';gap:4px 6px}
+ .timeline-controls #play-button,.detail-open #play-button{grid-area:play}
+ .timeline-controls #month-label,.detail-open #month-label{grid-area:date;justify-self:center;max-width:100%;min-height:36px;font-size:14px}
+ .timeline-controls #month-slider,.detail-open #month-slider{grid-area:slider;width:100%;min-width:0}
+ .timeline-controls #previous-button,.detail-open #previous-button{grid-area:previous}
+ .timeline-controls #next-button,.detail-open #next-button{grid-area:next}
+ .timeline-speed-control,.detail-open .timeline-speed-control{grid-area:speed;width:44px;height:44px}
+ .timeline-speed-control::before{inset:5px 0}
+ .timeline-speed-control::after{right:7px}
+ #playback-speed{height:44px;min-height:44px;font-size:14px;padding:0 16px 0 6px}
+ .timeline-bottom #time-note{font-size:9px}
+}
