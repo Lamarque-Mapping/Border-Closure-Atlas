@@ -438,7 +438,7 @@
     schedulePlayback();
   });
   $('playback-speed').addEventListener('change',event=>{
-    const rate=Number(event.target.value);playbackRate=[1,2,4,8].includes(rate)?rate:1;
+    const rate=Number(event.target.value);playbackRate=[1,2,4].includes(rate)?rate:1;
     if(timer)schedulePlayback();
   });
   $('back-button').addEventListener('click',showBrowse);$('fit-button').addEventListener('click',fitRecords);$('clear-location').addEventListener('click',()=>{state.location='';resetList();render();});$('reset-button').addEventListener('click',()=>{stop();resetFilters();populateRegions();showBrowse();render();fitContinent();});
