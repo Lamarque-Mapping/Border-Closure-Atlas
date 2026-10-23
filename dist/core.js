@@ -85,7 +85,7 @@
     return false;
   }
   function precision(e){if(excluded(e))return 'excluded';return e.mapping_precision||(array(e.location_ids).length?'crossing_reference':'unlocated');}
-  function matchesPrecision(e,value){if(!value)return true;const p=precision(e);if(value==='context')return p==='frontier_context'||p==='country_context';if(value==='crossing_reference')return p==='crossing_reference'||p==='policy_coverage';return p===value;}
+  function matchesPrecision(e,value){if(!value)return true;const p=precision(e);if(value==='context')return p==='frontier_context'||p==='country_context';if(value==='crossing_reference')return p==='crossing_reference'||p==='policy_coverage'||p==='national_policy';return p===value;}
   function availableContinents(){return [...CONTINENTS];}
   function continentCounts(data,includeExcluded=false){const names=availableContinents(data);const counts={World:0,...Object.fromEntries(names.map(c=>[c,0]))};for(const e of data.events){if(excluded(e)&&!includeExcluded)continue;counts.World++;for(const c of new Set(array(e.continents)))if(names.includes(c))counts[c]++;}return counts;}
   function validate(data){
@@ -103,3 +103,4 @@
   const api={array,CONTINENTS,monthOrdinal,monthISO,day,quarantined,excluded,locationsFor,locationFeatures,contextLocationsFor,displayLocationsFor,periodEvidenceDates,validPeriod,periods,periodsForView,measureLabel,phaseTemporalState,temporalStates,temporalState,temporalLabel,intervalEligible,matchesTime,precision,matchesPrecision,availableContinents,continentCounts,validate,filterEvents};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.BorderCore=api;
 })(typeof window!=='undefined'?window:globalThis);
+

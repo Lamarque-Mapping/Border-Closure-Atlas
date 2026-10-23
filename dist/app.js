@@ -177,24 +177,26 @@
     const method=data.meta.research_method||{};
     $('research-method').innerHTML='<h2>How was the research checked?</h2><p>The dataset has been built and refined through 16 research cycles, repeated reviews across the dataset, and further checks focused on dates, missing events and unresolved evidence. Earlier work recorded three dataset-wide verification exercises. Other substantial reviews included 272 duration reassessments, a six-region sense check covering 686 records, and detailed follow-up on 371 evidence questions. The number and scope of checks vary between entries as the dataset has grown.</p>';
     const coverage=summary.chronology_coverage||{};
-    $('release-method').innerHTML='<p><strong>'+(events.length-excludedCount)+' records are included</strong>; '+excludedCount+' further records are retained for inspection but excluded from the map and analysis. '+coverage.without_dated_evidence+' included records have no dated evidence.</p><p>Current workbook: '+escape(dateText(data.meta.snapshot_date))+'. <a href="downloads/Global_Border_Closures_Register_2016_2026.xlsx" download="Global_Border_Closures_Register_2016_2026.xlsx">Download the source workbook</a>.</p>';
+    const nationalCount=events.filter(e=>e.record_kind==='national_policy').length;
+    $('release-method').innerHTML='<p><strong>'+(events.length-excludedCount-nationalCount)+' land-border records are included</strong>; '+excludedCount+' further records are retained for inspection but excluded. '+coverage.without_dated_evidence+' included land records have no dated evidence.'+(nationalCount?' The main map also includes <strong>'+nationalCount+' national-policy histories</strong> from 18 dated observations for Australia, New Zealand and the UK/England. One extends an existing England land record; these are not additional independent-closure counts.':'')+'</p><p>Land workbook: '+escape(dateText(data.meta.snapshot_date))+'. <a href="downloads/Global_Border_Closures_Register_2016_2026.xlsx" download="Global_Border_Closures_Register_2016_2026.xlsx">Download the land source workbook</a>.'+(nationalCount?' <a href="downloads/national-policy-evidence.json" download>National policy evidence and display method</a>.':'')+'</p>';
 
-    resetMapLayers();showBrowse();render();fitContinent();if(loaded)notify('Atlas data updated.');
+    resetMapLayers();showBrowse();render();fitContinent();openSharedRecord();if(loaded)notify('Atlas data updated.');
   }
   function render(){
     if(!data)return;map.closePopup();visible=C.filterEvents(data,state);locationEvents=new Map();for(const e of visible)for(const id of mapLocationIDs(e)){if(!locationEvents.has(id))locationEvents.set(id,[]);locationEvents.get(id).push(e);}
     const mappedRecords=visible.filter(e=>mapLocationIDs(e).length).length;
     const excludedCount=visible.filter(C.excluded).length;const unlocatedCount=visible.length-mappedRecords-excludedCount;
-    $('record-count').textContent=visible.length.toLocaleString('en-GB');$('count-label').textContent=visible.length===1?'record':'records';$('mapped-count').textContent=mappedRecords+' with geography · '+unlocatedCount+' unlocated'+(excludedCount?' · '+excludedCount+' excluded':'');
+    const nationalCount=visible.filter(e=>e.record_kind==='national_policy').length;
+    $('record-count').textContent=visible.length.toLocaleString('en-GB');$('count-label').textContent=visible.length===1?'record':'records';$('mapped-count').textContent=(nationalCount?(visible.length-nationalCount)+' land · '+nationalCount+' national histories · ':'')+mappedRecords+' with geography · '+unlocatedCount+' unlocated'+(excludedCount?' · '+excludedCount+' excluded':'');
     const modeLabel=state.mode==='all'?'Matching records across the full study period, including those without confirmed dates. These closures did not all happen at once.':state.mode==='onsets'?'Recorded starts in the selected month.':'Dated evidence overlapping part of this month. Ordered windows and intermittent regimes do not establish continuous closure. Possible date overlap is labelled.';
-    $('result-context').textContent=modeLabel+(state.mode==='intervals'?' '+Number(data.meta.atlas_summary?.duration_reviewed_unresolved||0)+' records have no dated phase. Disputed evidence appears only at its recorded dates.':'')+' Coloured lines locate the matching records; they do not show approved closure extents. Unmarked borders are not necessarily open.';
+    $('result-context').textContent=modeLabel+(state.mode==='intervals'?' '+Number(data.meta.atlas_summary?.duration_reviewed_unresolved||0)+' land records have no dated phase. Disputed evidence appears only at its recorded dates.':'')+' Coloured lines locate land-border records. Shaded countries have entry or departure bans, with exceptions; unfilled national outlines show entry conditions only. Unmarked does not necessarily mean open.';
     $('map-note').textContent=(state.continent||'World')+' · '+(state.mode==='all'?'all recorded closures':state.mode==='onsets'?'starts · '+monthLabel(state.month):'Border Restrictions · '+monthLabel(state.month));
     $('month-label').textContent=state.mode==='all'?data.meta.window_start.slice(0,4)+'–'+data.meta.window_end.slice(0,4):monthLabel(state.month);$('month-slider').value=state.month;$('month-slider').setAttribute('aria-valuetext',monthLabel(state.month));
     const progress=100*(state.month-Number($('month-slider').min))/(Number($('month-slider').max)-Number($('month-slider').min)||1);
     $('month-slider').style.setProperty('--timeline-progress',progress+'%');
     $('month-slider').disabled=state.mode==='all';$('previous-button').disabled=state.mode==='all'||state.month<=Number($('month-slider').min);$('next-button').disabled=state.mode==='all'||state.month>=Number($('month-slider').max);
     $('include-excluded').disabled=state.mode!=='all';$('excluded-note').textContent=state.mode==='all'?'Excluded records are list-only and never animated.':'Excluded records are unavailable in timeline views.';
-    $('time-note').textContent=state.mode==='all'?'Full study period · Play to explore by month':state.mode==='onsets'?'Recorded starts in this month':'Border Restrictions · Unmarked does not mean open';
+    $('time-note').textContent=state.mode==='all'?'Full study period · Play to explore by month':state.mode==='onsets'?'Recorded starts in this month':'Border Restrictions · Unmarked does not necessarily mean open';
     $('location-filter').hidden=!state.location;$('location-filter-label').textContent=state.location?'Linked to '+(locations.get(state.location)?.properties?.label||locations.get(state.location)?.properties?.name||state.location):'';
     const activeFilters=[state.region,state.rationale,state.measureType?C.measureLabel(state.measureType):'',({crossing_reference:'Sourced geography',context:'Context geography',unlocated:'Without a mapped location'})[state.precision],state.includeExcluded&&state.mode==='all'?'Including excluded records':''].filter(Boolean);
     $('filter-summary').textContent=activeFilters.join(' · ');$('filter-summary').hidden=!activeFilters.length;
@@ -206,11 +208,11 @@
     const list=$('event-list');list.replaceChildren();
     const sorted=[...visible].sort((a,b)=>(text(a.start)||'9999').localeCompare(text(b.start)||'9999')||a.id.localeCompare(b.id));
     $('show-more').hidden=sorted.length<=listLimit;$('list-page-label').textContent=sorted.length?'Showing '+Math.min(sorted.length,listLimit)+' of '+sorted.length+' matching records':'';
-    if(!sorted.length){const p=document.createElement('p');p.className='empty';p.textContent=state.mode!=='all'&&state.query?'No evidence matches this month. Switch to All recorded closures to find records outside the selected dates. An unmarked border does not mean it was open.':'No records match this selection. An unmarked border does not mean it was open.';list.append(p);return;}
+    if(!sorted.length){const p=document.createElement('p');p.className='empty';p.textContent=state.mode!=='all'&&state.query?'No evidence matches this month. Switch to All recorded closures to find records outside the selected dates. An unmarked border does not necessarily mean it was open.':'No records match this selection. An unmarked border does not necessarily mean it was open.';list.append(p);return;}
     for(const e of sorted.slice(0,listLimit)){
-      const phases=cardPeriods(e),first=phases.find(p=>!p.contested)||phases[0],timing=first?periodLabel(first)+' · '+cardPeriodDates(first):'Dates not established';
+      const phases=cardPeriods(e),stageCount=phases.filter(p=>!p.national_display_period).length,first=phases.find(p=>!p.contested)||phases[0],timing=first?periodLabel(first)+' · '+cardPeriodDates(first):'Dates not established';
       const card=document.createElement('button');card.className='event-card'+(C.excluded(e)?' excluded-card':'');card.dataset.eventId=e.id;
-      card.innerHTML='<span class="card-top"><span>'+escape(C.array(e.countries).join(' – ')||e.region||'')+'</span><span>'+escape(e.id)+'</span></span><span class="card-title">'+escape(publicText(e.title||e.id,'title',e.id))+'</span><span class="card-bottom">'+rationaleHTML([e])+'<span class="duration-badge">'+escape(timing)+'</span>'+(phases.length>1?'<span class="period-scope">'+phases.length+' dated stages</span>':'')+'</span>';
+      card.innerHTML='<span class="card-top"><span>'+escape(C.array(e.countries).join(' – ')||e.region||'')+'</span><span>'+escape(e.id)+'</span></span><span class="card-title">'+escape(publicText(e.title||e.id,'title',e.id))+'</span><span class="card-bottom">'+rationaleHTML([e])+'<span class="duration-badge">'+escape(timing)+'</span>'+(stageCount>1?'<span class="period-scope">'+stageCount+' dated stages</span>':'')+'</span>';
       card.addEventListener('click',()=>showEvent(e.id,true));list.append(card);
     }
   }
@@ -232,14 +234,16 @@
   }
   function cardPeriodDates(p){
     const start=cardBoundary(p.start_earliest,p.start_latest),end=cardBoundary(p.end_earliest,p.end_latest);
+    if(p.national_observation)return start;
     if(p.contested)return C.periodEvidenceDates(p).map(dateText).join('; ')||'Dates not established';
     if(p.temporal_display_rule==='dated_evidence_only_no_continuity_inference'||!p.start_earliest||!p.end_latest)return 'Evidence dated: '+(C.periodEvidenceDates(p).map(dateText).join('; ')||'date not established');
     if(p.kind==='same_day')return start;
     return start+' – '+end+(p.endpoint_status==='last_confirmed'?' (last report)':p.observed_reopening==='Yes'?' (reopened)':'');
   }
   function cardPeriods(e){return C.periodsForView(e,state);}
-  function periodLabel(p){return p.contested?'Dates disputed':p.kind==='same_day'?'Same-day closure':p.temporal_display_rule==='dated_evidence_only_no_continuity_inference'?'Dated reports':C.measureLabel(p.measure_type);}
+  function periodLabel(p){return p.national_label|| (p.contested?'Dates disputed':p.kind==='same_day'?'Same-day closure':p.temporal_display_rule==='dated_evidence_only_no_continuity_inference'?'Dated reports':C.measureLabel(p.measure_type));}
   function periodDuration(p){
+    if(p.national_display_period||p.national_observation)return p.display;
     if(p.contested)return 'The dates are disputed; a continuous closure cannot be established.';
     if(p.kind==='same_day'||p.temporal_display_rule==='day_marker_no_whole_day_duration')return 'Same-day event; exact hours are not established.';
     if(p.temporal_display_rule==='dated_evidence_only_no_continuity_inference')return 'These reports do not establish a continuous closure between the dates.';
@@ -308,7 +312,7 @@
       action.addEventListener('click',()=>{map.closePopup();activateLocation(id,items);});card.append(action);
     }
     const notes=document.createElement('p');notes.className='location-map-note';
-    notes.textContent='The line locates the border. The description identifies the affected crossings and travellers.';card.append(notes);
+    notes.textContent=p.display_role==='national_policy'?'The country shape identifies the jurisdiction of the rule, not physical closure of its coastline or airports.':'The line locates the border. The description identifies the affected crossings and travellers.';card.append(notes);
     stop();map.closePopup();cardLocation=id;renderLocations();if(mobile)setPanelOpen(false);
     const padding=viewPadding();
     const availableHeight=$('map-page').getBoundingClientRect().height-padding.paddingTopLeft[1]-padding.paddingBottomRight[1]-58;
@@ -319,7 +323,10 @@
   }
   function renderLocations(){
     if(featureGroup)map.removeLayer(featureGroup);featureGroup=L.featureGroup().addTo(map);
-    for(const [id,items] of locationEvents){
+    // Area hit targets come first, so specific land lines stay clickable above
+    // them. Use the shared interaction pane, above the non-interactive basemap.
+    const orderedLocations=[...locationEvents].sort(([a],[b])=>Number(locations.get(b)?.properties.display_role==='national_policy')-Number(locations.get(a)?.properties.display_role==='national_policy'));
+    for(const [id,items] of orderedLocations){
       const f=locations.get(id);if(!K.isLineReference(f))continue;
       const styleRecords=(selected&&items.some(e=>e.id===selected)?items.filter(e=>e.id===selected):items).map(e=>({...e,duration_periods:C.periodsForView(e,state)}));
       const p=f.properties||{},isSelected=id===cardLocation||id===state.location||items.some(e=>e.id===selected),style=K.symbolStyle(p,{selected:isSelected,count:items.length,records:styleRecords,rationaleFilter:state.rationale});
@@ -329,9 +336,9 @@
         const pane=style.country?'countryContext':'scope';
         // A wider transparent stroke keeps thin or dashed geography clickable.
         // Country interiors do not become inferred closure footprints.
-        const target=L.geoJSON(f,{pane,style:{color:style.colour,weight:compact()?22:16,opacity:0,fill:false,className:'geography-hit'}}).addTo(featureGroup);
+        const target=L.geoJSON(f,{pane:'scope',style:{color:style.colour,weight:compact()?22:16,opacity:0,fill:style.national,fillOpacity:0,className:'geography-hit'}}).addTo(featureGroup);
         if(isSelected)L.geoJSON(f,{pane,interactive:false,style:{color:'#ffffff',weight:style.width+3,opacity:.95,fill:false}}).addTo(featureGroup);
-        L.geoJSON(f,{pane,interactive:false,style:{className:style.frontier?'frontier-reference':'location-reference',color:style.colour,weight:style.width,opacity:timePossible?.3:style.opacity,dashArray:style.dash.join(' '),lineCap:'round',fill:false}}).addTo(featureGroup);
+        L.geoJSON(f,{pane,interactive:false,style:{className:style.national?'national-policy-area':style.frontier?'frontier-reference':'location-reference',color:style.colour,weight:style.width,opacity:timePossible?.3:style.opacity,dashArray:style.dash.join(' '),lineCap:'round',fill:style.national,fillColor:style.colour,fillOpacity:style.fillOpacity}}).addTo(featureGroup);
       target.bindTooltip(tooltip,{direction:'top',offset:[0,-10]});
       target.on('click',e=>openLocationCard(id,items,e.latlng||target.getLatLng(),/^key/.test(e.originalEvent?.type||'')));
     }
@@ -357,9 +364,9 @@
     const locationLabel=location?locationTitle(location.properties,state.location):'';
     exportingRecords=true;updateRecordsControls();
     try{
-      const full=await window.AtlasData.getResearchData(),byID=new Map(full.events.map(e=>[e.id,e]));
+      const full=visible.every(e=>e.record_kind==='national_policy')?{meta:source.meta,events:visible}:await window.AtlasData.getResearchData({includeNational:true}),byID=new Map(full.events.map(e=>[e.id,e]));
       if(full.meta.source_sha256!==source.meta.source_sha256||ids.some(id=>!byID.has(id)))throw Error('The records do not match this atlas version. Please reload and try again.');
-      const output=window.BorderRecordExport.build({records:ids.map(id=>byID.get(id)),state:snapshot,locationLabel,cleanText:publicText,recordURL:id=>window.AtlasNavigation.getAnalysisURL('#record-'+id)});
+      const output=window.BorderRecordExport.build({records:ids.map(id=>byID.get(id)),state:snapshot,locationLabel,cleanText:publicText,recordURL:id=>id.startsWith('NATIONAL-')?new URL('#map/record-'+encodeURIComponent(id),window.location.href).href:window.AtlasNavigation.getAnalysisURL('#record-'+id)});
       window.BorderRecordExport.download(output);notify('Downloaded '+ids.length+' matching records as a CSV spreadsheet.');
     }catch(error){notify(error.message||'The spreadsheet could not be prepared. Please try again.');}
     finally{exportingRecords=false;updateRecordsControls();}
@@ -376,6 +383,21 @@
   }
   function showBrowse(){const wasRecord=Boolean(selected);selected=null;setRecordView(false);if(wasRecord)$('panel-scroll').scrollTop=recordsListScroll;if(data)renderLocations();}
   function field(title,value){value=publicText(value,title,selected);return value?'<section class="detail-field"><h3>'+escape(title)+'</h3><p>'+escape(text(value))+'</p></section>':'';}
+  function nationalDetailHTML(e){
+    const main=e.duration_periods.find(p=>p.national_display_period),sources=eventSources(e);
+    return '<div class="detail-id">National border rules · '+escape(e.countries.join(' – '))+'</div><h2 class="detail-title">'+escape(e.title)+'</h2><p class="event-summary">'+escape(e.national_summary)+'</p>'+rationaleHTML([e])+
+      (e.national_kind==='entry_conditions'?'<p class="qualification">Entry conditions only — this is not an additional border closure.</p>':'')+
+      (main?'<section class="detail-field"><h3>Dates</h3>'+cardPeriodHTML(main)+'</section>':'<p class="qualification">Shown only in months with a recorded policy change. No continuous interval is inferred.</p>')+
+      (e.linked_land_ids.length?field('Linked record',e.relationship):'')+
+      '<section class="detail-field"><h3>What changed, and who was affected?</h3><ol class="national-history">'+e.national_observations.map(r=>'<li><strong>'+escape(dateText(r['Effective date']))+'</strong><p>'+escape(r['Dated policy change'])+'</p><p><b>Affected:</b> '+escape(r['Affected people'])+'</p><details><summary>Exceptions and evidence</summary><p><b>Exceptions:</b> '+escape(r.Exceptions)+'</p><p><b>Applies to:</b> '+escape(r.Jurisdiction)+'. '+escape(r['Supported modes'].replace(/;/g,',').replace(/international_rail/g,'international rail'))+'.</p><p>'+escape(r['Remaining evidence need'])+'</p>'+String(r['Source URLs']).split('\n').filter(safeURL).map(url=>{const s=sources.find(s=>s.url===url);return '<p><a href="'+escape(url)+'" target="_blank" rel="noopener noreferrer">'+escape(s?.publisher||new URL(url).hostname)+' ↗</a></p>';}).join('')+'</details></li>').join('')+'</ol></section>'+
+      '<section class="detail-field"><h3>Sources</h3><ul>'+sources.map(s=>'<li><a href="'+escape(s.url)+'" target="_blank" rel="noopener noreferrer">'+escape(s.publisher)+': '+escape(s.label)+' ↗</a></li>').join('')+'</ul></section>'+field('How this appears on the map',e.geography_note+' Policy histories are kept separate from the land-border duration charts.');
+  }
+  function openSharedRecord(){
+    const match=location.hash.match(/^#map\/record-(NATIONAL-[A-Za-z0-9_-]+)$/);
+    if(!data||!match||!events.some(e=>e.id===match[1]))return;
+    window.AtlasNavigation.show('map',{address:false});resetFilters();populateRegions();state.mode='all';$('time-mode').value='all';render();showEvent(match[1],true);
+  }
+  window.addEventListener('hashchange',openSharedRecord);
   async function showEvent(id,zoom){
     if(!events.some(v=>v.id===id))return;map.closePopup();stop();if(!selected)recordsListScroll=$('panel-scroll').scrollTop||0;selected=id;
     openRecords();
@@ -389,6 +411,11 @@
       const retry=document.createElement('button');retry.textContent='Try again';retry.addEventListener('click',()=>showEvent(id,zoom));$('event-detail').append(retry);return;
     }
     if(selected!==id)return;
+    if(e.record_kind==='national_policy'){
+      $('event-detail').innerHTML=nationalDetailHTML(e);renderLocations();
+      if(zoom){const features=mapLocationIDs(e).map(lid=>locations.get(lid));if(features.length)map.fitBounds(L.geoJSON({type:'FeatureCollection',features}).getBounds(),{...viewPadding(12),maxZoom:6,animate:false});}
+      return;
+    }
     const ids=C.displayLocationsFor(e,data).filter(v=>locations.has(v));
     const reasonLabels={continuity_flag_missing_review_required:'Continuous closure has not been confirmed for the recorded dates.',continuity_claim_not_supported_or_qualified:'The evidence does not establish continuous closure over these dates.',end_claim_not_supported_or_qualified:'The reopening date is not sufficiently supported.',endpoint_not_operational_or_partial_reopening:'The endpoint is not classified as an operational or partial reopening.',exact_compatible_dates_missing:'Exact compatible start and end dates are missing.',explicit_continuity_false:'Continuous closure is not supported by the sources.',no_source_calculated_interval:'No supported duration is available.',same_day_or_nonpositive_date_interval:'A same-day or nonpositive date interval is not displayed as a whole-day closure.',start_claim_not_supported_or_qualified:'The start date is not sufficiently supported.'};
     const humanStatus=v=>text(v).replace(/_/g,' ');
@@ -471,7 +498,7 @@
     const button=$('save-view-button');button.disabled=true;button.textContent='Preparing…';
     try{
       const snapshot=window.BorderExport.capture({map,data,visible,locationEvents,selected,state,labels:labelSpecs(),viewport:exportViewport()});
-      const full=await window.AtlasData.getResearchData(),byID=new Map(full.events.map(e=>[e.id,e]));
+      const full=snapshot.events.every(e=>e.record_kind==='national_policy')?{events:snapshot.events}:await window.AtlasData.getResearchData({includeNational:true}),byID=new Map(full.events.map(e=>[e.id,e]));
       snapshot.events=snapshot.events.map(e=>byID.get(e.id));window.BorderExport.openSnapshot(snapshot);
     }catch(error){notify(error.message);}finally{button.disabled=false;button.textContent='Save view';}
   });

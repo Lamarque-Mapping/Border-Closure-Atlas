@@ -36,6 +36,8 @@ jobs:
           node --check dist/app.js
           node --check dist/export.js
           node --check dist/navigation.js
+          node --check dist/national.js
+          node scripts/verify-national-policies.cjs
           node scripts/verify-map-export.cjs
       - name: Configure Pages
         id: pages
@@ -51,3 +53,4 @@ jobs:
       - name: Publish to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+

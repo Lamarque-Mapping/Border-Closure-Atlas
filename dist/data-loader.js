@@ -12,7 +12,7 @@
    }
    delete data.geometry_pool;
   }
-  return data;
+  return window.AtlasNational?window.AtlasNational.attach(data):data;
  }
  function ready(){
   if(window.BORDER_DATA)return Promise.resolve(unpack(window.BORDER_DATA));
@@ -34,8 +34,9 @@
  }
  async function getRecord(id){
   const data=await ready();
-  if(researchByID)return researchByID.get(id);
   const summary=data.events.find(e=>e.id===id);if(!summary)throw Error('This record could not be found.');
+  if(summary.record_kind==='national_policy')return summary;
+  if(researchByID)return researchByID.get(id);
   if(!summary.details_file)return summary;
   if(!records.has(id))records.set(id,readJSON(summary.details_file).then(value=>{
    if(value.source_sha256!==data.meta.source_sha256||value.record?.id!==id)throw Error('The record does not match this atlas version. Please reload.');
@@ -43,8 +44,9 @@
   }).catch(error=>{records.delete(id);throw error;}));
   return records.get(id);
  }
- async function getResearchData(){
-  const data=await ready();if(!data.meta.web_assets)return {meta:data.meta,events:data.events,workbook_geography:data.workbook_geography,workbook_review:data.workbook_review};
+ async function getResearchData({includeNational=false}={}){
+  const data=await ready(),landEvents=data.events.filter(e=>e.record_kind!=='national_policy'),nationalEvents=data.events.filter(e=>e.record_kind==='national_policy');
+  if(!data.meta.web_assets)return {meta:data.meta,events:includeNational?data.events:landEvents,workbook_geography:data.workbook_geography,workbook_review:data.workbook_review};
   if(!research)research=readJSON(data.meta.web_assets.research).then(async value=>{
    if(value.meta?.source_sha256!==data.meta.source_sha256)throw Error('The research data does not match this atlas version. Please reload.');
    if(value.events_parts){
@@ -52,11 +54,13 @@
     if(parts.some(p=>p.source_sha256!==data.meta.source_sha256||!Array.isArray(p.events)))throw Error('The research data does not match this atlas version. Please reload.');
     value={...value,events:parts.flatMap(p=>p.events)};delete value.events_parts;
    }
-   const expected=new Set(data.events.map(e=>e.id));
-   if(value.events?.length!==data.events.length||new Set(value.events.map(e=>e.id)).size!==expected.size||value.events.some(e=>!expected.has(e.id)))throw Error('The research data does not match this atlas version. Please reload.');
+   const expected=new Set(landEvents.map(e=>e.id));
+   if(value.events?.length!==landEvents.length||new Set(value.events.map(e=>e.id)).size!==expected.size||value.events.some(e=>!expected.has(e.id)))throw Error('The research data does not match this atlas version. Please reload.');
    researchByID=new Map(value.events.map(e=>[e.id,e]));return value;
   }).catch(error=>{research=null;throw error;});
-  return research;
+  const value=await research;
+  return includeNational?{...value,meta:{...value.meta,national_supplement:data.meta.national_supplement},events:[...value.events,...nationalEvents]}:value;
  }
  window.AtlasData={ready,getRecord,getResearchData};
 })();
+

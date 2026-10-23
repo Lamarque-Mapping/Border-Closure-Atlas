@@ -34,6 +34,7 @@
       ||/^national (?:land[ /-]?(?:water )?)?(?:border|frontier)(?:s|[- ](?:passenger|entry|exit|closure|restriction|policy|regime|order))\b/i.test(text);
   }
   function scopeStyle(records=[]){
+    if(records.some(e=>e.record_kind==='national_policy'))return {broad:false,limited:false,national:true,conditionsOnly:records.every(e=>e.national_kind==='entry_conditions'),label:'National entry or departure rules'};
     const scopes=records.flatMap(e=>e.duration_periods?.length?e.duration_periods.map(p=>p.scope||''):[e.scope||'']);
     const broad=scopes.length>0&&scopes.every(broadScope);
     return {broad,limited:!broad,label:broad?'Border-wide scope stated':'Limited or uncertain geographical scope'};
@@ -41,9 +42,9 @@
   // Screen-space symbols aid legibility; their size does not encode severity
   // or the geographical extent of a closure. Shared by the map and PNG export.
   function symbolStyle(properties={},options={}){
-    const role=properties.display_role||'crossing_reference',country=role==='country_context',frontier=role==='frontier_context',context=country||frontier,selected=Boolean(options.selected);
+    const role=properties.display_role||'crossing_reference',national=role==='national_policy',country=role==='country_context'||national,frontier=role==='frontier_context',context=country||frontier,selected=Boolean(options.selected);
     const rationale=options.rationale||rationaleStyle(options.records,options.rationaleFilter),scope=options.scope||scopeStyle(options.records);
-    return {role,country,frontier,context,scope,colour:rationale.colour,rationale,selected,approximate:/approx|locality|town|centroid|indicative|unresolved/i.test(String(properties.precision||'')),radius:(options.count>99?11:options.count>1?10:5.5)+(selected?1:0),width:selected?3.8:country?1.5:2.7,opacity:country?.55:1,dash:country?[2,5]:scope.limited?[1,7]:[],fillOpacity:0};
+    return {role,country,national,frontier,context,scope,colour:rationale.colour,rationale,selected,approximate:/approx|locality|town|centroid|indicative|unresolved/i.test(String(properties.precision||'')),radius:(options.count>99?11:options.count>1?10:5.5)+(selected?1:0),width:selected?3.8:national?1.8:country?1.5:2.7,opacity:national?.85:country?.55:1,dash:national?(scope.conditionsOnly?[2,5]:[]):country?[2,5]:scope.limited?[1,7]:[],fillOpacity:national&&!scope.conditionsOnly?.12:0};
   }
   const cache=new WeakMap();
   // Area is used only to order and space reference labels. It is not a
@@ -104,3 +105,4 @@
   if(typeof module!=='undefined'&&module.exports)module.exports=api;
   else root.BorderCartography=api;
 })(typeof window!=='undefined'?window:globalThis);
+

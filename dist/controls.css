@@ -99,3 +99,12 @@
  .timeline-controls,.detail-open .timeline-controls{grid-template-columns:44px 100px 44px minmax(0,1fr) 44px 44px;gap:4px}
 }
 
+
+/* National policy histories use existing responsive record and map surfaces. */
+.legend-area{display:inline-block;width:26px;height:15px;flex:0 0 26px;border:1.5px solid #287e67;background:#287e6720;box-sizing:border-box}
+.legend-area.national-conditions{background:transparent;border-style:dotted}
+.national-history{padding-left:23px;margin:15px 0}
+.national-history li{padding:0 0 20px 8px;border-bottom:1px solid #dce4df;margin-bottom:20px}
+.national-history p{margin:7px 0;line-height:1.55}
+.national-history details{margin-top:9px}
+.national-history summary{cursor:pointer;color:#287567;min-height:36px;padding:6px 0}

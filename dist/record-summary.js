@@ -106,6 +106,7 @@
   }
   function describe(e,options={}){
     if(!e)return '';
+    if(e.record_kind==='national_policy')return e.national_summary;
     const periods=Array.isArray(options.periods)?options.periods:array(e.duration_periods);
     if(descriptions[e.id]&&descriptionHashes[e.id]===e.event_hash)return descriptions[e.id];
     const scope=known(e.scope),movement=known(periods.length===1?periods[0].movement:'')||known(e.movement),crossings=known(e.crossings),parts=[];
@@ -151,3 +152,4 @@
   if(typeof module!=='undefined'&&module.exports)module.exports=api;
   else root.BorderSummary=api;
 })(typeof window!=='undefined'?window:globalThis);
+

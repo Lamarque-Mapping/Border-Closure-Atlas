@@ -40,7 +40,7 @@
     const embedded=$('analysis-document');
     if(embedded){
       try{frame.srcdoc=JSON.parse(embedded.textContent);}catch{failed();}
-    }else frame.src='analysis.html';
+    }else frame.src='analysis.html?v=20261023-national';
   }
   function analysisLoaded(){
     if(!started||ready)return;
@@ -98,3 +98,4 @@
   if(document.fonts)document.fonts.ready.then(syncViewport);
   syncViewport();readAddress();
 })();
+
