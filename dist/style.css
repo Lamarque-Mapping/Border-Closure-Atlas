@@ -245,6 +245,23 @@ body[data-page="analysis"] #header-search-slot,body[data-page="briefing"] #heade
 .timeline-controls{display:grid;grid-template-columns:36px 132px minmax(0,1fr) 34px 34px;align-items:center;gap:8px;margin-top:0}
 .timeline-date{font-size:13px;font-weight:600;line-height:1.3;color:var(--ink);white-space:nowrap;text-align:center}
 .timeline-bottom{margin-top:3px}
+.play-button{position:relative;display:grid;place-items:center;isolation:isolate;touch-action:manipulation;-webkit-tap-highlight-color:transparent;box-shadow:0 2px 5px #244e4626;transition:transform .14s ease,background-color .18s ease,box-shadow .18s ease}
+.play-button svg{width:16px;height:16px}
+.play-button:active{transform:scale(.92);box-shadow:0 1px 2px #244e4633}
+.play-button.is-playing{background:#195d59;box-shadow:0 0 0 3px #28756724,0 2px 5px #244e4626}
+.play-button::after{content:'';position:absolute;inset:-4px;border:2px solid #28756766;border-radius:50%;pointer-events:none;opacity:0}
+.play-button.is-playing::after{animation:play-confirm .45s ease-out}
+@keyframes play-confirm{from{opacity:.65;transform:scale(.9)}to{opacity:0;transform:scale(1.35)}}
+#month-slider{appearance:none;-webkit-appearance:none;background:transparent;touch-action:manipulation}
+#month-slider::-webkit-slider-runnable-track{height:4px;border-radius:4px;background:linear-gradient(to right,var(--teal) var(--timeline-progress,0%),#dfe5e1 var(--timeline-progress,0%))}
+#month-slider::-moz-range-track{height:4px;border-radius:4px;background:#dfe5e1}
+#month-slider::-moz-range-progress{height:4px;border-radius:4px;background:var(--teal)}
+#month-slider::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border:2px solid var(--teal);border-radius:50%;background:#fff;box-shadow:0 1px 4px #244e4626;transition:background-color .18s ease,box-shadow .18s ease}
+#month-slider::-moz-range-thumb{box-sizing:border-box;width:18px;height:18px;border:2px solid var(--teal);border-radius:50%;background:#fff;box-shadow:0 1px 4px #244e4626;transition:background-color .18s ease,box-shadow .18s ease}
+.is-playing #month-slider::-webkit-slider-thumb{background:var(--teal);box-shadow:0 0 0 4px #2875671c}
+.is-playing #month-slider::-moz-range-thumb{background:var(--teal);box-shadow:0 0 0 4px #2875671c}
+#month-slider:disabled{opacity:.45}
+@media(prefers-reduced-motion:reduce){.play-button{transition:none}.play-button:active{transform:none}.play-button.is-playing::after{animation:none}#month-slider::-webkit-slider-thumb{transition:none}#month-slider::-moz-range-thumb{transition:none}}
 @media(min-width:761px) and (max-width:1100px){
  .detail-open .timeline-controls{grid-template-columns:36px minmax(0,1fr) 34px 34px;gap:4px 6px}
  .detail-open .timeline-date{grid-column:1/-1;grid-row:1}
@@ -256,7 +273,8 @@ body[data-page="analysis"] #header-search-slot,body[data-page="briefing"] #heade
 @media(max-width:760px), (max-width:950px) and (max-height:500px){
  .map-view-control{font-size:12px}
  .map-view-control select{min-height:44px;font-size:16px}
- .timeline-controls,.detail-open .timeline-controls{grid-template-columns:44px minmax(0,1fr) 44px 44px;gap:3px 6px}
+ .timeline-controls,.detail-open .timeline-controls{grid-template-columns:48px minmax(0,1fr) 44px 44px;gap:3px 6px}
+ .play-button{width:48px;height:48px}
  .timeline-date{grid-column:1/-1;grid-row:1;font-size:14px}
  #play-button{grid-column:1;grid-row:2}
  #month-slider{grid-column:2;grid-row:2}
@@ -278,7 +296,7 @@ body[data-page="analysis"] #header-search-slot,body[data-page="briefing"] #heade
 @media(min-width:761px) and (max-width:1000px){.masthead{gap:12px}.masthead nav{width:228px}}
 @media(max-width:760px){
  .masthead{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 8px;height:auto;min-height:0}
- .masthead .brand{grid-column:1;grid-row:1;min-height:54px;min-width:0}
+ .masthead .brand{grid-column:1;grid-row:1;min-height:56px;min-width:0;align-items:center;padding-block:10px}
  .header-support{grid-column:2;grid-row:1;min-width:0;padding:3px 0;gap:8px}
  .header-credit{gap:2px}
  .header-credit-author{font-size:9px;line-height:1.2}
@@ -352,3 +370,4 @@ body[data-page="analysis"] #header-search-slot,body[data-page="briefing"] #heade
  .records-dialog .card-title{font-size:18px}
  .records-dialog .detail-title{font-size:23px}
 }
+

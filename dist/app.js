@@ -46,7 +46,12 @@
   map.attributionControl.addAttribution('Base geometry: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a> · Locations: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a> (<a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener noreferrer">ODbL</a>)');
   map.createPane('countryContext');map.getPane('countryContext').style.zIndex=405;map.createPane('referenceLines');map.getPane('referenceLines').style.zIndex=407;map.createPane('scope');map.getPane('scope').style.zIndex=410;map.createPane('points');map.getPane('points').style.zIndex=430;
   function notify(message){$('message').textContent=message;$('message').hidden=false;clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>$('message').hidden=true,6500);}
-  function stop(){if(timer)clearInterval(timer);timer=null;$('play-button').innerHTML=playIcon;$('play-button').title='Play timeline';$('play-button').setAttribute('aria-label','Play timeline');}
+  function setPlayback(playing){
+    const button=$('play-button'),label=playing?'Pause timeline':'Play timeline';
+    button.innerHTML=playing?pauseIcon:playIcon;button.title=label;button.setAttribute('aria-label',label);
+    button.classList.toggle('is-playing',playing);document.querySelector('.timeline').classList.toggle('is-playing',playing);
+  }
+  function stop(){if(timer)clearInterval(timer);timer=null;setPlayback(false);}
   function dateText(value){if(!value)return 'Unknown';const s=text(value);if(C.day(s)!==null)return new Date(s+'T00:00:00Z').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'});if(/^\d{4}-\d{2}$/.test(s)&&C.monthOrdinal(s)!==null)return monthLabel(C.monthOrdinal(s));return s;}
   function dateRange(e){return dateText(e.start)+' → '+dateText(e.end);}
   function pointLocations(e){return C.locationsFor(e,data).filter(id=>locations.get(id)?.geometry?.type==='Point');}
@@ -58,7 +63,17 @@
   }
   const mapLocationIDs=e=>C.displayLocationsFor(e,data).filter(id=>K.isLineReference(locations.get(id)));
   function currentLocationIDs(){return [...new Set(visible.flatMap(mapLocationIDs))];}
-  function fitContinent(){map.fitBounds(continentViews[state.continent||'World']||continentViews.World,{...viewPadding(),animate:false});}
+  function fitContinent(){
+    const bounds=continentViews[state.continent||'World']||continentViews.World,padding=viewPadding(),size=map.getSize();
+    if(!state.continent&&compact()&&size.y>size.x){
+      // Give the portrait map more detail, with its focus above the timeline.
+      const topLeft=L.point(padding.paddingTopLeft),bottomRight=L.point(padding.paddingBottomRight);
+      const zoom=map.getBoundsZoom(bounds,false,topLeft.add(bottomRight))+.5;
+      const centre=map.unproject(map.project([30,12],zoom).add(bottomRight.subtract(topLeft).divideBy(2)),zoom);
+      map.setView(centre,zoom,{animate:false});return;
+    }
+    map.fitBounds(bounds,{...padding,animate:false});
+  }
   function fitRecords(){if(compact()){setPanelOpen(false);$('panel-toggle').focus();}const features=currentLocationIDs().map(id=>locations.get(id));if(!features.length){fitContinent();notify('No assigned geography in this selection. The continent view is retained.');return;}const layer=L.geoJSON({type:'FeatureCollection',features});const bounds=layer.getBounds();if(bounds.isValid())map.fitBounds(bounds,{...viewPadding(12),maxZoom:7,animate:false});}
   function updateTabs(){
     for(const button of $('continent-tabs').querySelectorAll('[role="tab"]')){const name=button.dataset.continent;const active=(state.continent||'World')===name;button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1;}
@@ -159,11 +174,13 @@
     $('record-count').textContent=visible.length.toLocaleString('en-GB');$('count-label').textContent=visible.length===1?'record':'records';$('mapped-count').textContent=mappedRecords+' with geography · '+unlocatedCount+' unlocated'+(excludedCount?' · '+excludedCount+' excluded':'');
     const modeLabel=state.mode==='all'?'Matching records across the full study period, including those without confirmed dates. These closures did not all happen at once.':state.mode==='onsets'?'Recorded starts in the selected month.':'Dated evidence overlapping part of this month. Ordered windows and intermittent regimes do not establish continuous closure. Possible date overlap is labelled.';
     $('result-context').textContent=modeLabel+(state.mode==='intervals'?' '+Number(data.meta.atlas_summary?.duration_reviewed_unresolved||0)+' records have no dated phase. Disputed evidence appears only at its recorded dates.':'')+' Coloured lines locate the matching records; they do not show approved closure extents. Unmarked borders are not necessarily open.';
-    $('map-note').textContent=(state.continent||'World')+' · '+(state.mode==='all'?'all recorded closures':state.mode==='onsets'?'starts · '+monthLabel(state.month):'dated restrictions · '+monthLabel(state.month));
+    $('map-note').textContent=(state.continent||'World')+' · '+(state.mode==='all'?'all recorded closures':state.mode==='onsets'?'starts · '+monthLabel(state.month):'border restrictions · '+monthLabel(state.month));
     $('month-label').textContent=state.mode==='all'?data.meta.window_start.slice(0,4)+'–'+data.meta.window_end.slice(0,4):monthLabel(state.month);$('month-slider').value=state.month;$('month-slider').setAttribute('aria-valuetext',monthLabel(state.month));
+    const progress=100*(state.month-Number($('month-slider').min))/(Number($('month-slider').max)-Number($('month-slider').min)||1);
+    $('month-slider').style.setProperty('--timeline-progress',progress+'%');
     $('month-slider').disabled=state.mode==='all';$('previous-button').disabled=state.mode==='all'||state.month<=Number($('month-slider').min);$('next-button').disabled=state.mode==='all'||state.month>=Number($('month-slider').max);
     $('include-excluded').disabled=state.mode!=='all';$('excluded-note').textContent=state.mode==='all'?'Excluded records are list-only and never animated.':'Excluded records are unavailable in timeline views.';
-    $('time-note').textContent=state.mode==='all'?'Full study period · Play to explore by month':state.mode==='onsets'?'Recorded starts in this month':'Dated restrictions · Unmarked does not mean open';
+    $('time-note').textContent=state.mode==='all'?'Full study period · Play to explore by month':state.mode==='onsets'?'Recorded starts in this month':'Border restrictions · Unmarked does not mean open';
     $('location-filter').hidden=!state.location;$('location-filter-label').textContent=state.location?'Linked to '+(locations.get(state.location)?.properties?.label||locations.get(state.location)?.properties?.name||state.location):'';
     const activeFilters=[state.region,state.rationale,state.measureType?C.measureLabel(state.measureType):'',({crossing_reference:'Sourced geography',context:'Context geography',unlocated:'Without a mapped location'})[state.precision],state.includeExcluded&&state.mode==='all'?'Including excluded records':''].filter(Boolean);
     $('filter-summary').textContent=activeFilters.join(' · ');$('filter-summary').hidden=!activeFilters.length;
@@ -311,7 +328,7 @@
     const location=locations.get(state.location);
     const scope=location?locationTitle(location.properties,state.location):state.query.trim()?'Search: “'+state.query.trim()+'”':state.continent||'World';
     $('records-heading').textContent=scope;
-    $('records-caption').textContent=visible.length+' matching record'+(visible.length===1?'':'s')+' · '+(state.mode==='all'?'All recorded closures':(state.mode==='onsets'?'Closures beginning':'Dated restrictions')+' · '+monthLabel(state.month));
+    $('records-caption').textContent=visible.length+' matching record'+(visible.length===1?'':'s')+' · '+(state.mode==='all'?'All recorded closures':(state.mode==='onsets'?'Closures beginning':'Border restrictions')+' · '+monthLabel(state.month));
   }
   function openRecords(){
     if(!data)return;stop();map.closePopup();
@@ -408,7 +425,14 @@
   $('search').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.isComposing&&compact()){e.preventDefault();e.currentTarget.blur();$('panel-scroll').scrollTop=0;scheduleViewport();}});
   $('search').addEventListener('focus',scheduleViewport);$('search').addEventListener('blur',scheduleViewport);
   $('precision').addEventListener('change',e=>{state.precision=e.target.value;resetList();render();});$('include-excluded').addEventListener('change',e=>{state.includeExcluded=e.target.checked;resetList();render();});$('show-more').addEventListener('click',()=>{listLimit+=50;renderList();});
-  $('play-button').addEventListener('click',()=>{if(!data)return;if(timer){stop();return;}if(state.mode==='all'){state.mode='intervals';$('time-mode').value='intervals';}if(state.month>=Number($('month-slider').max))state.month=Number($('month-slider').min);render();$('play-button').innerHTML=pauseIcon;$('play-button').title='Pause timeline';$('play-button').setAttribute('aria-label','Pause timeline');timer=setInterval(()=>{if(state.month>=Number($('month-slider').max)){stop();return;}changeMonth(state.month+1);},1400);});
+  $('play-button').addEventListener('click',()=>{
+    if(!data)return;if(timer){stop();return;}
+    if(state.mode==='all'){state.mode='intervals';$('time-mode').value='intervals';}
+    const min=Number($('month-slider').min),max=Number($('month-slider').max);
+    setPlayback(true);changeMonth(state.month>=max?min:state.month+1);
+    if(state.month>=max){stop();return;}
+    timer=setInterval(()=>{changeMonth(state.month+1);if(state.month>=max)stop();},1400);
+  });
   $('back-button').addEventListener('click',showBrowse);$('fit-button').addEventListener('click',fitRecords);$('clear-location').addEventListener('click',()=>{state.location='';resetList();render();});$('reset-button').addEventListener('click',()=>{stop();resetFilters();populateRegions();showBrowse();render();fitContinent();});
   $('read-records').addEventListener('click',openRecords);
   $('download-records').addEventListener('click',downloadRecords);$('download-reader-records').addEventListener('click',downloadRecords);
@@ -460,3 +484,4 @@
   window.AtlasData.ready().then(value=>{applyData(value);window.AtlasStartup?.ready();}).catch(err=>{window.AtlasStartup?.fail(err);$('result-context').textContent='The atlas could not be opened. Please try again.';notify(err.message);});
   window.BORDER_VIEWER={getData:()=>data,getState:()=>({...state}),getVisible:()=>visible.map(e=>e.id),load:applyData,map};
 })();
+

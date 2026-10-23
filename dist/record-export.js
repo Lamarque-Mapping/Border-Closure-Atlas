@@ -26,7 +26,7 @@
     return (period.contested?'Held / contested · ':'')+(period.period_id?period.period_id+': ':'')+'Start: '+bounds(period.start_earliest,period.start_latest)+'. '+endpoint;
   }
   function filterDescription(state,locationLabel){
-    const mode=state.mode==='all'?'All recorded closures':state.mode==='onsets'?'Closures beginning':'Dated restrictions';
+    const mode=state.mode==='all'?'All recorded closures':state.mode==='onsets'?'Closures beginning':'Border restrictions';
     const month=Number.isFinite(state.month)?String(Math.floor(state.month/12))+'-'+String(state.month%12+1).padStart(2,'0'):'';
     return [mode+(state.mode!=='all'&&month?' · '+month:''),state.query?.trim()?'Search: '+state.query.trim():'',
       state.continent?'Continent: '+state.continent:'',state.region?'Region: '+state.region:'',state.rationale?'Coded rationale: '+state.rationale:'',
@@ -55,3 +55,4 @@
   const api={build,download};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.BorderRecordExport=api;
 })(typeof window!=='undefined'?window:globalThis);
+
