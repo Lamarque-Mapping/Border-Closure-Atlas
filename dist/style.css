@@ -242,8 +242,9 @@ body[data-page="analysis"] #header-search-slot,body[data-page="briefing"] #heade
 .map-view-control{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:8px;margin:0 0 10px;font-size:11px;color:var(--muted)}
 .map-view-control select{margin:0;min-height:34px;width:100%;font-size:12px}
 .timeline,.panel-collapsed .timeline{padding:6px 10px}
-.timeline-controls{display:grid;grid-template-columns:36px 132px minmax(0,1fr) 34px 34px;align-items:center;gap:8px;margin-top:0}
-.timeline-date{font-size:13px;font-weight:600;line-height:1.3;color:var(--ink);white-space:nowrap;text-align:center}
+.timeline-controls{display:grid;grid-template-columns:36px 142px minmax(0,1fr) 56px 34px 34px;align-items:center;gap:8px;margin-top:0}
+.timeline-date{justify-self:center;font-size:13px;font-weight:600;line-height:1.3;color:var(--ink);white-space:nowrap;text-align:center;padding:5px 10px;border-radius:6px;background:#edf3ef;border:1px solid #dce7df;font-variant-numeric:tabular-nums}
+.timeline-speed{width:56px;min-width:0;min-height:34px;margin:0;padding:4px 6px;font-size:13px;line-height:1.3;color:var(--ink);background-color:#f8faf8;border:1px solid var(--line);border-radius:6px;cursor:pointer}
 .timeline-bottom{margin-top:3px}
 .play-button{position:relative;display:grid;place-items:center;isolation:isolate;touch-action:manipulation;-webkit-tap-highlight-color:transparent;box-shadow:0 2px 5px #244e4626;transition:transform .14s ease,background-color .18s ease,box-shadow .18s ease}
 .play-button svg{width:16px;height:16px}
@@ -264,7 +265,8 @@ body[data-page="analysis"] #header-search-slot,body[data-page="briefing"] #heade
 @media(prefers-reduced-motion:reduce){.play-button{transition:none}.play-button:active{transform:none}.play-button.is-playing::after{animation:none}#month-slider::-webkit-slider-thumb{transition:none}#month-slider::-moz-range-thumb{transition:none}}
 @media(min-width:761px) and (max-width:1100px){
  .detail-open .timeline-controls{grid-template-columns:36px minmax(0,1fr) 34px 34px;gap:4px 6px}
- .detail-open .timeline-date{grid-column:1/-1;grid-row:1}
+ .detail-open .timeline-date{grid-column:1/-1;grid-row:1;max-width:calc(100% - 130px)}
+ .detail-open .timeline-speed{grid-column:3/-1;grid-row:1;justify-self:end}
  .detail-open #play-button{grid-column:1;grid-row:2}
  .detail-open #month-slider{grid-column:2;grid-row:2}
  .detail-open #previous-button{grid-column:3;grid-row:2}
@@ -273,9 +275,13 @@ body[data-page="analysis"] #header-search-slot,body[data-page="briefing"] #heade
 @media(max-width:760px), (max-width:950px) and (max-height:500px){
  .map-view-control{font-size:12px}
  .map-view-control select{min-height:44px;font-size:16px}
- .timeline-controls,.detail-open .timeline-controls{grid-template-columns:48px minmax(0,1fr) 44px 44px;gap:3px 6px}
- .play-button{width:48px;height:48px}
- .timeline-date{grid-column:1/-1;grid-row:1;font-size:14px}
+ .timeline-controls,.detail-open .timeline-controls{grid-template-columns:44px minmax(0,1fr) 44px 44px;gap:3px 6px}
+ .play-button{width:44px;height:44px;border:2px solid transparent}
+ .play-button,.play-button:hover,.play-button.is-playing{background-clip:padding-box;border-color:transparent}
+ .play-button svg{width:14px;height:14px}
+ .play-button::after{inset:0}
+ .timeline-date{grid-column:1/-1;grid-row:1;font-size:14px;max-width:calc(100% - 130px)}
+ .timeline-speed,.detail-open .timeline-speed{grid-column:3/-1;grid-row:1;justify-self:end;width:56px;min-height:44px;font-size:16px}
  #play-button{grid-column:1;grid-row:2}
  #month-slider{grid-column:2;grid-row:2}
  #previous-button{grid-column:3;grid-row:2}

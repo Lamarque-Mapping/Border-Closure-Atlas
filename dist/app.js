@@ -30,7 +30,7 @@
   let desktopPanelOpen=true,desktopKeyOpen=true,viewportFrame=0,lastMapWidth=0,lastMapHeight=0;
   let labelLayer=null,labelsVisible=true;
   let data=null,events=[],locations=new Map(),locationEvents=new Map(),selected=null,cardLocation='',timer=null,noticeTimer=null,baseGroup=null,featureGroup=null,visible=[],listLimit=50;
-  let exportingRecords=false,recordsReturnFocus=null,recordsListScroll=0;
+  let exportingRecords=false,recordsReturnFocus=null,recordsListScroll=0,playbackRate=1;
   const state={query:'',region:'',rationale:'',location:'',continent:'',precision:'',measureType:'',includeExcluded:false,mode:'intervals',month:0};
   const continentViews={World:[[-55,-170],[75,180]],Africa:[[-36,-20],[38,54]],Europe:[[34,-25],[72,48]],Asia:[[-10,25],[74,150]],'North America':[[6,-168],[73,-50]],'South America':[[-56,-83],[14,-32]],Oceania:[[-50,110],[5,180]]};
   const precisionLabel=e=>({crossing_reference:'Sourced crossing / policy geography',policy_coverage:'Reviewed policy geography',frontier_context:'Border shown for reference',country_context:'Country outline shown for reference',unlocated:'Location not assigned',excluded:'Excluded · list only'}[C.precision(e)]||'Geography under review');
@@ -52,6 +52,10 @@
     button.classList.toggle('is-playing',playing);document.querySelector('.timeline').classList.toggle('is-playing',playing);
   }
   function stop(){if(timer)clearInterval(timer);timer=null;setPlayback(false);}
+  function schedulePlayback(){
+    if(timer)clearInterval(timer);
+    timer=setInterval(()=>{changeMonth(state.month+1);if(state.month>=Number($('month-slider').max))stop();},1400/playbackRate);
+  }
   function dateText(value){if(!value)return 'Unknown';const s=text(value);if(C.day(s)!==null)return new Date(s+'T00:00:00Z').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'});if(/^\d{4}-\d{2}$/.test(s)&&C.monthOrdinal(s)!==null)return monthLabel(C.monthOrdinal(s));return s;}
   function dateRange(e){return dateText(e.start)+' → '+dateText(e.end);}
   function pointLocations(e){return C.locationsFor(e,data).filter(id=>locations.get(id)?.geometry?.type==='Point');}
@@ -174,7 +178,7 @@
     $('record-count').textContent=visible.length.toLocaleString('en-GB');$('count-label').textContent=visible.length===1?'record':'records';$('mapped-count').textContent=mappedRecords+' with geography · '+unlocatedCount+' unlocated'+(excludedCount?' · '+excludedCount+' excluded':'');
     const modeLabel=state.mode==='all'?'Matching records across the full study period, including those without confirmed dates. These closures did not all happen at once.':state.mode==='onsets'?'Recorded starts in the selected month.':'Dated evidence overlapping part of this month. Ordered windows and intermittent regimes do not establish continuous closure. Possible date overlap is labelled.';
     $('result-context').textContent=modeLabel+(state.mode==='intervals'?' '+Number(data.meta.atlas_summary?.duration_reviewed_unresolved||0)+' records have no dated phase. Disputed evidence appears only at its recorded dates.':'')+' Coloured lines locate the matching records; they do not show approved closure extents. Unmarked borders are not necessarily open.';
-    $('map-note').textContent=(state.continent||'World')+' · '+(state.mode==='all'?'all recorded closures':state.mode==='onsets'?'starts · '+monthLabel(state.month):'border restrictions · '+monthLabel(state.month));
+    $('map-note').textContent=(state.continent||'World')+' · '+(state.mode==='all'?'all recorded closures':state.mode==='onsets'?'closures beginning':'border restrictions');
     $('month-label').textContent=state.mode==='all'?data.meta.window_start.slice(0,4)+'–'+data.meta.window_end.slice(0,4):monthLabel(state.month);$('month-slider').value=state.month;$('month-slider').setAttribute('aria-valuetext',monthLabel(state.month));
     const progress=100*(state.month-Number($('month-slider').min))/(Number($('month-slider').max)-Number($('month-slider').min)||1);
     $('month-slider').style.setProperty('--timeline-progress',progress+'%');
@@ -431,7 +435,11 @@
     const min=Number($('month-slider').min),max=Number($('month-slider').max);
     setPlayback(true);changeMonth(state.month>=max?min:state.month+1);
     if(state.month>=max){stop();return;}
-    timer=setInterval(()=>{changeMonth(state.month+1);if(state.month>=max)stop();},1400);
+    schedulePlayback();
+  });
+  $('playback-speed').addEventListener('change',event=>{
+    const rate=Number(event.target.value);playbackRate=[1,2,4,8].includes(rate)?rate:1;
+    if(timer)schedulePlayback();
   });
   $('back-button').addEventListener('click',showBrowse);$('fit-button').addEventListener('click',fitRecords);$('clear-location').addEventListener('click',()=>{state.location='';resetList();render();});$('reset-button').addEventListener('click',()=>{stop();resetFilters();populateRegions();showBrowse();render();fitContinent();});
   $('read-records').addEventListener('click',openRecords);
