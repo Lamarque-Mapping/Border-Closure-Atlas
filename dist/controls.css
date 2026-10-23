@@ -11,7 +11,10 @@
 .timeline-speed-control::after{content:'';position:absolute;top:calc(50% - 4px);right:9px;width:6px;height:6px;border-right:1.5px solid #62746a;border-bottom:1.5px solid #62746a;transform:rotate(45deg);pointer-events:none}
 #playback-speed{appearance:none;-webkit-appearance:none;display:block;width:100%;height:34px;min-height:34px;margin:0;padding:0 18px 0 9px;border:0;border-radius:var(--atlas-control-radius);background:transparent;color:var(--ink);font:500 14px/1.2 Atlas,Arial,sans-serif;font-variant-numeric:tabular-nums;cursor:pointer}
 @media(max-width:760px), (max-width:950px) and (max-height:500px){
- .map-status,.panel-toggle{min-height:44px}
+ /* Align the top edges of the zoom stack, status pill and Views button. */
+ .map-status,.panel-toggle{top:10px;min-height:44px}
+ .leaflet-top.leaflet-left{top:10px}
+ .leaflet-top.leaflet-left .leaflet-control-zoom{margin-top:0}
  .timeline-controls,.detail-open .timeline-controls{grid-template-columns:44px 44px minmax(0,1fr) 44px 44px;grid-template-areas:'date date date date date' 'play speed slider previous next';gap:4px 6px}
  .timeline-controls #play-button,.detail-open #play-button{grid-area:play}
  .timeline-controls #month-label,.detail-open #month-label{grid-area:date;justify-self:center;max-width:100%;min-height:36px;font-size:14px}
