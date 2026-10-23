@@ -42,7 +42,16 @@
   labelToggle.type='button';labelToggle.className='country-label-toggle';labelToggle.textContent='Country labels';
   labelToggle.setAttribute('aria-label','Country labels');labelToggle.setAttribute('aria-pressed','false');labelToggle.title='Show country labels';
   labelToggle.addEventListener('click',()=>{labelsVisible=!labelsVisible;labelToggle.setAttribute('aria-pressed',String(labelsVisible));labelToggle.title=labelsVisible?'Hide country labels':'Show country labels';renderLabels();});
-  L.DomEvent.disableClickPropagation(labelToggle);L.DomEvent.disableScrollPropagation(labelToggle);scaleControl.getContainer().append(labelToggle);
+  const mapButtons=document.createElement('div'),keyToggle=document.createElement('button'),keyDialog=$('mobile-map-key');
+  mapButtons.className='map-control-buttons';keyToggle.type='button';keyToggle.className='map-key-toggle';keyToggle.textContent='Map key';
+  keyToggle.setAttribute('aria-controls','mobile-map-key');keyToggle.setAttribute('aria-expanded','false');keyToggle.setAttribute('aria-haspopup','dialog');
+  const mobileKeyContent=$('map-key').querySelector('.map-key-content').cloneNode(true);
+  mobileKeyContent.querySelectorAll('[id]').forEach(element=>element.removeAttribute('id'));keyDialog.append(mobileKeyContent);
+  keyToggle.addEventListener('click',()=>{if(!compact())return;stop();map.closePopup();keyDialog.showModal();keyToggle.setAttribute('aria-expanded','true');});
+  $('mobile-map-key-close').addEventListener('click',()=>keyDialog.close());
+  keyDialog.addEventListener('click',event=>{if(event.target!==keyDialog)return;const box=keyDialog.getBoundingClientRect();if(event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom)keyDialog.close();});
+  keyDialog.addEventListener('close',()=>keyToggle.setAttribute('aria-expanded','false'));
+  mapButtons.append(keyToggle,labelToggle);L.DomEvent.disableClickPropagation(mapButtons);L.DomEvent.disableScrollPropagation(mapButtons);scaleControl.getContainer().append(mapButtons);
   map.attributionControl.addAttribution('Base geometry: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a> · Locations: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a> (<a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener noreferrer">ODbL</a>)');
   map.createPane('countryContext');map.getPane('countryContext').style.zIndex=405;map.createPane('referenceLines');map.getPane('referenceLines').style.zIndex=407;map.createPane('scope');map.getPane('scope').style.zIndex=410;map.createPane('points');map.getPane('points').style.zIndex=430;
   function notify(message){$('message').textContent=message;$('message').hidden=false;clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>$('message').hidden=true,6500);}
@@ -166,7 +175,7 @@
     const min=C.monthOrdinal(data.meta.window_start),max=C.monthOrdinal(data.meta.window_end);$('month-slider').min=min;$('month-slider').max=max;$('month-slider').value=min;$('last-month').textContent=monthLabel(max);
     const summary=data.meta.atlas_summary||{};
     const method=data.meta.research_method||{};
-    $('research-method').innerHTML='<h2>How was the research checked?</h2><p>The workbook was assembled and reviewed with AI assistance. The latest correction pass used six regional reviewers and a combined review, all using the same AI model. It has not received independent human verification. Unresolved questions remain visible in the records.</p><p>The inventory is incomplete and search coverage varies. A missing record does not establish that no closure occurred. The atlas cannot provide a global completeness rate or a total number of days that borders were closed.</p>';
+    $('research-method').innerHTML='<h2>How was the research checked?</h2><p>The dataset has been built and refined through 16 research cycles, repeated reviews across the dataset, and further checks focused on dates, missing events and unresolved evidence. Earlier work recorded three dataset-wide verification exercises. Other substantial reviews included 272 duration reassessments, a six-region sense check covering 686 records, and detailed follow-up on 371 evidence questions. The number and scope of checks vary between entries as the dataset has grown.</p>';
     const coverage=summary.chronology_coverage||{};
     $('release-method').innerHTML='<p><strong>'+(events.length-excludedCount)+' records are included</strong>; '+excludedCount+' further records are retained for inspection but excluded from the map and analysis. '+coverage.without_dated_evidence+' included records have no dated evidence.</p><p>Current workbook: '+escape(dateText(data.meta.snapshot_date))+'. <a href="downloads/Global_Border_Closures_Register_2016_2026.xlsx" download="Global_Border_Closures_Register_2016_2026.xlsx">Download the source workbook</a>.</p>';
 
@@ -454,7 +463,7 @@
   const showPage=page=>window.AtlasNavigation.show(page);
   let mapHasBeenVisible=!$('map-page').hidden;
   window.addEventListener('atlas:pagechange',event=>{
-    stop();if(event.detail.page!=='map'){if($('records-dialog').open)$('records-dialog').close();return;}scheduleViewport();
+    stop();if(event.detail.page!=='map'){if(keyDialog.open)keyDialog.close();if($('records-dialog').open)$('records-dialog').close();return;}scheduleViewport();
     if(!mapHasBeenVisible){mapHasBeenVisible=true;requestAnimationFrame(()=>{syncViewport();if(data)fitContinent();});}
   });
   $('save-view-button').addEventListener('click',async()=>{
@@ -471,6 +480,7 @@
   $('coding-note-button').addEventListener('click',()=>{showPage('briefing');requestAnimationFrame(()=>$('rationale-coding').scrollIntoView({behavior:'smooth',block:'center'}));});
   setPanelOpen(!compact());$('map-key').open=!compact();$('record-filters').open=false;
   compactMedia.addEventListener('change',()=>{
+    if(keyDialog.open)keyDialog.close();
     if(compact()){desktopKeyOpen=$('map-key').open;$('map-key').open=false;setPanelOpen(false);}
     else{$('map-key').open=desktopKeyOpen;setPanelOpen(desktopPanelOpen);}
     map.closePopup();scheduleViewport();
@@ -493,4 +503,5 @@
   window.AtlasData.ready().then(value=>{applyData(value);window.AtlasStartup?.ready();}).catch(err=>{window.AtlasStartup?.fail(err);$('result-context').textContent='The atlas could not be opened. Please try again.';notify(err.message);});
   window.BORDER_VIEWER={getData:()=>data,getState:()=>({...state}),getVisible:()=>visible.map(e=>e.id),load:applyData,map};
 })();
+
 

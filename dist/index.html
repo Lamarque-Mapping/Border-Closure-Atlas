@@ -7,7 +7,7 @@
   <title>Border closures · Global atlas</title>
   <link rel="stylesheet" href="vendor/leaflet.css">
   <link rel="stylesheet" href="style.css?v=20261023-views">
-  <link rel="stylesheet" href="controls.css?v=20261023-labels-right">
+  <link rel="stylesheet" href="controls.css?v=20261023-landscape-key">
 </head>
 <body class="atlas-pending">
   <a class="skip-link" href="#search">Skip to map controls</a>
@@ -68,6 +68,9 @@
           <div class="timeline-controls"><button id="play-button" class="play-button" aria-label="Play timeline" title="Play timeline"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5 13 8 4 13.5Z"/></svg></button><span id="month-label" class="timeline-date">Loading dates…</span><input type="range" id="month-slider" min="0" max="1" value="0" step="1" aria-label="Selected month"><span class="timeline-speed-control"><select id="playback-speed" class="timeline-speed" aria-label="Playback speed" title="Playback speed"><option value="1">1×</option><option value="2">2×</option><option value="4">4×</option><option value="8">8×</option></select></span><button class="step-button" id="previous-button" aria-label="Previous month">‹</button><button class="step-button" id="next-button" aria-label="Next month">›</button></div>
           <div class="timeline-bottom"><span id="time-note">Border Restrictions · Unmarked does not mean open</span><span id="last-month"></span></div>
         </div>
+    <dialog id="mobile-map-key" aria-labelledby="mobile-map-key-heading">
+      <header><h2 id="mobile-map-key-heading">Map key</h2><button id="mobile-map-key-close" type="button" aria-label="Close map key" autofocus>×</button></header>
+    </dialog>
     <dialog id="records-dialog" class="records-dialog" aria-labelledby="records-heading" aria-describedby="records-caption">
       <header class="records-heading"><div><h2 id="records-heading">Closure records</h2><p id="records-caption"></p></div><div class="records-tools"><button class="quiet" id="download-reader-records" type="button" title="Download all matching closure details as a CSV spreadsheet">Download CSV</button><button class="quiet" id="records-close" type="button">Back to map</button></div></header>
       <div class="records-body" id="records-body"></div>
@@ -105,7 +108,8 @@
   <script src="record-summary.js" defer></script>
   <script src="export.js" defer></script>
   <script src="record-export.js?v=20261023-polish" defer></script>
-  <script src="app.js?v=20261023-polish" defer></script>
+  <script src="app.js?v=20261023-map-key" defer></script>
 </body>
 </html>
+
 
