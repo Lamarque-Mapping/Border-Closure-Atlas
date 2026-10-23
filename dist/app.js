@@ -28,9 +28,9 @@
   const compactMedia=window.matchMedia('(max-width:760px), (max-width:950px) and (max-height:500px)');
   const compact=()=>compactMedia.matches;
   let desktopPanelOpen=true,desktopKeyOpen=true,viewportFrame=0,lastMapWidth=0,lastMapHeight=0;
-  let labelLayer=null,labelsVisible=true;
+  let labelLayer=null,labelsVisible=false;
   let data=null,events=[],locations=new Map(),locationEvents=new Map(),selected=null,cardLocation='',timer=null,noticeTimer=null,baseGroup=null,featureGroup=null,visible=[],listLimit=50;
-  let exportingRecords=false,recordsReturnFocus=null,recordsListScroll=0,playbackRate=1;
+  let exportingRecords=false,recordsReturnFocus=null,recordsListScroll=0,recordsPanelScroll=0,playbackRate=1;
   const state={query:'',region:'',rationale:'',location:'',continent:'',precision:'',measureType:'',includeExcluded:false,mode:'intervals',month:0};
   const continentViews={World:[[-55,-170],[75,180]],Africa:[[-36,-20],[38,54]],Europe:[[34,-25],[72,48]],Asia:[[-10,25],[74,150]],'North America':[[6,-168],[73,-50]],'South America':[[-56,-83],[14,-32]],Oceania:[[-50,110],[5,180]]};
   const precisionLabel=e=>({crossing_reference:'Sourced crossing / policy geography',policy_coverage:'Reviewed policy geography',frontier_context:'Border shown for reference',country_context:'Country outline shown for reference',unlocated:'Location not assigned',excluded:'Excluded · list only'}[C.precision(e)]||'Geography under review');
@@ -39,8 +39,8 @@
   const map=L.map('map',{preferCanvas:true,zoomControl:false,attributionControl:true,worldCopyJump:false,minZoom:.25,maxZoom:14,zoomSnap:.25}).setView([17,5],2);
   L.control.zoom({position:'topleft'}).addTo(map);
   const scaleControl=L.control.scale({imperial:false,position:'bottomleft'}).addTo(map),labelToggle=document.createElement('button');
-  labelToggle.type='button';labelToggle.className='country-label-toggle';labelToggle.innerHTML='<span aria-hidden="true">Aa</span> Labels';
-  labelToggle.setAttribute('aria-label','Country labels');labelToggle.setAttribute('aria-pressed','true');labelToggle.title='Hide country labels';
+  labelToggle.type='button';labelToggle.className='country-label-toggle';labelToggle.textContent='Country label';
+  labelToggle.setAttribute('aria-label','Country label');labelToggle.setAttribute('aria-pressed','false');labelToggle.title='Show country labels';
   labelToggle.addEventListener('click',()=>{labelsVisible=!labelsVisible;labelToggle.setAttribute('aria-pressed',String(labelsVisible));labelToggle.title=labelsVisible?'Hide country labels':'Show country labels';renderLabels();});
   L.DomEvent.disableClickPropagation(labelToggle);L.DomEvent.disableScrollPropagation(labelToggle);scaleControl.getContainer().append(labelToggle);
   map.attributionControl.addAttribution('Base geometry: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a> · Locations: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a> (<a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener noreferrer">ODbL</a>)');
@@ -112,6 +112,7 @@
     labelLayer.hidden=false;labelLayer.replaceChildren();
     for(const p of labelSpecs()){const el=document.createElement('span');el.className='country-label';el.textContent=p.text;el.style.left=p.x+'px';el.style.top=p.y+'px';el.style.fontSize=p.fontSize+'px';labelLayer.append(el);}
   }
+  function updatePanelTitle(active=Boolean(selected)){$('panel-title').textContent=active?'Full record':compact()?'Choose continent':state.continent||'World';}
   function setPanelOpen(open){
     $('map-page').classList.toggle('panel-collapsed',!open);$('panel-toggle').setAttribute('aria-expanded',String(open));
     $('explore-panel').setAttribute('aria-hidden',String(!open));$('explore-panel').inert=!open;
@@ -120,7 +121,7 @@
     $('collapse-panel').setAttribute('aria-label',compact()?'Back to map':'Minimize views and records');
     $('collapse-panel').title=compact()?'Back to map':'Minimize views and records';
     $('collapse-panel').textContent=compact()?'Back to map':'−';
-    scheduleViewport();
+    updatePanelTitle();scheduleViewport();
   }
   function viewPadding(extra=0){
     const page=$('map-page').getBoundingClientRect(),timeline=document.querySelector('.timeline').getBoundingClientRect();
@@ -162,7 +163,7 @@
     const excludedCount=events.filter(C.excluded).length;
     $('excluded-count').textContent='('+excludedCount+')';
     $('release-label').textContent=data.meta.window_start.slice(0,4)+'–'+data.meta.window_end.slice(0,4);document.title='Border closures · Global atlas';
-    const min=C.monthOrdinal(data.meta.window_start),max=C.monthOrdinal(data.meta.window_end);$('month-slider').min=min;$('month-slider').max=max;$('month-slider').value=min;$('first-month').textContent=monthLabel(min);$('last-month').textContent=monthLabel(max);
+    const min=C.monthOrdinal(data.meta.window_start),max=C.monthOrdinal(data.meta.window_end);$('month-slider').min=min;$('month-slider').max=max;$('month-slider').value=min;$('last-month').textContent=monthLabel(max);
     const summary=data.meta.atlas_summary||{};
     const method=data.meta.research_method||{};
     $('research-method').innerHTML='<h2>How was the research checked?</h2><p>The workbook was assembled and reviewed with AI assistance. The latest correction pass used six regional reviewers and a combined review, all using the same AI model. It has not received independent human verification. Unresolved questions remain visible in the records.</p><p>The inventory is incomplete and search coverage varies. A missing record does not establish that no closure occurred. The atlas cannot provide a global completeness rate or a total number of days that borders were closed.</p>';
@@ -178,7 +179,7 @@
     $('record-count').textContent=visible.length.toLocaleString('en-GB');$('count-label').textContent=visible.length===1?'record':'records';$('mapped-count').textContent=mappedRecords+' with geography · '+unlocatedCount+' unlocated'+(excludedCount?' · '+excludedCount+' excluded':'');
     const modeLabel=state.mode==='all'?'Matching records across the full study period, including those without confirmed dates. These closures did not all happen at once.':state.mode==='onsets'?'Recorded starts in the selected month.':'Dated evidence overlapping part of this month. Ordered windows and intermittent regimes do not establish continuous closure. Possible date overlap is labelled.';
     $('result-context').textContent=modeLabel+(state.mode==='intervals'?' '+Number(data.meta.atlas_summary?.duration_reviewed_unresolved||0)+' records have no dated phase. Disputed evidence appears only at its recorded dates.':'')+' Coloured lines locate the matching records; they do not show approved closure extents. Unmarked borders are not necessarily open.';
-    $('map-note').textContent=(state.continent||'World')+' · '+(state.mode==='all'?'all recorded closures':state.mode==='onsets'?'closures beginning':'border restrictions');
+    $('map-note').textContent=(state.continent||'World')+' · '+(state.mode==='all'?'all recorded closures':state.mode==='onsets'?'starts · '+monthLabel(state.month):'border restrictions · '+monthLabel(state.month));
     $('month-label').textContent=state.mode==='all'?data.meta.window_start.slice(0,4)+'–'+data.meta.window_end.slice(0,4):monthLabel(state.month);$('month-slider').value=state.month;$('month-slider').setAttribute('aria-valuetext',monthLabel(state.month));
     const progress=100*(state.month-Number($('month-slider').min))/(Number($('month-slider').max)-Number($('month-slider').min)||1);
     $('month-slider').style.setProperty('--timeline-progress',progress+'%');
@@ -188,7 +189,7 @@
     $('location-filter').hidden=!state.location;$('location-filter-label').textContent=state.location?'Linked to '+(locations.get(state.location)?.properties?.label||locations.get(state.location)?.properties?.name||state.location):'';
     const activeFilters=[state.region,state.rationale,state.measureType?C.measureLabel(state.measureType):'',({crossing_reference:'Sourced geography',context:'Context geography',unlocated:'Without a mapped location'})[state.precision],state.includeExcluded&&state.mode==='all'?'Including excluded records':''].filter(Boolean);
     $('filter-summary').textContent=activeFilters.join(' · ');$('filter-summary').hidden=!activeFilters.length;
-    $('panel-title').textContent=selected?'Full record':state.continent||'World';updateTabs();renderList();renderLocations();
+    updatePanelTitle();updateTabs();renderList();renderLocations();
     updateRecordsControls();
     if(selected&&!visible.some(e=>e.id===selected)){selected=null;showBrowse();}
   }
@@ -338,7 +339,7 @@
     if(!data)return;stop();map.closePopup();
     const dialog=$('records-dialog');
     updateRecordsControls();
-    if(!dialog.open){recordsReturnFocus=document.activeElement;$('records-body').appendChild($('panel-scroll'));dialog.showModal();$('records-close').focus();}
+    if(!dialog.open){recordsReturnFocus=document.activeElement;recordsPanelScroll=$('explore-panel').scrollTop;$('records-body').appendChild($('panel-scroll'));dialog.showModal();$('records-close').focus();}
     $('continent-panel').setAttribute('role','region');$('continent-panel').setAttribute('aria-labelledby','records-heading');
   }
   async function downloadRecords(){
@@ -357,7 +358,7 @@
   function setRecordView(active){
     $('map-page').classList.toggle('detail-open',active);
     $('browse-panel').hidden=active;$('detail-panel').hidden=!active;
-    $('panel-title').textContent=active?'Full record':state.continent||'World';
+    updatePanelTitle(active);
     const reading=$('records-dialog').open;
     $('continent-panel').setAttribute('role',active||reading?'region':'tabpanel');
     $('continent-panel').setAttribute('aria-labelledby',reading?'records-heading':active?'panel-title':'tab-'+(state.continent||'World').toLowerCase().replaceAll(' ','-'));
@@ -438,7 +439,7 @@
     schedulePlayback();
   });
   $('playback-speed').addEventListener('change',event=>{
-    const rate=Number(event.target.value);playbackRate=[1,2,4].includes(rate)?rate:1;
+    const rate=Number(event.target.value);playbackRate=[1,2,4,8].includes(rate)?rate:1;
     if(timer)schedulePlayback();
   });
   $('back-button').addEventListener('click',showBrowse);$('fit-button').addEventListener('click',fitRecords);$('clear-location').addEventListener('click',()=>{state.location='';resetList();render();});$('reset-button').addEventListener('click',()=>{stop();resetFilters();populateRegions();showBrowse();render();fitContinent();});
@@ -446,7 +447,7 @@
   $('download-records').addEventListener('click',downloadRecords);$('download-reader-records').addEventListener('click',downloadRecords);
   $('records-close').addEventListener('click',()=>$('records-dialog').close());
   $('records-dialog').addEventListener('close',()=>{
-    $('explore-panel').insertBefore($('panel-scroll'),$('map-key'));showBrowse();scheduleViewport();
+    $('explore-panel').insertBefore($('panel-scroll'),$('map-key'));showBrowse();$('explore-panel').scrollTop=recordsPanelScroll;scheduleViewport();
     if(!$('map-page').hidden){const target=recordsReturnFocus?.isConnected?recordsReturnFocus:$('map-page').classList.contains('panel-collapsed')?$('panel-toggle'):$('read-records');target.focus({preventScroll:true});}
     recordsReturnFocus=null;
   });

@@ -6,7 +6,7 @@
   <meta name="description" content="Explore documented border closures worldwide, their dates, affected movement and source evidence.">
   <title>Border closures · Global atlas</title>
   <link rel="stylesheet" href="vendor/leaflet.css">
-  <link rel="stylesheet" href="style.css?v=20261023-playback">
+  <link rel="stylesheet" href="style.css?v=20261023-views">
 </head>
 <body class="atlas-pending">
   <a class="skip-link" href="#search">Skip to map controls</a>
@@ -34,8 +34,8 @@
     <button class="panel-toggle" id="panel-toggle" aria-controls="explore-panel" aria-expanded="true">Views &amp; records</button>
     <aside class="sidebar" id="explore-panel" aria-label="Map views and closure records">
       <header class="panel-heading"><h2 id="panel-title">World</h2><button class="panel-close" id="collapse-panel" aria-label="Minimize views and records" title="Minimize views and records">−</button></header>
-      <div id="panel-search-slot"></div>
       <nav class="continent-tabs" id="continent-tabs" role="tablist" aria-label="Continents"></nav>
+      <div id="panel-search-slot"></div>
       <div class="panel-scroll" id="panel-scroll">
         <div id="continent-panel" role="tabpanel" aria-labelledby="tab-world">
         <div id="browse-panel">
@@ -64,8 +64,8 @@
     </aside>
     <div class="map-caption">Mapping by Hugh Lamarque <span aria-hidden="true">·</span> <a class="credit-contact" href="mailto:hugh.lamarque@gmail.com" aria-label="Email Hugh Lamarque">Contact</a></div>
         <div class="timeline">
-          <div class="timeline-controls"><button id="play-button" class="play-button" aria-label="Play timeline" title="Play timeline"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5 13 8 4 13.5Z"/></svg></button><span id="month-label" class="timeline-date">Loading dates…</span><input type="range" id="month-slider" min="0" max="1" value="0" step="1" aria-label="Selected month"><select id="playback-speed" class="timeline-speed" aria-label="Playback speed" title="Playback speed"><option value="1">1×</option><option value="2">2×</option><option value="4">4×</option></select><button class="step-button" id="previous-button" aria-label="Previous month">‹</button><button class="step-button" id="next-button" aria-label="Next month">›</button></div>
-          <div class="timeline-bottom"><span id="first-month"></span><span id="time-note">Border restrictions · Unmarked does not mean open</span><span id="last-month"></span></div>
+          <div class="timeline-controls"><button id="play-button" class="play-button" aria-label="Play timeline" title="Play timeline"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5 13 8 4 13.5Z"/></svg></button><span id="month-label" class="timeline-date">Loading dates…</span><input type="range" id="month-slider" min="0" max="1" value="0" step="1" aria-label="Selected month"><select id="playback-speed" class="timeline-speed" aria-label="Playback speed" title="Playback speed"><option value="1">1×</option><option value="2">2×</option><option value="4">4×</option><option value="8">8×</option></select><button class="step-button" id="previous-button" aria-label="Previous month">‹</button><button class="step-button" id="next-button" aria-label="Next month">›</button></div>
+          <div class="timeline-bottom"><span id="time-note">Border restrictions · Unmarked does not mean open</span><span id="last-month"></span></div>
         </div>
     <dialog id="records-dialog" class="records-dialog" aria-labelledby="records-heading" aria-describedby="records-caption">
       <header class="records-heading"><div><h2 id="records-heading">Closure records</h2><p id="records-caption"></p></div><div class="records-tools"><button class="quiet" id="download-reader-records" type="button" title="Download all matching closure details as a CSV spreadsheet">Download CSV</button><button class="quiet" id="records-close" type="button">Back to map</button></div></header>
@@ -104,7 +104,7 @@
   <script src="record-summary.js" defer></script>
   <script src="export.js" defer></script>
   <script src="record-export.js?v=20261023-playback" defer></script>
-  <script src="app.js?v=20261023-speed4" defer></script>
+  <script src="app.js?v=20261023-views" defer></script>
 </body>
 </html>
 
