@@ -1,0 +1,96 @@
+[
+  {
+    "pair": "KE-TZ",
+    "batch_role": "international_method_test",
+    "osm_data_timestamp": "2026-10-21T20:21:46Z",
+    "candidate_groups": 6,
+    "raw_contacts": 9,
+    "named_reference_entries": 7,
+    "association_status_counts": {
+      "supported_corridor": 4,
+      "provisional": 1,
+      "out_of_scope": 2
+    },
+    "topology_status_counts": {
+      "unresolved": 6
+    },
+    "loaded_boundary_members": 52,
+    "expected_boundary_members": 52,
+    "partial_boundary_geometry": false,
+    "candidates_outside_reference_sample": 0,
+    "provisional_component_candidates": 0,
+    "sourced_road_exception_count": 0,
+    "all_crossings_complete": false,
+    "automatic_event_links": 0
+  },
+  {
+    "pair": "DE-FR",
+    "batch_role": "international_method_test",
+    "osm_data_timestamp": "2026-10-20T20:23:47Z",
+    "candidate_groups": 21,
+    "raw_contacts": 39,
+    "named_reference_entries": 11,
+    "association_status_counts": {
+      "supported_corridor": 11
+    },
+    "topology_status_counts": {
+      "sustained_country_transition": 14,
+      "unresolved": 7
+    },
+    "loaded_boundary_members": 263,
+    "expected_boundary_members": 263,
+    "partial_boundary_geometry": false,
+    "candidates_outside_reference_sample": 10,
+    "provisional_component_candidates": 0,
+    "sourced_road_exception_count": 0,
+    "all_crossings_complete": false,
+    "automatic_event_links": 0
+  },
+  {
+    "pair": "MX-US",
+    "batch_role": "international_method_test",
+    "osm_data_timestamp": "2026-10-20T20:23:47Z",
+    "candidate_groups": 50,
+    "raw_contacts": 258,
+    "named_reference_entries": 27,
+    "association_status_counts": {
+      "supported_corridor": 27
+    },
+    "topology_status_counts": {
+      "sustained_country_transition": 28,
+      "unresolved": 22
+    },
+    "loaded_boundary_members": 202,
+    "expected_boundary_members": 202,
+    "partial_boundary_geometry": false,
+    "candidates_outside_reference_sample": 11,
+    "provisional_component_candidates": 3,
+    "sourced_road_exception_count": 1,
+    "all_crossings_complete": false,
+    "automatic_event_links": 0
+  },
+  {
+    "pair": "KE-SO",
+    "batch_role": "first_workbook_priority_regional_expansion",
+    "osm_data_timestamp": "2026-10-21T20:21:46Z",
+    "candidate_groups": 4,
+    "raw_contacts": 4,
+    "named_reference_entries": 4,
+    "association_status_counts": {
+      "supported_corridor": 2,
+      "provisional": 2
+    },
+    "topology_status_counts": {
+      "unresolved": 2,
+      "sustained_country_transition": 2
+    },
+    "loaded_boundary_members": 20,
+    "expected_boundary_members": 20,
+    "partial_boundary_geometry": false,
+    "candidates_outside_reference_sample": 0,
+    "provisional_component_candidates": 0,
+    "sourced_road_exception_count": 3,
+    "all_crossings_complete": false,
+    "automatic_event_links": 0
+  }
+]

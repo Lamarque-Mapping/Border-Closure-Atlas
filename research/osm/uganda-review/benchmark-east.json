@@ -1,0 +1,661 @@
+{
+  "scope": "Uganda–Kenya and Uganda–Tanzania named land crossings, plus a separate Malaba rail reference",
+  "researched_at": "2026-10-23",
+  "coverage_limitations": [
+    "This is a source-based reference benchmark, not a complete inventory of all physical or currently authorized border connections.",
+    "Source-verified means the named site is documented; it does not mean current operation, exact geometry or a closure-event link is verified.",
+    "Only the six core formal road sites provide a clearly bounded first benchmark; source dates and exact matching status remain separate.",
+    "not_found means no defensible association was established in this review, not that OSM contains no crossing or that extraction necessarily missed it.",
+    "Uganda and Kenya lists differ in scope; proposed, unstaffed and informal sites are retained outside the core formal-road denominator.",
+    "Lake ports and ferry routes require a separate inventory; they are not represented by all land-site records.",
+    "Opotpot is handled in the northern benchmark: the northern review found a dated NCIC report connecting it to the South Sudan border. It is not assigned to Kenya here.",
+    "Road mode for lesser-known immigration service points is provisional land-access classification where no road engineering evidence was found.",
+    "All checks are desk-based; no human field verification or independent survey was performed.",
+    "UNHCR coordinates are externally published reference positions. Their collection method, per-point observation date, accuracy and independence from OSM are undocumented; publication date is not observation date."
+  ],
+  "sources": [
+    {
+      "id": "E-KE-IMM",
+      "title": "Gazetted Ports of Entry and Exit (PoEs) and Location",
+      "url": "https://immigration.go.ke/gazetted-ports-of-entry-and-exit-poes-and-location/",
+      "publisher": "Kenya Directorate of Immigration Services",
+      "publication_date": null,
+      "retrieved_at": "2026-10-23",
+      "supports": "Lists Suam, Lwakhakha, Malaba and Busia as active land PoEs on the Uganda border.",
+      "notes": "Undated webpage; active is the publisher's displayed status at retrieval, not a reconstructed operational history."
+    },
+    {
+      "id": "E-KE-BMS",
+      "title": "Land PoEs",
+      "url": "https://bordersecretariat.go.ke/land-poes/",
+      "publisher": "Kenya Border Management Secretariat",
+      "publication_date": null,
+      "retrieved_at": "2026-10-23",
+      "supports": "Identifies Busia, Malaba, Lwakhakha and Suam as road clearance points on the Kenya-Uganda border.",
+      "notes": "The page repeats Busia and appears to mislabel Lwakhakha county; deduplicated using the more specific immigration list."
+    },
+    {
+      "id": "E-UG-IMM",
+      "title": "List of borders according to regions",
+      "url": "https://www.immigration.go.ug/list-borders-according-regions",
+      "publisher": "Uganda National Citizenship and Immigration Control",
+      "publication_date": null,
+      "retrieved_at": "2026-10-23",
+      "supports": "Lists eastern and northeastern immigration service points, including Kyebukube/Sona, Amudat, Nakabaat and Kamion; southern points include Mutukula, Kikagati and Bugango.",
+      "notes": "Service-point listing does not establish present staffing, legal status, exact coordinate or transport capacity. Mixed air, lake and land points; no completeness claim."
+    },
+    {
+      "id": "E-UG-NCIC-2024",
+      "title": "Vote Performance Report FY2023/24 Quarter 4: Vote 120 National Citizenship and Immigration Control",
+      "url": "https://budget.finance.go.ug/sites/default/files/Sector%20Spending%20Agency%20Budgets%20and%20Performance/National%20Citizenship%20and%20Immigration%20Control_15.pdf",
+      "publisher": "Uganda Ministry of Finance / NCIC",
+      "publication_date": "FY2023/24",
+      "retrieved_at": "2026-10-23",
+      "supports": "PDF page 10 names Kamion/Oropoi, Nakabat/Lokiriama and Amudat/Alakas and reports absent immigration staffing; later pages report construction and maintenance.",
+      "notes": "Evidence is dated to the reporting year. Construction or an entry in a budget report is not proof of current international operation."
+    },
+    {
+      "id": "E-KIDP3",
+      "title": "Third Karamoja Integrated Development Plan 2021/22–2025/26",
+      "url": "https://karamojaresilience.org/wp-content/uploads/2022/06/KIDP-Final-PDF.pdf",
+      "publisher": "Office of the Prime Minister, Ministry for Karamoja Affairs",
+      "publication_date": "2021/22–2025/26",
+      "retrieved_at": "2026-10-23",
+      "supports": "Printed pages 27–28 distinguish Alakas as a gazetted constructed border post from Lokiriama, which the plan says required gazetting; printed page 117 lists the Alakas–Kenya road.",
+      "notes": "Historical planning baseline, partly citing a 2018 Government/UNDP review; legal and staffing status may subsequently have changed."
+    },
+    {
+      "id": "E-KE-PROPOSED",
+      "title": "Proposed PoEs",
+      "url": "https://immigration.go.ke/proposed-poes/",
+      "publisher": "Kenya Directorate of Immigration Services",
+      "publication_date": null,
+      "retrieved_at": "2026-10-23",
+      "supports": "Lists Lokiriama, Konyao, Butebi and Mulwanda as proposed land PoEs on the Uganda border.",
+      "notes": "Proposed sites excluded from a denominator of currently operational formal crossings. Lokiriama overlaps a Ugandan reference location."
+    },
+    {
+      "id": "E-URA-OSBP",
+      "title": "One Stop Border Post",
+      "url": "https://ura.go.ug/en/import-export/one-stop-border-post/",
+      "publisher": "Uganda Revenue Authority",
+      "publication_date": null,
+      "retrieved_at": "2026-10-23",
+      "supports": "Identifies Busia, Malaba and Mutukula among Uganda's OSBPs and describes joint clearance arrangements.",
+      "notes": "Supports facility identity, not precise coordinates."
+    },
+    {
+      "id": "E-EAC-2017",
+      "title": "Presidents Magufuli and Museveni Launch Mutukula One-Stop Border Post",
+      "url": "https://www.eac.int/press-releases/150-infrastructure/888-presidentsmagufuli-and-museveni-launch-mutukula-one-stop-boder-post",
+      "publisher": "East African Community",
+      "publication_date": "2017-11-13",
+      "retrieved_at": "2026-10-23",
+      "supports": "Records the Mutukula road OSBP launch and identifies paired Busia/Busia, Malaba/Malaba and Mutukula/Mutukula sites; separately discusses earlier Malaba railway OSBP operations.",
+      "notes": "Road and railway references must be separated. The railway passage establishes historical existence, not current train operations."
+    },
+    {
+      "id": "E-AUPIDA-MALABA",
+      "title": "Malaba OSBP",
+      "url": "https://map.au-pida.org/projects/show/8570001",
+      "publisher": "African Union Programme for Infrastructure Development in Africa",
+      "publication_date": null,
+      "retrieved_at": "2026-10-23",
+      "supports": "Facility reference point [34.2693984,0.6327057] and Northern Corridor OSBP identity.",
+      "notes": "Project map point is about 550 m from the pilot road contact; it is a facility-area reference, not surveyed border-road intersection. Page displays operation stage dated 2022."
+    },
+    {
+      "id": "E-AUPIDA-MUTUKULA",
+      "title": "Mutukula OSBP",
+      "url": "https://map.au-pida.org/projects/show/3050001",
+      "publisher": "African Union Programme for Infrastructure Development in Africa",
+      "publication_date": null,
+      "retrieved_at": "2026-10-23",
+      "supports": "Facility reference point [31.416609317,-1.000284943] and Central Corridor OSBP identity.",
+      "notes": "Page displays operation stage dated 2022. Coordinates corroborate the principal Mutukula contact within about 40 m but do not resolve every adjacent lane."
+    },
+    {
+      "id": "E-UNHCR-2021",
+      "title": "Uganda: Refugee Locations and Border Points",
+      "url": "https://data.unhcr.org/en/documents/details/86907",
+      "publisher": "UNHCR",
+      "publication_date": "2021-05-20",
+      "retrieved_at": "2026-10-23",
+      "supports": "Border_Crossing worksheet rows 9, 10, 33 give Bugango, Kikagati and Mutukula names, coordinates and reported status.",
+      "notes": "Downloaded dataset SHA256 35087d843daf90287b90f62efed488f52c1bc204353748c60ed24fa26b013651. Its Bugango point differs by about 11 km from the OSM named-town road candidate; preserve conflict. No general Kenya-frontier inventory in this file; its Busia is in Koboko, a different location."
+    },
+    {
+      "id": "E-TZ-NAO",
+      "title": "Performance Audit on the Management of Invasive Alien Species in Terrestrial Environment",
+      "url": "https://www.nao.go.tz/uploads/Performance_Audit_on_the_Management_of_Invasive_Alien_Species_in_Terrestrial_Environment.pdf",
+      "publisher": "Tanzania Controller and Auditor General",
+      "publication_date": null,
+      "retrieved_at": "2026-10-23",
+      "supports": "PDF page 147 / printed 130 lists Murongo, Bugango, Mtukula and Kanyigo as road entry points in Kagera.",
+      "notes": "PDF retrieved and read directly after web parser timeout. Audit tables use 2022 evidence. Listing does not prove every site was staffed or legally open at all later dates."
+    },
+    {
+      "id": "E-TZ-POPCAB-2024",
+      "title": "Characterization of population connectivity for enhanced cross-border surveillance of yellow fever at Mutukula and Namanga borders in Tanzania",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11618027/",
+      "publisher": "Kakulu et al., IJID Regions; Tanzania Ministry of Health, NM-AIST and CDC research team",
+      "publication_date": "2024",
+      "retrieved_at": "2026-10-23",
+      "supports": "Primary fieldwork from July 2023 reports participants identifying Mutukula, Bugango, Kashenye, Minziro and Murongo as official PoEs; Kanyigo among unofficial routes.",
+      "notes": "DOI 10.1016/j.ijregi.2024.100476. These are fieldwork classifications, not a legal gazette. The article itself qualifies generalizability and subjective interpretation. Indexed article text inspected; direct PMC open returned a browser check."
+    },
+    {
+      "id": "E-UG-UBOS-2021",
+      "title": "Migration Report2021",
+      "url": "https://www.ubos.org/wp-content/uploads/publications/06_2022Migration_Report_2021.pdf",
+      "publisher": "Uganda Bureau of Statistics",
+      "publication_date": "2022",
+      "retrieved_at": "2026-10-23",
+      "supports": "Section 1.2.2 identifies Busia, Malaba, Suam, Lwakhakha and Sono; describes Sono as ungazetted at that time.",
+      "notes": "Relevant indexed passages inspected; direct PDF retrieval failed. Used as a dated corroborating lead, not sole source for accepted geometry."
+    }
+  ],
+  "crossings": [
+    {
+      "id": "UG-KE-BUSIA-ROAD",
+      "canonical_name": "Busia / Busia",
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Busia",
+        "Busia OSBP"
+      ],
+      "source_ids": [
+        "E-KE-IMM",
+        "E-KE-BMS",
+        "E-UG-IMM",
+        "E-URA-OSBP",
+        "E-EAC-2017"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-4d0fb0f28fe5d35f"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Official road facility identity agrees with OSM Customs Street/Kisumu-Busia Road. Named Busia car and truck control points lie on the intersecting route geometries (nodes 9072469038,9072469037,9072469017,9072472663), rather than merely in the surrounding town.",
+      "coordinate_status": "osm_geometry_identity_supported",
+      "notes": "Multiple control booths are components of one road crossing. Precise position remains an OSM-derived representative border contact; not a surveyed coordinate.",
+      "benchmark_role": "core_formal_road",
+      "operational_status": "Listed active on undated Kenya page; historical periods not inferred.",
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-KE-MALABA-ROAD",
+      "canonical_name": "Malaba / Malaba road crossing",
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Malaba",
+        "Malaba OSBP"
+      ],
+      "source_ids": [
+        "E-KE-IMM",
+        "E-KE-BMS",
+        "E-UG-IMM",
+        "E-URA-OSBP",
+        "E-EAC-2017",
+        "E-AUPIDA-MALABA"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-ea97afe8b2c493b9"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "Official OSBP name and Northern Corridor location agree broadly with the A109 Kenya Road bridge. AU-PIDA facility point is about 550 m away; original candidate also merges a private track bridge with the trunk bridge. Exact bridge/facility association requires adjudication.",
+      "coordinate_status": "facility_area_corroborated_exact_contact_unresolved",
+      "notes": "Keep road separate from the nearby metre-gauge railway. Do not assign the private-track restriction to all road traffic.",
+      "benchmark_role": "core_formal_road",
+      "external_coordinates": [
+        {
+          "source_id": "E-AUPIDA-MALABA",
+          "coordinate": [
+            34.2693984,
+            0.6327057
+          ],
+          "basis": "project facility map point"
+        }
+      ],
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-KE-LWAKHAKHA-ROAD",
+      "canonical_name": "Lwakhakha / Lwakhakha",
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Lwakhakha",
+        "Lwakhaka",
+        "Lwakhkha"
+      ],
+      "source_ids": [
+        "E-KE-IMM",
+        "E-KE-BMS",
+        "E-UG-IMM"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-fd6f356b6081e2e9"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Official named road crossing matches OSM bridge 607402412 named Mbale Lwakhkha on route C32; border-control node 2144233646 is 12 m from the contact and about 2 m from the bridge geometry.",
+      "coordinate_status": "osm_route_identity_supported",
+      "notes": "OSM route spelling preserved as an alias for lookup. No externally surveyed coordinate obtained.",
+      "benchmark_role": "core_formal_road",
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-KE-SUAM-ROAD",
+      "canonical_name": "Suam / Suam",
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Suam",
+        "Suam River",
+        "Suam OSBP"
+      ],
+      "source_ids": [
+        "E-KE-IMM",
+        "E-KE-BMS",
+        "E-UG-IMM"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-133f962f19b130e8"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "Official road post is verified. Pilot primary-road contact at Suam is a candidate, but lacks a named checkpoint or independently sourced exact position; nearby alternative minor-road contacts remain.",
+      "coordinate_status": "exact_contact_unresolved",
+      "notes": "The candidate uses an OSM primary road tagged dirt; do not infer that it represents the present OSBP alignment.",
+      "benchmark_role": "core_formal_road",
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-KE-MALABA-RAIL",
+      "canonical_name": "Malaba metre-gauge railway crossing",
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "mode": "rail",
+      "aliases": [
+        "Malaba railway",
+        "Malaba railway OSBP"
+      ],
+      "source_ids": [
+        "E-EAC-2017"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-d6ed2c4b739af025"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "EAC explicitly documents the railway OSBP separately from road clearance; pilot rail bridge 132240786 is tagged 1000 mm gauge. Exact historical facility extent and its relationship to the candidate remain to be checked.",
+      "coordinate_status": "osm_rail_contact_provisional",
+      "notes": "Historical existence verified; present service availability not assessed. A truck closure cannot be transferred to this railway solely from the shared name.",
+      "benchmark_role": "separate_mode_historical_reference",
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-KE-KYEBUKUBE-SONA-ROAD",
+      "canonical_name": "Kyebukube / Sona",
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Kyebukube",
+        "Sona",
+        "Sono"
+      ],
+      "source_ids": [
+        "E-UG-IMM",
+        "E-UG-UBOS-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Named by Uganda immigration; no defensible candidate association established from retained route/checkpoint evidence.",
+      "coordinate_status": "unresolved",
+      "notes": "Sono spelling comes from UBOS; equivalence to Sona is plausible but requires confirmation. Its2021 ungazetted description must not be converted into a present status.",
+      "benchmark_role": "additional_named_land_reference",
+      "alias_qualifications": {
+        "Sono": "probable spelling variant, not conclusively resolved"
+      },
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-KE-AMUDAT-ALAKAS-ROAD",
+      "canonical_name": "Amudat / Alakas border post",
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Amudat",
+        "Alakas"
+      ],
+      "source_ids": [
+        "E-UG-IMM",
+        "E-UG-NCIC-2024",
+        "E-KIDP3"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Government sources name the site and Alakas-Kenya road. Several minor-road contacts lie near the Alakas settlement; none is independently tied to the actual post.",
+      "coordinate_status": "unresolved",
+      "notes": "Amudat/Alakas in NCIC is a site/road naming pair; do not interpret it automatically as two national-side names. Staffing and gazetting descriptions are dated.",
+      "benchmark_role": "additional_named_land_reference",
+      "candidate_search_context_ids": [
+        "osm-19f7863ef043b008",
+        "osm-f28c8b81679411c9",
+        "osm-2bbfa8e08a9c466b"
+      ],
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-KE-NAKABAT-LOKIRIAMA-ROAD",
+      "canonical_name": "Nakabat / Lokiriama",
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Nakabat",
+        "Nakabaat",
+        "Lokiriama"
+      ],
+      "source_ids": [
+        "E-UG-IMM",
+        "E-UG-NCIC-2024",
+        "E-KIDP3",
+        "E-KE-PROPOSED"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Cross-border names documented by NCIC and Kenya lists Lokiriama as proposed. No exact candidate identity established.",
+      "coordinate_status": "unresolved",
+      "notes": "Reference location exists in sources; operating/formal status is unresolved across dated and proposed-site sources.",
+      "benchmark_role": "additional_named_land_reference",
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-KE-KAMION-OROPOI-ROAD",
+      "canonical_name": "Kamion / Oropoi",
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Kamion",
+        "Oropoi"
+      ],
+      "source_ids": [
+        "E-UG-IMM",
+        "E-UG-NCIC-2024"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "NCIC pairs the names; no candidate association independently established.",
+      "coordinate_status": "unresolved",
+      "notes": "Road/land reference inferred from border-post context; current transport capacity and staffing unverified.",
+      "benchmark_role": "additional_named_land_reference",
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-TZ-MUTUKULA-ROAD",
+      "canonical_name": "Mutukula / Mutukula",
+      "country_pair": [
+        "TZ",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Mutukula",
+        "Mtukula",
+        "Mutukula OSBP"
+      ],
+      "source_ids": [
+        "E-UG-IMM",
+        "E-URA-OSBP",
+        "E-EAC-2017",
+        "E-AUPIDA-MUTUKULA",
+        "E-UNHCR-2021",
+        "E-TZ-NAO"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-b67dd14fe01914d3"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "UNHCR border-post coordinate is 33 m from the pilot T4 trunk contact; AU-PIDA OSBP coordinate independently agrees within about 40 m. Official sources identify the paired road OSBP.",
+      "coordinate_status": "independent_reference_corroborated",
+      "notes": "The second trunk contact 132 m from the UNHCR point may be an adjacent facility lane; retained separately as a possible shared-facility component, not counted as a second verified crossing.",
+      "benchmark_role": "core_formal_road",
+      "possible_facility_component_candidate_ids": [
+        "osm-bed6cf622f6d3b35"
+      ],
+      "external_coordinates": [
+        {
+          "source_id": "E-UNHCR-2021",
+          "coordinate": [
+            31.416706,
+            -1.0
+          ],
+          "source_row": 33,
+          "reported_status": "Official"
+        },
+        {
+          "source_id": "E-AUPIDA-MUTUKULA",
+          "coordinate": [
+            31.416609317,
+            -1.000284943
+          ],
+          "basis": "project facility map point"
+        }
+      ],
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-TZ-KIKAGATI-MURONGO-ROAD",
+      "canonical_name": "Kikagati / Murongo",
+      "country_pair": [
+        "TZ",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Kikagati",
+        "Murongo"
+      ],
+      "source_ids": [
+        "E-UG-IMM",
+        "E-UNHCR-2021",
+        "E-TZ-NAO",
+        "E-TZ-POPCAB-2024"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-9a4391cf06604bbe"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "UNHCR Kikagati coordinate lies 36 m from the pilot primary-road bridge contact; Tanzania audit names Murongo as a road PoE. The matching border segment and transport mode support the paired reference.",
+      "coordinate_status": "independent_reference_corroborated",
+      "notes": "External coordinates are dated 2021; they corroborate identity, not uninterrupted operation over the closure-register period.",
+      "benchmark_role": "core_formal_road",
+      "external_coordinates": [
+        {
+          "source_id": "E-UNHCR-2021",
+          "coordinate": [
+            30.648244,
+            -1.065269
+          ],
+          "source_row": 10,
+          "reported_status": "Official"
+        }
+      ],
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-TZ-BUGANGO-ROAD",
+      "canonical_name": "Bugango",
+      "country_pair": [
+        "TZ",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Bugango"
+      ],
+      "source_ids": [
+        "E-UG-IMM",
+        "E-UNHCR-2021",
+        "E-TZ-NAO",
+        "E-TZ-POPCAB-2024"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-b373c7aac2358938"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "Government sources document Bugango. However, the UNHCR point 31.109511,-0.999067 lies roughly 11 km east of the major-road candidate 31.009233,-0.999995. Place identity or coordinate error is unresolved.",
+      "coordinate_status": "conflicting_external_coordinates",
+      "notes": "UNHCR 2021 calls its Bugango unofficial; later fieldwork calls Bugango official and Tanzania audit lists a road PoE. These may refer to different locations or changes; do not reconcile by assumption.",
+      "benchmark_role": "additional_named_land_reference",
+      "external_coordinates": [
+        {
+          "source_id": "E-UNHCR-2021",
+          "coordinate": [
+            31.109511,
+            -0.999067
+          ],
+          "source_row": 9,
+          "reported_status": "Unofficial"
+        }
+      ],
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-TZ-KASHENYE-ROAD",
+      "canonical_name": "Kashenye",
+      "country_pair": [
+        "TZ",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Kashenye"
+      ],
+      "source_ids": [
+        "E-TZ-POPCAB-2024"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Primary 2023 fieldwork identifies Kashenye as a PoE; pilot has several nearby road contacts but no sufficiently supported exact association.",
+      "coordinate_status": "unresolved",
+      "notes": "Official classification is a fieldwork report, not checked against current gazette. A secondary-road point 1.9 km from the settlement is not accepted merely for proximity.",
+      "benchmark_role": "fieldwork_named_reference",
+      "candidate_search_context_ids": [
+        "osm-5d8b75cb6efbc816",
+        "osm-20d650a979c62eee",
+        "osm-0cd40b654fb7abf5"
+      ],
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-TZ-MINZIRO-ROAD",
+      "canonical_name": "Minziro",
+      "country_pair": [
+        "TZ",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Minziro"
+      ],
+      "source_ids": [
+        "E-TZ-POPCAB-2024"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Primary 2023 fieldwork identifies Minziro among Tanzania-Uganda PoEs; no exact road contact confidently identified.",
+      "coordinate_status": "unresolved",
+      "notes": "Formal classification and motor-vehicle capacity need corroboration. No nearest-settlement geocoding accepted.",
+      "benchmark_role": "fieldwork_named_reference",
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-TZ-KANYIGO-ROAD",
+      "canonical_name": "Kanyigo",
+      "country_pair": [
+        "TZ",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Kanyigo"
+      ],
+      "source_ids": [
+        "E-TZ-NAO",
+        "E-TZ-POPCAB-2024"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Tanzania audit lists Kanyigo as a road entry point and 2023 fieldwork describes it as an unofficial Uganda-Tanzania route; exact alignment is unresolved.",
+      "coordinate_status": "unresolved",
+      "notes": "Preserve the source classification conflict; no conclusion that the crossing was open or closed.",
+      "benchmark_role": "additional_named_land_reference",
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    }
+  ],
+  "findings": [
+    "Kenya official pages agree on four main road sites; all have plausible pilot candidates, but only Busia and Lwakhakha have supported route-level matches in this review.",
+    "Mutukula and Kikagati have published UNHCR point corroboration within about 40 m; they are the strongest eastern coordinate checks.",
+    "Bugango has a material 11 km coordinate conflict. It remains unresolved even though several official/primary sources establish the place name.",
+    "The original Mutukula major-road count includes two contacts within one facility area; these should not automatically become two crossing records.",
+    "Malaba road and rail are separate reference entities. Neither proximity of customs objects nor shared name is sufficient to transfer a truck closure to the railway.",
+    "Alakas has minor-road candidates that a primary/secondary-only inventory would omit; the post itself still requires exact localization.",
+    "Kenya proposed PoEs Konyao, Butebi and Mulwanda are documented expansion leads; not accepted as currently functioning crossings in this batch."
+  ]
+}

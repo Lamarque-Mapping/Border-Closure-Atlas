@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-10-23T10:50:17.713030+00:00",
+  "country_code": "UG",
+  "source": {
+    "url": "https://download.geofabrik.de/africa/uganda-latest.osm.pbf",
+    "retrieved_at": "2026-10-23T10:02:43.799853+00:00",
+    "bytes": 371393447,
+    "sha256": "7814aee05bae0c7fd40c07b7f2a36a987f709e7b366dfc3e0f928c9b532ee320",
+    "last_modified": null,
+    "etag": null
+  },
+  "osm_data_timestamp": "2026-10-21T20:21:46Z",
+  "workbook_sha256": "3530415e136e81d20cc24b51b3a5c2739e6a529fc2484cc51c8861693ff33bf0",
+  "metric_crs": "+proj=aeqd +lat_0=1.37587935 +lon_0=32.2868705 +datum=WGS84 +units=m +no_defs +type=crs",
+  "boundary_ways_in_country_relation": 436,
+  "boundary_ways_loaded": 436,
+  "incomplete_way_ids": [],
+  "routes_inspected": 2095,
+  "raw_intersection_points": 53,
+  "candidate_count": 39,
+  "by_mode": {
+    "road": 39
+  },
+  "major_road_candidates": 37,
+  "tagged_controls_near_boundary": 26,
+  "linear_overlap_cases": 0,
+  "records_with_existing_points": 52,
+  "schema_version": 2,
+  "road_scope": "main",
+  "road_classes": [
+    "motorway",
+    "motorway_link",
+    "primary",
+    "primary_link",
+    "trunk",
+    "trunk_link"
+  ],
+  "targeted_road_exceptions": [
+    {
+      "crossing_id": "UG-KE-LWAKHAKHA-ROAD",
+      "reason": "One of the four principal Kenya–Uganda road entry posts in the official Kenya list; its mapped approach is secondary. Retain this documented major-post exception.",
+      "route_osm_ids": [
+        607402412
+      ],
+      "source_urls": [
+        "https://immigration.go.ke/gazetted-ports-of-entry-and-exit-poes-and-location/",
+        "https://bordersecretariat.go.ke/land-poes/",
+        "https://www.immigration.go.ug/list-borders-according-regions"
+      ]
+    },
+    {
+      "crossing_id": "UG-CD-BUSANZA-ROAD",
+      "reason": "Explicitly named in closure record GL13. Retain the two unresolved road-contact alternatives for targeted location review; this does not authorize a general minor-road survey.",
+      "route_osm_ids": [
+        836056805,
+        1083585614
+      ],
+      "source_urls": [
+        "https://data.unhcr.org/en/documents/details/86907",
+        "https://data.unhcr.org/en/documents/download/118063",
+        "https://www.gov.uk/foreign-travel-advice/uganda/regional-risks"
+      ]
+    }
+  ],
+  "include_nonroad": false,
+  "records_with_name_discovery_suggestions": 4,
+  "discovery_record_ids": [
+    "GL01",
+    "GL12",
+    "GL13",
+    "R4-AES-002"
+  ],
+  "records_with_pilot_candidate_links": 0,
+  "matched_record_ids": [],
+  "limits": [
+    "Pilot covers the supplied country extract only; it is not a global crossing inventory.",
+    "Geometric contacts are candidates, not proof of a legal, operational or historical crossing.",
+    "Nearby settlement names are separate from checkpoint names.",
+    "Road-only extraction omits informal pedestrian paths; rail and ferry candidates are separate.",
+    "OSM country relations may be incomplete in extracts; unresolved country pairs are flagged.",
+    "Current OSM geometry cannot establish which crossing was affected by a historical closure.",
+    "No candidate is added to the closure register or the displayed map."
+  ]
+}

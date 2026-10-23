@@ -1,0 +1,99 @@
+[
+  {
+    "candidate_id": "osm-05763abfabab501c",
+    "review_group_id": "review-25b88bb320449ac3",
+    "country_pair": [
+      "KE",
+      "SO"
+    ],
+    "mode": "road",
+    "is_major_road": false,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 1,
+    "raw_contact_count_original": 1,
+    "contact_status_counts": {
+      "unresolved": 1
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "frontier_endpoint_or_extract_edge"
+    ],
+    "raw_contact_ids": [
+      "raw-34359141-126924905-00000"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-2546bca60e485e95",
+    "review_group_id": "review-021d8b172066a298",
+    "country_pair": [
+      "KE",
+      "SO"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 1,
+    "raw_contact_count_original": 1,
+    "contact_status_counts": {
+      "sustained_country_transition": 1
+    },
+    "review_flags": [],
+    "raw_contact_ids": [
+      "raw-128370987-1201267309-00001"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-a363c30c1fad7755",
+    "review_group_id": "review-3c069372cefe5a9b",
+    "country_pair": [
+      "KE",
+      "SO"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 1,
+    "raw_contact_count_original": 1,
+    "contact_status_counts": {
+      "unresolved": 1
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation"
+    ],
+    "raw_contact_ids": [
+      "raw-701028822-261605196-00002"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-ef1abcfa1a6353c6",
+    "review_group_id": "review-1d1b80c0a3b16822",
+    "country_pair": [
+      "KE",
+      "SO"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 1,
+    "raw_contact_count_original": 1,
+    "contact_status_counts": {
+      "sustained_country_transition": 1
+    },
+    "review_flags": [],
+    "raw_contact_ids": [
+      "raw-1374443194-31316551-00003"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  }
+]

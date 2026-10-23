@@ -1,0 +1,588 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "osm-05763abfabab501c",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.55935186000169,
+          -1.65821411232758
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-05763abfabab501c",
+        "label": "Road–border contact near Shakani",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192798,
+            "name": "Kenya",
+            "iso2": "KE"
+          },
+          {
+            "osm_relation_id": 192799,
+            "name": "Somalia",
+            "iso2": "SO"
+          }
+        ],
+        "boundary_relation_provenance": [
+          192798,
+          192799
+        ],
+        "highway_classes": [
+          "tertiary"
+        ],
+        "road_tiers": [
+          "other"
+        ],
+        "route_osm_ids": [
+          34359141
+        ],
+        "boundary_osm_ids": [
+          126924905
+        ],
+        "route_names": [],
+        "route_refs": [
+          "E865"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              41.55935186000169,
+              -1.65821411232758
+            ],
+            "route_osm_id": 34359141,
+            "boundary_osm_id": 126924905
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Shakani",
+            "osm_id": 44915666,
+            "osm_url": "https://www.openstreetmap.org/node/44915666",
+            "distance_m": 608,
+            "place_type": "village",
+            "coordinate": [
+              41.554136,
+              -1.6598471
+            ]
+          },
+          {
+            "name": "Ras Kamboni",
+            "osm_id": 1404226796,
+            "osm_url": "https://www.openstreetmap.org/node/1404226796",
+            "distance_m": 3875,
+            "place_type": "village",
+            "coordinate": [
+              41.588518,
+              -1.639083
+            ]
+          },
+          {
+            "name": "Ishakani",
+            "osm_id": 10823977718,
+            "osm_url": "https://www.openstreetmap.org/node/10823977718",
+            "distance_m": 5452,
+            "place_type": "village",
+            "coordinate": [
+              41.526593,
+              -1.6948659
+            ]
+          },
+          {
+            "name": "Mado",
+            "osm_id": 1404226018,
+            "osm_url": "https://www.openstreetmap.org/node/1404226018",
+            "distance_m": 6430,
+            "place_type": "village",
+            "coordinate": [
+              41.568739,
+              -1.600835
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [
+          {
+            "record_id": "H01",
+            "names": [
+              [
+                "Ras Kamboni",
+                "nearby settlement"
+              ]
+            ],
+            "status": "discovery_only_not_event_link",
+            "transport_qualification": "Transport mode and affected movement require review",
+            "eligible_for_automatic_acceptance": false
+          }
+        ],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-2546bca60e485e95",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.989250121062256,
+          2.797804128068205
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-2546bca60e485e95",
+        "label": "Road–border contact near El Banda",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192798,
+            "name": "Kenya",
+            "iso2": "KE"
+          },
+          {
+            "osm_relation_id": 192799,
+            "name": "Somalia",
+            "iso2": "SO"
+          }
+        ],
+        "boundary_relation_provenance": [
+          192798,
+          192799
+        ],
+        "highway_classes": [
+          "secondary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          128370987
+        ],
+        "boundary_osm_ids": [
+          1201267309
+        ],
+        "route_names": [],
+        "route_refs": [],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              40.989250121062256,
+              2.7978041280682056
+            ],
+            "route_osm_id": 128370987,
+            "boundary_osm_id": 1201267309
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "El Banda",
+            "osm_id": 1404223734,
+            "osm_url": "https://www.openstreetmap.org/node/1404223734",
+            "distance_m": 2820,
+            "place_type": "village",
+            "coordinate": [
+              40.9951,
+              2.77299
+            ]
+          },
+          {
+            "name": "Elgolicha",
+            "osm_id": 10660720727,
+            "osm_url": "https://www.openstreetmap.org/node/10660720727",
+            "distance_m": 4766,
+            "place_type": "village",
+            "coordinate": [
+              40.9757259,
+              2.8387086
+            ]
+          },
+          {
+            "name": "El Hache",
+            "osm_id": 11284426370,
+            "osm_url": "https://www.openstreetmap.org/node/11284426370",
+            "distance_m": 6145,
+            "place_type": "village",
+            "coordinate": [
+              40.9399221,
+              2.7727694
+            ]
+          },
+          {
+            "name": "El Wak",
+            "osm_id": 45004341,
+            "osm_url": "https://www.openstreetmap.org/node/45004341",
+            "distance_m": 6812,
+            "place_type": "town",
+            "coordinate": [
+              40.9287789,
+              2.8076479
+            ]
+          },
+          {
+            "name": "Komorsido",
+            "osm_id": 1404232668,
+            "osm_url": "https://www.openstreetmap.org/node/1404232668",
+            "distance_m": 8079,
+            "place_type": "village",
+            "coordinate": [
+              40.9928847,
+              2.7248377
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-a363c30c1fad7755",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.994591833265886,
+          0.408990166162901
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-a363c30c1fad7755",
+        "label": "Road–border contact near Liboi",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192798,
+            "name": "Kenya",
+            "iso2": "KE"
+          },
+          {
+            "osm_relation_id": 192799,
+            "name": "Somalia",
+            "iso2": "SO"
+          }
+        ],
+        "boundary_relation_provenance": [
+          192798,
+          192799
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          701028822
+        ],
+        "boundary_osm_ids": [
+          261605196
+        ],
+        "route_names": [
+          "Afmadow - Dhobley Highway"
+        ],
+        "route_refs": [],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              40.994591833265886,
+              0.4089901661629009
+            ],
+            "route_osm_id": 701028822,
+            "boundary_osm_id": 261605196
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Liboi",
+            "osm_id": 44931340,
+            "osm_url": "https://www.openstreetmap.org/node/44931340",
+            "distance_m": 4835,
+            "place_type": "hamlet",
+            "coordinate": [
+              40.9520422,
+              0.4002038
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [
+          {
+            "record_id": "H01",
+            "names": [
+              [
+                "Liboi",
+                "nearby settlement"
+              ]
+            ],
+            "status": "discovery_only_not_event_link",
+            "transport_qualification": "Transport mode and affected movement require review",
+            "eligible_for_automatic_acceptance": false
+          }
+        ],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-ef1abcfa1a6353c6",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.87054715869063,
+          3.932727062511519
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-ef1abcfa1a6353c6",
+        "label": "Road–border contact near Beled Hawa بولاهاوا",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192798,
+            "name": "Kenya",
+            "iso2": "KE"
+          },
+          {
+            "osm_relation_id": 192799,
+            "name": "Somalia",
+            "iso2": "SO"
+          }
+        ],
+        "boundary_relation_provenance": [
+          192798,
+          192799
+        ],
+        "highway_classes": [
+          "secondary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          1374443194
+        ],
+        "boundary_osm_ids": [
+          31316551
+        ],
+        "route_names": [
+          "Garbahaarey - Bulahawa Road"
+        ],
+        "route_refs": [],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              41.87054715869062,
+              3.9327270625115194
+            ],
+            "route_osm_id": 1374443194,
+            "boundary_osm_id": 31316551
+          }
+        ],
+        "checkpoints": [
+          {
+            "osm_type": "n",
+            "osm_id": 14284208316,
+            "osm_version": 1,
+            "osm_timestamp": "2026-10-14 16:02:56+00:00",
+            "tags": {
+              "barrier": "border_control"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/14284208316",
+            "distance_m": 109,
+            "coordinate": [
+              41.869787,
+              3.9333486
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "n",
+            "osm_id": 14284208317,
+            "osm_version": 1,
+            "osm_timestamp": "2026-10-14 16:02:56+00:00",
+            "tags": {
+              "barrier": "border_control"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/14284208317",
+            "distance_m": 110,
+            "coordinate": [
+              41.8699293,
+              3.9335056
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "w",
+            "osm_id": 312793636,
+            "osm_version": 4,
+            "osm_timestamp": "2026-10-14 16:02:56+00:00",
+            "tags": {
+              "addr:city": "Mandera",
+              "addr:street": "Isiolo-Mandera Road",
+              "area": "yes",
+              "barrier": "border_control",
+              "name": "Mandera Border Control"
+            },
+            "osm_url": "https://www.openstreetmap.org/way/312793636",
+            "nodes": [
+              3186816719,
+              3186816720,
+              3186816721,
+              3186816722,
+              3186816719
+            ],
+            "position_method": "representative point on tagged way",
+            "distance_m": 167,
+            "coordinate": [
+              41.87140616093332,
+              3.933965327837288
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          }
+        ],
+        "nearby_settlements": [
+          {
+            "name": "Beled Hawa بولاهاوا",
+            "osm_id": 1404223191,
+            "osm_url": "https://www.openstreetmap.org/node/1404223191",
+            "distance_m": 695,
+            "place_type": "city",
+            "coordinate": [
+              41.874179,
+              3.92761
+            ]
+          },
+          {
+            "name": "Qansax Oomane",
+            "osm_id": 1404232878,
+            "osm_url": "https://www.openstreetmap.org/node/1404232878",
+            "distance_m": 1230,
+            "place_type": "village",
+            "coordinate": [
+              41.88157,
+              3.93381
+            ]
+          },
+          {
+            "name": "Mandera",
+            "osm_id": 44929726,
+            "osm_url": "https://www.openstreetmap.org/node/44929726",
+            "distance_m": 1598,
+            "place_type": "town",
+            "coordinate": [
+              41.8573239,
+              3.9384208
+            ]
+          },
+          {
+            "name": "Camp 2",
+            "osm_id": 1404223961,
+            "osm_url": "https://www.openstreetmap.org/node/1404223961",
+            "distance_m": 3117,
+            "place_type": "village",
+            "coordinate": [
+              41.888915,
+              3.9540407
+            ]
+          },
+          {
+            "name": "Camp 1",
+            "osm_id": 1404231724,
+            "osm_url": "https://www.openstreetmap.org/node/1404231724",
+            "distance_m": 4038,
+            "place_type": "village",
+            "coordinate": [
+              41.89493,
+              3.95981
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [
+          {
+            "record_id": "H01",
+            "names": [
+              [
+                "Belet Hawo",
+                "nearby settlement"
+              ],
+              [
+                "Mandera",
+                "nearby settlement"
+              ]
+            ],
+            "status": "discovery_only_not_event_link",
+            "transport_qualification": "Transport mode and affected movement require review",
+            "eligible_for_automatic_acceptance": false
+          },
+          {
+            "record_id": "H12",
+            "names": [
+              [
+                "Balad Hawo",
+                "nearby settlement"
+              ]
+            ],
+            "status": "discovery_only_not_event_link",
+            "transport_qualification": "Transport mode and affected movement require review",
+            "eligible_for_automatic_acceptance": false
+          }
+        ],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    }
+  ]
+}

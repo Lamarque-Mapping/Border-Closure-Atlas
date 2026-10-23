@@ -1,0 +1,683 @@
+{
+  "schema_version": 1,
+  "pair": [
+    "KE",
+    "SO"
+  ],
+  "reviewed_at": "2026-10-23",
+  "benchmark_scope": {
+    "name": "Kenya–Somalia strategic road and workbook-named reference benchmark",
+    "core_reference_count": 3,
+    "workbook_exception_reference_count": 1,
+    "background_reference_count": 0,
+    "selection_rule": "Three strategic crossings explicitly paired by Kenya MOD, plus Elwak named in H12.",
+    "main_road_filter": [
+      "motorway",
+      "motorway_link",
+      "trunk",
+      "trunk_link",
+      "primary",
+      "primary_link"
+    ],
+    "smaller_road_exceptions": [
+      {
+        "crossing_id": "KE-SO-MANDERA-ROAD",
+        "route_osm_ids": [
+          1374443194
+        ],
+        "status": "applied_in_scoped_extraction",
+        "allowlist_file": "../road_exception_proposals/KE-SO.json"
+      },
+      {
+        "crossing_id": "KE-SO-ELWAK-ROAD",
+        "route_osm_ids": [
+          128370987
+        ],
+        "status": "applied_in_scoped_extraction",
+        "allowlist_file": "../road_exception_proposals/KE-SO.json"
+      },
+      {
+        "crossing_id": "KE-SO-KIUNGA-ROAD",
+        "route_osm_ids": [
+          34359141
+        ],
+        "status": "applied_in_scoped_extraction",
+        "allowlist_file": "../road_exception_proposals/KE-SO.json"
+      }
+    ],
+    "targeted_exception_review": [
+      {
+        "crossing_id": "KE-SO-MANDERA-ROAD",
+        "basis": "Workbook names this crossing; a targeted lower-class approach may be reviewed if absent from main-road extraction.",
+        "record_ids": [
+          "H01",
+          "H12"
+        ],
+        "route_osm_ids": [
+          1374443194
+        ],
+        "review_status": "applied_in_scoped_extraction"
+      },
+      {
+        "crossing_id": "KE-SO-LIBOI-ROAD",
+        "basis": "Workbook names this crossing; a targeted lower-class approach may be reviewed if absent from main-road extraction.",
+        "record_ids": [
+          "H01"
+        ],
+        "route_osm_ids": [],
+        "review_status": "main_road_baseline_recovered_no_exception_needed"
+      },
+      {
+        "crossing_id": "KE-SO-KIUNGA-ROAD",
+        "basis": "Workbook names this crossing; a targeted lower-class approach may be reviewed if absent from main-road extraction.",
+        "record_ids": [
+          "H01"
+        ],
+        "route_osm_ids": [
+          34359141
+        ],
+        "review_status": "applied_in_scoped_extraction"
+      },
+      {
+        "crossing_id": "KE-SO-ELWAK-ROAD",
+        "basis": "Workbook names this crossing; a targeted lower-class approach may be reviewed if absent from main-road extraction.",
+        "record_ids": [
+          "H12"
+        ],
+        "route_osm_ids": [
+          128370987
+        ],
+        "review_status": "applied_in_scoped_extraction"
+      }
+    ],
+    "is_exhaustive_crossing_inventory": false,
+    "denominator_note": "Three strategic corridors and one workbook-driven identity target; not four established open gates.",
+    "limits": [
+      "No minor-road census.",
+      "Declared formal entry status and actual movement can diverge; neither derives from OSM.",
+      "Mandera/Liboi published map points are approximate references with unknown measurement quality.",
+      "Country pair must be checked independently around the Mandera tripoint; Doolow is out of scope."
+    ]
+  },
+  "workbook_sha256": "3530415e136e81d20cc24b51b3a5c2739e6a529fc2484cc51c8861693ff33bf0",
+  "sources": [
+    {
+      "source_id": "KE-SO-MOD-2023",
+      "url": "https://www.mod.go.ke/our-community/cs-duale-leads-high-profile-delegation-seeking-to-reopen-kenya-somalia-border/",
+      "title": "CS Duale leads high-profile delegation seeking to reopen Kenya-Somalia border",
+      "publisher": "Kenya Ministry of Defence",
+      "date": "2023-05-15",
+      "retrieved_at": "2026-10-23",
+      "claims": [
+        "Names Mandera–Bulahawa, Liboi–Dhobley and Kiunga–Ras Kamboni as three strategic crossings in the reopening talks.",
+        "Planned reopening and porous-border movement are distinguished from formal closure; this is not evidence that reopening occurred."
+      ],
+      "access": "full page"
+    },
+    {
+      "source_id": "KE-SO-IMM-PORTS",
+      "url": "https://immigration.go.ke/gazetted-ports-of-entry-and-exit-poes-and-location/",
+      "title": "Gazetted Ports of Entry and Exit (PoEs) and Location",
+      "publisher": "Kenya Directorate of Immigration Services",
+      "date": null,
+      "retrieved_at": "2026-10-23",
+      "claims": [
+        "Lists Mandera, Liboi and Kiunga under the Somalia frontier as land entries, each marked closed."
+      ],
+      "access": "full page",
+      "date_basis": "Undated directory; no per-point observation date or assurance of current operations."
+    },
+    {
+      "source_id": "KE-SO-IMM-PROPOSED",
+      "url": "https://immigration.go.ke/proposed-poes/",
+      "title": "Proposed PoEs",
+      "publisher": "Kenya Directorate of Immigration Services",
+      "date": null,
+      "retrieved_at": "2026-10-23",
+      "claims": [
+        "Lists Elwak as a proposed land entry on the Somalia frontier, in Mandera County."
+      ],
+      "access": "full page",
+      "date_basis": "Undated directory; proposed status is preserved, not promoted to a currently operating formal gate."
+    },
+    {
+      "source_id": "KE-SO-KENHA-MANDERA",
+      "url": "https://kenha.co.ke/wp-content/uploads/2023/11/TOR-for-Rhamu-and-Mandera-OSBP-KRA-Accomodation-units.pdf",
+      "title": "Terms of Reference for Rhamu and Mandera OSBPs and KRA accommodation",
+      "publisher": "Kenya National Highways Authority",
+      "date": "2023-11",
+      "retrieved_at": "2026-10-23",
+      "claims": [
+        "Page 2 distinguishes Mandera as a Somalia crossing from Rhamu on the Ethiopia frontier; describes an existing gazetted Mandera station and proposed OSBP development."
+      ],
+      "date_precision": "month",
+      "access": "full official PDF",
+      "locator": "PDF page 3, printed page 2"
+    },
+    {
+      "source_id": "KE-SO-KENHA-A13",
+      "url": "https://kenha.co.ke/isiolo-modogashe-wajir-elwak-rhamu-manderaa13/",
+      "title": "Isiolo–Modogashe–Wajir–Elwak–Rhamu–Mandera (A13)",
+      "publisher": "Kenya National Highways Authority",
+      "date": null,
+      "retrieved_at": "2026-10-23",
+      "claims": [
+        "Identifies A13 as the approach corridor through Elwak and Mandera. It does not identify the final international gate spur or prove that A13 itself crosses the frontier."
+      ],
+      "access": "full page"
+    },
+    {
+      "source_id": "KE-SO-KENHA-A3",
+      "url": "https://kenha.co.ke/wp-content/uploads/2021/07/HoAGDP_GARISA_LIBOI_REOI_TOR_Doc.pdf",
+      "title": "Horn of Africa Gateway Development Project: Madogo–Garissa–Dadaab–Liboi–Harhar A3 road",
+      "publisher": "Kenya National Highways Authority",
+      "date": "2021",
+      "retrieved_at": "2026-10-23",
+      "claims": [
+        "Defines the A3 corridor to Liboi/Harhar border-post town. Describes unpaved/earth-road conditions in 2021, showing national-road importance is not equivalent to paved width."
+      ],
+      "date_precision": "year",
+      "access": "full official PDF",
+      "locator": "PDF pages 1–4",
+      "date_basis": "Tender KeNHA/2414/2021; no current road-condition assertion."
+    },
+    {
+      "source_id": "KE-SO-GAROWE-H12",
+      "url": "https://www.garoweonline.com/en/news/somalia/somalia-closes-land-border-with-kenya-to-rein-in-coronavirus-cases",
+      "title": "Somalia closes common border with Kenya to rein in coronavirus cases",
+      "publisher": "Garowe Online",
+      "date": "2020-04-11",
+      "retrieved_at": "2026-10-23",
+      "claims": [
+        "Reports Gedo authorities naming Balad-Hawo and Elwak as Kenya–Somalia entries, and separately Doolow as the Ethiopia entry."
+      ],
+      "access": "full page",
+      "source_type": "Original reporting of governor statement; used for workbook identity and country-pair distinction, not independent coordinate evidence."
+    },
+    {
+      "source_id": "KE-SO-KRA-2020",
+      "url": "https://www.kra.go.ke/images/publications/KRA-Financial-Statement-for-FY-2019-2020.pdf",
+      "title": "KRA Financial Statements FY 2019–2020",
+      "publisher": "Kenya Revenue Authority / Auditor-General",
+      "date": "2020",
+      "retrieved_at": "2026-10-23",
+      "claims": [
+        "Lists an Elwak land allocation for a proposed OSBP. Institutional designation/project status does not establish present operation."
+      ],
+      "date_precision": "year",
+      "access": "indexed official PDF excerpt",
+      "date_basis": "Financial year end; publication date not established."
+    },
+    {
+      "source_id": "KE-SO-PIDA-2024",
+      "url": "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+      "title": "One-Stop Border Post (OSBP) Status Report",
+      "publisher": "AUDA-NEPAD and JICA",
+      "date": "2024",
+      "retrieved_at": "2026-10-23",
+      "claims": [
+        "Appendix A gives Liboi E38 [longitude 40.99437, latitude 0.40898] and Mandera E40 [41.85729, 3.96209].",
+        "These illustrative map-legend points have no documented accuracy, datum, collection date or independence from OSM."
+      ],
+      "date_precision": "year",
+      "publication_context_url": "https://au-pida.org/events/resources/",
+      "date_basis": "Report published among PIDA Week 2024 resources; PDF creation metadata 2024-11-05 does not establish point observation dates.",
+      "access": "Full 84-page PDF downloaded; Appendix A extracted locally and corroborated by indexed source text.",
+      "sha256": "35e1b5d512bfc882baf263b1abe002d0c99331d0b2b8e08fcb0f354ab504cbed",
+      "bytes": 11923818,
+      "locator": "Appendix A, printed page 79 / PDF page 81, E38 and E40",
+      "coordinate_origin_independence": "unknown"
+    },
+    {
+      "source_id": "KE-SO-EUAA-GEDO-2025",
+      "url": "https://www.euaa.europa.eu/coi/somalia/2025/security-situation/21-jubbaland/211-gedo",
+      "title": "Somalia: Security Situation — 2.1.1. Gedo",
+      "publisher": "European Union Agency for Asylum",
+      "date": "2025-05",
+      "date_precision": "month",
+      "retrieved_at": "2026-10-23",
+      "claims": [
+        "The Gedo background section identifies Ceel Waaq as also written El Waq/El Wak, and Belet Xaawo as Bulo Hawa.",
+        "Used only for place-name reconciliation; does not identify an exact gate coordinate, current opening status or historical closure scope."
+      ],
+      "access": "Full official 2025 report section",
+      "locator": "Section 2.1.1(a), Background; district-name paragraph"
+    },
+    {
+      "source_id": "KE-SO-MANDERA-ELWAK-PLAN-2022",
+      "url": "https://manderaassembly.go.ke/storage/downloads/February2026/iwuIJtN8IJPKzet3GSa1.pdf",
+      "title": "Elwak Municipality Integrated Development Plan 2022–2026",
+      "publisher": "Elwak Municipality / County Government of Mandera; hosted by Mandera County Assembly",
+      "date": "2022-02",
+      "date_basis": "Cover month; upload path says February2026, which is not the document date.",
+      "retrieved_at": "2026-10-23",
+      "claims": [
+        "Printed page 3 (PDF page 16) locates El-Wak town at 2°48′34″N, 40°56′9″E and describes its Kenya–Somalia border setting.",
+        "The coordinate is a town reference, not a surveyed border gate; it supports regional identity only."
+      ]
+    },
+    {
+      "source_id": "KE-SO-RUSI-KIUNGA",
+      "url": "https://www.rusi.org/explore-our-research/closed-projects/deris-wanaag-kenya-somalia-ethiopia-borderlands-project",
+      "title": "Deris Wanaag: The Kenya-Somalia-Ethiopia Borderlands Project",
+      "publisher": "Royal United Services Institute",
+      "date": null,
+      "date_basis": "Undated project page; retrieved version describes 2023–2026 research.",
+      "retrieved_at": "2026-10-23",
+      "claims": [
+        "The institution’s own research project names the Kiunga–Ishakani–Ras Kamboni cross-border area.",
+        "This is a regional identity source; it does not establish a gate coordinate or current vehicle access."
+      ]
+    }
+  ],
+  "crossings": [
+    {
+      "crossing_id": "KE-SO-MANDERA-ROAD",
+      "country_pair": [
+        "KE",
+        "SO"
+      ],
+      "name": "Mandera / Belet Hawo",
+      "aliases": [
+        "Mandera",
+        "Belet Hawo",
+        "Belet Xaawo",
+        "Balad Hawo",
+        "Balad-Hawo",
+        "Bulahawa",
+        "Bulo Hawa"
+      ],
+      "mode": "road",
+      "transport_mode_evidence": {
+        "classification": "documented_land_corridor",
+        "source_ids": [
+          "KE-SO-MOD-2023",
+          "KE-SO-IMM-PORTS",
+          "KE-SO-KENHA-A13",
+          "KE-SO-KENHA-MANDERA",
+          "KE-SO-PIDA-2024",
+          "KE-SO-GAROWE-H12"
+        ],
+        "formal_current_vehicle_access": "not_reverified"
+      },
+      "road_refs": [
+        "A13"
+      ],
+      "road_ref_evidence": [
+        {
+          "country": "KE",
+          "ref": "A13",
+          "source_id": "KE-SO-KENHA-A13",
+          "role": "approach corridor; exact international gate spur unverified"
+        }
+      ],
+      "road_corridors": [
+        "Isiolo–Wajir–Elwak–Rhamu–Mandera approach"
+      ],
+      "source_ids": [
+        "KE-SO-MOD-2023",
+        "KE-SO-IMM-PORTS",
+        "KE-SO-KENHA-A13",
+        "KE-SO-KENHA-MANDERA",
+        "KE-SO-PIDA-2024",
+        "KE-SO-GAROWE-H12"
+      ],
+      "reference_coordinate": [
+        41.85729,
+        3.96209
+      ],
+      "coordinate_order": "longitude, latitude",
+      "coordinate_basis": {
+        "source_id": "KE-SO-PIDA-2024",
+        "locator": "Appendix A, printed page 79 / PDF page 81, E40",
+        "point_role": "published illustrative border-post map-legend location",
+        "observation_date": null,
+        "accuracy_metres": null,
+        "datum": null,
+        "independence_from_osm": "unknown",
+        "exact_frontier_gate_established": false
+      },
+      "benchmark_role": "core_strategic_road_reference",
+      "benchmark_eligible": true,
+      "identity_status": "documented_named_corridor",
+      "geometry_status": "supported_corridor_reference",
+      "operational_status": {
+        "current_verified": false,
+        "source_assertion": "closed in undated immigration directory; 2023 MOD reopening proposal is not a completion record",
+        "source_id": "KE-SO-IMM-PORTS",
+        "observation_date": null
+      },
+      "named_in_workbook_record_ids": [
+        "H01",
+        "H12"
+      ],
+      "accepted_event_links": [],
+      "notes": [
+        "Workbook name permits targeted route investigation if the main-road filter misses this corridor; no blanket smaller-road inclusion.",
+        "Present geography, historical closure scope and formal operational status remain separate.",
+        "Do not substitute nearby Ethiopia frontier contacts at Rhamu, Doolow or Suftu."
+      ],
+      "association_file": "../associations/KE-SO.json",
+      "exact_gate_verified": false
+    },
+    {
+      "crossing_id": "KE-SO-LIBOI-ROAD",
+      "country_pair": [
+        "KE",
+        "SO"
+      ],
+      "name": "Liboi / Dhobley",
+      "aliases": [
+        "Liboi",
+        "Harhar",
+        "Dhobley",
+        "Dhoobley"
+      ],
+      "mode": "road",
+      "transport_mode_evidence": {
+        "classification": "documented_land_corridor",
+        "source_ids": [
+          "KE-SO-MOD-2023",
+          "KE-SO-IMM-PORTS",
+          "KE-SO-KENHA-A3",
+          "KE-SO-PIDA-2024"
+        ],
+        "formal_current_vehicle_access": "not_reverified"
+      },
+      "road_refs": [
+        "A3"
+      ],
+      "road_ref_evidence": [
+        {
+          "country": "KE",
+          "ref": "A3",
+          "source_id": "KE-SO-KENHA-A3",
+          "role": "approach corridor; exact international gate spur unverified"
+        }
+      ],
+      "road_corridors": [
+        "Garissa–Dadaab–Liboi/Harhar–Dhobley"
+      ],
+      "source_ids": [
+        "KE-SO-MOD-2023",
+        "KE-SO-IMM-PORTS",
+        "KE-SO-KENHA-A3",
+        "KE-SO-PIDA-2024"
+      ],
+      "reference_coordinate": [
+        40.99437,
+        0.40898
+      ],
+      "coordinate_order": "longitude, latitude",
+      "coordinate_basis": {
+        "source_id": "KE-SO-PIDA-2024",
+        "locator": "Appendix A, printed page 79 / PDF page 81, E38",
+        "point_role": "published illustrative border-post map-legend location",
+        "observation_date": null,
+        "accuracy_metres": null,
+        "datum": null,
+        "independence_from_osm": "unknown",
+        "exact_frontier_gate_established": false
+      },
+      "benchmark_role": "core_strategic_road_reference",
+      "benchmark_eligible": true,
+      "identity_status": "documented_named_corridor",
+      "geometry_status": "supported_corridor_reference",
+      "operational_status": {
+        "current_verified": false,
+        "source_assertion": "closed in undated immigration directory; 2023 MOD reopening proposal is not a completion record",
+        "source_id": "KE-SO-IMM-PORTS",
+        "observation_date": null
+      },
+      "named_in_workbook_record_ids": [
+        "H01"
+      ],
+      "accepted_event_links": [],
+      "notes": [
+        "Workbook name permits targeted route investigation if the main-road filter misses this corridor; no blanket smaller-road inclusion.",
+        "Present geography, historical closure scope and formal operational status remain separate.",
+        "The identity of inland facilities versus the frontier crossing needs specific review."
+      ],
+      "association_file": "../associations/KE-SO.json",
+      "exact_gate_verified": false
+    },
+    {
+      "crossing_id": "KE-SO-KIUNGA-ROAD",
+      "country_pair": [
+        "KE",
+        "SO"
+      ],
+      "name": "Kiunga / Ras Kamboni",
+      "aliases": [
+        "Kiunga",
+        "Ras Kamboni",
+        "Ras Kiamboni"
+      ],
+      "mode": "road",
+      "transport_mode_evidence": {
+        "classification": "documented_land_corridor",
+        "source_ids": [
+          "KE-SO-MOD-2023",
+          "KE-SO-IMM-PORTS"
+        ],
+        "formal_current_vehicle_access": "not_reverified"
+      },
+      "road_refs": [],
+      "road_ref_evidence": [],
+      "road_corridors": [
+        "Kiunga–Ras Kamboni named strategic corridor"
+      ],
+      "source_ids": [
+        "KE-SO-MOD-2023",
+        "KE-SO-IMM-PORTS",
+        "KE-SO-RUSI-KIUNGA"
+      ],
+      "reference_coordinate": null,
+      "coordinate_order": "longitude, latitude",
+      "coordinate_basis": null,
+      "benchmark_role": "core_strategic_road_reference",
+      "benchmark_eligible": true,
+      "identity_status": "documented_named_corridor",
+      "geometry_status": "provisional_corridor_reference",
+      "operational_status": {
+        "current_verified": false,
+        "source_assertion": "closed in undated immigration directory; 2023 MOD reopening proposal is not a completion record",
+        "source_id": "KE-SO-IMM-PORTS",
+        "observation_date": null
+      },
+      "named_in_workbook_record_ids": [
+        "H01"
+      ],
+      "accepted_event_links": [],
+      "notes": [
+        "Workbook name permits targeted route investigation if the main-road filter misses this corridor; no blanket smaller-road inclusion.",
+        "Present geography, historical closure scope and formal operational status remain separate.",
+        "The identity of inland facilities versus the frontier crossing needs specific review."
+      ],
+      "association_file": "../associations/KE-SO.json",
+      "exact_gate_verified": false
+    },
+    {
+      "crossing_id": "KE-SO-ELWAK-ROAD",
+      "country_pair": [
+        "KE",
+        "SO"
+      ],
+      "name": "Elwak / El Wak",
+      "aliases": [
+        "Elwak",
+        "El Wak",
+        "El Waq",
+        "Ceel Waaq"
+      ],
+      "mode": "road",
+      "transport_mode_evidence": {
+        "classification": "documented_land_corridor",
+        "source_ids": [
+          "KE-SO-KENHA-A13",
+          "KE-SO-IMM-PROPOSED",
+          "KE-SO-KRA-2020",
+          "KE-SO-GAROWE-H12"
+        ],
+        "formal_current_vehicle_access": "not_reverified"
+      },
+      "road_refs": [
+        "A13"
+      ],
+      "road_ref_evidence": [
+        {
+          "country": "KE",
+          "ref": "A13",
+          "source_id": "KE-SO-KENHA-A13",
+          "role": "approach corridor; exact international gate spur unverified"
+        }
+      ],
+      "road_corridors": [
+        "Isiolo–Wajir–Elwak–Rhamu–Mandera approach"
+      ],
+      "source_ids": [
+        "KE-SO-KENHA-A13",
+        "KE-SO-IMM-PROPOSED",
+        "KE-SO-KRA-2020",
+        "KE-SO-GAROWE-H12",
+        "KE-SO-EUAA-GEDO-2025",
+        "KE-SO-MANDERA-ELWAK-PLAN-2022"
+      ],
+      "reference_coordinate": null,
+      "coordinate_order": "longitude, latitude",
+      "coordinate_basis": null,
+      "benchmark_role": "workbook_named_reference_exception",
+      "benchmark_eligible": true,
+      "identity_status": "documented_named_corridor",
+      "geometry_status": "provisional_corridor_reference",
+      "operational_status": {
+        "current_verified": false,
+        "source_assertion": "proposed entry in immigration directory; historical reporting names a crossing",
+        "source_id": "KE-SO-IMM-PROPOSED",
+        "observation_date": null
+      },
+      "named_in_workbook_record_ids": [
+        "H12"
+      ],
+      "accepted_event_links": [],
+      "notes": [
+        "Workbook name permits targeted route investigation if the main-road filter misses this corridor; no blanket smaller-road inclusion.",
+        "Present geography, historical closure scope and formal operational status remain separate.",
+        "A13 links the approach town but may not be the road that crosses internationally."
+      ],
+      "town_reference_coordinate": {
+        "coordinate": [
+          40.935833333333335,
+          2.8094444444444444
+        ],
+        "source_id": "KE-SO-MANDERA-ELWAK-PLAN-2022",
+        "role": "town only; not gate",
+        "datum": null,
+        "accuracy_metres": null
+      },
+      "association_file": "../associations/KE-SO.json",
+      "exact_gate_verified": false
+    }
+  ],
+  "workbook_records": [
+    {
+      "record_id": "H01",
+      "title": "Kenya Somalia security closure continuing into research window",
+      "countries": [
+        "Kenya",
+        "Somalia"
+      ],
+      "crossings_verbatim": "Mandera Belet Hawo; Liboi Dhobley; Kiunga Ras Kamboni",
+      "location_ids": [
+        "context-frontier-ken-som"
+      ],
+      "source_urls": [
+        "https://citizen.digital/article/president-ruto-why-we-have-not-re-opened-kenya-somalia-border-n382701",
+        "https://www.africanews.com/2023/07/05/kenya-postpones-reopening-of-border-with-somalia/",
+        "https://www.amnesty.org/en/documents/afr32/002/2007/en/",
+        "https://www.kenyans.co.ke/news/120534-interior-ministry-announces-reopening-kenya-somalia-border-miraa-traders",
+        "https://www.mod.go.ke/our-community/cs-duale-leads-high-profile-delegation-seeking-to-reopen-kenya-somalia-border/"
+      ],
+      "named_reference_ids": [
+        "KE-SO-MANDERA-ROAD",
+        "KE-SO-LIBOI-ROAD",
+        "KE-SO-KIUNGA-ROAD"
+      ],
+      "review_status": "workbook_identity_leads_only",
+      "accepted_event_links": [],
+      "notes": [
+        "Formal closure, reopening proposals and movement/exemptions are distinct; canonical chronology unchanged."
+      ]
+    },
+    {
+      "record_id": "H12",
+      "title": "Gedo COVID closure of Somalia Kenya and Ethiopia crossings",
+      "countries": [
+        "Somalia",
+        "Kenya",
+        "Ethiopia"
+      ],
+      "crossings_verbatim": "Balad Hawo; Elwak; Doolow",
+      "location_ids": [
+        "context-frontier-eth-som",
+        "context-frontier-ken-som"
+      ],
+      "source_urls": [
+        "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/IOM_Eastern%20Corridor%20Migrant%20Situation_10062020.pdf",
+        "https://radioergo.org/en/2020/04/somali-border-closures-affect-jobs-and-food-supplies-in-gedo/",
+        "https://www.ecoi.net/de/dokument/2035661.html",
+        "https://www.garoweonline.com/en/news/somalia/somalia-closes-land-border-with-kenya-to-rein-in-coronavirus-cases"
+      ],
+      "named_reference_ids": [
+        "KE-SO-MANDERA-ROAD",
+        "KE-SO-ELWAK-ROAD"
+      ],
+      "review_status": "workbook_identity_leads_only",
+      "accepted_event_links": [],
+      "notes": [
+        "Doolow is explicitly an Ethiopia–Somalia crossing in the cited report and excluded from this pair."
+      ]
+    },
+    {
+      "record_id": "H08",
+      "title": "Kenya COVID passenger closure at Tanzania and Somalia borders",
+      "countries": [
+        "Kenya",
+        "Tanzania",
+        "Somalia"
+      ],
+      "crossings_verbatim": "Kenya Tanzania and Kenya Somalia land borders",
+      "location_ids": [
+        "context-frontier-ken-som",
+        "context-frontier-ken-tza"
+      ],
+      "source_urls": [
+        "https://citizen.digital/news/president-kenyatta-closes-kenyas-borders-with-tanzania-somalia-for-30-days-332832",
+        "https://www.africanews.com/2020/07/24/kenya-coronavirus-updates/",
+        "https://www.brecorder.com/news/597621/kenya-closes-borders-to-tanzania-and-somalia-over-coronavirus",
+        "https://www.kenyanews.go.ke/kenya-and-tanzania-resolve-dispute-over-covid19-tests/",
+        "https://www.kenyanews.go.ke/kenya-seals-borders-with-somalia-and-tanzania-to-contain-covid-19/",
+        "https://www.theeastafrican.co.ke/tea/news/east-africa/kenya-shuts-tanzania-somalia-borders-over-covid-19-1441468",
+        "https://www.theeastafrican.co.ke/tea/news/east-africa/kenya-tanzania-agree-on-covid-19-testing-and-cross-border-movement-1441772"
+      ],
+      "named_reference_ids": [],
+      "review_status": "workbook_identity_leads_only",
+      "accepted_event_links": [],
+      "notes": [
+        "Broad policy record; not expanded into assumed per-post closures."
+      ]
+    }
+  ],
+  "excluded_workbook_locations": [
+    {
+      "record_id": "H12",
+      "name_verbatim": "Doolow",
+      "country_pair": [
+        "ET",
+        "SO"
+      ],
+      "reason": "Source explicitly identifies it as the Ethiopia entry, separate from Balad-Hawo and Elwak.",
+      "source_id": "KE-SO-GAROWE-H12"
+    }
+  ]
+}

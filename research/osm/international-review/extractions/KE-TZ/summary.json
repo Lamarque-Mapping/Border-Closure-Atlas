@@ -1,0 +1,95 @@
+{
+  "created_at": "2026-10-23T12:22:08.931473+00:00",
+  "country_code": "KE",
+  "extractor_sha256": "88eb0d6b50cbe2875daeb64c5fd07105a619fcbc5f6c40291cb5b0d310064a8c",
+  "neighbour_code": "TZ",
+  "source": {
+    "url": "https://download.geofabrik.de/africa/kenya-latest.osm.pbf",
+    "retrieved_at": "2026-10-23T11:08:47.764153+00:00",
+    "bytes": 351587887,
+    "sha256": "effb612991eea80a718f71a48f707a16c0a4561b711ff4b614a8eed2dfa79371",
+    "http_headers": {
+      "Last-Modified": "Thu, 22 Oct 2026 08:31:55 GMT",
+      "ETag": "\"14f4ce2f-65e69b23df791\"",
+      "Content-Length": "351587887"
+    }
+  },
+  "osm_data_timestamp": "2026-10-21T20:21:46Z",
+  "workbook_sha256": "3530415e136e81d20cc24b51b3a5c2739e6a529fc2484cc51c8861693ff33bf0",
+  "metric_crs": "+proj=aeqd +lat_0=-2.8404248 +lon_0=36.5756505 +datum=WGS84 +units=m +no_defs +type=crs",
+  "projection": {
+    "centre": [
+      36.5756505,
+      -2.8404248
+    ],
+    "max_geodesic_radius_m": 357530.7,
+    "projection_scope": "selected frontier geometry only",
+    "antimeridian_supported": false
+  },
+  "coverage": {
+    "selected_by": "shared_admin2_memberways",
+    "country_pair": [
+      "KE",
+      "TZ"
+    ],
+    "expected_member_count": 52,
+    "loaded_member_count": 52,
+    "non_maritime_geometry_count": 48,
+    "excluded_maritime_member_ids": [
+      157708988,
+      260637505,
+      1319186891,
+      1319186895
+    ],
+    "missing_member_ids": [],
+    "incomplete_member_ids": [],
+    "unsupported_nested_boundary_members": [],
+    "is_partial": false,
+    "allows_frontier_completeness_claim": false,
+    "status": "all_selected_osm_members_loaded"
+  },
+  "boundary_ways_in_country_relation": 185,
+  "boundary_ways_selected": 52,
+  "connected_context_routes": 4205,
+  "boundary_ways_loaded": 48,
+  "incomplete_way_ids": [],
+  "routes_inspected": 580915,
+  "raw_intersection_points": 9,
+  "candidate_count": 6,
+  "by_mode": {
+    "road": 6
+  },
+  "major_road_candidates": 6,
+  "tagged_controls_near_boundary": 0,
+  "linear_overlap_cases": 0,
+  "records_with_existing_points": 52,
+  "schema_version": 3,
+  "road_scope": "main",
+  "road_classes": [
+    "motorway",
+    "motorway_link",
+    "primary",
+    "primary_link",
+    "trunk",
+    "trunk_link"
+  ],
+  "targeted_road_exceptions": [],
+  "include_nonroad": false,
+  "records_with_name_discovery_suggestions": 1,
+  "discovery_record_ids": [
+    "R5-AES-003"
+  ],
+  "records_with_pilot_candidate_links": 0,
+  "matched_record_ids": [],
+  "limits": [
+    "Coverage is restricted to selected OSM frontier geometry; loaded memberways do not establish crossing completeness.",
+    "Graph context includes minor/service roads; they become candidates only through explicit sourced exceptions.",
+    "Missing and nested boundary members require explicit partial opt-in; antimeridian/polar/overwide projections are unsupported.",
+    "Geometric contacts are candidates, not proof of a legal, operational or historical crossing.",
+    "Nearby settlement names are separate from checkpoint names.",
+    "Road-only extraction omits informal pedestrian paths; rail and ferry candidates are separate.",
+    "OSM country relations may be incomplete in extracts; unresolved country pairs are flagged.",
+    "Current OSM geometry cannot establish which crossing was affected by a historical closure.",
+    "No candidate is added to the closure register or the displayed map."
+  ]
+}

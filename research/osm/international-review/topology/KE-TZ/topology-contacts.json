@@ -1,0 +1,1135 @@
+[
+  {
+    "raw_contact_id": "raw-446929373-967219282-00000",
+    "candidate_id": "osm-1236932655e4414f",
+    "route_osm_id": 446929373,
+    "boundary_osm_id": 967219282,
+    "coordinate": [
+      37.64110811067727,
+      -3.382115954250481
+    ],
+    "mode": "road",
+    "pair": [
+      192798,
+      195270
+    ],
+    "assignment_method": "explicit raw contacts retained by extraction; source lines checked",
+    "diagnostic": {
+      "status": "unresolved",
+      "route_distance_m": 409.166,
+      "arms": [
+        {
+          "stable_side": 1,
+          "paths": [
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                446929373
+              ],
+              "distance_m": 140.0,
+              "clear_run_m": 100.0,
+              "boundary_clearance_m": 138.1
+            }
+          ]
+        },
+        {
+          "stable_side": 0,
+          "paths": [
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                446929373,
+                446929373,
+                474662195,
+                446929374
+              ],
+              "distance_m": 159.2,
+              "clear_run_m": 109.4,
+              "boundary_clearance_m": 122.7
+            },
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                446929373,
+                446929378,
+                996682923,
+                996682928
+              ],
+              "distance_m": 454.0,
+              "clear_run_m": 110.4,
+              "boundary_clearance_m": 137.9
+            },
+            {
+              "side": 0,
+              "reason": "branch_limit",
+              "route_osm_ids": [
+                446929373,
+                446929378,
+                996682923,
+                474662196,
+                474662196
+              ],
+              "distance_m": 304.7
+            },
+            {
+              "side": 0,
+              "reason": "branch_limit",
+              "route_osm_ids": [
+                446929373,
+                446929378,
+                996682923,
+                474662196,
+                474662197
+              ],
+              "distance_m": 353.1
+            },
+            {
+              "side": 0,
+              "reason": "branch_limit",
+              "route_osm_ids": [
+                446929373,
+                446929378,
+                996682923,
+                996682923,
+                996682924
+              ],
+              "distance_m": 288.4
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "raw_contact_id": "raw-364744973-1196006151-00001",
+    "candidate_id": "osm-251dbbfe15c9bc78",
+    "route_osm_id": 364744973,
+    "boundary_osm_id": 1196006151,
+    "coordinate": [
+      34.47528890293271,
+      -1.2445335260879675
+    ],
+    "mode": "road",
+    "pair": [
+      192798,
+      195270
+    ],
+    "assignment_method": "explicit raw contacts retained by extraction; source lines checked",
+    "diagnostic": {
+      "status": "unresolved",
+      "route_distance_m": 8.162,
+      "arms": [
+        {
+          "stable_side": 1,
+          "paths": [
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                364744973,
+                23854461
+              ],
+              "distance_m": 148.2,
+              "clear_run_m": 100.0,
+              "boundary_clearance_m": 144.3
+            }
+          ]
+        },
+        {
+          "stable_side": 0,
+          "paths": [
+            {
+              "side": 0,
+              "reason": "branch_limit",
+              "route_osm_ids": [
+                364744973,
+                461120614,
+                461120614
+              ],
+              "distance_m": 141.8
+            },
+            {
+              "side": 0,
+              "reason": "branch_limit",
+              "route_osm_ids": [
+                364744973,
+                461120614,
+                727741083
+              ],
+              "distance_m": 216.8
+            },
+            {
+              "side": 0,
+              "reason": "branch_limit",
+              "route_osm_ids": [
+                364744973,
+                708567660,
+                461120622
+              ],
+              "distance_m": 224.3
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                364744973,
+                708567660,
+                461120637
+              ],
+              "distance_m": 159.3,
+              "clear_run_m": 103.6,
+              "boundary_clearance_m": 99.6
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                364744973,
+                364744973,
+                464373575,
+                464373575
+              ],
+              "distance_m": 158.1,
+              "clear_run_m": 117.8,
+              "boundary_clearance_m": 135.2
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                364744973,
+                364744973,
+                464373575,
+                340050292
+              ],
+              "distance_m": 149.8,
+              "clear_run_m": 109.5,
+              "boundary_clearance_m": 124.4
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                364744973,
+                364744973,
+                464373575,
+                1148164604
+              ],
+              "distance_m": 158.1,
+              "clear_run_m": 117.8,
+              "boundary_clearance_m": 110.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "raw_contact_id": "raw-996682923-967219282-00002",
+    "candidate_id": "osm-88fb5bbaa13df35d",
+    "route_osm_id": 996682923,
+    "boundary_osm_id": 967219282,
+    "coordinate": [
+      37.64214890728363,
+      -3.3810434162618654
+    ],
+    "mode": "road",
+    "pair": [
+      192798,
+      195270
+    ],
+    "assignment_method": "explicit raw contacts retained by extraction; source lines checked",
+    "diagnostic": {
+      "status": "unresolved",
+      "route_distance_m": 59.83,
+      "arms": [
+        {
+          "stable_side": 0,
+          "paths": [
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                996682923,
+                996682928
+              ],
+              "distance_m": 240.8,
+              "clear_run_m": 110.4,
+              "boundary_clearance_m": 137.9
+            },
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                996682923,
+                996682923,
+                446929378,
+                446929373
+              ],
+              "distance_m": 356.6,
+              "clear_run_m": 100.0,
+              "boundary_clearance_m": 139.7
+            },
+            {
+              "side": 0,
+              "reason": "branch_limit",
+              "route_osm_ids": [
+                996682923,
+                996682923,
+                996682923,
+                474662196,
+                474662197
+              ],
+              "distance_m": 166.6
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                996682923,
+                996682923,
+                446929378,
+                446929373,
+                474662195
+              ],
+              "distance_m": 194.5,
+              "clear_run_m": 100.4,
+              "boundary_clearance_m": 65.0
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                996682923,
+                996682923,
+                996682923,
+                474662196,
+                474662196,
+                446929375
+              ],
+              "distance_m": 158.2,
+              "clear_run_m": 104.5,
+              "boundary_clearance_m": 140.8
+            }
+          ]
+        },
+        {
+          "stable_side": 1,
+          "paths": [
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                996682923,
+                996682924,
+                446929372
+              ],
+              "distance_m": 140.5,
+              "clear_run_m": 102.4,
+              "boundary_clearance_m": 129.2
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "raw_contact_id": "raw-68977837-260271144-00003",
+    "candidate_id": "osm-cc22327583ced6c1",
+    "route_osm_id": 68977837,
+    "boundary_osm_id": 260271144,
+    "coordinate": [
+      36.7863119,
+      -2.5476614
+    ],
+    "mode": "road",
+    "pair": [
+      192798,
+      195270
+    ],
+    "assignment_method": "explicit raw contacts retained by extraction; source lines checked",
+    "diagnostic": {
+      "status": "unresolved",
+      "route_distance_m": 877.331,
+      "arms": [
+        {
+          "stable_side": 0,
+          "paths": [
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                68977837,
+                657409966,
+                657409971
+              ],
+              "distance_m": 277.3,
+              "clear_run_m": 103.7,
+              "boundary_clearance_m": 88.3
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                68977837,
+                68977837,
+                68977837,
+                68977837
+              ],
+              "distance_m": 183.8,
+              "clear_run_m": 110.3,
+              "boundary_clearance_m": 86.7
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                68977837,
+                68977837,
+                68977837,
+                691258783
+              ],
+              "distance_m": 174.2,
+              "clear_run_m": 100.7,
+              "boundary_clearance_m": 50.7
+            },
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                68977837,
+                68977837,
+                691208841,
+                168983716
+              ],
+              "distance_m": 328.9,
+              "clear_run_m": 113.2,
+              "boundary_clearance_m": 60.6
+            },
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                68977837,
+                68977837,
+                691208841,
+                168983716
+              ],
+              "distance_m": 323.8,
+              "clear_run_m": 108.2,
+              "boundary_clearance_m": 137.8
+            },
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                68977837,
+                657409966,
+                657409966,
+                657409966
+              ],
+              "distance_m": 274.0,
+              "clear_run_m": 100.5,
+              "boundary_clearance_m": 71.7
+            },
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                68977837,
+                657409966,
+                657409966,
+                657409968
+              ],
+              "distance_m": 278.8,
+              "clear_run_m": 105.3,
+              "boundary_clearance_m": 96.9
+            }
+          ]
+        },
+        {
+          "stable_side": 1,
+          "paths": [
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                68977837,
+                446928603
+              ],
+              "distance_m": 140.0,
+              "clear_run_m": 100.0,
+              "boundary_clearance_m": 129.9
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "raw_contact_id": "raw-426655236-260271144-00004",
+    "candidate_id": "osm-cc22327583ced6c1",
+    "route_osm_id": 426655236,
+    "boundary_osm_id": 260271144,
+    "coordinate": [
+      36.7868238,
+      -2.5479668
+    ],
+    "mode": "road",
+    "pair": [
+      192798,
+      195270
+    ],
+    "assignment_method": "explicit raw contacts retained by extraction; source lines checked",
+    "diagnostic": {
+      "status": "unresolved",
+      "route_distance_m": 983.529,
+      "arms": [
+        {
+          "stable_side": 0,
+          "paths": [
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                426655236,
+                426655236
+              ],
+              "distance_m": 171.2,
+              "clear_run_m": 100.0,
+              "boundary_clearance_m": 71.0
+            },
+            {
+              "side": 0,
+              "reason": "route_endpoint_or_extract_gap",
+              "route_osm_ids": [
+                426655236,
+                658179267,
+                657409983
+              ],
+              "distance_m": 23.3
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                426655236,
+                658179267,
+                658179269
+              ],
+              "distance_m": 234.4,
+              "clear_run_m": 103.2,
+              "boundary_clearance_m": 92.3
+            },
+            {
+              "side": 0,
+              "reason": "route_endpoint_or_extract_gap",
+              "route_osm_ids": [
+                426655236,
+                658179267,
+                657409983,
+                657409983
+              ],
+              "distance_m": 92.8
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                426655236,
+                658179267,
+                657409983,
+                657409980
+              ],
+              "distance_m": 178.8,
+              "clear_run_m": 104.7,
+              "boundary_clearance_m": 134.6
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                426655236,
+                658179267,
+                658179267,
+                658179267
+              ],
+              "distance_m": 239.5,
+              "clear_run_m": 108.3,
+              "boundary_clearance_m": 80.6
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                426655236,
+                658179267,
+                658179267,
+                658179268
+              ],
+              "distance_m": 247.5,
+              "clear_run_m": 116.3,
+              "boundary_clearance_m": 106.6
+            }
+          ]
+        },
+        {
+          "stable_side": -1,
+          "paths": [
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                426655236,
+                446928611
+              ],
+              "distance_m": 160.0,
+              "clear_run_m": 100.0,
+              "boundary_clearance_m": 136.8
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "raw_contact_id": "raw-446928603-260271144-00005",
+    "candidate_id": "osm-cc22327583ced6c1",
+    "route_osm_id": 446928603,
+    "boundary_osm_id": 260271144,
+    "coordinate": [
+      36.7863119,
+      -2.5476614
+    ],
+    "mode": "road",
+    "pair": [
+      192798,
+      195270
+    ],
+    "assignment_method": "explicit raw contacts retained by extraction; source lines checked",
+    "diagnostic": {
+      "status": "unresolved",
+      "route_distance_m": 0.0,
+      "arms": [
+        {
+          "stable_side": 0,
+          "paths": [
+            {
+              "side": 0,
+              "reason": "branch_limit",
+              "route_osm_ids": [
+                446928603,
+                68977837,
+                657409966,
+                657409966
+              ],
+              "distance_m": 238.8
+            },
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                446928603,
+                68977837,
+                657409966,
+                657409971
+              ],
+              "distance_m": 277.3,
+              "clear_run_m": 103.7,
+              "boundary_clearance_m": 88.3
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                446928603,
+                68977837,
+                68977837,
+                68977837,
+                68977837
+              ],
+              "distance_m": 183.8,
+              "clear_run_m": 110.3,
+              "boundary_clearance_m": 86.7
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                446928603,
+                68977837,
+                68977837,
+                68977837,
+                691258783
+              ],
+              "distance_m": 174.2,
+              "clear_run_m": 100.7,
+              "boundary_clearance_m": 50.7
+            },
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                446928603,
+                68977837,
+                68977837,
+                691208841,
+                168983716
+              ],
+              "distance_m": 328.9,
+              "clear_run_m": 113.2,
+              "boundary_clearance_m": 60.6
+            },
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                446928603,
+                68977837,
+                68977837,
+                691208841,
+                168983716
+              ],
+              "distance_m": 323.8,
+              "clear_run_m": 108.2,
+              "boundary_clearance_m": 137.8
+            }
+          ]
+        },
+        {
+          "stable_side": 1,
+          "paths": [
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                446928603
+              ],
+              "distance_m": 140.0,
+              "clear_run_m": 100.0,
+              "boundary_clearance_m": 129.9
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "raw_contact_id": "raw-446928611-260271144-00006",
+    "candidate_id": "osm-cc22327583ced6c1",
+    "route_osm_id": 446928611,
+    "boundary_osm_id": 260271144,
+    "coordinate": [
+      36.7868238,
+      -2.5479668
+    ],
+    "mode": "road",
+    "pair": [
+      192798,
+      195270
+    ],
+    "assignment_method": "explicit raw contacts retained by extraction; source lines checked",
+    "diagnostic": {
+      "status": "unresolved",
+      "route_distance_m": 0.0,
+      "arms": [
+        {
+          "stable_side": 0,
+          "paths": [
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                446928611,
+                426655236,
+                426655236
+              ],
+              "distance_m": 171.2,
+              "clear_run_m": 100.0,
+              "boundary_clearance_m": 71.0
+            },
+            {
+              "side": 0,
+              "reason": "route_endpoint_or_extract_gap",
+              "route_osm_ids": [
+                446928611,
+                426655236,
+                658179267,
+                657409983
+              ],
+              "distance_m": 23.3
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                446928611,
+                426655236,
+                658179267,
+                658179269
+              ],
+              "distance_m": 234.4,
+              "clear_run_m": 103.2,
+              "boundary_clearance_m": 92.3
+            },
+            {
+              "side": 0,
+              "reason": "route_endpoint_or_extract_gap",
+              "route_osm_ids": [
+                446928611,
+                426655236,
+                658179267,
+                657409983,
+                657409983
+              ],
+              "distance_m": 92.8
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                446928611,
+                426655236,
+                658179267,
+                657409983,
+                657409980
+              ],
+              "distance_m": 178.8,
+              "clear_run_m": 104.7,
+              "boundary_clearance_m": 134.6
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                446928611,
+                426655236,
+                658179267,
+                658179267,
+                658179267
+              ],
+              "distance_m": 239.5,
+              "clear_run_m": 108.3,
+              "boundary_clearance_m": 80.6
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                446928611,
+                426655236,
+                658179267,
+                658179267,
+                658179268
+              ],
+              "distance_m": 247.5,
+              "clear_run_m": 116.3,
+              "boundary_clearance_m": 106.6
+            }
+          ]
+        },
+        {
+          "stable_side": -1,
+          "paths": [
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                446928611
+              ],
+              "distance_m": 160.0,
+              "clear_run_m": 100.0,
+              "boundary_clearance_m": 136.8
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "raw_contact_id": "raw-176091808-260447751-00007",
+    "candidate_id": "osm-e74599bab0e81a5f",
+    "route_osm_id": 176091808,
+    "boundary_osm_id": 260447751,
+    "coordinate": [
+      37.56822049535541,
+      -2.9906787169661833
+    ],
+    "mode": "road",
+    "pair": [
+      192798,
+      195270
+    ],
+    "assignment_method": "explicit raw contacts retained by extraction; source lines checked",
+    "diagnostic": {
+      "status": "unresolved",
+      "route_distance_m": 0.002,
+      "arms": [
+        {
+          "stable_side": 1,
+          "paths": [
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                176091808,
+                40187528,
+                40187528
+              ],
+              "distance_m": 149.1,
+              "clear_run_m": 109.1,
+              "boundary_clearance_m": 143.6
+            },
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                176091808,
+                40187528,
+                642319522,
+                642319522
+              ],
+              "distance_m": 141.8,
+              "clear_run_m": 101.8,
+              "boundary_clearance_m": 104.2
+            },
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                176091808,
+                40187528,
+                642319522,
+                642319521
+              ],
+              "distance_m": 140.9,
+              "clear_run_m": 100.9,
+              "boundary_clearance_m": 127.6
+            }
+          ]
+        },
+        {
+          "stable_side": 0,
+          "paths": [
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                176091808,
+                176091808
+              ],
+              "distance_m": 140.3,
+              "clear_run_m": 100.0,
+              "boundary_clearance_m": 137.0
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                176091808,
+                664585024,
+                665147208
+              ],
+              "distance_m": 350.3,
+              "clear_run_m": 100.0,
+              "boundary_clearance_m": 132.4
+            },
+            {
+              "side": 0,
+              "reason": "branch_limit",
+              "route_osm_ids": [
+                176091808,
+                701670924,
+                704879384
+              ],
+              "distance_m": 674.3
+            },
+            {
+              "side": 0,
+              "reason": "branch_limit",
+              "route_osm_ids": [
+                176091808,
+                664585024,
+                664585024,
+                664585024
+              ],
+              "distance_m": 454.5
+            },
+            {
+              "side": 0,
+              "reason": "branch_limit",
+              "route_osm_ids": [
+                176091808,
+                664585024,
+                664585024,
+                655056562
+              ],
+              "distance_m": 473.9
+            },
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                176091808,
+                701670924,
+                649585898,
+                649585898
+              ],
+              "distance_m": 277.8,
+              "clear_run_m": 107.9,
+              "boundary_clearance_m": 141.3
+            },
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                176091808,
+                701670924,
+                649585898,
+                649585885
+              ],
+              "distance_m": 287.1,
+              "clear_run_m": 117.3,
+              "boundary_clearance_m": 118.6
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "raw_contact_id": "raw-474909579-260447748-00008",
+    "candidate_id": "osm-eff9511c33d0e08e",
+    "route_osm_id": 474909579,
+    "boundary_osm_id": 260447748,
+    "coordinate": [
+      39.10537977137371,
+      -4.6016214264613815
+    ],
+    "mode": "road",
+    "pair": [
+      192798,
+      195270
+    ],
+    "assignment_method": "explicit raw contacts retained by extraction; source lines checked",
+    "diagnostic": {
+      "status": "unresolved",
+      "route_distance_m": 5.077,
+      "arms": [
+        {
+          "stable_side": 0,
+          "paths": [
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                474909579,
+                447033599,
+                1089695420
+              ],
+              "distance_m": 178.2,
+              "clear_run_m": 100.0,
+              "boundary_clearance_m": 123.8
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                474909579,
+                447033599,
+                447033599,
+                447033604
+              ],
+              "distance_m": 138.3,
+              "clear_run_m": 100.1,
+              "boundary_clearance_m": 86.2
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                474909579,
+                447033599,
+                447033599,
+                447033599,
+                447033599
+              ],
+              "distance_m": 143.1,
+              "clear_run_m": 104.9,
+              "boundary_clearance_m": 134.4
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                474909579,
+                447033599,
+                447033599,
+                447033599,
+                447033604
+              ],
+              "distance_m": 143.1,
+              "clear_run_m": 104.9,
+              "boundary_clearance_m": 102.1
+            }
+          ]
+        },
+        {
+          "stable_side": 0,
+          "paths": [
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                474909579,
+                449469716
+              ],
+              "distance_m": 140.7,
+              "clear_run_m": 100.7,
+              "boundary_clearance_m": 125.9
+            },
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                474909579,
+                474909579,
+                447033598
+              ],
+              "distance_m": 150.0,
+              "clear_run_m": 110.0,
+              "boundary_clearance_m": 144.2
+            },
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                474909579,
+                449469716,
+                449469716
+              ],
+              "distance_m": 284.6,
+              "clear_run_m": 100.0,
+              "boundary_clearance_m": 131.5
+            },
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                474909579,
+                449469716,
+                1089695419
+              ],
+              "distance_m": 244.6,
+              "clear_run_m": 100.0,
+              "boundary_clearance_m": 137.4
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

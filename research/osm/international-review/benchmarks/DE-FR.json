@@ -1,0 +1,559 @@
+{
+  "schema_version": 1,
+  "pair": [
+    "DE",
+    "FR"
+  ],
+  "created_at": "2026-10-23T12:18:30.629433+00:00",
+  "review_date": "2026-10-23",
+  "benchmark_scope": {
+    "description": "Bounded sample of 11 named major road corridors: eight core motorway/federal-road references and three strategic road-scope tests.",
+    "expected_reference_count": 11,
+    "core_reference_count": 8,
+    "strategic_scope_test_count": 3,
+    "road_policy": "motorway/trunk/primary including links; secondary and smaller roads require an explicit, source-supported exception. National road numbering alone does not establish OSM road class.",
+    "selection": "Six major Bas-Rhin axes in ADEUS Note 345, plus Goldene Bremm and four southern Rhine road corridors. This is not an exhaustive France–Germany frontier census or Schengen checkpoint list.",
+    "denominator_limit": "Selected benchmark recovery is not full-frontier recall; reference corridors and raw directional road contacts use different counting units.",
+    "current_operational_completeness": false
+  },
+  "sources": [
+    {
+      "source_id": "DEFR-ADEUS-345",
+      "url": "https://www.adeus.org/wp-content/uploads/Note-345-Trafic-routier-transfrontalier.pdf",
+      "title": "Trafic transfrontalier : le Pont de l’Europe dans les parcours routiers (Note 345)",
+      "publisher": "ADEUS",
+      "date": "2025-03",
+      "retrieved_at": "2026-10-23T12:18:30.629433+00:00",
+      "claims": [
+        "Six studied Bas-Rhin road axes: Lauterbourg/A35, Roppenheim/D504, Gambsheim/D502, Pont de l’Europe, Pflimlin/M353, Marckolsheim/D424."
+      ],
+      "limitations": [
+        "A selected traffic study, not an exhaustive frontier crossing register. Counts are historical traffic observations, not evidence of closure or current operating status."
+      ],
+      "access": "Substantive primary source read",
+      "locator": "Printed page 2, axes and counting points map and discussion"
+    },
+    {
+      "source_id": "DEFR-LTBW-15-5565",
+      "url": "https://www.landtag-bw.de/resource/blob/227612/fb01fe023872122b5d29bc9ebbceb2e8/15_5565_D.pdf",
+      "title": "Situation der grenzüberschreitenden deutsch-französischen Rad- und Fußwege, Drucksache 15/5565",
+      "publisher": "Ministry of Transport and Infrastructure, published by Landtag Baden-Württemberg",
+      "date": "2014-09-12",
+      "retrieved_at": "2026-10-23T12:18:30.629433+00:00",
+      "claims": [
+        "Identifies Iffezheim/Roppenheim B500, Rheinau-Freistett/Gambsheim L87, Europabrücke B28/N4, Pierre-Pflimlin L98/N353, Sasbach/Marckolsheim L113/D424, Breisach B31/D415 and Neuenburg/Chalampé B378/D39."
+      ],
+      "limitations": [
+        "Transport-ministry response concerns cycling and walking connections alongside roads. Use named road connections only; 2014 access conditions and road numbering are not asserted as current."
+      ],
+      "access": "Substantive primary source read",
+      "locator": "Response to question 1, printed pages 3–4; response dated 12 September 2014, issued 19 September"
+    },
+    {
+      "source_id": "DEFR-LTBW-17-8661",
+      "url": "https://www.landtag-bw.de/resource/blob/568340/1bfb57642c1b4261c5bf7600957a9397/17_8661_D.pdf",
+      "title": "Sanierungsbedarf der Brücken in den Landkreisen Waldshut und Lörrach, Drucksache 17/8661",
+      "publisher": "Ministry of Transport, published by Landtag Baden-Württemberg",
+      "date": "2025-05-02",
+      "retrieved_at": "2026-10-23T12:18:30.629433+00:00",
+      "claims": [
+        "Identifies the Palmrheinbrücke/Palmrain crossing on B532 at Weil am Rhein as France–Germany."
+      ],
+      "limitations": [
+        "Source also lists Switzerland–Germany bridges; those are not part of this pair. No numerical crossing coordinate is supplied."
+      ],
+      "access": "Substantive primary source read",
+      "locator": "Answer to question 7, printed page 6; response dated 2 May 2025, issued 8 May"
+    },
+    {
+      "source_id": "DEFR-AUTOBAHN-PFINGSTEN-2025",
+      "url": "https://www.autobahn.de/storage/user_upload/qbank/PM_Verkehrsprognose_Pfingsten_2025.pdf",
+      "title": "Autobahn GmbH rechnet mit einem der verkehrsreichsten Wochenenden des Jahres",
+      "publisher": "Die Autobahn GmbH des Bundes",
+      "date": "2025-06-02",
+      "retrieved_at": "2026-10-23T12:18:30.629433+00:00",
+      "claims": [
+        "Lists the A6 segment between the French frontier and Saarbrücken Goldene Bremm."
+      ],
+      "limitations": [
+        "A dated traffic forecast used only for corridor identity. It does not establish current traffic restrictions or a precise frontier coordinate."
+      ],
+      "access": "Substantive primary source read",
+      "locator": "Printed page 3, motorway table A6 row"
+    },
+    {
+      "source_id": "DEFR-LTRP-12-8048",
+      "url": "https://dokumente.landtag.rlp.de/landtag/drucksachen/8048-12.pdf",
+      "title": "Verkehrssicherheit auf der Bundesstraße 9 zwischen Kandel-Süd und Lauterbourg, Drucksache 12/8048",
+      "publisher": "Ministry of Economy, Transport, Agriculture and Viticulture, published by Landtag Rheinland-Pfalz",
+      "date": "1996-01-23",
+      "retrieved_at": "2026-10-23T12:18:30.629433+00:00",
+      "claims": [
+        "Identifies B9 between Kandel-Süd and the Lauterbourg frontier crossing."
+      ],
+      "limitations": [
+        "Historical road identity corroboration only; accident counts, design and operating conditions are not treated as current."
+      ],
+      "access": "Substantive primary source read",
+      "locator": "Answer to question 1, printed page 1"
+    },
+    {
+      "source_id": "DEFR-RPF-GAMBSHEIM",
+      "url": "https://rpf.baden-wuerttemberg.de/service/presse/medienmitteilungen/artikel/stuetzpfeiler-an-der-l-87-ueber-den-rhein-bei-rheinau-werden-saniert/",
+      "title": "Stützpfeiler an der L87 über den Rhein bei Rheinau werden saniert",
+      "publisher": "Regierungspräsidium Freiburg",
+      "date": "2025-05-22",
+      "retrieved_at": "2026-10-23T12:18:30.629433+00:00",
+      "claims": [
+        "Confirms the L87 barrage-road corridor between Rheinau-Freistett and Gambsheim alongside the separate walking/cycling bridge."
+      ],
+      "limitations": [
+        "Construction notice supports the road and locality relationship only; it is not imported as a closure event."
+      ],
+      "access": "Substantive primary source read"
+    },
+    {
+      "source_id": "DEFR-RPF-BREISACH",
+      "url": "https://rpf.baden-wuerttemberg.de/service/presse/medienmitteilungen/artikel/rheinbruecke-bei-breisach-b-31-d-415-breisgau-hochschwarzwald-wird-ueberprueft/",
+      "title": "Rheinbrücke bei Breisach (B31/D415, Breisgau-Hochschwarzwald) wird überprüft",
+      "publisher": "Regierungspräsidium Freiburg",
+      "date": "2021-08-20",
+      "retrieved_at": "2026-10-23T12:18:30.629433+00:00",
+      "claims": [
+        "Names the Breisach Rhine road bridge and B31/D415 routes."
+      ],
+      "limitations": [
+        "Dated maintenance announcement is used for corridor identity only; historical construction restrictions are not added to the workbook."
+      ],
+      "access": "Substantive primary source read"
+    },
+    {
+      "source_id": "DEFR-RPF-CHALAMPE",
+      "url": "https://rpf.baden-wuerttemberg.de/service/presse/medienmitteilungen/artikel/kleinere-bauarbeiten-an-der-b-378-bei-neuenburg-am-rhein/",
+      "title": "Kleinere Bauarbeiten an der B378 bei Neuenburg am Rhein",
+      "publisher": "Regierungspräsidium Freiburg",
+      "date": "2024-01-25",
+      "retrieved_at": "2026-10-23T12:18:30.629433+00:00",
+      "claims": [
+        "Identifies B378 and the bridge approach toward Chalampé at Neuenburg."
+      ],
+      "limitations": [
+        "Approach works and a relocated traffic counter are not a surveyed frontier point or closure-event evidence."
+      ],
+      "access": "Substantive primary source read"
+    },
+    {
+      "source_id": "DEFR-EURHENA-BRIDGES",
+      "url": "https://eurhena.eu/decouvrir/transports-et-itineraires/",
+      "title": "Transports et itinéraires – Les 5 ponts de l’Eurodistrict",
+      "publisher": "Eurodistrict Region Freiburg – Centre et Sud Alsace",
+      "date": null,
+      "retrieved_at": "2026-10-23T12:18:30.629433+00:00",
+      "claims": [
+        "Names the Ottmarsheim–Steinenstadt road bridge connecting A36 and A5; also distinguishes Breisach, Chalampé and Marckolsheim road bridges."
+      ],
+      "limitations": [
+        "Undated regional-authority transport overview, not a current crossing-status inventory; local Hartheim/Fessenheim crossing is outside this bounded sample."
+      ],
+      "access": "Substantive primary source read",
+      "locator": "Les 5 ponts de l’Eurodistrict"
+    },
+    {
+      "source_id": "DEFR-LEGIFRANCE-ROADS-68",
+      "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000051328346/2026-05-07",
+      "title": "Décret n°2009-615, routes à grande circulation, article (60 à 69)",
+      "publisher": "Légifrance",
+      "date": null,
+      "retrieved_at": "2026-10-23T12:18:30.629433+00:00",
+      "claims": [
+        "Department 68 entries connect D39 to the German frontier at Chalampé, D105 at Village-Neuf and D415 at Vogelgrun."
+      ],
+      "limitations": [
+        "Consulted dated consolidation route list for identity only; road category in French law is not an OSM highway class."
+      ],
+      "access": "Substantive primary source read",
+      "locator": "Department 68 table; version displayed 7 May 2026"
+    }
+  ],
+  "crossings": [
+    {
+      "crossing_id": "DE-FR-GOLDENE-BREMM-ROAD",
+      "country_pair": [
+        "DE",
+        "FR"
+      ],
+      "name": "Goldene Bremm motorway crossing",
+      "aliases": [
+        "Goldene Bremm",
+        "Brème d’Or motorway"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "A6"
+      ],
+      "source_ids": [
+        "DEFR-AUTOBAHN-PFINGSTEN-2025"
+      ],
+      "reference_coordinate": null,
+      "coordinate_basis": "No defensible numeric frontier coordinate published in the reviewed primary sources; no town centroid or OSM-derived coordinate used as independent truth.",
+      "benchmark_role": "core_main_road_reference",
+      "notes": "Motorway corridor only. Do not substitute the nearby B41/Metzer Straße crossing or the police-office location.",
+      "is_closure_evidence": false,
+      "event_links": []
+    },
+    {
+      "crossing_id": "DE-FR-LAUTERBOURG-ROAD",
+      "country_pair": [
+        "DE",
+        "FR"
+      ],
+      "name": "Lauterbourg–Bienwald road crossing",
+      "aliases": [
+        "Lauterbourg",
+        "Bienwald"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "A35",
+        "B9"
+      ],
+      "source_ids": [
+        "DEFR-ADEUS-345",
+        "DEFR-LTRP-12-8048"
+      ],
+      "reference_coordinate": null,
+      "coordinate_basis": "No defensible numeric frontier coordinate published in the reviewed primary sources; no town centroid or OSM-derived coordinate used as independent truth.",
+      "benchmark_role": "core_main_road_reference",
+      "notes": "Named A35/B9 corridor; distinguish the separate local crossing.",
+      "is_closure_evidence": false,
+      "event_links": []
+    },
+    {
+      "crossing_id": "DE-FR-IFFEZHEIM-ROAD",
+      "country_pair": [
+        "DE",
+        "FR"
+      ],
+      "name": "Iffezheim–Roppenheim Rhine crossing",
+      "aliases": [
+        "Iffezheim",
+        "Roppenheim",
+        "Staustufe Iffezheim",
+        "Barrage de Roppenheim"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "B500",
+        "D504"
+      ],
+      "source_ids": [
+        "DEFR-ADEUS-345",
+        "DEFR-LTBW-15-5565"
+      ],
+      "reference_coordinate": null,
+      "coordinate_basis": "No defensible numeric frontier coordinate published in the reviewed primary sources; no town centroid or OSM-derived coordinate used as independent truth.",
+      "benchmark_role": "core_main_road_reference",
+      "notes": "Rhine barrage road corridor; do not substitute a nearby canal bridge.",
+      "is_closure_evidence": false,
+      "event_links": []
+    },
+    {
+      "crossing_id": "DE-FR-GAMBSHEIM-ROAD",
+      "country_pair": [
+        "DE",
+        "FR"
+      ],
+      "name": "Gambsheim–Rheinau-Freistett crossing",
+      "aliases": [
+        "Gambsheim",
+        "Rheinau-Freistett",
+        "Barrage de Gambsheim"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "L87",
+        "D502"
+      ],
+      "source_ids": [
+        "DEFR-ADEUS-345",
+        "DEFR-LTBW-15-5565",
+        "DEFR-RPF-GAMBSHEIM"
+      ],
+      "reference_coordinate": null,
+      "coordinate_basis": "No defensible numeric frontier coordinate published in the reviewed primary sources; no town centroid or OSM-derived coordinate used as independent truth.",
+      "benchmark_role": "strategic_road_scope_test",
+      "notes": "Tests a major corridor numbered as a German Landesstraße; this numbering alone does not imply an OSM secondary-road exception.",
+      "is_closure_evidence": false,
+      "event_links": []
+    },
+    {
+      "crossing_id": "DE-FR-EUROPABRUECKE-ROAD",
+      "country_pair": [
+        "DE",
+        "FR"
+      ],
+      "name": "Europabrücke / Pont de l’Europe",
+      "aliases": [
+        "Europabrücke",
+        "Pont de l’Europe",
+        "Kehl–Strasbourg"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "B28",
+        "N4"
+      ],
+      "source_ids": [
+        "DEFR-ADEUS-345",
+        "DEFR-LTBW-15-5565"
+      ],
+      "reference_coordinate": null,
+      "coordinate_basis": "No defensible numeric frontier coordinate published in the reviewed primary sources; no town centroid or OSM-derived coordinate used as independent truth.",
+      "benchmark_role": "core_main_road_reference",
+      "notes": "Road bridge only; exclude adjacent tram, railway and pedestrian bridges. N4 is a historical reference in the 2014 source.",
+      "is_closure_evidence": false,
+      "event_links": []
+    },
+    {
+      "crossing_id": "DE-FR-PIERRE-PFLIMLIN-ROAD",
+      "country_pair": [
+        "DE",
+        "FR"
+      ],
+      "name": "Pierre-Pflimlin bridge",
+      "aliases": [
+        "Pierre-Pflimlin-Brücke",
+        "Pont Pierre Pflimlin",
+        "Altenheim–Eschau"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "L98",
+        "M353",
+        "N353"
+      ],
+      "source_ids": [
+        "DEFR-ADEUS-345",
+        "DEFR-LTBW-15-5565"
+      ],
+      "reference_coordinate": null,
+      "coordinate_basis": "No defensible numeric frontier coordinate published in the reviewed primary sources; no town centroid or OSM-derived coordinate used as independent truth.",
+      "benchmark_role": "strategic_road_scope_test",
+      "notes": "M353 appears in 2025; N353 in 2014. A numbered Landesstraße can still be a main-road OSM candidate.",
+      "is_closure_evidence": false,
+      "event_links": []
+    },
+    {
+      "crossing_id": "DE-FR-MARCKOLSHEIM-ROAD",
+      "country_pair": [
+        "DE",
+        "FR"
+      ],
+      "name": "Sasbach–Marckolsheim road bridge",
+      "aliases": [
+        "Sasbach–Marckolsheim",
+        "Rheinbrücke Sasbach",
+        "Barrage de Marckolsheim"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "L113",
+        "D424"
+      ],
+      "source_ids": [
+        "DEFR-ADEUS-345",
+        "DEFR-LTBW-15-5565",
+        "DEFR-EURHENA-BRIDGES"
+      ],
+      "reference_coordinate": null,
+      "coordinate_basis": "No defensible numeric frontier coordinate published in the reviewed primary sources; no town centroid or OSM-derived coordinate used as independent truth.",
+      "benchmark_role": "strategic_road_scope_test",
+      "notes": "The Sasbach road bridge is distinct from the Burkheim walking/cycling barrage crossing.",
+      "is_closure_evidence": false,
+      "event_links": []
+    },
+    {
+      "crossing_id": "DE-FR-BREISACH-ROAD",
+      "country_pair": [
+        "DE",
+        "FR"
+      ],
+      "name": "Breisach–Vogelgrun road bridge",
+      "aliases": [
+        "Breisach",
+        "Vogelgrun",
+        "Neuf-Brisach"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "B31",
+        "D415"
+      ],
+      "source_ids": [
+        "DEFR-RPF-BREISACH",
+        "DEFR-LTBW-15-5565",
+        "DEFR-LEGIFRANCE-ROADS-68"
+      ],
+      "reference_coordinate": null,
+      "coordinate_basis": "No defensible numeric frontier coordinate published in the reviewed primary sources; no town centroid or OSM-derived coordinate used as independent truth.",
+      "benchmark_role": "core_main_road_reference",
+      "notes": "Use Rhine frontier bridge; the same route subsequently crosses separate canals.",
+      "is_closure_evidence": false,
+      "event_links": []
+    },
+    {
+      "crossing_id": "DE-FR-CHALAMPE-ROAD",
+      "country_pair": [
+        "DE",
+        "FR"
+      ],
+      "name": "Chalampé–Neuenburg road bridge",
+      "aliases": [
+        "Chalampé",
+        "Neuenburg am Rhein"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "B378",
+        "D39"
+      ],
+      "source_ids": [
+        "DEFR-RPF-CHALAMPE",
+        "DEFR-LTBW-15-5565",
+        "DEFR-LEGIFRANCE-ROADS-68"
+      ],
+      "reference_coordinate": null,
+      "coordinate_basis": "No defensible numeric frontier coordinate published in the reviewed primary sources; no town centroid or OSM-derived coordinate used as independent truth.",
+      "benchmark_role": "core_main_road_reference",
+      "notes": "Road component of the Rhine crossing; nearby rail geometry is not a second road facility.",
+      "is_closure_evidence": false,
+      "event_links": []
+    },
+    {
+      "crossing_id": "DE-FR-OTTMARSHEIM-ROAD",
+      "country_pair": [
+        "DE",
+        "FR"
+      ],
+      "name": "Ottmarsheim–Steinenstadt motorway bridge",
+      "aliases": [
+        "Ottmarsheim",
+        "Steinenstadt",
+        "Rheinbrücke Ottmarsheim",
+        "Neuenburg motorway connection"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "A36",
+        "A5"
+      ],
+      "source_ids": [
+        "DEFR-EURHENA-BRIDGES"
+      ],
+      "reference_coordinate": null,
+      "coordinate_basis": "No defensible numeric frontier coordinate published in the reviewed primary sources; no town centroid or OSM-derived coordinate used as independent truth.",
+      "benchmark_role": "core_main_road_reference",
+      "notes": "A5 is the connecting German motorway. The Rhine frontier bridge is distinct from the A36 bridge over the Grand Canal d’Alsace.",
+      "is_closure_evidence": false,
+      "event_links": []
+    },
+    {
+      "crossing_id": "DE-FR-PALMRAIN-ROAD",
+      "country_pair": [
+        "DE",
+        "FR"
+      ],
+      "name": "Palmrain bridge",
+      "aliases": [
+        "Palmrainbrücke",
+        "Palmrheinbrücke",
+        "Pont du Palmrain",
+        "Weil am Rhein–Village-Neuf"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "B532",
+        "D105"
+      ],
+      "source_ids": [
+        "DEFR-LTBW-17-8661",
+        "DEFR-LEGIFRANCE-ROADS-68"
+      ],
+      "reference_coordinate": null,
+      "coordinate_basis": "No defensible numeric frontier coordinate published in the reviewed primary sources; no town centroid or OSM-derived coordinate used as independent truth.",
+      "benchmark_role": "core_main_road_reference",
+      "notes": "France–Germany road bridge; exclude the nearby pedestrian Dreiländerbrücke and Switzerland–Germany crossings.",
+      "is_closure_evidence": false,
+      "event_links": []
+    }
+  ],
+  "workbook_provenance": {
+    "source_filename": "Global_Border_Closures_Register_2016_2026.xlsx",
+    "source_sha256": "3530415e136e81d20cc24b51b3a5c2739e6a529fc2484cc51c8861693ff33bf0",
+    "site_data": "dist/data.js",
+    "selection_rule": "Actual context-frontier-deu-fra location link, not country-array co-occurrence."
+  },
+  "workbook_records": [
+    {
+      "event_id": "EU034",
+      "title": "Germany rejects nonessential entry at five neighbouring land frontiers",
+      "crossings_field": "Five designated neighbouring frontiers",
+      "scope": "Selected internal Schengen land borders, not every German boundary",
+      "matching_location_ids": [
+        "context-frontier-deu-fra"
+      ],
+      "assessment": "broad_frontier_policy_context_only",
+      "accepted_crossing_ids": [],
+      "reason": "No individually named crossing in this record scope. Do not distribute a national/frontier entry regime across every OSM road crossing."
+    },
+    {
+      "event_id": "R2-EU-011",
+      "title": "France limits non-exempt entry at internal-European borders during first COVID wave",
+      "crossings_field": "European land crossing network; not all posts physically shut",
+      "scope": "Metropolitan internal-European land frontier entry regime",
+      "matching_location_ids": [
+        "context-frontier-deu-fra"
+      ],
+      "assessment": "broad_frontier_policy_context_only",
+      "accepted_crossing_ids": [],
+      "reason": "No individually named crossing in this record scope. Do not distribute a national/frontier entry regime across every OSM road crossing."
+    }
+  ],
+  "excluded_country_cooccurrences": [
+    {
+      "event_id": "EU024",
+      "title": "Switzerland expands pandemic entry restrictions at neighbouring frontiers",
+      "reason": "France and Germany co-occur as neighbours of the imposing state; actual location links do not include the France–Germany pair.",
+      "location_ids": [
+        "context-frontier-aut-che",
+        "context-frontier-che-deu",
+        "context-frontier-che-fra",
+        "context-frontier-che-ita"
+      ]
+    },
+    {
+      "event_id": "EU033",
+      "title": "Belgium closes land borders to nonessential travel, 2020",
+      "reason": "France and Germany co-occur as neighbours of the imposing state; actual location links do not include the France–Germany pair.",
+      "location_ids": [
+        "context-frontier-bel-deu",
+        "context-frontier-bel-fra",
+        "context-frontier-bel-lux",
+        "context-frontier-bel-nld"
+      ]
+    },
+    {
+      "event_id": "R3-EU-002",
+      "title": "Belgium renews prohibition of nonessential cross-border journeys in 2021",
+      "reason": "France and Germany co-occur as neighbours of the imposing state; actual location links do not include the France–Germany pair.",
+      "location_ids": [
+        "context-frontier-bel-deu",
+        "context-frontier-bel-fra",
+        "context-frontier-bel-lux",
+        "context-frontier-bel-nld"
+      ]
+    }
+  ],
+  "accepted_event_crossing_links": [],
+  "workbook_sha256": "3530415e136e81d20cc24b51b3a5c2739e6a529fc2484cc51c8861693ff33bf0"
+}

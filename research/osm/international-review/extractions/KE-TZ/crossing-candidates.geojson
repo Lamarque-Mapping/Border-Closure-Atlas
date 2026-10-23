@@ -1,0 +1,834 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "osm-1236932655e4414f",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.64110811067727,
+          -3.3821159542504797
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-1236932655e4414f",
+        "label": "Road–border contact near Holili",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192798,
+            "name": "Kenya",
+            "iso2": "KE"
+          },
+          {
+            "osm_relation_id": 195270,
+            "name": "Tanzania",
+            "iso2": "TZ"
+          }
+        ],
+        "boundary_relation_provenance": [
+          192798,
+          195270
+        ],
+        "highway_classes": [
+          "trunk"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          446929373
+        ],
+        "boundary_osm_ids": [
+          967219282
+        ],
+        "route_names": [],
+        "route_refs": [
+          "A6"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              37.64110811067727,
+              -3.382115954250481
+            ],
+            "route_osm_id": 446929373,
+            "boundary_osm_id": 967219282
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Holili",
+            "osm_id": 3886079725,
+            "osm_url": "https://www.openstreetmap.org/node/3886079725",
+            "distance_m": 818,
+            "place_type": "town",
+            "coordinate": [
+              37.6351976,
+              -3.3777136
+            ]
+          },
+          {
+            "name": "Lessesia",
+            "osm_id": 4912360732,
+            "osm_url": "https://www.openstreetmap.org/node/4912360732",
+            "distance_m": 3658,
+            "place_type": "village",
+            "coordinate": [
+              37.6702076,
+              -3.3666587
+            ]
+          },
+          {
+            "name": "Mahoo",
+            "osm_id": 4912360733,
+            "osm_url": "https://www.openstreetmap.org/node/4912360733",
+            "distance_m": 5043,
+            "place_type": "village",
+            "coordinate": [
+              37.6861579,
+              -3.3766264
+            ]
+          },
+          {
+            "name": "Taveta",
+            "osm_id": 44914874,
+            "osm_url": "https://www.openstreetmap.org/node/44914874",
+            "distance_m": 5089,
+            "place_type": "town",
+            "coordinate": [
+              37.6833,
+              -3.4
+            ]
+          },
+          {
+            "name": "Riata",
+            "osm_id": 4912277795,
+            "osm_url": "https://www.openstreetmap.org/node/4912277795",
+            "distance_m": 5475,
+            "place_type": "village",
+            "coordinate": [
+              37.6597078,
+              -3.4279659
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [
+          {
+            "record_id": "R5-AES-003",
+            "names": [
+              [
+                "Holili",
+                "nearby settlement"
+              ],
+              [
+                "Taveta",
+                "nearby settlement"
+              ]
+            ],
+            "status": "discovery_only_not_event_link",
+            "transport_qualification": "Transport mode and affected movement require review",
+            "eligible_for_automatic_acceptance": false
+          }
+        ],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-251dbbfe15c9bc78",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.47528890293271,
+          -1.244533526087967
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-251dbbfe15c9bc78",
+        "label": "Road–border contact near Isebania",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192798,
+            "name": "Kenya",
+            "iso2": "KE"
+          },
+          {
+            "osm_relation_id": 195270,
+            "name": "Tanzania",
+            "iso2": "TZ"
+          }
+        ],
+        "boundary_relation_provenance": [
+          192798,
+          195270
+        ],
+        "highway_classes": [
+          "trunk"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          364744973
+        ],
+        "boundary_osm_ids": [
+          1196006151
+        ],
+        "route_names": [],
+        "route_refs": [
+          "T4"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              34.47528890293271,
+              -1.2445335260879675
+            ],
+            "route_osm_id": 364744973,
+            "boundary_osm_id": 1196006151
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Sirari",
+            "osm_id": 258513537,
+            "osm_url": "https://www.openstreetmap.org/node/258513537",
+            "distance_m": 633,
+            "place_type": "village",
+            "coordinate": [
+              34.476966,
+              -1.25
+            ]
+          },
+          {
+            "name": "Isebania",
+            "osm_id": 1401393601,
+            "osm_url": "https://www.openstreetmap.org/node/1401393601",
+            "distance_m": 639,
+            "place_type": "town",
+            "coordinate": [
+              34.4792225,
+              -1.2403216
+            ]
+          },
+          {
+            "name": "Nyabohanse",
+            "osm_id": 1401393605,
+            "osm_url": "https://www.openstreetmap.org/node/1401393605",
+            "distance_m": 3885,
+            "place_type": "village",
+            "coordinate": [
+              34.4718953,
+              -1.2095733
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [
+          {
+            "record_id": "R5-AES-003",
+            "names": [
+              [
+                "Isebania",
+                "nearby settlement"
+              ]
+            ],
+            "status": "discovery_only_not_event_link",
+            "transport_qualification": "Transport mode and affected movement require review",
+            "eligible_for_automatic_acceptance": false
+          }
+        ],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-88fb5bbaa13df35d",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.64214890728363,
+          -3.381043416261865
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-88fb5bbaa13df35d",
+        "label": "Road–border contact near Holili",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192798,
+            "name": "Kenya",
+            "iso2": "KE"
+          },
+          {
+            "osm_relation_id": 195270,
+            "name": "Tanzania",
+            "iso2": "TZ"
+          }
+        ],
+        "boundary_relation_provenance": [
+          192798,
+          195270
+        ],
+        "highway_classes": [
+          "trunk"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          996682923
+        ],
+        "boundary_osm_ids": [
+          967219282
+        ],
+        "route_names": [],
+        "route_refs": [
+          "A6"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              37.64214890728363,
+              -3.3810434162618654
+            ],
+            "route_osm_id": 996682923,
+            "boundary_osm_id": 967219282
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Holili",
+            "osm_id": 3886079725,
+            "osm_url": "https://www.openstreetmap.org/node/3886079725",
+            "distance_m": 856,
+            "place_type": "town",
+            "coordinate": [
+              37.6351976,
+              -3.3777136
+            ]
+          },
+          {
+            "name": "Lessesia",
+            "osm_id": 4912360732,
+            "osm_url": "https://www.openstreetmap.org/node/4912360732",
+            "distance_m": 3501,
+            "place_type": "village",
+            "coordinate": [
+              37.6702076,
+              -3.3666587
+            ]
+          },
+          {
+            "name": "Mahoo",
+            "osm_id": 4912360733,
+            "osm_url": "https://www.openstreetmap.org/node/4912360733",
+            "distance_m": 4915,
+            "place_type": "village",
+            "coordinate": [
+              37.6861579,
+              -3.3766264
+            ]
+          },
+          {
+            "name": "Taveta",
+            "osm_id": 44914874,
+            "osm_url": "https://www.openstreetmap.org/node/44914874",
+            "distance_m": 5030,
+            "place_type": "town",
+            "coordinate": [
+              37.6833,
+              -3.4
+            ]
+          },
+          {
+            "name": "Riata",
+            "osm_id": 4912277795,
+            "osm_url": "https://www.openstreetmap.org/node/4912277795",
+            "distance_m": 5544,
+            "place_type": "village",
+            "coordinate": [
+              37.6597078,
+              -3.4279659
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [
+          {
+            "record_id": "R5-AES-003",
+            "names": [
+              [
+                "Holili",
+                "nearby settlement"
+              ],
+              [
+                "Taveta",
+                "nearby settlement"
+              ]
+            ],
+            "status": "discovery_only_not_event_link",
+            "transport_qualification": "Transport mode and affected movement require review",
+            "eligible_for_automatic_acceptance": false
+          }
+        ],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-cc22327583ced6c1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.7863119,
+          -2.5476614000000004
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-cc22327583ced6c1",
+        "label": "Road–border contact near Namanga",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192798,
+            "name": "Kenya",
+            "iso2": "KE"
+          },
+          {
+            "osm_relation_id": 195270,
+            "name": "Tanzania",
+            "iso2": "TZ"
+          }
+        ],
+        "boundary_relation_provenance": [
+          192798,
+          195270
+        ],
+        "highway_classes": [
+          "trunk"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          68977837,
+          426655236,
+          446928603,
+          446928611
+        ],
+        "boundary_osm_ids": [
+          260271144
+        ],
+        "route_names": [
+          "Arusha Road",
+          "Athi River Road"
+        ],
+        "route_refs": [
+          "A2",
+          "T2"
+        ],
+        "raw_contact_count": 4,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              36.7863119,
+              -2.5476614
+            ],
+            "route_osm_id": 68977837,
+            "boundary_osm_id": 260271144
+          },
+          {
+            "coordinate": [
+              36.7868238,
+              -2.5479668
+            ],
+            "route_osm_id": 426655236,
+            "boundary_osm_id": 260271144
+          },
+          {
+            "coordinate": [
+              36.7863119,
+              -2.5476614
+            ],
+            "route_osm_id": 446928603,
+            "boundary_osm_id": 260271144
+          },
+          {
+            "coordinate": [
+              36.7868238,
+              -2.5479668
+            ],
+            "route_osm_id": 446928611,
+            "boundary_osm_id": 260271144
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Namanga",
+            "osm_id": 44925089,
+            "osm_url": "https://www.openstreetmap.org/node/44925089",
+            "distance_m": 303,
+            "place_type": "town",
+            "coordinate": [
+              36.7869821,
+              -2.5450079
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [
+          {
+            "record_id": "R5-AES-003",
+            "names": [
+              [
+                "Namanga",
+                "nearby settlement"
+              ]
+            ],
+            "status": "discovery_only_not_event_link",
+            "transport_qualification": "Transport mode and affected movement require review",
+            "eligible_for_automatic_acceptance": false
+          }
+        ],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-e74599bab0e81a5f",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.56822049535541,
+          -2.990678716966182
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-e74599bab0e81a5f",
+        "label": "Road–border contact near Tarakea",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192798,
+            "name": "Kenya",
+            "iso2": "KE"
+          },
+          {
+            "osm_relation_id": 195270,
+            "name": "Tanzania",
+            "iso2": "TZ"
+          }
+        ],
+        "boundary_relation_provenance": [
+          192798,
+          195270
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          176091808
+        ],
+        "boundary_osm_ids": [
+          260447751
+        ],
+        "route_names": [],
+        "route_refs": [
+          "T21"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              37.56822049535541,
+              -2.9906787169661833
+            ],
+            "route_osm_id": 176091808,
+            "boundary_osm_id": 260447751
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Tarakea",
+            "osm_id": 2986395051,
+            "osm_url": "https://www.openstreetmap.org/node/2986395051",
+            "distance_m": 1294,
+            "place_type": "village",
+            "coordinate": [
+              37.5651663,
+              -3.0019726
+            ]
+          },
+          {
+            "name": "Nayeme",
+            "osm_id": 7835333093,
+            "osm_url": "https://www.openstreetmap.org/node/7835333093",
+            "distance_m": 2807,
+            "place_type": "village",
+            "coordinate": [
+              37.5859949,
+              -3.0087061
+            ]
+          },
+          {
+            "name": "Laset",
+            "osm_id": 44998940,
+            "osm_url": "https://www.openstreetmap.org/node/44998940",
+            "distance_m": 3583,
+            "place_type": "village",
+            "coordinate": [
+              37.5726275,
+              -2.9585827
+            ]
+          },
+          {
+            "name": "Kikelelwa",
+            "osm_id": 7835236780,
+            "osm_url": "https://www.openstreetmap.org/node/7835236780",
+            "distance_m": 3767,
+            "place_type": "village",
+            "coordinate": [
+              37.537627,
+              -2.9760334
+            ]
+          },
+          {
+            "name": "Loitokitok",
+            "osm_id": 2178131859,
+            "osm_url": "https://www.openstreetmap.org/node/2178131859",
+            "distance_m": 9593,
+            "place_type": "town",
+            "coordinate": [
+              37.5095,
+              -2.927112
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required",
+          "endpoint_or_tangent_contact"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-eff9511c33d0e08e",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.10537977137371,
+          -4.601621426461381
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-eff9511c33d0e08e",
+        "label": "Road–border contact near Horohoro",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192798,
+            "name": "Kenya",
+            "iso2": "KE"
+          },
+          {
+            "osm_relation_id": 195270,
+            "name": "Tanzania",
+            "iso2": "TZ"
+          }
+        ],
+        "boundary_relation_provenance": [
+          192798,
+          195270
+        ],
+        "highway_classes": [
+          "trunk"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          474909579
+        ],
+        "boundary_osm_ids": [
+          260447748
+        ],
+        "route_names": [],
+        "route_refs": [
+          "A14"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              39.10537977137371,
+              -4.6016214264613815
+            ],
+            "route_osm_id": 474909579,
+            "boundary_osm_id": 260447748
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Horohoro",
+            "osm_id": 8038081977,
+            "osm_url": "https://www.openstreetmap.org/node/8038081977",
+            "distance_m": 678,
+            "place_type": "village",
+            "coordinate": [
+              39.1028095,
+              -4.6071784
+            ]
+          },
+          {
+            "name": "Mwanyora",
+            "osm_id": 44925837,
+            "osm_url": "https://www.openstreetmap.org/node/44925837",
+            "distance_m": 3919,
+            "place_type": "village",
+            "coordinate": [
+              39.1,
+              -4.5666
+            ]
+          },
+          {
+            "name": "Lunga-Lunga",
+            "osm_id": 44930430,
+            "osm_url": "https://www.openstreetmap.org/node/44930430",
+            "distance_m": 5735,
+            "place_type": "village",
+            "coordinate": [
+              39.1203358,
+              -4.5520032
+            ]
+          },
+          {
+            "name": "Duruma",
+            "osm_id": 45002760,
+            "osm_url": "https://www.openstreetmap.org/node/45002760",
+            "distance_m": 6210,
+            "place_type": "village",
+            "coordinate": [
+              39.0833144,
+              -4.5500252
+            ]
+          },
+          {
+            "name": "Mkambini",
+            "osm_id": 44928104,
+            "osm_url": "https://www.openstreetmap.org/node/44928104",
+            "distance_m": 6220,
+            "place_type": "village",
+            "coordinate": [
+              39.0832638,
+              -4.5499467
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [
+          {
+            "record_id": "R5-AES-003",
+            "names": [
+              [
+                "Horohoro",
+                "nearby settlement"
+              ],
+              [
+                "Lunga-Lunga",
+                "nearby settlement"
+              ]
+            ],
+            "status": "discovery_only_not_event_link",
+            "transport_qualification": "Transport mode and affected movement require review",
+            "eligible_for_automatic_acceptance": false
+          }
+        ],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    }
+  ]
+}

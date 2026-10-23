@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "decision_date": "2026-10-23",
+  "purpose": "A manageable global inventory of crossings on main roads, with bounded exceptions for the closure research.",
+  "default_road_scope": "main",
+  "main_highway_classes": ["motorway", "trunk", "primary"],
+  "include_link_roads": true,
+  "systematically_extract_secondary_roads": false,
+  "systematically_extract_minor_roads": false,
+  "include_nonroad_by_default": false,
+  "targeted_exceptions": [
+    {
+      "crossing_id": "UG-KE-LWAKHAKHA-ROAD",
+      "reason": "One of the four principal Kenya–Uganda road entry posts in the official Kenya list; its mapped approach is secondary. Retain this documented major-post exception."
+    },
+    {
+      "crossing_id": "UG-CD-BUSANZA-ROAD",
+      "reason": "Explicitly named in closure record GL13. Retain the two unresolved road-contact alternatives for targeted location review; this does not authorize a general minor-road survey."
+    }
+  ],
+  "limits": [
+    "OSM road classes vary between countries and are not traffic-volume measurements.",
+    "A named documented major post or named workbook crossing can be reviewed as an explicit exception, with its reason and sources retained.",
+    "Existing smaller-road and rail findings remain background data; they do not expand the global extraction scope.",
+    "Even a main road can follow a border or intersect inaccurate boundary geometry. Topology and source checks still apply."
+  ]
+}

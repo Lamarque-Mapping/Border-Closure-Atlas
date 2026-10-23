@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "exceptions": [
+    {
+      "crossing_id": "UG-KE-LWAKHAKHA-ROAD",
+      "reason": "One of the four principal Kenya–Uganda road entry posts in the official Kenya list; its mapped approach is secondary. Retain this documented major-post exception.",
+      "route_osm_ids": [
+        607402412
+      ],
+      "source_urls": [
+        "https://immigration.go.ke/gazetted-ports-of-entry-and-exit-poes-and-location/",
+        "https://bordersecretariat.go.ke/land-poes/",
+        "https://www.immigration.go.ug/list-borders-according-regions"
+      ]
+    },
+    {
+      "crossing_id": "UG-CD-BUSANZA-ROAD",
+      "reason": "Explicitly named in closure record GL13. Retain the two unresolved road-contact alternatives for targeted location review; this does not authorize a general minor-road survey.",
+      "route_osm_ids": [
+        836056805,
+        1083585614
+      ],
+      "source_urls": [
+        "https://data.unhcr.org/en/documents/details/86907",
+        "https://data.unhcr.org/en/documents/download/118063",
+        "https://www.gov.uk/foreign-travel-advice/uganda/regional-risks"
+      ]
+    }
+  ]
+}

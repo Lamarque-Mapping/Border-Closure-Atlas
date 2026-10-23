@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Explore documented border closures worldwide, their dates, affected movement and source evidence.">
+  <title>Border closures · Global atlas</title>
+  <link rel="stylesheet" href="vendor/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="atlas-pending">
+  <a class="skip-link" href="#search">Skip to map controls</a>
+  <header class="masthead">
+    <div class="brand"><h1>Border closures</h1><span class="brand-meta"><span>Global atlas</span><span class="release" id="release-label">2016–2026</span></span></div>
+    <div id="header-search-slot"><div class="map-search" id="map-search"><label class="search"><span class="sr-only">Search closures</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.7" cy="10.7" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg><input id="search" type="search" placeholder="Search closures" enterkeyhint="search" autocorrect="off" autocapitalize="none" spellcheck="false"></label></div></div>
+    <a class="header-support" href="https://www.leverhulme.ac.uk/" target="_blank" rel="noopener noreferrer" aria-label="Mapping by Hugh Lamarque, supported by the Leverhulme Trust"><span class="header-credit"><span class="header-credit-author">Mapping by Hugh Lamarque</span><span class="header-credit-support">Supported by the:</span></span><img src="assets/leverhulme-trust.jpg" width="329" height="110" alt="The Leverhulme Trust" decoding="async"></a>
+    <nav aria-label="Main navigation">
+      <button class="nav-button active" id="map-page-button" aria-pressed="true">Map</button>
+      <button class="nav-button" id="analysis-page-button" aria-pressed="false" aria-controls="analysis-page">Analysis</button>
+      <button class="nav-button" id="method-button" aria-pressed="false">Methods</button>
+    </nav>
+  </header>
+  <main id="map-page">
+    <section id="startup-panel" class="startup-panel" role="status" aria-live="polite">
+      <h2 id="startup-heading">Open the interactive map</h2>
+      <p id="startup-message">If this file shows only a preview, open the atlas in your browser using the link below.</p>
+      <a class="startup-link" href="https://border-closures-atlas.lamarque.chatgpt.site" target="_blank" rel="noopener noreferrer">Open interactive atlas ↗</a>
+      <button id="startup-retry" type="button" hidden>Try again</button>
+      <details id="startup-error" hidden><summary>Technical detail</summary><p id="startup-detail"></p></details>
+    </section>
+
+    <div id="map" aria-label="Map of documented border restrictions"></div>
+    <div class="map-status" id="map-note">World · dated restrictions</div>
+    <button class="panel-toggle" id="panel-toggle" aria-controls="explore-panel" aria-expanded="true">Views &amp; records</button>
+    <aside class="sidebar" id="explore-panel" aria-label="Map views and closure records">
+      <header class="panel-heading"><h2 id="panel-title">World</h2><button class="panel-close" id="collapse-panel" aria-label="Minimize views and records" title="Minimize views and records">−</button></header>
+      <div id="panel-search-slot"></div>
+      <nav class="continent-tabs" id="continent-tabs" role="tablist" aria-label="Continents"></nav>
+      <div class="panel-scroll" id="panel-scroll">
+        <div id="continent-panel" role="tabpanel" aria-labelledby="tab-world">
+        <div id="browse-panel">
+          <div class="section-top"><h3>Records</h3><button class="text-button" id="reset-button">Reset</button></div>
+          <label class="map-view-control">Map view<select id="time-mode"><option value="intervals" selected>Dated restrictions</option><option value="onsets">Closures beginning</option><option value="all">All recorded closures</option></select></label>
+
+          <details class="record-filters" id="record-filters"><summary>Filters</summary>
+          <div class="filter-grid"><label>Region<select id="region"><option value="">All regions</option></select></label><label>Coded Rationale<select id="rationale"><option value="">All coded rationales</option></select></label></div>
+          <label class="chronology-filter">Timing evidence<select id="measure-type"><option value="">All evidence types</option><option value="operational_spell">Observed closure</option><option value="formal_policy_period">Policy in force</option><option value="ordered_window">Announced closure dates</option><option value="intermittent_regime">Repeated closures</option></select></label>
+          <p class="coding-note">Rationale coding is interpretive and necessarily imperfect. <button class="text-button" id="coding-note-button">About coding</button></p>
+          <details class="filter-details"><summary>Map detail &amp; other records</summary><div class="geography-controls"><label>Location detail<select id="precision"><option value="">All levels of detail</option><option value="crossing_reference">Sourced crossing / policy area</option><option value="context">Border or country reference</option><option value="unlocated">Without a mapped location</option></select></label><label class="checkbox-label"><input type="checkbox" id="include-excluded"> Include excluded records <span id="excluded-count"></span></label><span class="excluded-note" id="excluded-note">Excluded records appear in the list only.</span></div></details>
+          </details>
+          <p id="filter-summary" class="active-filters" hidden></p>
+          <div class="result-summary"><div><strong id="record-count">—</strong> <span id="count-label">records</span></div><span id="mapped-count"></span></div>
+          <div class="results-actions"><button class="quiet" id="read-records" type="button" disabled>Read all records</button><button class="quiet" id="download-records" type="button" title="Download matching closure details as an Excel-compatible CSV spreadsheet" disabled>Download CSV</button></div>
+          <p class="result-context" id="result-context">Preparing the map…</p>
+          <div class="location-filter" id="location-filter" hidden><span id="location-filter-label"></span><button class="text-button" id="clear-location">Clear</button></div>
+          <div id="event-list" class="event-list" aria-live="polite"></div>
+          <div class="list-footer" id="list-footer"><span id="list-page-label"></span><button class="quiet" id="show-more" hidden>Show more records</button></div>
+        </div>
+        <article id="detail-panel" hidden><button class="back-button" id="back-button">← All matching records</button><div id="event-detail"></div></article>
+        </div>
+      </div>
+      <details class="map-key" id="map-key" open><summary>Map key</summary><div class="map-key-content"><div class="map-legend rationale-legend" id="rationale-legend" aria-label="Rationale colours"></div><div class="map-legend line-type-legend"><span><i class="legend-line broad"></i>Border-wide scope stated</span><span><i class="legend-line limited"></i>Limited or uncertain scope</span><span><i class="legend-line country"></i>Country outline</span><span><i class="legend-line possible"></i>Possible date overlap</span></div><p class="map-disclaimer">Colour shows the recorded reason. Dotted lines mark limited or uncertain geographical scope. Lines locate the border, not the exact affected section.</p></div></details>
+      <footer class="panel-footer"><button class="quiet" id="fit-button" title="Show all matching locations">Fit records</button><button class="quiet save-button" id="save-view-button" aria-label="Save map view as PNG" title="Save the current map as a PNG image">Save view</button><span class="sidebar-credit">Mapping by Hugh Lamarque <span aria-hidden="true">·</span> <a class="credit-contact" href="mailto:hugh.lamarque@gmail.com" aria-label="Email Hugh Lamarque">Contact</a></span></footer>
+    </aside>
+    <div class="map-caption">Mapping by Hugh Lamarque <span aria-hidden="true">·</span> <a class="credit-contact" href="mailto:hugh.lamarque@gmail.com" aria-label="Email Hugh Lamarque">Contact</a></div>
+        <div class="timeline">
+          <div class="timeline-controls"><button id="play-button" class="play-button" aria-label="Play timeline" title="Play timeline"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5 13 8 4 13.5Z"/></svg></button><span id="month-label" class="timeline-date">Loading dates…</span><input type="range" id="month-slider" min="0" max="1" value="0" step="1" aria-label="Selected month"><button class="step-button" id="previous-button" aria-label="Previous month">‹</button><button class="step-button" id="next-button" aria-label="Next month">›</button></div>
+          <div class="timeline-bottom"><span id="first-month"></span><span id="time-note">Dated restrictions · Unmarked does not mean open</span><span id="last-month"></span></div>
+        </div>
+    <dialog id="records-dialog" class="records-dialog" aria-labelledby="records-heading" aria-describedby="records-caption">
+      <header class="records-heading"><div><h2 id="records-heading">Closure records</h2><p id="records-caption"></p></div><div class="records-tools"><button class="quiet" id="download-reader-records" type="button" title="Download all matching closure details as a CSV spreadsheet">Download CSV</button><button class="quiet" id="records-close" type="button">Back to map</button></div></header>
+      <div class="records-body" id="records-body"></div>
+    </dialog>
+  </main>
+  <main id="analysis-page" class="analysis-page" aria-label="Analysis" hidden>
+    <div id="analysis-loading" class="analysis-loading" role="status" aria-live="polite">
+      <p id="analysis-loading-message">Loading analysis…</p>
+      <button id="analysis-retry" type="button" hidden>Try again</button>
+    </div>
+    <iframe id="analysis-frame" title="Border closures: analysis, charts and evidence" hidden></iframe>
+  </main>
+  <main id="briefing-page" class="briefing-page" hidden>
+    <header class="briefing-head"><div><p class="eyebrow">Sources and methods</p><h2>How to read the atlas</h2><p class="briefing-intro">A research record of land-border closures and restrictions between 21 October 2016 and 21 October 2026. It describes past events, not whether a crossing is open today.</p></div><button id="back-to-map" class="quiet">Return to map →</button></header>
+    <div id="release-method" class="coverage-note"></div>
+    <div class="briefing-grid">
+      <section><h3>What is included?</h3><p>Restrictions at land borders and international river ferries, including short closures. A record may concern one crossing, several crossings or a wider policy, and may contain several stages as the rules changed.</p><p>Routine overnight hours, individual visa refusals, checks that still allow passage, and air- or sea-only restrictions are outside this dataset. Related records can describe parts of the same event.</p></section>
+      <section><h3>What do the lines mean?</h3><p>Colour shows the recorded reason for a restriction. A solid line means the selected evidence explicitly describes border-wide scope. A dotted line means the restriction concerns particular crossings, a smaller area, or an extent that remains unclear. If records are mixed, the line stays dotted.</p><p>Both styles locate the relevant border; neither traces the exact closed section or means that every traveller was stopped. Read the description for the affected crossings, people, goods and exceptions. A border without colour may simply lack collected evidence.</p></section>
+      <section><h3>What do the dates mean?</h3><p><strong>Observed closure:</strong> sources describe an interruption to passage. <strong>Policy in force:</strong> the dates refer to a rule, without proving continuous closure on the ground. <strong>Announced closure dates:</strong> a planned schedule whose implementation is not confirmed. <strong>Repeated closures:</strong> a period containing closures and possible openings.</p><p>Some records have only dated reports or disputed dates. These appear on those dates, without filling the gaps between them. A last report, scheduled end or change in law is not automatically a reopening. Missing end dates are not extended to the present.</p><p>Days are differences between calendar dates, not measured hours. A same-day event is not counted as a full day. Overlapping stages must not be added together.</p></section>
+      <section><h3>How should I use the timeline?</h3><p><strong>Dated restrictions</strong> shows records with evidence in the selected month. It does not mean the restriction lasted throughout that month. <strong>Closures beginning</strong> shows supported starting months. <strong>All recorded closures</strong> includes records without dates.</p><p>Typing in search switches to all recorded closures so that a date filter does not hide a matching event. You can then narrow the dates yourself.</p></section>
+      <section id="rationale-coding"><h3>What is a coded rationale?</h3><p>A category summarises a reason attributed by a source. A record can have several categories because reasons, actors or stages differ. An official explanation is not proof of the complete motive. Grey means no category is assigned; the reason may be unknown or fall outside the categories.</p><p>Counts describe the records collected, not how often closures occur worldwide. Continental and rationale totals can overlap. The duration charts use a smaller group with sufficiently clear dates and reopening evidence, and show its coverage alongside the comparison.</p></section>
+      <section><h3>Where can I check the evidence?</h3><p>Open a record for a plain summary, dated stages and named source links. Further details contain the qualifications and review history. Later corrections take precedence over original claims, which are labelled as historical.</p><p><strong>Read all records</strong> opens a wider reading view. <strong>Download CSV</strong> saves every matching record, including those beyond the first page. Analysis offers chart data, chronology and review downloads. <strong>Save view</strong> downloads the current map and its key.</p><p>Some evidence was available in full; some only as extracts. Several reports can repeat one original account, so more links do not necessarily mean independent confirmation.</p></section>
+    </div>
+    <section id="research-method" class="briefing-method" aria-label="Research and review"></section>
+    <footer class="briefing-footer"><p>Mapping by Hugh Lamarque</p><p>Reference geography: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a> and © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a> (<a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener noreferrer">ODbL</a>), with other location sources named in the records. These reference boundaries do not resolve territorial claims.</p></footer>
+  </main>
+  <div id="message" role="status" class="message" hidden></div>
+  <script src="data-loader.js" data-map-src="map-data.js?v=73c85879d0e66a1ec93e2576" defer></script>
+  <script src="navigation.js" defer></script>
+  <script src="startup.js" defer></script>
+  <script src="vendor/leaflet.js" defer></script>
+  <script src="cartography.js" defer></script>
+  <script src="core.js" defer></script>
+  <script src="public-text.js" defer></script>
+  <script src="record-summary.js" defer></script>
+  <script src="export.js" defer></script>
+  <script src="record-export.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>

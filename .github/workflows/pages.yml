@@ -1,0 +1,53 @@
+name: Publish Border Closure Atlas
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out atlas
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check map code and export framing
+        run: |
+          node --check dist/app.js
+          node --check dist/export.js
+          node --check dist/navigation.js
+          node scripts/verify-map-export.cjs
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Prepare website
+        env:
+          ATLAS_PUBLIC_URL: ${{ steps.pages.outputs.base_url }}
+        run: node scripts/build-hosted.cjs
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: out
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

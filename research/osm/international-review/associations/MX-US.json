@@ -1,0 +1,2026 @@
+{
+  "schema_version": 1,
+  "pair": [
+    "MX",
+    "US"
+  ],
+  "reviewed_at": "2026-10-23T12:26:46.433989+00:00",
+  "active_extraction": "extractions/MX-US-scoped",
+  "active_topology": "topology/MX-US-scoped",
+  "source_candidate_sha256": "395a555eee0f0457a983b1c3e8ac2b5c546777497ed1b1edcbb4a62482473b2c",
+  "topology_diagnostics_sha256": "2a1e49d6bd276da099f4d665d91faf80f0286a8a1703541286f8804d97da9977",
+  "topology_reviewer_sha256": "7c2af195125d4bc5c8e796a488f8a91df7ccfe9bde43d7af9ea8b963061d932a",
+  "benchmark_sha256": "c5f1f54d435737cfa901ff671ead6b4392bcb935aeb01326c07687cf7b4f1e15",
+  "road_exception_input_sha256": "8ba9b0c01c6a1d7af694743add4bf303b894b08d3bf583bcd179a504714f50f7",
+  "source_osm_sha256": "239794a0c709e2ad03409c420d5925a11bd2958dd4aff7acaa86fac40045ac3c",
+  "topology_method_version": "regional-topology-review-3",
+  "associations": [
+    {
+      "crossing_id": "MX-US-OTAY-MESA-ROAD",
+      "candidate_ids": [
+        "osm-44775b86ca9e1a6d",
+        "osm-53688c50ccfe1118",
+        "osm-61e8bf64ce144247"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "Official Caltrans and SANDAG Otay Mesa references and CA 905 / Garita de Otay vehicle approaches support the existing facility corridor. CBP reports distinct Passenger and Commercial units. The scoped extraction adds only seven explicitly reviewed secondary, secondary_link and service ways with hgv=designated at this documented major cargo post. These candidate groups are cargo/passenger corridor components, not separate physical ports or evidence of a historical closure.",
+      "source_ids": [
+        "MXUS-CALTRANS-GIS",
+        "MXUS-SANDAG-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced.",
+        "osm-53688c50ccfe1118: unresolved; geometry requires further review despite supported named-corridor correspondence.",
+        "osm-61e8bf64ce144247: unresolved; geometry requires further review despite supported named-corridor correspondence.",
+        "Cargo/passenger identity is supported at corridor level. Specific lane directions, current access and historical closure applicability require separate evidence; the explicit exception does not admit other small roads."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-44775b86ca9e1a6d",
+          "route_osm_ids": [
+            200257858,
+            221972671
+          ],
+          "coordinate": [
+            -116.9372688,
+            32.55030359999999
+          ],
+          "route_refs": [],
+          "route_names": [
+            "Calle Frontera Internacional"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 126,
+          "includes_documented_cargo_exception_ways": true
+        },
+        {
+          "candidate_id": "osm-53688c50ccfe1118",
+          "route_osm_ids": [
+            602751004,
+            602751006,
+            602751007,
+            602751008,
+            602751009
+          ],
+          "coordinate": [
+            -116.94039211890323,
+            32.55003916441164
+          ],
+          "route_refs": [],
+          "route_names": [],
+          "topology_status": "unresolved",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation",
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 179,
+          "includes_documented_cargo_exception_ways": true
+        },
+        {
+          "candidate_id": "osm-61e8bf64ce144247",
+          "route_osm_ids": [
+            114198558,
+            220571793,
+            220571794,
+            220571796,
+            220571798,
+            400557874,
+            468318914,
+            468318938,
+            468318961,
+            468318962,
+            468318963,
+            468318964,
+            468318965,
+            468318966,
+            468318967,
+            468318969,
+            492567538,
+            1468444507
+          ],
+          "coordinate": [
+            -116.9386577,
+            32.55018600000001
+          ],
+          "route_refs": [
+            "CA 905",
+            "MEX 2D Spur"
+          ],
+          "route_names": [
+            "Boulevard Garita de Otay",
+            "Global Entry SENTRI Lane",
+            "Linea Global Entry SENTRI",
+            "Línea (Ready Lane)",
+            "Otay Mesa Freeway",
+            "Ready Lane (Línea)"
+          ],
+          "topology_status": "unresolved",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation",
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 42,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-SAN-YSIDRO-ROAD",
+      "candidate_ids": [
+        "osm-3eebc8e335d0c9fd",
+        "osm-eec09d2188c50eb5",
+        "osm-0c272088aaa2e097",
+        "osm-97c2898a35e28a4d",
+        "osm-1095f60a7c1345a6"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "Official Caltrans/SANDAG San Ysidro references, I 5 route references and named San Ysidro control features support a single facility corridor. Five candidate clusters are lane/directional components, not five posts.",
+      "source_ids": [
+        "MXUS-CALTRANS-GIS",
+        "MXUS-SANDAG-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced.",
+        "osm-3eebc8e335d0c9fd: unresolved; geometry requires further review despite supported named-corridor correspondence.",
+        "osm-eec09d2188c50eb5: unresolved; geometry requires further review despite supported named-corridor correspondence.",
+        "osm-0c272088aaa2e097: unresolved; geometry requires further review despite supported named-corridor correspondence.",
+        "osm-97c2898a35e28a4d: unresolved; geometry requires further review despite supported named-corridor correspondence.",
+        "osm-1095f60a7c1345a6: unresolved; geometry requires further review despite supported named-corridor correspondence."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-3eebc8e335d0c9fd",
+          "route_osm_ids": [
+            713820834,
+            736585877,
+            736585878,
+            796253357,
+            796253361,
+            796253362,
+            796253363,
+            796253364,
+            796253365,
+            1014246520,
+            1014246521,
+            1014246522,
+            1014246523,
+            1014246524,
+            1014246525,
+            1014246526,
+            1014246527,
+            1014246528,
+            1014246529,
+            1014246530,
+            1014246531,
+            1014246532,
+            1014246533,
+            1014246534,
+            1014246535,
+            1014246536,
+            1014246537,
+            1014246538,
+            1014246539,
+            1014246540,
+            1014246541,
+            1014246542,
+            1014246543,
+            1014246544,
+            1014246545,
+            1014246546,
+            1014246547,
+            1014246548,
+            1014246549
+          ],
+          "coordinate": [
+            -117.03524590000004,
+            32.541966300000006
+          ],
+          "route_refs": [
+            "I 5",
+            "MEX 1",
+            "MEX 1D"
+          ],
+          "route_names": [
+            "Carretera Transpeninsular",
+            "John J. Montgomery Freeway"
+          ],
+          "topology_status": "unresolved",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation",
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 517,
+          "includes_documented_cargo_exception_ways": false
+        },
+        {
+          "candidate_id": "osm-eec09d2188c50eb5",
+          "route_osm_ids": [
+            879503563,
+            879503565,
+            879503566,
+            879503570,
+            1014945621,
+            1014945622,
+            1014945623,
+            1014945624
+          ],
+          "coordinate": [
+            -117.0301506,
+            32.542403500000006
+          ],
+          "route_refs": [
+            "I 5"
+          ],
+          "route_names": [
+            "All Travelers Lane",
+            "Linea Normal"
+          ],
+          "topology_status": "unresolved",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation",
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 37,
+          "includes_documented_cargo_exception_ways": false
+        },
+        {
+          "candidate_id": "osm-0c272088aaa2e097",
+          "route_osm_ids": [
+            1062411384
+          ],
+          "coordinate": [
+            -117.0292729,
+            32.5424778
+          ],
+          "route_refs": [],
+          "route_names": [
+            "Linea del Motos"
+          ],
+          "topology_status": "unresolved",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation"
+          ],
+          "source_coordinate_distance_m": 46,
+          "includes_documented_cargo_exception_ways": false
+        },
+        {
+          "candidate_id": "osm-97c2898a35e28a4d",
+          "route_osm_ids": [
+            468334881,
+            527302477,
+            527302478,
+            527302479,
+            527302480,
+            527304745,
+            527304746,
+            527323470,
+            546859119,
+            879503564,
+            879503568,
+            879503569,
+            879503571,
+            1014945625,
+            1014945626,
+            1014945627,
+            1014945628,
+            1014945629,
+            1014945630,
+            1014945631,
+            1014945632,
+            1014945633,
+            1014945634,
+            1014945635,
+            1014945636,
+            1014945638
+          ],
+          "coordinate": [
+            -117.02921170000002,
+            32.542483000000004
+          ],
+          "route_refs": [
+            "I 5",
+            "MEX 1D",
+            "MEX 2"
+          ],
+          "route_names": [
+            "All Travelers Lane",
+            "Avenida Internacional",
+            "Carril Listo",
+            "John J. Montgomery Freeway",
+            "Linea Normal",
+            "Ready Lane"
+          ],
+          "topology_status": "unresolved",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation",
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 52,
+          "includes_documented_cargo_exception_ways": false
+        },
+        {
+          "candidate_id": "osm-1095f60a7c1345a6",
+          "route_osm_ids": [
+            468334871,
+            468334875,
+            468334878,
+            468334916,
+            468334948,
+            468334949,
+            468334950,
+            527295353,
+            527295354,
+            527295355,
+            527295357,
+            527295358,
+            527295359,
+            527298939,
+            1014945620,
+            1014945639,
+            1014945640,
+            1014945641,
+            1014945642,
+            1014945643,
+            1014945644,
+            1014945645,
+            1014945646,
+            1014945647,
+            1014945649,
+            1014945650,
+            1014945651,
+            1014945652,
+            1014945653,
+            1014945654,
+            1014945655
+          ],
+          "coordinate": [
+            -117.0283767,
+            32.54255380000001
+          ],
+          "route_refs": [
+            "I 5",
+            "MEX 2"
+          ],
+          "route_names": [
+            "Carril Listo",
+            "Carril SENTRI de entrada global",
+            "Global Entry SENTRI Lane",
+            "Ready Lane"
+          ],
+          "topology_status": "unresolved",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation",
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 130,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-CALEXICO-WEST-ROAD",
+      "candidate_ids": [
+        "osm-e7c9315d58d435f6",
+        "osm-aa6a49cd3c4d2617"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "Named Calexico West border-control features and CA 111 FUT/Cesar Chavez vehicle approaches correspond to the official facility references. Conflicting published point locations are retained; no point chosen as an exact historic gate.",
+      "source_ids": [
+        "MXUS-CALTRANS-GIS",
+        "MXUS-SANDAG-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced.",
+        "osm-e7c9315d58d435f6: unresolved; geometry requires further review despite supported named-corridor correspondence.",
+        "Official coordinate disagreement of approximately 850 m remains unresolved; this is a facility corridor match, not coordinate validation."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-e7c9315d58d435f6",
+          "route_osm_ids": [
+            791934761,
+            1014969833
+          ],
+          "coordinate": [
+            -115.49981640000001,
+            32.664646600000005
+          ],
+          "route_refs": [
+            "CA 111 FUT"
+          ],
+          "route_names": [
+            "Calzada de los Presidentes",
+            "Cesar Chavez Boulevard"
+          ],
+          "topology_status": "unresolved",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation",
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 330,
+          "includes_documented_cargo_exception_ways": false
+        },
+        {
+          "candidate_id": "osm-aa6a49cd3c4d2617",
+          "route_osm_ids": [
+            373546017,
+            791937565,
+            945207360,
+            1474056354
+          ],
+          "coordinate": [
+            -115.49864710000001,
+            32.66473599999999
+          ],
+          "route_refs": [
+            "CA 111 FUT"
+          ],
+          "route_names": [
+            "Avenida Cristóbal Colón",
+            "Calzada de los Presidentes",
+            "Cesar Chavez Boulevard",
+            "Christopher Columbus Avenue"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 220,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-CALEXICO-EAST-ROAD",
+      "candidate_ids": [
+        "osm-9e59d9d142e68091"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "Official Caltrans point, CA 7 Truck and explicitly named Calexico East control support this corridor.",
+      "source_ids": [
+        "MXUS-CALTRANS-GIS",
+        "MXUS-SANDAG-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-9e59d9d142e68091",
+          "route_osm_ids": [
+            54609065,
+            178984057,
+            776214597,
+            1304580982
+          ],
+          "coordinate": [
+            -115.38793311701573,
+            32.6727348802737
+          ],
+          "route_refs": [
+            "CA 7 Truck"
+          ],
+          "route_names": [
+            "Puerto de Entrada de Calexico Este"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 75,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-SAN-LUIS-I-ROAD",
+      "candidate_ids": [
+        "osm-f41b939bb87ab94c"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "ADOT documents US 95 as the San Luis I approach; GSA identifies the facility at Highway 95 and the international boundary. The selected OSM contact explicitly carries US 95. No independent precise coordinate is claimed.",
+      "source_ids": [
+        "MXUS-ADOT-MANUAL",
+        "MXUS-GSA-ARIZONA",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced.",
+        "osm-f41b939bb87ab94c: unresolved; geometry requires further review despite supported named-corridor correspondence."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-f41b939bb87ab94c",
+          "route_osm_ids": [
+            1461646251
+          ],
+          "coordinate": [
+            -114.78255459320964,
+            32.485147501878345
+          ],
+          "route_refs": [
+            "US 95"
+          ],
+          "route_names": [],
+          "topology_status": "unresolved",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation"
+          ],
+          "source_coordinate_distance_m": null,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [
+        {
+          "candidate_id": "osm-5eaf5063ab359d3a",
+          "status": "provisional_component",
+          "reason": "Nearby Avenida Internacional contact is in the broad San Luis I compound, but gate and direction identity require further evidence.",
+          "topology_status": "unresolved",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation",
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ]
+        }
+      ],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-SAN-LUIS-II-ROAD",
+      "candidate_ids": [
+        "osm-922a1923a7647053"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "GSA distinguishes San Luis II at South Avenue East from San Luis I at Highway 95. The contact carries South Avenue E at the frontier, separate from US 95. CBP names San Luis II as the commercial reporting facility.",
+      "source_ids": [
+        "MXUS-ADOT-MANUAL",
+        "MXUS-GSA-ARIZONA",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced.",
+        "osm-922a1923a7647053: unresolved; geometry requires further review despite supported named-corridor correspondence."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-922a1923a7647053",
+          "route_osm_ids": [
+            285644134,
+            285653143
+          ],
+          "coordinate": [
+            -114.70000036178645,
+            32.46031794007656
+          ],
+          "route_refs": [],
+          "route_names": [
+            "South Avenue E"
+          ],
+          "topology_status": "unresolved",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation",
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": null,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-LUKEVILLE-ROAD",
+      "candidate_ids": [
+        "osm-5d875d56414d99c8"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "ADOT SR 85 and GSA Lukeville–Sonoyta identification locate this corridor; OSM opposite approach is MEX 8 / Avenida Benemérito de las Américas with named Sonoyta immigration/customs. Geography only, not imported closure dates.",
+      "source_ids": [
+        "MXUS-ADOT-MANUAL",
+        "MXUS-GSA-LUKEVILLE",
+        "MXUS-CBP-BWT",
+        "MXUS-CBP-LUKEVILLE"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced.",
+        "osm-5d875d56414d99c8: unresolved; geometry requires further review despite supported named-corridor correspondence."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-5d875d56414d99c8",
+          "route_osm_ids": [
+            55536364,
+            292984364
+          ],
+          "coordinate": [
+            -112.8174183571097,
+            31.880014412538184
+          ],
+          "route_refs": [
+            "MEX 8"
+          ],
+          "route_names": [
+            "Avenida Benemérito de las Américas"
+          ],
+          "topology_status": "unresolved",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation",
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": null,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-NOGALES-MARIPOSA-ROAD",
+      "candidate_ids": [
+        "osm-bf4aa765007194d9"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "ADOT report explicitly gives AZ 189 / MEX 15D at Mariposa. Both road refs occur in this candidate; distinct from downtown DeConcini.",
+      "source_ids": [
+        "MXUS-ADOT-MARIPOSA",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-bf4aa765007194d9",
+          "route_osm_ids": [
+            16943180,
+            16946165,
+            217505958,
+            414745673,
+            414746808,
+            737079218,
+            737079222,
+            737079223,
+            737079225,
+            737079227,
+            737079229,
+            737079230,
+            880444314,
+            880444339,
+            1217431291,
+            1217431292
+          ],
+          "coordinate": [
+            -110.964777,
+            31.3326793
+          ],
+          "route_refs": [
+            "AZ 189",
+            "AZ 189 Truck",
+            "MEX 15D"
+          ],
+          "route_names": [
+            "Libramiento de Nogales",
+            "Libramiento de Nogales (Camiones)",
+            "Libramiento de Nogales (Linea Rapida)",
+            "Nogales Primary Connection"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation",
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": null,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-NOGALES-DECONCINI-ROAD",
+      "candidate_ids": [
+        "osm-f8697d53f99b55bf"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "GSA locates DeConcini at North Grand Avenue and ADOT names Business I-19. Candidate carries I 19 BUS, North Grand Avenue and MEX 15. Morley Gate proximity is not a road-mode identity.",
+      "source_ids": [
+        "MXUS-ADOT-MANUAL",
+        "MXUS-GSA-DECONCINI",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-f8697d53f99b55bf",
+          "route_osm_ids": [
+            16947292,
+            49743399,
+            131549807,
+            414773576,
+            414773622,
+            1013620459,
+            1013620460,
+            1013620461,
+            1013620462,
+            1013620463,
+            1013620464,
+            1564791522,
+            1565031585,
+            1565031586,
+            1565031587,
+            1565031588,
+            1565031589,
+            1565031590
+          ],
+          "coordinate": [
+            -110.9425611,
+            31.332744999999992
+          ],
+          "route_refs": [
+            "I 19 BUS",
+            "MEX 15"
+          ],
+          "route_names": [
+            "Avenida Adolfo López Mateos",
+            "Avenida Plutarco Elías Calles",
+            "Linea SENTRI",
+            "North Arroyo Boulevard",
+            "North Grand Avenue"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation",
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": null,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-DOUGLAS-RAUL-HECTOR-CASTRO-ROAD",
+      "candidate_ids": [
+        "osm-71dc7605e6298523"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "GSA names the existing Raul Hector Castro facility on Pan American Avenue; candidate carries Pan-American Avenue / Avenida Panamericana and named Douglas/Agua Prieta controls. Not the future West Douglas project.",
+      "source_ids": [
+        "MXUS-ADOT-PRIORITIES",
+        "MXUS-GSA-ARIZONA",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-71dc7605e6298523",
+          "route_osm_ids": [
+            174919494,
+            492208344,
+            983209298,
+            1190220713,
+            1285376805,
+            1285376808,
+            1285376811,
+            1285376814,
+            1285376817,
+            1285376820
+          ],
+          "coordinate": [
+            -109.56064919999999,
+            31.3340033
+          ],
+          "route_refs": [
+            "US 191 BUS"
+          ],
+          "route_names": [
+            "Avenida Panamericana",
+            "Calle Internacional",
+            "Pan-American Avenue"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation",
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": null,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-SANTA-TERESA-ROAD",
+      "candidate_ids": [
+        "osm-ab83a5b1a8186c1a"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "NMDOT identifies NM 136 as the Santa Teresa port approach. The candidate carries NM 136 / Peter V. Domenici International Highway with named Santa Teresa and San Jeronimo controls. Named-corridor identity is supported, but geometry remains unresolved: all connected branches must be retained when NM 136 connects to MEX 2, rather than following only the same-ref carriageway. This is not evidence of a closed, absent, or non-crossing road.",
+      "source_ids": [
+        "MXUS-NMDOT-SANTA-TERESA",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced.",
+        "osm-ab83a5b1a8186c1a: unresolved; geometry requires further review despite supported named-corridor correspondence."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-ab83a5b1a8186c1a",
+          "route_osm_ids": [
+            1263508039,
+            1408438942
+          ],
+          "coordinate": [
+            -106.67955687385661,
+            31.783846375872518
+          ],
+          "route_refs": [
+            "NM 136"
+          ],
+          "route_names": [
+            "Peter V. Domenici International Highway"
+          ],
+          "topology_status": "unresolved",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation",
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": null,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [
+        {
+          "candidate_id": "osm-503d1db49e9f778d",
+          "status": "provisional_component",
+          "reason": "Nearby unnamed trunk contact; proximity and control names alone do not establish cargo or gate role. Keep the livestock-only gateway distinct; unresolved geometry is not proof of absence.",
+          "topology_status": "unresolved",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation"
+          ]
+        },
+        {
+          "candidate_id": "osm-e6b7a1ee0d02ff4b",
+          "status": "provisional_component",
+          "reason": "Nearby unnamed trunk contact; proximity and control names alone do not establish cargo or gate role. Keep the livestock-only gateway distinct; unresolved geometry is not proof of absence.",
+          "topology_status": "unresolved",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation"
+          ]
+        }
+      ],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-COLUMBUS-ROAD",
+      "candidate_ids": [
+        "osm-99d3b8aed7fb82f8"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "NMDOT corridor study names NM 11 at Columbus; NM Border Authority pairs Columbus with Palomas. Candidate has NM 11 and named Puerto Palomas customs. Separate livestock facilities not automatically assigned.",
+      "source_ids": [
+        "MXUS-NMBA-COLUMBUS",
+        "MXUS-NM11-STUDY",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced.",
+        "osm-99d3b8aed7fb82f8: unresolved; geometry requires further review despite supported named-corridor correspondence."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-99d3b8aed7fb82f8",
+          "route_osm_ids": [
+            190116535,
+            1408330812
+          ],
+          "coordinate": [
+            -107.62798032079678,
+            31.783662020254926
+          ],
+          "route_refs": [
+            "NM 11"
+          ],
+          "route_names": [],
+          "topology_status": "unresolved",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation",
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": null,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-PASO-DEL-NORTE-ROAD",
+      "candidate_ids": [
+        "osm-c2486e3bcb379c7b"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "TxDOT Paso del Norte facility reference is about 207 m from the primary-road bridge contact. Its international bridge geometry is distinct from Stanton, approximately 400 m east. No transfer from neighbouring Stanton.",
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-c2486e3bcb379c7b",
+          "route_osm_ids": [
+            1531523735
+          ],
+          "coordinate": [
+            -106.4869389995289,
+            31.747706097456405
+          ],
+          "route_refs": [],
+          "route_names": [
+            "Puente Internacional Santa Fe"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [],
+          "source_coordinate_distance_m": 207,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-BRIDGE-OF-THE-AMERICAS-ROAD",
+      "candidate_ids": [
+        "osm-54784067c67f362b"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "TxDOT Bridge of the Americas reference lies on the same international bridge corridor; OSM names Cordova de las Americas and cargo lane. Facility coordinate is about 323 m north of frontier contact, not a contradictory crossing.",
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-54784067c67f362b",
+          "route_osm_ids": [
+            179149442,
+            413217805,
+            1535686438,
+            1535686448
+          ],
+          "coordinate": [
+            -106.45120213460478,
+            31.764366591354225
+          ],
+          "route_refs": [
+            "MEX 45 CAM"
+          ],
+          "route_names": [
+            "Linea de Camiones",
+            "Puente Internacional Cordova de las Americas"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation",
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 323,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-YSLETA-ZARAGOZA-ROAD",
+      "candidate_ids": [
+        "osm-e84ef6f8f62d28b0"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "TxDOT Ysleta-Zaragoza reference coincides with the named Zaragoza/Waterfill and truck bridge candidate.",
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-e84ef6f8f62d28b0",
+          "route_osm_ids": [
+            43999402,
+            43999448,
+            43999672,
+            43999711
+          ],
+          "coordinate": [
+            -106.33799100972885,
+            31.671253029186566
+          ],
+          "route_refs": [],
+          "route_names": [
+            "Puente Internacional Zaragoza Waterfill",
+            "Zaragoza Truck Bridge"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 6,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-PRESIDIO-OJINAGA-ROAD",
+      "candidate_ids": [
+        "osm-435403e98eda46ed"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "TxDOT Presidio–Ojinaga reference and OSM Puente Ojinaga–Presidio name agree at the same bridge corridor; reference point is offset from international frontier.",
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-435403e98eda46ed",
+          "route_osm_ids": [
+            42725524,
+            1322347249
+          ],
+          "coordinate": [
+            -104.3950618453846,
+            29.561777551115366
+          ],
+          "route_refs": [],
+          "route_names": [
+            "Puente Ojinaga - Presidio"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 207,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-DEL-RIO-ACUNA-ROAD",
+      "candidate_ids": [
+        "osm-01135b12707b8b81"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "TxDOT Del Rio–Ciudad Acuña bridge point is approximately 28 m from the road contact, which carries International Bridge Road / US 277 Spur. Not the Amistad Dam crossing.",
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-01135b12707b8b81",
+          "route_osm_ids": [
+            32656954,
+            32666080,
+            1092421335,
+            1092421337
+          ],
+          "coordinate": [
+            -100.9277416,
+            29.326625400000005
+          ],
+          "route_refs": [
+            "US 277 Spur"
+          ],
+          "route_names": [
+            "International Bridge Road"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 28,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-EAGLE-PASS-I-ROAD",
+      "candidate_ids": [
+        "osm-bb0b7abcc64db878"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "TxDOT Bridge I coordinate and OSM Eagle Pass International Bridge I name agree. Bridge II and railway remain separate identities.",
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced.",
+        "osm-bb0b7abcc64db878: unresolved; geometry requires further review despite supported named-corridor correspondence."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-bb0b7abcc64db878",
+          "route_osm_ids": [
+            42955298
+          ],
+          "coordinate": [
+            -100.51188968575605,
+            28.705504889671356
+          ],
+          "route_refs": [
+            "MEX 57"
+          ],
+          "route_names": [
+            "Eagle Pass International Bridge I"
+          ],
+          "topology_status": "unresolved",
+          "topology_flags": [
+            "some_route_arms_lack_unambiguous_continuation"
+          ],
+          "source_coordinate_distance_m": 6,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-EAGLE-PASS-II-ROAD",
+      "candidate_ids": [
+        "osm-1aeb905f29188b1f"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "TxDOT Camino Real coordinate and OSM International Bridge II name agree. Source RR_BRDGE attribute is not used to attach railway events.",
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-1aeb905f29188b1f",
+          "route_osm_ids": [
+            42953871,
+            162649826
+          ],
+          "coordinate": [
+            -100.51047810341116,
+            28.697818038510043
+          ],
+          "route_refs": [],
+          "route_names": [
+            "International Bridge II"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 13,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-COLOMBIA-SOLIDARITY-ROAD",
+      "candidate_ids": [
+        "osm-698038dc2590920e"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "TxDOT coordinate coincides with OSM Puente Internacional Solidaridad-Colombia and named Laredo Colombia truck port.",
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-698038dc2590920e",
+          "route_osm_ids": [
+            219295904
+          ],
+          "coordinate": [
+            -99.74565428602263,
+            27.69975057672239
+          ],
+          "route_refs": [],
+          "route_names": [
+            "Puente Internacional Solidaridad-Colombia"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [],
+          "source_coordinate_distance_m": 4,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-WORLD-TRADE-ROAD",
+      "candidate_ids": [
+        "osm-5e02bef35bd999b9"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "TxDOT point and OSM World Trade International Bridge name agree; independent of the other three Laredo bridges.",
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-5e02bef35bd999b9",
+          "route_osm_ids": [
+            30535881,
+            509683512
+          ],
+          "coordinate": [
+            -99.5370018322425,
+            27.59717345418526
+          ],
+          "route_refs": [],
+          "route_names": [
+            "World Trade International Bridge"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 17,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-GATEWAY-TO-THE-AMERICAS-ROAD",
+      "candidate_ids": [
+        "osm-e23f12354bf30715"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "TxDOT bridge point coincides with OSM Puente Internacional Puerta de las Américas. Juarez–Lincoln contact is a different bridge approximately 475 m east.",
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-e23f12354bf30715",
+          "route_osm_ids": [
+            833093781,
+            833093786
+          ],
+          "coordinate": [
+            -99.50749546023677,
+            27.499443833983385
+          ],
+          "route_refs": [],
+          "route_names": [
+            "Puente Internacional Puerta de las Américas"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 1,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-JUAREZ-LINCOLN-ROAD",
+      "candidate_ids": [
+        "osm-23857abcb211ce45"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "TxDOT Juarez–Lincoln reference and OSM named bridge agree; keep Laredo Bridge I separate.",
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-23857abcb211ce45",
+          "route_osm_ids": [
+            962696778,
+            962696779,
+            1353911687
+          ],
+          "coordinate": [
+            -99.50277070399889,
+            27.50019420646973
+          ],
+          "route_refs": [],
+          "route_names": [
+            "Puente Internacional Juárez-Lincoln"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 35,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-ANZALDUAS-ROAD",
+      "candidate_ids": [
+        "osm-70f339be49b99f94"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "TxDOT Anzalduas point coincides with OSM Anzalduas Highway / named international bridge approach.",
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-70f339be49b99f94",
+          "route_osm_ids": [
+            104350451,
+            365612299
+          ],
+          "coordinate": [
+            -98.318265,
+            26.116517300000005
+          ],
+          "route_refs": [
+            "FM 396",
+            "MEX 40"
+          ],
+          "route_names": [
+            "Anzalduas Highway",
+            "Calle Puente Internacional Anzalduas"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 4,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-HIDALGO-REYNOSA-ROAD",
+      "candidate_ids": [
+        "osm-c495de759fb8e823",
+        "osm-7f642a128a992115"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "Both OSM contacts are explicitly named McAllen–Hidalgo–Reynosa International Bridge, approximately 207/229 m from TxDOT facility point. They are parallel/component road contacts of one reference facility.",
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-c495de759fb8e823",
+          "route_osm_ids": [
+            28209857
+          ],
+          "coordinate": [
+            -98.27194420350847,
+            26.095344245567425
+          ],
+          "route_refs": [],
+          "route_names": [
+            "McAllen–Hidalgo–Reynosa International Bridge"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [],
+          "source_coordinate_distance_m": 207,
+          "includes_documented_cargo_exception_ways": false
+        },
+        {
+          "candidate_id": "osm-7f642a128a992115",
+          "route_osm_ids": [
+            28209842,
+            365602452
+          ],
+          "coordinate": [
+            -98.27124700961338,
+            26.094956379690167
+          ],
+          "route_refs": [],
+          "route_names": [
+            "McAllen–Hidalgo–Reynosa International Bridge",
+            "SENTRI Lane"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 229,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-PHARR-REYNOSA-ROAD",
+      "candidate_ids": [
+        "osm-9ff5040a21067342"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "TxDOT point is approximately 12 m from the explicitly named Pharr International Bridge road contact.",
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-9ff5040a21067342",
+          "route_osm_ids": [
+            101921364
+          ],
+          "coordinate": [
+            -98.20516187753199,
+            26.066801317566306
+          ],
+          "route_refs": [],
+          "route_names": [
+            "Pharr International Bridge"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [],
+          "source_coordinate_distance_m": 12,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    },
+    {
+      "crossing_id": "MX-US-VETERANS-LOS-TOMATES-ROAD",
+      "candidate_ids": [
+        "osm-33a892364b22ae82",
+        "osm-56bcf32a33282b0b"
+      ],
+      "match_status": "supported_corridor",
+      "evidence": "Two contacts approximately 52/57 m from TxDOT Veterans/Los Tomates bridge point represent truck/SENTRI lanes at that same corridor. SENTRI access restrictions remain attached; this is not universal access.",
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "limitations": [
+        "Supported corridor identity is not independent verification of an exact gate, current legal access, or historical closure extent.",
+        "OSM candidate clusters and lane contacts are not counts of physical facilities.",
+        "No accepted event-to-point links are produced."
+      ],
+      "components": [
+        {
+          "candidate_id": "osm-33a892364b22ae82",
+          "route_osm_ids": [
+            435876312
+          ],
+          "coordinate": [
+            -97.47639433274239,
+            25.883502463139795
+          ],
+          "route_refs": [],
+          "route_names": [
+            "Linea SENTRI"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [],
+          "source_coordinate_distance_m": 52,
+          "includes_documented_cargo_exception_ways": false
+        },
+        {
+          "candidate_id": "osm-56bcf32a33282b0b",
+          "route_osm_ids": [
+            1554340876,
+            1554340878,
+            1554340879
+          ],
+          "coordinate": [
+            -97.47643313194796,
+            25.883466039395785
+          ],
+          "route_refs": [],
+          "route_names": [
+            "Avenida Acción Civica",
+            "Linea Camiones"
+          ],
+          "topology_status": "sustained_country_transition",
+          "topology_flags": [
+            "original_75m_group_can_contain_distinct_roads_review_each_member"
+          ],
+          "source_coordinate_distance_m": 57,
+          "includes_documented_cargo_exception_ways": false
+        }
+      ],
+      "related_candidate_proposals": [],
+      "is_closure_evidence": false,
+      "accepted_event_ids": []
+    }
+  ],
+  "applied_road_exceptions": [
+    {
+      "crossing_id": "MX-US-OTAY-MESA-ROAD",
+      "route_osm_ids": [
+        200257858,
+        221972671,
+        602751004,
+        602751006,
+        602751007,
+        602751008,
+        602751009
+      ],
+      "reason": "Restore documented major-port cargo components at existing Otay Mesa, where short international gate roads are locally tagged secondary/secondary_link/service although connecting a major freight facility. CBP reports Otay Mesa Commercial separately from Passenger; selected crossing ways are hgv=designated and within 190 m of the official Caltrans facility reference. This does not authorize broader small-road extraction.",
+      "source_urls": [
+        "https://bwt.cbp.gov/xml/bwt.xml",
+        "https://bwt.cbp.gov/details/09250602/COV",
+        "https://services1.arcgis.com/8CpMUd3fdw6aXef7/ArcGIS/rest/services/Technical_Freight_Projects_Integration_Viewer/FeatureServer/4"
+      ],
+      "scope": "specific_main_post_cargo_gate_components",
+      "status": "applied_to_active_scoped_extraction",
+      "geometry_acceptance": "Named major-port cargo corridor components only; retain each active topology result and no event links.",
+      "candidate_ids": [
+        "osm-44775b86ca9e1a6d",
+        "osm-53688c50ccfe1118"
+      ]
+    }
+  ],
+  "candidate_dispositions": [
+    {
+      "candidate_id": "osm-01135b12707b8b81",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-08b76bdca6b989da",
+      "disposition": "outside_bounded_benchmark_sample",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-0c272088aaa2e097",
+      "disposition": "named_corridor_component",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-1095f60a7c1345a6",
+      "disposition": "named_corridor_component",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-1aeb905f29188b1f",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-23857abcb211ce45",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-33a892364b22ae82",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-3eebc8e335d0c9fd",
+      "disposition": "named_corridor_component",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-435403e98eda46ed",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-44775b86ca9e1a6d",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-503d1db49e9f778d",
+      "disposition": "provisional_facility_component",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-53688c50ccfe1118",
+      "disposition": "named_corridor_component",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-54784067c67f362b",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-56bcf32a33282b0b",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-5a6a14d5a4ced276",
+      "disposition": "outside_bounded_benchmark_sample",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-5d875d56414d99c8",
+      "disposition": "named_corridor_component",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-5e02bef35bd999b9",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-5eaf5063ab359d3a",
+      "disposition": "provisional_facility_component",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-61e8bf64ce144247",
+      "disposition": "named_corridor_component",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-698038dc2590920e",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-6a6f24fc152bd576",
+      "disposition": "outside_bounded_benchmark_sample",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-70f339be49b99f94",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-71dc7605e6298523",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-7d24b38ec0cee2b7",
+      "disposition": "outside_bounded_benchmark_sample",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-7f642a128a992115",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-922a1923a7647053",
+      "disposition": "named_corridor_component",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-95a2e4f7c4645dd2",
+      "disposition": "outside_bounded_benchmark_sample",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-97c2898a35e28a4d",
+      "disposition": "named_corridor_component",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-99d3b8aed7fb82f8",
+      "disposition": "named_corridor_component",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-9beb3a8e3c9a8222",
+      "disposition": "outside_bounded_benchmark_sample",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-9e59d9d142e68091",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-9ff5040a21067342",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-aa6a49cd3c4d2617",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-ab83a5b1a8186c1a",
+      "disposition": "named_corridor_component",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-b01232571b556dba",
+      "disposition": "outside_bounded_benchmark_sample",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-bb0b7abcc64db878",
+      "disposition": "named_corridor_component",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-bd6133cef3d5fa7b",
+      "disposition": "outside_bounded_benchmark_sample",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-bf4aa765007194d9",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-c2486e3bcb379c7b",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-c495de759fb8e823",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-cbe01f701646bfd5",
+      "disposition": "outside_bounded_benchmark_sample",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-d1e82df35d678a8c",
+      "disposition": "outside_bounded_benchmark_sample",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-e23f12354bf30715",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-e41e812bbdb40971",
+      "disposition": "outside_bounded_benchmark_sample",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-e6b7a1ee0d02ff4b",
+      "disposition": "provisional_facility_component",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-e7c9315d58d435f6",
+      "disposition": "named_corridor_component",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-e84ef6f8f62d28b0",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-eec09d2188c50eb5",
+      "disposition": "named_corridor_component",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-f41b939bb87ab94c",
+      "disposition": "named_corridor_component",
+      "topology_status": "unresolved",
+      "counts_as_verified_physical_crossing": false
+    },
+    {
+      "candidate_id": "osm-f8697d53f99b55bf",
+      "disposition": "named_corridor_component",
+      "topology_status": "sustained_country_transition",
+      "counts_as_verified_physical_crossing": false
+    }
+  ],
+  "summary": {
+    "benchmark_references": 27,
+    "supported_corridor_references": 27,
+    "unique_associated_candidate_clusters": 36,
+    "provisional_additional_candidate_components": 3,
+    "candidates_outside_bounded_sample": 11,
+    "active_candidates": 50,
+    "active_raw_contacts": 258,
+    "documented_exception_ways": 7,
+    "cargo_exception_candidate_groups": 2,
+    "topology_status_counts": {
+      "sustained_country_transition": 28,
+      "unresolved": 22
+    },
+    "physical_crossing_count": null,
+    "full_frontier_recall": null,
+    "automatic_event_links": 0
+  },
+  "limits": [
+    "27/27 describes this selected named reference sample, not all road crossings or every directional gate.",
+    "Candidate groups and individual road–boundary contacts are different units from named facilities.",
+    "Named-corridor support, topology confidence, exact gate identity, operational status and closure evidence are separate decisions.",
+    "The active evidence is the scoped main-road extraction plus seven sourced Otay cargo ways. No regenerated baseline output or baseline hash is claimed.",
+    "No source coordinate, raw count or proximity match is promoted to a verified exact gate or current operational crossing."
+  ]
+}

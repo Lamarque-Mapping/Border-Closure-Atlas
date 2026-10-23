@@ -1,0 +1,105 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "osm-a363c30c1fad7755",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.994591833265886,
+          0.408990166162901
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-a363c30c1fad7755",
+        "label": "Road–border contact near Liboi",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192798,
+            "name": "Kenya",
+            "iso2": "KE"
+          },
+          {
+            "osm_relation_id": 192799,
+            "name": "Somalia",
+            "iso2": "SO"
+          }
+        ],
+        "boundary_relation_provenance": [
+          192798,
+          192799
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          701028822
+        ],
+        "boundary_osm_ids": [
+          261605196
+        ],
+        "route_names": [
+          "Afmadow - Dhobley Highway"
+        ],
+        "route_refs": [],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              40.994591833265886,
+              0.4089901661629009
+            ],
+            "route_osm_id": 701028822,
+            "boundary_osm_id": 261605196
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Liboi",
+            "osm_id": 44931340,
+            "osm_url": "https://www.openstreetmap.org/node/44931340",
+            "distance_m": 4835,
+            "place_type": "hamlet",
+            "coordinate": [
+              40.9520422,
+              0.4002038
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [
+          {
+            "record_id": "H01",
+            "names": [
+              [
+                "Liboi",
+                "nearby settlement"
+              ]
+            ],
+            "status": "discovery_only_not_event_link",
+            "transport_qualification": "Transport mode and affected movement require review",
+            "eligible_for_automatic_acceptance": false
+          }
+        ],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    }
+  ]
+}

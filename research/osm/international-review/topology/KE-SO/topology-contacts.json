@@ -1,0 +1,87 @@
+[
+  {
+    "raw_contact_id": "raw-701028822-261605196-00000",
+    "candidate_id": "osm-a363c30c1fad7755",
+    "route_osm_id": 701028822,
+    "boundary_osm_id": 261605196,
+    "coordinate": [
+      40.994591833265886,
+      0.4089901661629009
+    ],
+    "mode": "road",
+    "pair": [
+      192798,
+      192799
+    ],
+    "assignment_method": "explicit raw contacts retained by extraction; source lines checked",
+    "diagnostic": {
+      "status": "unresolved",
+      "route_distance_m": 9.151,
+      "arms": [
+        {
+          "stable_side": -1,
+          "paths": [
+            {
+              "side": -1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                701028822,
+                33402624
+              ],
+              "distance_m": 149.2,
+              "clear_run_m": 109.8,
+              "boundary_clearance_m": 148.5
+            }
+          ]
+        },
+        {
+          "stable_side": 0,
+          "paths": [
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                701028822,
+                701028822
+              ],
+              "distance_m": 143.6,
+              "clear_run_m": 103.6,
+              "boundary_clearance_m": 143.4
+            },
+            {
+              "side": 0,
+              "reason": "trace_limit_without_stable_side",
+              "route_osm_ids": [
+                701028822,
+                456998228
+              ],
+              "distance_m": 1000.0
+            },
+            {
+              "side": 0,
+              "reason": "trace_limit_without_stable_side",
+              "route_osm_ids": [
+                701028822,
+                127477950,
+                127477950
+              ],
+              "distance_m": 1000.0
+            },
+            {
+              "side": 1,
+              "reason": "stable_country_side",
+              "route_osm_ids": [
+                701028822,
+                127477950,
+                1198574560
+              ],
+              "distance_m": 635.7,
+              "clear_run_m": 100.0,
+              "boundary_clearance_m": 131.5
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

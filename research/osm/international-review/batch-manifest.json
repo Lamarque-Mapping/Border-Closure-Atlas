@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "scope": "Motorway, trunk, primary and links; individually sourced named-post exceptions only.",
+  "automatic_event_linking": false,
+  "batches": [
+    {
+      "pair": "KE-TZ",
+      "country_code": "KE",
+      "neighbour_code": "TZ",
+      "pbf": "kenya.osm.pbf",
+      "download_manifest": "kenya.osm.download.json",
+      "expected_sha256": "effb612991eea80a718f71a48f707a16c0a4561b711ff4b614a8eed2dfa79371",
+      "output": "research/osm/international-review/extractions/KE-TZ",
+      "topology_output": "research/osm/international-review/topology/KE-TZ",
+      "road_exceptions": null,
+      "allow_partial_boundary": false,
+      "batch_role": "international_method_test",
+      "source": {
+        "url": "https://download.geofabrik.de/africa/kenya-latest.osm.pbf",
+        "retrieved_at": "2026-10-23T11:08:47.764153+00:00",
+        "bytes": 351587887,
+        "sha256": "effb612991eea80a718f71a48f707a16c0a4561b711ff4b614a8eed2dfa79371",
+        "http_headers": {
+          "Last-Modified": "Thu, 22 Oct 2026 08:31:55 GMT",
+          "ETag": "\"14f4ce2f-65e69b23df791\"",
+          "Content-Length": "351587887"
+        }
+      }
+    },
+    {
+      "pair": "DE-FR",
+      "country_code": "FR",
+      "neighbour_code": "DE",
+      "pbf": "france-germany.osm.pbf",
+      "download_manifest": "france-germany.osm.download.json",
+      "expected_sha256": "67c7f79974667daae63b331c44bda2fa791a5e2426835e8f4c9fdfd59b9b3633",
+      "output": "research/osm/international-review/extractions/DE-FR",
+      "topology_output": "research/osm/international-review/topology/DE-FR",
+      "road_exceptions": null,
+      "allow_partial_boundary": false,
+      "batch_role": "international_method_test",
+      "source": {
+        "kind": "checked_same_snapshot_regional_merge",
+        "retrieved_at": "2026-10-23T11:12:58.541425+00:00",
+        "osm_data_timestamp": "2026-10-20T20:23:47Z",
+        "bytes": 301083273,
+        "sha256": "67c7f79974667daae63b331c44bda2fa791a5e2426835e8f4c9fdfd59b9b3633",
+        "inputs": [
+          {
+            "url": "https://download.geofabrik.de/europe/france/alsace-latest.osm.pbf",
+            "retrieved_at": "2026-10-23T11:08:39.463941+00:00",
+            "bytes": 131404081,
+            "sha256": "0a65fca591de795b570139fa5c80012784badc140305439824456aa91da9e111",
+            "http_headers": {
+              "Last-Modified": "Tue, 20 Oct 2026 23:36:13 GMT",
+              "ETag": "\"7d51131-65e4e1897e2a9\"",
+              "Content-Length": "131404081"
+            }
+          },
+          {
+            "url": "https://download.geofabrik.de/europe/france/lorraine-latest.osm.pbf",
+            "retrieved_at": "2026-10-23T11:08:43.893109+00:00",
+            "bytes": 171228706,
+            "sha256": "33f515b7176c6ded4da55b0e3562ffaef2c83fd1d96c89264d1a4952e47883ff",
+            "http_headers": {
+              "Last-Modified": "Tue, 20 Oct 2026 23:37:09 GMT",
+              "ETag": "\"a34be22-65e4e1be9bb4f\"",
+              "Content-Length": "171228706"
+            }
+          }
+        ],
+        "entities_written": {
+          "n": 30032752,
+          "w": 4568189,
+          "r": 93857
+        },
+        "identical_duplicates_removed": {
+          "n": 265621,
+          "w": 10561,
+          "r": 1383
+        },
+        "conflicting_duplicates": 0,
+        "limits": [
+          "Union of regional inputs; frontier member coverage is audited separately.",
+          "No missing geometry is interpolated or manufactured."
+        ]
+      }
+    },
+    {
+      "pair": "MX-US",
+      "country_code": "MX",
+      "neighbour_code": "US",
+      "pbf": "mexico.osm.pbf",
+      "download_manifest": "mexico.osm.download.json",
+      "expected_sha256": "239794a0c709e2ad03409c420d5925a11bd2958dd4aff7acaa86fac40045ac3c",
+      "output": "research/osm/international-review/extractions/MX-US-scoped",
+      "topology_output": "research/osm/international-review/topology/MX-US-scoped",
+      "road_exceptions": "research/osm/international-review/road_exception_proposals/MX-US.json",
+      "allow_partial_boundary": false,
+      "batch_role": "international_method_test",
+      "source": {
+        "url": "https://download.geofabrik.de/north-america/mexico-latest.osm.pbf",
+        "retrieved_at": "2026-10-23T11:09:49.688119+00:00",
+        "bytes": 647294299,
+        "sha256": "239794a0c709e2ad03409c420d5925a11bd2958dd4aff7acaa86fac40045ac3c",
+        "http_headers": {
+          "Last-Modified": "Tue, 20 Oct 2026 23:45:17 GMT",
+          "ETag": "\"2694ed5b-65e4e39017a78\"",
+          "Content-Length": "647294299"
+        }
+      }
+    },
+    {
+      "pair": "KE-SO",
+      "country_code": "KE",
+      "neighbour_code": "SO",
+      "pbf": "kenya.osm.pbf",
+      "download_manifest": "kenya.osm.download.json",
+      "expected_sha256": "effb612991eea80a718f71a48f707a16c0a4561b711ff4b614a8eed2dfa79371",
+      "output": "research/osm/international-review/extractions/KE-SO-scoped",
+      "topology_output": "research/osm/international-review/topology/KE-SO-scoped",
+      "road_exceptions": "research/osm/international-review/road_exception_proposals/KE-SO.json",
+      "allow_partial_boundary": false,
+      "batch_role": "first_workbook_priority_regional_expansion",
+      "source": {
+        "url": "https://download.geofabrik.de/africa/kenya-latest.osm.pbf",
+        "retrieved_at": "2026-10-23T11:08:47.764153+00:00",
+        "bytes": 351587887,
+        "sha256": "effb612991eea80a718f71a48f707a16c0a4561b711ff4b614a8eed2dfa79371",
+        "http_headers": {
+          "Last-Modified": "Thu, 22 Oct 2026 08:31:55 GMT",
+          "ETag": "\"14f4ce2f-65e69b23df791\"",
+          "Content-Length": "351587887"
+        }
+      }
+    }
+  ]
+}

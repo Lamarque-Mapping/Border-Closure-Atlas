@@ -1,0 +1,5618 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "osm-02efa00605a53b88",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.09877555359938,
+          0.46501736282381695
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-02efa00605a53b88",
+        "label": "Road–border contact near Busia",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          },
+          {
+            "osm_relation_id": 192798,
+            "name": "Kenya",
+            "iso2": "KE"
+          }
+        ],
+        "highway_classes": [
+          "trunk"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          792057446,
+          980759972,
+          980760359,
+          980760385
+        ],
+        "boundary_osm_ids": [
+          990648877,
+          1187249108
+        ],
+        "route_names": [
+          "Customs Street",
+          "Kisumu-Busia Road"
+        ],
+        "route_refs": [
+          "A12",
+          "B380-01"
+        ],
+        "raw_contact_count": 4,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              34.098775553599374,
+              0.4650173628238166
+            ],
+            "route_osm_id": 792057446,
+            "boundary_osm_id": 1187249108
+          },
+          {
+            "coordinate": [
+              34.09876676810742,
+              0.46540350286015564
+            ],
+            "route_osm_id": 980759972,
+            "boundary_osm_id": 990648877
+          },
+          {
+            "coordinate": [
+              34.09886884264315,
+              0.4654962642509328
+            ],
+            "route_osm_id": 980760359,
+            "boundary_osm_id": 990648877
+          },
+          {
+            "coordinate": [
+              34.09878487545149,
+              0.4648744237377822
+            ],
+            "route_osm_id": 980760385,
+            "boundary_osm_id": 1187249108
+          }
+        ],
+        "checkpoints": [
+          {
+            "osm_type": "n",
+            "osm_id": 9072469003,
+            "osm_version": 1,
+            "osm_timestamp": "2021-09-08 03:21:24+00:00",
+            "tags": {
+              "access": "yes",
+              "barrier": "border_control",
+              "bicycle": "yes",
+              "foot": "yes",
+              "hgv": "no",
+              "horse": "yes",
+              "lanes": "2",
+              "maxwidth": "8",
+              "mofa": "yes",
+              "moped": "yes",
+              "motor_vehicle": "yes",
+              "motorcar": "yes",
+              "motorcycle": "yes",
+              "name": "Busia One Stop Border Uganda - Pedestrians",
+              "operator": "Uganda Immigration",
+              "vehicle": "no"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/9072469003",
+            "distance_m": 34,
+            "coordinate": [
+              34.0985045,
+              0.4651527
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "n",
+            "osm_id": 9072469038,
+            "osm_version": 1,
+            "osm_timestamp": "2021-09-08 03:21:24+00:00",
+            "tags": {
+              "access": "yes",
+              "barrier": "border_control",
+              "bicycle": "yes",
+              "foot": "yes",
+              "hgv": "no",
+              "horse": "yes",
+              "lanes": "2",
+              "maxwidth": "8",
+              "mofa": "yes",
+              "moped": "yes",
+              "motor_vehicle": "yes",
+              "motorcar": "yes",
+              "motorcycle": "yes",
+              "name": "Busia One Stop Border Uganda - Cars",
+              "operator": "Kenya Immigration",
+              "vehicle": "no"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/9072469038",
+            "distance_m": 35,
+            "coordinate": [
+              34.0984746,
+              0.4651163
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "n",
+            "osm_id": 9072469017,
+            "osm_version": 1,
+            "osm_timestamp": "2021-09-08 03:21:24+00:00",
+            "tags": {
+              "access": "yes",
+              "barrier": "border_control",
+              "bicycle": "yes",
+              "foot": "yes",
+              "hgv": "no",
+              "horse": "yes",
+              "lanes": "2",
+              "maxwidth": "8",
+              "mofa": "yes",
+              "moped": "yes",
+              "motor_vehicle": "yes",
+              "motorcar": "yes",
+              "motorcycle": "yes",
+              "name": "Busia Border Kenya - Cars & Pedestrians",
+              "operator": "Kenya Immigration",
+              "vehicle": "no"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/9072469017",
+            "distance_m": 37,
+            "coordinate": [
+              34.0987654,
+              0.465354
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "n",
+            "osm_id": 9072469037,
+            "osm_version": 1,
+            "osm_timestamp": "2021-09-08 03:21:24+00:00",
+            "tags": {
+              "access": "yes",
+              "barrier": "border_control",
+              "lanes": "2",
+              "maxwidth": "8",
+              "motor_vehicle": "yes",
+              "name": "Busia One Stop Border Uganda - Trucks",
+              "operator": "Uganda Immigration",
+              "truck": "yes",
+              "vehicle": "no"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/9072469037",
+            "distance_m": 42,
+            "coordinate": [
+              34.0984006,
+              0.465026
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "n",
+            "osm_id": 9072472663,
+            "osm_version": 1,
+            "osm_timestamp": "2021-09-08 03:21:28+00:00",
+            "tags": {
+              "access": "yes",
+              "barrier": "border_control",
+              "hgv": "yes",
+              "lanes": "2",
+              "maxwidth": "8",
+              "motor_vehicle": "yes",
+              "name": "Busia Border Kenya - Trucks",
+              "operator": "Kenya Immigration",
+              "vehicle": "no"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/9072472663",
+            "distance_m": 49,
+            "coordinate": [
+              34.098898,
+              0.4654423
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "n",
+            "osm_id": 9072469034,
+            "osm_version": 2,
+            "osm_timestamp": "2026-07-10 18:05:21+00:00",
+            "tags": {
+              "barrier": "border_control",
+              "old_ref": "B1",
+              "ref": "A12",
+              "start_date": "2016"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/9072469034",
+            "distance_m": 56,
+            "coordinate": [
+              34.0992654,
+              0.4651154
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "n",
+            "osm_id": 9072469035,
+            "osm_version": 2,
+            "osm_timestamp": "2026-03-16 19:57:35+00:00",
+            "tags": {
+              "barrier": "border_control"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/9072469035",
+            "distance_m": 67,
+            "coordinate": [
+              34.0983227,
+              0.4654106
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "n",
+            "osm_id": 9072469036,
+            "osm_version": 2,
+            "osm_timestamp": "2026-03-16 19:57:35+00:00",
+            "tags": {
+              "barrier": "border_control"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/9072469036",
+            "distance_m": 67,
+            "coordinate": [
+              34.0983956,
+              0.4654857
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "n",
+            "osm_id": 9072469033,
+            "osm_version": 1,
+            "osm_timestamp": "2021-09-08 03:21:24+00:00",
+            "tags": {
+              "barrier": "border_control"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/9072469033",
+            "distance_m": 100,
+            "coordinate": [
+              34.0996344,
+              0.4652897
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "n",
+            "osm_id": 6362553252,
+            "osm_version": 3,
+            "osm_timestamp": "2026-03-15 21:06:27+00:00",
+            "tags": {
+              "barrier": "border_control"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/6362553252",
+            "distance_m": 247,
+            "coordinate": [
+              34.0973357,
+              0.4633168
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "n",
+            "osm_id": 6362553256,
+            "osm_version": 4,
+            "osm_timestamp": "2026-03-15 21:06:27+00:00",
+            "tags": {
+              "barrier": "border_control"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/6362553256",
+            "distance_m": 274,
+            "coordinate": [
+              34.0972606,
+              0.463068
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          }
+        ],
+        "nearby_settlements": [
+          {
+            "name": "Marachi A",
+            "osm_id": 10581708710,
+            "osm_url": "https://www.openstreetmap.org/node/10581708710",
+            "distance_m": 109,
+            "place_type": "village",
+            "coordinate": [
+              34.0978471,
+              0.4646941
+            ]
+          },
+          {
+            "name": "Marachi B",
+            "osm_id": 10581708709,
+            "osm_url": "https://www.openstreetmap.org/node/10581708709",
+            "distance_m": 249,
+            "place_type": "village",
+            "coordinate": [
+              34.0965589,
+              0.4647037
+            ]
+          },
+          {
+            "name": "Sofia A",
+            "osm_id": 10581708712,
+            "osm_url": "https://www.openstreetmap.org/node/10581708712",
+            "distance_m": 270,
+            "place_type": "village",
+            "coordinate": [
+              34.0992293,
+              0.4674175
+            ]
+          },
+          {
+            "name": "Marachi C",
+            "osm_id": 10581708708,
+            "osm_url": "https://www.openstreetmap.org/node/10581708708",
+            "distance_m": 371,
+            "place_type": "village",
+            "coordinate": [
+              34.0961679,
+              0.4629296
+            ]
+          },
+          {
+            "name": "Busia",
+            "osm_id": 1429946815,
+            "osm_url": "https://www.openstreetmap.org/node/1429946815",
+            "distance_m": 965,
+            "place_type": "town",
+            "coordinate": [
+              34.0904896,
+              0.4675812
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-0442cf6b8cc3dfae",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.628091600000005,
+          -0.7274253000000003
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-0442cf6b8cc3dfae",
+        "label": "Road–border contact near Burambi",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          395064719
+        ],
+        "boundary_osm_ids": [
+          395064715,
+          798933246
+        ],
+        "route_names": [],
+        "route_refs": [],
+        "raw_contact_count": 2,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              29.6280916,
+              -0.7274253
+            ],
+            "route_osm_id": 395064719,
+            "boundary_osm_id": 395064715
+          },
+          {
+            "coordinate": [
+              29.6280916,
+              -0.7274253
+            ],
+            "route_osm_id": 395064719,
+            "boundary_osm_id": 798933246
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Burambi",
+            "osm_id": 11046313652,
+            "osm_url": "https://www.openstreetmap.org/node/11046313652",
+            "distance_m": 1446,
+            "place_type": "village",
+            "coordinate": [
+              29.640865,
+              -0.7298009
+            ]
+          },
+          {
+            "name": "Busanza",
+            "osm_id": 11046313306,
+            "osm_url": "https://www.openstreetmap.org/node/11046313306",
+            "distance_m": 2049,
+            "place_type": "village",
+            "coordinate": [
+              29.6429671,
+              -0.7383216
+            ]
+          },
+          {
+            "name": "Ishasha",
+            "osm_id": 11046313305,
+            "osm_url": "https://www.openstreetmap.org/node/11046313305",
+            "distance_m": 2103,
+            "place_type": "village",
+            "coordinate": [
+              29.6367801,
+              -0.744297
+            ]
+          },
+          {
+            "name": "Mushunga",
+            "osm_id": 11046313303,
+            "osm_url": "https://www.openstreetmap.org/node/11046313303",
+            "distance_m": 3009,
+            "place_type": "village",
+            "coordinate": [
+              29.6385162,
+              -0.7525215
+            ]
+          },
+          {
+            "name": "Karambi",
+            "osm_id": 11046313651,
+            "osm_url": "https://www.openstreetmap.org/node/11046313651",
+            "distance_m": 3500,
+            "place_type": "village",
+            "coordinate": [
+              29.6593298,
+              -0.7309503
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [
+          {
+            "record_id": "GL13",
+            "names": [
+              [
+                "Busanza",
+                "nearby settlement"
+              ],
+              [
+                "Ishasha",
+                "nearby settlement"
+              ]
+            ],
+            "status": "discovery_only_not_event_link",
+            "transport_qualification": "Transport mode and affected movement require review",
+            "eligible_for_automatic_acceptance": false
+          }
+        ],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-0d3f0d063e53a03c",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.924731612405914,
+          3.505333411867618
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-0d3f0d063e53a03c",
+        "label": "Road–border contact near Awindiri",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          613417039
+        ],
+        "boundary_osm_ids": [
+          133182311
+        ],
+        "route_names": [
+          "Yei - Koboko Road"
+        ],
+        "route_refs": [
+          "A8"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.924731612405918,
+              3.5053334118676176
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Awindiri",
+            "osm_id": 9521193561,
+            "osm_url": "https://www.openstreetmap.org/node/9521193561",
+            "distance_m": 954,
+            "place_type": "village",
+            "coordinate": [
+              30.9177194,
+              3.5103035
+            ]
+          },
+          {
+            "name": "Nyokpa",
+            "osm_id": 9521193584,
+            "osm_url": "https://www.openstreetmap.org/node/9521193584",
+            "distance_m": 1169,
+            "place_type": "village",
+            "coordinate": [
+              30.9324911,
+              3.512461
+            ]
+          },
+          {
+            "name": "Bongo",
+            "osm_id": 9521193610,
+            "osm_url": "https://www.openstreetmap.org/node/9521193610",
+            "distance_m": 1198,
+            "place_type": "village",
+            "coordinate": [
+              30.9253585,
+              3.5161506
+            ]
+          },
+          {
+            "name": "Keri Central",
+            "osm_id": 9521193603,
+            "osm_url": "https://www.openstreetmap.org/node/9521193603",
+            "distance_m": 1583,
+            "place_type": "village",
+            "coordinate": [
+              30.9389318,
+              3.5064291
+            ]
+          },
+          {
+            "name": "Kuluba",
+            "osm_id": 228783245,
+            "osm_url": "https://www.openstreetmap.org/node/228783245",
+            "distance_m": 1894,
+            "place_type": "village",
+            "coordinate": [
+              30.9414171,
+              3.501842
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-10d89e0b14f12c30",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.94047410644746,
+          3.5014066014987284
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-10d89e0b14f12c30",
+        "label": "Road–border contact near Kuluba",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          613417039
+        ],
+        "boundary_osm_ids": [
+          133182311
+        ],
+        "route_names": [
+          "Yei - Koboko Road"
+        ],
+        "route_refs": [
+          "A8"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.940474106447457,
+              3.5014066014987306
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Kuluba",
+            "osm_id": 228783245,
+            "osm_url": "https://www.openstreetmap.org/node/228783245",
+            "distance_m": 115,
+            "place_type": "village",
+            "coordinate": [
+              30.9414171,
+              3.501842
+            ]
+          },
+          {
+            "name": "Keri Central",
+            "osm_id": 9521193603,
+            "osm_url": "https://www.openstreetmap.org/node/9521193603",
+            "distance_m": 581,
+            "place_type": "village",
+            "coordinate": [
+              30.9389318,
+              3.5064291
+            ]
+          },
+          {
+            "name": "Kololo",
+            "osm_id": 9565799853,
+            "osm_url": "https://www.openstreetmap.org/node/9565799853",
+            "distance_m": 597,
+            "place_type": "village",
+            "coordinate": [
+              30.9452648,
+              3.4989595
+            ]
+          },
+          {
+            "name": "Bura",
+            "osm_id": 9565799856,
+            "osm_url": "https://www.openstreetmap.org/node/9565799856",
+            "distance_m": 1156,
+            "place_type": "village",
+            "coordinate": [
+              30.9422212,
+              3.4911016
+            ]
+          },
+          {
+            "name": "Kiakumiri",
+            "osm_id": 9521193582,
+            "osm_url": "https://www.openstreetmap.org/node/9521193582",
+            "distance_m": 1352,
+            "place_type": "village",
+            "coordinate": [
+              30.9469143,
+              3.5117815
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-24ce5ea6a88a3ac3",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.94048392048742,
+          3.4892430621726707
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-24ce5ea6a88a3ac3",
+        "label": "Road–border contact near Bura",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          613417039
+        ],
+        "boundary_osm_ids": [
+          133182311
+        ],
+        "route_names": [
+          "Yei - Koboko Road"
+        ],
+        "route_refs": [
+          "A8"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.940483920487416,
+              3.489243062172671
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Bura",
+            "osm_id": 9565799856,
+            "osm_url": "https://www.openstreetmap.org/node/9565799856",
+            "distance_m": 282,
+            "place_type": "village",
+            "coordinate": [
+              30.9422212,
+              3.4911016
+            ]
+          },
+          {
+            "name": "Kololo",
+            "osm_id": 9565799853,
+            "osm_url": "https://www.openstreetmap.org/node/9565799853",
+            "distance_m": 1199,
+            "place_type": "village",
+            "coordinate": [
+              30.9452648,
+              3.4989595
+            ]
+          },
+          {
+            "name": "Kuluba",
+            "osm_id": 228783245,
+            "osm_url": "https://www.openstreetmap.org/node/228783245",
+            "distance_m": 1397,
+            "place_type": "village",
+            "coordinate": [
+              30.9414171,
+              3.501842
+            ]
+          },
+          {
+            "name": "Kupajo",
+            "osm_id": 9565799852,
+            "osm_url": "https://www.openstreetmap.org/node/9565799852",
+            "distance_m": 1437,
+            "place_type": "village",
+            "coordinate": [
+              30.9469894,
+              3.4780123
+            ]
+          },
+          {
+            "name": "Koboko",
+            "osm_id": 1157841131,
+            "osm_url": "https://www.openstreetmap.org/node/1157841131",
+            "distance_m": 9065,
+            "place_type": "town",
+            "coordinate": [
+              30.9603105,
+              3.4097256
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-2e13392e3235206d",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.5985472,
+          -1.2951306999999983
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-2e13392e3235206d",
+        "label": "Road–border contact near Gatsibo",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          940396545,
+          1065807214
+        ],
+        "boundary_osm_ids": [
+          776637545,
+          940396547
+        ],
+        "route_names": [],
+        "route_refs": [],
+        "raw_contact_count": 4,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              29.5985472,
+              -1.2951307
+            ],
+            "route_osm_id": 940396545,
+            "boundary_osm_id": 776637545
+          },
+          {
+            "coordinate": [
+              29.5985472,
+              -1.2951307
+            ],
+            "route_osm_id": 940396545,
+            "boundary_osm_id": 940396547
+          },
+          {
+            "coordinate": [
+              29.5985472,
+              -1.2951307
+            ],
+            "route_osm_id": 1065807214,
+            "boundary_osm_id": 776637545
+          },
+          {
+            "coordinate": [
+              29.5985472,
+              -1.2951307
+            ],
+            "route_osm_id": 1065807214,
+            "boundary_osm_id": 940396547
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Gatsibo",
+            "osm_id": 8279097277,
+            "osm_url": "https://www.openstreetmap.org/node/8279097277",
+            "distance_m": 472,
+            "place_type": "village",
+            "coordinate": [
+              29.6027833,
+              -1.2950583
+            ]
+          },
+          {
+            "name": "Bunagana",
+            "osm_id": 5357865694,
+            "osm_url": "https://www.openstreetmap.org/node/5357865694",
+            "distance_m": 561,
+            "place_type": "village",
+            "coordinate": [
+              29.6034336,
+              -1.2938735
+            ]
+          },
+          {
+            "name": "Gatsibo",
+            "osm_id": 6776907198,
+            "osm_url": "https://www.openstreetmap.org/node/6776907198",
+            "distance_m": 719,
+            "place_type": "village",
+            "coordinate": [
+              29.60376,
+              -1.2989683
+            ]
+          },
+          {
+            "name": "Kanyampiriko",
+            "osm_id": 8273212825,
+            "osm_url": "https://www.openstreetmap.org/node/8273212825",
+            "distance_m": 958,
+            "place_type": "village",
+            "coordinate": [
+              29.6042067,
+              -1.301655
+            ]
+          },
+          {
+            "name": "Kibaya",
+            "osm_id": 8279097246,
+            "osm_url": "https://www.openstreetmap.org/node/8279097246",
+            "distance_m": 1082,
+            "place_type": "village",
+            "coordinate": [
+              29.6082183,
+              -1.294185
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [
+          {
+            "record_id": "GL12",
+            "names": [
+              [
+                "Bunagana",
+                "nearby settlement"
+              ]
+            ],
+            "status": "discovery_only_not_event_link",
+            "transport_qualification": "Transport mode and affected movement require review",
+            "eligible_for_automatic_acceptance": false
+          },
+          {
+            "record_id": "GL13",
+            "names": [
+              [
+                "Bunagana",
+                "nearby settlement"
+              ]
+            ],
+            "status": "discovery_only_not_event_link",
+            "transport_qualification": "Transport mode and affected movement require review",
+            "eligible_for_automatic_acceptance": false
+          }
+        ],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-3f546a1b975247c2",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.939515595282288,
+          3.4912766953715324
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-3f546a1b975247c2",
+        "label": "Road–border contact near Bura",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          613417039
+        ],
+        "boundary_osm_ids": [
+          133182311
+        ],
+        "route_names": [
+          "Yei - Koboko Road"
+        ],
+        "route_refs": [
+          "A8"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.93951559528229,
+              3.4912766953715324
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Bura",
+            "osm_id": 9565799856,
+            "osm_url": "https://www.openstreetmap.org/node/9565799856",
+            "distance_m": 301,
+            "place_type": "village",
+            "coordinate": [
+              30.9422212,
+              3.4911016
+            ]
+          },
+          {
+            "name": "Kololo",
+            "osm_id": 9565799853,
+            "osm_url": "https://www.openstreetmap.org/node/9565799853",
+            "distance_m": 1063,
+            "place_type": "village",
+            "coordinate": [
+              30.9452648,
+              3.4989595
+            ]
+          },
+          {
+            "name": "Kuluba",
+            "osm_id": 228783245,
+            "osm_url": "https://www.openstreetmap.org/node/228783245",
+            "distance_m": 1187,
+            "place_type": "village",
+            "coordinate": [
+              30.9414171,
+              3.501842
+            ]
+          },
+          {
+            "name": "Ifoko",
+            "osm_id": 9565799855,
+            "osm_url": "https://www.openstreetmap.org/node/9565799855",
+            "distance_m": 1544,
+            "place_type": "village",
+            "coordinate": [
+              30.9533349,
+              3.4926977
+            ]
+          },
+          {
+            "name": "Koboko",
+            "osm_id": 1157841131,
+            "osm_url": "https://www.openstreetmap.org/node/1157841131",
+            "distance_m": 9309,
+            "place_type": "town",
+            "coordinate": [
+              30.9603105,
+              3.4097256
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-4206b6af7da47a7f",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.029773874157392,
+          2.3769090533009076
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-4206b6af7da47a7f",
+        "label": "Road–border contact near Goli",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          33593474
+        ],
+        "boundary_osm_ids": [
+          396444469
+        ],
+        "route_names": [],
+        "route_refs": [
+          "RN27"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              31.029773874157396,
+              2.3769090533009076
+            ],
+            "route_osm_id": 33593474,
+            "boundary_osm_id": 396444469
+          }
+        ],
+        "checkpoints": [
+          {
+            "osm_type": "n",
+            "osm_id": 6470678520,
+            "osm_version": 4,
+            "osm_timestamp": "2021-01-20 11:24:51+00:00",
+            "tags": {
+              "barrier": "border_control"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/6470678520",
+            "distance_m": 171,
+            "coordinate": [
+              31.0290329,
+              2.3755508
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          }
+        ],
+        "nearby_settlements": [
+          {
+            "name": "Goli",
+            "osm_id": 1157859264,
+            "osm_url": "https://www.openstreetmap.org/node/1157859264",
+            "distance_m": 1163,
+            "place_type": "village",
+            "coordinate": [
+              31.0296457,
+              2.3874268
+            ]
+          },
+          {
+            "name": "Jopanziri",
+            "osm_id": 2229108886,
+            "osm_url": "https://www.openstreetmap.org/node/2229108886",
+            "distance_m": 2864,
+            "place_type": "village",
+            "coordinate": [
+              31.052519,
+              2.364764
+            ]
+          },
+          {
+            "name": "Ambaki",
+            "osm_id": 8631222842,
+            "osm_url": "https://www.openstreetmap.org/node/8631222842",
+            "distance_m": 3070,
+            "place_type": "village",
+            "coordinate": [
+              31.01077,
+              2.3970383
+            ]
+          },
+          {
+            "name": "Pakolo",
+            "osm_id": 8631222841,
+            "osm_url": "https://www.openstreetmap.org/node/8631222841",
+            "distance_m": 3302,
+            "place_type": "village",
+            "coordinate": [
+              31.0100738,
+              2.3992512
+            ]
+          },
+          {
+            "name": "Paidha",
+            "osm_id": 1157859693,
+            "osm_url": "https://www.openstreetmap.org/node/1157859693",
+            "distance_m": 6616,
+            "place_type": "town",
+            "coordinate": [
+              30.9853389,
+              2.4166898
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-4a4480d1cb9fa4a6",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.917609443697692,
+          3.505793971453384
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-4a4480d1cb9fa4a6",
+        "label": "Road–border contact near Awindiri",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          613417039
+        ],
+        "boundary_osm_ids": [
+          133182311
+        ],
+        "route_names": [
+          "Yei - Koboko Road"
+        ],
+        "route_refs": [
+          "A8"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.91760944369769,
+              3.505793971453385
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Awindiri",
+            "osm_id": 9521193561,
+            "osm_url": "https://www.openstreetmap.org/node/9521193561",
+            "distance_m": 499,
+            "place_type": "village",
+            "coordinate": [
+              30.9177194,
+              3.5103035
+            ]
+          },
+          {
+            "name": "Bongo",
+            "osm_id": 9521193610,
+            "osm_url": "https://www.openstreetmap.org/node/9521193610",
+            "distance_m": 1433,
+            "place_type": "village",
+            "coordinate": [
+              30.9253585,
+              3.5161506
+            ]
+          },
+          {
+            "name": "Kindra",
+            "osm_id": 9521193567,
+            "osm_url": "https://www.openstreetmap.org/node/9521193567",
+            "distance_m": 1656,
+            "place_type": "village",
+            "coordinate": [
+              30.9027128,
+              3.5058168
+            ]
+          },
+          {
+            "name": "Nyokpa",
+            "osm_id": 9521193584,
+            "osm_url": "https://www.openstreetmap.org/node/9521193584",
+            "distance_m": 1811,
+            "place_type": "village",
+            "coordinate": [
+              30.9324911,
+              3.512461
+            ]
+          },
+          {
+            "name": "Kilibi Ii",
+            "osm_id": 9521193590,
+            "osm_url": "https://www.openstreetmap.org/node/9521193590",
+            "distance_m": 2280,
+            "place_type": "village",
+            "coordinate": [
+              30.9162987,
+              3.5263693
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-5121058e9584ddcc",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.941037113176044,
+          3.499974469779813
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-5121058e9584ddcc",
+        "label": "Road–border contact near Kuluba",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          613417039
+        ],
+        "boundary_osm_ids": [
+          133182311
+        ],
+        "route_names": [
+          "Yei - Koboko Road"
+        ],
+        "route_refs": [
+          "A8"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.941037113176044,
+              3.4999744697798136
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Kuluba",
+            "osm_id": 228783245,
+            "osm_url": "https://www.openstreetmap.org/node/228783245",
+            "distance_m": 211,
+            "place_type": "village",
+            "coordinate": [
+              30.9414171,
+              3.501842
+            ]
+          },
+          {
+            "name": "Kololo",
+            "osm_id": 9565799853,
+            "osm_url": "https://www.openstreetmap.org/node/9565799853",
+            "distance_m": 483,
+            "place_type": "village",
+            "coordinate": [
+              30.9452648,
+              3.4989595
+            ]
+          },
+          {
+            "name": "Keri Central",
+            "osm_id": 9521193603,
+            "osm_url": "https://www.openstreetmap.org/node/9521193603",
+            "distance_m": 751,
+            "place_type": "village",
+            "coordinate": [
+              30.9389318,
+              3.5064291
+            ]
+          },
+          {
+            "name": "Bura",
+            "osm_id": 9565799856,
+            "osm_url": "https://www.openstreetmap.org/node/9565799856",
+            "distance_m": 990,
+            "place_type": "village",
+            "coordinate": [
+              30.9422212,
+              3.4911016
+            ]
+          },
+          {
+            "name": "Kiakumiri",
+            "osm_id": 9521193582,
+            "osm_url": "https://www.openstreetmap.org/node/9521193582",
+            "distance_m": 1460,
+            "place_type": "village",
+            "coordinate": [
+              30.9469143,
+              3.5117815
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-56bfe0c0e2c1428c",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.939942576325574,
+          3.4962578107092424
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-56bfe0c0e2c1428c",
+        "label": "Road–border contact near Bura",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          613417039
+        ],
+        "boundary_osm_ids": [
+          133182311
+        ],
+        "route_names": [
+          "Yei - Koboko Road"
+        ],
+        "route_refs": [
+          "A8"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.939942576325574,
+              3.496257810709242
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Bura",
+            "osm_id": 9565799856,
+            "osm_url": "https://www.openstreetmap.org/node/9565799856",
+            "distance_m": 624,
+            "place_type": "village",
+            "coordinate": [
+              30.9422212,
+              3.4911016
+            ]
+          },
+          {
+            "name": "Kuluba",
+            "osm_id": 228783245,
+            "osm_url": "https://www.openstreetmap.org/node/228783245",
+            "distance_m": 639,
+            "place_type": "village",
+            "coordinate": [
+              30.9414171,
+              3.501842
+            ]
+          },
+          {
+            "name": "Kololo",
+            "osm_id": 9565799853,
+            "osm_url": "https://www.openstreetmap.org/node/9565799853",
+            "distance_m": 663,
+            "place_type": "village",
+            "coordinate": [
+              30.9452648,
+              3.4989595
+            ]
+          },
+          {
+            "name": "Keri Central",
+            "osm_id": 9521193603,
+            "osm_url": "https://www.openstreetmap.org/node/9521193603",
+            "distance_m": 1130,
+            "place_type": "village",
+            "coordinate": [
+              30.9389318,
+              3.5064291
+            ]
+          },
+          {
+            "name": "Koboko",
+            "osm_id": 1157841131,
+            "osm_url": "https://www.openstreetmap.org/node/1157841131",
+            "distance_m": 9833,
+            "place_type": "town",
+            "coordinate": [
+              30.9603105,
+              3.4097256
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-603b566516fee789",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.26845417592004,
+          0.6378493307142343
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-603b566516fee789",
+        "label": "Road–border contact near Malaba",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          },
+          {
+            "osm_relation_id": 192798,
+            "name": "Kenya",
+            "iso2": "KE"
+          }
+        ],
+        "highway_classes": [
+          "trunk"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          1528070456
+        ],
+        "boundary_osm_ids": [
+          1211523767
+        ],
+        "route_names": [
+          "Kenya Road"
+        ],
+        "route_refs": [
+          "A109"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              34.268454175920034,
+              0.6378493307142338
+            ],
+            "route_osm_id": 1528070456,
+            "boundary_osm_id": 1211523767
+          }
+        ],
+        "checkpoints": [
+          {
+            "osm_type": "n",
+            "osm_id": 1120362869,
+            "osm_version": 7,
+            "osm_timestamp": "2020-09-10 04:51:58+00:00",
+            "tags": {
+              "addr:country": "KE",
+              "barrier": "border_control"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/1120362869",
+            "distance_m": 147,
+            "coordinate": [
+              34.2693112,
+              0.6368437
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "n",
+            "osm_id": 7891926165,
+            "osm_version": 1,
+            "osm_timestamp": "2020-09-10 04:51:58+00:00",
+            "tags": {
+              "addr:country": "UG",
+              "barrier": "border_control"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/7891926165",
+            "distance_m": 470,
+            "coordinate": [
+              34.2642538,
+              0.6382587
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "n",
+            "osm_id": 2321166924,
+            "osm_version": 4,
+            "osm_timestamp": "2020-09-10 04:51:58+00:00",
+            "tags": {
+              "addr:country": "UG",
+              "barrier": "border_control"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/2321166924",
+            "distance_m": 483,
+            "coordinate": [
+              34.2641309,
+              0.6381643
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          }
+        ],
+        "nearby_settlements": [
+          {
+            "name": "Malaba 'a' South",
+            "osm_id": 9766263504,
+            "osm_url": "https://www.openstreetmap.org/node/9766263504",
+            "distance_m": 210,
+            "place_type": "village",
+            "coordinate": [
+              34.2672548,
+              0.6393115
+            ]
+          },
+          {
+            "name": "Akolodongo Central 'a'",
+            "osm_id": 9766276629,
+            "osm_url": "https://www.openstreetmap.org/node/9766276629",
+            "distance_m": 423,
+            "place_type": "village",
+            "coordinate": [
+              34.2699222,
+              0.6413736
+            ]
+          },
+          {
+            "name": "Malaba 'a' North I",
+            "osm_id": 9766263505,
+            "osm_url": "https://www.openstreetmap.org/node/9766263505",
+            "distance_m": 446,
+            "place_type": "village",
+            "coordinate": [
+              34.2657969,
+              0.6408691
+            ]
+          },
+          {
+            "name": "Malaba 'a' North H",
+            "osm_id": 9766263506,
+            "osm_url": "https://www.openstreetmap.org/node/9766263506",
+            "distance_m": 450,
+            "place_type": "village",
+            "coordinate": [
+              34.267063,
+              0.641672
+            ]
+          },
+          {
+            "name": "Malaba",
+            "osm_id": 1430275363,
+            "osm_url": "https://www.openstreetmap.org/node/1430275363",
+            "distance_m": 690,
+            "place_type": "town",
+            "coordinate": [
+              34.2629562,
+              0.6407313
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [
+          {
+            "record_id": "R4-AES-002",
+            "names": [
+              [
+                "Malaba",
+                "nearby settlement"
+              ]
+            ],
+            "status": "discovery_only_not_event_link",
+            "transport_qualification": "Transport mode and affected movement require review",
+            "eligible_for_automatic_acceptance": false
+          }
+        ],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-60accc5e3da83ba8",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.011723209820374,
+          -1.4248080331939812
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-60accc5e3da83ba8",
+        "label": "Road–border contact near Katuna",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 171496,
+            "name": "Rwanda",
+            "iso2": "RW"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "trunk"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          694452639
+        ],
+        "boundary_osm_ids": [
+          413987446
+        ],
+        "route_names": [],
+        "route_refs": [
+          "NR3"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.011723209820378,
+              -1.4248080331939827
+            ],
+            "route_osm_id": 694452639,
+            "boundary_osm_id": 413987446
+          }
+        ],
+        "checkpoints": [
+          {
+            "osm_type": "n",
+            "osm_id": 282225385,
+            "osm_version": 7,
+            "osm_timestamp": "2020-07-02 14:06:47+00:00",
+            "tags": {
+              "barrier": "border_control",
+              "country": "UG"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/282225385",
+            "distance_m": 180,
+            "coordinate": [
+              30.0107546,
+              -1.4235102
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "n",
+            "osm_id": 282221835,
+            "osm_version": 5,
+            "osm_timestamp": "2019-04-30 01:35:35+00:00",
+            "tags": {
+              "barrier": "border_control",
+              "country": "RW"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/282221835",
+            "distance_m": 215,
+            "coordinate": [
+              30.0130418,
+              -1.4262273
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          }
+        ],
+        "nearby_settlements": [
+          {
+            "name": "Katuna-Border",
+            "osm_id": 10748471211,
+            "osm_url": "https://www.openstreetmap.org/node/10748471211",
+            "distance_m": 346,
+            "place_type": "village",
+            "coordinate": [
+              30.0090384,
+              -1.4232276
+            ]
+          },
+          {
+            "name": "Katuna",
+            "osm_id": 281721577,
+            "osm_url": "https://www.openstreetmap.org/node/281721577",
+            "distance_m": 427,
+            "place_type": "town",
+            "coordinate": [
+              30.0098485,
+              -1.421437
+            ]
+          },
+          {
+            "name": "Burambira-Katuna",
+            "osm_id": 10748471097,
+            "osm_url": "https://www.openstreetmap.org/node/10748471097",
+            "distance_m": 880,
+            "place_type": "village",
+            "coordinate": [
+              30.0040947,
+              -1.4268896
+            ]
+          },
+          {
+            "name": "Mayengo/Katuna",
+            "osm_id": 10748471209,
+            "osm_url": "https://www.openstreetmap.org/node/10748471209",
+            "distance_m": 976,
+            "place_type": "village",
+            "coordinate": [
+              30.0072316,
+              -1.4172371
+            ]
+          },
+          {
+            "name": "Burambira (Mukarangye)",
+            "osm_id": 10748471096,
+            "osm_url": "https://www.openstreetmap.org/node/10748471096",
+            "distance_m": 1438,
+            "place_type": "village",
+            "coordinate": [
+              29.9992102,
+              -1.4216082
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [
+          {
+            "record_id": "GL01",
+            "names": [
+              [
+                "Katuna",
+                "nearby settlement"
+              ]
+            ],
+            "status": "discovery_only_not_event_link",
+            "transport_qualification": "Transport mode and affected movement require review",
+            "eligible_for_automatic_acceptance": false
+          }
+        ],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-650c1dcddec9e9d7",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.926854270863977,
+          3.5056076026403775
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-650c1dcddec9e9d7",
+        "label": "Road–border contact near Nyokpa",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          613417039
+        ],
+        "boundary_osm_ids": [
+          133182311
+        ],
+        "route_names": [
+          "Yei - Koboko Road"
+        ],
+        "route_refs": [
+          "A8"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.926854270863974,
+              3.505607602640378
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Nyokpa",
+            "osm_id": 9521193584,
+            "osm_url": "https://www.openstreetmap.org/node/9521193584",
+            "distance_m": 983,
+            "place_type": "village",
+            "coordinate": [
+              30.9324911,
+              3.512461
+            ]
+          },
+          {
+            "name": "Awindiri",
+            "osm_id": 9521193561,
+            "osm_url": "https://www.openstreetmap.org/node/9521193561",
+            "distance_m": 1140,
+            "place_type": "village",
+            "coordinate": [
+              30.9177194,
+              3.5103035
+            ]
+          },
+          {
+            "name": "Bongo",
+            "osm_id": 9521193610,
+            "osm_url": "https://www.openstreetmap.org/node/9521193610",
+            "distance_m": 1178,
+            "place_type": "village",
+            "coordinate": [
+              30.9253585,
+              3.5161506
+            ]
+          },
+          {
+            "name": "Keri Central",
+            "osm_id": 9521193603,
+            "osm_url": "https://www.openstreetmap.org/node/9521193603",
+            "distance_m": 1345,
+            "place_type": "village",
+            "coordinate": [
+              30.9389318,
+              3.5064291
+            ]
+          },
+          {
+            "name": "Kuluba",
+            "osm_id": 228783245,
+            "osm_url": "https://www.openstreetmap.org/node/228783245",
+            "distance_m": 1671,
+            "place_type": "village",
+            "coordinate": [
+              30.9414171,
+              3.501842
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-6a12feb9e54a44eb",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.07337111263835,
+          3.5710891136309444
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-6a12feb9e54a44eb",
+        "label": "Road–border contact near Bibia West Lc1",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          },
+          {
+            "osm_relation_id": 1656678,
+            "name": "South Sudan",
+            "iso2": "SS"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          266617731
+        ],
+        "boundary_osm_ids": [
+          492761566
+        ],
+        "route_names": [
+          "Nimule-Gulu"
+        ],
+        "route_refs": [
+          "A43"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              32.07337111263835,
+              3.5710891136309466
+            ],
+            "route_osm_id": 266617731,
+            "boundary_osm_id": 492761566
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Bibia West Lc1",
+            "osm_id": 10980479655,
+            "osm_url": "https://www.openstreetmap.org/node/10980479655",
+            "distance_m": 3005,
+            "place_type": "village",
+            "coordinate": [
+              32.0730398,
+              3.543919
+            ]
+          },
+          {
+            "name": "Loduriekpwa",
+            "osm_id": 10595854304,
+            "osm_url": "https://www.openstreetmap.org/node/10595854304",
+            "distance_m": 5323,
+            "place_type": "village",
+            "coordinate": [
+              32.0258934,
+              3.5647232
+            ]
+          },
+          {
+            "name": "Melehwe",
+            "osm_id": 10595854303,
+            "osm_url": "https://www.openstreetmap.org/node/10595854303",
+            "distance_m": 6879,
+            "place_type": "village",
+            "coordinate": [
+              32.0299674,
+              3.5267415
+            ]
+          },
+          {
+            "name": "Kibira",
+            "osm_id": 10595864607,
+            "osm_url": "https://www.openstreetmap.org/node/10595864607",
+            "distance_m": 8033,
+            "place_type": "village",
+            "coordinate": [
+              32.0286365,
+              3.5140254
+            ]
+          },
+          {
+            "name": "Bibia West",
+            "osm_id": 10980479656,
+            "osm_url": "https://www.openstreetmap.org/node/10980479656",
+            "distance_m": 8145,
+            "place_type": "village",
+            "coordinate": [
+              32.1116635,
+              3.5082812
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required",
+          "endpoint_or_tangent_contact"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-80be3a7b102485d8",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.928300559719045,
+          3.5056035605119784
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-80be3a7b102485d8",
+        "label": "Road–border contact near Nyokpa",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          613417039
+        ],
+        "boundary_osm_ids": [
+          133182311
+        ],
+        "route_names": [
+          "Yei - Koboko Road"
+        ],
+        "route_refs": [
+          "A8"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.92830055971904,
+              3.5056035605119793
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Nyokpa",
+            "osm_id": 9521193584,
+            "osm_url": "https://www.openstreetmap.org/node/9521193584",
+            "distance_m": 890,
+            "place_type": "village",
+            "coordinate": [
+              30.9324911,
+              3.512461
+            ]
+          },
+          {
+            "name": "Keri Central",
+            "osm_id": 9521193603,
+            "osm_url": "https://www.openstreetmap.org/node/9521193603",
+            "distance_m": 1185,
+            "place_type": "village",
+            "coordinate": [
+              30.9389318,
+              3.5064291
+            ]
+          },
+          {
+            "name": "Bongo",
+            "osm_id": 9521193610,
+            "osm_url": "https://www.openstreetmap.org/node/9521193610",
+            "distance_m": 1211,
+            "place_type": "village",
+            "coordinate": [
+              30.9253585,
+              3.5161506
+            ]
+          },
+          {
+            "name": "Awindiri",
+            "osm_id": 9521193561,
+            "osm_url": "https://www.openstreetmap.org/node/9521193561",
+            "distance_m": 1286,
+            "place_type": "village",
+            "coordinate": [
+              30.9177194,
+              3.5103035
+            ]
+          },
+          {
+            "name": "Kuluba",
+            "osm_id": 228783245,
+            "osm_url": "https://www.openstreetmap.org/node/228783245",
+            "distance_m": 1516,
+            "place_type": "village",
+            "coordinate": [
+              30.9414171,
+              3.501842
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-8702c8d50e467668",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.416714800000005,
+          -1.000000499999999
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-8702c8d50e467668",
+        "label": "Road–border contact near Mutukula",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          },
+          {
+            "osm_relation_id": 195270,
+            "name": "Tanzania",
+            "iso2": "TZ"
+          }
+        ],
+        "highway_classes": [
+          "trunk"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          37422120,
+          474905581
+        ],
+        "boundary_osm_ids": [
+          31852656
+        ],
+        "route_names": [],
+        "route_refs": [
+          "T4"
+        ],
+        "raw_contact_count": 2,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              31.4167148,
+              -1.0000005
+            ],
+            "route_osm_id": 37422120,
+            "boundary_osm_id": 31852656
+          },
+          {
+            "coordinate": [
+              31.4167148,
+              -1.0000005
+            ],
+            "route_osm_id": 474905581,
+            "boundary_osm_id": 31852656
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Mutukula",
+            "osm_id": 1770323575,
+            "osm_url": "https://www.openstreetmap.org/node/1770323575",
+            "distance_m": 139,
+            "place_type": "village",
+            "coordinate": [
+              31.4156634,
+              -1.0006814
+            ]
+          },
+          {
+            "name": "Special Area",
+            "osm_id": 9407464532,
+            "osm_url": "https://www.openstreetmap.org/node/9407464532",
+            "distance_m": 588,
+            "place_type": "village",
+            "coordinate": [
+              31.416703,
+              -0.9946871
+            ]
+          },
+          {
+            "name": "Mutukula Central",
+            "osm_id": 9407464533,
+            "osm_url": "https://www.openstreetmap.org/node/9407464533",
+            "distance_m": 697,
+            "place_type": "village",
+            "coordinate": [
+              31.4181611,
+              -0.9938667
+            ]
+          },
+          {
+            "name": "Kololo",
+            "osm_id": 9407464534,
+            "osm_url": "https://www.openstreetmap.org/node/9407464534",
+            "distance_m": 864,
+            "place_type": "village",
+            "coordinate": [
+              31.4090379,
+              -0.9988398
+            ]
+          },
+          {
+            "name": "Kabawo",
+            "osm_id": 9407464531,
+            "osm_url": "https://www.openstreetmap.org/node/9407464531",
+            "distance_m": 916,
+            "place_type": "village",
+            "coordinate": [
+              31.4231243,
+              -0.9948033
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-8802d9bce5833653",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.20251908848111,
+          3.776843429145652
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-8802d9bce5833653",
+        "label": "Road–border contact near Lipan Hunting Area",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          },
+          {
+            "osm_relation_id": 1656678,
+            "name": "South Sudan",
+            "iso2": "SS"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          1217180806
+        ],
+        "boundary_osm_ids": [
+          1009705742
+        ],
+        "route_names": [
+          "Interstate 5"
+        ],
+        "route_refs": [
+          "I 5"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              33.20251908848111,
+              3.776843429145651
+            ],
+            "route_osm_id": 1217180806,
+            "boundary_osm_id": 1009705742
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Lipan Hunting Area",
+            "osm_id": 10844058850,
+            "osm_url": "https://www.openstreetmap.org/node/10844058850",
+            "distance_m": 9837,
+            "place_type": "village",
+            "coordinate": [
+              33.244147,
+              3.6983408
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-8a6ce817ea17982e",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.583648146314097,
+          -1.1613729812443254
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-8a6ce817ea17982e",
+        "label": "Road–border contact near Gakenke",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "unclassified"
+        ],
+        "road_tiers": [
+          "other"
+        ],
+        "route_osm_ids": [
+          1083585614
+        ],
+        "boundary_osm_ids": [
+          412129443
+        ],
+        "route_names": [],
+        "route_refs": [],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              29.583648146314097,
+              -1.1613729812443263
+            ],
+            "route_osm_id": 1083585614,
+            "boundary_osm_id": 412129443
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Gakenke",
+            "osm_id": 6776870282,
+            "osm_url": "https://www.openstreetmap.org/node/6776870282",
+            "distance_m": 316,
+            "place_type": "village",
+            "coordinate": [
+              29.5838333,
+              -1.1585183
+            ]
+          },
+          {
+            "name": "Kinanira",
+            "osm_id": 6776870280,
+            "osm_url": "https://www.openstreetmap.org/node/6776870280",
+            "distance_m": 585,
+            "place_type": "village",
+            "coordinate": [
+              29.5851933,
+              -1.1664233
+            ]
+          },
+          {
+            "name": "Nyarurambi",
+            "osm_id": 6776870283,
+            "osm_url": "https://www.openstreetmap.org/node/6776870283",
+            "distance_m": 834,
+            "place_type": "village",
+            "coordinate": [
+              29.5910883,
+              -1.1622133
+            ]
+          },
+          {
+            "name": "Gatera",
+            "osm_id": 8953722762,
+            "osm_url": "https://www.openstreetmap.org/node/8953722762",
+            "distance_m": 2456,
+            "place_type": "hamlet",
+            "coordinate": [
+              29.5919967,
+              -1.1819174
+            ]
+          },
+          {
+            "name": "Butunga",
+            "osm_id": 6776907186,
+            "osm_url": "https://www.openstreetmap.org/node/6776907186",
+            "distance_m": 2685,
+            "place_type": "village",
+            "coordinate": [
+              29.5777917,
+              -1.1849233
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-8fa3063d2cf66276",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.95767238019646,
+          0.6300410883145658
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-8fa3063d2cf66276",
+        "label": "Road–border contact near Mulungitanua I",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          377747128
+        ],
+        "boundary_osm_ids": [
+          326920456
+        ],
+        "route_names": [
+          "Fort Portal - Bundibugyo Road"
+        ],
+        "route_refs": [],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              29.957672380196467,
+              0.630041088314566
+            ],
+            "route_osm_id": 377747128,
+            "boundary_osm_id": 326920456
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Mulungitanua I",
+            "osm_id": 9643219630,
+            "osm_url": "https://www.openstreetmap.org/node/9643219630",
+            "distance_m": 422,
+            "place_type": "village",
+            "coordinate": [
+              29.9579366,
+              0.6338511
+            ]
+          },
+          {
+            "name": "Mulungitanua Ii",
+            "osm_id": 9643219648,
+            "osm_url": "https://www.openstreetmap.org/node/9643219648",
+            "distance_m": 577,
+            "place_type": "village",
+            "coordinate": [
+              29.9614579,
+              0.6264845
+            ]
+          },
+          {
+            "name": "Busunga Central",
+            "osm_id": 9643219653,
+            "osm_url": "https://www.openstreetmap.org/node/9643219653",
+            "distance_m": 721,
+            "place_type": "village",
+            "coordinate": [
+              29.9641436,
+              0.6297458
+            ]
+          },
+          {
+            "name": "Busunga",
+            "osm_id": 2229101352,
+            "osm_url": "https://www.openstreetmap.org/node/2229101352",
+            "distance_m": 764,
+            "place_type": "village",
+            "coordinate": [
+              29.963895,
+              0.632954
+            ]
+          },
+          {
+            "name": "Majada",
+            "osm_id": 9643219631,
+            "osm_url": "https://www.openstreetmap.org/node/9643219631",
+            "distance_m": 880,
+            "place_type": "village",
+            "coordinate": [
+              29.9628478,
+              0.636051
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-935e22452e911757",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.941012438267684,
+          3.487492394041072
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-935e22452e911757",
+        "label": "Road–border contact near Bura",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          613417039
+        ],
+        "boundary_osm_ids": [
+          133182311
+        ],
+        "route_names": [
+          "Yei - Koboko Road"
+        ],
+        "route_refs": [
+          "A8"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.941012438267684,
+              3.487492394041072
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Bura",
+            "osm_id": 9565799856,
+            "osm_url": "https://www.openstreetmap.org/node/9565799856",
+            "distance_m": 421,
+            "place_type": "village",
+            "coordinate": [
+              30.9422212,
+              3.4911016
+            ]
+          },
+          {
+            "name": "Kupajo",
+            "osm_id": 9565799852,
+            "osm_url": "https://www.openstreetmap.org/node/9565799852",
+            "distance_m": 1241,
+            "place_type": "village",
+            "coordinate": [
+              30.9469894,
+              3.4780123
+            ]
+          },
+          {
+            "name": "Kololo",
+            "osm_id": 9565799853,
+            "osm_url": "https://www.openstreetmap.org/node/9565799853",
+            "distance_m": 1353,
+            "place_type": "village",
+            "coordinate": [
+              30.9452648,
+              3.4989595
+            ]
+          },
+          {
+            "name": "Ifoko",
+            "osm_id": 9565799855,
+            "osm_url": "https://www.openstreetmap.org/node/9565799855",
+            "distance_m": 1486,
+            "place_type": "village",
+            "coordinate": [
+              30.9533349,
+              3.4926977
+            ]
+          },
+          {
+            "name": "Koboko",
+            "osm_id": 1157841131,
+            "osm_url": "https://www.openstreetmap.org/node/1157841131",
+            "distance_m": 8863,
+            "place_type": "town",
+            "coordinate": [
+              30.9603105,
+              3.4097256
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-9499a701dd54dc9a",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.941245488198607,
+          3.4864067121902433
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-9499a701dd54dc9a",
+        "label": "Road–border contact near Bura",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          613417039
+        ],
+        "boundary_osm_ids": [
+          133182311
+        ],
+        "route_names": [
+          "Yei - Koboko Road"
+        ],
+        "route_refs": [
+          "A8"
+        ],
+        "raw_contact_count": 2,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.941245488198607,
+              3.4864067121902433
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          },
+          {
+            "coordinate": [
+              30.941393094758627,
+              3.48589583456376
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Bura",
+            "osm_id": 9565799856,
+            "osm_url": "https://www.openstreetmap.org/node/9565799856",
+            "distance_m": 530,
+            "place_type": "village",
+            "coordinate": [
+              30.9422212,
+              3.4911016
+            ]
+          },
+          {
+            "name": "Kupajo",
+            "osm_id": 9565799852,
+            "osm_url": "https://www.openstreetmap.org/node/9565799852",
+            "distance_m": 1126,
+            "place_type": "village",
+            "coordinate": [
+              30.9469894,
+              3.4780123
+            ]
+          },
+          {
+            "name": "Kololo",
+            "osm_id": 9565799853,
+            "osm_url": "https://www.openstreetmap.org/node/9565799853",
+            "distance_m": 1458,
+            "place_type": "village",
+            "coordinate": [
+              30.9452648,
+              3.4989595
+            ]
+          },
+          {
+            "name": "Ifoko",
+            "osm_id": 9565799855,
+            "osm_url": "https://www.openstreetmap.org/node/9565799855",
+            "distance_m": 1513,
+            "place_type": "village",
+            "coordinate": [
+              30.9533349,
+              3.4926977
+            ]
+          },
+          {
+            "name": "Koboko",
+            "osm_id": 1157841131,
+            "osm_url": "https://www.openstreetmap.org/node/1157841131",
+            "distance_m": 8740,
+            "place_type": "town",
+            "coordinate": [
+              30.9603105,
+              3.4097256
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-9a4391cf06604bbe",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.648207529394096,
+          -1.0655921755692046
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-9a4391cf06604bbe",
+        "label": "Road–border contact near Murongo",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          },
+          {
+            "osm_relation_id": 195270,
+            "name": "Tanzania",
+            "iso2": "TZ"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          178431655
+        ],
+        "boundary_osm_ids": [
+          1485447228
+        ],
+        "route_names": [],
+        "route_refs": [],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.648207529394092,
+              -1.0655921755692048
+            ],
+            "route_osm_id": 178431655,
+            "boundary_osm_id": 1485447228
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Murongo",
+            "osm_id": 1886332702,
+            "osm_url": "https://www.openstreetmap.org/node/1886332702",
+            "distance_m": 168,
+            "place_type": "village",
+            "coordinate": [
+              30.6478382,
+              -1.0670677
+            ]
+          },
+          {
+            "name": "Boarder",
+            "osm_id": 9679740932,
+            "osm_url": "https://www.openstreetmap.org/node/9679740932",
+            "distance_m": 1388,
+            "place_type": "village",
+            "coordinate": [
+              30.6375147,
+              -1.0591489
+            ]
+          },
+          {
+            "name": "Kikagati",
+            "osm_id": 2968475199,
+            "osm_url": "https://www.openstreetmap.org/node/2968475199",
+            "distance_m": 2652,
+            "place_type": "village",
+            "coordinate": [
+              30.6578347,
+              -1.0436576
+            ]
+          },
+          {
+            "name": "Rwenkuba",
+            "osm_id": 9679740920,
+            "osm_url": "https://www.openstreetmap.org/node/9679740920",
+            "distance_m": 3050,
+            "place_type": "village",
+            "coordinate": [
+              30.6310596,
+              -1.0440897
+            ]
+          },
+          {
+            "name": "Nyakayojo",
+            "osm_id": 9679740918,
+            "osm_url": "https://www.openstreetmap.org/node/9679740918",
+            "distance_m": 3231,
+            "place_type": "village",
+            "coordinate": [
+              30.6584251,
+              -1.0382401
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-a3aad857d4ad32cd",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4596067,
+          -1.0523240999999997
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-a3aad857d4ad32cd",
+        "label": "Road–border contact near Osaka",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 171496,
+            "name": "Rwanda",
+            "iso2": "RW"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "trunk"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          173178984,
+          906677187
+        ],
+        "boundary_osm_ids": [
+          358610238,
+          906677186
+        ],
+        "route_names": [
+          "Kayonza - Kagitumba Road"
+        ],
+        "route_refs": [],
+        "raw_contact_count": 4,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.4596067,
+              -1.0523241
+            ],
+            "route_osm_id": 173178984,
+            "boundary_osm_id": 358610238
+          },
+          {
+            "coordinate": [
+              30.4596067,
+              -1.0523241
+            ],
+            "route_osm_id": 173178984,
+            "boundary_osm_id": 906677186
+          },
+          {
+            "coordinate": [
+              30.4596067,
+              -1.0523241
+            ],
+            "route_osm_id": 906677187,
+            "boundary_osm_id": 358610238
+          },
+          {
+            "coordinate": [
+              30.4596067,
+              -1.0523241
+            ],
+            "route_osm_id": 906677187,
+            "boundary_osm_id": 906677186
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Osaka",
+            "osm_id": 6366796394,
+            "osm_url": "https://www.openstreetmap.org/node/6366796394",
+            "distance_m": 238,
+            "place_type": "village",
+            "coordinate": [
+              30.4613396,
+              -1.0510606
+            ]
+          },
+          {
+            "name": "Kagyezi",
+            "osm_id": 4915802341,
+            "osm_url": "https://www.openstreetmap.org/node/4915802341",
+            "distance_m": 259,
+            "place_type": "village",
+            "coordinate": [
+              30.4609383,
+              -1.0504024
+            ]
+          },
+          {
+            "name": "Kagitumba",
+            "osm_id": 11651402112,
+            "osm_url": "https://www.openstreetmap.org/node/11651402112",
+            "distance_m": 455,
+            "place_type": "village",
+            "coordinate": [
+              30.4573991,
+              -1.0557916
+            ]
+          },
+          {
+            "name": "Sofia",
+            "osm_id": 10549042502,
+            "osm_url": "https://www.openstreetmap.org/node/10549042502",
+            "distance_m": 690,
+            "place_type": "village",
+            "coordinate": [
+              30.4649959,
+              -1.0492468
+            ]
+          },
+          {
+            "name": "Nyarubira",
+            "osm_id": 10549042187,
+            "osm_url": "https://www.openstreetmap.org/node/10549042187",
+            "distance_m": 1147,
+            "place_type": "village",
+            "coordinate": [
+              30.4519251,
+              -1.0454177
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-a4417f6bf00b9a46",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.942031693292588,
+          3.4835831007853924
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-a4417f6bf00b9a46",
+        "label": "Road–border contact near Kupajo",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          613417039
+        ],
+        "boundary_osm_ids": [
+          133182311
+        ],
+        "route_names": [
+          "Yei - Koboko Road"
+        ],
+        "route_refs": [
+          "A8"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.94203169329259,
+              3.4835831007853924
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Kupajo",
+            "osm_id": 9565799852,
+            "osm_url": "https://www.openstreetmap.org/node/9565799852",
+            "distance_m": 826,
+            "place_type": "village",
+            "coordinate": [
+              30.9469894,
+              3.4780123
+            ]
+          },
+          {
+            "name": "Bura",
+            "osm_id": 9565799856,
+            "osm_url": "https://www.openstreetmap.org/node/9565799856",
+            "distance_m": 832,
+            "place_type": "village",
+            "coordinate": [
+              30.9422212,
+              3.4911016
+            ]
+          },
+          {
+            "name": "Ranzu",
+            "osm_id": 9565799851,
+            "osm_url": "https://www.openstreetmap.org/node/9565799851",
+            "distance_m": 1354,
+            "place_type": "village",
+            "coordinate": [
+              30.9529871,
+              3.4782264
+            ]
+          },
+          {
+            "name": "Ifoko",
+            "osm_id": 9565799855,
+            "osm_url": "https://www.openstreetmap.org/node/9565799855",
+            "distance_m": 1611,
+            "place_type": "village",
+            "coordinate": [
+              30.9533349,
+              3.4926977
+            ]
+          },
+          {
+            "name": "Koboko",
+            "osm_id": 1157841131,
+            "osm_url": "https://www.openstreetmap.org/node/1157841131",
+            "distance_m": 8416,
+            "place_type": "town",
+            "coordinate": [
+              30.9603105,
+              3.4097256
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-af2bd490cae5f29d",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.720157835883587,
+          0.04116759624152679
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-af2bd490cae5f29d",
+        "label": "Road–border contact near Bwera",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "trunk"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          504641749
+        ],
+        "boundary_osm_ids": [
+          1536524196
+        ],
+        "route_names": [
+          "Mpondwe"
+        ],
+        "route_refs": [],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              29.720157835883583,
+              0.04116759624152683
+            ],
+            "route_osm_id": 504641749,
+            "boundary_osm_id": 1536524196
+          }
+        ],
+        "checkpoints": [
+          {
+            "osm_type": "n",
+            "osm_id": 732513540,
+            "osm_version": 10,
+            "osm_timestamp": "2023-05-04 17:12:38+00:00",
+            "tags": {
+              "barrier": "border_control",
+              "bicycle": "yes",
+              "foot": "yes",
+              "horse": "yes",
+              "motorcar": "yes",
+              "motorcycle": "yes"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/732513540",
+            "distance_m": 33,
+            "coordinate": [
+              29.7200493,
+              0.0408862
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          }
+        ],
+        "nearby_settlements": [
+          {
+            "name": "Mpondwe",
+            "osm_id": 435909889,
+            "osm_url": "https://www.openstreetmap.org/node/435909889",
+            "distance_m": 635,
+            "place_type": "village",
+            "coordinate": [
+              29.7256531,
+              0.0396318
+            ]
+          },
+          {
+            "name": "Kambukamabwe",
+            "osm_id": 10657211922,
+            "osm_url": "https://www.openstreetmap.org/node/10657211922",
+            "distance_m": 1112,
+            "place_type": "village",
+            "coordinate": [
+              29.7221694,
+              0.0510113
+            ]
+          },
+          {
+            "name": "Kyasenda I",
+            "osm_id": 10657211930,
+            "osm_url": "https://www.openstreetmap.org/node/10657211930",
+            "distance_m": 1877,
+            "place_type": "village",
+            "coordinate": [
+              29.7214818,
+              0.0580868
+            ]
+          },
+          {
+            "name": "Kyandobokerya",
+            "osm_id": 10657211920,
+            "osm_url": "https://www.openstreetmap.org/node/10657211920",
+            "distance_m": 1913,
+            "place_type": "village",
+            "coordinate": [
+              29.7370504,
+              0.0443464
+            ]
+          },
+          {
+            "name": "Bwera",
+            "osm_id": 5722687647,
+            "osm_url": "https://www.openstreetmap.org/node/5722687647",
+            "distance_m": 4446,
+            "place_type": "town",
+            "coordinate": [
+              29.7593621,
+              0.0335241
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-b77b6a1b84c4022f",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.942325652684428,
+          3.4824063221517436
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-b77b6a1b84c4022f",
+        "label": "Road–border contact near Kupajo",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          613417039
+        ],
+        "boundary_osm_ids": [
+          133182311
+        ],
+        "route_names": [
+          "Yei - Koboko Road"
+        ],
+        "route_refs": [
+          "A8"
+        ],
+        "raw_contact_count": 2,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.94232565268443,
+              3.4824063221517436
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          },
+          {
+            "coordinate": [
+              30.94223959699046,
+              3.482750820421842
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Kupajo",
+            "osm_id": 9565799852,
+            "osm_url": "https://www.openstreetmap.org/node/9565799852",
+            "distance_m": 710,
+            "place_type": "village",
+            "coordinate": [
+              30.9469894,
+              3.4780123
+            ]
+          },
+          {
+            "name": "Bura",
+            "osm_id": 9565799856,
+            "osm_url": "https://www.openstreetmap.org/node/9565799856",
+            "distance_m": 962,
+            "place_type": "village",
+            "coordinate": [
+              30.9422212,
+              3.4911016
+            ]
+          },
+          {
+            "name": "Ranzu",
+            "osm_id": 9565799851,
+            "osm_url": "https://www.openstreetmap.org/node/9565799851",
+            "distance_m": 1272,
+            "place_type": "village",
+            "coordinate": [
+              30.9529871,
+              3.4782264
+            ]
+          },
+          {
+            "name": "Ifoko",
+            "osm_id": 9565799855,
+            "osm_url": "https://www.openstreetmap.org/node/9565799855",
+            "distance_m": 1671,
+            "place_type": "village",
+            "coordinate": [
+              30.9533349,
+              3.4926977
+            ]
+          },
+          {
+            "name": "Koboko",
+            "osm_id": 1157841131,
+            "osm_url": "https://www.openstreetmap.org/node/1157841131",
+            "distance_m": 8282,
+            "place_type": "town",
+            "coordinate": [
+              30.9603105,
+              3.4097256
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-ba55944ec55cbf32",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.940841946071817,
+          3.4881696303590926
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-ba55944ec55cbf32",
+        "label": "Road–border contact near Bura",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          613417039
+        ],
+        "boundary_osm_ids": [
+          133182311
+        ],
+        "route_names": [
+          "Yei - Koboko Road"
+        ],
+        "route_refs": [
+          "A8"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.940841946071817,
+              3.488169630359093
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Bura",
+            "osm_id": 9565799856,
+            "osm_url": "https://www.openstreetmap.org/node/9565799856",
+            "distance_m": 359,
+            "place_type": "village",
+            "coordinate": [
+              30.9422212,
+              3.4911016
+            ]
+          },
+          {
+            "name": "Kololo",
+            "osm_id": 9565799853,
+            "osm_url": "https://www.openstreetmap.org/node/9565799853",
+            "distance_m": 1291,
+            "place_type": "village",
+            "coordinate": [
+              30.9452648,
+              3.4989595
+            ]
+          },
+          {
+            "name": "Kupajo",
+            "osm_id": 9565799852,
+            "osm_url": "https://www.openstreetmap.org/node/9565799852",
+            "distance_m": 1315,
+            "place_type": "village",
+            "coordinate": [
+              30.9469894,
+              3.4780123
+            ]
+          },
+          {
+            "name": "Ifoko",
+            "osm_id": 9565799855,
+            "osm_url": "https://www.openstreetmap.org/node/9565799855",
+            "distance_m": 1476,
+            "place_type": "village",
+            "coordinate": [
+              30.9533349,
+              3.4926977
+            ]
+          },
+          {
+            "name": "Koboko",
+            "osm_id": 1157841131,
+            "osm_url": "https://www.openstreetmap.org/node/1157841131",
+            "distance_m": 8940,
+            "place_type": "town",
+            "coordinate": [
+              30.9603105,
+              3.4097256
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-bb6d657d5aec6066",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.740233240220146,
+          -1.3405475009049739
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-bb6d657d5aec6066",
+        "label": "Road–border contact near Rukoro",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 171496,
+            "name": "Rwanda",
+            "iso2": "RW"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          370731275
+        ],
+        "boundary_osm_ids": [
+          413987447
+        ],
+        "route_names": [
+          "Kisoro - Cyanika Road"
+        ],
+        "route_refs": [],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              29.740233240220146,
+              -1.3405475009049734
+            ],
+            "route_osm_id": 370731275,
+            "boundary_osm_id": 413987447
+          }
+        ],
+        "checkpoints": [
+          {
+            "osm_type": "n",
+            "osm_id": 2684030714,
+            "osm_version": 8,
+            "osm_timestamp": "2020-07-07 21:15:28+00:00",
+            "tags": {
+              "barrier": "border_control",
+              "country": "UG"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/2684030714",
+            "distance_m": 45,
+            "coordinate": [
+              29.740359,
+              -1.3409311
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "n",
+            "osm_id": 2684030725,
+            "osm_version": 4,
+            "osm_timestamp": "2019-06-04 06:03:06+00:00",
+            "tags": {
+              "barrier": "border_control",
+              "bicycle": "yes",
+              "country": "RW",
+              "foot": "yes",
+              "motorcar": "yes",
+              "motorcycle": "yes"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/2684030725",
+            "distance_m": 123,
+            "coordinate": [
+              29.7406742,
+              -1.341564
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          }
+        ],
+        "nearby_settlements": [
+          {
+            "name": "Rukoro",
+            "osm_id": 6776870261,
+            "osm_url": "https://www.openstreetmap.org/node/6776870261",
+            "distance_m": 141,
+            "place_type": "village",
+            "coordinate": [
+              29.7409683,
+              -1.3395083
+            ]
+          },
+          {
+            "name": "Cyanika A",
+            "osm_id": 3945393730,
+            "osm_url": "https://www.openstreetmap.org/node/3945393730",
+            "distance_m": 186,
+            "place_type": "village",
+            "coordinate": [
+              29.7399045,
+              -1.3388946
+            ]
+          },
+          {
+            "name": "Cyanika",
+            "osm_id": 3945393731,
+            "osm_url": "https://www.openstreetmap.org/node/3945393731",
+            "distance_m": 314,
+            "place_type": "village",
+            "coordinate": [
+              29.7410775,
+              -1.3432526
+            ]
+          },
+          {
+            "name": "Rukoro",
+            "osm_id": 8273212912,
+            "osm_url": "https://www.openstreetmap.org/node/8273212912",
+            "distance_m": 685,
+            "place_type": "village",
+            "coordinate": [
+              29.7372592,
+              -1.3351251
+            ]
+          },
+          {
+            "name": "Kisoro",
+            "osm_id": 435662822,
+            "osm_url": "https://www.openstreetmap.org/node/435662822",
+            "distance_m": 8350,
+            "place_type": "town",
+            "coordinate": [
+              29.6926665,
+              -1.2822138
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-bf6bf81b322a9c32",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.41753145271174,
+          -1.0000005024914647
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-bf6bf81b322a9c32",
+        "label": "Road–border contact near Mutukula",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          },
+          {
+            "osm_relation_id": 195270,
+            "name": "Tanzania",
+            "iso2": "TZ"
+          }
+        ],
+        "highway_classes": [
+          "trunk"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          442196154
+        ],
+        "boundary_osm_ids": [
+          31852656
+        ],
+        "route_names": [],
+        "route_refs": [],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              31.417531452711735,
+              -1.0000005024914642
+            ],
+            "route_osm_id": 442196154,
+            "boundary_osm_id": 31852656
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Mutukula",
+            "osm_id": 1770323575,
+            "osm_url": "https://www.openstreetmap.org/node/1770323575",
+            "distance_m": 221,
+            "place_type": "village",
+            "coordinate": [
+              31.4156634,
+              -1.0006814
+            ]
+          },
+          {
+            "name": "Special Area",
+            "osm_id": 9407464532,
+            "osm_url": "https://www.openstreetmap.org/node/9407464532",
+            "distance_m": 595,
+            "place_type": "village",
+            "coordinate": [
+              31.416703,
+              -0.9946871
+            ]
+          },
+          {
+            "name": "Mutukula Central",
+            "osm_id": 9407464533,
+            "osm_url": "https://www.openstreetmap.org/node/9407464533",
+            "distance_m": 682,
+            "place_type": "village",
+            "coordinate": [
+              31.4181611,
+              -0.9938667
+            ]
+          },
+          {
+            "name": "Kabawo",
+            "osm_id": 9407464531,
+            "osm_url": "https://www.openstreetmap.org/node/9407464531",
+            "distance_m": 847,
+            "place_type": "village",
+            "coordinate": [
+              31.4231243,
+              -0.9948033
+            ]
+          },
+          {
+            "name": "Kololo",
+            "osm_id": 9407464534,
+            "osm_url": "https://www.openstreetmap.org/node/9407464534",
+            "distance_m": 954,
+            "place_type": "village",
+            "coordinate": [
+              31.4090379,
+              -0.9988398
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-c0d36bf4791734bf",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.93695192512339,
+          3.5067779530395047
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-c0d36bf4791734bf",
+        "label": "Road–border contact near Keri Central",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          613417039
+        ],
+        "boundary_osm_ids": [
+          133182311
+        ],
+        "route_names": [
+          "Yei - Koboko Road"
+        ],
+        "route_refs": [
+          "A8"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.93695192512339,
+              3.5067779530395042
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Keri Central",
+            "osm_id": 9521193603,
+            "osm_url": "https://www.openstreetmap.org/node/9521193603",
+            "distance_m": 223,
+            "place_type": "village",
+            "coordinate": [
+              30.9389318,
+              3.5064291
+            ]
+          },
+          {
+            "name": "Kuluba",
+            "osm_id": 228783245,
+            "osm_url": "https://www.openstreetmap.org/node/228783245",
+            "distance_m": 738,
+            "place_type": "village",
+            "coordinate": [
+              30.9414171,
+              3.501842
+            ]
+          },
+          {
+            "name": "Nyokpa",
+            "osm_id": 9521193584,
+            "osm_url": "https://www.openstreetmap.org/node/9521193584",
+            "distance_m": 800,
+            "place_type": "village",
+            "coordinate": [
+              30.9324911,
+              3.512461
+            ]
+          },
+          {
+            "name": "Kiakumiri",
+            "osm_id": 9521193582,
+            "osm_url": "https://www.openstreetmap.org/node/9521193582",
+            "distance_m": 1238,
+            "place_type": "village",
+            "coordinate": [
+              30.9469143,
+              3.5117815
+            ]
+          },
+          {
+            "name": "Kololo",
+            "osm_id": 9565799853,
+            "osm_url": "https://www.openstreetmap.org/node/9565799853",
+            "distance_m": 1265,
+            "place_type": "village",
+            "coordinate": [
+              30.9452648,
+              3.4989595
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-d06319204c49f061",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.942762810475497,
+          3.48084531117532
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-d06319204c49f061",
+        "label": "Road–border contact near Kupajo",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          613417039
+        ],
+        "boundary_osm_ids": [
+          133182311
+        ],
+        "route_names": [
+          "Yei - Koboko Road"
+        ],
+        "route_refs": [
+          "A8"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.942762810475497,
+              3.4808453111753215
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Kupajo",
+            "osm_id": 9565799852,
+            "osm_url": "https://www.openstreetmap.org/node/9565799852",
+            "distance_m": 565,
+            "place_type": "village",
+            "coordinate": [
+              30.9469894,
+              3.4780123
+            ]
+          },
+          {
+            "name": "Bura",
+            "osm_id": 9565799856,
+            "osm_url": "https://www.openstreetmap.org/node/9565799856",
+            "distance_m": 1136,
+            "place_type": "village",
+            "coordinate": [
+              30.9422212,
+              3.4911016
+            ]
+          },
+          {
+            "name": "Ranzu",
+            "osm_id": 9565799851,
+            "osm_url": "https://www.openstreetmap.org/node/9565799851",
+            "distance_m": 1173,
+            "place_type": "village",
+            "coordinate": [
+              30.9529871,
+              3.4782264
+            ]
+          },
+          {
+            "name": "Ifoko",
+            "osm_id": 9565799855,
+            "osm_url": "https://www.openstreetmap.org/node/9565799855",
+            "distance_m": 1761,
+            "place_type": "village",
+            "coordinate": [
+              30.9533349,
+              3.4926977
+            ]
+          },
+          {
+            "name": "Koboko",
+            "osm_id": 1157841131,
+            "osm_url": "https://www.openstreetmap.org/node/1157841131",
+            "distance_m": 8103,
+            "place_type": "town",
+            "coordinate": [
+              30.9603105,
+              3.4097256
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-d70411e906b4d5f7",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.735306529132764,
+          1.2193258023372957
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-d70411e906b4d5f7",
+        "label": "Road–border contact near Suam",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          },
+          {
+            "osm_relation_id": 192798,
+            "name": "Kenya",
+            "iso2": "KE"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          692975473
+        ],
+        "boundary_osm_ids": [
+          31515998
+        ],
+        "route_names": [],
+        "route_refs": [],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              34.73530652913276,
+              1.2193258023372961
+            ],
+            "route_osm_id": 692975473,
+            "boundary_osm_id": 31515998
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Suam",
+            "osm_id": 4863093415,
+            "osm_url": "https://www.openstreetmap.org/node/4863093415",
+            "distance_m": 114,
+            "place_type": "town",
+            "coordinate": [
+              34.7343223,
+              1.2196227
+            ]
+          },
+          {
+            "name": "Lamaywo",
+            "osm_id": 9894518130,
+            "osm_url": "https://www.openstreetmap.org/node/9894518130",
+            "distance_m": 193,
+            "place_type": "village",
+            "coordinate": [
+              34.7369877,
+              1.21976
+            ]
+          },
+          {
+            "name": "Kapkobor",
+            "osm_id": 9894518143,
+            "osm_url": "https://www.openstreetmap.org/node/9894518143",
+            "distance_m": 286,
+            "place_type": "village",
+            "coordinate": [
+              34.7334448,
+              1.2211057
+            ]
+          },
+          {
+            "name": "Suam Upper",
+            "osm_id": 9894518149,
+            "osm_url": "https://www.openstreetmap.org/node/9894518149",
+            "distance_m": 297,
+            "place_type": "village",
+            "coordinate": [
+              34.7328282,
+              1.2203201
+            ]
+          },
+          {
+            "name": "Kongasis",
+            "osm_id": 9894518161,
+            "osm_url": "https://www.openstreetmap.org/node/9894518161",
+            "distance_m": 337,
+            "place_type": "village",
+            "coordinate": [
+              34.7368283,
+              1.2219629
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-d9bee8a2862ca220",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.939028350579868,
+          3.494160116801307
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-d9bee8a2862ca220",
+        "label": "Road–border contact near Bura",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          613417039
+        ],
+        "boundary_osm_ids": [
+          133182311
+        ],
+        "route_names": [
+          "Yei - Koboko Road"
+        ],
+        "route_refs": [
+          "A8"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.939028350579868,
+              3.4941601168013063
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Bura",
+            "osm_id": 9565799856,
+            "osm_url": "https://www.openstreetmap.org/node/9565799856",
+            "distance_m": 490,
+            "place_type": "village",
+            "coordinate": [
+              30.9422212,
+              3.4911016
+            ]
+          },
+          {
+            "name": "Kololo",
+            "osm_id": 9565799853,
+            "osm_url": "https://www.openstreetmap.org/node/9565799853",
+            "distance_m": 873,
+            "place_type": "village",
+            "coordinate": [
+              30.9452648,
+              3.4989595
+            ]
+          },
+          {
+            "name": "Kuluba",
+            "osm_id": 228783245,
+            "osm_url": "https://www.openstreetmap.org/node/228783245",
+            "distance_m": 890,
+            "place_type": "village",
+            "coordinate": [
+              30.9414171,
+              3.501842
+            ]
+          },
+          {
+            "name": "Keri Central",
+            "osm_id": 9521193603,
+            "osm_url": "https://www.openstreetmap.org/node/9521193603",
+            "distance_m": 1357,
+            "place_type": "village",
+            "coordinate": [
+              30.9389318,
+              3.5064291
+            ]
+          },
+          {
+            "name": "Koboko",
+            "osm_id": 1157841131,
+            "osm_url": "https://www.openstreetmap.org/node/1157841131",
+            "distance_m": 9632,
+            "place_type": "town",
+            "coordinate": [
+              30.9603105,
+              3.4097256
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-ee88e95c07147e09",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.919256047957443,
+          3.5059550674238826
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-ee88e95c07147e09",
+        "label": "Road–border contact near Awindiri",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          613417039
+        ],
+        "boundary_osm_ids": [
+          133182311
+        ],
+        "route_names": [
+          "Yei - Koboko Road"
+        ],
+        "route_refs": [
+          "A8"
+        ],
+        "raw_contact_count": 2,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.91925604795744,
+              3.505955067423882
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          },
+          {
+            "coordinate": [
+              30.91992684060421,
+              3.5059206269108056
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Awindiri",
+            "osm_id": 9521193561,
+            "osm_url": "https://www.openstreetmap.org/node/9521193561",
+            "distance_m": 510,
+            "place_type": "village",
+            "coordinate": [
+              30.9177194,
+              3.5103035
+            ]
+          },
+          {
+            "name": "Bongo",
+            "osm_id": 9521193610,
+            "osm_url": "https://www.openstreetmap.org/node/9521193610",
+            "distance_m": 1316,
+            "place_type": "village",
+            "coordinate": [
+              30.9253585,
+              3.5161506
+            ]
+          },
+          {
+            "name": "Nyokpa",
+            "osm_id": 9521193584,
+            "osm_url": "https://www.openstreetmap.org/node/9521193584",
+            "distance_m": 1638,
+            "place_type": "village",
+            "coordinate": [
+              30.9324911,
+              3.512461
+            ]
+          },
+          {
+            "name": "Kindra",
+            "osm_id": 9521193567,
+            "osm_url": "https://www.openstreetmap.org/node/9521193567",
+            "distance_m": 1839,
+            "place_type": "village",
+            "coordinate": [
+              30.9027128,
+              3.5058168
+            ]
+          },
+          {
+            "name": "Keri Central",
+            "osm_id": 9521193603,
+            "osm_url": "https://www.openstreetmap.org/node/9521193603",
+            "distance_m": 2187,
+            "place_type": "village",
+            "coordinate": [
+              30.9389318,
+              3.5064291
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-f3acd61049331130",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.943035397496303,
+          3.4796686944759854
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-f3acd61049331130",
+        "label": "Road–border contact near Kupajo",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          613417039
+        ],
+        "boundary_osm_ids": [
+          133182311
+        ],
+        "route_names": [
+          "Yei - Koboko Road"
+        ],
+        "route_refs": [
+          "A8"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.943035397496303,
+              3.4796686944759845
+            ],
+            "route_osm_id": 613417039,
+            "boundary_osm_id": 133182311
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Kupajo",
+            "osm_id": 9565799852,
+            "osm_url": "https://www.openstreetmap.org/node/9565799852",
+            "distance_m": 476,
+            "place_type": "village",
+            "coordinate": [
+              30.9469894,
+              3.4780123
+            ]
+          },
+          {
+            "name": "Ranzu",
+            "osm_id": 9565799851,
+            "osm_url": "https://www.openstreetmap.org/node/9565799851",
+            "distance_m": 1117,
+            "place_type": "village",
+            "coordinate": [
+              30.9529871,
+              3.4782264
+            ]
+          },
+          {
+            "name": "Bura",
+            "osm_id": 9565799856,
+            "osm_url": "https://www.openstreetmap.org/node/9565799856",
+            "distance_m": 1268,
+            "place_type": "village",
+            "coordinate": [
+              30.9422212,
+              3.4911016
+            ]
+          },
+          {
+            "name": "Lurunu",
+            "osm_id": 2229118140,
+            "osm_url": "https://www.openstreetmap.org/node/2229118140",
+            "distance_m": 1719,
+            "place_type": "village",
+            "coordinate": [
+              30.944509,
+              3.464195
+            ]
+          },
+          {
+            "name": "Koboko",
+            "osm_id": 1157841131,
+            "osm_url": "https://www.openstreetmap.org/node/1157841131",
+            "distance_m": 7969,
+            "place_type": "town",
+            "coordinate": [
+              30.9603105,
+              3.4097256
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-f70fba9c18fa4293",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.58400818998024,
+          -1.1607920646801733
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-f70fba9c18fa4293",
+        "label": "Road–border contact near Gakenke",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192795,
+            "name": "Democratic Republic of the Congo",
+            "iso2": "CD"
+          },
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          }
+        ],
+        "highway_classes": [
+          "unclassified"
+        ],
+        "road_tiers": [
+          "other"
+        ],
+        "route_osm_ids": [
+          836056805
+        ],
+        "boundary_osm_ids": [
+          412129443
+        ],
+        "route_names": [],
+        "route_refs": [],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              29.58400818998024,
+              -1.1607920646801742
+            ],
+            "route_osm_id": 836056805,
+            "boundary_osm_id": 412129443
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Gakenke",
+            "osm_id": 6776870282,
+            "osm_url": "https://www.openstreetmap.org/node/6776870282",
+            "distance_m": 252,
+            "place_type": "village",
+            "coordinate": [
+              29.5838333,
+              -1.1585183
+            ]
+          },
+          {
+            "name": "Kinanira",
+            "osm_id": 6776870280,
+            "osm_url": "https://www.openstreetmap.org/node/6776870280",
+            "distance_m": 637,
+            "place_type": "village",
+            "coordinate": [
+              29.5851933,
+              -1.1664233
+            ]
+          },
+          {
+            "name": "Nyarurambi",
+            "osm_id": 6776870283,
+            "osm_url": "https://www.openstreetmap.org/node/6776870283",
+            "distance_m": 804,
+            "place_type": "village",
+            "coordinate": [
+              29.5910883,
+              -1.1622133
+            ]
+          },
+          {
+            "name": "Gatera",
+            "osm_id": 8953722762,
+            "osm_url": "https://www.openstreetmap.org/node/8953722762",
+            "distance_m": 2501,
+            "place_type": "hamlet",
+            "coordinate": [
+              29.5919967,
+              -1.1819174
+            ]
+          },
+          {
+            "name": "Butunga",
+            "osm_id": 6776907186,
+            "osm_url": "https://www.openstreetmap.org/node/6776907186",
+            "distance_m": 2757,
+            "place_type": "village",
+            "coordinate": [
+              29.5777917,
+              -1.1849233
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-fbff1988e9d2aedc",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.883275963457567,
+          3.539824147783346
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-fbff1988e9d2aedc",
+        "label": "Road–border contact near Ropoli",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          },
+          {
+            "osm_relation_id": 1656678,
+            "name": "South Sudan",
+            "iso2": "SS"
+          }
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          1021775364
+        ],
+        "boundary_osm_ids": [
+          260852319
+        ],
+        "route_names": [
+          "Yei-Koboko Road"
+        ],
+        "route_refs": [],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              30.883275963457567,
+              3.539824147783346
+            ],
+            "route_osm_id": 1021775364,
+            "boundary_osm_id": 260852319
+          }
+        ],
+        "checkpoints": [
+          {
+            "osm_type": "n",
+            "osm_id": 4902706410,
+            "osm_version": 1,
+            "osm_timestamp": "2017-06-07 20:08:32+00:00",
+            "tags": {
+              "barrier": "border_control"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/4902706410",
+            "distance_m": 21,
+            "coordinate": [
+              30.8831418,
+              3.5399535
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "n",
+            "osm_id": 3632750323,
+            "osm_version": 9,
+            "osm_timestamp": "2021-04-27 20:59:52+00:00",
+            "tags": {
+              "barrier": "border_control",
+              "country": "UG"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/3632750323",
+            "distance_m": 196,
+            "coordinate": [
+              30.88458,
+              3.5386296
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "n",
+            "osm_id": 228690802,
+            "osm_version": 7,
+            "osm_timestamp": "2015-07-03 11:58:37+00:00",
+            "tags": {
+              "barrier": "border_control",
+              "country": "SS"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/228690802",
+            "distance_m": 242,
+            "coordinate": [
+              30.8817399,
+              3.5413716
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          }
+        ],
+        "nearby_settlements": [
+          {
+            "name": "Ropoli",
+            "osm_id": 9521193560,
+            "osm_url": "https://www.openstreetmap.org/node/9521193560",
+            "distance_m": 346,
+            "place_type": "village",
+            "coordinate": [
+              30.8863788,
+              3.5400517
+            ]
+          },
+          {
+            "name": "Kakanya",
+            "osm_id": 9521193591,
+            "osm_url": "https://www.openstreetmap.org/node/9521193591",
+            "distance_m": 2503,
+            "place_type": "village",
+            "coordinate": [
+              30.8989472,
+              3.5235579
+            ]
+          },
+          {
+            "name": "Lokajo",
+            "osm_id": 9521193566,
+            "osm_url": "https://www.openstreetmap.org/node/9521193566",
+            "distance_m": 2699,
+            "place_type": "village",
+            "coordinate": [
+              30.8807333,
+              3.5155573
+            ]
+          },
+          {
+            "name": "Romoni",
+            "osm_id": 9521193589,
+            "osm_url": "https://www.openstreetmap.org/node/9521193589",
+            "distance_m": 2778,
+            "place_type": "village",
+            "coordinate": [
+              30.9070402,
+              3.5476079
+            ]
+          },
+          {
+            "name": "Drabara",
+            "osm_id": 9521193568,
+            "osm_url": "https://www.openstreetmap.org/node/9521193568",
+            "distance_m": 3079,
+            "place_type": "village",
+            "coordinate": [
+              30.8939198,
+              3.514114
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-fd6f356b6081e2e9",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.3787916550731,
+          0.7943937370047939
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-fd6f356b6081e2e9",
+        "label": "Road–border contact near Lwakhakha",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 192796,
+            "name": "Uganda",
+            "iso2": "UG"
+          },
+          {
+            "osm_relation_id": 192798,
+            "name": "Kenya",
+            "iso2": "KE"
+          }
+        ],
+        "highway_classes": [
+          "secondary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          607402412
+        ],
+        "boundary_osm_ids": [
+          260853445
+        ],
+        "route_names": [
+          "Mbale Lwakhkha"
+        ],
+        "route_refs": [
+          "C32"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              34.3787916550731,
+              0.7943937370047939
+            ],
+            "route_osm_id": 607402412,
+            "boundary_osm_id": 260853445
+          }
+        ],
+        "checkpoints": [
+          {
+            "osm_type": "n",
+            "osm_id": 2144233646,
+            "osm_version": 4,
+            "osm_timestamp": "2019-05-06 16:45:53+00:00",
+            "tags": {
+              "barrier": "border_control",
+              "foot": "yes",
+              "motorcar": "yes",
+              "motorcycle": "yes"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/2144233646",
+            "distance_m": 12,
+            "coordinate": [
+              34.3788716,
+              0.7943155
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          }
+        ],
+        "nearby_settlements": [
+          {
+            "name": "Market Cell",
+            "osm_id": 10310853628,
+            "osm_url": "https://www.openstreetmap.org/node/10310853628",
+            "distance_m": 186,
+            "place_type": "village",
+            "coordinate": [
+              34.3790292,
+              0.796058
+            ]
+          },
+          {
+            "name": "Kibayi",
+            "osm_id": 8600907154,
+            "osm_url": "https://www.openstreetmap.org/node/8600907154",
+            "distance_m": 323,
+            "place_type": "village",
+            "coordinate": [
+              34.3777335,
+              0.7971107
+            ]
+          },
+          {
+            "name": "Central Cell",
+            "osm_id": 10310854005,
+            "osm_url": "https://www.openstreetmap.org/node/10310854005",
+            "distance_m": 344,
+            "place_type": "village",
+            "coordinate": [
+              34.3791891,
+              0.7974804
+            ]
+          },
+          {
+            "name": "Nabutiti Cell",
+            "osm_id": 10310854764,
+            "osm_url": "https://www.openstreetmap.org/node/10310854764",
+            "distance_m": 363,
+            "place_type": "village",
+            "coordinate": [
+              34.3779976,
+              0.7975731
+            ]
+          },
+          {
+            "name": "Lwakhakha",
+            "osm_id": 1504278933,
+            "osm_url": "https://www.openstreetmap.org/node/1504278933",
+            "distance_m": 386,
+            "place_type": "town",
+            "coordinate": [
+              34.3779663,
+              0.797781
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    }
+  ]
+}

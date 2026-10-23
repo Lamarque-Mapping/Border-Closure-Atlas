@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "scope": "documented major-post cargo components only",
+  "exceptions": [
+    {
+      "crossing_id": "MX-US-OTAY-MESA-ROAD",
+      "route_osm_ids": [
+        200257858,
+        221972671,
+        602751004,
+        602751006,
+        602751007,
+        602751008,
+        602751009
+      ],
+      "reason": "Restore documented major-port cargo components at existing Otay Mesa, where short international gate roads are locally tagged secondary/secondary_link/service although connecting a major freight facility. CBP reports Otay Mesa Commercial separately from Passenger; selected crossing ways are hgv=designated and within 190 m of the official Caltrans facility reference. This does not authorize broader small-road extraction.",
+      "source_urls": [
+        "https://bwt.cbp.gov/xml/bwt.xml",
+        "https://bwt.cbp.gov/details/09250602/COV",
+        "https://services1.arcgis.com/8CpMUd3fdw6aXef7/ArcGIS/rest/services/Technical_Freight_Projects_Integration_Viewer/FeatureServer/4"
+      ],
+      "scope": "specific_main_post_cargo_gate_components",
+      "status": "proposed_for_targeted_extraction",
+      "geometry_acceptance": "pending extraction/topology, not automatic event links"
+    }
+  ]
+}

@@ -1,0 +1,644 @@
+{
+  "schema_version": 1,
+  "pair": [
+    "DE",
+    "FR"
+  ],
+  "reviewed_at": "2026-10-23T12:26:55.114411+00:00",
+  "benchmark_file": "research/osm/international-review/benchmarks/DE-FR.json",
+  "benchmark_sha256": "10462d4868164d1d76bb23fce1a8341100b8321a63d721534b0c84e861595c81",
+  "extraction_directory": "research/osm/international-review/extractions/DE-FR",
+  "source_candidate_sha256": "582109ba85d9353bc19161d698b223f58d30ad77a4442095688a291d3b17e7ba",
+  "source_osm_sha256": "67c7f79974667daae63b331c44bda2fa791a5e2426835e8f4c9fdfd59b9b3633",
+  "source_graph_sha256": "0faf27ff0b988bdc66ed62ba6db42d54ef6f4124bebd25ff7f4080cc6d27e326",
+  "extraction_summary_sha256": "b7a805787469fa47c2f1e96ce66805a7106cf13798637fae5c83492dbc73a2a4",
+  "extractor_sha256": "88eb0d6b50cbe2875daeb64c5fd07105a619fcbc5f6c40291cb5b0d310064a8c",
+  "osm_data_timestamp": "2026-10-20T20:23:47Z",
+  "topology_diagnostics_sha256": "5ff9e1b7507508ea9f51b8f13d28197cae29cae0cd65ef7d1f04d2ecb12f8c2d",
+  "topology_reviewer_sha256": "7c2af195125d4bc5c8e796a488f8a91df7ccfe9bde43d7af9ea8b963061d932a",
+  "topology_method_version": "regional-topology-review-3",
+  "association_method": "Manual corridor identity review using primary-source bridge/locality and route references, exact OSM multilingual bridge tags, and shared node IDs. Nearby settlement labels and coordinate proximity alone are not acceptance evidence.",
+  "review_summary": {
+    "named_reference_count": 11,
+    "supported_corridor_count": 11,
+    "candidate_group_count": 21,
+    "raw_contact_count": 39,
+    "associated_candidate_count": 11,
+    "associated_candidates_requiring_geometry_review": 1,
+    "all_candidate_topology_counts": {
+      "sustained_country_transition": 14,
+      "unresolved": 7
+    },
+    "main_road_scope": "motorway/trunk/primary including links",
+    "strategic_tests": [
+      "DE-FR-GAMBSHEIM-ROAD",
+      "DE-FR-PIERRE-PFLIMLIN-ROAD",
+      "DE-FR-MARCKOLSHEIM-ROAD"
+    ],
+    "strategic_result": "All three actual frontier routes are OSM primary and are recovered without exceptions.",
+    "all_crossings_complete": false,
+    "automatic_event_links": 0
+  },
+  "associations": [
+    {
+      "crossing_id": "DE-FR-GOLDENE-BREMM-ROAD",
+      "candidate_ids": [
+        "osm-3f7f5a27dfa8c0df"
+      ],
+      "match_status": "supported_corridor",
+      "source_ids": [
+        "DEFR-AUTOBAHN-PFINGSTEN-2025"
+      ],
+      "evidence": {
+        "basis": "Official A6 frontier corridor corresponds to four motorway way contacts split at the frontier, tagged A6/A320. Two shared-node pairs join the opposing country route references on the two carriageways. The B41/D603 urban crossing remains a distinct candidate.",
+        "candidate_way_ids": [
+          37702095,
+          37702141,
+          434857304,
+          434862543
+        ],
+        "candidate_route_refs": [
+          "A 320",
+          "A 6"
+        ],
+        "candidate_highway_classes": [
+          "motorway"
+        ],
+        "shared_node_connections": [
+          {
+            "node_id": 279572982,
+            "way_ids": [
+              37702095,
+              434857304
+            ]
+          },
+          {
+            "node_id": 4327799373,
+            "way_ids": [
+              37702141,
+              434862543
+            ]
+          }
+        ],
+        "osm_tag_and_node_provenance": "extractions/DE-FR/osm-graph-context.json.gz"
+      },
+      "topology_status": "sustained_country_transition",
+      "topology_review_flags": [
+        "original_75m_group_can_contain_distinct_roads_review_each_member"
+      ],
+      "geometry_review_required": false,
+      "limitations": [
+        "Supported named corridor identity does not independently verify an exact gate, legality, current operation or a historical closure.",
+        "No independent numerical frontier coordinate was available; OSM geometry is not used as independent benchmark truth."
+      ],
+      "is_closure_evidence": false,
+      "event_links": []
+    },
+    {
+      "crossing_id": "DE-FR-LAUTERBOURG-ROAD",
+      "candidate_ids": [
+        "osm-f491c1ca28174244"
+      ],
+      "match_status": "supported_corridor",
+      "source_ids": [
+        "DEFR-ADEUS-345",
+        "DEFR-LTRP-12-8048"
+      ],
+      "evidence": {
+        "basis": "Official B9 Lauterbourg frontier corridor corresponds to the two B9 trunk ways. Their French continuations are tagged D1363 at the shared nodes; ADEUS describes the wider A35 corridor, not an A35 tag on the frontier itself. Geometry continuation is unresolved and is retained separately from this supported corridor identity.",
+        "candidate_way_ids": [
+          240800443,
+          445300592
+        ],
+        "candidate_route_refs": [
+          "B 9"
+        ],
+        "candidate_highway_classes": [
+          "trunk"
+        ],
+        "shared_node_connections": [
+          {
+            "node_id": 1392542370,
+            "way_ids": [
+              240800443,
+              29201585
+            ]
+          },
+          {
+            "node_id": 1392542369,
+            "way_ids": [
+              445300592,
+              125349703
+            ]
+          }
+        ],
+        "osm_tag_and_node_provenance": "extractions/DE-FR/osm-graph-context.json.gz"
+      },
+      "topology_status": "unresolved",
+      "topology_review_flags": [
+        "some_route_arms_lack_unambiguous_continuation",
+        "original_75m_group_can_contain_distinct_roads_review_each_member"
+      ],
+      "geometry_review_required": true,
+      "limitations": [
+        "Supported named corridor identity does not independently verify an exact gate, legality, current operation or a historical closure.",
+        "No independent numerical frontier coordinate was available; OSM geometry is not used as independent benchmark truth.",
+        "Automated topology remains unresolved. This association does not override the separate geometry review or assert a fully verified crossing."
+      ],
+      "is_closure_evidence": false,
+      "event_links": []
+    },
+    {
+      "crossing_id": "DE-FR-IFFEZHEIM-ROAD",
+      "candidate_ids": [
+        "osm-7e1519d1d52ff95a"
+      ],
+      "match_status": "supported_corridor",
+      "source_ids": [
+        "DEFR-ADEUS-345",
+        "DEFR-LTBW-15-5565"
+      ],
+      "evidence": {
+        "basis": "Official B500/D504 Iffezheim–Roppenheim references match the primary-road pair joined at the frontier. D504 carries the historical D4 tag. The association uses route continuity, not the position of a nearby canal bridge.",
+        "candidate_way_ids": [
+          33652156,
+          192757521
+        ],
+        "candidate_route_refs": [
+          "B 500",
+          "D 504"
+        ],
+        "candidate_highway_classes": [
+          "primary"
+        ],
+        "shared_node_connections": [
+          {
+            "node_id": 384968451,
+            "way_ids": [
+              33652156,
+              192757521
+            ]
+          }
+        ],
+        "osm_tag_and_node_provenance": "extractions/DE-FR/osm-graph-context.json.gz"
+      },
+      "topology_status": "sustained_country_transition",
+      "topology_review_flags": [
+        "original_75m_group_can_contain_distinct_roads_review_each_member"
+      ],
+      "geometry_review_required": false,
+      "limitations": [
+        "Supported named corridor identity does not independently verify an exact gate, legality, current operation or a historical closure.",
+        "No independent numerical frontier coordinate was available; OSM geometry is not used as independent benchmark truth."
+      ],
+      "is_closure_evidence": false,
+      "event_links": []
+    },
+    {
+      "crossing_id": "DE-FR-GAMBSHEIM-ROAD",
+      "candidate_ids": [
+        "osm-22406cb48dd3f38f"
+      ],
+      "match_status": "supported_corridor",
+      "source_ids": [
+        "DEFR-ADEUS-345",
+        "DEFR-LTBW-15-5565",
+        "DEFR-RPF-GAMBSHEIM"
+      ],
+      "evidence": {
+        "basis": "Official D502/L87 Gambsheim–Rheinau references match candidate way 642651318 and its German continuation 151574526 through an actual shared node. Both are primary. A Landesstraße route number does not require a smaller-road exception.",
+        "candidate_way_ids": [
+          642651318
+        ],
+        "candidate_route_refs": [
+          "D 502"
+        ],
+        "candidate_highway_classes": [
+          "primary"
+        ],
+        "shared_node_connections": [
+          {
+            "node_id": 1644011414,
+            "way_ids": [
+              642651318,
+              151574526
+            ]
+          }
+        ],
+        "osm_tag_and_node_provenance": "extractions/DE-FR/osm-graph-context.json.gz"
+      },
+      "topology_status": "sustained_country_transition",
+      "topology_review_flags": [],
+      "geometry_review_required": false,
+      "limitations": [
+        "Supported named corridor identity does not independently verify an exact gate, legality, current operation or a historical closure.",
+        "No independent numerical frontier coordinate was available; OSM geometry is not used as independent benchmark truth."
+      ],
+      "is_closure_evidence": false,
+      "event_links": []
+    },
+    {
+      "crossing_id": "DE-FR-EUROPABRUECKE-ROAD",
+      "candidate_ids": [
+        "osm-d1072f79994e837e"
+      ],
+      "match_status": "supported_corridor",
+      "source_ids": [
+        "DEFR-ADEUS-345",
+        "DEFR-LTBW-15-5565"
+      ],
+      "evidence": {
+        "basis": "Candidate bridge way 10104868 has name:de=Europabrücke and name:fr=Pont de l’Europe. Its shared-node continuation 415636881 has the same bilingual bridge identity. These are primary road ways, not the nearby tram, railway or walking bridges.",
+        "candidate_way_ids": [
+          10104868
+        ],
+        "candidate_route_refs": [],
+        "candidate_highway_classes": [
+          "primary"
+        ],
+        "shared_node_connections": [
+          {
+            "node_id": 4703023959,
+            "way_ids": [
+              10104868,
+              415636881
+            ]
+          }
+        ],
+        "osm_tag_and_node_provenance": "extractions/DE-FR/osm-graph-context.json.gz"
+      },
+      "topology_status": "sustained_country_transition",
+      "topology_review_flags": [],
+      "geometry_review_required": false,
+      "limitations": [
+        "Supported named corridor identity does not independently verify an exact gate, legality, current operation or a historical closure.",
+        "No independent numerical frontier coordinate was available; OSM geometry is not used as independent benchmark truth."
+      ],
+      "is_closure_evidence": false,
+      "event_links": []
+    },
+    {
+      "crossing_id": "DE-FR-PIERRE-PFLIMLIN-ROAD",
+      "candidate_ids": [
+        "osm-6497440d2389fd8e"
+      ],
+      "match_status": "supported_corridor",
+      "source_ids": [
+        "DEFR-ADEUS-345",
+        "DEFR-LTBW-15-5565"
+      ],
+      "evidence": {
+        "basis": "Candidate 4757526 is the named Pont Pierre Pflimlin primary bridge with M353 and old_ref=N353. The shared-node German bridge 68193072 has the same bilingual name and L98. This directly recovers the strategic corridor within the main-road filter.",
+        "candidate_way_ids": [
+          4757526
+        ],
+        "candidate_route_refs": [
+          "M 353"
+        ],
+        "candidate_highway_classes": [
+          "primary"
+        ],
+        "shared_node_connections": [
+          {
+            "node_id": 821580262,
+            "way_ids": [
+              4757526,
+              68193072
+            ]
+          }
+        ],
+        "osm_tag_and_node_provenance": "extractions/DE-FR/osm-graph-context.json.gz"
+      },
+      "topology_status": "sustained_country_transition",
+      "topology_review_flags": [],
+      "geometry_review_required": false,
+      "limitations": [
+        "Supported named corridor identity does not independently verify an exact gate, legality, current operation or a historical closure.",
+        "No independent numerical frontier coordinate was available; OSM geometry is not used as independent benchmark truth."
+      ],
+      "is_closure_evidence": false,
+      "event_links": []
+    },
+    {
+      "crossing_id": "DE-FR-MARCKOLSHEIM-ROAD",
+      "candidate_ids": [
+        "osm-b76f4ce483c86d48"
+      ],
+      "match_status": "supported_corridor",
+      "source_ids": [
+        "DEFR-ADEUS-345",
+        "DEFR-LTBW-15-5565",
+        "DEFR-EURHENA-BRIDGES"
+      ],
+      "evidence": {
+        "basis": "The two candidate primary bridge ways carry the official D424/L113 route pairing and share frontier node 394117213. This identifies the Sasbach–Marckolsheim road bridge, distinct from the Burkheim walking/cycling barrage. No smaller-road exception is needed.",
+        "candidate_way_ids": [
+          129040761,
+          129040777
+        ],
+        "candidate_route_refs": [
+          "D 424",
+          "L 113"
+        ],
+        "candidate_highway_classes": [
+          "primary"
+        ],
+        "shared_node_connections": [
+          {
+            "node_id": 394117213,
+            "way_ids": [
+              129040761,
+              129040777
+            ]
+          }
+        ],
+        "osm_tag_and_node_provenance": "extractions/DE-FR/osm-graph-context.json.gz"
+      },
+      "topology_status": "sustained_country_transition",
+      "topology_review_flags": [
+        "original_75m_group_can_contain_distinct_roads_review_each_member"
+      ],
+      "geometry_review_required": false,
+      "limitations": [
+        "Supported named corridor identity does not independently verify an exact gate, legality, current operation or a historical closure.",
+        "No independent numerical frontier coordinate was available; OSM geometry is not used as independent benchmark truth."
+      ],
+      "is_closure_evidence": false,
+      "event_links": []
+    },
+    {
+      "crossing_id": "DE-FR-BREISACH-ROAD",
+      "candidate_ids": [
+        "osm-43478f574b2d49c5"
+      ],
+      "match_status": "supported_corridor",
+      "source_ids": [
+        "DEFR-RPF-BREISACH",
+        "DEFR-LTBW-15-5565",
+        "DEFR-LEGIFRANCE-ROADS-68"
+      ],
+      "evidence": {
+        "basis": "The candidate primary bridge ways carry the officially documented B31/D415 pairing and meet at frontier node 47807071. These are the Rhine bridge components; the farther D415 canal crossings do not supply the frontier point.",
+        "candidate_way_ids": [
+          20670542,
+          295961284
+        ],
+        "candidate_route_refs": [
+          "B 31",
+          "D 415"
+        ],
+        "candidate_highway_classes": [
+          "primary"
+        ],
+        "shared_node_connections": [
+          {
+            "node_id": 47807071,
+            "way_ids": [
+              20670542,
+              295961284
+            ]
+          }
+        ],
+        "osm_tag_and_node_provenance": "extractions/DE-FR/osm-graph-context.json.gz"
+      },
+      "topology_status": "sustained_country_transition",
+      "topology_review_flags": [
+        "original_75m_group_can_contain_distinct_roads_review_each_member"
+      ],
+      "geometry_review_required": false,
+      "limitations": [
+        "Supported named corridor identity does not independently verify an exact gate, legality, current operation or a historical closure.",
+        "No independent numerical frontier coordinate was available; OSM geometry is not used as independent benchmark truth."
+      ],
+      "is_closure_evidence": false,
+      "event_links": []
+    },
+    {
+      "crossing_id": "DE-FR-CHALAMPE-ROAD",
+      "candidate_ids": [
+        "osm-7d160edcbcd8c259"
+      ],
+      "match_status": "supported_corridor",
+      "source_ids": [
+        "DEFR-RPF-CHALAMPE",
+        "DEFR-LTBW-15-5565",
+        "DEFR-LEGIFRANCE-ROADS-68"
+      ],
+      "evidence": {
+        "basis": "Candidate 17556000 is the B378 primary bridge documented by RP Freiburg for the Chalampé crossing. It directly joins French primary road bridge 30667620, tagged Pont du Rhin. The associated road geometry is kept distinct from adjacent rail geometry.",
+        "candidate_way_ids": [
+          17556000
+        ],
+        "candidate_route_refs": [
+          "B 378"
+        ],
+        "candidate_highway_classes": [
+          "primary"
+        ],
+        "shared_node_connections": [
+          {
+            "node_id": 323514408,
+            "way_ids": [
+              17556000,
+              30667620
+            ]
+          }
+        ],
+        "osm_tag_and_node_provenance": "extractions/DE-FR/osm-graph-context.json.gz"
+      },
+      "topology_status": "sustained_country_transition",
+      "topology_review_flags": [],
+      "geometry_review_required": false,
+      "limitations": [
+        "Supported named corridor identity does not independently verify an exact gate, legality, current operation or a historical closure.",
+        "No independent numerical frontier coordinate was available; OSM geometry is not used as independent benchmark truth."
+      ],
+      "is_closure_evidence": false,
+      "event_links": []
+    },
+    {
+      "crossing_id": "DE-FR-OTTMARSHEIM-ROAD",
+      "candidate_ids": [
+        "osm-7d492dfda1fb476e"
+      ],
+      "match_status": "supported_corridor",
+      "source_ids": [
+        "DEFR-EURHENA-BRIDGES"
+      ],
+      "evidence": {
+        "basis": "The official Ottmarsheim–Steinenstadt motorway bridge is recovered by two candidate motorway bridge ways with old_ref=A862 and no current ref. Each directly shares an endpoint with an A36 motorway bridge way. Thus A36 continuity is established from node identity, not a nearest-town label or an unrelated A36 canal bridge.",
+        "candidate_way_ids": [
+          27328800,
+          56758547
+        ],
+        "candidate_route_refs": [],
+        "candidate_highway_classes": [
+          "motorway"
+        ],
+        "shared_node_connections": [
+          {
+            "node_id": 323652796,
+            "way_ids": [
+              27328800,
+              101427678
+            ]
+          },
+          {
+            "node_id": 324139976,
+            "way_ids": [
+              56758547,
+              17670012
+            ]
+          }
+        ],
+        "osm_tag_and_node_provenance": "extractions/DE-FR/osm-graph-context.json.gz"
+      },
+      "topology_status": "sustained_country_transition",
+      "topology_review_flags": [
+        "original_75m_group_can_contain_distinct_roads_review_each_member"
+      ],
+      "geometry_review_required": false,
+      "limitations": [
+        "Supported named corridor identity does not independently verify an exact gate, legality, current operation or a historical closure.",
+        "No independent numerical frontier coordinate was available; OSM geometry is not used as independent benchmark truth."
+      ],
+      "is_closure_evidence": false,
+      "event_links": []
+    },
+    {
+      "crossing_id": "DE-FR-PALMRAIN-ROAD",
+      "candidate_ids": [
+        "osm-b7d54168f50b85bc"
+      ],
+      "match_status": "supported_corridor",
+      "source_ids": [
+        "DEFR-LTBW-17-8661",
+        "DEFR-LEGIFRANCE-ROADS-68"
+      ],
+      "evidence": {
+        "basis": "The candidate primary bridges carry the official B532/D105 pairing and share a frontier node. Adjacent shared-node bridge ways are explicitly named Palmrainbrücke/Pont Palmrain on both sides. This road bridge is distinct from the nearby pedestrian crossing and Swiss frontier.",
+        "candidate_way_ids": [
+          25777622,
+          149789424
+        ],
+        "candidate_route_refs": [
+          "B 532",
+          "D 105"
+        ],
+        "candidate_highway_classes": [
+          "primary"
+        ],
+        "shared_node_connections": [
+          {
+            "node_id": 779123645,
+            "way_ids": [
+              25777622,
+              149789424
+            ]
+          },
+          {
+            "node_id": 27124890,
+            "way_ids": [
+              25777622,
+              1442539413
+            ]
+          },
+          {
+            "node_id": 1853115991,
+            "way_ids": [
+              149789424,
+              784778678
+            ]
+          }
+        ],
+        "osm_tag_and_node_provenance": "extractions/DE-FR/osm-graph-context.json.gz"
+      },
+      "topology_status": "sustained_country_transition",
+      "topology_review_flags": [
+        "original_75m_group_can_contain_distinct_roads_review_each_member"
+      ],
+      "geometry_review_required": false,
+      "limitations": [
+        "Supported named corridor identity does not independently verify an exact gate, legality, current operation or a historical closure.",
+        "No independent numerical frontier coordinate was available; OSM geometry is not used as independent benchmark truth."
+      ],
+      "is_closure_evidence": false,
+      "event_links": []
+    }
+  ],
+  "candidate_dispositions": [
+    {
+      "candidate_id": "osm-277fadb8c00d26ba",
+      "disposition": "outside_bounded_reference_sample",
+      "reason": "Outside the bounded 11-reference benchmark; not evidence of an extraction false positive or a missing named facility.",
+      "topology_status": "unresolved"
+    },
+    {
+      "candidate_id": "osm-35065810496c1c58",
+      "disposition": "outside_bounded_reference_sample",
+      "reason": "Outside the bounded 11-reference benchmark; not evidence of an extraction false positive or a missing named facility.",
+      "topology_status": "sustained_country_transition"
+    },
+    {
+      "candidate_id": "osm-35930a22cb4b6eee",
+      "disposition": "outside_bounded_reference_sample",
+      "reason": "Outside the bounded 11-reference benchmark; not evidence of an extraction false positive or a missing named facility.",
+      "topology_status": "tangent_or_endpoint"
+    },
+    {
+      "candidate_id": "osm-73a93089ca9af0ca",
+      "disposition": "outside_bounded_reference_sample",
+      "reason": "Outside the bounded 11-reference benchmark; not evidence of an extraction false positive or a missing named facility.",
+      "topology_status": "unresolved"
+    },
+    {
+      "candidate_id": "osm-7534f4f6340d5b92",
+      "disposition": "outside_bounded_reference_sample",
+      "reason": "Outside the bounded 11-reference benchmark; not evidence of an extraction false positive or a missing named facility.",
+      "topology_status": "sustained_country_transition"
+    },
+    {
+      "candidate_id": "osm-7c704ae7bf24136f",
+      "disposition": "outside_bounded_reference_sample",
+      "reason": "Outside the bounded 11-reference benchmark; not evidence of an extraction false positive or a missing named facility.",
+      "topology_status": "sustained_country_transition"
+    },
+    {
+      "candidate_id": "osm-84caec773c74c238",
+      "disposition": "outside_bounded_reference_sample",
+      "reason": "Outside the bounded 11-reference benchmark; not evidence of an extraction false positive or a missing named facility.",
+      "topology_status": "unresolved"
+    },
+    {
+      "candidate_id": "osm-b4da6d5a708dcfb2",
+      "disposition": "outside_bounded_reference_sample",
+      "reason": "Outside the bounded 11-reference benchmark; not evidence of an extraction false positive or a missing named facility.",
+      "topology_status": "sustained_country_transition"
+    },
+    {
+      "candidate_id": "osm-bed375bb297652c7",
+      "disposition": "outside_bounded_reference_sample",
+      "reason": "Outside the bounded 11-reference benchmark; not evidence of an extraction false positive or a missing named facility.",
+      "topology_status": "unresolved"
+    },
+    {
+      "candidate_id": "osm-c8ced8fcb37a618f",
+      "disposition": "outside_bounded_reference_sample",
+      "reason": "Separate B41/D603 Metzer Straße road corridor near Goldene Bremm; not the benchmark A6 motorway crossing and not merged solely by vicinity.",
+      "topology_status": "unresolved"
+    }
+  ],
+  "road_exception_proposals": [],
+  "workbook_link_policy": "Only EU034 and R2-EU-011 link to France–Germany frontier context; neither names an individual crossing. Zero event-to-crossing links accepted.",
+  "limitations": [
+    "This selected sample does not measure full-frontier recall, facility precision or present operating status.",
+    "Multiple raw road contacts can be carriageway or country-way splits; group membership does not itself prove a single facility.",
+    "All 263 selected OSM boundary members were loaded, but this only describes extraction coverage.",
+    "Bilateral blank-ISO relation 90333 remains boundary provenance and does not identify a third country.",
+    "Sourced corridor identity and automated topology status are separate review dimensions."
+  ],
+  "accepted_event_crossing_links": [],
+  "published_on_map": false,
+  "topology_summary_sha256": "a55390ccb4b136b8f3266f7e3a63ebf5521dabfc5de6b565ebef336bf2742718",
+  "source_evidence_sha256": "ac40e860ad68cd02f08a57f954b890153d4b4df2f655bd29d4ae8c58686bb8d0"
+}

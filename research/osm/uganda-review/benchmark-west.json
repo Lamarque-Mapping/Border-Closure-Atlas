@@ -1,0 +1,1149 @@
+{
+  "scope": "Uganda–Rwanda designated land posts and Uganda–DRC independently documented ground entry locations; additional lake/service points retained outside road benchmark",
+  "researched_at": "2026-10-23",
+  "reviewer": "Codex desk review",
+  "coverage_limitations": [
+    "This is an independently sourced benchmark, not a complete inventory of all formal and informal crossings.",
+    "Source-verified means the named crossing or entry location is documented; it does not mean its current operation, exact gate coordinate, road suitability or a historical closure has been verified.",
+    "Rwanda six-post designation is explicit. DRC list combines national service directories and humanitarian reference data with different purposes.",
+    "No candidate is accepted solely because a similarly named settlement is nearby. Supported locations combine independent coordinates with the correct frontier and route evidence; source accuracy is unspecified.",
+    "2021 GPS data predates the 2026 OSM extract. Relocated facilities and changed roads require historical checks.",
+    "DRC post counterparts outside the extract, informal paths and lake connections are incomplete.",
+    "Unresolved named facilities must not be counted as closed, open, absent, or false OSM detections.",
+    "UNHCR coordinates are externally published reference positions. Their collection method, per-point observation date, accuracy and independence from OSM are undocumented; publication date is not observation date."
+  ],
+  "sources": [
+    {
+      "id": "W-RW-DGIE",
+      "title": "Border Services: designated border posts",
+      "url": "https://www.migration.gov.rw/our-services/border-management",
+      "publisher": "Rwanda Directorate General of Immigration and Emigration",
+      "publication_date": null,
+      "retrieved_at": "2026-10-23",
+      "supports": "Lists six Uganda-frontier posts: Buhita, Buziba, Cyanika, Gatuna, Kagitumba, Rwempasha.",
+      "notes": "Current directory is not a statement of operating status or vehicle access."
+    },
+    {
+      "id": "W-RW-GAZETTE-2020",
+      "title": "Presidential Order 129/01 of 16 December 2020: border posts",
+      "url": "https://www.migration.gov.rw/fileadmin/user_upload/pdf_files/official_gazette_n__41_of_21.12.2020_imipaka_border_post__2_.pdf",
+      "publisher": "Republic of Rwanda Official Gazette",
+      "publication_date": "2020-12-21",
+      "retrieved_at": "2026-10-23",
+      "supports": "Annex, printed pages 15–16 (PDF pages 12–13), designates the same six Uganda-frontier posts.",
+      "notes": "Legal designation in 2020 does not establish operating history."
+    },
+    {
+      "id": "W-NCIC-LIST",
+      "title": "List of borders according to regions",
+      "url": "https://www.immigration.go.ug/list-borders-according-regions",
+      "publisher": "Uganda National Citizenship and Immigration Control",
+      "publication_date": null,
+      "retrieved_at": "2026-10-23",
+      "supports": "Names immigration service stations in Uganda regions, including western and northwestern ground and lake locations.",
+      "notes": "Table has apparent geographic/typographic issues, e.g. Lwebisengo district and Ishaha; district alone is not used to assign a precise crossing."
+    },
+    {
+      "id": "W-URA-OSBP",
+      "title": "One Stop Border Post",
+      "url": "https://ura.go.ug/en/import-export/one-stop-border-post/",
+      "publisher": "Uganda Revenue Authority",
+      "publication_date": null,
+      "retrieved_at": "2026-10-23",
+      "supports": "Explicit paired names: Mirama Hills/Kagitumba, Katuna/Gatuna, Goli/Mahagi, Mpondwe/Kasindi.",
+      "notes": "Paired national facilities count as one crossing; no exact coordinates supplied."
+    },
+    {
+      "id": "W-URA-ROUTES",
+      "title": "Enforcement Questions and Answers",
+      "url": "https://ura.go.ug/en/enforcement-questions-and-answers/",
+      "publisher": "Uganda Revenue Authority",
+      "publication_date": null,
+      "retrieved_at": "2026-10-23",
+      "supports": "Transit route list names Vurra, Lia, Goli, Padea, Mirama Hills, Katuna, Cyanika, Bunagana, Mpondwe and Busunga.",
+      "notes": "Route identifiers and endpoints support road mode, not current openness."
+    },
+    {
+      "id": "W-URA-SCT-2023",
+      "title": "Customs External Operations",
+      "url": "https://ura.go.ug/en/customs-external-operations/",
+      "publisher": "Uganda Revenue Authority",
+      "publication_date": "2023-08-24",
+      "retrieved_at": "2026-10-23",
+      "supports": "Lists Vurra, Mpondwe, Busunga, Lia and Ishasha River among border points.",
+      "notes": "Page uses spelling Mpodwe."
+    },
+    {
+      "id": "W-MTIC-2025",
+      "title": "Trade Minister Gen. Mbadi moves to address trade barriers and enhance Uganda–DRC trade",
+      "url": "https://www.mtic.go.ug/trade-minister-gen-mbadi-moves-to-address-trade-barriers-and-enhance-uganda-drc-trade/",
+      "publisher": "Uganda Ministry of Trade, Industry and Cooperatives",
+      "publication_date": "2025-09-15",
+      "retrieved_at": "2026-10-23",
+      "supports": "Reports visits to Mpondwe, Ntoroko, Goli, Padea, Vurra and Lia on the DRC frontier; explicitly describes Ntoroko marine services.",
+      "notes": "The report states that upgraded OSBPs had incomplete operations in September 2025. Do not convert that into total border closure."
+    },
+    {
+      "id": "W-UNHCR-2021",
+      "title": "Uganda: Refugee Locations and Border Points",
+      "url": "https://data.unhcr.org/en/documents/details/86907",
+      "publisher": "UNHCR",
+      "publication_date": "2021-05-20",
+      "retrieved_at": "2026-10-23",
+      "supports": "Border_Crossing worksheet supplies named locations, GPS coordinates and official/unofficial labels.",
+      "notes": "Download https://data.unhcr.org/en/documents/download/86907; SHA256 35087d843daf90287b90f62efed488f52c1bc204353748c60ed24fa26b013651; 33332 bytes; CC BY 4.0. The 2021 points can represent facilities or localities off the boundary. No coordinate accuracy specification found."
+    },
+    {
+      "id": "W-UNHCR-2025",
+      "title": "Uganda influx out of Eastern D.R. Congo, as of 10 August 2025",
+      "url": "https://data.unhcr.org/en/documents/download/118063",
+      "publisher": "Government of Uganda and UNHCR",
+      "publication_date": "2025-08-12",
+      "retrieved_at": "2026-10-23",
+      "supports": "Reports named entry points including Bunagana, Busanza, Butogota, Ishasha/Kihihi, Kyeshero, Mpondwe, Nteko, Paidha and Sebagoro; map includes Busunga and Butogo.",
+      "notes": "Humanitarian entry reporting does not imply a separately gazetted road facility for every label."
+    },
+    {
+      "id": "W-FCDO-UG",
+      "title": "Uganda regional risks: south-west Uganda",
+      "url": "https://www.gov.uk/foreign-travel-advice/uganda/regional-risks",
+      "publisher": "UK Foreign, Commonwealth and Development Office",
+      "publication_date": null,
+      "retrieved_at": "2026-10-23",
+      "supports": "Identifies Bunagana and Kitagoma–Buszana as DRC-frontier crossings in Kisoro.",
+      "notes": "Used for crossing identity only, not to add closure events."
+    },
+    {
+      "id": "W-RW-ROUTES-2007",
+      "title": "Ministerial Decree 003/07 implementing customs law",
+      "url": "https://rwandatrade.rw/media/Ministerial_Decree_No_003-07_of_09.05.2007_Implementing_the_Law_No_21-2006_of_28.04.2006_Establishing_the_Customs_Law%20%281%29.pdf",
+      "publisher": "Rwanda Ministry of Finance and Economic Planning; Rwanda Trade Portal",
+      "publication_date": "2007-05-09",
+      "retrieved_at": "2026-10-23",
+      "supports": "Article 5 specifies Mirama Hill–Kagitumba, Gisoro–Cyanika, Kabale–Gatuna, Bigaga–Buhita and Kizinga–Rwempasha routes.",
+      "notes": "Historical evidence of route pairing, not current legal advice or operating status."
+    }
+  ],
+  "crossings": [
+    {
+      "id": "UG-RW-KATUNA-ROAD",
+      "canonical_name": "Katuna / Gatuna",
+      "country_pair": [
+        "RW",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Katuna",
+        "Gatuna"
+      ],
+      "source_ids": [
+        "W-RW-DGIE",
+        "W-RW-GAZETTE-2020",
+        "W-URA-OSBP",
+        "W-URA-ROUTES",
+        "W-UNHCR-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-60accc5e3da83ba8"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Independent named point is 107 m from the NR3 trunk bridge; paired OSM border controls are 180/215 m from the contact. Country pair and route support the identity.",
+      "coordinate_status": "osm_candidate_location_supported; no independent survey",
+      "notes": "",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-60accc5e3da83ba8": 107
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 11,
+        "source_name": "Katuna",
+        "coordinate": [
+          30.011244,
+          -1.423978
+        ],
+        "status_as_published": "Official",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-RW-CYANIKA-ROAD",
+      "canonical_name": "Cyanika",
+      "country_pair": [
+        "RW",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Cyanika",
+        "Kyanika"
+      ],
+      "source_ids": [
+        "W-RW-DGIE",
+        "W-RW-GAZETTE-2020",
+        "W-URA-ROUTES",
+        "W-UNHCR-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-377ab9fbbb397c7e"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Candidate lies on named Kisoro–Cyanika primary road with Ugandan and Rwandan tagged controls 45/123 m away. UNHCR point is 652 m away on the Rwanda side, supporting locality rather than exact gate.",
+      "coordinate_status": "osm_candidate_location_supported; no independent survey",
+      "notes": "Original group includes a service road. Principal crossing identity is supported; individual lanes are not separate facilities.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-377ab9fbbb397c7e": 652
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 19,
+        "source_name": "Cyanika",
+        "coordinate": [
+          29.743092,
+          -1.34567
+        ],
+        "status_as_published": "Official",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-RW-MIRAMA-HILLS-ROAD",
+      "canonical_name": "Mirama Hills / Kagitumba",
+      "country_pair": [
+        "RW",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Mirama Hills",
+        "Mirama Hill",
+        "Kagitumba"
+      ],
+      "source_ids": [
+        "W-RW-DGIE",
+        "W-RW-GAZETTE-2020",
+        "W-URA-OSBP",
+        "W-URA-ROUTES",
+        "W-UNHCR-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-a3aad857d4ad32cd"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Named Kayonza–Kagitumba trunk bridge is 106 m from independent Mirama Hills point; paired identity confirmed by URA. A second unclassified bridge 64 m from reference is retained as a separate unresolved route, not a second named crossing.",
+      "coordinate_status": "osm_candidate_location_supported; no independent survey",
+      "notes": "Related unclassified contact osm-410108df88e55d7e is not automatically a distinct facility or accepted lane.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-a3aad857d4ad32cd": 106
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 32,
+        "source_name": "Mirama Hills",
+        "coordinate": [
+          30.459192,
+          -1.051464
+        ],
+        "status_as_published": "Official",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-RW-RWEMPASHA-ROAD",
+      "canonical_name": "Rwempasha / Kizinga",
+      "country_pair": [
+        "RW",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Rwempasha",
+        "Kizinga"
+      ],
+      "source_ids": [
+        "W-RW-DGIE",
+        "W-RW-GAZETTE-2020",
+        "W-RW-ROUTES-2007",
+        "W-NCIC-LIST"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-497a2c4357f00345"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "Official route identifies Kizinga–Rwempasha. Candidate is a secondary road near Kizinga II, but there is no independently georeferenced facility in the inspected sources.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "Do not use the unrelated Kizinga settlement at 30.083333,-1.266667 or Kizinga in Rubirizi as an alias match.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-RW-BUHITA-ROAD",
+      "canonical_name": "Buhita",
+      "country_pair": [
+        "RW",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_historical_route",
+      "aliases": [
+        "Buhita"
+      ],
+      "source_ids": [
+        "W-RW-DGIE",
+        "W-RW-GAZETTE-2020",
+        "W-RW-ROUTES-2007"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-31aec44990c31333"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "Official source names Bigaga–Buhita route; an unclassified contact is 236 m from OSM Buhita village. That locality-only proximity does not establish the exact post.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "Several other contacts near Buhita remain possible. Formal designation does not prove present operation.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-RW-BUZIBA-ROAD",
+      "canonical_name": "Buziba",
+      "country_pair": [
+        "RW",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "land_post; vehicle_access_unverified",
+      "aliases": [
+        "Buziba"
+      ],
+      "source_ids": [
+        "W-RW-DGIE",
+        "W-RW-GAZETTE-2020"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-72ae61f5039d8f35"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "Designated post is independently established; one unclassified contact is 891 m from a similarly named settlement, insufficient for acceptance.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "Ugandan counterpart alias and exact coordinate remain unresolved.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-CD-BUNAGANA-ROAD",
+      "canonical_name": "Bunagana",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Bunagana"
+      ],
+      "source_ids": [
+        "W-NCIC-LIST",
+        "W-URA-ROUTES",
+        "W-UNHCR-2021",
+        "W-UNHCR-2025",
+        "W-FCDO-UG"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-2e13392e3235206d"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Independent Bunagana border point lies 135 m from the joined primary-road endpoints on the correct frontier. A nearer track is not substituted for the principal road.",
+      "coordinate_status": "osm_candidate_location_supported; no independent survey",
+      "notes": "Track contacts around Bunagana do not independently inherit closure evidence.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-2e13392e3235206d": 135
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 17,
+        "source_name": "Bunagana",
+        "coordinate": [
+          29.599436,
+          -1.294306
+        ],
+        "status_as_published": "Official",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-CD-ISHASHA-ROAD",
+      "canonical_name": "Ishasha River",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Ishasha",
+        "Ishasa",
+        "Ishasha River"
+      ],
+      "source_ids": [
+        "W-URA-SCT-2023",
+        "W-UNHCR-2021",
+        "W-UNHCR-2025"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-0442cf6b8cc3dfae"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "UNHCR Ishasa border coordinate is 23 m from the primary-road contact on the DRC frontier.",
+      "coordinate_status": "osm_candidate_location_supported; no independent survey",
+      "notes": "Busanza village 2 km from this point is a homonym, not the Busanza–Kitagoma crossing in Kisoro. Ishasha/Kihihi is a humanitarian reporting label, not proof that Kihihi is another border gate.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-0442cf6b8cc3dfae": 23
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 12,
+        "source_name": "Ishasa",
+        "coordinate": [
+          29.628294,
+          -0.727378
+        ],
+        "status_as_published": "Official",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-CD-MPONDWE-ROAD",
+      "canonical_name": "Mpondwe / Kasindi",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Mpondwe",
+        "Kasindi",
+        "Mpodwe"
+      ],
+      "source_ids": [
+        "W-URA-OSBP",
+        "W-URA-ROUTES",
+        "W-MTIC-2025",
+        "W-UNHCR-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-af2bd490cae5f29d"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Independent Mpondwe point is 85 m from named Mpondwe trunk bridge; tagged control is 33 m away. Paired name is explicit in URA.",
+      "coordinate_status": "osm_candidate_location_supported; no independent survey",
+      "notes": "",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-af2bd490cae5f29d": 85
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 15,
+        "source_name": "Mpondwe",
+        "coordinate": [
+          29.720422,
+          0.041889
+        ],
+        "status_as_published": "Official",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-CD-BUSUNGA-ROAD",
+      "canonical_name": "Busunga",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Busunga",
+        "Busungu"
+      ],
+      "source_ids": [
+        "W-URA-ROUTES",
+        "W-URA-SCT-2023",
+        "W-UNHCR-2021",
+        "W-UNHCR-2025"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-8fa3063d2cf66276"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Independent Busunga point is 23 m from the Fort Portal–Bundibugyo primary road bridge.",
+      "coordinate_status": "osm_candidate_location_supported; no independent survey",
+      "notes": "Nearby unclassified contact osm-07c6f3ac54b2e391 lies 96 m from source coordinate but is not independently established as a separate crossing.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-8fa3063d2cf66276": 23
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 3,
+        "source_name": "Busunga",
+        "coordinate": [
+          29.957875,
+          0.630011
+        ],
+        "status_as_published": "Official",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-CD-GOLI-ROAD",
+      "canonical_name": "Goli / Mahagi",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Goli",
+        "Mahagi"
+      ],
+      "source_ids": [
+        "W-URA-OSBP",
+        "W-URA-ROUTES",
+        "W-MTIC-2025",
+        "W-NCIC-LIST"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-4206b6af7da47a7f"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "RN27 primary-road contact has a control 171 m away and Goli village 1163 m away; country pair and paired name are supported, but no independent coordinate was found.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "This is a strong location suggestion; precise gate still requires independent spatial corroboration.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-CD-VURRA-ROAD",
+      "canonical_name": "Vurra",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Vurra"
+      ],
+      "source_ids": [
+        "W-URA-ROUTES",
+        "W-MTIC-2025",
+        "W-NCIC-LIST"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-36889e6a7bb0fc28",
+        "osm-d4bbd2220c1c882b"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "Both candidates are contacts on named Vurra Custom Road; one lies 147 m from Vurra village. Repeated intersections of one road must be reconciled before choosing the true crossing.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "Do not confuse other OSM villages named Vurra elsewhere in West Nile.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-CD-LIA-ROAD",
+      "canonical_name": "Lia",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Lia"
+      ],
+      "source_ids": [
+        "W-URA-ROUTES",
+        "W-MTIC-2025",
+        "W-NCIC-LIST"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Named customs crossing is source-confirmed, but the inspected data did not provide a trustworthy exact post-to-candidate match.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "Short name is especially vulnerable to substring matches; Nyilia is not Lia.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-CD-PADEA-ROAD",
+      "canonical_name": "Padea",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Padea"
+      ],
+      "source_ids": [
+        "W-URA-ROUTES",
+        "W-MTIC-2025",
+        "W-NCIC-LIST"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Independent sources verify the customs crossing in Zombo; repeated secondary-road contacts south/west of Paidha cannot be assigned on proximity alone.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "NCIC lists Padea and Paidha separately. Retain separate unresolved identities until exact facilities and aliases are checked.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-CD-PAIDHA-ROAD",
+      "canonical_name": "Paidha",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "land_entry_location; vehicle_access_unverified",
+      "aliases": [
+        "Paidha"
+      ],
+      "source_ids": [
+        "W-NCIC-LIST",
+        "W-UNHCR-2025"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Named entry/service location is independently documented, but no authoritative exact boundary coordinate was found.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "Do not equate town coordinates, Padea, Alisi, or another road contact without explicit evidence.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-CD-ODRAMACAKU-ROAD",
+      "canonical_name": "Odramacaku",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "land_service_point; vehicle_access_unverified",
+      "aliases": [
+        "Odramacaku",
+        "Odramachaka"
+      ],
+      "source_ids": [
+        "W-NCIC-LIST"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "NCIC lists Odramachaka in Vurra cluster, Arua. Exact post and route identity are unresolved.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "Spelling equivalence Odramacaku/Odramachaka remains an editorial normalization, not coordinate evidence.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-CD-DEI-ROAD",
+      "canonical_name": "Dei",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_candidate; facility_mode_unresolved",
+      "aliases": [
+        "Dei"
+      ],
+      "source_ids": [
+        "W-NCIC-LIST"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-68a7fea25e428e39"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "Official service-point list establishes Dei; candidate secondary road lies 605 m from OSM Dei settlement. Independent exact crossing coordinate absent.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "Dei is also a lake-shore locality. Road contact and lake landing must not be collapsed.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-CD-KYESHERO-ROAD",
+      "canonical_name": "Kyeshero",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_geometry; vehicle_access_unverified",
+      "aliases": [
+        "Kyeshero"
+      ],
+      "source_ids": [
+        "W-UNHCR-2021",
+        "W-UNHCR-2025"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-18e6472d419fa291"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Independent Kyeshero border coordinate is 32 m from the unclassified road contact; the 2025 humanitarian report independently names the entry point.",
+      "coordinate_status": "osm_candidate_location_supported; no independent survey",
+      "notes": "This lies outside the major-road tier. Status labelled unofficial in 2021 is retained as dated evidence only.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-18e6472d419fa291": 32
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 13,
+        "source_name": "Kyeshero",
+        "coordinate": [
+          29.622067,
+          -0.900828
+        ],
+        "status_as_published": "Unofficial",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-CD-BUSANZA-ROAD",
+      "canonical_name": "Busanza / Kitagoma",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_geometry; vehicle_access_unverified",
+      "aliases": [
+        "Busanza",
+        "Busanja",
+        "Buszana",
+        "Kitagoma"
+      ],
+      "source_ids": [
+        "W-UNHCR-2021",
+        "W-UNHCR-2025",
+        "W-FCDO-UG"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-8a6ce817ea17982e",
+        "osm-f70fba9c18fa4293"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "UNHCR Busanja coordinate in Kisoro is within 40/104 m of two unclassified-road contacts, and FCDO identifies Kitagoma–Buszana in Kisoro. Identity/locality is supported but exact route contact is unresolved.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "Reject homonymous Busanza settlements near Ishasha and Bunagana. Multiple nearby routes must be reviewed as one facility area before choosing a gate.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-8a6ce817ea17982e": 40,
+        "osm-f70fba9c18fa4293": 104
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 16,
+        "source_name": "Busanja",
+        "coordinate": [
+          29.583794,
+          -1.1617
+        ],
+        "status_as_published": "Unofficial",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-CD-BUTOGOTA-ROAD",
+      "canonical_name": "Butogota",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "ground_entry_location; vehicle_access_unverified",
+      "aliases": [
+        "Butogota"
+      ],
+      "source_ids": [
+        "W-NCIC-LIST",
+        "W-UNHCR-2021",
+        "W-UNHCR-2025"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "UNHCR coordinate is inland; nearest contact is 1.7 km away and already independently aligns with Kyeshero. It is not accepted as a separate Butogota crossing.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "Could be a service/arrival reporting location or route label. Distinct physical gate is not established.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 14,
+        "source_name": "Butogota",
+        "coordinate": [
+          29.631289,
+          -0.888464
+        ],
+        "status_as_published": "Unofficial",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-CD-NTEKO-ROAD",
+      "canonical_name": "Nteko",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "ground_entry_location; vehicle_access_unverified",
+      "aliases": [
+        "Nteko"
+      ],
+      "source_ids": [
+        "W-UNHCR-2021",
+        "W-UNHCR-2025"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-4f6f9d704ffa8e98"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "Closest unclassified-road contact is 630 m from UNHCR Nteko point. Several nearby routes and similarly named settlements prevent exact identification.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-4f6f9d704ffa8e98": 630
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 18,
+        "source_name": "Nteko",
+        "coordinate": [
+          29.588094,
+          -1.028669
+        ],
+        "status_as_published": "Unofficial",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-CD-BULYANTANO-ROAD",
+      "canonical_name": "Bulyantano",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "ground_entry_location; transport_mode_unverified",
+      "aliases": [
+        "Bulyantano"
+      ],
+      "source_ids": [
+        "W-UNHCR-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Nearest included road contact is approximately 2 km from the independent reference and is not accepted.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "UNHCR labels this unofficial in 2021; an unmapped/minor path or river route remains possible.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 4,
+        "source_name": "Bulyantano",
+        "coordinate": [
+          29.973222,
+          0.597333
+        ],
+        "status_as_published": "Unofficial",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-CD-BUTOGO-ROAD",
+      "canonical_name": "Butogo",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "track_geometry; vehicle_access_unverified",
+      "aliases": [
+        "Butogo"
+      ],
+      "source_ids": [
+        "W-UNHCR-2021",
+        "W-UNHCR-2025"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-07bc49781e22ae95"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Track contact lies 115 m from the independent Butogo coordinate and the later UNHCR map retains the name.",
+      "coordinate_status": "osm_candidate_location_supported; no independent survey",
+      "notes": "This establishes a reference crossing locality, not a formal vehicular post or current operational access.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-07bc49781e22ae95": 115
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 5,
+        "source_name": "Butogo",
+        "coordinate": [
+          29.971433,
+          0.723822
+        ],
+        "status_as_published": "Unofficial",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-CD-KASIRI-ROAD",
+      "canonical_name": "Kasiri",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "ground_entry_location; transport_mode_unverified",
+      "aliases": [
+        "Kasiri"
+      ],
+      "source_ids": [
+        "W-UNHCR-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Nearest included road contact is over 2.2 km from independent reference; no accepted match.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "UNHCR labels this unofficial in 2021; possible path/river crossing requires separate inspection.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 6,
+        "source_name": "Kasiri",
+        "coordinate": [
+          29.971475,
+          0.702328
+        ],
+        "status_as_published": "Unofficial",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    }
+  ],
+  "outside_road_benchmark": [
+    {
+      "name": "Ntoroko",
+      "source_ids": [
+        "W-MTIC-2025",
+        "W-NCIC-LIST"
+      ],
+      "reason": "Explicitly marine/Lake Albert facility. Road–land-boundary intersections are not an appropriate recall test."
+    },
+    {
+      "name": "Nsonga / Sebagoro",
+      "source_ids": [
+        "W-UNHCR-2021",
+        "W-NCIC-LIST"
+      ],
+      "reason": "UNHCR labels both boat crossings. Keep in water reference work, not road candidates."
+    },
+    {
+      "name": "Rwebisengo, Nyankanda, Budiba, Makindo, Canara",
+      "source_ids": [
+        "W-UNHCR-2021"
+      ],
+      "reason": "Named Ntoroko-district points have no nearby accepted road–boundary contacts. Exact river/lake/ground connection and facility position require mode review; source coordinates retained in independent full reference file."
+    },
+    {
+      "name": "Kayanja (Kasese), Kizinga (Rubirizi), Butiaba, Wanseko, Kaiso-Tonya, Ndaiga",
+      "source_ids": [
+        "W-NCIC-LIST"
+      ],
+      "reason": "Listed service locations include lake-shore facilities; mode and exact cross-border connection unresolved. Excluded from road completeness denominator."
+    },
+    {
+      "name": "Kamwezi, Kayanja (Ntungamo)",
+      "source_ids": [
+        "W-NCIC-LIST"
+      ],
+      "reason": "Ugandan service-point aliases may overlap Rwanda designated posts. No unsupported one-to-one pairing or extra physical-crossing count is made."
+    },
+    {
+      "name": "Birijaku and Kashenyi",
+      "source_ids": [
+        "W-UNHCR-2025"
+      ],
+      "reason": "Humanitarian map/table labels need separate ground-versus-water and exact-facility verification before inclusion."
+    }
+  ],
+  "findings": [
+    "UNHCR 2021 provides independent coordinates for many west-frontier locations, materially improving on nearest-town suggestions.",
+    "Busanza in the closure records is a distinct Kisoro/Kitagoma location; old matches near Ishasha and Bunagana are unsupported homonyms.",
+    "Kyeshero and Butogo align with unclassified/track candidates; limiting inventory to primary and secondary roads misses documented entry points.",
+    "Butogota reference is inland and near Kyeshero; assigning both labels to one nearest contact would invent a second facility.",
+    "Six Rwanda designated posts include Buhita, Buziba and Rwempasha. Their exact post coordinates remain unresolved despite nearby road suggestions.",
+    "Vurra Custom Road has multiple boundary contacts, so its name does not by itself resolve the true facility.",
+    "Independent primary-source point positions support nine selected candidate identities, but source precision and gate-level accuracy remain qualified."
+  ]
+}

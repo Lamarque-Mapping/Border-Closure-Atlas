@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "note": "Historical research-batch status only. Retains the extraction/review snapshots and does not validate any record association for the replacement workbook, crossing completeness, closure evidence or current operating status.",
+  "frontiers": {
+    "CD-UG": {
+      "status": "uganda_desk_review_completed",
+      "evidence_paths": [
+        "research/osm/uganda-review/REVIEW.md"
+      ],
+      "extraction_status": "completed_scoped_snapshot",
+      "reference_review_status": "completed_qualified_desk_review",
+      "note": "Prior Uganda reference sample reviewed with recorded qualifications; no census or operating-status claim."
+    },
+    "KE-UG": {
+      "status": "uganda_desk_review_completed",
+      "evidence_paths": [
+        "research/osm/uganda-review/REVIEW.md"
+      ],
+      "extraction_status": "completed_scoped_snapshot",
+      "reference_review_status": "completed_qualified_desk_review",
+      "note": "Prior Uganda reference sample reviewed with recorded qualifications; no census or operating-status claim."
+    },
+    "RW-UG": {
+      "status": "uganda_desk_review_completed",
+      "evidence_paths": [
+        "research/osm/uganda-review/REVIEW.md"
+      ],
+      "extraction_status": "completed_scoped_snapshot",
+      "reference_review_status": "completed_qualified_desk_review",
+      "note": "Prior Uganda reference sample reviewed with recorded qualifications; no census or operating-status claim."
+    },
+    "SS-UG": {
+      "status": "uganda_desk_review_completed",
+      "evidence_paths": [
+        "research/osm/uganda-review/REVIEW.md"
+      ],
+      "extraction_status": "completed_scoped_snapshot",
+      "reference_review_status": "completed_qualified_desk_review",
+      "note": "Prior Uganda reference sample reviewed with recorded qualifications; no census or operating-status claim."
+    },
+    "TZ-UG": {
+      "status": "uganda_desk_review_completed",
+      "evidence_paths": [
+        "research/osm/uganda-review/REVIEW.md"
+      ],
+      "extraction_status": "completed_scoped_snapshot",
+      "reference_review_status": "completed_qualified_desk_review",
+      "note": "Prior Uganda reference sample reviewed with recorded qualifications; no census or operating-status claim."
+    },
+    "KE-TZ": {
+      "status": "qualified_desk_review_completed",
+      "extraction_status": "completed_scoped_snapshot",
+      "reference_review_status": "completed_qualified_desk_review",
+      "evidence_paths": [
+        "research/osm/international-review/REVIEW.md",
+        "research/osm/international-review/associations/KE-TZ.json",
+        "research/osm/international-review/extractions/KE-TZ/summary.json",
+        "research/osm/international-review/topology/KE-TZ/topology-summary.json"
+      ],
+      "note": "Bounded named-reference sample and qualified geometry review completed; not a complete crossing census or operating-status assessment."
+    },
+    "DE-FR": {
+      "status": "qualified_desk_review_completed",
+      "extraction_status": "completed_scoped_snapshot",
+      "reference_review_status": "completed_qualified_desk_review",
+      "evidence_paths": [
+        "research/osm/international-review/REVIEW.md",
+        "research/osm/international-review/associations/DE-FR.json",
+        "research/osm/international-review/extractions/DE-FR/summary.json",
+        "research/osm/international-review/topology/DE-FR/topology-summary.json"
+      ],
+      "note": "Bounded named-reference sample and qualified geometry review completed; not a complete crossing census or operating-status assessment."
+    },
+    "MX-US": {
+      "status": "qualified_desk_review_completed",
+      "extraction_status": "completed_scoped_snapshot",
+      "reference_review_status": "completed_qualified_desk_review",
+      "evidence_paths": [
+        "research/osm/international-review/REVIEW.md",
+        "research/osm/international-review/associations/MX-US.json",
+        "research/osm/international-review/extractions/MX-US-scoped/summary.json",
+        "research/osm/international-review/topology/MX-US-scoped/topology-summary.json"
+      ],
+      "note": "Bounded named-reference sample and qualified geometry review completed; not a complete crossing census or operating-status assessment."
+    },
+    "KE-SO": {
+      "status": "qualified_desk_review_completed",
+      "extraction_status": "completed_scoped_snapshot",
+      "reference_review_status": "completed_qualified_desk_review",
+      "evidence_paths": [
+        "research/osm/international-review/REVIEW.md",
+        "research/osm/international-review/associations/KE-SO.json",
+        "research/osm/international-review/extractions/KE-SO-scoped/summary.json",
+        "research/osm/international-review/topology/KE-SO-scoped/topology-summary.json"
+      ],
+      "note": "Bounded named-reference sample and qualified geometry review completed; not a complete crossing census or operating-status assessment."
+    }
+  },
+  "historical_workbook_sha256": "3530415e136e81d20cc24b51b3a5c2739e6a529fc2484cc51c8861693ff33bf0"
+}

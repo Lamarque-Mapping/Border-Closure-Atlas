@@ -1,0 +1,592 @@
+{
+  "scope": "Uganda–South Sudan named land crossings and documented border service locations; source benchmark independent of OSM candidate generation",
+  "researched_at": "2026-10-23",
+  "coverage_limitations": [
+    "This is a bounded primary-source benchmark, not a comprehensive census of all formal and informal crossings.",
+    "Source-verified means the named location is documented at the stated source date, not that it is currently open or affected by any closure event.",
+    "UNHCR2021 points can represent control facilities offset from a mapped boundary; unknown source accuracy is retained. Large mismatches are unresolved, not corrected by snapping.",
+    "No rail or ferry crossing on this frontier was established by the reviewed sources. Absence from this list is not proof that such connections do not exist.",
+    "Owino-Drewu versus Aweno-Olwiyo and Musingo versus Madi Opei remain unresolved alias questions; they are not counted as additional distinct crossings.",
+    "Opposite-side operation areas from URA are preserved as pair labels, not automatically treated as colocated facilities.",
+    "Boundary alignment/disputes are documented in government sources; this benchmark does not adjudicate them.",
+    "UNHCR coordinates are externally published reference positions. Their collection method, per-point observation date, accuracy and independence from OSM are undocumented; publication date is not observation date."
+  ],
+  "sources": [
+    {
+      "id": "N-DCIC-REGIONS",
+      "title": "List of borders according to regions",
+      "url": "https://www.immigration.go.ug/list-borders-according-regions",
+      "publisher": "Uganda National Citizenship and Immigration Control",
+      "publication_date": null,
+      "retrieved_at": "2026-10-23",
+      "supports": "Northern region names Atiak/Elegu, Ngoromoro, Madi Opei, Owino-Drewu, Oraba and Afogi. North Eastern region names Opotpot.",
+      "notes": "Undated service-point list; does not establish 2026 operation, precise border geometry or equivalent spellings. Airstrips and ports in other regions must not be counted as land crossings."
+    },
+    {
+      "id": "N-URA-PAIRS-2023",
+      "title": "URA signs bilateral agreement with South Sudan to curb smuggling",
+      "url": "https://thetaxman.ura.go.ug/?p=4130",
+      "publisher": "Uganda Revenue Authority, The Taxman",
+      "publication_date": "2023-01-18",
+      "retrieved_at": "2026-10-23",
+      "supports": "Six common operation areas: Elegu/Nimule; Ngomoromo/Pogei; Awenolwio/Lobone; Madiope/Tdetenya; Afoji/Kajo Keji; Oraba/Kaya.",
+      "notes": "Named bilateral operation areas as reported in 2023. Opposite-side labels can describe a wider area, not a colocated checkpoint or automatic alias. Current opening status not established."
+    },
+    {
+      "id": "N-URA-OSBP",
+      "title": "One Stop Border Post",
+      "url": "https://ura.go.ug/en/import-export/one-stop-border-post/",
+      "publisher": "Uganda Revenue Authority",
+      "publication_date": null,
+      "retrieved_at": "2026-10-23",
+      "supports": "Identifies Elegu/Nimule as a Uganda–South Sudan OSBP.",
+      "notes": "Undated explanatory page; no exact coordinate or historical closure evidence."
+    },
+    {
+      "id": "N-URA-TRANSIT-2023",
+      "title": "Enforcement Questions and Answers",
+      "url": "https://ura.go.ug/en/enforcement-questions-and-answers/",
+      "publisher": "Uganda Revenue Authority",
+      "publication_date": "2023-08-24",
+      "retrieved_at": "2026-10-23",
+      "supports": "Transit routes include Gulu/Elegu, Arua/Oraba, Adjumani/Moyo/Afogi and Kitgum/Madi Opei.",
+      "notes": "Route identity evidence; not a live operational-status feed."
+    },
+    {
+      "id": "N-MEACA-ORABA-2026",
+      "title": "MEACA Strengthens Cross-Border Security Through Stakeholder Engagement at Oraba Border Post",
+      "url": "https://www.meaca.go.ug/news/meaca-strengthens-cross-border-security-through-stakeholder-engagement-oraba-border-post",
+      "publisher": "Uganda Ministry of East African Community Affairs",
+      "publication_date": "2026-07-08",
+      "retrieved_at": "2026-10-23",
+      "supports": "Reports an official stakeholder visit at Oraba Border Post, Koboko, on 7–8 July 2026.",
+      "notes": "Recent institutional presence corroborates the named post; this does not prove unrestricted crossing."
+    },
+    {
+      "id": "N-UNHCR-GPS-2021",
+      "title": "Uganda: Refugee Locations and Border Points",
+      "url": "https://data.unhcr.org/en/documents/details/86907",
+      "publisher": "UNHCR Operational Data Portal",
+      "publication_date": "2021-05-20",
+      "retrieved_at": "2026-10-23",
+      "supports": "Border_Crossing worksheet supplies named coordinates, districts and 2021 official/unofficial labels for nine northern crossing locations.",
+      "notes": "Coordinates may describe inland facilities. Dataset has no stated coordinate accuracy or opposing-country column. Preserve 2021 status separately from current status. XLSX SHA256 35087d843daf90287b90f62efed488f52c1bc204353748c60ed24fa26b013651; download https://data.unhcr.org/en/documents/download/86907. ODP default licence CC BY 4.0."
+    },
+    {
+      "id": "N-UPDF-WALIGO-2025",
+      "title": "Illegal Firearm Recovered, Two Suspects Arrested at Uganda–South Sudan Border",
+      "url": "https://www.updf.go.ug/disarmament-operation/illegal-firearm-recovered-two-suspects-arrested-at-uganda-south-sudan-border/amp/",
+      "publisher": "Uganda Peoples’ Defence Forces",
+      "publication_date": null,
+      "retrieved_at": "2026-10-23",
+      "supports": "Direct institutional account locates a motorcycle crossing attempt into South Sudan at Waligo Checkpoint in Lamwo on 1 August 2025.",
+      "notes": "2025-08-01 is the incident date, not a confirmed publication date. Used only to establish a named road checkpoint and country pair; personal details not retained."
+    },
+    {
+      "id": "N-DCIC-PERFORMANCE-2018",
+      "title": "National Citizenship and Immigration Control: FY 2017/18 Quarter 4 Vote Performance Report",
+      "url": "https://budget.finance.go.ug/sites/default/files/Sector%20Spending%20Agency%20Budgets%20and%20Performance/2017-2018_QuarterlyReport_Q4_120_NationalCitizenshipandImmigrationControl_8_22_20188_21_59AM_Final.pdf",
+      "publisher": "Uganda National Citizenship and Immigration Control / Ministry of Finance",
+      "publication_date": null,
+      "retrieved_at": "2026-10-23",
+      "supports": "Printed page 20 states that work at Ngomoromo and Opotpot awaited South Sudan boundary demarcation; page 2 also places Afogi, Oraba, Opotpot and Ngomoromo in that context.",
+      "notes": "FY2017/18 institutional reporting, not current boundary adjudication or proof of current operation."
+    },
+    {
+      "id": "N-NPA-PIP-2021",
+      "title": "Public Investment Plan FY2021/22–FY2023/24",
+      "url": "https://www.npa.go.ug/wp-content/uploads/2023/09/Public-Investment-Plan-FY-2021-22_0.pdf",
+      "publisher": "Government of Uganda / National Planning Authority",
+      "publication_date": null,
+      "retrieved_at": "2026-10-23",
+      "supports": "Printed pages 199–200 describe the Olwiyo–Gulu–Acholibur–Kitgum road ending at Musingo on the South Sudan border.",
+      "notes": "Confirms Musingo road-border terminology. This source alone does not prove it is identical to the Madi-Opei/Tdetenya pair."
+    },
+    {
+      "id": "N-LAMWO-DDP-2020",
+      "title": "Lamwo District Five Year Development Plan 2020/21–2024/25",
+      "url": "https://lamwo.go.ug/sites/default/files/Approved%20Lamwo%20District%20Development%20Plan%20III.pdf",
+      "publisher": "Lamwo District Local Government",
+      "publication_date": "2020-12",
+      "retrieved_at": "2026-10-23",
+      "supports": "Page 30 road inventory includes Kitgum–Ngomoromo, Kitgum–Musingo and Ngomoromo–Waligo–Bibia routes.",
+      "notes": "Road context, not crossing coordinates or continuous operation."
+    }
+  ],
+  "crossings": [
+    {
+      "id": "UG-SS-ELEGU-ROAD",
+      "canonical_name": "Elegu–Nimule",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Elegu",
+        "Nimule",
+        "Atiak/Elegu"
+      ],
+      "source_ids": [
+        "N-DCIC-REGIONS",
+        "N-URA-PAIRS-2023",
+        "N-URA-OSBP",
+        "N-URA-TRANSIT-2023",
+        "N-UNHCR-GPS-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-6a12feb9e54a44eb"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Published UNHCR Elegu point lies 486 m from this unique primary-road border contact. OSM way 266617731 is a bridge named Nimule–Gulu, A43; URA identifies the Gulu–Elegu route and Elegu/Nimule pair. The next nearest SS/UG candidate is 5.45 km from the source point.",
+      "coordinate_status": "OSM road/boundary contact supports the named corridor; published 2021 facility point retained separately; exact facility footprint not surveyed.",
+      "notes": "Reject osm-0625f6d45ad03c49 as an Elegu event location: its name link uses a different Elegu village in the Moyo area, roughly 30 km west of the independently sourced Amuru crossing.",
+      "current_operation_status": "not_assessed",
+      "is_closure_evidence": false,
+      "external_reference": {
+        "source_id": "N-UNHCR-GPS-2021",
+        "worksheet": "Border_Crossing",
+        "source_row": 2,
+        "name_as_published": "Elegu",
+        "district": "Amuru",
+        "coordinate": [
+          32.070767,
+          3.567556
+        ],
+        "coordinate_accuracy_m": null,
+        "status_as_published": "Official",
+        "coordinate_basis": "UNHCR named border-point reference; not assumed to lie exactly on the boundary",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-SS-ORABA-ROAD",
+      "canonical_name": "Oraba–Kaya",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Oraba",
+        "Kaya"
+      ],
+      "source_ids": [
+        "N-DCIC-REGIONS",
+        "N-URA-PAIRS-2023",
+        "N-URA-TRANSIT-2023",
+        "N-MEACA-ORABA-2026",
+        "N-UNHCR-GPS-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-fbff1988e9d2aedc"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "UNHCR Oraba point is 685 m from this Yei–Koboko road contact; OSM controls at 21, 196 and 242 m bracket the frontier, two explicitly tagged UG and SS. Government sources identify the Oraba/Kaya pair and Arua–Oraba route.",
+      "coordinate_status": "Supported corridor; source facility coordinate and OSM border-contact coordinate are distinct, neither treated as surveyed accuracy.",
+      "notes": "The 19 repeated contacts of Yei–Koboko way 613417039 are on the CD/UG frontier and must not be relabelled as 19 Oraba crossings.",
+      "current_operation_status": "not_assessed",
+      "is_closure_evidence": false,
+      "external_reference": {
+        "source_id": "N-UNHCR-GPS-2021",
+        "worksheet": "Border_Crossing",
+        "source_row": 20,
+        "name_as_published": "Oraba",
+        "district": "Koboko",
+        "coordinate": [
+          30.883438,
+          3.533634
+        ],
+        "coordinate_accuracy_m": null,
+        "status_as_published": "Official",
+        "coordinate_basis": "UNHCR named border-point reference; not assumed to lie exactly on the boundary",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-SS-AFOJI-ROAD",
+      "canonical_name": "Afoji–Kajo Keji",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Afoji",
+        "Afogi"
+      ],
+      "source_ids": [
+        "N-DCIC-REGIONS",
+        "N-URA-PAIRS-2023",
+        "N-URA-TRANSIT-2023",
+        "N-UNHCR-GPS-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-75bba08529b79e5f"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "The candidate is on the named Ajumani–Kajo Keji road, near a named Kajo Keji County/Moyo District border-control building. UNHCR Afoji coordinate is 1,418 m from the candidate and about 727 m from that retained route geometry, so the exact facility/contact relationship remains unresolved.",
+      "coordinate_status": "Use the UNHCR2021 point as a dated source reference only; candidate alignment remains unresolved.",
+      "notes": "Kajo Keji is the opposite operation area named by URA; it is not asserted to be a colocated checkpoint name. Do not choose the closer-to-Afoji-village minor road osm-45f50d408db27bde merely from proximity.",
+      "current_operation_status": "not_assessed",
+      "is_closure_evidence": false,
+      "external_reference": {
+        "source_id": "N-UNHCR-GPS-2021",
+        "worksheet": "Border_Crossing",
+        "source_row": 26,
+        "name_as_published": "Afoji",
+        "district": "Moyo",
+        "coordinate": [
+          31.673564,
+          3.714692
+        ],
+        "coordinate_accuracy_m": null,
+        "status_as_published": "Official",
+        "coordinate_basis": "UNHCR named border-point reference; not assumed to lie exactly on the boundary",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-SS-NGOMOROMO-ROAD",
+      "canonical_name": "Ngomoromo–Pogei",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Ngomoromo",
+        "Ngoromoro"
+      ],
+      "source_ids": [
+        "N-DCIC-REGIONS",
+        "N-URA-PAIRS-2023",
+        "N-UNHCR-GPS-2021",
+        "N-DCIC-PERFORMANCE-2018",
+        "N-LAMWO-DDP-2020"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-f0bab3fdb31f36b0"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "The UNHCR point falls about 5 m from OSM road 27996413, the same retained road that generates this candidate, supporting a corridor association. The OSM boundary contact is 7,658 m from the source point. This large offset must not be silently treated as a precise post coordinate.",
+      "coordinate_status": "Named source point verified for 2021; border-contact alignment unresolved, with documentary boundary-demarcation concern.",
+      "notes": "Pogei spelling is retained from the URA source as opposite-side operation area. Similar variants Poge/Pogee were found in secondary reporting but are not automatically accepted aliases here.",
+      "current_operation_status": "not_assessed",
+      "is_closure_evidence": false,
+      "external_reference": {
+        "source_id": "N-UNHCR-GPS-2021",
+        "worksheet": "Border_Crossing",
+        "source_row": 23,
+        "name_as_published": "Ngomoromo",
+        "district": "Lamwo",
+        "coordinate": [
+          32.576667,
+          3.699167
+        ],
+        "coordinate_accuracy_m": null,
+        "status_as_published": "Official",
+        "coordinate_basis": "UNHCR named border-point reference; not assumed to lie exactly on the boundary",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-SS-AWENO-OLWIYO-ROAD",
+      "canonical_name": "Aweno-Olwiyo–Lobone",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Aweno-Olwiyo",
+        "Awenolwio"
+      ],
+      "source_ids": [
+        "N-URA-PAIRS-2023",
+        "N-UNHCR-GPS-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-150dec370bf38176"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "UNHCR Aweno-Olwiyo point is about 26 m from OSM way 633316615 (Magwi–Farajok), supporting the route corridor. The generated border contact is 4,115 m farther north than the source point; no evidence resolves the exact checkpoint versus mapped-boundary relationship.",
+      "coordinate_status": "Source point retained separately; candidate is provisional corridor context only.",
+      "notes": "Do not silently equate the immigration list’s Owino-Drewu with this crossing. That potential alias requires confirmation. Lobone is the paired operation area in URA reporting.",
+      "current_operation_status": "not_assessed",
+      "is_closure_evidence": false,
+      "external_reference": {
+        "source_id": "N-UNHCR-GPS-2021",
+        "worksheet": "Border_Crossing",
+        "source_row": 24,
+        "name_as_published": "Aweno-Olwiyo",
+        "district": "Lamwo",
+        "coordinate": [
+          32.756389,
+          3.740556
+        ],
+        "coordinate_accuracy_m": null,
+        "status_as_published": "Official",
+        "coordinate_basis": "UNHCR named border-point reference; not assumed to lie exactly on the boundary",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-SS-MADI-OPEI-ROAD",
+      "canonical_name": "Madi Opei–Tdetenya",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Madi Opei",
+        "Madi-Opei",
+        "Madiope"
+      ],
+      "source_ids": [
+        "N-DCIC-REGIONS",
+        "N-URA-PAIRS-2023",
+        "N-URA-TRANSIT-2023",
+        "N-UNHCR-GPS-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-8802d9bce5833653"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "UNHCR Madi-Opei point is 339 m from this unique primary-road I5 contact; the next nearest SS/UG candidate is 6.38 km away. URA independently names the Madi Opei transit route and Madiope/Tdetenya operation pair.",
+      "coordinate_status": "Supported corridor with separate 2021 facility and 2026 OSM contact coordinates; exact installation not surveyed.",
+      "notes": "Musingo is independently documented as a South Sudan border road terminus, but source-backed equivalence to Madi Opei/Tdetenya has not been established in this review; retained as an unresolved alias lead rather than counted as another verified distinct crossing.",
+      "current_operation_status": "not_assessed",
+      "is_closure_evidence": false,
+      "external_reference": {
+        "source_id": "N-UNHCR-GPS-2021",
+        "worksheet": "Border_Crossing",
+        "source_row": 25,
+        "name_as_published": "Madi-Opei",
+        "district": "Lamwo",
+        "coordinate": [
+          33.201484,
+          3.773955
+        ],
+        "coordinate_accuracy_m": null,
+        "status_as_published": "Official",
+        "coordinate_basis": "UNHCR named border-point reference; not assumed to lie exactly on the boundary",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-SS-WALIGO-ROAD",
+      "canonical_name": "Waligo",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Waligo"
+      ],
+      "source_ids": [
+        "N-UNHCR-GPS-2021",
+        "N-UPDF-WALIGO-2025",
+        "N-LAMWO-DDP-2020"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-355234de51c93270"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "UNHCR Waligo point lies about 7 m from OSM way 305100543, a tertiary road retained in the all-road output. Its boundary intersection is 9,805 m away, so this is a corridor lead, not a resolved checkpoint coordinate.",
+      "coordinate_status": "2021 source point and 2025 named checkpoint independently supported; OSM border-contact alignment unresolved.",
+      "notes": "Absent from the 76 major-road candidates because the route is tertiary. Official status belongs to the 2021 UNHCR source; 2025 evidence establishes a checkpoint, not its unrestricted operation.",
+      "current_operation_status": "not_assessed",
+      "is_closure_evidence": false,
+      "external_reference": {
+        "source_id": "N-UNHCR-GPS-2021",
+        "worksheet": "Border_Crossing",
+        "source_row": 22,
+        "name_as_published": "Waligo",
+        "district": "Lamwo",
+        "coordinate": [
+          32.363889,
+          3.606667
+        ],
+        "coordinate_accuracy_m": null,
+        "status_as_published": "Official",
+        "coordinate_basis": "UNHCR named border-point reference; not assumed to lie exactly on the boundary",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-SS-OPOTPOT-ROAD",
+      "canonical_name": "Opotpot",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Opotpot",
+        "Opot pot"
+      ],
+      "source_ids": [
+        "N-DCIC-REGIONS",
+        "N-DCIC-PERFORMANCE-2018"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "The independent immigration list names Opotpot; the performance report places its planned facilities along the South Sudan border. No candidate can be confidently assigned without exact route or facility evidence.",
+      "coordinate_status": "No accepted coordinate.",
+      "notes": "Road mode is a working classification for this listed land service point; vehicle access has not been established. Do not place it at the similarly named OSM Opotipot settlement or a nearby park road.",
+      "current_operation_status": "not_assessed",
+      "is_closure_evidence": false,
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-SS-BUSIA-KOBOKO-ROAD",
+      "canonical_name": "Busia (Koboko)",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Busia"
+      ],
+      "source_ids": [
+        "N-UNHCR-GPS-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-c58ebfec916f9441",
+        "osm-773f516d66634ea5"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "The 2021 UNHCR Busia/Koboko point lies 38 m from a track contact and 41 m from a tertiary-road contact at the SS/UG boundary. The two candidates are a facility/route grouping question; neither is automatically selected.",
+      "coordinate_status": "Dated source point retained; nearby route contacts require facility grouping review.",
+      "notes": "UNHCR classified this point unofficial in 2021. This Busia is on the South Sudan frontier, not the Kenya/Uganda Busia OSBP; repeated names require country and district constraints.",
+      "current_operation_status": "not_assessed",
+      "is_closure_evidence": false,
+      "external_reference": {
+        "source_id": "N-UNHCR-GPS-2021",
+        "worksheet": "Border_Crossing",
+        "source_row": 21,
+        "name_as_published": "Busia",
+        "district": "Koboko",
+        "coordinate": [
+          30.995325,
+          3.704273
+        ],
+        "coordinate_accuracy_m": null,
+        "status_as_published": "Unofficial",
+        "coordinate_basis": "UNHCR named border-point reference; not assumed to lie exactly on the boundary",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    },
+    {
+      "id": "UG-SS-ANGILIA-ROAD",
+      "canonical_name": "Angilia",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Angilia"
+      ],
+      "source_ids": [
+        "N-UNHCR-GPS-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "UNHCR identifies an Angilia border point in Yumbe; the nearest SS/UG candidate, osm-a3ee1e83deb21001, is 2,162 m away and its retained route stays about 2,044 m from the source point. No sufficient route or identity evidence supports assigning it.",
+      "coordinate_status": "Dated UNHCR coordinate available; no accepted candidate link.",
+      "notes": "UNHCR classified this point unofficial in 2021. Present facility status and movement types are unresolved.",
+      "current_operation_status": "not_assessed",
+      "is_closure_evidence": false,
+      "external_reference": {
+        "source_id": "N-UNHCR-GPS-2021",
+        "worksheet": "Border_Crossing",
+        "source_row": 34,
+        "name_as_published": "Angilia",
+        "district": "Yumbe",
+        "coordinate": [
+          31.355364,
+          3.758435
+        ],
+        "coordinate_accuracy_m": null,
+        "status_as_published": "Unofficial",
+        "coordinate_basis": "UNHCR named border-point reference; not assumed to lie exactly on the boundary",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status."
+    }
+  ],
+  "unresolved_named_leads": [
+    {
+      "name": "Owino-Drewu",
+      "source_ids": [
+        "N-DCIC-REGIONS"
+      ],
+      "reason": "Listed in Kitgum; may be a variant of Aweno-Olwiyo but exact identity not confirmed. Do not double count or merge automatically."
+    },
+    {
+      "name": "Musingo",
+      "source_ids": [
+        "N-NPA-PIP-2021",
+        "N-LAMWO-DDP-2020"
+      ],
+      "reason": "Named road terminus at South Sudan border. Likely related to Madi Opei corridor, but independent alias confirmation remains needed."
+    },
+    {
+      "name": "Kerwa",
+      "source_urls": [
+        "https://dtm.iom.int/report-product-series/flow-monitoring-dashboard-ugandasouth-sudan-border"
+      ],
+      "reason": "IOM flow-monitoring name is a research lead, not automatically an exact crossing; monitoring points may be inland."
+    }
+  ],
+  "findings": [
+    "Three of ten independently documented named locations have supported OSM corridor associations, five have provisional associations and two have no accepted candidate match. These are identity/geometry review outcomes, not measured extraction precision or recall.",
+    "Waligo is outside the major-road sample although independently documented; road-class filtering alone misses important named locations.",
+    "The six URA operation areas were discovered from an institutional list before matching candidates, avoiding a benchmark limited to OSM successes.",
+    "The loose original name matcher attached Elegu events to a different same-name settlement around 30 km west of the Amuru crossing. Country pair alone is not a sufficient disambiguator.",
+    "The nineteen Yei–Koboko A8 contacts occur along CD/UG, while actual Oraba/Kaya has its own SS/UG candidate.",
+    "Facilities and boundary intersections differ by 4.1 km at Aweno-Olwiyo, 7.7 km at Ngomoromo and 9.8 km at Waligo. Road continuity supports corridor leads but cannot resolve boundary placement or exact post identity."
+  ]
+}

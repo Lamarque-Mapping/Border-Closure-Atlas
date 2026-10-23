@@ -1,0 +1,3686 @@
+{
+  "schema_version": 1,
+  "crossings": [
+    {
+      "id": "UG-KE-BUSIA-ROAD",
+      "canonical_name": "Busia / Busia",
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Busia",
+        "Busia OSBP"
+      ],
+      "source_ids": [
+        "E-KE-IMM",
+        "E-KE-BMS",
+        "E-UG-IMM",
+        "E-URA-OSBP",
+        "E-EAC-2017"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-4d0fb0f28fe5d35f"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Official road facility identity agrees with OSM Customs Street/Kisumu-Busia Road. Named Busia car and truck control points lie on the intersecting route geometries (nodes 9072469038,9072469037,9072469017,9072472663), rather than merely in the surrounding town.",
+      "coordinate_status": "osm_geometry_identity_supported",
+      "notes": "Multiple control booths are components of one road crossing. Precise position remains an OSM-derived representative border contact; not a surveyed coordinate.",
+      "benchmark_role": "core_formal_road",
+      "operational_status": "Listed active on undated Kenya page; historical periods not inferred.",
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-east.json",
+      "is_closure_evidence": false,
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": true,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://immigration.go.ke/gazetted-ports-of-entry-and-exit-poes-and-location/",
+        "https://bordersecretariat.go.ke/land-poes/",
+        "https://www.immigration.go.ug/list-borders-according-regions",
+        "https://ura.go.ug/en/import-export/one-stop-border-post/",
+        "https://www.eac.int/press-releases/150-infrastructure/888-presidentsmagufuli-and-museveni-launch-mutukula-one-stop-boder-post"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-4d0fb0f28fe5d35f",
+          "coordinate": [
+            34.0987848754515,
+            0.4648744237377819
+          ],
+          "route_osm_ids": [
+            792057446,
+            980759972,
+            980760359,
+            980760385
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "supported"
+        }
+      ],
+      "osm_reference_coordinate": [
+        34.0987848754515,
+        0.4648744237377819
+      ],
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "main_road_candidate",
+      "source_document_ids": [
+        "SRC-3692c984a887",
+        "SRC-4ae0d9c27191",
+        "SRC-6c97a1f44204",
+        "SRC-75db68ac61b1",
+        "SRC-771a60046f4a"
+      ]
+    },
+    {
+      "id": "UG-KE-MALABA-ROAD",
+      "canonical_name": "Malaba / Malaba road crossing",
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Malaba",
+        "Malaba OSBP"
+      ],
+      "source_ids": [
+        "E-KE-IMM",
+        "E-KE-BMS",
+        "E-UG-IMM",
+        "E-URA-OSBP",
+        "E-EAC-2017",
+        "E-AUPIDA-MALABA"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-ea97afe8b2c493b9"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "Official OSBP name and Northern Corridor location agree broadly with the A109 Kenya Road bridge. AU-PIDA facility point is about 550 m away; original candidate also merges a private track bridge with the trunk bridge. Exact bridge/facility association requires adjudication.",
+      "coordinate_status": "facility_area_corroborated_exact_contact_unresolved",
+      "notes": "Keep road separate from the nearby metre-gauge railway. Do not assign the private-track restriction to all road traffic.",
+      "benchmark_role": "core_formal_road",
+      "external_coordinates": [
+        {
+          "source_id": "E-AUPIDA-MALABA",
+          "coordinate": [
+            34.2693984,
+            0.6327057
+          ],
+          "basis": "project facility map point"
+        }
+      ],
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-east.json",
+      "is_closure_evidence": false,
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://immigration.go.ke/gazetted-ports-of-entry-and-exit-poes-and-location/",
+        "https://bordersecretariat.go.ke/land-poes/",
+        "https://www.immigration.go.ug/list-borders-according-regions",
+        "https://ura.go.ug/en/import-export/one-stop-border-post/",
+        "https://www.eac.int/press-releases/150-infrastructure/888-presidentsmagufuli-and-museveni-launch-mutukula-one-stop-boder-post",
+        "https://map.au-pida.org/projects/show/8570001"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-ea97afe8b2c493b9",
+          "coordinate": [
+            34.26822866507035,
+            0.637508416330062
+          ],
+          "route_osm_ids": [
+            1528070453,
+            1528070456
+          ],
+          "road_tiers": [
+            "major",
+            "other"
+          ],
+          "association_status": "provisional"
+        }
+      ],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "main_road_candidate",
+      "source_document_ids": [
+        "SRC-3692c984a887",
+        "SRC-4ae0d9c27191",
+        "SRC-5da2f949edd9",
+        "SRC-6c97a1f44204",
+        "SRC-75db68ac61b1",
+        "SRC-771a60046f4a"
+      ]
+    },
+    {
+      "id": "UG-KE-LWAKHAKHA-ROAD",
+      "canonical_name": "Lwakhakha / Lwakhakha",
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Lwakhakha",
+        "Lwakhaka",
+        "Lwakhkha"
+      ],
+      "source_ids": [
+        "E-KE-IMM",
+        "E-KE-BMS",
+        "E-UG-IMM"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-fd6f356b6081e2e9"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Official named road crossing matches OSM bridge 607402412 named Mbale Lwakhkha on route C32; border-control node 2144233646 is 12 m from the contact and about 2 m from the bridge geometry.",
+      "coordinate_status": "osm_route_identity_supported",
+      "notes": "OSM route spelling preserved as an alias for lookup. No externally surveyed coordinate obtained.",
+      "benchmark_role": "core_formal_road",
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-east.json",
+      "is_closure_evidence": false,
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": true,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://immigration.go.ke/gazetted-ports-of-entry-and-exit-poes-and-location/",
+        "https://bordersecretariat.go.ke/land-poes/",
+        "https://www.immigration.go.ug/list-borders-according-regions"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-fd6f356b6081e2e9",
+          "coordinate": [
+            34.3787916550731,
+            0.7943937370047939
+          ],
+          "route_osm_ids": [
+            607402412
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "supported"
+        }
+      ],
+      "osm_reference_coordinate": [
+        34.3787916550731,
+        0.7943937370047939
+      ],
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "targeted_named_exception",
+      "source_document_ids": [
+        "SRC-4ae0d9c27191",
+        "SRC-6c97a1f44204",
+        "SRC-75db68ac61b1"
+      ]
+    },
+    {
+      "id": "UG-KE-SUAM-ROAD",
+      "canonical_name": "Suam / Suam",
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Suam",
+        "Suam River",
+        "Suam OSBP"
+      ],
+      "source_ids": [
+        "E-KE-IMM",
+        "E-KE-BMS",
+        "E-UG-IMM"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-133f962f19b130e8"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "Official road post is verified. Pilot primary-road contact at Suam is a candidate, but lacks a named checkpoint or independently sourced exact position; nearby alternative minor-road contacts remain.",
+      "coordinate_status": "exact_contact_unresolved",
+      "notes": "The candidate uses an OSM primary road tagged dirt; do not infer that it represents the present OSBP alignment.",
+      "benchmark_role": "core_formal_road",
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-east.json",
+      "is_closure_evidence": false,
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://immigration.go.ke/gazetted-ports-of-entry-and-exit-poes-and-location/",
+        "https://bordersecretariat.go.ke/land-poes/",
+        "https://www.immigration.go.ug/list-borders-according-regions"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-133f962f19b130e8",
+          "coordinate": [
+            34.73497467262892,
+            1.2193231652162972
+          ],
+          "route_osm_ids": [
+            494556692,
+            692975473
+          ],
+          "road_tiers": [
+            "major",
+            "other"
+          ],
+          "association_status": "provisional"
+        }
+      ],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "main_road_candidate",
+      "source_document_ids": [
+        "SRC-4ae0d9c27191",
+        "SRC-6c97a1f44204",
+        "SRC-75db68ac61b1"
+      ]
+    },
+    {
+      "id": "UG-KE-MALABA-RAIL",
+      "canonical_name": "Malaba metre-gauge railway crossing",
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "mode": "rail",
+      "aliases": [
+        "Malaba railway",
+        "Malaba railway OSBP"
+      ],
+      "source_ids": [
+        "E-EAC-2017"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-d6ed2c4b739af025"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "EAC explicitly documents the railway OSBP separately from road clearance; pilot rail bridge 132240786 is tagged 1000 mm gauge. Exact historical facility extent and its relationship to the candidate remain to be checked.",
+      "coordinate_status": "osm_rail_contact_provisional",
+      "notes": "Historical existence verified; present service availability not assessed. A truck closure cannot be transferred to this railway solely from the shared name.",
+      "benchmark_role": "separate_mode_historical_reference",
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-east.json",
+      "is_closure_evidence": false,
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "rail",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://www.eac.int/press-releases/150-infrastructure/888-presidentsmagufuli-and-museveni-launch-mutukula-one-stop-boder-post"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-d6ed2c4b739af025",
+          "coordinate": [
+            34.26468240915164,
+            0.6373343892581073
+          ],
+          "route_osm_ids": [
+            132240786
+          ],
+          "road_tiers": [],
+          "association_status": "provisional"
+        }
+      ],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-771a60046f4a"
+      ]
+    },
+    {
+      "id": "UG-KE-KYEBUKUBE-SONA-ROAD",
+      "canonical_name": "Kyebukube / Sona",
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Kyebukube",
+        "Sona",
+        "Sono"
+      ],
+      "source_ids": [
+        "E-UG-IMM",
+        "E-UG-UBOS-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Named by Uganda immigration; no defensible candidate association established from retained route/checkpoint evidence.",
+      "coordinate_status": "unresolved",
+      "notes": "Sono spelling comes from UBOS; equivalence to Sona is plausible but requires confirmation. Its2021 ungazetted description must not be converted into a present status.",
+      "benchmark_role": "additional_named_land_reference",
+      "alias_qualifications": {
+        "Sono": "probable spelling variant, not conclusively resolved"
+      },
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-east.json",
+      "is_closure_evidence": false,
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://www.immigration.go.ug/list-borders-according-regions",
+        "https://www.ubos.org/wp-content/uploads/publications/06_2022Migration_Report_2021.pdf"
+      ],
+      "osm_candidates": [],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-6c97a1f44204",
+        "SRC-89e200384568"
+      ]
+    },
+    {
+      "id": "UG-KE-AMUDAT-ALAKAS-ROAD",
+      "canonical_name": "Amudat / Alakas border post",
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Amudat",
+        "Alakas"
+      ],
+      "source_ids": [
+        "E-UG-IMM",
+        "E-UG-NCIC-2024",
+        "E-KIDP3"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Government sources name the site and Alakas-Kenya road. Several minor-road contacts lie near the Alakas settlement; none is independently tied to the actual post.",
+      "coordinate_status": "unresolved",
+      "notes": "Amudat/Alakas in NCIC is a site/road naming pair; do not interpret it automatically as two national-side names. Staffing and gazetting descriptions are dated.",
+      "benchmark_role": "additional_named_land_reference",
+      "candidate_search_context_ids": [
+        "osm-19f7863ef043b008",
+        "osm-f28c8b81679411c9",
+        "osm-2bbfa8e08a9c466b"
+      ],
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-east.json",
+      "is_closure_evidence": false,
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://www.immigration.go.ug/list-borders-according-regions",
+        "https://budget.finance.go.ug/sites/default/files/Sector%20Spending%20Agency%20Budgets%20and%20Performance/National%20Citizenship%20and%20Immigration%20Control_15.pdf",
+        "https://karamojaresilience.org/wp-content/uploads/2022/06/KIDP-Final-PDF.pdf"
+      ],
+      "osm_candidates": [],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-64b578190871",
+        "SRC-6c97a1f44204",
+        "SRC-9145e08f3305"
+      ]
+    },
+    {
+      "id": "UG-KE-NAKABAT-LOKIRIAMA-ROAD",
+      "canonical_name": "Nakabat / Lokiriama",
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Nakabat",
+        "Nakabaat",
+        "Lokiriama"
+      ],
+      "source_ids": [
+        "E-UG-IMM",
+        "E-UG-NCIC-2024",
+        "E-KIDP3",
+        "E-KE-PROPOSED"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Cross-border names documented by NCIC and Kenya lists Lokiriama as proposed. No exact candidate identity established.",
+      "coordinate_status": "unresolved",
+      "notes": "Reference location exists in sources; operating/formal status is unresolved across dated and proposed-site sources.",
+      "benchmark_role": "additional_named_land_reference",
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-east.json",
+      "is_closure_evidence": false,
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://www.immigration.go.ug/list-borders-according-regions",
+        "https://budget.finance.go.ug/sites/default/files/Sector%20Spending%20Agency%20Budgets%20and%20Performance/National%20Citizenship%20and%20Immigration%20Control_15.pdf",
+        "https://karamojaresilience.org/wp-content/uploads/2022/06/KIDP-Final-PDF.pdf",
+        "https://immigration.go.ke/proposed-poes/"
+      ],
+      "osm_candidates": [],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-16a17ac3f644",
+        "SRC-64b578190871",
+        "SRC-6c97a1f44204",
+        "SRC-9145e08f3305"
+      ]
+    },
+    {
+      "id": "UG-KE-KAMION-OROPOI-ROAD",
+      "canonical_name": "Kamion / Oropoi",
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Kamion",
+        "Oropoi"
+      ],
+      "source_ids": [
+        "E-UG-IMM",
+        "E-UG-NCIC-2024"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "NCIC pairs the names; no candidate association independently established.",
+      "coordinate_status": "unresolved",
+      "notes": "Road/land reference inferred from border-post context; current transport capacity and staffing unverified.",
+      "benchmark_role": "additional_named_land_reference",
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-east.json",
+      "is_closure_evidence": false,
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://www.immigration.go.ug/list-borders-according-regions",
+        "https://budget.finance.go.ug/sites/default/files/Sector%20Spending%20Agency%20Budgets%20and%20Performance/National%20Citizenship%20and%20Immigration%20Control_15.pdf"
+      ],
+      "osm_candidates": [],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-64b578190871",
+        "SRC-6c97a1f44204"
+      ]
+    },
+    {
+      "id": "UG-TZ-MUTUKULA-ROAD",
+      "canonical_name": "Mutukula / Mutukula",
+      "country_pair": [
+        "TZ",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Mutukula",
+        "Mtukula",
+        "Mutukula OSBP"
+      ],
+      "source_ids": [
+        "E-UG-IMM",
+        "E-URA-OSBP",
+        "E-EAC-2017",
+        "E-AUPIDA-MUTUKULA",
+        "E-UNHCR-2021",
+        "E-TZ-NAO"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-b67dd14fe01914d3"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "UNHCR border-post coordinate is 33 m from the pilot T4 trunk contact; AU-PIDA OSBP coordinate independently agrees within about 40 m. Official sources identify the paired road OSBP.",
+      "coordinate_status": "independent_reference_corroborated",
+      "notes": "The second trunk contact 132 m from the UNHCR point may be an adjacent facility lane; retained separately as a possible shared-facility component, not counted as a second verified crossing.",
+      "benchmark_role": "core_formal_road",
+      "possible_facility_component_candidate_ids": [
+        "osm-bed6cf622f6d3b35"
+      ],
+      "external_coordinates": [
+        {
+          "source_id": "E-UNHCR-2021",
+          "coordinate": [
+            31.416706,
+            -1.0
+          ],
+          "source_row": 33,
+          "reported_status": "Official"
+        },
+        {
+          "source_id": "E-AUPIDA-MUTUKULA",
+          "coordinate": [
+            31.416609317,
+            -1.000284943
+          ],
+          "basis": "project facility map point"
+        }
+      ],
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-east.json",
+      "is_closure_evidence": false,
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": true,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://www.immigration.go.ug/list-borders-according-regions",
+        "https://ura.go.ug/en/import-export/one-stop-border-post/",
+        "https://www.eac.int/press-releases/150-infrastructure/888-presidentsmagufuli-and-museveni-launch-mutukula-one-stop-boder-post",
+        "https://map.au-pida.org/projects/show/3050001",
+        "https://data.unhcr.org/en/documents/details/86907",
+        "https://www.nao.go.tz/uploads/Performance_Audit_on_the_Management_of_Invasive_Alien_Species_in_Terrestrial_Environment.pdf"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-b67dd14fe01914d3",
+          "coordinate": [
+            31.416413125611452,
+            -1.0000048873672045
+          ],
+          "route_osm_ids": [
+            37422120,
+            474905581,
+            815151334
+          ],
+          "road_tiers": [
+            "major",
+            "other"
+          ],
+          "association_status": "supported"
+        }
+      ],
+      "osm_reference_coordinate": [
+        31.416413125611452,
+        -1.0000048873672045
+      ],
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "main_road_candidate",
+      "source_document_ids": [
+        "SRC-002eb8079bf9",
+        "SRC-3692c984a887",
+        "SRC-636262fc846f",
+        "SRC-6c97a1f44204",
+        "SRC-7310056e83eb",
+        "SRC-771a60046f4a"
+      ]
+    },
+    {
+      "id": "UG-TZ-KIKAGATI-MURONGO-ROAD",
+      "canonical_name": "Kikagati / Murongo",
+      "country_pair": [
+        "TZ",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Kikagati",
+        "Murongo"
+      ],
+      "source_ids": [
+        "E-UG-IMM",
+        "E-UNHCR-2021",
+        "E-TZ-NAO",
+        "E-TZ-POPCAB-2024"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-9a4391cf06604bbe"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "UNHCR Kikagati coordinate lies 36 m from the pilot primary-road bridge contact; Tanzania audit names Murongo as a road PoE. The matching border segment and transport mode support the paired reference.",
+      "coordinate_status": "independent_reference_corroborated",
+      "notes": "External coordinates are dated 2021; they corroborate identity, not uninterrupted operation over the closure-register period.",
+      "benchmark_role": "core_formal_road",
+      "external_coordinates": [
+        {
+          "source_id": "E-UNHCR-2021",
+          "coordinate": [
+            30.648244,
+            -1.065269
+          ],
+          "source_row": 10,
+          "reported_status": "Official"
+        }
+      ],
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-east.json",
+      "is_closure_evidence": false,
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": true,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://www.immigration.go.ug/list-borders-according-regions",
+        "https://data.unhcr.org/en/documents/details/86907",
+        "https://www.nao.go.tz/uploads/Performance_Audit_on_the_Management_of_Invasive_Alien_Species_in_Terrestrial_Environment.pdf",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11618027/"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-9a4391cf06604bbe",
+          "coordinate": [
+            30.648207529394096,
+            -1.0655921755692046
+          ],
+          "route_osm_ids": [
+            178431655
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "supported"
+        }
+      ],
+      "osm_reference_coordinate": [
+        30.648207529394096,
+        -1.0655921755692046
+      ],
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "main_road_candidate",
+      "source_document_ids": [
+        "SRC-636262fc846f",
+        "SRC-6c97a1f44204",
+        "SRC-7310056e83eb",
+        "SRC-a2d146f5ff18"
+      ]
+    },
+    {
+      "id": "UG-TZ-BUGANGO-ROAD",
+      "canonical_name": "Bugango",
+      "country_pair": [
+        "TZ",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Bugango"
+      ],
+      "source_ids": [
+        "E-UG-IMM",
+        "E-UNHCR-2021",
+        "E-TZ-NAO",
+        "E-TZ-POPCAB-2024"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-b373c7aac2358938"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "Government sources document Bugango. However, the UNHCR point 31.109511,-0.999067 lies roughly 11 km east of the major-road candidate 31.009233,-0.999995. Place identity or coordinate error is unresolved.",
+      "coordinate_status": "conflicting_external_coordinates",
+      "notes": "UNHCR 2021 calls its Bugango unofficial; later fieldwork calls Bugango official and Tanzania audit lists a road PoE. These may refer to different locations or changes; do not reconcile by assumption.",
+      "benchmark_role": "additional_named_land_reference",
+      "external_coordinates": [
+        {
+          "source_id": "E-UNHCR-2021",
+          "coordinate": [
+            31.109511,
+            -0.999067
+          ],
+          "source_row": 9,
+          "reported_status": "Unofficial"
+        }
+      ],
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-east.json",
+      "is_closure_evidence": false,
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://www.immigration.go.ug/list-borders-according-regions",
+        "https://data.unhcr.org/en/documents/details/86907",
+        "https://www.nao.go.tz/uploads/Performance_Audit_on_the_Management_of_Invasive_Alien_Species_in_Terrestrial_Environment.pdf",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11618027/"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-b373c7aac2358938",
+          "coordinate": [
+            31.00923332211604,
+            -0.9999953597310368
+          ],
+          "route_osm_ids": [
+            739477957
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "provisional"
+        }
+      ],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-636262fc846f",
+        "SRC-6c97a1f44204",
+        "SRC-7310056e83eb",
+        "SRC-a2d146f5ff18"
+      ]
+    },
+    {
+      "id": "UG-TZ-KASHENYE-ROAD",
+      "canonical_name": "Kashenye",
+      "country_pair": [
+        "TZ",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Kashenye"
+      ],
+      "source_ids": [
+        "E-TZ-POPCAB-2024"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Primary 2023 fieldwork identifies Kashenye as a PoE; pilot has several nearby road contacts but no sufficiently supported exact association.",
+      "coordinate_status": "unresolved",
+      "notes": "Official classification is a fieldwork report, not checked against current gazette. A secondary-road point 1.9 km from the settlement is not accepted merely for proximity.",
+      "benchmark_role": "fieldwork_named_reference",
+      "candidate_search_context_ids": [
+        "osm-5d8b75cb6efbc816",
+        "osm-20d650a979c62eee",
+        "osm-0cd40b654fb7abf5"
+      ],
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-east.json",
+      "is_closure_evidence": false,
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11618027/"
+      ],
+      "osm_candidates": [],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-a2d146f5ff18"
+      ]
+    },
+    {
+      "id": "UG-TZ-MINZIRO-ROAD",
+      "canonical_name": "Minziro",
+      "country_pair": [
+        "TZ",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Minziro"
+      ],
+      "source_ids": [
+        "E-TZ-POPCAB-2024"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Primary 2023 fieldwork identifies Minziro among Tanzania-Uganda PoEs; no exact road contact confidently identified.",
+      "coordinate_status": "unresolved",
+      "notes": "Formal classification and motor-vehicle capacity need corroboration. No nearest-settlement geocoding accepted.",
+      "benchmark_role": "fieldwork_named_reference",
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-east.json",
+      "is_closure_evidence": false,
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11618027/"
+      ],
+      "osm_candidates": [],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-a2d146f5ff18"
+      ]
+    },
+    {
+      "id": "UG-TZ-KANYIGO-ROAD",
+      "canonical_name": "Kanyigo",
+      "country_pair": [
+        "TZ",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Kanyigo"
+      ],
+      "source_ids": [
+        "E-TZ-NAO",
+        "E-TZ-POPCAB-2024"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Tanzania audit lists Kanyigo as a road entry point and 2023 fieldwork describes it as an unofficial Uganda-Tanzania route; exact alignment is unresolved.",
+      "coordinate_status": "unresolved",
+      "notes": "Preserve the source classification conflict; no conclusion that the crossing was open or closed.",
+      "benchmark_role": "additional_named_land_reference",
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-east.json",
+      "is_closure_evidence": false,
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://www.nao.go.tz/uploads/Performance_Audit_on_the_Management_of_Invasive_Alien_Species_in_Terrestrial_Environment.pdf",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11618027/"
+      ],
+      "osm_candidates": [],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-7310056e83eb",
+        "SRC-a2d146f5ff18"
+      ]
+    },
+    {
+      "id": "UG-SS-ELEGU-ROAD",
+      "canonical_name": "Elegu–Nimule",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Elegu",
+        "Nimule",
+        "Atiak/Elegu"
+      ],
+      "source_ids": [
+        "N-DCIC-REGIONS",
+        "N-URA-PAIRS-2023",
+        "N-URA-OSBP",
+        "N-URA-TRANSIT-2023",
+        "N-UNHCR-GPS-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-6a12feb9e54a44eb"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Published UNHCR Elegu point lies 486 m from this unique primary-road border contact. OSM way 266617731 is a bridge named Nimule–Gulu, A43; URA identifies the Gulu–Elegu route and Elegu/Nimule pair. The next nearest SS/UG candidate is 5.45 km from the source point.",
+      "coordinate_status": "OSM road/boundary contact supports the named corridor; published 2021 facility point retained separately; exact facility footprint not surveyed.",
+      "notes": "Reject osm-0625f6d45ad03c49 as an Elegu event location: its name link uses a different Elegu village in the Moyo area, roughly 30 km west of the independently sourced Amuru crossing.",
+      "current_operation_status": "not_assessed",
+      "is_closure_evidence": false,
+      "external_reference": {
+        "source_id": "N-UNHCR-GPS-2021",
+        "worksheet": "Border_Crossing",
+        "source_row": 2,
+        "name_as_published": "Elegu",
+        "district": "Amuru",
+        "coordinate": [
+          32.070767,
+          3.567556
+        ],
+        "coordinate_accuracy_m": null,
+        "status_as_published": "Official",
+        "coordinate_basis": "UNHCR named border-point reference; not assumed to lie exactly on the boundary",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-north.json",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": true,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://www.immigration.go.ug/list-borders-according-regions",
+        "https://thetaxman.ura.go.ug/?p=4130",
+        "https://ura.go.ug/en/import-export/one-stop-border-post/",
+        "https://ura.go.ug/en/enforcement-questions-and-answers/",
+        "https://data.unhcr.org/en/documents/details/86907"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-6a12feb9e54a44eb",
+          "coordinate": [
+            32.07337111263835,
+            3.5710891136309444
+          ],
+          "route_osm_ids": [
+            266617731
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "supported"
+        }
+      ],
+      "osm_reference_coordinate": [
+        32.07337111263835,
+        3.5710891136309444
+      ],
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "main_road_candidate",
+      "source_document_ids": [
+        "SRC-3692c984a887",
+        "SRC-636262fc846f",
+        "SRC-6c97a1f44204",
+        "SRC-be7538dfa280",
+        "SRC-f44ddd0727fb"
+      ]
+    },
+    {
+      "id": "UG-SS-ORABA-ROAD",
+      "canonical_name": "Oraba–Kaya",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Oraba",
+        "Kaya"
+      ],
+      "source_ids": [
+        "N-DCIC-REGIONS",
+        "N-URA-PAIRS-2023",
+        "N-URA-TRANSIT-2023",
+        "N-MEACA-ORABA-2026",
+        "N-UNHCR-GPS-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-fbff1988e9d2aedc"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "UNHCR Oraba point is 685 m from this Yei–Koboko road contact; OSM controls at 21, 196 and 242 m bracket the frontier, two explicitly tagged UG and SS. Government sources identify the Oraba/Kaya pair and Arua–Oraba route.",
+      "coordinate_status": "Supported corridor; source facility coordinate and OSM border-contact coordinate are distinct, neither treated as surveyed accuracy.",
+      "notes": "The 19 repeated contacts of Yei–Koboko way 613417039 are on the CD/UG frontier and must not be relabelled as 19 Oraba crossings.",
+      "current_operation_status": "not_assessed",
+      "is_closure_evidence": false,
+      "external_reference": {
+        "source_id": "N-UNHCR-GPS-2021",
+        "worksheet": "Border_Crossing",
+        "source_row": 20,
+        "name_as_published": "Oraba",
+        "district": "Koboko",
+        "coordinate": [
+          30.883438,
+          3.533634
+        ],
+        "coordinate_accuracy_m": null,
+        "status_as_published": "Official",
+        "coordinate_basis": "UNHCR named border-point reference; not assumed to lie exactly on the boundary",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-north.json",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": true,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://www.immigration.go.ug/list-borders-according-regions",
+        "https://thetaxman.ura.go.ug/?p=4130",
+        "https://ura.go.ug/en/enforcement-questions-and-answers/",
+        "https://www.meaca.go.ug/news/meaca-strengthens-cross-border-security-through-stakeholder-engagement-oraba-border-post",
+        "https://data.unhcr.org/en/documents/details/86907"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-fbff1988e9d2aedc",
+          "coordinate": [
+            30.883275963457567,
+            3.539824147783346
+          ],
+          "route_osm_ids": [
+            1021775364
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "supported"
+        }
+      ],
+      "osm_reference_coordinate": [
+        30.883275963457567,
+        3.539824147783346
+      ],
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "main_road_candidate",
+      "source_document_ids": [
+        "SRC-636262fc846f",
+        "SRC-6c97a1f44204",
+        "SRC-be7538dfa280",
+        "SRC-f01930309c4d",
+        "SRC-f44ddd0727fb"
+      ]
+    },
+    {
+      "id": "UG-SS-AFOJI-ROAD",
+      "canonical_name": "Afoji–Kajo Keji",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Afoji",
+        "Afogi"
+      ],
+      "source_ids": [
+        "N-DCIC-REGIONS",
+        "N-URA-PAIRS-2023",
+        "N-URA-TRANSIT-2023",
+        "N-UNHCR-GPS-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-75bba08529b79e5f"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "The candidate is on the named Ajumani–Kajo Keji road, near a named Kajo Keji County/Moyo District border-control building. UNHCR Afoji coordinate is 1,418 m from the candidate and about 727 m from that retained route geometry, so the exact facility/contact relationship remains unresolved.",
+      "coordinate_status": "Use the UNHCR2021 point as a dated source reference only; candidate alignment remains unresolved.",
+      "notes": "Kajo Keji is the opposite operation area named by URA; it is not asserted to be a colocated checkpoint name. Do not choose the closer-to-Afoji-village minor road osm-45f50d408db27bde merely from proximity.",
+      "current_operation_status": "not_assessed",
+      "is_closure_evidence": false,
+      "external_reference": {
+        "source_id": "N-UNHCR-GPS-2021",
+        "worksheet": "Border_Crossing",
+        "source_row": 26,
+        "name_as_published": "Afoji",
+        "district": "Moyo",
+        "coordinate": [
+          31.673564,
+          3.714692
+        ],
+        "coordinate_accuracy_m": null,
+        "status_as_published": "Official",
+        "coordinate_basis": "UNHCR named border-point reference; not assumed to lie exactly on the boundary",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-north.json",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://www.immigration.go.ug/list-borders-according-regions",
+        "https://thetaxman.ura.go.ug/?p=4130",
+        "https://ura.go.ug/en/enforcement-questions-and-answers/",
+        "https://data.unhcr.org/en/documents/details/86907"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-75bba08529b79e5f",
+          "coordinate": [
+            31.678079644464358,
+            3.7027022542936567
+          ],
+          "route_osm_ids": [
+            970711277
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "provisional"
+        }
+      ],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-636262fc846f",
+        "SRC-6c97a1f44204",
+        "SRC-be7538dfa280",
+        "SRC-f44ddd0727fb"
+      ]
+    },
+    {
+      "id": "UG-SS-NGOMOROMO-ROAD",
+      "canonical_name": "Ngomoromo–Pogei",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Ngomoromo",
+        "Ngoromoro"
+      ],
+      "source_ids": [
+        "N-DCIC-REGIONS",
+        "N-URA-PAIRS-2023",
+        "N-UNHCR-GPS-2021",
+        "N-DCIC-PERFORMANCE-2018",
+        "N-LAMWO-DDP-2020"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-f0bab3fdb31f36b0"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "The UNHCR point falls about 5 m from OSM road 27996413, the same retained road that generates this candidate, supporting a corridor association. The OSM boundary contact is 7,658 m from the source point. This large offset must not be silently treated as a precise post coordinate.",
+      "coordinate_status": "Named source point verified for 2021; border-contact alignment unresolved, with documentary boundary-demarcation concern.",
+      "notes": "Pogei spelling is retained from the URA source as opposite-side operation area. Similar variants Poge/Pogee were found in secondary reporting but are not automatically accepted aliases here.",
+      "current_operation_status": "not_assessed",
+      "is_closure_evidence": false,
+      "external_reference": {
+        "source_id": "N-UNHCR-GPS-2021",
+        "worksheet": "Border_Crossing",
+        "source_row": 23,
+        "name_as_published": "Ngomoromo",
+        "district": "Lamwo",
+        "coordinate": [
+          32.576667,
+          3.699167
+        ],
+        "coordinate_accuracy_m": null,
+        "status_as_published": "Official",
+        "coordinate_basis": "UNHCR named border-point reference; not assumed to lie exactly on the boundary",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-north.json",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://www.immigration.go.ug/list-borders-according-regions",
+        "https://thetaxman.ura.go.ug/?p=4130",
+        "https://data.unhcr.org/en/documents/details/86907",
+        "https://budget.finance.go.ug/sites/default/files/Sector%20Spending%20Agency%20Budgets%20and%20Performance/2017-2018_QuarterlyReport_Q4_120_NationalCitizenshipandImmigrationControl_8_22_20188_21_59AM_Final.pdf",
+        "https://lamwo.go.ug/sites/default/files/Approved%20Lamwo%20District%20Development%20Plan%20III.pdf"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-f0bab3fdb31f36b0",
+          "coordinate": [
+            32.53595045243757,
+            3.755049845630128
+          ],
+          "route_osm_ids": [
+            27996413
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "provisional"
+        }
+      ],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-636262fc846f",
+        "SRC-6c97a1f44204",
+        "SRC-be7538dfa280",
+        "SRC-c2bdbb464ae2",
+        "SRC-e63dd203dcc2"
+      ]
+    },
+    {
+      "id": "UG-SS-AWENO-OLWIYO-ROAD",
+      "canonical_name": "Aweno-Olwiyo–Lobone",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Aweno-Olwiyo",
+        "Awenolwio"
+      ],
+      "source_ids": [
+        "N-URA-PAIRS-2023",
+        "N-UNHCR-GPS-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-150dec370bf38176"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "UNHCR Aweno-Olwiyo point is about 26 m from OSM way 633316615 (Magwi–Farajok), supporting the route corridor. The generated border contact is 4,115 m farther north than the source point; no evidence resolves the exact checkpoint versus mapped-boundary relationship.",
+      "coordinate_status": "Source point retained separately; candidate is provisional corridor context only.",
+      "notes": "Do not silently equate the immigration list’s Owino-Drewu with this crossing. That potential alias requires confirmation. Lobone is the paired operation area in URA reporting.",
+      "current_operation_status": "not_assessed",
+      "is_closure_evidence": false,
+      "external_reference": {
+        "source_id": "N-UNHCR-GPS-2021",
+        "worksheet": "Border_Crossing",
+        "source_row": 24,
+        "name_as_published": "Aweno-Olwiyo",
+        "district": "Lamwo",
+        "coordinate": [
+          32.756389,
+          3.740556
+        ],
+        "coordinate_accuracy_m": null,
+        "status_as_published": "Official",
+        "coordinate_basis": "UNHCR named border-point reference; not assumed to lie exactly on the boundary",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-north.json",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://thetaxman.ura.go.ug/?p=4130",
+        "https://data.unhcr.org/en/documents/details/86907"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-150dec370bf38176",
+          "coordinate": [
+            32.75615435751767,
+            3.7777697039202773
+          ],
+          "route_osm_ids": [
+            633316615
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "provisional"
+        }
+      ],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-636262fc846f",
+        "SRC-be7538dfa280"
+      ]
+    },
+    {
+      "id": "UG-SS-MADI-OPEI-ROAD",
+      "canonical_name": "Madi Opei–Tdetenya",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Madi Opei",
+        "Madi-Opei",
+        "Madiope"
+      ],
+      "source_ids": [
+        "N-DCIC-REGIONS",
+        "N-URA-PAIRS-2023",
+        "N-URA-TRANSIT-2023",
+        "N-UNHCR-GPS-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-8802d9bce5833653"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "UNHCR Madi-Opei point is 339 m from this unique primary-road I5 contact; the next nearest SS/UG candidate is 6.38 km away. URA independently names the Madi Opei transit route and Madiope/Tdetenya operation pair.",
+      "coordinate_status": "Supported corridor with separate 2021 facility and 2026 OSM contact coordinates; exact installation not surveyed.",
+      "notes": "Musingo is independently documented as a South Sudan border road terminus, but source-backed equivalence to Madi Opei/Tdetenya has not been established in this review; retained as an unresolved alias lead rather than counted as another verified distinct crossing.",
+      "current_operation_status": "not_assessed",
+      "is_closure_evidence": false,
+      "external_reference": {
+        "source_id": "N-UNHCR-GPS-2021",
+        "worksheet": "Border_Crossing",
+        "source_row": 25,
+        "name_as_published": "Madi-Opei",
+        "district": "Lamwo",
+        "coordinate": [
+          33.201484,
+          3.773955
+        ],
+        "coordinate_accuracy_m": null,
+        "status_as_published": "Official",
+        "coordinate_basis": "UNHCR named border-point reference; not assumed to lie exactly on the boundary",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-north.json",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": true,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://www.immigration.go.ug/list-borders-according-regions",
+        "https://thetaxman.ura.go.ug/?p=4130",
+        "https://ura.go.ug/en/enforcement-questions-and-answers/",
+        "https://data.unhcr.org/en/documents/details/86907"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-8802d9bce5833653",
+          "coordinate": [
+            33.20251908848111,
+            3.776843429145652
+          ],
+          "route_osm_ids": [
+            1217180806
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "supported"
+        }
+      ],
+      "osm_reference_coordinate": [
+        33.20251908848111,
+        3.776843429145652
+      ],
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "main_road_candidate",
+      "source_document_ids": [
+        "SRC-636262fc846f",
+        "SRC-6c97a1f44204",
+        "SRC-be7538dfa280",
+        "SRC-f44ddd0727fb"
+      ]
+    },
+    {
+      "id": "UG-SS-WALIGO-ROAD",
+      "canonical_name": "Waligo",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Waligo"
+      ],
+      "source_ids": [
+        "N-UNHCR-GPS-2021",
+        "N-UPDF-WALIGO-2025",
+        "N-LAMWO-DDP-2020"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-355234de51c93270"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "UNHCR Waligo point lies about 7 m from OSM way 305100543, a tertiary road retained in the all-road output. Its boundary intersection is 9,805 m away, so this is a corridor lead, not a resolved checkpoint coordinate.",
+      "coordinate_status": "2021 source point and 2025 named checkpoint independently supported; OSM border-contact alignment unresolved.",
+      "notes": "Absent from the 76 major-road candidates because the route is tertiary. Official status belongs to the 2021 UNHCR source; 2025 evidence establishes a checkpoint, not its unrestricted operation.",
+      "current_operation_status": "not_assessed",
+      "is_closure_evidence": false,
+      "external_reference": {
+        "source_id": "N-UNHCR-GPS-2021",
+        "worksheet": "Border_Crossing",
+        "source_row": 22,
+        "name_as_published": "Waligo",
+        "district": "Lamwo",
+        "coordinate": [
+          32.363889,
+          3.606667
+        ],
+        "coordinate_accuracy_m": null,
+        "status_as_published": "Official",
+        "coordinate_basis": "UNHCR named border-point reference; not assumed to lie exactly on the boundary",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-north.json",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://data.unhcr.org/en/documents/details/86907",
+        "https://www.updf.go.ug/disarmament-operation/illegal-firearm-recovered-two-suspects-arrested-at-uganda-south-sudan-border/amp/",
+        "https://lamwo.go.ug/sites/default/files/Approved%20Lamwo%20District%20Development%20Plan%20III.pdf"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-355234de51c93270",
+          "coordinate": [
+            32.32859821684389,
+            3.6879434949993546
+          ],
+          "route_osm_ids": [
+            305100543
+          ],
+          "road_tiers": [
+            "other"
+          ],
+          "association_status": "provisional"
+        }
+      ],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-636262fc846f",
+        "SRC-8802a277ce27",
+        "SRC-e63dd203dcc2"
+      ]
+    },
+    {
+      "id": "UG-SS-OPOTPOT-ROAD",
+      "canonical_name": "Opotpot",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Opotpot",
+        "Opot pot"
+      ],
+      "source_ids": [
+        "N-DCIC-REGIONS",
+        "N-DCIC-PERFORMANCE-2018"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "The independent immigration list names Opotpot; the performance report places its planned facilities along the South Sudan border. No candidate can be confidently assigned without exact route or facility evidence.",
+      "coordinate_status": "No accepted coordinate.",
+      "notes": "Road mode is a working classification for this listed land service point; vehicle access has not been established. Do not place it at the similarly named OSM Opotipot settlement or a nearby park road.",
+      "current_operation_status": "not_assessed",
+      "is_closure_evidence": false,
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-north.json",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://www.immigration.go.ug/list-borders-according-regions",
+        "https://budget.finance.go.ug/sites/default/files/Sector%20Spending%20Agency%20Budgets%20and%20Performance/2017-2018_QuarterlyReport_Q4_120_NationalCitizenshipandImmigrationControl_8_22_20188_21_59AM_Final.pdf"
+      ],
+      "osm_candidates": [],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-6c97a1f44204",
+        "SRC-c2bdbb464ae2"
+      ]
+    },
+    {
+      "id": "UG-SS-BUSIA-KOBOKO-ROAD",
+      "canonical_name": "Busia (Koboko)",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Busia"
+      ],
+      "source_ids": [
+        "N-UNHCR-GPS-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-c58ebfec916f9441",
+        "osm-773f516d66634ea5"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "The 2021 UNHCR Busia/Koboko point lies 38 m from a track contact and 41 m from a tertiary-road contact at the SS/UG boundary. The two candidates are a facility/route grouping question; neither is automatically selected.",
+      "coordinate_status": "Dated source point retained; nearby route contacts require facility grouping review.",
+      "notes": "UNHCR classified this point unofficial in 2021. This Busia is on the South Sudan frontier, not the Kenya/Uganda Busia OSBP; repeated names require country and district constraints.",
+      "current_operation_status": "not_assessed",
+      "is_closure_evidence": false,
+      "external_reference": {
+        "source_id": "N-UNHCR-GPS-2021",
+        "worksheet": "Border_Crossing",
+        "source_row": 21,
+        "name_as_published": "Busia",
+        "district": "Koboko",
+        "coordinate": [
+          30.995325,
+          3.704273
+        ],
+        "coordinate_accuracy_m": null,
+        "status_as_published": "Unofficial",
+        "coordinate_basis": "UNHCR named border-point reference; not assumed to lie exactly on the boundary",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-north.json",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://data.unhcr.org/en/documents/details/86907"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-c58ebfec916f9441",
+          "coordinate": [
+            30.994983325175408,
+            3.7043057417074436
+          ],
+          "route_osm_ids": [
+            676967649
+          ],
+          "road_tiers": [
+            "other"
+          ],
+          "association_status": "provisional"
+        },
+        {
+          "candidate_id": "osm-773f516d66634ea5",
+          "coordinate": [
+            30.995672116093786,
+            3.704386341461371
+          ],
+          "route_osm_ids": [
+            676967528
+          ],
+          "road_tiers": [
+            "other"
+          ],
+          "association_status": "provisional"
+        }
+      ],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-636262fc846f"
+      ]
+    },
+    {
+      "id": "UG-SS-ANGILIA-ROAD",
+      "canonical_name": "Angilia",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "aliases": [
+        "Angilia"
+      ],
+      "source_ids": [
+        "N-UNHCR-GPS-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "UNHCR identifies an Angilia border point in Yumbe; the nearest SS/UG candidate, osm-a3ee1e83deb21001, is 2,162 m away and its retained route stays about 2,044 m from the source point. No sufficient route or identity evidence supports assigning it.",
+      "coordinate_status": "Dated UNHCR coordinate available; no accepted candidate link.",
+      "notes": "UNHCR classified this point unofficial in 2021. Present facility status and movement types are unresolved.",
+      "current_operation_status": "not_assessed",
+      "is_closure_evidence": false,
+      "external_reference": {
+        "source_id": "N-UNHCR-GPS-2021",
+        "worksheet": "Border_Crossing",
+        "source_row": 34,
+        "name_as_published": "Angilia",
+        "district": "Yumbe",
+        "coordinate": [
+          31.355364,
+          3.758435
+        ],
+        "coordinate_accuracy_m": null,
+        "status_as_published": "Unofficial",
+        "coordinate_basis": "UNHCR named border-point reference; not assumed to lie exactly on the boundary",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_status": "working transport classification; precise facility mode and vehicle access require source-specific review",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-north.json",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "working transport classification; precise facility mode and vehicle access require source-specific review"
+      },
+      "source_urls": [
+        "https://data.unhcr.org/en/documents/details/86907"
+      ],
+      "osm_candidates": [],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-636262fc846f"
+      ]
+    },
+    {
+      "id": "UG-RW-KATUNA-ROAD",
+      "canonical_name": "Katuna / Gatuna",
+      "country_pair": [
+        "RW",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Katuna",
+        "Gatuna"
+      ],
+      "source_ids": [
+        "W-RW-DGIE",
+        "W-RW-GAZETTE-2020",
+        "W-URA-OSBP",
+        "W-URA-ROUTES",
+        "W-UNHCR-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-60accc5e3da83ba8"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Independent named point is 107 m from the NR3 trunk bridge; paired OSM border controls are 180/215 m from the contact. Country pair and route support the identity.",
+      "coordinate_status": "osm_candidate_location_supported; no independent survey",
+      "notes": "",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-60accc5e3da83ba8": 107
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 11,
+        "source_name": "Katuna",
+        "coordinate": [
+          30.011244,
+          -1.423978
+        ],
+        "status_as_published": "Official",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": true,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "road_supported_by_route_or_geometry"
+      },
+      "source_urls": [
+        "https://www.migration.gov.rw/our-services/border-management",
+        "https://www.migration.gov.rw/fileadmin/user_upload/pdf_files/official_gazette_n__41_of_21.12.2020_imipaka_border_post__2_.pdf",
+        "https://ura.go.ug/en/import-export/one-stop-border-post/",
+        "https://ura.go.ug/en/enforcement-questions-and-answers/",
+        "https://data.unhcr.org/en/documents/details/86907"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-60accc5e3da83ba8",
+          "coordinate": [
+            30.011723209820374,
+            -1.4248080331939812
+          ],
+          "route_osm_ids": [
+            694452639
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "supported"
+        }
+      ],
+      "osm_reference_coordinate": [
+        30.011723209820374,
+        -1.4248080331939812
+      ],
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "main_road_candidate",
+      "source_document_ids": [
+        "SRC-3692c984a887",
+        "SRC-557f8841b71a",
+        "SRC-636262fc846f",
+        "SRC-6ef88c2a0d90",
+        "SRC-f44ddd0727fb"
+      ]
+    },
+    {
+      "id": "UG-RW-CYANIKA-ROAD",
+      "canonical_name": "Cyanika",
+      "country_pair": [
+        "RW",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Cyanika",
+        "Kyanika"
+      ],
+      "source_ids": [
+        "W-RW-DGIE",
+        "W-RW-GAZETTE-2020",
+        "W-URA-ROUTES",
+        "W-UNHCR-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-377ab9fbbb397c7e"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Candidate lies on named Kisoro–Cyanika primary road with Ugandan and Rwandan tagged controls 45/123 m away. UNHCR point is 652 m away on the Rwanda side, supporting locality rather than exact gate.",
+      "coordinate_status": "osm_candidate_location_supported; no independent survey",
+      "notes": "Original group includes a service road. Principal crossing identity is supported; individual lanes are not separate facilities.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-377ab9fbbb397c7e": 652
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 19,
+        "source_name": "Cyanika",
+        "coordinate": [
+          29.743092,
+          -1.34567
+        ],
+        "status_as_published": "Official",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": true,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "road_supported_by_route_or_geometry"
+      },
+      "source_urls": [
+        "https://www.migration.gov.rw/our-services/border-management",
+        "https://www.migration.gov.rw/fileadmin/user_upload/pdf_files/official_gazette_n__41_of_21.12.2020_imipaka_border_post__2_.pdf",
+        "https://ura.go.ug/en/enforcement-questions-and-answers/",
+        "https://data.unhcr.org/en/documents/details/86907"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-377ab9fbbb397c7e",
+          "coordinate": [
+            29.740233240220146,
+            -1.3405475009049739
+          ],
+          "route_osm_ids": [
+            262746767,
+            370731275
+          ],
+          "road_tiers": [
+            "major",
+            "other"
+          ],
+          "association_status": "supported"
+        }
+      ],
+      "osm_reference_coordinate": [
+        29.740233240220146,
+        -1.3405475009049739
+      ],
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "main_road_candidate",
+      "source_document_ids": [
+        "SRC-557f8841b71a",
+        "SRC-636262fc846f",
+        "SRC-6ef88c2a0d90",
+        "SRC-f44ddd0727fb"
+      ]
+    },
+    {
+      "id": "UG-RW-MIRAMA-HILLS-ROAD",
+      "canonical_name": "Mirama Hills / Kagitumba",
+      "country_pair": [
+        "RW",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Mirama Hills",
+        "Mirama Hill",
+        "Kagitumba"
+      ],
+      "source_ids": [
+        "W-RW-DGIE",
+        "W-RW-GAZETTE-2020",
+        "W-URA-OSBP",
+        "W-URA-ROUTES",
+        "W-UNHCR-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-a3aad857d4ad32cd"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Named Kayonza–Kagitumba trunk bridge is 106 m from independent Mirama Hills point; paired identity confirmed by URA. A second unclassified bridge 64 m from reference is retained as a separate unresolved route, not a second named crossing.",
+      "coordinate_status": "osm_candidate_location_supported; no independent survey",
+      "notes": "Related unclassified contact osm-410108df88e55d7e is not automatically a distinct facility or accepted lane.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-a3aad857d4ad32cd": 106
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 32,
+        "source_name": "Mirama Hills",
+        "coordinate": [
+          30.459192,
+          -1.051464
+        ],
+        "status_as_published": "Official",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": true,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "road_supported_by_route_or_geometry"
+      },
+      "source_urls": [
+        "https://www.migration.gov.rw/our-services/border-management",
+        "https://www.migration.gov.rw/fileadmin/user_upload/pdf_files/official_gazette_n__41_of_21.12.2020_imipaka_border_post__2_.pdf",
+        "https://ura.go.ug/en/import-export/one-stop-border-post/",
+        "https://ura.go.ug/en/enforcement-questions-and-answers/",
+        "https://data.unhcr.org/en/documents/details/86907"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-a3aad857d4ad32cd",
+          "coordinate": [
+            30.4596067,
+            -1.0523240999999997
+          ],
+          "route_osm_ids": [
+            173178984,
+            906677187
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "supported"
+        }
+      ],
+      "osm_reference_coordinate": [
+        30.4596067,
+        -1.0523240999999997
+      ],
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "main_road_candidate",
+      "source_document_ids": [
+        "SRC-3692c984a887",
+        "SRC-557f8841b71a",
+        "SRC-636262fc846f",
+        "SRC-6ef88c2a0d90",
+        "SRC-f44ddd0727fb"
+      ]
+    },
+    {
+      "id": "UG-RW-RWEMPASHA-ROAD",
+      "canonical_name": "Rwempasha / Kizinga",
+      "country_pair": [
+        "RW",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Rwempasha",
+        "Kizinga"
+      ],
+      "source_ids": [
+        "W-RW-DGIE",
+        "W-RW-GAZETTE-2020",
+        "W-RW-ROUTES-2007",
+        "W-NCIC-LIST"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-497a2c4357f00345"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "Official route identifies Kizinga–Rwempasha. Candidate is a secondary road near Kizinga II, but there is no independently georeferenced facility in the inspected sources.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "Do not use the unrelated Kizinga settlement at 30.083333,-1.266667 or Kizinga in Rubirizi as an alias match.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "road_supported_by_route_or_geometry"
+      },
+      "source_urls": [
+        "https://www.migration.gov.rw/our-services/border-management",
+        "https://www.migration.gov.rw/fileadmin/user_upload/pdf_files/official_gazette_n__41_of_21.12.2020_imipaka_border_post__2_.pdf",
+        "https://rwandatrade.rw/media/Ministerial_Decree_No_003-07_of_09.05.2007_Implementing_the_Law_No_21-2006_of_28.04.2006_Establishing_the_Customs_Law%20%281%29.pdf",
+        "https://www.immigration.go.ug/list-borders-according-regions"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-497a2c4357f00345",
+          "coordinate": [
+            30.30667420487028,
+            -1.1463372999219767
+          ],
+          "route_osm_ids": [
+            907053947
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "provisional"
+        }
+      ],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-451b26ba2727",
+        "SRC-557f8841b71a",
+        "SRC-6c97a1f44204",
+        "SRC-6ef88c2a0d90"
+      ]
+    },
+    {
+      "id": "UG-RW-BUHITA-ROAD",
+      "canonical_name": "Buhita",
+      "country_pair": [
+        "RW",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_historical_route",
+      "aliases": [
+        "Buhita"
+      ],
+      "source_ids": [
+        "W-RW-DGIE",
+        "W-RW-GAZETTE-2020",
+        "W-RW-ROUTES-2007"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-31aec44990c31333"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "Official source names Bigaga–Buhita route; an unclassified contact is 236 m from OSM Buhita village. That locality-only proximity does not establish the exact post.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "Several other contacts near Buhita remain possible. Formal designation does not prove present operation.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "road_supported_by_historical_route"
+      },
+      "source_urls": [
+        "https://www.migration.gov.rw/our-services/border-management",
+        "https://www.migration.gov.rw/fileadmin/user_upload/pdf_files/official_gazette_n__41_of_21.12.2020_imipaka_border_post__2_.pdf",
+        "https://rwandatrade.rw/media/Ministerial_Decree_No_003-07_of_09.05.2007_Implementing_the_Law_No_21-2006_of_28.04.2006_Establishing_the_Customs_Law%20%281%29.pdf"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-31aec44990c31333",
+          "coordinate": [
+            29.918655346562126,
+            -1.4819829992550748
+          ],
+          "route_osm_ids": [
+            679775991
+          ],
+          "road_tiers": [
+            "other"
+          ],
+          "association_status": "provisional"
+        }
+      ],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-451b26ba2727",
+        "SRC-557f8841b71a",
+        "SRC-6ef88c2a0d90"
+      ]
+    },
+    {
+      "id": "UG-RW-BUZIBA-ROAD",
+      "canonical_name": "Buziba",
+      "country_pair": [
+        "RW",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "land_post; vehicle_access_unverified",
+      "aliases": [
+        "Buziba"
+      ],
+      "source_ids": [
+        "W-RW-DGIE",
+        "W-RW-GAZETTE-2020"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-72ae61f5039d8f35"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "Designated post is independently established; one unclassified contact is 891 m from a similarly named settlement, insufficient for acceptance.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "Ugandan counterpart alias and exact coordinate remain unresolved.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "land_post; vehicle_access_unverified"
+      },
+      "source_urls": [
+        "https://www.migration.gov.rw/our-services/border-management",
+        "https://www.migration.gov.rw/fileadmin/user_upload/pdf_files/official_gazette_n__41_of_21.12.2020_imipaka_border_post__2_.pdf"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-72ae61f5039d8f35",
+          "coordinate": [
+            30.232379871130785,
+            -1.2509601714678993
+          ],
+          "route_osm_ids": [
+            514641841
+          ],
+          "road_tiers": [
+            "other"
+          ],
+          "association_status": "provisional"
+        }
+      ],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-557f8841b71a",
+        "SRC-6ef88c2a0d90"
+      ]
+    },
+    {
+      "id": "UG-CD-BUNAGANA-ROAD",
+      "canonical_name": "Bunagana",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Bunagana"
+      ],
+      "source_ids": [
+        "W-NCIC-LIST",
+        "W-URA-ROUTES",
+        "W-UNHCR-2021",
+        "W-UNHCR-2025",
+        "W-FCDO-UG"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-2e13392e3235206d"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Independent Bunagana border point lies 135 m from the joined primary-road endpoints on the correct frontier. A nearer track is not substituted for the principal road.",
+      "coordinate_status": "osm_candidate_location_supported; no independent survey",
+      "notes": "Track contacts around Bunagana do not independently inherit closure evidence.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-2e13392e3235206d": 135
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 17,
+        "source_name": "Bunagana",
+        "coordinate": [
+          29.599436,
+          -1.294306
+        ],
+        "status_as_published": "Official",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": true,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "road_supported_by_route_or_geometry"
+      },
+      "source_urls": [
+        "https://www.immigration.go.ug/list-borders-according-regions",
+        "https://ura.go.ug/en/enforcement-questions-and-answers/",
+        "https://data.unhcr.org/en/documents/details/86907",
+        "https://data.unhcr.org/en/documents/download/118063",
+        "https://www.gov.uk/foreign-travel-advice/uganda/regional-risks"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-2e13392e3235206d",
+          "coordinate": [
+            29.5985472,
+            -1.2951306999999983
+          ],
+          "route_osm_ids": [
+            940396545,
+            1065807214
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "supported"
+        }
+      ],
+      "osm_reference_coordinate": [
+        29.5985472,
+        -1.2951306999999983
+      ],
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "main_road_candidate",
+      "source_document_ids": [
+        "SRC-636262fc846f",
+        "SRC-6c97a1f44204",
+        "SRC-8c178d549c57",
+        "SRC-9244392e90d1",
+        "SRC-f44ddd0727fb"
+      ]
+    },
+    {
+      "id": "UG-CD-ISHASHA-ROAD",
+      "canonical_name": "Ishasha River",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Ishasha",
+        "Ishasa",
+        "Ishasha River"
+      ],
+      "source_ids": [
+        "W-URA-SCT-2023",
+        "W-UNHCR-2021",
+        "W-UNHCR-2025"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-0442cf6b8cc3dfae"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "UNHCR Ishasa border coordinate is 23 m from the primary-road contact on the DRC frontier.",
+      "coordinate_status": "osm_candidate_location_supported; no independent survey",
+      "notes": "Busanza village 2 km from this point is a homonym, not the Busanza–Kitagoma crossing in Kisoro. Ishasha/Kihihi is a humanitarian reporting label, not proof that Kihihi is another border gate.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-0442cf6b8cc3dfae": 23
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 12,
+        "source_name": "Ishasa",
+        "coordinate": [
+          29.628294,
+          -0.727378
+        ],
+        "status_as_published": "Official",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": true,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "road_supported_by_route_or_geometry"
+      },
+      "source_urls": [
+        "https://ura.go.ug/en/customs-external-operations/",
+        "https://data.unhcr.org/en/documents/details/86907",
+        "https://data.unhcr.org/en/documents/download/118063"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-0442cf6b8cc3dfae",
+          "coordinate": [
+            29.628091600000005,
+            -0.7274253000000003
+          ],
+          "route_osm_ids": [
+            395064719
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "supported"
+        }
+      ],
+      "osm_reference_coordinate": [
+        29.628091600000005,
+        -0.7274253000000003
+      ],
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "main_road_candidate",
+      "source_document_ids": [
+        "SRC-32306d9dae01",
+        "SRC-636262fc846f",
+        "SRC-8c178d549c57"
+      ]
+    },
+    {
+      "id": "UG-CD-MPONDWE-ROAD",
+      "canonical_name": "Mpondwe / Kasindi",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Mpondwe",
+        "Kasindi",
+        "Mpodwe"
+      ],
+      "source_ids": [
+        "W-URA-OSBP",
+        "W-URA-ROUTES",
+        "W-MTIC-2025",
+        "W-UNHCR-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-af2bd490cae5f29d"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Independent Mpondwe point is 85 m from named Mpondwe trunk bridge; tagged control is 33 m away. Paired name is explicit in URA.",
+      "coordinate_status": "osm_candidate_location_supported; no independent survey",
+      "notes": "",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-af2bd490cae5f29d": 85
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 15,
+        "source_name": "Mpondwe",
+        "coordinate": [
+          29.720422,
+          0.041889
+        ],
+        "status_as_published": "Official",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": true,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "road_supported_by_route_or_geometry"
+      },
+      "source_urls": [
+        "https://ura.go.ug/en/import-export/one-stop-border-post/",
+        "https://ura.go.ug/en/enforcement-questions-and-answers/",
+        "https://www.mtic.go.ug/trade-minister-gen-mbadi-moves-to-address-trade-barriers-and-enhance-uganda-drc-trade/",
+        "https://data.unhcr.org/en/documents/details/86907"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-af2bd490cae5f29d",
+          "coordinate": [
+            29.720157835883587,
+            0.04116759624152679
+          ],
+          "route_osm_ids": [
+            504641749
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "supported"
+        }
+      ],
+      "osm_reference_coordinate": [
+        29.720157835883587,
+        0.04116759624152679
+      ],
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "main_road_candidate",
+      "source_document_ids": [
+        "SRC-3692c984a887",
+        "SRC-636262fc846f",
+        "SRC-84d59392df04",
+        "SRC-f44ddd0727fb"
+      ]
+    },
+    {
+      "id": "UG-CD-BUSUNGA-ROAD",
+      "canonical_name": "Busunga",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Busunga",
+        "Busungu"
+      ],
+      "source_ids": [
+        "W-URA-ROUTES",
+        "W-URA-SCT-2023",
+        "W-UNHCR-2021",
+        "W-UNHCR-2025"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-8fa3063d2cf66276"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Independent Busunga point is 23 m from the Fort Portal–Bundibugyo primary road bridge.",
+      "coordinate_status": "osm_candidate_location_supported; no independent survey",
+      "notes": "Nearby unclassified contact osm-07c6f3ac54b2e391 lies 96 m from source coordinate but is not independently established as a separate crossing.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-8fa3063d2cf66276": 23
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 3,
+        "source_name": "Busunga",
+        "coordinate": [
+          29.957875,
+          0.630011
+        ],
+        "status_as_published": "Official",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": true,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "road_supported_by_route_or_geometry"
+      },
+      "source_urls": [
+        "https://ura.go.ug/en/enforcement-questions-and-answers/",
+        "https://ura.go.ug/en/customs-external-operations/",
+        "https://data.unhcr.org/en/documents/details/86907",
+        "https://data.unhcr.org/en/documents/download/118063"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-8fa3063d2cf66276",
+          "coordinate": [
+            29.95767238019646,
+            0.6300410883145658
+          ],
+          "route_osm_ids": [
+            377747128
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "supported"
+        }
+      ],
+      "osm_reference_coordinate": [
+        29.95767238019646,
+        0.6300410883145658
+      ],
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "main_road_candidate",
+      "source_document_ids": [
+        "SRC-32306d9dae01",
+        "SRC-636262fc846f",
+        "SRC-8c178d549c57",
+        "SRC-f44ddd0727fb"
+      ]
+    },
+    {
+      "id": "UG-CD-GOLI-ROAD",
+      "canonical_name": "Goli / Mahagi",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Goli",
+        "Mahagi"
+      ],
+      "source_ids": [
+        "W-URA-OSBP",
+        "W-URA-ROUTES",
+        "W-MTIC-2025",
+        "W-NCIC-LIST"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-4206b6af7da47a7f"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "RN27 primary-road contact has a control 171 m away and Goli village 1163 m away; country pair and paired name are supported, but no independent coordinate was found.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "This is a strong location suggestion; precise gate still requires independent spatial corroboration.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "road_supported_by_route_or_geometry"
+      },
+      "source_urls": [
+        "https://ura.go.ug/en/import-export/one-stop-border-post/",
+        "https://ura.go.ug/en/enforcement-questions-and-answers/",
+        "https://www.mtic.go.ug/trade-minister-gen-mbadi-moves-to-address-trade-barriers-and-enhance-uganda-drc-trade/",
+        "https://www.immigration.go.ug/list-borders-according-regions"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-4206b6af7da47a7f",
+          "coordinate": [
+            31.029773874157392,
+            2.3769090533009076
+          ],
+          "route_osm_ids": [
+            33593474
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "provisional"
+        }
+      ],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "main_road_candidate",
+      "source_document_ids": [
+        "SRC-3692c984a887",
+        "SRC-6c97a1f44204",
+        "SRC-84d59392df04",
+        "SRC-f44ddd0727fb"
+      ]
+    },
+    {
+      "id": "UG-CD-VURRA-ROAD",
+      "canonical_name": "Vurra",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Vurra"
+      ],
+      "source_ids": [
+        "W-URA-ROUTES",
+        "W-MTIC-2025",
+        "W-NCIC-LIST"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-36889e6a7bb0fc28",
+        "osm-d4bbd2220c1c882b"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "Both candidates are contacts on named Vurra Custom Road; one lies 147 m from Vurra village. Repeated intersections of one road must be reconciled before choosing the true crossing.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "Do not confuse other OSM villages named Vurra elsewhere in West Nile.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "road_supported_by_route_or_geometry"
+      },
+      "source_urls": [
+        "https://ura.go.ug/en/enforcement-questions-and-answers/",
+        "https://www.mtic.go.ug/trade-minister-gen-mbadi-moves-to-address-trade-barriers-and-enhance-uganda-drc-trade/",
+        "https://www.immigration.go.ug/list-borders-according-regions"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-36889e6a7bb0fc28",
+          "coordinate": [
+            30.879366883840706,
+            2.8878323784012587
+          ],
+          "route_osm_ids": [
+            189305536
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "provisional"
+        },
+        {
+          "candidate_id": "osm-d4bbd2220c1c882b",
+          "coordinate": [
+            30.887517453096258,
+            2.8797946346104437
+          ],
+          "route_osm_ids": [
+            189305536
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "provisional"
+        }
+      ],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-6c97a1f44204",
+        "SRC-84d59392df04",
+        "SRC-f44ddd0727fb"
+      ]
+    },
+    {
+      "id": "UG-CD-LIA-ROAD",
+      "canonical_name": "Lia",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Lia"
+      ],
+      "source_ids": [
+        "W-URA-ROUTES",
+        "W-MTIC-2025",
+        "W-NCIC-LIST"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Named customs crossing is source-confirmed, but the inspected data did not provide a trustworthy exact post-to-candidate match.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "Short name is especially vulnerable to substring matches; Nyilia is not Lia.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "road_supported_by_route_or_geometry"
+      },
+      "source_urls": [
+        "https://ura.go.ug/en/enforcement-questions-and-answers/",
+        "https://www.mtic.go.ug/trade-minister-gen-mbadi-moves-to-address-trade-barriers-and-enhance-uganda-drc-trade/",
+        "https://www.immigration.go.ug/list-borders-according-regions"
+      ],
+      "osm_candidates": [],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-6c97a1f44204",
+        "SRC-84d59392df04",
+        "SRC-f44ddd0727fb"
+      ]
+    },
+    {
+      "id": "UG-CD-PADEA-ROAD",
+      "canonical_name": "Padea",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_supported_by_route_or_geometry",
+      "aliases": [
+        "Padea"
+      ],
+      "source_ids": [
+        "W-URA-ROUTES",
+        "W-MTIC-2025",
+        "W-NCIC-LIST"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Independent sources verify the customs crossing in Zombo; repeated secondary-road contacts south/west of Paidha cannot be assigned on proximity alone.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "NCIC lists Padea and Paidha separately. Retain separate unresolved identities until exact facilities and aliases are checked.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "road_supported_by_route_or_geometry"
+      },
+      "source_urls": [
+        "https://ura.go.ug/en/enforcement-questions-and-answers/",
+        "https://www.mtic.go.ug/trade-minister-gen-mbadi-moves-to-address-trade-barriers-and-enhance-uganda-drc-trade/",
+        "https://www.immigration.go.ug/list-borders-according-regions"
+      ],
+      "osm_candidates": [],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-6c97a1f44204",
+        "SRC-84d59392df04",
+        "SRC-f44ddd0727fb"
+      ]
+    },
+    {
+      "id": "UG-CD-PAIDHA-ROAD",
+      "canonical_name": "Paidha",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "land_entry_location; vehicle_access_unverified",
+      "aliases": [
+        "Paidha"
+      ],
+      "source_ids": [
+        "W-NCIC-LIST",
+        "W-UNHCR-2025"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Named entry/service location is independently documented, but no authoritative exact boundary coordinate was found.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "Do not equate town coordinates, Padea, Alisi, or another road contact without explicit evidence.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "land_entry_location; vehicle_access_unverified"
+      },
+      "source_urls": [
+        "https://www.immigration.go.ug/list-borders-according-regions",
+        "https://data.unhcr.org/en/documents/download/118063"
+      ],
+      "osm_candidates": [],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-6c97a1f44204",
+        "SRC-8c178d549c57"
+      ]
+    },
+    {
+      "id": "UG-CD-ODRAMACAKU-ROAD",
+      "canonical_name": "Odramacaku",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "land_service_point; vehicle_access_unverified",
+      "aliases": [
+        "Odramacaku",
+        "Odramachaka"
+      ],
+      "source_ids": [
+        "W-NCIC-LIST"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "NCIC lists Odramachaka in Vurra cluster, Arua. Exact post and route identity are unresolved.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "Spelling equivalence Odramacaku/Odramachaka remains an editorial normalization, not coordinate evidence.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "land_service_point; vehicle_access_unverified"
+      },
+      "source_urls": [
+        "https://www.immigration.go.ug/list-borders-according-regions"
+      ],
+      "osm_candidates": [],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-6c97a1f44204"
+      ]
+    },
+    {
+      "id": "UG-CD-DEI-ROAD",
+      "canonical_name": "Dei",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_candidate; facility_mode_unresolved",
+      "aliases": [
+        "Dei"
+      ],
+      "source_ids": [
+        "W-NCIC-LIST"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-68a7fea25e428e39"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "Official service-point list establishes Dei; candidate secondary road lies 605 m from OSM Dei settlement. Independent exact crossing coordinate absent.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "Dei is also a lake-shore locality. Road contact and lake landing must not be collapsed.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "road_candidate; facility_mode_unresolved"
+      },
+      "source_urls": [
+        "https://www.immigration.go.ug/list-borders-according-regions"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-68a7fea25e428e39",
+          "coordinate": [
+            31.276388709493705,
+            2.178665217553336
+          ],
+          "route_osm_ids": [
+            858575704
+          ],
+          "road_tiers": [
+            "major"
+          ],
+          "association_status": "provisional"
+        }
+      ],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-6c97a1f44204"
+      ]
+    },
+    {
+      "id": "UG-CD-KYESHERO-ROAD",
+      "canonical_name": "Kyeshero",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_geometry; vehicle_access_unverified",
+      "aliases": [
+        "Kyeshero"
+      ],
+      "source_ids": [
+        "W-UNHCR-2021",
+        "W-UNHCR-2025"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-18e6472d419fa291"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Independent Kyeshero border coordinate is 32 m from the unclassified road contact; the 2025 humanitarian report independently names the entry point.",
+      "coordinate_status": "osm_candidate_location_supported; no independent survey",
+      "notes": "This lies outside the major-road tier. Status labelled unofficial in 2021 is retained as dated evidence only.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-18e6472d419fa291": 32
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 13,
+        "source_name": "Kyeshero",
+        "coordinate": [
+          29.622067,
+          -0.900828
+        ],
+        "status_as_published": "Unofficial",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": true,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "road_geometry; vehicle_access_unverified"
+      },
+      "source_urls": [
+        "https://data.unhcr.org/en/documents/details/86907",
+        "https://data.unhcr.org/en/documents/download/118063"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-18e6472d419fa291",
+          "coordinate": [
+            29.621911097582213,
+            -0.9005874367224742
+          ],
+          "route_osm_ids": [
+            33593531
+          ],
+          "road_tiers": [
+            "other"
+          ],
+          "association_status": "supported"
+        }
+      ],
+      "osm_reference_coordinate": [
+        29.621911097582213,
+        -0.9005874367224742
+      ],
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-636262fc846f",
+        "SRC-8c178d549c57"
+      ]
+    },
+    {
+      "id": "UG-CD-BUSANZA-ROAD",
+      "canonical_name": "Busanza / Kitagoma",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "road_geometry; vehicle_access_unverified",
+      "aliases": [
+        "Busanza",
+        "Busanja",
+        "Buszana",
+        "Kitagoma"
+      ],
+      "source_ids": [
+        "W-UNHCR-2021",
+        "W-UNHCR-2025",
+        "W-FCDO-UG"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-8a6ce817ea17982e",
+        "osm-f70fba9c18fa4293"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "UNHCR Busanja coordinate in Kisoro is within 40/104 m of two unclassified-road contacts, and FCDO identifies Kitagoma–Buszana in Kisoro. Identity/locality is supported but exact route contact is unresolved.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "Reject homonymous Busanza settlements near Ishasha and Bunagana. Multiple nearby routes must be reviewed as one facility area before choosing a gate.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-8a6ce817ea17982e": 40,
+        "osm-f70fba9c18fa4293": 104
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 16,
+        "source_name": "Busanja",
+        "coordinate": [
+          29.583794,
+          -1.1617
+        ],
+        "status_as_published": "Unofficial",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "road_geometry; vehicle_access_unverified"
+      },
+      "source_urls": [
+        "https://data.unhcr.org/en/documents/details/86907",
+        "https://data.unhcr.org/en/documents/download/118063",
+        "https://www.gov.uk/foreign-travel-advice/uganda/regional-risks"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-8a6ce817ea17982e",
+          "coordinate": [
+            29.583648146314097,
+            -1.1613729812443254
+          ],
+          "route_osm_ids": [
+            1083585614
+          ],
+          "road_tiers": [
+            "other"
+          ],
+          "association_status": "provisional"
+        },
+        {
+          "candidate_id": "osm-f70fba9c18fa4293",
+          "coordinate": [
+            29.58400818998024,
+            -1.1607920646801733
+          ],
+          "route_osm_ids": [
+            836056805
+          ],
+          "road_tiers": [
+            "other"
+          ],
+          "association_status": "provisional"
+        }
+      ],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "targeted_named_exception",
+      "source_document_ids": [
+        "SRC-636262fc846f",
+        "SRC-8c178d549c57",
+        "SRC-9244392e90d1"
+      ]
+    },
+    {
+      "id": "UG-CD-BUTOGOTA-ROAD",
+      "canonical_name": "Butogota",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "ground_entry_location; vehicle_access_unverified",
+      "aliases": [
+        "Butogota"
+      ],
+      "source_ids": [
+        "W-NCIC-LIST",
+        "W-UNHCR-2021",
+        "W-UNHCR-2025"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "UNHCR coordinate is inland; nearest contact is 1.7 km away and already independently aligns with Kyeshero. It is not accepted as a separate Butogota crossing.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "Could be a service/arrival reporting location or route label. Distinct physical gate is not established.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 14,
+        "source_name": "Butogota",
+        "coordinate": [
+          29.631289,
+          -0.888464
+        ],
+        "status_as_published": "Unofficial",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "ground_entry_location; vehicle_access_unverified"
+      },
+      "source_urls": [
+        "https://www.immigration.go.ug/list-borders-according-regions",
+        "https://data.unhcr.org/en/documents/details/86907",
+        "https://data.unhcr.org/en/documents/download/118063"
+      ],
+      "osm_candidates": [],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-636262fc846f",
+        "SRC-6c97a1f44204",
+        "SRC-8c178d549c57"
+      ]
+    },
+    {
+      "id": "UG-CD-NTEKO-ROAD",
+      "canonical_name": "Nteko",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "ground_entry_location; vehicle_access_unverified",
+      "aliases": [
+        "Nteko"
+      ],
+      "source_ids": [
+        "W-UNHCR-2021",
+        "W-UNHCR-2025"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-4f6f9d704ffa8e98"
+      ],
+      "candidate_match_status": "provisional",
+      "match_reason": "Closest unclassified-road contact is 630 m from UNHCR Nteko point. Several nearby routes and similarly named settlements prevent exact identification.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-4f6f9d704ffa8e98": 630
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 18,
+        "source_name": "Nteko",
+        "coordinate": [
+          29.588094,
+          -1.028669
+        ],
+        "status_as_published": "Unofficial",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "ground_entry_location; vehicle_access_unverified"
+      },
+      "source_urls": [
+        "https://data.unhcr.org/en/documents/details/86907",
+        "https://data.unhcr.org/en/documents/download/118063"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-4f6f9d704ffa8e98",
+          "coordinate": [
+            29.584359800000005,
+            -1.024401999999999
+          ],
+          "route_osm_ids": [
+            714509942
+          ],
+          "road_tiers": [
+            "other"
+          ],
+          "association_status": "provisional"
+        }
+      ],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-636262fc846f",
+        "SRC-8c178d549c57"
+      ]
+    },
+    {
+      "id": "UG-CD-BULYANTANO-ROAD",
+      "canonical_name": "Bulyantano",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "ground_entry_location; transport_mode_unverified",
+      "aliases": [
+        "Bulyantano"
+      ],
+      "source_ids": [
+        "W-UNHCR-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Nearest included road contact is approximately 2 km from the independent reference and is not accepted.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "UNHCR labels this unofficial in 2021; an unmapped/minor path or river route remains possible.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 4,
+        "source_name": "Bulyantano",
+        "coordinate": [
+          29.973222,
+          0.597333
+        ],
+        "status_as_published": "Unofficial",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "ground_entry_location; transport_mode_unverified"
+      },
+      "source_urls": [
+        "https://data.unhcr.org/en/documents/details/86907"
+      ],
+      "osm_candidates": [],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-636262fc846f"
+      ]
+    },
+    {
+      "id": "UG-CD-BUTOGO-ROAD",
+      "canonical_name": "Butogo",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "track_geometry; vehicle_access_unverified",
+      "aliases": [
+        "Butogo"
+      ],
+      "source_ids": [
+        "W-UNHCR-2021",
+        "W-UNHCR-2025"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [
+        "osm-07bc49781e22ae95"
+      ],
+      "candidate_match_status": "supported",
+      "match_reason": "Track contact lies 115 m from the independent Butogo coordinate and the later UNHCR map retains the name.",
+      "coordinate_status": "osm_candidate_location_supported; no independent survey",
+      "notes": "This establishes a reference crossing locality, not a formal vehicular post or current operational access.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "reference_distances_m": {
+        "osm-07bc49781e22ae95": 115
+      },
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 5,
+        "source_name": "Butogo",
+        "coordinate": [
+          29.971433,
+          0.723822
+        ],
+        "status_as_published": "Unofficial",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": true,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "track_geometry; vehicle_access_unverified"
+      },
+      "source_urls": [
+        "https://data.unhcr.org/en/documents/details/86907",
+        "https://data.unhcr.org/en/documents/download/118063"
+      ],
+      "osm_candidates": [
+        {
+          "candidate_id": "osm-07bc49781e22ae95",
+          "coordinate": [
+            29.97070632881352,
+            0.724559510525015
+          ],
+          "route_osm_ids": [
+            630108602
+          ],
+          "road_tiers": [
+            "other"
+          ],
+          "association_status": "supported"
+        }
+      ],
+      "osm_reference_coordinate": [
+        29.97070632881352,
+        0.724559510525015
+      ],
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-636262fc846f",
+        "SRC-8c178d549c57"
+      ]
+    },
+    {
+      "id": "UG-CD-KASIRI-ROAD",
+      "canonical_name": "Kasiri",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "mode_status": "ground_entry_location; transport_mode_unverified",
+      "aliases": [
+        "Kasiri"
+      ],
+      "source_ids": [
+        "W-UNHCR-2021"
+      ],
+      "existence_status": "source_verified",
+      "candidate_ids": [],
+      "candidate_match_status": "not_found",
+      "match_reason": "Nearest included road contact is over 2.2 km from independent reference; no accepted match.",
+      "coordinate_status": "unresolved_exact_crossing",
+      "notes": "UNHCR labels this unofficial in 2021; possible path/river crossing requires separate inspection.",
+      "current_operating_status": "not_assessed",
+      "is_closure_evidence": false,
+      "review_method": "primary-source desk review; not field inspection",
+      "external_reference": {
+        "source_id": "W-UNHCR-2021",
+        "worksheet": "Border_Crossing",
+        "row": 6,
+        "source_name": "Kasiri",
+        "coordinate": [
+          29.971475,
+          0.702328
+        ],
+        "status_as_published": "Unofficial",
+        "comments": null,
+        "coordinate_accuracy": "not specified by source",
+        "source_publication_date": "2021-05-20",
+        "observation_date": null
+      },
+      "mode_field_meaning": "Reference or candidate transport class; does not establish lawful/current vehicle access. See mode_status.",
+      "review_input": "benchmark-west.json",
+      "current_operation_status": "not_assessed",
+      "transport_mode_evidence": {
+        "working_reference_class": "road",
+        "mapped_route_class_supported": false,
+        "formal_vehicle_access_verified": false,
+        "current_vehicle_access_verified": false,
+        "classification_note": "ground_entry_location; transport_mode_unverified"
+      },
+      "source_urls": [
+        "https://data.unhcr.org/en/documents/details/86907"
+      ],
+      "osm_candidates": [],
+      "osm_reference_coordinate": null,
+      "coordinate_accuracy_m": null,
+      "coordinate_accuracy_note": "No surveyed accuracy claimed; see source point and route review.",
+      "global_scope": "background_reference_only",
+      "source_document_ids": [
+        "SRC-636262fc846f"
+      ]
+    }
+  ]
+}

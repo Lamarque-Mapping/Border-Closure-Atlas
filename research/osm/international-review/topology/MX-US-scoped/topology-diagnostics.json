@@ -1,0 +1,1466 @@
+[
+  {
+    "candidate_id": "osm-01135b12707b8b81",
+    "review_group_id": "review-da0a251fa05634df",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 8,
+    "raw_contact_count_original": 8,
+    "contact_status_counts": {
+      "sustained_country_transition": 8
+    },
+    "review_flags": [
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-32656954-1092421336-00000",
+      "raw-32656954-1092421338-00001",
+      "raw-32666080-1092421338-00002",
+      "raw-32666080-307094003-00003",
+      "raw-1092421335-1092421338-00004",
+      "raw-1092421335-307094003-00005",
+      "raw-1092421337-1092421336-00006",
+      "raw-1092421337-1092421338-00007"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-08b76bdca6b989da",
+    "review_group_id": "review-2f01a5c0d0b9ba43",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 4,
+    "raw_contact_count_original": 4,
+    "contact_status_counts": {
+      "unresolved": 4
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-461203252-48995291-00008",
+      "raw-463891705-48995291-00009",
+      "raw-509041024-48995291-00010",
+      "raw-510018460-48995291-00011"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-0c272088aaa2e097",
+    "review_group_id": "review-69b6d4f16d3693fc",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 1,
+    "raw_contact_count_original": 1,
+    "contact_status_counts": {
+      "unresolved": 1
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation"
+    ],
+    "raw_contact_ids": [
+      "raw-1062411384-1081927760-00012"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-1095f60a7c1345a6",
+    "review_group_id": "review-b8d7ba11ada2f618",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 31,
+    "raw_contact_count_original": 31,
+    "contact_status_counts": {
+      "unresolved": 31
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-468334871-1081927760-00013",
+      "raw-468334875-1081927760-00014",
+      "raw-468334878-1081927760-00015",
+      "raw-468334916-1081927760-00016",
+      "raw-468334948-1081927760-00017",
+      "raw-468334949-1081927760-00018",
+      "raw-468334950-1081927760-00019",
+      "raw-527295353-1081927760-00020",
+      "raw-527295354-1081927760-00021",
+      "raw-527295355-1081927760-00022",
+      "raw-527295357-1081927760-00023",
+      "raw-527295358-1081927760-00024",
+      "raw-527295359-1081927760-00025",
+      "raw-527298939-1081927760-00026",
+      "raw-1014945620-1081927760-00027",
+      "raw-1014945639-1081927760-00028",
+      "raw-1014945640-1081927760-00029",
+      "raw-1014945641-1081927760-00030",
+      "raw-1014945642-1081927760-00031",
+      "raw-1014945643-1081927760-00032",
+      "raw-1014945644-1081927760-00033",
+      "raw-1014945645-1081927760-00034",
+      "raw-1014945646-1081927760-00035",
+      "raw-1014945647-1081927760-00036",
+      "raw-1014945649-1081927760-00037",
+      "raw-1014945650-1081927760-00038",
+      "raw-1014945651-1081927760-00039",
+      "raw-1014945652-1081927760-00040",
+      "raw-1014945653-1081927760-00041",
+      "raw-1014945654-1081927760-00042",
+      "raw-1014945655-1081927760-00043"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-1aeb905f29188b1f",
+    "review_group_id": "review-0d34118827beee4f",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 2,
+    "raw_contact_count_original": 2,
+    "contact_status_counts": {
+      "sustained_country_transition": 2
+    },
+    "review_flags": [
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-42953871-307094023-00044",
+      "raw-162649826-307094023-00045"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-23857abcb211ce45",
+    "review_group_id": "review-7981d931df32f669",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 3,
+    "raw_contact_count_original": 3,
+    "contact_status_counts": {
+      "sustained_country_transition": 3
+    },
+    "review_flags": [
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-962696778-376956453-00046",
+      "raw-962696779-376956453-00047",
+      "raw-1353911687-376956453-00048"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-33a892364b22ae82",
+    "review_group_id": "review-cec3a95d107fa5f0",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 1,
+    "raw_contact_count_original": 1,
+    "contact_status_counts": {
+      "sustained_country_transition": 1
+    },
+    "review_flags": [],
+    "raw_contact_ids": [
+      "raw-435876312-376984209-00049"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-3eebc8e335d0c9fd",
+    "review_group_id": "review-1b44e1962ec60ff9",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 39,
+    "raw_contact_count_original": 39,
+    "contact_status_counts": {
+      "unresolved": 39
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-713820834-1081927760-00050",
+      "raw-736585877-1081927760-00051",
+      "raw-736585878-1081927760-00052",
+      "raw-796253357-1081927760-00053",
+      "raw-796253361-1081927760-00054",
+      "raw-796253362-1081927760-00055",
+      "raw-796253363-1081927760-00056",
+      "raw-796253364-1081927760-00057",
+      "raw-796253365-1081927760-00058",
+      "raw-1014246520-1081927760-00059",
+      "raw-1014246521-1081927760-00060",
+      "raw-1014246522-1081927760-00061",
+      "raw-1014246523-1081927760-00062",
+      "raw-1014246524-1081927760-00063",
+      "raw-1014246525-1081927760-00064",
+      "raw-1014246526-1081927760-00065",
+      "raw-1014246527-1081927760-00066",
+      "raw-1014246528-1081927760-00067",
+      "raw-1014246529-1081927760-00068",
+      "raw-1014246530-1081927760-00069",
+      "raw-1014246531-1081927760-00070",
+      "raw-1014246532-1081927760-00071",
+      "raw-1014246533-1081927760-00072",
+      "raw-1014246534-1081927760-00073",
+      "raw-1014246535-1081927760-00074",
+      "raw-1014246536-1081927760-00075",
+      "raw-1014246537-1081927760-00076",
+      "raw-1014246538-1081927760-00077",
+      "raw-1014246539-1081927760-00078",
+      "raw-1014246540-1081927760-00079",
+      "raw-1014246541-1081927760-00080",
+      "raw-1014246542-1081927760-00081",
+      "raw-1014246543-1081927760-00082",
+      "raw-1014246544-1081927760-00083",
+      "raw-1014246545-1081927760-00084",
+      "raw-1014246546-1081927760-00085",
+      "raw-1014246547-1081927760-00086",
+      "raw-1014246548-1081927760-00087",
+      "raw-1014246549-1081927760-00088"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-435403e98eda46ed",
+    "review_group_id": "review-a7c6c8570f100e06",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 2,
+    "raw_contact_count_original": 2,
+    "contact_status_counts": {
+      "sustained_country_transition": 2
+    },
+    "review_flags": [
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-42725524-307094199-00089",
+      "raw-1322347249-307094199-00090"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-44775b86ca9e1a6d",
+    "review_group_id": "review-f504c9311b746989",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 2,
+    "raw_contact_count_original": 2,
+    "contact_status_counts": {
+      "sustained_country_transition": 2
+    },
+    "review_flags": [
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-200257858-172118907-00091",
+      "raw-221972671-172118907-00092"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-503d1db49e9f778d",
+    "review_group_id": "review-accf95d3d2fd6459",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 1,
+    "raw_contact_count_original": 1,
+    "contact_status_counts": {
+      "unresolved": 1
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation"
+    ],
+    "raw_contact_ids": [
+      "raw-789823028-290528824-00093"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-53688c50ccfe1118",
+    "review_group_id": "review-143eb303f06b7277",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 5,
+    "raw_contact_count_original": 5,
+    "contact_status_counts": {
+      "unresolved": 5
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-602751004-172118907-00094",
+      "raw-602751006-172118907-00095",
+      "raw-602751007-172118907-00096",
+      "raw-602751008-172118907-00097",
+      "raw-602751009-172118907-00098"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-54784067c67f362b",
+    "review_group_id": "review-cba4ef48e34a815a",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 4,
+    "raw_contact_count_original": 4,
+    "contact_status_counts": {
+      "unresolved": 3,
+      "sustained_country_transition": 1
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-179149442-307094012-00099",
+      "raw-413217805-307094012-00100",
+      "raw-1535686438-307094012-00101",
+      "raw-1535686448-307094012-00102"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-56bcf32a33282b0b",
+    "review_group_id": "review-b4a442003de27886",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 3,
+    "raw_contact_count_original": 3,
+    "contact_status_counts": {
+      "sustained_country_transition": 3
+    },
+    "review_flags": [
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-1554340876-376984209-00103",
+      "raw-1554340878-376984209-00104",
+      "raw-1554340879-376984209-00105"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-5a6a14d5a4ced276",
+    "review_group_id": "review-c7ee3940a90b9e1a",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 4,
+    "raw_contact_count_original": 4,
+    "contact_status_counts": {
+      "sustained_country_transition": 4
+    },
+    "review_flags": [
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-145954353-376956468-00106",
+      "raw-145954358-376956468-00107",
+      "raw-1448086517-376956468-00108",
+      "raw-1448086518-376956468-00109"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-5d875d56414d99c8",
+    "review_group_id": "review-4dcfac8f7599b84c",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 2,
+    "raw_contact_count_original": 2,
+    "contact_status_counts": {
+      "unresolved": 2
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-55536364-376530826-00110",
+      "raw-292984364-376530826-00111"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-5e02bef35bd999b9",
+    "review_group_id": "review-f73fb5ab00b7ec50",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 2,
+    "raw_contact_count_original": 2,
+    "contact_status_counts": {
+      "sustained_country_transition": 2
+    },
+    "review_flags": [
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-30535881-376956453-00112",
+      "raw-509683512-376956453-00113"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-5eaf5063ab359d3a",
+    "review_group_id": "review-2f5800f84bb4443d",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 2,
+    "raw_contact_count_original": 2,
+    "contact_status_counts": {
+      "unresolved": 2
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-1503731756-11801333-00114",
+      "raw-1503731758-11801333-00115"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-61e8bf64ce144247",
+    "review_group_id": "review-ec0d428d11493324",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 18,
+    "raw_contact_count_original": 18,
+    "contact_status_counts": {
+      "unresolved": 18
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-114198558-172118907-00116",
+      "raw-220571793-172118907-00117",
+      "raw-220571794-172118907-00118",
+      "raw-220571796-172118907-00119",
+      "raw-220571798-172118907-00120",
+      "raw-400557874-172118907-00121",
+      "raw-468318914-172118907-00122",
+      "raw-468318938-172118907-00123",
+      "raw-468318961-172118907-00124",
+      "raw-468318962-172118907-00125",
+      "raw-468318963-172118907-00126",
+      "raw-468318964-172118907-00127",
+      "raw-468318965-172118907-00128",
+      "raw-468318966-172118907-00129",
+      "raw-468318967-172118907-00130",
+      "raw-468318969-172118907-00131",
+      "raw-492567538-172118907-00132",
+      "raw-1468444507-172118907-00133"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-698038dc2590920e",
+    "review_group_id": "review-71152631ac73392b",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 1,
+    "raw_contact_count_original": 1,
+    "contact_status_counts": {
+      "sustained_country_transition": 1
+    },
+    "review_flags": [],
+    "raw_contact_ids": [
+      "raw-219295904-1303563141-00134"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-6a6f24fc152bd576",
+    "review_group_id": "review-0784e40154bc140b",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 2,
+    "raw_contact_count_original": 2,
+    "contact_status_counts": {
+      "unresolved": 2
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-42801350-376984209-00135",
+      "raw-42801356-376984209-00136"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-70f339be49b99f94",
+    "review_group_id": "review-6b94bb7e40d1776e",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 2,
+    "raw_contact_count_original": 2,
+    "contact_status_counts": {
+      "sustained_country_transition": 2
+    },
+    "review_flags": [
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-104350451-1554865994-00137",
+      "raw-365612299-1554865994-00138"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-71dc7605e6298523",
+    "review_group_id": "review-988f5064e44b4644",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 10,
+    "raw_contact_count_original": 10,
+    "contact_status_counts": {
+      "sustained_country_transition": 2,
+      "unresolved": 8
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-174919494-15808174-00139",
+      "raw-492208344-15808174-00140",
+      "raw-983209298-15808174-00141",
+      "raw-1190220713-15808174-00142",
+      "raw-1285376805-15808174-00143",
+      "raw-1285376808-15808174-00144",
+      "raw-1285376811-15808174-00145",
+      "raw-1285376814-15808174-00146",
+      "raw-1285376817-15808174-00147",
+      "raw-1285376820-15808174-00148"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-7d24b38ec0cee2b7",
+    "review_group_id": "review-ba6705d04d07e30b",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 2,
+    "raw_contact_count_original": 2,
+    "contact_status_counts": {
+      "unresolved": 2
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-362351064-1023800236-00149",
+      "raw-362351067-1023800236-00150"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-7f642a128a992115",
+    "review_group_id": "review-ca4e45d5090939e3",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 2,
+    "raw_contact_count_original": 2,
+    "contact_status_counts": {
+      "sustained_country_transition": 2
+    },
+    "review_flags": [
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-28209842-376956462-00151",
+      "raw-365602452-376956462-00152"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-922a1923a7647053",
+    "review_group_id": "review-37131a98e7a83055",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 2,
+    "raw_contact_count_original": 2,
+    "contact_status_counts": {
+      "unresolved": 2
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-285644134-192213612-00153",
+      "raw-285653143-192213612-00154"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-95a2e4f7c4645dd2",
+    "review_group_id": "review-d5ee8413d9e3a0cc",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 1,
+    "raw_contact_count_original": 1,
+    "contact_status_counts": {
+      "sustained_country_transition": 1
+    },
+    "review_flags": [],
+    "raw_contact_ids": [
+      "raw-42873909-376957583-00155"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-97c2898a35e28a4d",
+    "review_group_id": "review-fadef20823ebfcfb",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 26,
+    "raw_contact_count_original": 26,
+    "contact_status_counts": {
+      "unresolved": 26
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-468334881-1081927760-00156",
+      "raw-527302477-1081927760-00157",
+      "raw-527302478-1081927760-00158",
+      "raw-527302479-1081927760-00159",
+      "raw-527302480-1081927760-00160",
+      "raw-527304745-1081927760-00161",
+      "raw-527304746-1081927760-00162",
+      "raw-527323470-1081927760-00163",
+      "raw-546859119-1081927760-00164",
+      "raw-879503564-1081927760-00165",
+      "raw-879503568-1081927760-00166",
+      "raw-879503569-1081927760-00167",
+      "raw-879503571-1081927760-00168",
+      "raw-1014945625-1081927760-00169",
+      "raw-1014945626-1081927760-00170",
+      "raw-1014945627-1081927760-00171",
+      "raw-1014945628-1081927760-00172",
+      "raw-1014945629-1081927760-00173",
+      "raw-1014945630-1081927760-00174",
+      "raw-1014945631-1081927760-00175",
+      "raw-1014945632-1081927760-00176",
+      "raw-1014945633-1081927760-00177",
+      "raw-1014945634-1081927760-00178",
+      "raw-1014945635-1081927760-00179",
+      "raw-1014945636-1081927760-00180",
+      "raw-1014945638-1081927760-00181"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-99d3b8aed7fb82f8",
+    "review_group_id": "review-4c00de6f7755a033",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 2,
+    "raw_contact_count_original": 2,
+    "contact_status_counts": {
+      "unresolved": 2
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-190116535-1160715126-00182",
+      "raw-1408330812-1160715126-00183"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-9beb3a8e3c9a8222",
+    "review_group_id": "review-62d6054858c54e52",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 1,
+    "raw_contact_count_original": 1,
+    "contact_status_counts": {
+      "unresolved": 1
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation"
+    ],
+    "raw_contact_ids": [
+      "raw-27283527-376530824-00184"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-9e59d9d142e68091",
+    "review_group_id": "review-58a928693c01ad09",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 4,
+    "raw_contact_count_original": 4,
+    "contact_status_counts": {
+      "sustained_country_transition": 4
+    },
+    "review_flags": [
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-54609065-49041750-00185",
+      "raw-178984057-49041750-00186",
+      "raw-776214597-49041750-00187",
+      "raw-1304580982-49041750-00188"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-9ff5040a21067342",
+    "review_group_id": "review-df9be8f8d5e72001",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 1,
+    "raw_contact_count_original": 1,
+    "contact_status_counts": {
+      "sustained_country_transition": 1
+    },
+    "review_flags": [],
+    "raw_contact_ids": [
+      "raw-101921364-376973945-00189"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-aa6a49cd3c4d2617",
+    "review_group_id": "review-56ccdbd0005095bc",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 4,
+    "raw_contact_count_original": 4,
+    "contact_status_counts": {
+      "sustained_country_transition": 4
+    },
+    "review_flags": [
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-373546017-1160719908-00190",
+      "raw-791937565-1160719908-00191",
+      "raw-945207360-1160719908-00192",
+      "raw-1474056354-1160719908-00193"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-ab83a5b1a8186c1a",
+    "review_group_id": "review-aaafec82b377a185",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 2,
+    "raw_contact_count_original": 2,
+    "contact_status_counts": {
+      "unresolved": 2
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-1263508039-290528824-00194",
+      "raw-1408438942-290528824-00195"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-b01232571b556dba",
+    "review_group_id": "review-1ab42ee28d428996",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 2,
+    "raw_contact_count_original": 2,
+    "contact_status_counts": {
+      "unresolved": 2
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-255596865-48995291-00196",
+      "raw-255596866-48995291-00197"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-bb0b7abcc64db878",
+    "review_group_id": "review-e11afddc3bed51c8",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 1,
+    "raw_contact_count_original": 1,
+    "contact_status_counts": {
+      "unresolved": 1
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation"
+    ],
+    "raw_contact_ids": [
+      "raw-42955298-307094023-00198"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-bd6133cef3d5fa7b",
+    "review_group_id": "review-ce123b089357ae19",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 1,
+    "raw_contact_count_original": 1,
+    "contact_status_counts": {
+      "sustained_country_transition": 1
+    },
+    "review_flags": [],
+    "raw_contact_ids": [
+      "raw-42805819-307093942-00199"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-bf4aa765007194d9",
+    "review_group_id": "review-f9726a9eb42b1024",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 16,
+    "raw_contact_count_original": 16,
+    "contact_status_counts": {
+      "sustained_country_transition": 14,
+      "unresolved": 2
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-16943180-376530825-00200",
+      "raw-16946165-376530825-00201",
+      "raw-217505958-376530825-00202",
+      "raw-414745673-376530825-00203",
+      "raw-414746808-376530825-00204",
+      "raw-737079218-376530825-00205",
+      "raw-737079222-376530825-00206",
+      "raw-737079223-376530825-00207",
+      "raw-737079225-376530825-00208",
+      "raw-737079227-376530825-00209",
+      "raw-737079229-376530825-00210",
+      "raw-737079230-376530825-00211",
+      "raw-880444314-376530825-00212",
+      "raw-880444339-376530825-00213",
+      "raw-1217431291-376530825-00214",
+      "raw-1217431292-376530825-00215"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-c2486e3bcb379c7b",
+    "review_group_id": "review-d3b6cc593b30f6a2",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 1,
+    "raw_contact_count_original": 1,
+    "contact_status_counts": {
+      "sustained_country_transition": 1
+    },
+    "review_flags": [],
+    "raw_contact_ids": [
+      "raw-1531523735-307094012-00216"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-c495de759fb8e823",
+    "review_group_id": "review-20fcd54623b0d3e7",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 1,
+    "raw_contact_count_original": 1,
+    "contact_status_counts": {
+      "sustained_country_transition": 1
+    },
+    "review_flags": [],
+    "raw_contact_ids": [
+      "raw-28209857-376956462-00217"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-cbe01f701646bfd5",
+    "review_group_id": "review-1be488a454c59401",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 1,
+    "raw_contact_count_original": 1,
+    "contact_status_counts": {
+      "sustained_country_transition": 1
+    },
+    "review_flags": [],
+    "raw_contact_ids": [
+      "raw-42806146-376956468-00218"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-d1e82df35d678a8c",
+    "review_group_id": "review-3ea1a725cb07133c",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 2,
+    "raw_contact_count_original": 2,
+    "contact_status_counts": {
+      "sustained_country_transition": 2
+    },
+    "review_flags": [
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-58127271-307094012-00219",
+      "raw-1531523733-307094012-00220"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-e23f12354bf30715",
+    "review_group_id": "review-c0a443f7d6a1451a",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 2,
+    "raw_contact_count_original": 2,
+    "contact_status_counts": {
+      "sustained_country_transition": 2
+    },
+    "review_flags": [
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-833093781-376956453-00221",
+      "raw-833093786-376956453-00222"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-e41e812bbdb40971",
+    "review_group_id": "review-1178edb25f24f96b",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 1,
+    "raw_contact_count_original": 1,
+    "contact_status_counts": {
+      "sustained_country_transition": 1
+    },
+    "review_flags": [],
+    "raw_contact_ids": [
+      "raw-485600888-377350561-00223"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-e6b7a1ee0d02ff4b",
+    "review_group_id": "review-e34c68dbbcfc4c2f",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 1,
+    "raw_contact_count_original": 1,
+    "contact_status_counts": {
+      "unresolved": 1
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation"
+    ],
+    "raw_contact_ids": [
+      "raw-145467361-290528824-00224"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-e7c9315d58d435f6",
+    "review_group_id": "review-490e7bc63d5367f0",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 2,
+    "raw_contact_count_original": 2,
+    "contact_status_counts": {
+      "unresolved": 2
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-791934761-1160719908-00225",
+      "raw-1014969833-1160719908-00226"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-e84ef6f8f62d28b0",
+    "review_group_id": "review-1d834cbbecfc9d11",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 4,
+    "raw_contact_count_original": 4,
+    "contact_status_counts": {
+      "sustained_country_transition": 4
+    },
+    "review_flags": [
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-43999402-307094012-00227",
+      "raw-43999448-307094012-00228",
+      "raw-43999672-307094012-00229",
+      "raw-43999711-307094012-00230"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-eec09d2188c50eb5",
+    "review_group_id": "review-4fc68549262284f8",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 8,
+    "raw_contact_count_original": 8,
+    "contact_status_counts": {
+      "unresolved": 8
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-879503563-1081927760-00231",
+      "raw-879503565-1081927760-00232",
+      "raw-879503566-1081927760-00233",
+      "raw-879503570-1081927760-00234",
+      "raw-1014945621-1081927760-00235",
+      "raw-1014945622-1081927760-00236",
+      "raw-1014945623-1081927760-00237",
+      "raw-1014945624-1081927760-00238"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-f41b939bb87ab94c",
+    "review_group_id": "review-3465f18d6f457b23",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "unresolved",
+    "has_sustained_geometric_transition": false,
+    "raw_contact_count_reconstructed": 1,
+    "raw_contact_count_original": 1,
+    "contact_status_counts": {
+      "unresolved": 1
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation"
+    ],
+    "raw_contact_ids": [
+      "raw-1461646251-11801333-00239"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  },
+  {
+    "candidate_id": "osm-f8697d53f99b55bf",
+    "review_group_id": "review-03f4c946f8c07766",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "mode": "road",
+    "is_major_road": true,
+    "topology_status": "sustained_country_transition",
+    "has_sustained_geometric_transition": true,
+    "raw_contact_count_reconstructed": 18,
+    "raw_contact_count_original": 18,
+    "contact_status_counts": {
+      "unresolved": 16,
+      "sustained_country_transition": 2
+    },
+    "review_flags": [
+      "some_route_arms_lack_unambiguous_continuation",
+      "original_75m_group_can_contain_distinct_roads_review_each_member"
+    ],
+    "raw_contact_ids": [
+      "raw-16947292-376530825-00240",
+      "raw-49743399-376530825-00241",
+      "raw-131549807-376530825-00242",
+      "raw-414773576-376530825-00243",
+      "raw-414773622-376530825-00244",
+      "raw-1013620459-376530825-00245",
+      "raw-1013620460-376530825-00246",
+      "raw-1013620461-376530825-00247",
+      "raw-1013620462-376530825-00248",
+      "raw-1013620463-376530825-00249",
+      "raw-1013620464-376530825-00250",
+      "raw-1564791522-376530825-00251",
+      "raw-1565031585-376530825-00252",
+      "raw-1565031586-376530825-00253",
+      "raw-1565031587-376530825-00254",
+      "raw-1565031588-376530825-00255",
+      "raw-1565031589-376530825-00256",
+      "raw-1565031590-376530825-00257"
+    ],
+    "is_verified_crossing": false,
+    "is_closure_evidence": false
+  }
+]

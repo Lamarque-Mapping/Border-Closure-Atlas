@@ -1,0 +1,1280 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "UG-KE-BUSIA-ROAD",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.0987848754515,
+          0.4648744237377819
+        ]
+      },
+      "properties": {
+        "id": "UG-KE-BUSIA-ROAD",
+        "canonical_name": "Busia / Busia",
+        "country_pair": [
+          "KE",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "supported",
+        "coordinate_status": "osm_geometry_identity_supported",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://immigration.go.ke/gazetted-ports-of-entry-and-exit-poes-and-location/",
+          "https://bordersecretariat.go.ke/land-poes/",
+          "https://www.immigration.go.ug/list-borders-according-regions",
+          "https://ura.go.ug/en/import-export/one-stop-border-post/",
+          "https://www.eac.int/press-releases/150-infrastructure/888-presidentsmagufuli-and-museveni-launch-mutukula-one-stop-boder-post"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-KE-MALABA-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-KE-MALABA-ROAD",
+        "canonical_name": "Malaba / Malaba road crossing",
+        "country_pair": [
+          "KE",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "provisional",
+        "coordinate_status": "facility_area_corroborated_exact_contact_unresolved",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://immigration.go.ke/gazetted-ports-of-entry-and-exit-poes-and-location/",
+          "https://bordersecretariat.go.ke/land-poes/",
+          "https://www.immigration.go.ug/list-borders-according-regions",
+          "https://ura.go.ug/en/import-export/one-stop-border-post/",
+          "https://www.eac.int/press-releases/150-infrastructure/888-presidentsmagufuli-and-museveni-launch-mutukula-one-stop-boder-post",
+          "https://map.au-pida.org/projects/show/8570001"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-KE-LWAKHAKHA-ROAD",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.3787916550731,
+          0.7943937370047939
+        ]
+      },
+      "properties": {
+        "id": "UG-KE-LWAKHAKHA-ROAD",
+        "canonical_name": "Lwakhakha / Lwakhakha",
+        "country_pair": [
+          "KE",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "supported",
+        "coordinate_status": "osm_route_identity_supported",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://immigration.go.ke/gazetted-ports-of-entry-and-exit-poes-and-location/",
+          "https://bordersecretariat.go.ke/land-poes/",
+          "https://www.immigration.go.ug/list-borders-according-regions"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-KE-SUAM-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-KE-SUAM-ROAD",
+        "canonical_name": "Suam / Suam",
+        "country_pair": [
+          "KE",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "provisional",
+        "coordinate_status": "exact_contact_unresolved",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://immigration.go.ke/gazetted-ports-of-entry-and-exit-poes-and-location/",
+          "https://bordersecretariat.go.ke/land-poes/",
+          "https://www.immigration.go.ug/list-borders-according-regions"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-KE-MALABA-RAIL",
+      "geometry": null,
+      "properties": {
+        "id": "UG-KE-MALABA-RAIL",
+        "canonical_name": "Malaba metre-gauge railway crossing",
+        "country_pair": [
+          "KE",
+          "UG"
+        ],
+        "mode": "rail",
+        "candidate_match_status": "provisional",
+        "coordinate_status": "osm_rail_contact_provisional",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.eac.int/press-releases/150-infrastructure/888-presidentsmagufuli-and-museveni-launch-mutukula-one-stop-boder-post"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-KE-KYEBUKUBE-SONA-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-KE-KYEBUKUBE-SONA-ROAD",
+        "canonical_name": "Kyebukube / Sona",
+        "country_pair": [
+          "KE",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "not_found",
+        "coordinate_status": "unresolved",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.immigration.go.ug/list-borders-according-regions",
+          "https://www.ubos.org/wp-content/uploads/publications/06_2022Migration_Report_2021.pdf"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-KE-AMUDAT-ALAKAS-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-KE-AMUDAT-ALAKAS-ROAD",
+        "canonical_name": "Amudat / Alakas border post",
+        "country_pair": [
+          "KE",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "not_found",
+        "coordinate_status": "unresolved",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.immigration.go.ug/list-borders-according-regions",
+          "https://budget.finance.go.ug/sites/default/files/Sector%20Spending%20Agency%20Budgets%20and%20Performance/National%20Citizenship%20and%20Immigration%20Control_15.pdf",
+          "https://karamojaresilience.org/wp-content/uploads/2022/06/KIDP-Final-PDF.pdf"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-KE-NAKABAT-LOKIRIAMA-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-KE-NAKABAT-LOKIRIAMA-ROAD",
+        "canonical_name": "Nakabat / Lokiriama",
+        "country_pair": [
+          "KE",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "not_found",
+        "coordinate_status": "unresolved",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.immigration.go.ug/list-borders-according-regions",
+          "https://budget.finance.go.ug/sites/default/files/Sector%20Spending%20Agency%20Budgets%20and%20Performance/National%20Citizenship%20and%20Immigration%20Control_15.pdf",
+          "https://karamojaresilience.org/wp-content/uploads/2022/06/KIDP-Final-PDF.pdf",
+          "https://immigration.go.ke/proposed-poes/"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-KE-KAMION-OROPOI-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-KE-KAMION-OROPOI-ROAD",
+        "canonical_name": "Kamion / Oropoi",
+        "country_pair": [
+          "KE",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "not_found",
+        "coordinate_status": "unresolved",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.immigration.go.ug/list-borders-according-regions",
+          "https://budget.finance.go.ug/sites/default/files/Sector%20Spending%20Agency%20Budgets%20and%20Performance/National%20Citizenship%20and%20Immigration%20Control_15.pdf"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-TZ-MUTUKULA-ROAD",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.416413125611452,
+          -1.0000048873672045
+        ]
+      },
+      "properties": {
+        "id": "UG-TZ-MUTUKULA-ROAD",
+        "canonical_name": "Mutukula / Mutukula",
+        "country_pair": [
+          "TZ",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "supported",
+        "coordinate_status": "independent_reference_corroborated",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.immigration.go.ug/list-borders-according-regions",
+          "https://ura.go.ug/en/import-export/one-stop-border-post/",
+          "https://www.eac.int/press-releases/150-infrastructure/888-presidentsmagufuli-and-museveni-launch-mutukula-one-stop-boder-post",
+          "https://map.au-pida.org/projects/show/3050001",
+          "https://data.unhcr.org/en/documents/details/86907",
+          "https://www.nao.go.tz/uploads/Performance_Audit_on_the_Management_of_Invasive_Alien_Species_in_Terrestrial_Environment.pdf"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-TZ-KIKAGATI-MURONGO-ROAD",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.648207529394096,
+          -1.0655921755692046
+        ]
+      },
+      "properties": {
+        "id": "UG-TZ-KIKAGATI-MURONGO-ROAD",
+        "canonical_name": "Kikagati / Murongo",
+        "country_pair": [
+          "TZ",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "supported",
+        "coordinate_status": "independent_reference_corroborated",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.immigration.go.ug/list-borders-according-regions",
+          "https://data.unhcr.org/en/documents/details/86907",
+          "https://www.nao.go.tz/uploads/Performance_Audit_on_the_Management_of_Invasive_Alien_Species_in_Terrestrial_Environment.pdf",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC11618027/"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-TZ-BUGANGO-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-TZ-BUGANGO-ROAD",
+        "canonical_name": "Bugango",
+        "country_pair": [
+          "TZ",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "provisional",
+        "coordinate_status": "conflicting_external_coordinates",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.immigration.go.ug/list-borders-according-regions",
+          "https://data.unhcr.org/en/documents/details/86907",
+          "https://www.nao.go.tz/uploads/Performance_Audit_on_the_Management_of_Invasive_Alien_Species_in_Terrestrial_Environment.pdf",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC11618027/"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-TZ-KASHENYE-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-TZ-KASHENYE-ROAD",
+        "canonical_name": "Kashenye",
+        "country_pair": [
+          "TZ",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "not_found",
+        "coordinate_status": "unresolved",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC11618027/"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-TZ-MINZIRO-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-TZ-MINZIRO-ROAD",
+        "canonical_name": "Minziro",
+        "country_pair": [
+          "TZ",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "not_found",
+        "coordinate_status": "unresolved",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC11618027/"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-TZ-KANYIGO-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-TZ-KANYIGO-ROAD",
+        "canonical_name": "Kanyigo",
+        "country_pair": [
+          "TZ",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "not_found",
+        "coordinate_status": "unresolved",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.nao.go.tz/uploads/Performance_Audit_on_the_Management_of_Invasive_Alien_Species_in_Terrestrial_Environment.pdf",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC11618027/"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-SS-ELEGU-ROAD",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.07337111263835,
+          3.5710891136309444
+        ]
+      },
+      "properties": {
+        "id": "UG-SS-ELEGU-ROAD",
+        "canonical_name": "Elegu–Nimule",
+        "country_pair": [
+          "SS",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "supported",
+        "coordinate_status": "OSM road/boundary contact supports the named corridor; published 2021 facility point retained separately; exact facility footprint not surveyed.",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.immigration.go.ug/list-borders-according-regions",
+          "https://thetaxman.ura.go.ug/?p=4130",
+          "https://ura.go.ug/en/import-export/one-stop-border-post/",
+          "https://ura.go.ug/en/enforcement-questions-and-answers/",
+          "https://data.unhcr.org/en/documents/details/86907"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-SS-ORABA-ROAD",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.883275963457567,
+          3.539824147783346
+        ]
+      },
+      "properties": {
+        "id": "UG-SS-ORABA-ROAD",
+        "canonical_name": "Oraba–Kaya",
+        "country_pair": [
+          "SS",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "supported",
+        "coordinate_status": "Supported corridor; source facility coordinate and OSM border-contact coordinate are distinct, neither treated as surveyed accuracy.",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.immigration.go.ug/list-borders-according-regions",
+          "https://thetaxman.ura.go.ug/?p=4130",
+          "https://ura.go.ug/en/enforcement-questions-and-answers/",
+          "https://www.meaca.go.ug/news/meaca-strengthens-cross-border-security-through-stakeholder-engagement-oraba-border-post",
+          "https://data.unhcr.org/en/documents/details/86907"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-SS-AFOJI-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-SS-AFOJI-ROAD",
+        "canonical_name": "Afoji–Kajo Keji",
+        "country_pair": [
+          "SS",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "provisional",
+        "coordinate_status": "Use the UNHCR2021 point as a dated source reference only; candidate alignment remains unresolved.",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.immigration.go.ug/list-borders-according-regions",
+          "https://thetaxman.ura.go.ug/?p=4130",
+          "https://ura.go.ug/en/enforcement-questions-and-answers/",
+          "https://data.unhcr.org/en/documents/details/86907"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-SS-NGOMOROMO-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-SS-NGOMOROMO-ROAD",
+        "canonical_name": "Ngomoromo–Pogei",
+        "country_pair": [
+          "SS",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "provisional",
+        "coordinate_status": "Named source point verified for 2021; border-contact alignment unresolved, with documentary boundary-demarcation concern.",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.immigration.go.ug/list-borders-according-regions",
+          "https://thetaxman.ura.go.ug/?p=4130",
+          "https://data.unhcr.org/en/documents/details/86907",
+          "https://budget.finance.go.ug/sites/default/files/Sector%20Spending%20Agency%20Budgets%20and%20Performance/2017-2018_QuarterlyReport_Q4_120_NationalCitizenshipandImmigrationControl_8_22_20188_21_59AM_Final.pdf",
+          "https://lamwo.go.ug/sites/default/files/Approved%20Lamwo%20District%20Development%20Plan%20III.pdf"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-SS-AWENO-OLWIYO-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-SS-AWENO-OLWIYO-ROAD",
+        "canonical_name": "Aweno-Olwiyo–Lobone",
+        "country_pair": [
+          "SS",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "provisional",
+        "coordinate_status": "Source point retained separately; candidate is provisional corridor context only.",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://thetaxman.ura.go.ug/?p=4130",
+          "https://data.unhcr.org/en/documents/details/86907"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-SS-MADI-OPEI-ROAD",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.20251908848111,
+          3.776843429145652
+        ]
+      },
+      "properties": {
+        "id": "UG-SS-MADI-OPEI-ROAD",
+        "canonical_name": "Madi Opei–Tdetenya",
+        "country_pair": [
+          "SS",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "supported",
+        "coordinate_status": "Supported corridor with separate 2021 facility and 2026 OSM contact coordinates; exact installation not surveyed.",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.immigration.go.ug/list-borders-according-regions",
+          "https://thetaxman.ura.go.ug/?p=4130",
+          "https://ura.go.ug/en/enforcement-questions-and-answers/",
+          "https://data.unhcr.org/en/documents/details/86907"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-SS-WALIGO-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-SS-WALIGO-ROAD",
+        "canonical_name": "Waligo",
+        "country_pair": [
+          "SS",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "provisional",
+        "coordinate_status": "2021 source point and 2025 named checkpoint independently supported; OSM border-contact alignment unresolved.",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://data.unhcr.org/en/documents/details/86907",
+          "https://www.updf.go.ug/disarmament-operation/illegal-firearm-recovered-two-suspects-arrested-at-uganda-south-sudan-border/amp/",
+          "https://lamwo.go.ug/sites/default/files/Approved%20Lamwo%20District%20Development%20Plan%20III.pdf"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-SS-OPOTPOT-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-SS-OPOTPOT-ROAD",
+        "canonical_name": "Opotpot",
+        "country_pair": [
+          "SS",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "not_found",
+        "coordinate_status": "No accepted coordinate.",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.immigration.go.ug/list-borders-according-regions",
+          "https://budget.finance.go.ug/sites/default/files/Sector%20Spending%20Agency%20Budgets%20and%20Performance/2017-2018_QuarterlyReport_Q4_120_NationalCitizenshipandImmigrationControl_8_22_20188_21_59AM_Final.pdf"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-SS-BUSIA-KOBOKO-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-SS-BUSIA-KOBOKO-ROAD",
+        "canonical_name": "Busia (Koboko)",
+        "country_pair": [
+          "SS",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "provisional",
+        "coordinate_status": "Dated source point retained; nearby route contacts require facility grouping review.",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://data.unhcr.org/en/documents/details/86907"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-SS-ANGILIA-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-SS-ANGILIA-ROAD",
+        "canonical_name": "Angilia",
+        "country_pair": [
+          "SS",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "not_found",
+        "coordinate_status": "Dated UNHCR coordinate available; no accepted candidate link.",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://data.unhcr.org/en/documents/details/86907"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-RW-KATUNA-ROAD",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.011723209820374,
+          -1.4248080331939812
+        ]
+      },
+      "properties": {
+        "id": "UG-RW-KATUNA-ROAD",
+        "canonical_name": "Katuna / Gatuna",
+        "country_pair": [
+          "RW",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "supported",
+        "coordinate_status": "osm_candidate_location_supported; no independent survey",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.migration.gov.rw/our-services/border-management",
+          "https://www.migration.gov.rw/fileadmin/user_upload/pdf_files/official_gazette_n__41_of_21.12.2020_imipaka_border_post__2_.pdf",
+          "https://ura.go.ug/en/import-export/one-stop-border-post/",
+          "https://ura.go.ug/en/enforcement-questions-and-answers/",
+          "https://data.unhcr.org/en/documents/details/86907"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-RW-CYANIKA-ROAD",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.740233240220146,
+          -1.3405475009049739
+        ]
+      },
+      "properties": {
+        "id": "UG-RW-CYANIKA-ROAD",
+        "canonical_name": "Cyanika",
+        "country_pair": [
+          "RW",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "supported",
+        "coordinate_status": "osm_candidate_location_supported; no independent survey",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.migration.gov.rw/our-services/border-management",
+          "https://www.migration.gov.rw/fileadmin/user_upload/pdf_files/official_gazette_n__41_of_21.12.2020_imipaka_border_post__2_.pdf",
+          "https://ura.go.ug/en/enforcement-questions-and-answers/",
+          "https://data.unhcr.org/en/documents/details/86907"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-RW-MIRAMA-HILLS-ROAD",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4596067,
+          -1.0523240999999997
+        ]
+      },
+      "properties": {
+        "id": "UG-RW-MIRAMA-HILLS-ROAD",
+        "canonical_name": "Mirama Hills / Kagitumba",
+        "country_pair": [
+          "RW",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "supported",
+        "coordinate_status": "osm_candidate_location_supported; no independent survey",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.migration.gov.rw/our-services/border-management",
+          "https://www.migration.gov.rw/fileadmin/user_upload/pdf_files/official_gazette_n__41_of_21.12.2020_imipaka_border_post__2_.pdf",
+          "https://ura.go.ug/en/import-export/one-stop-border-post/",
+          "https://ura.go.ug/en/enforcement-questions-and-answers/",
+          "https://data.unhcr.org/en/documents/details/86907"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-RW-RWEMPASHA-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-RW-RWEMPASHA-ROAD",
+        "canonical_name": "Rwempasha / Kizinga",
+        "country_pair": [
+          "RW",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "provisional",
+        "coordinate_status": "unresolved_exact_crossing",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.migration.gov.rw/our-services/border-management",
+          "https://www.migration.gov.rw/fileadmin/user_upload/pdf_files/official_gazette_n__41_of_21.12.2020_imipaka_border_post__2_.pdf",
+          "https://rwandatrade.rw/media/Ministerial_Decree_No_003-07_of_09.05.2007_Implementing_the_Law_No_21-2006_of_28.04.2006_Establishing_the_Customs_Law%20%281%29.pdf",
+          "https://www.immigration.go.ug/list-borders-according-regions"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-RW-BUHITA-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-RW-BUHITA-ROAD",
+        "canonical_name": "Buhita",
+        "country_pair": [
+          "RW",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "provisional",
+        "coordinate_status": "unresolved_exact_crossing",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.migration.gov.rw/our-services/border-management",
+          "https://www.migration.gov.rw/fileadmin/user_upload/pdf_files/official_gazette_n__41_of_21.12.2020_imipaka_border_post__2_.pdf",
+          "https://rwandatrade.rw/media/Ministerial_Decree_No_003-07_of_09.05.2007_Implementing_the_Law_No_21-2006_of_28.04.2006_Establishing_the_Customs_Law%20%281%29.pdf"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-RW-BUZIBA-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-RW-BUZIBA-ROAD",
+        "canonical_name": "Buziba",
+        "country_pair": [
+          "RW",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "provisional",
+        "coordinate_status": "unresolved_exact_crossing",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.migration.gov.rw/our-services/border-management",
+          "https://www.migration.gov.rw/fileadmin/user_upload/pdf_files/official_gazette_n__41_of_21.12.2020_imipaka_border_post__2_.pdf"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-CD-BUNAGANA-ROAD",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.5985472,
+          -1.2951306999999983
+        ]
+      },
+      "properties": {
+        "id": "UG-CD-BUNAGANA-ROAD",
+        "canonical_name": "Bunagana",
+        "country_pair": [
+          "CD",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "supported",
+        "coordinate_status": "osm_candidate_location_supported; no independent survey",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.immigration.go.ug/list-borders-according-regions",
+          "https://ura.go.ug/en/enforcement-questions-and-answers/",
+          "https://data.unhcr.org/en/documents/details/86907",
+          "https://data.unhcr.org/en/documents/download/118063",
+          "https://www.gov.uk/foreign-travel-advice/uganda/regional-risks"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-CD-ISHASHA-ROAD",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.628091600000005,
+          -0.7274253000000003
+        ]
+      },
+      "properties": {
+        "id": "UG-CD-ISHASHA-ROAD",
+        "canonical_name": "Ishasha River",
+        "country_pair": [
+          "CD",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "supported",
+        "coordinate_status": "osm_candidate_location_supported; no independent survey",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://ura.go.ug/en/customs-external-operations/",
+          "https://data.unhcr.org/en/documents/details/86907",
+          "https://data.unhcr.org/en/documents/download/118063"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-CD-MPONDWE-ROAD",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.720157835883587,
+          0.04116759624152679
+        ]
+      },
+      "properties": {
+        "id": "UG-CD-MPONDWE-ROAD",
+        "canonical_name": "Mpondwe / Kasindi",
+        "country_pair": [
+          "CD",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "supported",
+        "coordinate_status": "osm_candidate_location_supported; no independent survey",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://ura.go.ug/en/import-export/one-stop-border-post/",
+          "https://ura.go.ug/en/enforcement-questions-and-answers/",
+          "https://www.mtic.go.ug/trade-minister-gen-mbadi-moves-to-address-trade-barriers-and-enhance-uganda-drc-trade/",
+          "https://data.unhcr.org/en/documents/details/86907"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-CD-BUSUNGA-ROAD",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.95767238019646,
+          0.6300410883145658
+        ]
+      },
+      "properties": {
+        "id": "UG-CD-BUSUNGA-ROAD",
+        "canonical_name": "Busunga",
+        "country_pair": [
+          "CD",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "supported",
+        "coordinate_status": "osm_candidate_location_supported; no independent survey",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://ura.go.ug/en/enforcement-questions-and-answers/",
+          "https://ura.go.ug/en/customs-external-operations/",
+          "https://data.unhcr.org/en/documents/details/86907",
+          "https://data.unhcr.org/en/documents/download/118063"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-CD-GOLI-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-CD-GOLI-ROAD",
+        "canonical_name": "Goli / Mahagi",
+        "country_pair": [
+          "CD",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "provisional",
+        "coordinate_status": "unresolved_exact_crossing",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://ura.go.ug/en/import-export/one-stop-border-post/",
+          "https://ura.go.ug/en/enforcement-questions-and-answers/",
+          "https://www.mtic.go.ug/trade-minister-gen-mbadi-moves-to-address-trade-barriers-and-enhance-uganda-drc-trade/",
+          "https://www.immigration.go.ug/list-borders-according-regions"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-CD-VURRA-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-CD-VURRA-ROAD",
+        "canonical_name": "Vurra",
+        "country_pair": [
+          "CD",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "provisional",
+        "coordinate_status": "unresolved_exact_crossing",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://ura.go.ug/en/enforcement-questions-and-answers/",
+          "https://www.mtic.go.ug/trade-minister-gen-mbadi-moves-to-address-trade-barriers-and-enhance-uganda-drc-trade/",
+          "https://www.immigration.go.ug/list-borders-according-regions"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-CD-LIA-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-CD-LIA-ROAD",
+        "canonical_name": "Lia",
+        "country_pair": [
+          "CD",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "not_found",
+        "coordinate_status": "unresolved_exact_crossing",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://ura.go.ug/en/enforcement-questions-and-answers/",
+          "https://www.mtic.go.ug/trade-minister-gen-mbadi-moves-to-address-trade-barriers-and-enhance-uganda-drc-trade/",
+          "https://www.immigration.go.ug/list-borders-according-regions"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-CD-PADEA-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-CD-PADEA-ROAD",
+        "canonical_name": "Padea",
+        "country_pair": [
+          "CD",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "not_found",
+        "coordinate_status": "unresolved_exact_crossing",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://ura.go.ug/en/enforcement-questions-and-answers/",
+          "https://www.mtic.go.ug/trade-minister-gen-mbadi-moves-to-address-trade-barriers-and-enhance-uganda-drc-trade/",
+          "https://www.immigration.go.ug/list-borders-according-regions"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-CD-PAIDHA-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-CD-PAIDHA-ROAD",
+        "canonical_name": "Paidha",
+        "country_pair": [
+          "CD",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "not_found",
+        "coordinate_status": "unresolved_exact_crossing",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.immigration.go.ug/list-borders-according-regions",
+          "https://data.unhcr.org/en/documents/download/118063"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-CD-ODRAMACAKU-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-CD-ODRAMACAKU-ROAD",
+        "canonical_name": "Odramacaku",
+        "country_pair": [
+          "CD",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "not_found",
+        "coordinate_status": "unresolved_exact_crossing",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.immigration.go.ug/list-borders-according-regions"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-CD-DEI-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-CD-DEI-ROAD",
+        "canonical_name": "Dei",
+        "country_pair": [
+          "CD",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "provisional",
+        "coordinate_status": "unresolved_exact_crossing",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.immigration.go.ug/list-borders-according-regions"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-CD-KYESHERO-ROAD",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.621911097582213,
+          -0.9005874367224742
+        ]
+      },
+      "properties": {
+        "id": "UG-CD-KYESHERO-ROAD",
+        "canonical_name": "Kyeshero",
+        "country_pair": [
+          "CD",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "supported",
+        "coordinate_status": "osm_candidate_location_supported; no independent survey",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://data.unhcr.org/en/documents/details/86907",
+          "https://data.unhcr.org/en/documents/download/118063"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-CD-BUSANZA-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-CD-BUSANZA-ROAD",
+        "canonical_name": "Busanza / Kitagoma",
+        "country_pair": [
+          "CD",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "provisional",
+        "coordinate_status": "unresolved_exact_crossing",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://data.unhcr.org/en/documents/details/86907",
+          "https://data.unhcr.org/en/documents/download/118063",
+          "https://www.gov.uk/foreign-travel-advice/uganda/regional-risks"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-CD-BUTOGOTA-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-CD-BUTOGOTA-ROAD",
+        "canonical_name": "Butogota",
+        "country_pair": [
+          "CD",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "not_found",
+        "coordinate_status": "unresolved_exact_crossing",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://www.immigration.go.ug/list-borders-according-regions",
+          "https://data.unhcr.org/en/documents/details/86907",
+          "https://data.unhcr.org/en/documents/download/118063"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-CD-NTEKO-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-CD-NTEKO-ROAD",
+        "canonical_name": "Nteko",
+        "country_pair": [
+          "CD",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "provisional",
+        "coordinate_status": "unresolved_exact_crossing",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://data.unhcr.org/en/documents/details/86907",
+          "https://data.unhcr.org/en/documents/download/118063"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-CD-BULYANTANO-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-CD-BULYANTANO-ROAD",
+        "canonical_name": "Bulyantano",
+        "country_pair": [
+          "CD",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "not_found",
+        "coordinate_status": "unresolved_exact_crossing",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://data.unhcr.org/en/documents/details/86907"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-CD-BUTOGO-ROAD",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.97070632881352,
+          0.724559510525015
+        ]
+      },
+      "properties": {
+        "id": "UG-CD-BUTOGO-ROAD",
+        "canonical_name": "Butogo",
+        "country_pair": [
+          "CD",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "supported",
+        "coordinate_status": "osm_candidate_location_supported; no independent survey",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://data.unhcr.org/en/documents/details/86907",
+          "https://data.unhcr.org/en/documents/download/118063"
+        ],
+        "is_closure_evidence": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UG-CD-KASIRI-ROAD",
+      "geometry": null,
+      "properties": {
+        "id": "UG-CD-KASIRI-ROAD",
+        "canonical_name": "Kasiri",
+        "country_pair": [
+          "CD",
+          "UG"
+        ],
+        "mode": "road",
+        "candidate_match_status": "not_found",
+        "coordinate_status": "unresolved_exact_crossing",
+        "coordinate_accuracy_m": null,
+        "current_operation_status": "not_assessed",
+        "source_urls": [
+          "https://data.unhcr.org/en/documents/details/86907"
+        ],
+        "is_closure_evidence": false
+      }
+    }
+  ],
+  "attribution": "OSM-derived reference coordinates © OpenStreetMap contributors, ODbL 1.0; independent source points retained separately."
+}

@@ -1,0 +1,785 @@
+{
+  "reviewed_at": "2026-10-23T10:38:21.669624+00:00",
+  "scope": "Eight included authoritative-workbook records naming Uganda; six have named crossings. Identity review only, separate from geometry verification and chronology adjudication.",
+  "workbook_sha256": "3530415e136e81d20cc24b51b3a5c2739e6a529fc2484cc51c8861693ff33bf0",
+  "review_method": "Same-model AI source review of substantive reporting; no human or independent-model validation.",
+  "sources": [
+    {
+      "id": "EV-GL01-AFP-20220131",
+      "title": "Confusion at Rwanda-Uganda border crossing after reopening",
+      "publisher": "AFP / Daily Monitor",
+      "url": "https://www.monitor.co.ug/uganda/news/national/confusion-at-rwanda-uganda-border-crossing-after-reopening-3700712",
+      "date": "2022-01-31",
+      "retrieved_at": "2026-10-23T10:38:21.669624+00:00",
+      "supports": [
+        "GL01 names Katuna/Gatuna as the affected crossing; observed truck movement and continuing passenger restrictions"
+      ],
+      "notes": "Original AFP reporting and attributed government comments. The reopening was category-specific; this source does not establish uninterrupted all-traffic closure.",
+      "access": "Substantive article text read in this review",
+      "retrieval_ref": "turn32view4"
+    },
+    {
+      "id": "EV-GL12-OKAPI-20220621",
+      "title": "Nord-Kivu : interdiction d’importer et d’exporter les marchandises via Bunagana",
+      "publisher": "Radio Okapi",
+      "url": "https://www.radiookapi.net/2022/06/21/actualite/economie/nord-kivu-interdiction-dimporter-et-dexporter-les-marchandises",
+      "date": "2022-06-21",
+      "retrieved_at": "2026-10-23T10:38:21.669624+00:00",
+      "supports": [
+        "GL12 prohibition names Bunagana border post between DRC and Uganda"
+      ],
+      "notes": "Reports the North Kivu governor’s signed 20 June communiqué prohibiting goods import/export through Bunagana. A reported legal prohibition is distinct from an observed physical seal; the government document itself was not newly obtained.",
+      "access": "Substantive article text read in this review",
+      "retrieval_ref": "turn31view1"
+    },
+    {
+      "id": "EV-GL13-AA-20250711",
+      "title": "Uganda reopens border posts with DR Congo",
+      "publisher": "Anadolu Agency; James Tasamba",
+      "url": "https://www.aa.com.tr/en/africa/uganda-reopens-border-posts-with-dr-congo/3628319",
+      "date": "2025-07-11",
+      "retrieved_at": "2026-10-23T10:38:21.669624+00:00",
+      "supports": [
+        "GL13 explicitly names Bunagana and Ishasha"
+      ],
+      "notes": "Reports military assistant Chris Magezi’s statement about the two crossings. This is attributed reporting of a directive and reopening; first ordinary passage at each post is not independently established.",
+      "access": "Substantive article text read in this review",
+      "retrieval_ref": "turn31view2"
+    },
+    {
+      "id": "EV-GL13-XINHUA-URN-20250710",
+      "title": "Uganda reopens border posts with eastern DRC",
+      "publisher": "Xinhua and Uganda Radio Network / The Independent",
+      "url": "https://www.independent.co.ug/uganda-reopens-border-posts-with-eastern-drc/",
+      "date": "2025-07-10",
+      "retrieved_at": "2026-10-23T10:38:21.669624+00:00",
+      "supports": [
+        "GL13 names Bunagana, Ishasha and Busanza; identifies Busanza–Kitagoma"
+      ],
+      "notes": "Reports a telephone interview with military spokesperson Felix Kulayigye and Bunagana ceremony. The instruction includes Busanza; this does not establish first physical traffic there. Name is Busanza–Kitagoma in Kisoro, not a same-name settlement by Ishasha.",
+      "access": "Substantive article text read in this review",
+      "retrieval_ref": "turn32view0"
+    },
+    {
+      "id": "EV-R3-AF-006-EYE-20220512",
+      "title": "Nimule border closes temporarily as gunmen kill 2 police officers – Police",
+      "publisher": "Eye Radio; Alhadi Hawari",
+      "url": "https://eyeradio.org/nimule-border-closes-temporarily-as-gunmen-kill-2-police-officers-police/",
+      "date": "2022-05-12",
+      "retrieved_at": "2026-10-23T10:38:21.669624+00:00",
+      "supports": [
+        "R3-AF-006 identifies the South Sudan–Uganda border in Nimule"
+      ],
+      "notes": "Direct interview with the Nimule police chief; photo caption identifies the bridge connection. Both sides’ closure is the officer’s account, not separate observations.",
+      "access": "Substantive article text read in this review",
+      "retrieval_ref": "turn31view3"
+    },
+    {
+      "id": "EV-R3-AF-006-TAMAZUJ-20220513",
+      "title": "Nimule border reopened after brief closure",
+      "publisher": "Radio Tamazuj",
+      "url": "https://www.radiotamazuj.org/en/news/article/nimule-border-reopened-after-brief-closure",
+      "date": "2022-05-13",
+      "retrieved_at": "2026-10-23T10:38:21.669624+00:00",
+      "supports": [
+        "R3-AF-006 identifies the same international crossing and reported traffic resumption"
+      ],
+      "notes": "Interviews the same principal police source as Eye Radio. It is corroborating publication, not an independent operational witness.",
+      "access": "Substantive article text read in this review",
+      "retrieval_ref": "turn32view5"
+    },
+    {
+      "id": "EV-R3-AF-007-URN-20220712",
+      "title": "Trucks Pile at Elegu Border Following Violence In South Sudan",
+      "publisher": "Uganda Radio Network; Julius Ocungi",
+      "url": "https://www.ugandaradionetwork.net/a/story/trucks-pile-at-elegu-border-following-violence-in-south-sudan",
+      "date": "2022-07-12",
+      "retrieved_at": "2026-10-23T10:38:21.669624+00:00",
+      "supports": [
+        "R3-AF-007 pairs Elegu in Amuru with Nimule, and describes halted road transport and customs clearance"
+      ],
+      "notes": "The same URN article contains conflicting accounts: anonymous border staff say URA stopped clearing trucks, while named UPDF spokesperson Cpt Hassan Ahmed Kato says the Ugandan border remained open and operational. Crossing identity and the Nimule road disruption are supported; Ugandan formal closure is contested. Backlog and voluntary waiting after traffic resumed are separate.",
+      "access": "Substantive article text read in this review",
+      "retrieval_ref": "turn52view0"
+    },
+    {
+      "id": "EV-R4-AES-002-STANDARD-20220107",
+      "title": "Truck drivers at Kenya-Uganda border on strike over Covid-19 tests",
+      "publisher": "The Standard; Alexander Chagema",
+      "url": "https://www.standardmedia.co.ke/health/amp/national/article/2001433667/truck-drivers-at-kenya-uganda-border-on-strike-over-covid-19-tests",
+      "date": "2022-01-07",
+      "retrieved_at": "2026-10-23T10:38:21.669624+00:00",
+      "supports": [
+        "R4-AES-002 is Malaba road freight entering Uganda from Kenya; rail is not established"
+      ],
+      "notes": "Reports truck stoppage at Malaba with dated photo and interviews. Busia and opposite-direction traffic are reported separately. This review accepts location and movement identity only; it does not re-adjudicate conflicting onset or reopening reports.",
+      "access": "Substantive article text read in this review",
+      "retrieval_ref": "turn31view5"
+    },
+    {
+      "id": "EV-GEO-FCDO-BUSANZA",
+      "title": "Uganda travel advice: Regional risks",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "url": "https://www.gov.uk/foreign-travel-advice/uganda/regional-risks",
+      "date": null,
+      "retrieved_at": "2026-10-23T10:39:10.862040+00:00",
+      "supports": [
+        "Identifies Kitagoma–Buszana as a crossing in Kisoro district"
+      ],
+      "notes": "Geographic identity context only; current travel advice does not establish the closure dates or an OSM coordinate. The source spelling is Buszana; the closure report spells Busanza.",
+      "access": "Substantive regional paragraph read",
+      "retrieval_ref": "turn50view0"
+    }
+  ],
+  "links": [
+    {
+      "id": "ECL-GL01-KATUNA-ROAD",
+      "event_id": "GL01",
+      "crossing_name": "Katuna / Gatuna",
+      "country_pair": [
+        "RW",
+        "UG"
+      ],
+      "mode": "road",
+      "link_status": "verified_identity",
+      "source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "workbook_crossings_verbatim": "Gatuna/Katuna",
+      "scope": "The named Katuna/Gatuna crossing; wider Rwandan exit restrictions remain a separate scope.",
+      "affected_movement": "Traders, cargo and passengers; resumption initially prioritised cargo and returnees.",
+      "direction": "Rwandan exit to Uganda especially restricted; practical effects on both directions.",
+      "coordinate_status": "separate_review",
+      "phase_ids": [
+        "GL01-R1",
+        "GL01-R2"
+      ],
+      "phase_dates_policy": "Retain authoritative workbook phase dates and qualifications; no date amendment or transfer to other crossings.",
+      "notes": "The exact named crossing can be linked. Nearby Rwanda–Uganda roads are not Katuna simply because the same town is within 10 km. The record’s wider travel restriction does not assign every nearby road the Katuna freight chronology.",
+      "crossing_id": "UG-RW-KATUNA-ROAD"
+    },
+    {
+      "id": "ECL-GL12-BUNAGANA-ROAD",
+      "event_id": "GL12",
+      "crossing_name": "Bunagana",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "link_status": "verified_identity",
+      "source_ids": [
+        "EV-GL12-OKAPI-20220621"
+      ],
+      "workbook_crossings_verbatim": "Bunagana",
+      "scope": "Goods import/export prohibition through the named Bunagana post.",
+      "affected_movement": "Goods imports and exports via Bunagana; road traffic separately reported retrospectively.",
+      "direction": "Not established",
+      "coordinate_status": "separate_review",
+      "phase_ids": [],
+      "phase_dates_policy": "Retain authoritative workbook phase dates and qualifications; no date amendment or transfer to other crossings.",
+      "notes": "Identity is supported by a source reporting the governor’s communiqué. This is a formal prohibition; current physical traffic or full historical sealing is not established. There are no duration_periods in the current record.",
+      "crossing_id": "UG-CD-BUNAGANA-ROAD"
+    },
+    {
+      "id": "ECL-GL13-BUNAGANA-ROAD",
+      "event_id": "GL13",
+      "crossing_name": "Bunagana",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "link_status": "verified_identity",
+      "source_ids": [
+        "EV-GL13-AA-20250711",
+        "EV-GL13-XINHUA-URN-20250710"
+      ],
+      "workbook_crossings_verbatim": "Bunagana; Ishasha; Busanza",
+      "scope": "Ugandan formal suspension and official reactivation at Bunagana.",
+      "affected_movement": "Border trade and passenger flows.",
+      "direction": "Not established",
+      "coordinate_status": "separate_review",
+      "phase_ids": [
+        "GL13-D1"
+      ],
+      "phase_dates_policy": "Retain authoritative workbook phase dates and qualifications; no date amendment or transfer to other crossings.",
+      "notes": "Link the named post only. Preserve the distinction between official reactivation and continued informal movement.",
+      "crossing_id": "UG-CD-BUNAGANA-ROAD"
+    },
+    {
+      "id": "ECL-GL13-ISHASHA-ROAD",
+      "event_id": "GL13",
+      "crossing_name": "Ishasha",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "link_status": "verified_identity",
+      "source_ids": [
+        "EV-GL13-AA-20250711",
+        "EV-GL13-XINHUA-URN-20250710"
+      ],
+      "workbook_crossings_verbatim": "Bunagana; Ishasha; Busanza",
+      "scope": "Ugandan formal suspension and reported official reactivation at Ishasha.",
+      "affected_movement": "Border trade and passenger flows.",
+      "direction": "Not established",
+      "coordinate_status": "separate_review",
+      "phase_ids": [
+        "GL13-D1"
+      ],
+      "phase_dates_policy": "Retain authoritative workbook phase dates and qualifications; no date amendment or transfer to other crossings.",
+      "notes": "Identity is supported; this does not establish independently observed first ordinary passage.",
+      "crossing_id": "UG-CD-ISHASHA-ROAD"
+    },
+    {
+      "id": "ECL-GL13-BUSANZA-ROAD",
+      "event_id": "GL13",
+      "crossing_name": "Busanza / Kitagoma",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "link_status": "verified_identity",
+      "source_ids": [
+        "EV-GL13-XINHUA-URN-20250710",
+        "EV-GEO-FCDO-BUSANZA"
+      ],
+      "workbook_crossings_verbatim": "Bunagana; Ishasha; Busanza",
+      "scope": "Ugandan formal suspension at Busanza, until reopening permission.",
+      "affected_movement": "Border trade and passenger flows.",
+      "direction": "Not established",
+      "coordinate_status": "separate_review",
+      "phase_ids": [
+        "GL13-R1"
+      ],
+      "phase_dates_policy": "Retain authoritative workbook phase dates and qualifications; no date amendment or transfer to other crossings.",
+      "notes": "Use the Busanza–Kitagoma crossing in Kisoro. Do not assign homonymous settlements near Bunagana or Ishasha. The workbook gives this phase a 9 July permission endpoint; it must not inherit the 10 July Bunagana/Ishasha endpoint. FCDO identifies Kitagoma–Buszana in Kisoro. UNHCR’s 2021 Busanja spelling is retained separately in the geographic benchmark; exact gate selection remains unresolved.",
+      "crossing_id": "UG-CD-BUSANZA-ROAD"
+    },
+    {
+      "id": "ECL-R3-AF-006-ELEGU-ROAD",
+      "event_id": "R3-AF-006",
+      "crossing_name": "Elegu / Nimule",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "link_status": "verified_identity",
+      "source_ids": [
+        "EV-R3-AF-006-EYE-20220512",
+        "EV-R3-AF-006-TAMAZUJ-20220513"
+      ],
+      "workbook_crossings_verbatim": "Nimule / Elegu",
+      "scope": "Nimule–Elegu international road crossing.",
+      "affected_movement": "Cross-border travellers and trade",
+      "direction": "Both directions; South Sudan officer expressly cites preventing outward movement",
+      "coordinate_status": "separate_review",
+      "phase_ids": [
+        "R3-AF-006-D1"
+      ],
+      "phase_dates_policy": "Retain authoritative workbook phase dates and qualifications; no date amendment or transfer to other crossings.",
+      "notes": "This refers to the Nimule–Elegu road/bridge corridor, not any settlement named Elegu. Exact hours and exemptions remain unestablished.",
+      "crossing_id": "UG-SS-ELEGU-ROAD"
+    },
+    {
+      "id": "ECL-R3-AF-007-ELEGU-ROAD",
+      "event_id": "R3-AF-007",
+      "crossing_name": "Elegu / Nimule",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "link_status": "verified_identity",
+      "source_ids": [
+        "EV-R3-AF-007-URN-20220712"
+      ],
+      "workbook_crossings_verbatim": "Nimule / Elegu",
+      "scope": "Nimule–Elegu road crossing and associated customs clearance.",
+      "affected_movement": "Cross-border travellers and trade",
+      "direction": "Not established",
+      "coordinate_status": "separate_review",
+      "phase_ids": [
+        "R3-AF-007-D1"
+      ],
+      "phase_dates_policy": "Retain authoritative workbook phase dates and qualifications; no date amendment or transfer to other crossings.",
+      "notes": "The same URN article contains conflicting accounts: anonymous border staff say URA stopped clearing trucks, while named UPDF spokesperson Cpt Hassan Ahmed Kato says the Ugandan border remained open and operational. Crossing identity and the Nimule road disruption are supported; Ugandan formal closure is contested. No canonical chronology amendment is made.",
+      "source_conflict": "Ugandan side closure/clearance status conflicts within source; preserve for chronology adjudication.",
+      "crossing_id": "UG-SS-ELEGU-ROAD"
+    },
+    {
+      "id": "ECL-R4-AES-002-MALABA-ROAD",
+      "event_id": "R4-AES-002",
+      "crossing_name": "Malaba",
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "mode": "road",
+      "link_status": "verified_identity",
+      "source_ids": [
+        "EV-R4-AES-002-STANDARD-20220107"
+      ],
+      "workbook_crossings_verbatim": "Malaba",
+      "scope": "Kenya-to-Uganda truck approach and road crossing at Malaba.",
+      "affected_movement": "Uganda-bound trucks and cargo, including fuel; passenger prohibition not established.",
+      "direction": "Kenya to Uganda; broader bilateral closure not established.",
+      "coordinate_status": "separate_review",
+      "phase_ids": [
+        "R4-AES-002-R1"
+      ],
+      "phase_dates_policy": "Retain authoritative workbook phase dates and qualifications; no date amendment or transfer to other crossings.",
+      "notes": "Road freight only. A nearby railway crossing is not evidence of a rail closure. Keep the phase’s confirmed-through endpoint; do not present it as reopening.",
+      "crossing_id": "UG-KE-MALABA-ROAD"
+    }
+  ],
+  "rejected_candidate_links": [
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-0001cc80208b2a99",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-0333f1af6cbacee2",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "R3-AF-006",
+      "candidate_id": "osm-0625f6d45ad03c49",
+      "reason": "Wrong locality identity: the old match uses an Elegu settlement near an unclassified contact at 31.7971°E, 3.7986°N. The sources identify the Amuru Elegu–Nimule highway/bridge corridor. The old point cannot be assigned to those events merely from its nearby settlement name.",
+      "basis": "conflicting_location_identity",
+      "evidence_source_ids": [
+        "EV-R3-AF-006-EYE-20220512",
+        "EV-R3-AF-006-TAMAZUJ-20220513"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "R3-AF-007",
+      "candidate_id": "osm-0625f6d45ad03c49",
+      "reason": "Wrong locality identity: the old match uses an Elegu settlement near an unclassified contact at 31.7971°E, 3.7986°N. The sources identify the Amuru Elegu–Nimule highway/bridge corridor. The old point cannot be assigned to those events merely from its nearby settlement name.",
+      "basis": "conflicting_location_identity",
+      "evidence_source_ids": [
+        "EV-R3-AF-007-URN-20220712"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-144454e1160c5036",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-146c876eae882dcc",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-25968c48405a68c9",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-471776359249a076",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL12",
+      "candidate_id": "osm-4fba9de76a387db6",
+      "reason": "Unsupported precise crossing identity: the suggestion comes from nearby Bunagana or Busanza settlement names. No reviewed evidence connects this particular track to the named formal post. Reject the event-point assignment, without claiming the road was open or unaffected.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL12-OKAPI-20220621"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL13",
+      "candidate_id": "osm-4fba9de76a387db6",
+      "reason": "Unsupported precise crossing identity: the suggestion comes from nearby Bunagana or Busanza settlement names. No reviewed evidence connects this particular track to the named formal post. Reject the event-point assignment, without claiming the road was open or unaffected.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL13-AA-20250711",
+        "EV-GL13-XINHUA-URN-20250710"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL12",
+      "candidate_id": "osm-4fe9c21e75380123",
+      "reason": "Unsupported precise crossing identity: the suggestion comes from nearby Bunagana or Busanza settlement names. No reviewed evidence connects this particular track to the named formal post. Reject the event-point assignment, without claiming the road was open or unaffected.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL12-OKAPI-20220621"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL13",
+      "candidate_id": "osm-4fe9c21e75380123",
+      "reason": "Unsupported precise crossing identity: the suggestion comes from nearby Bunagana or Busanza settlement names. No reviewed evidence connects this particular track to the named formal post. Reject the event-point assignment, without claiming the road was open or unaffected.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL13-AA-20250711",
+        "EV-GL13-XINHUA-URN-20250710"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-50696698f0132cbf",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL13",
+      "candidate_id": "osm-57cfd577bf226616",
+      "reason": "Unsupported precise crossing identity: the suggestion comes from nearby Bunagana or Busanza settlement names. No reviewed evidence connects this particular track to the named formal post. Reject the event-point assignment, without claiming the road was open or unaffected.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL13-AA-20250711",
+        "EV-GL13-XINHUA-URN-20250710"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-5df89d3d26499230",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL13",
+      "candidate_id": "osm-63e7176ec2b2a9ac",
+      "reason": "Unsupported precise crossing identity: the suggestion comes from nearby Bunagana or Busanza settlement names. No reviewed evidence connects this particular track to the named formal post. Reject the event-point assignment, without claiming the road was open or unaffected.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL13-AA-20250711",
+        "EV-GL13-XINHUA-URN-20250710"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-6d2da6fcb73763a6",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL12",
+      "candidate_id": "osm-6ed05bd1e2420a66",
+      "reason": "Unsupported precise crossing identity: the suggestion comes from nearby Bunagana or Busanza settlement names. No reviewed evidence connects this particular track to the named formal post. Reject the event-point assignment, without claiming the road was open or unaffected.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL12-OKAPI-20220621"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL13",
+      "candidate_id": "osm-6ed05bd1e2420a66",
+      "reason": "Unsupported precise crossing identity: the suggestion comes from nearby Bunagana or Busanza settlement names. No reviewed evidence connects this particular track to the named formal post. Reject the event-point assignment, without claiming the road was open or unaffected.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL13-AA-20250711",
+        "EV-GL13-XINHUA-URN-20250710"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-836eaba5ca9f05a1",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-a31c0bd40af7a6d6",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL13",
+      "candidate_id": "osm-a68e55521101ec91",
+      "reason": "Unsupported precise crossing identity: the suggestion comes from nearby Bunagana or Busanza settlement names. No reviewed evidence connects this particular track to the named formal post. Reject the event-point assignment, without claiming the road was open or unaffected.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL13-AA-20250711",
+        "EV-GL13-XINHUA-URN-20250710"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-a701ed6bcd05e485",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-a707511781dc0d04",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-a95350bc5e8e6131",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-ac9b4dba49312f0b",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-ad6e4e88af6db584",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-afd8e35408a50198",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-b81596963aa09474",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-cc308167aff8d784",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-d55798764566794d",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "R4-AES-002",
+      "candidate_id": "osm-d6ed2c4b739af025",
+      "reason": "Transport-mode mismatch: the candidate is railway, while the reviewed event concerns trucks using the Malaba road crossing. No evidence of a rail closure was obtained.",
+      "basis": "mode_mismatch",
+      "evidence_source_ids": [
+        "EV-R4-AES-002-STANDARD-20220107"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-faf74adb2831f54a",
+      "reason": "Unsupported precise crossing identity: proximity to a town named Katuna does not identify this road as the Katuna/Gatuna post. Retire this suggestion from event-point assignment; any wider exit-policy scope remains in the authoritative record.",
+      "basis": "locality_proximity_only",
+      "evidence_source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "rejection_scope": "Event-to-point assignment only; not a verdict on the road’s existence or historical accessibility."
+    }
+  ],
+  "retained_candidate_proposals": [
+    {
+      "event_id": "GL13",
+      "candidate_id": "osm-0442cf6b8cc3dfae",
+      "crossing_name": "Ishasha",
+      "status": "provisional_geometry_separate_review",
+      "reason": "Retained for source/route/spatial benchmark review; never accepted from the locality-name match alone."
+    },
+    {
+      "event_id": "GL12",
+      "candidate_id": "osm-2e13392e3235206d",
+      "crossing_name": "Bunagana",
+      "status": "provisional_geometry_separate_review",
+      "reason": "Retained for source/route/spatial benchmark review; never accepted from the locality-name match alone."
+    },
+    {
+      "event_id": "GL13",
+      "candidate_id": "osm-2e13392e3235206d",
+      "crossing_name": "Bunagana",
+      "status": "provisional_geometry_separate_review",
+      "reason": "Retained for source/route/spatial benchmark review; never accepted from the locality-name match alone."
+    },
+    {
+      "event_id": "GL01",
+      "candidate_id": "osm-60accc5e3da83ba8",
+      "crossing_name": "Katuna / Gatuna",
+      "status": "provisional_geometry_separate_review",
+      "reason": "Retained for source/route/spatial benchmark review; never accepted from the locality-name match alone."
+    },
+    {
+      "event_id": "R4-AES-002",
+      "candidate_id": "osm-ea97afe8b2c493b9",
+      "crossing_name": "Malaba",
+      "status": "provisional_geometry_separate_review",
+      "reason": "Retained for source/route/spatial benchmark review; never accepted from the locality-name match alone."
+    }
+  ],
+  "additional_candidate_proposals": [
+    {
+      "event_id": "R3-AF-006",
+      "crossing_name": "Elegu / Nimule",
+      "candidate_id": "osm-6a12feb9e54a44eb",
+      "status": "provisional_geometry_separate_review",
+      "reason": "Nimule–Gulu A43 road candidate for the independently identified crossing; absent from the previous locality-name matches."
+    },
+    {
+      "event_id": "R3-AF-007",
+      "crossing_name": "Elegu / Nimule",
+      "candidate_id": "osm-6a12feb9e54a44eb",
+      "status": "provisional_geometry_separate_review",
+      "reason": "Nimule–Gulu A43 road candidate for the independently identified crossing; absent from the previous locality-name matches."
+    },
+    {
+      "event_id": "GL13",
+      "crossing_name": "Busanza / Kitagoma",
+      "candidate_ids": [
+        "osm-8a6ce817ea17982e",
+        "osm-f70fba9c18fa4293"
+      ],
+      "status": "provisional_geometry_separate_review",
+      "reason": "Both unclassified-road contacts lie near UNHCR’s 2021 Busanja point in Kisoro. Do not choose one gate from distance alone or assign the unrelated Busanza settlement near Ishasha."
+    }
+  ],
+  "national_scope_records_not_expanded": [
+    {
+      "event_id": "GL04",
+      "scope": "National land-border passenger regime",
+      "reason": "No named crossing in the workbook crossing field. Preserve national policy scope; do not automatically create individual OSM crossing closure links."
+    },
+    {
+      "event_id": "GL05",
+      "scope": "National land and water passenger entry/exit restrictions",
+      "reason": "No named crossing in the workbook crossing field. Preserve national policy scope; do not automatically create individual OSM crossing closure links."
+    }
+  ],
+  "summary": {
+    "uganda_records": 8,
+    "named_crossing_records": 6,
+    "verified_event_crossing_identities": 8,
+    "distinct_named_crossings": 6,
+    "old_event_candidate_associations": 38,
+    "old_associations_retained_as_geometry_proposals": 5,
+    "old_associations_rejected_for_point_assignment": 33,
+    "new_geometry_proposals": 4,
+    "accepted_candidate_coordinates": 0,
+    "additional_geometry_proposal_groups": 3
+  },
+  "limitations": [
+    "Verified_identity means that freshly read reporting connects the event to the named crossing, not that a particular OSM point has been verified.",
+    "All canonical workbook dates, scope, uncertainty and event data remain unchanged. This is not a new full chronology verification.",
+    "Source reports of official permission and reactivation cannot establish first ordinary passage or uninterrupted physical closure.",
+    "The source set combines original reporting, attributed official statements and syndicated reporting. Multiple publications using the same operational source are not counted as independent confirmation.",
+    "A nearby settlement name is discovery context only. Alternative roads and informal routes can be affected by a broader restriction without being the named formal crossing.",
+    "No national policy is expanded into assumed post-specific closure links. No link is published to the public-facing map in this work package."
+  ],
+  "unresolved_source_conflicts": [
+    {
+      "event_id": "R3-AF-007",
+      "source_ids": [
+        "EV-R3-AF-007-URN-20220712"
+      ],
+      "field": "Ugandan-side operational scope",
+      "finding": "The same URN article contains conflicting accounts: anonymous border staff say URA stopped clearing trucks, while named UPDF spokesperson Cpt Hassan Ahmed Kato says the Ugandan border remained open and operational. Crossing identity and the Nimule road disruption are supported; Ugandan formal closure is contested.",
+      "action": "Flagged for later closure-chronology adjudication; location identity retained and authoritative workbook unchanged."
+    }
+  ]
+}

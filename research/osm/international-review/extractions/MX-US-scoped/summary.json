@@ -1,0 +1,116 @@
+{
+  "created_at": "2026-10-23T12:23:36.196862+00:00",
+  "country_code": "MX",
+  "extractor_sha256": "88eb0d6b50cbe2875daeb64c5fd07105a619fcbc5f6c40291cb5b0d310064a8c",
+  "neighbour_code": "US",
+  "source": {
+    "url": "https://download.geofabrik.de/north-america/mexico-latest.osm.pbf",
+    "retrieved_at": "2026-10-23T11:09:49.688119+00:00",
+    "bytes": 647294299,
+    "sha256": "239794a0c709e2ad03409c420d5925a11bd2958dd4aff7acaa86fac40045ac3c",
+    "http_headers": {
+      "Last-Modified": "Tue, 20 Oct 2026 23:45:17 GMT",
+      "ETag": "\"2694ed5b-65e4e39017a78\"",
+      "Content-Length": "647294299"
+    }
+  },
+  "osm_data_timestamp": "2026-10-20T20:23:47Z",
+  "workbook_sha256": "3530415e136e81d20cc24b51b3a5c2739e6a529fc2484cc51c8861693ff33bf0",
+  "metric_crs": "+proj=aeqd +lat_0=29.277886649999996 +lon_0=-107.13584375 +datum=WGS84 +units=m +no_defs +type=crs",
+  "projection": {
+    "centre": [
+      -107.13584375,
+      29.277886649999996
+    ],
+    "max_geodesic_radius_m": 1051917.7,
+    "projection_scope": "selected frontier geometry only",
+    "antimeridian_supported": false
+  },
+  "coverage": {
+    "selected_by": "shared_admin2_memberways",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "expected_member_count": 202,
+    "loaded_member_count": 202,
+    "non_maritime_geometry_count": 197,
+    "excluded_maritime_member_ids": [
+      49164805,
+      89639520,
+      192095665,
+      483345310,
+      993062142
+    ],
+    "missing_member_ids": [],
+    "incomplete_member_ids": [],
+    "unsupported_nested_boundary_members": [],
+    "is_partial": false,
+    "allows_frontier_completeness_claim": false,
+    "status": "all_selected_osm_members_loaded"
+  },
+  "boundary_ways_in_country_relation": 367,
+  "boundary_ways_selected": 202,
+  "connected_context_routes": 40056,
+  "boundary_ways_loaded": 197,
+  "incomplete_way_ids": [],
+  "routes_inspected": 4315436,
+  "raw_intersection_points": 258,
+  "candidate_count": 50,
+  "by_mode": {
+    "road": 50
+  },
+  "major_road_candidates": 50,
+  "tagged_controls_near_boundary": 397,
+  "linear_overlap_cases": 0,
+  "records_with_existing_points": 52,
+  "schema_version": 3,
+  "road_scope": "main",
+  "road_classes": [
+    "motorway",
+    "motorway_link",
+    "primary",
+    "primary_link",
+    "trunk",
+    "trunk_link"
+  ],
+  "targeted_road_exceptions": [
+    {
+      "crossing_id": "MX-US-OTAY-MESA-ROAD",
+      "route_osm_ids": [
+        200257858,
+        221972671,
+        602751004,
+        602751006,
+        602751007,
+        602751008,
+        602751009
+      ],
+      "reason": "Restore documented major-port cargo components at existing Otay Mesa, where short international gate roads are locally tagged secondary/secondary_link/service although connecting a major freight facility. CBP reports Otay Mesa Commercial separately from Passenger; selected crossing ways are hgv=designated and within 190 m of the official Caltrans facility reference. This does not authorize broader small-road extraction.",
+      "source_urls": [
+        "https://bwt.cbp.gov/xml/bwt.xml",
+        "https://bwt.cbp.gov/details/09250602/COV",
+        "https://services1.arcgis.com/8CpMUd3fdw6aXef7/ArcGIS/rest/services/Technical_Freight_Projects_Integration_Viewer/FeatureServer/4"
+      ],
+      "scope": "specific_main_post_cargo_gate_components",
+      "status": "proposed_for_targeted_extraction",
+      "geometry_acceptance": "pending extraction/topology, not automatic event links"
+    }
+  ],
+  "include_nonroad": false,
+  "records_with_name_discovery_suggestions": 0,
+  "discovery_record_ids": [],
+  "records_with_pilot_candidate_links": 0,
+  "matched_record_ids": [],
+  "limits": [
+    "Coverage is restricted to selected OSM frontier geometry; loaded memberways do not establish crossing completeness.",
+    "Graph context includes minor/service roads; they become candidates only through explicit sourced exceptions.",
+    "Missing and nested boundary members require explicit partial opt-in; antimeridian/polar/overwide projections are unsupported.",
+    "Geometric contacts are candidates, not proof of a legal, operational or historical crossing.",
+    "Nearby settlement names are separate from checkpoint names.",
+    "Road-only extraction omits informal pedestrian paths; rail and ferry candidates are separate.",
+    "OSM country relations may be incomplete in extracts; unresolved country pairs are flagged.",
+    "Current OSM geometry cannot establish which crossing was affected by a historical closure.",
+    "No candidate is added to the closure register or the displayed map."
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "created_at": "2026-10-23T12:25:52.690906+00:00",
+  "method_version": "regional-topology-review-3",
+  "reviewer_sha256": "7c2af195125d4bc5c8e796a488f8a91df7ccfe9bde43d7af9ea8b963061d932a",
+  "country_code": "MX",
+  "neighbour_code": "US",
+  "coverage": {
+    "selected_by": "shared_admin2_memberways",
+    "country_pair": [
+      "MX",
+      "US"
+    ],
+    "expected_member_count": 202,
+    "loaded_member_count": 202,
+    "non_maritime_geometry_count": 197,
+    "excluded_maritime_member_ids": [
+      49164805,
+      89639520,
+      192095665,
+      483345310,
+      993062142
+    ],
+    "missing_member_ids": [],
+    "incomplete_member_ids": [],
+    "unsupported_nested_boundary_members": [],
+    "is_partial": false,
+    "allows_frontier_completeness_claim": false,
+    "status": "all_selected_osm_members_loaded"
+  },
+  "contact_membership_method": "explicit_raw_contacts",
+  "side_basis": "continuous_frontier_component",
+  "frontier_component_count": 1,
+  "source_osm_sha256": "239794a0c709e2ad03409c420d5925a11bd2958dd4aff7acaa86fac40045ac3c",
+  "source_osm_timestamp": "2026-10-20T20:23:47Z",
+  "source_candidate_sha256": "395a555eee0f0457a983b1c3e8ac2b5c546777497ed1b1edcbb4a62482473b2c",
+  "source_graph_sha256": "10ab3e32ee72e7e7ca767fe49bf73a560c504485492229ba07d841e0eb68432c",
+  "source_evidence_sha256": "be5f7f06cb74928abe39397297e366771d28c2bbb350083b2918995569e6a89a",
+  "parameters": {
+    "boundary_band_m": 30.0,
+    "sample_step_m": 20.0,
+    "stable_run_m": 100.0,
+    "max_trace_m": 1000.0,
+    "context_buffer_m": 1500,
+    "max_branches": 12,
+    "repeat_window_m": 5000.0,
+    "repeat_min_contacts": 3,
+    "continuation_policy": "all_connected_same_mode_branches"
+  },
+  "closed_country_polygons": 0,
+  "context_routes": 40056,
+  "candidate_count": 50,
+  "raw_contacts_reconstructed": 258,
+  "original_raw_contact_count": 258,
+  "review_group_count": 50,
+  "multi_candidate_review_groups": 0,
+  "by_topology_status": {
+    "sustained_country_transition": 28,
+    "unresolved": 22
+  },
+  "major_road_by_topology_status": {
+    "sustained_country_transition": 28,
+    "unresolved": 22
+  },
+  "limits": [
+    "Automated geometry diagnostics are not independent verification of a crossing, its legality, operation or any closure.",
+    "Repeated-contact groups are review units and are not accepted counts of physical crossing facilities.",
+    "Sides use a complete country polygon where available, otherwise consistently oriented frontier components; systematic boundary errors remain possible.",
+    "Open-component left/right sides are geometric only and do not independently name jurisdictions; endpoints, branches and disputed segments require review.",
+    "Thirty metres and the continuation distances are explicit review parameters, not measured positional accuracy.",
+    "Modern graph joins explore all connected same-mode branches; road reference changes at borders cannot discard continuations. Frozen legacy replay retains its declared historical preference.",
+    "Incomplete or ambiguous graph continuation stays unresolved; private/access restrictions require separate review.",
+    "Only the supplied extraction candidates are diagnosed; this run does not discover missed crossings.",
+    "Extraction groups are retained for audit; nearby roads in one group are not thereby one facility.",
+    "Partial boundary-member coverage is retained as a limitation; antimeridian and polar processing are unsupported."
+  ]
+}

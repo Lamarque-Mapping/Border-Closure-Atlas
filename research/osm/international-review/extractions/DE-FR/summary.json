@@ -1,0 +1,123 @@
+{
+  "created_at": "2026-10-23T12:22:01.041701+00:00",
+  "country_code": "FR",
+  "extractor_sha256": "88eb0d6b50cbe2875daeb64c5fd07105a619fcbc5f6c40291cb5b0d310064a8c",
+  "neighbour_code": "DE",
+  "source": {
+    "kind": "checked_same_snapshot_regional_merge",
+    "retrieved_at": "2026-10-23T11:12:58.541425+00:00",
+    "osm_data_timestamp": "2026-10-20T20:23:47Z",
+    "bytes": 301083273,
+    "sha256": "67c7f79974667daae63b331c44bda2fa791a5e2426835e8f4c9fdfd59b9b3633",
+    "inputs": [
+      {
+        "url": "https://download.geofabrik.de/europe/france/alsace-latest.osm.pbf",
+        "retrieved_at": "2026-10-23T11:08:39.463941+00:00",
+        "bytes": 131404081,
+        "sha256": "0a65fca591de795b570139fa5c80012784badc140305439824456aa91da9e111",
+        "http_headers": {
+          "Last-Modified": "Tue, 20 Oct 2026 23:36:13 GMT",
+          "ETag": "\"7d51131-65e4e1897e2a9\"",
+          "Content-Length": "131404081"
+        }
+      },
+      {
+        "url": "https://download.geofabrik.de/europe/france/lorraine-latest.osm.pbf",
+        "retrieved_at": "2026-10-23T11:08:43.893109+00:00",
+        "bytes": 171228706,
+        "sha256": "33f515b7176c6ded4da55b0e3562ffaef2c83fd1d96c89264d1a4952e47883ff",
+        "http_headers": {
+          "Last-Modified": "Tue, 20 Oct 2026 23:37:09 GMT",
+          "ETag": "\"a34be22-65e4e1be9bb4f\"",
+          "Content-Length": "171228706"
+        }
+      }
+    ],
+    "entities_written": {
+      "n": 30032752,
+      "w": 4568189,
+      "r": 93857
+    },
+    "identical_duplicates_removed": {
+      "n": 265621,
+      "w": 10561,
+      "r": 1383
+    },
+    "conflicting_duplicates": 0,
+    "limits": [
+      "Union of regional inputs; frontier member coverage is audited separately.",
+      "No missing geometry is interpolated or manufactured."
+    ]
+  },
+  "osm_data_timestamp": "2026-10-20T20:23:47Z",
+  "workbook_sha256": "3530415e136e81d20cc24b51b3a5c2739e6a529fc2484cc51c8861693ff33bf0",
+  "metric_crs": "+proj=aeqd +lat_0=48.53342465000001 +lon_0=7.300152350000002 +datum=WGS84 +units=m +no_defs +type=crs",
+  "projection": {
+    "centre": [
+      7.300152350000002,
+      48.53342465000001
+    ],
+    "max_geodesic_radius_m": 124455.4,
+    "projection_scope": "selected frontier geometry only",
+    "antimeridian_supported": false
+  },
+  "coverage": {
+    "selected_by": "shared_admin2_memberways",
+    "country_pair": [
+      "DE",
+      "FR"
+    ],
+    "expected_member_count": 263,
+    "loaded_member_count": 263,
+    "non_maritime_geometry_count": 263,
+    "excluded_maritime_member_ids": [],
+    "missing_member_ids": [],
+    "incomplete_member_ids": [],
+    "unsupported_nested_boundary_members": [],
+    "is_partial": false,
+    "allows_frontier_completeness_claim": false,
+    "status": "all_selected_osm_members_loaded"
+  },
+  "boundary_ways_in_country_relation": 1742,
+  "boundary_ways_selected": 263,
+  "connected_context_routes": 26315,
+  "boundary_ways_loaded": 263,
+  "incomplete_way_ids": [],
+  "routes_inspected": 600965,
+  "raw_intersection_points": 39,
+  "candidate_count": 21,
+  "by_mode": {
+    "road": 21
+  },
+  "major_road_candidates": 21,
+  "tagged_controls_near_boundary": 12,
+  "linear_overlap_cases": 0,
+  "records_with_existing_points": 52,
+  "schema_version": 3,
+  "road_scope": "main",
+  "road_classes": [
+    "motorway",
+    "motorway_link",
+    "primary",
+    "primary_link",
+    "trunk",
+    "trunk_link"
+  ],
+  "targeted_road_exceptions": [],
+  "include_nonroad": false,
+  "records_with_name_discovery_suggestions": 0,
+  "discovery_record_ids": [],
+  "records_with_pilot_candidate_links": 0,
+  "matched_record_ids": [],
+  "limits": [
+    "Coverage is restricted to selected OSM frontier geometry; loaded memberways do not establish crossing completeness.",
+    "Graph context includes minor/service roads; they become candidates only through explicit sourced exceptions.",
+    "Missing and nested boundary members require explicit partial opt-in; antimeridian/polar/overwide projections are unsupported.",
+    "Geometric contacts are candidates, not proof of a legal, operational or historical crossing.",
+    "Nearby settlement names are separate from checkpoint names.",
+    "Road-only extraction omits informal pedestrian paths; rail and ferry candidates are separate.",
+    "OSM country relations may be incomplete in extracts; unresolved country pairs are flagged.",
+    "Current OSM geometry cannot establish which crossing was affected by a historical closure.",
+    "No candidate is added to the closure register or the displayed map."
+  ]
+}

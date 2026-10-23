@@ -1,0 +1,131 @@
+{
+  "reviewed_at": "2026-10-23T10:51:41.232297+00:00",
+  "schema_version": 1,
+  "scope": "Uganda pilot: source-reviewed reference directory, all original major-road candidates and named workbook locations",
+  "workbook_sha256": "3530415e136e81d20cc24b51b3a5c2739e6a529fc2484cc51c8861693ff33bf0",
+  "osm_data_timestamp": "2026-10-21T20:21:46Z",
+  "reference_entries": 49,
+  "reference_entries_by_working_transport_class": {
+    "road": 48,
+    "rail": 1
+  },
+  "reference_match_status": {
+    "supported": 16,
+    "provisional": 17,
+    "not_found": 16
+  },
+  "major_road_candidates_reviewed": 76,
+  "all_candidates_with_geometry_diagnostics": 843,
+  "major_road_review_outcomes": {
+    "unverified_geometric_connection": 17,
+    "source_supported_crossing_reference": 14,
+    "boundary_alignment_or_repeated_contact_review": 33,
+    "unresolved_named_reference": 11,
+    "unresolved_geometry": 1
+  },
+  "event_crossing_identities": 8,
+  "events_with_named_links": 6,
+  "distinct_event_crossings": 6,
+  "event_links_with_supported_osm_correspondence": 6,
+  "event_links_with_unresolved_geometry": 2,
+  "old_event_candidate_associations": 38,
+  "old_associations_retired_for_point_assignment": 33,
+  "sources_distinct_urls": 36,
+  "global_scope_policy": {
+    "version": 1,
+    "decision_date": "2026-10-23",
+    "purpose": "A manageable global inventory of crossings on main roads, with bounded exceptions for the closure research.",
+    "default_road_scope": "main",
+    "main_highway_classes": [
+      "motorway",
+      "trunk",
+      "primary"
+    ],
+    "include_link_roads": true,
+    "systematically_extract_secondary_roads": false,
+    "systematically_extract_minor_roads": false,
+    "include_nonroad_by_default": false,
+    "targeted_exceptions": [
+      {
+        "crossing_id": "UG-KE-LWAKHAKHA-ROAD",
+        "reason": "One of the four principal Kenya–Uganda road entry posts in the official Kenya list; its mapped approach is secondary. Retain this documented major-post exception."
+      },
+      {
+        "crossing_id": "UG-CD-BUSANZA-ROAD",
+        "reason": "Explicitly named in closure record GL13. Retain the two unresolved road-contact alternatives for targeted location review; this does not authorize a general minor-road survey."
+      }
+    ],
+    "limits": [
+      "OSM road classes vary between countries and are not traffic-volume measurements.",
+      "A named documented major post or named workbook crossing can be reviewed as an explicit exception, with its reason and sources retained.",
+      "Existing smaller-road and rail findings remain background data; they do not expand the global extraction scope.",
+      "Even a main road can follow a border or intersect inaccurate boundary geometry. Topology and source checks still apply."
+    ]
+  },
+  "original_candidates_in_focused_scope": {
+    "background_only": 804,
+    "main_road": 36,
+    "targeted_named_exception": 3
+  },
+  "focused_extraction_candidates": 39,
+  "limits": [
+    "The reference list is not a complete inventory of all formal or informal crossings.",
+    "Supported correspondence means named crossing and mapped route agree; no surveyed positional accuracy or current operation is claimed.",
+    "Unknown candidates prevent an honest global precision/recall estimate. Recovery is reported against this dated, non-exhaustive benchmark only.",
+    "All review uses AI-assisted desk research and automated checks; it is not independent human validation.",
+    "Geometry review groups are not crossing-facility counts. Border alignment and exact gate questions remain explicit.",
+    "Closure dates and canonical workbook facts are unchanged. All new references remain outside the public map."
+  ],
+  "benchmark_recovery_by_frontier": [
+    {
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "documented_references": 18,
+      "supported": 6,
+      "provisional": 5,
+      "not_located": 7
+    },
+    {
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "documented_references": 9,
+      "supported": 2,
+      "provisional": 3,
+      "not_located": 4
+    },
+    {
+      "country_pair": [
+        "RW",
+        "UG"
+      ],
+      "documented_references": 6,
+      "supported": 3,
+      "provisional": 3,
+      "not_located": 0
+    },
+    {
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "documented_references": 10,
+      "supported": 3,
+      "provisional": 5,
+      "not_located": 2
+    },
+    {
+      "country_pair": [
+        "TZ",
+        "UG"
+      ],
+      "documented_references": 6,
+      "supported": 2,
+      "provisional": 1,
+      "not_located": 3
+    }
+  ]
+}

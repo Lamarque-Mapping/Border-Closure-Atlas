@@ -1,0 +1,322 @@
+{
+  "schema_version": 1,
+  "links": [
+    {
+      "id": "ECL-GL01-KATUNA-ROAD",
+      "event_id": "GL01",
+      "crossing_name": "Katuna / Gatuna",
+      "country_pair": [
+        "RW",
+        "UG"
+      ],
+      "mode": "road",
+      "link_status": "verified_identity",
+      "source_ids": [
+        "EV-GL01-AFP-20220131"
+      ],
+      "workbook_crossings_verbatim": "Gatuna/Katuna",
+      "scope": "The named Katuna/Gatuna crossing; wider Rwandan exit restrictions remain a separate scope.",
+      "affected_movement": "Traders, cargo and passengers; resumption initially prioritised cargo and returnees.",
+      "direction": "Rwandan exit to Uganda especially restricted; practical effects on both directions.",
+      "coordinate_status": "reviewed_osm_correspondence_not_surveyed",
+      "phase_ids": [
+        "GL01-R1",
+        "GL01-R2"
+      ],
+      "phase_dates_policy": "Retain authoritative workbook phase dates and qualifications; no date amendment or transfer to other crossings.",
+      "notes": "The exact named crossing can be linked. Nearby Rwanda–Uganda roads are not Katuna simply because the same town is within 10 km. The record’s wider travel restriction does not assign every nearby road the Katuna freight chronology.",
+      "crossing_id": "UG-RW-KATUNA-ROAD",
+      "crossing_identity_status": "source_verified",
+      "geometry_match_status": "supported",
+      "supported_candidate_ids": [
+        "osm-60accc5e3da83ba8"
+      ],
+      "unresolved_candidate_ids": [],
+      "source_urls": [
+        "https://www.monitor.co.ug/uganda/news/national/confusion-at-rwanda-uganda-border-crossing-after-reopening-3700712"
+      ],
+      "published_on_map": false,
+      "source_document_ids": [
+        "SRC-8809282c2c81"
+      ]
+    },
+    {
+      "id": "ECL-GL12-BUNAGANA-ROAD",
+      "event_id": "GL12",
+      "crossing_name": "Bunagana",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "link_status": "verified_identity",
+      "source_ids": [
+        "EV-GL12-OKAPI-20220621"
+      ],
+      "workbook_crossings_verbatim": "Bunagana",
+      "scope": "Goods import/export prohibition through the named Bunagana post.",
+      "affected_movement": "Goods imports and exports via Bunagana; road traffic separately reported retrospectively.",
+      "direction": "Not established",
+      "coordinate_status": "reviewed_osm_correspondence_not_surveyed",
+      "phase_ids": [],
+      "phase_dates_policy": "Retain authoritative workbook phase dates and qualifications; no date amendment or transfer to other crossings.",
+      "notes": "Identity is supported by a source reporting the governor’s communiqué. This is a formal prohibition; current physical traffic or full historical sealing is not established. There are no duration_periods in the current record.",
+      "crossing_id": "UG-CD-BUNAGANA-ROAD",
+      "crossing_identity_status": "source_verified",
+      "geometry_match_status": "supported",
+      "supported_candidate_ids": [
+        "osm-2e13392e3235206d"
+      ],
+      "unresolved_candidate_ids": [],
+      "source_urls": [
+        "https://www.radiookapi.net/2022/06/21/actualite/economie/nord-kivu-interdiction-dimporter-et-dexporter-les-marchandises"
+      ],
+      "published_on_map": false,
+      "source_document_ids": [
+        "SRC-edcfaf3a8820"
+      ]
+    },
+    {
+      "id": "ECL-GL13-BUNAGANA-ROAD",
+      "event_id": "GL13",
+      "crossing_name": "Bunagana",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "link_status": "verified_identity",
+      "source_ids": [
+        "EV-GL13-AA-20250711",
+        "EV-GL13-XINHUA-URN-20250710"
+      ],
+      "workbook_crossings_verbatim": "Bunagana; Ishasha; Busanza",
+      "scope": "Ugandan formal suspension and official reactivation at Bunagana.",
+      "affected_movement": "Border trade and passenger flows.",
+      "direction": "Not established",
+      "coordinate_status": "reviewed_osm_correspondence_not_surveyed",
+      "phase_ids": [
+        "GL13-D1"
+      ],
+      "phase_dates_policy": "Retain authoritative workbook phase dates and qualifications; no date amendment or transfer to other crossings.",
+      "notes": "Link the named post only. Preserve the distinction between official reactivation and continued informal movement.",
+      "crossing_id": "UG-CD-BUNAGANA-ROAD",
+      "crossing_identity_status": "source_verified",
+      "geometry_match_status": "supported",
+      "supported_candidate_ids": [
+        "osm-2e13392e3235206d"
+      ],
+      "unresolved_candidate_ids": [],
+      "source_urls": [
+        "https://www.aa.com.tr/en/africa/uganda-reopens-border-posts-with-dr-congo/3628319",
+        "https://www.independent.co.ug/uganda-reopens-border-posts-with-eastern-drc/"
+      ],
+      "published_on_map": false,
+      "source_document_ids": [
+        "SRC-90e22cd39781",
+        "SRC-f0f3bfab7a58"
+      ]
+    },
+    {
+      "id": "ECL-GL13-ISHASHA-ROAD",
+      "event_id": "GL13",
+      "crossing_name": "Ishasha",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "link_status": "verified_identity",
+      "source_ids": [
+        "EV-GL13-AA-20250711",
+        "EV-GL13-XINHUA-URN-20250710"
+      ],
+      "workbook_crossings_verbatim": "Bunagana; Ishasha; Busanza",
+      "scope": "Ugandan formal suspension and reported official reactivation at Ishasha.",
+      "affected_movement": "Border trade and passenger flows.",
+      "direction": "Not established",
+      "coordinate_status": "reviewed_osm_correspondence_not_surveyed",
+      "phase_ids": [
+        "GL13-D1"
+      ],
+      "phase_dates_policy": "Retain authoritative workbook phase dates and qualifications; no date amendment or transfer to other crossings.",
+      "notes": "Identity is supported; this does not establish independently observed first ordinary passage.",
+      "crossing_id": "UG-CD-ISHASHA-ROAD",
+      "crossing_identity_status": "source_verified",
+      "geometry_match_status": "supported",
+      "supported_candidate_ids": [
+        "osm-0442cf6b8cc3dfae"
+      ],
+      "unresolved_candidate_ids": [],
+      "source_urls": [
+        "https://www.aa.com.tr/en/africa/uganda-reopens-border-posts-with-dr-congo/3628319",
+        "https://www.independent.co.ug/uganda-reopens-border-posts-with-eastern-drc/"
+      ],
+      "published_on_map": false,
+      "source_document_ids": [
+        "SRC-90e22cd39781",
+        "SRC-f0f3bfab7a58"
+      ]
+    },
+    {
+      "id": "ECL-GL13-BUSANZA-ROAD",
+      "event_id": "GL13",
+      "crossing_name": "Busanza / Kitagoma",
+      "country_pair": [
+        "CD",
+        "UG"
+      ],
+      "mode": "road",
+      "link_status": "verified_identity",
+      "source_ids": [
+        "EV-GL13-XINHUA-URN-20250710",
+        "EV-GEO-FCDO-BUSANZA"
+      ],
+      "workbook_crossings_verbatim": "Bunagana; Ishasha; Busanza",
+      "scope": "Ugandan formal suspension at Busanza, until reopening permission.",
+      "affected_movement": "Border trade and passenger flows.",
+      "direction": "Not established",
+      "coordinate_status": "unresolved_exact_contact",
+      "phase_ids": [
+        "GL13-R1"
+      ],
+      "phase_dates_policy": "Retain authoritative workbook phase dates and qualifications; no date amendment or transfer to other crossings.",
+      "notes": "Use the Busanza–Kitagoma crossing in Kisoro. Do not assign homonymous settlements near Bunagana or Ishasha. The workbook gives this phase a 9 July permission endpoint; it must not inherit the 10 July Bunagana/Ishasha endpoint. FCDO identifies Kitagoma–Buszana in Kisoro. UNHCR’s 2021 Busanja spelling is retained separately in the geographic benchmark; exact gate selection remains unresolved.",
+      "crossing_id": "UG-CD-BUSANZA-ROAD",
+      "crossing_identity_status": "source_verified",
+      "geometry_match_status": "provisional",
+      "supported_candidate_ids": [],
+      "unresolved_candidate_ids": [
+        "osm-8a6ce817ea17982e",
+        "osm-f70fba9c18fa4293"
+      ],
+      "source_urls": [
+        "https://www.independent.co.ug/uganda-reopens-border-posts-with-eastern-drc/",
+        "https://www.gov.uk/foreign-travel-advice/uganda/regional-risks"
+      ],
+      "published_on_map": false,
+      "source_document_ids": [
+        "SRC-90e22cd39781",
+        "SRC-9244392e90d1"
+      ]
+    },
+    {
+      "id": "ECL-R3-AF-006-ELEGU-ROAD",
+      "event_id": "R3-AF-006",
+      "crossing_name": "Elegu / Nimule",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "link_status": "verified_identity",
+      "source_ids": [
+        "EV-R3-AF-006-EYE-20220512",
+        "EV-R3-AF-006-TAMAZUJ-20220513"
+      ],
+      "workbook_crossings_verbatim": "Nimule / Elegu",
+      "scope": "Nimule–Elegu international road crossing.",
+      "affected_movement": "Cross-border travellers and trade",
+      "direction": "Both directions; South Sudan officer expressly cites preventing outward movement",
+      "coordinate_status": "reviewed_osm_correspondence_not_surveyed",
+      "phase_ids": [
+        "R3-AF-006-D1"
+      ],
+      "phase_dates_policy": "Retain authoritative workbook phase dates and qualifications; no date amendment or transfer to other crossings.",
+      "notes": "This refers to the Nimule–Elegu road/bridge corridor, not any settlement named Elegu. Exact hours and exemptions remain unestablished.",
+      "crossing_id": "UG-SS-ELEGU-ROAD",
+      "crossing_identity_status": "source_verified",
+      "geometry_match_status": "supported",
+      "supported_candidate_ids": [
+        "osm-6a12feb9e54a44eb"
+      ],
+      "unresolved_candidate_ids": [],
+      "source_urls": [
+        "https://eyeradio.org/nimule-border-closes-temporarily-as-gunmen-kill-2-police-officers-police/",
+        "https://www.radiotamazuj.org/en/news/article/nimule-border-reopened-after-brief-closure"
+      ],
+      "published_on_map": false,
+      "source_document_ids": [
+        "SRC-555706c74ad4",
+        "SRC-f87e9a2dd978"
+      ]
+    },
+    {
+      "id": "ECL-R3-AF-007-ELEGU-ROAD",
+      "event_id": "R3-AF-007",
+      "crossing_name": "Elegu / Nimule",
+      "country_pair": [
+        "SS",
+        "UG"
+      ],
+      "mode": "road",
+      "link_status": "verified_identity",
+      "source_ids": [
+        "EV-R3-AF-007-URN-20220712"
+      ],
+      "workbook_crossings_verbatim": "Nimule / Elegu",
+      "scope": "Nimule–Elegu road crossing and associated customs clearance.",
+      "affected_movement": "Cross-border travellers and trade",
+      "direction": "Not established",
+      "coordinate_status": "reviewed_osm_correspondence_not_surveyed",
+      "phase_ids": [
+        "R3-AF-007-D1"
+      ],
+      "phase_dates_policy": "Retain authoritative workbook phase dates and qualifications; no date amendment or transfer to other crossings.",
+      "notes": "The same URN article contains conflicting accounts: anonymous border staff say URA stopped clearing trucks, while named UPDF spokesperson Cpt Hassan Ahmed Kato says the Ugandan border remained open and operational. Crossing identity and the Nimule road disruption are supported; Ugandan formal closure is contested. No canonical chronology amendment is made.",
+      "source_conflict": "Ugandan side closure/clearance status conflicts within source; preserve for chronology adjudication.",
+      "crossing_id": "UG-SS-ELEGU-ROAD",
+      "crossing_identity_status": "source_verified",
+      "geometry_match_status": "supported",
+      "supported_candidate_ids": [
+        "osm-6a12feb9e54a44eb"
+      ],
+      "unresolved_candidate_ids": [],
+      "source_urls": [
+        "https://www.ugandaradionetwork.net/a/story/trucks-pile-at-elegu-border-following-violence-in-south-sudan"
+      ],
+      "published_on_map": false,
+      "source_document_ids": [
+        "SRC-197aa0b9d353"
+      ]
+    },
+    {
+      "id": "ECL-R4-AES-002-MALABA-ROAD",
+      "event_id": "R4-AES-002",
+      "crossing_name": "Malaba",
+      "country_pair": [
+        "KE",
+        "UG"
+      ],
+      "mode": "road",
+      "link_status": "verified_identity",
+      "source_ids": [
+        "EV-R4-AES-002-STANDARD-20220107"
+      ],
+      "workbook_crossings_verbatim": "Malaba",
+      "scope": "Kenya-to-Uganda truck approach and road crossing at Malaba.",
+      "affected_movement": "Uganda-bound trucks and cargo, including fuel; passenger prohibition not established.",
+      "direction": "Kenya to Uganda; broader bilateral closure not established.",
+      "coordinate_status": "unresolved_exact_contact",
+      "phase_ids": [
+        "R4-AES-002-R1"
+      ],
+      "phase_dates_policy": "Retain authoritative workbook phase dates and qualifications; no date amendment or transfer to other crossings.",
+      "notes": "Road freight only. A nearby railway crossing is not evidence of a rail closure. Keep the phase’s confirmed-through endpoint; do not present it as reopening.",
+      "crossing_id": "UG-KE-MALABA-ROAD",
+      "crossing_identity_status": "source_verified",
+      "geometry_match_status": "provisional",
+      "supported_candidate_ids": [],
+      "unresolved_candidate_ids": [
+        "osm-ea97afe8b2c493b9"
+      ],
+      "source_urls": [
+        "https://www.standardmedia.co.ke/health/amp/national/article/2001433667/truck-drivers-at-kenya-uganda-border-on-strike-over-covid-19-tests"
+      ],
+      "published_on_map": false,
+      "source_document_ids": [
+        "SRC-8c75e4998862"
+      ]
+    }
+  ]
+}

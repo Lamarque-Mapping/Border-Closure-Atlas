@@ -1,0 +1,659 @@
+{
+  "schema_version": 1,
+  "pair": [
+    "KE",
+    "SO"
+  ],
+  "reviewed_at": "2026-10-23",
+  "benchmark_file": "../benchmarks/KE-SO.json",
+  "extraction_directory": "../extractions/KE-SO-scoped",
+  "osm_data_timestamp": "2026-10-21T20:21:46Z",
+  "pbf_sha256": "effb612991eea80a718f71a48f707a16c0a4561b711ff4b614a8eed2dfa79371",
+  "input_sha256": {
+    "crossing-candidates.geojson": "93cc14f725cf5ab0b4936e8df934381b6f228fefbcd5632f2c0d479bfe7bc3d4",
+    "osm-graph-context.json.gz": "8712892aa0bdd306f62d82d77e314b558bc89ec084d8dcb0e7b2cbf6b7564bde",
+    "summary.json": "3bbd38a98d9b9dae0b8ce95785a37faded7b8f882a3c05c185446df2f26946f7"
+  },
+  "associations": [
+    {
+      "crossing_id": "KE-SO-MANDERA-ROAD",
+      "candidate_ids": [
+        "osm-ef1abcfa1a6353c6"
+      ],
+      "match_status": "supported_corridor",
+      "benchmark_eligible": true,
+      "evidence": [
+        "Kenya MOD names the Mandera–Bulahawa strategic land crossing and workbook H01/H12 name Mandera/Belet Hawo.",
+        "Secondary Garbahaarey–Bulahawa Road way 1374443194 crosses the selected Kenya–Somalia frontier. Its western endpoint node 2131521833 is shared with Kenya A13 ways 203171838 and 417030547.",
+        "OSM Mandera Border Control way 312793636 is nearby. The Kenya A13 approach and Somali Bulahawa road name corroborate a specific corridor, not a census of neighbouring residential roads.",
+        "Final v3 topology confirms sustained transition, following both A13 approach branches; their outcomes agree. This supports corridor correspondence despite the PIDA coordinate offset.",
+        "The two actual A13 approach ways contain mapped border-control nodes 14284208317 and 14284208316 respectively. These shared-way connections strengthen the corridor evidence beyond the nearby Mandera Border Control area label, while remaining same-snapshot OSM evidence."
+      ],
+      "source_ids": [
+        "KE-SO-MOD-2023",
+        "KE-SO-IMM-PORTS",
+        "KE-SO-KENHA-A13",
+        "KE-SO-KENHA-MANDERA",
+        "KE-SO-PIDA-2024",
+        "KE-SO-GAROWE-H12"
+      ],
+      "candidate_evidence": [
+        {
+          "candidate_id": "osm-ef1abcfa1a6353c6",
+          "coordinate": [
+            41.87054715869063,
+            3.932727062511519
+          ],
+          "route_osm_ids": [
+            1374443194
+          ],
+          "highway_classes": [
+            "secondary"
+          ],
+          "route_refs": [],
+          "route_names": [
+            "Garbahaarey - Bulahawa Road"
+          ],
+          "boundary_osm_ids": [
+            31316551
+          ],
+          "raw_contact_count": 1,
+          "osm_way_provenance": [
+            {
+              "osm_id": 1374443194,
+              "osm_version": 1,
+              "osm_timestamp": "2025-04-03 14:36:47+00:00",
+              "tags": {
+                "attribution": "Mart Roumen;FAO-SWALIM;Madmappers-SOM-2008-01",
+                "highway": "secondary",
+                "name": "Garbahaarey - Bulahawa Road",
+                "source": "Landsat ETM+",
+                "surface": "unpaved"
+              }
+            }
+          ],
+          "topology_statuses": [
+            "sustained_country_transition"
+          ],
+          "topology_raw_contact_ids": [
+            "raw-1374443194-31316551-00003"
+          ],
+          "topology_diagnostics": [
+            {
+              "status": "sustained_country_transition",
+              "route_distance_m": 46.467,
+              "arms": [
+                {
+                  "stable_side": -1,
+                  "paths": [
+                    {
+                      "side": -1,
+                      "reason": "stable_country_side",
+                      "route_osm_ids": [
+                        1374443194,
+                        203171838
+                      ],
+                      "distance_m": 146.5,
+                      "clear_run_m": 106.5,
+                      "boundary_clearance_m": 139.2
+                    },
+                    {
+                      "side": -1,
+                      "reason": "stable_country_side",
+                      "route_osm_ids": [
+                        1374443194,
+                        417030547
+                      ],
+                      "distance_m": 146.5,
+                      "clear_run_m": 106.5,
+                      "boundary_clearance_m": 143.7
+                    }
+                  ]
+                },
+                {
+                  "stable_side": 1,
+                  "paths": [
+                    {
+                      "side": 1,
+                      "reason": "stable_country_side",
+                      "route_osm_ids": [
+                        1374443194,
+                        1374443194
+                      ],
+                      "distance_m": 145.8,
+                      "clear_run_m": 105.8,
+                      "boundary_clearance_m": 143.8
+                    },
+                    {
+                      "side": 1,
+                      "reason": "stable_country_side",
+                      "route_osm_ids": [
+                        1374443194,
+                        246342377
+                      ],
+                      "distance_m": 156.4,
+                      "clear_run_m": 116.4,
+                      "boundary_clearance_m": 138.4
+                    },
+                    {
+                      "side": 1,
+                      "reason": "stable_country_side",
+                      "route_osm_ids": [
+                        1374443194,
+                        679624932
+                      ],
+                      "distance_m": 156.4,
+                      "clear_run_m": 116.4,
+                      "boundary_clearance_m": 132.1
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "published_reference_distance_m": 3565.1,
+          "distance_method": "WGS84 geodesic; source reference datum and accuracy unspecified",
+          "shared_node_evidence": [
+            {
+              "node_id": 2131521833,
+              "way_ids": [
+                1374443194,
+                203171838,
+                417030547
+              ],
+              "role": "Somali Garbahaarey–Bulahawa secondary crossing joins both Kenya A13 approach branches"
+            }
+          ],
+          "connected_border_control_nodes": [
+            {
+              "node_id": 14284208316,
+              "coordinate": [
+                41.869787,
+                3.9333486
+              ],
+              "osm_version": 1,
+              "osm_timestamp": "2026-10-14 16:02:56+00:00",
+              "tags": {
+                "barrier": "border_control"
+              },
+              "approach_way_id": 417030547,
+              "evidence_role": "Mapped control node on connected A13 approach; not independently surveyed gate evidence"
+            },
+            {
+              "node_id": 14284208317,
+              "coordinate": [
+                41.8699293,
+                3.9335056
+              ],
+              "osm_version": 1,
+              "osm_timestamp": "2026-10-14 16:02:56+00:00",
+              "tags": {
+                "barrier": "border_control"
+              },
+              "approach_way_id": 203171838,
+              "evidence_role": "Mapped control node on connected A13 approach; not independently surveyed gate evidence"
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "No accepted event link; the workbook supplies named-location identity only.",
+        "OSM reference geography does not establish the scope or dates of any closure, formal vehicle access, or present opening status.",
+        "The PIDA Mandera map-reference point is roughly 3.6 km north of this contact. Preserve this unresolved coordinate discrepancy; do not snap or assert it is the same exact facility.",
+        "Two mapped A13 approach ways have overlapping endpoints; no claim of distinct carriageways or gates is made."
+      ],
+      "accepted_event_links": [],
+      "road_exception": {
+        "route_osm_ids": [
+          1374443194
+        ],
+        "allowlist_file": "../road_exception_proposals/KE-SO.json",
+        "allowlist_sha256": "2771f8d662fe0f11e28a0d610cc15e9205aa0d8b3f535efd7bd6c5dc304b369d",
+        "status": "applied_in_scoped_extraction",
+        "scope": "Only the exact sourced road ID is allowed; no class-wide widening.",
+        "historical_proposal_note": "The allowlist is the immutable pre-run proposal input; its original review text is superseded by this final association and topology result."
+      }
+    },
+    {
+      "crossing_id": "KE-SO-LIBOI-ROAD",
+      "candidate_ids": [
+        "osm-a363c30c1fad7755"
+      ],
+      "match_status": "supported_corridor",
+      "benchmark_eligible": true,
+      "evidence": [
+        "The original main-road baseline and scoped extraction both recover the same Liboi candidate on Afmadow–Dhobley Highway way 701028822 near the published PIDA Liboi reference.",
+        "Way 701028822 shares node 6583592262 with Kenya trunk A3 approach way 33402624. This corroborates the sourced Garissa–Liboi/Harhar–Dhobley corridor.",
+        "Final v3 topology follows the actual shared-node A3 continuation but leaves the contact unresolved because connected branches do not yield an unambiguous country-side continuation. Documentary and connected-way evidence support the named corridor; the geometric qualification is retained."
+      ],
+      "source_ids": [
+        "KE-SO-MOD-2023",
+        "KE-SO-IMM-PORTS",
+        "KE-SO-KENHA-A3",
+        "KE-SO-PIDA-2024"
+      ],
+      "candidate_evidence": [
+        {
+          "candidate_id": "osm-a363c30c1fad7755",
+          "coordinate": [
+            40.994591833265886,
+            0.408990166162901
+          ],
+          "route_osm_ids": [
+            701028822
+          ],
+          "highway_classes": [
+            "primary"
+          ],
+          "route_refs": [],
+          "route_names": [
+            "Afmadow - Dhobley Highway"
+          ],
+          "boundary_osm_ids": [
+            261605196
+          ],
+          "raw_contact_count": 1,
+          "osm_way_provenance": [
+            {
+              "osm_id": 701028822,
+              "osm_version": 6,
+              "osm_timestamp": "2025-04-02 15:40:38+00:00",
+              "tags": {
+                "highway": "primary",
+                "name": "Afmadow - Dhobley Highway",
+                "source": "Yahoo",
+                "surface": "unpaved"
+              }
+            }
+          ],
+          "topology_statuses": [
+            "unresolved"
+          ],
+          "topology_raw_contact_ids": [
+            "raw-701028822-261605196-00002"
+          ],
+          "topology_diagnostics": [
+            {
+              "status": "unresolved",
+              "route_distance_m": 9.151,
+              "arms": [
+                {
+                  "stable_side": -1,
+                  "paths": [
+                    {
+                      "side": -1,
+                      "reason": "stable_country_side",
+                      "route_osm_ids": [
+                        701028822,
+                        33402624
+                      ],
+                      "distance_m": 149.2,
+                      "clear_run_m": 109.8,
+                      "boundary_clearance_m": 148.5
+                    }
+                  ]
+                },
+                {
+                  "stable_side": 0,
+                  "paths": [
+                    {
+                      "side": 1,
+                      "reason": "stable_country_side",
+                      "route_osm_ids": [
+                        701028822,
+                        701028822
+                      ],
+                      "distance_m": 143.6,
+                      "clear_run_m": 103.6,
+                      "boundary_clearance_m": 143.4
+                    },
+                    {
+                      "side": 0,
+                      "reason": "trace_limit_without_stable_side",
+                      "route_osm_ids": [
+                        701028822,
+                        456998228
+                      ],
+                      "distance_m": 1000.0
+                    },
+                    {
+                      "side": 0,
+                      "reason": "trace_limit_without_stable_side",
+                      "route_osm_ids": [
+                        701028822,
+                        127477950,
+                        127477950
+                      ],
+                      "distance_m": 1000.0
+                    },
+                    {
+                      "side": 1,
+                      "reason": "stable_country_side",
+                      "route_osm_ids": [
+                        701028822,
+                        127477950,
+                        1198574560
+                      ],
+                      "distance_m": 635.7,
+                      "clear_run_m": 100.0,
+                      "boundary_clearance_m": 131.5
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "published_reference_distance_m": 24.7,
+          "distance_method": "WGS84 geodesic; source reference datum and accuracy unspecified",
+          "shared_node_evidence": [
+            {
+              "node_id": 6583592262,
+              "way_ids": [
+                33402624,
+                701028822
+              ],
+              "role": "Kenya A3 and Somalia Afmadow–Dhobley approach join"
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "No accepted event link; the workbook supplies named-location identity only.",
+        "OSM reference geography does not establish the scope or dates of any closure, formal vehicle access, or present opening status.",
+        "Published PIDA point is illustrative and may locate a facility rather than the exact frontier."
+      ],
+      "accepted_event_links": []
+    },
+    {
+      "crossing_id": "KE-SO-KIUNGA-ROAD",
+      "candidate_ids": [
+        "osm-05763abfabab501c"
+      ],
+      "match_status": "provisional",
+      "benchmark_eligible": true,
+      "evidence": [
+        "MOD names Kiunga–Ras Kamboni among three strategic land crossings and workbook H01 names Kiunga. RUSI independently names the Kiunga–Ishakani–Ras Kamboni cross-border area.",
+        "OSM tertiary E865 way 34359141 crosses this frontier between Ishakani and Ras Kamboni; its stored extent runs from [41.5,-1.7156867] toward [41.5855067,-1.636203].",
+        "The exception is only this specific existing road way. Its OSM Class E label does not extend the global filter to all tertiary or local roads.",
+        "The scoped extractor recovers E865 at the selected frontier. Final v3 topology classifies it unresolved (frontier_endpoint_or_extract_edge), so it is not counted as a sustained transition or accepted gate."
+      ],
+      "source_ids": [
+        "KE-SO-MOD-2023",
+        "KE-SO-IMM-PORTS",
+        "KE-SO-RUSI-KIUNGA"
+      ],
+      "candidate_evidence": [
+        {
+          "candidate_id": "osm-05763abfabab501c",
+          "coordinate": [
+            41.55935186000169,
+            -1.65821411232758
+          ],
+          "route_osm_ids": [
+            34359141
+          ],
+          "highway_classes": [
+            "tertiary"
+          ],
+          "route_refs": [
+            "E865"
+          ],
+          "route_names": [],
+          "boundary_osm_ids": [
+            126924905
+          ],
+          "raw_contact_count": 1,
+          "osm_way_provenance": [
+            {
+              "osm_id": 34359141,
+              "osm_version": 38,
+              "osm_timestamp": "2025-02-05 22:45:35+00:00",
+              "tags": {
+                "designation": "Class E, Unpaved",
+                "highway": "tertiary",
+                "oneway": "no",
+                "ref": "E865",
+                "ref:ar": "E٨٦٥",
+                "ref:so": "E865",
+                "source": "Africover, Kenya Roads Board",
+                "surface": "gravel"
+              }
+            }
+          ],
+          "topology_statuses": [
+            "unresolved"
+          ],
+          "topology_raw_contact_ids": [
+            "raw-34359141-126924905-00000"
+          ],
+          "topology_diagnostics": [
+            {
+              "status": "unresolved",
+              "reason": "frontier_endpoint_or_extract_edge",
+              "route_distance_m": 4018.853,
+              "arms": []
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "No accepted event link; the workbook supplies named-location identity only.",
+        "OSM reference geography does not establish the scope or dates of any closure, formal vehicle access, or present opening status.",
+        "No independent exact gate coordinate is available. Source pairing and OSM corridor alignment support investigation; exact post identity remains provisional.",
+        "Retained border-band graph does not include the full road continuation to Kiunga town; do not infer missing shared-node joins.",
+        "Country-side continuation is unresolved at the land-frontier endpoint/extract edge. Full coastal boundary context or independent gate evidence is needed before upgrading this association."
+      ],
+      "accepted_event_links": [],
+      "road_exception": {
+        "route_osm_ids": [
+          34359141
+        ],
+        "allowlist_file": "../road_exception_proposals/KE-SO.json",
+        "allowlist_sha256": "2771f8d662fe0f11e28a0d610cc15e9205aa0d8b3f535efd7bd6c5dc304b369d",
+        "status": "applied_in_scoped_extraction",
+        "scope": "Only the exact sourced road ID is allowed; no class-wide widening.",
+        "historical_proposal_note": "The allowlist is the immutable pre-run proposal input; its original review text is superseded by this final association and topology result."
+      }
+    },
+    {
+      "crossing_id": "KE-SO-ELWAK-ROAD",
+      "candidate_ids": [
+        "osm-2546bca60e485e95"
+      ],
+      "match_status": "provisional",
+      "benchmark_eligible": true,
+      "evidence": [
+        "Workbook H12 and its historical source name Elwak as a Kenya-entry crossing. EUAA identifies Ceel Waaq/El Waq/El Wak aliases; the municipal source independently locates the Kenyan town.",
+        "Secondary border segment 128370987 shares western node 380114458 with approach way 33410544, whose west end is near the Kenyan Elwak town, and eastern node 10034942475 with Ceel Waaq–Buusaar Highway way 128370918.",
+        "This is a bounded review of the connected secondary corridor, excluding nearby unclassified and track contacts.",
+        "Final v3 topology confirms a sustained crossing at this secondary corridor. Named-post identity remains provisional because the documentary sources do not identify this exact gate, and the formal entry-point directory lists Elwak as proposed."
+      ],
+      "source_ids": [
+        "KE-SO-KENHA-A13",
+        "KE-SO-IMM-PROPOSED",
+        "KE-SO-KRA-2020",
+        "KE-SO-GAROWE-H12",
+        "KE-SO-EUAA-GEDO-2025",
+        "KE-SO-MANDERA-ELWAK-PLAN-2022"
+      ],
+      "candidate_evidence": [
+        {
+          "candidate_id": "osm-2546bca60e485e95",
+          "coordinate": [
+            40.989250121062256,
+            2.797804128068205
+          ],
+          "route_osm_ids": [
+            128370987
+          ],
+          "highway_classes": [
+            "secondary"
+          ],
+          "route_refs": [],
+          "route_names": [],
+          "boundary_osm_ids": [
+            1201267309
+          ],
+          "raw_contact_count": 1,
+          "osm_way_provenance": [
+            {
+              "osm_id": 128370987,
+              "osm_version": 5,
+              "osm_timestamp": "2022-10-11 13:55:23+00:00",
+              "tags": {
+                "attribution": "Mart Roumen; FAO-SWALIM; Madmappers-SOM-2008-01",
+                "highway": "secondary",
+                "surface": "unpaved"
+              }
+            }
+          ],
+          "topology_statuses": [
+            "sustained_country_transition"
+          ],
+          "topology_raw_contact_ids": [
+            "raw-128370987-1201267309-00001"
+          ],
+          "topology_diagnostics": [
+            {
+              "status": "sustained_country_transition",
+              "route_distance_m": 174.584,
+              "arms": [
+                {
+                  "stable_side": -1,
+                  "paths": [
+                    {
+                      "side": -1,
+                      "reason": "stable_country_side",
+                      "route_osm_ids": [
+                        128370987
+                      ],
+                      "distance_m": 140.0,
+                      "clear_run_m": 100.0,
+                      "boundary_clearance_m": 131.9
+                    }
+                  ]
+                },
+                {
+                  "stable_side": 1,
+                  "paths": [
+                    {
+                      "side": 1,
+                      "reason": "stable_country_side",
+                      "route_osm_ids": [
+                        128370987
+                      ],
+                      "distance_m": 140.0,
+                      "clear_run_m": 100.0,
+                      "boundary_clearance_m": 137.4
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "shared_node_evidence": [
+            {
+              "node_id": 380114458,
+              "way_ids": [
+                33410544,
+                128370987
+              ],
+              "role": "Kenyan town approach joins frontier road"
+            },
+            {
+              "node_id": 10034942475,
+              "way_ids": [
+                128370987,
+                128370918
+              ],
+              "role": "Frontier road joins Ceel Waaq–Buusaar Highway"
+            }
+          ],
+          "town_reference_distance_m": 6077.1,
+          "town_reference_note": "Town context only, not gate-position error."
+        }
+      ],
+      "limitations": [
+        "No accepted event link; the workbook supplies named-location identity only.",
+        "OSM reference geography does not establish the scope or dates of any closure, formal vehicle access, or present opening status.",
+        "No independently published gate coordinate has been found; the municipal coordinate is a town reference several kilometres west of the frontier.",
+        "Immigration lists Elwak as proposed; historical crossing reports do not prove current formal operation.",
+        "A geometric transition alone does not establish that this specific contact is the historically named Elwak post; source-supported exact gate identity is still required."
+      ],
+      "accepted_event_links": [],
+      "road_exception": {
+        "route_osm_ids": [
+          128370987
+        ],
+        "allowlist_file": "../road_exception_proposals/KE-SO.json",
+        "allowlist_sha256": "2771f8d662fe0f11e28a0d610cc15e9205aa0d8b3f535efd7bd6c5dc304b369d",
+        "status": "applied_in_scoped_extraction",
+        "scope": "Only the exact sourced road ID is allowed; no class-wide widening.",
+        "historical_proposal_note": "The allowlist is the immutable pre-run proposal input; its original review text is superseded by this final association and topology result."
+      }
+    }
+  ],
+  "counts": {
+    "core_references": 3,
+    "workbook_exception_references": 1,
+    "core_supported_corridors": 2,
+    "core_provisional": 1,
+    "core_not_recovered": 0,
+    "workbook_exception_supported_corridors": 0,
+    "workbook_exception_provisional": 1,
+    "total_supported_corridors": 2,
+    "total_provisional": 2,
+    "total_not_recovered": 0,
+    "extracted_candidate_groups": 4,
+    "raw_contacts": 4,
+    "applied_sourced_road_exceptions": 3,
+    "topology_sustained_transitions": 2,
+    "topology_unresolved": 2
+  },
+  "review_basis": "AI-assisted official-source, actual shared-node and final v3 topology desk review; not independent field verification.",
+  "denominator_note": "Three preselected strategic corridors plus one workbook-named exception. Two corridors are supported and two remain provisional. All four have extracted candidates, but only two sustain geometric transitions; Liboi and Kiunga remain geometrically unresolved. These are bounded benchmark outcomes, not frontier completeness, exact-gate validation or closure records.",
+  "unassigned_candidate_ids": [],
+  "is_closure_evidence": false,
+  "benchmark_sha256": "6833457d973fe797e50382b0b92811a5f861ae3cbcc1e42d5034f49197afc448",
+  "baseline_comparison": {
+    "extraction_directory": "../extractions/KE-SO",
+    "candidate_count": 1,
+    "candidate_ids": [
+      "osm-a363c30c1fad7755"
+    ],
+    "core_supported_corridors": 1,
+    "workbook_exception_supported_corridors": 0,
+    "interpretation": "Main-road-only baseline recovered Liboi. Three named-post road exceptions were then extracted in a separate snapshot. This is method comparison, not additional current candidate count.",
+    "source_candidate_sha256": "10b99412a544f496a8c6c12a7201f6fdff85423518be0c2803180f3de065101a"
+  },
+  "topology_review": {
+    "directory": "../topology/KE-SO-scoped",
+    "method_version": "regional-topology-review-3",
+    "reviewer_sha256": "7c2af195125d4bc5c8e796a488f8a91df7ccfe9bde43d7af9ea8b963061d932a",
+    "source_candidate_sha256": "93cc14f725cf5ab0b4936e8df934381b6f228fefbcd5632f2c0d479bfe7bc3d4",
+    "summary_sha256": "ec3ea8acbe085f646ec9453ec5ace5c52489340df875cbef2504aedccb07c306",
+    "candidate_count": 4,
+    "by_topology_status": {
+      "unresolved": 2,
+      "sustained_country_transition": 2
+    },
+    "parameters": {
+      "boundary_band_m": 30.0,
+      "sample_step_m": 20.0,
+      "stable_run_m": 100.0,
+      "max_trace_m": 1000.0,
+      "context_buffer_m": 1500,
+      "max_branches": 12,
+      "repeat_window_m": 5000.0,
+      "repeat_min_contacts": 3,
+      "continuation_policy": "all_connected_same_mode_branches"
+    },
+    "interpretation": "Mandera and Elwak sustain transitions under the stated geometry parameters. Liboi has ambiguous connected branches, while Kiunga remains unresolved at a frontier endpoint/extract edge. Geometry diagnostics neither validate exact post identity nor operational status."
+  },
+  "source_candidate_sha256": "93cc14f725cf5ab0b4936e8df934381b6f228fefbcd5632f2c0d479bfe7bc3d4",
+  "source_osm_sha256": "effb612991eea80a718f71a48f707a16c0a4561b711ff4b614a8eed2dfa79371",
+  "topology_diagnostics_sha256": "5a5b8e1cfcd79b3c716733e8fbaaadee9c7d75394cd9dc936a6913b30e6bf087",
+  "topology_reviewer_sha256": "7c2af195125d4bc5c8e796a488f8a91df7ccfe9bde43d7af9ea8b963061d932a",
+  "topology_method_version": "regional-topology-review-3",
+  "topology_contacts_sha256": "71719dabb43228cd1bcd58b64db464137b8179e1ea78038f80eb5d9f5620536e"
+}

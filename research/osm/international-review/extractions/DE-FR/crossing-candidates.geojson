@@ -1,0 +1,3167 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "osm-22406cb48dd3f38f",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.916581259571725,
+          48.68374626870951
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-22406cb48dd3f38f",
+        "label": "Road–border contact near Gambsheim",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          642651318
+        ],
+        "boundary_osm_ids": [
+          178127111
+        ],
+        "route_names": [],
+        "route_refs": [
+          "D 502"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              7.916581259571729,
+              48.68374626870951
+            ],
+            "route_osm_id": 642651318,
+            "boundary_osm_id": 178127111
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Gambsheim",
+            "osm_id": 26698584,
+            "osm_url": "https://www.openstreetmap.org/node/26698584",
+            "distance_m": 2401,
+            "place_type": "village",
+            "coordinate": [
+              7.8864256,
+              48.6919519
+            ]
+          },
+          {
+            "name": "Offendorf",
+            "osm_id": 97968675,
+            "osm_url": "https://www.openstreetmap.org/node/97968675",
+            "distance_m": 3138,
+            "place_type": "village",
+            "coordinate": [
+              7.9123631,
+              48.7118236
+            ]
+          },
+          {
+            "name": "Kilstett",
+            "osm_id": 97968364,
+            "osm_url": "https://www.openstreetmap.org/node/97968364",
+            "distance_m": 4468,
+            "place_type": "village",
+            "coordinate": [
+              7.8573782,
+              48.6749481
+            ]
+          },
+          {
+            "name": "Herrlisheim",
+            "osm_id": 26695358,
+            "osm_url": "https://www.openstreetmap.org/node/26695358",
+            "distance_m": 5078,
+            "place_type": "village",
+            "coordinate": [
+              7.9061317,
+              48.7288855
+            ]
+          },
+          {
+            "name": "La Wantzenau",
+            "osm_id": 26696978,
+            "osm_url": "https://www.openstreetmap.org/node/26696978",
+            "distance_m": 7127,
+            "place_type": "village",
+            "coordinate": [
+              7.8277685,
+              48.6583055
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-277fadb8c00d26ba",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.381743400000001,
+          49.17524490000001
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-277fadb8c00d26ba",
+        "label": "Road–border contact near Schweyen",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          763999767,
+          841292051
+        ],
+        "boundary_osm_ids": [
+          78337515
+        ],
+        "route_names": [],
+        "route_refs": [
+          "B 424",
+          "D 35a"
+        ],
+        "raw_contact_count": 2,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              7.3817434,
+              49.1752449
+            ],
+            "route_osm_id": 763999767,
+            "boundary_osm_id": 78337515
+          },
+          {
+            "coordinate": [
+              7.3817434,
+              49.1752449
+            ],
+            "route_osm_id": 841292051,
+            "boundary_osm_id": 78337515
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Schweyen",
+            "osm_id": 287938443,
+            "osm_url": "https://www.openstreetmap.org/node/287938443",
+            "distance_m": 1752,
+            "place_type": "village",
+            "coordinate": [
+              7.3911287,
+              49.1607442
+            ]
+          },
+          {
+            "name": "Ohrenthal",
+            "osm_id": 1214180607,
+            "osm_url": "https://www.openstreetmap.org/node/1214180607",
+            "distance_m": 2313,
+            "place_type": "village",
+            "coordinate": [
+              7.4126377,
+              49.1705295
+            ]
+          },
+          {
+            "name": "Loutzviller",
+            "osm_id": 287938233,
+            "osm_url": "https://www.openstreetmap.org/node/287938233",
+            "distance_m": 3118,
+            "place_type": "village",
+            "coordinate": [
+              7.3823394,
+              49.147211
+            ]
+          },
+          {
+            "name": "Opperding",
+            "osm_id": 1944479594,
+            "osm_url": "https://www.openstreetmap.org/node/1944479594",
+            "distance_m": 3808,
+            "place_type": "village",
+            "coordinate": [
+              7.43347,
+              49.1799895
+            ]
+          },
+          {
+            "name": "Rolbing",
+            "osm_id": 287938378,
+            "osm_url": "https://www.openstreetmap.org/node/287938378",
+            "distance_m": 4272,
+            "place_type": "village",
+            "coordinate": [
+              7.4401766,
+              49.1724808
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-35065810496c1c58",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.128476527801283,
+          49.13914524162336
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-35065810496c1c58",
+        "label": "Road–border contact near Frauenberg",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          38510652
+        ],
+        "boundary_osm_ids": [
+          31993163
+        ],
+        "route_names": [
+          "Rue Nationale"
+        ],
+        "route_refs": [
+          "D 974"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              7.128476527801284,
+              49.13914524162335
+            ],
+            "route_osm_id": 38510652,
+            "boundary_osm_id": 31993163
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Frauenberg",
+            "osm_id": 287938013,
+            "osm_url": "https://www.openstreetmap.org/node/287938013",
+            "distance_m": 448,
+            "place_type": "village",
+            "coordinate": [
+              7.1244734,
+              49.1360857
+            ]
+          },
+          {
+            "name": "Bliesmengen-Bolchen",
+            "osm_id": 253421680,
+            "osm_url": "https://www.openstreetmap.org/node/253421680",
+            "distance_m": 1687,
+            "place_type": "village",
+            "coordinate": [
+              7.1154524,
+              49.1516845
+            ]
+          },
+          {
+            "name": "Blies-Ébersing",
+            "osm_id": 287937888,
+            "osm_url": "https://www.openstreetmap.org/node/287937888",
+            "distance_m": 2104,
+            "place_type": "village",
+            "coordinate": [
+              7.1446081,
+              49.1234706
+            ]
+          },
+          {
+            "name": "Blies-Schweyen",
+            "osm_id": 2999189074,
+            "osm_url": "https://www.openstreetmap.org/node/2999189074",
+            "distance_m": 2481,
+            "place_type": "village",
+            "coordinate": [
+              7.1007885,
+              49.1520957
+            ]
+          },
+          {
+            "name": "Sarreguemines",
+            "osm_id": 26691730,
+            "osm_url": "https://www.openstreetmap.org/node/26691730",
+            "distance_m": 5343,
+            "place_type": "town",
+            "coordinate": [
+              7.0708865,
+              49.1094836
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-35930a22cb4b6eee",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.068516007261427,
+          49.11655609821376
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-35930a22cb4b6eee",
+        "label": "Road–border contact near Sarreguemines",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          585438940
+        ],
+        "boundary_osm_ids": [
+          303400256
+        ],
+        "route_names": [],
+        "route_refs": [
+          "D 82A"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              7.068516007261426,
+              49.11655609821375
+            ],
+            "route_osm_id": 585438940,
+            "boundary_osm_id": 303400256
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Sarreguemines",
+            "osm_id": 26691730,
+            "osm_url": "https://www.openstreetmap.org/node/26691730",
+            "distance_m": 805,
+            "place_type": "town",
+            "coordinate": [
+              7.0708865,
+              49.1094836
+            ]
+          },
+          {
+            "name": "Auf der Helle",
+            "osm_id": 6230304863,
+            "osm_url": "https://www.openstreetmap.org/node/6230304863",
+            "distance_m": 3234,
+            "place_type": "hamlet",
+            "coordinate": [
+              7.0849623,
+              49.1435543
+            ]
+          },
+          {
+            "name": "Rémelfing",
+            "osm_id": 287938395,
+            "osm_url": "https://www.openstreetmap.org/node/287938395",
+            "distance_m": 3254,
+            "place_type": "village",
+            "coordinate": [
+              7.0925786,
+              49.0919301
+            ]
+          },
+          {
+            "name": "Blies-Guersviller",
+            "osm_id": 287937889,
+            "osm_url": "https://www.openstreetmap.org/node/287937889",
+            "distance_m": 3765,
+            "place_type": "village",
+            "coordinate": [
+              7.0835502,
+              49.1489431
+            ]
+          },
+          {
+            "name": "Gunglingerberg",
+            "osm_id": 6391862955,
+            "osm_url": "https://www.openstreetmap.org/node/6391862955",
+            "distance_m": 4015,
+            "place_type": "hamlet",
+            "coordinate": [
+              7.0298459,
+              49.1422284
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required",
+          "endpoint_or_tangent_contact"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-3f7f5a27dfa8c0df",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.957962499999996,
+          49.2037593
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-3f7f5a27dfa8c0df",
+        "label": "Road–border contact near Stiring-Wendel",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "motorway"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          37702095,
+          37702141,
+          434857304,
+          434862543
+        ],
+        "boundary_osm_ids": [
+          78277258
+        ],
+        "route_names": [],
+        "route_refs": [
+          "A 320",
+          "A 6"
+        ],
+        "raw_contact_count": 4,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              6.9579625,
+              49.2037593
+            ],
+            "route_osm_id": 37702095,
+            "boundary_osm_id": 78277258
+          },
+          {
+            "coordinate": [
+              6.9581166,
+              49.2036951
+            ],
+            "route_osm_id": 37702141,
+            "boundary_osm_id": 78277258
+          },
+          {
+            "coordinate": [
+              6.9579625,
+              49.2037593
+            ],
+            "route_osm_id": 434857304,
+            "boundary_osm_id": 78277258
+          },
+          {
+            "coordinate": [
+              6.9581166,
+              49.2036951
+            ],
+            "route_osm_id": 434862543,
+            "boundary_osm_id": 78277258
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Spicheren",
+            "osm_id": 26694309,
+            "osm_url": "https://www.openstreetmap.org/node/26694309",
+            "distance_m": 1455,
+            "place_type": "village",
+            "coordinate": [
+              6.9677794,
+              49.1923675
+            ]
+          },
+          {
+            "name": "Stiring-Wendel",
+            "osm_id": 26692569,
+            "osm_url": "https://www.openstreetmap.org/node/26692569",
+            "distance_m": 2226,
+            "place_type": "town",
+            "coordinate": [
+              6.9276792,
+              49.2011318
+            ]
+          },
+          {
+            "name": "Etzling",
+            "osm_id": 287938010,
+            "osm_url": "https://www.openstreetmap.org/node/287938010",
+            "distance_m": 2763,
+            "place_type": "village",
+            "coordinate": [
+              6.9630374,
+              49.1791354
+            ]
+          },
+          {
+            "name": "Schœneck",
+            "osm_id": 26694662,
+            "osm_url": "https://www.openstreetmap.org/node/26694662",
+            "distance_m": 3108,
+            "place_type": "village",
+            "coordinate": [
+              6.9240547,
+              49.2207124
+            ]
+          },
+          {
+            "name": "Behren-lès-Forbach",
+            "osm_id": 26692548,
+            "osm_url": "https://www.openstreetmap.org/node/26692548",
+            "distance_m": 3943,
+            "place_type": "village",
+            "coordinate": [
+              6.935203,
+              49.1715929
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-43478f574b2d49c5",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.581673600000005,
+          48.022559099999995
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-43478f574b2d49c5",
+        "label": "Road–border contact near Vogelgrun",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          20670542,
+          295961284
+        ],
+        "boundary_osm_ids": [
+          30334567
+        ],
+        "route_names": [],
+        "route_refs": [
+          "B 31",
+          "D 415"
+        ],
+        "raw_contact_count": 2,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              7.5816736,
+              48.0225591
+            ],
+            "route_osm_id": 20670542,
+            "boundary_osm_id": 30334567
+          },
+          {
+            "coordinate": [
+              7.5816736,
+              48.0225591
+            ],
+            "route_osm_id": 295961284,
+            "boundary_osm_id": 30334567
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Vogelgrun",
+            "osm_id": 97992108,
+            "osm_url": "https://www.openstreetmap.org/node/97992108",
+            "distance_m": 1292,
+            "place_type": "village",
+            "coordinate": [
+              7.5723177,
+              48.0127788
+            ]
+          },
+          {
+            "name": "Algolsheim",
+            "osm_id": 97991178,
+            "osm_url": "https://www.openstreetmap.org/node/97991178",
+            "distance_m": 2484,
+            "place_type": "village",
+            "coordinate": [
+              7.5606558,
+              48.0052375
+            ]
+          },
+          {
+            "name": "Volgelsheim",
+            "osm_id": 26697992,
+            "osm_url": "https://www.openstreetmap.org/node/26697992",
+            "distance_m": 2665,
+            "place_type": "village",
+            "coordinate": [
+              7.5471221,
+              48.0164772
+            ]
+          },
+          {
+            "name": "Biesheim",
+            "osm_id": 26697986,
+            "osm_url": "https://www.openstreetmap.org/node/26697986",
+            "distance_m": 3417,
+            "place_type": "village",
+            "coordinate": [
+              7.5448609,
+              48.0408514
+            ]
+          },
+          {
+            "name": "Obersaasheim",
+            "osm_id": 97991754,
+            "osm_url": "https://www.openstreetmap.org/node/97991754",
+            "distance_m": 4005,
+            "place_type": "village",
+            "coordinate": [
+              7.5563788,
+              47.9907928
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-6497440d2389fd8e",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.769905325559918,
+          48.49137197448052
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-6497440d2389fd8e",
+        "label": "Road–border contact near Hetzlader",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          4757526
+        ],
+        "boundary_osm_ids": [
+          1185057361
+        ],
+        "route_names": [
+          "Pont Pierre Pflimlin"
+        ],
+        "route_refs": [
+          "M 353"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              7.769905325559919,
+              48.491371974480515
+            ],
+            "route_osm_id": 4757526,
+            "boundary_osm_id": 1185057361
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Hetzlader",
+            "osm_id": 10238881041,
+            "osm_url": "https://www.openstreetmap.org/node/10238881041",
+            "distance_m": 3132,
+            "place_type": "hamlet",
+            "coordinate": [
+              7.7275713,
+              48.4901862
+            ]
+          },
+          {
+            "name": "Cité EDF",
+            "osm_id": 10238942811,
+            "osm_url": "https://www.openstreetmap.org/node/10238942811",
+            "distance_m": 3191,
+            "place_type": "hamlet",
+            "coordinate": [
+              7.7321445,
+              48.4774704
+            ]
+          },
+          {
+            "name": "Plobsheim",
+            "osm_id": 26696252,
+            "osm_url": "https://www.openstreetmap.org/node/26696252",
+            "distance_m": 3928,
+            "place_type": "village",
+            "coordinate": [
+              7.7267224,
+              48.4707922
+            ]
+          },
+          {
+            "name": "Eschau",
+            "osm_id": 26695328,
+            "osm_url": "https://www.openstreetmap.org/node/26695328",
+            "distance_m": 4086,
+            "place_type": "village",
+            "coordinate": [
+              7.7153003,
+              48.4856711
+            ]
+          },
+          {
+            "name": "Illkirch-Graffenstaden",
+            "osm_id": 26692512,
+            "osm_url": "https://www.openstreetmap.org/node/26692512",
+            "distance_m": 6091,
+            "place_type": "town",
+            "coordinate": [
+              7.7113254,
+              48.5299117
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-73a93089ca9af0ca",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.371951260071251,
+          49.46672254194218
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-73a93089ca9af0ca",
+        "label": "Road–border contact near Apach",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          24351408
+        ],
+        "boundary_osm_ids": [
+          173204589
+        ],
+        "route_names": [
+          "Route de Trèves"
+        ],
+        "route_refs": [
+          "D 654"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              6.371951260071247,
+              49.466722541942175
+            ],
+            "route_osm_id": 24351408,
+            "boundary_osm_id": 173204589
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Apach",
+            "osm_id": 287937831,
+            "osm_url": "https://www.openstreetmap.org/node/287937831",
+            "distance_m": 857,
+            "place_type": "village",
+            "coordinate": [
+              6.3743525,
+              49.4591762
+            ]
+          },
+          {
+            "name": "Haut Apach",
+            "osm_id": 2309930321,
+            "osm_url": "https://www.openstreetmap.org/node/2309930321",
+            "distance_m": 1364,
+            "place_type": "hamlet",
+            "coordinate": [
+              6.3867046,
+              49.4591081
+            ]
+          },
+          {
+            "name": "Belmach",
+            "osm_id": 2309927437,
+            "osm_url": "https://www.openstreetmap.org/node/2309927437",
+            "distance_m": 1895,
+            "place_type": "hamlet",
+            "coordinate": [
+              6.3960794,
+              49.4601597
+            ]
+          },
+          {
+            "name": "Contz-les-Bains",
+            "osm_id": 88894598,
+            "osm_url": "https://www.openstreetmap.org/node/88894598",
+            "distance_m": 2388,
+            "place_type": "village",
+            "coordinate": [
+              6.3467655,
+              49.4528849
+            ]
+          },
+          {
+            "name": "Rustroff",
+            "osm_id": 287938400,
+            "osm_url": "https://www.openstreetmap.org/node/287938400",
+            "distance_m": 2732,
+            "place_type": "village",
+            "coordinate": [
+              6.3720465,
+              49.4421576
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-7534f4f6340d5b92",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.651390299999995,
+          49.2855678
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-7534f4f6340d5b92",
+        "label": "Road–border contact near Bedem",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          26878366,
+          140149581
+        ],
+        "boundary_osm_ids": [
+          374274231
+        ],
+        "route_names": [],
+        "route_refs": [
+          "B 269",
+          "D 954"
+        ],
+        "raw_contact_count": 2,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              6.6513903,
+              49.2855678
+            ],
+            "route_osm_id": 26878366,
+            "boundary_osm_id": 374274231
+          },
+          {
+            "coordinate": [
+              6.6513903,
+              49.2855678
+            ],
+            "route_osm_id": 140149581,
+            "boundary_osm_id": 374274231
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Bedem",
+            "osm_id": 3051049930,
+            "osm_url": "https://www.openstreetmap.org/node/3051049930",
+            "distance_m": 988,
+            "place_type": "hamlet",
+            "coordinate": [
+              6.6405822,
+              49.2801912
+            ]
+          },
+          {
+            "name": "Villing",
+            "osm_id": 287938555,
+            "osm_url": "https://www.openstreetmap.org/node/287938555",
+            "distance_m": 1529,
+            "place_type": "village",
+            "coordinate": [
+              6.6317962,
+              49.2806022
+            ]
+          },
+          {
+            "name": "Berviller-en-Moselle",
+            "osm_id": 287937875,
+            "osm_url": "https://www.openstreetmap.org/node/287937875",
+            "distance_m": 1588,
+            "place_type": "village",
+            "coordinate": [
+              6.6464907,
+              49.2716496
+            ]
+          },
+          {
+            "name": "Trois Maisons",
+            "osm_id": 3051049931,
+            "osm_url": "https://www.openstreetmap.org/node/3051049931",
+            "distance_m": 1736,
+            "place_type": "hamlet",
+            "coordinate": [
+              6.6319426,
+              49.2765306
+            ]
+          },
+          {
+            "name": "Creutzwald",
+            "osm_id": 26691766,
+            "osm_url": "https://www.openstreetmap.org/node/26691766",
+            "distance_m": 9509,
+            "place_type": "town",
+            "coordinate": [
+              6.6963095,
+              49.2052869
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-7c704ae7bf24136f",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.631442636205971,
+          49.2974114823821
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-7c704ae7bf24136f",
+        "label": "Road–border contact near Schreckling",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          661044553,
+          1556438244
+        ],
+        "boundary_osm_ids": [
+          374274230
+        ],
+        "route_names": [],
+        "route_refs": [
+          "B 405",
+          "D 918 / B 405"
+        ],
+        "raw_contact_count": 3,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              6.631442636205971,
+              49.2974114823821
+            ],
+            "route_osm_id": 661044553,
+            "boundary_osm_id": 374274230
+          },
+          {
+            "coordinate": [
+              6.632172696651866,
+              49.29740319498704
+            ],
+            "route_osm_id": 661044553,
+            "boundary_osm_id": 374274230
+          },
+          {
+            "coordinate": [
+              6.630419843076914,
+              49.29744063463818
+            ],
+            "route_osm_id": 1556438244,
+            "boundary_osm_id": 374274230
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Schreckling",
+            "osm_id": 1232968819,
+            "osm_url": "https://www.openstreetmap.org/node/1232968819",
+            "distance_m": 793,
+            "place_type": "hamlet",
+            "coordinate": [
+              6.6205467,
+              49.2970814
+            ]
+          },
+          {
+            "name": "Vœlfling-lès-Bouzonville",
+            "osm_id": 287938625,
+            "osm_url": "https://www.openstreetmap.org/node/287938625",
+            "distance_m": 1728,
+            "place_type": "village",
+            "coordinate": [
+              6.6095246,
+              49.2914308
+            ]
+          },
+          {
+            "name": "Villing",
+            "osm_id": 287938555,
+            "osm_url": "https://www.openstreetmap.org/node/287938555",
+            "distance_m": 1870,
+            "place_type": "village",
+            "coordinate": [
+              6.6317962,
+              49.2806022
+            ]
+          },
+          {
+            "name": "Leidingen",
+            "osm_id": 944670704,
+            "osm_url": "https://www.openstreetmap.org/node/944670704",
+            "distance_m": 1948,
+            "place_type": "village",
+            "coordinate": [
+              6.6109318,
+              49.3086764
+            ]
+          },
+          {
+            "name": "Bedem",
+            "osm_id": 3051049930,
+            "osm_url": "https://www.openstreetmap.org/node/3051049930",
+            "distance_m": 2027,
+            "place_type": "hamlet",
+            "coordinate": [
+              6.6405822,
+              49.2801912
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-7d160edcbcd8c259",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.546445715984902,
+          47.81439082693754
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-7d160edcbcd8c259",
+        "label": "Road–border contact near Chalampé",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          17556000
+        ],
+        "boundary_osm_ids": [
+          59858866
+        ],
+        "route_names": [],
+        "route_refs": [
+          "B 378"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              7.546445715984901,
+              47.81439082693754
+            ],
+            "route_osm_id": 17556000,
+            "boundary_osm_id": 59858866
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Chalampé",
+            "osm_id": 97991350,
+            "osm_url": "https://www.openstreetmap.org/node/97991350",
+            "distance_m": 828,
+            "place_type": "village",
+            "coordinate": [
+              7.5410482,
+              47.8208892
+            ]
+          },
+          {
+            "name": "Chalampé-le-Bas",
+            "osm_id": 11920315536,
+            "osm_url": "https://www.openstreetmap.org/node/11920315536",
+            "distance_m": 2169,
+            "place_type": "hamlet",
+            "coordinate": [
+              7.5488171,
+              47.8338322
+            ]
+          },
+          {
+            "name": "Bantzenheim",
+            "osm_id": 97991224,
+            "osm_url": "https://www.openstreetmap.org/node/97991224",
+            "distance_m": 2611,
+            "place_type": "village",
+            "coordinate": [
+              7.5149874,
+              47.8245208
+            ]
+          },
+          {
+            "name": "Ottmarsheim",
+            "osm_id": 97991849,
+            "osm_url": "https://www.openstreetmap.org/node/97991849",
+            "distance_m": 3963,
+            "place_type": "village",
+            "coordinate": [
+              7.5094906,
+              47.7888815
+            ]
+          },
+          {
+            "name": "Rumersheim-le-Haut",
+            "osm_id": 97991917,
+            "osm_url": "https://www.openstreetmap.org/node/97991917",
+            "distance_m": 4631,
+            "place_type": "village",
+            "coordinate": [
+              7.5208505,
+              47.8523112
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-7d492dfda1fb476e",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.529996632406005,
+          47.775516022681856
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-7d492dfda1fb476e",
+        "label": "Road–border contact near Ottmarsheim",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "motorway"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          27328800,
+          56758547
+        ],
+        "boundary_osm_ids": [
+          30334065
+        ],
+        "route_names": [],
+        "route_refs": [],
+        "raw_contact_count": 2,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              7.529996632406005,
+              47.77551602268185
+            ],
+            "route_osm_id": 27328800,
+            "boundary_osm_id": 30334065
+          },
+          {
+            "coordinate": [
+              7.529980171307779,
+              47.775650253344736
+            ],
+            "route_osm_id": 56758547,
+            "boundary_osm_id": 30334065
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Ottmarsheim",
+            "osm_id": 97991849,
+            "osm_url": "https://www.openstreetmap.org/node/97991849",
+            "distance_m": 2138,
+            "place_type": "village",
+            "coordinate": [
+              7.5094906,
+              47.7888815
+            ]
+          },
+          {
+            "name": "Hombourg",
+            "osm_id": 97991522,
+            "osm_url": "https://www.openstreetmap.org/node/97991522",
+            "distance_m": 2576,
+            "place_type": "village",
+            "coordinate": [
+              7.5063314,
+              47.758716
+            ]
+          },
+          {
+            "name": "Ferme Saint-Martin",
+            "osm_id": 220564319,
+            "osm_url": "https://www.openstreetmap.org/node/220564319",
+            "distance_m": 4219,
+            "place_type": "hamlet",
+            "coordinate": [
+              7.5045609,
+              47.7416677
+            ]
+          },
+          {
+            "name": "Niederfeld",
+            "osm_id": 8797255753,
+            "osm_url": "https://www.openstreetmap.org/node/8797255753",
+            "distance_m": 4282,
+            "place_type": "hamlet",
+            "coordinate": [
+              7.5120306,
+              47.7389636
+            ]
+          },
+          {
+            "name": "Petit-Landau",
+            "osm_id": 97991823,
+            "osm_url": "https://www.openstreetmap.org/node/97991823",
+            "distance_m": 4980,
+            "place_type": "village",
+            "coordinate": [
+              7.5177461,
+              47.7314942
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-7e1519d1d52ff95a",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.107710200000005,
+          48.8332683
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-7e1519d1d52ff95a",
+        "label": "Road–border contact near Neuhaeusel",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          33652156,
+          192757521
+        ],
+        "boundary_osm_ids": [
+          330327227
+        ],
+        "route_names": [],
+        "route_refs": [
+          "B 500",
+          "D 504"
+        ],
+        "raw_contact_count": 2,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              8.1077102,
+              48.8332683
+            ],
+            "route_osm_id": 33652156,
+            "boundary_osm_id": 330327227
+          },
+          {
+            "coordinate": [
+              8.1077102,
+              48.8332683
+            ],
+            "route_osm_id": 192757521,
+            "boundary_osm_id": 330327227
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Neuhaeusel",
+            "osm_id": 97968582,
+            "osm_url": "https://www.openstreetmap.org/node/97968582",
+            "distance_m": 1934,
+            "place_type": "village",
+            "coordinate": [
+              8.0856866,
+              48.8237291
+            ]
+          },
+          {
+            "name": "Beinheim",
+            "osm_id": 97966665,
+            "osm_url": "https://www.openstreetmap.org/node/97966665",
+            "distance_m": 3748,
+            "place_type": "village",
+            "coordinate": [
+              8.0844618,
+              48.8632757
+            ]
+          },
+          {
+            "name": "Roppenheim",
+            "osm_id": 97968920,
+            "osm_url": "https://www.openstreetmap.org/node/97968920",
+            "distance_m": 4080,
+            "place_type": "village",
+            "coordinate": [
+              8.0545977,
+              48.8440817
+            ]
+          },
+          {
+            "name": "Fort-Louis",
+            "osm_id": 891039826,
+            "osm_url": "https://www.openstreetmap.org/node/891039826",
+            "distance_m": 5131,
+            "place_type": "village",
+            "coordinate": [
+              8.0571568,
+              48.8014183
+            ]
+          },
+          {
+            "name": "Rœschwoog",
+            "osm_id": 97968827,
+            "osm_url": "https://www.openstreetmap.org/node/97968827",
+            "distance_m": 5274,
+            "place_type": "village",
+            "coordinate": [
+              8.0363491,
+              48.8278605
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-84caec773c74c238",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.953617386448281,
+          49.0461092599873
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-84caec773c74c238",
+        "label": "Road–border contact near Wissembourg",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          487503640
+        ],
+        "boundary_osm_ids": [
+          1065146767
+        ],
+        "route_names": [
+          "Route de Schweigen"
+        ],
+        "route_refs": [
+          "D 264"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              7.953617386448278,
+              49.04610925998729
+            ],
+            "route_osm_id": 487503640,
+            "boundary_osm_id": 1065146767
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Wissembourg",
+            "osm_id": 18306751,
+            "osm_url": "https://www.openstreetmap.org/node/18306751",
+            "distance_m": 1250,
+            "place_type": "town",
+            "coordinate": [
+              7.9445109,
+              49.0365935
+            ]
+          },
+          {
+            "name": "Windhof",
+            "osm_id": 372773085,
+            "osm_url": "https://www.openstreetmap.org/node/372773085",
+            "distance_m": 1352,
+            "place_type": "hamlet",
+            "coordinate": [
+              7.9678075,
+              49.0383127
+            ]
+          },
+          {
+            "name": "Welschdorf",
+            "osm_id": 6433807553,
+            "osm_url": "https://www.openstreetmap.org/node/6433807553",
+            "distance_m": 1955,
+            "place_type": "hamlet",
+            "coordinate": [
+              7.9703651,
+              49.0324019
+            ]
+          },
+          {
+            "name": "Neuhof",
+            "osm_id": 266891223,
+            "osm_url": "https://www.openstreetmap.org/node/266891223",
+            "distance_m": 1988,
+            "place_type": "hamlet",
+            "coordinate": [
+              7.9738347,
+              49.0341496
+            ]
+          },
+          {
+            "name": "Altenstadt",
+            "osm_id": 26698604,
+            "osm_url": "https://www.openstreetmap.org/node/26698604",
+            "distance_m": 2185,
+            "place_type": "village",
+            "coordinate": [
+              7.9693216,
+              49.0293953
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-b4da6d5a708dcfb2",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.719260559039094,
+          49.221207832977456
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-b4da6d5a708dcfb2",
+        "label": "Road–border contact near Creutzwald",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          81033798
+        ],
+        "boundary_osm_ids": [
+          713023610
+        ],
+        "route_names": [],
+        "route_refs": [
+          "D 633"
+        ],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              6.719260559039104,
+              49.22120783297744
+            ],
+            "route_osm_id": 81033798,
+            "boundary_osm_id": 713023610
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Creutzwald",
+            "osm_id": 26691766,
+            "osm_url": "https://www.openstreetmap.org/node/26691766",
+            "distance_m": 2436,
+            "place_type": "town",
+            "coordinate": [
+              6.6963095,
+              49.2052869
+            ]
+          },
+          {
+            "name": "Merten",
+            "osm_id": 287938271,
+            "osm_url": "https://www.openstreetmap.org/node/287938271",
+            "distance_m": 4873,
+            "place_type": "village",
+            "coordinate": [
+              6.6674,
+              49.2489
+            ]
+          },
+          {
+            "name": "Diesen",
+            "osm_id": 287937978,
+            "osm_url": "https://www.openstreetmap.org/node/287937978",
+            "distance_m": 5585,
+            "place_type": "village",
+            "coordinate": [
+              6.6788279,
+              49.1785471
+            ]
+          },
+          {
+            "name": "Falck",
+            "osm_id": 26698213,
+            "osm_url": "https://www.openstreetmap.org/node/26698213",
+            "distance_m": 5790,
+            "place_type": "village",
+            "coordinate": [
+              6.6398114,
+              49.222549
+            ]
+          },
+          {
+            "name": "Carling",
+            "osm_id": 26697598,
+            "osm_url": "https://www.openstreetmap.org/node/26697598",
+            "distance_m": 5887,
+            "place_type": "village",
+            "coordinate": [
+              6.7181281,
+              49.1682805
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-b76f4ce483c86d48",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.599094199999999,
+          48.15391799999999
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-b76f4ce483c86d48",
+        "label": "Road–border contact near Hameau du Rhin",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          129040761,
+          129040777
+        ],
+        "boundary_osm_ids": [
+          30443786
+        ],
+        "route_names": [],
+        "route_refs": [
+          "D 424",
+          "L 113"
+        ],
+        "raw_contact_count": 2,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              7.5990942,
+              48.153918
+            ],
+            "route_osm_id": 129040761,
+            "boundary_osm_id": 30443786
+          },
+          {
+            "coordinate": [
+              7.5990942,
+              48.153918
+            ],
+            "route_osm_id": 129040777,
+            "boundary_osm_id": 30443786
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Hameau du Rhin",
+            "osm_id": 3619210881,
+            "osm_url": "https://www.openstreetmap.org/node/3619210881",
+            "distance_m": 641,
+            "place_type": "hamlet",
+            "coordinate": [
+              7.5972151,
+              48.1482902
+            ]
+          },
+          {
+            "name": "Marckolsheim",
+            "osm_id": 26697049,
+            "osm_url": "https://www.openstreetmap.org/node/26697049",
+            "distance_m": 4265,
+            "place_type": "village",
+            "coordinate": [
+              7.5444161,
+              48.165441
+            ]
+          },
+          {
+            "name": "Mackenheim",
+            "osm_id": 97968470,
+            "osm_url": "https://www.openstreetmap.org/node/97968470",
+            "distance_m": 4277,
+            "place_type": "village",
+            "coordinate": [
+              7.5638117,
+              48.1842906
+            ]
+          },
+          {
+            "name": "Bootzheim",
+            "osm_id": 97966756,
+            "osm_url": "https://www.openstreetmap.org/node/97966756",
+            "distance_m": 4344,
+            "place_type": "village",
+            "coordinate": [
+              7.5711408,
+              48.1882206
+            ]
+          },
+          {
+            "name": "Artzenheim",
+            "osm_id": 97991203,
+            "osm_url": "https://www.openstreetmap.org/node/97991203",
+            "distance_m": 5962,
+            "place_type": "village",
+            "coordinate": [
+              7.5440064,
+              48.114993
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-b7d54168f50b85bc",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.592989600000003,
+          47.60097189999998
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-b7d54168f50b85bc",
+        "label": "Road–border contact near Saint-Louis",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          25777622,
+          149789424
+        ],
+        "boundary_osm_ids": [
+          860310556
+        ],
+        "route_names": [],
+        "route_refs": [
+          "B 532",
+          "D 105"
+        ],
+        "raw_contact_count": 2,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              7.5929896,
+              47.6009719
+            ],
+            "route_osm_id": 25777622,
+            "boundary_osm_id": 860310556
+          },
+          {
+            "coordinate": [
+              7.5929896,
+              47.6009719
+            ],
+            "route_osm_id": 149789424,
+            "boundary_osm_id": 860310556
+          }
+        ],
+        "checkpoints": [
+          {
+            "osm_type": "w",
+            "osm_id": 531623498,
+            "osm_version": 5,
+            "osm_timestamp": "2022-11-05 20:14:12+00:00",
+            "tags": {
+              "addr:city": "Weil am Rhein",
+              "addr:country": "DE",
+              "addr:housenumber": "1",
+              "addr:postcode": "79576",
+              "addr:street": "Zollstraße",
+              "area": "yes",
+              "barrier": "border_control",
+              "building": "yes",
+              "description": "German customs office"
+            },
+            "osm_url": "https://www.openstreetmap.org/way/531623498",
+            "nodes": [
+              5160362726,
+              6737229314,
+              6737229313,
+              5160362727,
+              6737229310,
+              6737229311,
+              5160362728,
+              6737229312,
+              6737229315,
+              5160362729,
+              5160362726
+            ],
+            "position_method": "representative point on tagged way",
+            "distance_m": 1305,
+            "coordinate": [
+              7.593068144973874,
+              47.58923750941493
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "w",
+            "osm_id": 315432621,
+            "osm_version": 3,
+            "osm_timestamp": "2022-11-05 20:14:12+00:00",
+            "tags": {
+              "addr:city": "Basel",
+              "addr:country": "CH",
+              "addr:housenumber": "83",
+              "addr:postcode": "4057",
+              "addr:street": "Hiltalingerstrasse",
+              "area": "yes",
+              "barrier": "border_control",
+              "building": "yes",
+              "description": "Swiss customs office (unstaffed)"
+            },
+            "osm_url": "https://www.openstreetmap.org/way/315432621",
+            "nodes": [
+              3215496224,
+              3215496235,
+              3215496232,
+              3215496242,
+              3215496240,
+              3215496238,
+              3215496234,
+              3215496230,
+              3215496226,
+              3215496198,
+              3215496199,
+              3215496200,
+              3215496206,
+              3215496218,
+              3215496224
+            ],
+            "position_method": "representative point on tagged way",
+            "distance_m": 1332,
+            "coordinate": [
+              7.5929785118265825,
+              47.58899294393476
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "n",
+            "osm_id": 1902515050,
+            "osm_version": 7,
+            "osm_timestamp": "2020-03-30 10:30:34+00:00",
+            "tags": {
+              "barrier": "border_control",
+              "boundary": "country_border",
+              "country": "CH",
+              "name": "Grenzübergang Basel Hiltalingerstrasse"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/1902515050",
+            "distance_m": 1332,
+            "coordinate": [
+              7.5931023,
+              47.5889909
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "w",
+            "osm_id": 315433231,
+            "osm_version": 5,
+            "osm_timestamp": "2026-03-26 00:13:31+00:00",
+            "tags": {
+              "addr:city": "Basel",
+              "addr:country": "CH",
+              "addr:housenumber": "80",
+              "addr:postcode": "4057",
+              "addr:street": "Hiltalingerstrasse",
+              "area": "yes",
+              "barrier": "border_control",
+              "building": "yes",
+              "building:levels": "1",
+              "roof:shape": "flat"
+            },
+            "osm_url": "https://www.openstreetmap.org/way/315433231",
+            "nodes": [
+              3215496228,
+              3215496223,
+              3215496222,
+              3215496221,
+              3215496220,
+              3215496217,
+              3215496216,
+              3215496214,
+              3215496213,
+              3215496211,
+              3215496209,
+              3215496207,
+              3215496204,
+              3215496201,
+              3215496202,
+              3215496203,
+              3215496205,
+              3215496208,
+              3215496210,
+              3215496212,
+              3215496215,
+              3215496219,
+              3215496227,
+              3215496241,
+              3215496243,
+              3215496244,
+              3215496245,
+              3215496247,
+              3215496250,
+              3215496252,
+              3215496255,
+              3215496258,
+              3215496260,
+              3215496263,
+              3215496265,
+              3215496267,
+              3215496266,
+              3215496264,
+              3215496262,
+              3215496261,
+              3215496259,
+              3215496256,
+              3215496251,
+              3215496248,
+              3215496228
+            ],
+            "position_method": "representative point on tagged way",
+            "distance_m": 1336,
+            "coordinate": [
+              7.5932273553130845,
+              47.58895586539922
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "n",
+            "osm_id": 3183003739,
+            "osm_version": 7,
+            "osm_timestamp": "2020-03-30 10:30:34+00:00",
+            "tags": {
+              "barrier": "border_control",
+              "boundary": "country_border",
+              "country": "DE",
+              "name": "Grenzübergang Weil-Friedlingen"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/3183003739",
+            "distance_m": 1337,
+            "coordinate": [
+              7.5932822,
+              47.5889445
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          },
+          {
+            "osm_type": "n",
+            "osm_id": 6584133750,
+            "osm_version": 2,
+            "osm_timestamp": "2020-04-09 09:53:19+00:00",
+            "tags": {
+              "barrier": "border_control",
+              "boundary": "country_border",
+              "country": "DE",
+              "name": "Grenzübergang Weil-Friedlingen"
+            },
+            "osm_url": "https://www.openstreetmap.org/node/6584133750",
+            "distance_m": 1340,
+            "coordinate": [
+              7.5933657,
+              47.5889235
+            ],
+            "association": "proximity only; not verified as the same crossing"
+          }
+        ],
+        "nearby_settlements": [
+          {
+            "name": "Palmrain",
+            "osm_id": 11778660881,
+            "osm_url": "https://www.openstreetmap.org/node/11778660881",
+            "distance_m": 326,
+            "place_type": "hamlet",
+            "coordinate": [
+              7.5886864,
+              47.6006557
+            ]
+          },
+          {
+            "name": "Huningue",
+            "osm_id": 26698551,
+            "osm_url": "https://www.openstreetmap.org/node/26698551",
+            "distance_m": 1269,
+            "place_type": "village",
+            "coordinate": [
+              7.5794613,
+              47.5941514
+            ]
+          },
+          {
+            "name": "Village-Neuf",
+            "osm_id": 26697171,
+            "osm_url": "https://www.openstreetmap.org/node/26697171",
+            "distance_m": 1823,
+            "place_type": "village",
+            "coordinate": [
+              7.5696755,
+              47.6054816
+            ]
+          },
+          {
+            "name": "Saint-Louis",
+            "osm_id": 26692502,
+            "osm_url": "https://www.openstreetmap.org/node/26692502",
+            "distance_m": 2887,
+            "place_type": "town",
+            "coordinate": [
+              7.5615765,
+              47.5860467
+            ]
+          },
+          {
+            "name": "Langenhaeuser",
+            "osm_id": 11886404225,
+            "osm_url": "https://www.openstreetmap.org/node/11886404225",
+            "distance_m": 3948,
+            "place_type": "hamlet",
+            "coordinate": [
+              7.5417527,
+              47.6087097
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-bed375bb297652c7",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.027804400000001,
+          49.191102
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-bed375bb297652c7",
+        "label": "Road–border contact near Alsting",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          38074000,
+          992312675
+        ],
+        "boundary_osm_ids": [
+          401606053,
+          923494110
+        ],
+        "route_names": [
+          "Großblittersdorfer Straße",
+          "Rue de Sarrebruck"
+        ],
+        "route_refs": [
+          "D 661"
+        ],
+        "raw_contact_count": 4,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              7.0278044,
+              49.191102
+            ],
+            "route_osm_id": 38074000,
+            "boundary_osm_id": 401606053
+          },
+          {
+            "coordinate": [
+              7.0278044,
+              49.191102
+            ],
+            "route_osm_id": 38074000,
+            "boundary_osm_id": 923494110
+          },
+          {
+            "coordinate": [
+              7.0278044,
+              49.191102
+            ],
+            "route_osm_id": 992312675,
+            "boundary_osm_id": 401606053
+          },
+          {
+            "coordinate": [
+              7.0278044,
+              49.191102
+            ],
+            "route_osm_id": 992312675,
+            "boundary_osm_id": 923494110
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Alsting",
+            "osm_id": 26698181,
+            "osm_url": "https://www.openstreetmap.org/node/26698181",
+            "distance_m": 2391,
+            "place_type": "village",
+            "coordinate": [
+              7.0003939,
+              49.1793035
+            ]
+          },
+          {
+            "name": "Battenberg",
+            "osm_id": 6391862958,
+            "osm_url": "https://www.openstreetmap.org/node/6391862958",
+            "distance_m": 2755,
+            "place_type": "hamlet",
+            "coordinate": [
+              7.0116737,
+              49.1687026
+            ]
+          },
+          {
+            "name": "Boehlingen",
+            "osm_id": 6391862957,
+            "osm_url": "https://www.openstreetmap.org/node/6391862957",
+            "distance_m": 2792,
+            "place_type": "hamlet",
+            "coordinate": [
+              7.0193772,
+              49.1666164
+            ]
+          },
+          {
+            "name": "Kellerwiese",
+            "osm_id": 6391862948,
+            "osm_url": "https://www.openstreetmap.org/node/6391862948",
+            "distance_m": 3137,
+            "place_type": "hamlet",
+            "coordinate": [
+              7.0286828,
+              49.1628991
+            ]
+          },
+          {
+            "name": "Stiring-Wendel",
+            "osm_id": 26692569,
+            "osm_url": "https://www.openstreetmap.org/node/26692569",
+            "distance_m": 7382,
+            "place_type": "town",
+            "coordinate": [
+              6.9276792,
+              49.2011318
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-c8ced8fcb37a618f",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.956280427825107,
+          49.20447173837538
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-c8ced8fcb37a618f",
+        "label": "Road–border contact near Stiring-Wendel",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          801903553,
+          801903554,
+          1408435295
+        ],
+        "boundary_osm_ids": [
+          78277258
+        ],
+        "route_names": [
+          "Metzer Straße"
+        ],
+        "route_refs": [
+          "B 41",
+          "D 603"
+        ],
+        "raw_contact_count": 3,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              6.95628042782511,
+              49.20447173837538
+            ],
+            "route_osm_id": 801903553,
+            "boundary_osm_id": 78277258
+          },
+          {
+            "coordinate": [
+              6.956114082933457,
+              49.20457097609778
+            ],
+            "route_osm_id": 801903554,
+            "boundary_osm_id": 78277258
+          },
+          {
+            "coordinate": [
+              6.95629390815387,
+              49.20446369630622
+            ],
+            "route_osm_id": 1408435295,
+            "boundary_osm_id": 78277258
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Spicheren",
+            "osm_id": 26694309,
+            "osm_url": "https://www.openstreetmap.org/node/26694309",
+            "distance_m": 1586,
+            "place_type": "village",
+            "coordinate": [
+              6.9677794,
+              49.1923675
+            ]
+          },
+          {
+            "name": "Stiring-Wendel",
+            "osm_id": 26692569,
+            "osm_url": "https://www.openstreetmap.org/node/26692569",
+            "distance_m": 2117,
+            "place_type": "town",
+            "coordinate": [
+              6.9276792,
+              49.2011318
+            ]
+          },
+          {
+            "name": "Etzling",
+            "osm_id": 287938010,
+            "osm_url": "https://www.openstreetmap.org/node/287938010",
+            "distance_m": 2860,
+            "place_type": "village",
+            "coordinate": [
+              6.9630374,
+              49.1791354
+            ]
+          },
+          {
+            "name": "Schœneck",
+            "osm_id": 26694662,
+            "osm_url": "https://www.openstreetmap.org/node/26694662",
+            "distance_m": 2962,
+            "place_type": "village",
+            "coordinate": [
+              6.9240547,
+              49.2207124
+            ]
+          },
+          {
+            "name": "Behren-lès-Forbach",
+            "osm_id": 26692548,
+            "osm_url": "https://www.openstreetmap.org/node/26692548",
+            "distance_m": 3966,
+            "place_type": "village",
+            "coordinate": [
+              6.935203,
+              49.1715929
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-d1072f79994e837e",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.80183124396543,
+          48.573699391840144
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-d1072f79994e837e",
+        "label": "Road–border contact near Strasbourg",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "primary"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          10104868
+        ],
+        "boundary_osm_ids": [
+          1147631398
+        ],
+        "route_names": [],
+        "route_refs": [],
+        "raw_contact_count": 1,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              7.801831243965428,
+              48.57369939184013
+            ],
+            "route_osm_id": 10104868,
+            "boundary_osm_id": 1147631398
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Strasbourg",
+            "osm_id": 26686563,
+            "osm_url": "https://www.openstreetmap.org/node/26686563",
+            "distance_m": 3962,
+            "place_type": "city",
+            "coordinate": [
+              7.7507127,
+              48.584614
+            ]
+          },
+          {
+            "name": "Schiltigheim",
+            "osm_id": 26692130,
+            "osm_url": "https://www.openstreetmap.org/node/26692130",
+            "distance_m": 5235,
+            "place_type": "town",
+            "coordinate": [
+              7.7484488,
+              48.6047148
+            ]
+          },
+          {
+            "name": "Bischheim",
+            "osm_id": 26692338,
+            "osm_url": "https://www.openstreetmap.org/node/26692338",
+            "distance_m": 5852,
+            "place_type": "town",
+            "coordinate": [
+              7.7523716,
+              48.6148396
+            ]
+          },
+          {
+            "name": "Hœnheim",
+            "osm_id": 26692107,
+            "osm_url": "https://www.openstreetmap.org/node/26692107",
+            "distance_m": 6300,
+            "place_type": "town",
+            "coordinate": [
+              7.7554925,
+              48.6212867
+            ]
+          },
+          {
+            "name": "Ostwald",
+            "osm_id": 26691681,
+            "osm_url": "https://www.openstreetmap.org/node/26691681",
+            "distance_m": 7600,
+            "place_type": "town",
+            "coordinate": [
+              7.7102193,
+              48.5425109
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-f491c1ca28174244",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.157286505254588,
+          48.97837816775226
+        ]
+      },
+      "properties": {
+        "candidate_id": "osm-f491c1ca28174244",
+        "label": "Road–border contact near Porte de France",
+        "candidate_kind": "transport_border_intersection",
+        "mode": "road",
+        "country_relations": [
+          {
+            "osm_relation_id": 51477,
+            "name": "Germany",
+            "iso2": "DE"
+          },
+          {
+            "osm_relation_id": 2202162,
+            "name": "France",
+            "iso2": "FR"
+          }
+        ],
+        "boundary_relation_provenance": [
+          51477,
+          90333,
+          2202162
+        ],
+        "highway_classes": [
+          "trunk"
+        ],
+        "road_tiers": [
+          "major"
+        ],
+        "route_osm_ids": [
+          240800443,
+          445300592
+        ],
+        "boundary_osm_ids": [
+          75114355
+        ],
+        "route_names": [],
+        "route_refs": [
+          "B 9"
+        ],
+        "raw_contact_count": 2,
+        "cluster_radius_m": 75,
+        "raw_contacts": [
+          {
+            "coordinate": [
+              8.157286505254588,
+              48.97837816775227
+            ],
+            "route_osm_id": 240800443,
+            "boundary_osm_id": 75114355
+          },
+          {
+            "coordinate": [
+              8.15743199976269,
+              48.97837089640888
+            ],
+            "route_osm_id": 445300592,
+            "boundary_osm_id": 75114355
+          }
+        ],
+        "checkpoints": [],
+        "nearby_settlements": [
+          {
+            "name": "Porte de France",
+            "osm_id": 8142654643,
+            "osm_url": "https://www.openstreetmap.org/node/8142654643",
+            "distance_m": 503,
+            "place_type": "hamlet",
+            "coordinate": [
+              8.1615691,
+              48.9748442
+            ]
+          },
+          {
+            "name": "Scheibenhard",
+            "osm_id": 97969027,
+            "osm_url": "https://www.openstreetmap.org/node/97969027",
+            "distance_m": 1440,
+            "place_type": "village",
+            "coordinate": [
+              8.1376453,
+              48.9776565
+            ]
+          },
+          {
+            "name": "Lauterbourg",
+            "osm_id": 26695882,
+            "osm_url": "https://www.openstreetmap.org/node/26695882",
+            "distance_m": 1468,
+            "place_type": "village",
+            "coordinate": [
+              8.1767166,
+              48.9751103
+            ]
+          },
+          {
+            "name": "Neewiller-près-Lauterbourg",
+            "osm_id": 97968594,
+            "osm_url": "https://www.openstreetmap.org/node/97968594",
+            "distance_m": 3454,
+            "place_type": "village",
+            "coordinate": [
+              8.1262948,
+              48.9549618
+            ]
+          },
+          {
+            "name": "Niederlauterbach",
+            "osm_id": 97968718,
+            "osm_url": "https://www.openstreetmap.org/node/97968718",
+            "distance_m": 3962,
+            "place_type": "village",
+            "coordinate": [
+              8.1037078,
+              48.9733424
+            ]
+          }
+        ],
+        "workbook_name_suggestions": [],
+        "workbook_candidate_links": [],
+        "review_flags": [
+          "current_reference_only",
+          "closure_scope_not_assigned",
+          "manual_review_required"
+        ],
+        "is_verified_crossing": false,
+        "is_closure_evidence": false,
+        "coordinate_method": "representative raw road/border contact",
+        "attribution": "© OpenStreetMap contributors",
+        "licence": "ODbL 1.0"
+      }
+    }
+  ]
+}

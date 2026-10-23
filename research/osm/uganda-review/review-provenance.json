@@ -1,0 +1,29 @@
+{
+  "workbook_sha256": "3530415e136e81d20cc24b51b3a5c2739e6a529fc2484cc51c8861693ff33bf0",
+  "canonical_data_sha256": "309545aba25be2e2de123ae39aa521d3d7429ae387bc071a073f308e0dea04aa",
+  "input_sha256": {
+    "research/osm/uganda-pilot/crossing-candidates.geojson": "5a8bd17500581d8878721c6ab32030bbf4011234a572beecda03382969592f5c",
+    "research/osm/uganda-pilot/summary.json": "54cc0d7e46cab574614a304e429c53178a9b4fd0e7e286d3160f010cfea20429",
+    "research/osm/uganda-review/event-link-review.json": "29e79da83f2a6c6912ee05230fc778c4136ac65d3e8d739d81f7b86eafc3c346",
+    "research/osm/uganda-review/topology-diagnostics.json": "f57d1198363360f4f158200ad27273f704bc702d183996547bd81f21a8a5075a",
+    "research/osm/uganda-review/scope-policy.json": "1ee8e48226c0a50f5bea584bd6ba84a550df3c131f7fbe8a3ec86b1b66c177a0",
+    "research/osm/uganda-review/benchmark-east.json": "6adc3637699bdf233236ba3dddfbab9ec64a3ca8e8b94d27c3c54f667c86e60c",
+    "research/osm/uganda-review/benchmark-north.json": "4c25449980535dec992199d0711be19d97e3babd3af766e7540160cd9fa38d35",
+    "research/osm/uganda-review/benchmark-west.json": "ca00456ae65a58b550087ca6d58bec479b953a22cb7d9052da9caf4fb96bc114",
+    "scripts/build-osm-review.py": "8addfc855ed0c7b33ff09c475547d5dc6f544a8b6dc58d93dafa42e71b0d3f93",
+    "scripts/osm-crossings.py": "10eb011cd9f9026409785f5fb6d15b25a34ecfa8cc4e5ff69d0b21e15923932b",
+    "scripts/osm-review-topology.py": "0758c02ed46a699314171feebe8c22be11bc3264072671f2bc5b24ef5fae4e1b",
+    "research/osm/uganda-review/main-road-extraction/crossing-candidates.geojson": "f55825e0a775ca5bccf0f28b56fea59cfeff36c6abe48fc71db07e595aff818b",
+    "research/osm/uganda-review/main-road-extraction/summary.json": "1b18d8d5522e73702353e5bae63c8421fddb150180c7cdeb8929ebda5b691305"
+  },
+  "osm_source": {
+    "url": "https://download.geofabrik.de/africa/uganda-latest.osm.pbf",
+    "retrieved_at": "2026-10-23T10:02:43.799853+00:00",
+    "bytes": 371393447,
+    "sha256": "7814aee05bae0c7fd40c07b7f2a36a987f709e7b366dfc3e0f928c9b532ee320",
+    "last_modified": null,
+    "etag": null
+  },
+  "osm_data_timestamp": "2026-10-21T20:21:46Z",
+  "review_basis": "Source-reviewed benchmark input files carry stable identity IDs. Rebuilds never generate new accepted event links from names or distance."
+}

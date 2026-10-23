@@ -1,0 +1,2590 @@
+{
+  "schema_version": 1,
+  "pair": [
+    "MX",
+    "US"
+  ],
+  "created_at": "2026-10-23T12:15:47.085848+00:00",
+  "benchmark_scope": {
+    "description": "Bounded 27-reference sample of prominent vehicle corridors and workbook-named road facilities spanning California, Arizona, New Mexico and Texas. It is not an exhaustive inventory or a measured traffic ranking.",
+    "expected_reference_count": 27,
+    "selection": "Four California gateways; six Arizona vehicle facilities; two New Mexico vehicle corridors; fifteen selected Texas bridges.",
+    "road_policy": "motorway/trunk/primary including links; no automatic addition of secondary/local roads. Only separately reviewed explicit source-supported or workbook-named exceptions may be admitted.",
+    "membership_status": "These are named road references to test against main-road candidates. Being in this sample does not assert any OSM road class or automatically admit a small road.",
+    "denominator_limit": "Full-frontier recall cannot be calculated from a selected sample; candidate contacts, named facilities and individual directional gates have different units.",
+    "current_operational_completeness": false
+  },
+  "sources": [
+    {
+      "source_id": "MXUS-TXDOT-GIS",
+      "url": "https://services.arcgis.com/KTcxiTD9dsQw4r7Z/arcgis/rest/services/TxDOT_Border_Crossings/FeatureServer",
+      "title": "TxDOT Border Crossings GIS",
+      "publisher": "Texas Department of Transportation",
+      "date": null,
+      "retrieved_at": "2026-10-23T12:15:47.085848+00:00",
+      "claims": [
+        "Named facility points across the Texas–Mexico frontier; facility names and vehicle-mode attributes."
+      ],
+      "access": "substantive primary source read",
+      "valid_as_of": "2021",
+      "layer_data_last_edit_ms": 1681999865192,
+      "layer_data_last_edit_is_not_observation_date": true,
+      "query_url": "https://services.arcgis.com/KTcxiTD9dsQw4r7Z/arcgis/rest/services/TxDOT_Border_Crossings/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json",
+      "limits": [
+        "Service description says valid as of 2021; layer edit timestamp is not a per-facility observation date.",
+        "Source has 28 rows including dams and a ferry; it is not a verified current open-crossing list.",
+        "Facility points need not lie exactly on the border or on a specific lane.",
+        "Falcon Dam coordinate appears in the Amistad area and is withheld from matching."
+      ]
+    },
+    {
+      "source_id": "MXUS-CALTRANS-GIS",
+      "url": "https://services1.arcgis.com/8CpMUd3fdw6aXef7/ArcGIS/rest/services/Technical_Freight_Projects_Integration_Viewer/FeatureServer/4",
+      "title": "Land Ports of Entry, Technical Freight Projects Integration Viewer",
+      "publisher": "California Department of Transportation",
+      "date": null,
+      "retrieved_at": "2026-10-23T12:15:47.085848+00:00",
+      "claims": [
+        "California named POE locations, route-number field, and existing/future classification."
+      ],
+      "access": "substantive primary source read",
+      "query_url": "https://services1.arcgis.com/8CpMUd3fdw6aXef7/ArcGIS/rest/services/Technical_Freight_Projects_Integration_Viewer/FeatureServer/4/query?where=1%3D1&outFields=*&outSR=4326&f=json",
+      "limits": [
+        "Includes proposed Otay Mesa East and pedestrian CBX, which are not included in road benchmark.",
+        "Point geometry is a reference position, not a surveyed frontier contact.",
+        "Date fields are metadata edits, not observations of operational status."
+      ]
+    },
+    {
+      "source_id": "MXUS-SANDAG-GIS",
+      "url": "https://geo.sandag.org/server/rest/services/Hosted/Ports_of_Entry_CA_Mexico/FeatureServer/0",
+      "title": "Ports of Entry CA Mexico",
+      "publisher": "San Diego Association of Governments; California Border Patrol; San Diego County OES",
+      "date": null,
+      "retrieved_at": "2026-10-23T12:15:47.085848+00:00",
+      "claims": [
+        "Six named California facility points allow comparison of published reference positions."
+      ],
+      "access": "substantive primary source read",
+      "query_url": "https://geo.sandag.org/server/rest/services/Hosted/Ports_of_Entry_CA_Mexico/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json",
+      "limits": [
+        "Upstream independence from Caltrans/OSM and per-point survey dates are undocumented.",
+        "Andrade point differs from Caltrans by roughly 13 km; Calexico West differs by roughly 850 m. These are unresolved source-coordinate discrepancies."
+      ]
+    },
+    {
+      "source_id": "MXUS-CBP-BWT",
+      "url": "https://bwt.cbp.gov/xml/bwt.xml",
+      "title": "Border Wait Times XML feed",
+      "publisher": "U.S. Customs and Border Protection",
+      "date": "2026-10-23",
+      "retrieved_at": "2026-10-23T12:15:47.085848+00:00",
+      "claims": [
+        "Named road and pedestrian reporting facilities, distinct cargo/passenger reporting units, and duplicate/umbrella feed records."
+      ],
+      "access": "XML fetched and parsed directly",
+      "feed_timestamp": {
+        "date": "2026-10-23",
+        "time": "07:06:01"
+      },
+      "raw_sha256": "c843b57360a9018dd4b3f238a8fa7e3fc0c4d80e5c9a13f77a321012ea13d34e",
+      "limits": [
+        "55 Mexican-border reporting records are not 55 distinct physical crossings.",
+        "Operational statuses in a morning live feed can mean routine hours/lane updates; they are not historical closure evidence.",
+        "No coordinates provided in this feed."
+      ]
+    },
+    {
+      "source_id": "MXUS-BTS-FAQ",
+      "url": "https://www.bts.gov/browse-statistical-products-and-data/statistical-products/border-crossingentry-data-faq",
+      "title": "Border Crossing/Entry Data FAQ",
+      "publisher": "Bureau of Transportation Statistics",
+      "date": "2017-05-25",
+      "retrieved_at": "2026-10-23T12:15:47.085848+00:00",
+      "claims": [
+        "Statistical ports aggregate individual bridges and transport infrastructure; Laredo is an explicit example.",
+        "Counts are inbound movements, not unique people/vehicles or outbound totals."
+      ],
+      "access": "substantive primary source read"
+    },
+    {
+      "source_id": "MXUS-ADOT-MANUAL",
+      "url": "https://azdot.gov/sites/default/files/media/2020/12/ADOT_MPO_COG_Manual.pdf",
+      "title": "ADOT MPO/COG Manual, Table 15-3",
+      "publisher": "Arizona Department of Transportation",
+      "date": null,
+      "retrieved_at": "2026-10-23T12:15:47.085848+00:00",
+      "claims": [
+        "Table names San Luis I/II, Lukeville, Sasabe, Mariposa and DeConcini and their access-road references and transport modes."
+      ],
+      "access": "Substantive indexed table text; full PDF download returned 403 and browser file was too large",
+      "limits": [
+        "Historical table; traffic counts and opening hours not promoted to current assertions.",
+        "Route references identify approach corridors, not OSM classifications."
+      ]
+    },
+    {
+      "source_id": "MXUS-ADOT-MARIPOSA",
+      "url": "https://apps.azdot.gov/ADOTLibrary/Multimodal_Planning_Division/Studies/ARID_POE-Final-Report-151124.pdf",
+      "title": "Analysis of Bluetooth and Wi-Fi Technology to Measure Wait Times of Personal Vehicles at Arizona-Mexico Ports of Entry",
+      "publisher": "Arizona Department of Transportation",
+      "date": "2015-11-24",
+      "retrieved_at": "2026-10-23T12:15:47.085848+00:00",
+      "claims": [
+        "Mariposa links Nogales, Arizona/Sonora via SR 189 and Mexican Federal Highway 15D."
+      ],
+      "access": "Substantive indexed primary-report text, page 19"
+    },
+    {
+      "source_id": "MXUS-ADOT-PRIORITIES",
+      "url": "https://azdot.gov/planning/transportation-programs/arizona-sonoran-border-infrastructure-master-plan/priority-lpoe-projects",
+      "title": "Priority LPOE Projects",
+      "publisher": "Arizona Department of Transportation",
+      "date": null,
+      "retrieved_at": "2026-10-23T12:15:47.085848+00:00",
+      "claims": [
+        "Distinguishes existing Raul Hector Castro facility from proposed West Douglas commercial project; identifies Arizona POEs and pedestrian Morley Gate."
+      ],
+      "access": "substantive primary source read",
+      "limits": [
+        "Photographs generally circa 2013; page refers to 2022 funding."
+      ]
+    },
+    {
+      "source_id": "MXUS-GSA-DECONCINI",
+      "url": "https://www.gsa.gov/real-estate/ongoing-construction-projects/dennis-deconcini-land-port-of-entry",
+      "title": "Dennis DeConcini Land Port of Entry",
+      "publisher": "U.S. General Services Administration",
+      "date": null,
+      "retrieved_at": "2026-10-23T12:15:47.085848+00:00",
+      "claims": [
+        "Facility at 9 N Grand Ave, downtown Nogales; Morley Gate is pedestrian component, separate from vehicle lanes."
+      ],
+      "access": "Substantive indexed primary-page text"
+    },
+    {
+      "source_id": "MXUS-NMDOT-SANTA-TERESA",
+      "url": "https://www.dot.nm.gov/projects/nm136-interchange-event/",
+      "title": "NM 136 Interchange Feasibility Study",
+      "publisher": "New Mexico Department of Transportation",
+      "date": null,
+      "retrieved_at": "2026-10-23T12:15:47.085848+00:00",
+      "claims": [
+        "NM 136 milepost 0 is Santa Teresa POE; four-lane major arterial connecting port to I-10 via Artcraft Road."
+      ],
+      "access": "Substantive indexed primary-page text; direct web open returned 403"
+    },
+    {
+      "source_id": "MXUS-NMBA-COLUMBUS",
+      "url": "https://www.nmborder.com/new-mexico-ports-of-entry/columbus/",
+      "title": "Columbus",
+      "publisher": "New Mexico Border Authority",
+      "date": null,
+      "retrieved_at": "2026-10-23T12:15:47.085848+00:00",
+      "claims": [
+        "Columbus–Palomas facility serves vehicle, commercial and pedestrian traffic; distinct livestock crossing facility is not interchangeable with road gates."
+      ],
+      "access": "substantive primary source read",
+      "limits": [
+        "Undated page retains prospective 2015 construction text, so operational hours not treated as current."
+      ]
+    },
+    {
+      "source_id": "MXUS-NM11-STUDY",
+      "url": "https://swnmcog.org/wp-content/uploads/2022/06/NM-11-Phase-IA-to-NM-26_-Final-Report.pdf",
+      "title": "NM 11 Corridor Study",
+      "publisher": "New Mexico Department of Transportation / Southwest New Mexico Council of Governments",
+      "date": null,
+      "retrieved_at": "2026-10-23T12:15:47.085848+00:00",
+      "claims": [
+        "NM 11 links Columbus LPOE to Deming and I-10."
+      ],
+      "access": "Substantive indexed official corridor-study text"
+    },
+    {
+      "source_id": "MXUS-CBP-LUKEVILLE",
+      "url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/37dd40c",
+      "title": "CSMS 58577932: Temporary Suspension of Operations at Lukeville",
+      "publisher": "U.S. Customs and Border Protection",
+      "date": "2023-12-01",
+      "retrieved_at": "2026-10-23T12:15:47.085848+00:00",
+      "claims": [
+        "Names Lukeville and both vehicle/pedestrian directions for historical suspension; establishes workbook crossing identity only for this geography benchmark."
+      ],
+      "access": "Substantive primary bulletin text"
+    },
+    {
+      "source_id": "MXUS-TXDOT-MASTERPLAN",
+      "url": "https://www.txdot.gov/projects/planning/international-trade-border-planning/btmp.html",
+      "title": "Texas-Mexico Border Transportation Master Plan update",
+      "publisher": "Texas Department of Transportation",
+      "date": null,
+      "retrieved_at": "2026-10-23T12:15:47.085848+00:00",
+      "claims": [
+        "Separates vehicle, rail and pedestrian facilities; source GIS list is not an exhaustive all-mode frontier truth set."
+      ],
+      "access": "substantive primary source read"
+    },
+    {
+      "source_id": "MXUS-GSA-ARIZONA",
+      "url": "https://origin-www.gsa.gov/about-us/gsa-regions/region-9-pacific-rim/buildings-and-facilities/arizona",
+      "title": "Arizona Buildings and Facilities",
+      "publisher": "U.S. General Services Administration",
+      "date": null,
+      "retrieved_at": "2026-10-23T12:15:47.085848+00:00",
+      "claims": [
+        "San Luis I is at State Highway 95 and the international boundary; San Luis II is at 1375 South Avenue East.",
+        "Raul Hector Castro facility in Douglas is on Pan American Avenue; DeConcini is on North Grand Avenue."
+      ],
+      "access": "Substantive indexed primary-page directory text",
+      "limits": [
+        "Street addresses and historic route labels establish named approach corridors, not survey coordinates or current access status.",
+        "Undated facility directory; retrieval date is not a facility observation date."
+      ]
+    },
+    {
+      "source_id": "MXUS-GSA-LUKEVILLE",
+      "url": "https://www.gsa.gov/about-us/newsroom/former-gsa-regional-news-archive/region-9-newsroom/feature-stories/bipartisan-infrastructure-law-in-action-first-construction-contract-awarded-04222022",
+      "title": "Bipartisan Infrastructure Law in Action, First Construction Contract Awarded",
+      "publisher": "U.S. General Services Administration",
+      "date": "2022-04-22",
+      "retrieved_at": "2026-10-23T12:15:47.085848+00:00",
+      "claims": [
+        "Lukeville Land Port of Entry is on the border with Sonoyta, Sonora and serves commercial and non-commercial traffic."
+      ],
+      "access": "Substantive indexed primary-page text",
+      "limits": [
+        "Facility identity only; historic traffic and operational information are not asserted to be current."
+      ]
+    }
+  ],
+  "crossings": [
+    {
+      "crossing_id": "MX-US-OTAY-MESA-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Otay Mesa",
+      "aliases": [
+        "Mesa de Otay",
+        "Otay Mesa Passenger",
+        "Otay Mesa Commercial"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "CA SR 905"
+      ],
+      "source_ids": [
+        "MXUS-CALTRANS-GIS",
+        "MXUS-SANDAG-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": [
+        -116.93858015584983,
+        32.55055929060927
+      ],
+      "coordinate_basis": "Caltrans feature OBJECTID 1, geometry queried as EPSG:4326; facility reference, not exact border contact.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "Published facility coordinate is not an exact historical gate location.",
+        "Cargo/passenger and northbound/southbound components must be assessed separately before event assignment.",
+        "This is existing Otay Mesa; proposed Otay Mesa East has a separate identity and is excluded."
+      ],
+      "coordinate_alternatives": [
+        {
+          "source_id": "MXUS-SANDAG-GIS",
+          "objectid": 3,
+          "coordinate": [
+            -116.93859385596569,
+            32.55011358241404
+          ]
+        }
+      ]
+    },
+    {
+      "crossing_id": "MX-US-SAN-YSIDRO-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "San Ysidro",
+      "aliases": [
+        "El Chaparral",
+        "San Ysidro vehicle lanes"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "I-5"
+      ],
+      "source_ids": [
+        "MXUS-CALTRANS-GIS",
+        "MXUS-SANDAG-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": [
+        -117.02976037429677,
+        32.54244485591376
+      ],
+      "coordinate_basis": "Caltrans feature OBJECTID 2, geometry queried as EPSG:4326; facility reference, not exact border contact.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "Published facility coordinate is not an exact historical gate location.",
+        "Cargo/passenger and northbound/southbound components must be assessed separately before event assignment.",
+        "PedWest and PedEast are distinct pedestrian components; never attach their pedestrian-only closures to the road point automatically."
+      ],
+      "coordinate_alternatives": [
+        {
+          "source_id": "MXUS-SANDAG-GIS",
+          "objectid": 2,
+          "coordinate": [
+            -117.02828194439459,
+            32.54204398381721
+          ]
+        }
+      ]
+    },
+    {
+      "crossing_id": "MX-US-CALEXICO-WEST-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Calexico West",
+      "aliases": [
+        "Mexicali I",
+        "Calexico I"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "CA SR 111"
+      ],
+      "source_ids": [
+        "MXUS-CALTRANS-GIS",
+        "MXUS-SANDAG-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": [
+        -115.4963430248733,
+        32.66513324175136
+      ],
+      "coordinate_basis": "Caltrans feature OBJECTID 3, geometry queried as EPSG:4326; facility reference, not exact border contact.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "Published facility coordinate is not an exact historical gate location.",
+        "Cargo/passenger and northbound/southbound components must be assessed separately before event assignment.",
+        "Caltrans and SANDAG points differ by approximately 850 m, possibly reflecting relocated/older facility mapping. Exact current location remains unresolved pending road-geometry review."
+      ],
+      "coordinate_alternatives": [
+        {
+          "source_id": "MXUS-SANDAG-GIS",
+          "objectid": 1,
+          "coordinate": [
+            -115.50406054167128,
+            32.66116648498731
+          ]
+        }
+      ]
+    },
+    {
+      "crossing_id": "MX-US-CALEXICO-EAST-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Calexico East",
+      "aliases": [
+        "Mexicali II",
+        "Calexico II"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "CA SR 7"
+      ],
+      "source_ids": [
+        "MXUS-CALTRANS-GIS",
+        "MXUS-SANDAG-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": [
+        -115.38767907207547,
+        32.67337017099006
+      ],
+      "coordinate_basis": "Caltrans feature OBJECTID 4, geometry queried as EPSG:4326; facility reference, not exact border contact.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "Published facility coordinate is not an exact historical gate location.",
+        "Cargo/passenger and northbound/southbound components must be assessed separately before event assignment."
+      ],
+      "coordinate_alternatives": [
+        {
+          "source_id": "MXUS-SANDAG-GIS",
+          "objectid": 6,
+          "coordinate": [
+            -115.38286519242106,
+            32.6719504601221
+          ]
+        }
+      ]
+    },
+    {
+      "crossing_id": "MX-US-SAN-LUIS-I-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "San Luis I",
+      "aliases": [
+        "San Luis Río Colorado I"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "US 95"
+      ],
+      "source_ids": [
+        "MXUS-ADOT-MANUAL",
+        "MXUS-GSA-ARIZONA",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": null,
+      "coordinate_basis": "No precise external facility coordinate accepted in this bounded source review.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "No guessed coordinate or generic port centroid is used. Exact gate geography is pending."
+      ]
+    },
+    {
+      "crossing_id": "MX-US-SAN-LUIS-II-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "San Luis II",
+      "aliases": [
+        "San Luis Río Colorado II"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "AZ SR 195"
+      ],
+      "source_ids": [
+        "MXUS-ADOT-MANUAL",
+        "MXUS-GSA-ARIZONA",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": null,
+      "coordinate_basis": "No precise external facility coordinate accepted in this bounded source review.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "No guessed coordinate or generic port centroid is used. Exact gate geography is pending."
+      ]
+    },
+    {
+      "crossing_id": "MX-US-LUKEVILLE-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Lukeville–Sonoyta",
+      "aliases": [
+        "Lukeville",
+        "Sonoyta"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "AZ SR 85"
+      ],
+      "source_ids": [
+        "MXUS-ADOT-MANUAL",
+        "MXUS-GSA-LUKEVILLE",
+        "MXUS-CBP-BWT",
+        "MXUS-CBP-LUKEVILLE"
+      ],
+      "reference_coordinate": null,
+      "coordinate_basis": "No precise external facility coordinate accepted in this bounded source review.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "workbook_named_exception_if_needed",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "No guessed coordinate or generic port centroid is used. Exact gate geography is pending."
+      ]
+    },
+    {
+      "crossing_id": "MX-US-NOGALES-MARIPOSA-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Nogales Mariposa",
+      "aliases": [
+        "Mariposa"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "AZ SR 189",
+        "MX 15D"
+      ],
+      "source_ids": [
+        "MXUS-ADOT-MARIPOSA",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": null,
+      "coordinate_basis": "No precise external facility coordinate accepted in this bounded source review.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "No guessed coordinate or generic port centroid is used. Exact gate geography is pending."
+      ]
+    },
+    {
+      "crossing_id": "MX-US-NOGALES-DECONCINI-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Nogales Dennis DeConcini",
+      "aliases": [
+        "DeConcini",
+        "Grand Avenue"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "Business I-19",
+        "Grand Avenue"
+      ],
+      "source_ids": [
+        "MXUS-ADOT-MANUAL",
+        "MXUS-GSA-DECONCINI",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": null,
+      "coordinate_basis": "No precise external facility coordinate accepted in this bounded source review.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "No guessed coordinate or generic port centroid is used. Exact gate geography is pending.",
+        "Rail and pedestrian Morley Gate remain separate from vehicle crossing."
+      ]
+    },
+    {
+      "crossing_id": "MX-US-DOUGLAS-RAUL-HECTOR-CASTRO-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Douglas–Agua Prieta (Raul Hector Castro)",
+      "aliases": [
+        "Douglas",
+        "Raul Hector Castro"
+      ],
+      "mode": "road",
+      "road_refs": [],
+      "source_ids": [
+        "MXUS-ADOT-PRIORITIES",
+        "MXUS-GSA-ARIZONA",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": null,
+      "coordinate_basis": "No precise external facility coordinate accepted in this bounded source review.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "No guessed coordinate or generic port centroid is used. Exact gate geography is pending.",
+        "Existing Raul Hector Castro, not planned West Douglas facility."
+      ]
+    },
+    {
+      "crossing_id": "MX-US-SANTA-TERESA-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Santa Teresa–San Jerónimo",
+      "aliases": [
+        "Santa Teresa",
+        "San Jeronimo"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "NM 136"
+      ],
+      "source_ids": [
+        "MXUS-NMDOT-SANTA-TERESA",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": null,
+      "coordinate_basis": "No precise external facility coordinate accepted in this bounded source review.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "Nearby livestock-only gateway is a separate feature and must not become the road crossing."
+      ]
+    },
+    {
+      "crossing_id": "MX-US-COLUMBUS-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Columbus–Palomas",
+      "aliases": [
+        "Columbus",
+        "Puerto Palomas"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "NM 11"
+      ],
+      "source_ids": [
+        "MXUS-NMBA-COLUMBUS",
+        "MXUS-NM11-STUDY",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": null,
+      "coordinate_basis": "No precise external facility coordinate accepted in this bounded source review.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": []
+    },
+    {
+      "crossing_id": "MX-US-PASO-DEL-NORTE-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Paso del Norte Bridge",
+      "aliases": [
+        "Paso del Norte",
+        "PDN",
+        "Santa Fe Bridge"
+      ],
+      "mode": "road",
+      "road_refs": [],
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": [
+        -106.48640000034482,
+        31.745899999987202
+      ],
+      "coordinate_basis": "TxDOT feature OBJECTID 1; NAD83 source geometry returned as EPSG:4326. Facility reference, not surveyed border contact.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "workbook_named_exception_if_needed",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "TxDOT reference point uses a source described as valid in 2021; exact observation date and spatial accuracy are unknown.",
+        "No current opening status inferred from the dataset or live wait-time feed."
+      ],
+      "txdot_objectid": 1,
+      "road_ref_basis": "No road number asserted from the reviewed sources."
+    },
+    {
+      "crossing_id": "MX-US-BRIDGE-OF-THE-AMERICAS-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Bridge of the Americas",
+      "aliases": [
+        "BOTA",
+        "Bridge of the Americas"
+      ],
+      "mode": "road",
+      "road_refs": [],
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": [
+        -106.45093199990997,
+        31.767261000022515
+      ],
+      "coordinate_basis": "TxDOT feature OBJECTID 3; NAD83 source geometry returned as EPSG:4326. Facility reference, not surveyed border contact.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "TxDOT reference point uses a source described as valid in 2021; exact observation date and spatial accuracy are unknown.",
+        "No current opening status inferred from the dataset or live wait-time feed."
+      ],
+      "txdot_objectid": 3,
+      "road_ref_basis": "No road number asserted from the reviewed sources."
+    },
+    {
+      "crossing_id": "MX-US-YSLETA-ZARAGOZA-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Ysleta Bridge",
+      "aliases": [
+        "Ysleta",
+        "Ysleta-Zaragoza"
+      ],
+      "mode": "road",
+      "road_refs": [],
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": [
+        -106.3379999995115,
+        31.67120000032894
+      ],
+      "coordinate_basis": "TxDOT feature OBJECTID 4; NAD83 source geometry returned as EPSG:4326. Facility reference, not surveyed border contact.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "TxDOT reference point uses a source described as valid in 2021; exact observation date and spatial accuracy are unknown.",
+        "No current opening status inferred from the dataset or live wait-time feed."
+      ],
+      "txdot_objectid": 4,
+      "road_ref_basis": "No road number asserted from the reviewed sources."
+    },
+    {
+      "crossing_id": "MX-US-PRESIDIO-OJINAGA-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Presidio-Ojinaga International Bridge",
+      "aliases": [
+        "Presidio",
+        "Ojinaga"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "US 67"
+      ],
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": [
+        -104.39649999996607,
+        29.560399999938916
+      ],
+      "coordinate_basis": "TxDOT feature OBJECTID 7; NAD83 source geometry returned as EPSG:4326. Facility reference, not surveyed border contact.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "TxDOT reference point uses a source described as valid in 2021; exact observation date and spatial accuracy are unknown.",
+        "No current opening status inferred from the dataset or live wait-time feed."
+      ],
+      "txdot_objectid": 7,
+      "road_ref_basis": "TxDOT source street address"
+    },
+    {
+      "crossing_id": "MX-US-DEL-RIO-ACUNA-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Del Rio International Bridge",
+      "aliases": [
+        "Del Rio",
+        "Ciudad Acuña"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "TX Spur 239"
+      ],
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": [
+        -100.92749999988175,
+        29.326759999680764
+      ],
+      "coordinate_basis": "TxDOT feature OBJECTID 9; NAD83 source geometry returned as EPSG:4326. Facility reference, not surveyed border contact.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "workbook_named_exception_if_needed",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "TxDOT reference point uses a source described as valid in 2021; exact observation date and spatial accuracy are unknown.",
+        "No current opening status inferred from the dataset or live wait-time feed."
+      ],
+      "txdot_objectid": 9,
+      "road_ref_basis": "TxDOT source street address"
+    },
+    {
+      "crossing_id": "MX-US-EAGLE-PASS-I-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Eagle Pass International Bridge",
+      "aliases": [
+        "Eagle Pass Bridge I",
+        "Eagle Pass International Bridge I"
+      ],
+      "mode": "road",
+      "road_refs": [],
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": [
+        -100.51190000019147,
+        28.7055599995253
+      ],
+      "coordinate_basis": "TxDOT feature OBJECTID 10; NAD83 source geometry returned as EPSG:4326. Facility reference, not surveyed border contact.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "workbook_named_exception_if_needed",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "TxDOT reference point uses a source described as valid in 2021; exact observation date and spatial accuracy are unknown.",
+        "No current opening status inferred from the dataset or live wait-time feed."
+      ],
+      "txdot_objectid": 10,
+      "road_ref_basis": "No road number asserted from the reviewed sources."
+    },
+    {
+      "crossing_id": "MX-US-EAGLE-PASS-II-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Camino Real International Bridge",
+      "aliases": [
+        "Eagle Pass Bridge II",
+        "Camino Real"
+      ],
+      "mode": "road",
+      "road_refs": [],
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": [
+        -100.5105999995591,
+        28.697780000063357
+      ],
+      "coordinate_basis": "TxDOT feature OBJECTID 11; NAD83 source geometry returned as EPSG:4326. Facility reference, not surveyed border contact.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "TxDOT reference point uses a source described as valid in 2021; exact observation date and spatial accuracy are unknown.",
+        "No current opening status inferred from the dataset or live wait-time feed.",
+        "TxDOT RR_BRDGE=1 conflicts with its named Camino Real road-bridge identity. Railway closure records must remain separate; rail flag not copied as crossing mode."
+      ],
+      "txdot_objectid": 11,
+      "road_ref_basis": "No road number asserted from the reviewed sources."
+    },
+    {
+      "crossing_id": "MX-US-COLOMBIA-SOLIDARITY-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Colombia Solidarity Bridge",
+      "aliases": [
+        "Laredo-Colombia",
+        "Colombia Solidarity"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "TX SH 255"
+      ],
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": [
+        -99.74564600018196,
+        27.699716000479718
+      ],
+      "coordinate_basis": "TxDOT feature OBJECTID 12; NAD83 source geometry returned as EPSG:4326. Facility reference, not surveyed border contact.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "TxDOT reference point uses a source described as valid in 2021; exact observation date and spatial accuracy are unknown.",
+        "No current opening status inferred from the dataset or live wait-time feed."
+      ],
+      "txdot_objectid": 12,
+      "road_ref_basis": "TxDOT source street address"
+    },
+    {
+      "crossing_id": "MX-US-WORLD-TRADE-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "World Trade Bridge",
+      "aliases": [
+        "World Trade Bridge",
+        "Laredo Bridge IV"
+      ],
+      "mode": "road",
+      "road_refs": [],
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": [
+        -99.53711900010633,
+        27.59729099999496
+      ],
+      "coordinate_basis": "TxDOT feature OBJECTID 13; NAD83 source geometry returned as EPSG:4326. Facility reference, not surveyed border contact.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "TxDOT reference point uses a source described as valid in 2021; exact observation date and spatial accuracy are unknown.",
+        "No current opening status inferred from the dataset or live wait-time feed."
+      ],
+      "txdot_objectid": 13,
+      "road_ref_basis": "No road number asserted from the reviewed sources."
+    },
+    {
+      "crossing_id": "MX-US-GATEWAY-TO-THE-AMERICAS-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Gateway to the Americas Bridge",
+      "aliases": [
+        "Laredo Bridge I",
+        "Gateway to the Americas"
+      ],
+      "mode": "road",
+      "road_refs": [],
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": [
+        -99.50750000045055,
+        27.499440000214875
+      ],
+      "coordinate_basis": "TxDOT feature OBJECTID 14; NAD83 source geometry returned as EPSG:4326. Facility reference, not surveyed border contact.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "TxDOT reference point uses a source described as valid in 2021; exact observation date and spatial accuracy are unknown.",
+        "No current opening status inferred from the dataset or live wait-time feed."
+      ],
+      "txdot_objectid": 14,
+      "road_ref_basis": "No road number asserted from the reviewed sources."
+    },
+    {
+      "crossing_id": "MX-US-JUAREZ-LINCOLN-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Juárez-Lincoln Bridge",
+      "aliases": [
+        "Laredo Bridge II",
+        "Juarez-Lincoln"
+      ],
+      "mode": "road",
+      "road_refs": [],
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": [
+        -99.50270000032648,
+        27.500499999562827
+      ],
+      "coordinate_basis": "TxDOT feature OBJECTID 15; NAD83 source geometry returned as EPSG:4326. Facility reference, not surveyed border contact.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "TxDOT reference point uses a source described as valid in 2021; exact observation date and spatial accuracy are unknown.",
+        "No current opening status inferred from the dataset or live wait-time feed."
+      ],
+      "txdot_objectid": 15,
+      "road_ref_basis": "No road number asserted from the reviewed sources."
+    },
+    {
+      "crossing_id": "MX-US-ANZALDUAS-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Anzalduas International Bridge",
+      "aliases": [
+        "Anzalduas"
+      ],
+      "mode": "road",
+      "road_refs": [],
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": [
+        -98.31829999981922,
+        26.116499999554662
+      ],
+      "coordinate_basis": "TxDOT feature OBJECTID 20; NAD83 source geometry returned as EPSG:4326. Facility reference, not surveyed border contact.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "TxDOT reference point uses a source described as valid in 2021; exact observation date and spatial accuracy are unknown.",
+        "No current opening status inferred from the dataset or live wait-time feed."
+      ],
+      "txdot_objectid": 20,
+      "road_ref_basis": "No road number asserted from the reviewed sources."
+    },
+    {
+      "crossing_id": "MX-US-HIDALGO-REYNOSA-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "McAllen-Hidalgo International Bridge",
+      "aliases": [
+        "Hidalgo",
+        "McAllen-Hidalgo-Reynosa"
+      ],
+      "mode": "road",
+      "road_refs": [],
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": [
+        -98.27099999962067,
+        26.096999999593038
+      ],
+      "coordinate_basis": "TxDOT feature OBJECTID 21; NAD83 source geometry returned as EPSG:4326. Facility reference, not surveyed border contact.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "TxDOT reference point uses a source described as valid in 2021; exact observation date and spatial accuracy are unknown.",
+        "No current opening status inferred from the dataset or live wait-time feed."
+      ],
+      "txdot_objectid": 21,
+      "road_ref_basis": "No road number asserted from the reviewed sources."
+    },
+    {
+      "crossing_id": "MX-US-PHARR-REYNOSA-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Pharr-Reynosa International Bridge",
+      "aliases": [
+        "Pharr",
+        "Pharr-Reynosa"
+      ],
+      "mode": "road",
+      "road_refs": [],
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": [
+        -98.2051999995556,
+        26.06689999983751
+      ],
+      "coordinate_basis": "TxDOT feature OBJECTID 22; NAD83 source geometry returned as EPSG:4326. Facility reference, not surveyed border contact.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "TxDOT reference point uses a source described as valid in 2021; exact observation date and spatial accuracy are unknown.",
+        "No current opening status inferred from the dataset or live wait-time feed."
+      ],
+      "txdot_objectid": 22,
+      "road_ref_basis": "No road number asserted from the reviewed sources."
+    },
+    {
+      "crossing_id": "MX-US-VETERANS-LOS-TOMATES-ROAD",
+      "country_pair": [
+        "MX",
+        "US"
+      ],
+      "name": "Veterans International Bridge at Los Tomates",
+      "aliases": [
+        "Veterans International",
+        "Los Tomates"
+      ],
+      "mode": "road",
+      "road_refs": [
+        "US 77"
+      ],
+      "source_ids": [
+        "MXUS-TXDOT-GIS",
+        "MXUS-CBP-BWT"
+      ],
+      "reference_coordinate": [
+        -97.47610999996954,
+        25.883890000154224
+      ],
+      "coordinate_basis": "TxDOT feature OBJECTID 28; NAD83 source geometry returned as EPSG:4326. Facility reference, not surveyed border contact.",
+      "benchmark_role": "priority_road_reference",
+      "scope_admission_basis": "main_road_test_sample",
+      "is_verified_currently_operational": false,
+      "is_closure_evidence": false,
+      "osm_association_status": "not_yet_reviewed",
+      "notes": [
+        "TxDOT reference point uses a source described as valid in 2021; exact observation date and spatial accuracy are unknown.",
+        "No current opening status inferred from the dataset or live wait-time feed."
+      ],
+      "txdot_objectid": 28,
+      "road_ref_basis": "TxDOT source street address"
+    }
+  ],
+  "workbook_sha256": "3530415e136e81d20cc24b51b3a5c2739e6a529fc2484cc51c8861693ff33bf0",
+  "workbook_records": [
+    {
+      "record_id": "AM001",
+      "title": "United States COVID nonessential inbound land restrictions",
+      "countries": [
+        "United States",
+        "Canada",
+        "Mexico"
+      ],
+      "crossings_verbatim": null,
+      "eligible_for_automatic_acceptance": false,
+      "accepted_crossing_ids": [],
+      "scope_note": "National or multi-frontier policy; do not expand into assumed per-facility closures."
+    },
+    {
+      "record_id": "AM031",
+      "title": "Mexico COVID nonessential land-entry restrictions March 2021",
+      "countries": [
+        "Mexico",
+        "United States",
+        "Guatemala",
+        "Belize"
+      ],
+      "crossings_verbatim": null,
+      "eligible_for_automatic_acceptance": false,
+      "accepted_crossing_ids": [],
+      "scope_note": "National or multi-frontier policy; do not expand into assumed per-facility closures."
+    },
+    {
+      "record_id": "AM005",
+      "title": "Del Rio port closure during migrant encampment",
+      "countries": [
+        "United States",
+        "Mexico"
+      ],
+      "crossings_verbatim": null,
+      "eligible_for_automatic_acceptance": false,
+      "accepted_crossing_ids": [],
+      "scope_note": "Named crossing requires separate source/phase/movement review; no automatic event association."
+    },
+    {
+      "record_id": "AM003",
+      "title": "Lukeville crossing closure for migration-related staffing",
+      "countries": [
+        "United States",
+        "Mexico"
+      ],
+      "crossings_verbatim": null,
+      "eligible_for_automatic_acceptance": false,
+      "accepted_crossing_ids": [],
+      "scope_note": "Named crossing requires separate source/phase/movement review; no automatic event association."
+    },
+    {
+      "record_id": "AM004",
+      "title": "Eagle Pass and El Paso railway border suspension",
+      "countries": [
+        "United States",
+        "Mexico"
+      ],
+      "crossings_verbatim": null,
+      "eligible_for_automatic_acceptance": false,
+      "accepted_crossing_ids": [],
+      "scope_note": "Rail-specific closure; outside road benchmark."
+    },
+    {
+      "record_id": "R2-AM-007",
+      "title": "San Ysidro emergency security-hardening suspension November 19 2018",
+      "countries": [
+        "United States",
+        "Mexico"
+      ],
+      "crossings_verbatim": "San Ysidro vehicle lanes; PedEast",
+      "eligible_for_automatic_acceptance": false,
+      "accepted_crossing_ids": [],
+      "scope_note": "Named crossing requires separate source/phase/movement review; no automatic event association."
+    },
+    {
+      "record_id": "R2-AM-008",
+      "title": "San Ysidro closure during migrant confrontation November 25 2018",
+      "countries": [
+        "United States",
+        "Mexico"
+      ],
+      "crossings_verbatim": "San Ysidro / El Chaparral",
+      "eligible_for_automatic_acceptance": false,
+      "accepted_crossing_ids": [],
+      "scope_note": "Named crossing requires separate source/phase/movement review; no automatic event association."
+    },
+    {
+      "record_id": "R2-AM-009",
+      "title": "PedWest pandemic facility closure persisting beyond national entry ban",
+      "countries": [
+        "United States",
+        "Mexico"
+      ],
+      "crossings_verbatim": "PedWest",
+      "eligible_for_automatic_acceptance": false,
+      "accepted_crossing_ids": [],
+      "scope_note": "Pedestrian-only crossing; outside main-road benchmark."
+    },
+    {
+      "record_id": "R2-AM-010",
+      "title": "PedWest migrant-processing redeployment closure September 2023",
+      "countries": [
+        "United States",
+        "Mexico"
+      ],
+      "crossings_verbatim": "PedWest",
+      "eligible_for_automatic_acceptance": false,
+      "accepted_crossing_ids": [],
+      "scope_note": "Pedestrian-only crossing; outside main-road benchmark."
+    },
+    {
+      "record_id": "R2-AM-012",
+      "title": "Eagle Pass Bridge I vehicle suspension September 2023",
+      "countries": [
+        "United States",
+        "Mexico"
+      ],
+      "crossings_verbatim": "Eagle Pass International Bridge I",
+      "eligible_for_automatic_acceptance": false,
+      "accepted_crossing_ids": [],
+      "scope_note": "Named crossing requires separate source/phase/movement review; no automatic event association."
+    },
+    {
+      "record_id": "R2-AM-013",
+      "title": "Eagle Pass international railway suspension September 2023",
+      "countries": [
+        "United States",
+        "Mexico"
+      ],
+      "crossings_verbatim": "Eagle Pass international railway bridge",
+      "eligible_for_automatic_acceptance": false,
+      "accepted_crossing_ids": [],
+      "scope_note": "Rail-specific closure; outside road benchmark."
+    },
+    {
+      "record_id": "R2-AM-014",
+      "title": "Eagle Pass Bridge I northbound passenger suspension November 2023",
+      "countries": [
+        "United States",
+        "Mexico"
+      ],
+      "crossings_verbatim": "Eagle Pass International Bridge I",
+      "eligible_for_automatic_acceptance": false,
+      "accepted_crossing_ids": [],
+      "scope_note": "Named crossing requires separate source/phase/movement review; no automatic event association."
+    },
+    {
+      "record_id": "R2-AM-011",
+      "title": "PedWest second migrant-processing closure December 2023",
+      "countries": [
+        "United States",
+        "Mexico"
+      ],
+      "crossings_verbatim": "PedWest",
+      "eligible_for_automatic_acceptance": false,
+      "accepted_crossing_ids": [],
+      "scope_note": "Pedestrian-only crossing; outside main-road benchmark."
+    },
+    {
+      "record_id": "R6-AM-006",
+      "title": "Paso del Norte CBP emergency suspension during migrant crowd arrival, March 12, 2023",
+      "countries": [
+        "United States",
+        "Mexico"
+      ],
+      "crossings_verbatim": "Paso del Norte",
+      "eligible_for_automatic_acceptance": false,
+      "accepted_crossing_ids": [],
+      "scope_note": "Named crossing requires separate source/phase/movement review; no automatic event association."
+    }
+  ],
+  "source_record_evidence": {
+    "txdot_28_features": [
+      {
+        "objectid": 1,
+        "name": "Paso del Norte Bridge",
+        "source_coordinate": [
+          -106.48640000034482,
+          31.745899999987202
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Bridge",
+          "PED": 1,
+          "VEH_COML": 0,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "1000 S. El Paso Street. El Paso, TX 79901"
+        },
+        "in_priority_benchmark": true,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 2,
+        "name": "Good Neighbor Bridge",
+        "source_coordinate": [
+          -106.48279999969131,
+          31.748060000496814
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Bridge",
+          "PED": 1,
+          "VEH_COML": 0,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "1001 S. Stanton El Paso, TX 79901"
+        },
+        "in_priority_benchmark": false,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 3,
+        "name": "Bridge of the Americas",
+        "source_coordinate": [
+          -106.45093199990997,
+          31.767261000022515
+        ],
+        "attributes": {
+          "CRS_TYPE": "Bridge",
+          "PED": 0,
+          "VEH_COML": 1,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "3600 E. Paisano Dr El Paso, TX 79905"
+        },
+        "in_priority_benchmark": true,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 4,
+        "name": "Ysleta Bridge",
+        "source_coordinate": [
+          -106.3379999995115,
+          31.67120000032894
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Bridge",
+          "PED": 1,
+          "VEH_COML": 1,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "791 S. Zaragoza El Paso, TX 79907"
+        },
+        "in_priority_benchmark": true,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 5,
+        "name": "Tornillo-Guadalupe Bridge",
+        "source_coordinate": [
+          -106.14809999993473,
+          31.432800000436174
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Bridge",
+          "PED": 0,
+          "VEH_COML": 1,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "1400 Lower Island Rd. (FM 1109) Tornillo, TX 79853"
+        },
+        "in_priority_benchmark": false,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 6,
+        "name": "Fort Hancock-El Porvenir Bridge",
+        "source_coordinate": [
+          -105.85440000026821,
+          31.273060000467957
+        ],
+        "attributes": {
+          "CRS_TYPE": "Bridge",
+          "PED": 0,
+          "VEH_COML": 1,
+          "VEH_CAR": 0,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "Farm Rd 1088 Fort Hancock, TX 79839 "
+        },
+        "in_priority_benchmark": false,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 7,
+        "name": "Presidio-Ojinaga International Bridge",
+        "source_coordinate": [
+          -104.39649999996607,
+          29.560399999938916
+        ],
+        "attributes": {
+          "CRS_TYPE": "Bridge",
+          "PED": 0,
+          "VEH_COML": 1,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "4902 Highway 67 Presidio, TX 79845"
+        },
+        "in_priority_benchmark": true,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 8,
+        "name": "Lake Amistad Dam Crossing",
+        "source_coordinate": [
+          -101.05500000037046,
+          29.443160000323026
+        ],
+        "attributes": {
+          "CRS_TYPE": "Dam Bridge",
+          "PED": 0,
+          "VEH_COML": 0,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "Spur 349, Del Rio, Texas 78840"
+        },
+        "in_priority_benchmark": false,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 9,
+        "name": "Del Rio International Bridge",
+        "source_coordinate": [
+          -100.92749999988175,
+          29.326759999680764
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Bridge",
+          "PED": 1,
+          "VEH_COML": 1,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "3140 Spur 239, Del Rio, TX 78840"
+        },
+        "in_priority_benchmark": true,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 10,
+        "name": "Eagle Pass International Bridge",
+        "source_coordinate": [
+          -100.51190000019147,
+          28.7055599995253
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Bridge",
+          "PED": 1,
+          "VEH_COML": 0,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "160 E Garrison St Eagle Pass, TX 78852"
+        },
+        "in_priority_benchmark": true,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 11,
+        "name": "Camino Real International Bridge",
+        "source_coordinate": [
+          -100.5105999995591,
+          28.697780000063357
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Bridge",
+          "PED": 1,
+          "VEH_COML": 1,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 1,
+          "ST_ADDR": "500 S Monroe Street Eagle Pass, TX 78852"
+        },
+        "in_priority_benchmark": true,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 12,
+        "name": "Colombia Solidarity Bridge",
+        "source_coordinate": [
+          -99.74564600018196,
+          27.699716000479718
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Bridge",
+          "PED": 0,
+          "VEH_COML": 1,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "202 State Highway 255. Laredo, Texas 78045"
+        },
+        "in_priority_benchmark": true,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 13,
+        "name": "World Trade Bridge",
+        "source_coordinate": [
+          -99.53711900010633,
+          27.59729099999496
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Bridge",
+          "PED": 0,
+          "VEH_COML": 1,
+          "VEH_CAR": 0,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "715 Bob Bullock Loop, Laredo, TX 78045"
+        },
+        "in_priority_benchmark": true,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 14,
+        "name": "Gateway to the Americas Bridge",
+        "source_coordinate": [
+          -99.50750000045055,
+          27.499440000214875
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Bridge",
+          "PED": 1,
+          "VEH_COML": 0,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "100 Convent Ave, Laredo, TX 78040"
+        },
+        "in_priority_benchmark": true,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 15,
+        "name": "Juárez-Lincoln Bridge",
+        "source_coordinate": [
+          -99.50270000032648,
+          27.500499999562827
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Bridge",
+          "PED": 1,
+          "VEH_COML": 0,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "201 Santa Ursula Laredo, TX 78040"
+        },
+        "in_priority_benchmark": true,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 16,
+        "name": "Lake Falcon Dam International Crossing",
+        "source_coordinate": [
+          -101.05830000044985,
+          29.449720000447734
+        ],
+        "attributes": {
+          "CRS_TYPE": "Dam Bridge",
+          "PED": 0,
+          "VEH_COML": 0,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "270-296 SH-2098 Spur Roma,TX 78584"
+        },
+        "in_priority_benchmark": false,
+        "coordinate_use": "withheld_source_error"
+      },
+      {
+        "objectid": 17,
+        "name": "Roma-Ciudad Miguel Alemán International Bridge",
+        "source_coordinate": [
+          -99.01888999978483,
+          26.403610000226504
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Bridge",
+          "PED": 1,
+          "VEH_COML": 1,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "405 N. Estrella Street, Roma, Texas 78584"
+        },
+        "in_priority_benchmark": false,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 18,
+        "name": "Starr-Camargo Bridge",
+        "source_coordinate": [
+          -98.80239999984354,
+          26.365899999766047
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Bridge",
+          "PED": 1,
+          "VEH_COML": 1,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "317 Pete Diaz Ave, Rio Grande City, TX 78582"
+        },
+        "in_priority_benchmark": false,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 19,
+        "name": "Los Ebanos Ferry",
+        "source_coordinate": [
+          -98.56514000001442,
+          26.23944000030115
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Ferry",
+          "PED": 1,
+          "VEH_COML": 0,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "200 Flores St, Los Ebanos, TX 78565"
+        },
+        "in_priority_benchmark": false,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 20,
+        "name": "Anzalduas International Bridge",
+        "source_coordinate": [
+          -98.31829999981922,
+          26.116499999554662
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Bridge",
+          "PED": 1,
+          "VEH_COML": 1,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "6100 Stewart Rd, Mission, TX 78572"
+        },
+        "in_priority_benchmark": true,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 21,
+        "name": "McAllen-Hidalgo International Bridge",
+        "source_coordinate": [
+          -98.27099999962067,
+          26.096999999593038
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll bridge",
+          "PED": 1,
+          "VEH_COML": 1,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "1023 International Blvd, Hidalgo, TX 78557"
+        },
+        "in_priority_benchmark": true,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 22,
+        "name": "Pharr-Reynosa International Bridge",
+        "source_coordinate": [
+          -98.2051999995556,
+          26.06689999983751
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll bridge",
+          "PED": 1,
+          "VEH_COML": 1,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "9900 S Cage Blvd, Pharr, TX 78577"
+        },
+        "in_priority_benchmark": true,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 23,
+        "name": "Donna-Rio Bravo International Bridge",
+        "source_coordinate": [
+          -98.08332999951976,
+          26.06666999966204
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Bridge",
+          "PED": 1,
+          "VEH_COML": 0,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "8000 S International Blvd, Donna, TX 78537"
+        },
+        "in_priority_benchmark": false,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 24,
+        "name": "Progreso International Bridge",
+        "source_coordinate": [
+          -97.95049999954763,
+          26.060200000430072
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Bridge",
+          "PED": 1,
+          "VEH_COML": 1,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "251 S International Blvd Progreso, TX 78579, USA"
+        },
+        "in_priority_benchmark": false,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 25,
+        "name": "Free Trade International Bridge",
+        "source_coordinate": [
+          -97.73889000030545,
+          26.02916999985486
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Bridge",
+          "PED": 1,
+          "VEH_COML": 1,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "100 S. Los Indios Blvd., Los Indios, TX. 78567"
+        },
+        "in_priority_benchmark": false,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 26,
+        "name": "Brownsville & Matamoros Express Bridge",
+        "source_coordinate": [
+          -97.50380000005396,
+          25.89110000005028
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Bridge",
+          "PED": 0,
+          "VEH_COML": 1,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "1300 Mexico Blvd, Brownsville, TX 78520"
+        },
+        "in_priority_benchmark": false,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 27,
+        "name": "Gateway International Bridge",
+        "source_coordinate": [
+          -97.49719999961648,
+          25.898299999732572
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Bridge",
+          "PED": 1,
+          "VEH_COML": 0,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "??510 E. 14th Street, Brownsville Tx. 78520"
+        },
+        "in_priority_benchmark": false,
+        "coordinate_use": "external_reference_only"
+      },
+      {
+        "objectid": 28,
+        "name": "Veterans International Bridge at Los Tomates",
+        "source_coordinate": [
+          -97.47610999996954,
+          25.883890000154224
+        ],
+        "attributes": {
+          "CRS_TYPE": "Toll Bridge",
+          "PED": 1,
+          "VEH_COML": 1,
+          "VEH_CAR": 1,
+          "RR_BRDGE": 0,
+          "ST_ADDR": "?3310 S. Expressway 77 Brownsville Tx. 78520"
+        },
+        "in_priority_benchmark": true,
+        "coordinate_use": "external_reference_only"
+      }
+    ],
+    "caltrans_8_features": [
+      {
+        "attributes": {
+          "OBJECTID": 1,
+          "rte": 905,
+          "co": "San Diego",
+          "name": "Otay Mesa",
+          "status": "Existing",
+          "commercial": "Yes"
+        },
+        "geometry": {
+          "x": -116.93858015584983,
+          "y": 32.55055929060927
+        }
+      },
+      {
+        "attributes": {
+          "OBJECTID": 2,
+          "rte": 5,
+          "co": "San Diego",
+          "name": "San Ysidro",
+          "status": "Existing",
+          "commercial": "No"
+        },
+        "geometry": {
+          "x": -117.02976037429677,
+          "y": 32.54244485591376
+        }
+      },
+      {
+        "attributes": {
+          "OBJECTID": 3,
+          "rte": 111,
+          "co": "Imperial",
+          "name": "Calexico West",
+          "status": "Existing",
+          "commercial": "No"
+        },
+        "geometry": {
+          "x": -115.4963430248733,
+          "y": 32.66513324175136
+        }
+      },
+      {
+        "attributes": {
+          "OBJECTID": 4,
+          "rte": 7,
+          "co": "Imperial",
+          "name": "Calexico East",
+          "status": "Existing",
+          "commercial": "Yes"
+        },
+        "geometry": {
+          "x": -115.38767907207547,
+          "y": 32.67337017099006
+        }
+      },
+      {
+        "attributes": {
+          "OBJECTID": 5,
+          "rte": 186,
+          "co": "Imperial",
+          "name": "Andrade",
+          "status": "Existing",
+          "commercial": "No"
+        },
+        "geometry": {
+          "x": -114.72823697276272,
+          "y": 32.71847488951156
+        }
+      },
+      {
+        "attributes": {
+          "OBJECTID": 6,
+          "rte": 188,
+          "co": "San Diego",
+          "name": "Tecate",
+          "status": "Existing",
+          "commercial": "Yes"
+        },
+        "geometry": {
+          "x": -116.62751055549963,
+          "y": 32.57652873591066
+        }
+      },
+      {
+        "attributes": {
+          "OBJECTID": 7,
+          "rte": 11,
+          "co": "San Diego",
+          "name": "Otay Mesa East",
+          "status": "Future",
+          "commercial": "Yes"
+        },
+        "geometry": {
+          "x": -116.90655289996526,
+          "y": 32.553016714859055
+        }
+      },
+      {
+        "attributes": {
+          "OBJECTID": 8,
+          "rte": 0,
+          "co": "San Diego",
+          "name": "Cross Border Xpress",
+          "status": "Existing",
+          "commercial": "No"
+        },
+        "geometry": {
+          "x": -116.97115256567187,
+          "y": 32.54738034624701
+        }
+      }
+    ],
+    "sandag_6_features": [
+      {
+        "attributes": {
+          "com_mx_lns": 3,
+          "hours": "6am-10pm",
+          "pas_mx_lns": 8,
+          "globalid": "{C409DB53-B73E-43A7-B2A7-D68C87D7754B}",
+          "portname": "CALEXICO EAST",
+          "objectid": 6,
+          "portcode": 2507
+        },
+        "geometry": {
+          "x": -115.38286519242106,
+          "y": 32.6719504601221
+        }
+      },
+      {
+        "attributes": {
+          "com_mx_lns": 0,
+          "hours": "24 hrs/day",
+          "pas_mx_lns": 10,
+          "globalid": "{AAB33ADC-9D99-4BEE-87C2-562009AB5895}",
+          "portname": "CALEXICO WEST",
+          "objectid": 1,
+          "portcode": 2503
+        },
+        "geometry": {
+          "x": -115.50406054167128,
+          "y": 32.66116648498731
+        }
+      },
+      {
+        "attributes": {
+          "com_mx_lns": 10,
+          "hours": "6am-10pm",
+          "pas_mx_lns": 12,
+          "globalid": "{B8DF204F-D824-4295-9E1E-28568CFF7231}",
+          "portname": "OTAY MESA",
+          "objectid": 3,
+          "portcode": 2506
+        },
+        "geometry": {
+          "x": -116.93859385596569,
+          "y": 32.55011358241404
+        }
+      },
+      {
+        "attributes": {
+          "com_mx_lns": 1,
+          "hours": "6am-10pm",
+          "pas_mx_lns": 2,
+          "globalid": "{DFCE3ECF-163E-4DB4-945B-281B9813C162}",
+          "portname": "ANDRADE",
+          "objectid": 5,
+          "portcode": 2502
+        },
+        "geometry": {
+          "x": -114.86703345986615,
+          "y": 32.70796267249801
+        }
+      },
+      {
+        "attributes": {
+          "com_mx_lns": 2,
+          "hours": "5am-11pm",
+          "pas_mx_lns": 2,
+          "globalid": "{D4797613-2D7B-4380-AFA7-F036540E7486}",
+          "portname": "TECATE",
+          "objectid": 4,
+          "portcode": 2505
+        },
+        "geometry": {
+          "x": -116.627477335047,
+          "y": 32.57625232984243
+        }
+      },
+      {
+        "attributes": {
+          "com_mx_lns": 0,
+          "hours": "24 hrs/day",
+          "pas_mx_lns": 24,
+          "globalid": "{2F16F4EA-87D5-4D61-8DF7-CA2F8C260895}",
+          "portname": "SAN YSIDRO",
+          "objectid": 2,
+          "portcode": 2504
+        },
+        "geometry": {
+          "x": -117.02828194439459,
+          "y": 32.54204398381721
+        }
+      }
+    ],
+    "cbp_mexican_border_55_reporting_records": [
+      {
+        "port_number": "250201",
+        "port_name": "Andrade",
+        "crossing_name": "",
+        "commercial_maximum_lanes": "1",
+        "passenger_maximum_lanes": "3",
+        "pedestrian_maximum_lanes": "4"
+      },
+      {
+        "port_number": "230106",
+        "port_name": "B&M Bridge",
+        "crossing_name": "B&M Bridge",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "4",
+        "pedestrian_maximum_lanes": "2"
+      },
+      {
+        "port_number": "240215",
+        "port_name": "BOTA CARGO FACILITY",
+        "crossing_name": "BRIDGE OF AMERICAS CARGO FACILITY ",
+        "commercial_maximum_lanes": "6",
+        "passenger_maximum_lanes": "N/A",
+        "pedestrian_maximum_lanes": "N/A"
+      },
+      {
+        "port_number": "240207",
+        "port_name": "Bridge of the Americas Port of Entry",
+        "crossing_name": "",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "N/A",
+        "pedestrian_maximum_lanes": "N/A"
+      },
+      {
+        "port_number": "535501",
+        "port_name": "Brownsville",
+        "crossing_name": "B&M",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "4",
+        "pedestrian_maximum_lanes": "2"
+      },
+      {
+        "port_number": "535504",
+        "port_name": "Brownsville",
+        "crossing_name": "Gateway",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "5",
+        "pedestrian_maximum_lanes": "4"
+      },
+      {
+        "port_number": "535503",
+        "port_name": "Brownsville",
+        "crossing_name": "Los Indios",
+        "commercial_maximum_lanes": "4",
+        "passenger_maximum_lanes": "4",
+        "pedestrian_maximum_lanes": "N/A"
+      },
+      {
+        "port_number": "535502",
+        "port_name": "Brownsville",
+        "crossing_name": "Veterans International",
+        "commercial_maximum_lanes": "4",
+        "passenger_maximum_lanes": "8",
+        "pedestrian_maximum_lanes": "2"
+      },
+      {
+        "port_number": "250301",
+        "port_name": "Calexico",
+        "crossing_name": "East",
+        "commercial_maximum_lanes": "3",
+        "passenger_maximum_lanes": "8",
+        "pedestrian_maximum_lanes": "4"
+      },
+      {
+        "port_number": "250302",
+        "port_name": "Calexico",
+        "crossing_name": "West",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "16",
+        "pedestrian_maximum_lanes": "8"
+      },
+      {
+        "port_number": "240601",
+        "port_name": "Columbus",
+        "crossing_name": "",
+        "commercial_maximum_lanes": "1",
+        "passenger_maximum_lanes": "3",
+        "pedestrian_maximum_lanes": "4"
+      },
+      {
+        "port_number": "230201",
+        "port_name": "Del Rio",
+        "crossing_name": "",
+        "commercial_maximum_lanes": "2",
+        "passenger_maximum_lanes": "6",
+        "pedestrian_maximum_lanes": "N/A"
+      },
+      {
+        "port_number": "260101",
+        "port_name": "Douglas (Raul Hector Castro)",
+        "crossing_name": "",
+        "commercial_maximum_lanes": "2",
+        "passenger_maximum_lanes": "7",
+        "pedestrian_maximum_lanes": "3"
+      },
+      {
+        "port_number": "230301",
+        "port_name": "Eagle Pass",
+        "crossing_name": "Bridge I",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "5",
+        "pedestrian_maximum_lanes": "N/A"
+      },
+      {
+        "port_number": "230302",
+        "port_name": "Eagle Pass",
+        "crossing_name": "Bridge II",
+        "commercial_maximum_lanes": "1",
+        "passenger_maximum_lanes": "7",
+        "pedestrian_maximum_lanes": "N/A"
+      },
+      {
+        "port_number": "240221",
+        "port_name": "El Paso",
+        "crossing_name": "",
+        "commercial_maximum_lanes": "6",
+        "passenger_maximum_lanes": "13",
+        "pedestrian_maximum_lanes": "12"
+      },
+      {
+        "port_number": "240201",
+        "port_name": "El Paso",
+        "crossing_name": "Bridge of the Americas (BOTA)",
+        "commercial_maximum_lanes": "3",
+        "passenger_maximum_lanes": "14",
+        "pedestrian_maximum_lanes": "4"
+      },
+      {
+        "port_number": "240202",
+        "port_name": "El Paso",
+        "crossing_name": "Paso Del Norte (PDN)",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "12",
+        "pedestrian_maximum_lanes": "14"
+      },
+      {
+        "port_number": "240204",
+        "port_name": "El Paso",
+        "crossing_name": "Stanton DCL",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "3",
+        "pedestrian_maximum_lanes": "N/A"
+      },
+      {
+        "port_number": "240203",
+        "port_name": "El Paso",
+        "crossing_name": "Ysleta",
+        "commercial_maximum_lanes": "8",
+        "passenger_maximum_lanes": "13",
+        "pedestrian_maximum_lanes": "4"
+      },
+      {
+        "port_number": "l24501",
+        "port_name": "Fort Hancock",
+        "crossing_name": "Fort Hancock",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "2",
+        "pedestrian_maximum_lanes": "4"
+      },
+      {
+        "port_number": "230103",
+        "port_name": "Gateway",
+        "crossing_name": "",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "5",
+        "pedestrian_maximum_lanes": "4"
+      },
+      {
+        "port_number": "230503",
+        "port_name": "Hidalgo/Pharr",
+        "crossing_name": "Anzalduas International Bridge",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "6",
+        "pedestrian_maximum_lanes": "N/A"
+      },
+      {
+        "port_number": "230501",
+        "port_name": "Hidalgo/Pharr",
+        "crossing_name": "Hidalgo",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "12",
+        "pedestrian_maximum_lanes": "10"
+      },
+      {
+        "port_number": "230502",
+        "port_name": "Hidalgo/Pharr",
+        "crossing_name": "Pharr",
+        "commercial_maximum_lanes": "7",
+        "passenger_maximum_lanes": "10",
+        "pedestrian_maximum_lanes": "N/A"
+      },
+      {
+        "port_number": "230401",
+        "port_name": "Laredo",
+        "crossing_name": "Bridge I",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "4",
+        "pedestrian_maximum_lanes": "12"
+      },
+      {
+        "port_number": "230402",
+        "port_name": "Laredo",
+        "crossing_name": "Bridge II",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "15",
+        "pedestrian_maximum_lanes": "N/A"
+      },
+      {
+        "port_number": "230403",
+        "port_name": "Laredo",
+        "crossing_name": "Colombia Solidarity",
+        "commercial_maximum_lanes": "8",
+        "passenger_maximum_lanes": "4",
+        "pedestrian_maximum_lanes": "N/A"
+      },
+      {
+        "port_number": "230404",
+        "port_name": "Laredo",
+        "crossing_name": "World Trade Bridge",
+        "commercial_maximum_lanes": "19",
+        "passenger_maximum_lanes": "N/A",
+        "pedestrian_maximum_lanes": "N/A"
+      },
+      {
+        "port_number": "260201",
+        "port_name": "Lukeville",
+        "crossing_name": "",
+        "commercial_maximum_lanes": "1",
+        "passenger_maximum_lanes": "6",
+        "pedestrian_maximum_lanes": "N/A"
+      },
+      {
+        "port_number": "240401",
+        "port_name": "Marcelino Serna",
+        "crossing_name": "Tornillo",
+        "commercial_maximum_lanes": "2",
+        "passenger_maximum_lanes": "4",
+        "pedestrian_maximum_lanes": "2"
+      },
+      {
+        "port_number": "260305",
+        "port_name": "Naco",
+        "crossing_name": "",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "2",
+        "pedestrian_maximum_lanes": "1"
+      },
+      {
+        "port_number": "260301",
+        "port_name": "Naco",
+        "crossing_name": "",
+        "commercial_maximum_lanes": "1",
+        "passenger_maximum_lanes": "2",
+        "pedestrian_maximum_lanes": "2"
+      },
+      {
+        "port_number": "260401",
+        "port_name": "Nogales",
+        "crossing_name": "Deconcini",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "8",
+        "pedestrian_maximum_lanes": "6"
+      },
+      {
+        "port_number": "260402",
+        "port_name": "Nogales",
+        "crossing_name": "Mariposa",
+        "commercial_maximum_lanes": "8",
+        "passenger_maximum_lanes": "13",
+        "pedestrian_maximum_lanes": "6"
+      },
+      {
+        "port_number": "260403",
+        "port_name": "Nogales",
+        "crossing_name": "Morley Gate",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "N/A",
+        "pedestrian_maximum_lanes": "4"
+      },
+      {
+        "port_number": "250609",
+        "port_name": "Otay Mesa",
+        "crossing_name": "",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "13",
+        "pedestrian_maximum_lanes": "6"
+      },
+      {
+        "port_number": "250602",
+        "port_name": "Otay Mesa",
+        "crossing_name": "Commercial",
+        "commercial_maximum_lanes": "10",
+        "passenger_maximum_lanes": "N/A",
+        "pedestrian_maximum_lanes": "N/A"
+      },
+      {
+        "port_number": "250601",
+        "port_name": "Otay Mesa",
+        "crossing_name": "Passenger",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "13",
+        "pedestrian_maximum_lanes": "12"
+      },
+      {
+        "port_number": "250608",
+        "port_name": "Otay Mesa Port of Entry",
+        "crossing_name": "",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "13",
+        "pedestrian_maximum_lanes": "6"
+      },
+      {
+        "port_number": "202401",
+        "port_name": "Paso Del Norte",
+        "crossing_name": "",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "14",
+        "pedestrian_maximum_lanes": "N/A"
+      },
+      {
+        "port_number": "240301",
+        "port_name": "Presidio",
+        "crossing_name": "PRESIDIO PORT OF ENTRY",
+        "commercial_maximum_lanes": "2",
+        "passenger_maximum_lanes": "4",
+        "pedestrian_maximum_lanes": "1"
+      },
+      {
+        "port_number": "230902",
+        "port_name": "Progreso",
+        "crossing_name": "Donna International Bridge",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "4",
+        "pedestrian_maximum_lanes": "4"
+      },
+      {
+        "port_number": "230901",
+        "port_name": "Progreso",
+        "crossing_name": "Progreso International Bridge",
+        "commercial_maximum_lanes": "1",
+        "passenger_maximum_lanes": "5",
+        "pedestrian_maximum_lanes": "6"
+      },
+      {
+        "port_number": "230701",
+        "port_name": "Rio Grande City",
+        "crossing_name": "",
+        "commercial_maximum_lanes": "2",
+        "passenger_maximum_lanes": "3",
+        "pedestrian_maximum_lanes": "N/A"
+      },
+      {
+        "port_number": "231001",
+        "port_name": "Roma",
+        "crossing_name": "",
+        "commercial_maximum_lanes": "1",
+        "passenger_maximum_lanes": "4",
+        "pedestrian_maximum_lanes": "N/A"
+      },
+      {
+        "port_number": "231002",
+        "port_name": "ROMA TEXAS",
+        "crossing_name": "ROMA TEXAS ",
+        "commercial_maximum_lanes": "1",
+        "passenger_maximum_lanes": "4",
+        "pedestrian_maximum_lanes": "N/A"
+      },
+      {
+        "port_number": "260801",
+        "port_name": "San Luis",
+        "crossing_name": "San Luis I",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "16",
+        "pedestrian_maximum_lanes": "9"
+      },
+      {
+        "port_number": "260802",
+        "port_name": "San Luis",
+        "crossing_name": "San Luis II",
+        "commercial_maximum_lanes": "2",
+        "passenger_maximum_lanes": "N/A",
+        "pedestrian_maximum_lanes": "N/A"
+      },
+      {
+        "port_number": "250401",
+        "port_name": "San Ysidro",
+        "crossing_name": "",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "34",
+        "pedestrian_maximum_lanes": "22"
+      },
+      {
+        "port_number": "250409",
+        "port_name": "San Ysidro",
+        "crossing_name": "Cross Border Express",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "N/A",
+        "pedestrian_maximum_lanes": "8"
+      },
+      {
+        "port_number": "250407",
+        "port_name": "San Ysidro",
+        "crossing_name": "PedWest",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "N/A",
+        "pedestrian_maximum_lanes": "14"
+      },
+      {
+        "port_number": "240801",
+        "port_name": "Santa Teresa",
+        "crossing_name": "Santa Teresa Port of Entry",
+        "commercial_maximum_lanes": "3",
+        "passenger_maximum_lanes": "4",
+        "pedestrian_maximum_lanes": "2"
+      },
+      {
+        "port_number": "250501",
+        "port_name": "Tecate",
+        "crossing_name": "",
+        "commercial_maximum_lanes": "2",
+        "passenger_maximum_lanes": "4",
+        "pedestrian_maximum_lanes": "4"
+      },
+      {
+        "port_number": "240104",
+        "port_name": "YSLETA",
+        "crossing_name": "",
+        "commercial_maximum_lanes": "N/A",
+        "passenger_maximum_lanes": "N/A",
+        "pedestrian_maximum_lanes": "N/A"
+      }
+    ]
+  },
+  "unresolved_issues": [
+    {
+      "issue": "source_coordinate_discrepancy",
+      "name": "Falcon Dam",
+      "detail": "TxDOT OBJECTID16 lies near Amistad, inconsistent with named Falcon location. Retained as source evidence only; excluded from coordinate matching."
+    },
+    {
+      "issue": "source_coordinate_discrepancy",
+      "name": "Andrade",
+      "detail": "SANDAG and Caltrans reference points differ by approximately 13 km. Neither automatically accepted; outside priority sample."
+    },
+    {
+      "issue": "source_coordinate_discrepancy",
+      "name": "Calexico West",
+      "detail": "Caltrans and SANDAG positions differ by approximately 850 m. Retain both and review relocation/gate components."
+    },
+    {
+      "issue": "duplicate_or_umbrella_records",
+      "name": "CBP BWT",
+      "detail": "Feed includes repeated B&M, BOTA, Otay Mesa, Paso del Norte, Naco, Roma and Ysleta labels plus an El Paso umbrella. Count physical named facilities, not feed rows."
+    },
+    {
+      "issue": "geometry_vs_facility",
+      "name": "All",
+      "detail": "External government GIS positions are reference points, not necessarily exact international-frontier contacts or independent surveyed measurements."
+    }
+  ],
+  "exclusions": [
+    {
+      "name": "PedWest, PedEast, Morley Gate, Cross Border Xpress",
+      "reason": "Pedestrian components; not road-crossing identities."
+    },
+    {
+      "name": "Eagle Pass and El Paso international railway crossings",
+      "reason": "Separate rail mode; road closures cannot be transferred."
+    },
+    {
+      "name": "Otay Mesa East and West Douglas",
+      "reason": "Future/proposed projects in reviewed source versions; not promoted to current operational crossings."
+    },
+    {
+      "name": "Andrade, Tecate, Sasabe, Naco, Antelope Wells and nonselected TxDOT entries",
+      "reason": "Outside bounded priority sample, not claims of absence or insignificance. Main-road extraction may recover them; any lower-road exception requires separate justification."
+    },
+    {
+      "name": "Lake dams, Los Ebanos Ferry and livestock-only gateways",
+      "reason": "Different transport/site functions; not generic major road crossings."
+    }
+  ],
+  "event_link_policy": "No event-to-point links accepted here. Preserve original phase IDs, affected mode/direction, and source evidence in separate review."
+}

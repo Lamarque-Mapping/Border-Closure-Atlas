@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "pair": [
+    "KE",
+    "SO"
+  ],
+  "reviewed_at": "2026-10-23",
+  "scope": "Three specific named-post discovery exceptions; no blanket secondary/tertiary/minor-road inclusion.",
+  "baseline_extraction_directory": "../extractions/KE-SO",
+  "pbf_sha256": "effb612991eea80a718f71a48f707a16c0a4561b711ff4b614a8eed2dfa79371",
+  "osm_timestamp": "2026-10-21T20:21:46Z",
+  "input_sha256": {
+    "osm-graph-context.json.gz": "40bff238596a60488a56cfa4c3838fdc709cc0fb25cf864952081e4b0eb43259",
+    "osm-reference-evidence.geojson.gz": "071822def818b0651d96a4a7275556618883785a30013190dc0bfde559fcef83"
+  },
+  "boundary_review": {
+    "selection": "Intersection of Kenya relation 192798 and Somalia relation 192799 member-way IDs; excludes maritime way 157708992",
+    "selected_non_maritime_count": 19,
+    "geometry_present_count": 19
+  },
+  "exceptions": [
+    {
+      "crossing_id": "KE-SO-MANDERA-ROAD",
+      "route_osm_ids": [
+        1374443194
+      ],
+      "reason": "Specific named workbook crossing / documented strategic post exception; global main-road scope remains unchanged.",
+      "source_urls": [
+        "https://www.mod.go.ke/our-community/cs-duale-leads-high-profile-delegation-seeking-to-reopen-kenya-somalia-border/",
+        "https://kenha.co.ke/isiolo-modogashe-wajir-elwak-rhamu-manderaa13/",
+        "https://kenha.co.ke/wp-content/uploads/2023/11/TOR-for-Rhamu-and-Mandera-OSBP-KRA-Accomodation-units.pdf"
+      ],
+      "source_ids": [
+        "KE-SO-MOD-2023",
+        "KE-SO-KENHA-A13",
+        "KE-SO-KENHA-MANDERA"
+      ],
+      "workbook_record_ids": [
+        "H01",
+        "H12"
+      ],
+      "review_status": "proposed_for_scoped_extraction",
+      "identity_status": "provisional_corridor",
+      "osm_way_provenance": {
+        "osm_id": 1374443194,
+        "osm_version": 1,
+        "osm_timestamp": "2025-04-03 14:36:47+00:00",
+        "tags": {
+          "attribution": "Mart Roumen;FAO-SWALIM;Madmappers-SOM-2008-01",
+          "highway": "secondary",
+          "name": "Garbahaarey - Bulahawa Road",
+          "source": "Landsat ETM+",
+          "surface": "unpaved"
+        }
+      },
+      "inspected_frontier_contacts": [
+        {
+          "coordinate": [
+            41.87054715869062,
+            3.9327270625115194
+          ],
+          "boundary_osm_id": 31316551,
+          "method": "WGS84 source-line intersection for proposal inspection; effective candidate geometry will come from the metric extractor"
+        }
+      ],
+      "evidence": [
+        "Kenya MOD names the Mandera–Bulahawa strategic land crossing and workbook H01/H12 name Mandera/Belet Hawo.",
+        "Secondary Garbahaarey–Bulahawa Road way 1374443194 crosses the selected Kenya–Somalia frontier. Its western endpoint node 2131521833 is shared with Kenya A13 ways 203171838 and 417030547.",
+        "OSM Mandera Border Control way 312793636 is nearby. The Kenya A13 approach and Somali Bulahawa road name corroborate a specific corridor, not a census of neighbouring residential roads."
+      ],
+      "limitations": [
+        "The PIDA Mandera map-reference point is roughly 3.6 km north of this contact. Preserve this unresolved coordinate discrepancy; do not snap or assert it is the same exact facility.",
+        "Formal sustained-transition diagnostics are required on the scoped extraction.",
+        "Two mapped A13 approach ways have overlapping endpoints; no claim of distinct carriageways or gates is made."
+      ],
+      "accepted_event_links": []
+    },
+    {
+      "crossing_id": "KE-SO-ELWAK-ROAD",
+      "route_osm_ids": [
+        128370987
+      ],
+      "reason": "Specific named workbook crossing / documented strategic post exception; global main-road scope remains unchanged.",
+      "source_urls": [
+        "https://www.garoweonline.com/en/news/somalia/somalia-closes-land-border-with-kenya-to-rein-in-coronavirus-cases",
+        "https://immigration.go.ke/proposed-poes/",
+        "https://www.euaa.europa.eu/coi/somalia/2025/security-situation/21-jubbaland/211-gedo",
+        "https://manderaassembly.go.ke/storage/downloads/February2026/iwuIJtN8IJPKzet3GSa1.pdf"
+      ],
+      "source_ids": [
+        "KE-SO-GAROWE-H12",
+        "KE-SO-IMM-PROPOSED",
+        "KE-SO-EUAA-GEDO-2025",
+        "KE-SO-MANDERA-ELWAK-PLAN-2022"
+      ],
+      "workbook_record_ids": [
+        "H12"
+      ],
+      "review_status": "proposed_for_scoped_extraction",
+      "identity_status": "provisional_corridor",
+      "osm_way_provenance": {
+        "osm_id": 128370987,
+        "osm_version": 5,
+        "osm_timestamp": "2022-10-11 13:55:23+00:00",
+        "tags": {
+          "attribution": "Mart Roumen; FAO-SWALIM; Madmappers-SOM-2008-01",
+          "highway": "secondary",
+          "surface": "unpaved"
+        }
+      },
+      "inspected_frontier_contacts": [
+        {
+          "coordinate": [
+            40.989250121062256,
+            2.7978041280682056
+          ],
+          "boundary_osm_id": 1201267309,
+          "method": "WGS84 source-line intersection for proposal inspection; effective candidate geometry will come from the metric extractor"
+        }
+      ],
+      "evidence": [
+        "Workbook H12 and its historical source name Elwak as a Kenya-entry crossing. EUAA identifies Ceel Waaq/El Waq/El Wak aliases; the municipal source independently locates the Kenyan town.",
+        "Secondary border segment 128370987 shares western node 380114458 with approach way 33410544, whose west end is near the Kenyan Elwak town, and eastern node 10034942475 with Ceel Waaq–Buusaar Highway way 128370918.",
+        "This is a bounded review of the connected secondary corridor, excluding nearby unclassified and track contacts."
+      ],
+      "limitations": [
+        "No independently published gate coordinate has been found; the municipal coordinate is a town reference several kilometres west of the frontier.",
+        "Immigration lists Elwak as proposed; historical crossing reports do not prove current formal operation.",
+        "Formal sustained-transition diagnostics are required on the scoped extraction."
+      ],
+      "accepted_event_links": []
+    },
+    {
+      "crossing_id": "KE-SO-KIUNGA-ROAD",
+      "route_osm_ids": [
+        34359141
+      ],
+      "reason": "Specific named workbook crossing / documented strategic post exception; global main-road scope remains unchanged.",
+      "source_urls": [
+        "https://www.mod.go.ke/our-community/cs-duale-leads-high-profile-delegation-seeking-to-reopen-kenya-somalia-border/",
+        "https://immigration.go.ke/gazetted-ports-of-entry-and-exit-poes-and-location/",
+        "https://www.rusi.org/explore-our-research/closed-projects/deris-wanaag-kenya-somalia-ethiopia-borderlands-project"
+      ],
+      "source_ids": [
+        "KE-SO-MOD-2023",
+        "KE-SO-IMM-PORTS",
+        "KE-SO-RUSI-KIUNGA"
+      ],
+      "workbook_record_ids": [
+        "H01"
+      ],
+      "review_status": "proposed_for_scoped_extraction",
+      "identity_status": "provisional_corridor",
+      "osm_way_provenance": {
+        "osm_id": 34359141,
+        "osm_version": 38,
+        "osm_timestamp": "2025-02-05 22:45:35+00:00",
+        "tags": {
+          "designation": "Class E, Unpaved",
+          "highway": "tertiary",
+          "oneway": "no",
+          "ref": "E865",
+          "ref:ar": "E٨٦٥",
+          "ref:so": "E865",
+          "source": "Africover, Kenya Roads Board",
+          "surface": "gravel"
+        }
+      },
+      "inspected_frontier_contacts": [
+        {
+          "coordinate": [
+            41.55935186000169,
+            -1.65821411232758
+          ],
+          "boundary_osm_id": 126924905,
+          "method": "WGS84 source-line intersection for proposal inspection; effective candidate geometry will come from the metric extractor"
+        }
+      ],
+      "evidence": [
+        "MOD names Kiunga–Ras Kamboni among three strategic land crossings and workbook H01 names Kiunga. RUSI independently names the Kiunga–Ishakani–Ras Kamboni cross-border area.",
+        "OSM tertiary E865 way 34359141 crosses this frontier between Ishakani and Ras Kamboni; its stored extent runs from [41.5,-1.7156867] toward [41.5855067,-1.636203].",
+        "The exception is only this specific existing road way. Its OSM Class E label does not extend the global filter to all tertiary or local roads."
+      ],
+      "limitations": [
+        "No independent exact gate coordinate is available. Source pairing and OSM corridor alignment support investigation; exact post identity remains provisional.",
+        "Retained border-band graph does not include the full road continuation to Kiunga town; do not infer missing shared-node joins.",
+        "Formal sustained-transition diagnostics are required on the scoped extraction."
+      ],
+      "accepted_event_links": []
+    }
+  ],
+  "is_closure_evidence": false,
+  "limits": [
+    "Exact road IDs qualify only for this source-backed named-post review. Accepting an extraction exception does not accept an event link or exact gate identity.",
+    "All OSM geometry derives from one snapshot and is not independent ground verification."
+  ]
+}
