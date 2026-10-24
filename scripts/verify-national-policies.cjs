@@ -13,7 +13,7 @@ assert.equal(JSON.stringify(land),originalLand,'supplement must not alter any la
 assert.equal(land.length,701);assert.equal(national.length,7);
 assert.equal(C.filterEvents({events:land},{mode:'all'}).length,697);
 assert.equal(C.filterEvents(data,{mode:'all'}).length,704);
-assert.equal(data.context_locations.features.filter(f=>f.properties.display_role==='national_policy').length,4);
+assert.equal(data.context_locations.features.filter(f=>f.properties.display_role==='national_policy').length,3);
 assert.equal(national.reduce((n,e)=>n+e.national_observations.length,0),18);
 assert.equal(new Set(data.events.map(e=>e.id)).size,data.events.length);
 const get=id=>national.find(e=>e.national_policy_id===id),at=(e,month)=>C.temporalState(e,C.monthOrdinal(month));
@@ -25,20 +25,26 @@ assert.equal(at(eng,'2021-04'),'policy');assert.equal(at(eng,'2021-06'),'none');
 assert.equal(at(red,'2021-04'),'observation');assert.equal(at(red,'2021-05'),'none');
 assert.equal(at(uk,'2020-06'),'observation');assert.equal(at(uk,'2021-06'),'none');assert.equal(at(uk,'2022-03'),'observation');
 assert.deepEqual(eng.linked_land_ids,['R6-EU-004']);assert.equal(eng.national_geometry,'ENG');
-const engGeo=data.context_locations.features.find(f=>f.properties.location_id==='national-ENG');
-assert.equal(engGeo.geometry,england.features[0].geometry);assert.equal(engGeo.properties.label,'England');
-assert.notEqual(engGeo.geometry,data.countries.features.find(f=>f.properties.ADM0_A3==='GBR').geometry);
-const nzCoordinates=data.context_locations.features.find(f=>f.properties.location_id==='national-NZL').geometry.coordinates.flat(2);
-assert(Math.max(...nzCoordinates.map(p=>p[0]))-Math.min(...nzCoordinates.map(p=>p[0]))<40,'NZ fits one Pacific map copy');
+assert.equal(eng.scope,'England');assert.equal(red.scope,'England');
+assert.equal(eng.national_map_country,'GBR');assert.equal(red.national_geometry,'ENG');assert.equal(red.national_map_country,'GBR');
+assert.deepEqual(eng.location_ids,['national-GBR']);assert.deepEqual(red.location_ids,uk.location_ids,'UK and England policies share a country reference without broadening legal scope');
+assert(!data.context_locations.features.some(f=>f.properties.location_id==='national-ENG'),'no England perimeter is presented as a closed domestic boundary');
+for(const code of ['AUS','NZL','GBR']){
+ const marker=data.context_locations.features.find(f=>f.properties.location_id==='national-'+code),country=data.countries.features.find(f=>f.properties.ADM0_A3===code);
+ assert.equal(marker.geometry.type,'Point','all supplement countries use the same non-boundary representation');
+ assert.deepEqual(marker.geometry.coordinates,[country.properties.LABEL_X,country.properties.LABEL_Y]);
+ assert(marker.properties.label.includes('international passenger rules'));
+ assert(marker.properties.precision.includes('legal jurisdiction is stated in each record'));
+}
 for(const e of national){
  assert.equal(e.sources.length,e.source_urls.length);assert(e.sources.length>0);
  assert.equal(e.timing_coverage.operational_complete,false);
- assert(C.displayLocationsFor(e,data).includes('national-'+e.national_geometry));
+ assert(C.displayLocationsFor(e,data).includes('national-'+e.national_map_country));
  for(const p of e.duration_periods){assert.equal(p.minimum_days,null);assert.equal(p.maximum_days,null);assert.equal(p.end_is_reopening,false);}
 }
 const custom=JSON.parse(JSON.stringify(data));custom.meta.source_sha256='replacement-workbook';custom.meta.national_supplement=null;const before=custom.events.length;N.attach(custom,source,england);assert.equal(custom.events.length,before,'no supplement grafted onto a different release');
-const ban=K.symbolStyle({display_role:'national_policy'},{records:[aus]});assert.equal(ban.fillOpacity,0);assert.deepEqual(ban.dash,[]);assert.equal(ban.colour,'#287e67');
-const conditions=K.symbolStyle({display_role:'national_policy'},{records:[uk]});assert.equal(conditions.fillOpacity,0);assert.deepEqual(conditions.dash,[2,5]);
+const ban=K.symbolStyle({display_role:'national_policy'},{records:[aus]});assert.equal(ban.fillOpacity,0);assert.deepEqual(ban.dash,[]);assert.equal(ban.colour,'#287e67');assert.equal(ban.pointShape,'square');assert.equal(ban.radius*2,11);assert.equal(ban.pointFill,ban.colour);assert.equal(ban.pointStrokeWidth,1.8);
+const conditions=K.symbolStyle({display_role:'national_policy'},{records:[uk]});assert.equal(conditions.fillOpacity,0);assert.deepEqual(conditions.dash,[]);assert.equal(conditions.pointShape,'square');assert.equal(conditions.radius*2,11);assert.equal(conditions.pointFill,K.colours.land);assert.equal(conditions.pointStroke,conditions.colour);
 assert.equal(K.scopeStyle([nz,get('NAT-NZL-ARRIVAL-CONDITIONS-COVID')]).conditionsOnly,false);
 const csv=CSV.build({records:national,state:{mode:'all'},recordURL:id=>'https://example.test/#map/record-'+id});
 assert.equal(csv.count,7);assert(csv.content.includes('"Record type","Linked land records"'));
@@ -65,4 +71,4 @@ async function loaderCheck(withManifest){
  assert.equal((await window.AtlasData.getRecord(landCopy[0].id)).id,landCopy[0].id);
  if(withManifest)assert.deepEqual(fetched,['research.json','land-part.json']);
 }
-Promise.all([loaderCheck(true),loaderCheck(false)]).then(()=>console.log('National policies passed: 18 observations, 7 histories, 4 jurisdictions; Australia/NZ timelines, England-only geography, no inferred missing dates or numeric durations, CSV evidence, source isolation, loader cache, and unchanged 697-record land analysis.')).catch(error=>{console.error(error);process.exitCode=1;});
+Promise.all([loaderCheck(true),loaderCheck(false)]).then(()=>console.log('Passenger policies passed: 18 observations, 7 histories, 3 country reference points; precise England jurisdiction retained, no jurisdiction perimeter marked closed, filled/outlined 11 px squares, unchanged timelines, no inferred durations, CSV evidence, source isolation, loader cache, and unchanged 697-record land analysis.')).catch(error=>{console.error(error);process.exitCode=1;});

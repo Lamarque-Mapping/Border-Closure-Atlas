@@ -37,29 +37,29 @@ function host(initialHash='',offline=false){
 (async()=>{
  const h=host();const frame=h.ids['analysis-frame'];
  assert.equal(frame.src,undefined,'analysis should not load before selection');
- assert.match(masthead,/id="map-page-button"[^>]*>Map<\/button>/);assert.match(masthead,/id="overview-page-button"[^>]*>Overview<\/button>/);assert.match(masthead,/id="dataset-page-button"[^>]*>Dataset<\/button>/);
+ assert.match(masthead,/id="map-page-button"[^>]*>Map<\/button>/);assert.match(masthead,/id="overview-page-button"[^>]*>Overview<\/button>/);assert.match(masthead,/id="analysis-page-button"[^>]*>Analysis<\/button>/);assert.match(masthead,/id="dataset-page-button"[^>]*>Dataset<\/button>/);
  await h.ids['overview-page-button'].emit('click');
- assert.equal(frame.src,undefined,'Overview introduction does not require the analysis iframe');assert.equal(h.ids['briefing-page'].hidden,false);assert.equal(h.ids['overview-navigation'].hidden,false);assert.equal(h.context.location.hash,'#overview');
+ assert.equal(frame.src,undefined,'Overview introduction does not require the analysis iframe');assert.equal(h.ids['briefing-page'].hidden,false);assert.equal(h.ids['analysis-page'].hidden,true);assert.equal(h.context.location.hash,'#overview');
  await h.ids['analysis-page-button'].emit('click');
  assert.match(frame.src,/^analysis\.html(?:\?v=[\w-]+)?$/);assert.equal(h.ids['map-page'].hidden,true);assert.equal(h.ids['analysis-page'].hidden,false);assert.equal(h.ids['save-view-button'].hidden,false,'the map ancestor controls save visibility');
  await frame.emit('load');assert.equal(frame.hidden,false);assert.equal(h.ids['analysis-loading'].hidden,true);assert.equal(h.view,'overview');
  const api=h.context.AtlasNavigation;api.setAnalysisHash('#patterns');
- assert.equal(h.context.location.hash,'#overview/analysis/patterns');
+ assert.equal(h.context.location.hash,'#analysis/patterns');assert.equal(h.ids['analysis-page-button'].attrs['aria-current'],'page');assert.equal(h.ids['overview-page-button'].attrs['aria-pressed'],'false');
  assert.equal(api.getAnalysisURL('#record-R16-EU-005'),'https://lamarque-mapping.github.io/Border-Closure-Atlas/#dataset/record-R16-EU-005');
  h.navigated=null;await h.ids['map-page-button'].emit('click');assert.equal(h.ids['map-page'].hidden,false);assert.equal(h.ids['save-view-button'].hidden,false);
- await h.ids['overview-page-button'].emit('click');assert.equal(h.navigated,null,'return must retain iframe scroll rather than reset');assert.equal(h.ids['analysis-page'].hidden,false,'Overview retains its last selected subsection');
- await h.ids['dataset-page-button'].emit('click');assert.equal(h.view,'dataset');assert.equal(h.navigated,'#register');assert.equal(h.context.location.hash,'#dataset');assert.equal(h.ids['overview-navigation'].hidden,true);assert.equal(h.ids['dataset-page-button'].attrs['aria-current'],'page');
+ await h.ids['overview-page-button'].emit('click');assert.equal(h.navigated,null,'return must retain iframe scroll rather than reset');assert.equal(h.ids['briefing-page'].hidden,false,'Overview always opens its own introduction');assert.equal(h.ids['analysis-page'].hidden,true);
+ await h.ids['dataset-page-button'].emit('click');assert.equal(h.view,'dataset');assert.equal(h.navigated,'#register');assert.equal(h.context.location.hash,'#dataset');assert.equal(h.ids['briefing-page'].hidden,true);assert.equal(h.ids['dataset-page-button'].attrs['aria-current'],'page');
  api.setAnalysisHash('#record-R16-EU-005');assert.equal(h.context.location.hash,'#dataset/record-R16-EU-005');
  h.navigated=null;await h.ids['map-page-button'].emit('click');await h.ids['dataset-page-button'].emit('click');assert.equal(h.navigated,null,'return to Dataset preserves its record and scroll');
- await h.ids['analysis-page-button'].emit('click');assert.equal(h.navigated,'#patterns','Overview keeps a separate position from Dataset');assert.equal(h.view,'overview');
- await h.ids['method-button'].emit('click');assert.equal(h.ids['briefing-page'].hidden,false);assert.equal(h.ids['analysis-page'].hidden,true);assert.equal(h.ids['map-page'].hidden,true);
+ await h.ids['analysis-page-button'].emit('click');assert.equal(h.navigated,'#patterns','Analysis keeps a separate position from Dataset');assert.equal(h.view,'overview');
+ await h.ids['overview-page-button'].emit('click');assert.equal(h.ids['briefing-page'].hidden,false);assert.equal(h.ids['analysis-page'].hidden,true);assert.equal(h.ids['map-page'].hidden,true);
  h.context.matchMedia=()=>({matches:true});h.ids['map-search'].parentNode=h.ids['panel-search-slot'];h.ids['map-page'].classList.add('detail-open');
  await h.ids['map-page-button'].emit('click');assert.equal(h.document.querySelector('.skip-link').href,'#back-button','returning to a phone record skips to visible controls');
- h.ids['map-page'].classList.add('panel-collapsed');await h.ids['method-button'].emit('click');await h.ids['map-page-button'].emit('click');assert.equal(h.document.querySelector('.skip-link').href,'#panel-toggle');
+ h.ids['map-page'].classList.add('panel-collapsed');await h.ids['overview-page-button'].emit('click');await h.ids['map-page-button'].emit('click');assert.equal(h.document.querySelector('.skip-link').href,'#panel-toggle');
  h.context.matchMedia=()=>({matches:false});for(const fn of h.listeners.resize||[])fn();assert.equal(h.ids['map-search'].parentNode,h.ids['header-search-slot']);assert.equal(h.document.querySelector('.skip-link').href,'#search');
  h.context.matchMedia=()=>({matches:true});for(const fn of h.listeners.resize||[])fn();assert.equal(h.ids['map-search'].parentNode,h.ids['panel-search-slot']);assert.equal(h.document.querySelector('.skip-link').href,'#panel-toggle','resizing must not target the hidden search');
  for(const hash of ['#analysis/record-R16-EU-005','#dataset/record-R16-EU-005']){const direct=host(hash);await direct.ids['analysis-frame'].emit('load');assert.equal(direct.navigated,'#record-R16-EU-005');assert.equal(direct.view,'dataset','legacy and current record links open Dataset');}
- for(const [hash,target,view] of [['#overview/analysis/patterns','#patterns','overview'],['#analysis/register','#register','dataset'],['#dataset/downloads','#downloads','dataset']]){const direct=host(hash);await direct.ids['analysis-frame'].emit('load');assert.equal(direct.navigated,target);assert.equal(direct.view,view);}
+ for(const [hash,target,view] of [['#analysis/patterns','#patterns','overview'],['#analysis/duration-sample','#duration-sample','overview'],['#overview/analysis/patterns','#patterns','overview'],['#analysis/register','#register','dataset'],['#dataset/downloads','#downloads','dataset']]){const direct=host(hash);await direct.ids['analysis-frame'].emit('load');assert.equal(direct.navigated,target);assert.equal(direct.view,view);}
  const oldMethods=host('#briefing');assert.equal(oldMethods.ids['briefing-page'].hidden,false,'old Methods address remains valid');
  const citeLink=host('#overview/cite');assert.equal(citeLink.ids['cite-atlas'].scrolled,true,'citation deep link opens and scrolls the Overview');
  const slow=host();slow.ids['analysis-frame'].contentWindow={};await slow.ids['analysis-page-button'].emit('click');await slow.ids['analysis-frame'].emit('load');
@@ -67,7 +67,7 @@ function host(initialHash='',offline=false){
  slow.ids['analysis-frame'].contentWindow.AtlasAnalysis={navigate(){}};slow.context.AtlasNavigation.analysisReady();assert.equal(slow.ids['analysis-frame'].hidden,false,'show Analysis once its data is ready, even after iframe load');
  const offline=host('#analysis',true);assert(offline.ids['analysis-frame'].srcdoc.includes('Offline analysis'));assert.equal(offline.ids['analysis-frame'].src,undefined);
  offline.context.location.protocol='file:';assert.equal(offline.context.AtlasNavigation.getAnalysisURL('#register'),'https://lamarque-mapping.github.io/Border-Closure-Atlas/#dataset');
- console.log('Navigation passed: Map/Overview/Dataset, Overview subsections, map-only save action, lazy loading, current and legacy record links, separate view positions, citation link, offline srcdoc.');
+ console.log('Navigation passed: separate Map/Overview/Analysis/Dataset destinations, map-only save action, lazy loading, current and legacy record links, separate view positions, citation link, offline srcdoc.');
  const analysis=fs.readFileSync(root+'analysis.html','utf8'),a=env(analysis);
  for(const match of analysis.matchAll(/<script id="([^"]+)"[^>]*>([\s\S]*?)<\/script>/g))a.ids[match[1]].textContent=match[2];
  a.ids.chartPopulation.value='all';a.ids.sortRecords.value='id';

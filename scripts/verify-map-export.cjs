@@ -5,16 +5,19 @@ const plain=value=>JSON.parse(JSON.stringify(value));
 const app=fs.readFileSync(root+'/app.js','utf8');
 let mobile=false,canvas;
 function canvasContext(){
- const scales=[],points=[],arcs=[],texts=[],strokes=[],stack=[];let matrix={x:1,y:1,left:0,top:0},currentPath=[];
- const api={scales,points,arcs,texts,strokes,measureText:text=>({width:String(text).length*7}),
+ const scales=[],points=[],arcs=[],texts=[],strokes=[],fills=[],operations=[],rectFills=[],rectStrokes=[],stack=[];let matrix={x:1,y:1,left:0,top:0},currentPath=[],currentArcs=[];
+ const api={scales,points,arcs,texts,strokes,fills,operations,rectFills,rectStrokes,measureText:text=>({width:String(text).length*7}),
   save(){stack.push({...matrix})},restore(){matrix=stack.pop()},
   scale(x,y){scales.push([x,y]);matrix.x*=x;matrix.y*=y},
   translate(x,y){matrix.left+=x*matrix.x;matrix.top+=y*matrix.y},
-  beginPath(){currentPath=[]},
+  beginPath(){currentPath=[];currentArcs=[]},
   moveTo(x,y){const p=[matrix.left+x*matrix.x,matrix.top+y*matrix.y];points.push(p);currentPath.push(p)},
   lineTo(x,y){const p=[matrix.left+x*matrix.x,matrix.top+y*matrix.y];points.push(p);currentPath.push(p)},
-  stroke(){strokes.push({points:currentPath.slice(),width:api.lineWidth*matrix.x,rawWidth:api.lineWidth,cap:api.lineCap,colour:api.strokeStyle})},
-  arc(x,y,radius){arcs.push({x:matrix.left+x*matrix.x,y:matrix.top+y*matrix.y,radius:radius*matrix.x,rawRadius:radius})},
+  stroke(){const mark={points:currentPath.slice(),arcs:currentArcs.slice(),width:api.lineWidth*matrix.x,rawWidth:api.lineWidth,cap:api.lineCap,colour:api.strokeStyle};strokes.push(mark);operations.push({type:'stroke',mark})},
+  fill(){const mark={arcs:currentArcs.slice(),colour:api.fillStyle};fills.push(mark);operations.push({type:'fill',mark})},
+  fillRect(x,y,width,height){rectFills.push({x:matrix.left+x*matrix.x,y:matrix.top+y*matrix.y,width:width*matrix.x,height:height*matrix.y,rawWidth:width,rawHeight:height,colour:api.fillStyle})},
+  strokeRect(x,y,width,height){rectStrokes.push({x:matrix.left+x*matrix.x,y:matrix.top+y*matrix.y,width:width*matrix.x,height:height*matrix.y,rawWidth:width,rawHeight:height,lineWidth:api.lineWidth*matrix.x,rawLineWidth:api.lineWidth,colour:api.strokeStyle})},
+  arc(x,y,radius){const mark={x:matrix.left+x*matrix.x,y:matrix.top+y*matrix.y,radius:radius*matrix.x,rawRadius:radius};arcs.push(mark);currentArcs.push(mark)},
   fillText(text){texts.push(String(text))}};
  return new Proxy(api,{get:(target,key)=>key in target?target[key]:()=>{}});
 }
@@ -116,11 +119,59 @@ assert.deepEqual(plain(pointSnapshot.mappingSummary),{pendingRecords:2,unmappedR
 assert(pointNotes.includes('Locations awaiting checks: 2 records, including 1 with no map position'));
 assert(E.notes({...pointSnapshot,state:{mode:'all',precision:'unlocated'},events:[]},'Crossing map').includes('Locations awaiting checks'));
 
+// Earlier crossings are a separate, immutable reference layer: no extra active
+// records or reference counts, and no inherited active rationale or duration.
+const historicalFeature=plain(pointFeature);historicalFeature.properties.location_id='earlier-post';historicalFeature.properties.name='Earlier post';
+const oldPoint=pointMap.containerPointToLatLng([400,300]);historicalFeature.geometry.coordinates=[oldPoint.lng,oldPoint.lat];
+const historicalPhase={period_id:'earlier-phase',start_earliest:'2018-01-01',start_latest:'2018-01-02',end_earliest:'2018-02-01',end_latest:'2018-02-02',last_confirmed:'2018-01-20',evidence_dates:['2018-01-20'],display:'Do not inherit this duration as current'};
+const historicalRecord={id:'earlier-event',title:'Old crossing restriction',rationales:['Security'],source_urls:['https://example.invalid/history'],duration_periods:[historicalPhase]};
+const historyLocations=[{feature:historicalFeature,locationId:'earlier-post',title:'Earlier post',records:[{record:historicalRecord,phases:[historicalPhase],latestEvidenceDate:'2018-02-02'}],latestEvidenceDate:'2018-02-02'}];
+const borderStart=pointMap.containerPointToLatLng([300,300]),borderEnd=pointMap.containerPointToLatLng([600,300]);
+const historyData={...pointData,borders:{type:'FeatureCollection',features:[{type:'Feature',properties:{},geometry:{type:'LineString',coordinates:[[borderStart.lng,borderStart.lat],[borderEnd.lng,borderEnd.lat]]}}]}};
+const historySnapshot=E.capture({map:pointMap,data:historyData,visible:[pointEvent],locationEvents:new Map([['named-post',[pointEvent]]]),historyLocations,state:{mode:'all'}});
+assert.equal(historySnapshot.events.length,1);assert.equal(historySnapshot.references.length,1);assert.equal(historySnapshot.historyReferences.length,1);
+assert(!historySnapshot.events.some(event=>event.id==='earlier-event'),'history never enters the active event selection');
+assert(!historySnapshot.references.some(reference=>reference.feature.properties.location_id==='earlier-post'),'history never enters active reference totals');
+assert.deepEqual(Object.keys(historySnapshot.historyReferences[0]).sort(),['geometry','latestEvidenceDate','locationId','records','title']);
+assert.deepEqual(plain(historySnapshot.historyReferences[0].records[0]),{recordId:'earlier-event',latestEvidenceDate:'2018-02-02',phases:[{phaseId:'earlier-phase',startEarliest:'2018-01-01',startLatest:'2018-01-02',endEarliest:'2018-02-01',endLatest:'2018-02-02',lastConfirmed:'2018-01-20',evidenceDates:['2018-01-20']}]});
+historicalFeature.geometry.coordinates[0]+=20;historicalRecord.id='changed-record';historicalPhase.evidence_dates.push('2025-01-01');historicalPhase.start_earliest='2025-01-01';historyLocations[0].title='Changed title';historyLocations[0].latestEvidenceDate='2025-01-01';
+near(historySnapshot.historyReferences[0].geometry.coordinates[0],oldPoint.lng,'history geometry is captured before later changes');assert.equal(historySnapshot.historyReferences[0].title,'Earlier post');assert.equal(historySnapshot.historyReferences[0].latestEvidenceDate,'2018-02-02');assert.equal(historySnapshot.historyReferences[0].records[0].recordId,'earlier-event');assert.deepEqual(plain(historySnapshot.historyReferences[0].records[0].phases[0].evidenceDates),['2018-01-20']);assert.equal(historySnapshot.historyReferences[0].records[0].phases[0].startEarliest,'2018-01-01');
+const historyRender=E.render(historySnapshot,'Current view with earlier histories'),historyFactor=historyRender.scale*historyRender.frame.w/historySnapshot.size.x;
+const ring=canvas.context.strokes.find(mark=>mark.colour==='#86928b'&&mark.arcs.length);
+assert(ring,'PNG draws the earlier-history ring');assert.equal(ring.rawWidth,1);assert.equal(ring.arcs[0].rawRadius,2.5);near(ring.arcs[0].radius*2+ring.width,6*historyFactor,'history ring has the same 6 px outer diameter as the map');
+assert(canvas.context.fills.some(mark=>mark.colour==='#f5f6f4'&&mark.arcs.some(arc=>arc.rawRadius===2.5)),'history ring has the neutral map background');
+const borderOperation=canvas.context.operations.findIndex(operation=>operation.type==='stroke'&&operation.mark.colour===K.colours.border),ringOperation=canvas.context.operations.findIndex(operation=>operation.mark===ring),activeOperation=canvas.context.operations.findIndex(operation=>operation.type==='stroke'&&operation.mark.colour===historySnapshot.references[0].rationale.colour);
+assert(borderOperation>=0&&borderOperation<ringOperation,'history rings draw after border lines');assert(activeOperation>ringOperation,'active coloured points draw above history rings');
+assert(canvas.context.texts.includes('Earlier restriction · read dated history'));
+assert(canvas.context.texts.some(text=>text.startsWith('Selection: 1 records · 1 map references.')),'history does not inflate the PNG selection caption');
+const historyNotes=E.notes({...historySnapshot,events:[{id:'point-event',title:'Current selection',duration_periods:[]}]},'Current view with earlier histories');
+assert(historyNotes.includes('Selection: 1 records; 1 map references.'));const historyHeading=historyNotes.indexOf('EARLIER RESTRICTIONS — DATED HISTORY');assert(historyHeading>historyNotes.indexOf('EVENT REFERENCES'));assert(historyNotes.indexOf('Historical record: earlier-event')>historyHeading);assert(!historyNotes.slice(0,historyHeading).includes('earlier-event'));assert(historyNotes.includes('Latest recorded evidence: 2 Feb 2018'));assert(historyNotes.includes('Recorded start bounds: 1 Jan 2018 to 2 Jan 2018'));assert(historyNotes.includes('do not establish crossing conditions in the selected month'));assert(!historyNotes.includes('Do not inherit this duration as current'));
+const onlyHistory={...historySnapshot,events:[],references:[]};E.render(onlyHistory,'Earlier histories');assert(canvas.context.texts.some(text=>text.startsWith('Selection: 0 records · 0 map references.')));assert(!canvas.context.texts.includes('Named crossing'),'a history-only key does not advertise active crossing points');
+
+// Country-positioned policy squares must remain distinct from crossing dots in
+// both the map's style contract and the actual PNG drawing operations.
+for(const kind of ['prohibition','entry_conditions']){
+ const feature={...pointFeature,properties:{location_id:'national-GBR',label:'United Kingdom · international passenger rules',display_role:'national_policy',precision:'Country reference point; legal jurisdiction is stated in each record'}};
+ const event={...pointEvent,id:'passenger-rule',record_kind:'national_policy',national_kind:kind,location_ids:['national-GBR'],scope:'England',rationales:['Health and biosecurity']};
+ const snapshot=E.capture({map:pointMap,data:{...data,context_locations:{type:'FeatureCollection',features:[feature]}},visible:[event],locationEvents:new Map([['national-GBR',[event]]]),state:{mode:'all'}});
+ const result=E.render(snapshot,'Passenger rules'),factor=result.scale*result.frame.w/snapshot.size.x,style=K.symbolStyle(feature.properties,{records:[event]});
+ const stroke=canvas.context.rectStrokes.find(rect=>rect.colour===style.colour&&rect.rawWidth===9.2&&rect.rawLineWidth===1.8);
+ assert(stroke,'PNG draws the policy square border');
+ near(stroke.width+stroke.lineWidth,11*factor,'policy square has the same 11 px outer size as the map');
+ near(stroke.height+stroke.lineWidth,11*factor,'policy square is not stretched');
+ assert(canvas.context.rectFills.some(rect=>rect.rawWidth===9.2&&rect.colour===style.pointFill),'PNG fill matches ban versus entry-condition styling');
+ assert(canvas.context.texts.includes(kind==='prohibition'?'International passenger ban':'Passenger entry conditions'));
+ assert(!canvas.context.texts.includes('Named crossing'),'policy-only key does not mislabel the marker as a crossing');
+ const notes=E.notes({...snapshot,events:[]},'Passenger rules');
+ assert(notes.includes('international passenger-rule reference'));assert(notes.includes('legal jurisdiction'));
+ assert(!notes.includes('Solid country outlines show national entry or departure bans'));
+}
+
 // Exercise the real save handler: capture before asynchronous evidence loading,
 // without collapsing or resizing the map as the dialog opens.
 const nodes=new Map(),record={id:'example'},originalViewport=layout(laptop,{panelWidth:292});
 let complete,opened,handler,passed;
-const context={data,visible:[record],locationEvents:new Map(),selected:null,state:{mode:'all'},map:{...laptop,closePopup(){}},stop(){},notify(message){throw Error(message)},labelSpecs:()=>[],exportViewport:()=>originalViewport,
+const context={data,visible:[record],locationEvents:new Map(),historyLocations:[],selected:null,state:{mode:'all'},map:{...laptop,closePopup(){}},stop(){},notify(message){throw Error(message)},labelSpecs:()=>[],exportViewport:()=>originalViewport,
  $:id=>{if(!nodes.has(id))nodes.set(id,{textContent:'Save view',disabled:false,addEventListener(_,fn){handler=fn}});return nodes.get(id)},
  window:{BorderExport:{capture(input){passed=input;return E.capture(input)},openSnapshot(snapshot){opened=snapshot}},AtlasData:{getResearchData:()=>new Promise(resolve=>complete=resolve)}}};
 vm.createContext(context);vm.runInContext(app.slice(app.indexOf("  $('save-view-button').addEventListener"),app.indexOf("  $('panel-toggle').addEventListener")),context);
@@ -129,6 +180,6 @@ vm.createContext(context);vm.runInContext(app.slice(app.indexOf("  $('save-view-
  context.exportViewport=()=>({x:0,y:0,width:10,height:10});context.visible=[];
  complete({events:[{...record,title:'Full evidence'}]});await task;
  assert.deepEqual(plain(opened.size),{x:originalViewport.width,y:originalViewport.height});assert.equal(opened.events[0].title,'Full evidence');assert.equal(context.$('save-view-button').disabled,false);
- console.log('Map export passed: visible-area crop, eight viewport/projection cases, uniform PNG scaling, label alignment, cropped bounds/notes, stable capture during asynchronous loading, phase-specific crossing points, points matching dotted border marks at every zoom, and point source notes.');
+ console.log('Map export passed: visible-area crop, eight viewport/projection cases, uniform PNG scaling, label alignment, cropped bounds/notes, stable capture during asynchronous loading, phase-specific crossing points, unchanged 11 px national squares, immutable 6 px neutral history rings below active points, separate historical notes, and no active-count inflation.');
 })().catch(error=>{console.error(error);process.exitCode=1});
 

@@ -1,13 +1,13 @@
 (function(){
   'use strict';
   const $=id=>document.getElementById(id);
-  const buttons={map:$('map-page-button'),overview:$('overview-page-button'),dataset:$('dataset-page-button')};
+  const buttons={map:$('map-page-button'),overview:$('overview-page-button'),analysis:$('analysis-page-button'),dataset:$('dataset-page-button')};
   const frame=$('analysis-frame'),loading=$('analysis-loading');
-  const sections=new Set(['top','main','dimensions','motivations','borderwork','patterns','coding','register','downloads','methods']);
+  const sections=new Set(['top','main','dimensions','motivations','borderwork','patterns','coding','register','downloads','methods','motivation-counts','evidence-coverage','closure-lengths','duration-sample','geography','research-areas']);
   const hashes={overview:'#top',dataset:'#register'};
-  let currentPage='map',overviewPage='briefing',frameView=null,started=false,ready=false,loadTimer=null;
+  let currentPage='map',frameView=null,started=false,ready=false,loadTimer=null;
   const datasetHash=hash=>/^#(?:register|downloads|record-)/.test(hash);
-  const primaryPage=page=>page==='briefing'||page==='analysis'?'overview':page;
+  const primaryPage=page=>page==='briefing'?'overview':page;
   const activeView=()=>currentPage==='dataset'?'dataset':'overview';
   function normaliseHash(hash){
     const value=String(hash||'#top').replace(/^#/,'');
@@ -15,7 +15,7 @@
   }
   function pageHash(page){
     if(page==='dataset')return '#dataset'+(hashes.dataset==='#register'?'':'/'+hashes.dataset.slice(1));
-    if(page==='analysis')return '#overview/analysis'+(hashes.overview==='#top'?'':'/'+hashes.overview.slice(1));
+    if(page==='analysis')return '#analysis'+(hashes.overview==='#top'?'':'/'+hashes.overview.slice(1));
     return page==='briefing'?'#overview':'#map';
   }
   function updateAddress(hash){if(location.hash!==hash){try{history.replaceState(null,'',hash);}catch{}}}
@@ -24,9 +24,9 @@
     const slot=$(compact?'panel-search-slot':'header-search-slot');
     if(search.parentNode!==slot)slot.appendChild(search);
     syncSkipLink();
-    const viewport=window.visualViewport,subnav=$('overview-navigation');
+    const viewport=window.visualViewport;
     document.documentElement.style.setProperty('--atlas-viewport-height',Math.round(viewport?viewport.height:window.innerHeight)+'px');
-    const headerHeight=document.querySelector('.masthead').getBoundingClientRect().height+(subnav.hidden?0:subnav.getBoundingClientRect().height);
+    const headerHeight=document.querySelector('.masthead').getBoundingClientRect().height;
     document.documentElement.style.setProperty('--atlas-masthead-height',Math.ceil(headerHeight)+'px');
   }
   function syncSkipLink(){
@@ -52,7 +52,7 @@
     loadTimer=setTimeout(failed,20000);
     const embedded=$('analysis-document');
     if(embedded){try{frame.srcdoc=JSON.parse(embedded.textContent);}catch{failed();}}
-    else frame.src='analysis.html?v=20261024-overview-dataset';
+    else frame.src='analysis.html?v=20261024-analysis-navigation';
   }
   window.addEventListener('atlas:mapready',()=>{
     const connection=navigator.connection;
@@ -70,10 +70,9 @@
   frame.addEventListener('load',analysisLoaded);frame.addEventListener('error',failed);
   $('analysis-retry').addEventListener('click',()=>{started=false;frameView=null;loadAnalysis();});
   function show(page,options={}){
-    if(page==='overview')page=overviewPage;
+    if(page==='overview')page='briefing';
     if(!['map','briefing','analysis','dataset'].includes(page))page='map';
     const changed=currentPage!==page;currentPage=page;
-    if(page==='briefing'||page==='analysis')overviewPage=page;
     if(options.analysisHash)hashes[activeView()]=normaliseHash(options.analysisHash);
     const primary=primaryPage(page);
     for(const [name,button] of Object.entries(buttons)){
@@ -81,10 +80,6 @@
       if(active)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');
     }
     $('map-page').hidden=page!=='map';$('briefing-page').hidden=page!=='briefing';$('analysis-page').hidden=page!=='analysis'&&page!=='dataset';
-    $('overview-navigation').hidden=primary!=='overview';
-    for(const [id,name] of [['method-button','briefing'],['analysis-page-button','analysis']]){
-      const active=page===name;$(id).classList.toggle('active',active);$(id).setAttribute('aria-pressed',String(active));
-    }
     document.body.dataset.page=page==='dataset'?'analysis':page;document.body.dataset.primaryPage=primary;
     $('analysis-page').setAttribute('aria-label',page==='dataset'?'Dataset':'Analysis');
     frame.title=page==='dataset'?'Border closures: dataset and source records':'Border closures: analysis and charts';
@@ -111,11 +106,10 @@
     setAnalysisHash(hash){const view=frameView||activeView();hashes[view]=normaliseHash(hash);if(currentPage==='analysis'||currentPage==='dataset')updateAddress(pageHash(currentPage));},
     getAnalysisURL(hash){
       const url=new URL(location.protocol==='file:'?'https://lamarque-mapping.github.io/Border-Closure-Atlas/':location.href),target=normaliseHash(hash);
-      url.hash=datasetHash(target)?'#dataset'+(target==='#register'?'':'/'+target.slice(1)):'#overview/analysis'+(target==='#top'?'':'/'+target.slice(1));return url.href;
+      url.hash=datasetHash(target)?'#dataset'+(target==='#register'?'':'/'+target.slice(1)):'#analysis'+(target==='#top'?'':'/'+target.slice(1));return url.href;
     }
   };
   for(const [page,button] of Object.entries(buttons))button.addEventListener('click',()=>show(page));
-  $('method-button').addEventListener('click',()=>show('briefing'));$('analysis-page-button').addEventListener('click',()=>show('analysis'));
   $('back-to-map').addEventListener('click',()=>show('map'));
   window.addEventListener('hashchange',readAddress);window.addEventListener('resize',syncViewport);
   if(window.visualViewport)window.visualViewport.addEventListener('resize',syncViewport);

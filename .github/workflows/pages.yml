@@ -40,12 +40,14 @@ jobs:
           node scripts/build-web-data.cjs
       - name: Check map code and export framing
         run: |
+          node scripts/build-national-data.cjs
           node scripts/build-crossing-geography.cjs
           node scripts/build-evidence-pages.cjs
           node --check dist/app.js
           node --check dist/export.js
           node --check dist/navigation.js
           node --check dist/site-controls.js
+          node --check dist/border-history.js
           node --check dist/national.js
           node --check dist/data-loader.js
           node scripts/verify-analysis-loading.cjs
@@ -54,6 +56,8 @@ jobs:
           node scripts/verify-crossing-map.cjs
           python scripts/verify-workbook.py
           node scripts/verify-ui.cjs
+          node scripts/verify-analysis-sections.cjs
+          node scripts/verify-border-history.cjs
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5

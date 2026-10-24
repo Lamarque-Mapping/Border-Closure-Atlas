@@ -28,7 +28,7 @@
   const compactMedia=window.matchMedia('(max-width:760px), (max-width:950px) and (max-height:500px)');
   const compact=()=>compactMedia.matches;
   let desktopPanelOpen=true,desktopKeyOpen=true,viewportFrame=0,lastMapWidth=0,lastMapHeight=0;
-  let labelLayer=null,labelsVisible=false;
+  let labelLayer=null,labelsVisible=false,historyIndex=null,historyLayer=null,historyLocations=[];
   let data=null,events=[],locations=new Map(),locationEvents=new Map(),selected=null,cardLocation='',timer=null,noticeTimer=null,baseGroup=null,featureGroup=null,visible=[],listLimit=50;
   let exportingRecords=false,recordsReturnFocus=null,recordsListScroll=0,recordsPanelScroll=0,playbackRate=1;
   const state={query:'',region:'',rationale:'',location:'',continent:'',precision:'',measureType:'',includeExcluded:false,mode:'intervals',month:0};
@@ -53,7 +53,7 @@
   keyDialog.addEventListener('close',()=>keyToggle.setAttribute('aria-expanded','false'));
   mapButtons.append(keyToggle,labelToggle);L.DomEvent.disableClickPropagation(mapButtons);L.DomEvent.disableScrollPropagation(mapButtons);scaleControl.getContainer().append(mapButtons);
   map.attributionControl.addAttribution('Base geometry: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a> · Locations: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a> (<a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener noreferrer">ODbL</a>)');
-  map.createPane('countryContext');map.getPane('countryContext').style.zIndex=405;map.createPane('referenceLines');map.getPane('referenceLines').style.zIndex=407;map.createPane('scope');map.getPane('scope').style.zIndex=410;map.createPane('points');map.getPane('points').style.zIndex=430;
+  map.createPane('countryContext');map.getPane('countryContext').style.zIndex=405;map.createPane('referenceLines');map.getPane('referenceLines').style.zIndex=407;map.createPane('boundaryLookup');map.getPane('boundaryLookup').style.zIndex=408;map.createPane('scope');map.getPane('scope').style.zIndex=410;map.createPane('historyPoints');map.getPane('historyPoints').style.zIndex=429;map.createPane('points');map.getPane('points').style.zIndex=430;
   function notify(message){$('message').textContent=message;$('message').hidden=false;clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>$('message').hidden=true,6500);}
   function setPlayback(playing){
     const button=$('play-button'),label=playing?'Pause timeline':'Play timeline';
@@ -85,7 +85,8 @@
     }
     map.fitBounds(bounds,{...padding,animate:false});
   }
-  function fitRecords(){if(compact()){setPanelOpen(false);$('panel-toggle').focus();}const features=currentLocationIDs().map(id=>locations.get(id));if(!features.length){fitContinent();notify('No assigned geography in this selection. The continent view is retained.');return;}const layer=L.geoJSON({type:'FeatureCollection',features});const bounds=layer.getBounds();if(bounds.isValid())map.fitBounds(bounds,{...viewPadding(12),maxZoom:7,animate:false});}
+  const nationalViewZoom=records=>Math.min(...records.map(e=>({AUS:3,NZL:4,GBR:4.5})[e.national_map_country||e.national_geometry]||4));
+  function fitRecords(){if(compact()){setPanelOpen(false);$('panel-toggle').focus();}const features=currentLocationIDs().map(id=>locations.get(id));if(!features.length){fitContinent();notify('No assigned geography in this selection. The continent view is retained.');return;}const layer=L.geoJSON({type:'FeatureCollection',features});const bounds=layer.getBounds();if(bounds.isValid())map.fitBounds(bounds,{...viewPadding(12),maxZoom:visible.length&&visible.every(e=>e.record_kind==='national_policy')?nationalViewZoom(visible):7,animate:false});}
   function updateTabs(){
     for(const button of $('continent-tabs').querySelectorAll('[role="tab"]')){const name=button.dataset.continent;const active=(state.continent||'World')===name;button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1;}
     $('continent-panel').setAttribute('aria-labelledby',selected?'panel-title':'tab-'+(state.continent||'World').toLowerCase().replaceAll(' ','-'));
@@ -104,6 +105,12 @@
     L.geoJSON(data.countries||emptyFC(),{interactive:false,style:{fillColor:PALETTE.land,fillOpacity:1,color:PALETTE.coast,weight:.6,opacity:.8}}).addTo(baseGroup);
     L.geoJSON(data.borders||emptyFC(),{pane:'referenceLines',interactive:false,style:{color:PALETTE.border,weight:.6,opacity:.8}}).addTo(baseGroup);
     L.geoJSON(data.disputed||emptyFC(),{pane:'referenceLines',interactive:false,style:{color:PALETTE.disputed,weight:.9,opacity:.8,dashArray:'4 4'}}).addTo(baseGroup);
+    for(const feature of historyIndex?.boundaries||[]){
+      const id=feature.properties.location_id,label=locationTitle(feature.properties,id);
+      const target=L.geoJSON(feature,{pane:'boundaryLookup',style:{color:PALETTE.border,weight:compact()?20:14,opacity:0,fill:false,className:'boundary-history-hit'}}).addTo(baseGroup);
+      target.bindTooltip('<strong class="map-tip-title">'+escape(label)+'</strong><span class="map-tip-hint">Read border records →</span>',{direction:'top',offset:[0,-8]});
+      target.on('click',event=>openHistoryCard(window.BorderHistory.lookup(historyIndex,id,state),event.latlng,false));
+    }
     renderLabels();
   }
   function labelSpecs(){
@@ -152,7 +159,7 @@
     page.style.setProperty('--timeline-clearance',Math.max(0,Math.ceil(bounds.bottom-timeline.top))+8+'px');
     if(bounds.width!==lastMapWidth||bounds.height!==lastMapHeight){
       lastMapWidth=bounds.width;lastMapHeight=bounds.height;
-      map.invalidateSize({pan:false,debounceMoveend:true});renderLabels();
+      map.invalidateSize({pan:true,animate:false,debounceMoveend:true});renderLabels();
     }
   }
   function scheduleViewport(){if(!viewportFrame)viewportFrame=requestAnimationFrame(syncViewport);}
@@ -166,6 +173,7 @@
   }
   function applyData(value,loaded=false){
     C.validate(value);stop();data=value;events=data.events;locations=new Map();for(const f of C.locationFeatures(data)){const id=f.properties?.location_id;if(id&&f.geometry)locations.set(id,f);}resetFilters();
+    historyIndex=window.BorderHistory?.buildIndex(data,C)||null;historyLocations=[];
     populateRegions();populateSelect('rationale',events.flatMap(e=>C.array(e.rationales)),'All coded rationales');makeTabs();
     const excludedCount=events.filter(C.excluded).length;
     $('excluded-count').textContent='('+excludedCount+')';
@@ -182,12 +190,13 @@
   }
   function render(){
     if(!data)return;map.closePopup();visible=C.filterEvents(data,state);locationEvents=new Map();for(const e of visible)for(const id of mapLocationIDs(e)){if(!locationEvents.has(id))locationEvents.set(id,[]);locationEvents.get(id).push(e);}
+    historyLocations=window.BorderHistory?.priorCrossings(data,C,state,[...locationEvents.keys()])||[];
     const mappedRecords=visible.filter(e=>mapLocationIDs(e).length).length;
     const excludedCount=visible.filter(C.excluded).length;const pendingCount=visible.filter(e=>C.mappingStatus(e,data,state).pending).length;
     const nationalCount=visible.filter(e=>e.record_kind==='national_policy').length;
     $('record-count').textContent=visible.length.toLocaleString('en-GB');$('count-label').textContent=visible.length===1?'record':'records';$('mapped-count').textContent=(nationalCount?(visible.length-nationalCount)+' land · '+nationalCount+' national '+(nationalCount===1?'record':'records')+' · ':'')+mappedRecords+' on map'+(pendingCount?' · '+pendingCount+' need location checks':'')+(excludedCount?' · '+excludedCount+' excluded':'');
     const modeLabel=state.mode==='all'?'Matching records across the full study period, including those without confirmed dates. These closures did not all happen at once.':state.mode==='onsets'?'Recorded starts in the selected month.':'Dated evidence overlapping part of this month. Ordered windows and intermittent regimes do not establish continuous closure. Possible date overlap is labelled.';
-    $('result-context').textContent=modeLabel+(state.mode==='intervals'?' '+Number(data.meta.atlas_summary?.duration_reviewed_unresolved||0)+' land records have no dated phase. Disputed evidence appears only at its recorded dates.':'')+' Dots show named crossings; locations awaiting checks remain in the records. Country outlines show national rules: solid for entry or departure bans, dotted for entry conditions. Read each record for the people and routes affected. Unmarked does not necessarily mean open.';
+    $('result-context').textContent=modeLabel+' Dots mark crossings; squares identify international passenger rules. Read each entry for affected people, routes and exceptions. Unmarked does not necessarily mean open.';
     $('map-note').textContent=(state.continent||'World')+' · '+(state.mode==='all'?'all recorded closures':state.mode==='onsets'?'starts · '+monthLabel(state.month):'Border Restrictions · '+monthLabel(state.month));
     $('month-label').textContent=state.mode==='all'?data.meta.window_start.slice(0,4)+'–'+data.meta.window_end.slice(0,4):monthLabel(state.month);$('month-slider').value=state.month;$('month-slider').setAttribute('aria-valuetext',monthLabel(state.month));
     $('month-label').setAttribute('aria-label',(state.mode==='all'?'All recorded dates':monthLabel(state.month))+'. Choose a month and year');
@@ -195,11 +204,11 @@
     $('month-slider').style.setProperty('--timeline-progress',progress+'%');
     $('month-slider').disabled=state.mode==='all';$('previous-button').disabled=state.mode==='all'||state.month<=Number($('month-slider').min);$('next-button').disabled=state.mode==='all'||state.month>=Number($('month-slider').max);
     $('include-excluded').disabled=state.mode!=='all';$('excluded-note').textContent=state.mode==='all'?'Excluded records are list-only and never animated.':'Excluded records are unavailable in timeline views.';
-    $('time-note').textContent=state.mode==='all'?'Full study period · Play to explore by month':state.mode==='onsets'?'Recorded starts in this month':'Border Restrictions · Unmarked does not necessarily mean open';
+    $('time-note').textContent=state.mode==='all'?'Full study period':state.mode==='onsets'?'Recorded starts in this month':'Unmarked: status not established';
     $('location-filter').hidden=!state.location;$('location-filter-label').textContent=state.location?'Linked to '+(locations.get(state.location)?.properties?.label||locations.get(state.location)?.properties?.name||state.location):'';
     const activeFilters=[state.region,state.rationale,state.measureType?C.measureLabel(state.measureType):'',({crossing_reference:'Crossing points / national rules',context:'Wider border references',unlocated:'Locations awaiting checks'})[state.precision],state.includeExcluded&&state.mode==='all'?'Including excluded records':''].filter(Boolean);
     $('filter-summary').textContent=activeFilters.join(' · ');$('filter-summary').hidden=!activeFilters.length;
-    updatePanelTitle();updateTabs();renderList();renderLocations();
+    updatePanelTitle();updateTabs();renderList();renderHistoryLocations();renderLocations();
     updateRecordsControls();
     if(selected&&!visible.some(e=>e.id===selected)){selected=null;showBrowse();}
   }
@@ -282,6 +291,41 @@
       '<button type="button" class="location-record-link" data-record-id="'+escape(e.id)+'">Full record <span aria-hidden="true">→</span></button></div></article>';
   }
   function locationRecords(items){return [...items].sort((a,b)=>Number(b.id===selected)-Number(a.id===selected)||(text(a.start)||'9999').localeCompare(text(b.start)||'9999')||a.id.localeCompare(b.id));}
+  function openHistoryCard(entry,latlng,crossing=false){
+    if(!entry)return;stop();map.closePopup();
+    const card=document.createElement('div');card.className='location-card history-card';
+    const date=monthLabel(state.month);
+    let explanation;
+    if(crossing)explanation='Earlier restrictions are recorded here. These entries describe particular movements and dates; they do not establish whether the crossing was open or closed in '+date+'.';
+    else if(state.mode==='all')explanation='Entries associated with this border across the study period. This reference line is a route to the evidence, not the mapped extent of a closure.';
+    else explanation=(entry.datedRecordCount?entry.datedRecordCount+' associated '+(entry.datedRecordCount===1?'entry has':'entries have')+' dated evidence in '+date+'. ':'No matching dated evidence in this register covers '+date+'. ')+'The reference line does not establish whether this border was open or closed. Read each entry for its dates and affected crossings.';
+    card.innerHTML='<h2>'+escape(entry.title)+(crossing?' · earlier records':' · records')+'</h2><p class="location-history-explanation">'+escape(explanation)+'</p>';
+    if(!entry.records.length){
+      const note=document.createElement('p');note.className='location-map-note';note.textContent=entry.totalRecordCount?'No entries match the current filters. Clear the filters to see the associated records.':'No associated entry is available in this register. This is not evidence that the border was open.';card.append(note);
+    }
+    const list=document.createElement('div');list.className='history-record-list';
+    for(const item of entry.records){
+      const record=item.record,link=document.createElement('a');link.className='history-record-link';
+      link.href=window.AtlasNavigation.getAnalysisURL('#record-'+record.id);
+      const evidenceDate=crossing?item.latestEvidenceDate:item.latestEvidenceOnOrBeforeMonth||item.latestEvidenceDate;
+      const timing=!crossing&&state.mode!=='all'&&item.datedThisMonth?'Dated evidence in '+date:evidenceDate?(crossing||item.latestEvidenceOnOrBeforeMonth?'Latest earlier date: ':'Latest date in entry: ')+dateText(evidenceDate):'Dates not established';
+      link.innerHTML='<span class="history-record-id">'+escape(record.id)+'</span><strong>'+escape(publicText(record.title||record.id,'title',record.id))+'</strong><span>'+escape(timing)+'</span><span class="history-record-action">Read the dated record →</span>';
+      link.addEventListener('click',()=>map.closePopup());list.append(link);
+    }
+    card.append(list);if(compact())setPanelOpen(false);
+    const padding=viewPadding(),availableHeight=$('map-page').getBoundingClientRect().height-padding.paddingTopLeft[1]-padding.paddingBottomRight[1]-58;
+    L.popup({className:'location-popup',maxWidth:Math.min(400,window.innerWidth-48),minWidth:Math.min(280,window.innerWidth-72),maxHeight:Math.max(90,Math.min(compact()?400:520,availableHeight)),offset:L.point(0,-7),autoPanPaddingTopLeft:L.point(16,padding.paddingTopLeft[1]),autoPanPaddingBottomRight:L.point(padding.paddingBottomRight[0],padding.paddingBottomRight[1])}).setLatLng(latlng).setContent(card).openOn(map);
+  }
+  function renderHistoryLocations(){
+    if(historyLayer)map.removeLayer(historyLayer);historyLayer=L.layerGroup().addTo(map);
+    for(const entry of historyLocations){
+      const [lng,lat]=entry.feature.geometry.coordinates,label=entry.title+' · earlier restriction; read dated history';
+      const marker=L.marker([lat,lng],{pane:'historyPoints',keyboard:true,title:label,alt:label,icon:L.divIcon({className:'closure-marker history-marker',iconSize:[44,44],iconAnchor:[22,22],html:'<span class="history-marker-dot"></span>'})}).addTo(historyLayer);
+      const element=marker.getElement();if(element){element.dataset.locationId=entry.locationId;element.setAttribute('role','button');element.setAttribute('aria-label',label);element.addEventListener('keydown',event=>{if(event.key===' '){event.preventDefault();openHistoryCard(entry,L.latLng(lat,lng),true);}});}
+      marker.bindTooltip('<strong class="map-tip-title">'+escape(entry.title)+'</strong><span class="map-tip-meta">Earlier restriction · read dated history</span>',{direction:'top',offset:[0,-10]});
+      marker.on('click',event=>openPointCard(entry.locationId,event));
+    }
+  }
   function openLocationCard(id,items,latlng,focusCard=false){
     if(!data.meta.web_assets){renderLocationCard(id,items,latlng,focusCard);return;}
     stop();map.closePopup();
@@ -311,7 +355,7 @@
       action.addEventListener('click',()=>{map.closePopup();activateLocation(id,items);});card.append(action);
     }
     const notes=document.createElement('p');notes.className='location-map-note';
-    notes.textContent=f.geometry.type==='Point'?'The dot marks an approximate crossing area. It does not indicate closure along the rest of the border.':p.display_role==='national_policy'?'The outline marks the country or area covered by the rule. Read the record for the travellers and journeys affected.':'The line locates the border. The description identifies the affected crossings and travellers.';card.append(notes);
+    notes.textContent=p.display_role==='national_policy'?'The square is a country reference for international passenger rules, not a crossing or a closed internal boundary. Each entry identifies the jurisdiction, travellers and journeys affected.':f.geometry.type==='Point'?'The dot marks an approximate crossing area. It does not indicate closure along the rest of the border.':'The line locates the border. The description identifies the affected crossings and travellers.';card.append(notes);
     stop();map.closePopup();cardLocation=id;renderLocations();if(mobile)setPanelOpen(false);
     const padding=viewPadding();
     const availableHeight=$('map-page').getBoundingClientRect().height-padding.paddingTopLeft[1]-padding.paddingBottomRight[1]-58;
@@ -324,12 +368,45 @@
     const original=event.originalEvent;
     if(!original||/^key/.test(original.type||'')||!Number.isFinite(original.clientX))return id;
     const pointer=map.mouseEventToContainerPoint(original);let chosen=id,distance=Infinity;
-    for(const candidate of locationEvents.keys()){
+    for(const candidate of new Set([...locationEvents.keys(),...historyLocations.map(entry=>entry.locationId)])){
       const f=locations.get(candidate);if(f?.geometry?.type!=='Point')continue;
       const [lng,lat]=f.geometry.coordinates,p=map.latLngToContainerPoint([lat,lng]),d=Math.hypot(pointer.x-p.x,pointer.y-p.y);
       if(d<distance&&d<=22){distance=d;chosen=candidate;}
     }
     return chosen;
+  }
+  function openPointRecord(chosen,keyboard=false){
+    const feature=locations.get(chosen);
+    if(!feature||feature.geometry?.type!=='Point')return;
+    const latlng=L.latLng(feature.geometry.coordinates[1],feature.geometry.coordinates[0]),items=locationEvents.get(chosen);
+    if(items?.length)openLocationCard(chosen,items,latlng,keyboard);
+    else openHistoryCard(historyLocations.find(entry=>entry.locationId===chosen),latlng,true);
+  }
+  function overlappingPoints(id){
+    const feature=locations.get(id);if(feature?.geometry?.type!=='Point')return [id];
+    const [lng,lat]=feature.geometry.coordinates,centre=map.latLngToContainerPoint([lat,lng]);
+    return [...new Set([...locationEvents.keys(),...historyLocations.map(entry=>entry.locationId)])].filter(candidate=>{
+      const other=locations.get(candidate);if(other?.geometry?.type!=='Point')return false;
+      const [x,y]=other.geometry.coordinates,point=map.latLngToContainerPoint([y,x]);return Math.hypot(centre.x-point.x,centre.y-point.y)<=4.5;
+    }).sort((a,b)=>locationTitle(locations.get(a).properties,a).localeCompare(locationTitle(locations.get(b).properties,b)));
+  }
+  function openPointChoices(ids,anchor){
+    stop();map.closePopup();const card=document.createElement('div');card.className='location-card';
+    card.innerHTML='<h2>Choose a location</h2><p class="location-history-explanation">Select a crossing or passenger-rule reference to read its records.</p>';
+    for(const id of ids){
+      const feature=locations.get(id),button=document.createElement('button');button.type='button';button.className='history-record-link point-choice';
+      button.innerHTML='<strong>'+escape(locationTitle(feature.properties,id))+'</strong><span>'+escape(locationEvents.has(id)?state.mode==='all'?'Records across the study period':'Dated records for '+monthLabel(state.month):'Earlier records')+'</span>';
+      button.addEventListener('click',()=>openPointRecord(id,true));card.append(button);
+    }
+    if(compact())setPanelOpen(false);
+    const feature=locations.get(anchor),padding=viewPadding(),availableHeight=$('map-page').getBoundingClientRect().height-padding.paddingTopLeft[1]-padding.paddingBottomRight[1]-58;
+    L.popup({className:'location-popup',maxWidth:Math.min(400,window.innerWidth-48),minWidth:Math.min(280,window.innerWidth-72),maxHeight:Math.max(90,Math.min(400,availableHeight)),offset:L.point(0,-7),autoPanPaddingTopLeft:L.point(16,padding.paddingTopLeft[1]),autoPanPaddingBottomRight:L.point(padding.paddingBottomRight[0],padding.paddingBottomRight[1])}).setLatLng(L.latLng(feature.geometry.coordinates[1],feature.geometry.coordinates[0])).setContent(card).openOn(map);
+  }
+  function openPointCard(id,event){
+    const keyboard=/^key/.test(event.originalEvent?.type||''),chosen=nearestPoint(id,event);
+    const overlapping=keyboard||!event.originalEvent?[chosen]:overlappingPoints(chosen);
+    if(overlapping.length>1)openPointChoices(overlapping,chosen);
+    else openPointRecord(chosen,keyboard);
   }
   function renderLocations(){
     if(featureGroup)map.removeLayer(featureGroup);featureGroup=L.featureGroup().addTo(map);
@@ -345,7 +422,8 @@
       let target;
       if(point){
         const [lng,lat]=f.geometry.coordinates;
-        target=L.marker([lat,lng],{pane:'points',keyboard:true,title:label,alt:label,icon:L.divIcon({className:'closure-marker'+(isSelected?' is-selected':''),iconSize:[44,44],iconAnchor:[22,22],html:'<span class="closure-marker-dot" style="--dot-size:'+(style.radius*2)+'px;--dot-length:'+style.pointLength+'px;--dot-colour:'+style.colour+';opacity:'+(timePossible?.3:1)+'"></span>'})}).addTo(featureGroup);
+        const mark=style.national?'<span class="national-policy-marker" style="--policy-colour:'+style.pointStroke+';--policy-fill:'+style.pointFill+';opacity:'+(timePossible?.3:1)+'"></span>':'<span class="closure-marker-dot" style="--dot-size:'+(style.radius*2)+'px;--dot-length:'+style.pointLength+'px;--dot-colour:'+style.colour+';opacity:'+(timePossible?.3:1)+'"></span>';
+        target=L.marker([lat,lng],{pane:'points',keyboard:true,title:label,alt:label,icon:L.divIcon({className:'closure-marker'+(isSelected?' is-selected':''),iconSize:[44,44],iconAnchor:[22,22],html:mark})}).addTo(featureGroup);
         const element=target.getElement();if(element){element.dataset.locationId=id;element.setAttribute('role','button');element.setAttribute('aria-label',label+' · '+items.length+' record'+(items.length===1?'':'s')+'. Open closure details');element.addEventListener('keydown',event=>{if(event.key===' '){event.preventDefault();openLocationCard(id,allItems,L.latLng(lat,lng),true);}});}
       }else{
         const pane=style.country?'countryContext':'scope';
@@ -355,9 +433,8 @@
       }
       target.bindTooltip(tooltip,{direction:'top',offset:[0,-10]});
       target.on('click',event=>{
-        const chosen=point?nearestPoint(id,event):id,feature=locations.get(chosen),selectedItems=locationEvents.get(chosen);
-        const latlng=point?L.latLng(feature.geometry.coordinates[1],feature.geometry.coordinates[0]):event.latlng;
-        openLocationCard(chosen,selectedItems,latlng,/^key/.test(event.originalEvent?.type||''));
+        if(point)openPointCard(id,event);
+        else openLocationCard(id,allItems,event.latlng,/^key/.test(event.originalEvent?.type||''));
       });
     }
   }
@@ -403,7 +480,7 @@
   function field(title,value){value=publicText(value,title,selected);return value?'<section class="detail-field"><h3>'+escape(title)+'</h3><p>'+escape(text(value))+'</p></section>':'';}
   function nationalDetailHTML(e){
     const main=e.duration_periods.find(p=>p.national_display_period),sources=eventSources(e);
-    return '<div class="detail-id">National border rules · '+escape(e.countries.join(' – '))+'</div><h2 class="detail-title">'+escape(e.title)+'</h2><p class="event-summary">'+escape(e.national_summary)+'</p>'+rationaleHTML([e])+
+    return '<div class="detail-id">International passenger rules · '+escape(e.countries.join(' – '))+'</div><h2 class="detail-title">'+escape(e.title)+'</h2><p class="event-summary">'+escape(e.national_summary)+'</p>'+rationaleHTML([e])+
       (e.national_kind==='entry_conditions'?'<p class="qualification">Entry conditions only — this is not an additional border closure.</p>':'')+
       (main?'<section class="detail-field"><h3>Dates</h3>'+cardPeriodHTML(main)+'</section>':'<p class="qualification">Shown only in months with a recorded policy change. No continuous interval is inferred.</p>')+
       (e.linked_land_ids.length?field('Linked record',e.relationship):'')+
@@ -431,7 +508,7 @@
     if(selected!==id)return;
     if(e.record_kind==='national_policy'){
       $('event-detail').innerHTML=nationalDetailHTML(e);renderLocations();
-      if(zoom){const features=mapLocationIDs(e).map(lid=>locations.get(lid));if(features.length)map.fitBounds(L.geoJSON({type:'FeatureCollection',features}).getBounds(),{...viewPadding(12),maxZoom:6,animate:false});}
+      if(zoom){const features=mapLocationIDs(e).map(lid=>locations.get(lid));if(features.length)map.fitBounds(L.geoJSON({type:'FeatureCollection',features}).getBounds(),{...viewPadding(12),maxZoom:nationalViewZoom([e]),animate:false});}
       return;
     }
     const ids=C.mapLocationsFor(e,data,{mode:'all'}).filter(v=>locations.has(v));
@@ -516,7 +593,7 @@
     if(!data||!window.BorderExport)return;stop();map.closePopup();
     const button=$('save-view-button');button.disabled=true;button.textContent='Preparing…';
     try{
-      const snapshot=window.BorderExport.capture({map,data,visible,locationEvents,selected,state,labels:labelSpecs(),viewport:exportViewport()});
+      const snapshot=window.BorderExport.capture({map,data,visible,locationEvents,historyLocations,selected,state,labels:labelSpecs(),viewport:exportViewport()});
       const full=snapshot.events.every(e=>e.record_kind==='national_policy')?{events:snapshot.events}:await window.AtlasData.getResearchData({includeNational:true}),byID=new Map(full.events.map(e=>[e.id,e]));
       snapshot.events=snapshot.events.map(e=>byID.get(e.id));window.BorderExport.openSnapshot(snapshot);
     }catch(error){notify(error.message);}finally{button.disabled=false;button.textContent='Save view';}

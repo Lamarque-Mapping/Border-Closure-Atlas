@@ -863,13 +863,14 @@
       "Reviewers / provenance": "AI national-policy reviewer; root primary-source spot-checks recorded separately."
     }
   ],
-  "version": "20261024-national-outlines",
-  "method": "Solid country outlines show national entry or departure bans; dotted country outlines show entry conditions. The outline marks the country or area covered by a rule. The displayed periods follow the rule through changes to the groups and exceptions it covered. These records have no single duration and are excluded from the land-border charts. Where the evidence supplies only individual dates, the record appears only in those months. Missing end dates are not extended to the present.",
+  "version": "20261024-passenger-rule-markers",
+  "method": "Square markers identify international passenger rules: filled for entry or departure bans, outlined for entry conditions. Each marker uses a country reference point; the record specifies the legal jurisdiction, affected travellers and modes. The marker does not trace a closed coastline or domestic boundary. The displayed periods follow the rule through changes to the groups and exceptions it covered. These records have no single duration and are excluded from the land-border charts. Where the evidence supplies only individual dates, the record appears only in those months. Missing end dates are not extended to the present.",
   "review_date": "2026-10-23",
   "policies": [
     {
       "id": "NAT-AUS-ENTRY-COVID",
       "geometry": "AUS",
+      "map_country": "AUS",
       "kind": "prohibition",
       "title": "Australia closed its border to most foreign visitors during COVID-19",
       "summary": "Australia barred most non-resident foreign nationals from 20 March 2020 to reduce COVID-19 transmission. Citizens, permanent residents and other exempt travellers could still enter, subject to health rules. Entry reopened in stages: specified eligible visa holders from 15 December 2021, and all fully vaccinated visa holders from 21 February 2022. Unvaccinated visitors still needed an exemption. This was a border closure to the affected travellers, not a shutdown of every airport or a ban on all arrivals.",
@@ -888,6 +889,7 @@
     {
       "id": "NAT-AUS-EXIT-COVID",
       "geometry": "AUS",
+      "map_country": "AUS",
       "kind": "prohibition",
       "title": "Australia restricted overseas departure by citizens and permanent residents",
       "summary": "From 25 March 2020, Australian citizens and permanent residents generally needed an exemption to leave the country by air or sea. Fully vaccinated eligible travellers no longer needed that departure exemption from 1 November 2021. Others still did. The map follows the broad restriction to this major relaxation, not to a claimed universal repeal; the final legal endpoint is not settled in this dataset.",
@@ -905,6 +907,7 @@
     {
       "id": "NAT-NZL-ADMISSION-COVID",
       "geometry": "NZL",
+      "map_country": "NZL",
       "kind": "prohibition",
       "title": "New Zealand closed its border to most foreign travellers during COVID-19",
       "summary": "New Zealand restricted entry by most foreign travellers from 19 March 2020, while retaining return rights and specified exceptions. Admission later reopened through travel arrangements and different traveller groups. Australian citizens and permanent residents gained wider entry in April 2022, followed by eligible visa-waiver visitors in May. Remaining visitor and student visa categories reopened on 31 July 2022, alongside maritime reopening. This history does not mean that every traveller was excluded throughout, or that every airport stopped operating.",
@@ -923,6 +926,7 @@
     {
       "id": "NAT-NZL-ARRIVAL-CONDITIONS-COVID",
       "geometry": "NZL",
+      "map_country": "NZL",
       "kind": "entry_conditions",
       "title": "New Zealand relaxed isolation requirements for eligible arrivals",
       "summary": "These February and March 2022 changes replaced managed isolation or removed isolation for specified groups allowed to enter New Zealand. Testing and admission eligibility remained separate requirements. They are changes to entry conditions, not additional border closures. Only the dated observations are shown; the intervening amendment history is incomplete."
@@ -930,6 +934,7 @@
     {
       "id": "NAT-GBR-ARRIVAL-CONDITIONS-COVID",
       "geometry": "GBR",
+      "map_country": "GBR",
       "kind": "entry_conditions",
       "title": "UK COVID-19 arrival conditions: quarantine, testing and passenger forms",
       "summary": "UK-wide notices introduced isolation and passenger-information requirements in June 2020 and removed remaining COVID-19 testing and passenger-locator requirements in March 2022. These were conditions on admission, not a universal UK entry ban. Rules and enforcement differed between the UK nations and changed over time. This record shows the two documented changes, not an uninterrupted period with identical rules."
@@ -937,6 +942,7 @@
     {
       "id": "R6-EU-004",
       "geometry": "ENG",
+      "map_country": "GBR",
       "kind": "prohibition",
       "title": "England prohibited overseas departure without a permitted reason",
       "summary": "From 29 March 2021, England's regulations prohibited overseas departure without a permitted reason. The rule applied to air, sea and international rail departures; it was removed from 17 May 2021. This is the same policy already recorded for the Channel Tunnel, shown here with its wider England-only scope. It is not an extra independent closure and does not establish physical shutdown of airports or terminals.",
@@ -954,6 +960,7 @@
     {
       "id": "NAT-GBR-ENG-REDLIST-COVID",
       "geometry": "ENG",
+      "map_country": "GBR",
       "kind": "prohibition",
       "title": "England restricted entry after travel through four red-list countries",
       "summary": "From 9 April 2021, England refused entry to non-exempt visitors who had recently been in the Philippines, Pakistan, Kenya or Bangladesh. British and Irish citizens and people with UK residence rights were excepted, but faced hotel quarantine and testing. This was an entry prohibition for a defined traveller group, not a universal UK closure or a direct flight ban. The later amendment chain is incomplete, so this record appears only at its documented date."

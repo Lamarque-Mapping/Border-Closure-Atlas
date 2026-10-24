@@ -9,12 +9,21 @@ Source: `source/Global_Border_Closures_Register_2016_2026.xlsx`
 Snapshot: 23 October 2026 (`border-corrections-20261023`).
 Study window: 21 October 2016–21 October 2026.
 
-The public navigation is Map / Overview / Dataset. Overview contains About &
-methods and Analysis; Dataset provides the browser reader, workbook and CSV
-exports. Legacy Analysis and record links continue to resolve. The map date
+The public navigation is Map / Overview / Analysis / Dataset. Overview gives
+the introduction and methods; Analysis has its own chart navigation. Dataset
+provides the browser reader, workbook and CSV exports. Legacy Analysis and record links continue to resolve. The map date
 button selects a month and year directly, and Cite provides the Harvard
 reference with the reader's access date. Location and national-policy sources
 have readable HTML pages, with JSON retained as an optional technical download.
+On phones, the timeline is docked to the bottom edge and contains Cite/Contact.
+
+International passenger rules use country-positioned square reference markers;
+the entry retains its precise jurisdiction, including England-only measures.
+No jurisdiction perimeter is presented as a closed internal boundary. In monthly
+views, hollow grey crossing points retain earlier evidence at approved sites.
+Neutral bilateral boundary references open explicitly associated records. These
+references do not establish later status or enter the dated selection counts,
+charts or CSV exports; coloured restriction marks retain the existing date rules.
 
 The 24 October workbook compatibility repair gives four internal table IDs
 unique values. All 55 worksheet XML files, values and formulas are unchanged.

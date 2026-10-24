@@ -58,6 +58,7 @@ function setView(view){
  document.documentElement.dataset.analysisView=currentView;
  document.title=currentView==="dataset"?"Dataset · Global Border Closures Atlas":"Analysis · Global Border Closures Atlas";
  const skip=document.querySelector(".skip");if(skip)skip.href=currentView==="dataset"?"#register":"#main";
+ if(currentView!=="dataset")scheduleSectionNavigation();
 }
 function openDataset(hash="#register",behavior="smooth"){
  setView("dataset");
@@ -114,9 +115,10 @@ function renderCharts(){
  $("codeChart").innerHTML=counts.map(function(x){return bar(x.label,x.count,n,max,"code",false);}).join("")+bar("No code assigned",blank,n,max,"code",true);
  currentCharts.codes=counts.concat({label:"No code assigned",count:blank}).map(function(x){return [x.label,x.count,n,pct(x.count,n),selected];});
  $("chartPopulationNote").textContent=n+" records · select a bar to explore";
+ $("motivationDenominatorNote").textContent="Percentages use all "+n+" selected records, including those without a category.";
  const assigned=rows.filter(e=>e.codes.length).length;
  const statuses=frequencies(rows,e=>e.codes.length?'Category assigned':e.rationale_coding_status||'No category assigned');
- $("assessmentChart").innerHTML='<div class="big-number">'+assigned+' <small>of '+n+' records have an assigned rationale category</small></div><div class="legend-rows">'+Object.entries(statuses).map(([label,count])=>legend(label,count,label==='Category assigned'?COLORS.supported:COLORS.other)).join('')+'</div><p class="figure-note">Coding records an attributed reason. It is not a claim that the reason or every closure detail has been independently verified.</p>';
+ $("assessmentChart").innerHTML='<div class="big-number">'+assigned+' <small>of '+n+' records have an assigned rationale category</small></div><div class="legend-rows">'+Object.entries(statuses).map(([label,count])=>legend(label,count,label==='Category assigned'?COLORS.supported:COLORS.other)).join('')+'</div><p class="figure-note">Each record retains the source attribution and any qualifications behind its coding.</p>';
  const coverage=[['Closed on a later reported date','operational_censored','A later report confirms closure, but a reopening date is missing.'],['Same-day interruption reported','same_day','No whole-day duration is calculated.'],['Policy in force','formal_policy','Dates when a rule applied; they do not prove that passage stopped throughout.'],['Announced closure dates','ordered_window','A planned schedule; actual enforcement is not established.'],['Repeated closures','intermittent_regime','A period with interruptions or openings, not continuous closure.']];
  const duration=rows.filter(e=>e.timing_coverage.operational_complete).length;
  $("durationChart").innerHTML='<div class="big-number">'+duration+' <small>of '+n+' records have a closure length that can be estimated</small></div><div class="legend-rows">'+legend('Exact start and end dates',rows.filter(e=>e.timing_coverage.operational_exact_complete).length,COLORS.supported,'A stricter subset of the estimated lengths above.')+legend('At least one dated observation',rows.filter(e=>e.timing_coverage.any_dated_evidence).length,COLORS.other,'A dated report need not establish the whole duration.')+legend('No dated evidence',rows.filter(e=>!e.timing_coverage.any_dated_evidence).length,'#dfe3d9')+'</div><details class="timing-more"><summary>Other kinds of timing evidence</summary>'+coverage.map(([label,key,note])=>legend(label,rows.filter(e=>e.timing_coverage[key]).length,COLORS.other,note)).join('')+'</details>';
@@ -134,8 +136,9 @@ function legend(label,count,color,note){return '<div class="legend-row"><span cl
 function renderDurationComparison(rows,population){
  const phases=METRICS.durationRows(rows),groups=METRICS.durationGroups(rows,CODES).sort((a,b)=>(b.median??-1)-(a.median??-1)||a.code.localeCompare(b.code));
  currentCharts.durationRows=phases;currentCharts.durationGroups=groups;currentCharts.durationPopulation=population;
- const parents=new Set(phases.map(p=>p.record_id)).size,uncoded=phases.filter(p=>!p.codes.length).length;
- $("durationComparisonNote").textContent=phases.length+' eligible phases from '+parents+' records. A phase is one documented period for a particular movement and location. The horizontal scale is logarithmic: the marks 1, 10, 100 and 1,000 days are equally spaced.'+(uncoded?' '+uncoded+' phase'+(uncoded===1?' has':'s have')+' no rationale label and '+(uncoded===1?'is':'are')+' not plotted.':'')+(population==='exact'&&rows.length>parents?' '+(rows.length-parents)+' records in the exact-date filter do not meet this chart’s additional reopening checks.':'');
+ const parentIDs=new Set(phases.map(p=>p.record_id)),parents=parentIDs.size,uncoded=phases.filter(p=>!p.codes.length).length;
+ const extraChecks=rows.filter(e=>e.timing_coverage.operational_exact_complete&&!parentIDs.has(e.id)).length;
+ $("durationComparisonNote").textContent=phases.length+' eligible phases from '+parents+' records. A phase is one documented period for a particular movement and location.'+(extraChecks?' '+extraChecks+' other records have exact date ranges but do not meet this chart’s further checks, including a confirmed reopening.':'')+' The horizontal scale is logarithmic: the marks 1, 10, 100 and 1,000 days are equally spaced.'+(uncoded?' '+uncoded+' phase'+(uncoded===1?' has':'s have')+' no rationale label and '+(uncoded===1?'is':'are')+' not plotted.':'');
  const maximum=Math.max(1,...phases.map(p=>p.days)),cap=[10,30,100,300,1000,3000,10000,30000].find(x=>x>=maximum)||Math.pow(10,Math.ceil(Math.log10(maximum))),position=value=>(100*Math.log10(value)/Math.log10(cap)).toFixed(3)+'%';
  const ticks=[1,10,100,1000,10000].filter(t=>t<=cap),number=value=>Number.isInteger(value)?value.toLocaleString('en-GB'):Number(value.toFixed(1)).toLocaleString('en-GB');
  const axis='<div class="distribution-axis"><span>Days · log scale</span><svg aria-hidden="true">'+ticks.map(t=>'<text x="'+position(t)+'" y="25" text-anchor="'+(t===1?'start':'middle')+'" font-size="10" fill="#65756f">'+number(t)+'</text>').join('')+'</svg><span>Median · sample</span></div>';
@@ -144,7 +147,10 @@ function renderDurationComparison(rows,population){
   const plot=g.phases?'<svg class="distribution-plot" role="img" aria-label="'+escapeHTML(description)+'"><title>'+escapeHTML(description)+'</title>'+ticks.map(t=>'<line x1="'+position(t)+'" x2="'+position(t)+'" y1="0" y2="32" stroke="#e2e9e4"/>').join('')+'<line x1="'+position(g.min)+'" x2="'+position(g.max)+'" y1="16" y2="16" stroke="#9ab0a4" stroke-width="2"/><line x1="'+position(g.q1)+'" x2="'+position(g.q3)+'" y1="16" y2="16" stroke="#709784" stroke-width="8" stroke-linecap="round"/><circle cx="'+position(g.median)+'" cy="16" r="4" fill="#244e46" stroke="#fff" stroke-width="1.2"/></svg>':'<span class="distribution-none">No eligible phases</span>';
   return '<div class="distribution-row"><span class="distribution-label">'+escapeHTML(g.code)+'</span>'+plot+'<span class="distribution-value">'+(g.phases?number(g.median)+' days':'—')+'<small>'+g.phases+' phases · '+g.records+' records</small></span></div>';
  }).join('');
- $("durationCoverageChart").innerHTML=groups.map(g=>'<div class="bar-row"><span class="bar-label">'+escapeHTML(g.code)+'</span><span class="bar-track" aria-hidden="true"><span class="bar-fill" style="width:'+(g.total?100*g.records/g.total:0)+'%"></span></span><span class="bar-value">'+(g.total?g.records+' / '+g.total+' records':'No selected records')+'<small>'+(g.total?pct(g.records,g.total):'—')+'</small></span></div>').join('');
+ const coverageGroups=[...groups].sort((a,b)=>b.total-a.total||CODES.indexOf(a.code)-CODES.indexOf(b.code));
+ const example=coverageGroups.find(g=>g.total);
+ $("durationCoverageExample").textContent=example?'For example, '+example.code+' appears in '+example.total+' selected records. Of these, '+example.records+' can contribute to the duration comparison: '+pct(example.records,example.total)+' of that category.':'No selected records are available for this comparison.';
+ $("durationCoverageChart").innerHTML='<table><caption>The categories follow the same order as the motivation chart. “Used” means a record contributes at least one phase to the duration comparison.</caption><thead><tr><th scope="col">Recorded reason</th><th scope="col">Used / category total</th><th scope="col">Share used</th></tr></thead><tbody>'+coverageGroups.map(g=>'<tr><th scope="row">'+escapeHTML(g.code)+'</th><td class="sample-total">'+(g.total?g.records+' / '+g.total+' records':'No selected records')+'</td><td>'+(g.total?pct(g.records,g.total):'—')+'</td></tr>').join('')+'</tbody></table>';
 }
 function filterFromChart(kind,value){
  $("filters").reset();
@@ -338,10 +344,36 @@ $("exportPhases").addEventListener("click",()=>withResearch('exportPhases',full=
  ...full.events.flatMap(e=>e.duration_periods.map(p=>[e.id,p.period_id,!e.quarantined,p.measure_type,p.kind,p.contested,p.scope,p.start_earliest,p.start_latest,p.endpoint_status==='last_confirmed'?'':p.end_earliest,p.endpoint_status==='last_confirmed'?'':p.end_latest,p.last_confirmed,p.minimum_days,p.maximum_days,cleanText(p.display),p.calculation_rule,p.complete_operational,p.exact_complete_operational,p.qualification,p.observed_reopening,p.endpoint_inclusion,p.reported_schedule,p.temporal_display_rule,(p.location_bindings||[]).map(b=>b['Binding decision']+': '+b['Location / marker']).join(' | '),p.source_urls.join(' | ')]))])));
 $("exportCoverage").addEventListener("click",function(){const rows=DATA.meta.timing_coverage,keys=Object.keys(rows[0]);downloadCSV('border-closures-timing-coverage.csv',[keys,...rows.map(r=>keys.map(k=>r[k]))]);});
 $("exportFontLicense").addEventListener("click",function(){download("Borderland-Sans-LICENSE.txt",JSON.parse($("fontLicense").textContent),"text/plain;charset=utf-8");});
-const observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){document.querySelectorAll(".contents nav a").forEach(function(a){a.classList.toggle("active",a.getAttribute("href")==="#"+entry.target.id);});const group=["dimensions","motivations","borderwork"].includes(entry.target.id)?"dimensions":entry.target.id;document.querySelectorAll(".topnav nav a").forEach(function(a){a.classList.toggle("active",a.getAttribute("href")==="#"+group);});}});},{rootMargin:"-15% 0px -60% 0px",threshold:0});
-document.querySelectorAll(".chapter").forEach(function(s){observer.observe(s);});
+// Keep the desktop section cue and the mobile selector in step with reading position.
+const readingSections=Array.from(document.querySelectorAll('[data-analysis-section]'));
+const sectionLinks=Array.from(document.querySelectorAll('[data-analysis-link]'));
+let sectionFrame=0;
+function markAnalysisSection(id){
+ const section=readingSections.find(node=>node.id===id);if(!section)return;
+ $("analysis-current-section").textContent=section.getAttribute('data-analysis-section');
+ if(document.activeElement!==$("analysis-section-select"))$("analysis-section-select").value=id;
+ for(const link of sectionLinks){const active=link.getAttribute('href')==='#'+id;link.classList.toggle('active',active);if(active)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');}
+}
+function updateSectionNavigation(){
+ sectionFrame=0;if(currentView==='dataset'||!document.documentElement.clientHeight)return;
+ const bar=document.querySelector('.topnav'),readingLine=(bar?bar.getBoundingClientRect().height:0)+28;
+ let current=readingSections[0];
+ for(const section of readingSections){if(section.getBoundingClientRect().top<=readingLine)current=section;else break;}
+ if(scrollY+innerHeight>=document.documentElement.scrollHeight-8)current=readingSections[readingSections.length-1];
+ if(current)markAnalysisSection(current.id);
+}
+function scheduleSectionNavigation(){
+ if(sectionFrame)return;
+ const schedule=window.requestAnimationFrame||function(callback){return setTimeout(callback,16);};
+ sectionFrame=schedule(updateSectionNavigation);
+}
+$("analysis-section-select").addEventListener('change',function(event){
+ const id=event.target.value;if(!readingSections.some(section=>section.id===id))return;
+ const hash='#'+id;replaceRoute(hash);navigateAnalysis(hash);markAnalysisSection(id);
+});
 function progress(){const available=document.documentElement.scrollHeight-innerHeight;$("readProgress").style.width=(available?100*scrollY/available:0)+"%";}
-window.addEventListener("scroll",progress,{passive:true});
+window.addEventListener("scroll",function(){progress();scheduleSectionNavigation();},{passive:true});
+window.addEventListener("resize",scheduleSectionNavigation);
 async function navigateAnalysis(hash){
  if(hash==="#methods"&&ATLAS_HOST?.show){ATLAS_HOST.show("briefing");return;}
  if(hash==="#register"||hash==="#downloads")setView("dataset");
@@ -353,7 +385,7 @@ async function navigateAnalysis(hash){
  }else{
   if(dialog.open)closeRecord();
   const target=document.getElementById(currentView==="dataset"&&hash==="#top"?"register":hash.slice(1)||"top");
-  if(target)target.scrollIntoView({behavior:"auto",block:"start"});
+  if(target){if(target.tagName==='DETAILS')target.open=true;target.scrollIntoView({behavior:"auto",block:"start"});if(currentView!=='dataset')markAnalysisSection(target.id);}
  }
 }
 window.AtlasAnalysis={navigate:navigateAnalysis,setView,getView:()=>currentView};
@@ -368,7 +400,7 @@ if(ATLAS_HOST)document.addEventListener("click",function(event){
  else if(currentView==="dataset"&&!hash.startsWith("#record-")&&hash!=="#register"){setView("overview");ATLAS_HOST.show("analysis",{analysisHash:hash});return;}
  replaceRoute(hash);navigateAnalysis(hash);
 });
-renderCharts();renderRecords();progress();
+renderCharts();renderRecords();progress();scheduleSectionNavigation();
 if(!ATLAS_HOST){setView(routeHash().startsWith("#record-")||["#register","#downloads"].includes(routeHash())?"dataset":"overview");}
 if(routeHash())navigateAnalysis(routeHash());
 if(ATLAS_HOST?.analysisReady)ATLAS_HOST.analysisReady();

@@ -40,7 +40,7 @@
       ||/^national (?:land[ /-]?(?:water )?)?(?:border|frontier)(?:s|[- ](?:passenger|entry|exit|closure|restriction|policy|regime|order))\b/i.test(text);
   }
   function scopeStyle(records=[]){
-    if(records.some(e=>e.record_kind==='national_policy'))return {broad:false,limited:false,national:true,conditionsOnly:records.every(e=>e.national_kind==='entry_conditions'),label:'National entry or departure rules'};
+    if(records.some(e=>e.record_kind==='national_policy'))return {broad:false,limited:false,national:true,conditionsOnly:records.every(e=>e.national_kind==='entry_conditions'),label:'International passenger rules'};
     const scopes=records.flatMap(e=>e.duration_periods?.length?e.duration_periods.map(p=>p.scope||''):[e.scope||'']);
     const broad=scopes.length>0&&scopes.every(broadScope);
     return {broad,limited:!broad,label:broad?'Border-wide scope stated':'Limited or uncertain geographical scope'};
@@ -50,8 +50,8 @@
   function symbolStyle(properties={},options={}){
     const role=properties.display_role||'crossing_reference',national=role==='national_policy',country=role==='country_context'||national,frontier=role==='frontier_context',context=country||frontier,selected=Boolean(options.selected);
     const rationale=options.rationale||rationaleStyle(options.records,options.rationaleFilter),scope=options.scope||scopeStyle(options.records);
-    const radius=pointDiameter(options.zoom)/2;
-    return {role,country,national,frontier,context,scope,colour:rationale.colour,rationale,selected,approximate:/approx|locality|town|centroid|indicative|unresolved/i.test(String(properties.precision||'')),radius,pointLength:restrictionDotLength,pointStroke:'none',pointStrokeWidth:0,hitRadius:22,selectedHaloRadius:radius+3,width:selected?3.8:national?1.8:country?1.5:restrictionWidth,opacity:national?.85:country?.55:1,dash:national?(scope.conditionsOnly?[2,5]:[]):country?[2,5]:scope.limited?[restrictionDotLength,7]:[],fillOpacity:0};
+    const radius=national?5.5:pointDiameter(options.zoom)/2;
+    return {role,country,national,frontier,context,scope,colour:rationale.colour,rationale,selected,approximate:/approx|locality|town|centroid|indicative|unresolved/i.test(String(properties.precision||'')),radius,pointShape:national?'square':'crossing',pointLength:national?0:restrictionDotLength,pointStroke:national?rationale.colour:'none',pointStrokeWidth:national?1.8:0,pointFill:national&&scope.conditionsOnly?colours.land:rationale.colour,hitRadius:22,selectedHaloRadius:radius+3,width:selected?3.8:national?1.8:country?1.5:restrictionWidth,opacity:national?.85:country?.55:1,dash:national?[]:country?[2,5]:scope.limited?[restrictionDotLength,7]:[],fillOpacity:0};
   }
   const cache=new WeakMap();
   // Area is used only to order and space reference labels. It is not a
