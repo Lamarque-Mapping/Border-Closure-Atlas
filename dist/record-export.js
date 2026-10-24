@@ -35,8 +35,8 @@
       locationLabel?'Location: '+locationLabel:'',state.precision?'Location detail: '+state.precision:'',state.measureType?'Timing evidence: '+state.measureType:'',
       state.includeExcluded?'Includes excluded records':''].filter(Boolean).join('; ');
   }
-  function build({records,state,locationLabel='',cleanText=text,recordURL=id=>'https://border-closures-atlas.lamarque.chatgpt.site/#analysis/record-'+encodeURIComponent(id)}){
-    const headers=['Record ID','Closure','Countries','Named crossings','Geographical scope','Affected movement','Direction','Coded rationale','Documented dates','Duration (days)','Timing notes','Context','Stated justification','Exceptions','Uncertainty','Source names and titles','Source links','Full record link','Region','Current review','Excluded record','Map filters','Record type','Linked land records'];
+  function build({records,state,locationLabel='',cleanText=text,mappingStatus=()=>'',recordURL=id=>'https://border-closures-atlas.lamarque.chatgpt.site/#analysis/record-'+encodeURIComponent(id)}){
+    const headers=['Record ID','Closure','Countries','Named crossings','Geographical scope','Affected movement','Direction','Coded rationale','Documented dates','Duration (days)','Timing notes','Context','Stated justification','Exceptions','Uncertainty','Source names and titles','Source links','Full record link','Region','Current review','Excluded record','Map filters','Record type','Linked land records','Map location status'];
     const filters=filterDescription(state,locationLabel);
     const rows=records.map(record=>{
       const clean=(value,field)=>text(cleanText(value,field,record.id));
@@ -45,7 +45,7 @@
       const timing=periods.map(p=>[p.period_id,p.scope,p.basis,p.qualification,'Observed reopening: '+p.observed_reopening,'Endpoint inclusion: '+p.endpoint_inclusion,p.reported_schedule,p.temporal_display_rule,p.map_scope_note].filter(Boolean).join(' · ')).join('\n\n');
       return [record.id,clean(record.title||record.id,'title'),text(record.countries),clean(record.crossings,'Crossings'),clean(record.scope,'scope'),clean(record.movement,'Affected movement'),clean(record.direction,'Direction'),text(record.rationales)||record.rationale_coding_status||'No assigned category',
         periods.length?periods.map(periodDates).join('\n'):'Not established',duration,clean(timing||record.current_timing,'duration'),clean(record.context,'Context'),clean(record.official_rationale,'Stated justification'),clean(record.exceptions,'Exceptions'),clean(record.uncertainty,'uncertainty'),
-        linked.map(s=>[s.publisher||new URL(s.url).hostname,s.title,s.publication_date].filter(Boolean).join(' · ')).join('\n'),linked.map(s=>s.url).join('\n'),recordURL(record.id),record.region,record.current_review?.outcome,record.quarantined||record.excluded_from_map?'Yes':'No',filters,record.record_kind==='national_policy'?record.record_type:'Land-border record',text(record.linked_land_ids)];
+        linked.map(s=>[s.publisher||new URL(s.url).hostname,s.title,s.publication_date].filter(Boolean).join(' · ')).join('\n'),linked.map(s=>s.url).join('\n'),recordURL(record.id),record.region,record.current_review?.outcome,record.quarantined||record.excluded_from_map?'Yes':'No',filters,record.record_kind==='national_policy'?record.record_type:'Land-border record',text(record.linked_land_ids),mappingStatus(record)];
     });
     const label=String(state.query?.trim()||locationLabel||state.continent||'filtered').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,60)||'filtered';
     return {filename:'border-closures-'+label+'-'+records.length+'-records.csv',content:'\ufeff'+[headers,...rows].map(row=>row.map(cell).join(',')).join('\r\n')+'\r\n',type:'text/csv;charset=utf-8',count:records.length};

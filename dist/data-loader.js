@@ -15,6 +15,8 @@
    }
    delete data.geometry_pool;
   }
+  if(settings.crossingReview==='required'&&!window.AtlasCrossings)throw Error('Crossing locations could not be loaded. Please reload to show the map accurately.');
+  if(window.AtlasCrossings)data=window.AtlasCrossings.attach(data);
   return window.AtlasNational?window.AtlasNational.attach(data):data;
  }
  function ready(){

@@ -5,13 +5,17 @@ const plain=value=>JSON.parse(JSON.stringify(value));
 const app=fs.readFileSync(root+'/app.js','utf8');
 let mobile=false,canvas;
 function canvasContext(){
- const scales=[],points=[],stack=[];let matrix={x:1,y:1,left:0,top:0};
- const api={scales,points,measureText:text=>({width:String(text).length*7}),
+ const scales=[],points=[],arcs=[],texts=[],strokes=[],stack=[];let matrix={x:1,y:1,left:0,top:0},currentPath=[];
+ const api={scales,points,arcs,texts,strokes,measureText:text=>({width:String(text).length*7}),
   save(){stack.push({...matrix})},restore(){matrix=stack.pop()},
   scale(x,y){scales.push([x,y]);matrix.x*=x;matrix.y*=y},
   translate(x,y){matrix.left+=x*matrix.x;matrix.top+=y*matrix.y},
-  moveTo(x,y){points.push([matrix.left+x*matrix.x,matrix.top+y*matrix.y])},
-  lineTo(x,y){points.push([matrix.left+x*matrix.x,matrix.top+y*matrix.y])}};
+  beginPath(){currentPath=[]},
+  moveTo(x,y){const p=[matrix.left+x*matrix.x,matrix.top+y*matrix.y];points.push(p);currentPath.push(p)},
+  lineTo(x,y){const p=[matrix.left+x*matrix.x,matrix.top+y*matrix.y];points.push(p);currentPath.push(p)},
+  stroke(){strokes.push({points:currentPath.slice(),width:api.lineWidth*matrix.x,rawWidth:api.lineWidth,cap:api.lineCap,colour:api.strokeStyle})},
+  arc(x,y,radius){arcs.push({x:matrix.left+x*matrix.x,y:matrix.top+y*matrix.y,radius:radius*matrix.x,rawRadius:radius})},
+  fillText(text){texts.push(String(text))}};
  return new Proxy(api,{get:(target,key)=>key in target?target[key]:()=>{}});
 }
 const w={BorderCartography:K,BorderCore:C,matchMedia:()=>({matches:mobile})};
@@ -70,6 +74,48 @@ assert.equal(full.size.x,1366,'direct capture without a viewport retains the who
 assert.throws(()=>E.capture({map:laptop,data,viewport:{x:0,y:0,width:0,height:600}}),/visible map area/);
 assert(E.notes({...cut,state:{mode:'all'},events:[],references:[]},'Map').includes(JSON.stringify(cut.bounds)),'downloaded notes describe the cropped bounds');
 
+// A named crossing repeats exactly one mark of a dotted border, at every zoom.
+// The exported explanation must not imply a whole frontier.
+const pointMap=makeMap(900,600),pointLL=pointMap.containerPointToLatLng([450,300]);
+const pointFeature={type:'Feature',properties:{location_id:'named-post',name:'Named post',precision:'approximate_crossing_area',display_role:'crossing_reference',source_note:'Source identifies the crossing area.',sources:[{url:'https://www.openstreetmap.org/node/1'}]},geometry:{type:'Point',coordinates:[pointLL.lng,pointLL.lat]}};
+assert(K.isMapReference(pointFeature));assert(!K.isLineReference(pointFeature));
+assert(!K.isMapReference({geometry:{type:'MultiPoint',coordinates:[]}}),'separate crossing bindings use separate points');
+const limitedLine=K.symbolStyle({display_role:'frontier_context'},{records:[{scope:'Selected crossings'}]});
+assert.equal(limitedLine.width,2.7);assert.deepEqual(limitedLine.dash,[1,7],'existing dotted border pattern is unchanged');
+for(const zoom of [1,3.99,4,6.99,7,15]){
+ const single=K.symbolStyle(pointFeature.properties,{zoom,count:1}),many=K.symbolStyle(pointFeature.properties,{zoom,count:700,selected:true});
+ assert.equal(single.radius*2,limitedLine.width);assert.equal(single.pointLength,limitedLine.dash[0]);assert.equal(many.radius,single.radius,'neither zoom, record count nor selection enlarges the dot');
+ assert.equal(K.pointDiameter(zoom),2.7);assert.equal(single.pointStrokeWidth,0,'there is no extra white outline');assert.equal(single.pointStroke,'none');assert(single.hitRadius>=22,'small dot retains a phone-sized invisible target');
+}
+const pointEvent={id:'point-event',title:'Crossing restriction',rationales:['Environment and resource management'],duration_periods:[{period_id:'point-phase',scope:'Named post road freight',kind:'closed_interval',start_earliest:'2020-01-01',start_latest:'2020-01-01',end_earliest:'2020-02-01',end_latest:'2020-02-01'},{period_id:'other-phase',scope:'All borders'}]};
+const savedCore=w.BorderCore;
+w.BorderCore={...C,recordsForLocation(items,id,source,state){assert.equal(id,'named-post');assert.equal(items[0].id,'point-event');assert.equal(state.mode,'all');return items.map(e=>({...e,duration_periods:e.duration_periods.filter(p=>p.period_id==='point-phase')}));}};
+const awaitingEvent={id:'awaiting-event',duration_periods:[{period_id:'awaiting-phase',scope:'Another named crossing'}]};
+const pointData={...data,locations:{type:'FeatureCollection',features:[pointFeature]},crossing_map:{phases:{'point-phase':{record_id:'point-event',category:'single_site',site_ids:['named-post']},'other-phase':{record_id:'point-event',category:'single_site',site_ids:[]},'awaiting-phase':{record_id:'awaiting-event',category:'single_site',site_ids:[]}},undated:{}}};
+const pointSnapshot=E.capture({map:pointMap,data:pointData,visible:[pointEvent,awaitingEvent],locationEvents:new Map([['named-post',[pointEvent]]]),state:{mode:'all'}});
+w.BorderCore=savedCore;
+assert.equal(pointSnapshot.references.length,1);assert.equal(pointSnapshot.references[0].feature.geometry.type,'Point');
+assert.deepEqual(plain(pointSnapshot.references[0].phases),[{record_id:'point-event',phase_ids:['point-phase']}],'snapshot retains only the phases bound to this point');
+assert.equal(pointSnapshot.references[0].rationale.colour,K.rationaleStyle([pointEvent]).colour);
+const pointRender=E.render(pointSnapshot,'Crossing map'),pointFactor=pointRender.scale*pointRender.frame.w/pointSnapshot.size.x;
+const pointStroke=canvas.context.strokes[0];
+assert.equal(pointStroke.cap,'round');assert.equal(pointStroke.rawWidth,limitedLine.width);assert.equal(pointStroke.colour,pointSnapshot.references[0].rationale.colour);
+near(pointStroke.points[1][0]-pointStroke.points[0][0],limitedLine.dash[0]*pointFactor,'export draws exactly one existing border dash');
+near(pointStroke.points[1][1]-pointStroke.points[0][1],0,'standalone dash is horizontal');
+near(pointStroke.width,2.7*pointFactor,'standalone mark height equals the normal border line width');
+near(pointStroke.points[1][0]-pointStroke.points[0][0]+pointStroke.width,3.7*pointFactor,'round caps give the same 3.7 by 2.7 pixel footprint');
+assert(canvas.context.texts.includes('Named crossing'),'PNG key explains dots');
+assert(!canvas.context.texts.includes('Limited or uncertain scope'),'a point-only view does not advertise a dotted border line');
+assert(!canvas.context.texts.includes('1'),'no numbered count bubble is drawn');
+const pointNotes=E.notes({...pointSnapshot,events:[]},'Crossing map');
+assert(pointNotes.includes('Mapped phases: point-event — point-phase'));
+assert(pointNotes.includes('approximate crossing area'));
+assert(pointNotes.includes('does not show duration, severity or record count'));
+assert(!pointNotes.includes('Crossing points are not displayed'));
+assert.deepEqual(plain(pointSnapshot.mappingSummary),{pendingRecords:2,unmappedRecords:1},'pending summary counts partially and fully unmapped records separately');
+assert(pointNotes.includes('Locations awaiting checks: 2 records, including 1 with no map position'));
+assert(E.notes({...pointSnapshot,state:{mode:'all',precision:'unlocated'},events:[]},'Crossing map').includes('Locations awaiting checks'));
+
 // Exercise the real save handler: capture before asynchronous evidence loading,
 // without collapsing or resizing the map as the dialog opens.
 const nodes=new Map(),record={id:'example'},originalViewport=layout(laptop,{panelWidth:292});
@@ -83,5 +129,6 @@ vm.createContext(context);vm.runInContext(app.slice(app.indexOf("  $('save-view-
  context.exportViewport=()=>({x:0,y:0,width:10,height:10});context.visible=[];
  complete({events:[{...record,title:'Full evidence'}]});await task;
  assert.deepEqual(plain(opened.size),{x:originalViewport.width,y:originalViewport.height});assert.equal(opened.events[0].title,'Full evidence');assert.equal(context.$('save-view-button').disabled,false);
- console.log('Map export passed: visible-area crop, eight viewport/projection cases, uniform PNG scaling, label alignment, cropped bounds/notes, and stable capture during asynchronous loading.');
+ console.log('Map export passed: visible-area crop, eight viewport/projection cases, uniform PNG scaling, label alignment, cropped bounds/notes, stable capture during asynchronous loading, phase-specific crossing points, points matching dotted border marks at every zoom, and point source notes.');
 })().catch(error=>{console.error(error);process.exitCode=1});
+

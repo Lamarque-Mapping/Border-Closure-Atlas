@@ -10,8 +10,8 @@
   const geographyIndexes=new WeakMap();
   function geographyIndex(data){
     let index=geographyIndexes.get(data);
-    if(!index||index.linksSource!==data.links||index.contextSource!==data.crossing_contexts){
-      index={linksSource:data.links,contextSource:data.crossing_contexts,links:new Map(),contexts:new Map()};
+    if(!index||index.linksSource!==data.links||index.contextSource!==data.crossing_contexts||index.locationsSource!==data.locations||index.contextLocationsSource!==data.context_locations){
+      index={linksSource:data.links,contextSource:data.crossing_contexts,locationsSource:data.locations,contextLocationsSource:data.context_locations,links:new Map(),contexts:new Map(),features:new Map(locationFeatures(data).map(f=>[f.properties?.location_id,f]))};
       for(const l of array(data.links)){if(!index.links.has(l.event_id))index.links.set(l.event_id,[]);index.links.get(l.event_id).push(l.location_id);}
       for(const l of array(data.crossing_contexts)){if(!index.contexts.has(l.location_id))index.contexts.set(l.location_id,[]);index.contexts.get(l.location_id).push(l.context_location_id);}
       geographyIndexes.set(data,index);
@@ -76,6 +76,35 @@
   function periodsForView(e,state={}){
     return (state.mode==='intervals'?periods(e,state.measureType):array(e.duration_periods).filter(p=>!state.measureType||p.measure_type===state.measureType)).filter(p=>state.mode!=='intervals'||phaseTemporalState(p,state.month)!=='none');
   }
+  function mappingRows(e,data,state={}){
+    if(excluded(e)||e.record_kind==='national_policy'||!data.crossing_map)return [];
+    const phases=periodsForView(e,state);
+    if(phases.length)return phases.map(p=>data.crossing_map.phases[p.period_id]).filter(row=>row?.record_id===e.id);
+    return !array(e.duration_periods).length&&data.crossing_map.undated[e.id]?[data.crossing_map.undated[e.id]]:[];
+  }
+  function phaseLocationIDs(e,row,data){
+    if(!row)return [];
+    // Only a wider-scope phase can use the existing border reference. A named
+    // crossing with no approved position must never fall back to that line.
+    if(row.category!=='wider_border')return array(row.site_ids);
+    const features=geographyIndex(data).features;
+    return displayLocationsFor(e,data).filter(id=>/^(?:Multi)?(?:LineString|Polygon)$/.test(features.get(id)?.geometry?.type||''));
+  }
+  function mapLocationsFor(e,data,state={}){
+    if(excluded(e))return [];
+    if(e.record_kind==='national_policy'||!data.crossing_map)return displayLocationsFor(e,data);
+    return [...new Set(mappingRows(e,data,state).flatMap(row=>phaseLocationIDs(e,row,data)))];
+  }
+  function recordsForLocation(records,id,data,state={}){
+    return records.filter(e=>mapLocationsFor(e,data,state).includes(id)).map(e=>({...e,duration_periods:periodsForView(e,state).filter(p=>e.record_kind==='national_policy'||!data.crossing_map||phaseLocationIDs(e,data.crossing_map.phases[p.period_id],data).includes(id))}));
+  }
+  function mappingStatus(e,data,state={}){
+    const ids=mapLocationsFor(e,data,state),features=geographyIndex(data).features;
+    const pointCount=ids.filter(id=>features.get(id)?.geometry?.type==='Point').length,lineCount=ids.length-pointCount;
+    const rows=mappingRows(e,data,state),pending=!excluded(e)&&(rows.some(row=>row.partial||!phaseLocationIDs(e,row,data).length)||!ids.length);
+    const label=excluded(e)?'Excluded · list only':e.record_kind==='national_policy'?'National rule mapped':!ids.length?'Location awaiting mapping':pending?'Some locations awaiting mapping':pointCount&&lineCount?'Crossings and wider border rules':pointCount?'Crossing'+(pointCount===1?'':'s')+' mapped':'Wider border rule mapped';
+    return {ids,mapped:ids.length>0,pending,pointCount,lineCount,label};
+  }
   function temporalLabel(state){return {supported:'Restriction reported this month',possible:'Dates may overlap this month',observation:'Reported on specific dates',policy:'Policy in force',ordered:'Announced closure dates',intermittent:'Repeated closures',held:'Dates disputed',none:'No evidence dated to this month'}[state]||'Dated evidence';}
   function matchesTime(e,mode,month,measureType=''){
     if(mode==='all')return true;
@@ -85,7 +114,7 @@
     return false;
   }
   function precision(e){if(excluded(e))return 'excluded';return e.mapping_precision||(array(e.location_ids).length?'crossing_reference':'unlocated');}
-  function matchesPrecision(e,value){if(!value)return true;const p=precision(e);if(value==='context')return p==='frontier_context'||p==='country_context';if(value==='crossing_reference')return p==='crossing_reference'||p==='policy_coverage'||p==='national_policy';return p===value;}
+  function matchesPrecision(e,value,data,state){if(!value)return true;if(data?.crossing_map){const status=mappingStatus(e,data,state);if(value==='unlocated')return status.pending;if(value==='context')return status.lineCount>0;if(value==='crossing_reference')return status.pointCount>0||e.record_kind==='national_policy';}const p=precision(e);if(value==='context')return p==='frontier_context'||p==='country_context';if(value==='crossing_reference')return p==='crossing_reference'||p==='policy_coverage'||p==='national_policy';return p===value;}
   function availableContinents(){return [...CONTINENTS];}
   function continentCounts(data,includeExcluded=false){const names=availableContinents(data);const counts={World:0,...Object.fromEntries(names.map(c=>[c,0]))};for(const e of data.events){if(excluded(e)&&!includeExcluded)continue;counts.World++;for(const c of new Set(array(e.continents)))if(names.includes(c))counts[c]++;}return counts;}
   function validate(data){
@@ -98,9 +127,9 @@
   }
   function filterEvents(data,state){
     const q=String(state.query||'').trim().toLowerCase();
-    return data.events.filter(e=>!excluded(e)||(state.includeExcluded===true&&state.mode==='all')).filter(e=>!state.continent||array(e.continents).includes(state.continent)).filter(e=>!state.region||e.region===state.region).filter(e=>!state.rationale||array(e.rationales).includes(state.rationale)).filter(e=>matchesPrecision(e,state.precision)).filter(e=>!q||[e.id,e.title,e.region,e.scope,e.crossings,e.movement,e.direction,...array(e.countries),...array(e.rationales)].join(' ').toLowerCase().includes(q)).filter(e=>!state.location||displayLocationsFor(e,data).includes(state.location)).filter(e=>!state.measureType||(state.mode==='all'?array(e.duration_periods).some(p=>p.measure_type===state.measureType):periods(e,state.measureType).length)).filter(e=>matchesTime(e,state.mode,state.month,state.measureType));
+    return data.events.filter(e=>!excluded(e)||(state.includeExcluded===true&&state.mode==='all')).filter(e=>!state.continent||array(e.continents).includes(state.continent)).filter(e=>!state.region||e.region===state.region).filter(e=>!state.rationale||array(e.rationales).includes(state.rationale)).filter(e=>matchesPrecision(e,state.precision,data,state)).filter(e=>!q||[e.id,e.title,e.region,e.scope,e.crossings,e.movement,e.direction,...array(e.countries),...array(e.rationales)].join(' ').toLowerCase().includes(q)).filter(e=>!state.location||mapLocationsFor(e,data,state).includes(state.location)).filter(e=>!state.measureType||(state.mode==='all'?array(e.duration_periods).some(p=>p.measure_type===state.measureType):periods(e,state.measureType).length)).filter(e=>matchesTime(e,state.mode,state.month,state.measureType));
   }
-  const api={array,CONTINENTS,monthOrdinal,monthISO,day,quarantined,excluded,locationsFor,locationFeatures,contextLocationsFor,displayLocationsFor,periodEvidenceDates,validPeriod,periods,periodsForView,measureLabel,phaseTemporalState,temporalStates,temporalState,temporalLabel,intervalEligible,matchesTime,precision,matchesPrecision,availableContinents,continentCounts,validate,filterEvents};
+  const api={array,CONTINENTS,monthOrdinal,monthISO,day,quarantined,excluded,locationsFor,locationFeatures,contextLocationsFor,displayLocationsFor,mapLocationsFor,mappingRows,recordsForLocation,mappingStatus,periodEvidenceDates,validPeriod,periods,periodsForView,measureLabel,phaseTemporalState,temporalStates,temporalState,temporalLabel,intervalEligible,matchesTime,precision,matchesPrecision,availableContinents,continentCounts,validate,filterEvents};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.BorderCore=api;
 })(typeof window!=='undefined'?window:globalThis);
 

@@ -7,7 +7,7 @@
   <title>Border closures · Global atlas</title>
   <link rel="stylesheet" href="vendor/leaflet.css">
   <link rel="stylesheet" href="style.css?v=20261023-views">
-  <link rel="stylesheet" href="controls.css?v=20261024-analysis-fast">
+  <link rel="stylesheet" href="controls.css?v=20261024-crossing-line-dots">
 </head>
 <body class="atlas-pending">
   <a class="skip-link" href="#search">Skip to map controls</a>
@@ -47,7 +47,7 @@
           <div class="filter-grid"><label>Region<select id="region"><option value="">All regions</option></select></label><label>Coded Rationale<select id="rationale"><option value="">All coded rationales</option></select></label></div>
           <label class="chronology-filter">Timing evidence<select id="measure-type"><option value="">All evidence types</option><option value="operational_spell">Observed closure</option><option value="formal_policy_period">Policy in force</option><option value="ordered_window">Announced closure dates</option><option value="intermittent_regime">Repeated closures</option></select></label>
           <p class="coding-note">Rationale coding is interpretive and necessarily imperfect. <button class="text-button" id="coding-note-button">About coding</button></p>
-          <details class="filter-details"><summary>Map detail &amp; other records</summary><div class="geography-controls"><label>Location detail<select id="precision"><option value="">All levels of detail</option><option value="crossing_reference">Sourced crossing / policy area</option><option value="context">Border or country reference</option><option value="unlocated">Without a mapped location</option></select></label><label class="checkbox-label"><input type="checkbox" id="include-excluded"> Include excluded records <span id="excluded-count"></span></label><span class="excluded-note" id="excluded-note">Excluded records appear in the list only.</span></div></details>
+          <details class="filter-details"><summary>Map detail &amp; other records</summary><div class="geography-controls"><label>Location detail<select id="precision"><option value="">All levels of detail</option><option value="crossing_reference">Crossing points / national rules</option><option value="context">Wider border references</option><option value="unlocated">Locations awaiting checks</option></select></label><label class="checkbox-label"><input type="checkbox" id="include-excluded"> Include excluded records <span id="excluded-count"></span></label><span class="excluded-note" id="excluded-note">Excluded records appear in the list only.</span></div></details>
           </details>
           <p id="filter-summary" class="active-filters" hidden></p>
           <div class="result-summary"><div><strong id="record-count">—</strong> <span id="count-label">records</span></div><span id="mapped-count"></span></div>
@@ -60,7 +60,7 @@
         <article id="detail-panel" hidden><button class="back-button" id="back-button">← All matching records</button><div id="event-detail"></div></article>
         </div>
       </div>
-      <details class="map-key" id="map-key" open><summary>Map key</summary><div class="map-key-content"><div class="map-legend rationale-legend" id="rationale-legend" aria-label="Rationale colours"></div><div class="map-legend line-type-legend"><span><i class="legend-line broad"></i>Border-wide scope stated</span><span><i class="legend-line limited"></i>Limited or uncertain scope</span><span><i class="legend-area national-ban"></i>National entry/departure ban</span><span><i class="legend-area national-conditions"></i>Entry conditions only</span><span><i class="legend-line country"></i>Country reference outline</span><span><i class="legend-line possible"></i>Possible date overlap</span></div><p class="map-disclaimer">Colour shows the recorded reason. Solid country outlines show entry or departure bans; dotted country outlines show entry conditions. Border lines locate the record. Read it for the affected crossings, travellers and exceptions.</p></div></details>
+      <details class="map-key" id="map-key" open><summary>Map key</summary><div class="map-key-content"><div class="map-legend rationale-legend" id="rationale-legend" aria-label="Rationale colours"></div><div class="map-legend line-type-legend"><span><i class="legend-crossing"></i>Named crossing</span><span><i class="legend-line broad"></i>Border-wide scope stated</span><span><i class="legend-line limited"></i>Wider rule · extent uncertain</span><span><i class="legend-area national-ban"></i>National entry/departure ban</span><span><i class="legend-area national-conditions"></i>Entry conditions only</span><span><i class="legend-line country"></i>Country reference outline</span><span><i class="legend-line possible"></i>Possible date overlap</span></div><p class="map-disclaimer">Colour shows the recorded reason. Dots locate named crossings; their size does not show duration or severity. Lines show wider rules. Locations awaiting checks remain in the records. Unmarked does not necessarily mean open.</p></div></details>
       <footer class="panel-footer"><button class="quiet" id="fit-button" title="Show all matching locations">Fit records</button><button class="quiet save-button" id="save-view-button" aria-label="Save map view as PNG" title="Save the current map as a PNG image">Save view</button><span class="sidebar-credit">Mapping by Hugh Lamarque <span aria-hidden="true">·</span> <a class="credit-contact" href="mailto:hugh.lamarque@gmail.com" aria-label="Email Hugh Lamarque">Contact</a></span></footer>
     </aside>
     <div class="map-caption">Mapping by Hugh Lamarque <span aria-hidden="true">·</span> <a class="credit-contact" href="mailto:hugh.lamarque@gmail.com" aria-label="Email Hugh Lamarque">Contact</a></div>
@@ -88,7 +88,7 @@
     <div id="release-method" class="coverage-note"></div>
     <div class="briefing-grid">
       <section><h3>What does the dataset cover?</h3><p>The dataset describes restrictions at land borders and international river ferries. A record can cover one crossing, several crossings or a wider rule. It may include several stages as restrictions changed.</p><p>Routine overnight opening hours, individual visa refusals and checks that allow passage are excluded.</p></section>
-      <section><h3>How should I read the map?</h3><p>Colour shows the recorded reason for a restriction. Along a land border, a solid line means the sources describe a restriction across that border. A dotted line means only some crossings were affected, or the extent is unclear.</p><p>The lines locate the records; they do not trace every closed section. Read each record for the affected people, goods, routes and exceptions. Unmarked does not necessarily mean open.</p></section>
+      <section><h3>How should I read the map?</h3><p>Colour shows the recorded reason for a restriction. Dots mark named crossings, using the same small symbols as the dotted border lines. Their size does not show duration, severity or the number of records.</p><p>Lines are reserved for wider restrictions. A solid line means border-wide scope is stated; a dotted line means the extent of a wider rule is limited or uncertain. Locations are matched to each dated stage, so one record can change from a line to a point as its scope changes.</p><p>Crossing positions can be approximate. A site without a sufficiently checked position stays in search, counts and downloads, without a whole-border line in its place. Read each record for the affected people, goods, routes and exceptions. Unmarked does not necessarily mean open.</p><p><a href="downloads/crossing-map-review.json" download>Download the location review and sources</a></p></section>
       <section><h3>What do the dates mean?</h3><p><strong>Observed closure</strong> means a source reports that passage was stopped or restricted. <strong>Policy in force</strong> gives the dates of a rule. <strong>Announced closure dates</strong> come from a planned schedule. <strong>Repeated closures</strong> describes a period with closures and possible openings.</p><p>A record can appear in a month without covering every day of it. When the evidence gives only individual dates, or dates are disputed, the map shows those dates without filling the gaps. A last report of closure is not treated as a reopening date. Missing end dates are not extended to the present.</p><p>Days are calculated from recorded calendar dates. Same-day closures have no whole-day total; overlapping periods should not be added together.</p></section>
       <section id="rationale-coding"><h3>How are the reasons grouped?</h3><p>The categories, labelled “coded rationale” in the records, summarise reasons given in the sources. More than one category can apply to a record. An official explanation is recorded as such; it may not explain every reason for a closure.</p><p>Grey means no category has been assigned. This can reflect missing evidence or a reason that does not fit the categories.</p><p>Coverage varies by place, time and available sources. The charts describe the records collected. They do not measure how often closures happen worldwide. The duration charts use only land-border records with sufficiently clear dates and reopening evidence.</p></section>
       <section><h3>How do I find and download records?</h3><p>Search looks across all recorded dates. After searching, you can use <strong>Map view</strong> to select restrictions recorded in a month, closures beginning in that month, or all records.</p><p>Click a line or record for a summary, dates and source links. <strong>Read all records</strong> opens a wider reading view. <strong>Download CSV</strong> saves every record matching your filters in a spreadsheet. <strong>Save view</strong> saves an image of the map and its key.</p></section>
@@ -102,17 +102,18 @@
   <script src="national-data.js?v=20261024-outline-methods" defer></script>
   <script src="england-geometry.js?v=20261024-outline-methods" defer></script>
   <script src="national.js?v=20261024-outline-methods" defer></script>
-  <script src="data-loader.js?v=20261024-analysis-fast" data-map-src="map-data.js?v=73c85879d0e66a1ec93e2576" data-analysis-src="analysis-data.json?v=a7f862a1538df35c028dcf98" data-source-sha="f96ad671372e6fb9c1afd564373d954c717f4bf809b75a757b48f54ee08ca024" defer></script>
+  <script src="crossing-geography.js?v=20261024-crossing-line-dots" defer></script>
+  <script src="data-loader.js?v=20261024-crossing-line-dots" data-crossing-review="required" data-map-src="map-data.js?v=73c85879d0e66a1ec93e2576" data-analysis-src="analysis-data.json?v=a7f862a1538df35c028dcf98" data-source-sha="f96ad671372e6fb9c1afd564373d954c717f4bf809b75a757b48f54ee08ca024" defer></script>
   <script src="navigation.js?v=20261024-analysis-fast" defer></script>
   <script src="startup.js?v=20261024-analysis-fast" defer></script>
   <script src="vendor/leaflet.js" defer></script>
-  <script src="cartography.js?v=20261024-outline-methods" defer></script>
-  <script src="core.js?v=20261024-outline-methods" defer></script>
+  <script src="cartography.js?v=20261024-crossing-line-dots" defer></script>
+  <script src="core.js?v=20261024-crossing-line-dots" defer></script>
   <script src="public-text.js" defer></script>
   <script src="record-summary.js?v=20261024-outline-methods" defer></script>
-  <script src="export.js?v=20261024-outline-methods" defer></script>
-  <script src="record-export.js?v=20261024-outline-methods" defer></script>
-  <script src="app.js?v=20261024-analysis-fast" defer></script>
+  <script src="export.js?v=20261024-crossing-line-dots" defer></script>
+  <script src="record-export.js?v=20261024-crossing-line-dots" defer></script>
+  <script src="app.js?v=20261024-crossing-line-dots" defer></script>
 </body>
 </html>
 

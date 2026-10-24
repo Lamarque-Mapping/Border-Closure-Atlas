@@ -16,8 +16,14 @@
     {code:'__uncoded',label:'No assigned category',colour:'#92999e'}
   ].map(Object.freeze));
   const rationaleByCode=new Map(rationaleKey.map(item=>[item.code,item]));
-  // Crossing coordinates remain in the research data; only linework is displayed.
+  // A point is eligible only after its phase-to-location binding has been
+  // resolved by BorderCore; this helper describes geometry, not evidence.
   function isLineReference(feature){return /^(?:Multi)?(?:LineString|Polygon)$/.test(feature?.geometry?.type||'');}
+  function isMapReference(feature){return feature?.geometry?.type==='Point'||isLineReference(feature);}
+  // A standalone crossing repeats one mark from the existing dotted border:
+  // 1 px of line with round caps at 2.7 px width (3.7 by 2.7 px overall).
+  const restrictionWidth=2.7,restrictionDotLength=1;
+  function pointDiameter(){return restrictionWidth;}
   function rationaleStyle(records=[],filter=''){
     const codes=[...new Set(records.flatMap(e=>Array.isArray(e.rationales)?e.rationales:[]))];
     const key=filter&&codes.includes(filter)?filter:codes.length===1?codes[0]:codes.length>1?'__multiple':'__uncoded';
@@ -44,7 +50,8 @@
   function symbolStyle(properties={},options={}){
     const role=properties.display_role||'crossing_reference',national=role==='national_policy',country=role==='country_context'||national,frontier=role==='frontier_context',context=country||frontier,selected=Boolean(options.selected);
     const rationale=options.rationale||rationaleStyle(options.records,options.rationaleFilter),scope=options.scope||scopeStyle(options.records);
-    return {role,country,national,frontier,context,scope,colour:rationale.colour,rationale,selected,approximate:/approx|locality|town|centroid|indicative|unresolved/i.test(String(properties.precision||'')),radius:(options.count>99?11:options.count>1?10:5.5)+(selected?1:0),width:selected?3.8:national?1.8:country?1.5:2.7,opacity:national?.85:country?.55:1,dash:national?(scope.conditionsOnly?[2,5]:[]):country?[2,5]:scope.limited?[1,7]:[],fillOpacity:0};
+    const radius=pointDiameter(options.zoom)/2;
+    return {role,country,national,frontier,context,scope,colour:rationale.colour,rationale,selected,approximate:/approx|locality|town|centroid|indicative|unresolved/i.test(String(properties.precision||'')),radius,pointLength:restrictionDotLength,pointStroke:'none',pointStrokeWidth:0,hitRadius:22,selectedHaloRadius:radius+3,width:selected?3.8:national?1.8:country?1.5:restrictionWidth,opacity:national?.85:country?.55:1,dash:national?(scope.conditionsOnly?[2,5]:[]):country?[2,5]:scope.limited?[restrictionDotLength,7]:[],fillOpacity:0};
   }
   const cache=new WeakMap();
   // Area is used only to order and space reference labels. It is not a
@@ -101,7 +108,7 @@
     }
     return chosen.map(({text,x,y,fontSize})=>({text,x,y,fontSize}));
   }
-  const api=Object.freeze({colours,countryLabels,symbolStyle,rationaleKey,rationaleStyle,scopeStyle,broadScope,isLineReference});
+  const api=Object.freeze({colours,countryLabels,symbolStyle,restrictionWidth,restrictionDotLength,pointDiameter,rationaleKey,rationaleStyle,scopeStyle,broadScope,isLineReference,isMapReference});
   if(typeof module!=='undefined'&&module.exports)module.exports=api;
   else root.BorderCartography=api;
 })(typeof window!=='undefined'?window:globalThis);

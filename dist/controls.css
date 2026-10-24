@@ -116,3 +116,13 @@
 .briefing-island-note{max-width:760px;margin:24px 0 0;padding:14px 16px;border:1px solid #cbd8d1;border-radius:8px;background:#ffffff73;font-size:13px;line-height:1.6}
 .briefing-island-note strong{display:block;color:#244e46}
 .briefing-island-note p{margin:5px 0 8px}
+
+/* Crossing dots have a small fixed visual size and a larger touch target. */
+.closure-marker{display:flex!important;align-items:center;justify-content:center;border:0;background:transparent;cursor:pointer;outline:none}
+.closure-marker-dot{display:block;flex:none;width:calc(var(--dot-size) + var(--dot-length,1px));height:var(--dot-size);box-sizing:border-box;background:var(--dot-colour);border:0;border-radius:99px;box-shadow:none;pointer-events:none}
+.closure-marker.is-selected .closure-marker-dot,.closure-marker:focus-visible .closure-marker-dot{box-shadow:0 0 0 3px #fff,0 0 0 4px #244e4680}
+.closure-marker:focus-visible{outline:2px solid #244e46;outline-offset:-6px;border-radius:50%}
+.legend-crossing{display:inline-block;flex:none;width:3.7px;height:2.7px;border:0;border-radius:99px;background:#65756f;box-shadow:none;margin:0 11px}
+.mapping-pending{font-size:11px;line-height:1.35;color:#65756f}
+/* Leave the popup's close button unobstructed on compact maps. */
+.location-card-open .panel-toggle{visibility:hidden}

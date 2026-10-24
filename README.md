@@ -1,7 +1,9 @@
 # Border Closures Atlas
 
-The current workbook is the sole research source for Map, Analysis, Methods,
-exports and downloads. It entirely replaces the previous dataset.
+The core land dataset uses the replacement workbook below for its historical
+records, dates, rationales and Analysis. Separately reviewed crossing coordinates
+control map positions without changing those findings. Selected national COVID
+rules remain in the separate supplement and are excluded from core Analysis.
 
 Source: `source/Global_Border_Closures_Register_2016_2026.xlsx`
 Snapshot: 23 October 2026 (`border-corrections-20261023`).
@@ -22,18 +24,29 @@ Categories, related parents and phases can overlap; do not sum them as independe
 closures or aggregate their days. Short land closures remain included; airport
 and sea-only restrictions are outside this release.
 
-The map and PNG exports display linework only. Colours locate the general border
-references associated with filtered records; they are not approved phase geometry
-or closure extents. Selecting a month selects records with evidence then, not a
-finding that the entire coloured border was closed. A shared border with several
-codes uses the multiple-rationale colour without inventing a primary rationale.
-Individual crossing dots remain hidden. Workbook phase-coordinate decisions are
-kept separately: 16 approved approximate bindings use nine published markers;
-unlocated, rejected and unverified bindings are not silently upgraded.
+The map and PNG export use phase-specific geography. Named crossings appear as
+the same small rationale-coloured dots used in dotted border lines; larger
+invisible controls support touch and keyboard use. Their size does not encode duration,
+severity or record count. Wider rules retain the established line styles.
+
+The 24 October 2026 location review contains 78 sourced crossing-area positions,
+with 205 bindings covering 202 phases in 180 records. It covers all six
+China–Mongolia phases at five road crossings. Of 431 single-crossing phases,
+199 have reviewed positions and 232 remain awaiting location checks. A known
+single-post restriction never falls back to a whole-border highlight. Partial
+multi-site and unresolved cases remain searchable, counted and downloadable,
+with their mapping status stated. All 697 included records, dates and Analysis
+figures remain unchanged.
+
+See `source/crossings/README.md` for the review files and update procedure.
+The 16 workbook-approved approximate bindings are retained; rejected and
+unverified old bindings are not silently upgraded. Coordinates are approximate
+crossing-area references, not surveys of historical gates or obstructions.
 
 OSM reference research lives in `research/osm/`, with a reproducible Uganda
 pilot, candidate review tables and source geometries. It is separate from the
-workbook and is not loaded by the website. See `research/osm/README.md`.
+workbook. Only explicitly re-reviewed phase bindings are promoted into the
+crossing layer; the research directory itself is not loaded by the website. See `research/osm/README.md`.
 
 Current conclusions come from Register, Durations, Chronology phases and Follow-up
 review. Initial Audit review claims, original parent dates and numbered research
@@ -74,6 +87,8 @@ the generated hosting directory. To update them:
 python scripts/import-workbook.py
 python scripts/build-analysis.py
 node scripts/build-web-data.cjs
+node scripts/build-crossing-geography.cjs
+node scripts/verify-crossing-map.cjs
 node scripts/build-hosted.cjs
 python scripts/verify-workbook.py
 node scripts/verify-ui.cjs
@@ -111,7 +126,9 @@ only `out`.
 Workbook totals, phase arithmetic, inclusion, URL joins, current review fields,
 category counts, timeline exclusions and CSV/JSON exports are checked. Navigation
 and all record/card render paths are exercised in a JavaScript DOM harness.
-Browser visual checks were unavailable in this environment. QGIS output is
+Crossing-point layouts and interactions have been checked in a browser at laptop,
+portrait-phone and landscape-phone sizes. This is responsive-layout verification,
+not testing on physical iOS and Android devices. QGIS output is
 checked structurally (SQLite integrity, geometry decoding and relative paths);
 native QGIS rendering was not run. Temporal GIS outputs must use the current phase
 dates, endpoint meanings and binding decisions; all phases remain in the chronology
@@ -126,3 +143,4 @@ licences are included with the web assets. No external tile server is required.
 Evidence links require an internet connection.
 
 Hosting uses the generated `out` directory. It excludes the full offline `data.js`; exports load the checked manifest and its record parts on demand. All hosted files are checked to be smaller than 10 MB.
+

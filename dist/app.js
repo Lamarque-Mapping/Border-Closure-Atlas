@@ -67,14 +67,12 @@
   }
   function dateText(value){if(!value)return 'Unknown';const s=text(value);if(C.day(s)!==null)return new Date(s+'T00:00:00Z').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'});if(/^\d{4}-\d{2}$/.test(s)&&C.monthOrdinal(s)!==null)return monthLabel(C.monthOrdinal(s));return s;}
   function dateRange(e){return dateText(e.start)+' → '+dateText(e.end);}
-  function pointLocations(e){return C.locationsFor(e,data).filter(id=>locations.get(id)?.geometry?.type==='Point');}
   function mapLocationNote(e){
-    const points=pointLocations(e);if(!points.length)return '';
+    const status=C.mappingStatus(e,data,{mode:'all'}),points=status.ids.filter(id=>locations.get(id)?.geometry?.type==='Point');
     const names=points.map(id=>locationTitle(locations.get(id).properties,id));
-    const borders=[...new Set(points.flatMap(id=>C.contextLocationsFor(id,data)))].filter(id=>locations.has(id)).map(id=>locationTitle(locations.get(id).properties,id));
-    return '<section class="detail-field crossing-location-note"><h3>Referenced crossings</h3><p>'+escape(names.join('; '))+'.</p>'+(borders.length?'<p><strong>Border context:</strong> '+escape(borders.join('; '))+'.</p><p>The border line gives geographical context. It does not mean every crossing or the full length was closed; the scope and location notes below describe this record.</p>':'')+'</section>';
+    return '<section class="detail-field crossing-location-note"><h3>How this record is mapped</h3><p>'+escape(status.label)+'.</p>'+(names.length?'<p>'+escape(names.join('; '))+'. Dots locate the crossing area; they do not represent closure of the whole border.</p>':'')+(status.pending?'<p>Some locations still need checking. They remain in the dataset and downloads, without a whole-border line substituted for an unknown point.</p>':'')+'</section>';
   }
-  const mapLocationIDs=e=>C.displayLocationsFor(e,data).filter(id=>K.isLineReference(locations.get(id)));
+  const mapLocationIDs=e=>C.mapLocationsFor(e,data,state).filter(id=>K.isMapReference(locations.get(id)));
   function currentLocationIDs(){return [...new Set(visible.flatMap(mapLocationIDs))];}
   function fitContinent(){
     const bounds=continentViews[state.continent||'World']||continentViews.World,padding=viewPadding(),size=map.getSize();
@@ -185,11 +183,11 @@
   function render(){
     if(!data)return;map.closePopup();visible=C.filterEvents(data,state);locationEvents=new Map();for(const e of visible)for(const id of mapLocationIDs(e)){if(!locationEvents.has(id))locationEvents.set(id,[]);locationEvents.get(id).push(e);}
     const mappedRecords=visible.filter(e=>mapLocationIDs(e).length).length;
-    const excludedCount=visible.filter(C.excluded).length;const unlocatedCount=visible.length-mappedRecords-excludedCount;
+    const excludedCount=visible.filter(C.excluded).length;const pendingCount=visible.filter(e=>C.mappingStatus(e,data,state).pending).length;
     const nationalCount=visible.filter(e=>e.record_kind==='national_policy').length;
-    $('record-count').textContent=visible.length.toLocaleString('en-GB');$('count-label').textContent=visible.length===1?'record':'records';$('mapped-count').textContent=(nationalCount?(visible.length-nationalCount)+' land · '+nationalCount+' national '+(nationalCount===1?'record':'records')+' · ':'')+mappedRecords+' with geography · '+unlocatedCount+' unlocated'+(excludedCount?' · '+excludedCount+' excluded':'');
+    $('record-count').textContent=visible.length.toLocaleString('en-GB');$('count-label').textContent=visible.length===1?'record':'records';$('mapped-count').textContent=(nationalCount?(visible.length-nationalCount)+' land · '+nationalCount+' national '+(nationalCount===1?'record':'records')+' · ':'')+mappedRecords+' on map'+(pendingCount?' · '+pendingCount+' need location checks':'')+(excludedCount?' · '+excludedCount+' excluded':'');
     const modeLabel=state.mode==='all'?'Matching records across the full study period, including those without confirmed dates. These closures did not all happen at once.':state.mode==='onsets'?'Recorded starts in the selected month.':'Dated evidence overlapping part of this month. Ordered windows and intermittent regimes do not establish continuous closure. Possible date overlap is labelled.';
-    $('result-context').textContent=modeLabel+(state.mode==='intervals'?' '+Number(data.meta.atlas_summary?.duration_reviewed_unresolved||0)+' land records have no dated phase. Disputed evidence appears only at its recorded dates.':'')+' Country outlines show national rules: solid for entry or departure bans, dotted for entry conditions. Read each record for the people and routes affected. Unmarked does not necessarily mean open.';
+    $('result-context').textContent=modeLabel+(state.mode==='intervals'?' '+Number(data.meta.atlas_summary?.duration_reviewed_unresolved||0)+' land records have no dated phase. Disputed evidence appears only at its recorded dates.':'')+' Dots show named crossings; locations awaiting checks remain in the records. Country outlines show national rules: solid for entry or departure bans, dotted for entry conditions. Read each record for the people and routes affected. Unmarked does not necessarily mean open.';
     $('map-note').textContent=(state.continent||'World')+' · '+(state.mode==='all'?'all recorded closures':state.mode==='onsets'?'starts · '+monthLabel(state.month):'Border Restrictions · '+monthLabel(state.month));
     $('month-label').textContent=state.mode==='all'?data.meta.window_start.slice(0,4)+'–'+data.meta.window_end.slice(0,4):monthLabel(state.month);$('month-slider').value=state.month;$('month-slider').setAttribute('aria-valuetext',monthLabel(state.month));
     const progress=100*(state.month-Number($('month-slider').min))/(Number($('month-slider').max)-Number($('month-slider').min)||1);
@@ -198,7 +196,7 @@
     $('include-excluded').disabled=state.mode!=='all';$('excluded-note').textContent=state.mode==='all'?'Excluded records are list-only and never animated.':'Excluded records are unavailable in timeline views.';
     $('time-note').textContent=state.mode==='all'?'Full study period · Play to explore by month':state.mode==='onsets'?'Recorded starts in this month':'Border Restrictions · Unmarked does not necessarily mean open';
     $('location-filter').hidden=!state.location;$('location-filter-label').textContent=state.location?'Linked to '+(locations.get(state.location)?.properties?.label||locations.get(state.location)?.properties?.name||state.location):'';
-    const activeFilters=[state.region,state.rationale,state.measureType?C.measureLabel(state.measureType):'',({crossing_reference:'Sourced geography',context:'Context geography',unlocated:'Without a mapped location'})[state.precision],state.includeExcluded&&state.mode==='all'?'Including excluded records':''].filter(Boolean);
+    const activeFilters=[state.region,state.rationale,state.measureType?C.measureLabel(state.measureType):'',({crossing_reference:'Crossing points / national rules',context:'Wider border references',unlocated:'Locations awaiting checks'})[state.precision],state.includeExcluded&&state.mode==='all'?'Including excluded records':''].filter(Boolean);
     $('filter-summary').textContent=activeFilters.join(' · ');$('filter-summary').hidden=!activeFilters.length;
     updatePanelTitle();updateTabs();renderList();renderLocations();
     updateRecordsControls();
@@ -212,7 +210,7 @@
     for(const e of sorted.slice(0,listLimit)){
       const phases=cardPeriods(e),stageCount=phases.filter(p=>!p.national_display_period).length,first=phases.find(p=>!p.contested)||phases[0],timing=first?periodLabel(first)+' · '+cardPeriodDates(first):'Dates not established';
       const card=document.createElement('button');card.className='event-card'+(C.excluded(e)?' excluded-card':'');card.dataset.eventId=e.id;
-      card.innerHTML='<span class="card-top"><span>'+escape(C.array(e.countries).join(' – ')||e.region||'')+'</span><span>'+escape(e.id)+'</span></span><span class="card-title">'+escape(publicText(e.title||e.id,'title',e.id))+'</span><span class="card-bottom">'+rationaleHTML([e])+'<span class="duration-badge">'+escape(timing)+'</span>'+(stageCount>1?'<span class="period-scope">'+stageCount+' dated stages</span>':'')+'</span>';
+      card.innerHTML='<span class="card-top"><span>'+escape(C.array(e.countries).join(' – ')||e.region||'')+'</span><span>'+escape(e.id)+'</span></span><span class="card-title">'+escape(publicText(e.title||e.id,'title',e.id))+'</span><span class="card-bottom">'+rationaleHTML([e])+'<span class="duration-badge">'+escape(timing)+'</span>'+(stageCount>1?'<span class="period-scope">'+stageCount+' dated stages</span>':'')+(C.mappingStatus(e,data,state).pending?'<span class="mapping-pending">'+escape(C.mappingStatus(e,data,state).label)+'</span>':'')+'</span>';
       card.addEventListener('click',()=>showEvent(e.id,true));list.append(card);
     }
   }
@@ -301,7 +299,7 @@
   }
   function renderLocationCard(id,items,latlng,focusCard=false){
     const f=locations.get(id),p=f.properties||{},style=K.symbolStyle(p),mobile=compact();
-    const sorted=locationRecords(items);
+    const sorted=locationRecords(C.recordsForLocation(items,id,data,state));
     const card=document.createElement('div');card.className='location-card';
     const locationMeta=items.length>1?'Showing 1 of '+items.length+' matching records':'';
     card.innerHTML='<h2>'+escape(locationTitle(p,id))+'</h2>'+(locationMeta?'<div class="location-card-meta">'+escape(locationMeta)+'</div>':'')+'<div class="location-card-records">'+sorted.slice(0,1).map(locationRecordHTML).join('')+'</div>';
@@ -312,7 +310,7 @@
       action.addEventListener('click',()=>{map.closePopup();activateLocation(id,items);});card.append(action);
     }
     const notes=document.createElement('p');notes.className='location-map-note';
-    notes.textContent=p.display_role==='national_policy'?'The outline marks the country or area covered by the rule. Read the record for the travellers and journeys affected.':'The line locates the border. The description identifies the affected crossings and travellers.';card.append(notes);
+    notes.textContent=f.geometry.type==='Point'?'The dot marks an approximate crossing area. It does not indicate closure along the rest of the border.':p.display_role==='national_policy'?'The outline marks the country or area covered by the rule. Read the record for the travellers and journeys affected.':'The line locates the border. The description identifies the affected crossings and travellers.';card.append(notes);
     stop();map.closePopup();cardLocation=id;renderLocations();if(mobile)setPanelOpen(false);
     const padding=viewPadding();
     const availableHeight=$('map-page').getBoundingClientRect().height-padding.paddingTopLeft[1]-padding.paddingBottomRight[1]-58;
@@ -321,26 +319,45 @@
     card.addEventListener('toggle',()=>popup.update(),true);
     popup.openOn(map);if(focusCard&&action)action.focus({preventScroll:true});
   }
+  function nearestPoint(id,event){
+    const original=event.originalEvent;
+    if(!original||/^key/.test(original.type||'')||!Number.isFinite(original.clientX))return id;
+    const pointer=map.mouseEventToContainerPoint(original);let chosen=id,distance=Infinity;
+    for(const candidate of locationEvents.keys()){
+      const f=locations.get(candidate);if(f?.geometry?.type!=='Point')continue;
+      const [lng,lat]=f.geometry.coordinates,p=map.latLngToContainerPoint([lat,lng]),d=Math.hypot(pointer.x-p.x,pointer.y-p.y);
+      if(d<distance&&d<=22){distance=d;chosen=candidate;}
+    }
+    return chosen;
+  }
   function renderLocations(){
     if(featureGroup)map.removeLayer(featureGroup);featureGroup=L.featureGroup().addTo(map);
-    // Area hit targets come first, so specific land lines stay clickable above
-    // them. Use the shared interaction pane, above the non-interactive basemap.
     const orderedLocations=[...locationEvents].sort(([a],[b])=>Number(locations.get(b)?.properties.display_role==='national_policy')-Number(locations.get(a)?.properties.display_role==='national_policy'));
-    for(const [id,items] of orderedLocations){
-      const f=locations.get(id);if(!K.isLineReference(f))continue;
-      const styleRecords=(selected&&items.some(e=>e.id===selected)?items.filter(e=>e.id===selected):items).map(e=>({...e,duration_periods:C.periodsForView(e,state)}));
-      const p=f.properties||{},isSelected=id===cardLocation||id===state.location||items.some(e=>e.id===selected),style=K.symbolStyle(p,{selected:isSelected,count:items.length,records:styleRecords,rationaleFilter:state.rationale});
+    for(const [id,allItems] of orderedLocations){
+      const f=locations.get(id);if(!K.isMapReference(f))continue;
+      const items=C.recordsForLocation(allItems,id,data,state);if(!items.length)continue;
+      const styleRecords=selected&&items.some(e=>e.id===selected)?items.filter(e=>e.id===selected):items;
+      const p=f.properties||{},isSelected=id===cardLocation||id===state.location||items.some(e=>e.id===selected),style=K.symbolStyle(p,{selected:isSelected,zoom:map.getZoom(),records:styleRecords,rationaleFilter:state.rationale});
       const timePossible=state.mode==='intervals'&&items.every(e=>C.temporalState(e,state.month,state.measureType)==='possible');
-      const label=locationTitle(p,id);
+      const label=locationTitle(p,id),point=f.geometry.type==='Point';
       const tooltip='<strong class="map-tip-title">'+escape(label)+'</strong><span class="map-tip-meta">'+items.length+' record'+(items.length===1?'':'s')+'</span>'+rationaleHTML(items)+(style.rationale.hasUncoded&&style.rationale.codes.length?'<span class="map-tip-meta">Some records uncoded</span>':'')+(timePossible?'<span class="map-tip-meta">Possible month overlap</span>':'')+'<span class="map-tip-hint">Click for records &amp; sources →</span>';
+      let target;
+      if(point){
+        const [lng,lat]=f.geometry.coordinates;
+        target=L.marker([lat,lng],{pane:'points',keyboard:true,title:label,alt:label,icon:L.divIcon({className:'closure-marker'+(isSelected?' is-selected':''),iconSize:[44,44],iconAnchor:[22,22],html:'<span class="closure-marker-dot" style="--dot-size:'+(style.radius*2)+'px;--dot-length:'+style.pointLength+'px;--dot-colour:'+style.colour+';opacity:'+(timePossible?.3:1)+'"></span>'})}).addTo(featureGroup);
+        const element=target.getElement();if(element){element.dataset.locationId=id;element.setAttribute('role','button');element.setAttribute('aria-label',label+' · '+items.length+' record'+(items.length===1?'':'s')+'. Open closure details');element.addEventListener('keydown',event=>{if(event.key===' '){event.preventDefault();openLocationCard(id,allItems,L.latLng(lat,lng),true);}});}
+      }else{
         const pane=style.country?'countryContext':'scope';
-        // A wider transparent stroke keeps thin or dashed geography clickable.
-        // Country interiors do not become inferred closure footprints.
-        const target=L.geoJSON(f,{pane:'scope',style:{color:style.colour,weight:compact()?22:16,opacity:0,fill:style.national,fillOpacity:0,className:'geography-hit'}}).addTo(featureGroup);
+        target=L.geoJSON(f,{pane:'scope',style:{color:style.colour,weight:compact()?22:16,opacity:0,fill:style.national,fillOpacity:0,className:'geography-hit'}}).addTo(featureGroup);
         if(isSelected)L.geoJSON(f,{pane,interactive:false,style:{color:'#ffffff',weight:style.width+3,opacity:.95,fill:false}}).addTo(featureGroup);
         L.geoJSON(f,{pane,interactive:false,style:{className:style.national?'national-policy-area':style.frontier?'frontier-reference':'location-reference',color:style.colour,weight:style.width,opacity:timePossible?.3:style.opacity,dashArray:style.dash.join(' '),lineCap:'round',fill:false}}).addTo(featureGroup);
+      }
       target.bindTooltip(tooltip,{direction:'top',offset:[0,-10]});
-      target.on('click',e=>openLocationCard(id,items,e.latlng||target.getLatLng(),/^key/.test(e.originalEvent?.type||'')));
+      target.on('click',event=>{
+        const chosen=point?nearestPoint(id,event):id,feature=locations.get(chosen),selectedItems=locationEvents.get(chosen);
+        const latlng=point?L.latLng(feature.geometry.coordinates[1],feature.geometry.coordinates[0]):event.latlng;
+        openLocationCard(chosen,selectedItems,latlng,/^key/.test(event.originalEvent?.type||''));
+      });
     }
   }
   function updateRecordsControls(){
@@ -366,7 +383,7 @@
     try{
       const full=visible.every(e=>e.record_kind==='national_policy')?{meta:source.meta,events:visible}:await window.AtlasData.getResearchData({includeNational:true}),byID=new Map(full.events.map(e=>[e.id,e]));
       if(full.meta.source_sha256!==source.meta.source_sha256||ids.some(id=>!byID.has(id)))throw Error('The records do not match this atlas version. Please reload and try again.');
-      const output=window.BorderRecordExport.build({records:ids.map(id=>byID.get(id)),state:snapshot,locationLabel,cleanText:publicText,recordURL:id=>id.startsWith('NATIONAL-')?new URL('#map/record-'+encodeURIComponent(id),window.location.href).href:window.AtlasNavigation.getAnalysisURL('#record-'+id)});
+      const output=window.BorderRecordExport.build({records:ids.map(id=>byID.get(id)),state:snapshot,locationLabel,cleanText:publicText,mappingStatus:record=>C.mappingStatus(record,source,snapshot).label,recordURL:id=>id.startsWith('NATIONAL-')?new URL('#map/record-'+encodeURIComponent(id),window.location.href).href:window.AtlasNavigation.getAnalysisURL('#record-'+id)});
       window.BorderRecordExport.download(output);notify('Downloaded '+ids.length+' matching records as a CSV spreadsheet.');
     }catch(error){notify(error.message||'The spreadsheet could not be prepared. Please try again.');}
     finally{exportingRecords=false;updateRecordsControls();}
@@ -416,7 +433,7 @@
       if(zoom){const features=mapLocationIDs(e).map(lid=>locations.get(lid));if(features.length)map.fitBounds(L.geoJSON({type:'FeatureCollection',features}).getBounds(),{...viewPadding(12),maxZoom:6,animate:false});}
       return;
     }
-    const ids=C.displayLocationsFor(e,data).filter(v=>locations.has(v));
+    const ids=C.mapLocationsFor(e,data,{mode:'all'}).filter(v=>locations.has(v));
     const reasonLabels={continuity_flag_missing_review_required:'Continuous closure has not been confirmed for the recorded dates.',continuity_claim_not_supported_or_qualified:'The evidence does not establish continuous closure over these dates.',end_claim_not_supported_or_qualified:'The reopening date is not sufficiently supported.',endpoint_not_operational_or_partial_reopening:'The endpoint is not classified as an operational or partial reopening.',exact_compatible_dates_missing:'Exact compatible start and end dates are missing.',explicit_continuity_false:'Continuous closure is not supported by the sources.',no_source_calculated_interval:'No supported duration is available.',same_day_or_nonpositive_date_interval:'A same-day or nonpositive date interval is not displayed as a whole-day closure.',start_claim_not_supported_or_qualified:'The start date is not sufficiently supported.'};
     const humanStatus=v=>text(v).replace(/_/g,' ');
     const reasons=C.array(e.interval_exclusion_reasons).map(r=>reasonLabels[r]||humanStatus(r)).join(' ');
@@ -447,7 +464,7 @@
       '<details class="detail-field"><summary>Detailed timing evidence</summary>'+field('Dates, sources and qualifications',temporal)+'</details>'+
       '<details class="detail-field"><summary>Rationale and context</summary>'+field('Stated justification',e.official_rationale)+field('Context',e.context)+field('Overall record scope',e.scope)+field('Direction',e.direction)+field('Exceptions',e.exceptions)+field('Rationale subcategories',Object.entries(e.rationale_subcategories||{}).map(([k,v])=>k+': '+v.join('; ')).join('\n'))+field('Attribution and phase',C.array(e.rationale_assignments).map(a=>a['Broad rationale']+': '+a['Evidence attribution']+'. '+a['Phase / overlap']+'. '+a['Coding decision and qualification']).join('\n\n'))+'</details>'+
       '<details class="detail-field"><summary>Uncertainty and review notes</summary>'+field('What remains uncertain',e.uncertainty)+currentFindings+field('Open evidence needs',C.array(e.unresolved_issues).map(q=>q['Field needing evidence']+': '+q['Unresolved finding']+' '+q['Next evidence needed']).join('\n\n'))+'</details>'+
-      '<details class="detail-field"><summary>Scope and map notes</summary><p>'+escape(publicText(e.geography_note,'geography_note',e.id))+'</p>'+mapLocationNote(e)+field('Start-month view',onset)+field('Linked policy or phase',e.relationship)+locHTML+'</details>'+
+      '<details class="detail-field"><summary>Scope and map notes</summary>'+mapLocationNote(e)+field('Start-month view',onset)+field('Linked policy or phase',e.relationship)+locHTML+'</details>'+
       '<details class="detail-field"><summary>Earlier dates and claims</summary><p>These original claims are retained in the workbook. The corrected dates and findings above take precedence.</p>'+field('Original start',dateText(historical.start))+field('Original end date',dateText(historical.end))+field('What that end date meant',historical.endpoint)+field('Original duration qualification',historical.duration_note)+field('Historical evidence assessment',historical.evidence_status)+C.array(e.initial_review?.claims).map(c=>field('Initial '+c.field+' · '+c.assessment,c.note)).join('')+'</details>';
 
     setPanelOpen(true);$('browse-panel').hidden=true;$('detail-panel').hidden=false;$('panel-scroll').scrollTop=0;renderLocations();
@@ -520,6 +537,7 @@
   });
   map.on('movestart zoomstart',()=>{if(labelLayer)labelLayer.hidden=true;});
   map.on('moveend zoomend',renderLabels);
+  map.on('zoomend',()=>{if(data)renderLocations();});
   map.on('popupopen',()=>$('map-page').classList.add('location-card-open'));
   map.on('popupclose',()=>$('map-page').classList.remove('location-card-open'));
   window.addEventListener('resize',scheduleViewport);
