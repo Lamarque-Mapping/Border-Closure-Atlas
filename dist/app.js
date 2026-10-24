@@ -178,7 +178,7 @@
     $('research-method').innerHTML='<h2>How was the research checked?</h2><p>The dataset has been developed through 16 rounds of research, repeated reviews of the full dataset, and further checks on dates, missing events and unanswered questions. Earlier work recorded three checks across the whole dataset. Other reviews included 272 checks of closure length, a review of 686 records across six regions, and follow-up on 371 evidence questions. The number and scope of checks vary between entries as the dataset has grown.</p><p>The latest review of the land dataset used six regional AI reviews and a combined review using the same model. These checks did not provide independent human verification. The source links and review history allow readers to examine the conclusions.</p>';
     const coverage=summary.chronology_coverage||{};
     const nationalCount=events.filter(e=>e.record_kind==='national_policy').length;
-    $('release-method').innerHTML='<p><strong>'+(events.length-excludedCount-nationalCount)+' land-border records are included</strong>. '+excludedCount+' other records are retained for reference but excluded from the map and charts. '+coverage.without_dated_evidence+' included land records have no dated evidence.'+(nationalCount?' The map also includes <strong>'+nationalCount+' records of national rules</strong>, covering 18 dated changes. One describes the same England rule as an existing land-border record. The national records are excluded from the charts.':'')+'</p><p>Land dataset dated '+escape(dateText(data.meta.snapshot_date))+'. <a href="downloads/Global_Border_Closures_Register_2016_2026.xlsx" download="Global_Border_Closures_Register_2016_2026.xlsx">Download the land dataset (Excel)</a>.'+(nationalCount?' <a href="downloads/national-policy-evidence.json" download>Download the national rules and sources (JSON)</a>.':'')+'</p>';
+    $('release-method').innerHTML='<p><strong>'+(events.length-excludedCount-nationalCount)+' land-border records are included</strong>. '+excludedCount+' other records are retained for reference but excluded from the map and charts. '+coverage.without_dated_evidence+' included land records have no dated evidence.</p><p>Land dataset dated '+escape(dateText(data.meta.snapshot_date))+'. <a href="downloads/Global_Border_Closures_Register_2016_2026.xlsx" download="Global_Border_Closures_Register_2016_2026.xlsx">Download the land dataset (Excel)</a>.</p>';
 
     resetMapLayers();showBrowse();render();fitContinent();openSharedRecord();if(loaded)notify('Atlas data updated.');
   }
@@ -490,6 +490,7 @@
   const showPage=page=>window.AtlasNavigation.show(page);
   let mapHasBeenVisible=!$('map-page').hidden;
   window.addEventListener('atlas:pagechange',event=>{
+    if(event.detail.page!=='analysis')loadMap();
     stop();if(event.detail.page!=='map'){if(keyDialog.open)keyDialog.close();if($('records-dialog').open)$('records-dialog').close();return;}scheduleViewport();
     if(!mapHasBeenVisible){mapHasBeenVisible=true;requestAnimationFrame(()=>{syncViewport();if(data)fitContinent();});}
   });
@@ -527,7 +528,16 @@
   syncViewport();
   if(document.fonts)document.fonts.ready.then(()=>{scheduleViewport();renderLabels();});
 
-  window.AtlasData.ready().then(value=>{applyData(value);window.AtlasStartup?.ready();}).catch(err=>{window.AtlasStartup?.fail(err);$('result-context').textContent='The atlas could not be opened. Please try again.';notify(err.message);});
+  let loadingMap=null;
+  function loadMap(){
+    if(data||loadingMap)return;
+    window.AtlasStartup?.start();
+    loadingMap=window.AtlasData.ready().then(value=>{
+      applyData(value);window.AtlasStartup?.ready();window.dispatchEvent(new CustomEvent('atlas:mapready'));
+    }).catch(err=>{window.AtlasStartup?.fail(err);$('result-context').textContent='The atlas could not be opened. Please try again.';notify(err.message);}).finally(()=>{loadingMap=null;});
+  }
+  // A direct Analysis link should not download or draw map geometry first.
+  if(document.body.dataset.page!=='analysis')loadMap();
   window.BORDER_VIEWER={getData:()=>data,getState:()=>({...state}),getVisible:()=>visible.map(e=>e.id),load:applyData,map};
 })();
 

@@ -43,4 +43,6 @@ const body='window.BORDER_DATA = '+serialise(compact)+';\n';
 fs.writeFileSync(path.join(web,'map-data.js'),body);
 const index=path.join(web,'index.html');
 fs.writeFileSync(index,fs.readFileSync(index,'utf8').replace(/data-map-src="[^"]*"/,'data-map-src="map-data.js?v='+hash(body)+'"'));
+require('./build-analysis-data.cjs').build(web);
 console.log(JSON.stringify({fullBytes:Buffer.byteLength(raw),initialBytes:Buffer.byteLength(body),fullGzipBytes:zlib.gzipSync(raw).length,initialGzipBytes:zlib.gzipSync(body).length,records:events.length}));
+

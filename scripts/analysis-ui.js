@@ -13,10 +13,10 @@ if(!provider && (ATLAS_HOST ? window.parent.BORDER_DATA : window.BORDER_DATA)){
  provider={ready:async()=>complete,getRecord:async id=>complete.events.find(e=>e.id===id),getResearchData:async()=>complete};
 }
 if(!provider){
- await new Promise(function(resolve,reject){const script=document.createElement("script");script.src="data-loader.js";script.onload=resolve;script.onerror=()=>reject(new Error("The data could not be loaded. Please try again."));document.head.appendChild(script);});
+ await new Promise(function(resolve,reject){const script=document.createElement("script");script.src="data-loader.js?v=20261024-analysis-fast";script.dataset.analysisSrc="analysis-data.json";script.dataset.sourceSha="";script.onload=resolve;script.onerror=()=>reject(new Error("The data could not be loaded. Please try again."));document.head.appendChild(script);});
  provider=window.AtlasData;
 }
-const shared=await provider.ready();
+const shared=await (provider.getAnalysisData?provider.getAnalysisData():provider.ready());
 const METRICS=window.BorderAnalysisMetrics;
 const cleanText = value => String(value==null?"":value).replace(/(\d)(calendar)/gi,"$1 $2").replace(/\bcalendar-day differences?\b/gi,"days").replace(/;\s*scoped endpoint only\b/gi,"; for the stated movement and location").replace(/\bcalendar(?:-date)? (days?)\b/gi,"$1").replace(/\s+to (?:the )?scoped endpoint\b/gi,"").replace(/\bscoped endpoint(s?)\b/gi,"endpoint$1").replace(/\bFormal policy:\s*/gi,"Policy: ").replace(/\b(days?) in policy period\b/gi,"$1").replace(/\boperational continuity not established\b/gi,"continuous closure not confirmed").replace(/\boperational continuity\b/gi,"continuous closure").replace(/\b1 days\b/g,"1 day");
 function analysisEvent(e){
@@ -25,7 +25,8 @@ function analysisEvent(e){
   claims:e.current_review.claims.map(c=>({Field:c.field,"Evidence assessment":c.assessment,"Assessment note":c.note})),
   sources:e.sources.map(s=>({"Source ID":s.source_id,Publisher:s.publisher,"Original reporting source":s.origin,Title:s.title,"Publication date":s.publication_date,"Source type":s.source_type,"Access level":s.content_access,"Supports fields":(s.supports||[]).join("; "),"Evidence note":s.evidence_note,URL:s.url,access_history:s.access_history||[]}))};
 }
-const EVENTS = shared.events.map(analysisEvent);
+// National histories remain separate from land-closure statistics.
+const EVENTS = shared.events.filter(e=>e.record_kind!=='national_policy').map(analysisEvent);
 const INCLUDED=EVENTS.filter(e=>!e.quarantined);
 const DATA={meta:shared.meta,events:EVENTS,summary:{codes:shared.meta.rationale_counts}};
 const CODES=DATA.meta.rationale_categories;
@@ -349,3 +350,4 @@ if(routeHash().startsWith("#record-"))navigateAnalysis(routeHash());
 if(ATLAS_HOST?.analysisReady)ATLAS_HOST.analysisReady();
 
 })().catch(function(error){const el=document.getElementById("analysisError");el.hidden=false;el.textContent=error.message;console.error(error);});
+

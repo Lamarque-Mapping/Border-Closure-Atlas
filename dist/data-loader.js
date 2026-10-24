@@ -1,9 +1,12 @@
 (function(){
  'use strict';
- const mapSource=window.location?.protocol==='file:'?'data.js':document.currentScript?.dataset.mapSrc||'map-data.js';
- let initial=null,research=null,researchByID=null;
+ const offline=window.location?.protocol==='file:',settings=document.currentScript?.dataset||{};
+ const mapSource=offline?'data.js':settings.mapSrc||'map-data.js';
+ const analysisSource=settings.analysisSrc||'analysis-data.json',expectedSource=settings.sourceSha;
+ let initial=null,analysis=null,analysisData=null,research=null,researchByID=null;
  const records=new Map();
  function unpack(data){
+  if(expectedSource&&data.meta?.source_sha256!==expectedSource||analysisData&&data.meta?.source_sha256!==analysisData.meta.source_sha256)throw Error('The map and analysis do not match this atlas version. Please reload.');
   if(data.geometry_pool){
    const pool=data.geometry_pool;
    for(const key of ['countries','borders','disputed','locations','context_locations'])for(const f of data[key].features){
@@ -15,7 +18,7 @@
   return window.AtlasNational?window.AtlasNational.attach(data):data;
  }
  function ready(){
-  if(window.BORDER_DATA)return Promise.resolve(unpack(window.BORDER_DATA));
+  if(window.BORDER_DATA)return Promise.resolve().then(()=>unpack(window.BORDER_DATA));
   if(!initial)initial=new Promise((resolve,reject)=>{
    const script=document.createElement('script');script.src=mapSource;
    const timeout=setTimeout(()=>{script.remove();initial=null;reject(Error('The map data took too long to load. Please try again.'));},30000);
@@ -32,8 +35,19 @@
   catch(error){if(error.name==='AbortError')throw Error('Loading took too long. Please try again.');throw error;}
   finally{clearTimeout(timeout);}
  }
+ async function getAnalysisData(){
+  // Reuse an already requested map. Do not download the same records twice.
+  if(window.BORDER_DATA||initial||offline)return ready();
+  if(!analysis)analysis=readJSON(analysisSource).then(value=>{
+   if(!value.meta?.source_sha256||expectedSource&&value.meta.source_sha256!==expectedSource||!Array.isArray(value.events)||new Set(value.events.map(e=>e.id)).size!==value.events.length||value.events.some(e=>e.record_kind==='national_policy'))throw Error('The analysis does not match this atlas version. Please reload.');
+   if(window.BORDER_DATA&&window.BORDER_DATA.meta.source_sha256!==value.meta.source_sha256)throw Error('The map and analysis do not match this atlas version. Please reload.');
+   analysisData=value;return value;
+  }).catch(error=>{analysis=null;throw error;});
+  return analysis;
+ }
+ function catalogue(){return window.BORDER_DATA||initial||offline?ready():analysis||getAnalysisData();}
  async function getRecord(id){
-  const data=await ready();
+  const data=await (/^NATIONAL-/.test(id)?ready():catalogue());
   const summary=data.events.find(e=>e.id===id);if(!summary)throw Error('This record could not be found.');
   if(summary.record_kind==='national_policy')return summary;
   if(researchByID)return researchByID.get(id);
@@ -45,7 +59,7 @@
   return records.get(id);
  }
  async function getResearchData({includeNational=false}={}){
-  const data=await ready(),landEvents=data.events.filter(e=>e.record_kind!=='national_policy'),nationalEvents=data.events.filter(e=>e.record_kind==='national_policy');
+  const data=await (includeNational?ready():catalogue()),landEvents=data.events.filter(e=>e.record_kind!=='national_policy'),nationalEvents=data.events.filter(e=>e.record_kind==='national_policy');
   if(!data.meta.web_assets)return {meta:data.meta,events:includeNational?data.events:landEvents,workbook_geography:data.workbook_geography,workbook_review:data.workbook_review};
   if(!research)research=readJSON(data.meta.web_assets.research).then(async value=>{
    if(value.meta?.source_sha256!==data.meta.source_sha256)throw Error('The research data does not match this atlas version. Please reload.');
@@ -61,6 +75,6 @@
   const value=await research;
   return includeNational?{...value,meta:{...value.meta,national_supplement:data.meta.national_supplement},events:[...value.events,...nationalEvents]}:value;
  }
- window.AtlasData={ready,getRecord,getResearchData};
+ window.AtlasData={ready,getAnalysisData,getRecord,getResearchData};
 })();
 

@@ -7,7 +7,7 @@
   <title>Border closures · Global atlas</title>
   <link rel="stylesheet" href="vendor/leaflet.css">
   <link rel="stylesheet" href="style.css?v=20261023-views">
-  <link rel="stylesheet" href="controls.css?v=20261024-outline-methods">
+  <link rel="stylesheet" href="controls.css?v=20261024-analysis-fast">
 </head>
 <body class="atlas-pending">
   <a class="skip-link" href="#search">Skip to map controls</a>
@@ -87,23 +87,24 @@
     <header class="briefing-head"><div><p class="eyebrow">Sources and methods</p><h2>How to read the atlas</h2><p class="briefing-intro">The atlas brings together reports of border closures and restrictions between 21 October 2016 and 21 October 2026. It is a record of past events. It does not provide live information about whether a border is open.</p></div><button id="back-to-map" class="quiet">Return to map →</button></header>
     <div id="release-method" class="coverage-note"></div>
     <div class="briefing-grid">
-      <section><h3>What does the dataset cover?</h3><p>Most records describe restrictions at land borders and international river ferries. A record can cover one crossing, several crossings or a wider rule. It may include several stages as restrictions changed.</p><p>The map also includes selected national entry and departure rules for Australia, New Zealand and the UK. Rules that applied only to England use England’s outline. Testing and quarantine requirements are labelled as entry conditions. National coverage is still limited.</p><p>Routine overnight opening hours, individual visa refusals and checks that allow passage are excluded.</p></section>
-      <section><h3>How should I read the map?</h3><p>Colour shows the recorded reason for a restriction. Along a land border, a solid line means the sources describe a restriction across that border. A dotted line means only some crossings were affected, or the extent is unclear.</p><p>For national rules, a solid country outline shows an entry or departure ban. A dotted country outline shows entry conditions. Read the record for the affected people, goods, routes and exceptions.</p><p>The lines locate the records; they do not trace every closed section. Unmarked does not necessarily mean open.</p></section>
-      <section><h3>What do the dates mean?</h3><p><strong>Observed closure</strong> means a source reports that passage was stopped or restricted. <strong>Policy in force</strong> gives the dates of a rule. <strong>Announced closure dates</strong> come from a planned schedule. <strong>Repeated closures</strong> describes a period with closures and possible openings.</p><p>A record can appear in a month without covering every day of it. When the evidence gives only individual dates, or dates are disputed, the map shows those dates without filling the gaps. A last report of closure is not treated as a reopening date. Missing end dates are not extended to the present.</p><p>National rules often changed for different groups at different times, so these records have no single duration. Elsewhere, days are calculated from recorded calendar dates. Same-day closures have no whole-day total; overlapping periods should not be added together.</p></section>
+      <section><h3>What does the dataset cover?</h3><p>The dataset describes restrictions at land borders and international river ferries. A record can cover one crossing, several crossings or a wider rule. It may include several stages as restrictions changed.</p><p>Routine overnight opening hours, individual visa refusals and checks that allow passage are excluded.</p></section>
+      <section><h3>How should I read the map?</h3><p>Colour shows the recorded reason for a restriction. Along a land border, a solid line means the sources describe a restriction across that border. A dotted line means only some crossings were affected, or the extent is unclear.</p><p>The lines locate the records; they do not trace every closed section. Read each record for the affected people, goods, routes and exceptions. Unmarked does not necessarily mean open.</p></section>
+      <section><h3>What do the dates mean?</h3><p><strong>Observed closure</strong> means a source reports that passage was stopped or restricted. <strong>Policy in force</strong> gives the dates of a rule. <strong>Announced closure dates</strong> come from a planned schedule. <strong>Repeated closures</strong> describes a period with closures and possible openings.</p><p>A record can appear in a month without covering every day of it. When the evidence gives only individual dates, or dates are disputed, the map shows those dates without filling the gaps. A last report of closure is not treated as a reopening date. Missing end dates are not extended to the present.</p><p>Days are calculated from recorded calendar dates. Same-day closures have no whole-day total; overlapping periods should not be added together.</p></section>
       <section id="rationale-coding"><h3>How are the reasons grouped?</h3><p>The categories, labelled “coded rationale” in the records, summarise reasons given in the sources. More than one category can apply to a record. An official explanation is recorded as such; it may not explain every reason for a closure.</p><p>Grey means no category has been assigned. This can reflect missing evidence or a reason that does not fit the categories.</p><p>Coverage varies by place, time and available sources. The charts describe the records collected. They do not measure how often closures happen worldwide. The duration charts use only land-border records with sufficiently clear dates and reopening evidence.</p></section>
       <section><h3>How do I find and download records?</h3><p>Search looks across all recorded dates. After searching, you can use <strong>Map view</strong> to select restrictions recorded in a month, closures beginning in that month, or all records.</p><p>Click a line or record for a summary, dates and source links. <strong>Read all records</strong> opens a wider reading view. <strong>Download CSV</strong> saves every record matching your filters in a spreadsheet. <strong>Save view</strong> saves an image of the map and its key.</p></section>
       <section><h3>How can I check the sources?</h3><p>Each record links to its sources and explains any uncertainty. Later reviews can correct earlier findings. Earlier findings are retained in the review history.</p><p>Some sources were available in full; others only as extracts. Different websites can repeat the same original report, so the number of links is not a count of independent confirmations.</p><p>Related records can describe parts of the same event. Record totals should therefore not be read as a count of separate closure decisions.</p></section>
     </div>
     <section id="research-method" class="briefing-method" aria-label="Research and review"></section>
+    <aside class="briefing-island-note" aria-label="Island borders during COVID-19"><strong>Island borders during COVID-19</strong><p>Selected pandemic border rules for Australia, New Zealand and the UK appear separately on the map as outlines. Leaving these cases unmarked would misleadingly suggest that their borders were accessible during the pandemic. Each record explains who was affected and the exceptions. These additions are excluded from Analysis.</p><a href="downloads/national-policy-evidence.json" download>Sources for these cases</a></aside>
     <footer class="briefing-footer"><p>Mapping by Hugh Lamarque</p><p>Map boundaries and locations: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a> and © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a> (<a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener noreferrer">ODbL</a>). Other location sources are named in the records. The map does not take a position on disputed territorial claims.</p></footer>
   </main>
   <div id="message" role="status" class="message" hidden></div>
   <script src="national-data.js?v=20261024-outline-methods" defer></script>
   <script src="england-geometry.js?v=20261024-outline-methods" defer></script>
   <script src="national.js?v=20261024-outline-methods" defer></script>
-  <script src="data-loader.js?v=20261024-outline-methods" data-map-src="map-data.js?v=73c85879d0e66a1ec93e2576" defer></script>
-  <script src="navigation.js?v=20261024-outline-methods" defer></script>
-  <script src="startup.js" defer></script>
+  <script src="data-loader.js?v=20261024-analysis-fast" data-map-src="map-data.js?v=73c85879d0e66a1ec93e2576" data-analysis-src="analysis-data.json?v=a7f862a1538df35c028dcf98" data-source-sha="f96ad671372e6fb9c1afd564373d954c717f4bf809b75a757b48f54ee08ca024" defer></script>
+  <script src="navigation.js?v=20261024-analysis-fast" defer></script>
+  <script src="startup.js?v=20261024-analysis-fast" defer></script>
   <script src="vendor/leaflet.js" defer></script>
   <script src="cartography.js?v=20261024-outline-methods" defer></script>
   <script src="core.js?v=20261024-outline-methods" defer></script>
@@ -111,7 +112,7 @@
   <script src="record-summary.js?v=20261024-outline-methods" defer></script>
   <script src="export.js?v=20261024-outline-methods" defer></script>
   <script src="record-export.js?v=20261024-outline-methods" defer></script>
-  <script src="app.js?v=20261024-outline-methods" defer></script>
+  <script src="app.js?v=20261024-analysis-fast" defer></script>
 </body>
 </html>
 

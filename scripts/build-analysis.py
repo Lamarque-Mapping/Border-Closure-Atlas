@@ -5,6 +5,7 @@ import datetime as dt
 import html
 import json
 import re
+import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -43,7 +44,10 @@ def build(web):
     script=(web/'record-summary.js').read_text()+'\n'+(ROOT/'scripts/analysis-metrics.js').read_text()+'\n'+(ROOT/'scripts/analysis-ui.js').read_text()
     text=text.replace('<!-- ANALYSIS_SCRIPT -->','<script>\n'+script+'\n</script>')
     (web/'analysis.html').write_text(text)
+    if (web/'map-data.js').exists():
+        subprocess.run(['node', str(ROOT/'scripts/build-analysis-data.cjs'), str(web)], check=True)
     print('Analysis built from '+m['source_filename']+' · '+m['source_sha256'])
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('web',type=Path,nargs='?',default=ROOT/'dist');build(p.parse_args().web)
+

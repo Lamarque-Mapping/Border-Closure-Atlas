@@ -40,8 +40,15 @@
     const embedded=$('analysis-document');
     if(embedded){
       try{frame.srcdoc=JSON.parse(embedded.textContent);}catch{failed();}
-    }else frame.src='analysis.html?v=20261024-outline-methods';
+    }else frame.src='analysis.html?v=20261024-analysis-fast';
   }
+  // Prepare Analysis after the map has painted, without delaying its opening.
+  window.addEventListener('atlas:mapready',()=>{
+    const connection=navigator.connection;
+    if(connection?.saveData||/^(slow-)?2g$/.test(connection?.effectiveType||''))return;
+    const warm=()=>{if(currentPage==='map'&&!started)loadAnalysis();};
+    if(window.requestIdleCallback)window.requestIdleCallback(warm,{timeout:2500});else setTimeout(warm,1500);
+  });
   function analysisLoaded(){
     if(!started||ready)return;
     try{

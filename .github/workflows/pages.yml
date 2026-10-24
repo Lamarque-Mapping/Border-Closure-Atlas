@@ -37,6 +37,8 @@ jobs:
           node --check dist/export.js
           node --check dist/navigation.js
           node --check dist/national.js
+          node --check dist/data-loader.js
+          node scripts/verify-analysis-loading.cjs
           node scripts/verify-national-policies.cjs
           node scripts/verify-map-export.cjs
       - name: Configure Pages

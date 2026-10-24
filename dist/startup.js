@@ -20,6 +20,11 @@
     }
   }
   window.AtlasStartup = {
+    start: function () {
+      if(done)return;
+      clearTimeout(timer);
+      timer = setTimeout(function () { if (!done && !failed) fail('Loading did not complete.'); }, 20000);
+    },
     ready: function () {
       done = true;
       clearTimeout(timer);
@@ -35,5 +40,5 @@
   window.addEventListener('unhandledrejection', function (event) { fail(event.reason); });
   retry.addEventListener('click', function () { window.location.reload(); });
   message.textContent = 'Loading the map and its source records…';
-  timer = setTimeout(function () { if (!done && !failed) fail('Loading did not complete.'); }, 20000);
 })();
+
