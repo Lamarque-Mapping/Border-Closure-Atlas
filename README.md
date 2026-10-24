@@ -9,6 +9,21 @@ Source: `source/Global_Border_Closures_Register_2016_2026.xlsx`
 Snapshot: 23 October 2026 (`border-corrections-20261023`).
 Study window: 21 October 2016–21 October 2026.
 
+The public navigation is Map / Overview / Dataset. Overview contains About &
+methods and Analysis; Dataset provides the browser reader, workbook and CSV
+exports. Legacy Analysis and record links continue to resolve. The map date
+button selects a month and year directly, and Cite provides the Harvard
+reference with the reader's access date. Location and national-policy sources
+have readable HTML pages, with JSON retained as an optional technical download.
+
+The 24 October workbook compatibility repair gives four internal table IDs
+unique values. All 55 worksheet XML files, values and formulas are unchanged.
+The repository retains the original research workbook. Before publication,
+`scripts/prepare-release-workbook.py` applies and checks the repair using
+`scripts/repair-workbook-package.py`, then the build regenerates the downloadable
+workbook and all data assets. The published fingerprint identifies that repaired
+package; historical research-input fingerprints remain unchanged.
+
 There are 701 parent records: 697 included, three quarantined and one excluded.
 Of the included records, 695 have dated evidence and 252 have a complete
 operational duration for their stated scope, including 163 with exact dates.
@@ -84,10 +99,12 @@ For this hosted source checkout, `dist` contains the full release and `out` is
 the generated hosting directory. To update them:
 
 ```
+python scripts/prepare-release-workbook.py
 python scripts/import-workbook.py
 python scripts/build-analysis.py
 node scripts/build-web-data.cjs
 node scripts/build-crossing-geography.cjs
+node scripts/build-evidence-pages.cjs
 node scripts/verify-crossing-map.cjs
 node scripts/build-hosted.cjs
 python scripts/verify-workbook.py

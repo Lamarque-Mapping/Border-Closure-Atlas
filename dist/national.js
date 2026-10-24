@@ -31,7 +31,7 @@
   function attach(data,source=root.ATLAS_NATIONAL_DATA,england=root.ATLAS_ENGLAND_GEOMETRY){
     if(!source||data.meta.national_supplement?.version===source.version)return data;
     // A custom replacement dataset must not inherit this release's supplement.
-    if(data.meta.source_sha256!=='f96ad671372e6fb9c1afd564373d954c717f4bf809b75a757b48f54ee08ca024')return data;
+    if(data.meta.source_sha256!=='b7290c0ce1056ed7f045ff66e7354edd1d5593db001b12f4d65372318185c6f1')return data;
     const events=compile(source),features=[];
     for(const code of unique(events.map(e=>e.national_geometry))){
       let feature=code==='ENG'?england?.features?.[0]:data.countries.features.find(f=>f.properties.ADM0_A3===code);

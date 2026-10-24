@@ -126,3 +126,79 @@
 .mapping-pending{font-size:11px;line-height:1.35;color:#65756f}
 /* Leave the popup's close button unobstructed on compact maps. */
 .location-card-open .panel-toggle{visibility:hidden}
+
+/* Public navigation, readable methods and direct date selection. */
+.overview-navigation{display:flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:4px 16px;background:#f5f8f5;border-bottom:1px solid var(--line)}
+.overview-section-button{border:0;background:transparent;color:var(--muted);font-size:13px;min-height:36px;padding:8px 15px}
+.overview-section-button.active{background:#e6eee8;color:var(--ink);font-weight:600}
+.record-definition{font-size:14px;line-height:1.7;max-width:700px;color:#53665b;margin:18px 0 0}
+.record-definition strong{color:var(--ink)}
+.excluded-records-note{margin-top:9px;font-size:12px;line-height:1.65}
+.excluded-records-note summary{cursor:pointer;color:#53665b;padding:4px 0}
+.excluded-records-note p{max-width:850px;margin-top:6px!important}
+.citation-section{margin:28px 0 24px;padding-top:24px;border-top:1px solid var(--line);overflow-wrap:anywhere}
+.citation-section .citation-snapshot{font-size:12px;margin-top:10px;color:var(--muted)}
+.cite-link{display:inline;border:0;background:transparent;padding:0;min-height:0;color:inherit;font:inherit;text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+.map-hint{position:absolute;z-index:500;left:60px;right:calc(var(--panel) + 40px);top:64px;margin:0;width:fit-content;max-width:calc(100% - 80px);padding:5px 9px;border-radius:6px;background:#ffffffe3;color:#53695e;font-size:11px;line-height:1.4;pointer-events:none}
+.panel-collapsed .map-hint{right:20px}
+.atlas-pending .map-hint,.location-card-open .map-hint{visibility:hidden}
+.timeline-controls{grid-template-columns:126px 166px minmax(40px,1fr) 56px 34px 34px}
+.timeline-controls .play-button{display:flex;align-items:center;justify-content:center;gap:7px;width:126px;min-height:38px;height:38px;padding:7px 10px;border:0;border-radius:7px;font-size:12px;white-space:nowrap}
+.timeline-controls .play-button svg{flex:none;margin:0;width:12px;height:12px}
+.timeline-controls .play-button::after{border-radius:9px}
+.timeline-date{cursor:pointer;gap:9px;min-height:38px;max-width:none;touch-action:manipulation}
+.timeline-date::after{content:'';width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);flex:none}
+.timeline-date:hover{background:#e1ece4;border-color:#b2c9ba}
+.atlas-dialog{width:min(480px,calc(100% - 28px));box-sizing:border-box;max-height:calc(100dvh - 48px);padding:22px;border:1px solid var(--atlas-control-edge);border-radius:12px;background:var(--paper);color:var(--ink);box-shadow:0 12px 40px #173e342e;overflow:auto;overscroll-behavior:contain}
+.atlas-dialog::backdrop{background:#163e3345}
+.atlas-dialog header{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:18px}
+.atlas-dialog h2{margin:0;font-size:22px;line-height:1.2;font-weight:600;letter-spacing:-.02em}
+.atlas-dialog p{font-size:14px;line-height:1.7;overflow-wrap:anywhere}
+.dialog-close{display:grid;place-items:center;width:40px;height:40px;min-height:40px;padding:0;border:1px solid var(--line);background:#edf3ef;font-size:24px}
+.date-fields{display:grid;grid-template-columns:1fr 1.4fr;gap:14px}
+.date-fields label{display:block;font-size:13px;font-weight:600;color:#52685b}
+.date-fields select{width:100%;font-size:16px;min-height:46px;margin-top:7px}
+.atlas-dialog .date-range-note{font-size:12px;color:var(--muted);margin:12px 0 18px}
+.dialog-primary{background:var(--teal);border-color:var(--teal);color:white;padding:11px 16px;min-height:44px;font-size:14px}
+.dialog-primary:hover{background:#195d59;color:white}
+.atlas-dialog .citation-credit{font-size:12px;color:var(--muted);margin:18px 0 0}
+.atlas-dialog :focus-visible,.timeline-date:focus-visible,.overview-section-button:focus-visible,.cite-link:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+@media(min-width:761px) and (max-width:1200px){
+ .timeline-controls,.detail-open .timeline-controls{grid-template-columns:126px minmax(80px,1fr) 56px 34px 34px;grid-template-areas:'play date date date date' 'slider slider speed previous next';gap:5px 8px}
+ .timeline-controls #play-button,.detail-open #play-button{grid-area:play}
+ .timeline-controls #month-label,.detail-open #month-label{grid-area:date;max-width:none}
+ .timeline-controls #month-slider,.detail-open #month-slider{grid-area:slider}
+ .timeline-controls .timeline-speed-control{grid-area:speed}
+ .timeline-controls #previous-button,.detail-open #previous-button{grid-area:previous}
+ .timeline-controls #next-button,.detail-open #next-button{grid-area:next}
+}
+@media(max-width:760px), (max-width:950px) and (max-height:500px){
+ .overview-navigation{justify-content:flex-start;padding-inline:16px;min-height:46px}
+ .overview-section-button{min-height:40px;padding:9px 12px}
+ .map-hint,.panel-collapsed .map-hint{top:62px;left:62px;right:12px;max-width:calc(100% - 76px);font-size:10px;padding:4px 7px}
+ #map-page:not(.panel-collapsed) .map-hint{visibility:hidden}
+ .panel-toggle{width:104px;font-size:10px}
+ .map-status{right:calc(max(10px,env(safe-area-inset-right,0px)) + 112px);font-size:9.5px}
+ .timeline-controls,.detail-open .timeline-controls{grid-template-columns:44px minmax(70px,1fr) minmax(0,1fr) 44px 44px;grid-template-areas:'play play date date date' 'speed slider slider previous next';gap:4px 6px}
+ .timeline-controls .play-button,.detail-open .timeline-controls .play-button{grid-area:play;justify-self:start;width:126px;min-height:44px;height:44px;font-size:12px;padding:7px 9px}
+ .timeline-controls #month-label,.detail-open #month-label{grid-area:date;justify-self:stretch;min-height:44px;font-size:13px;max-width:none;padding:7px 8px;white-space:nowrap}
+ .timeline-controls #month-slider,.detail-open #month-slider{grid-area:slider}
+ .timeline-controls .timeline-speed-control,.detail-open .timeline-controls .timeline-speed-control{grid-area:speed}
+ .timeline-controls #previous-button,.detail-open #previous-button{grid-area:previous}
+ .timeline-controls #next-button,.detail-open #next-button{grid-area:next}
+ .atlas-dialog{padding:18px}
+ .map-caption .cite-link{min-height:32px;padding:4px 2px}
+ #map-page.panel-collapsed .map-caption{display:flex!important;align-items:center;flex-wrap:wrap;gap:0 3px;left:10px;right:auto;bottom:calc(var(--timeline-clearance,150px) + 44px);max-width:calc(100% - 125px);padding:2px 6px;font-size:9px}
+ .map-caption .map-caption-author,.map-caption .caption-author-divider{display:none}
+}
+@media(max-width:374px){
+ .map-status{right:max(10px,env(safe-area-inset-right,0px))}
+ .map-hint,.panel-collapsed .map-hint{top:65px;right:124px;font-size:9px}
+ .timeline-controls .play-button,.detail-open .timeline-controls .play-button{width:116px;font-size:11px}
+ .timeline-controls #month-label,.detail-open #month-label{font-size:12px;gap:5px}
+}
+@media(max-width:950px) and (max-height:500px){
+ .timeline-controls,.detail-open .timeline-controls{grid-template-columns:126px 150px 44px minmax(40px,1fr) 44px 44px;grid-template-areas:'play date speed slider previous next';gap:4px}
+ .map-hint,.panel-collapsed .map-hint{top:50px;max-width:55%}
+ .map-status{right:auto;font-size:10px}
+}

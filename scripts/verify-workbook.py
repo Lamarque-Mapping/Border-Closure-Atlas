@@ -13,7 +13,7 @@ import openpyxl
 
 ROOT = Path(__file__).resolve().parents[1]
 WEB = ROOT/'dist' if (ROOT/'dist').exists() else ROOT/'releases/current_public/web'
-EXPECTED_SHA = 'f96ad671372e6fb9c1afd564373d954c717f4bf809b75a757b48f54ee08ca024'
+EXPECTED_SHA = 'b7290c0ce1056ed7f045ff66e7354edd1d5593db001b12f4d65372318185c6f1'
 MODEL_SHA = '166953024ad9fb169d6c7c6067455aaf72429fcab467b934db9e4bf79ff5ae3e'
 
 def check(actual, expected, label):

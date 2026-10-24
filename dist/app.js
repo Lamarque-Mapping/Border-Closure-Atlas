@@ -57,7 +57,7 @@
   function notify(message){$('message').textContent=message;$('message').hidden=false;clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>$('message').hidden=true,6500);}
   function setPlayback(playing){
     const button=$('play-button'),label=playing?'Pause timeline':'Play timeline';
-    button.innerHTML=playing?pauseIcon:playIcon;button.title=label;button.setAttribute('aria-label',label);
+    button.innerHTML=(playing?pauseIcon:playIcon)+'<span>'+label+'</span>';button.title=label;button.setAttribute('aria-label',label);
     button.classList.toggle('is-playing',playing);document.querySelector('.timeline').classList.toggle('is-playing',playing);
   }
   function stop(){if(timer)clearInterval(timer);timer=null;setPlayback(false);}
@@ -125,8 +125,8 @@
     $('explore-panel').setAttribute('aria-hidden',String(!open));$('explore-panel').inert=!open;
     if(!compact())desktopPanelOpen=open;
     if(!$('map-page').hidden)document.querySelector('.skip-link').href=$('map-search').parentNode===$('panel-search-slot')?(!open?'#panel-toggle':selected?'#back-button':'#search'):'#search';
-    $('collapse-panel').setAttribute('aria-label',compact()?'Back to map':'Minimize views and records');
-    $('collapse-panel').title=compact()?'Back to map':'Minimize views and records';
+    $('collapse-panel').setAttribute('aria-label',compact()?'Back to map':'Minimize search and zoom');
+    $('collapse-panel').title=compact()?'Back to map':'Minimize search and zoom';
     $('collapse-panel').textContent=compact()?'Back to map':'−';
     updatePanelTitle();scheduleViewport();
   }
@@ -173,10 +173,10 @@
     const min=C.monthOrdinal(data.meta.window_start),max=C.monthOrdinal(data.meta.window_end);$('month-slider').min=min;$('month-slider').max=max;$('month-slider').value=min;$('last-month').textContent=monthLabel(max);
     const summary=data.meta.atlas_summary||{};
     const method=data.meta.research_method||{};
-    $('research-method').innerHTML='<h2>How was the research checked?</h2><p>The dataset has been developed through 16 rounds of research, repeated reviews of the full dataset, and further checks on dates, missing events and unanswered questions. Earlier work recorded three checks across the whole dataset. Other reviews included 272 checks of closure length, a review of 686 records across six regions, and follow-up on 371 evidence questions. The number and scope of checks vary between entries as the dataset has grown.</p><p>The latest review of the land dataset used six regional AI reviews and a combined review using the same model. These checks did not provide independent human verification. The source links and review history allow readers to examine the conclusions.</p>';
+    $('research-method').innerHTML='<h2>How was the research checked?</h2><p>The dataset has been developed through 16 rounds of research, repeated reviews of the full dataset, and further checks on dates, missing events and unanswered questions. Earlier work recorded three checks across the whole dataset. Other reviews included 272 checks of closure length, a review of 686 records across six regions, and follow-up on 371 evidence questions. The number and scope of checks vary between entries as the dataset has grown.</p><p>The AI-assisted research and review used <strong>GPT-6 Astra, using the Ultra reasoning setting</strong>. The latest review of the land dataset involved six regional AI reviews and a combined review using that same model. These are repeated checks within one AI system, rather than independent human verification of every entry. The source links and review history allow readers to examine the evidence and trace revisions.</p>';
     const coverage=summary.chronology_coverage||{};
     const nationalCount=events.filter(e=>e.record_kind==='national_policy').length;
-    $('release-method').innerHTML='<p><strong>'+(events.length-excludedCount-nationalCount)+' land-border records are included</strong>. '+excludedCount+' other records are retained for reference but excluded from the map and charts. '+coverage.without_dated_evidence+' included land records have no dated evidence.</p><p>Land dataset dated '+escape(dateText(data.meta.snapshot_date))+'. <a href="downloads/Global_Border_Closures_Register_2016_2026.xlsx" download="Global_Border_Closures_Register_2016_2026.xlsx">Download the land dataset (Excel)</a>.</p>';
+    $('release-method').innerHTML='<p><strong>'+(events.length-excludedCount-nationalCount)+' land-border records are included</strong>. Land dataset dated '+escape(dateText(data.meta.snapshot_date))+'. <a href="#dataset">Browse and download the dataset →</a></p><details class="excluded-records-note"><summary>'+excludedCount+' further entries are retained for reference</summary><p>These entries are kept so readers can see why they were set aside, but are excluded from the map and charts: <a href="#dataset/record-GL18">Burundi’s reported entry ban on travellers from AFC–M23 areas (GL18)</a> is not sufficiently verified; the <a href="#dataset/record-SA025">August 2024 India–Bangladesh trade interruption (SA025)</a> is not established as an imposed border closure; <a href="#dataset/record-SUP-004">Benin’s January 2026 election closure order (SUP-004)</a> was cancelled before taking effect; and the evidence for the <a href="#dataset/record-R3-SC-004">Madaniyat pedestrian-post restriction (R3-SC-004)</a> does not establish an eligible closure at the stated crossing and scope.</p></details>';
 
     resetMapLayers();showBrowse();render();fitContinent();openSharedRecord();if(loaded)notify('Atlas data updated.');
   }
@@ -190,6 +190,7 @@
     $('result-context').textContent=modeLabel+(state.mode==='intervals'?' '+Number(data.meta.atlas_summary?.duration_reviewed_unresolved||0)+' land records have no dated phase. Disputed evidence appears only at its recorded dates.':'')+' Dots show named crossings; locations awaiting checks remain in the records. Country outlines show national rules: solid for entry or departure bans, dotted for entry conditions. Read each record for the people and routes affected. Unmarked does not necessarily mean open.';
     $('map-note').textContent=(state.continent||'World')+' · '+(state.mode==='all'?'all recorded closures':state.mode==='onsets'?'starts · '+monthLabel(state.month):'Border Restrictions · '+monthLabel(state.month));
     $('month-label').textContent=state.mode==='all'?data.meta.window_start.slice(0,4)+'–'+data.meta.window_end.slice(0,4):monthLabel(state.month);$('month-slider').value=state.month;$('month-slider').setAttribute('aria-valuetext',monthLabel(state.month));
+    $('month-label').setAttribute('aria-label',(state.mode==='all'?'All recorded dates':monthLabel(state.month))+'. Choose a month and year');
     const progress=100*(state.month-Number($('month-slider').min))/(Number($('month-slider').max)-Number($('month-slider').min)||1);
     $('month-slider').style.setProperty('--timeline-progress',progress+'%');
     $('month-slider').disabled=state.mode==='all';$('previous-button').disabled=state.mode==='all'||state.month<=Number($('month-slider').min);$('next-button').disabled=state.mode==='all'||state.month>=Number($('month-slider').max);
@@ -556,7 +557,7 @@
   }
   // A direct Analysis link should not download or draw map geometry first.
   if(document.body.dataset.page!=='analysis')loadMap();
-  window.BORDER_VIEWER={getData:()=>data,getState:()=>({...state}),getVisible:()=>visible.map(e=>e.id),load:applyData,map};
+  window.BORDER_VIEWER={getData:()=>data,getState:()=>({...state}),getVisible:()=>visible.map(e=>e.id),load:applyData,map,selectMonth(n){if(!data||!Number.isInteger(n))return;stop();if(state.mode==='all'){state.mode='intervals';$('time-mode').value=state.mode;}changeMonth(n);}};
 })();
 
 

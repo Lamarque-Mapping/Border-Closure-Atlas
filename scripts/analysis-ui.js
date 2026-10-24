@@ -1,7 +1,7 @@
 (async function(){
 "use strict";
 const ATLAS_HOST = window.parent !== window && window.parent.AtlasNavigation ? window.parent.AtlasNavigation : null;
-if(ATLAS_HOST)document.documentElement.classList.add("atlas-embedded");
+if(ATLAS_HOST){document.documentElement.classList.add("atlas-embedded");document.documentElement.dataset.analysisView="overview";}
 const routeHash = function(){return ATLAS_HOST ? ATLAS_HOST.getAnalysisHash() : location.hash;};
 const replaceRoute = function(hash){
  if(ATLAS_HOST)ATLAS_HOST.setAnalysisHash(hash);
@@ -52,6 +52,19 @@ const PAGE_SIZE = 12;
 let recordBeforeHash = "#register";
 let currentRecord = null;
 const dialog = $("recordDialog");
+let currentView="overview";
+function setView(view){
+ currentView=view==="dataset"?"dataset":"overview";
+ document.documentElement.dataset.analysisView=currentView;
+ document.title=currentView==="dataset"?"Dataset · Global Border Closures Atlas":"Analysis · Global Border Closures Atlas";
+ const skip=document.querySelector(".skip");if(skip)skip.href=currentView==="dataset"?"#register":"#main";
+}
+function openDataset(hash="#register",behavior="smooth"){
+ setView("dataset");
+ if(ATLAS_HOST?.show)ATLAS_HOST.show("dataset",{analysisHash:hash});
+ else replaceRoute(hash);
+ const target=$(hash.slice(1));if(target)target.scrollIntoView({behavior,block:"start"});
+}
 const dateLabel = function(value){
  if(!value)return "Not established";
  if(/^\d{4}-\d{2}-\d{2}$/.test(value)){
@@ -140,7 +153,7 @@ function filterFromChart(kind,value){
  if(kind==="continent")$("continentFilter").value=value;
  if(kind==="code")$("codeFilter").value=value==="No code assigned"?"__uncoded":value;
  page=0;renderRecords();
- $("register").scrollIntoView({behavior:"smooth"});
+ openDataset();
 }
 function applyFilters(){
  const q=norm($("query").value).trim(),r=$("regionFilter").value,continent=$("continentFilter").value,c=$("codeFilter").value,s=$("statusFilter").value,a=$("auditFilter").value;
@@ -276,7 +289,7 @@ document.addEventListener("click",function(event){
  const chart=event.target.closest("[data-chart-kind]");
  if(chart){filterFromChart(chart.dataset.chartKind,chart.dataset.chartValue);return;}
  const audit=event.target.closest("[data-audit-group]");
- if(audit){$("filters").reset();$("auditFilter").value=audit.dataset.auditGroup;page=0;renderRecords();$("register").scrollIntoView({behavior:"smooth"});return;}
+ if(audit){$("filters").reset();$("auditFilter").value=audit.dataset.auditGroup;page=0;renderRecords();openDataset();return;}
  const code=event.target.closest(".code-filter");
  if(code){$("chartPopulation").value="all";renderCharts();filterFromChart("code",code.dataset.code);}
 });
@@ -297,14 +310,16 @@ $("copyRecordLink").addEventListener("click",async function(){
  catch(err){toast(ATLAS_HOST && location.protocol==="about:" ? "Open the hosted atlas to copy a shareable record link." : "Copy the page address to share this record.");}
 });
 async function withResearch(buttonID,action){
- const button=$(buttonID),label=button.textContent;button.disabled=true;button.textContent='Preparing…';
- try{await action(await provider.getResearchData());}catch(error){toast(error.message);}finally{button.disabled=false;button.textContent=label;}
+ const button=$(buttonID),label=button.innerHTML;button.disabled=true;button.textContent='Preparing…';
+ try{await action(await provider.getResearchData());}catch(error){toast(error.message);}finally{button.disabled=false;button.innerHTML=label;}
 }
-$("exportRows").addEventListener("click",()=>withResearch('exportRows',function(full){
+function exportRecordRows(full,selected,filename){
  const byID=new Map(full.events.map(e=>[e.id,analysisEvent(e)]));
  const headings=['ID','Region','Episode','Countries','Crossings','Current timing','Current review','Included','Rationales','Rationale attribution','Scope','Direction','Affected movement','Exceptions','Current uncertainty','Any dated evidence','Complete operational duration','Exact operational duration','Original start (historical)','Original endpoint (historical)','Source URLs'];
- downloadCSV('border-closures-current.csv',[headings,...filtered.map(e=>byID.get(e.id)).map(e=>[e.id,e.region,e.title,e.countries.join('; '),e.crossings,cleanText(e.current_timing),e.status,!e.quarantined,e.codes.join('; '),e.rationale_assignments.map(a=>a['Broad rationale']+': '+a['Evidence attribution']).join(' | '),e.scope,e.direction,e.movement,e.exceptions,e.uncertainty,e.timing_coverage.any_dated_evidence,e.timing_coverage.operational_complete,e.timing_coverage.operational_exact_complete,e.historical.start,e.historical.end,e.sources.map(s=>s.URL).join(' | ')])]);
-}));
+ downloadCSV(filename,[headings,...selected.map(e=>byID.get(e.id)).map(e=>[e.id,e.region,e.title,e.countries.join('; '),e.crossings,cleanText(e.current_timing),e.status,!e.quarantined,e.codes.join('; '),e.rationale_assignments.map(a=>a['Broad rationale']+': '+a['Evidence attribution']).join(' | '),e.scope,e.direction,e.movement,e.exceptions,e.uncertainty,e.timing_coverage.any_dated_evidence,e.timing_coverage.operational_complete,e.timing_coverage.operational_exact_complete,e.historical.start,e.historical.end,e.sources.map(s=>s.URL).join(' | ')])]);
+}
+$("exportRows").addEventListener("click",()=>withResearch('exportRows',full=>exportRecordRows(full,filtered,'border-closures-current.csv')));
+$("exportAllRows").addEventListener("click",()=>withResearch('exportAllRows',full=>exportRecordRows(full,INCLUDED,'border-closures-included-records.csv')));
 $("exportCodes").addEventListener("click",()=>downloadCSV('motivation-counts.csv',[["Current code","Records","Denominator","Share of selected records","Population"],...currentCharts.codes]));
 $("exportRegions").addEventListener("click",()=>downloadCSV('regional-counts.csv',[["Original region label","Records","Denominator","Share of selected records","Population"],...currentCharts.regions]));
 $("exportContinents").addEventListener("click",()=>downloadCSV('continent-counts.csv',[["Continent","Records","All selected records","Share of selected records","Population"],...currentCharts.continents]));
@@ -328,25 +343,34 @@ document.querySelectorAll(".chapter").forEach(function(s){observer.observe(s);})
 function progress(){const available=document.documentElement.scrollHeight-innerHeight;$("readProgress").style.width=(available?100*scrollY/available:0)+"%";}
 window.addEventListener("scroll",progress,{passive:true});
 async function navigateAnalysis(hash){
+ if(hash==="#methods"&&ATLAS_HOST?.show){ATLAS_HOST.show("briefing");return;}
+ if(hash==="#register"||hash==="#downloads")setView("dataset");
+ else if(hash==="#methods"&&!ATLAS_HOST){currentView="overview";delete document.documentElement.dataset.analysisView;}
+ else if(!hash.startsWith("#record-")&&hash!=="#top"&&hash!=="#main")setView("overview");
  if(hash.startsWith("#record-")){
   let id;try{id=decodeURIComponent(hash.slice(8));}catch{return;}
   await openRecord(id,false);
  }else{
   if(dialog.open)closeRecord();
-  const target=document.getElementById(hash.slice(1)||"top");
+  const target=document.getElementById(currentView==="dataset"&&hash==="#top"?"register":hash.slice(1)||"top");
   if(target)target.scrollIntoView({behavior:"auto",block:"start"});
  }
 }
-window.AtlasAnalysis={navigate:navigateAnalysis};
+window.AtlasAnalysis={navigate:navigateAnalysis,setView,getView:()=>currentView};
 window.addEventListener("hashchange",function(){if(!ATLAS_HOST)navigateAnalysis(routeHash());});
 if(ATLAS_HOST)document.addEventListener("click",function(event){
  const link=event.target.closest('a[href^="#"]');
  if(!link)return;
- event.preventDefault();const hash=link.getAttribute("href");
+ event.preventDefault();let hash=link.getAttribute("href");
+ if(hash==="#methods"){ATLAS_HOST.show("briefing");return;}
+ if(hash==="#register"||hash==="#downloads"){openDataset(hash);return;}
+ if(currentView==="dataset"&&hash==="#top")hash="#register";
+ else if(currentView==="dataset"&&!hash.startsWith("#record-")&&hash!=="#register"){setView("overview");ATLAS_HOST.show("analysis",{analysisHash:hash});return;}
  replaceRoute(hash);navigateAnalysis(hash);
 });
 renderCharts();renderRecords();progress();
-if(routeHash().startsWith("#record-"))navigateAnalysis(routeHash());
+if(!ATLAS_HOST){setView(routeHash().startsWith("#record-")||["#register","#downloads"].includes(routeHash())?"dataset":"overview");}
+if(routeHash())navigateAnalysis(routeHash());
 if(ATLAS_HOST?.analysisReady)ATLAS_HOST.analysisReady();
 
 })().catch(function(error){const el=document.getElementById("analysisError");el.hidden=false;el.textContent=error.message;console.error(error);});

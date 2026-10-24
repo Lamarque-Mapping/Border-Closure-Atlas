@@ -31,18 +31,29 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Build the verified workbook and research data
+        run: |
+          python -m pip install --disable-pip-version-check openpyxl==3.1.5
+          python scripts/prepare-release-workbook.py
+          python scripts/import-workbook.py
+          python scripts/build-analysis.py
+          node scripts/build-web-data.cjs
       - name: Check map code and export framing
         run: |
           node scripts/build-crossing-geography.cjs
+          node scripts/build-evidence-pages.cjs
           node --check dist/app.js
           node --check dist/export.js
           node --check dist/navigation.js
+          node --check dist/site-controls.js
           node --check dist/national.js
           node --check dist/data-loader.js
           node scripts/verify-analysis-loading.cjs
           node scripts/verify-national-policies.cjs
           node scripts/verify-map-export.cjs
           node scripts/verify-crossing-map.cjs
+          python scripts/verify-workbook.py
+          node scripts/verify-ui.cjs
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5
