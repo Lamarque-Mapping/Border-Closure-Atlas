@@ -10,6 +10,7 @@ rewrites the research data. GitHub Actions needs only Python's standard library.
 import argparse
 from copy import deepcopy
 import hashlib
+import importlib.util
 import json
 import math
 from pathlib import Path
@@ -370,6 +371,12 @@ def stripped_sheet(data):
 def verify_presentation(source, destination):
     _, before, _ = read_package(source)
     _, after, _ = read_package(destination)
+    reader_layout = None
+    if "xl/worksheets/sheet56.xml" in after:
+        spec = importlib.util.spec_from_file_location("reader_layout", ROOT / "scripts/workbook-reader-layout.py")
+        reader = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(reader)
+        after, reader_layout = reader.normalized_for_presentation(before, after)
     assert before.keys() == after.keys(), "Package parts changed"
     old_styles = ET.fromstring(before["xl/styles.xml"])
     new_styles = ET.fromstring(after["xl/styles.xml"])
@@ -399,11 +406,14 @@ def verify_presentation(source, destination):
             new_fmt = new_xfs[int(current.get("s", 0))].get("numFmtId", "0")
             assert old_fmt == new_fmt, f"Number/date format changed: {path} {cell.get('r')}"
     assert before["xl/workbook.xml"] == after["xl/workbook.xml"], "Worksheet order/names changed"
-    return {"input_sha256": hashlib.sha256(Path(source).read_bytes()).hexdigest(),
+    report = {"input_sha256": hashlib.sha256(Path(source).read_bytes()).hexdigest(),
             "output_sha256": hashlib.sha256(Path(destination).read_bytes()).hexdigest(),
-            "changed_members": changed, "worksheet_count": 55,
+            "changed_members": changed, "worksheet_count": 56 if reader_layout else 55,
+            "original_worksheet_count": 55,
             "cell_payloads_preserved": cells, "formula_payloads_preserved": formula_count,
             "native_features_preserved": True, "research_content_unchanged": True}
+    if reader_layout: report["reader_layout"] = reader_layout
+    return report
 
 
 def main():

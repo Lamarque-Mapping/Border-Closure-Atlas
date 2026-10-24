@@ -3,11 +3,14 @@
 
 Git retains the original research workbook. A narrow metadata repair fixes its
 native tables; artifact-authored presentation resources improve the download.
-All research cells, cached formulas and sheet names/order are verified unchanged.
+All original research cells, cached formulas and sheet identities are preserved.
+A front guide and reversible visibility/order changes make the current records
+easy to find without discarding the supporting research history.
 The importer copies this exact source package to the public XLSX download, so
 the download and every data provenance binding have one matching fingerprint.
 """
 import hashlib
+import argparse
 import json
 import importlib.util
 import subprocess
@@ -22,6 +25,8 @@ WORKBOOK = ROOT / "source/Global_Border_Closures_Register_2016_2026.xlsx"
 REPAIR = ROOT / "scripts/repair-workbook-package.py"
 PRESENTATION = ROOT / "scripts/workbook-presentation.py"
 PRESENTATION_RESOURCES = ROOT / "source/workbook-presentation.json"
+READER = ROOT / "scripts/workbook-reader-layout.py"
+READER_RESOURCES = ROOT / "source/workbook-reader-layout.json"
 REPORT = ROOT / "source/workbook-release-report.json"
 
 
@@ -34,14 +39,22 @@ def tracked_original():
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', type=Path, help='Prepare a review candidate without changing source or live hash bindings')
+    args = parser.parse_args()
+    target = args.output or WORKBOOK
     initial = hashlib.sha256(WORKBOOK.read_bytes()).hexdigest()
     spec = importlib.util.spec_from_file_location("workbook_presentation", PRESENTATION)
     presentation = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(presentation)
+    spec = importlib.util.spec_from_file_location("workbook_reader_layout", READER)
+    reader = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(reader)
     with tempfile.TemporaryDirectory(prefix="atlas-workbook-") as directory:
         original = Path(directory) / "original.xlsx"
         repaired = Path(directory) / "repaired.xlsx"
         formatted = Path(directory) / "formatted.xlsx"
+        release = Path(directory) / "release.xlsx"
         original.write_bytes(tracked_original())
         result = subprocess.run([sys.executable, str(REPAIR), str(original),
                                  "--repair", str(repaired)], check=True, capture_output=True, text=True)
@@ -54,20 +67,23 @@ def main():
             # research contents and native features are still exactly present.
             presentation.verify_presentation(repaired, WORKBOOK)
         formatting = presentation.apply_presentation(repaired, formatted)
-        subprocess.run([sys.executable, str(REPAIR), str(formatted)], check=True, capture_output=True)
-        WORKBOOK.write_bytes(formatted.read_bytes())
-    fingerprint = hashlib.sha256(WORKBOOK.read_bytes()).hexdigest()
+        reader_layout = reader.apply_layout(formatted, release)
+        preservation = presentation.verify_presentation(repaired, release)
+        subprocess.run([sys.executable, str(REPAIR), str(release)], check=True, capture_output=True)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(release.read_bytes())
+    fingerprint = hashlib.sha256(target.read_bytes()).hexdigest()
     # Compression-library versions can affect ZIP bytes. The repair and style
     # comparisons prove exactly which XML metadata changed before rebinding.
     previous_bindings = {ORIGINAL_SHA, REPAIRED_SHA, metadata_sha, initial, fingerprint}
-    for name in ["source/crossings/locations.json", "source/crossings/scope-review.json"]:
+    for name in ([] if args.output else ["source/crossings/locations.json", "source/crossings/scope-review.json"]):
         path = ROOT / name
         text = path.read_text()
         previous = json.loads(text)["source_sha256"]
         assert previous in previous_bindings
         assert text.count(previous) == 1
         path.write_text(text.replace(previous, fingerprint))
-    for name in ["dist/national.js", "scripts/verify-workbook.py"]:
+    for name in ([] if args.output else ["dist/national.js", "scripts/verify-workbook.py"]):
         path = ROOT / name
         text = path.read_text()
         previous = next((value for value in previous_bindings
@@ -77,15 +93,19 @@ def main():
     report = {"original_source_sha256": ORIGINAL_SHA, "repaired_sha256": metadata_sha,
               "release_sha256": fingerprint,
               "presentation_resources_sha256": hashlib.sha256(PRESENTATION_RESOURCES.read_bytes()).hexdigest(),
+              "reader_resources_sha256": hashlib.sha256(READER_RESOURCES.read_bytes()).hexdigest(),
               "metadata_repair": repair, "presentation": formatting,
+              "reader_layout": reader_layout, "preservation": preservation,
               "native_excel_tested": False}
-    REPORT.write_text(json.dumps(report, indent=2) + "\n")
+    report_path = target.with_suffix('.release-report.json') if args.output else REPORT
+    report_path.write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps({"source_sha256": initial, "release_sha256": fingerprint,
-                      "worksheets": formatting["worksheet_count"],
+                      "worksheets": preservation["worksheet_count"],
+                      "original_worksheets": preservation["original_worksheet_count"],
                       "preserved_cells": formatting["cell_payloads_preserved"],
                       "preserved_formulas": formatting["formula_payloads_preserved"],
                       "research_content_unchanged": True,
-                      "repair": "unique table IDs and header metadata", "presentation": "artifact-authored styles"}))
+                      "repair": "unique table IDs and header metadata", "presentation": "artifact-authored styles and reader guide"}))
 
 
 if __name__ == "__main__":

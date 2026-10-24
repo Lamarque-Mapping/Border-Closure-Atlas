@@ -200,12 +200,12 @@ def main():
     if not args.self_test_only:
         _, current, _ = PACKAGE.load_package(args.workbook)
         current_report, _ = PACKAGE.inspect(current)
-        assert current_report["worksheets"] == 55 and current_report["tables"] == 55
+        assert current_report["worksheets"] in {55, 56} and current_report["tables"] == 55
         assert current_report["table_headers_checked"] == 532
         report.update(historical_regressions(current, args.original, args.previous))
         report.update({"workbook": str(args.workbook),
                        "sha256": hashlib.sha256(args.workbook.read_bytes()).hexdigest(),
-                       "worksheets_checked": 55, "tables_checked": 55, "headers_checked": 532})
+                       "worksheets_checked": current_report["worksheets"], "tables_checked": 55, "headers_checked": 532})
     print(json.dumps(report, indent=2))
 
 

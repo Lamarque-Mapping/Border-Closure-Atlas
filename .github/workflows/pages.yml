@@ -57,6 +57,7 @@ jobs:
           python scripts/verify-workbook.py
           python scripts/verify-workbook-package.py
           python scripts/verify-workbook-presentation.py
+          python scripts/verify-workbook-reader-layout.py
           node scripts/verify-downloads.cjs
           python scripts/verify-standalone-downloads.py
           node scripts/verify-ui.cjs

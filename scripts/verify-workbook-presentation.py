@@ -7,6 +7,7 @@ compare typed cell values. Mutation checks prove that content/formula changes
 cannot be accepted as formatting. It never saves through a workbook engine.
 """
 import hashlib
+import argparse
 import importlib.util
 import json
 from pathlib import Path
@@ -25,6 +26,10 @@ spec.loader.exec_module(PRESENTATION)
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--workbook', type=Path, default=WORKBOOK)
+    args = parser.parse_args()
+    workbook = args.workbook
     original_bytes = subprocess.run(["git", "show", "HEAD:source/Global_Border_Closures_Register_2016_2026.xlsx"],
                                     cwd=ROOT, check=True, capture_output=True).stdout
     assert hashlib.sha256(original_bytes).hexdigest() == ORIGINAL_SHA
@@ -34,8 +39,10 @@ def main():
         original.write_bytes(original_bytes)
         subprocess.run([sys.executable, str(ROOT / "scripts/repair-workbook-package.py"), str(original),
                         "--repair", str(repaired)], check=True, capture_output=True)
-        report = PRESENTATION.verify_presentation(repaired, WORKBOOK)
-        assert report["worksheet_count"] == 55
+        report = PRESENTATION.verify_presentation(repaired, workbook)
+        assert report["original_worksheet_count"] == 55
+        assert report["worksheet_count"] == 56
+        assert report["reader_layout"]["hidden_supporting_worksheets"] == 50
         assert report["cell_payloads_preserved"] == 363749
         assert report["formula_payloads_preserved"] == 37762
         # Mutation regressions use a real research worksheet, preserving its
@@ -63,8 +70,9 @@ def main():
         typed_cells = 0
         for data_only in [False, True]:
             before = openpyxl.load_workbook(repaired, read_only=True, data_only=data_only)
-            after = openpyxl.load_workbook(WORKBOOK, read_only=True, data_only=data_only)
-            assert before.sheetnames == after.sheetnames
+            after = openpyxl.load_workbook(workbook, read_only=True, data_only=data_only)
+            assert set(after.sheetnames) == set(before.sheetnames) | {'Start here'}
+            assert after.sheetnames[0] == 'Start here'
             for name in before.sheetnames:
                 rows_before = before[name].iter_rows()
                 rows_after = after[name].iter_rows()
@@ -76,7 +84,7 @@ def main():
                         assert left.number_format == right.number_format, f"Date/number display differs: {name} {left.coordinate}"
                         typed_cells += int(left.value is not None)
             before.close(); after.close()
-        with ZipFile(WORKBOOK) as package:
+        with ZipFile(workbook) as package:
             styles = ET.fromstring(package.read("xl/styles.xml"))
             style_count = len(styles.find(PRESENTATION.M + "cellXfs"))
             resources = json.loads((ROOT / "source/workbook-presentation.json").read_text())

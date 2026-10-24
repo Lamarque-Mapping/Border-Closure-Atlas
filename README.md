@@ -34,11 +34,18 @@ Neutral bilateral boundary references open explicitly associated records. These
 references do not establish later status or enter the dated selection counts,
 charts or CSV exports; coloured restriction marks retain the existing date rules.
 
+The downloadable workbook opens on Start here, which links to the existing
+Register and the current phase dates, duration summaries, rationale coding and
+source index. Those six sheets form the default tab view. The other 50 sheets
+remain available through Unhide, including current supporting reviews and
+historical research. Clearly historical Register columns are hidden; current
+correction notes remain visible and take precedence over earlier descriptions.
+Automated readers should select the Register worksheet by name.
+
 The 24 October workbook compatibility repair gives internal table IDs unique
 values and synchronizes table-column metadata with the existing worksheet
 headings. The latter corrects mismatches in `table4.xml` and `table10.xml`, the
-two table parts identified by an Excel recovery log. Research values, formulas,
-worksheet names and worksheet order remain unchanged.
+two table parts identified by an Excel recovery log. Research values, formulas and original worksheet names remain unchanged.
 The repository retains the original research workbook. Before publication,
 `scripts/prepare-release-workbook.py` applies and checks the repair and the
 download's presentation formatting, then the build regenerates the downloadable

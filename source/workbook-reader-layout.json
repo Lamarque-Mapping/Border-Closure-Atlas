@@ -1,0 +1,120 @@
+{
+  "schema": 1,
+  "author": "@oai/artifact-tool",
+  "builder": "scripts/build-workbook-reader-guide.mjs",
+  "original_sheets": [
+    "Register",
+    "Dimensions",
+    "Evidence",
+    "Claim checks",
+    "Leads",
+    "Coverage",
+    "COVID screen",
+    "Codebook",
+    "Round 2 changes",
+    "Search coverage",
+    "Round 3 changes",
+    "Round 4 changes",
+    "Full audit",
+    "Source review",
+    "Round 5 changes",
+    "Round 6 changes",
+    "Round 6 screening",
+    "Round 7 changes",
+    "Round 7 audit",
+    "Frontier frame",
+    "Round 8 changes",
+    "Round 8 audit",
+    "Round 9 changes",
+    "Round 9 audit",
+    "Round 10 changes",
+    "Round 10 audit",
+    "Round 11 changes",
+    "Round 11 audit",
+    "Round 12 changes",
+    "Round 12 audit",
+    "Round 13 changes",
+    "Round 13 audit",
+    "Round 14 changes",
+    "Round 14 audit",
+    "Round 15 changes",
+    "Round 15 audit",
+    "Round 15 source access",
+    "Round 16 candidates",
+    "Rationale revision",
+    "Rationale coding",
+    "Durations",
+    "Chronology phases",
+    "Timing coverage",
+    "Chronology sources",
+    "Audit review",
+    "Unresolved queue",
+    "Audit changes",
+    "Source index",
+    "Follow-up review",
+    "Country-year coverage",
+    "Relationships",
+    "Locations",
+    "Candidate screening",
+    "Release summary",
+    "Phase locations"
+  ],
+  "visible_sheets": [
+    "Start here",
+    "Register",
+    "Chronology phases",
+    "Durations",
+    "Rationale coding",
+    "Source index"
+  ],
+  "historical_register_columns": [
+    "K:O",
+    "S:W"
+  ],
+  "guide": "<x:worksheet xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><x:sheetPr><x:tabColor rgb=\"FF243A4D\" /></x:sheetPr><x:sheetViews><x:sheetView showGridLines=\"0\" workbookViewId=\"0\" /></x:sheetViews><x:sheetFormatPr defaultRowHeight=\"15\" /><x:cols><x:col min=\"1\" max=\"1\" width=\"3\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"2\" max=\"2\" width=\"29\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"3\" max=\"3\" width=\"91\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"4\" max=\"4\" width=\"3\" hidden=\"0\" customWidth=\"1\" /></x:cols><x:sheetData><x:row r=\"1\" ht=\"12\" customHeight=\"1\"><x:c r=\"A1\" s=\"4\" /><x:c r=\"B1\" s=\"4\" /><x:c r=\"C1\" s=\"4\" /><x:c r=\"D1\" s=\"4\" /></x:row><x:row r=\"2\" ht=\"30\" customHeight=\"1\"><x:c r=\"A2\" s=\"4\" /><x:c r=\"B2\" s=\"6\" t=\"str\"><x:v>Global Border Closures Atlas</x:v></x:c><x:c r=\"C2\" s=\"6\" /><x:c r=\"D2\" s=\"4\" /></x:row><x:row r=\"3\" ht=\"22\" customHeight=\"1\"><x:c r=\"A3\" s=\"4\" /><x:c r=\"B3\" s=\"8\" t=\"str\"><x:v>Workbook guide. Research snapshot: 23 October 2026.</x:v></x:c><x:c r=\"C3\" s=\"8\" /><x:c r=\"D3\" s=\"4\" /></x:row><x:row r=\"4\" ht=\"12\" customHeight=\"1\"><x:c r=\"A4\" s=\"4\" /><x:c r=\"B4\" s=\"4\" /><x:c r=\"C4\" s=\"4\" /><x:c r=\"D4\" s=\"4\" /></x:row><x:row r=\"5\" ht=\"26\" customHeight=\"1\"><x:c r=\"A5\" s=\"4\" /><x:c r=\"B5\" s=\"11\" t=\"str\"><x:v>Start with the Register</x:v></x:c><x:c r=\"C5\" s=\"11\" /><x:c r=\"D5\" s=\"4\" /></x:row><x:row r=\"6\" ht=\"48\" customHeight=\"1\"><x:c r=\"A6\" s=\"4\" /><x:c r=\"B6\" s=\"12\" t=\"str\"><x:f>HYPERLINK(\"#'Register'!A5\",\"Open Register\")</x:f><x:v>Open Register</x:v></x:c><x:c r=\"C6\" s=\"4\" t=\"str\"><x:v>701 records covering land-border restrictions within 21 October 2016 to 21 October 2026. Filter “Analysis inclusion” to “Included” for the 697 records used in the atlas analyses.</x:v></x:c><x:c r=\"D6\" s=\"4\" /></x:row><x:row r=\"7\" ht=\"48\" customHeight=\"1\"><x:c r=\"A7\" s=\"4\" /><x:c r=\"B7\" s=\"14\" t=\"str\"><x:f>HYPERLINK(\"#'Register'!Y5\",\"Read current corrections\")</x:f><x:v>Read current corrections</x:v></x:c><x:c r=\"C7\" s=\"13\" t=\"str\"><x:v>Register is the main record index. Current record corrections (column Y) take precedence over earlier descriptions. Read these with the current timing and rationale fields.</x:v></x:c><x:c r=\"D7\" s=\"4\" /></x:row><x:row r=\"8\" ht=\"23\" customHeight=\"1\"><x:c r=\"A8\" s=\"4\" /><x:c r=\"B8\" s=\"7\" t=\"str\"><x:v>Use the same Record ID to follow a case across the sheets below.</x:v></x:c><x:c r=\"C8\" s=\"7\" /><x:c r=\"D8\" s=\"4\" /></x:row><x:row r=\"9\" ht=\"12\" customHeight=\"1\"><x:c r=\"A9\" s=\"4\" /><x:c r=\"B9\" s=\"4\" /><x:c r=\"C9\" s=\"4\" /><x:c r=\"D9\" s=\"4\" /></x:row><x:row r=\"10\" ht=\"26\" customHeight=\"1\"><x:c r=\"A10\" s=\"4\" /><x:c r=\"B10\" s=\"11\" t=\"str\"><x:v>Open the supporting data</x:v></x:c><x:c r=\"C10\" s=\"11\" /><x:c r=\"D10\" s=\"4\" /></x:row><x:row r=\"11\" ht=\"48\" customHeight=\"1\"><x:c r=\"A11\" s=\"4\" /><x:c r=\"B11\" s=\"14\" t=\"str\"><x:f>HYPERLINK(\"#'Chronology phases'!A1\",\"Chronology phases\")</x:f><x:v>Chronology phases</x:v></x:c><x:c r=\"C11\" s=\"13\" t=\"str\"><x:v>Current scoped timing evidence. Each row is a dated observation or period for a defined restriction, movement or location. Several phases may belong to one record.</x:v></x:c><x:c r=\"D11\" s=\"4\" /></x:row><x:row r=\"12\" ht=\"48\" customHeight=\"1\"><x:c r=\"A12\" s=\"4\" /><x:c r=\"B12\" s=\"12\" t=\"str\"><x:f>HYPERLINK(\"#'Durations'!A1\",\"Durations\")</x:f><x:v>Durations</x:v></x:c><x:c r=\"C12\" s=\"4\" t=\"str\"><x:v>Current timing summary for each record, with date bounds, duration interpretation, evidence and qualifications. “Confirmed through” is not a reopening date.</x:v></x:c><x:c r=\"D12\" s=\"4\" /></x:row><x:row r=\"13\" ht=\"40\" customHeight=\"1\"><x:c r=\"A13\" s=\"4\" /><x:c r=\"B13\" s=\"14\" t=\"str\"><x:f>HYPERLINK(\"#'Rationale coding'!A1\",\"Rationale coding\")</x:f><x:v>Rationale coding</x:v></x:c><x:c r=\"C13\" s=\"13\" t=\"str\"><x:v>Current rationale categories and subcategories, with attribution, phase notes and sources. A record can have more than one rationale.</x:v></x:c><x:c r=\"D13\" s=\"4\" /></x:row><x:row r=\"14\" ht=\"40\" customHeight=\"1\"><x:c r=\"A14\" s=\"4\" /><x:c r=\"B14\" s=\"12\" t=\"str\"><x:f>HYPERLINK(\"#'Source index'!A1\",\"Source index\")</x:f><x:v>Source index</x:v></x:c><x:c r=\"C14\" s=\"4\" t=\"str\"><x:v>Source links and labelled retrieval notes from every research stage. Check the current phase or rationale for what a source supports.</x:v></x:c><x:c r=\"D14\" s=\"4\" /></x:row><x:row r=\"15\" ht=\"12\" customHeight=\"1\"><x:c r=\"A15\" s=\"4\" /><x:c r=\"B15\" s=\"4\" /><x:c r=\"C15\" s=\"4\" /><x:c r=\"D15\" s=\"4\" /></x:row><x:row r=\"16\" ht=\"26\" customHeight=\"1\"><x:c r=\"A16\" s=\"4\" /><x:c r=\"B16\" s=\"11\" t=\"str\"><x:v>Read current and historical evidence</x:v></x:c><x:c r=\"C16\" s=\"11\" /><x:c r=\"D16\" s=\"4\" /></x:row><x:row r=\"17\" ht=\"44\" customHeight=\"1\"><x:c r=\"A17\" s=\"4\" /><x:c r=\"B17\" s=\"15\" t=\"str\"><x:v>What is a record?</x:v></x:c><x:c r=\"C17\" s=\"13\" t=\"str\"><x:v>An analytical entry that brings reports together about a restriction episode or regime. One record can cover several crossings, periods or traffic categories.</x:v></x:c><x:c r=\"D17\" s=\"4\" /></x:row><x:row r=\"18\" ht=\"48\" customHeight=\"1\"><x:c r=\"A18\" s=\"4\" /><x:c r=\"B18\" s=\"16\" t=\"str\"><x:v>Use current findings</x:v></x:c><x:c r=\"C18\" s=\"4\" t=\"str\"><x:v>Use Register’s inclusion, current fields and corrections, then the scoped evidence in Chronology phases and Rationale coding. Earlier assessments can be superseded by a later review.</x:v></x:c><x:c r=\"D18\" s=\"4\" /></x:row><x:row r=\"19\" ht=\"48\" customHeight=\"1\"><x:c r=\"A19\" s=\"4\" /><x:c r=\"B19\" s=\"15\" t=\"str\"><x:v>Keep dates in scope</x:v></x:c><x:c r=\"C19\" s=\"13\" t=\"str\"><x:v>A phase ending at its last confirmed date does not establish reopening or continued closure afterwards. Do not treat the original parent dates as one continuous, current duration.</x:v></x:c><x:c r=\"D19\" s=\"4\" /></x:row><x:row r=\"20\" ht=\"48\" customHeight=\"1\"><x:c r=\"A20\" s=\"4\" /><x:c r=\"B20\" s=\"16\" t=\"str\"><x:v>Historical columns</x:v></x:c><x:c r=\"C20\" s=\"4\" t=\"str\"><x:v>Register columns K:O and S:W retain older claims and original dates. They are hidden by default. To inspect them, select columns J:P or R:X, then choose Unhide Columns.</x:v></x:c><x:c r=\"D20\" s=\"4\" /></x:row><x:row r=\"21\" ht=\"12\" customHeight=\"1\"><x:c r=\"A21\" s=\"4\" /><x:c r=\"B21\" s=\"4\" /><x:c r=\"C21\" s=\"4\" /><x:c r=\"D21\" s=\"4\" /></x:row><x:row r=\"22\" ht=\"26\" customHeight=\"1\"><x:c r=\"A22\" s=\"4\" /><x:c r=\"B22\" s=\"11\" t=\"str\"><x:v>Find the retained supporting worksheets</x:v></x:c><x:c r=\"C22\" s=\"11\" /><x:c r=\"D22\" s=\"4\" /></x:row><x:row r=\"23\" ht=\"44\" customHeight=\"1\"><x:c r=\"A23\" s=\"4\" /><x:c r=\"B23\" s=\"4\" t=\"str\"><x:v>50 additional worksheets are hidden to keep the opening view simple. Their cells, formulas and evidence remain in the file. Hidden sheets include both current supporting detail and earlier research.</x:v></x:c><x:c r=\"C23\" s=\"4\" /><x:c r=\"D23\" s=\"4\" /></x:row><x:row r=\"24\" ht=\"44\" customHeight=\"1\"><x:c r=\"A24\" s=\"4\" /><x:c r=\"B24\" s=\"16\" t=\"str\"><x:v>Unhide a worksheet</x:v></x:c><x:c r=\"C24\" s=\"4\" t=\"str\"><x:v>In Excel, right-click a visible sheet tab and choose Unhide, then select a sheet. Other spreadsheet apps provide a similar sheet-visibility command.</x:v></x:c><x:c r=\"D24\" s=\"4\" /></x:row><x:row r=\"25\" ht=\"48\" customHeight=\"1\"><x:c r=\"A25\" s=\"4\" /><x:c r=\"B25\" s=\"15\" t=\"str\"><x:v>Current review detail</x:v></x:c><x:c r=\"C25\" s=\"13\" t=\"str\"><x:v>Audit review (current outcome alongside initial review fields), Follow-up review and Unresolved queue. These retain qualifications, adjudications and outstanding evidence needs.</x:v></x:c><x:c r=\"D25\" s=\"4\" /></x:row><x:row r=\"26\" ht=\"48\" customHeight=\"1\"><x:c r=\"A26\" s=\"4\" /><x:c r=\"B26\" s=\"16\" t=\"str\"><x:v>Sources and geography</x:v></x:c><x:c r=\"C26\" s=\"4\" t=\"str\"><x:v>Chronology sources, Relationships, Locations, Phase locations and Country-year coverage. They retain detailed source, relationship, location and search information.</x:v></x:c><x:c r=\"D26\" s=\"4\" /></x:row><x:row r=\"27\" ht=\"48\" customHeight=\"1\"><x:c r=\"A27\" s=\"4\" /><x:c r=\"B27\" s=\"15\" t=\"str\"><x:v>Earlier research</x:v></x:c><x:c r=\"C27\" s=\"13\" t=\"str\"><x:v>Claim checks, Full audit, Source review, Rationale revision and the Round 2–16 sheets retain earlier findings and research history. They do not replace the current scoped conclusions.</x:v></x:c><x:c r=\"D27\" s=\"4\" /></x:row><x:row r=\"28\" ht=\"48\" customHeight=\"1\"><x:c r=\"A28\" s=\"4\" /><x:c r=\"B28\" s=\"16\" t=\"str\"><x:v>Definitions and summaries</x:v></x:c><x:c r=\"C28\" s=\"4\" t=\"str\"><x:v>Codebook retains definitions alongside earlier snapshots. Release summary and Timing coverage retain release diagnostics, including labelled historical totals. Read the labels before comparing figures.</x:v></x:c><x:c r=\"D28\" s=\"4\" /></x:row><x:row r=\"29\" ht=\"12\" customHeight=\"1\"><x:c r=\"A29\" s=\"4\" /><x:c r=\"B29\" s=\"4\" /><x:c r=\"C29\" s=\"4\" /><x:c r=\"D29\" s=\"4\" /></x:row><x:row r=\"30\" ht=\"30\" customHeight=\"1\"><x:c r=\"A30\" s=\"4\" /><x:c r=\"B30\" s=\"7\" t=\"str\"><x:v>All 55 original worksheets remain available.</x:v></x:c><x:c r=\"C30\" s=\"7\" /><x:c r=\"D30\" s=\"4\" /></x:row><x:row r=\"31\" ht=\"12\" customHeight=\"1\"><x:c r=\"A31\" s=\"4\" /><x:c r=\"B31\" s=\"4\" /><x:c r=\"C31\" s=\"4\" /><x:c r=\"D31\" s=\"4\" /></x:row><x:row r=\"32\" ht=\"12\" customHeight=\"1\"><x:c r=\"A32\" s=\"4\" /><x:c r=\"B32\" s=\"4\" /><x:c r=\"C32\" s=\"4\" /><x:c r=\"D32\" s=\"4\" /></x:row><x:row r=\"33\" ht=\"12\" customHeight=\"1\"><x:c r=\"A33\" s=\"4\" /><x:c r=\"B33\" s=\"4\" /><x:c r=\"C33\" s=\"4\" /><x:c r=\"D33\" s=\"4\" /></x:row><x:row r=\"34\" ht=\"12\" customHeight=\"1\"><x:c r=\"A34\" s=\"4\" /><x:c r=\"B34\" s=\"4\" /><x:c r=\"C34\" s=\"4\" /><x:c r=\"D34\" s=\"4\" /></x:row><x:row r=\"35\" ht=\"12\" customHeight=\"1\"><x:c r=\"A35\" s=\"4\" /><x:c r=\"B35\" s=\"4\" /><x:c r=\"C35\" s=\"4\" /><x:c r=\"D35\" s=\"4\" /></x:row><x:row r=\"36\" ht=\"12\" customHeight=\"1\"><x:c r=\"A36\" s=\"4\" /><x:c r=\"B36\" s=\"4\" /><x:c r=\"C36\" s=\"4\" /><x:c r=\"D36\" s=\"4\" /></x:row><x:row r=\"37\" ht=\"12\" customHeight=\"1\"><x:c r=\"A37\" s=\"4\" /><x:c r=\"B37\" s=\"4\" /><x:c r=\"C37\" s=\"4\" /><x:c r=\"D37\" s=\"4\" /></x:row><x:row r=\"38\" ht=\"12\" customHeight=\"1\"><x:c r=\"A38\" s=\"4\" /><x:c r=\"B38\" s=\"4\" /><x:c r=\"C38\" s=\"4\" /><x:c r=\"D38\" s=\"4\" /></x:row><x:row r=\"39\" ht=\"12\" customHeight=\"1\"><x:c r=\"A39\" s=\"4\" /><x:c r=\"B39\" s=\"4\" /><x:c r=\"C39\" s=\"4\" /><x:c r=\"D39\" s=\"4\" /></x:row><x:row r=\"40\" ht=\"12\" customHeight=\"1\"><x:c r=\"A40\" s=\"4\" /><x:c r=\"B40\" s=\"4\" /><x:c r=\"C40\" s=\"4\" /><x:c r=\"D40\" s=\"4\" /></x:row></x:sheetData><x:mergeCells><x:mergeCell ref=\"B2:C2\" /><x:mergeCell ref=\"B3:C3\" /><x:mergeCell ref=\"B5:C5\" /><x:mergeCell ref=\"B8:C8\" /><x:mergeCell ref=\"B10:C10\" /><x:mergeCell ref=\"B16:C16\" /><x:mergeCell ref=\"B22:C22\" /><x:mergeCell ref=\"B23:C23\" /><x:mergeCell ref=\"B30:C30\" /></x:mergeCells><x:pageMargins left=\"0.7\" right=\"0.7\" top=\"0.75\" bottom=\"0.75\" header=\"0.3\" footer=\"0.3\" /></x:worksheet>",
+  "styles": "<?xml version=\"1.0\" encoding=\"utf-8\"?><x:styleSheet xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><x:fonts count=\"7\"><x:font><x:sz val=\"11\" /><x:name val=\"Carlito\" /></x:font><x:font><x:sz val=\"10\" /><x:color rgb=\"FF263746\" /><x:name val=\"Arial\" /></x:font><x:font><x:b /><x:sz val=\"16\" /><x:color rgb=\"FF243A4D\" /><x:name val=\"Arial\" /></x:font><x:font><x:i /><x:sz val=\"10\" /><x:color rgb=\"FF536474\" /><x:name val=\"Arial\" /></x:font><x:font><x:b /><x:sz val=\"11\" /><x:color rgb=\"FF243A4D\" /><x:name val=\"Arial\" /></x:font><x:font><x:b /><x:sz val=\"10\" /><x:color rgb=\"FF175B86\" /><x:name val=\"Arial\" /></x:font><x:font><x:b /><x:sz val=\"10\" /><x:color rgb=\"FF263746\" /><x:name val=\"Arial\" /></x:font></x:fonts><x:fills count=\"4\"><x:fill><x:patternFill patternType=\"none\" /></x:fill><x:fill><x:patternFill patternType=\"gray125\" /></x:fill><x:fill><x:patternFill patternType=\"solid\"><x:fgColor rgb=\"FFFFFFFF\" /></x:patternFill></x:fill><x:fill><x:patternFill patternType=\"solid\"><x:fgColor rgb=\"FFF1F5F8\" /></x:patternFill></x:fill></x:fills><x:borders count=\"2\"><x:border><x:left /><x:right /><x:top /><x:bottom /><x:diagonal /></x:border><x:border><x:left /><x:right /><x:top /><x:bottom style=\"thin\"><x:color rgb=\"FFC6D1D9\" /></x:bottom><x:diagonal /></x:border></x:borders><x:cellStyleXfs count=\"1\"><x:xf numFmtId=\"0\" fontId=\"0\" fillId=\"0\" borderId=\"0\" /></x:cellStyleXfs><x:cellXfs count=\"17\"><x:xf numFmtId=\"0\" fontId=\"0\" fillId=\"0\" borderId=\"0\" xfId=\"0\" /><x:xf numFmtId=\"0\" fontId=\"0\" fillId=\"2\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"2\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"2\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment wrapText=\"1\" /></x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"2\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"top\" wrapText=\"1\" /></x:xf><x:xf numFmtId=\"0\" fontId=\"2\" fillId=\"2\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"top\" wrapText=\"1\" /></x:xf><x:xf numFmtId=\"0\" fontId=\"2\" fillId=\"2\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"top\" wrapText=\"0\" /></x:xf><x:xf numFmtId=\"0\" fontId=\"3\" fillId=\"2\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"top\" wrapText=\"1\" /></x:xf><x:xf numFmtId=\"0\" fontId=\"3\" fillId=\"2\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"top\" wrapText=\"0\" /></x:xf><x:xf numFmtId=\"0\" fontId=\"4\" fillId=\"2\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"top\" wrapText=\"1\" /></x:xf><x:xf numFmtId=\"0\" fontId=\"4\" fillId=\"2\" borderId=\"1\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"top\" wrapText=\"1\" /></x:xf><x:xf numFmtId=\"0\" fontId=\"4\" fillId=\"2\" borderId=\"1\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /></x:xf><x:xf numFmtId=\"0\" fontId=\"5\" fillId=\"2\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"top\" wrapText=\"1\" /></x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"3\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"top\" wrapText=\"1\" /></x:xf><x:xf numFmtId=\"0\" fontId=\"5\" fillId=\"3\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"top\" wrapText=\"1\" /></x:xf><x:xf numFmtId=\"0\" fontId=\"6\" fillId=\"3\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"top\" wrapText=\"1\" /></x:xf><x:xf numFmtId=\"0\" fontId=\"6\" fillId=\"2\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"top\" wrapText=\"1\" /></x:xf></x:cellXfs><x:cellStyles count=\"1\"><x:cellStyle name=\"Normal\" xfId=\"0\" /></x:cellStyles></x:styleSheet>",
+  "links": [
+    {
+      "cell": "B6",
+      "sheet": "Register",
+      "target": "A5",
+      "label": "Open Register",
+      "formula": "=HYPERLINK(\"#'Register'!A5\",\"Open Register\")"
+    },
+    {
+      "cell": "B7",
+      "sheet": "Register",
+      "target": "Y5",
+      "label": "Read current corrections",
+      "formula": "=HYPERLINK(\"#'Register'!Y5\",\"Read current corrections\")"
+    },
+    {
+      "cell": "B11",
+      "sheet": "Chronology phases",
+      "target": "A1",
+      "label": "Chronology phases",
+      "formula": "=HYPERLINK(\"#'Chronology phases'!A1\",\"Chronology phases\")"
+    },
+    {
+      "cell": "B12",
+      "sheet": "Durations",
+      "target": "A1",
+      "label": "Durations",
+      "formula": "=HYPERLINK(\"#'Durations'!A1\",\"Durations\")"
+    },
+    {
+      "cell": "B13",
+      "sheet": "Rationale coding",
+      "target": "A1",
+      "label": "Rationale coding",
+      "formula": "=HYPERLINK(\"#'Rationale coding'!A1\",\"Rationale coding\")"
+    },
+    {
+      "cell": "B14",
+      "sheet": "Source index",
+      "target": "A1",
+      "label": "Source index",
+      "formula": "=HYPERLINK(\"#'Source index'!A1\",\"Source index\")"
+    }
+  ]
+}
