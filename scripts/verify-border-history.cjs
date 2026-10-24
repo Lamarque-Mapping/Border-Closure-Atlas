@@ -54,6 +54,114 @@ assert.equal(H.priorCrossings(fixture,C,state,[])[0].recordCount,1);
 // whichever marker receives the browser event, the nearest visible point wins.
 // Keyboard activation instead retains its explicitly focused marker.
 const app=fs.readFileSync(path.join(root,'dist/app.js'),'utf8');
+
+// The optional reference layer starts off and must stay separate from dated
+// records in the live renderer and the saved view. Exercise production state,
+// control wiring and rendering functions rather than restating their gate.
+const stateDeclaration=app.match(/const state=(\{[^\n]+\});/);
+assert(stateDeclaration,'the production default map state is available');
+const defaultState=vm.runInNewContext('('+stateDeclaration[1]+')');
+assert.equal(defaultState.showHistory,false,'earlier crossing history is off by default');
+const html=fs.readFileSync(path.join(root,'dist/index.html'),'utf8');
+const historyInput=html.match(/<input\b[^>]*\bid="show-history"[^>]*>/);
+assert(historyInput&&!/\schecked(?:\s|=|>)/.test(historyInput[0]),'the initial history checkbox is unchecked');
+function productionFunction(name,nextName){
+  const start=app.indexOf('  function '+name+'('),end=app.indexOf('  function '+nextName+'(',start);
+  assert(start>=0&&end>start,'production function is available: '+name);
+  return app.slice(start,end);
+}
+const controls=new Map(),historyKeys=[{hidden:false},{hidden:false}],liveHistoryLayers=new Set();
+function control(id){
+  if(!controls.has(id))controls.set(id,{hidden:false,disabled:false,checked:false,value:'',textContent:'',
+    min:C.monthOrdinal(data.meta.window_start),max:C.monthOrdinal(data.meta.window_end),
+    style:{setProperty(){}},setAttribute(){},listeners:{},addEventListener(name,callback){this.listeners[name]=callback;}});
+  return controls.get(id);
+}
+const viewMap={
+  closePopup(){},removeLayer(layer){liveHistoryLayers.delete(layer);},
+  getSize:()=>({x:1000,y:650}),getZoom:()=>2,getPixelBounds:()=>({min:{x:0,y:0}}),
+  containerPointToLatLng:([x,y])=>({lng:x*.36-180,lat:80-y*.16}),
+  distance:(a,b)=>Math.abs(b.lng-a.lng)*111320
+};
+const viewContext={
+  data,C,state:{...defaultState},map:viewMap,visible:[],locationEvents:new Map(),historyLocations:[],historyLayer:null,selected:null,
+  locations:new Map(C.locationFeatures(data).map(feature=>[feature.properties.location_id,feature])),
+  window:{BorderHistory:H},$:control,document:{querySelectorAll(selector){assert.equal(selector,'[data-history-key]');return historyKeys;}},
+  monthLabel:C.monthISO,escape:value=>String(value),
+  updatePanelTitle(){},updateTabs(){},renderList(){},renderLocations(){},updateRecordsControls(){},showBrowse(){},resetList(){},
+  L:{
+    layerGroup(){return {markers:[],addTo(map){assert.strictEqual(map,viewMap);liveHistoryLayers.add(this);return this;}};},
+    divIcon:options=>options,
+    marker(coordinates,options){return {coordinates,options,addTo(layer){layer.markers.push(this);return this;},
+      getElement:()=>null,bindTooltip(){return this;},on(){return this;}};}
+  }
+};
+viewContext.mapLocationIDs=record=>C.mapLocationsFor(record,data,viewContext.state);
+vm.createContext(viewContext);
+vm.runInContext([
+  productionFunction('resetFilters','applyData'),
+  productionFunction('updateHistoryLocations','render'),
+  productionFunction('render','renderListContent'),
+  productionFunction('renderHistoryLocations','openLocationCard')
+].join('\n'),viewContext);
+const historyChange=app.split('\n').find(line=>line.includes("$('show-history').addEventListener('change'"));
+assert(historyChange,'the real history checkbox change handler is wired');
+vm.runInContext(historyChange,viewContext);
+const changeHistory=checked=>{const checkbox=control('show-history');checkbox.checked=checked;checkbox.listeners.change({target:checkbox});};
+const exportWindow={BorderCartography:require(path.join(root,'dist/cartography.js')),BorderCore:C};
+vm.runInNewContext(fs.readFileSync(path.join(root,'dist/export.js'),'utf8'),{window:exportWindow,structuredClone,URL,Date,Map,Set});
+const captureHistory=(extra={})=>exportWindow.BorderExport.capture({
+  map:viewMap,data,visible:viewContext.visible,locationEvents:viewContext.locationEvents,
+  historyLocations:viewContext.historyLocations,state:viewContext.state,...extra
+});
+const currentRecordIDs=()=>Array.from(viewContext.visible,record=>record.id);
+for(const month of ['2020-06','2026-10']){
+  Object.assign(viewContext.state,defaultState,{month:C.monthOrdinal(month)});
+  viewContext.render();
+  const datedIDs=currentRecordIDs(),displayedCount=control('record-count').textContent,offSnapshot=captureHistory();
+  assert.equal(viewContext.historyLocations.length,0,month+' default view has no historical points');
+  assert.equal(liveHistoryLayers.size,0,month+' default view creates no empty history layer');
+  assert(historyKeys.every(key=>key.hidden),month+' desktop and mobile history keys are hidden while off');
+  assert.equal(offSnapshot.historyReferences.length,0,month+' default saved view excludes historical points');
+  changeHistory(true);
+  const enabledHistory=[...viewContext.historyLocations],enabledLayer=viewContext.historyLayer,onSnapshot=captureHistory();
+  const expected=H.priorCrossings(data,C,viewContext.state,[...viewContext.locationEvents.keys()]);
+  assert(expected.length>0,month+' fixture has earlier eligible crossings');
+  assert.equal(enabledHistory.length,expected.length,month+' enabling history uses the real eligible references');
+  assert.equal(liveHistoryLayers.size,1,month+' enabling history creates one reference layer');
+  assert.equal(enabledLayer.markers.length,expected.length,month+' actual marker rendering receives only the enabled references');
+  assert(historyKeys.every(key=>!key.hidden),month+' both history keys are shown while enabled');
+  assert.equal(onSnapshot.historyReferences.length,expected.length,month+' enabled saved view includes the displayed history');
+  assert.deepEqual(currentRecordIDs(),datedIDs,month+' enabling history cannot inflate dated record selection');
+  assert.equal(control('record-count').textContent,displayedCount,month+' enabling history cannot inflate the displayed count');
+  assert.equal(onSnapshot.events.length,offSnapshot.events.length,month+' export active record count is unchanged');
+  assert.equal(onSnapshot.references.length,offSnapshot.references.length,month+' export active map-reference count is unchanged');
+  changeHistory(false);
+  assert.equal(viewContext.historyLocations.length,0,month+' disabling clears cached historical references');
+  assert.equal(viewContext.historyLayer,null,month+' disabling removes and clears the former history layer');
+  assert(!liveHistoryLayers.has(enabledLayer)&&liveHistoryLayers.size===0,month+' former grey markers are removed from the map');
+  assert(historyKeys.every(key=>key.hidden),month+' disabling hides both history keys');
+  assert.equal(captureHistory().historyReferences.length,0,month+' disabling removes history from subsequent exports');
+  assert.equal(captureHistory({historyLocations:enabledHistory}).historyReferences.length,0,month+' disabled export rejects even a stale supplied history array');
+  assert.equal(onSnapshot.historyReferences.length,expected.length,month+' an already captured enabled view remains an immutable snapshot');
+  assert.deepEqual(currentRecordIDs(),datedIDs,month+' disabling history cannot change the dated selection');
+}
+for(const mode of ['all','onsets']){
+  Object.assign(viewContext.state,{mode,showHistory:true});viewContext.render();
+  assert.equal(control('show-history').disabled,true,mode+' mode disables the history control');
+  assert.equal(control('history-mode-note').hidden,false,mode+' mode explains the unavailable layer');
+  assert.equal(viewContext.historyLocations.length,0,mode+' mode never feeds earlier markers into the renderer');
+  assert.equal(liveHistoryLayers.size,0,mode+' mode leaves no historical markers on the map');
+  assert.equal(captureHistory().historyReferences.length,0,mode+' saved view excludes the unavailable history layer');
+}
+Object.assign(viewContext.state,{mode:'intervals',showHistory:true});control('show-history').checked=true;
+viewContext.resetFilters();viewContext.render();
+assert.equal(viewContext.state.showHistory,false,'Reset restores the history-off default');
+assert.equal(control('show-history').checked,false,'Reset unchecks the actual history control');
+assert.equal(control('show-history').disabled,false,'the history control is available again in the default Border Restrictions view');
+assert.equal(control('history-mode-note').hidden,true,'the unavailable-mode note is hidden in the default view');
+assert.equal(liveHistoryLayers.size,0,'Reset cannot leave historical markers visible');
+
 const interactionStart=app.indexOf('  function nearestPoint('),interactionEnd=app.indexOf('  function renderLocations(',interactionStart);
 assert(interactionStart>=0&&interactionEnd>interactionStart,'the production point-interaction functions can be exercised');
 const productionInteraction=app.slice(interactionStart,interactionEnd);

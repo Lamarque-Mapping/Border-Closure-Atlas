@@ -5,16 +5,18 @@ const plain=value=>JSON.parse(JSON.stringify(value));
 const app=fs.readFileSync(root+'/app.js','utf8');
 let mobile=false,canvas;
 function canvasContext(){
- const scales=[],points=[],arcs=[],texts=[],strokes=[],fills=[],operations=[],rectFills=[],rectStrokes=[],stack=[];let matrix={x:1,y:1,left:0,top:0},currentPath=[],currentArcs=[];
- const api={scales,points,arcs,texts,strokes,fills,operations,rectFills,rectStrokes,measureText:text=>({width:String(text).length*7}),
-  save(){stack.push({...matrix})},restore(){matrix=stack.pop()},
+ const scales=[],points=[],arcs=[],texts=[],strokes=[],fills=[],operations=[],rectFills=[],rectStrokes=[],stack=[];let matrix={x:1,y:1,left:0,top:0},currentPath=[],currentArcs=[],dash=[];
+ const styleKeys=['globalAlpha','lineWidth','strokeStyle','fillStyle','lineCap','lineJoin','font','textAlign','textBaseline'];
+ const api={scales,points,arcs,texts,strokes,fills,operations,rectFills,rectStrokes,globalAlpha:1,lineWidth:1,measureText:text=>({width:String(text).length*7}),
+  save(){stack.push({matrix:{...matrix},dash:[...dash],style:Object.fromEntries(styleKeys.map(key=>[key,api[key]]))})},restore(){const saved=stack.pop();matrix=saved.matrix;dash=saved.dash;Object.assign(api,saved.style)},
+  setLineDash(value){dash=[...value]},
   scale(x,y){scales.push([x,y]);matrix.x*=x;matrix.y*=y},
   translate(x,y){matrix.left+=x*matrix.x;matrix.top+=y*matrix.y},
   beginPath(){currentPath=[];currentArcs=[]},
   moveTo(x,y){const p=[matrix.left+x*matrix.x,matrix.top+y*matrix.y];points.push(p);currentPath.push(p)},
   lineTo(x,y){const p=[matrix.left+x*matrix.x,matrix.top+y*matrix.y];points.push(p);currentPath.push(p)},
-  stroke(){const mark={points:currentPath.slice(),arcs:currentArcs.slice(),width:api.lineWidth*matrix.x,rawWidth:api.lineWidth,cap:api.lineCap,colour:api.strokeStyle};strokes.push(mark);operations.push({type:'stroke',mark})},
-  fill(){const mark={arcs:currentArcs.slice(),colour:api.fillStyle};fills.push(mark);operations.push({type:'fill',mark})},
+  stroke(){const mark={points:currentPath.slice(),arcs:currentArcs.slice(),width:api.lineWidth*matrix.x,rawWidth:api.lineWidth,cap:api.lineCap,colour:api.strokeStyle,opacity:api.globalAlpha,dash:[...dash]};strokes.push(mark);operations.push({type:'stroke',mark})},
+  fill(){const mark={points:currentPath.slice(),arcs:currentArcs.slice(),colour:api.fillStyle};fills.push(mark);operations.push({type:'fill',mark})},
   fillRect(x,y,width,height){rectFills.push({x:matrix.left+x*matrix.x,y:matrix.top+y*matrix.y,width:width*matrix.x,height:height*matrix.y,rawWidth:width,rawHeight:height,colour:api.fillStyle})},
   strokeRect(x,y,width,height){rectStrokes.push({x:matrix.left+x*matrix.x,y:matrix.top+y*matrix.y,width:width*matrix.x,height:height*matrix.y,rawWidth:width,rawHeight:height,lineWidth:api.lineWidth*matrix.x,rawLineWidth:api.lineWidth,colour:api.strokeStyle})},
   arc(x,y,radius){const mark={x:matrix.left+x*matrix.x,y:matrix.top+y*matrix.y,radius:radius*matrix.x,rawRadius:radius};arcs.push(mark);currentArcs.push(mark)},
@@ -123,12 +125,12 @@ assert(E.notes({...pointSnapshot,state:{mode:'all',precision:'unlocated'},events
 // records or reference counts, and no inherited active rationale or duration.
 const historicalFeature=plain(pointFeature);historicalFeature.properties.location_id='earlier-post';historicalFeature.properties.name='Earlier post';
 const oldPoint=pointMap.containerPointToLatLng([400,300]);historicalFeature.geometry.coordinates=[oldPoint.lng,oldPoint.lat];
-const historicalPhase={period_id:'earlier-phase',start_earliest:'2018-01-01',start_latest:'2018-01-02',end_earliest:'2018-02-01',end_latest:'2018-02-02',last_confirmed:'2018-01-20',evidence_dates:['2018-01-20'],display:'Do not inherit this duration as current'};
+const historicalPhase={period_id:'earlier-phase',start_earliest:'2018-01-01',start_latest:'2018-01-02',end_earliest:'2018-02-01',end_latest:'2018-02-02',last_confirmed:'2018-01-20',evidence_dates:['2018-01-20'],end_is_reopening:true,observed_reopening:'Reopening documented',display:'Do not inherit this duration as current'};
 const historicalRecord={id:'earlier-event',title:'Old crossing restriction',rationales:['Security'],source_urls:['https://example.invalid/history'],duration_periods:[historicalPhase]};
 const historyLocations=[{feature:historicalFeature,locationId:'earlier-post',title:'Earlier post',records:[{record:historicalRecord,phases:[historicalPhase],latestEvidenceDate:'2018-02-02'}],latestEvidenceDate:'2018-02-02'}];
 const borderStart=pointMap.containerPointToLatLng([300,300]),borderEnd=pointMap.containerPointToLatLng([600,300]);
 const historyData={...pointData,borders:{type:'FeatureCollection',features:[{type:'Feature',properties:{},geometry:{type:'LineString',coordinates:[[borderStart.lng,borderStart.lat],[borderEnd.lng,borderEnd.lat]]}}]}};
-const historySnapshot=E.capture({map:pointMap,data:historyData,visible:[pointEvent],locationEvents:new Map([['named-post',[pointEvent]]]),historyLocations,state:{mode:'all'}});
+const historySnapshot=E.capture({map:pointMap,data:historyData,visible:[pointEvent],locationEvents:new Map([['named-post',[pointEvent]]]),historyLocations,state:{mode:'all',showHistory:true}});
 assert.equal(historySnapshot.events.length,1);assert.equal(historySnapshot.references.length,1);assert.equal(historySnapshot.historyReferences.length,1);
 assert(!historySnapshot.events.some(event=>event.id==='earlier-event'),'history never enters the active event selection');
 assert(!historySnapshot.references.some(reference=>reference.feature.properties.location_id==='earlier-post'),'history never enters active reference totals');
@@ -146,32 +148,58 @@ assert(canvas.context.texts.includes('Earlier restriction · read dated history'
 assert(canvas.context.texts.some(text=>text.startsWith('Selection: 1 records · 1 map references.')),'history does not inflate the PNG selection caption');
 const historyNotes=E.notes({...historySnapshot,events:[{id:'point-event',title:'Current selection',duration_periods:[]}]},'Current view with earlier histories');
 assert(historyNotes.includes('Selection: 1 records; 1 map references.'));const historyHeading=historyNotes.indexOf('EARLIER RESTRICTIONS — DATED HISTORY');assert(historyHeading>historyNotes.indexOf('EVENT REFERENCES'));assert(historyNotes.indexOf('Historical record: earlier-event')>historyHeading);assert(!historyNotes.slice(0,historyHeading).includes('earlier-event'));assert(historyNotes.includes('Latest recorded evidence: 2 Feb 2018'));assert(historyNotes.includes('Recorded start bounds: 1 Jan 2018 to 2 Jan 2018'));assert(historyNotes.includes('do not establish crossing conditions in the selected month'));assert(!historyNotes.includes('Do not inherit this duration as current'));
+assert(historyNotes.includes('including records with a documented reopening'),'history is not restricted to cases with unknown reopening');
 const onlyHistory={...historySnapshot,events:[],references:[]};E.render(onlyHistory,'Earlier histories');assert(canvas.context.texts.some(text=>text.startsWith('Selection: 0 records · 0 map references.')));assert(!canvas.context.texts.includes('Named crossing'),'a history-only key does not advertise active crossing points');
 
-// Country-positioned policy squares must remain distinct from crossing dots in
-// both the map's style contract and the actual PNG drawing operations.
-for(const kind of ['prohibition','entry_conditions']){
- const feature={...pointFeature,properties:{location_id:'national-GBR',label:'United Kingdom · international passenger rules',display_role:'national_policy',precision:'Country reference point; legal jurisdiction is stated in each record'}};
- const event={...pointEvent,id:'passenger-rule',record_kind:'national_policy',national_kind:kind,location_ids:['national-GBR'],scope:'England',rationales:['Health and biosecurity']};
- const snapshot=E.capture({map:pointMap,data:{...data,context_locations:{type:'FeatureCollection',features:[feature]}},visible:[event],locationEvents:new Map([['national-GBR',[event]]]),state:{mode:'all'}});
- const result=E.render(snapshot,'Passenger rules'),factor=result.scale*result.frame.w/snapshot.size.x,style=K.symbolStyle(feature.properties,{records:[event]});
- const stroke=canvas.context.rectStrokes.find(rect=>rect.colour===style.colour&&rect.rawWidth===9.2&&rect.rawLineWidth===1.8);
- assert(stroke,'PNG draws the policy square border');
- near(stroke.width+stroke.lineWidth,11*factor,'policy square has the same 11 px outer size as the map');
- near(stroke.height+stroke.lineWidth,11*factor,'policy square is not stretched');
- assert(canvas.context.rectFills.some(rect=>rect.rawWidth===9.2&&rect.colour===style.pointFill),'PNG fill matches ban versus entry-condition styling');
- assert(canvas.context.texts.includes(kind==='prohibition'?'International passenger ban':'Passenger entry conditions'));
- assert(!canvas.context.texts.includes('Named crossing'),'policy-only key does not mislabel the marker as a crossing');
- const notes=E.notes({...snapshot,events:[]},'Passenger rules');
- assert(notes.includes('international passenger-rule reference'));assert(notes.includes('legal jurisdiction'));
- assert(!notes.includes('Solid country outlines show national entry or departure bans'));
+const historyOff=E.capture({map:pointMap,data:historyData,visible:[pointEvent],locationEvents:new Map([['named-post',[pointEvent]]]),historyLocations,state:{mode:'all',showHistory:false}});
+assert.equal(historyOff.historyReferences.length,0,'off ignores even a stale supplied history list');
+assert.equal(historyOff.events.length,1);assert.equal(historyOff.references.length,1);
+E.render(historyOff,'Earlier histories switched off');
+assert(!canvas.context.strokes.some(mark=>mark.colour==='#86928b'),'off draws no history ring or ring key');
+assert(!canvas.context.texts.some(text=>/Earlier restriction|Hollow grey rings/i.test(text)),'off shows no history legend or caption');
+const offNotes=E.notes({...historyOff,events:[]},'Earlier histories switched off');
+assert(!offNotes.includes('EARLIER RESTRICTIONS — DATED HISTORY'));assert(!offNotes.includes('Historical record:'));
+assert.equal(E.capture({map:pointMap,data:pointData,state:{mode:'all'}}).historyReferences.length,0,'omitting the optional layer captures no history');
+
+// Full country reference geometries use the same unfilled green outline for
+// bans and conditions. England's legal scope does not create an internal line.
+const ringFromPixels=points=>points.map(point=>{const ll=pointMap.containerPointToLatLng(point);return [ll.lng,ll.lat]});
+const mainland=ringFromPixels([[350,200],[530,180],[550,380],[360,390],[350,200]]);
+const island=ringFromPixels([[270,260],[310,250],[320,300],[275,305],[270,260]]);
+for(const [code,name] of [['GBR','United Kingdom'],['AUS','Australia'],['NZL','New Zealand']])for(const kind of ['prohibition','entry_conditions']){
+ const geometry=code==='AUS'?{type:'Polygon',coordinates:[mainland]}:{type:'MultiPolygon',coordinates:[[mainland],[island]]};
+ const feature={type:'Feature',geometry:plain(geometry),properties:{location_id:'national-'+code,map_country:code,label:name+' · international passenger rules',display_role:'national_policy',precision:'Country reference outline; legal jurisdiction is stated in each record',source_note:'Full-country reference geography.'}};
+ const england={type:'Feature',geometry:{type:'LineString',coordinates:mainland.slice(0,2)},properties:{location_id:'unused-England-boundary',display_role:'frontier_context'}};
+ const event={id:'passenger-rule',title:'Passenger rules',record_kind:'national_policy',national_kind:kind,national_geometry:code==='GBR'?'ENG':code,national_map_country:code,location_ids:['national-'+code],scope:code==='GBR'?'England':name,rationales:['Health and biosecurity'],duration_periods:[],linked_land_ids:[],national_summary:'Dated passenger rules.'};
+ const selected=code==='GBR'&&kind==='prohibition';
+ const snapshot=E.capture({map:pointMap,data:{...data,countries:{type:'FeatureCollection',features:[{type:'Feature',geometry,properties:{ADM0_A3:code}}]},borders:historyData.borders,context_locations:{type:'FeatureCollection',features:[feature,england]}},visible:[event],locationEvents:new Map([['national-'+code,[event]]]),selected:selected?event.id:null,state:{mode:'all',showHistory:false}});
+ assert.equal(snapshot.references.length,1,'country policy yields only the bound country reference');
+ assert.deepEqual(plain(snapshot.references[0].feature.geometry),plain(geometry),'snapshot keeps the full country geometry, including separate islands');
+ feature.geometry.coordinates=[];
+ assert.deepEqual(plain(snapshot.references[0].feature.geometry),plain(geometry),'country geometry is immutable after capture');
+ const result=E.render(snapshot,'Passenger rules'),factor=result.scale*result.frame.w/snapshot.size.x,style=K.symbolStyle(feature.properties,{records:[event],selected});
+ const coordinates=geometry.type==='Polygon'?geometry.coordinates.flat():geometry.coordinates.flat(2);
+ const stroke=canvas.context.strokes.find(mark=>mark.colour==='#287e67'&&mark.rawWidth===style.width&&mark.points.length===coordinates.length);
+ assert(stroke,'PNG draws the entire green country outline');
+ assert.equal(stroke.rawWidth,selected?3.8:2.4);assert.equal(stroke.opacity,.9);assert.deepEqual(stroke.dash,[]);
+ near(stroke.width,style.width*factor,'country outline width matches the map at export scale');
+ coordinates.forEach((coordinate,index)=>{const pixel=E.project(coordinate,snapshot);near(stroke.points[index][0],result.scale*result.frame.x+pixel[0]*factor,'country outline x coordinate');near(stroke.points[index][1],result.scale*result.frame.y+pixel[1]*factor,'country outline y coordinate');});
+ assert(!canvas.context.fills.some(mark=>mark.colour==='#287e67'),'country outlines and key have no green area fill');
+ assert(!canvas.context.rectFills.some(mark=>mark.colour==='#287e67'));assert(!canvas.context.rectStrokes.some(mark=>mark.colour==='#287e67'),'national squares are absent');
+ const baseline=canvas.context.operations.findIndex(operation=>operation.type==='stroke'&&operation.mark.colour===K.colours.border),outline=canvas.context.operations.findIndex(operation=>operation.mark===stroke);
+ assert(baseline>=0&&outline>baseline,'green country edges draw after the baseline borders');
+ assert(canvas.context.texts.includes('International passenger rules'));
+ assert(!canvas.context.texts.includes('Named crossing'),'policy-only key does not advertise a crossing');
+ const notes=E.notes(snapshot,'Passenger rules');
+ assert(notes.includes('international passenger-rule country reference'));assert(notes.includes('legal jurisdiction'));assert(!/square/i.test(notes));
+ if(code==='GBR'){assert(notes.includes('Recorded scope: England'));assert(notes.includes('Where a record specifies England, its legal scope remains England.'));assert(!snapshot.references.some(ref=>ref.feature.properties.location_id==='unused-England-boundary'));}
 }
 
 // Exercise the real save handler: capture before asynchronous evidence loading,
 // without collapsing or resizing the map as the dialog opens.
 const nodes=new Map(),record={id:'example'},originalViewport=layout(laptop,{panelWidth:292});
 let complete,opened,handler,passed;
-const context={data,visible:[record],locationEvents:new Map(),historyLocations:[],selected:null,state:{mode:'all'},map:{...laptop,closePopup(){}},stop(){},notify(message){throw Error(message)},labelSpecs:()=>[],exportViewport:()=>originalViewport,
+const context={data,visible:[record],locationEvents:new Map(),historyLocations:[],selected:null,state:{mode:'all',showHistory:false},map:{...laptop,closePopup(){}},stop(){},notify(message){throw Error(message)},labelSpecs:()=>[],exportViewport:()=>originalViewport,
  $:id=>{if(!nodes.has(id))nodes.set(id,{textContent:'Save view',disabled:false,addEventListener(_,fn){handler=fn}});return nodes.get(id)},
  window:{BorderExport:{capture(input){passed=input;return E.capture(input)},openSnapshot(snapshot){opened=snapshot}},AtlasData:{getResearchData:()=>new Promise(resolve=>complete=resolve)}}};
 vm.createContext(context);vm.runInContext(app.slice(app.indexOf("  $('save-view-button').addEventListener"),app.indexOf("  $('panel-toggle').addEventListener")),context);
@@ -180,6 +208,6 @@ vm.createContext(context);vm.runInContext(app.slice(app.indexOf("  $('save-view-
  context.exportViewport=()=>({x:0,y:0,width:10,height:10});context.visible=[];
  complete({events:[{...record,title:'Full evidence'}]});await task;
  assert.deepEqual(plain(opened.size),{x:originalViewport.width,y:originalViewport.height});assert.equal(opened.events[0].title,'Full evidence');assert.equal(context.$('save-view-button').disabled,false);
- console.log('Map export passed: visible-area crop, eight viewport/projection cases, uniform PNG scaling, label alignment, cropped bounds/notes, stable capture during asynchronous loading, phase-specific crossing points, unchanged 11 px national squares, immutable 6 px neutral history rings below active points, separate historical notes, and no active-count inflation.');
+ console.log('Map export passed: visible-area crop, eight viewport/projection cases, uniform PNG scaling, label alignment, stable asynchronous capture, phase-specific crossings, unfilled full-country national outlines with England scope, history-off suppression, immutable 6 px optional history rings, known-reopening history wording, and no active-count inflation.');
 })().catch(error=>{console.error(error);process.exitCode=1});
 

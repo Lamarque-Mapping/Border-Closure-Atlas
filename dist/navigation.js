@@ -5,6 +5,7 @@
   const frame=$('analysis-frame'),loading=$('analysis-loading');
   const sections=new Set(['top','main','dimensions','motivations','borderwork','patterns','coding','register','downloads','methods','motivation-counts','evidence-coverage','closure-lengths','duration-sample','geography','research-areas']);
   const hashes={overview:'#top',dataset:'#register'};
+  const movedOverviewSections={'coding':'rationale-coding','evidence-coverage':'date-evidence'};
   let currentPage='map',frameView=null,started=false,ready=false,loadTimer=null;
   const datasetHash=hash=>/^#(?:register|downloads|record-)/.test(hash);
   const primaryPage=page=>page==='briefing'?'overview':page;
@@ -52,7 +53,7 @@
     loadTimer=setTimeout(failed,20000);
     const embedded=$('analysis-document');
     if(embedded){try{frame.srcdoc=JSON.parse(embedded.textContent);}catch{failed();}}
-    else frame.src='analysis.html?v=20261024-workbook-layout';
+    else frame.src='analysis.html?v=20261024-rationale-duration-controls';
   }
   window.addEventListener('atlas:mapready',()=>{
     const connection=navigator.connection;
@@ -91,6 +92,9 @@
   }
   function readAddress(){
     const hash=location.hash;
+    const moved=hash.match(/^#(?:(?:analysis|overview\/analysis)\/)?(coding|evidence-coverage)$/);
+    const overviewTarget=moved?movedOverviewSections[moved[1]]:hash.match(/^#overview\/(rationale-coding|date-evidence)$/)?.[1];
+    if(overviewTarget){show('briefing',{address:false});$(overviewTarget)?.scrollIntoView({block:'start'});if(moved)updateAddress('#overview/'+overviewTarget);return;}
     if(hash==='#dataset'||hash.startsWith('#dataset/'))show('dataset',{analysisHash:hash.includes('/')?'#'+hash.slice(9):'#register',address:false});
     else if(hash==='#overview/analysis'||hash.startsWith('#overview/analysis/'))show('analysis',{analysisHash:hash.startsWith('#overview/analysis/')?'#'+hash.slice(19):'#top',address:false});
     else if(hash==='#analysis'||hash.startsWith('#analysis/')){
@@ -106,7 +110,7 @@
     setAnalysisHash(hash){const view=frameView||activeView();hashes[view]=normaliseHash(hash);if(currentPage==='analysis'||currentPage==='dataset')updateAddress(pageHash(currentPage));},
     getAnalysisURL(hash){
       const url=new URL(location.protocol==='file:'?'https://lamarque-mapping.github.io/Border-Closure-Atlas/':location.href),target=normaliseHash(hash);
-      url.hash=datasetHash(target)?'#dataset'+(target==='#register'?'':'/'+target.slice(1)):'#analysis'+(target==='#top'?'':'/'+target.slice(1));return url.href;
+      url.hash=movedOverviewSections[target.slice(1)]?'#overview/'+movedOverviewSections[target.slice(1)]:datasetHash(target)?'#dataset'+(target==='#register'?'':'/'+target.slice(1)):'#analysis'+(target==='#top'?'':'/'+target.slice(1));return url.href;
     }
   };
   for(const [page,button] of Object.entries(buttons))button.addEventListener('click',()=>show(page));

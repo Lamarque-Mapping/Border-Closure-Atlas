@@ -60,6 +60,25 @@ function host(initialHash='',offline=false){
  h.context.matchMedia=()=>({matches:true});for(const fn of h.listeners.resize||[])fn();assert.equal(h.ids['map-search'].parentNode,h.ids['panel-search-slot']);assert.equal(h.document.querySelector('.skip-link').href,'#panel-toggle','resizing must not target the hidden search');
  for(const hash of ['#analysis/record-R16-EU-005','#dataset/record-R16-EU-005']){const direct=host(hash);await direct.ids['analysis-frame'].emit('load');assert.equal(direct.navigated,'#record-R16-EU-005');assert.equal(direct.view,'dataset','legacy and current record links open Dataset');}
  for(const [hash,target,view] of [['#analysis/patterns','#patterns','overview'],['#analysis/duration-sample','#duration-sample','overview'],['#overview/analysis/patterns','#patterns','overview'],['#analysis/register','#register','dataset'],['#dataset/downloads','#downloads','dataset']]){const direct=host(hash);await direct.ids['analysis-frame'].emit('load');assert.equal(direct.navigated,target);assert.equal(direct.view,view);}
+ const movedSections=[['coding','rationale-coding'],['evidence-coverage','date-evidence']];
+ for(const [legacy,target] of movedSections){
+  for(const hash of ['#'+legacy,'#analysis/'+legacy,'#overview/analysis/'+legacy,'#overview/'+target]){
+   const direct=host(hash);
+   assert.equal(direct.context.location.hash,'#overview/'+target,hash+' resolves to the canonical Overview address');
+   assert.equal(direct.ids['briefing-page'].hidden,false,hash+' opens Overview');
+   assert.equal(direct.ids['map-page'].hidden,true);assert.equal(direct.ids['analysis-page'].hidden,true);
+   assert.equal(direct.ids[target].scrolled,true,hash+' scrolls to the intended Overview section');
+   assert.equal(direct.ids['overview-page-button'].attrs['aria-current'],'page',hash+' selects the Overview navigation tab');
+   assert.equal(direct.ids['analysis-frame'].src,undefined,hash+' does not load the unused Analysis iframe');
+  }
+  assert.equal(api.getAnalysisURL('#'+legacy),'https://lamarque-mapping.github.io/Border-Closure-Atlas/#overview/'+target,'generated links for '+legacy+' use the new Overview destination');
+  const changed=host('#analysis/patterns');await changed.ids['analysis-frame'].emit('load');
+  changed.context.location.hash='#analysis/'+legacy;changed.context.dispatchEvent(new changed.context.CustomEvent('hashchange'));
+  assert.equal(changed.ids['briefing-page'].hidden,false,'a legacy hash change leaves a loaded Analysis view');
+  assert.equal(changed.ids[target].scrolled,true);assert.equal(changed.context.location.hash,'#overview/'+target);
+  await changed.ids['analysis-page-button'].emit('click');
+  assert.equal(changed.navigated,'#patterns','the moved section does not overwrite the previous Analysis position');
+ }
  const oldMethods=host('#briefing');assert.equal(oldMethods.ids['briefing-page'].hidden,false,'old Methods address remains valid');
  const citeLink=host('#overview/cite');assert.equal(citeLink.ids['cite-atlas'].scrolled,true,'citation deep link opens and scrolls the Overview');
  const slow=host();slow.ids['analysis-frame'].contentWindow={};await slow.ids['analysis-page-button'].emit('click');await slow.ids['analysis-frame'].emit('load');
@@ -67,12 +86,20 @@ function host(initialHash='',offline=false){
  slow.ids['analysis-frame'].contentWindow.AtlasAnalysis={navigate(){}};slow.context.AtlasNavigation.analysisReady();assert.equal(slow.ids['analysis-frame'].hidden,false,'show Analysis once its data is ready, even after iframe load');
  const offline=host('#analysis',true);assert(offline.ids['analysis-frame'].srcdoc.includes('Offline analysis'));assert.equal(offline.ids['analysis-frame'].src,undefined);
  offline.context.location.protocol='file:';assert.equal(offline.context.AtlasNavigation.getAnalysisURL('#register'),'https://lamarque-mapping.github.io/Border-Closure-Atlas/#dataset');
- console.log('Navigation passed: separate Map/Overview/Analysis/Dataset destinations, map-only save action, lazy loading, current and legacy record links, separate view positions, citation link, offline srcdoc.');
+ console.log('Navigation passed: separate Map/Overview/Analysis/Dataset destinations, moved Overview evidence sections and canonical legacy links, map-only save action, lazy loading, current and legacy record links, separate view positions, citation link, offline srcdoc.');
  const analysis=fs.readFileSync(root+'analysis.html','utf8'),a=env(analysis);
+ for(const id of ['coding','evidence-coverage','assessmentChart','durationChart'])assert(!a.ids[id],id+' has intentionally moved out of Analysis');
+ for(const id of ['rationale-coding','date-evidence','rationale-evidence-summary','date-evidence-summary','date-evidence-kinds'])assert(h.ids[id],id+' belongs to the Overview DOM');
+ const visibleAnalysisTitles=[...analysis.matchAll(/<(?:h[1-6]|option|summary)\b[^>]*>([\s\S]*?)<\/(?:h[1-6]|option|summary)>/gi)].map(match=>match[1].replace(/<[^>]*>/g,''));
+ assert(!visibleAnalysisTitles.some(title=>/\bmotivations?\b/i.test(title)),'visible headings and controls use rationale terminology while legacy identifiers remain valid');
+ assert(analysis.includes('How often is each rationale recorded?'));
  for(const match of analysis.matchAll(/<script id="([^"]+)"[^>]*>([\s\S]*?)<\/script>/g))a.ids[match[1]].textContent=match[2];
  a.ids.chartPopulation.value='all';a.ids.sortRecords.value='id';
- a.ids.filters.reset=()=>{for(const id of ['query','continentFilter','regionFilter','codeFilter','statusFilter','auditFilter'])a.ids[id].value='';};
+ if(a.ids.chartDuration)a.ids.chartDuration.value='all';
+ if(a.ids.durationFilter)a.ids.durationFilter.value='all';
+ a.ids.filters.reset=()=>{for(const id of ['query','continentFilter','regionFilter','codeFilter','statusFilter','auditFilter'])a.ids[id].value='';if(a.ids.durationFilter)a.ids.durationFilter.value='all';};
  const data=JSON.parse(fs.readFileSync(root+'data.js','utf8').replace(/^window.BORDER_DATA = /,'').replace(/;\s*$/,''));
+ const summary=JSON.parse(fs.readFileSync(root+'map-data.js','utf8').replace(/^window.BORDER_DATA = /,'').replace(/;\s*$/,''));
  const timeline=env(index),tc=timeline.context,app=fs.readFileSync(root+'app.js','utf8'),core=require(root+'core.js');
  Object.assign(tc,{C:core,$:id=>timeline.ids[id],data:null,events:[],locations:new Map(),selected:null,timer:null,playIcon:'play',pauseIcon:'pause',playbackRate:1,escape:String,dateText:String,monthLabel:String,map:{},visible:[],
   resetList(){},populateRegions(){},populateSelect(){},makeTabs(){},resetMapLayers(){},showBrowse(){},render(){},fitContinent(){},fitRecords(){},notify(){},openSharedRecord(){},setPanelOpen(open){tc.panelOpen=open},scheduleViewport(){},openRecords(){},downloadRecords(){},setInterval(){return 1},clearInterval(){}});
@@ -81,6 +108,35 @@ function host(initialHash='',offline=false){
  vm.runInContext(app.slice(app.indexOf('  function changeMonth('),app.indexOf("  $('search').addEventListener")),tc);
  vm.runInContext(app.slice(app.indexOf('  function resetFilters('),app.indexOf('  function render(){')),tc);
  tc.applyData(data);const timelineState=vm.runInContext('state',tc);
+ // Overview totals describe the complete land dataset. Execute the production
+ // renderer on the real browsing summaries, including the actual separate
+ // national-policy histories, and reconcile against the full research records.
+ const overview=env(index),oc=overview.context;
+ const nationalSource=JSON.parse(fs.readFileSync(root+'national-data.js','utf8').replace(/^window.ATLAS_NATIONAL_DATA = /,'').replace(/;\s*$/,''));
+ const nationalRecords=require(root+'national.js').compile(nationalSource);
+ assert(nationalRecords.length>0,'the real national supplement exercises the land-only denominator');
+ Object.assign(oc,{C:core,$:id=>overview.ids[id],events:[...summary.events,...nationalRecords],visible:[],state:{query:'no-matching-record',continent:'Europe',mode:'intervals',month:core.monthOrdinal('2026-10')},escape:String});
+ const evidenceStart=app.indexOf('  function renderOverviewEvidence('),evidenceEnd=app.indexOf('  function applyData(',evidenceStart);
+ assert(evidenceStart>=0&&evidenceEnd>evidenceStart,'the production Overview evidence renderer is available');
+ vm.runInContext(app.slice(evidenceStart,evidenceEnd),oc);oc.renderOverviewEvidence();
+ const fullLand=data.events.filter(record=>!core.excluded(record)&&record.record_kind!=='national_policy');
+ const assigned=fullLand.filter(record=>record.rationales.length).length;
+ const total=key=>fullLand.reduce((count,record)=>count+Number(Boolean(record.timing_coverage?.[key])),0);
+ const unassigned=Object.fromEntries([...new Set(fullLand.filter(record=>!record.rationales.length).map(record=>record.rationale_coding_status||'No category assigned'))].map(label=>[label,fullLand.filter(record=>!record.rationales.length&&(record.rationale_coding_status||'No category assigned')===label).length]));
+ const displayedRows=id=>Object.fromEntries([...overview.ids[id].innerHTML.matchAll(/<dt>([^<]+)<\/dt><dd>(\d+)<\/dd>/g)].map(match=>[match[1],Number(match[2])]));
+ assert.equal(fullLand.length,697);assert.equal(assigned,677);
+ assert(overview.ids['rationale-evidence-summary'].innerHTML.includes(assigned+' of '+fullLand.length+' included land-border records'));
+ assert(overview.ids['rationale-evidence-summary'].innerHTML.includes('; '+(fullLand.length-assigned)+' do not.'));
+ assert.deepEqual(displayedRows('rationale-evidence-summary'),unassigned,'Overview retains the distinct reasons for missing rationale categories');
+ assert(overview.ids['date-evidence-summary'].innerHTML.includes(total('operational_complete')+' of '+fullLand.length+' included land-border records'));
+ assert(overview.ids['date-evidence-summary'].innerHTML.includes('Of these, '+total('operational_exact_complete')+' have exact start and end dates.'));
+ assert.deepEqual(displayedRows('date-evidence-summary'),{'At least one dated observation':total('any_dated_evidence'),'No dated evidence':fullLand.length-total('any_dated_evidence')});
+ assert.deepEqual(displayedRows('date-evidence-kinds'),{'Closed on a later reported date':total('operational_censored'),'Same-day interruption reported':total('same_day'),'Policy in force':total('formal_policy'),'Announced closure dates':total('ordered_window'),'Repeated closures':total('intermittent_regime')});
+ assert.equal(total('operational_complete'),252);assert.equal(total('operational_exact_complete'),163);assert.equal(total('any_dated_evidence'),695);
+ const overviewBefore=['rationale-evidence-summary','date-evidence-summary','date-evidence-kinds'].map(id=>overview.ids[id].innerHTML);
+ Object.assign(oc.state,{query:'Norway',continent:'Asia',mode:'all',includeExcluded:true});oc.visible=summary.events.slice(0,1);oc.renderOverviewEvidence();
+ assert.deepEqual(['rationale-evidence-summary','date-evidence-summary','date-evidence-kinds'].map(id=>overview.ids[id].innerHTML),overviewBefore,'map filters, the visible selection and excluded-record controls cannot change global Overview denominators');
+ console.log('Overview evidence passed: actual renderer, 697 included land records, 677 assigned rationales, 252 estimable durations, 163 exact dates, 695 dated records, separate national histories excluded, all timing categories and global/filter-independent denominators.');
  assert.equal(timelineState.mode,'intervals');assert.equal(timeline.ids['time-mode'].value,'intervals');
  assert.equal(timelineState.month,core.monthOrdinal(data.meta.window_start));assert.equal(core.filterEvents(data,timelineState).length,19,'default October 2016 evidence reconciles to current Chronology phases and Phase locations');
  assert(core.filterEvents(data,timelineState).some(e=>e.id==='FU-COV-EAS-003'),'include the replacement workbook conservation-policy record');
@@ -120,10 +176,10 @@ function host(initialHash='',offline=false){
  await timeline.ids['citation-close'].emit('click');assert.equal(timeline.ids['citation-dialog'].open,false);assert(timeline.document.querySelectorAll('[data-access-date]').every(node=>node.textContent==='24 October 2026'));
  console.log('Timeline, search and public controls passed: dated defaults, full-period search, labelled play/pause, direct month/year selection, date bounds, preserved filters, all-dates transition, citation dialog and exact Harvard reference.');
  const atlas={hash:'#top',getAnalysisHash(){return this.hash},setAnalysisHash(hash){this.hash=hash},getAnalysisURL:api.getAnalysisURL,show(page,options={}){this.page=page;if(options.analysisHash)this.hash=options.analysisHash;}};
- const summary=JSON.parse(fs.readFileSync(root+'map-data.js','utf8').replace(/^window.BORDER_DATA = /,'').replace(/;\s*$/,''));
  let detailRequests=0,archiveRequests=0;
  const completeResearch={meta:data.meta,events:data.events,workbook_geography:data.workbook_geography,workbook_review:data.workbook_review};
- a.context.parent={AtlasNavigation:atlas,AtlasData:{ready:async()=>summary,getRecord:async id=>{detailRequests++;return data.events.find(e=>e.id===id)},getResearchData:async()=>{archiveRequests++;return completeResearch}}};
+ const parentLocation={hash:''};
+ a.context.parent={location:parentLocation,AtlasNavigation:atlas,AtlasData:{ready:async()=>summary,getRecord:async id=>{detailRequests++;return data.events.find(e=>e.id===id)},getResearchData:async()=>{archiveRequests++;return completeResearch}}};
  const ui=fs.readFileSync(require('path').resolve(__dirname,'analysis-ui.js'),'utf8').replace('\n})().catch','\nwindow.TEST={filterFromChart,renderRecords,openRecord,closeRecord,renderCharts,applyFilters,currentCharts,EVENTS,INCLUDED,DATA,setDownload(fn){download=fn}};\n})().catch');
  vm.runInContext(fs.readFileSync(root+'record-summary.js','utf8'),a.context);
  vm.runInContext(fs.readFileSync(require('path').resolve(__dirname,'analysis-metrics.js'),'utf8'),a.context);
@@ -132,7 +188,6 @@ function host(initialHash='',offline=false){
  assert.equal(detailRequests,0,'Analysis charts and register must not fetch full records on opening');assert.equal(archiveRequests,0);
  assert.equal(a.ids.resultCount.textContent,'697 matching records');assert.equal(a.ids.pageNote.textContent,'1–12 of 697');
  assert(a.ids.codeChart.innerHTML.includes('Health and biosecurity'));assert(a.ids.codeChart.innerHTML.includes('Policy and socioeconomic demands'));
- assert(!a.ids.assessmentChart.innerHTML.includes('rationale assessed as supported'),'initial six-field findings must not be presented as current rationale verification');
  assert(a.ids.codeChart.innerHTML.includes('Administration and service operation'));assert(a.ids.codeChart.innerHTML.includes('Environment and resource management'));
  assert.equal(t.currentCharts.durationRows.length,164);assert(a.ids.durationComparisonNote.textContent.includes('160 records'));
  assert(a.ids.durationRationaleChart.innerHTML.includes('119 days'));assert(a.ids.durationRationaleChart.innerHTML.includes('No eligible phases'));
@@ -140,8 +195,7 @@ function host(initialHash='',offline=false){
  assert(!a.ids.continentChart.innerHTML.includes('Unassigned'));assert(a.ids.continentChart.innerHTML.includes('North America'));
  assert(!a.ids.regionChart.innerHTML.includes('data-chart-value="Europe"'));assert(a.ids.broadRegionChart.innerHTML.includes('data-chart-value="Europe"'));
  assert(!a.ids.regionChart.innerHTML.includes('data-chart-value="South Asia, Central Asia and Caucasus"'));assert(a.ids.broadRegionChart.innerHTML.includes('data-chart-value="South Asia, Central Asia and Caucasus"'));
- assert(a.ids.durationChart.innerHTML.includes('Policy in force'));assert(a.ids.durationChart.innerHTML.includes('Announced closure dates'));assert(a.ids.durationChart.innerHTML.includes('Repeated closures'));
- assert(a.ids.durationChart.innerHTML.includes('Same-day interruption reported'));assert(!a.ids.durationChart.innerHTML.includes('Closed and reopened the same day'));
+ for(const [legacy,target] of movedSections){await a.context.AtlasAnalysis.navigate('#'+legacy);assert.equal(parentLocation.hash,'#overview/'+target,'an old embedded Analysis anchor redirects to Overview');}
  t.filterFromChart('continent','Africa');assert.equal(t.applyFilters().length,190);assert.equal(atlas.page,'dataset');assert.equal(a.context.AtlasAnalysis.getView(),'dataset');
  a.context.AtlasAnalysis.setView('overview');a.context.AtlasAnalysis.setView('dataset');assert.equal(a.ids.continentFilter.value,'Africa','switching views preserves Dataset filters');assert.equal(t.applyFilters().length,190);a.ids.filters.reset();
 

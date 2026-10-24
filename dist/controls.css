@@ -200,19 +200,17 @@
 @media(max-width:950px) and (max-height:500px){.masthead nav{width:272px}}
 @media(max-width:620px) and (max-height:500px){.masthead nav{width:248px}}
 
-.national-policy-marker{display:block;flex:none;width:11px;height:11px;box-sizing:border-box;border:1.8px solid var(--policy-colour);background:var(--policy-fill);border-radius:1px;pointer-events:none}
-.closure-marker.is-selected .national-policy-marker,.closure-marker:focus-visible .national-policy-marker{box-shadow:0 0 0 3px #fff,0 0 0 4px #244e4680}
-.legend-policy{display:inline-block;flex:0 0 11px;width:11px;height:11px;box-sizing:border-box;border:1.8px solid #287e67;background:#287e67;border-radius:1px;margin:0 7px}
-.legend-policy.conditions{background:transparent}
+.legend-policy{display:inline-block;flex:0 0 20px;width:20px;height:0;border-top:2.4px solid #287e67;margin:0 3px}
+[data-history-key][hidden]{display:none!important}
 
-/* Phone timeline: balanced buttons, a full-width slider and one quiet footer.
+/* Phone timeline: three evenly spaced controls, arrows flanking the slider and one quiet footer.
  * Main controls retain 44 px targets; citation/contact are compact text links.
  * Desktop controls and credits are unchanged. */
 .timeline-mobile-links,.timeline-mobile-note{display:none}
 @media(max-width:760px), (max-width:950px) and (max-height:500px){
  #map-page .timeline,#map-page.panel-collapsed .timeline{
-  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 44px 44px 44px;
-  grid-template-rows:44px 32px 24px;column-gap:4px;row-gap:0;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-rows:44px 44px 24px;column-gap:4px;row-gap:0;
   left:0;right:0;bottom:0;max-width:none;margin:0;
   padding:4px max(8px,env(safe-area-inset-right,0px)) calc(26px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-left,0px));
   border:0;border-top:1px solid #d8e2dc;border-radius:10px 10px 0 0;background:#fff;box-shadow:0 -3px 14px #244e4615;
@@ -221,10 +219,10 @@
  #map-page .timeline-controls #play-button{grid-area:auto;grid-row:1;grid-column:1;justify-self:stretch;box-sizing:border-box;min-width:0;width:100%;max-width:none;height:44px;min-height:44px;padding:6px 4px;font-size:11px;gap:4px}
  #map-page .timeline-controls #play-button svg{width:11px;height:11px}
  #map-page .timeline-controls #month-label{grid-area:auto;grid-row:1;grid-column:2;justify-self:stretch;box-sizing:border-box;min-width:0;width:100%;max-width:none;height:44px;min-height:44px;padding:6px 4px;font-size:11px;gap:4px}
- #map-page .timeline-controls .timeline-speed-control{grid-area:auto;grid-row:1;grid-column:3;width:44px;height:44px;margin:0}
- #map-page .timeline-controls #previous-button{grid-area:auto;grid-row:1;grid-column:4;width:44px;height:44px;min-height:44px}
- #map-page .timeline-controls #next-button{grid-area:auto;grid-row:1;grid-column:5;width:44px;height:44px;min-height:44px}
- #map-page .timeline-controls #month-slider{grid-area:auto;grid-row:2;grid-column:1/-1;min-width:0;width:100%;height:32px;min-height:32px;margin:0}
+ #map-page .timeline-controls .timeline-speed-control{grid-area:auto;grid-row:1;grid-column:3;justify-self:center;width:56px;height:44px;margin:0}
+ #map-page .timeline-controls #previous-button{grid-area:auto;grid-row:2;grid-column:1;justify-self:start;width:44px;height:44px;min-height:44px}
+ #map-page .timeline-controls #next-button{grid-area:auto;grid-row:2;grid-column:3;justify-self:end;width:44px;height:44px;min-height:44px}
+ #map-page .timeline-controls #month-slider{grid-area:auto;grid-row:2;grid-column:1/-1;justify-self:center;min-width:0;width:calc(100% - 104px);height:44px;min-height:44px;margin:0}
  #map-page .timeline-bottom{grid-row:3;grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;gap:6px;min-width:0;min-height:24px;height:24px;margin:0;padding:0}
  #map-page .timeline-bottom #last-month,#map-page .timeline-bottom #time-note{display:none}
  #map-page .timeline-bottom .timeline-mobile-note{display:block;flex:1 1 auto;min-width:0;margin:0;padding:0;font-size:10px;line-height:1.25;text-align:left;white-space:nowrap;color:#65756f}
@@ -252,7 +250,7 @@
  #map-page .timeline,#map-page.panel-collapsed .timeline{padding-bottom:calc(16px + env(safe-area-inset-bottom,0px))}
 }
 @media(max-width:374px){
- #map-page .timeline-controls #play-button,#map-page .timeline-controls #month-label{font-size:10px;padding-inline:3px}
+ #map-page .timeline-controls #play-button,#map-page .timeline-controls #month-label{font-size:11px;padding-inline:3px}
  #map-page .timeline-controls #month-label{padding-inline:1px}
  #map-page .timeline-controls #play-button svg,#map-page .timeline-controls #month-label::after{display:none}
 }
@@ -271,3 +269,13 @@
 .history-record-link:hover strong{color:#287567}
 .history-record-link:focus-visible{outline:2px solid #287567;outline-offset:3px}
 .point-choice{width:100%;text-align:left;background:transparent;border-radius:0;min-height:56px}
+
+/* Dataset evidence belongs with the Overview explanations. */
+.overview-evidence{margin:16px 0 10px;padding-top:12px;border-top:1px solid #dce4df}
+.overview-evidence-counts{margin:10px 0 12px;font-size:12px;color:#53665b}
+.overview-evidence-counts>div{display:flex;justify-content:space-between;gap:18px;padding:6px 0;border-bottom:1px solid #edf1ee}
+.overview-evidence-counts dt{flex:1}.overview-evidence-counts dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink)}
+.overview-evidence-detail{margin:14px 0;padding:11px 0;border-top:1px solid #dce4df}
+.overview-evidence-detail summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ink)}
+.overview-evidence-detail[open] summary{margin-bottom:12px}
+#date-evidence,#rationale-coding{scroll-margin-top:24px}

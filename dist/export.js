@@ -44,7 +44,7 @@
     }
     // Earlier crossing histories are reference markers, not part of the active
     // selection. Retain only their display geometry, identities and dated facts.
-    const historyReferences=copy(historyLocations.filter(item=>item.feature?.geometry?.type==='Point').map(item=>({
+    const historyReferences=copy((state.showHistory===false?[]:historyLocations).filter(item=>item.feature?.geometry?.type==='Point').map(item=>({
       locationId:item.locationId||item.feature.properties?.location_id,title:item.title||item.feature.properties?.label||item.feature.properties?.name||item.locationId,
       geometry:item.feature.geometry,latestEvidenceDate:item.latestEvidenceDate||null,
       records:(item.records||[]).map(entry=>({recordId:entry.record.id,latestEvidenceDate:entry.latestEvidenceDate||null,
@@ -85,8 +85,13 @@
     return filters;
   }
   function hasPIDA(snapshot){return snapshot.references.some(ref=>{const p=ref.feature.properties||{};return [p.source_url,...(p.source_urls||[]),...(p.sources||[]).map(s=>typeof s==='string'?s:s.url)].some(url=>/^https?:\/\/(?:[^/]+\.)?au-pida\.org(?:\/|$)/i.test(url||''));});}
+  function nationalReading(snapshot){
+    const references=snapshot.references.filter(ref=>ref.feature.properties?.display_role==='national_policy');
+    if(!references.length)return '';
+    return ' Green country outlines identify international passenger rules. They show full-country reference geography; read each record for its legal jurisdiction, affected travellers and modes.'+(references.some(ref=>ref.feature.properties.map_country==='GBR'||ref.feature.properties.location_id==='national-GBR')?' Where a record specifies England, its legal scope remains England.':'');
+  }
   function notes(snapshot,title){
-    const lines=[title,timeDescription(snapshot),'Continent: '+(snapshot.state.continent||'World'),...filterDescription(snapshot),'','Selection: '+snapshot.events.length+' records; '+snapshot.references.length+' map references. Counts refer to the filtered selection; references outside the saved extent are not drawn.','Extent (degrees; unwrapped longitude): '+JSON.stringify(snapshot.bounds),'Projection: Web Mercator. Scale bar is approximate at the centre latitude.','Saved: '+snapshot.capturedAt,'Workbook: '+snapshot.meta.source_filename,'Workbook SHA-256: '+snapshot.meta.source_sha256,'','Reading the map','Unmarked does not necessarily mean open. Border lines show reference geography. Squares identify international passenger rules: filled for entry or departure bans, outlined for entry conditions. Their country reference points do not trace a closed boundary. Read each record for its legal jurisdiction, affected travellers and modes. Present-day reference boundaries do not establish historical territorial control or sovereignty. Unknown endpoints are not extended to the present. Month views do not imply closure throughout the month. Announced dates are schedules, not confirmed implementation. Repeated closures can include openings; their total days closed are unknown.','Colours show coded rationales on lines, crossing dots and policy squares. Dots locate named crossings for the selected dated phases; they do not mark a closure of the whole border. Their size aids legibility and does not show duration, severity or record count. Positions can be approximate crossing-area references. Several records or rationales can share a point. Solid lines mean the selected evidence states border-wide scope; dotted lines mean wider restrictions with limited or uncertain extent. Sites awaiting a reliable map position remain in the records and are not replaced by a whole-border line.','', 'Mapping by Dr. Hugh Lamarque','Base geography: Natural Earth — https://www.naturalearthdata.com/ (public domain)','Crossing references: © OpenStreetMap contributors — https://www.openstreetmap.org/copyright (ODbL), with additional references below.','','EVENT REFERENCES'];
+    const lines=[title,timeDescription(snapshot),'Continent: '+(snapshot.state.continent||'World'),...filterDescription(snapshot),'','Selection: '+snapshot.events.length+' records; '+snapshot.references.length+' map references. Counts refer to the filtered selection; references outside the saved extent are not drawn.','Extent (degrees; unwrapped longitude): '+JSON.stringify(snapshot.bounds),'Projection: Web Mercator. Scale bar is approximate at the centre latitude.','Saved: '+snapshot.capturedAt,'Workbook: '+snapshot.meta.source_filename,'Workbook SHA-256: '+snapshot.meta.source_sha256,'','Reading the map','Unmarked does not necessarily mean open. Border lines show reference geography.'+nationalReading(snapshot)+' Present-day reference boundaries do not establish historical territorial control or sovereignty. Unknown endpoints are not extended to the present. Month views do not imply closure throughout the month. Announced dates are schedules, not confirmed implementation. Repeated closures can include openings; their total days closed are unknown.','Colours show coded rationales on restriction lines and crossing dots. Dots locate named crossings for the selected dated phases; they do not mark a closure of the whole border. Their size aids legibility and does not show duration, severity or record count. Positions can be approximate crossing-area references. Several records or rationales can share a point. Solid restriction lines mean the selected evidence states border-wide scope; dotted lines mean wider restrictions with limited or uncertain extent. Sites awaiting a reliable map position remain in the records and are not replaced by a whole-border line.','', 'Mapping by Dr. Hugh Lamarque','Base geography: Natural Earth — https://www.naturalearthdata.com/ (public domain)','Crossing references: © OpenStreetMap contributors — https://www.openstreetmap.org/copyright (ODbL), with additional references below.','','EVENT REFERENCES'];
     if(snapshot.mappingSummary?.pendingRecords)lines.splice(lines.indexOf('Reading the map'),0,'Locations awaiting checks: '+snapshot.mappingSummary.pendingRecords+' records, including '+snapshot.mappingSummary.unmappedRecords+' with no map position. These records remain in the selection counts and exports.','');
     if(hasPIDA(snapshot))lines.splice(lines.indexOf('EVENT REFERENCES'),0,'Crossing project markers: AU-PIDA — https://map.au-pida.org/','');
     if(snapshot.meta.national_supplement)lines.splice(lines.indexOf('Reading the map'),0,'National supplement SHA-256: '+snapshot.meta.national_supplement.source_sha256,'National policy histories are separate from land-closure duration statistics. Broad display periods do not certify an uninterrupted closure for every traveller.','');
@@ -99,7 +104,7 @@
       for(const source of event.source_urls||[]){const url=typeof source==='string'?source:source?.url;if(/^https?:\/\//i.test(url||''))lines.push(url);}
     }
     if(snapshot.historyReferences?.length){
-      lines.push('','EARLIER RESTRICTIONS — DATED HISTORY','Hollow grey rings mark earlier restriction histories. They are excluded from the selected records and active map-reference totals. These dates describe earlier evidence and do not establish crossing conditions in the selected month.');
+      lines.push('','EARLIER RESTRICTIONS — DATED HISTORY','Hollow grey rings mark earlier restriction histories, including records with a documented reopening. They are excluded from the selected records and active map-reference totals. These dates describe earlier evidence and do not establish crossing conditions in the selected month.');
       for(const reference of snapshot.historyReferences){
         lines.push('',reference.title+' — '+reference.locationId,'Latest recorded evidence: '+dateLabel(reference.latestEvidenceDate));
         for(const record of reference.records){
@@ -116,7 +121,7 @@
     }
     lines.push('','GEOGRAPHIC REFERENCES');
     const seen=new Set();
-    for(const ref of snapshot.references){const p=ref.feature.properties||{};if(ref.feature.geometry?.type==='Point'){lines.push((p.label||p.name||p.location_id)+(p.display_role==='national_policy'?' — international passenger-rule reference':' — named crossing')+(p.precision?'; '+p.precision.replace(/_/g,' '):''));if(p.source_note||p.review_note)lines.push(p.source_note||p.review_note);for(const binding of ref.phases||[])lines.push('Mapped phases: '+binding.record_id+' — '+(binding.phase_ids.join(', ')||'Undated record'));}const urls=[p.source_url,...(p.source_urls||[]),...(p.sources||[]).map(s=>typeof s==='string'?s:s.url)].filter(u=>/^https?:\/\//i.test(u||''));for(const url of urls){const key=(p.location_id||'')+'|'+url;if(!seen.has(key)){seen.add(key);lines.push((p.label||p.name||p.location_id)+' — '+url);}}}
+    for(const ref of snapshot.references){const p=ref.feature.properties||{};if(ref.feature.geometry?.type==='Point'||p.display_role==='national_policy'){lines.push((p.label||p.name||p.location_id)+(p.display_role==='national_policy'?' — international passenger-rule country reference':' — named crossing')+(p.precision?'; '+p.precision.replace(/_/g,' '):''));if(p.source_note||p.review_note)lines.push(p.source_note||p.review_note);for(const binding of ref.phases||[])lines.push('Mapped phases: '+binding.record_id+' — '+(binding.phase_ids.join(', ')||'Undated record'));}const urls=[p.source_url,...(p.source_urls||[]),...(p.sources||[]).map(s=>typeof s==='string'?s:s.url)].filter(u=>/^https?:\/\//i.test(u||''));for(const url of urls){const key=(p.location_id||'')+'|'+url;if(!seen.has(key)){seen.add(key);lines.push((p.label||p.name||p.location_id)+' — '+url);}}}
     return lines.join('\n')+'\n';
   }
   function wrap(ctx,value,maxWidth){
@@ -162,14 +167,6 @@
     if(x < -30||y < -30||x>snapshot.size.x+30||y>snapshot.size.y+30)return;
     ctx.save();if(ref.timePossible)ctx.globalAlpha=.3;
     ctx.setLineDash([]);ctx.lineCap='round';
-    if(style.pointShape==='square'){
-      const half=style.radius,edge=style.pointStrokeWidth/2;
-      // Match the screen's 11 px border-box marker, including its outline.
-      if(ref.selected){ctx.strokeStyle=COLOURS.paper;ctx.lineWidth=6;ctx.strokeRect(x-half,y-half,width,width);}
-      ctx.fillStyle=style.pointFill;ctx.fillRect(x-half+edge,y-half+edge,width-style.pointStrokeWidth,width-style.pointStrokeWidth);
-      ctx.strokeStyle=style.pointStroke;ctx.lineWidth=style.pointStrokeWidth;ctx.lineJoin='miter';ctx.strokeRect(x-half+edge,y-half+edge,width-style.pointStrokeWidth,width-style.pointStrokeWidth);
-      ctx.restore();return;
-    }
     ctx.beginPath();ctx.moveTo(x-style.pointLength/2,y);ctx.lineTo(x+style.pointLength/2,y);
     if(ref.selected){ctx.lineWidth=width+6;ctx.strokeStyle=COLOURS.paper;ctx.stroke();}
     ctx.lineWidth=width;ctx.strokeStyle=style.colour;ctx.stroke();
@@ -195,8 +192,7 @@
     if(snapshot.references.some(r=>window.BorderCartography.isLineReference(r.feature)&&r.scope?.broad))items.push(['broad','Border-wide scope stated']);
     if(snapshot.references.some(r=>window.BorderCartography.isLineReference(r.feature)&&r.scope?.limited))items.push(['limited','Limited or uncertain scope']);
     if(snapshot.references.some(r=>r.feature.properties?.display_role==='country_context'))items.push(['country','Country outline']);
-    if(snapshot.references.some(r=>r.scope?.national&&!r.scope.conditionsOnly))items.push(['national','International passenger ban','#287e67']);
-    if(snapshot.references.some(r=>r.scope?.national&&r.scope.conditionsOnly))items.push(['conditions','Passenger entry conditions','#287e67']);
+    if(snapshot.references.some(r=>r.scope?.national))items.push(['national','International passenger rules','#287e67']);
     if(snapshot.historyReferences?.length)items.push(['history','Earlier restriction · read dated history']);
     items.push(['disputed','Disputed reference boundary']);
     if(snapshot.references.some(r=>r.selected))items.push(['selected','Selected geography']);
@@ -208,7 +204,7 @@
     if(type==='point'){
       const K=window.BorderCartography;ctx.lineWidth=K.restrictionWidth;ctx.lineCap='round';ctx.setLineDash([]);ctx.moveTo(x+10-K.restrictionDotLength/2,y-4);ctx.lineTo(x+10+K.restrictionDotLength/2,y-4);ctx.stroke();
     }else if(type==='history'){ctx.setLineDash([]);ctx.lineWidth=1;ctx.arc(x+10,y-4,2.5,0,2*Math.PI);ctx.fillStyle='#f5f6f4';ctx.fill();ctx.strokeStyle='#86928b';ctx.stroke();}
-    else if(type==='national'||type==='conditions'){ctx.setLineDash([]);ctx.lineWidth=1.8;if(type==='national')ctx.fillRect(x+5,y-10,11,11);else{ctx.fillStyle=COLOURS.land;ctx.fillRect(x+5,y-10,11,11);}ctx.strokeRect(x+5.9,y-9.1,9.2,9.2);}
+    else if(type==='national'){const style=window.BorderCartography.symbolStyle({display_role:'national_policy'});ctx.setLineDash([]);ctx.lineWidth=style.width;ctx.globalAlpha=style.opacity;ctx.lineJoin='round';ctx.moveTo(x+2,y-7);ctx.lineTo(x+7,y-13);ctx.lineTo(x+17,y-11);ctx.lineTo(x+24,y-4);ctx.lineTo(x+18,y+2);ctx.lineTo(x+8,y);ctx.closePath();ctx.stroke();}
     else if(type==='country'){ctx.setLineDash([2,3]);ctx.globalAlpha=.85;ctx.strokeRect(x,y-12,22,15);}
     else{ctx.setLineDash(type==='limited'?[1,7]:type==='disputed'?[4,4]:[]);ctx.lineCap='round';if(type==='possible')ctx.globalAlpha=.3;ctx.moveTo(x,y-4);ctx.lineTo(x+27,y-4);ctx.stroke();}
     ctx.restore();
@@ -233,7 +229,7 @@
     const legend=legendItems(snapshot),legendColumns=3,legendRows=Math.ceil(legend.length/legendColumns),footerY=frame.y+frame.h+32;
     const warning=snapshot.state.mode==='intervals'?'Dated evidence occurs within the selected month. Held and observation-only evidence is shown only at recorded dates; no continuous interval is inferred. Missing markers do not necessarily mean open borders. See record duration notes for date bounds, minimum periods and formal policy dates. Policy endpoints do not establish observed traffic resumption.':'Unmarked does not necessarily mean open. The map is an incomplete record of documented restrictions.';
     measure.font='12px '+FONT;
-    const caveatLines=wrap(measure,warning+' Dots show named crossings for the selected dates; size does not show duration or severity.'+(snapshot.historyReferences?.length?' Hollow grey rings identify earlier restriction histories, not restrictions in the selected month.':'')+' Sites awaiting a reliable position remain in the records. Border lines show reference geography. Squares identify international passenger rules: filled for entry or departure bans, outlined for entry conditions. Their country reference points do not trace a closed boundary. Read each record for its legal jurisdiction, affected travellers and modes. Multiple rationales can span records and dates. Present-day boundaries do not establish historical control or sovereignty.'+(snapshot.state.rationale?' Rationale coding is interpretive and necessarily imperfect.':''),content);
+    const caveatLines=wrap(measure,warning+' Dots show named crossings for the selected dates; size does not show duration or severity.'+(snapshot.historyReferences?.length?' Hollow grey rings identify earlier restriction histories, including records with a documented reopening. They do not establish restrictions in the selected month.':'')+' Sites awaiting a reliable position remain in the records. Border lines show reference geography.'+nationalReading(snapshot)+' Multiple rationales can span records and dates. Present-day boundaries do not establish historical control or sovereignty.'+(snapshot.state.rationale?' Rationale coding is interpretive and necessarily imperfect.':''),content);
     const selectedEvent=snapshot.events.find(e=>e.id===snapshot.selected),selectionText=selectedEvent?'Selected record: '+selectedEvent.id+' · '+(selectedEvent.title||selectedEvent.id):'';
     const selectionLines=selectionText?wrap(measure,selectionText,content):[];
     const height=Math.ceil(footerY+legendRows*31+26+caveatLines.length*18+selectionLines.length*18+91);
@@ -246,10 +242,11 @@
     ctx.font='12px '+FONT;textLines(ctx,filterLines,margin,y+1,18);
     ctx.save();ctx.beginPath();ctx.rect(frame.x,frame.y,frame.w,frame.h);ctx.clip();ctx.fillStyle=COLOURS.ocean;ctx.fillRect(frame.x,frame.y,frame.w,frame.h);ctx.translate(frame.x,frame.y);const factor=frame.w/snapshot.size.x;ctx.scale(factor,factor);
     for(const f of snapshot.countries.features)paintGeometry(ctx,f,snapshot,{fill:COLOURS.land,stroke:COLOURS.coast,width:.6,opacity:.8});
-    const countryRefs=snapshot.references.filter(r=>referenceStyle(r).country&&!/Point/.test(r.feature.geometry.type)),scopeRefs=snapshot.references.filter(r=>!referenceStyle(r).country&&!/Point/.test(r.feature.geometry.type)),pointRefs=snapshot.references.filter(r=>/Point/.test(r.feature.geometry.type));
+    const countryRefs=snapshot.references.filter(r=>referenceStyle(r).country&&!referenceStyle(r).national&&!/Point/.test(r.feature.geometry.type)),nationalRefs=snapshot.references.filter(r=>referenceStyle(r).national&&!/Point/.test(r.feature.geometry.type)),scopeRefs=snapshot.references.filter(r=>!referenceStyle(r).country&&!/Point/.test(r.feature.geometry.type)),pointRefs=snapshot.references.filter(r=>/Point/.test(r.feature.geometry.type));
     paintReferences(ctx,countryRefs,snapshot);
     for(const f of snapshot.borders.features)paintGeometry(ctx,f,snapshot,{stroke:COLOURS.border,width:.6,opacity:.8});
     for(const f of snapshot.disputed.features)paintGeometry(ctx,f,snapshot,{stroke:COLOURS.disputed,width:.9,opacity:.8,dash:[4,4]});
+    paintReferences(ctx,nationalRefs,snapshot);
     paintReferences(ctx,scopeRefs,snapshot);
     ctx.save();ctx.textAlign='center';ctx.textBaseline='middle';ctx.lineJoin='round';
     for(const label of snapshot.labels||[]){ctx.font='500 '+label.fontSize+'px '+FONT;ctx.lineWidth=3;ctx.strokeStyle='rgba(255,255,255,.85)';ctx.strokeText(label.text,label.x,label.y);ctx.fillStyle='#6b7d73';ctx.fillText(label.text,label.x,label.y);}

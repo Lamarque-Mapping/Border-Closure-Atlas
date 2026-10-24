@@ -61,6 +61,7 @@ jobs:
           python scripts/verify-standalone-downloads.py
           node scripts/verify-ui.cjs
           node scripts/verify-analysis-sections.cjs
+          node scripts/verify-analysis-duration-filter.cjs
           node scripts/verify-border-history.cjs
       - name: Configure Pages
         id: pages

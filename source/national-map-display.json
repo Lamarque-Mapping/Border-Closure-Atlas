@@ -1,6 +1,6 @@
 {
-  "version": "20261024-passenger-rule-markers",
-  "method": "Square markers identify international passenger rules: filled for entry or departure bans, outlined for entry conditions. Each marker uses a country reference point; the record specifies the legal jurisdiction, affected travellers and modes. The marker does not trace a closed coastline or domestic boundary. The displayed periods follow the rule through changes to the groups and exceptions it covered. These records have no single duration and are excluded from the land-border charts. Where the evidence supplies only individual dates, the record appears only in those months. Missing end dates are not extended to the present.",
+  "version": "20261024-passenger-rule-outlines",
+  "method": "Green country outlines identify international passenger entry or departure bans and entry conditions. Outlines are country references; each record specifies the legal jurisdiction, affected travellers and modes. England-only rules use the UK outline for reference, without drawing constituent-country boundaries. The outline does not establish the legal extent of a rule or closure of every crossing. The displayed periods follow the rule through changes to the groups and exceptions it covered. These records have no single duration and are excluded from the land-border charts. Where the evidence supplies only individual dates, the record appears only in those months. Missing end dates are not extended to the present.",
   "review_date": "2026-10-23",
   "policies": [
     {

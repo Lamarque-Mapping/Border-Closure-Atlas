@@ -18,7 +18,7 @@
         const publisher=found?.['Publishers / reporting bodies']||(host==='www.anao.gov.au'?'Australian National Audit Office':host.includes('beehive')?'New Zealand Government':host.includes('legislation.gov.uk')?'UK legislation':host.includes('homeaffairs')?'Australian Home Affairs':host.includes('gov.uk')?'UK Government':host);
         return {url,publisher,title:found?.['Source titles']?.split('\n')[0]||publisher,publication_date:found?.['Publication date(s)']||null,source_id:found?.['Source labels — all retrievals']||'National map review',supports:[],source_type:'Official policy evidence',content_access:'See source and workbook',access_history:[]};
       });
-      const base={measure_type:'formal_policy_period',kind:'policy_period',contested:false,minimum_days:null,maximum_days:null,complete_operational:false,exact_complete_operational:false,end_inclusive:false,endpoint_inclusion:'Not used for a duration',observed_reopening:'Not an airport or crossing reopening',end_is_reopening:false,map_scope_note:'The square is a country-positioned reference for international passenger rules. The record specifies the legal jurisdiction, affected travellers and modes; the marker does not trace a closed boundary.'};
+      const base={measure_type:'formal_policy_period',kind:'policy_period',contested:false,minimum_days:null,maximum_days:null,complete_operational:false,exact_complete_operational:false,end_inclusive:false,endpoint_inclusion:'Not used for a duration',observed_reopening:'Not an airport or crossing reopening',end_is_reopening:false,map_scope_note:'The outline is a country reference for international passenger rules. Each entry identifies the jurisdiction, travellers and journeys covered; England-only rules use the UK outline for reference.'};
       const periods=observations.map(row=>({...base,period_id:row['Observation ID'],national_observation:true,national_label:({entry_prohibition:'Entry ban introduced',exit_prohibition:'Departure ban introduced',entry_condition:'Entry conditions',relaxation:'Rules relaxed'})[row['Measure class']],start_earliest:row['Effective date'],start_latest:row['Effective date'],end_earliest:null,end_latest:null,last_confirmed:null,evidence_dates:[row['Effective date']],temporal_display_rule:'dated_evidence_only_no_continuity_inference',scope:row.Jurisdiction,movement:row['Affected people'],direction:row.Direction,authority:country+' authorities',display:row['Dated policy change'],basis:row['Dated policy change'],qualification:row['Remaining evidence need'],exceptions:row.Exceptions,modes:row['Supported modes'],endpoint_status:'policy_change',source_ids:split(row['Source IDs']),source_urls:lines(row['Source URLs']),reported_schedule:row['Local time and zone']}));
       if(config.period){
         const p=config.period;
@@ -36,12 +36,12 @@
     for(const code of unique(events.map(e=>e.national_map_country))){
       const feature=data.countries.features.find(f=>f.properties.ADM0_A3===code);
       if(!feature)throw Error('National policy geography missing: '+code);
-      // A country's existing cartographic label point is a navigation anchor,
-      // not evidence that every place or domestic boundary shares a legal rule.
-      const coordinates=[feature.properties.LABEL_X,feature.properties.LABEL_Y];
-      if(coordinates.some(value=>typeof value!=='number'||!Number.isFinite(value))||Math.abs(coordinates[0])>180||Math.abs(coordinates[1])>90)throw Error('Country reference point missing: '+code);
+      // Full-country outlines are display references, not inferred legal scope.
+      // England-only records keep their jurisdiction and share the UK outline;
+      // no constituent-country boundary is drawn as a passenger restriction.
+      if(!/^(?:Multi)?Polygon$/.test(feature.geometry?.type||''))throw Error('Country reference outline missing: '+code);
       const countryName=feature.properties.ADMIN||feature.properties.NAME;
-      features.push({type:'Feature',geometry:{type:'Point',coordinates},properties:{location_id:'national-'+code,label:countryName+' · international passenger rules',country:countryName,map_country:code,display_role:'national_policy',precision:'Country reference point; legal jurisdiction is stated in each record',source_note:'Natural Earth country label point used only to position a policy marker. It is not an airport, crossing or physical closure location.',source_name:'Natural Earth',source_url:'https://www.naturalearthdata.com/'}});
+      features.push({type:'Feature',geometry:feature.geometry,properties:{location_id:'national-'+code,label:countryName+' · international passenger rules',country:countryName,map_country:code,display_role:'national_policy',precision:'Country reference outline; legal jurisdiction is stated in each record',source_note:'Natural Earth country outline used as a reference for international passenger rules. Display boundaries do not define the legal scope of a rule.',source_name:'Natural Earth',source_url:'https://www.naturalearthdata.com/'}});
     }
     data.events.push(...events);data.context_locations.features.push(...features);
     data.meta.national_supplement={version:source.version,source_sha256:source.source_sha256,policy_histories:events.length,observations:source.observations.length,method:source.method};

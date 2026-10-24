@@ -37,7 +37,6 @@ const AUDIT={meta:{workbook:DATA.meta.source_filename,sha256:DATA.meta.source_sh
 const AUDIT_BY_ID=new Map(AUDIT.records.map(r=>[r.event_id,r]));
 const AUDIT_GROUPS=new Map(AUDIT.groups.map(g=>[g.key,g]));
 const populationMatch=(e,value)=>value==="complete"?e.timing_coverage.operational_complete:value==="exact"?e.timing_coverage.operational_exact_complete:value==="undated"?!e.timing_coverage.any_dated_evidence:value==="held"?e.duration_periods.some(p=>p.contested):true;
-const COLORS = {supported:"#658e78",qualified:"#c4aa7a",other:"#b3bfb7"};
 const $ = function(id){return document.getElementById(id);};
 const escapeHTML = function(value){return cleanText(value).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});};
 const pct = function(n,d){return d ? (100*n/d).toFixed(1)+"%" : "0.0%";};
@@ -100,45 +99,43 @@ function csvCell(value){
  return '"'+s.replace(/"/g,'""')+'"';
 }
 function downloadCSV(filename,rows){download(filename,"\ufeff"+rows.map(function(r){return r.map(csvCell).join(",");}).join("\r\n"),"text/csv;charset=utf-8");}
+const durationExplanation="Includes records with at least one documented closure period whose minimum date difference exceeds one day. A continuing closure can qualify through its last confirmed date, without implying a reopening or later duration. Policy-only dates and lengths that could be one day or less are excluded. Days use date differences, not hour-by-hour measurements.";
+const durationSelection=(population,duration)=>population+(duration==='over1'?'; minimum date difference >1 day in at least one operational phase; confirmed-through lower bounds allowed':'');
+const filteredFilename=(filename,duration)=>duration==='over1'?filename.replace(/\.csv$/,'-over-1-day.csv'):filename;
 function bar(label,value,total,max,kind,uncoded){
  const width=max?Math.max(0,100*value/max):0;
  return '<button type="button" class="bar-row'+(uncoded?' uncoded':'')+'" data-chart-kind="'+kind+'" data-chart-value="'+escapeHTML(label)+'" aria-label="'+escapeHTML(label)+': '+value+' records, '+pct(value,total)+'. Inspect records.">'+
  '<span class="bar-label">'+escapeHTML(label)+'</span><span class="bar-track" aria-hidden="true"><span class="bar-fill" style="width:'+width+'%"></span></span><span class="bar-value">'+value+'<small>'+pct(value,total)+'</small></span></button>';
 }
 function renderCharts(){
- const selected=$("chartPopulation").value;
- const rows=INCLUDED.filter(function(e){return selected==="all" || populationMatch(e,selected);});
+ const selected=$("chartPopulation").value,duration=$("chartDuration").value,selection=durationSelection(selected,duration);
+ const rows=METRICS.filterRecords(INCLUDED,selected,duration);
  const n=rows.length;
  const counts=CODES.map(function(c){return {label:c,count:rows.filter(function(e){return e.codes.includes(c);}).length};}).sort(function(a,b){return b.count-a.count;});
  const blank=rows.filter(function(e){return !e.codes.length;}).length;
  const max=Math.max(1,...counts.map(function(x){return x.count;}),blank);
  $("codeChart").innerHTML=counts.map(function(x){return bar(x.label,x.count,n,max,"code",false);}).join("")+bar("No code assigned",blank,n,max,"code",true);
- currentCharts.codes=counts.concat({label:"No code assigned",count:blank}).map(function(x){return [x.label,x.count,n,pct(x.count,n),selected];});
- $("chartPopulationNote").textContent=n+" records · select a bar to explore";
+ currentCharts.codes=counts.concat({label:"No code assigned",count:blank}).map(function(x){return [x.label,x.count,n,pct(x.count,n),selection];});
+ $("chartPopulationNote").textContent=n+" records"+(duration==='over1'?" · more than 1 day":"")+" · select a bar to explore";
+ $("chartDurationNote").hidden=duration!=='over1';$("chartDurationNote").textContent=duration==='over1'?durationExplanation:'';
  $("motivationDenominatorNote").textContent="Percentages use all "+n+" selected records, including those without a category.";
- const assigned=rows.filter(e=>e.codes.length).length;
- const statuses=frequencies(rows,e=>e.codes.length?'Category assigned':e.rationale_coding_status||'No category assigned');
- $("assessmentChart").innerHTML='<div class="big-number">'+assigned+' <small>of '+n+' records have an assigned rationale category</small></div><div class="legend-rows">'+Object.entries(statuses).map(([label,count])=>legend(label,count,label==='Category assigned'?COLORS.supported:COLORS.other)).join('')+'</div><p class="figure-note">Each record retains the source attribution and any qualifications behind its coding.</p>';
- const coverage=[['Closed on a later reported date','operational_censored','A later report confirms closure, but a reopening date is missing.'],['Same-day interruption reported','same_day','No whole-day duration is calculated.'],['Policy in force','formal_policy','Dates when a rule applied; they do not prove that passage stopped throughout.'],['Announced closure dates','ordered_window','A planned schedule; actual enforcement is not established.'],['Repeated closures','intermittent_regime','A period with interruptions or openings, not continuous closure.']];
- const duration=rows.filter(e=>e.timing_coverage.operational_complete).length;
- $("durationChart").innerHTML='<div class="big-number">'+duration+' <small>of '+n+' records have a closure length that can be estimated</small></div><div class="legend-rows">'+legend('Exact start and end dates',rows.filter(e=>e.timing_coverage.operational_exact_complete).length,COLORS.supported,'A stricter subset of the estimated lengths above.')+legend('At least one dated observation',rows.filter(e=>e.timing_coverage.any_dated_evidence).length,COLORS.other,'A dated report need not establish the whole duration.')+legend('No dated evidence',rows.filter(e=>!e.timing_coverage.any_dated_evidence).length,'#dfe3d9')+'</div><details class="timing-more"><summary>Other kinds of timing evidence</summary>'+coverage.map(([label,key,note])=>legend(label,rows.filter(e=>e.timing_coverage[key]).length,COLORS.other,note)).join('')+'</details>';
  const rc=Object.entries(frequencies(rows,function(e){return e.region;})).sort(function(a,b){return b[1]-a[1];});
  const broad=new Set(['Americas','Europe','East and Southeast Asia and Oceania','South Asia, Central Asia and Caucasus']);
  $("regionChart").innerHTML=rc.filter(x=>!broad.has(x[0])).map(function(x){return bar(x[0],x[1],n,rc[0]?.[1]||1,"region",false);}).join("");
  $("broadRegionChart").innerHTML=rc.filter(x=>broad.has(x[0])).map(function(x){return bar(x[0],x[1],n,rc[0]?.[1]||1,"region",false);}).join("");
- currentCharts.regions=rc.map(function(x){return [x[0],x[1],n,pct(x[1],n),selected];});
+ currentCharts.regions=rc.map(function(x){return [x[0],x[1],n,pct(x[1],n),selection];});
  const cc=METRICS.continents(rows).sort((a,b)=>b.count-a.count);
  $("continentChart").innerHTML=cc.map(x=>bar(x.label,x.count,n,cc[0]?.count||1,'continent',false)).join('');
- currentCharts.continents=cc.map(x=>[x.label,x.count,n,pct(x.count,n),selected]);
- renderDurationComparison(rows,selected);
+ currentCharts.continents=cc.map(x=>[x.label,x.count,n,pct(x.count,n),selection]);
+ renderDurationComparison(rows,selected,duration);
 }
-function legend(label,count,color,note){return '<div class="legend-row"><span class="swatch" style="background:'+color+'"></span><span>'+escapeHTML(label)+(note?'<small class="legend-description">'+escapeHTML(note)+'</small>':'')+'</span><strong>'+count+'</strong></div>';}
-function renderDurationComparison(rows,population){
- const phases=METRICS.durationRows(rows),groups=METRICS.durationGroups(rows,CODES).sort((a,b)=>(b.median??-1)-(a.median??-1)||a.code.localeCompare(b.code));
- currentCharts.durationRows=phases;currentCharts.durationGroups=groups;currentCharts.durationPopulation=population;
+function renderDurationComparison(rows,population,duration='all'){
+ const phases=METRICS.durationRows(rows,duration),groups=METRICS.durationGroups(rows,CODES,duration).sort((a,b)=>(b.median??-1)-(a.median??-1)||a.code.localeCompare(b.code));
+ currentCharts.durationRows=phases;currentCharts.durationGroups=groups;currentCharts.durationPopulation=durationSelection(population,duration);currentCharts.durationFilter=duration;
  const parentIDs=new Set(phases.map(p=>p.record_id)),parents=parentIDs.size,uncoded=phases.filter(p=>!p.codes.length).length;
- const extraChecks=rows.filter(e=>e.timing_coverage.operational_exact_complete&&!parentIDs.has(e.id)).length;
- $("durationComparisonNote").textContent=phases.length+' eligible phases from '+parents+' records. A phase is one documented period for a particular movement and location.'+(extraChecks?' '+extraChecks+' other records have exact date ranges but do not meet this chart’s further checks, including a confirmed reopening.':'')+' The horizontal scale is logarithmic: the marks 1, 10, 100 and 1,000 days are equally spaced.'+(uncoded?' '+uncoded+' phase'+(uncoded===1?' has':'s have')+' no rationale label and '+(uncoded===1?'is':'are')+' not plotted.':'');
+ const eligibleParents=new Set(METRICS.durationRows(rows).map(p=>p.record_id));
+ const extraChecks=rows.filter(e=>e.timing_coverage.operational_exact_complete&&!eligibleParents.has(e.id)).length;
+ $("durationComparisonNote").textContent=phases.length+' eligible phases from '+parents+' records. A phase is one documented period for a particular movement and location.'+(duration==='over1'?' Only phases longer than one day are plotted; shorter phases from the same record are excluded.':'')+(extraChecks?' '+extraChecks+' other records have exact date ranges but do not meet this chart’s further checks, including a confirmed reopening.':'')+' The horizontal scale is logarithmic: the marks 1, 10, 100 and 1,000 days are equally spaced.'+(uncoded?' '+uncoded+' phase'+(uncoded===1?' has':'s have')+' no rationale label and '+(uncoded===1?'is':'are')+' not plotted.':'');
  const maximum=Math.max(1,...phases.map(p=>p.days)),cap=[10,30,100,300,1000,3000,10000,30000].find(x=>x>=maximum)||Math.pow(10,Math.ceil(Math.log10(maximum))),position=value=>(100*Math.log10(value)/Math.log10(cap)).toFixed(3)+'%';
  const ticks=[1,10,100,1000,10000].filter(t=>t<=cap),number=value=>Number.isInteger(value)?value.toLocaleString('en-GB'):Number(value.toFixed(1)).toLocaleString('en-GB');
  const axis='<div class="distribution-axis"><span>Days · log scale</span><svg aria-hidden="true">'+ticks.map(t=>'<text x="'+position(t)+'" y="25" text-anchor="'+(t===1?'start':'middle')+'" font-size="10" fill="#65756f">'+number(t)+'</text>').join('')+'</svg><span>Median · sample</span></div>';
@@ -150,11 +147,12 @@ function renderDurationComparison(rows,population){
  const coverageGroups=[...groups].sort((a,b)=>b.total-a.total||CODES.indexOf(a.code)-CODES.indexOf(b.code));
  const example=coverageGroups.find(g=>g.total);
  $("durationCoverageExample").textContent=example?'For example, '+example.code+' appears in '+example.total+' selected records. Of these, '+example.records+' can contribute to the duration comparison: '+pct(example.records,example.total)+' of that category.':'No selected records are available for this comparison.';
- $("durationCoverageChart").innerHTML='<table><caption>The categories follow the same order as the motivation chart. “Used” means a record contributes at least one phase to the duration comparison.</caption><thead><tr><th scope="col">Recorded reason</th><th scope="col">Used / category total</th><th scope="col">Share used</th></tr></thead><tbody>'+coverageGroups.map(g=>'<tr><th scope="row">'+escapeHTML(g.code)+'</th><td class="sample-total">'+(g.total?g.records+' / '+g.total+' records':'No selected records')+'</td><td>'+(g.total?pct(g.records,g.total):'—')+'</td></tr>').join('')+'</tbody></table>';
+ $("durationCoverageChart").innerHTML='<table><caption>The categories follow the same order as the rationale chart. “Used” means a record contributes at least one phase to the duration comparison.</caption><thead><tr><th scope="col">Recorded rationale</th><th scope="col">Used / category total</th><th scope="col">Share used</th></tr></thead><tbody>'+coverageGroups.map(g=>'<tr><th scope="row">'+escapeHTML(g.code)+'</th><td class="sample-total">'+(g.total?g.records+' / '+g.total+' records':'No selected records')+'</td><td>'+(g.total?pct(g.records,g.total):'—')+'</td></tr>').join('')+'</tbody></table>';
 }
 function filterFromChart(kind,value){
  $("filters").reset();
  $("statusFilter").value=$("chartPopulation").value==="all"?"":$("chartPopulation").value;
+ $("durationFilter").value=$("chartDuration").value;
  if(kind==="region")$("regionFilter").value=value;
  if(kind==="continent")$("continentFilter").value=value;
  if(kind==="code")$("codeFilter").value=value==="No code assigned"?"__uncoded":value;
@@ -162,11 +160,11 @@ function filterFromChart(kind,value){
  openDataset();
 }
 function applyFilters(){
- const q=norm($("query").value).trim(),r=$("regionFilter").value,continent=$("continentFilter").value,c=$("codeFilter").value,s=$("statusFilter").value,a=$("auditFilter").value;
+ const q=norm($("query").value).trim(),r=$("regionFilter").value,continent=$("continentFilter").value,c=$("codeFilter").value,s=$("statusFilter").value,a=$("auditFilter").value,duration=$("durationFilter").value;
  let result=EVENTS.filter(function(e){
   if(s==="quarantined"){if(!e.quarantined)return false;}
   else {if(e.quarantined)return false;if(s && !populationMatch(e,s))return false;}
-  return (!q||e.searchText.includes(q)) && (!continent||e.continents.includes(continent)) && (!r||e.region===r) && (!c||(c==="__uncoded"?!e.codes.length:e.codes.includes(c))) && (!a||(AUDIT_BY_ID.has(e.id)&&AUDIT_BY_ID.get(e.id).classification_key===a));
+  return METRICS.durationMatch(e,duration) && (!q||e.searchText.includes(q)) && (!continent||e.continents.includes(continent)) && (!r||e.region===r) && (!c||(c==="__uncoded"?!e.codes.length:e.codes.includes(c))) && (!a||(AUDIT_BY_ID.has(e.id)&&AUDIT_BY_ID.get(e.id).classification_key===a));
  });
  const sort=$("sortRecords").value;
  result.sort(function(a,b){
@@ -198,7 +196,9 @@ function renderRecords(){
  const pages=Math.max(1,Math.ceil(filtered.length/PAGE_SIZE));
  page=Math.min(page,pages-1);
  const start=page*PAGE_SIZE;
- $("resultCount").textContent=filtered.length+" matching "+(filtered.length===1?"record":"records")+($("statusFilter").value==="quarantined"?" · excluded from analysis":"");
+ const longOnly=$("durationFilter").value==='over1';
+ $("resultCount").textContent=filtered.length+" matching "+(filtered.length===1?"record":"records")+(longOnly?" · more than 1 day":"")+($("statusFilter").value==="quarantined"?" · excluded from analysis":"");
+ $("datasetDurationNote").hidden=!longOnly;$("datasetDurationNote").textContent=longOnly?durationExplanation:'';
  $("recordList").innerHTML=filtered.length?filtered.slice(start,start+PAGE_SIZE).map(function(e){
   return '<button type="button" class="record-row" data-record="'+escapeHTML(e.id)+'" aria-label="Open '+escapeHTML(e.id)+': '+escapeHTML(e.title)+'">'+
   '<span class="record-id">'+escapeHTML(e.id)+'</span><span><span class="record-title">'+escapeHTML(e.title)+'</span>'+
@@ -297,9 +297,10 @@ document.addEventListener("click",function(event){
  const audit=event.target.closest("[data-audit-group]");
  if(audit){$("filters").reset();$("auditFilter").value=audit.dataset.auditGroup;page=0;renderRecords();openDataset();return;}
  const code=event.target.closest(".code-filter");
- if(code){$("chartPopulation").value="all";renderCharts();filterFromChart("code",code.dataset.code);}
+ if(code){$("chartPopulation").value="all";$("chartDuration").value="all";renderCharts();filterFromChart("code",code.dataset.code);}
 });
 $("chartPopulation").addEventListener("change",renderCharts);
+$("chartDuration").addEventListener("change",renderCharts);
 $("filters").addEventListener("submit",function(e){e.preventDefault();});
 $("filters").addEventListener("input",function(){page=0;renderRecords();});
 $("filters").addEventListener("change",function(){page=0;renderRecords();});
@@ -324,16 +325,16 @@ function exportRecordRows(full,selected,filename){
  const headings=['ID','Region','Episode','Countries','Crossings','Current timing','Current review','Included','Rationales','Rationale attribution','Scope','Direction','Affected movement','Exceptions','Current uncertainty','Any dated evidence','Complete operational duration','Exact operational duration','Original start (historical)','Original endpoint (historical)','Source URLs'];
  downloadCSV(filename,[headings,...selected.map(e=>byID.get(e.id)).map(e=>[e.id,e.region,e.title,e.countries.join('; '),e.crossings,cleanText(e.current_timing),e.status,!e.quarantined,e.codes.join('; '),e.rationale_assignments.map(a=>a['Broad rationale']+': '+a['Evidence attribution']).join(' | '),e.scope,e.direction,e.movement,e.exceptions,e.uncertainty,e.timing_coverage.any_dated_evidence,e.timing_coverage.operational_complete,e.timing_coverage.operational_exact_complete,e.historical.start,e.historical.end,e.sources.map(s=>s.URL).join(' | ')])]);
 }
-$("exportRows").addEventListener("click",()=>withResearch('exportRows',full=>exportRecordRows(full,filtered,'border-closures-current.csv')));
+$("exportRows").addEventListener("click",()=>withResearch('exportRows',full=>exportRecordRows(full,filtered,filteredFilename('border-closures-current.csv',$("durationFilter").value))));
 $("exportAllRows").addEventListener("click",()=>withResearch('exportAllRows',full=>exportRecordRows(full,INCLUDED,'border-closures-included-records.csv')));
-$("exportCodes").addEventListener("click",()=>downloadCSV('motivation-counts.csv',[["Current code","Records","Denominator","Share of selected records","Population"],...currentCharts.codes]));
-$("exportRegions").addEventListener("click",()=>downloadCSV('regional-counts.csv',[["Original region label","Records","Denominator","Share of selected records","Population"],...currentCharts.regions]));
-$("exportContinents").addEventListener("click",()=>downloadCSV('continent-counts.csv',[["Continent","Records","All selected records","Share of selected records","Population"],...currentCharts.continents]));
-$("exportDuration").addEventListener("click",()=>downloadCSV('duration-by-rationale-phases.csv',[
+$("exportCodes").addEventListener("click",()=>downloadCSV(filteredFilename('rationale-counts.csv',currentCharts.durationFilter),[["Current code","Records","Denominator","Share of selected records","Population"],...currentCharts.codes]));
+$("exportRegions").addEventListener("click",()=>downloadCSV(filteredFilename('regional-counts.csv',currentCharts.durationFilter),[["Original region label","Records","Denominator","Share of selected records","Population"],...currentCharts.regions]));
+$("exportContinents").addEventListener("click",()=>downloadCSV(filteredFilename('continent-counts.csv',currentCharts.durationFilter),[["Continent","Records","All selected records","Share of selected records","Population"],...currentCharts.continents]));
+$("exportDuration").addEventListener("click",()=>downloadCSV(filteredFilename('duration-by-rationale-phases.csv',currentCharts.durationFilter),[
  ['Record ID','Phase ID','Event','Phase scope','Start date','Observed reopening date','Days (date difference)','Parent record rationale labels','Endpoint inclusion','Eligibility','Population','Workbook SHA-256'],
- ...currentCharts.durationRows.map(p=>[p.record_id,p.phase_id,p.title,p.scope,p.start,p.end,p.days,p.codes.join('; '),p.endpoint_inclusion,'Exact dates; operational closure; observed reopening; not disputed; at least one date-boundary day',currentCharts.durationPopulation,DATA.meta.source_sha256])
+ ...currentCharts.durationRows.map(p=>[p.record_id,p.phase_id,p.title,p.scope,p.start,p.end,p.days,p.codes.join('; '),p.endpoint_inclusion,'Exact dates; operational closure; observed reopening; not disputed; '+(currentCharts.durationFilter==='over1'?'more than one day (date difference)':'at least one date-boundary day'),currentCharts.durationPopulation,DATA.meta.source_sha256])
 ]));
-$("exportDurationCoverage").addEventListener("click",()=>downloadCSV('duration-by-rationale-coverage.csv',[
+$("exportDurationCoverage").addEventListener("click",()=>downloadCSV(filteredFilename('duration-by-rationale-coverage.csv',currentCharts.durationFilter),[
  ['Parent record rationale','Eligible phases','Records with eligible phases','All selected records in category','Share of category records','Shortest days','25th percentile days','Median days','75th percentile days','Longest days','Population','Workbook SHA-256'],
  ...currentCharts.durationGroups.map(g=>[g.code,g.phases,g.records,g.total,g.total?pct(g.records,g.total):'',g.min,g.q1,g.median,g.q3,g.max,currentCharts.durationPopulation,DATA.meta.source_sha256])
 ]));
@@ -358,7 +359,7 @@ function updateSectionNavigation(){
  sectionFrame=0;if(currentView==='dataset'||!document.documentElement.clientHeight)return;
  const bar=document.querySelector('.topnav'),readingLine=(bar?bar.getBoundingClientRect().height:0)+28;
  let current=readingSections[0];
- for(const section of readingSections){if(section.getBoundingClientRect().top<=readingLine)current=section;else break;}
+ for(const section of readingSections){const anchor=section.id==='motivation-counts'?($("patterns")||section):section;if(anchor.getBoundingClientRect().top<=readingLine)current=section;else break;}
  if(scrollY+innerHeight>=document.documentElement.scrollHeight-8)current=readingSections[readingSections.length-1];
  if(current)markAnalysisSection(current.id);
 }
@@ -375,6 +376,8 @@ function progress(){const available=document.documentElement.scrollHeight-innerH
 window.addEventListener("scroll",function(){progress();scheduleSectionNavigation();},{passive:true});
 window.addEventListener("resize",scheduleSectionNavigation);
 async function navigateAnalysis(hash){
+ const overviewAnchor=({'#coding':'rationale-coding','#evidence-coverage':'date-evidence'})[hash];
+ if(overviewAnchor){if(ATLAS_HOST)window.parent.location.hash='#overview/'+overviewAnchor;else location.replace('index.html#overview/'+overviewAnchor);return;}
  if(hash==="#methods"&&ATLAS_HOST?.show){ATLAS_HOST.show("briefing");return;}
  if(hash==="#register"||hash==="#downloads")setView("dataset");
  else if(hash==="#methods"&&!ATLAS_HOST){currentView="overview";delete document.documentElement.dataset.analysisView;}
@@ -385,7 +388,7 @@ async function navigateAnalysis(hash){
  }else{
   if(dialog.open)closeRecord();
   const target=document.getElementById(currentView==="dataset"&&hash==="#top"?"register":hash.slice(1)||"top");
-  if(target){if(target.tagName==='DETAILS')target.open=true;target.scrollIntoView({behavior:"auto",block:"start"});if(currentView!=='dataset')markAnalysisSection(target.id);}
+  if(target){if(target.tagName==='DETAILS')target.open=true;target.scrollIntoView({behavior:"auto",block:"start"});if(currentView!=='dataset')markAnalysisSection(target.id==='patterns'?'motivation-counts':target.id);}
  }
 }
 window.AtlasAnalysis={navigate:navigateAnalysis,setView,getView:()=>currentView};

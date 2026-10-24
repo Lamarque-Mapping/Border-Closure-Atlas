@@ -63,6 +63,11 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
 @media(min-width:901px){.atlas-embedded .topnav{display:none}.atlas-embedded{scroll-padding-top:22px}.atlas-embedded .contents{top:18px;max-height:calc(100dvh - 36px)}}
 @media(max-width:900px){.topnav .standalone-links{display:none!important}.analysis-section-picker{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:12px;min-width:0;flex:1;font-size:12px}.analysis-section-picker select{margin:0;min-height:40px;padding:8px 10px;font-size:15px}.atlas-embedded .topnav{height:56px;justify-content:stretch}.atlas-embedded{scroll-padding-top:76px}.sample-explanation{font-size:13px}.duration-sample-table th:first-child{width:46%}.duration-sample-table th:nth-child(2){width:35%}.duration-sample-table th:last-child{width:19%}}
 @media(max-width:620px){.analysis-section-picker{gap:8px;font-size:11px}.analysis-section-picker select{min-height:44px;font-size:16px;padding:7px 9px}.atlas-embedded .topnav{height:58px}.duration-sample-table table{font-size:11px}.duration-sample-table th,.duration-sample-table td,.duration-sample-table tbody th{padding:10px 5px;overflow-wrap:anywhere}.chart-introduction{font-size:14px}.sample-example{font-size:12px;padding:10px 12px}.duration-sample-table caption{font-size:11px}}
+.contents .contents-nav a[data-chart-link]{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:40px}.contents-nav a[data-chart-link]>span{min-width:0}.analysis-nav-icon{width:22px;height:22px;flex:none;margin-left:auto;color:#6b8979;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;fill:none}.contents-nav a.active .analysis-nav-icon,.contents-nav a:hover .analysis-nav-icon{color:var(--ink)}
+
+/* Duration and evidence filters share one chart population. */
+.chart-controls{flex-wrap:wrap;gap:12px 18px}.chart-controls label{flex:1 1 220px;min-width:0}.chart-controls p{flex:1 1 170px;margin:0}#chartDurationNote,#datasetDurationNote{margin:10px 0 14px}
+@media(max-width:620px){.chart-controls label+label{margin-top:12px}.chart-controls p{margin-top:9px}}
 </style>
 </head>
 <body>
@@ -71,14 +76,19 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
 <header class="topnav">
  <a class="brand" href="#top">Border closures <span>/ Types, patterns &amp; evidence</span></a>
  <nav class="standalone-links" aria-label="Atlas pages"><a href="index.html#map">Map</a><a href="#patterns">Charts</a><a href="#register">Dataset</a><a href="#methods">Methods</a></nav>
- <label class="analysis-section-picker"><span>On this page</span><select id="analysis-section-select" aria-label="Go to an Analysis section"><option value="top">Introduction</option><option value="dimensions">Meaning and scope</option><option value="motivations">Types of motivation</option><option value="borderwork">Borderwork</option><option value="patterns">Charts and filters</option><option value="motivation-counts">Recorded reasons</option><option value="evidence-coverage">Coding and date evidence</option><option value="closure-lengths">Closure lengths</option><option value="duration-sample">Duration sample</option><option value="geography">Continents</option><option value="research-areas">Research areas</option><option value="coding">Coding notes</option></select></label>
+ <label class="analysis-section-picker"><span>On this page</span><select id="analysis-section-select" aria-label="Go to an Analysis section"><option value="top">Introduction</option><option value="dimensions">Meaning and scope</option><option value="motivations">Types of rationale</option><option value="borderwork">Borderwork</option><option value="motivation-counts">Recorded rationales</option><option value="closure-lengths">Closure lengths</option><option value="duration-sample">Duration sample</option><option value="geography">Continents</option><option value="research-areas">Research areas</option></select></label>
 </header>
 <main id="main" class="page-shell">
  <aside class="contents" aria-label="On this page">
   <h2>On this page</h2><p class="current-section">Viewing: <strong id="analysis-current-section">Introduction</strong></p>
   <nav class="contents-nav" aria-label="Analysis sections">
-   <p class="contents-group">Understanding closures</p><a href="#top" data-analysis-link>Introduction</a><a href="#dimensions" data-analysis-link>Meaning &amp; scope</a><a href="#motivations" data-analysis-link>Types of motivation</a><a href="#borderwork" data-analysis-link>Borderwork</a>
-   <p class="contents-group">Charts</p><a href="#patterns" data-analysis-link>Charts &amp; filters</a><a href="#motivation-counts" data-analysis-link>Recorded reasons</a><a href="#evidence-coverage" data-analysis-link>Coding &amp; date evidence</a><a href="#closure-lengths" data-analysis-link>Closure lengths</a><a href="#duration-sample" data-analysis-link>Duration sample</a><a href="#geography" data-analysis-link>Continents</a><a href="#research-areas" data-analysis-link>Research areas</a><a href="#coding" data-analysis-link>Coding notes</a>
+   <p class="contents-group">Understanding closures</p><a href="#top" data-analysis-link>Introduction</a><a href="#dimensions" data-analysis-link>Meaning &amp; scope</a><a href="#motivations" data-analysis-link>Types of rationale</a><a href="#borderwork" data-analysis-link>Borderwork</a>
+   <p class="contents-group">Charts</p>
+   <a href="#motivation-counts" data-analysis-link data-chart-link><span>Recorded rationales</span><svg class="analysis-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4v16M4 7h12M4 12h16M4 17h8"/></svg></a>
+   <a href="#closure-lengths" data-analysis-link data-chart-link><span>Closure lengths</span><svg class="analysis-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 12h4m10 0h4M3 8v8M21 8v8M12 7v10"/><rect x="7" y="7" width="10" height="10" rx="1"/></svg></a>
+   <a href="#duration-sample" data-analysis-link data-chart-link><span>Duration sample</span><svg class="analysis-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M3 14h18M11 9v11"/></svg></a>
+   <a href="#geography" data-analysis-link data-chart-link><span>Continents</span><svg class="analysis-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg></a>
+   <a href="#research-areas" data-analysis-link data-chart-link><span>Research areas</span><svg class="analysis-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3ZM9 3v15M15 6v15"/></svg></a>
   </nav>
   <div class="sidebar-info"><span class="eyebrow">OBSERVATION PERIOD</span><p>21 October 2016<br>to 21 October 2026</p><p class="small-note">A historical research register.<br>Not a guide to current crossing conditions.</p></div>
   <div class="sidebar-footer">Research by Dr. Hugh Lamarque<a href="#methods">About the evidence →</a></div>
@@ -108,9 +118,9 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
    <figure class="scope-example"><figcaption>One frontier, different movements <span>Conceptual illustration</span></figcaption><div><span>Ordinary passengers <b class="restricted">Restricted</b></span><span>Exempt freight <b>Permitted</b></span><span>Informal passage <b class="unknown">Unknown</b></span></div></figure>
   </section>
 
-  <section id="motivations" class="chapter" data-analysis-section="Types of motivation">
-   <div class="section-top"><p class="eyebrow">MOTIVATIONS</p></div><h2>Why are borders closed?</h2>
-   <div class="prose"><p>Separating out closures based on the official rationales behind them has both explanatory and analytical value. The boundaries between these categories are not sealed, and there will always be exceptions.</p><p>Some of these headings also describe subjects of protest by non-state actors who block crossings. An attributed explanation records what an actor says; it does not, by itself, establish underlying intent.</p></div>
+  <section id="motivations" class="chapter" data-analysis-section="Types of rationale">
+   <div class="section-top"><p class="eyebrow">RATIONALES</p></div><h2>Why are borders closed?</h2>
+   <div class="prose"><p>Separating out closures based on their recorded rationales has both explanatory and analytical value. The boundaries between these categories are not sealed, and there will always be exceptions.</p><p>An official rationale is the explanation stated by the authority imposing a restriction. Some of these headings also describe subjects of protest by non-state actors who block crossings. An attributed explanation records what an actor says; it does not, by itself, establish underlying intent.</p></div>
    <div class="typology"><details><summary><h3>Security</h3><span class="type-count" data-count="Security">292 records</span></summary><div><p>Armed conflict, attacks, public order, crime and asserted security threats. Allegations remain attributed; coding does not establish that a claimed threat existed.</p><button class="text-button code-filter" data-code="Security">Explore these records →</button></div></details><details><summary><h3>Health and biosecurity</h3><span class="type-count" data-count="Health and biosecurity">253 records</span></summary><div><p>Closures imposed to prevent the spread of human, animal or plant disease. Human disease control and animal or plant disease control are distinct subcategories.</p><button class="text-button code-filter" data-code="Health and biosecurity">Explore these records →</button></div></details><details><summary><h3>Trade and protectionism</h3><span class="type-count" data-count="Trade and protectionism">69 records</span></summary><div><p>Import and export controls, customs and transport rules, currency controls and documented trade protests. Affected freight alone does not establish a trade motive.</p><button class="text-button code-filter" data-code="Trade and protectionism">Explore these records →</button></div></details><details><summary><h3>Migration</h3><span class="type-count" data-count="Migration">45 records</span></summary><div><p>Entry, asylum, exit and transit controls, processing capacity and admission or document disputes. Includes demands to restore passage; direction alone does not establish a migration purpose.</p><button class="text-button code-filter" data-code="Migration">Explore these records →</button></div></details><details><summary><h3>Electoral politics</h3><span class="type-count" data-count="Electoral politics">80 records</span></summary><div><p>Election administration and security, electoral disputes and transitions, and voter access. Proximity to an election alone does not establish purpose.</p><button class="text-button code-filter" data-code="Electoral politics">Explore these records →</button></div></details><details><summary><h3>Interstate disputes and pressure</h3><span class="type-count" data-count="Interstate disputes and pressure">66 records</span></summary><div><p>Documented sanctions, diplomatic retaliation and disputes over territory or frontier administration. Cross-border effects alone do not establish political pressure.</p><button class="text-button code-filter" data-code="Interstate disputes and pressure">Explore these records →</button></div></details><details><summary><h3>Power and regime politics</h3><span class="type-count" data-count="Power and regime politics">36 records</span></summary><div><p>Coups, succession, opposition, political reform and contested governing authority. Policy or livelihood demands alone do not establish a struggle for governing power.</p><button class="text-button code-filter" data-code="Power and regime politics">Explore these records →</button></div></details><details><summary><h3>Policy and socioeconomic demands</h3><span class="type-count" data-count="Policy and socioeconomic demands">49 records</span></summary><div><p>Blockades or restrictions used to press demands over jobs, services, livelihoods, rights or public policy, including protests against health restrictions. An unspecified protest does not establish a particular demand.</p><button class="text-button code-filter" data-code="Policy and socioeconomic demands">Explore these records →</button></div></details><details><summary><h3>Administration and service operation</h3><span class="type-count" data-count="Administration and service operation">3 records</span></summary><div><p>Documented decisions about authorised checkpoints, consolidation of crossing services or deliberate temporary service suspensions. An administrative act does not by itself establish a security or political motive; accidental outages and routine overnight hours remain distinct.</p><button class="text-button code-filter" data-code="Administration and service operation">Explore these records →</button></div></details><details><summary><h3>Environment and resource management</h3><span class="type-count" data-count="Environment and resource management">2 records</span></summary><div><p>Documented nature conservation or control of cross-border herds and grazing. Disease prevention needs its own evidence and code; location alone does not establish an environmental purpose.</p><button class="text-button code-filter" data-code="Environment and resource management">Explore these records →</button></div></details></div>
 <p class="figure-note">Count distinct included records within each category. Categories overlap; their totals must not be added. A record’s reasons may concern different actors or phases.</p>
   </section>
@@ -121,30 +131,20 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
    <div class="case-note"><h3>One blockade, changing scope</h3><p>At Siret–Porubne, separate records describe a blockade of trucks in both directions and a later phase affecting entry into Romania. They capture a change within the same episode.</p><div><button class="record-link" data-record="R16-EU-005">Both directions →</button><button class="record-link" data-record="R16-EU-006">Entry into Romania →</button></div></div>
   </section>
 
-  <section id="patterns" class="chapter" data-analysis-section="Charts and filters">
+  <section id="patterns" class="chapter">
    <div class="section-top"><p class="eyebrow">PATTERNS IN THE REGISTER</p></div><h2>What do the records show?</h2>
    <div class="prose"><p>Security and health and biosecurity are the most frequent labels in the collected records. The counts describe an incomplete inventory, with related policies and phases recorded separately. They do not estimate the global frequency of independent closure decisions.</p></div>
-   <div class="chart-controls"><label>Records shown<select id="chartPopulation"><option value="all">All included records</option><option value="complete">Closure length can be estimated</option><option value="exact">Exact closure dates recorded</option></select></label><p id="chartPopulationNote" aria-live="polite"></p></div>
-   <p class="figure-note population-explanation">These filters select records with different kinds of date evidence. They do not identify a representative sample of closures.</p>
-   <figure id="motivation-counts" class="chart-panel" data-analysis-section="Recorded reasons"><div class="figure-heading"><div><span class="eyebrow">RECORDED REASONS</span><h3>How often is each reason recorded?</h3></div><button class="quiet" id="exportCodes">Export data · CSV</button></div><div id="codeChart" class="bar-chart"></div><figcaption><span id="motivationDenominatorNote">Percentages use all selected records, including those without a category.</span> Categories overlap, so one record can appear in several bars. Select a bar to explore its records.</figcaption></figure>
-   <div id="evidence-coverage" class="two-charts evidence-summary" data-analysis-section="Coding and date evidence">
-    <figure class="chart-panel"><span class="eyebrow">INTERPRETING REASONS</span><h3>Assigning reasons to categories</h3><p class="chart-introduction">A closure can serve several purposes, and reports do not always explain them clearly. Assigning categories requires judgment. These counts show where a reason has been coded.</p><div id="assessmentChart"></div><figcaption>Records without a category include unknown reasons and documented reasons outside the taxonomy. An assigned category does not establish every actor’s underlying intent.</figcaption></figure>
-    <figure class="chart-panel"><span class="eyebrow">DATE EVIDENCE</span><h3>How precisely can closures be dated?</h3><p class="chart-introduction">Reports often omit a precise start date or confirm a continuing restriction without recording its reopening. These counts show which comparisons the available dates can support.</p><div id="durationChart"></div><figcaption>A dated report need not establish a closure’s full duration. A record can contain more than one kind of timing evidence. A missing reopening date does not mean a closure continued.</figcaption></figure>
-   </div>
+   <div class="chart-controls"><label>Records shown<select id="chartPopulation"><option value="all">All included records</option><option value="complete">Closure length can be estimated</option><option value="exact">Exact closure dates recorded</option></select></label><label>Duration<select id="chartDuration" aria-describedby="chartDurationNote"><option value="all">Any duration</option><option value="over1">More than 1 day</option></select></label><p id="chartPopulationNote" aria-live="polite"></p></div>
+   <p id="chartDurationNote" class="figure-note" aria-live="polite" hidden></p>
+   <p class="figure-note population-explanation">Use the controls to compare records by date evidence and documented duration. These selections are not representative samples of all closures.</p>
+   <figure id="motivation-counts" class="chart-panel" data-analysis-section="Recorded rationales"><div class="figure-heading"><div><span class="eyebrow">RECORDED RATIONALES</span><h3>How often is each rationale recorded?</h3></div><button class="quiet" id="exportCodes">Export data · CSV</button></div><div id="codeChart" class="bar-chart"></div><figcaption><span id="motivationDenominatorNote">Percentages use all selected records, including those without a category.</span> Categories overlap, so one record can appear in several bars. Select a bar to explore its records.</figcaption></figure>
    <figure id="closure-lengths" class="chart-panel duration-comparison" data-analysis-section="Closure lengths"><div class="figure-heading"><div><span class="eyebrow">DURATION &amp; RATIONALE</span><h3>How long did recorded closures last?</h3></div><button class="quiet" id="exportDuration">Export phases · CSV</button></div>
     <p id="durationComparisonNote" class="figure-note"></p><div class="distribution-key"><span><i class="median-key"></i> Median</span><span><i class="quartile-key"></i> Middle half</span><span><i class="range-key"></i> Shortest to longest</span></div><div id="durationRationaleChart" class="duration-distribution"></div>
     <figcaption>Only closure phases with exact start and end dates and an observed reopening are shown. Days are differences between dates, not measured 24-hour periods. Each phase is counted separately; overlapping or related phases are never added together. Categories use the overall record’s rationale labels; these do not necessarily apply to every phase. This is a selected set of documented episodes, not evidence that a rationale causes a longer closure.</figcaption>
    </figure>
-   <figure id="duration-sample" class="chart-panel" data-analysis-section="Duration sample"><div class="figure-heading"><div><span class="eyebrow">THE DURATION SAMPLE</span><h3>Which records can be used to compare duration?</h3></div><button class="quiet" id="exportDurationCoverage">Export coverage · CSV</button></div><p class="sample-explanation">The motivation chart counts every selected record with a given reason. This table shows how many of those records also have an exact closure period and an observed reopening, so can contribute to the duration chart.</p><p id="durationCoverageExample" class="sample-example"></p><div id="durationCoverageChart" class="duration-sample-table"></div><figcaption>The denominator is the total for each category in the motivation chart, rather than the total across all categories. Records with approximate or disputed dates, no confirmed reopening, policy dates, repeated closures or no whole-day duration are not used in this comparison. One record can contribute more than one phase.</figcaption></figure>
+   <figure id="duration-sample" class="chart-panel" data-analysis-section="Duration sample"><div class="figure-heading"><div><span class="eyebrow">THE DURATION SAMPLE</span><h3>Which records can be used to compare duration?</h3></div><button class="quiet" id="exportDurationCoverage">Export coverage · CSV</button></div><p class="sample-explanation">The rationale chart counts every selected record with a given rationale. This table shows how many of those records also have an exact closure period with an observed reopening that meets the selected duration filter, so can contribute to the duration chart.</p><p id="durationCoverageExample" class="sample-example"></p><div id="durationCoverageChart" class="duration-sample-table"></div><figcaption>The denominator is the total for each category in the rationale chart, rather than the total across all categories. Records with approximate or disputed dates, no confirmed reopening, policy dates, repeated closures or no whole-day duration are not used in this comparison. One record can contribute more than one phase.</figcaption></figure>
    <figure id="geography" class="chart-panel" data-analysis-section="Continents"><div class="figure-heading"><div><span class="eyebrow">GEOGRAPHY</span><h3>Records by continent</h3></div><button class="quiet" id="exportContinents">Export data · CSV</button></div><div id="continentChart" class="bar-chart"></div><figcaption>A record can involve more than one continent. Global totals also retain records without an assigned continent. These counts reflect the records collected, not how often closures occurred worldwide.</figcaption></figure>
    <details id="research-areas" class="disclosure geography-detail" data-analysis-section="Research areas" open><summary>Smaller research areas and original groupings</summary><div class="disclosure-body"><p>The workbook also groups research by area. These labels vary in size, so they are shown separately from the continents above.</p><h3>Smaller research areas</h3><div id="regionChart" class="bar-chart region-bars"></div><h3>Broad or combined research groups</h3><div id="broadRegionChart" class="bar-chart region-bars"></div><p class="figure-note">These are the original research groups, not extra continents or a consistent set of subregions. Select a bar to inspect its records.</p><button class="quiet" id="exportRegions">Export research areas · CSV</button></div></details>
-   <details id="coding" class="disclosure" data-analysis-section="Coding notes"><summary>How to read the motivation coding</summary><div class="disclosure-body">
-    <p>677 of 697 included records have a rationale code. 20 have no assigned code: this can mean the reason is unknown or a documented reason falls outside the taxonomy. The 10 broad categories and their subcategories are nonexclusive.</p>
-    <p>A closure imposed to prevent disease belongs under Health and biosecurity; a blockade protesting health restrictions belongs under Policy and socioeconomic demands. Health and biosecurity separates human disease from animal and plant disease. Interstate disputes and pressure, Power and regime politics, and Policy and socioeconomic demands distinguish different political mechanisms.</p>
-    <p>Each assignment retains its evidence attribution, qualification and phase. An official stated reason, a reported explanation and an analytical interpretation are different kinds of evidence. Several codes do not imply that all purposes applied throughout the record.</p>
-    <button class="text-button code-filter" data-code="__uncoded">Inspect records without a code →</button>
-    <button class="quiet" id="exportAudit">Export current review · JSON</button>
-   </div></details>
   </section>
 
   <section id="register" class="chapter" aria-labelledby="dataset-heading">
@@ -154,8 +154,8 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
    <div id="downloads" class="dataset-downloads">
     <h3>Download the dataset</h3>
     <p>The workbook contains the register, chronology, source links and review history. The CSV offers a simpler table of all included records. You can also read and search the records below without downloading anything.</p>
-    <div class="dataset-download-grid"><a class="workbook-download" href="downloads/Global_Border_Closures_Register_2016_2026.xlsx?v=aa2a96192c7b3adc5a40a19b865bf2fa0f6c3a79c67f9315e28af2737144ed32" download="Global_Border_Closures_Register_2016_2026.xlsx" type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"><strong>Full workbook · Excel (.xlsx)</strong><small>All worksheets, evidence and review history</small></a><button id="exportAllRows" type="button"><strong>Included records · CSV (.csv)</strong><small>A simple table for spreadsheet applications</small></button></div>
-    <details class="disclosure"><summary>Additional tables and technical formats</summary><div class="disclosure-body"><p>CSV files open in spreadsheet applications. JSON is intended for reuse in code; it is not needed to read the evidence on this website.</p><div class="download-actions"><button class="quiet" id="exportPhases">Chronology phases · CSV</button><button class="quiet" id="exportCoverage">Timing coverage · CSV</button><button class="quiet" id="exportSnapshot">Complete snapshot · JSON</button><button class="quiet" id="exportFontLicense">Font licence · TXT</button></div><p id="sourceHash" class="hash"></p></div></details>
+    <div class="dataset-download-grid"><a class="workbook-download" href="downloads/Global_Border_Closures_Register_2016_2026.xlsx?v=aa2a96192c7b3adc5a40a19b865bf2fa0f6c3a79c67f9315e28af2737144ed32" download="Global_Border_Closures_Register_2016_2026.xlsx" type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"><strong>Full workbook · Excel (.xlsx)</strong><small>All worksheets, evidence and review history</small></a><button id="exportAllRows" type="button"><strong>Included records · CSV (.csv)</strong><small>All 697 included records; unaffected by filters</small></button></div>
+    <details class="disclosure"><summary>Additional tables and technical formats</summary><div class="disclosure-body"><p>CSV files open in spreadsheet applications. JSON is intended for reuse in code; it is not needed to read the evidence on this website.</p><div class="download-actions"><button class="quiet" id="exportPhases">Chronology phases · CSV</button><button class="quiet" id="exportCoverage">Timing coverage · CSV</button><button class="quiet" id="exportSnapshot">Complete snapshot · JSON</button><button class="quiet" id="exportAudit">Current review · JSON</button><button class="quiet" id="exportFontLicense">Font licence · TXT</button></div><p id="sourceHash" class="hash"></p></div></details>
    </div>
    <h3 class="dataset-browser-heading">Browse records and sources</h3>
    <p class="prose">Search by place, actor, title or record ID. Select a record to read its dates, scope, explanations and linked sources. Use <strong>Download matching records · CSV</strong> to save just the results of your search. Dates describe historical evidence; they do not establish present crossing conditions.</p>
@@ -163,11 +163,13 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
     <label class="search-label">Search records<input id="query" type="search" placeholder="Place, actor or record ID" autocomplete="off"></label>
     <label>Continent<select id="continentFilter"><option value="">All continents</option></select></label>
     <label>Research area<select id="regionFilter"><option value="">All research areas</option></select></label>
-    <label>Motivation code<select id="codeFilter"><option value="">All codes</option><option value="__uncoded">No code assigned</option></select></label>
+    <label>Rationale code<select id="codeFilter"><option value="">All codes</option><option value="__uncoded">No code assigned</option></select></label>
     <label>Timing or inclusion<select id="statusFilter"><option value="">All included records</option><option value="complete">Closure length can be estimated</option><option value="exact">Exact closure dates recorded</option><option value="undated">No dated evidence</option><option value="held">Has disputed date evidence</option><option value="quarantined">Excluded from analysis</option></select></label>
+    <label>Duration<select id="durationFilter" aria-describedby="datasetDurationNote"><option value="all">Any duration</option><option value="over1">More than 1 day</option></select></label>
     <label>Current review outcome<select id="auditFilter"><option value="">Any review status</option></select></label>
     <button class="quiet" type="reset">Reset filters</button>
    </form>
+   <p id="datasetDurationNote" class="figure-note" hidden></p>
    <div class="results-toolbar"><p id="resultCount" aria-live="polite"></p><div><label class="inline-label">Sort<select id="sortRecords"><option value="id">Record ID</option><option value="newest">Latest recorded start</option><option value="oldest">Earliest recorded start</option><option value="title">Title</option></select></label><button class="quiet" id="exportRows">Download matching records · CSV</button></div></div>
    <div id="recordList" class="record-list"></div><div class="pagination"><button id="prevPage" class="quiet">← Previous</button><span id="pageNote"></span><button id="nextPage" class="quiet">Next →</button></div>
    <p class="dataset-help-link"><a href="#methods">Sources and methods</a> <span aria-hidden="true">·</span> <a href="#dimensions">Explore the analysis</a></p>
@@ -379,18 +381,46 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
   if(p.maximum_days!=null&&Number(p.maximum_days)!==days)return null;
   return days;
  }
+ function operationalMinimumDays(p){
+  if(!p||p.measure_type!=='operational_spell'||p.contested)return null;
+  const complete=p.complete_operational&&['closed_interval','bounded_interval'].includes(p.kind)
+   &&p.temporal_display_rule==='scoped_interval_with_endpoint_uncertainty';
+  const censored=p.kind==='confirmed_through'&&p.endpoint_status==='last_confirmed'
+   &&p.temporal_display_rule==='censored_interval_stop_at_last_confirmation_unknown_afterward';
+  if(!complete&&!censored)return null;
+  const firstStart=day(p.start_earliest),lastStart=day(p.start_latest);
+  const firstEnd=day(censored?p.last_confirmed:p.end_earliest),lastEnd=day(censored?p.last_confirmed:p.end_latest);
+  if([firstStart,lastStart,firstEnd,lastEnd].some(value=>value===null)||firstStart>lastStart||firstEnd>lastEnd)return null;
+  const minimum=firstEnd-lastStart;
+  if(minimum<0||!Number.isFinite(p.minimum_days)||p.minimum_days!==minimum)return null;
+  if(complete&&(!Number.isFinite(p.maximum_days)||p.maximum_days!==lastEnd-firstStart))return null;
+  // A last confirmation supplies a lower bound, never an inferred reopening.
+  if(censored&&(p.maximum_days!=null||p.end_earliest!==p.last_confirmed||p.end_latest!==p.last_confirmed))return null;
+  return minimum;
+ }
+ function durationMatch(event,duration='all'){
+  return duration!=='over1'||(event.duration_periods||[]).some(p=>{
+   const minimum=operationalMinimumDays(p);return minimum!==null&&minimum>1;
+  });
+ }
+ function filterRecords(events,population='all',duration='all'){
+  return events.filter(e=>!e.quarantined&&(!e.inclusion_status||e.inclusion_status==='Included')
+   &&(population==='complete'?e.timing_coverage?.operational_complete:
+      population==='exact'?e.timing_coverage?.operational_exact_complete:true)
+   &&durationMatch(e,duration));
+ }
  function quantile(values,q){
   if(!values.length)return null;
   const a=[...values].sort((x,y)=>x-y),position=(a.length-1)*q,lo=Math.floor(position),fraction=position-lo;
   return a[lo]+(a[Math.min(lo+1,a.length-1)]-a[lo])*fraction;
  }
- function durationRows(events){
+ function durationRows(events,duration='all'){
   const rows=[],seen=new Set();
   for(const e of events){
    if(e.quarantined||e.inclusion_status&&e.inclusion_status!=='Included')continue;
    for(const p of e.duration_periods||[]){
     const days=exactDays(p),key=e.id+'\t'+p.period_id;
-    if(days===null||!p.period_id||seen.has(key))continue;
+    if(days===null||duration==='over1'&&days<=1||!p.period_id||seen.has(key))continue;
     seen.add(key);rows.push({record_id:e.id,phase_id:p.period_id,title:e.title,scope:p.scope,
      start:p.start_earliest,end:p.end_latest,days,codes:[...new Set(e.rationales||e.codes||[])],
      endpoint_inclusion:p.endpoint_inclusion,observed_reopening:p.observed_reopening});
@@ -398,8 +428,8 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
   }
   return rows;
  }
- function durationGroups(events,codes){
-  const rows=durationRows(events);
+ function durationGroups(events,codes,duration='all'){
+  const rows=durationRows(events,duration);
   return codes.map(code=>{
    const sample=rows.filter(p=>p.codes.includes(code)),values=sample.map(p=>p.days);
    const total=events.filter(e=>!e.quarantined&&(!e.inclusion_status||e.inclusion_status==='Included')&&(e.rationales||e.codes||[]).includes(code)).length;
@@ -408,7 +438,7 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
   });
  }
  function continents(events){return CONTINENTS.map(name=>({label:name,count:events.filter(e=>(e.continents||[]).includes(name)).length}));}
- const api=Object.freeze({CONTINENTS,day,exactDays,quantile,durationRows,durationGroups,continents});
+ const api=Object.freeze({CONTINENTS,day,exactDays,operationalMinimumDays,durationMatch,filterRecords,quantile,durationRows,durationGroups,continents});
  if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.BorderAnalysisMetrics=api;
 })(typeof window!=='undefined'?window:globalThis);
 
@@ -451,7 +481,6 @@ const AUDIT={meta:{workbook:DATA.meta.source_filename,sha256:DATA.meta.source_sh
 const AUDIT_BY_ID=new Map(AUDIT.records.map(r=>[r.event_id,r]));
 const AUDIT_GROUPS=new Map(AUDIT.groups.map(g=>[g.key,g]));
 const populationMatch=(e,value)=>value==="complete"?e.timing_coverage.operational_complete:value==="exact"?e.timing_coverage.operational_exact_complete:value==="undated"?!e.timing_coverage.any_dated_evidence:value==="held"?e.duration_periods.some(p=>p.contested):true;
-const COLORS = {supported:"#658e78",qualified:"#c4aa7a",other:"#b3bfb7"};
 const $ = function(id){return document.getElementById(id);};
 const escapeHTML = function(value){return cleanText(value).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});};
 const pct = function(n,d){return d ? (100*n/d).toFixed(1)+"%" : "0.0%";};
@@ -514,45 +543,43 @@ function csvCell(value){
  return '"'+s.replace(/"/g,'""')+'"';
 }
 function downloadCSV(filename,rows){download(filename,"\ufeff"+rows.map(function(r){return r.map(csvCell).join(",");}).join("\r\n"),"text/csv;charset=utf-8");}
+const durationExplanation="Includes records with at least one documented closure period whose minimum date difference exceeds one day. A continuing closure can qualify through its last confirmed date, without implying a reopening or later duration. Policy-only dates and lengths that could be one day or less are excluded. Days use date differences, not hour-by-hour measurements.";
+const durationSelection=(population,duration)=>population+(duration==='over1'?'; minimum date difference >1 day in at least one operational phase; confirmed-through lower bounds allowed':'');
+const filteredFilename=(filename,duration)=>duration==='over1'?filename.replace(/\.csv$/,'-over-1-day.csv'):filename;
 function bar(label,value,total,max,kind,uncoded){
  const width=max?Math.max(0,100*value/max):0;
  return '<button type="button" class="bar-row'+(uncoded?' uncoded':'')+'" data-chart-kind="'+kind+'" data-chart-value="'+escapeHTML(label)+'" aria-label="'+escapeHTML(label)+': '+value+' records, '+pct(value,total)+'. Inspect records.">'+
  '<span class="bar-label">'+escapeHTML(label)+'</span><span class="bar-track" aria-hidden="true"><span class="bar-fill" style="width:'+width+'%"></span></span><span class="bar-value">'+value+'<small>'+pct(value,total)+'</small></span></button>';
 }
 function renderCharts(){
- const selected=$("chartPopulation").value;
- const rows=INCLUDED.filter(function(e){return selected==="all" || populationMatch(e,selected);});
+ const selected=$("chartPopulation").value,duration=$("chartDuration").value,selection=durationSelection(selected,duration);
+ const rows=METRICS.filterRecords(INCLUDED,selected,duration);
  const n=rows.length;
  const counts=CODES.map(function(c){return {label:c,count:rows.filter(function(e){return e.codes.includes(c);}).length};}).sort(function(a,b){return b.count-a.count;});
  const blank=rows.filter(function(e){return !e.codes.length;}).length;
  const max=Math.max(1,...counts.map(function(x){return x.count;}),blank);
  $("codeChart").innerHTML=counts.map(function(x){return bar(x.label,x.count,n,max,"code",false);}).join("")+bar("No code assigned",blank,n,max,"code",true);
- currentCharts.codes=counts.concat({label:"No code assigned",count:blank}).map(function(x){return [x.label,x.count,n,pct(x.count,n),selected];});
- $("chartPopulationNote").textContent=n+" records · select a bar to explore";
+ currentCharts.codes=counts.concat({label:"No code assigned",count:blank}).map(function(x){return [x.label,x.count,n,pct(x.count,n),selection];});
+ $("chartPopulationNote").textContent=n+" records"+(duration==='over1'?" · more than 1 day":"")+" · select a bar to explore";
+ $("chartDurationNote").hidden=duration!=='over1';$("chartDurationNote").textContent=duration==='over1'?durationExplanation:'';
  $("motivationDenominatorNote").textContent="Percentages use all "+n+" selected records, including those without a category.";
- const assigned=rows.filter(e=>e.codes.length).length;
- const statuses=frequencies(rows,e=>e.codes.length?'Category assigned':e.rationale_coding_status||'No category assigned');
- $("assessmentChart").innerHTML='<div class="big-number">'+assigned+' <small>of '+n+' records have an assigned rationale category</small></div><div class="legend-rows">'+Object.entries(statuses).map(([label,count])=>legend(label,count,label==='Category assigned'?COLORS.supported:COLORS.other)).join('')+'</div><p class="figure-note">Each record retains the source attribution and any qualifications behind its coding.</p>';
- const coverage=[['Closed on a later reported date','operational_censored','A later report confirms closure, but a reopening date is missing.'],['Same-day interruption reported','same_day','No whole-day duration is calculated.'],['Policy in force','formal_policy','Dates when a rule applied; they do not prove that passage stopped throughout.'],['Announced closure dates','ordered_window','A planned schedule; actual enforcement is not established.'],['Repeated closures','intermittent_regime','A period with interruptions or openings, not continuous closure.']];
- const duration=rows.filter(e=>e.timing_coverage.operational_complete).length;
- $("durationChart").innerHTML='<div class="big-number">'+duration+' <small>of '+n+' records have a closure length that can be estimated</small></div><div class="legend-rows">'+legend('Exact start and end dates',rows.filter(e=>e.timing_coverage.operational_exact_complete).length,COLORS.supported,'A stricter subset of the estimated lengths above.')+legend('At least one dated observation',rows.filter(e=>e.timing_coverage.any_dated_evidence).length,COLORS.other,'A dated report need not establish the whole duration.')+legend('No dated evidence',rows.filter(e=>!e.timing_coverage.any_dated_evidence).length,'#dfe3d9')+'</div><details class="timing-more"><summary>Other kinds of timing evidence</summary>'+coverage.map(([label,key,note])=>legend(label,rows.filter(e=>e.timing_coverage[key]).length,COLORS.other,note)).join('')+'</details>';
  const rc=Object.entries(frequencies(rows,function(e){return e.region;})).sort(function(a,b){return b[1]-a[1];});
  const broad=new Set(['Americas','Europe','East and Southeast Asia and Oceania','South Asia, Central Asia and Caucasus']);
  $("regionChart").innerHTML=rc.filter(x=>!broad.has(x[0])).map(function(x){return bar(x[0],x[1],n,rc[0]?.[1]||1,"region",false);}).join("");
  $("broadRegionChart").innerHTML=rc.filter(x=>broad.has(x[0])).map(function(x){return bar(x[0],x[1],n,rc[0]?.[1]||1,"region",false);}).join("");
- currentCharts.regions=rc.map(function(x){return [x[0],x[1],n,pct(x[1],n),selected];});
+ currentCharts.regions=rc.map(function(x){return [x[0],x[1],n,pct(x[1],n),selection];});
  const cc=METRICS.continents(rows).sort((a,b)=>b.count-a.count);
  $("continentChart").innerHTML=cc.map(x=>bar(x.label,x.count,n,cc[0]?.count||1,'continent',false)).join('');
- currentCharts.continents=cc.map(x=>[x.label,x.count,n,pct(x.count,n),selected]);
- renderDurationComparison(rows,selected);
+ currentCharts.continents=cc.map(x=>[x.label,x.count,n,pct(x.count,n),selection]);
+ renderDurationComparison(rows,selected,duration);
 }
-function legend(label,count,color,note){return '<div class="legend-row"><span class="swatch" style="background:'+color+'"></span><span>'+escapeHTML(label)+(note?'<small class="legend-description">'+escapeHTML(note)+'</small>':'')+'</span><strong>'+count+'</strong></div>';}
-function renderDurationComparison(rows,population){
- const phases=METRICS.durationRows(rows),groups=METRICS.durationGroups(rows,CODES).sort((a,b)=>(b.median??-1)-(a.median??-1)||a.code.localeCompare(b.code));
- currentCharts.durationRows=phases;currentCharts.durationGroups=groups;currentCharts.durationPopulation=population;
+function renderDurationComparison(rows,population,duration='all'){
+ const phases=METRICS.durationRows(rows,duration),groups=METRICS.durationGroups(rows,CODES,duration).sort((a,b)=>(b.median??-1)-(a.median??-1)||a.code.localeCompare(b.code));
+ currentCharts.durationRows=phases;currentCharts.durationGroups=groups;currentCharts.durationPopulation=durationSelection(population,duration);currentCharts.durationFilter=duration;
  const parentIDs=new Set(phases.map(p=>p.record_id)),parents=parentIDs.size,uncoded=phases.filter(p=>!p.codes.length).length;
- const extraChecks=rows.filter(e=>e.timing_coverage.operational_exact_complete&&!parentIDs.has(e.id)).length;
- $("durationComparisonNote").textContent=phases.length+' eligible phases from '+parents+' records. A phase is one documented period for a particular movement and location.'+(extraChecks?' '+extraChecks+' other records have exact date ranges but do not meet this chart’s further checks, including a confirmed reopening.':'')+' The horizontal scale is logarithmic: the marks 1, 10, 100 and 1,000 days are equally spaced.'+(uncoded?' '+uncoded+' phase'+(uncoded===1?' has':'s have')+' no rationale label and '+(uncoded===1?'is':'are')+' not plotted.':'');
+ const eligibleParents=new Set(METRICS.durationRows(rows).map(p=>p.record_id));
+ const extraChecks=rows.filter(e=>e.timing_coverage.operational_exact_complete&&!eligibleParents.has(e.id)).length;
+ $("durationComparisonNote").textContent=phases.length+' eligible phases from '+parents+' records. A phase is one documented period for a particular movement and location.'+(duration==='over1'?' Only phases longer than one day are plotted; shorter phases from the same record are excluded.':'')+(extraChecks?' '+extraChecks+' other records have exact date ranges but do not meet this chart’s further checks, including a confirmed reopening.':'')+' The horizontal scale is logarithmic: the marks 1, 10, 100 and 1,000 days are equally spaced.'+(uncoded?' '+uncoded+' phase'+(uncoded===1?' has':'s have')+' no rationale label and '+(uncoded===1?'is':'are')+' not plotted.':'');
  const maximum=Math.max(1,...phases.map(p=>p.days)),cap=[10,30,100,300,1000,3000,10000,30000].find(x=>x>=maximum)||Math.pow(10,Math.ceil(Math.log10(maximum))),position=value=>(100*Math.log10(value)/Math.log10(cap)).toFixed(3)+'%';
  const ticks=[1,10,100,1000,10000].filter(t=>t<=cap),number=value=>Number.isInteger(value)?value.toLocaleString('en-GB'):Number(value.toFixed(1)).toLocaleString('en-GB');
  const axis='<div class="distribution-axis"><span>Days · log scale</span><svg aria-hidden="true">'+ticks.map(t=>'<text x="'+position(t)+'" y="25" text-anchor="'+(t===1?'start':'middle')+'" font-size="10" fill="#65756f">'+number(t)+'</text>').join('')+'</svg><span>Median · sample</span></div>';
@@ -564,11 +591,12 @@ function renderDurationComparison(rows,population){
  const coverageGroups=[...groups].sort((a,b)=>b.total-a.total||CODES.indexOf(a.code)-CODES.indexOf(b.code));
  const example=coverageGroups.find(g=>g.total);
  $("durationCoverageExample").textContent=example?'For example, '+example.code+' appears in '+example.total+' selected records. Of these, '+example.records+' can contribute to the duration comparison: '+pct(example.records,example.total)+' of that category.':'No selected records are available for this comparison.';
- $("durationCoverageChart").innerHTML='<table><caption>The categories follow the same order as the motivation chart. “Used” means a record contributes at least one phase to the duration comparison.</caption><thead><tr><th scope="col">Recorded reason</th><th scope="col">Used / category total</th><th scope="col">Share used</th></tr></thead><tbody>'+coverageGroups.map(g=>'<tr><th scope="row">'+escapeHTML(g.code)+'</th><td class="sample-total">'+(g.total?g.records+' / '+g.total+' records':'No selected records')+'</td><td>'+(g.total?pct(g.records,g.total):'—')+'</td></tr>').join('')+'</tbody></table>';
+ $("durationCoverageChart").innerHTML='<table><caption>The categories follow the same order as the rationale chart. “Used” means a record contributes at least one phase to the duration comparison.</caption><thead><tr><th scope="col">Recorded rationale</th><th scope="col">Used / category total</th><th scope="col">Share used</th></tr></thead><tbody>'+coverageGroups.map(g=>'<tr><th scope="row">'+escapeHTML(g.code)+'</th><td class="sample-total">'+(g.total?g.records+' / '+g.total+' records':'No selected records')+'</td><td>'+(g.total?pct(g.records,g.total):'—')+'</td></tr>').join('')+'</tbody></table>';
 }
 function filterFromChart(kind,value){
  $("filters").reset();
  $("statusFilter").value=$("chartPopulation").value==="all"?"":$("chartPopulation").value;
+ $("durationFilter").value=$("chartDuration").value;
  if(kind==="region")$("regionFilter").value=value;
  if(kind==="continent")$("continentFilter").value=value;
  if(kind==="code")$("codeFilter").value=value==="No code assigned"?"__uncoded":value;
@@ -576,11 +604,11 @@ function filterFromChart(kind,value){
  openDataset();
 }
 function applyFilters(){
- const q=norm($("query").value).trim(),r=$("regionFilter").value,continent=$("continentFilter").value,c=$("codeFilter").value,s=$("statusFilter").value,a=$("auditFilter").value;
+ const q=norm($("query").value).trim(),r=$("regionFilter").value,continent=$("continentFilter").value,c=$("codeFilter").value,s=$("statusFilter").value,a=$("auditFilter").value,duration=$("durationFilter").value;
  let result=EVENTS.filter(function(e){
   if(s==="quarantined"){if(!e.quarantined)return false;}
   else {if(e.quarantined)return false;if(s && !populationMatch(e,s))return false;}
-  return (!q||e.searchText.includes(q)) && (!continent||e.continents.includes(continent)) && (!r||e.region===r) && (!c||(c==="__uncoded"?!e.codes.length:e.codes.includes(c))) && (!a||(AUDIT_BY_ID.has(e.id)&&AUDIT_BY_ID.get(e.id).classification_key===a));
+  return METRICS.durationMatch(e,duration) && (!q||e.searchText.includes(q)) && (!continent||e.continents.includes(continent)) && (!r||e.region===r) && (!c||(c==="__uncoded"?!e.codes.length:e.codes.includes(c))) && (!a||(AUDIT_BY_ID.has(e.id)&&AUDIT_BY_ID.get(e.id).classification_key===a));
  });
  const sort=$("sortRecords").value;
  result.sort(function(a,b){
@@ -612,7 +640,9 @@ function renderRecords(){
  const pages=Math.max(1,Math.ceil(filtered.length/PAGE_SIZE));
  page=Math.min(page,pages-1);
  const start=page*PAGE_SIZE;
- $("resultCount").textContent=filtered.length+" matching "+(filtered.length===1?"record":"records")+($("statusFilter").value==="quarantined"?" · excluded from analysis":"");
+ const longOnly=$("durationFilter").value==='over1';
+ $("resultCount").textContent=filtered.length+" matching "+(filtered.length===1?"record":"records")+(longOnly?" · more than 1 day":"")+($("statusFilter").value==="quarantined"?" · excluded from analysis":"");
+ $("datasetDurationNote").hidden=!longOnly;$("datasetDurationNote").textContent=longOnly?durationExplanation:'';
  $("recordList").innerHTML=filtered.length?filtered.slice(start,start+PAGE_SIZE).map(function(e){
   return '<button type="button" class="record-row" data-record="'+escapeHTML(e.id)+'" aria-label="Open '+escapeHTML(e.id)+': '+escapeHTML(e.title)+'">'+
   '<span class="record-id">'+escapeHTML(e.id)+'</span><span><span class="record-title">'+escapeHTML(e.title)+'</span>'+
@@ -711,9 +741,10 @@ document.addEventListener("click",function(event){
  const audit=event.target.closest("[data-audit-group]");
  if(audit){$("filters").reset();$("auditFilter").value=audit.dataset.auditGroup;page=0;renderRecords();openDataset();return;}
  const code=event.target.closest(".code-filter");
- if(code){$("chartPopulation").value="all";renderCharts();filterFromChart("code",code.dataset.code);}
+ if(code){$("chartPopulation").value="all";$("chartDuration").value="all";renderCharts();filterFromChart("code",code.dataset.code);}
 });
 $("chartPopulation").addEventListener("change",renderCharts);
+$("chartDuration").addEventListener("change",renderCharts);
 $("filters").addEventListener("submit",function(e){e.preventDefault();});
 $("filters").addEventListener("input",function(){page=0;renderRecords();});
 $("filters").addEventListener("change",function(){page=0;renderRecords();});
@@ -738,16 +769,16 @@ function exportRecordRows(full,selected,filename){
  const headings=['ID','Region','Episode','Countries','Crossings','Current timing','Current review','Included','Rationales','Rationale attribution','Scope','Direction','Affected movement','Exceptions','Current uncertainty','Any dated evidence','Complete operational duration','Exact operational duration','Original start (historical)','Original endpoint (historical)','Source URLs'];
  downloadCSV(filename,[headings,...selected.map(e=>byID.get(e.id)).map(e=>[e.id,e.region,e.title,e.countries.join('; '),e.crossings,cleanText(e.current_timing),e.status,!e.quarantined,e.codes.join('; '),e.rationale_assignments.map(a=>a['Broad rationale']+': '+a['Evidence attribution']).join(' | '),e.scope,e.direction,e.movement,e.exceptions,e.uncertainty,e.timing_coverage.any_dated_evidence,e.timing_coverage.operational_complete,e.timing_coverage.operational_exact_complete,e.historical.start,e.historical.end,e.sources.map(s=>s.URL).join(' | ')])]);
 }
-$("exportRows").addEventListener("click",()=>withResearch('exportRows',full=>exportRecordRows(full,filtered,'border-closures-current.csv')));
+$("exportRows").addEventListener("click",()=>withResearch('exportRows',full=>exportRecordRows(full,filtered,filteredFilename('border-closures-current.csv',$("durationFilter").value))));
 $("exportAllRows").addEventListener("click",()=>withResearch('exportAllRows',full=>exportRecordRows(full,INCLUDED,'border-closures-included-records.csv')));
-$("exportCodes").addEventListener("click",()=>downloadCSV('motivation-counts.csv',[["Current code","Records","Denominator","Share of selected records","Population"],...currentCharts.codes]));
-$("exportRegions").addEventListener("click",()=>downloadCSV('regional-counts.csv',[["Original region label","Records","Denominator","Share of selected records","Population"],...currentCharts.regions]));
-$("exportContinents").addEventListener("click",()=>downloadCSV('continent-counts.csv',[["Continent","Records","All selected records","Share of selected records","Population"],...currentCharts.continents]));
-$("exportDuration").addEventListener("click",()=>downloadCSV('duration-by-rationale-phases.csv',[
+$("exportCodes").addEventListener("click",()=>downloadCSV(filteredFilename('rationale-counts.csv',currentCharts.durationFilter),[["Current code","Records","Denominator","Share of selected records","Population"],...currentCharts.codes]));
+$("exportRegions").addEventListener("click",()=>downloadCSV(filteredFilename('regional-counts.csv',currentCharts.durationFilter),[["Original region label","Records","Denominator","Share of selected records","Population"],...currentCharts.regions]));
+$("exportContinents").addEventListener("click",()=>downloadCSV(filteredFilename('continent-counts.csv',currentCharts.durationFilter),[["Continent","Records","All selected records","Share of selected records","Population"],...currentCharts.continents]));
+$("exportDuration").addEventListener("click",()=>downloadCSV(filteredFilename('duration-by-rationale-phases.csv',currentCharts.durationFilter),[
  ['Record ID','Phase ID','Event','Phase scope','Start date','Observed reopening date','Days (date difference)','Parent record rationale labels','Endpoint inclusion','Eligibility','Population','Workbook SHA-256'],
- ...currentCharts.durationRows.map(p=>[p.record_id,p.phase_id,p.title,p.scope,p.start,p.end,p.days,p.codes.join('; '),p.endpoint_inclusion,'Exact dates; operational closure; observed reopening; not disputed; at least one date-boundary day',currentCharts.durationPopulation,DATA.meta.source_sha256])
+ ...currentCharts.durationRows.map(p=>[p.record_id,p.phase_id,p.title,p.scope,p.start,p.end,p.days,p.codes.join('; '),p.endpoint_inclusion,'Exact dates; operational closure; observed reopening; not disputed; '+(currentCharts.durationFilter==='over1'?'more than one day (date difference)':'at least one date-boundary day'),currentCharts.durationPopulation,DATA.meta.source_sha256])
 ]));
-$("exportDurationCoverage").addEventListener("click",()=>downloadCSV('duration-by-rationale-coverage.csv',[
+$("exportDurationCoverage").addEventListener("click",()=>downloadCSV(filteredFilename('duration-by-rationale-coverage.csv',currentCharts.durationFilter),[
  ['Parent record rationale','Eligible phases','Records with eligible phases','All selected records in category','Share of category records','Shortest days','25th percentile days','Median days','75th percentile days','Longest days','Population','Workbook SHA-256'],
  ...currentCharts.durationGroups.map(g=>[g.code,g.phases,g.records,g.total,g.total?pct(g.records,g.total):'',g.min,g.q1,g.median,g.q3,g.max,currentCharts.durationPopulation,DATA.meta.source_sha256])
 ]));
@@ -772,7 +803,7 @@ function updateSectionNavigation(){
  sectionFrame=0;if(currentView==='dataset'||!document.documentElement.clientHeight)return;
  const bar=document.querySelector('.topnav'),readingLine=(bar?bar.getBoundingClientRect().height:0)+28;
  let current=readingSections[0];
- for(const section of readingSections){if(section.getBoundingClientRect().top<=readingLine)current=section;else break;}
+ for(const section of readingSections){const anchor=section.id==='motivation-counts'?($("patterns")||section):section;if(anchor.getBoundingClientRect().top<=readingLine)current=section;else break;}
  if(scrollY+innerHeight>=document.documentElement.scrollHeight-8)current=readingSections[readingSections.length-1];
  if(current)markAnalysisSection(current.id);
 }
@@ -789,6 +820,8 @@ function progress(){const available=document.documentElement.scrollHeight-innerH
 window.addEventListener("scroll",function(){progress();scheduleSectionNavigation();},{passive:true});
 window.addEventListener("resize",scheduleSectionNavigation);
 async function navigateAnalysis(hash){
+ const overviewAnchor=({'#coding':'rationale-coding','#evidence-coverage':'date-evidence'})[hash];
+ if(overviewAnchor){if(ATLAS_HOST)window.parent.location.hash='#overview/'+overviewAnchor;else location.replace('index.html#overview/'+overviewAnchor);return;}
  if(hash==="#methods"&&ATLAS_HOST?.show){ATLAS_HOST.show("briefing");return;}
  if(hash==="#register"||hash==="#downloads")setView("dataset");
  else if(hash==="#methods"&&!ATLAS_HOST){currentView="overview";delete document.documentElement.dataset.analysisView;}
@@ -799,7 +832,7 @@ async function navigateAnalysis(hash){
  }else{
   if(dialog.open)closeRecord();
   const target=document.getElementById(currentView==="dataset"&&hash==="#top"?"register":hash.slice(1)||"top");
-  if(target){if(target.tagName==='DETAILS')target.open=true;target.scrollIntoView({behavior:"auto",block:"start"});if(currentView!=='dataset')markAnalysisSection(target.id);}
+  if(target){if(target.tagName==='DETAILS')target.open=true;target.scrollIntoView({behavior:"auto",block:"start"});if(currentView!=='dataset')markAnalysisSection(target.id==='patterns'?'motivation-counts':target.id);}
  }
 }
 window.AtlasAnalysis={navigate:navigateAnalysis,setView,getView:()=>currentView};

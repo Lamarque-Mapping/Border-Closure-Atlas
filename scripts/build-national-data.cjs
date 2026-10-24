@@ -9,8 +9,8 @@ if(workbook.observations.some(r=>!ids.has(r['Policy ID'])))throw Error('Unmapped
 const countries={AUS:'Australia',NZL:'New Zealand',GBR:'United Kingdom'};
 for(const policy of display.policies){
  if(!countries[policy.map_country])throw Error('Unknown country reference for policy: '+policy.id);
- if(workbook.observations.filter(row=>row['Policy ID']===policy.id).some(row=>row.Country!==countries[policy.map_country]))throw Error('Policy marker country differs from its source: '+policy.id);
- if(policy.geometry==='ENG'&&policy.map_country!=='GBR')throw Error('England policy requires a UK reference point without changing its jurisdiction');
+ if(workbook.observations.filter(row=>row['Policy ID']===policy.id).some(row=>row.Country!==countries[policy.map_country]))throw Error('Policy reference country differs from its source: '+policy.id);
+ if(policy.geometry==='ENG'&&policy.map_country!=='GBR')throw Error('England policy requires a UK reference outline without changing its jurisdiction');
 }
 fs.writeFileSync(path.join(root,'dist/national-data.js'),'window.ATLAS_NATIONAL_DATA = '+JSON.stringify({...workbook,...display})+';\n');
 fs.mkdirSync(path.join(root,'dist/downloads'),{recursive:true});

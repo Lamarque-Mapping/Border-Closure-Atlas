@@ -10,19 +10,26 @@ Snapshot: 23 October 2026 (`border-corrections-20261023`).
 Study window: 21 October 2016–21 October 2026.
 
 The public navigation is Map / Overview / Analysis / Dataset. Overview gives
-the introduction and methods; Analysis has its own chart navigation. Dataset
-provides the browser reader, workbook and CSV exports. Legacy Analysis and record links continue to resolve. The map date
+the introduction, methods, and full-dataset summaries of rationale coding and
+date evidence. Analysis has its own chart navigation with five illustrated
+chart links. Its optional More than 1 day filter selects records with a supported
+operational duration above one day; each phase in the exact-duration plot must
+also pass that cutoff. Policy-only dates and uncertain lengths do not qualify.
+Dataset provides the browser reader, workbook and CSV exports. Legacy Analysis and record links continue to resolve. The map date
 button selects a month and year directly, and Cite provides the Harvard
 reference with the reader's access date. Location and national-policy sources
 have readable HTML pages, with JSON retained as an optional technical download.
-On phones, the timeline is docked to the bottom edge. Play and date controls
-share equal widths, the slider spans its own full-width row, and compact
-Cite/Contact links align with the status note in one footer line.
+On phones, the timeline is docked to the bottom edge. Play, date and speed controls
+are evenly spaced across the top row. Back and forward arrows flank the slider
+on the second row, and compact Cite/Contact links align with the status note
+in one footer line. The desktop control layout is unchanged.
 
-International passenger rules use country-positioned square reference markers;
-the entry retains its precise jurisdiction, including England-only measures.
-No jurisdiction perimeter is presented as a closed internal boundary. In monthly
-views, hollow grey crossing points retain earlier evidence at approved sites.
+International passenger rules use green country reference outlines for Australia,
+New Zealand and the UK; each entry retains its precise legal jurisdiction.
+England-only measures use the full UK outline without marking an internal boundary.
+Earlier crossing records are optional and off by default, with a toggle under
+Search & zoom → Filters → Map detail & other records. Their hollow grey rings
+include records with reported reopenings and records whose ending is unresolved.
 Neutral bilateral boundary references open explicitly associated records. These
 references do not establish later status or enter the dated selection counts,
 charts or CSV exports; coloured restriction marks retain the existing date rules.
