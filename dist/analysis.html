@@ -81,7 +81,7 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
    <p class="contents-group">Charts</p><a href="#patterns" data-analysis-link>Charts &amp; filters</a><a href="#motivation-counts" data-analysis-link>Recorded reasons</a><a href="#evidence-coverage" data-analysis-link>Coding &amp; date evidence</a><a href="#closure-lengths" data-analysis-link>Closure lengths</a><a href="#duration-sample" data-analysis-link>Duration sample</a><a href="#geography" data-analysis-link>Continents</a><a href="#research-areas" data-analysis-link>Research areas</a><a href="#coding" data-analysis-link>Coding notes</a>
   </nav>
   <div class="sidebar-info"><span class="eyebrow">OBSERVATION PERIOD</span><p>21 October 2016<br>to 21 October 2026</p><p class="small-note">A historical research register.<br>Not a guide to current crossing conditions.</p></div>
-  <div class="sidebar-footer">Research by Hugh Lamarque<a href="#methods">About the evidence →</a></div>
+  <div class="sidebar-footer">Research by Dr. Hugh Lamarque<a href="#methods">About the evidence →</a></div>
  </aside>
  <div class="paper">
   <section id="top" class="hero" data-analysis-section="Introduction">
@@ -154,7 +154,7 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
    <div id="downloads" class="dataset-downloads">
     <h3>Download the dataset</h3>
     <p>The workbook contains the register, chronology, source links and review history. The CSV offers a simpler table of all included records. You can also read and search the records below without downloading anything.</p>
-    <div class="dataset-download-grid"><a class="workbook-download" href="downloads/Global_Border_Closures_Register_2016_2026.xlsx" download="Global_Border_Closures_Register_2016_2026.xlsx"><strong>Full workbook · XLSX</strong><small>All worksheets, evidence and review history</small></a><button id="exportAllRows" type="button"><strong>Included records · CSV</strong><small>A single table for spreadsheets and other analysis tools</small></button></div>
+    <div class="dataset-download-grid"><a class="workbook-download" href="downloads/Global_Border_Closures_Register_2016_2026.xlsx?v=aa2a96192c7b3adc5a40a19b865bf2fa0f6c3a79c67f9315e28af2737144ed32" download="Global_Border_Closures_Register_2016_2026.xlsx" type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"><strong>Full workbook · Excel (.xlsx)</strong><small>All worksheets, evidence and review history</small></a><button id="exportAllRows" type="button"><strong>Included records · CSV (.csv)</strong><small>A simple table for spreadsheet applications</small></button></div>
     <details class="disclosure"><summary>Additional tables and technical formats</summary><div class="disclosure-body"><p>CSV files open in spreadsheet applications. JSON is intended for reuse in code; it is not needed to read the evidence on this website.</p><div class="download-actions"><button class="quiet" id="exportPhases">Chronology phases · CSV</button><button class="quiet" id="exportCoverage">Timing coverage · CSV</button><button class="quiet" id="exportSnapshot">Complete snapshot · JSON</button><button class="quiet" id="exportFontLicense">Font licence · TXT</button></div><p id="sourceHash" class="hash"></p></div></details>
    </div>
    <h3 class="dataset-browser-heading">Browse records and sources</h3>
@@ -190,7 +190,7 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
     <p><a href="#downloads">Open Dataset for the workbook, CSV tables and technical formats →</a></p>
    </div></details>
   </section>
-  <footer><div><p>Research by Hugh Lamarque</p><p class="review-credit">With thanks to Robert Macdonald for review and feedback.</p></div><a href="#top">Back to top ↑</a></footer>
+  <footer><div><p>Research by Dr. Hugh Lamarque</p><p class="review-credit">With thanks to Dr. Robert Macdonald for review and feedback.</p></div><a href="#top">Back to top ↑</a></footer>
  </div>
 </main>
 <dialog id="recordDialog" aria-labelledby="dialogTitle"><div class="dialog-bar"><span id="dialogId"></span><div><button id="copyRecordLink" class="quiet">Copy record link</button><button id="closeDialog" class="close-button" aria-label="Close record">×</button></div></div><div id="dialogBody"></div></dialog>
@@ -427,7 +427,7 @@ if(!provider && (ATLAS_HOST ? window.parent.BORDER_DATA : window.BORDER_DATA)){
  provider={ready:async()=>complete,getRecord:async id=>complete.events.find(e=>e.id===id),getResearchData:async()=>complete};
 }
 if(!provider){
- await new Promise(function(resolve,reject){const script=document.createElement("script");script.src="data-loader.js?v=20261024-analysis-fast";script.dataset.analysisSrc="analysis-data.json?v=7bc0048c3d385ae9ada0e053";script.dataset.sourceSha="b7290c0ce1056ed7f045ff66e7354edd1d5593db001b12f4d65372318185c6f1";script.onload=resolve;script.onerror=()=>reject(new Error("The data could not be loaded. Please try again."));document.head.appendChild(script);});
+ await new Promise(function(resolve,reject){const script=document.createElement("script");script.src="data-loader.js?v=20261024-analysis-fast";script.dataset.analysisSrc="analysis-data.json?v=8a2cbecd37b3be2c404ef92f";script.dataset.sourceSha="aa2a96192c7b3adc5a40a19b865bf2fa0f6c3a79c67f9315e28af2737144ed32";script.onload=resolve;script.onerror=()=>reject(new Error("The data could not be loaded. Please try again."));document.head.appendChild(script);});
  provider=window.AtlasData;
 }
 const shared=await (provider.getAnalysisData?provider.getAnalysisData():provider.ready());

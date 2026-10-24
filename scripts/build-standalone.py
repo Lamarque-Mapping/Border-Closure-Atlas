@@ -7,6 +7,12 @@ import re
 from pathlib import Path
 
 
+def inline_workbook_downloads(html: str, filename: str, contents: bytes) -> str:
+    url = 'data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,' + base64.b64encode(contents).decode('ascii')
+    pattern = r'downloads/' + re.escape(filename) + r'(?:\?v=[0-9a-f]{64})?'
+    return re.sub(pattern, lambda _: url, html)
+
+
 def bundle(web: Path) -> str:
     html = (web / 'index.html').read_text(encoding='utf-8')
     logo = base64.b64encode((web / 'assets/leverhulme-trust.jpg').read_bytes()).decode('ascii')
@@ -29,10 +35,9 @@ def bundle(web: Path) -> str:
     for quote in ["'", '"']:
         html = html.replace('url(' + quote + 'vendor/AtlasSans.ttf' + quote + ')',
                             "url('data:font/ttf;base64," + font + "')")
-    # Both Methods and the embedded Analysis retain the exact source download.
+    # Embed the exact workbook and consume its cache version along with the URL.
     workbook = web / 'downloads/Global_Border_Closures_Register_2016_2026.xlsx'
-    workbook_url = 'data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,' + base64.b64encode(workbook.read_bytes()).decode('ascii')
-    html = html.replace('downloads/' + workbook.name, workbook_url)
+    html = inline_workbook_downloads(html, workbook.name, workbook.read_bytes())
     licence = (web / 'vendor/AtlasSans-LICENSE.txt').read_text(encoding='utf-8').replace('--', '—')
     return html.replace('</head>', '<!-- Bundled font licence\n' + licence + '\n-->\n</head>')
 

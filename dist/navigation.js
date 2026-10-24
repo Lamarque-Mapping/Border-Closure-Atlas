@@ -52,7 +52,7 @@
     loadTimer=setTimeout(failed,20000);
     const embedded=$('analysis-document');
     if(embedded){try{frame.srcdoc=JSON.parse(embedded.textContent);}catch{failed();}}
-    else frame.src='analysis.html?v=20261024-analysis-navigation';
+    else frame.src='analysis.html?v=20261024-workbook-layout';
   }
   window.addEventListener('atlas:mapready',()=>{
     const connection=navigator.connection;

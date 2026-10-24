@@ -55,6 +55,10 @@ jobs:
           node scripts/verify-map-export.cjs
           node scripts/verify-crossing-map.cjs
           python scripts/verify-workbook.py
+          python scripts/verify-workbook-package.py
+          python scripts/verify-workbook-presentation.py
+          node scripts/verify-downloads.cjs
+          python scripts/verify-standalone-downloads.py
           node scripts/verify-ui.cjs
           node scripts/verify-analysis-sections.cjs
           node scripts/verify-border-history.cjs

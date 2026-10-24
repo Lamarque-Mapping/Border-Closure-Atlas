@@ -7,7 +7,7 @@
   <title>Border closures · Global atlas</title>
   <link rel="stylesheet" href="vendor/leaflet.css">
   <link rel="stylesheet" href="style.css?v=20261023-views">
-  <link rel="stylesheet" href="controls.css?v=20261024-analysis-navigation">
+  <link rel="stylesheet" href="controls.css?v=20261024-timeline-full-width">
 </head>
 <body class="atlas-pending">
   <a class="skip-link" href="#search">Skip to map controls</a>
@@ -63,12 +63,12 @@
         </div>
       </div>
       <details class="map-key" id="map-key" open><summary>Map key</summary><div class="map-key-content"><div class="map-legend rationale-legend" id="rationale-legend" aria-label="Rationale colours"></div><div class="map-legend line-type-legend"><span><i class="legend-crossing"></i>Named crossing</span><span><i class="legend-line broad"></i>Border-wide scope stated</span><span><i class="legend-line limited"></i>Wider rule · extent uncertain</span><span><i class="legend-policy"></i>International passenger ban</span><span><i class="legend-policy conditions"></i>Passenger entry conditions</span><span><i class="legend-history"></i>Earlier restriction · read history</span><span><i class="legend-line boundary-reference"></i>Border reference · select for records</span><span><i class="legend-line possible"></i>Possible date overlap</span></div><p class="map-disclaimer">Colours show reasons for dated restrictions. Hollow grey dots open earlier crossing records; grey border references open associated entries. Neither establishes whether a border was open or closed. Squares identify international passenger rules.</p></div></details>
-      <footer class="panel-footer"><button class="quiet" id="fit-button" title="Show all matching locations">Fit records</button><button class="quiet save-button" id="save-view-button" aria-label="Save map view as PNG" title="Save the current map as a PNG image">Save view</button><span class="sidebar-credit">Mapping by Hugh Lamarque <span aria-hidden="true">·</span> <button class="cite-link" data-cite type="button">Cite</button> <span aria-hidden="true">·</span> <a class="credit-contact" href="mailto:hugh.lamarque@gmail.com" aria-label="Email Hugh Lamarque">Contact</a></span></footer>
+      <footer class="panel-footer"><button class="quiet" id="fit-button" title="Show all matching locations">Fit records</button><button class="quiet save-button" id="save-view-button" aria-label="Save map view as PNG" title="Save the current map as a PNG image">Save view</button><span class="sidebar-credit">Mapping by Dr. Hugh Lamarque <span aria-hidden="true">·</span> <button class="cite-link" data-cite type="button">Cite</button> <span aria-hidden="true">·</span> <a class="credit-contact" href="mailto:hugh.lamarque@gmail.com" aria-label="Email Dr. Hugh Lamarque">Contact</a></span></footer>
     </aside>
-    <div class="map-caption"><span class="map-caption-author">Mapping by Hugh Lamarque</span> <span class="caption-author-divider" aria-hidden="true">·</span> <button class="cite-link" data-cite type="button">Cite</button> <span aria-hidden="true">·</span> <a class="credit-contact" href="mailto:hugh.lamarque@gmail.com" aria-label="Email Hugh Lamarque">Contact</a></div>
+    <div class="map-caption"><span class="map-caption-author">Mapping by Dr. Hugh Lamarque</span> <span class="caption-author-divider" aria-hidden="true">·</span> <button class="cite-link" data-cite type="button">Cite</button> <span aria-hidden="true">·</span> <a class="credit-contact" href="mailto:hugh.lamarque@gmail.com" aria-label="Email Dr. Hugh Lamarque">Contact</a></div>
         <div class="timeline">
           <div class="timeline-controls"><button id="play-button" class="play-button" aria-label="Play timeline" title="Play timeline"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5 13 8 4 13.5Z"/></svg><span>Play timeline</span></button><button type="button" id="month-label" class="timeline-date" aria-haspopup="dialog" aria-controls="date-dialog" title="Choose a month and year">Loading dates…</button><input type="range" id="month-slider" min="0" max="1" value="0" step="1" aria-label="Selected month"><span class="timeline-speed-control"><select id="playback-speed" class="timeline-speed" aria-label="Playback speed" title="Playback speed"><option value="1">1×</option><option value="2">2×</option><option value="4">4×</option><option value="8">8×</option></select></span><button class="step-button" id="previous-button" aria-label="Previous month">‹</button><button class="step-button" id="next-button" aria-label="Next month">›</button></div>
-          <div class="timeline-bottom"><span id="time-note">Unmarked: status not established</span><span id="last-month"></span><span class="timeline-mobile-links"><button class="cite-link" data-cite type="button" aria-label="Cite this atlas">Cite</button><a class="credit-contact" href="mailto:hugh.lamarque@gmail.com" aria-label="Email Hugh Lamarque">Contact</a></span></div>
+          <div class="timeline-bottom"><span id="time-note">Unmarked: status not established</span><span class="timeline-mobile-note">Unmarked borders may still be restricted.</span><span id="last-month"></span><span class="timeline-mobile-links"><button class="cite-link" data-cite type="button" aria-label="Cite this atlas">Cite</button><a class="credit-contact" href="mailto:hugh.lamarque@gmail.com" aria-label="Email Dr. Hugh Lamarque">Contact</a></span></div>
         </div>
     <dialog id="date-dialog" class="atlas-dialog" aria-labelledby="date-heading">
       <header><h2 id="date-heading">Choose a month</h2><button id="date-close" class="dialog-close" type="button" aria-label="Close month selector">×</button></header>
@@ -102,16 +102,16 @@
     </div>
     <section id="research-method" class="briefing-method" aria-label="Research and review"></section>
     <section id="cite-atlas" class="citation-section"><h3>How to cite</h3><p data-citation>Lamarque, H. (2026) <cite>Global Border Closures Atlas</cite>. Available at: <a href="https://lamarque-mapping.github.io/Border-Closure-Atlas/">https://lamarque-mapping.github.io/Border-Closure-Atlas/</a> (Accessed: <span data-access-date>24 October 2026</span>).</p><button class="quiet" data-copy-citation type="button">Copy reference</button><p class="citation-snapshot">When discussing a particular release, also give the dataset date shown above.</p></section>
-    <footer class="briefing-footer"><p>Research and mapping by Hugh Lamarque. With thanks to Robert Macdonald for reviewing the atlas.</p><p>Map boundaries and locations: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a> and © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a> (<a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener noreferrer">ODbL</a>). Other location sources are named in the records. The map does not take a position on disputed territorial claims.</p></footer>
+    <footer class="briefing-footer"><p>Research and mapping by Dr. Hugh Lamarque. With thanks to Dr. Robert Macdonald for reviewing the atlas.</p><p>Map boundaries and locations: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a> and © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a> (<a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener noreferrer">ODbL</a>). Other location sources are named in the records. The map does not take a position on disputed territorial claims.</p></footer>
   </main>
-  <dialog id="citation-dialog" class="atlas-dialog" aria-labelledby="citation-heading"><header><h2 id="citation-heading">Cite this atlas</h2><button id="citation-close" class="dialog-close" type="button" aria-label="Close citation">×</button></header><p data-citation>Lamarque, H. (2026) <cite>Global Border Closures Atlas</cite>. Available at: <a href="https://lamarque-mapping.github.io/Border-Closure-Atlas/">https://lamarque-mapping.github.io/Border-Closure-Atlas/</a> (Accessed: <span data-access-date>24 October 2026</span>).</p><button class="dialog-primary" data-copy-citation type="button">Copy reference</button><p class="citation-credit">Research and mapping by Hugh Lamarque.<br>With thanks to Robert Macdonald for reviewing the atlas.</p></dialog>
+  <dialog id="citation-dialog" class="atlas-dialog" aria-labelledby="citation-heading"><header><h2 id="citation-heading">Cite this atlas</h2><button id="citation-close" class="dialog-close" type="button" aria-label="Close citation">×</button></header><p data-citation>Lamarque, H. (2026) <cite>Global Border Closures Atlas</cite>. Available at: <a href="https://lamarque-mapping.github.io/Border-Closure-Atlas/">https://lamarque-mapping.github.io/Border-Closure-Atlas/</a> (Accessed: <span data-access-date>24 October 2026</span>).</p><button class="dialog-primary" data-copy-citation type="button">Copy reference</button><p class="citation-credit">Research and mapping by Dr. Hugh Lamarque.<br>With thanks to Dr. Robert Macdonald for reviewing the atlas.</p></dialog>
   <div id="message" role="status" class="message" hidden></div>
   <script src="national-data.js?v=20261024-passenger-rule-markers" defer></script>
   <script src="england-geometry.js?v=20261024-outline-methods" defer></script>
-  <script src="national.js?v=20261024-analysis-navigation" defer></script>
-  <script src="crossing-geography.js?v=20261024-analysis-navigation" defer></script>
-  <script src="data-loader.js?v=20261024-crossing-line-dots" data-crossing-review="required" data-map-src="map-data.js?v=e1070d3343bacb52057f9bfd" data-analysis-src="analysis-data.json?v=7bc0048c3d385ae9ada0e053" data-source-sha="b7290c0ce1056ed7f045ff66e7354edd1d5593db001b12f4d65372318185c6f1" defer></script>
-  <script src="navigation.js?v=20261024-analysis-navigation" defer></script>
+  <script src="national.js?v=20261024-workbook-layout" defer></script>
+  <script src="crossing-geography.js?v=20261024-workbook-layout" defer></script>
+  <script src="data-loader.js?v=20261024-crossing-line-dots" data-crossing-review="required" data-map-src="map-data.js?v=3f49c0e87601cb969e96ad76" data-analysis-src="analysis-data.json?v=8a2cbecd37b3be2c404ef92f" data-source-sha="aa2a96192c7b3adc5a40a19b865bf2fa0f6c3a79c67f9315e28af2737144ed32" defer></script>
+  <script src="navigation.js?v=20261024-workbook-layout" defer></script>
   <script src="startup.js?v=20261024-analysis-fast" defer></script>
   <script src="vendor/leaflet.js" defer></script>
   <script src="cartography.js?v=20261024-passenger-rule-markers" defer></script>
@@ -119,7 +119,7 @@
   <script src="border-history.js?v=20261024-history-navigation" defer></script>
   <script src="public-text.js" defer></script>
   <script src="record-summary.js?v=20261024-outline-methods" defer></script>
-  <script src="export.js?v=20261024-history-navigation" defer></script>
+  <script src="export.js?v=20261024-workbook-layout" defer></script>
   <script src="record-export.js?v=20261024-history-navigation" defer></script>
   <script src="app.js?v=20261024-analysis-navigation" defer></script>
   <script src="site-controls.js?v=20261024-analysis-navigation" defer></script>

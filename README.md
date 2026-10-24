@@ -15,7 +15,9 @@ provides the browser reader, workbook and CSV exports. Legacy Analysis and recor
 button selects a month and year directly, and Cite provides the Harvard
 reference with the reader's access date. Location and national-policy sources
 have readable HTML pages, with JSON retained as an optional technical download.
-On phones, the timeline is docked to the bottom edge and contains Cite/Contact.
+On phones, the timeline is docked to the bottom edge. Play and date controls
+share equal widths, the slider spans its own full-width row, and compact
+Cite/Contact links align with the status note in one footer line.
 
 International passenger rules use country-positioned square reference markers;
 the entry retains its precise jurisdiction, including England-only measures.
@@ -25,13 +27,22 @@ Neutral bilateral boundary references open explicitly associated records. These
 references do not establish later status or enter the dated selection counts,
 charts or CSV exports; coloured restriction marks retain the existing date rules.
 
-The 24 October workbook compatibility repair gives four internal table IDs
-unique values. All 55 worksheet XML files, values and formulas are unchanged.
+The 24 October workbook compatibility repair gives internal table IDs unique
+values and synchronizes table-column metadata with the existing worksheet
+headings. The latter corrects mismatches in `table4.xml` and `table10.xml`, the
+two table parts identified by an Excel recovery log. Research values, formulas,
+worksheet names and worksheet order remain unchanged.
 The repository retains the original research workbook. Before publication,
-`scripts/prepare-release-workbook.py` applies and checks the repair using
-`scripts/repair-workbook-package.py`, then the build regenerates the downloadable
-workbook and all data assets. The published fingerprint identifies that repaired
+`scripts/prepare-release-workbook.py` applies and checks the repair and the
+download's presentation formatting, then the build regenerates the downloadable
+workbook and all data assets. The published fingerprint identifies that prepared
 package; historical research-input fingerprints remain unchanged.
+The presentation uses consistent fonts and table headers, restrained alternating
+rows, fitted text columns, frozen headings and identifying columns, and a compact
+release summary. Original number/date formats and native research features are
+preserved. Presentation resources are authored with the spreadsheet artifact
+tool and checked into `source/workbook-presentation.json`; the release assembler
+uses those resources without requiring that authoring runtime on GitHub Actions.
 
 There are 701 parent records: 697 included, three quarantined and one excluded.
 Of the included records, 695 have dated evidence and 252 have a complete
@@ -117,6 +128,10 @@ node scripts/build-evidence-pages.cjs
 node scripts/verify-crossing-map.cjs
 node scripts/build-hosted.cjs
 python scripts/verify-workbook.py
+python scripts/verify-workbook-package.py
+python scripts/verify-workbook-presentation.py
+node scripts/verify-downloads.cjs
+python scripts/verify-standalone-downloads.py
 node scripts/verify-ui.cjs
 node scripts/verify-cards.cjs
 ```
@@ -149,9 +164,15 @@ only `out`.
 
 ## Verification
 
-Workbook totals, phase arithmetic, inclusion, URL joins, current review fields,
+Workbook table metadata, totals, phase arithmetic, inclusion, URL joins, current review fields,
 category counts, timeline exclusions and CSV/JSON exports are checked. Navigation
 and all record/card render paths are exercised in a JavaScript DOM harness.
+The workbook link declares an explicit `.xlsx` filename and spreadsheet MIME
+type; the download check can also verify the public HTTP headers and file bytes.
+File associations and default viewer suggestions are controlled by the reader's
+device and browser. Native Microsoft Excel validation is not available in this
+environment; package and data-preservation checks do not replace that application
+check.
 Crossing-point layouts and interactions have been checked in a browser at laptop,
 portrait-phone and landscape-phone sizes. This is responsive-layout verification,
 not testing on physical iOS and Android devices. QGIS output is

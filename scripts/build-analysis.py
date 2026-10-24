@@ -36,6 +36,7 @@ def build(web):
         'CATEGORY_COUNT':len(m['rationale_categories']),
         'SNAPSHOT':f'{snapshot.day} {snapshot:%B %Y}',
         'SOURCE_FILENAME':html.escape(m['source_filename']),
+        'SOURCE_SHA256':m['source_sha256'],
         'REVIEW_LIMITS':html.escape(m['research_method']['verification_statement']+' '+m['research_method']['review_limits']),
         'TYPOLOGY':typology}
     text=(ROOT/'scripts/analysis-template.html').read_text()
