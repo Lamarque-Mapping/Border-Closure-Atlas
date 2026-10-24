@@ -44,7 +44,7 @@
   function symbolStyle(properties={},options={}){
     const role=properties.display_role||'crossing_reference',national=role==='national_policy',country=role==='country_context'||national,frontier=role==='frontier_context',context=country||frontier,selected=Boolean(options.selected);
     const rationale=options.rationale||rationaleStyle(options.records,options.rationaleFilter),scope=options.scope||scopeStyle(options.records);
-    return {role,country,national,frontier,context,scope,colour:rationale.colour,rationale,selected,approximate:/approx|locality|town|centroid|indicative|unresolved/i.test(String(properties.precision||'')),radius:(options.count>99?11:options.count>1?10:5.5)+(selected?1:0),width:selected?3.8:national?1.8:country?1.5:2.7,opacity:national?.85:country?.55:1,dash:national?(scope.conditionsOnly?[2,5]:[]):country?[2,5]:scope.limited?[1,7]:[],fillOpacity:national&&!scope.conditionsOnly?.12:0};
+    return {role,country,national,frontier,context,scope,colour:rationale.colour,rationale,selected,approximate:/approx|locality|town|centroid|indicative|unresolved/i.test(String(properties.precision||'')),radius:(options.count>99?11:options.count>1?10:5.5)+(selected?1:0),width:selected?3.8:national?1.8:country?1.5:2.7,opacity:national?.85:country?.55:1,dash:national?(scope.conditionsOnly?[2,5]:[]):country?[2,5]:scope.limited?[1,7]:[],fillOpacity:0};
   }
   const cache=new WeakMap();
   // Area is used only to order and space reference labels. It is not a

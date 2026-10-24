@@ -40,7 +40,7 @@
     const embedded=$('analysis-document');
     if(embedded){
       try{frame.srcdoc=JSON.parse(embedded.textContent);}catch{failed();}
-    }else frame.src='analysis.html?v=20261023-national';
+    }else frame.src='analysis.html?v=20261024-outline-methods';
   }
   function analysisLoaded(){
     if(!started||ready)return;

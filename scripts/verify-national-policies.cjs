@@ -37,7 +37,7 @@ for(const e of national){
  for(const p of e.duration_periods){assert.equal(p.minimum_days,null);assert.equal(p.maximum_days,null);assert.equal(p.end_is_reopening,false);}
 }
 const custom=JSON.parse(JSON.stringify(data));custom.meta.source_sha256='replacement-workbook';custom.meta.national_supplement=null;const before=custom.events.length;N.attach(custom,source,england);assert.equal(custom.events.length,before,'no supplement grafted onto a different release');
-const ban=K.symbolStyle({display_role:'national_policy'},{records:[aus]});assert.equal(ban.fillOpacity,.12);assert.deepEqual(ban.dash,[]);assert.equal(ban.colour,'#287e67');
+const ban=K.symbolStyle({display_role:'national_policy'},{records:[aus]});assert.equal(ban.fillOpacity,0);assert.deepEqual(ban.dash,[]);assert.equal(ban.colour,'#287e67');
 const conditions=K.symbolStyle({display_role:'national_policy'},{records:[uk]});assert.equal(conditions.fillOpacity,0);assert.deepEqual(conditions.dash,[2,5]);
 assert.equal(K.scopeStyle([nz,get('NAT-NZL-ARRIVAL-CONDITIONS-COVID')]).conditionsOnly,false);
 const csv=CSV.build({records:national,state:{mode:'all'},recordURL:id=>'https://example.test/#map/record-'+id});
