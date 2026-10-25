@@ -20,20 +20,25 @@ supported. The atlas describes historical evidence, not live border conditions.
 
 The map now distinguishes an observed reopening from the last report of closure.
 All **221 records / 250 last-confirmed phases** in the review inventory have now
-received a later-status assessment. Evidence supports map updates to **88 records**
-and resolves **101 phase markers**. **136 records retain at least one unverified
-phase (149 phases)**; the groups overlap for partial resolutions. Grey dashed
+received a later-status assessment. Evidence supports map updates to **106 records**
+and resolves **122 phase markers**. **118 records retain at least one unverified
+phase (128 phases)**; the groups overlap for partial resolutions. Grey dashed
 lines and hollow marks identify that uncertainty, not continuing closure.
 The searchable [audit reader](https://lamarque-mapping.github.io/Border-Closure-Atlas/status-audit.html)
 provides every finding, phase decision, source and access limitation.
 
-The outcomes are 57 later access bounds, 26 confirmed restrictions, one
-operator-reported restriction, 13 scope changes, 22 partial findings, five later
-closure confirmations, three conflicting findings and 94 unresolved findings.
+The outcomes are 75 later access or policy-ending bounds, 26 confirmed restrictions,
+one operator-reported restriction, 10 scope changes, 18 partial findings, five later
+closure confirmations, three conflicting findings and 83 unresolved findings.
 A later access bound does not assert that a border is currently open or supply
 an exact historical reopening date. Only supported matching phases are updated.
-Chile's partial reopening is not extended to all crossings; Burkina Faso's July
-lifting and October reimposition of its flour-export ban remain distinct.
+The COVID follow-up adds 21 phase bounds across 19 records: 18 newly integrated
+records and further resolution of Slovenia's railway phase. These old phase markers
+no longer appear in 2025. The national policy endings for Chile and Vietnam do not
+assert that every crossing physically reopened. Chile's 22-of-40 operational
+reopening remains explicit; Sota's traditional access does not resolve Kali Torasi
+or Bupul. Burkina Faso's July lifting and October reimposition of its flour-export
+ban remain distinct.
 
 Thirty-three separately sourced October status observations include the Ukraine–Russia
 and inter-Korean borders and restricted Rafah passenger access. Each carries its

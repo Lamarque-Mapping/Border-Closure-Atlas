@@ -19,8 +19,8 @@ for(const [id,location,status] of [['STATUS-RUS-UKR-202610','context-frontier-ru
  assert(e.sources.length&&e.status_review.qualification);
 }
 for(const e of d.events.filter(S.isStatus))for(const id of C.mapLocationsFor(e,d,oct))assert(features.has(id),'Known geography '+id);
-const old=get('AM016');assert.equal(C.temporalState(old,oct.month),'unresolved','Partial reopening is not proof of full reopening');
-assert.equal(C.temporalState(get('AM035'),oct.month),'unresolved','Changed traveller eligibility is not proof of full reopening');
+const old=get('H08');assert.equal(C.temporalState(old,oct.month),'unresolved','Evidence for one frontier must not resolve an unmatched frontier');
+assert.equal(C.temporalState(get('AM035'),oct.month),'none','Later removal of permission requirements bounds the Suriname admission restriction');
 assert.equal(C.temporalState(old,oct.month,'operational_spell'),'none','Unknown later status is not measured operational closure');
 const ids=C.mapLocationsFor(old,d,oct);assert(ids.length);
 const scoped=C.recordsForLocation([old],ids[0],d,oct);assert(scoped[0].map_status_unresolved);
@@ -30,12 +30,13 @@ assert.equal(C.temporalState(get('EA025'),C.monthOrdinal('2026-03')),'unresolved
 assert(source.unresolved.length===221&&source.unresolved.reduce((n,r)=>n+r.phases.length,0)===250);
 assert.equal(source.audit.records.length,221);
 assert.equal(new Set(source.audit.records.map(r=>r.record_id)).size,221);
-assert.equal(source.audit.counts.remaining_unverified_records,136);
-assert.equal(d.events.filter(e=>!S.isSupplement(e)&&C.statusPeriods(e,oct).some(p=>p.status==='unresolved')).length,136);
+assert.equal(source.audit.counts.remaining_unverified_records,118);
+assert.equal(d.events.filter(e=>!S.isSupplement(e)&&C.statusPeriods(e,oct).some(p=>p.status==='unresolved')).length,118);
 const paraguay=get('AM023');assert.equal(C.temporalState(paraguay,oct.month),'none','A sourced later access bound removes the old unknown marker without labelling the border open');
 assert.equal(C.temporalState(paraguay,C.monthOrdinal('2021-01')),'unresolved','A later access bound must not fill the earlier gap');
 assert.equal(paraguay.later_status_review.outcome,'ended_by');
-assert.equal(C.temporalState(get('AM016'),oct.month),'unresolved','Chile partial reopening cannot resolve all ports');
+assert.equal(C.temporalState(get('AM016'),oct.month),'none','Ending Chile’s blanket foreign-entry policy does not require every port to reopen');
+assert(get('AM016').later_status_review.finding.includes('22 of 40'),'Chile’s partial operational reopening remains explicit');
 const strasbourg=C.statusPeriods(get('FU-COV-EUR-001'),oct);
 assert(!strasbourg.some(p=>p.source_phase_id==='FU-COV-EUR-001-FU4'));
 assert.equal(strasbourg.length,2,'Other blockade sites remain unresolved');
@@ -48,7 +49,24 @@ assert.equal(C.matchesTime(flour,'onsets',oct.month),false);
 assert.equal(flour.duration_periods.length,0);
 const unmapped=get('STATUS-AUDIT-C7-EU-002-20261025');assert.deepEqual(C.mapLocationsFor(unmapped,d,oct),[],'Named posts without approved points must not fall back to entire frontiers');
 assert.equal(get('STATUS-AUDIT-EA024-20261001').map_status_periods[0].label,'Restriction reported by operator','Operational reporting must retain its evidence label on the map');
-assert.equal(C.statusPeriods(get('R3-EU-005'),oct).length,1,'Road access must not resolve the separate railway phase');
+assert.equal(C.statusPeriods(get('R3-EU-005'),oct).length,0,'Rail and road have separately sourced bounds');
+const jan2025={mode:'intervals',month:C.monthOrdinal('2025-01')};
+const slovenia=C.statusPeriods(get('R3-EU-005'),jan2025);
+assert.deepEqual(Array.from(slovenia,p=>p.source_phase_id),['R3-EU-005-C7P2'],'Rail policy repeal must not backdate the separate minor-road bound');
+const sota=C.statusPeriods(get('R6-EA-006'),jan2025);
+assert.deepEqual(Array.from(sota,p=>p.source_phase_id),['R6-EA-006-R1'],'Traditional Sota access must not resolve Kali Torasi or Bupul');
+assert(C.statusPeriods(get('R3-EU-012'),jan2025).length,'General Austrian entry advice is not enough to resolve every suspended minor route');
+const followup=source.audit.covid_followup;
+assert.equal(followup.updated_record_ids.length,19);
+const newBounds=source.resolutions.filter(r=>followup.updated_record_ids.includes(r.record_id)&&r.basis);
+assert.equal(newBounds.length,21);
+for(const r of newBounds){
+ const e=get(r.record_id),matches=state=>C.statusPeriods(e,state).some(p=>p.source_phase_id===r.phase_id);
+ assert(!matches(jan2025),'Resolved COVID phase must not linger in 2025: '+r.phase_id);
+ assert(!matches({...jan2025,month:C.monthOrdinal(r.from)}),'Bound takes effect in its evidence month: '+r.phase_id);
+ const priorMonth=C.monthOrdinal(r.from)-1,phase=source.unresolved.find(x=>x.record_id===r.record_id).phases.find(p=>p.phase_id===r.phase_id);
+ if(priorMonth>C.monthOrdinal(phase.last_confirmed))assert(matches({...jan2025,month:priorMonth}),'Earlier unknown gap must not be silently filled: '+r.phase_id);
+}
 for(const r of source.audit.records)assert.equal(get(r.record_id).later_status_review.record_id,r.record_id,'All findings attached to records');
 assert.equal(d.events.filter(e=>!S.isSupplement(e)&&!C.excluded(e)).length,825);
 const csv=CSV.build({records:[get('STATUS-RAFAH-202610'),old],state:oct});assert(csv.content.includes('Later-status evidence'));assert(csv.content.includes('Not calculated: separately dated border-access status'));assert(csv.content.includes('no continuing closure')||csv.content.includes('does not assert continuing closure'));
@@ -62,4 +80,4 @@ assert(resolvedCSV.content.includes(paraguay.later_status_review.sources[0].url)
 assert(app.includes('Unmarked borders are not necessarily open.'));assert(!index.includes('id="last-month"'));assert(!app.includes("$('last-month')"));
 assert(!d.events.some(e=>e.record_kind==='national_policy'&&e.countries.includes('United Kingdom')));
 const aus=get('NATIONAL-NAT-AUS-ENTRY-COVID');assert.equal(C.temporalState(aus,C.monthOrdinal('2021-06')),'policy');
-console.log('Status review passed: all 221 assessments, phase-specific resolutions, 136 records retaining uncertainty, 33 dated observations, separate reclosures, unchanged historical durations/statistics, COVID inclusion and footer corrections.');
+console.log('Status review passed: all 221 assessments, 106 records with adopted findings, 21 further COVID phase bounds absent in 2025, 118 records retaining uncertainty, 33 dated observations, separate reclosures and unchanged historical durations/statistics.');

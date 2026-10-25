@@ -41,6 +41,7 @@ for(const resolution of source.resolutions||[]){
  assert(!resolved.has(p.phase_id),'Duplicate phase resolution');resolved.add(p.phase_id);
  assert(C.day(resolution.from)!==null&&resolution.from>=p.last_confirmed&&resolution.from<=source.reviewed_at);
  assert(['ended_by','current_status'].includes(resolution.kind));
+ if(resolution.basis)assert(resolution.kind==='ended_by'&&['policy_ended','later_access'].includes(resolution.basis),'Unknown resolution basis');
  const finding=findings.get(resolution.finding_id);
  assert(finding?.record_id===row.record_id&&finding.sources.length,'Resolution needs matching sourced assessment');
  if(resolution.kind==='current_status'){
@@ -50,6 +51,9 @@ for(const resolution of source.resolutions||[]){
  p.resolved_from=resolution.from;
 }
 assert.equal(audit.counts.resolved_phases,resolved.size);
+assert.equal(audit.counts.records_with_integrated_findings,audit.records.filter(r=>r.integration.length).length);
+assert.equal(audit.counts.remaining_unverified_phases,source.unresolved.reduce((n,r)=>n+r.phases.filter(p=>!resolved.has(p.phase_id)).length,0));
+for(const finding of audit.records)assert.deepEqual(finding.integration.filter(r=>r.phase_id),source.resolutions.filter(r=>r.record_id===finding.record_id),'Audit and map decisions must match: '+finding.record_id);
 assert.equal(audit.counts.remaining_unverified_records,source.unresolved.filter(r=>r.phases.some(p=>!resolved.has(p.phase_id))).length);
 assert.equal(audit.counts.status_observations,source.observations.length);
 fs.writeFileSync(path.join(root,'dist/status-data.js'),'window.ATLAS_STATUS_REVIEW = '+JSON.stringify(source).replace(/</g,'\\u003c')+';\n');

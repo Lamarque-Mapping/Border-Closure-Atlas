@@ -1,8 +1,8 @@
 {
-  "version": "20261025-status-audit-2",
+  "version": "20261025-status-audit-3",
   "reviewed_at": "2026-10-25",
   "source_sha256": "5baf139f914593184ed2eee3f5a9dfd783cb264332415f98e645b409c314a415",
-  "method": "All 221 records (250 last-confirmed phases) in the endpoint review inventory were researched on 25 October 2026. Findings distinguish current restrictions, later access bounds, changed scope, partial evidence, conflicting evidence and unresolved status. Selected map updates received source-text, date and scope checks; unavailable full text and inadequate evidence remain qualified. Standing official guidance is dated to the check; news observations retain their event/report date. A later access bound suppresses only the matching old unknown marker from that bound onward. It does not label the border open, alter historical durations, fill gaps or merge later reclosures. Dated closure/restriction observations appear only in their evidence month and are excluded from episode and duration statistics. Coverage concerns this fixed inventory, not every world frontier.",
+  "method": "All 221 records (250 last-confirmed phases) in the endpoint review inventory were researched on 25 October 2026. Findings distinguish current restrictions, later access bounds, changed scope, partial evidence, conflicting evidence and unresolved status. Selected map updates received source-text, date and scope checks; unavailable full text and inadequate evidence remain qualified. Standing official guidance is dated to the check; news observations retain their event/report date. A later access bound suppresses only the matching old unknown marker from that bound onward. It does not label the border open, alter historical durations, fill gaps or merge later reclosures. Dated closure/restriction observations appear only in their evidence month and are excluded from episode and duration statistics. Coverage concerns this fixed inventory, not every world frontier. A further COVID-focused pass separates the ending of a national prohibition from reopening every individual port. Each new resolution records whether it is based on policy cessation or later access; neither establishes present-day openness.",
   "observations": [
     {
       "id": "STATUS-RUS-UKR-202610",
@@ -2105,6 +2105,174 @@
       "from": "2026-06-18",
       "kind": "ended_by",
       "finding_id": "R3-EU-005"
+    },
+    {
+      "record_id": "EU032",
+      "phase_id": "EU032-FU1",
+      "kind": "ended_by",
+      "finding_id": "EU032",
+      "basis": "later_access",
+      "from": "2020-11-10"
+    },
+    {
+      "record_id": "R4-EU-003",
+      "phase_id": "R4-EU-003-C7P1",
+      "kind": "ended_by",
+      "finding_id": "R4-EU-003",
+      "basis": "policy_ended",
+      "from": "2022-03-01"
+    },
+    {
+      "record_id": "R4-EU-002",
+      "phase_id": "R4-EU-002-C7P1",
+      "kind": "ended_by",
+      "finding_id": "R4-EU-002",
+      "basis": "policy_ended",
+      "from": "2020-05-04"
+    },
+    {
+      "record_id": "R2-RT-002",
+      "phase_id": "R2-RT-002-C7P1",
+      "kind": "ended_by",
+      "finding_id": "R2-RT-002",
+      "basis": "later_access",
+      "from": "2021-06-04"
+    },
+    {
+      "record_id": "R3-RT-001",
+      "phase_id": "R3-RT-001-D1",
+      "kind": "ended_by",
+      "finding_id": "R3-RT-001",
+      "basis": "later_access",
+      "from": "2024-04-12"
+    },
+    {
+      "record_id": "R3-EU-005",
+      "phase_id": "R3-EU-005-C7P1",
+      "kind": "ended_by",
+      "finding_id": "R3-EU-005",
+      "basis": "policy_ended",
+      "from": "2020-06-13"
+    },
+    {
+      "record_id": "AM035",
+      "phase_id": "AM035-D1",
+      "kind": "ended_by",
+      "finding_id": "AM035",
+      "basis": "policy_ended",
+      "from": "2022-04-13"
+    },
+    {
+      "record_id": "AM016",
+      "phase_id": "AM016-FU1",
+      "kind": "ended_by",
+      "finding_id": "AM016",
+      "basis": "policy_ended",
+      "from": "2022-05-01"
+    },
+    {
+      "record_id": "EA014",
+      "phase_id": "EA014-R1",
+      "kind": "ended_by",
+      "finding_id": "EA014",
+      "basis": "policy_ended",
+      "from": "2022-03-15"
+    },
+    {
+      "record_id": "SA003",
+      "phase_id": "SA003-C7P1",
+      "kind": "ended_by",
+      "finding_id": "SA003",
+      "basis": "later_access",
+      "from": "2020-08-21"
+    },
+    {
+      "record_id": "R6-SC-001",
+      "phase_id": "R6-SC-001-REV1",
+      "kind": "ended_by",
+      "finding_id": "R6-SC-001",
+      "basis": "later_access",
+      "from": "2023-08-06"
+    },
+    {
+      "record_id": "R6-EA-005",
+      "phase_id": "R6-EA-005-FU1",
+      "kind": "ended_by",
+      "finding_id": "R6-EA-005",
+      "basis": "later_access",
+      "from": "2022-04-26"
+    },
+    {
+      "record_id": "GL05",
+      "phase_id": "REC50-R47-GL05-P1",
+      "kind": "ended_by",
+      "finding_id": "GL05",
+      "basis": "policy_ended",
+      "from": "2022-12-31"
+    },
+    {
+      "record_id": "R4-AWN-002",
+      "phase_id": "R4-AWN-002-D1",
+      "kind": "ended_by",
+      "finding_id": "R4-AWN-002",
+      "basis": "policy_ended",
+      "from": "2021-02-28"
+    },
+    {
+      "record_id": "R5-AES-005",
+      "phase_id": "R5-AES-005-R1",
+      "kind": "ended_by",
+      "finding_id": "R5-AES-005",
+      "basis": "policy_ended",
+      "from": "2023-09-02"
+    },
+    {
+      "record_id": "REC50-R06-004",
+      "phase_id": "REC50-R06-004-P1",
+      "kind": "ended_by",
+      "finding_id": "REC50-R06-004",
+      "basis": "later_access",
+      "from": "2022-12-24"
+    },
+    {
+      "record_id": "REC50-R06-004",
+      "phase_id": "REC50-R06-004-P2",
+      "kind": "ended_by",
+      "finding_id": "REC50-R06-004",
+      "basis": "later_access",
+      "from": "2022-12-24"
+    },
+    {
+      "record_id": "REC50-R18-001",
+      "phase_id": "REC50-R18-001-P1",
+      "kind": "ended_by",
+      "finding_id": "REC50-R18-001",
+      "basis": "later_access",
+      "from": "2022-01-31"
+    },
+    {
+      "record_id": "R5-SC-001",
+      "phase_id": "R5-SC-001-FU1",
+      "kind": "ended_by",
+      "finding_id": "R5-SC-001",
+      "basis": "later_access",
+      "from": "2022-12-06"
+    },
+    {
+      "record_id": "R5-SC-001",
+      "phase_id": "R5-SC-001-FU2",
+      "kind": "ended_by",
+      "finding_id": "R5-SC-001",
+      "basis": "later_access",
+      "from": "2022-12-06"
+    },
+    {
+      "record_id": "R6-EA-006",
+      "phase_id": "R6-EA-006-REV1",
+      "kind": "ended_by",
+      "finding_id": "R6-EA-006",
+      "basis": "later_access",
+      "from": "2022-06-07"
     }
   ],
   "unresolved": [
@@ -4951,9 +5119,9 @@
         "record_id": "AM035",
         "title": "French Guiana Suriname Maroni border COVID closure",
         "checked_at": "2026-10-25",
-        "outcome": "scope_changed",
-        "evidence_date": "2022-02-21",
-        "finding": "Vaccinated travellers from French Guiana could enter by land without essential-travel permission; full later removal was not independently established.",
+        "outcome": "ended_by",
+        "evidence_date": "2022-04-13",
+        "finding": "Suriname’s 13 April 2022 entry circular includes land arrivals from French Guiana and removes the special government-permission requirement for unvaccinated travellers. Vaccinated/recovered travellers and unvaccinated travellers with the prescribed test could travel. This bounds the Suriname-imposed admission restriction, while retaining ordinary documentation and health requirements.",
         "phases": [
           {
             "phase_id": "AM035-D1",
@@ -4963,16 +5131,40 @@
         ],
         "sources": [
           {
-            "url": "https://www.bogsuriname.com/covid-19-maatregelen-geldende-van-maandag-21-februari-2022-tot-nader-order/",
-            "title": "COVID-19-maatregelen geldende van maandag 21 februari 2022 tot nader order - BOG Suriname",
-            "publisher": "bogsuriname.com",
+            "url": "https://www.flyslm.com/images/pdfs/SUR-COVID-19-Measures-13-April-2022.pdf",
+            "title": "COVID-19 measures for passengers travelling to Suriname, 13 April 2022",
+            "publisher": "Suriname Ministry of Foreign Affairs; copy hosted by Surinam Airways",
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "AM035",
+            "phase_id": "AM035-D1",
+            "kind": "ended_by",
+            "finding_id": "AM035",
+            "basis": "policy_ended",
+            "from": "2022-04-13"
+          }
+        ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "limitations": "This is a bound on the original restriction, not proof of present-day openness, continuous access, or an exact reopening date. Historical durations remain unchanged. This concerns the Suriname-side rule; it does not establish every ferry’s operating schedule or French-side measures.",
+        "source_access": "Relevant source text inspected; the finding is limited to the specified policy or crossing.",
+        "previous_assessment": {
+          "outcome": "scope_changed",
+          "evidence_date": "2022-02-21",
+          "finding": "Vaccinated travellers from French Guiana could enter by land without essential-travel permission; full later removal was not independently established.",
+          "sources": [
+            {
+              "url": "https://www.bogsuriname.com/covid-19-maatregelen-geldende-van-maandag-21-februari-2022-tot-nader-order/",
+              "title": "COVID-19-maatregelen geldende van maandag 21 februari 2022 tot nader order - BOG Suriname",
+              "publisher": "bogsuriname.com",
+              "checked_at": "2026-10-25"
+            }
+          ],
+          "integration": [],
+          "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        }
       },
       {
         "record_id": "AM021",
@@ -5013,9 +5205,9 @@
         "record_id": "AM016",
         "title": "Chile COVID restrictions on foreign land entry",
         "checked_at": "2026-10-25",
-        "outcome": "partial",
+        "outcome": "ended_by",
         "evidence_date": "2022-05-01",
-        "finding": "Chile’s follow-up confirms only 22 of 40 land crossings reopened on 1 May 2022. The earlier announcement of broad reopening cannot establish that every affected port resumed. No whole-record resolution applied.",
+        "finding": "Chile’s May 2022 reopening replaced the blanket COVID foreign-entry prohibition with admission through enabled land ports. The government confirmed that 22 of 40 complexes were operating, and Resolution 540 describes the 1 May border reopening. This bounds the recorded national formal-policy phase, without claiming that all 40 crossings physically reopened.",
         "phases": [
           {
             "phase_id": "AM016-FU1",
@@ -5035,12 +5227,48 @@
             "title": "Concluye exitosamente primera jornada de reapertura de pasos fronterizos | Ministerio de Relaciones Exteriores",
             "publisher": "minrel.gob.cl",
             "checked_at": "2026-10-25"
+          },
+          {
+            "url": "https://www.leychile.cl/navegar?idNorma=1175466",
+            "title": "Resolution 540 Exenta, 30 April 2022: modification of the Protected Borders Plan",
+            "publisher": "Chilean Ministry of Health / Library of Congress",
+            "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "AM016",
+            "phase_id": "AM016-FU1",
+            "kind": "ended_by",
+            "finding_id": "AM016",
+            "basis": "policy_ended",
+            "from": "2022-05-01"
+          }
+        ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "limitations": "This is a bound on the original restriction, not proof of present-day openness, continuous access, or an exact reopening date. Historical durations remain unchanged. The existing observed reopening of 22 crossings is preserved. The operational status of the other crossings is not inferred from the end of the blanket policy.",
+        "source_access": "Relevant source text inspected; the finding is limited to the specified policy or crossing.",
+        "previous_assessment": {
+          "outcome": "partial",
+          "evidence_date": "2022-05-01",
+          "finding": "Chile’s follow-up confirms only 22 of 40 land crossings reopened on 1 May 2022. The earlier announcement of broad reopening cannot establish that every affected port resumed. No whole-record resolution applied.",
+          "sources": [
+            {
+              "url": "https://www.gob.cl/noticias/plan-de-normalizacion-en-las-fronteras-22-complejos-fronterizos-terrestres-ya-estan-habilitados-para-el-transito-entre-chile-y-los-paises-vecinos/",
+              "title": "Plan de Normalización en las fronteras: 22 complejos fronterizos terrestres ya están habilitados para el tránsito entre Chile y los países vecinos - Gob.cl",
+              "publisher": "gob.cl",
+              "checked_at": "2026-10-25"
+            },
+            {
+              "url": "https://www.minrel.gob.cl/sala-de-prensa/concluye-exitosamente-primera-jornada-de-reapertura-de-pasos-fronterizos",
+              "title": "Concluye exitosamente primera jornada de reapertura de pasos fronterizos | Ministerio de Relaciones Exteriores",
+              "publisher": "minrel.gob.cl",
+              "checked_at": "2026-10-25"
+            }
+          ],
+          "integration": [],
+          "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        }
       },
       {
         "record_id": "AM019",
@@ -5513,9 +5741,9 @@
         "record_id": "EA014",
         "title": "Vietnam suspends individual crossings with Laos and Cambodia",
         "checked_at": "2026-10-25",
-        "outcome": "scope_changed",
+        "outcome": "ended_by",
         "evidence_date": "2022-03-15",
-        "finding": "National foreign-entry rules restored, including road travel; operation of every minor gate and trail is not proven.",
+        "finding": "Vietnam restored foreign-arrival immigration arrangements from 15 March 2022; its government’s tourism guidance explicitly includes road entry subject to COVID testing. This bounds the Vietnam-side formal suspension of individual entry. It does not prove that every minor gate or trail reopened, or that Laos simultaneously allowed exit at each location.",
         "phases": [
           {
             "phase_id": "EA014-R1",
@@ -5537,10 +5765,40 @@
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "EA014",
+            "phase_id": "EA014-R1",
+            "kind": "ended_by",
+            "finding_id": "EA014",
+            "basis": "policy_ended",
+            "from": "2022-03-15"
+          }
+        ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "limitations": "This is a bound on the original restriction, not proof of present-day openness, continuous access, or an exact reopening date. Historical durations remain unchanged. National policy restoration and operation of individual gates remain distinct. Road entry is explicitly covered; an air-only reopening would not suffice.",
+        "source_access": "Relevant source text inspected; the finding is limited to the specified policy or crossing.",
+        "previous_assessment": {
+          "outcome": "scope_changed",
+          "evidence_date": "2022-03-15",
+          "finding": "National foreign-entry rules restored, including road travel; operation of every minor gate and trail is not proven.",
+          "sources": [
+            {
+              "url": "https://en.baochinhphu.vn/travel-restrictions-relaxed-as-viet-nam-fully-opens-borders-to-foreign-arrivals-111220317203250536.htm",
+              "title": "Travel regulations relaxed as Viet Nam fully resume tourism",
+              "publisher": "en.baochinhphu.vn",
+              "checked_at": "2026-10-25"
+            },
+            {
+              "url": "https://dulieuphapluat.vn/van-ban/quyen-dan-su-van-ban/official-dispatch-no-1606vpcp-qhqt-dated-march-15-2022-on-resumption-of-immigration-services-of-vietnam-1112987.html",
+              "title": "Official Dispatch No. 1606/VPCP-QHQT dated March 15, 2022 on Resumption of immigration services of Vietnam",
+              "publisher": "dulieuphapluat.vn",
+              "checked_at": "2026-10-25"
+            }
+          ],
+          "integration": [],
+          "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        }
       },
       {
         "record_id": "EA012",
@@ -5709,9 +5967,9 @@
         "record_id": "EU032",
         "title": "Spain enforces essential-purpose restrictions at Gibraltar frontier",
         "checked_at": "2026-10-25",
-        "outcome": "scope_changed",
-        "evidence_date": "2020-06-10",
-        "finding": "Gibraltar residents regained passage June 10; this does not establish simultaneous unrestricted entry for every visitor cohort.",
+        "outcome": "ended_by",
+        "evidence_date": "2020-11-10",
+        "finding": "Gibraltar’s government explicitly reported no frontier restrictions in either direction and normal entry and exit on 10 November 2020. This bounds the earlier essential-purpose frontier restriction; Andalusian restrictions on travel within Spain were a separate measure.",
         "phases": [
           {
             "phase_id": "EU032-FU1",
@@ -5721,22 +5979,46 @@
         ],
         "sources": [
           {
-            "url": "https://www.gibraltar.gov.gi/press-releases/gibraltar-residents-able-to-cross-the-frontier-3922020-5952",
-            "title": "Gibraltar Residents Able to Cross the Frontier - 392/2020",
-            "publisher": "gibraltar.gov.gi",
-            "checked_at": "2026-10-25"
-          },
-          {
-            "url": "https://www.gibraltar.gov.gi/press-releases/air-travel-restrictions-into-gibraltar-to-be-lifted-4112020-5977",
-            "title": "Air Travel Restrictions into Gibraltar to be Lifted - 411/2020",
-            "publisher": "gibraltar.gov.gi",
+            "url": "https://www.gibraltar.gov.gi/press-releases/no-frontier-restrictions-in-place-in-either-direction-7852020-6369",
+            "title": "No frontier restrictions in place in either direction — 785/2020",
+            "publisher": "Government of Gibraltar",
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "EU032",
+            "phase_id": "EU032-FU1",
+            "kind": "ended_by",
+            "finding_id": "EU032",
+            "basis": "later_access",
+            "from": "2020-11-10"
+          }
+        ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "limitations": "This is a bound on the original restriction, not proof of present-day openness, continuous access, or an exact reopening date. Historical durations remain unchanged. ",
+        "source_access": "Relevant source text inspected; the finding is limited to the specified policy or crossing.",
+        "previous_assessment": {
+          "outcome": "scope_changed",
+          "evidence_date": "2020-06-10",
+          "finding": "Gibraltar residents regained passage June 10; this does not establish simultaneous unrestricted entry for every visitor cohort.",
+          "sources": [
+            {
+              "url": "https://www.gibraltar.gov.gi/press-releases/gibraltar-residents-able-to-cross-the-frontier-3922020-5952",
+              "title": "Gibraltar Residents Able to Cross the Frontier - 392/2020",
+              "publisher": "gibraltar.gov.gi",
+              "checked_at": "2026-10-25"
+            },
+            {
+              "url": "https://www.gibraltar.gov.gi/press-releases/air-travel-restrictions-into-gibraltar-to-be-lifted-4112020-5977",
+              "title": "Air Travel Restrictions into Gibraltar to be Lifted - 411/2020",
+              "publisher": "gibraltar.gov.gi",
+              "checked_at": "2026-10-25"
+            }
+          ],
+          "integration": [],
+          "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        }
       },
       {
         "record_id": "EU022",
@@ -6381,9 +6663,9 @@
         "record_id": "GL05",
         "title": "Uganda national COVID passenger border restrictions",
         "checked_at": "2026-10-25",
-        "outcome": "unresolved",
-        "evidence_date": null,
-        "finding": "Retrieved UNHCR evidence still distinguishes formal asylum closure from exceptional or unofficial admission; tourism reopening cannot resolve it.",
+        "outcome": "ended_by",
+        "evidence_date": "2022-12-31",
+        "finding": "UNHCR’s 2022 annual results report describes access to Ugandan territory as unhindered and reports access to asylum procedures for all people seeking protection, with 124,845 new arrivals received and registered during the year. This directly addresses asylum admission, supporting a conservative end-of-year bound on the earlier ordinary-asylum COVID suspension.",
         "phases": [
           {
             "phase_id": "REC50-R47-GL05-P1",
@@ -6393,22 +6675,46 @@
         ],
         "sources": [
           {
-            "url": "https://www.unhcr.org/news/press-releases/uganda-provides-safe-haven-drc-refugees-amid-covid-19-lockdown",
-            "title": "Uganda provides a safe haven to DRC refugees amid COVID-19 lockdown | UNHCR",
-            "publisher": "unhcr.org",
-            "checked_at": "2026-10-25"
-          },
-          {
-            "url": "https://reporting.unhcr.org/uganda-2020-year-end-report-issues-and-challenges",
-            "title": "Uganda - 2020 year-end report - Issues and Challenges | Global Focus",
-            "publisher": "reporting.unhcr.org",
+            "url": "https://reporting.unhcr.org/files/2023-06/EHGL%20Uganda.pdf",
+            "title": "Uganda Annual Results Report 2022, protection environment and asylum access",
+            "publisher": "UNHCR",
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "GL05",
+            "phase_id": "REC50-R47-GL05-P1",
+            "kind": "ended_by",
+            "finding_id": "GL05",
+            "basis": "policy_ended",
+            "from": "2022-12-31"
+          }
+        ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "limitations": "This is a bound on the original restriction, not proof of present-day openness, continuous access, or an exact reopening date. Historical durations remain unchanged. The report supports the situation during 2022; the year-end bound does not date the initial reopening. Later nationality-specific admission restrictions are not assessed as continuing COVID measures.",
+        "source_access": "Detailed indexed passages from the annual report inspected, including actual 2022 asylum-access indicators. Direct PDF retrieval returned HTTP 429 and the alternate archive required browser verification.",
+        "previous_assessment": {
+          "outcome": "unresolved",
+          "evidence_date": null,
+          "finding": "Retrieved UNHCR evidence still distinguishes formal asylum closure from exceptional or unofficial admission; tourism reopening cannot resolve it.",
+          "sources": [
+            {
+              "url": "https://www.unhcr.org/news/press-releases/uganda-provides-safe-haven-drc-refugees-amid-covid-19-lockdown",
+              "title": "Uganda provides a safe haven to DRC refugees amid COVID-19 lockdown | UNHCR",
+              "publisher": "unhcr.org",
+              "checked_at": "2026-10-25"
+            },
+            {
+              "url": "https://reporting.unhcr.org/uganda-2020-year-end-report-issues-and-challenges",
+              "title": "Uganda - 2020 year-end report - Issues and Challenges | Global Focus",
+              "publisher": "reporting.unhcr.org",
+              "checked_at": "2026-10-25"
+            }
+          ],
+          "integration": [],
+          "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        }
       },
       {
         "record_id": "GL12",
@@ -7260,9 +7566,9 @@
         "record_id": "SA003",
         "title": "Chaman initial COVID closure",
         "checked_at": "2026-10-25",
-        "outcome": "unresolved",
-        "evidence_date": null,
-        "finding": "2024 Chaman protest evidence is not a reopening observation for the 2020 Saturday-only pedestrian rule.",
+        "outcome": "ended_by",
+        "evidence_date": "2020-08-21",
+        "finding": "Officials confirmed the resumption of passenger movement at Chaman–Spin Boldak on 21 August 2020, with seven-day operation replacing the recorded Saturday-only regime. The UNHCR border-monitoring chronology reproduced by EUAA corroborates seven-day pedestrian access in late August. Later closures remain separate episodes.",
         "phases": [
           {
             "phase_id": "SA003-C7P1",
@@ -7272,16 +7578,46 @@
         ],
         "sources": [
           {
-            "url": "https://pass.dawn.com/news/1834750/weeks-long-protests-bring-chaman-to-a-standstill",
-            "title": "Weeks-long protests bring Chaman to a standstill - Pakistan - DAWN.COM",
-            "publisher": "pass.dawn.com",
+            "url": "https://www.aa.com.tr/en/asia-pacific/afghanistan-pakistan-reopen-key-border-crossing/1949410",
+            "title": "Afghanistan, Pakistan reopen key border crossing",
+            "publisher": "Anadolu Agency, reporting border officials",
+            "checked_at": "2026-10-25"
+          },
+          {
+            "url": "https://www.ecoi.net/en/file/local/2073352/2022_05_EUAA_COI_Report_Pakistan_Situation_of_Afghan_refugees.pdf",
+            "title": "Pakistan: situation of Afghan refugees, May 2022, cross-border movement chronology",
+            "publisher": "European Union Agency for Asylum",
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "SA003",
+            "phase_id": "SA003-C7P1",
+            "kind": "ended_by",
+            "finding_id": "SA003",
+            "basis": "later_access",
+            "from": "2020-08-21"
+          }
+        ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "limitations": "This is a bound on the original restriction, not proof of present-day openness, continuous access, or an exact reopening date. Historical durations remain unchanged. ",
+        "source_access": "Relevant source text inspected; the finding is limited to the specified policy or crossing.",
+        "previous_assessment": {
+          "outcome": "unresolved",
+          "evidence_date": null,
+          "finding": "2024 Chaman protest evidence is not a reopening observation for the 2020 Saturday-only pedestrian rule.",
+          "sources": [
+            {
+              "url": "https://pass.dawn.com/news/1834750/weeks-long-protests-bring-chaman-to-a-standstill",
+              "title": "Weeks-long protests bring Chaman to a standstill - Pakistan - DAWN.COM",
+              "publisher": "pass.dawn.com",
+              "checked_at": "2026-10-25"
+            }
+          ],
+          "integration": [],
+          "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        }
       },
       {
         "record_id": "SA019",
@@ -7921,9 +8257,9 @@
         "record_id": "R2-RT-002",
         "title": "Cyprus: Turkish Cypriot Limnitis crossing suspension, March–June 2020",
         "checked_at": "2026-10-25",
-        "outcome": "unresolved",
-        "evidence_date": null,
-        "finding": "Targeted Limnitis commuter-rule search did not return sufficiently specific later evidence.",
+        "outcome": "ended_by",
+        "evidence_date": "2021-06-04",
+        "finding": "Limnitis reopened on 4 June 2021. Reporting of police counts records 324 passages that day, including 212 returning from the north, and the Kato Pyrgos community leader confirmed use of the crossing. This bounds the earlier commuter-return restriction; testing requirements remained.",
         "phases": [
           {
             "phase_id": "R2-RT-002-C7P1",
@@ -7931,11 +8267,41 @@
             "scope": "Return passage for affected Kato Pyrgos commuters through the Limnitis route under changed testing requirements"
           }
         ],
-        "sources": [],
-        "integration": [],
+        "sources": [
+          {
+            "url": "https://cyprus-mail.com/2021/06/05/nearly-7500-use-crossing-points-on-first-day-of-reopening",
+            "title": "Nearly 7,500 use crossing points on first day of reopening",
+            "publisher": "Cyprus Mail",
+            "checked_at": "2026-10-25"
+          },
+          {
+            "url": "https://en.philenews.com/local/how-many-people-passed-from-the-crossing-points-today/",
+            "title": "How many people passed from the crossing points today?",
+            "publisher": "Philenews",
+            "checked_at": "2026-10-25"
+          }
+        ],
+        "integration": [
+          {
+            "record_id": "R2-RT-002",
+            "phase_id": "R2-RT-002-C7P1",
+            "kind": "ended_by",
+            "finding_id": "R2-RT-002",
+            "basis": "later_access",
+            "from": "2021-06-04"
+          }
+        ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Targeted searches did not return sufficiently specific later evidence. The original release evidence and endpoint remain unchanged."
+        "limitations": "This is a bound on the original restriction, not proof of present-day openness, continuous access, or an exact reopening date. Historical durations remain unchanged. ",
+        "source_access": "Relevant source text inspected; the finding is limited to the specified policy or crossing.",
+        "previous_assessment": {
+          "outcome": "unresolved",
+          "evidence_date": null,
+          "finding": "Targeted Limnitis commuter-rule search did not return sufficiently specific later evidence.",
+          "sources": [],
+          "integration": [],
+          "source_access": "Targeted searches did not return sufficiently specific later evidence. The original release evidence and endpoint remain unchanged."
+        }
       },
       {
         "record_id": "R2-EU-014",
@@ -8539,20 +8905,27 @@
             "title": "Austria - Observatory on Border Crossings Status due to COVID-19 - UNECE Wiki",
             "publisher": "wiki.unece.org",
             "checked_at": "2026-10-25"
+          },
+          {
+            "url": "https://www.bmeia.gv.at/ministerium/presse/aktuelles/2020/06/schallenberg-grosser-schritt-in-richtung-neue-reisenormalitaet",
+            "title": "Schallenberg: Großer Schritt in Richtung neue Reisenormalität, 10 June 2020",
+            "publisher": "Austrian Ministry of Foreign Affairs",
+            "checked_at": "2026-10-25"
           }
         ],
         "integration": [],
         "current_status_established": false,
         "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection.",
+        "followup_note": "The June 2020 Austrian Foreign Ministry statement restores general entry freedom, including Italy. It does not identify the complete roster of physically suspended minor routes in this record. The policy/access distinction was rechecked, but a route-specific repeal or later access match is still needed."
       },
       {
         "record_id": "R3-EU-005",
         "title": "Slovenia blocks minor road links and suspends passenger rail at the Italian frontier",
         "checked_at": "2026-10-25",
-        "outcome": "partial",
-        "evidence_date": "2026-06-18",
-        "finding": "Slovenian government guidance explicitly permits all EU and third-country nationals at all Italy crossings during the period ending 18 June 2026. This bounds the old minor-road closure; the separately coded passenger railway phase remains unresolved.",
+        "outcome": "ended_by",
+        "evidence_date": "2020-06-13",
+        "finding": "Slovenia revoked its international public passenger-transport prohibition through Ordinance 1402, published on 12 June 2020 and effective the following day. It explicitly includes international passenger rail, so the formal railway-suspension phase is bounded from 13 June. This does not move the separately reviewed minor-road phase’s existing June 2026 bound or assume every rail service restarted immediately.",
         "phases": [
           {
             "phase_id": "R3-EU-005-C7P1",
@@ -8566,6 +8939,18 @@
           }
         ],
         "sources": [
+          {
+            "url": "https://www.gov.si/novice/2020-06-11-vlada-sprostila-javni-prevoz-potnikov-v-mednarodnem-prometu/",
+            "title": "Government releases public passenger transport in international traffic",
+            "publisher": "Government of Slovenia",
+            "checked_at": "2026-10-25"
+          },
+          {
+            "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/celotno-kazalo/202085",
+            "title": "Official Gazette 85/2020, 12 June 2020, Ordinance 1402",
+            "publisher": "Official Gazette of Slovenia",
+            "checked_at": "2026-10-25"
+          },
           {
             "url": "https://www.gov.si/en/news/2020-06-12-55th-correspondence-session-government-adopts-several-ordinances-on-crossing-the-border/",
             "title": "55th correspondence session: Government adopts several ordinances on crossing the border | GOV.SI",
@@ -8586,11 +8971,48 @@
             "from": "2026-06-18",
             "kind": "ended_by",
             "finding_id": "R3-EU-005"
+          },
+          {
+            "record_id": "R3-EU-005",
+            "phase_id": "R3-EU-005-C7P1",
+            "kind": "ended_by",
+            "finding_id": "R3-EU-005",
+            "basis": "policy_ended",
+            "from": "2020-06-13"
           }
         ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Relevant page text or indexed source extract inspected; unavailable sections are not assumed."
+        "limitations": "This is a bound on the original restriction, not proof of present-day openness, continuous access, or an exact reopening date. Historical durations remain unchanged. The railway policy and minor-road access are separate phases. Later pandemic reclosures are not merged into this phase.",
+        "source_access": "Relevant source text inspected; the finding is limited to the specified policy or crossing.",
+        "previous_assessment": {
+          "outcome": "partial",
+          "evidence_date": "2026-06-18",
+          "finding": "Slovenian government guidance explicitly permits all EU and third-country nationals at all Italy crossings during the period ending 18 June 2026. This bounds the old minor-road closure; the separately coded passenger railway phase remains unresolved.",
+          "sources": [
+            {
+              "url": "https://www.gov.si/en/news/2020-06-12-55th-correspondence-session-government-adopts-several-ordinances-on-crossing-the-border/",
+              "title": "55th correspondence session: Government adopts several ordinances on crossing the border | GOV.SI",
+              "publisher": "gov.si",
+              "checked_at": "2026-10-25"
+            },
+            {
+              "url": "https://www.gov.si/en/registries/projects/zacasni-nadzor-na-notranji-meji/",
+              "title": "Temporary control on the internal border | GOV.SI",
+              "publisher": "gov.si",
+              "checked_at": "2026-10-25"
+            }
+          ],
+          "integration": [
+            {
+              "record_id": "R3-EU-005",
+              "phase_id": "R3-EU-005-C7P2",
+              "from": "2026-06-18",
+              "kind": "ended_by",
+              "finding_id": "R3-EU-005"
+            }
+          ],
+          "source_access": "Relevant page text or indexed source extract inspected; unavailable sections are not assumed."
+        }
       },
       {
         "record_id": "R3-EU-007",
@@ -8637,9 +9059,9 @@
         "record_id": "R3-RT-001",
         "title": "Austria–Liechtenstein: Mauren and Schellenberg pandemic gate closures",
         "checked_at": "2026-10-25",
-        "outcome": "unresolved",
-        "evidence_date": null,
-        "finding": "Ending border controls and listing legal crossings do not themselves prove the Mauren and Schellenberg barriers were reopened.",
+        "outcome": "ended_by",
+        "evidence_date": "2024-04-12",
+        "finding": "An April 2024 parliamentary question and government response discuss routine traffic counts across four Austrian frontier routes, explicitly including Hub–Mauren and Egg/Nofels–Schellenberg. This supports a conservative later-access bound for the two local closures; it does not establish their original reopening day.",
         "phases": [
           {
             "phase_id": "R3-RT-001-D1",
@@ -8649,22 +9071,46 @@
         ],
         "sources": [
           {
-            "url": "https://wiki.unece.org/pages/viewpage.action?pageId=117508736",
-            "title": "Austria - Observatory on Border Crossings Status due to COVID-19 - UNECE Wiki",
-            "publisher": "wiki.unece.org",
-            "checked_at": "2026-10-25"
-          },
-          {
-            "url": "https://www.edm.gv.at/edm_portal/redaList.do?d-49520-o=1&d-49520-p=1&d-49520-s=3&seqCode=u6qu9nyiihhetq&ubastyle_nav=false",
-            "title": "EDM Portal - Aktuelle Liste - 7447: Österreichische Grenzübergänge",
-            "publisher": "edm.gv.at",
+            "url": "https://www.landtag.li/kleine-anfragen?month=4&year=2024",
+            "title": "Traffic counts and analysis of the counting-station database, question 10 April and answer 12 April 2024",
+            "publisher": "Landtag of Liechtenstein",
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "R3-RT-001",
+            "phase_id": "R3-RT-001-D1",
+            "kind": "ended_by",
+            "finding_id": "R3-RT-001",
+            "basis": "later_access",
+            "from": "2024-04-12"
+          }
+        ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "limitations": "This is a bound on the original restriction, not proof of present-day openness, continuous access, or an exact reopening date. Historical durations remain unchanged. The bound is an inference from documented routine traffic on the named routes, not a reopening announcement.",
+        "source_access": "Relevant source text inspected; the finding is limited to the specified policy or crossing.",
+        "previous_assessment": {
+          "outcome": "unresolved",
+          "evidence_date": null,
+          "finding": "Ending border controls and listing legal crossings do not themselves prove the Mauren and Schellenberg barriers were reopened.",
+          "sources": [
+            {
+              "url": "https://wiki.unece.org/pages/viewpage.action?pageId=117508736",
+              "title": "Austria - Observatory on Border Crossings Status due to COVID-19 - UNECE Wiki",
+              "publisher": "wiki.unece.org",
+              "checked_at": "2026-10-25"
+            },
+            {
+              "url": "https://www.edm.gv.at/edm_portal/redaList.do?d-49520-o=1&d-49520-p=1&d-49520-s=3&seqCode=u6qu9nyiihhetq&ubastyle_nav=false",
+              "title": "EDM Portal - Aktuelle Liste - 7447: Österreichische Grenzübergänge",
+              "publisher": "edm.gv.at",
+              "checked_at": "2026-10-25"
+            }
+          ],
+          "integration": [],
+          "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        }
       },
       {
         "record_id": "R3-EU-009",
@@ -9080,9 +9526,9 @@
         "record_id": "R4-EU-002",
         "title": "Lithuania prohibits non-exempt foreign entry during the first pandemic wave",
         "checked_at": "2026-10-25",
-        "outcome": "partial",
-        "evidence_date": "2022-05-01",
-        "finding": "National COVID emergency ended, but entry-focused notice was not independently established against the phase's citizen-departure scope.",
+        "outcome": "ended_by",
+        "evidence_date": "2020-05-04",
+        "finding": "The Lithuanian report commissioned for the EU Fundamental Rights Agency states that the prohibition on Lithuanian citizens leaving the country was revoked from 4 May 2020. This directly addresses the citizen-exit policy, independently of foreign-entry rules or airline schedules.",
         "phases": [
           {
             "phase_id": "R4-EU-002-C7P1",
@@ -9092,30 +9538,60 @@
         ],
         "sources": [
           {
-            "url": "https://www.urm.lt/en/news/important-information-regarding-the-coronavirus-covid-19/929",
-            "title": "Important information regarding the Coronavirus (COVID-19) | Ministry of Foreign Affairs of the Republic of Lithuania",
-            "publisher": "urm.lt",
+            "url": "https://fra.europa.eu/sites/default/files/fra_uploads/lt_report_on_coronavirus_pandemic_may_2020.pdf",
+            "title": "Coronavirus pandemic in the EU: Lithuania, May 2020",
+            "publisher": "Lithuanian Social Research Centre, commissioned by EU FRA",
             "checked_at": "2026-10-25"
           },
           {
-            "url": "https://q2022.stat.gov.lt/lt/covid-19",
-            "title": "COVID-19 | Q2022",
-            "publisher": "q2022.stat.gov.lt",
+            "url": "https://www.lrt.lt/en/news-in-english/19/1169992/lithuania-lifts-exit-restrictions-for-citizens-airlines-to-resume-flights",
+            "title": "Lithuania lifts exit restrictions for citizens",
+            "publisher": "LRT",
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "R4-EU-002",
+            "phase_id": "R4-EU-002-C7P1",
+            "kind": "ended_by",
+            "finding_id": "R4-EU-002",
+            "basis": "policy_ended",
+            "from": "2020-05-04"
+          }
+        ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "limitations": "This is a bound on the original restriction, not proof of present-day openness, continuous access, or an exact reopening date. Historical durations remain unchanged. ",
+        "source_access": "Relevant source text inspected; the finding is limited to the specified policy or crossing.",
+        "previous_assessment": {
+          "outcome": "partial",
+          "evidence_date": "2022-05-01",
+          "finding": "National COVID emergency ended, but entry-focused notice was not independently established against the phase's citizen-departure scope.",
+          "sources": [
+            {
+              "url": "https://www.urm.lt/en/news/important-information-regarding-the-coronavirus-covid-19/929",
+              "title": "Important information regarding the Coronavirus (COVID-19) | Ministry of Foreign Affairs of the Republic of Lithuania",
+              "publisher": "urm.lt",
+              "checked_at": "2026-10-25"
+            },
+            {
+              "url": "https://q2022.stat.gov.lt/lt/covid-19",
+              "title": "COVID-19 | Q2022",
+              "publisher": "q2022.stat.gov.lt",
+              "checked_at": "2026-10-25"
+            }
+          ],
+          "integration": [],
+          "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        }
       },
       {
         "record_id": "R4-EU-003",
         "title": "Latvia prohibits non-exempt passenger movement at Russian and Belarusian land borders in March 2020",
         "checked_at": "2026-10-25",
-        "outcome": "unresolved",
-        "evidence_date": null,
-        "finding": "The April 2022 notice removes certificates and tests but does not explicitly settle the non-essential passenger-admission rule at the Russian and Belarusian frontiers. Testing relaxation alone is not used as an endpoint.",
+        "outcome": "ended_by",
+        "evidence_date": "2022-03-01",
+        "finding": "Latvia removed the requirement for a significant reason to enter from 1 March 2022, applying the same entry requirements regardless of departure country. Testing or vaccination documentation remained, but the recorded non-essential-travel prohibition did not. Later restrictions targeting Russian nationals must be assessed separately.",
         "phases": [
           {
             "phase_id": "R4-EU-003-C7P1",
@@ -9125,16 +9601,46 @@
         ],
         "sources": [
           {
-            "url": "https://www.rs.gov.lv/en/article/1-april-2022-no-covid-19-certificate-or-test-will-be-required-when-entering-latvia",
-            "title": "From 1 April 2022, no COVID-19 certificate or test will be required when entering Latvia | Valsts robežsardze",
-            "publisher": "rs.gov.lv",
+            "url": "https://www.rs.gov.lv/en/article/1-march-2022-entry-rules-will-change",
+            "title": "From 1 March 2022, the entry rules will change",
+            "publisher": "Latvian State Border Guard / Ministry of Transport",
+            "checked_at": "2026-10-25"
+          },
+          {
+            "url": "https://covid19.gov.lv/en/aktualites/1-march-2022-entry-rules-will-change",
+            "title": "From 1 March 2022, the entry rules will change",
+            "publisher": "Latvian State Chancellery",
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "R4-EU-003",
+            "phase_id": "R4-EU-003-C7P1",
+            "kind": "ended_by",
+            "finding_id": "R4-EU-003",
+            "basis": "policy_ended",
+            "from": "2022-03-01"
+          }
+        ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "limitations": "This is a bound on the original restriction, not proof of present-day openness, continuous access, or an exact reopening date. Historical durations remain unchanged. ",
+        "source_access": "Detailed indexed official source text inspected; direct State Border Guard retrieval timed out. The government COVID information site carries the same notice.",
+        "previous_assessment": {
+          "outcome": "unresolved",
+          "evidence_date": null,
+          "finding": "The April 2022 notice removes certificates and tests but does not explicitly settle the non-essential passenger-admission rule at the Russian and Belarusian frontiers. Testing relaxation alone is not used as an endpoint.",
+          "sources": [
+            {
+              "url": "https://www.rs.gov.lv/en/article/1-april-2022-no-covid-19-certificate-or-test-will-be-required-when-entering-latvia",
+              "title": "From 1 April 2022, no COVID-19 certificate or test will be required when entering Latvia | Valsts robežsardze",
+              "publisher": "rs.gov.lv",
+              "checked_at": "2026-10-25"
+            }
+          ],
+          "integration": [],
+          "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        }
       },
       {
         "record_id": "R4-AES-002",
@@ -9364,9 +9870,9 @@
         "record_id": "R4-AWN-002",
         "title": "Sierra Leone COVID land-border closure and initial return window",
         "checked_at": "2026-10-25",
-        "outcome": "unresolved",
-        "evidence_date": null,
-        "finding": "The January 2021 government FAQ explicitly says the Guinea and Liberia land borders are closed. It is historical evidence, not a reopening or current-status confirmation.",
+        "outcome": "ended_by",
+        "evidence_date": "2021-02-28",
+        "finding": "The World Bank’s 2021 Resilient Urban Sierra Leone project document states that land borders reopened in February 2021. A conservative month-end bound is used for the earlier national closure policy; the source does not identify a reopening day for every post.",
         "phases": [
           {
             "phase_id": "R4-AWN-002-D1",
@@ -9376,16 +9882,40 @@
         ],
         "sources": [
           {
-            "url": "https://mohs.gov.sl/wp-content/uploads/2021/01/FAQs-Revised-Measures-29th-Jan-2021-V3.pdf",
-            "title": "FREQUENTLY ASKED QUESTIONS (FAQS)",
-            "publisher": "mohs.gov.sl",
+            "url": "https://documents1.worldbank.org/curated/en/323121624932169139/pdf/Sierra-Leone-Resilient-Urban-Sierra-Leone-Project.pdf",
+            "title": "Resilient Urban Sierra Leone Project, Annex 5, paragraph 2",
+            "publisher": "World Bank",
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "R4-AWN-002",
+            "phase_id": "R4-AWN-002-D1",
+            "kind": "ended_by",
+            "finding_id": "R4-AWN-002",
+            "basis": "policy_ended",
+            "from": "2021-02-28"
+          }
+        ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Relevant page text or indexed source extract inspected; unavailable sections are not assumed."
+        "limitations": "This is a bound on the original restriction, not proof of present-day openness, continuous access, or an exact reopening date. Historical durations remain unchanged. Month precision is retained in the finding. The 28 February value is an upper bound, not an asserted exact reopening date.",
+        "source_access": "Relevant source text inspected; the finding is limited to the specified policy or crossing.",
+        "previous_assessment": {
+          "outcome": "unresolved",
+          "evidence_date": null,
+          "finding": "The January 2021 government FAQ explicitly says the Guinea and Liberia land borders are closed. It is historical evidence, not a reopening or current-status confirmation.",
+          "sources": [
+            {
+              "url": "https://mohs.gov.sl/wp-content/uploads/2021/01/FAQs-Revised-Measures-29th-Jan-2021-V3.pdf",
+              "title": "FREQUENTLY ASKED QUESTIONS (FAQS)",
+              "publisher": "mohs.gov.sl",
+              "checked_at": "2026-10-25"
+            }
+          ],
+          "integration": [],
+          "source_access": "Relevant page text or indexed source extract inspected; unavailable sections are not assumed."
+        }
       },
       {
         "record_id": "R4-AWN-005",
@@ -9495,15 +10025,16 @@
         "integration": [],
         "current_status_established": false,
         "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection.",
+        "followup_note": "An EABC advocacy report describes Kenya–Tanzania truck movement resuming after bilateral talks and names Namanga, Horohoro, Holili and Sirari. It does not securely date the outcome against both recorded May/June restrictions on Kenyan truckers. The file name suggests July 2020, but that alone is not adopted as an event date."
       },
       {
         "record_id": "R5-SC-001",
         "title": "Banke restricts Nepali shopping trips through Jamunaha–Rupaidiha during the 2021 COVID wave",
         "checked_at": "2026-10-25",
-        "outcome": "partial",
-        "evidence_date": null,
-        "finding": "Later full vehicular resumption is reported; Nepali discretionary shopping eligibility needs confirmation, not just vehicle admission.",
+        "outcome": "ended_by",
+        "evidence_date": "2022-12-06",
+        "finding": "A dated December 2022 Nepalgunj travel report describes Nepalese residents crossing to shop in Rupaidiha. Subsequent CSISA research records household shopping journeys to the same market during the 2023 sugar shortage. This is later evidence for the affected local-shopping movement and bounds both 2021 restrictions; it is not a national entry-policy finding.",
         "phases": [
           {
             "phase_id": "R5-SC-001-FU1",
@@ -9518,30 +10049,68 @@
         ],
         "sources": [
           {
-            "url": "https://thehimalayantimes.com/ampArticle/1006488",
-            "title": "Jamunaha border with India fully operational",
-            "publisher": "thehimalayantimes.com",
+            "url": "https://nepaltraveller.com/index.php/sidetrack/top-5-things-to-do-in-nepalgunj",
+            "title": "Top 5 Things to do in Nepalgunj, 6 December 2022",
+            "publisher": "Nepal Traveller",
             "checked_at": "2026-10-25"
           },
           {
-            "url": "https://english.nepalnews.com/s/nation/movement-to-rupaidiha-across-indian-border-banned/",
-            "title": "Nepal News | Nepal's First Online News Portal",
-            "publisher": "english.nepalnews.com",
+            "url": "https://csisa.org/wp-content/uploads/sites/2/2025/02/240731-CSISA-INFORMAL-TRADE_web.pdf",
+            "title": "Study of informal agricultural trade across the India–Nepal border",
+            "publisher": "Cereal Systems Initiative for South Asia / CIMMYT",
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "R5-SC-001",
+            "phase_id": "R5-SC-001-FU1",
+            "kind": "ended_by",
+            "finding_id": "R5-SC-001",
+            "basis": "later_access",
+            "from": "2022-12-06"
+          },
+          {
+            "record_id": "R5-SC-001",
+            "phase_id": "R5-SC-001-FU2",
+            "kind": "ended_by",
+            "finding_id": "R5-SC-001",
+            "basis": "later_access",
+            "from": "2022-12-06"
+          }
+        ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "limitations": "This is a bound on the original restriction, not proof of present-day openness, continuous access, or an exact reopening date. Historical durations remain unchanged. The bound relies on documented routine shopping rather than an official repeal notice. The research discusses informal goods trade; it is not proof of unrestricted customs clearance or every route being open.",
+        "source_access": "Relevant source text inspected; the finding is limited to the specified policy or crossing.",
+        "previous_assessment": {
+          "outcome": "partial",
+          "evidence_date": null,
+          "finding": "Later full vehicular resumption is reported; Nepali discretionary shopping eligibility needs confirmation, not just vehicle admission.",
+          "sources": [
+            {
+              "url": "https://thehimalayantimes.com/ampArticle/1006488",
+              "title": "Jamunaha border with India fully operational",
+              "publisher": "thehimalayantimes.com",
+              "checked_at": "2026-10-25"
+            },
+            {
+              "url": "https://english.nepalnews.com/s/nation/movement-to-rupaidiha-across-indian-border-banned/",
+              "title": "Nepal News | Nepal's First Online News Portal",
+              "publisher": "english.nepalnews.com",
+              "checked_at": "2026-10-25"
+            }
+          ],
+          "integration": [],
+          "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        }
       },
       {
         "record_id": "R5-AES-005",
         "title": "Gabon COVID land-passenger restrictions beginning with northern closure in March 2020",
         "checked_at": "2026-10-25",
-        "outcome": "partial",
-        "evidence_date": "2022-07-01",
-        "finding": "Travel dashboard reports land access restored and COVID restrictions lifted; official provenance and northern-post coverage need verification.",
+        "outcome": "ended_by",
+        "evidence_date": "2023-09-02",
+        "finding": "Gabon’s presidency explicitly reopened land, sea and air borders with immediate effect on 2 September 2023. This later, nationwide land-access decision bounds the old northern COVID closure. It followed a separate coup-related closure and must not be interpreted as evidence that COVID closure continued until 2023.",
         "phases": [
           {
             "phase_id": "R5-AES-005-R1",
@@ -9551,16 +10120,46 @@
         ],
         "sources": [
           {
-            "url": "https://www.arcgis.com/apps/dashboards/f79cf21fd8124482bb83fa5c2e4e5f2c",
-            "title": "Afro region Travel requirements - Mobile version",
-            "publisher": "arcgis.com",
+            "url": "https://presidence.ga/2023/09/02/communique-du-ctri-n005-2/",
+            "title": "Communiqué du CTRI No. 005, 2 September 2023",
+            "publisher": "Presidency of Gabon",
+            "checked_at": "2026-10-25"
+          },
+          {
+            "url": "https://www.afro.who.int/fr/countries/gabon/news/riposte-contre-la-covid-19-deux-ans-apres-le-premier-cas-le-gabon-leve-lensemble-des-mesures",
+            "title": "Gabon lifts COVID restrictive measures, 12 March 2022",
+            "publisher": "WHO Regional Office for Africa",
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "R5-AES-005",
+            "phase_id": "R5-AES-005-R1",
+            "kind": "ended_by",
+            "finding_id": "R5-AES-005",
+            "basis": "policy_ended",
+            "from": "2023-09-02"
+          }
+        ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "limitations": "This is a bound on the original restriction, not proof of present-day openness, continuous access, or an exact reopening date. Historical durations remain unchanged. WHO reported broad lifting in March 2022 but did not enumerate the northern land posts. The later explicit land-border decision supplies the conservative bound; neither source establishes current status.",
+        "source_access": "Relevant source text inspected; the finding is limited to the specified policy or crossing.",
+        "previous_assessment": {
+          "outcome": "partial",
+          "evidence_date": "2022-07-01",
+          "finding": "Travel dashboard reports land access restored and COVID restrictions lifted; official provenance and northern-post coverage need verification.",
+          "sources": [
+            {
+              "url": "https://www.arcgis.com/apps/dashboards/f79cf21fd8124482bb83fa5c2e4e5f2c",
+              "title": "Afro region Travel requirements - Mobile version",
+              "publisher": "arcgis.com",
+              "checked_at": "2026-10-25"
+            }
+          ],
+          "integration": [],
+          "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        }
       },
       {
         "record_id": "R5-AES-001",
@@ -9634,9 +10233,9 @@
         "record_id": "R6-SC-001",
         "title": "Kyrgyzstan China-frontier COVID closure order and phased cargo restoration",
         "checked_at": "2026-10-25",
-        "outcome": "unresolved",
-        "evidence_date": null,
-        "finding": "Targeted passenger reopening search did not return adequate Torugart/Irkeshtam evidence; freight reopening would not resolve passenger eligibility.",
+        "outcome": "ended_by",
+        "evidence_date": "2023-08-06",
+        "finding": "The Kyrgyz Border Service’s August 2023 announcement explicitly allows tourists and other citizens, on foot or in cars, through both Torugart and Irkeshtam on weekdays from 6 August. Weekends remained freight-only. This establishes passenger access at both named gates and bounds their earlier COVID passenger suspension.",
         "phases": [
           {
             "phase_id": "R6-SC-001-REV1",
@@ -9644,11 +10243,35 @@
             "scope": "Kyrgyz order 27-р restriction on non-exempt persons at Irkeshtam-road and Torugart-road; distinct from cargo operating status"
           }
         ],
-        "sources": [],
-        "integration": [],
+        "sources": [
+          {
+            "url": "https://24.kg/english/272014_Working_hours_of_Torugart-Avtodorozhny_checkpoint_changed/",
+            "title": "Working hours of Torugart-Avtodorozhny checkpoint changed, 8 August 2023",
+            "publisher": "24.kg, quoting Kyrgyz Border Service",
+            "checked_at": "2026-10-25"
+          }
+        ],
+        "integration": [
+          {
+            "record_id": "R6-SC-001",
+            "phase_id": "R6-SC-001-REV1",
+            "kind": "ended_by",
+            "finding_id": "R6-SC-001",
+            "basis": "later_access",
+            "from": "2023-08-06"
+          }
+        ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Targeted searches did not return sufficiently specific later evidence. The original release evidence and endpoint remain unchanged."
+        "limitations": "This is a bound on the original restriction, not proof of present-day openness, continuous access, or an exact reopening date. Historical durations remain unchanged. The reported schedule ran through 30 September 2023. It is evidence of later access, not proof of continuous or present-day opening.",
+        "source_access": "Full relevant indexed article text inspected. Direct page retrieval returned HTTP 403; no claim of direct agency-document inspection.",
+        "previous_assessment": {
+          "outcome": "unresolved",
+          "evidence_date": null,
+          "finding": "Targeted passenger reopening search did not return adequate Torugart/Irkeshtam evidence; freight reopening would not resolve passenger eligibility.",
+          "sources": [],
+          "integration": [],
+          "source_access": "Targeted searches did not return sufficiently specific later evidence. The original release evidence and endpoint remain unchanged."
+        }
       },
       {
         "record_id": "R6-EA-001",
@@ -9682,20 +10305,33 @@
             "title": "Many Vietnam-Laos border gates reopen as pandemic subsides | VOV.VN",
             "publisher": "english.vov.vn",
             "checked_at": "2026-10-25"
+          },
+          {
+            "url": "https://doisongphapluat.com.vn/xuat-nhap-canh-sang-lao-tro-lai-binh-thuong-sau-2-nam-ngung-tre-vi-covid-19-a536983.html",
+            "title": "Xuất nhập cảnh sang Lào trở lại bình thường sau 2 năm ngưng trệ vì COVID-19",
+            "publisher": "Đời sống & Pháp luật",
+            "checked_at": "2026-10-25"
+          },
+          {
+            "url": "https://baoquangtri.vn/thoi-su/202206/chinh-phu-lao-nhat-tri-mo-lai-cua-khau-quoc-te-phuc-vu-xuat-nhap-canh-2201009/",
+            "title": "Chính phủ Lào nhất trí mở lại cửa khẩu quốc tế phục vụ xuất nhập cảnh",
+            "publisher": "Báo Quảng Trị",
+            "checked_at": "2026-10-25"
           }
         ],
         "integration": [],
         "current_status_established": false,
         "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection.",
+        "followup_note": "May 2022 reporting described normal Laos entry including auxiliary gates, but a June Quang Tri government report still distinguished closed minor gates and trails from reopened international gates. These statements do not securely establish reopening at all four named auxiliary posts; the conflict is retained."
       },
       {
         "record_id": "R6-EA-006",
         "title": "Merauke closes Sota, Kali Torasi and Bupul crossings to PNG for COVID prevention",
         "checked_at": "2026-10-25",
-        "outcome": "unresolved",
-        "evidence_date": null,
-        "finding": "Skouw and nationwide PNG admission notices do not establish operation at Sota, Kali Torasi and Bupul.",
+        "outcome": "partial",
+        "evidence_date": "2022-06-07",
+        "finding": "Merauke’s official report quotes the Sota post head describing weekday shopping access for nearby PNG residents and permission for customary, family and bereavement visits in both directions. This bounds the Sota traditional-people suspension. Movement outside the border market still required permission, and the separate combined Sota/Kali Torasi/Bupul phase remains unresolved.",
         "phases": [
           {
             "phase_id": "R6-EA-006-R1",
@@ -9710,36 +10346,60 @@
         ],
         "sources": [
           {
-            "url": "https://setkab.go.id/en/covid-19-task-force-issues-new-circular-on-health-protocols-for-international-travel/",
-            "title": "Sekretariat Kabinet Republik Indonesia | COVID-19 Task Force Issues New Circular on Health Protocols for International Travel - Sekretariat Kabinet Republik Indonesia",
-            "publisher": "setkab.go.id",
-            "checked_at": "2026-10-25"
-          },
-          {
-            "url": "https://bnpp.go.id/berita/menanti-2-tahun-border-post-wutung-png-dibuka-kini-jalur-perlintasan-plbn-skouw-papua-resmi-beroperasi",
-            "title": "Berita - Menanti 2 Tahun Border Post Wutung-PNG Dibuka, Kini Jalur Perlintasan PLBN Skouw-Papua Resmi Beroperasi",
-            "publisher": "bnpp.go.id",
-            "checked_at": "2026-10-25"
-          },
-          {
-            "url": "https://papuanewguinea.travel/travel-advice-update/",
-            "title": "Travel Advice | Papua New Guinea",
-            "publisher": "papuanewguinea.travel",
+            "url": "https://infopublik.id/kategori/nusantara/638185/index.html",
+            "title": "PLBN Sota Sudah Buka Lima Hari, 7 June 2022",
+            "publisher": "Merauke government media centre / InfoPublik",
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "R6-EA-006",
+            "phase_id": "R6-EA-006-REV1",
+            "kind": "ended_by",
+            "finding_id": "R6-EA-006",
+            "basis": "later_access",
+            "from": "2022-06-07"
+          }
+        ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "limitations": "This is a bound on the original restriction, not proof of present-day openness, continuous access, or an exact reopening date. Historical durations remain unchanged. Only the separately coded traditional Sota phase is bounded. Market access, visits and medical exceptions do not prove normal international passage at all three posts.",
+        "source_access": "Detailed indexed official report inspected. Direct retrieval redirected to a login; the finding does not assume inaccessible material.",
+        "previous_assessment": {
+          "outcome": "unresolved",
+          "evidence_date": null,
+          "finding": "Skouw and nationwide PNG admission notices do not establish operation at Sota, Kali Torasi and Bupul.",
+          "sources": [
+            {
+              "url": "https://setkab.go.id/en/covid-19-task-force-issues-new-circular-on-health-protocols-for-international-travel/",
+              "title": "Sekretariat Kabinet Republik Indonesia | COVID-19 Task Force Issues New Circular on Health Protocols for International Travel - Sekretariat Kabinet Republik Indonesia",
+              "publisher": "setkab.go.id",
+              "checked_at": "2026-10-25"
+            },
+            {
+              "url": "https://bnpp.go.id/berita/menanti-2-tahun-border-post-wutung-png-dibuka-kini-jalur-perlintasan-plbn-skouw-papua-resmi-beroperasi",
+              "title": "Berita - Menanti 2 Tahun Border Post Wutung-PNG Dibuka, Kini Jalur Perlintasan PLBN Skouw-Papua Resmi Beroperasi",
+              "publisher": "bnpp.go.id",
+              "checked_at": "2026-10-25"
+            },
+            {
+              "url": "https://papuanewguinea.travel/travel-advice-update/",
+              "title": "Travel Advice | Papua New Guinea",
+              "publisher": "papuanewguinea.travel",
+              "checked_at": "2026-10-25"
+            }
+          ],
+          "integration": [],
+          "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        }
       },
       {
         "record_id": "R6-EA-005",
         "title": "Chi Ma–Ai Diem halts freight clearance during March–April 2022 outbreak",
         "checked_at": "2026-10-25",
-        "outcome": "unresolved",
-        "evidence_date": null,
-        "finding": "January 2022 reopening predates this March closure and cannot resolve its endpoint.",
+        "outcome": "ended_by",
+        "evidence_date": "2022-04-26",
+        "finding": "A 26 April 2022 report quoting the Dong Dang–Lang Son Border Gate Economic Zone authority describes goods clearance restored at Chi Ma–Ai Diem, with container transfer arrangements from 21 April. This supports a conservative publication-date bound on the March freight suspension, without treating capacity limits or transfer procedures as unrestricted trade.",
         "phases": [
           {
             "phase_id": "R6-EA-005-FU1",
@@ -9749,22 +10409,46 @@
         ],
         "sources": [
           {
-            "url": "https://en.nhandan.vn/chi-ma-and-tan-thanh-border-gates-resume-customs-clearance-post110232.html",
-            "title": "Chi Ma and Tan Thanh border gates resume customs clearance",
-            "publisher": "en.nhandan.vn",
-            "checked_at": "2026-10-25"
-          },
-          {
-            "url": "https://english.haiquanonline.com.vn/china-suspends-customs-clearance-at-chi-ma-border-gate-21290.html",
-            "title": "China suspends customs clearance at Chi Ma border gate",
-            "publisher": "english.haiquanonline.com.vn",
+            "url": "https://www.vinacas.com.vn/khoi-phuc-thong-quan-hang-hoa-tai-nhieu-cua-khau-o-lang-son-bv2910.htm",
+            "title": "Khôi phục thông quan hàng hoá tại nhiều cửa khẩu ở Lạng Sơn",
+            "publisher": "Vietnam Cashew Association, reproducing Công An Nhân Dân",
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "R6-EA-005",
+            "phase_id": "R6-EA-005-FU1",
+            "kind": "ended_by",
+            "finding_id": "R6-EA-005",
+            "basis": "later_access",
+            "from": "2022-04-26"
+          }
+        ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "limitations": "This is a bound on the original restriction, not proof of present-day openness, continuous access, or an exact reopening date. Historical durations remain unchanged. The later report describes resumption from 20 April; 26 April is used conservatively because contemporaneous reports differ on the immediate restart timetable.",
+        "source_access": "Relevant source text inspected; the finding is limited to the specified policy or crossing.",
+        "previous_assessment": {
+          "outcome": "unresolved",
+          "evidence_date": null,
+          "finding": "January 2022 reopening predates this March closure and cannot resolve its endpoint.",
+          "sources": [
+            {
+              "url": "https://en.nhandan.vn/chi-ma-and-tan-thanh-border-gates-resume-customs-clearance-post110232.html",
+              "title": "Chi Ma and Tan Thanh border gates resume customs clearance",
+              "publisher": "en.nhandan.vn",
+              "checked_at": "2026-10-25"
+            },
+            {
+              "url": "https://english.haiquanonline.com.vn/china-suspends-customs-clearance-at-chi-ma-border-gate-21290.html",
+              "title": "China suspends customs clearance at Chi Ma border gate",
+              "publisher": "english.haiquanonline.com.vn",
+              "checked_at": "2026-10-25"
+            }
+          ],
+          "integration": [],
+          "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        }
       },
       {
         "record_id": "R6-AWN-004",
@@ -11231,9 +11915,9 @@
         "record_id": "REC50-R06-004",
         "title": "Beitbridge exceptional night-time passenger curfews in December 2020",
         "checked_at": "2026-10-25",
-        "outcome": "unresolved",
-        "evidence_date": null,
-        "finding": "Nominal 24-hour processing could still exclude passengers during curfew; freight hours do not resolve either passenger phase.",
+        "outcome": "ended_by",
+        "evidence_date": "2022-12-24",
+        "finding": "South Africa’s Home Affairs department reported Beitbridge already operating 24 hours in its 23 December 2022 festive passenger plan. SABC’s 24 December report describes over 20,000 travellers crossing and confirms round-the-clock operation. Together these bound both recorded December 2020 passenger-curfew regimes, rather than relying on freight access alone.",
         "phases": [
           {
             "phase_id": "REC50-R06-004-P1",
@@ -11248,22 +11932,60 @@
         ],
         "sources": [
           {
-            "url": "https://www.ecr.co.za/news/news/home-affairs-temporarily-extends-operating-times-offices-borders/",
-            "title": "Home Affairs temporarily extends operating times at offices, borders",
-            "publisher": "ecr.co.za",
+            "url": "https://www.gov.za/af/news/media-advisories/government-activities/home-affairs-leads-implementation-202223-border-law",
+            "title": "Implementation of the 2022/23 Border Law Enforcement Festive Season Plan",
+            "publisher": "South African Department of Home Affairs",
             "checked_at": "2026-10-25"
           },
           {
-            "url": "https://www.sabcnews.com/sabcnews/sa-land-borders-reopen-on-monday-and-close-at-9pm-daily/",
-            "title": "SA land borders reopen on Monday and close at 9pm daily - SABC News - Breaking news, special reports, world, business, sport coverage of all South African current events. Africa's news leader.",
-            "publisher": "sabcnews.com",
+            "url": "https://www.sabcnews.com/sabcnews/more-than-20-000-immigrants-cross-from-south-africa-into-zimbabwe-at-the-beitbridge-border-post/",
+            "title": "More than 20,000 immigrants cross into Zimbabwe at Beitbridge, 24 December 2022",
+            "publisher": "SABC News",
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "REC50-R06-004",
+            "phase_id": "REC50-R06-004-P1",
+            "kind": "ended_by",
+            "finding_id": "REC50-R06-004",
+            "basis": "later_access",
+            "from": "2022-12-24"
+          },
+          {
+            "record_id": "REC50-R06-004",
+            "phase_id": "REC50-R06-004-P2",
+            "kind": "ended_by",
+            "finding_id": "REC50-R06-004",
+            "basis": "later_access",
+            "from": "2022-12-24"
+          }
+        ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "limitations": "This is a bound on the original restriction, not proof of present-day openness, continuous access, or an exact reopening date. Historical durations remain unchanged. ",
+        "source_access": "Official departmental page text and relevant indexed SABC text inspected; direct SABC retrieval returned HTTP 500.",
+        "previous_assessment": {
+          "outcome": "unresolved",
+          "evidence_date": null,
+          "finding": "Nominal 24-hour processing could still exclude passengers during curfew; freight hours do not resolve either passenger phase.",
+          "sources": [
+            {
+              "url": "https://www.ecr.co.za/news/news/home-affairs-temporarily-extends-operating-times-offices-borders/",
+              "title": "Home Affairs temporarily extends operating times at offices, borders",
+              "publisher": "ecr.co.za",
+              "checked_at": "2026-10-25"
+            },
+            {
+              "url": "https://www.sabcnews.com/sabcnews/sa-land-borders-reopen-on-monday-and-close-at-9pm-daily/",
+              "title": "SA land borders reopen on Monday and close at 9pm daily - SABC News - Breaking news, special reports, world, business, sport coverage of all South African current events. Africa's news leader.",
+              "publisher": "sabcnews.com",
+              "checked_at": "2026-10-25"
+            }
+          ],
+          "integration": [],
+          "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        }
       },
       {
         "record_id": "REC50-R07-001",
@@ -11716,9 +12438,9 @@
         "record_id": "REC50-R18-001",
         "title": "Cristo Redentor truckers’ protest obstruction during COVID testing delays, January 2022",
         "checked_at": "2026-10-25",
-        "outcome": "unresolved",
-        "evidence_date": null,
-        "finding": "January 26 still-blocked evidence located; no actual resumption established by this search.",
+        "outcome": "ended_by",
+        "evidence_date": "2022-01-31",
+        "finding": "Radio Nacional interviewed a participating trucker on 31 January 2022 and reported that the Cristo Redentor protest had been settled following roughly fifteen days of disruption. A possible new customs-staff stoppage was a separate threat. This bounds the recorded January trucker blockade without extending it into later years.",
         "phases": [
           {
             "phase_id": "REC50-R18-001-P1",
@@ -11728,16 +12450,40 @@
         ],
         "sources": [
           {
-            "url": "https://www.diariouno.com.ar/politica/chile-duplicaria-la-atencion-la-aduana-pero-los-camioneros-no-cesaran-el-bloqueo-n992891",
-            "title": "Chile informó a los camioneros que duplicará la atención en la aduana pero estos no cesarán el bloqueo",
-            "publisher": "diariouno.com.ar",
+            "url": "https://cdn-sp.radionacional.com.ar/se-regularizo-la-situacion-pero-hay-amenaza-de-paro-en-la-aduana-chilena/",
+            "title": "Se regularizó la situación, pero hay amenaza de paro en la aduana chilena",
+            "publisher": "Radio Nacional Argentina",
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "REC50-R18-001",
+            "phase_id": "REC50-R18-001-P1",
+            "kind": "ended_by",
+            "finding_id": "REC50-R18-001",
+            "basis": "later_access",
+            "from": "2022-01-31"
+          }
+        ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "limitations": "This is a bound on the original restriction, not proof of present-day openness, continuous access, or an exact reopening date. Historical durations remain unchanged. ",
+        "source_access": "Published interview summary inspected; the linked audio was not transcribed or independently checked.",
+        "previous_assessment": {
+          "outcome": "unresolved",
+          "evidence_date": null,
+          "finding": "January 26 still-blocked evidence located; no actual resumption established by this search.",
+          "sources": [
+            {
+              "url": "https://www.diariouno.com.ar/politica/chile-duplicaria-la-atencion-la-aduana-pero-los-camioneros-no-cesaran-el-bloqueo-n992891",
+              "title": "Chile informó a los camioneros que duplicará la atención en la aduana pero estos no cesarán el bloqueo",
+              "publisher": "diariouno.com.ar",
+              "checked_at": "2026-10-25"
+            }
+          ],
+          "integration": [],
+          "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        }
       },
       {
         "record_id": "REC50-R21-002",
@@ -12786,20 +13532,62 @@
     ],
     "counts": {
       "outcomes": {
-        "ended_by": 57,
-        "scope_changed": 13,
-        "partial": 22,
+        "ended_by": 75,
         "confirmed_current": 26,
-        "unresolved": 94,
+        "unresolved": 83,
+        "scope_changed": 10,
         "reported_current": 1,
         "later_confirmation": 5,
+        "partial": 18,
         "conflicting": 3
       },
-      "records_with_integrated_findings": 88,
-      "resolved_phases": 101,
-      "remaining_unverified_phases": 149,
-      "remaining_unverified_records": 136,
+      "records_with_integrated_findings": 106,
+      "resolved_phases": 122,
+      "remaining_unverified_phases": 128,
+      "remaining_unverified_records": 118,
       "status_observations": 33
+    },
+    "covid_followup": {
+      "checked_at": "2026-10-25",
+      "updated_record_ids": [
+        "EU032",
+        "R4-EU-003",
+        "R4-EU-002",
+        "R2-RT-002",
+        "R3-RT-001",
+        "R3-EU-005",
+        "AM035",
+        "AM016",
+        "EA014",
+        "SA003",
+        "R6-SC-001",
+        "R6-EA-005",
+        "GL05",
+        "R4-AWN-002",
+        "R5-AES-005",
+        "REC50-R06-004",
+        "REC50-R18-001",
+        "R5-SC-001",
+        "R6-EA-006"
+      ],
+      "previous_counts": {
+        "outcomes": {
+          "ended_by": 57,
+          "scope_changed": 13,
+          "partial": 22,
+          "confirmed_current": 26,
+          "unresolved": 94,
+          "reported_current": 1,
+          "later_confirmation": 5,
+          "conflicting": 3
+        },
+        "records_with_integrated_findings": 88,
+        "resolved_phases": 101,
+        "remaining_unverified_phases": 149,
+        "remaining_unverified_records": 136,
+        "status_observations": 33
+      },
+      "method": "Follow-up prioritised pandemic restrictions still appearing as unknown in 2025. National policy phases are matched to policy cessation; operational phases require evidence of the affected movement at the named crossing. Testing alone does not prolong an admission ban. Partial reopening is not applied to unmatched crossings. No automatic pandemic cutoff or inferred continuing closure is introduced."
     }
   }
 }
