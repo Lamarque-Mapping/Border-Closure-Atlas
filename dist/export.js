@@ -168,7 +168,7 @@
     const [x,y]=project(coordinate,snapshot),style=referenceStyle(ref,snapshot),width=style.radius*2;
     if(x < -30||y < -30||x>snapshot.size.x+30||y>snapshot.size.y+30)return;
     ctx.save();if(ref.timePossible)ctx.globalAlpha=.3;
-    if(style.unresolved){ctx.beginPath();ctx.setLineDash([]);ctx.arc(x,y,3,0,2*Math.PI);ctx.strokeStyle=style.colour;ctx.lineWidth=1.3;ctx.stroke();ctx.restore();return;}
+    if(style.unresolved){ctx.beginPath();ctx.setLineDash([]);ctx.arc(x,y,style.radius-style.pointStrokeWidth/2,0,2*Math.PI);ctx.strokeStyle=style.colour;ctx.lineWidth=style.pointStrokeWidth;ctx.stroke();ctx.restore();return;}
     ctx.setLineDash([]);ctx.lineCap='round';
     ctx.beginPath();ctx.moveTo(x-style.pointLength/2,y);ctx.lineTo(x+style.pointLength/2,y);
     if(ref.selected){ctx.lineWidth=width+6;ctx.strokeStyle=COLOURS.paper;ctx.stroke();}

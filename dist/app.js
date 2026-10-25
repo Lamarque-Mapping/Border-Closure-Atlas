@@ -455,7 +455,7 @@
       let target;
       if(point){
         const [lng,lat]=f.geometry.coordinates;
-        const mark='<span class="closure-marker-dot'+(style.unresolved?' unresolved-marker':'')+'" style="--dot-size:'+(style.radius*2)+'px;--dot-length:'+style.pointLength+'px;--dot-colour:'+style.colour+';opacity:'+(timePossible?.3:style.opacity)+'"></span>';
+        const mark='<span class="closure-marker-dot'+(style.unresolved?' unresolved-marker':'')+'" style="--dot-size:'+(style.radius*2)+'px;--dot-length:'+style.pointLength+'px;--dot-stroke:'+style.pointStrokeWidth+'px;--dot-colour:'+style.colour+';opacity:'+(timePossible?.3:style.opacity)+'"></span>';
         target=L.marker([lat,lng],{pane:'points',keyboard:true,title:label,alt:label,icon:L.divIcon({className:'closure-marker'+(isSelected?' is-selected':''),iconSize:[44,44],iconAnchor:[22,22],html:mark})}).addTo(featureGroup);
         const element=target.getElement();if(element){element.dataset.locationId=id;element.setAttribute('role','button');element.setAttribute('aria-label',label+' · '+items.length+' record'+(items.length===1?'':'s')+'. Open closure details');element.addEventListener('keydown',event=>{if(event.key===' '){event.preventDefault();openLocationCard(id,allItems,L.latLng(lat,lng),true);}});}
       }else{
