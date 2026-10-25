@@ -34,6 +34,7 @@
     <div id="map" aria-label="Map of documented border restrictions"></div>
     <div class="map-status" id="map-note">World · Border Restrictions</div>
     <p class="map-hint">Select a border or marker for dated records and sources.</p>
+    <div class="duration-toggle map-duration" role="group" aria-label="Restriction duration"><button type="button" data-map-duration="over1" aria-pressed="true" title="Documented restrictions lasting more than 24 hours">&gt;24h</button><button type="button" data-map-duration="all" aria-pressed="false" title="All durations, including short or unknown durations">All</button></div>
     <button class="panel-toggle" id="panel-toggle" aria-controls="explore-panel" aria-expanded="true">Search &amp; zoom</button>
     <aside class="sidebar" id="explore-panel" aria-label="Map views and closure records">
       <header class="panel-heading"><h2 id="panel-title">World</h2><button class="panel-close" id="collapse-panel" aria-label="Minimize search and zoom" title="Minimize search and zoom">−</button></header>
@@ -45,6 +46,7 @@
           <div class="section-top"><h3>Records</h3><button class="text-button" id="reset-button">Reset</button></div>
           <label class="map-view-control">Map view<select id="time-mode"><option value="intervals" selected>Border Restrictions</option><option value="onsets">Phases beginning</option><option value="all">All recorded closures</option></select></label>
 
+          <div class="duration-toggle map-panel-duration" role="group" aria-label="Restriction duration"><button type="button" data-map-duration="over1" aria-pressed="true" title="Documented restrictions lasting more than 24 hours">&gt;24h</button><button type="button" data-map-duration="all" aria-pressed="false" title="All durations, including short or unknown durations">All</button></div>
           <details class="record-filters" id="record-filters"><summary>Filters</summary>
           <div class="filter-grid"><label>Region<select id="region"><option value="">All regions</option></select></label><label>Coded Rationale<select id="rationale"><option value="">All coded rationales</option></select></label></div>
           <label class="chronology-filter">Timing evidence<select id="measure-type"><option value="">All evidence types</option><option value="operational_spell">Observed closure</option><option value="formal_policy_period">Policy in force</option><option value="ordered_window">Announced closure dates</option><option value="intermittent_regime">Repeated closures</option></select></label>
@@ -112,11 +114,12 @@
   <script src="status.js" defer></script>
   <script src="national.js?v=20261024-reader-workbook" defer></script>
   <script src="crossing-geography.js?v=20261024-reader-workbook" defer></script>
-  <script src="data-loader.js?v=20261024-crossing-line-dots" data-crossing-review="required" data-map-src="map-data.js?v=edf97d187acd42d6a723278d" data-analysis-src="analysis-data.json?v=d149785489286d0aa21835e5" data-source-sha="5baf139f914593184ed2eee3f5a9dfd783cb264332415f98e645b409c314a415" defer></script>
+  <script src="data-loader.js?v=20261024-crossing-line-dots" data-crossing-review="required" data-map-src="map-data.js?v=ba7ac063bc3a022788cea1d4" data-analysis-src="analysis-data.json?v=29ec864d33c32e178aa8703b" data-source-sha="5baf139f914593184ed2eee3f5a9dfd783cb264332415f98e645b409c314a415" defer></script>
   <script src="navigation.js?v=20261024-reader-workbook" defer></script>
   <script src="startup.js?v=20261024-analysis-fast" defer></script>
   <script src="vendor/leaflet.js" defer></script>
   <script src="cartography.js?v=20261024-outline-history-controls" defer></script>
+  <script src="duration.js" defer></script>
   <script src="core.js?v=20261024-crossing-line-dots" defer></script>
   <script src="border-history.js?v=20261024-history-navigation" defer></script>
   <script src="public-text.js" defer></script>

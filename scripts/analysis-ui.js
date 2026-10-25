@@ -102,8 +102,16 @@ function csvCell(value){
  return '"'+s.replace(/"/g,'""')+'"';
 }
 function downloadCSV(filename,rows){download(filename,"\ufeff"+rows.map(function(r){return r.map(csvCell).join(",");}).join("\r\n"),"text/csv;charset=utf-8");}
-const durationExplanation="Includes records with at least one documented closure period whose minimum date difference exceeds one day. A continuing closure can qualify through its last confirmed date, without implying a reopening or later duration. Policy-only dates and lengths that could be one day or less are excluded. Days use date differences, not hour-by-hour measurements.";
-const durationSelection=(population,duration)=>population+(duration==='over1'?'; minimum date difference >1 day in at least one operational phase; confirmed-through lower bounds allowed':'');
+function resetRecordFilters(){const duration=$("chartDuration").value;$("filters").reset();$("durationFilter").value=duration;}
+function setDuration(value){
+ const duration=value==='all'?'all':'over1';
+ $("chartDuration").value=duration;$("durationFilter").value=duration;
+ document.querySelectorAll('[data-duration]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.duration===duration)));
+ page=0;renderCharts();renderRecords();
+}
+function chooseDuration(value){if(ATLAS_HOST?.setDuration)ATLAS_HOST.setDuration(value);setDuration(value);}
+const durationExplanation="Includes records with at least one documented restriction period whose minimum date difference exceeds one day. A continuing closure can qualify through its last confirmed date, without implying a reopening or later duration. Documented official policy periods also qualify. Short, uncertain and unknown durations remain available under All. Days use date differences, not hour-by-hour measurements.";
+const durationSelection=(population,duration)=>population+(duration==='over1'?'; minimum date difference >1 day in at least one observed-closure or formal-policy phase; confirmed-through lower bounds allowed':'');
 const filteredFilename=(filename,duration)=>duration==='over1'?filename.replace(/\.csv$/,'-over-1-day.csv'):filename;
 function bar(label,value,total,max,kind,uncoded){
  const width=max?Math.max(0,100*value/max):0;
@@ -153,7 +161,7 @@ function renderDurationComparison(rows,population,duration='all'){
  $("durationCoverageChart").innerHTML='<table><caption>The categories follow the same order as the rationale chart. “Used” means a record contributes at least one phase to the duration comparison.</caption><thead><tr><th scope="col">Recorded rationale</th><th scope="col">Used / category total</th><th scope="col">Share used</th></tr></thead><tbody>'+coverageGroups.map(g=>'<tr><th scope="row">'+escapeHTML(g.code)+'</th><td class="sample-total">'+(g.total?g.records+' / '+g.total+' records':'No selected records')+'</td><td>'+(g.total?pct(g.records,g.total):'—')+'</td></tr>').join('')+'</tbody></table>';
 }
 function filterFromChart(kind,value){
- $("filters").reset();
+ resetRecordFilters();
  $("statusFilter").value=$("chartPopulation").value==="all"?"":$("chartPopulation").value;
  $("durationFilter").value=$("chartDuration").value;
  if(kind==="region")$("regionFilter").value=value;
@@ -293,21 +301,23 @@ function closeRecord(){
 }
 function toast(message){$("toast").textContent=message;$("toast").style.display="block";setTimeout(function(){$("toast").style.display="none";},3500);}
 document.addEventListener("click",function(event){
+ const durationButton=event.target.closest("[data-duration]");
+ if(durationButton){chooseDuration(durationButton.dataset.duration);return;}
  const record=event.target.closest("[data-record]");
  if(record){openRecord(record.dataset.record,true);return;}
  const chart=event.target.closest("[data-chart-kind]");
  if(chart){filterFromChart(chart.dataset.chartKind,chart.dataset.chartValue);return;}
  const audit=event.target.closest("[data-audit-group]");
- if(audit){$("filters").reset();$("auditFilter").value=audit.dataset.auditGroup;page=0;renderRecords();openDataset();return;}
+ if(audit){resetRecordFilters();$("auditFilter").value=audit.dataset.auditGroup;page=0;renderRecords();openDataset();return;}
  const code=event.target.closest(".code-filter");
- if(code){$("chartPopulation").value="all";$("chartDuration").value="all";renderCharts();filterFromChart("code",code.dataset.code);}
+ if(code){$("chartPopulation").value="all";renderCharts();filterFromChart("code",code.dataset.code);}
 });
 $("chartPopulation").addEventListener("change",renderCharts);
-$("chartDuration").addEventListener("change",renderCharts);
+$("chartDuration").addEventListener("change",()=>chooseDuration($("chartDuration").value));
 $("filters").addEventListener("submit",function(e){e.preventDefault();});
 $("filters").addEventListener("input",function(){page=0;renderRecords();});
 $("filters").addEventListener("change",function(){page=0;renderRecords();});
-$("filters").addEventListener("reset",function(){setTimeout(function(){page=0;renderRecords();},0);});
+$("filters").addEventListener("reset",function(){setTimeout(function(){chooseDuration($("durationFilter").value);},0);});
 $("sortRecords").addEventListener("change",function(){page=0;renderRecords();});
 $("prevPage").addEventListener("click",function(){page--;renderRecords();$("recordList").scrollIntoView({behavior:"smooth",block:"start"});});
 $("nextPage").addEventListener("click",function(){page++;renderRecords();$("recordList").scrollIntoView({behavior:"smooth",block:"start"});});
@@ -394,7 +404,7 @@ async function navigateAnalysis(hash){
   if(target){if(target.tagName==='DETAILS')target.open=true;target.scrollIntoView({behavior:"auto",block:"start"});if(currentView!=='dataset')markAnalysisSection(target.id==='patterns'?'motivation-counts':target.id);}
  }
 }
-window.AtlasAnalysis={navigate:navigateAnalysis,setView,getView:()=>currentView};
+window.AtlasAnalysis={navigate:navigateAnalysis,setView,setDuration,getView:()=>currentView};
 window.addEventListener("hashchange",function(){if(!ATLAS_HOST)navigateAnalysis(routeHash());});
 if(ATLAS_HOST)document.addEventListener("click",function(event){
  const link=event.target.closest('a[href^="#"]');
@@ -406,7 +416,7 @@ if(ATLAS_HOST)document.addEventListener("click",function(event){
  else if(currentView==="dataset"&&!hash.startsWith("#record-")&&hash!=="#register"){setView("overview");ATLAS_HOST.show("analysis",{analysisHash:hash});return;}
  replaceRoute(hash);navigateAnalysis(hash);
 });
-renderCharts();renderRecords();progress();scheduleSectionNavigation();
+setDuration(ATLAS_HOST?.getDuration?.()||"over1");progress();scheduleSectionNavigation();
 if(!ATLAS_HOST){setView(routeHash().startsWith("#record-")||["#register","#downloads"].includes(routeHash())?"dataset":"overview");}
 if(routeHash())navigateAnalysis(routeHash());
 if(ATLAS_HOST?.analysisReady)ATLAS_HOST.analysisReady();

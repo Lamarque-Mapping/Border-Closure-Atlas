@@ -42,6 +42,7 @@ jobs:
           node scripts/build-crossing-geography.cjs
           node scripts/build-status-review.cjs
           node scripts/build-evidence-pages.cjs
+          node --check dist/duration.js
           node --check dist/app.js
           node --check dist/export.js
           node --check dist/navigation.js
@@ -63,6 +64,7 @@ jobs:
           node scripts/verify-ui.cjs
           node scripts/verify-analysis-sections.cjs
           node scripts/verify-analysis-duration-filter.cjs
+          node scripts/verify-map-duration.cjs
           node scripts/verify-border-history.cjs
       - name: Prepare website
         env:

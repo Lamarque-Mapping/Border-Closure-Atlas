@@ -93,7 +93,7 @@ const context={$:node,METRICS:M,EVENTS:events,INCLUDED:events.filter(e=>!e.quara
  pct:(n,d)=>d?(100*n/d).toFixed(1)+'%':'0.0%',escapeHTML:String,norm:value=>String(value).toLowerCase(),
  frequencies:(list,key)=>list.reduce((out,e)=>(out[key(e)]=(out[key(e)]||0)+1,out),{}),
  populationMatch:(e,value)=>value==='complete'?e.timing_coverage.operational_complete:value==='exact'?e.timing_coverage.operational_exact_complete:true,
- openDataset(){},withResearch:(id,action)=>action(full),
+ resetRecordFilters(){node('filters').reset();},openDataset(){},withResearch:(id,action)=>action(full),
  exportRecordRows:(source,rows,filename)=>downloads.push({filename,recordIDs:rows.map(e=>e.id)}),
  downloadCSV:(filename,rows)=>downloads.push({filename,rows})};
 vm.createContext(context);
@@ -111,7 +111,7 @@ for(const population of Object.keys(counts))for(const duration of ['all','over1'
  assert.equal(node('chartPopulationNote').textContent.includes('more than 1 day'),duration==='over1');
  if(duration==='over1'){
   assert(node('chartDurationNote').textContent.includes('date differences, not hour-by-hour measurements'));
-  assert(node('chartDurationNote').textContent.includes('at least one documented closure period'));
+  assert(node('chartDurationNote').textContent.includes('at least one documented restriction period'));
   assert(node('chartDurationNote').textContent.includes('last confirmed date, without implying a reopening or later duration'));
  }
  for(const row of context.currentCharts.codes){
@@ -136,7 +136,7 @@ for(const population of Object.keys(counts))for(const duration of ['all','over1'
   const header=download.rows[0],populationColumn=header.indexOf('Population');
   assert(populationColumn>=0);
   assert(download.rows.slice(1).every(row=>String(row[populationColumn]).includes('>1 day')===(duration==='over1')));
-  if(duration==='over1')assert(download.rows.slice(1).every(row=>String(row[populationColumn]).includes('minimum date difference >1 day in at least one operational phase')));
+  if(duration==='over1')assert(download.rows.slice(1).every(row=>String(row[populationColumn]).includes('minimum date difference >1 day in at least one observed-closure or formal-policy phase')));
   if(id==='exportDuration'){
    assert.equal(download.rows.length,reference.exactPhases(reference.populationIDs(population,duration),duration).length+1,'phase CSV contains the native eligible sample plus its header');
    assert(download.rows.slice(1).every(row=>duration==='all'||row[6]>1),'phase CSV applies the same phase cutoff');
@@ -152,6 +152,10 @@ assert.equal(downloads.at(-1).filename,'border-closures-included-records.csv');
 assert(template.includes('All {{INCLUDED}} included records; unaffected by filters'));
 node('filters').reset();context.renderRecords();assert.equal(context.filtered.length,reference.counts.included,'reset restores unfiltered Dataset');
 node('chartDuration').value='all';context.renderCharts();assert.equal(context.currentCharts.durationRows.length,reference.exactPhases().length,'Any duration restores the complete exact distribution');
-assert(ui.includes('$("chartDuration").addEventListener("change",renderCharts)'));
+assert(ui.includes('$("chartDuration").addEventListener("change",()=>chooseDuration'));
+assert(template.includes('value="over1" selected'));
+assert(template.includes('data-duration="over1" aria-pressed="true"'));
+assert(selectedIDs.has('EU031'),'Ukraine policy qualifies');
+assert.equal(selected.length,408);
 for(const id of ['chartDuration','durationFilter'])assert(template.includes('id="'+id+'" aria-describedby='));
 console.log('Analysis duration filter passed against native release tables: '+JSON.stringify(counts)+'; conservative bounds, explicit censoring, no short-phase leakage, all chart denominators, Dataset drill-through, filtered CSV metadata, and full included-record export preserved.');

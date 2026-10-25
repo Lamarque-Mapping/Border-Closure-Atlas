@@ -6,6 +6,14 @@
   const sections=new Set(['top','main','dimensions','motivations','borderwork','patterns','coding','register','downloads','methods','motivation-counts','evidence-coverage','closure-lengths','duration-sample','geography','research-areas']);
   const hashes={overview:'#top',dataset:'#register'};
   const movedOverviewSections={'coding':'rationale-coding','evidence-coverage':'date-evidence'};
+  let duration='over1';
+  function setDuration(value){
+    const next=value==='all'?'all':'over1';
+    if(next===duration)return;
+    duration=next;
+    frame.contentWindow?.AtlasAnalysis?.setDuration?.(duration);
+    window.dispatchEvent(new CustomEvent('atlas:durationchange',{detail:{duration}}));
+  }
   let currentPage='map',frameView=null,started=false,ready=false,loadTimer=null;
   const datasetHash=hash=>/^#(?:register|downloads|record-)/.test(hash);
   const primaryPage=page=>page==='briefing'?'overview':page;
@@ -106,7 +114,7 @@
     }else if(hash===''||hash==='#map')show('map',{address:false});
   }
   window.AtlasNavigation={
-    show,analysisReady:analysisLoaded,getAnalysisHash:()=>hashes[activeView()],
+    show,getDuration:()=>duration,setDuration,analysisReady:analysisLoaded,getAnalysisHash:()=>hashes[activeView()],
     setAnalysisHash(hash){const view=frameView||activeView();hashes[view]=normaliseHash(hash);if(currentPage==='analysis'||currentPage==='dataset')updateAddress(pageHash(currentPage));},
     getAnalysisURL(hash){
       const url=new URL(location.protocol==='file:'?'https://lamarque-mapping.github.io/Border-Closure-Atlas/':location.href),target=normaliseHash(hash);

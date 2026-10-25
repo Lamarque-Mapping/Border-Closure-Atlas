@@ -35,7 +35,7 @@
       const entries=reviewed.length?reviewed:[{from_date:o.observed_at,through_date:o.observed_at,status:o.status,scope:o.scope,summary:o.summary,source_urls:o.sources.map(s=>s.url),end_inclusive:true}];
       const statusPeriods=entries.map((p,i)=>({
         period_id:o.id+(reviewed.length?'-T'+(i+1):'-OBS'),map_status:true,status:p.status,
-        status_timeline:reviewed.length>0,start_precision:p.start_precision,start_label:p.start_label,
+        status_timeline:reviewed.length>0,duration_pattern:p.duration_pattern||null,start_precision:p.start_precision,start_label:p.start_label,
         kind:'status_context',measure_type:'status_context',start_earliest:p.from_date,
         start_latest:p.from_date,end_earliest:p.through_date,end_latest:p.through_date,
         end_inclusive:p.end_inclusive,observed_at:o.observed_at,checked_at:source.reviewed_at,

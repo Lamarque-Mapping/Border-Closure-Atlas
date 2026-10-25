@@ -68,6 +68,11 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
 /* Duration and evidence filters share one chart population. */
 .chart-controls{flex-wrap:wrap;gap:12px 18px}.chart-controls label{flex:1 1 220px;min-width:0}.chart-controls p{flex:1 1 170px;margin:0}#chartDurationNote,#datasetDurationNote{margin:10px 0 14px}
 @media(max-width:620px){.chart-controls label+label{margin-top:12px}.chart-controls p{margin-top:9px}}
+.duration-toggle{display:inline-flex;gap:3px;padding:3px;border:1px solid #c7d7cc;border-radius:9px;background:#fff;box-shadow:0 2px 7px #244e4618}
+.duration-toggle button{min-width:54px;min-height:44px;padding:6px 12px;margin:0;border:0;border-radius:6px;background:transparent;color:#315a50;font:600 13px/1.2 Atlas,Arial,sans-serif;cursor:pointer;touch-action:manipulation}
+.duration-toggle button[aria-pressed="true"]{background:#27766b;color:#fff}
+.duration-toggle button:focus-visible{outline:2px solid #27766b;outline-offset:2px}
+.duration-control>span{display:block;font-size:12px;font-weight:550;color:#51685b;margin-bottom:6px}.duration-control select[hidden]{display:none}
 </style>
 </head>
 <body>
@@ -134,7 +139,7 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
   <section id="patterns" class="chapter">
    <div class="section-top"><p class="eyebrow">PATTERNS IN THE REGISTER</p></div><h2>What do the records show?</h2>
    <div class="prose"><p>Security and health and biosecurity are the most frequent labels in the collected records. The counts describe an incomplete inventory, with related policies and phases recorded separately. They do not estimate the global frequency of independent closure decisions.</p></div>
-   <div class="chart-controls"><label>Records shown<select id="chartPopulation"><option value="all">All included records</option><option value="complete">Closure length can be estimated</option><option value="exact">Exact closure dates recorded</option></select></label><label>Duration<select id="chartDuration" aria-describedby="chartDurationNote"><option value="all">Any duration</option><option value="over1">More than 1 day</option></select></label><p id="chartPopulationNote" aria-live="polite"></p></div>
+   <div class="chart-controls"><label>Records shown<select id="chartPopulation"><option value="all">All included records</option><option value="complete">Closure length can be estimated</option><option value="exact">Exact closure dates recorded</option></select></label><div class="duration-control"><span>Duration</span><select id="chartDuration" aria-describedby="chartDurationNote" hidden><option value="over1" selected>More than 24 hours</option><option value="all">All durations</option></select><div class="duration-toggle" role="group" aria-label="Restriction duration" aria-describedby="chartDurationNote"><button type="button" data-duration="over1" aria-pressed="true">&gt;24h</button><button type="button" data-duration="all" aria-pressed="false">All</button></div></div><p id="chartPopulationNote" aria-live="polite"></p></div>
    <p id="chartDurationNote" class="figure-note" aria-live="polite" hidden></p>
    <p class="figure-note population-explanation">Use the controls to compare records by date evidence and documented duration. These selections are not representative samples of all closures.</p>
    <figure id="motivation-counts" class="chart-panel" data-analysis-section="Recorded rationales"><div class="figure-heading"><div><span class="eyebrow">RECORDED RATIONALES</span><h3>How often is each rationale recorded?</h3></div><button class="quiet" id="exportCodes">Export data · CSV</button></div><div id="codeChart" class="bar-chart"></div><figcaption><span id="motivationDenominatorNote">Percentages use all selected records, including those without a category.</span> Categories overlap, so one record can appear in several bars. Select a bar to explore its records.</figcaption></figure>
@@ -166,7 +171,7 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
     <label>Research area<select id="regionFilter"><option value="">All research areas</option></select></label>
     <label>Rationale code<select id="codeFilter"><option value="">All codes</option><option value="__uncoded">No code assigned</option></select></label>
     <label>Timing or inclusion<select id="statusFilter"><option value="">All included records</option><option value="complete">Closure length can be estimated</option><option value="exact">Exact closure dates recorded</option><option value="undated">No dated evidence</option><option value="held">Has disputed date evidence</option><option value="quarantined">Excluded from analysis</option></select></label>
-    <label>Duration<select id="durationFilter" aria-describedby="datasetDurationNote"><option value="all">Any duration</option><option value="over1">More than 1 day</option></select></label>
+    <div class="duration-control"><span>Duration</span><select id="durationFilter" aria-describedby="datasetDurationNote" hidden><option value="over1" selected>More than 24 hours</option><option value="all">All durations</option></select><div class="duration-toggle" role="group" aria-label="Restriction duration" aria-describedby="datasetDurationNote"><button type="button" data-duration="over1" aria-pressed="true">&gt;24h</button><button type="button" data-duration="all" aria-pressed="false">All</button></div></div>
     <label>Current review outcome<select id="auditFilter"><option value="">Any review status</option></select></label>
     <button class="quiet" type="reset">Reset filters</button>
    </form>

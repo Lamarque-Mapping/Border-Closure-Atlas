@@ -31,7 +31,7 @@
   let labelLayer=null,labelsVisible=false,historyIndex=null,historyLayer=null,historyLocations=[];
   let data=null,events=[],locations=new Map(),locationEvents=new Map(),selected=null,cardLocation='',timer=null,noticeTimer=null,baseGroup=null,featureGroup=null,visible=[],listLimit=50;
   let exportingRecords=false,recordsReturnFocus=null,recordsListScroll=0,recordsPanelScroll=0,playbackRate=1;
-  const state={query:'',region:'',rationale:'',location:'',continent:'',precision:'',measureType:'',includeExcluded:false,showHistory:false,mode:'intervals',month:0};
+  const state={duration:window.AtlasNavigation?.getDuration?.()||'over1',query:'',region:'',rationale:'',location:'',continent:'',precision:'',measureType:'',includeExcluded:false,showHistory:false,mode:'intervals',month:0};
   const continentViews={World:[[-55,-170],[75,180]],Africa:[[-36,-20],[38,54]],Europe:[[34,-25],[72,48]],Asia:[[-10,25],[74,150]],'North America':[[6,-168],[73,-50]],'South America':[[-56,-83],[14,-32]],Oceania:[[-50,110],[5,180]]};
   const precisionLabel=e=>({crossing_reference:'Sourced crossing / policy geography',policy_coverage:'Reviewed policy geography',frontier_context:'Border shown for reference',country_context:'Country outline shown for reference',unlocated:'Location not assigned',excluded:'Excluded · list only'}[C.precision(e)]||'Geography under review');
   function resetList(){listLimit=50;}
@@ -177,6 +177,12 @@
   function scheduleViewport(){if(!viewportFrame)viewportFrame=requestAnimationFrame(syncViewport);}
 
   function populateSelect(id,values,first){const el=$(id);el.replaceChildren(new Option(first,''));[...new Set(values.filter(Boolean))].sort((a,b)=>a.localeCompare(b)).forEach(v=>el.add(new Option(v,v)));}
+  function syncDurationButtons(){
+    document.querySelectorAll('[data-map-duration]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.mapDuration===state.duration)));
+  }
+  document.querySelectorAll('[data-map-duration]').forEach(button=>button.addEventListener('click',()=>window.AtlasNavigation.setDuration(button.dataset.mapDuration)));
+  window.addEventListener('atlas:durationchange',event=>{state.duration=event.detail.duration;syncDurationButtons();if(data){stop();showBrowse();render();}});
+  syncDurationButtons();
   function resetFilters(){
     Object.assign(state,{month:C.monthOrdinal(data.meta.window_start),query:'',region:'',rationale:'',location:'',continent:'',precision:'',measureType:'',includeExcluded:false,showHistory:false,mode:'intervals'});
     selected=null;resetList();
@@ -235,7 +241,7 @@
     $('include-excluded').disabled=state.mode!=='all';$('excluded-note').textContent=state.mode==='all'?'Excluded records are list-only and never animated.':'Excluded records are unavailable in timeline views.';
     $('time-note').textContent=state.mode==='all'?'Full study period':state.mode==='onsets'?'Supported phase starts in this month':'Unmarked borders are not necessarily open.';
     $('location-filter').hidden=!state.location;$('location-filter-label').textContent=state.location?'Linked to '+(locations.get(state.location)?.properties?.label||locations.get(state.location)?.properties?.name||state.location):'';
-    const activeFilters=[state.region,state.rationale,state.measureType?C.measureLabel(state.measureType):'',({crossing_reference:'Crossing points / national rules',context:'Wider border references',unlocated:'Locations awaiting checks'})[state.precision],state.includeExcluded&&state.mode==='all'?'Including excluded records':''].filter(Boolean);
+    const activeFilters=[state.duration==='over1'?'Duration >24h':'',state.region,state.rationale,state.measureType?C.measureLabel(state.measureType):'',({crossing_reference:'Crossing points / national rules',context:'Wider border references',unlocated:'Locations awaiting checks'})[state.precision],state.includeExcluded&&state.mode==='all'?'Including excluded records':''].filter(Boolean);
     $('filter-summary').textContent=activeFilters.join(' · ');$('filter-summary').hidden=!activeFilters.length;
     updatePanelTitle();updateTabs();renderList();renderHistoryLocations();renderLocations();
     updateRecordsControls();
@@ -321,7 +327,7 @@
     const duration=first?cardPeriodHTML(first)+(other.length?'<details class="location-extra-periods"><summary>'+other.length+' more dated stage'+(other.length===1?'':'s')+'</summary>'+other.map(cardPeriodHTML).join('')+'</details>':''):'<p class="location-period-duration">Dates and duration are not established.</p>';
     const rationales=C.array(e.rationales);
     const description=window.BorderSummary?.describe(e,{periods});
-    return '<article><h3 class="location-closure-title">'+escape(publicText(e.title||e.id,'title',e.id))+'</h3>'+(description?'<p class="location-summary">'+escape(description)+'</p>':'')+'<p class="location-rationales"><span>Coded rationale'+(rationales.length>1?'s':'')+':</span> '+rationaleHTML([e])+'</p>'+duration+
+    return '<article data-location-record-id="'+escape(e.id)+'"><h3 class="location-closure-title">'+escape(publicText(e.title||e.id,'title',e.id))+'</h3>'+(description?'<p class="location-summary">'+escape(description)+'</p>':'')+'<p class="location-rationales"><span>Coded rationale'+(rationales.length>1?'s':'')+':</span> '+rationaleHTML([e])+'</p>'+duration+
       '<div class="location-card-links">'+(linked.length?'<div class="location-sources"><span class="location-sources-label">Sources</span><div class="location-source-list">'+sourceHTML+'</div></div>':'')+
       '<button type="button" class="location-record-link" data-record-id="'+escape(e.id)+'">Full record <span aria-hidden="true">→</span></button></div></article>';
   }
@@ -364,33 +370,39 @@
     }
   }
   function openLocationCard(id,items,latlng,focusCard=false){
-    if(!data.meta.web_assets){renderLocationCard(id,items,latlng,focusCard);return;}
-    stop();map.closePopup();
-    const content=document.createElement('div');content.setAttribute('role','status');content.textContent='Loading closure details…';
-    const loading=L.popup({className:'location-popup',maxWidth:280}).setLatLng(latlng).setContent(content).openOn(map);
-    const first=locationRecords(items).slice(0,1);
-    Promise.all(first.map(e=>window.AtlasData.getRecord(e.id))).then(records=>{
-      if(!map.hasLayer(loading))return;
-      const complete=new Map(records.map(e=>[e.id,e]));
-      renderLocationCard(id,items.map(e=>complete.get(e.id)||e),latlng,focusCard);
-    }).catch(error=>{
-      if(!map.hasLayer(loading))return;
-      content.textContent=error.message+' ';
-      const retry=document.createElement('button');retry.textContent='Try again';retry.addEventListener('click',()=>openLocationCard(id,items,latlng,focusCard));content.append(retry);loading.update();
-    });
+    const opened=renderLocationCard(id,items,latlng,focusCard);
+    if(!data.meta.web_assets)return;
+    const {popup,card}=opened;
+    const note=document.createElement('p');note.className='location-details-status';note.setAttribute('role','status');note.textContent='Loading full source details…';card.append(note);
+    function hydrate(records){
+      return Promise.allSettled(records.map(async item=>{
+        const full=await window.AtlasData.getRecord(item.id);
+        if(!map.hasLayer(popup))return;
+        const scoped=C.recordsForLocation([full],id,data,state)[0];
+        const article=[...card.querySelectorAll('[data-location-record-id]')].find(el=>el.dataset.locationRecordId===item.id);
+        if(!scoped||!article)return;
+        const scroller=popup.getElement()?.querySelector('.leaflet-popup-content'),top=scroller?.scrollTop||0;
+        article.outerHTML=locationRecordHTML(scoped);popup.update();
+        if(scroller)scroller.scrollTop=top;
+      })).then(results=>{
+        if(!map.hasLayer(popup))return;
+        const failed=records.filter((_,i)=>results[i].status==='rejected');
+        if(!failed.length){note.remove();return;}
+        note.textContent='Some source details could not load. ';
+        const retry=document.createElement('button');retry.type='button';retry.textContent='Try again';
+        retry.addEventListener('click',()=>{note.textContent='Loading full source details…';hydrate(failed);});note.append(retry);
+      });
+    }
+    hydrate(items);
   }
   function renderLocationCard(id,items,latlng,focusCard=false){
     const f=locations.get(id),p=f.properties||{},style=K.symbolStyle(p),mobile=compact();
     const sorted=locationRecords(C.recordsForLocation(items,id,data,state));
     const card=document.createElement('div');card.className='location-card';
-    const locationMeta=items.length>1?'Showing 1 of '+items.length+' matching records':'';
-    card.innerHTML='<h2>'+escape(locationTitle(p,id))+'</h2>'+(locationMeta?'<div class="location-card-meta">'+escape(locationMeta)+'</div>':'')+'<div class="location-card-records">'+sorted.slice(0,1).map(locationRecordHTML).join('')+'</div>';
-    for(const button of card.querySelectorAll('[data-record-id]'))button.addEventListener('click',()=>{map.closePopup();showEvent(button.dataset.recordId,false);$('back-button').focus();});
-    let action=card.querySelector('[data-record-id]');
-    if(items.length>1){
-      action=document.createElement('button');action.type='button';action.className='location-card-action';action.textContent='View all '+items.length+' records →';
-      action.addEventListener('click',()=>{map.closePopup();activateLocation(id,items);});card.append(action);
-    }
+    const locationMeta=sorted.length>1?sorted.length+' matching records · scroll to read':'';
+    card.innerHTML='<h2>'+escape(locationTitle(p,id))+'</h2>'+(locationMeta?'<div class="location-card-meta">'+escape(locationMeta)+'</div>':'')+'<div class="location-card-records">'+sorted.map(locationRecordHTML).join('')+'</div>';
+    card.addEventListener('click',event=>{const button=event.target.closest('[data-record-id]');if(!button)return;map.closePopup();showEvent(button.dataset.recordId,false);$('back-button').focus();});
+    const action=card.querySelector('[data-record-id]');
     const notes=document.createElement('p');notes.className='location-map-note';
     notes.textContent=p.display_role==='national_policy'?'The outline identifies a broad national ban on ordinary foreign-visitor entry. Citizens, residents and other exempt travellers could still enter.':f.geometry.type==='Point'?'The dot marks an approximate crossing area. It does not indicate closure along the rest of the border.':'The line locates the border. The description identifies the affected crossings and travellers.';card.append(notes);
     stop();map.closePopup();cardLocation=id;renderLocations();if(mobile)setPanelOpen(false);
@@ -400,6 +412,7 @@
     popup.on('remove',()=>{cardLocation='';renderLocations();if(focusCard&&document.activeElement===document.body){const marker=[...document.querySelectorAll('.closure-marker')].find(el=>el.dataset.locationId===id);if(marker)marker.focus({preventScroll:true});}});
     card.addEventListener('toggle',()=>popup.update(),true);
     popup.openOn(map);if(focusCard&&action)action.focus({preventScroll:true});
+    return {popup,card};
   }
   function nearestPoint(id,event){
     const original=event.originalEvent;
@@ -630,7 +643,7 @@
     const rate=Number(event.target.value);playbackRate=[1,2,4,8].includes(rate)?rate:1;
     if(timer)schedulePlayback();
   });
-  $('back-button').addEventListener('click',showBrowse);$('fit-button').addEventListener('click',fitRecords);$('clear-location').addEventListener('click',clearLocationFilter);$('reset-button').addEventListener('click',()=>{stop();resetFilters();populateRegions();showBrowse();render();fitContinent();});
+  $('back-button').addEventListener('click',showBrowse);$('fit-button').addEventListener('click',fitRecords);$('clear-location').addEventListener('click',clearLocationFilter);$('reset-button').addEventListener('click',()=>{stop();window.AtlasNavigation.setDuration('over1');resetFilters();populateRegions();showBrowse();render();fitContinent();});
   $('read-records').addEventListener('click',openRecords);
   $('download-records').addEventListener('click',downloadRecords);$('download-reader-records').addEventListener('click',downloadRecords);
   $('records-close').addEventListener('click',()=>$('records-dialog').close());

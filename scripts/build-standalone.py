@@ -28,7 +28,7 @@ def bundle(web: Path) -> str:
         html = html.replace('<link rel="stylesheet" href="' + name + '">',
                             '<style>\n' + (web / name).read_text(encoding='utf-8') + '\n</style>')
     for name in ['data-loader.js', 'navigation.js', 'startup.js', 'vendor/leaflet.js', 'cartography.js',
-                 'core.js', 'public-text.js', 'record-summary.js', 'export.js', 'record-export.js', 'app.js']:
+                 'duration.js', 'core.js', 'public-text.js', 'record-summary.js', 'export.js', 'record-export.js', 'app.js']:
         html = re.sub(r'<script src="' + re.escape(name) + r'"[^>]*></script>',
                       lambda _: '<script>\n' + (web / name).read_text(encoding='utf-8') + '\n</script>', html)
     font = base64.b64encode((web / 'vendor/AtlasSans.ttf').read_bytes()).decode('ascii')

@@ -68,6 +68,11 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
 /* Duration and evidence filters share one chart population. */
 .chart-controls{flex-wrap:wrap;gap:12px 18px}.chart-controls label{flex:1 1 220px;min-width:0}.chart-controls p{flex:1 1 170px;margin:0}#chartDurationNote,#datasetDurationNote{margin:10px 0 14px}
 @media(max-width:620px){.chart-controls label+label{margin-top:12px}.chart-controls p{margin-top:9px}}
+.duration-toggle{display:inline-flex;gap:3px;padding:3px;border:1px solid #c7d7cc;border-radius:9px;background:#fff;box-shadow:0 2px 7px #244e4618}
+.duration-toggle button{min-width:54px;min-height:44px;padding:6px 12px;margin:0;border:0;border-radius:6px;background:transparent;color:#315a50;font:600 13px/1.2 Atlas,Arial,sans-serif;cursor:pointer;touch-action:manipulation}
+.duration-toggle button[aria-pressed="true"]{background:#27766b;color:#fff}
+.duration-toggle button:focus-visible{outline:2px solid #27766b;outline-offset:2px}
+.duration-control>span{display:block;font-size:12px;font-weight:550;color:#51685b;margin-bottom:6px}.duration-control select[hidden]{display:none}
 </style>
 </head>
 <body>
@@ -134,7 +139,7 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
   <section id="patterns" class="chapter">
    <div class="section-top"><p class="eyebrow">PATTERNS IN THE REGISTER</p></div><h2>What do the records show?</h2>
    <div class="prose"><p>Security and health and biosecurity are the most frequent labels in the collected records. The counts describe an incomplete inventory, with related policies and phases recorded separately. They do not estimate the global frequency of independent closure decisions.</p></div>
-   <div class="chart-controls"><label>Records shown<select id="chartPopulation"><option value="all">All included records</option><option value="complete">Closure length can be estimated</option><option value="exact">Exact closure dates recorded</option></select></label><label>Duration<select id="chartDuration" aria-describedby="chartDurationNote"><option value="all">Any duration</option><option value="over1">More than 1 day</option></select></label><p id="chartPopulationNote" aria-live="polite"></p></div>
+   <div class="chart-controls"><label>Records shown<select id="chartPopulation"><option value="all">All included records</option><option value="complete">Closure length can be estimated</option><option value="exact">Exact closure dates recorded</option></select></label><div class="duration-control"><span>Duration</span><select id="chartDuration" aria-describedby="chartDurationNote" hidden><option value="over1" selected>More than 24 hours</option><option value="all">All durations</option></select><div class="duration-toggle" role="group" aria-label="Restriction duration" aria-describedby="chartDurationNote"><button type="button" data-duration="over1" aria-pressed="true">&gt;24h</button><button type="button" data-duration="all" aria-pressed="false">All</button></div></div><p id="chartPopulationNote" aria-live="polite"></p></div>
    <p id="chartDurationNote" class="figure-note" aria-live="polite" hidden></p>
    <p class="figure-note population-explanation">Use the controls to compare records by date evidence and documented duration. These selections are not representative samples of all closures.</p>
    <figure id="motivation-counts" class="chart-panel" data-analysis-section="Recorded rationales"><div class="figure-heading"><div><span class="eyebrow">RECORDED RATIONALES</span><h3>How often is each rationale recorded?</h3></div><button class="quiet" id="exportCodes">Export data · CSV</button></div><div id="codeChart" class="bar-chart"></div><figcaption><span id="motivationDenominatorNote">Percentages use all selected records, including those without a category.</span> Categories overlap, so one record can appear in several bars. Select a bar to explore its records.</figcaption></figure>
@@ -154,9 +159,9 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
    <div id="downloads" class="dataset-downloads">
     <p><a href="downloads/border-status-review.json" download>Later-status review · sources and unresolved endpoints (JSON)</a>. Dated status observations supplement the historical register and are excluded from its episode and duration statistics.</p>
     <h3>Download the dataset</h3>
-    <p>The master workbook has two tabs: Closures and Methodology. The <a href="downloads/Global_Border_Closures_Data_2016_2026.zip?v=92663f7458125d709422d6fb98da5b5501458134dffe925f29e33d982c6730fd" download="Global_Border_Closures_Data_2016_2026.zip">data companion</a> retains the phase-level chronology, source catalogue, review history and unresolved findings. The CSV offers a simpler table of all included records. You can also read and search the records below without downloading anything.</p>
+    <p>The master workbook has two tabs: Closures and Methodology. The <a href="downloads/Global_Border_Closures_Data_2016_2026.zip?v=385692cf7b40295ef85d1d4d45192fec296ffac1e0389510d70c0dcaca3a056a" download="Global_Border_Closures_Data_2016_2026.zip">data companion</a> retains the phase-level chronology, source catalogue, review history and unresolved findings. The CSV offers a simpler table of all included records. You can also read and search the records below without downloading anything.</p>
     <div class="dataset-download-grid"><a class="workbook-download" href="downloads/Global_Border_Closures_Master_2016_2026.xlsx?v=c7efe7071aa3346f3180e7a57b9023bede8108763a2b9a0cf040a9059f0121b4" download="Global_Border_Closures_Master_2016_2026.xlsx" type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"><strong>Master workbook · Excel (.xlsx)</strong><small>Closures reader and complete methodology</small></a><button id="exportAllRows" type="button"><strong>Included records · CSV (.csv)</strong><small>All 825 included records; unaffected by filters</small></button></div>
-    <details class="disclosure"><summary>Additional tables and technical formats</summary><div class="disclosure-body"><p>CSV files open in spreadsheet applications. The data companion preserves the full structured release; JSON is intended for reuse in code and is not needed to read the evidence on this website.</p><div class="download-actions"><a class="quiet" href="downloads/Global_Border_Closures_Data_2016_2026.zip?v=92663f7458125d709422d6fb98da5b5501458134dffe925f29e33d982c6730fd" download="Global_Border_Closures_Data_2016_2026.zip">Data companion · ZIP</a><a class="quiet" href="downloads/Global_Border_Closures_Data_2016_2026.json.gz?v=5baf139f914593184ed2eee3f5a9dfd783cb264332415f98e645b409c314a415" download="Global_Border_Closures_Data_2016_2026.json.gz">Structured data · JSON.gz</a><button class="quiet" id="exportPhases">Chronology phases · CSV</button><button class="quiet" id="exportCoverage">Timing coverage · CSV</button><button class="quiet" id="exportSnapshot">Website snapshot · JSON</button><button class="quiet" id="exportAudit">Current review · JSON</button><button class="quiet" id="exportFontLicense">Font licence · TXT</button></div><p id="sourceHash" class="hash"></p></div></details>
+    <details class="disclosure"><summary>Additional tables and technical formats</summary><div class="disclosure-body"><p>CSV files open in spreadsheet applications. The data companion preserves the full structured release; JSON is intended for reuse in code and is not needed to read the evidence on this website.</p><div class="download-actions"><a class="quiet" href="downloads/Global_Border_Closures_Data_2016_2026.zip?v=385692cf7b40295ef85d1d4d45192fec296ffac1e0389510d70c0dcaca3a056a" download="Global_Border_Closures_Data_2016_2026.zip">Data companion · ZIP</a><a class="quiet" href="downloads/Global_Border_Closures_Data_2016_2026.json.gz?v=5baf139f914593184ed2eee3f5a9dfd783cb264332415f98e645b409c314a415" download="Global_Border_Closures_Data_2016_2026.json.gz">Structured data · JSON.gz</a><button class="quiet" id="exportPhases">Chronology phases · CSV</button><button class="quiet" id="exportCoverage">Timing coverage · CSV</button><button class="quiet" id="exportSnapshot">Website snapshot · JSON</button><button class="quiet" id="exportAudit">Current review · JSON</button><button class="quiet" id="exportFontLicense">Font licence · TXT</button></div><p id="sourceHash" class="hash"></p></div></details>
    </div>
    <h3 class="dataset-browser-heading">Browse records and sources</h3>
    <p class="prose">Search by place, actor, title or record ID. Select a record to read its dates, scope, explanations and linked sources. Use <strong>Download matching records · CSV</strong> to save just the results of your search. Dates describe historical evidence; they do not establish present crossing conditions.</p>
@@ -166,7 +171,7 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
     <label>Research area<select id="regionFilter"><option value="">All research areas</option></select></label>
     <label>Rationale code<select id="codeFilter"><option value="">All codes</option><option value="__uncoded">No code assigned</option></select></label>
     <label>Timing or inclusion<select id="statusFilter"><option value="">All included records</option><option value="complete">Closure length can be estimated</option><option value="exact">Exact closure dates recorded</option><option value="undated">No dated evidence</option><option value="held">Has disputed date evidence</option><option value="quarantined">Excluded from analysis</option></select></label>
-    <label>Duration<select id="durationFilter" aria-describedby="datasetDurationNote"><option value="all">Any duration</option><option value="over1">More than 1 day</option></select></label>
+    <div class="duration-control"><span>Duration</span><select id="durationFilter" aria-describedby="datasetDurationNote" hidden><option value="over1" selected>More than 24 hours</option><option value="all">All durations</option></select><div class="duration-toggle" role="group" aria-label="Restriction duration" aria-describedby="datasetDurationNote"><button type="button" data-duration="over1" aria-pressed="true">&gt;24h</button><button type="button" data-duration="all" aria-pressed="false">All</button></div></div>
     <label>Current review outcome<select id="auditFilter"><option value="">Any review status</option></select></label>
     <button class="quiet" type="reset">Reset filters</button>
    </form>
@@ -205,6 +210,62 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
 
 <script id="fontLicense" type="application/json">"Borderland Sans is a Latin subset of Source Sans 3 with renamed font-family and PostScript names. Original font: https://github.com/google/fonts/tree/main/ofl/sourcesans3\n\nCopyright 2010-2020 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe in the United States and/or other countries.\n\nThis Font Software is licensed under the SIL Open Font License, Version 1.1.\n\nThis license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL\n\n\n-----------------------------------------------------------\nSIL OPEN FONT LICENSE Version 1.1 - 26 February 2007\n-----------------------------------------------------------\n\nPREAMBLE\nThe goals of the Open Font License (OFL) are to stimulate worldwide\ndevelopment of collaborative font projects, to support the font creation\nefforts of academic and linguistic communities, and to provide a free and\nopen framework in which fonts may be shared and improved in partnership\nwith others.\n\nThe OFL allows the licensed fonts to be used, studied, modified and\nredistributed freely as long as they are not sold by themselves. The\nfonts, including any derivative works, can be bundled, embedded, \nredistributed and/or sold with any software provided that any reserved\nnames are not used by derivative works. The fonts and derivatives,\nhowever, cannot be released under any other type of license. The\nrequirement for fonts to remain under this license does not apply\nto any document created using the fonts or their derivatives.\n\nDEFINITIONS\n\"Font Software\" refers to the set of files released by the Copyright\nHolder(s) under this license and clearly marked as such. This may\ninclude source files, build scripts and documentation.\n\n\"Reserved Font Name\" refers to any names specified as such after the\ncopyright statement(s).\n\n\"Original Version\" refers to the collection of Font Software components as\ndistributed by the Copyright Holder(s).\n\n\"Modified Version\" refers to any derivative made by adding to, deleting,\nor substituting -- in part or in whole -- any of the components of the\nOriginal Version, by changing formats or by porting the Font Software to a\nnew environment.\n\n\"Author\" refers to any designer, engineer, programmer, technical\nwriter or other person who contributed to the Font Software.\n\nPERMISSION & CONDITIONS\nPermission is hereby granted, free of charge, to any person obtaining\na copy of the Font Software, to use, study, copy, merge, embed, modify,\nredistribute, and sell modified and unmodified copies of the Font\nSoftware, subject to the following conditions:\n\n1) Neither the Font Software nor any of its individual components,\nin Original or Modified Versions, may be sold by itself.\n\n2) Original or Modified Versions of the Font Software may be bundled,\nredistributed and/or sold with any software, provided that each copy\ncontains the above copyright notice and this license. These can be\nincluded either as stand-alone text files, human-readable headers or\nin the appropriate machine-readable metadata fields within text or\nbinary files as long as those fields can be easily viewed by the user.\n\n3) No Modified Version of the Font Software may use the Reserved Font\nName(s) unless explicit written permission is granted by the corresponding\nCopyright Holder. This restriction only applies to the primary font name as\npresented to the users.\n\n4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font\nSoftware shall not be used to promote, endorse or advertise any\nModified Version, except to acknowledge the contribution(s) of the\nCopyright Holder(s) and the Author(s) or with their explicit written\npermission.\n\n5) The Font Software, modified or unmodified, in part or in whole,\nmust be distributed entirely under this license, and must not be\ndistributed under any other license. The requirement for fonts to\nremain under this license does not apply to any document created\nusing the Font Software.\n\nTERMINATION\nThis license becomes null and void if any of the above conditions are\nnot met.\n\nDISCLAIMER\nTHE FONT SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT\nOF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE\nCOPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nINCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL\nDAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM\nOTHER DEALINGS IN THE FONT SOFTWARE.\n\n"</script>
 <script>
+/* A conservative duration gate shared by the map, charts and record list.
+ * Calendar-date lower bounds are not exact hour measurements or closed-days totals. */
+(function(root){
+ 'use strict';
+ function day(value){
+  if(typeof value!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(value))return null;
+  const time=Date.parse(value+'T00:00:00Z');
+  return Number.isFinite(time)&&new Date(time).toISOString().slice(0,10)===value?time/86400000:null;
+ }
+ function minimumDays(p){
+  if(!p||p.contested)return null;
+  const policy=p.measure_type==='formal_policy_period'&&p.temporal_display_rule==='legal_policy_layer_only_not_operational_closure';
+  const complete=p.measure_type==='operational_spell'&&p.complete_operational&&['closed_interval','bounded_interval'].includes(p.kind)
+   &&p.temporal_display_rule==='scoped_interval_with_endpoint_uncertainty';
+  const censored=p.endpoint_status==='last_confirmed'&&(policy||p.measure_type==='operational_spell'&&p.kind==='confirmed_through'
+   &&p.temporal_display_rule==='censored_interval_stop_at_last_confirmation_unknown_afterward');
+  if(!policy&&!complete&&!censored)return null;
+  const dates=[p.start_earliest,p.start_latest,censored?p.last_confirmed:p.end_earliest,censored?p.last_confirmed:p.end_latest].map(day);
+  if(dates.some(v=>v===null))return null;
+  const [firstStart,lastStart,firstEnd,lastEnd]=dates,minimum=firstEnd-lastStart;
+  if(firstStart>lastStart||firstEnd>lastEnd||minimum<0||!Number.isFinite(p.minimum_days)||p.minimum_days!==minimum)return null;
+  if(complete&&(!Number.isFinite(p.maximum_days)||p.maximum_days!==lastEnd-firstStart))return null;
+  if(censored&&(p.maximum_days!=null||p.end_earliest!==p.last_confirmed||p.end_latest!==p.last_confirmed))return null;
+  return minimum;
+ }
+ function reviewedSpan(p){
+  // These scoped histories are separately reviewed; they never enter duration statistics.
+  if(p.duration_pattern==='intermittent')return null;
+  if(!(p.map_status&&p.status_timeline&&['closed','restricted'].includes(p.status))
+   &&!(p.national_display_period&&p.temporal_display_rule==='national_policy_context_not_exact_duration'))return null;
+  const start=day(p.start_latest),end=day(p.end_earliest);
+  return start!==null&&end!==null&&end>=start?end-start:null;
+ }
+ function qualifies(p,event){
+  if(p?.status==='unresolved'){
+   // The age of an unanswered report is never a duration. Use only its source phase.
+   const source=(event?.duration_source_periods||event?.duration_periods)?.find(q=>q.period_id===p.source_phase_id);
+   return minimumDays(source)>1;
+  }
+  return minimumDays(p)>1||reviewedSpan(p)>1;
+ }
+ function matches(event,value='all'){
+  return value!=='over1'||(event.duration_periods||[]).some(p=>qualifies(p,event))||(event.map_status_periods||[]).some(p=>qualifies(p,event));
+ }
+ function scopedEvent(event,value='all'){
+  if(value!=='over1')return event;
+  const periods=(event.duration_periods||[]).filter(p=>qualifies(p,event)),statuses=(event.map_status_periods||[]).filter(p=>qualifies(p,event));
+  if(!periods.length&&!statuses.length)return null;
+  const ids=new Set(periods.map(p=>p.period_id));
+  return {...event,duration_periods:periods,map_status_periods:statuses,
+   phase_onsets:Array.isArray(event.phase_onsets)?event.phase_onsets.filter(p=>ids.has(p.phase_id)):event.phase_onsets};
+ }
+ const api=Object.freeze({day,minimumDays,qualifies,matches,scopedEvent});
+ if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.BorderDuration=api;
+})(typeof window!=='undefined'?window:globalThis);
+
 /* Display-only event descriptions from the current workbook fields.
  * The workbook, its dates and its research qualifications remain unchanged. */
 (function(root){
@@ -383,28 +444,9 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
   if(p.maximum_days!=null&&Number(p.maximum_days)!==days)return null;
   return days;
  }
- function operationalMinimumDays(p){
-  if(!p||p.measure_type!=='operational_spell'||p.contested)return null;
-  const complete=p.complete_operational&&['closed_interval','bounded_interval'].includes(p.kind)
-   &&p.temporal_display_rule==='scoped_interval_with_endpoint_uncertainty';
-  const censored=p.kind==='confirmed_through'&&p.endpoint_status==='last_confirmed'
-   &&p.temporal_display_rule==='censored_interval_stop_at_last_confirmation_unknown_afterward';
-  if(!complete&&!censored)return null;
-  const firstStart=day(p.start_earliest),lastStart=day(p.start_latest);
-  const firstEnd=day(censored?p.last_confirmed:p.end_earliest),lastEnd=day(censored?p.last_confirmed:p.end_latest);
-  if([firstStart,lastStart,firstEnd,lastEnd].some(value=>value===null)||firstStart>lastStart||firstEnd>lastEnd)return null;
-  const minimum=firstEnd-lastStart;
-  if(minimum<0||!Number.isFinite(p.minimum_days)||p.minimum_days!==minimum)return null;
-  if(complete&&(!Number.isFinite(p.maximum_days)||p.maximum_days!==lastEnd-firstStart))return null;
-  // A last confirmation supplies a lower bound, never an inferred reopening.
-  if(censored&&(p.maximum_days!=null||p.end_earliest!==p.last_confirmed||p.end_latest!==p.last_confirmed))return null;
-  return minimum;
- }
- function durationMatch(event,duration='all'){
-  return duration!=='over1'||(event.duration_periods||[]).some(p=>{
-   const minimum=operationalMinimumDays(p);return minimum!==null&&minimum>1;
-  });
- }
+ const D=typeof module!=='undefined'&&module.exports?require('../dist/duration.js'):root.BorderDuration;
+ function operationalMinimumDays(p){return p?.measure_type==='operational_spell'?D.minimumDays(p):null;}
+ function durationMatch(event,duration='all'){return D.matches(event,duration);}
  function filterRecords(events,population='all',duration='all'){
   return events.filter(e=>!e.quarantined&&(!e.inclusion_status||e.inclusion_status==='Included')
    &&(population==='complete'?e.timing_coverage?.operational_complete:
@@ -459,7 +501,7 @@ if(!provider && (ATLAS_HOST ? window.parent.BORDER_DATA : window.BORDER_DATA)){
  provider={ready:async()=>complete,getRecord:async id=>complete.events.find(e=>e.id===id),getResearchData:async()=>complete};
 }
 if(!provider){
- await new Promise(function(resolve,reject){const script=document.createElement("script");script.src="data-loader.js?v=20261024-analysis-fast";script.dataset.analysisSrc="analysis-data.json?v=d149785489286d0aa21835e5";script.dataset.sourceSha="5baf139f914593184ed2eee3f5a9dfd783cb264332415f98e645b409c314a415";script.onload=resolve;script.onerror=()=>reject(new Error("The data could not be loaded. Please try again."));document.head.appendChild(script);});
+ await new Promise(function(resolve,reject){const script=document.createElement("script");script.src="data-loader.js?v=20261024-analysis-fast";script.dataset.analysisSrc="analysis-data.json?v=29ec864d33c32e178aa8703b";script.dataset.sourceSha="5baf139f914593184ed2eee3f5a9dfd783cb264332415f98e645b409c314a415";script.onload=resolve;script.onerror=()=>reject(new Error("The data could not be loaded. Please try again."));document.head.appendChild(script);});
  provider=window.AtlasData;
 }
 const shared=await (provider.getAnalysisData?provider.getAnalysisData():provider.ready());
@@ -548,8 +590,16 @@ function csvCell(value){
  return '"'+s.replace(/"/g,'""')+'"';
 }
 function downloadCSV(filename,rows){download(filename,"\ufeff"+rows.map(function(r){return r.map(csvCell).join(",");}).join("\r\n"),"text/csv;charset=utf-8");}
-const durationExplanation="Includes records with at least one documented closure period whose minimum date difference exceeds one day. A continuing closure can qualify through its last confirmed date, without implying a reopening or later duration. Policy-only dates and lengths that could be one day or less are excluded. Days use date differences, not hour-by-hour measurements.";
-const durationSelection=(population,duration)=>population+(duration==='over1'?'; minimum date difference >1 day in at least one operational phase; confirmed-through lower bounds allowed':'');
+function resetRecordFilters(){const duration=$("chartDuration").value;$("filters").reset();$("durationFilter").value=duration;}
+function setDuration(value){
+ const duration=value==='all'?'all':'over1';
+ $("chartDuration").value=duration;$("durationFilter").value=duration;
+ document.querySelectorAll('[data-duration]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.duration===duration)));
+ page=0;renderCharts();renderRecords();
+}
+function chooseDuration(value){if(ATLAS_HOST?.setDuration)ATLAS_HOST.setDuration(value);setDuration(value);}
+const durationExplanation="Includes records with at least one documented restriction period whose minimum date difference exceeds one day. A continuing closure can qualify through its last confirmed date, without implying a reopening or later duration. Documented official policy periods also qualify. Short, uncertain and unknown durations remain available under All. Days use date differences, not hour-by-hour measurements.";
+const durationSelection=(population,duration)=>population+(duration==='over1'?'; minimum date difference >1 day in at least one observed-closure or formal-policy phase; confirmed-through lower bounds allowed':'');
 const filteredFilename=(filename,duration)=>duration==='over1'?filename.replace(/\.csv$/,'-over-1-day.csv'):filename;
 function bar(label,value,total,max,kind,uncoded){
  const width=max?Math.max(0,100*value/max):0;
@@ -599,7 +649,7 @@ function renderDurationComparison(rows,population,duration='all'){
  $("durationCoverageChart").innerHTML='<table><caption>The categories follow the same order as the rationale chart. “Used” means a record contributes at least one phase to the duration comparison.</caption><thead><tr><th scope="col">Recorded rationale</th><th scope="col">Used / category total</th><th scope="col">Share used</th></tr></thead><tbody>'+coverageGroups.map(g=>'<tr><th scope="row">'+escapeHTML(g.code)+'</th><td class="sample-total">'+(g.total?g.records+' / '+g.total+' records':'No selected records')+'</td><td>'+(g.total?pct(g.records,g.total):'—')+'</td></tr>').join('')+'</tbody></table>';
 }
 function filterFromChart(kind,value){
- $("filters").reset();
+ resetRecordFilters();
  $("statusFilter").value=$("chartPopulation").value==="all"?"":$("chartPopulation").value;
  $("durationFilter").value=$("chartDuration").value;
  if(kind==="region")$("regionFilter").value=value;
@@ -739,21 +789,23 @@ function closeRecord(){
 }
 function toast(message){$("toast").textContent=message;$("toast").style.display="block";setTimeout(function(){$("toast").style.display="none";},3500);}
 document.addEventListener("click",function(event){
+ const durationButton=event.target.closest("[data-duration]");
+ if(durationButton){chooseDuration(durationButton.dataset.duration);return;}
  const record=event.target.closest("[data-record]");
  if(record){openRecord(record.dataset.record,true);return;}
  const chart=event.target.closest("[data-chart-kind]");
  if(chart){filterFromChart(chart.dataset.chartKind,chart.dataset.chartValue);return;}
  const audit=event.target.closest("[data-audit-group]");
- if(audit){$("filters").reset();$("auditFilter").value=audit.dataset.auditGroup;page=0;renderRecords();openDataset();return;}
+ if(audit){resetRecordFilters();$("auditFilter").value=audit.dataset.auditGroup;page=0;renderRecords();openDataset();return;}
  const code=event.target.closest(".code-filter");
- if(code){$("chartPopulation").value="all";$("chartDuration").value="all";renderCharts();filterFromChart("code",code.dataset.code);}
+ if(code){$("chartPopulation").value="all";renderCharts();filterFromChart("code",code.dataset.code);}
 });
 $("chartPopulation").addEventListener("change",renderCharts);
-$("chartDuration").addEventListener("change",renderCharts);
+$("chartDuration").addEventListener("change",()=>chooseDuration($("chartDuration").value));
 $("filters").addEventListener("submit",function(e){e.preventDefault();});
 $("filters").addEventListener("input",function(){page=0;renderRecords();});
 $("filters").addEventListener("change",function(){page=0;renderRecords();});
-$("filters").addEventListener("reset",function(){setTimeout(function(){page=0;renderRecords();},0);});
+$("filters").addEventListener("reset",function(){setTimeout(function(){chooseDuration($("durationFilter").value);},0);});
 $("sortRecords").addEventListener("change",function(){page=0;renderRecords();});
 $("prevPage").addEventListener("click",function(){page--;renderRecords();$("recordList").scrollIntoView({behavior:"smooth",block:"start"});});
 $("nextPage").addEventListener("click",function(){page++;renderRecords();$("recordList").scrollIntoView({behavior:"smooth",block:"start"});});
@@ -840,7 +892,7 @@ async function navigateAnalysis(hash){
   if(target){if(target.tagName==='DETAILS')target.open=true;target.scrollIntoView({behavior:"auto",block:"start"});if(currentView!=='dataset')markAnalysisSection(target.id==='patterns'?'motivation-counts':target.id);}
  }
 }
-window.AtlasAnalysis={navigate:navigateAnalysis,setView,getView:()=>currentView};
+window.AtlasAnalysis={navigate:navigateAnalysis,setView,setDuration,getView:()=>currentView};
 window.addEventListener("hashchange",function(){if(!ATLAS_HOST)navigateAnalysis(routeHash());});
 if(ATLAS_HOST)document.addEventListener("click",function(event){
  const link=event.target.closest('a[href^="#"]');
@@ -852,7 +904,7 @@ if(ATLAS_HOST)document.addEventListener("click",function(event){
  else if(currentView==="dataset"&&!hash.startsWith("#record-")&&hash!=="#register"){setView("overview");ATLAS_HOST.show("analysis",{analysisHash:hash});return;}
  replaceRoute(hash);navigateAnalysis(hash);
 });
-renderCharts();renderRecords();progress();scheduleSectionNavigation();
+setDuration(ATLAS_HOST?.getDuration?.()||"over1");progress();scheduleSectionNavigation();
 if(!ATLAS_HOST){setView(routeHash().startsWith("#record-")||["#register","#downloads"].includes(routeHash())?"dataset":"overview");}
 if(routeHash())navigateAnalysis(routeHash());
 if(ATLAS_HOST?.analysisReady)ATLAS_HOST.analysisReady();

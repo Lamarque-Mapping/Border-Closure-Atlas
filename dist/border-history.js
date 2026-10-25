@@ -39,8 +39,8 @@
   function lookup(index,locationId,state={}){
     const entry=index.byId.get(locationId);if(!entry)return null;
     const C=index.core,bounds=monthBounds(C,state);
-    const allowed=new Set(C.filterEvents(index.data,{...state,mode:'all',location:'',includeExcluded:false}).map(record=>record.id));
-    const records=entry.records.filter(record=>allowed.has(record.id)).map(record=>{
+    const allowed=new Map(C.filterEvents(index.data,{...state,mode:'all',location:'',includeExcluded:false}).map(record=>[record.id,record]));
+    const records=entry.records.filter(record=>allowed.has(record.id)).map(record=>allowed.get(record.id)).map(record=>{
       const dates=datesFor(record,C,state.measureType),preceding=bounds?dates.filter(date=>C.day(date)<bounds.end):dates;
       const temporalStates=bounds?C.temporalStates(record,state.month,state.measureType):[];
       return {record,latestEvidenceDate:latest(dates),latestEvidenceOnOrBeforeMonth:latest(preceding),datedThisMonth:temporalStates.length>0,temporalStates};

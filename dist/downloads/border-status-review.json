@@ -1,5 +1,5 @@
 {
-  "version": "20261025-status-audit-5",
+  "version": "20261025-status-audit-6",
   "reviewed_at": "2026-10-25",
   "source_sha256": "5baf139f914593184ed2eee3f5a9dfd783cb264332415f98e645b409c314a415",
   "method": "All 221 records (250 last-confirmed phases) in the endpoint review inventory were researched on 25 October 2026. Findings distinguish current restrictions, later access bounds, changed scope, partial evidence, conflicting evidence and unresolved status. Selected map updates received source-text, date and scope checks; unavailable full text and inadequate evidence remain qualified. Standing official guidance is dated to the check; news observations retain their event/report date. A later access bound suppresses only the matching old unknown marker from that bound onward. It does not label the border open, alter historical durations, fill gaps or merge later reclosures. Status verification dates are not closure starts. Separately reviewed timeline periods show a restriction from its sourced effective date through its latest supporting evidence, with changing scopes, exceptions and reopenings separated. Pre-window regimes are labelled as already in force, not newly starting at the window boundary. Unreviewed snapshots, if any, remain confined to their evidence month. These supplemental periods are excluded from episode and duration statistics. Coverage concerns this fixed inventory, not every world frontier. A further COVID-focused pass separates the ending of a national prohibition from reopening every individual port. Each new resolution records whether it is based on policy cessation or later access; neither establishes present-day openness. The subsequent open-ended follow-up also records scope_changed bounds: the original blanket policy no longer applies as stated, but narrower conditions or security restrictions may persist. This is not a declaration of whole-border reopening.",
@@ -1867,7 +1867,7 @@
     },
     {
       "id": "STATUS-AUDIT-REC50-R03-001-20261025",
-      "title": "Ukraine: non-exempt male citizens aged 23–60 restricted from exit",
+      "title": "Ukraine: wartime restrictions on male citizens leaving the country",
       "status": "restricted",
       "observed_at": "2026-10-25",
       "region": "Europe",
@@ -1892,12 +1892,12 @@
       "rationales": [
         "Security"
       ],
-      "scope": "Outward travel by non-exempt Ukrainian male citizens aged 23–60, including dual nationals",
-      "movement": "Outward travel by non-exempt Ukrainian male citizens aged 23–60, including dual nationals",
+      "scope": "Outward travel by non-exempt Ukrainian male citizens; the age group and exemptions changed over time",
+      "movement": "Outward travel by non-exempt Ukrainian male citizens; the age group and exemptions changed over time",
       "direction": "Outward from Ukraine",
       "exceptions": "Younger men and individually authorised exemptions are separate; foreign nationals are not all subject to this rule.",
-      "summary": "Current guidance retains the non-exempt Ukrainian male-citizen exit restriction for ages 23–60; younger exemption and authorised exceptions remain.",
-      "qualification": "The current non-exempt 23–60 cohort begins with the 18–22 exemption on 28 August 2025. The earlier 18–60 phase begins on 24 February 2022 in the linked historical record. The later age scope is not backdated to the start of martial law; other authorised exceptions remain. Verification dates are separate from effective dates. This supplemental chronology is excluded from historical episode and duration statistics.",
+      "summary": "The exit restriction began on 24 February 2022 for Ukrainian men aged 18–60, subject to exemptions. From 28 August 2025, men aged 18–22 were generally allowed to leave; the general restriction remained for non-exempt men aged 23–60.",
+      "qualification": "The exit restriction began on 24 February 2022 for Ukrainian men aged 18–60, subject to exemptions. From 28 August 2025, men aged 18–22 were generally allowed to leave; the general restriction remained for non-exempt men aged 23–60. Some public office-holders aged 18–22 remained subject to separate restrictions. These dates describe the general rule, not continuous physical closure of every crossing. Verification dates are separate from effective dates; this supplementary chronology is excluded from historical duration statistics.",
       "sources": [
         {
           "url": "https://www.gov.uk/foreign-travel-advice/ukraine",
@@ -1910,9 +1910,46 @@
           "title": "Ukraine Cabinet Resolution 1031: younger-men exemption effective 28 August 2025",
           "publisher": "zakon.rada.gov.ua",
           "checked_at": "2026-10-25"
+        },
+        {
+          "url": "https://mvs.gov.ua/en/news/shhodo-obmezen-v-peretini-kordonu-na-viyizd-z-ukrayini-okremoyu-kategorijeyu-gromadyan",
+          "title": "Initial exit restriction announced on 24 February 2022",
+          "publisher": "Ukraine Ministry of Internal Affairs",
+          "checked_at": "2026-10-25"
+        },
+        {
+          "url": "https://www.kmu.gov.ua/en/news/roziasnennia-mvs-shchodo-vyizdu-za-kordon-cholovikiv-vikom-18-22-rokiv-vkliuchno",
+          "title": "Explanation of the new exemption for men aged 18–22",
+          "publisher": "Cabinet of Ministers of Ukraine",
+          "checked_at": "2026-10-25"
+        },
+        {
+          "url": "https://koradm.cg.gov.ua/index.php?id=527904&tp=page",
+          "title": "Implementation of the younger-men exemption on 28 August 2025",
+          "publisher": "Koriukivka District State Administration",
+          "checked_at": "2026-10-25"
         }
       ],
       "timeline_periods": [
+        {
+          "from_date": "2022-02-24",
+          "through_date": "2025-08-28",
+          "end_inclusive": false,
+          "start_precision": "day",
+          "status": "restricted",
+          "scope": "Outward travel by non-exempt Ukrainian male citizens aged 18–60 under martial law; exemptions changed during this period",
+          "summary": "The general exit restriction began on 24 February 2022 for Ukrainian male citizens aged 18–60, subject to exemptions. On 28 August 2025 a general exemption for men aged 18–22 narrowed the main affected age group.",
+          "basis": "The Interior Ministry published the original Border Guard announcement on 24 February 2022. The Cabinet explanation and 28 August 2025 implementation notice identify the later younger-men exemption. The two dates bracket the earlier general rule, without treating changing exemptions as uninterrupted physical closure for every individual. The district implementation notice contains a resolution-number typo (1030); the legislative record identifies Resolution 1031.",
+          "source_urls": [
+            "https://mvs.gov.ua/en/news/shhodo-obmezen-v-peretini-kordonu-na-viyizd-z-ukrayini-okremoyu-kategorijeyu-gromadyan",
+            "https://www.kmu.gov.ua/en/news/roziasnennia-mvs-shchodo-vyizdu-za-kordon-cholovikiv-vikom-18-22-rokiv-vkliuchno",
+            "https://koradm.cg.gov.ua/index.php?id=527904&tp=page",
+            "https://zakon.rada.gov.ua/laws/show/1031-2025-%D0%BF"
+          ],
+          "historical_phase_ids": [
+            "REC50-R03-001-P1"
+          ]
+        },
         {
           "from_date": "2025-08-28",
           "through_date": "2026-10-25",
@@ -1920,11 +1957,14 @@
           "start_precision": "day",
           "status": "restricted",
           "scope": "Outward travel by non-exempt Ukrainian male citizens aged 23–60, including dual nationals",
-          "summary": "Current guidance retains the non-exempt Ukrainian male-citizen exit restriction for ages 23–60; younger exemption and authorised exceptions remain.",
-          "basis": "The current non-exempt 23–60 cohort begins with the 18–22 exemption on 28 August 2025. The earlier 18–60 phase begins on 24 February 2022 in the linked historical record. The later age scope is not backdated to the start of martial law; other authorised exceptions remain.",
+          "summary": "The exit restriction began on 24 February 2022 for Ukrainian men aged 18–60, subject to exemptions. From 28 August 2025, men aged 18–22 were generally allowed to leave; the general restriction remained for non-exempt men aged 23–60.",
+          "basis": "The exit restriction began on 24 February 2022. This later period begins on 28 August 2025, when the general 18–22 exemption narrowed the main restricted age group to 23–60. Other authorised exemptions and public-office restrictions remained.",
           "source_urls": [
             "https://zakon.rada.gov.ua/laws/show/1031-2025-%D0%BF",
-            "https://www.gov.uk/foreign-travel-advice/ukraine"
+            "https://www.gov.uk/foreign-travel-advice/ukraine",
+            "https://mvs.gov.ua/en/news/shhodo-obmezen-v-peretini-kordonu-na-viyizd-z-ukrayini-okremoyu-kategorijeyu-gromadyan",
+            "https://www.kmu.gov.ua/en/news/roziasnennia-mvs-shchodo-vyizdu-za-kordon-cholovikiv-vikom-18-22-rokiv-vkliuchno",
+            "https://koradm.cg.gov.ua/index.php?id=527904&tp=page"
           ],
           "historical_phase_ids": []
         }
@@ -1932,7 +1972,7 @@
       "timeline_review": {
         "checked_at": "2026-10-25",
         "decision": "supported_periods",
-        "finding": "The current non-exempt 23–60 cohort begins with the 18–22 exemption on 28 August 2025. The earlier 18–60 phase begins on 24 February 2022 in the linked historical record. The later age scope is not backdated to the start of martial law; other authorised exceptions remain.",
+        "finding": "The general exit restriction starts on 24 February 2022. The age-scope amendment takes effect on 28 August 2025; the 23–60 scope is not backdated to 2022. Official onset and amendment evidence support the general rule while individual exemptions changed.",
         "limitations": "Dates describe the stated restriction regime and its exceptions. They do not measure uninterrupted physical closure at every checkpoint or produce additional closed-day totals."
       },
       "previous_qualification": "Standing guidance checked on 25 October 2026; the observation does not establish continuous closure since the original endpoint."
@@ -2033,7 +2073,8 @@
             "https://kriis.ee/en/news/may-1-narva-border-crossing-point-closed-night",
             "https://www.emta.ee/uudised/eesti-vene-piiripunktide-oine-sulgemine-muudeti-tahtajatuks"
           ],
-          "historical_phase_ids": []
+          "historical_phase_ids": [],
+          "duration_pattern": "intermittent"
         },
         {
           "from_date": "2026-06-15",
@@ -2048,7 +2089,8 @@
             "https://valitsus.ee/en/news/border-crossing-points-remain-closed-night-during-summer",
             "https://www.emta.ee/uudised/eesti-vene-piiripunktide-oine-sulgemine-muudeti-tahtajatuks"
           ],
-          "historical_phase_ids": []
+          "historical_phase_ids": [],
+          "duration_pattern": "intermittent"
         }
       ],
       "timeline_review": {
@@ -2123,7 +2165,8 @@
             "https://www.emta.ee/en/news/luhamaa-and-koidula-border-crossing-points-closed-night-24-february",
             "https://www.emta.ee/uudised/eesti-vene-piiripunktide-oine-sulgemine-muudeti-tahtajatuks"
           ],
-          "historical_phase_ids": []
+          "historical_phase_ids": [],
+          "duration_pattern": "intermittent"
         }
       ],
       "timeline_review": {
@@ -3435,7 +3478,7 @@
       "finding_id": "REC50-R03-001",
       "observation_id": "STATUS-AUDIT-REC50-R03-001-20261025",
       "timeline_period_indexes": [
-        0
+        1
       ],
       "timeline_from": "2025-09-11"
     },
@@ -14160,7 +14203,7 @@
         "checked_at": "2026-10-25",
         "outcome": "confirmed_current",
         "evidence_date": "2026-10-25",
-        "finding": "Current guidance retains the non-exempt Ukrainian male-citizen exit restriction for ages 23–60; younger exemption and authorised exceptions remain.",
+        "finding": "The general wartime exit restriction began on 24 February 2022 for non-exempt men aged 18–60. The 28 August 2025 exemption for men aged 18–22 narrowed the main age group to 23–60; that amendment must not appear as the original policy onset. Current guidance retains the non-exempt Ukrainian male-citizen exit restriction for ages 23–60; younger exemption and authorised exceptions remain.",
         "phases": [
           {
             "phase_id": "REC50-R03-001-P2",
@@ -14185,7 +14228,7 @@
             "finding_id": "REC50-R03-001",
             "observation_id": "STATUS-AUDIT-REC50-R03-001-20261025",
             "timeline_period_indexes": [
-              0
+              1
             ],
             "timeline_from": "2025-09-11"
           }
@@ -16044,7 +16087,7 @@
       "checked_at": "2026-10-25",
       "reviewed_observations": 36,
       "observations_with_supported_periods": 36,
-      "timeline_periods": 48,
+      "timeline_periods": 49,
       "pre_window_regimes": 6,
       "method": "Each status observation was checked against its prior chronology and source evidence. Effective dates, pre-window regimes, changes of legal scope and genuine reclosures are separate from observation/check dates. Continuity describes the stated access regime with exceptions, not a measured daily closure duration. Source-access limits remain visible in the underlying record and the observation notes."
     },

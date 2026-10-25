@@ -46,7 +46,11 @@ function host(initialHash='',offline=false){
  await h.ids['analysis-page-button'].emit('click');
  assert.match(frame.src,/^analysis\.html(?:\?v=[\w-]+)?$/);assert.equal(h.ids['map-page'].hidden,true);assert.equal(h.ids['analysis-page'].hidden,false);assert.equal(h.ids['save-view-button'].hidden,false,'the map ancestor controls save visibility');
  await frame.emit('load');assert.equal(frame.hidden,false);assert.equal(h.ids['analysis-loading'].hidden,true);assert.equal(h.view,'overview');
- const api=h.context.AtlasNavigation;api.setAnalysisHash('#patterns');
+ const api=h.context.AtlasNavigation;
+ assert.equal(api.getDuration(),'over1');api.setDuration('all');assert.equal(api.getDuration(),'all');
+ await h.ids['map-page-button'].emit('click');assert.equal(api.getDuration(),'all','navigation preserves duration');
+ await h.ids['analysis-page-button'].emit('click');api.setDuration('over1');
+ api.setAnalysisHash('#patterns');
  assert.equal(h.context.location.hash,'#analysis/patterns');assert.equal(h.ids['analysis-page-button'].attrs['aria-current'],'page');assert.equal(h.ids['overview-page-button'].attrs['aria-pressed'],'false');
  assert.equal(api.getAnalysisURL('#record-R16-EU-005'),'https://lamarque-mapping.github.io/Border-Closure-Atlas/#dataset/record-R16-EU-005');
  h.navigated=null;await h.ids['map-page-button'].emit('click');assert.equal(h.ids['map-page'].hidden,false);assert.equal(h.ids['save-view-button'].hidden,false);
@@ -135,7 +139,7 @@ function host(initialHash='',offline=false){
  vm.runInContext(app.slice(app.indexOf('  function setPlayback('),app.indexOf('  function dateText(')),tc);
  vm.runInContext(app.slice(app.indexOf('  function changeMonth('),app.indexOf("  $('search').addEventListener")),tc);
  vm.runInContext(app.slice(app.indexOf('  function resetFilters('),app.indexOf('  function render(){')),tc);
- tc.applyData(data);const timelineState=vm.runInContext('state',tc);
+ tc.applyData(data);const timelineState=vm.runInContext('state',tc);tc.AtlasNavigation={setDuration(value){timelineState.duration=value;}};
  assert(timeline.ids['research-method'].innerHTML.includes(releaseMethod.full_text),'Overview retains the complete supplied research account');
  assert(timeline.ids['research-method'].innerHTML.includes('not independent human or different-model verification'),'AI-review limits stay explicit');
  // Overview totals describe the complete land dataset. Execute the production
@@ -168,8 +172,11 @@ function host(initialHash='',offline=false){
  assert.deepEqual(['rationale-evidence-summary','date-evidence-summary','date-evidence-kinds'].map(id=>overview.ids[id].innerHTML),overviewBefore,'map filters, the visible selection and excluded-record controls cannot change global Overview denominators');
  console.log('Overview evidence passed: complete shared methods; '+fullLand.length+' included land records, native-table rationale/timing totals, separate national histories excluded, and filter-independent denominators.');
  assert.equal(timelineState.mode,'intervals');assert.equal(timeline.ids['time-mode'].value,'intervals');
- assert.equal(timelineState.month,core.monthOrdinal(data.meta.window_start));assert.deepEqual(core.filterEvents(data,timelineState).map(e=>e.id).sort(),reference.recordIDsInMonth(data.meta.window_start.slice(0,7)).sort(),'default month selection reconciles to native phase dates and temporal bindings');
- assert(core.filterEvents(data,timelineState).some(e=>e.id==='FU-COV-EAS-003'),'include the replacement workbook conservation-policy record');
+ assert.equal(timelineState.month,core.monthOrdinal(data.meta.window_start));assert.deepEqual(core.filterEvents(data,timelineState).map(e=>e.id).sort(),reference.recordIDsInMonth(data.meta.window_start.slice(0,7),'over1').sort(),'default month selection reconciles to native phase dates and temporal bindings');
+ assert.equal(timelineState.duration,'over1','map defaults to strictly more than 24 hours');
+ assert(!core.filterEvents(data,timelineState).some(e=>e.id==='FU-COV-EAS-003'),'unmeasured conservation-policy record does not qualify');
+ timelineState.duration='all';
+ assert(core.filterEvents(data,timelineState).some(e=>e.id==='FU-COV-EAS-003'),'All restores unmeasured records');
  assert.equal((index.match(/id="time-mode"/g)||[]).length,1);assert(!index.slice(index.indexOf('<div class="timeline">')).includes('id="time-mode"'),'view selector belongs in the records panel');
  vm.runInContext(app.slice(app.indexOf("  $('search').addEventListener"),app.indexOf('  const showPage=')),tc);
  await timeline.ids.search.emit('input',{target:{value:' '}});assert.equal(timelineState.mode,'intervals','blank input leaves the initial dated view intact');
@@ -212,11 +219,15 @@ function host(initialHash='',offline=false){
  const parentLocation={hash:''};
  a.context.parent={location:parentLocation,AtlasNavigation:atlas,AtlasData:{ready:async()=>summary,getRecord:async id=>{detailRequests++;return data.events.find(e=>e.id===id)},getResearchData:async()=>{archiveRequests++;return completeResearch}}};
  const ui=fs.readFileSync(require('path').resolve(__dirname,'analysis-ui.js'),'utf8').replace('\n})().catch','\nwindow.TEST={filterFromChart,renderRecords,openRecord,closeRecord,renderCharts,applyFilters,currentCharts,EVENTS,INCLUDED,DATA,setDownload(fn){download=fn}};\n})().catch');
+ vm.runInContext(fs.readFileSync(root+'duration.js','utf8'),a.context);
  vm.runInContext(fs.readFileSync(root+'record-summary.js','utf8'),a.context);
  vm.runInContext(fs.readFileSync(require('path').resolve(__dirname,'analysis-metrics.js'),'utf8'),a.context);
  await vm.runInContext(ui,a.context);
  const t=a.context.TEST;assert(t,'Analysis initialization failed');
  assert.equal(detailRequests,0,'Analysis charts and register must not fetch full records on opening');assert.equal(archiveRequests,0);
+ assert.equal(a.ids.resultCount.textContent,'408 matching records · more than 1 day','Dataset starts with >24h');
+ assert.equal(a.ids.chartDuration.value,'over1');
+ a.context.AtlasAnalysis.setDuration('all');
  assert.equal(a.ids.resultCount.textContent,reference.counts.included+' matching records');assert.equal(a.ids.pageNote.textContent,'1–12 of '+reference.counts.included);
  assert(a.ids.codeChart.innerHTML.includes('Health and biosecurity'));assert(a.ids.codeChart.innerHTML.includes('Policy and socioeconomic demands'));
  assert(a.ids.codeChart.innerHTML.includes('Administration and service operation'));assert(a.ids.codeChart.innerHTML.includes('Environment and resource management'));

@@ -60,7 +60,7 @@ const app=fs.readFileSync(path.join(root,'dist/app.js'),'utf8');
 // control wiring and rendering functions rather than restating their gate.
 const stateDeclaration=app.match(/const state=(\{[^\n]+\});/);
 assert(stateDeclaration,'the production default map state is available');
-const defaultState=vm.runInNewContext('('+stateDeclaration[1]+')');
+const defaultState=vm.runInNewContext('('+stateDeclaration[1]+')',{window:{}});
 assert.equal(defaultState.showHistory,false,'earlier crossing history is off by default');
 const html=fs.readFileSync(path.join(root,'dist/index.html'),'utf8');
 const historyInput=html.match(/<input\b[^>]*\bid="show-history"[^>]*>/);

@@ -89,10 +89,21 @@ function fromNative(native){
   if(censored&&(recordedMaximum!=null||rawEnds.some(value=>value!==last)))return null;
   return minimum;
  }
+ function policyLowerBound(phase){
+  if(phase['Evidence category']!=='formal_policy_period'||yes(phase['Contested / held (1=yes)'])
+   ||String(phase['Calculation rule']||'').startsWith('withheld_')||temporalRule(phase)!=='legal_policy_layer_only_not_operational_closure')return null;
+  const censored=phase['Endpoint status']==='last_confirmed',last=phase['Last confirmed (not reopening)'];
+  const dates=[phase['Start earliest'],phase['Start latest'],censored?last:phase['Endpoint earliest'],censored?last:phase['Endpoint latest']].map(calendarDay);
+  if(dates.some(value=>value===null))return null;
+  const [a,b,c,d]=dates,minimum=c-b;
+  if(a>b||c>d||minimum<0||phase['Minimum date difference (days)']!==minimum)return null;
+  if(censored&&(phase['Maximum date difference (days)']!=null||[phase['Endpoint earliest']||last,phase['Endpoint latest']||last].some(value=>value!==last)))return null;
+  return minimum;
+ }
  function populationIDs(population='all',duration='all'){
   const flag=population==='complete'?'Complete operational (1=yes)':population==='exact'?'Exact operational (1=yes)':null;
   return includedIDs.filter(id=>(!flag||yes(durations.get(id)[flag]))
-   &&(duration!=='over1'||phasesByRecord.get(id).some(phase=>lowerBound(phase)>1)));
+   &&(duration!=='over1'||phasesByRecord.get(id).some(phase=>lowerBound(phase)>1||policyLowerBound(phase)>1)));
  }
  function exactPhases(ids=includedIDs,duration='all'){
   const selected=new Set(ids),rows=[];
@@ -105,13 +116,13 @@ function fromNative(native){
   }
   return rows;
  }
- function recordIDsInMonth(month){
+ function recordIDsInMonth(month,duration='all'){
   assert.match(month,/^\d{4}-\d{2}$/);
   const [year,number]=month.split('-').map(Number),first=Date.UTC(year,number-1,1)/86400000,next=Date.UTC(year,number,1)/86400000;
   const kinds=new Set(['closed_interval','bounded_interval','same_day','confirmed_through','policy_period','ordered_window','intermittent_regime']);
   const pointRules=new Set(['held_evidence_do_not_animate_as_confirmed','dated_evidence_only_no_continuity_inference','day_marker_no_whole_day_duration']);
   return includedIDs.filter(id=>phasesByRecord.get(id).some(phase=>{
-   if(!kinds.has(phase['Interval type']))return false;
+   if(!kinds.has(phase['Interval type'])||duration==='over1'&&!(lowerBound(phase)>1||policyLowerBound(phase)>1))return false;
    const dates=['Start earliest','Start latest','Endpoint earliest','Endpoint latest','Last confirmed (not reopening)'].map(key=>calendarDay(phase[key]));
    const recorded=dates.some(value=>value!==null&&value>=first&&value<next);
    const [a,b]=dates,c=dates[2]??dates[4],d=dates[3]??dates[4];

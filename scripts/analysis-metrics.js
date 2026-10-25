@@ -20,28 +20,9 @@
   if(p.maximum_days!=null&&Number(p.maximum_days)!==days)return null;
   return days;
  }
- function operationalMinimumDays(p){
-  if(!p||p.measure_type!=='operational_spell'||p.contested)return null;
-  const complete=p.complete_operational&&['closed_interval','bounded_interval'].includes(p.kind)
-   &&p.temporal_display_rule==='scoped_interval_with_endpoint_uncertainty';
-  const censored=p.kind==='confirmed_through'&&p.endpoint_status==='last_confirmed'
-   &&p.temporal_display_rule==='censored_interval_stop_at_last_confirmation_unknown_afterward';
-  if(!complete&&!censored)return null;
-  const firstStart=day(p.start_earliest),lastStart=day(p.start_latest);
-  const firstEnd=day(censored?p.last_confirmed:p.end_earliest),lastEnd=day(censored?p.last_confirmed:p.end_latest);
-  if([firstStart,lastStart,firstEnd,lastEnd].some(value=>value===null)||firstStart>lastStart||firstEnd>lastEnd)return null;
-  const minimum=firstEnd-lastStart;
-  if(minimum<0||!Number.isFinite(p.minimum_days)||p.minimum_days!==minimum)return null;
-  if(complete&&(!Number.isFinite(p.maximum_days)||p.maximum_days!==lastEnd-firstStart))return null;
-  // A last confirmation supplies a lower bound, never an inferred reopening.
-  if(censored&&(p.maximum_days!=null||p.end_earliest!==p.last_confirmed||p.end_latest!==p.last_confirmed))return null;
-  return minimum;
- }
- function durationMatch(event,duration='all'){
-  return duration!=='over1'||(event.duration_periods||[]).some(p=>{
-   const minimum=operationalMinimumDays(p);return minimum!==null&&minimum>1;
-  });
- }
+ const D=typeof module!=='undefined'&&module.exports?require('../dist/duration.js'):root.BorderDuration;
+ function operationalMinimumDays(p){return p?.measure_type==='operational_spell'?D.minimumDays(p):null;}
+ function durationMatch(event,duration='all'){return D.matches(event,duration);}
  function filterRecords(events,population='all',duration='all'){
   return events.filter(e=>!e.quarantined&&(!e.inclusion_status||e.inclusion_status==='Included')
    &&(population==='complete'?e.timing_coverage?.operational_complete:

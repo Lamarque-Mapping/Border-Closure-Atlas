@@ -1,6 +1,7 @@
 (function(root){
   'use strict';
   const array=v=>Array.isArray(v)?v:[];
+  const D=typeof module!=='undefined'&&module.exports?require('./duration.js'):root.BorderDuration;
   const CONTINENTS=['Africa','Europe','Asia','North America','South America','Oceania'];
   function monthOrdinal(value){const m=String(value||'').match(/^(\d{4})-(\d{2})(?:$|-)/);if(!m)return null;const n=Number(m[2]);return n>=1&&n<=12?Number(m[1])*12+n-1:null;}
   function monthISO(n){return String(Math.floor(n/12)).padStart(4,'0')+'-'+String(n%12+1).padStart(2,'0');}
@@ -38,7 +39,7 @@
   }
   function statusPeriods(e,state={}){
     if(state.mode==='onsets'||state.measureType)return [];
-    return array(e.map_status_periods).filter(p=>state.mode==='all'||statusTemporalState(p,state.month)!=='none');
+    return array(e.map_status_periods).filter(p=>state.duration!=='over1'||D.qualifies(p,e)).filter(p=>state.mode==='all'||statusTemporalState(p,state.month)!=='none');
   }
   function periodEvidenceDates(p){
     return [...new Set([...array(p?.evidence_dates),p?.start_earliest,p?.start_latest,p?.end_earliest,p?.end_latest,p?.last_confirmed].filter(v=>day(v)!==null))];
@@ -90,13 +91,13 @@
   function temporalState(e,month,measureType=''){return temporalStates(e,month,measureType)[0]||'none';}
   function periodsForView(e,state={}){
     const onsetIDs=state.mode==='onsets'&&Array.isArray(e.phase_onsets)?new Set(e.phase_onsets.filter(p=>monthOrdinal(p.month)===state.month&&(!state.measureType||p.measure_type===state.measureType)).map(p=>p.phase_id)):null;
-    return [...(state.mode==='intervals'?periods(e,state.measureType):array(e.duration_periods).filter(p=>!state.measureType||p.measure_type===state.measureType)).filter(p=>state.mode!=='intervals'||phaseTemporalState(p,state.month)!=='none').filter(p=>!onsetIDs||onsetIDs.has(p.period_id)),...statusPeriods(e,state)];
+    return [...(state.mode==='intervals'?periods(e,state.measureType):array(e.duration_periods).filter(p=>!state.measureType||p.measure_type===state.measureType)).filter(p=>state.mode!=='intervals'||phaseTemporalState(p,state.month)!=='none').filter(p=>!onsetIDs||onsetIDs.has(p.period_id)),...statusPeriods(e,state)].filter(p=>state.duration!=='over1'||D.qualifies(p,e));
   }
   function mappingRows(e,data,state={}){
     if(excluded(e)||isSupplement(e)||!data.crossing_map)return [];
     const phases=periodsForView(e,state);
     if(phases.length)return phases.map(p=>data.crossing_map.phases[p.source_phase_id||p.period_id]).filter(row=>row?.record_id===e.id);
-    return !array(e.duration_periods).length&&data.crossing_map.undated[e.id]?[data.crossing_map.undated[e.id]]:[];
+    return state.duration!=='over1'&&!array(e.duration_periods).length&&data.crossing_map.undated[e.id]?[data.crossing_map.undated[e.id]]:[];
   }
   function phaseLocationIDs(e,row,data){
     if(!row)return [];
@@ -115,7 +116,7 @@
   function recordsForLocation(records,id,data,state={}){
     return records.filter(e=>mapLocationsFor(e,data,state).includes(id)).map(e=>{
       const phases=periodsForView(e,state).filter(p=>e.record_kind==='border_status'?array(p.location_ids).includes(id):isSupplement(e)||!data.crossing_map||phaseLocationIDs(e,data.crossing_map.phases[p.source_phase_id||p.period_id],data).includes(id));
-      return {...e,duration_periods:phases.filter(p=>!p.map_status),map_status_periods:phases.filter(p=>p.map_status),map_status_only:phases.length>0&&phases.every(p=>p.map_status),map_status_unresolved:phases.length>0&&phases.every(p=>p.map_status&&p.status==='unresolved')};
+      return {...e,duration_source_periods:e.duration_source_periods||e.duration_periods,duration_periods:phases.filter(p=>!p.map_status),map_status_periods:phases.filter(p=>p.map_status),map_status_only:phases.length>0&&phases.every(p=>p.map_status),map_status_unresolved:phases.length>0&&phases.every(p=>p.map_status&&p.status==='unresolved')};
     });
   }
   function mappingStatus(e,data,state={}){
@@ -147,7 +148,7 @@
   }
   function filterEvents(data,state){
     const q=String(state.query||'').trim().toLowerCase();
-    return data.events.filter(e=>!excluded(e)||(state.includeExcluded===true&&state.mode==='all')).filter(e=>!state.continent||array(e.continents).includes(state.continent)).filter(e=>!state.region||e.region===state.region).filter(e=>!state.rationale||array(e.rationales).includes(state.rationale)).filter(e=>matchesPrecision(e,state.precision,data,state)).filter(e=>!q||[e.id,e.title,e.region,e.scope,e.crossings,e.movement,e.direction,...array(e.countries),...array(e.rationales)].join(' ').toLowerCase().includes(q)).filter(e=>!state.location||mapLocationsFor(e,data,state).includes(state.location)).filter(e=>!state.measureType||(state.mode==='all'?array(e.duration_periods).some(p=>p.measure_type===state.measureType):periods(e,state.measureType).length)).filter(e=>matchesTime(e,state.mode,state.month,state.measureType));
+    return data.events.map(e=>state.duration==='over1'?D.scopedEvent(e,state.duration):e).filter(Boolean).filter(e=>!excluded(e)||(state.includeExcluded===true&&state.mode==='all')).filter(e=>!state.continent||array(e.continents).includes(state.continent)).filter(e=>!state.region||e.region===state.region).filter(e=>!state.rationale||array(e.rationales).includes(state.rationale)).filter(e=>matchesPrecision(e,state.precision,data,state)).filter(e=>!q||[e.id,e.title,e.region,e.scope,e.crossings,e.movement,e.direction,...array(e.countries),...array(e.rationales)].join(' ').toLowerCase().includes(q)).filter(e=>!state.location||mapLocationsFor(e,data,state).includes(state.location)).filter(e=>!state.measureType||(state.mode==='all'?array(e.duration_periods).some(p=>p.measure_type===state.measureType):periods(e,state.measureType).length)).filter(e=>matchesTime(e,state.mode,state.month,state.measureType));
   }
   const api={array,CONTINENTS,monthOrdinal,monthISO,day,quarantined,excluded,isSupplement,statusPeriods,statusTemporalState,locationsFor,locationFeatures,contextLocationsFor,displayLocationsFor,mapLocationsFor,mappingRows,recordsForLocation,mappingStatus,periodEvidenceDates,validPeriod,periods,periodsForView,measureLabel,phaseTemporalState,temporalStates,temporalState,temporalLabel,intervalEligible,matchesTime,precision,matchesPrecision,availableContinents,continentCounts,validate,filterEvents};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.BorderCore=api;
