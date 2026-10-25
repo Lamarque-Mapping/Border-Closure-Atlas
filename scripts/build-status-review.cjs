@@ -15,6 +15,13 @@ const audit=source.audit;
 assert(audit&&audit.records.length===source.unresolved.length,'Review must cover the complete inventory');
 assert.equal(new Set(audit.records.map(r=>r.record_id)).size,audit.records.length,'Duplicate assessment');
 const findings=new Map(audit.records.map(r=>[r.record_id,r]));
+for(const w of source.geography_windows||[]){
+ const record=data.events.find(e=>e.id===w.record_id),phase=record?.duration_periods.find(p=>p.period_id===w.phase_id);
+ const observation=source.observations.find(o=>o.id===w.observation_id);
+ assert(phase&&observation?.linked_land_ids.includes(w.record_id));
+ assert(observation.timeline_periods.some(p=>p.from_date===w.from_date&&p.location_ids?.includes(w.location_id)),'Geography timing needs a reviewed location-specific period');
+ assert(w.from_date>=phase.start_earliest&&w.from_date<=phase.start_latest,'Geography correction must stay inside the recorded staggered onset range');
+}
 for(const r of source.unresolved){
  const finding=findings.get(r.record_id);assert(finding,'Missing assessment '+r.record_id);
  assert.equal(JSON.stringify(finding.phases),JSON.stringify(r.phases),'Assessment scope changed: '+r.record_id);
@@ -29,10 +36,21 @@ for(const o of source.observations){
  assert(Array.isArray(o.location_ids)&&o.scope&&o.qualification);
  if(!o.location_ids.length)assert(/without an unverified map position/.test(o.qualification),'Unmapped status needs an explicit qualification');
  for(const id of o.linked_land_ids||[])assert(ids.has(id),'Unknown linked record '+id);
+ if(o.timeline_periods){
+  assert(o.timeline_periods.length&&o.timeline_review?.checked_at===source.reviewed_at&&o.timeline_review.finding);
+  const urls=new Set(o.sources.map(s=>s.url));
+  for(const p of o.timeline_periods){
+   assert(C.day(p.from_date)!==null&&C.day(p.through_date)!==null&&p.from_date<=p.through_date&&p.through_date<=o.observed_at,'Invalid supported timeline bounds: '+o.id);
+   assert(['closed','restricted'].includes(p.status)&&['day','pre_window'].includes(p.start_precision));
+   assert(typeof p.end_inclusive==='boolean'&&(p.end_inclusive||p.from_date<p.through_date));
+   assert(p.scope&&p.summary&&p.basis&&p.source_urls.length&&p.source_urls.every(url=>urls.has(url)),'Each timeline phase needs matching source evidence');
+   if(p.start_precision==='pre_window')assert(p.from_date==='2016-10-21'&&p.start_label==='Already in force before October 2016','Window boundary must not masquerade as an onset');
+   if(p.location_ids)assert(p.location_ids.every(id=>o.location_ids.includes(id)),'Timeline geography must stay within reviewed observation scope');
+  }
+ }
 }
-// Snapshots are additional observations, not retrospective proof that every
-// intervening day was closed. Resolved dates only suppress a matching unknown
-// marker at a separately reviewed scope, never every phase of a parent record.
+// A check date alone is not continuity evidence. Explicit reviewed periods can
+// replace the matching unknown interval without altering measured durations.
 const resolved=new Set();
 for(const resolution of source.resolutions||[]){
  const row=source.unresolved.find(r=>r.record_id===resolution.record_id);
@@ -47,8 +65,14 @@ for(const resolution of source.resolutions||[]){
  if(resolution.kind==='current_status'){
   const observation=source.observations.find(o=>o.id===resolution.observation_id);
   assert(observation?.linked_land_ids.includes(row.record_id)&&observation.observed_at===resolution.from);
+  if(resolution.timeline_from){
+   assert(C.day(resolution.timeline_from)!==null&&resolution.timeline_from>=p.last_confirmed&&resolution.timeline_from<=resolution.from);
+   assert(resolution.timeline_period_indexes?.length);
+   const periods=resolution.timeline_period_indexes.map(i=>observation.timeline_periods?.[i]);
+   assert(periods.every(Boolean)&&periods.some(p=>p.from_date<=resolution.timeline_from)&&periods.some(p=>p.end_inclusive&&p.through_date===resolution.from),'Timeline resolution needs reviewed coverage');
+  }
  }
- p.resolved_from=resolution.from;
+ p.resolved_from=resolution.timeline_from||resolution.from;
 }
 assert.equal(audit.counts.resolved_phases,resolved.size);
 assert.equal(audit.counts.records_with_integrated_findings,audit.records.filter(r=>r.integration.length).length);
@@ -56,6 +80,11 @@ assert.equal(audit.counts.remaining_unverified_phases,source.unresolved.reduce((
 for(const finding of audit.records)assert.deepEqual(finding.integration.filter(r=>r.phase_id),source.resolutions.filter(r=>r.record_id===finding.record_id),'Audit and map decisions must match: '+finding.record_id);
 assert.equal(audit.counts.remaining_unverified_records,source.unresolved.filter(r=>r.phases.some(p=>!resolved.has(p.phase_id))).length);
 assert.equal(audit.counts.status_observations,source.observations.length);
+const chronology=audit.chronology_followup;
+assert.equal(chronology.reviewed_observations,source.observations.length);
+assert.equal(chronology.observations_with_supported_periods,source.observations.filter(o=>o.timeline_periods?.length).length);
+assert.equal(chronology.timeline_periods,source.observations.reduce((n,o)=>n+(o.timeline_periods?.length||0),0));
+assert.equal(chronology.pre_window_regimes,source.observations.filter(o=>o.timeline_periods?.some(p=>p.start_precision==='pre_window')).length);
 fs.writeFileSync(path.join(root,'dist/status-data.js'),'window.ATLAS_STATUS_REVIEW = '+JSON.stringify(source).replace(/</g,'\\u003c')+';\n');
 fs.writeFileSync(path.join(root,'dist/downloads/border-status-review.json'),JSON.stringify(source,null,2)+'\n');
 fs.writeFileSync(path.join(root,'dist/status-audit.html'),require('./status-audit-page.cjs')(source));

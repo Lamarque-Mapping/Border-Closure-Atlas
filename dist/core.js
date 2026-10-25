@@ -29,6 +29,11 @@
   function statusTemporalState(p,month){
     if(!p?.map_status||!Number.isInteger(month))return 'none';
     if(p.status==='unresolved')return month>monthOrdinal(p.last_confirmed)&&month<=monthOrdinal(p.end_latest)&&(!p.resolved_from||month<monthOrdinal(p.resolved_from))?'unresolved':'none';
+    if(p.status_timeline){
+      const start=day(p.start_earliest),end=day(p.end_latest),monthStart=day(monthISO(month)+'-01'),monthEnd=day(monthISO(month+1)+'-01');
+      if(start===null||end===null||monthStart===null||monthEnd===null)return 'none';
+      return start<monthEnd&&end+(p.end_inclusive?86400000:0)>monthStart?p.status:'none';
+    }
     return month===monthOrdinal(p.start_earliest)?p.status:'none';
   }
   function statusPeriods(e,state={}){
@@ -103,12 +108,13 @@
   }
   function mapLocationsFor(e,data,state={}){
     if(excluded(e))return [];
+    if(e.record_kind==='border_status'&&(state.mode==='all'||state.mode==='onsets'||Number.isInteger(state.month)))return [...new Set(statusPeriods(e,state).flatMap(p=>array(p.location_ids)))];
     if(isSupplement(e)||!data.crossing_map)return displayLocationsFor(e,data);
-    return [...new Set(mappingRows(e,data,state).flatMap(row=>phaseLocationIDs(e,row,data)))];
+    return [...new Set(mappingRows(e,data,state).flatMap(row=>phaseLocationIDs(e,row,data).filter(id=>state.mode!=='intervals'||!array(e.map_geography_windows).some(w=>w.phase_id===row.phase_id&&w.location_id===id&&state.month<monthOrdinal(w.from_date)))))];
   }
   function recordsForLocation(records,id,data,state={}){
     return records.filter(e=>mapLocationsFor(e,data,state).includes(id)).map(e=>{
-      const phases=periodsForView(e,state).filter(p=>isSupplement(e)||!data.crossing_map||phaseLocationIDs(e,data.crossing_map.phases[p.source_phase_id||p.period_id],data).includes(id));
+      const phases=periodsForView(e,state).filter(p=>e.record_kind==='border_status'?array(p.location_ids).includes(id):isSupplement(e)||!data.crossing_map||phaseLocationIDs(e,data.crossing_map.phases[p.source_phase_id||p.period_id],data).includes(id));
       return {...e,duration_periods:phases.filter(p=>!p.map_status),map_status_periods:phases.filter(p=>p.map_status),map_status_only:phases.length>0&&phases.every(p=>p.map_status),map_status_unresolved:phases.length>0&&phases.every(p=>p.map_status&&p.status==='unresolved')};
     });
   }

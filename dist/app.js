@@ -274,7 +274,7 @@
     return dateText(first)+' – '+dateText(last);
   }
   function cardPeriodDates(p){
-    if(p.map_status)return p.status==='unresolved'?'Last confirmed '+dateText(p.last_confirmed):'Observed '+dateText(p.start_earliest);
+    if(p.map_status)return window.AtlasStatus.periodDates(p,dateText);
     const start=cardBoundary(p.start_earliest,p.start_latest),end=cardBoundary(p.end_earliest,p.end_latest);
     if(p.national_observation)return start;
     if(p.contested)return C.periodEvidenceDates(p).map(dateText).join('; ')||'Dates not established';
@@ -524,7 +524,9 @@
   }
   function statusDetailHTML(e){
     const o=e.status_review;
-    return '<div class="detail-id">Border-access status · '+escape(dateText(o.observed_at))+'</div><h2 class="detail-title">'+escape(e.title)+'</h2><p class="event-summary">'+escape(o.summary)+'</p>'+rationaleHTML([e])+field('Scope',o.scope)+field('Affected movement',o.movement)+field('Exceptions',o.exceptions)+field('Evidence limits',o.qualification)+'<p class="qualification">This is a dated status observation. It does not count as a new closure episode or establish an exact duration.</p><section class="detail-field"><h3>Sources</h3><ul>'+eventSources(e).map(s=>'<li><a href="'+escape(s.url)+'" target="_blank" rel="noopener noreferrer">'+escape(s.label)+' ↗</a></li>').join('')+'</ul></section>'+(e.linked_land_ids.length?'<section class="detail-field"><h3>Related historical records</h3>'+e.linked_land_ids.map(id=>'<p><a href="#map/record-'+encodeURIComponent(id)+'">'+escape(id)+'</a></p>').join('')+'</section>':'');
+    const periods=e.map_status_periods||[],active=C.statusPeriods(e,state);
+    const chronology='<section class="detail-field"><h3>Restriction timeline</h3><ol class="national-history">'+periods.map(p=>'<li><strong>'+escape(cardPeriodDates(p))+'</strong>'+((state.mode==='intervals'&&active.includes(p))?'<p class="qualification">Applies in the selected month</p>':'')+'<p>'+escape(p.display)+'</p><p><b>Scope:</b> '+escape(p.scope)+'</p></li>').join('')+'</ol></section>';
+    return '<div class="detail-id">Border-access evidence · checked '+escape(dateText(o.timeline_review?.checked_at||o.sources[0]?.checked_at||o.observed_at))+'</div><h2 class="detail-title">'+escape(e.title)+'</h2>'+chronology+field('Latest observation · '+dateText(o.observed_at),o.summary)+rationaleHTML([e])+field('Affected movement',o.movement)+field('Exceptions',o.exceptions)+field('Evidence limits',o.qualification)+'<p class="qualification">The check date is not a closure start. Supplemental chronology does not add closure episodes or closed-day totals.</p><section class="detail-field"><h3>Sources</h3><ul>'+eventSources(e).map(s=>'<li><a href="'+escape(s.url)+'" target="_blank" rel="noopener noreferrer">'+escape(s.label)+' ↗</a></li>').join('')+'</ul></section>'+(e.linked_land_ids.length?'<section class="detail-field"><h3>Related historical records</h3>'+e.linked_land_ids.map(id=>'<p><a href="#map/record-'+encodeURIComponent(id)+'">'+escape(id)+'</a></p>').join('')+'</section>':'');
   }
   function nationalDetailHTML(e){
     const main=e.duration_periods.find(p=>p.national_display_period),sources=eventSources(e);

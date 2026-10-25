@@ -33,19 +33,27 @@ closure confirmations, three conflicting findings and 83 unresolved findings.
 A later access bound does not assert that a border is currently open or supply
 an exact historical reopening date. Only supported matching phases are updated.
 The COVID follow-up adds 21 phase bounds across 19 records: 18 newly integrated
-records and further resolution of Slovenia's railway phase. These old phase markers
-no longer appear in 2025. The national policy endings for Chile and Vietnam do not
+records and further resolution of Slovenia's railway phase. Each old phase marker
+ends at its own supported bound throughout the timeline. The national policy endings for Chile and Vietnam do not
 assert that every crossing physically reopened. Chile's 22-of-40 operational
 reopening remains explicit; Sota's traditional access does not resolve Kali Torasi
 or Bupul. Burkina Faso's July lifting and October reimposition of its flour-export
 ban remain distinct.
 
-Thirty-three separately sourced October status observations include the Ukraine–Russia
-and inter-Korean borders and restricted Rafah passenger access. Each carries its
-actual observation date, scope, exceptions and evidence. The observations do not
-interpolate earlier months, enter closure-duration statistics or count as new
-closure episodes. Some were checked after the original 21 October study cutoff;
-their actual dates remain visible. The historical 829-record reader is unchanged.
+All **33 status observations now have separately reviewed chronology**, comprising
+**45 scoped periods**. The date a restriction was checked is not its start date.
+Ukraine's Russia and Belarus ordinary-crossing suspensions appear from **28 February
+2022**, the effective date of Order 188-r. Six longstanding regimes, including the
+inter-Korean boundary, are labelled as already in force before October 2016.
+Rafah's passenger closures and controlled reopenings are separate phases from May
+2024 onward; Finland's December 2023 reclosure, changes to Ukraine's exit-age rule,
+Narva's changing hours and Azerbaijan's different frontier dates remain distinct.
+Source-supported continuity concerns the stated restriction regime with exceptions,
+not uninterrupted physical closure at every checkpoint. A check without supported
+chronology would remain a labelled snapshot with no invented start.
+These supplements do not enter closure-duration statistics or count as new closure
+episodes. Some checks postdate the original 21 October study cutoff; their actual
+dates remain visible. The historical 829-record reader is unchanged.
 The companion ZIP and `downloads/border-status-review.json` include this review.
 The review was an AI source assessment, not independent field verification.
 

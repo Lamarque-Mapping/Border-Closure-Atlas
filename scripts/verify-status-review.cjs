@@ -13,10 +13,52 @@ for(const e of d.events.filter(e=>!S.isSupplement(e)))assert.equal(JSON.stringif
 const oct={mode:'intervals',month:C.monthOrdinal('2026-10')},sep={...oct,month:C.monthOrdinal('2026-09')};
 const visible=C.filterEvents(d,oct),get=id=>d.events.find(e=>e.id===id),features=new Map(C.locationFeatures(d).map(f=>[f.properties.location_id,f]));
 for(const [id,location,status] of [['STATUS-RUS-UKR-202610','context-frontier-rus-ukr','closed'],['STATUS-KOR-PRK-202610','context-frontier-kor-prk','closed'],['STATUS-RAFAH-202610','post-rafah','restricted']]){
- const e=get(id);assert(visible.includes(e));assert.equal(C.temporalState(e,oct.month),status);assert.equal(C.temporalState(e,sep.month),'none','A snapshot must not fill earlier months');
+ const e=get(id);assert(visible.includes(e));assert.equal(C.temporalState(e,oct.month),status);assert.equal(C.temporalState(e,sep.month),status,'Verified continuing regimes must not pop into existence in the check month');
  assert(C.mapLocationsFor(e,d,oct).includes(location));assert.equal(e.duration_periods.length,0);
  assert.equal(C.matchesTime(e,'onsets',oct.month),false,'No new closure onset invented');
  assert(e.sources.length&&e.status_review.qualification);
+}
+const at=(id,month)=>C.temporalState(get(id),C.monthOrdinal(month));
+for(const id of ['STATUS-RUS-UKR-202610','STATUS-BLR-UKR-202610']){
+ assert.equal(get(id).start,'2022-02-28','Use the operative date, not the order adoption, invasion or check date');
+ assert.equal(at(id,'2022-01'),'none');
+ for(const month of ['2022-02','2022-10','2023-11','2024-06','2025-06','2026-09'])assert.equal(at(id,month),'closed',id+' continuing in '+month);
+ assert.equal(at(id,'2026-11'),'none','No future projection after evidence');
+ assert(S.periodDates(get(id).map_status_periods[0]).includes('From 2022-02-28'));
+}
+for(const o of source.observations.filter(o=>o.timeline_periods.some(p=>p.start_precision==='pre_window'))){
+ const e=get(o.id);assert.equal(e.start,null,'No invented exact onset for a pre-window regime');
+ assert.notEqual(at(o.id,'2016-10'),'none');assert.equal(C.matchesTime(e,'onsets',C.monthOrdinal('2016-10')),false);
+ assert(S.periodDates(e.map_status_periods[0]).startsWith('Already in force before October 2016'));
+}
+for(const [month,status] of [['2024-04','none'],['2024-06','closed'],['2025-01','closed'],['2025-02','restricted'],['2025-04','closed'],['2026-01','closed'],['2026-04','restricted']])assert.equal(at('STATUS-RAFAH-202610',month),status,'Rafah passenger phase in '+month);
+assert.deepEqual(C.temporalStates(get('STATUS-RAFAH-202610'),C.monthOrdinal('2025-03')),['closed','restricted'],'Monthly view retains both sides of a within-month transition');
+assert.equal(at('STATUS-FIN-RUS-202610','2023-11'),'none','Do not merge the renewed Finnish closure across the brief reopening');
+assert.equal(at('STATUS-FIN-RUS-202610','2024-01'),'closed');
+assert.equal(at('STATUS-BDI-RWA-202610','2023-12'),'none');assert.equal(at('STATUS-BDI-RWA-202610','2024-02'),'closed');
+assert.equal(at('STATUS-AUDIT-REC50-R03-001-20261025','2025-07'),'none','Do not backdate the 23–60 age scope');
+assert.equal(at('STATUS-AUDIT-REC50-R03-001-20261025','2025-09'),'restricted');
+assert.equal(at('STATUS-AUDIT-EA024-20261001','2025-02'),'none','Rason’s brief reopening must remain distinct');
+assert.equal(at('STATUS-AUDIT-EA024-20261001','2025-04'),'restricted');
+const narva=get('STATUS-AUDIT-REC50-R08-002-20261025');
+assert.equal(C.statusPeriods(narva,{mode:'intervals',month:C.monthOrdinal('2024-04')}).length,1,'Initial vehicle restriction only');
+assert(C.statusPeriods(narva,{mode:'intervals',month:C.monthOrdinal('2025-10')}).some(p=>p.scope.includes('23:00')));
+assert(!C.statusPeriods(narva,{mode:'intervals',month:C.monthOrdinal('2025-10')}).some(p=>p.scope.includes('19:00')));
+assert(C.statusPeriods(narva,{mode:'intervals',month:C.monthOrdinal('2026-07')}).some(p=>p.scope.includes('19:00')));
+const aze=get('STATUS-AUDIT-CC003-20261025'),feb2020={mode:'intervals',month:C.monthOrdinal('2020-02')};
+assert.deepEqual(C.mapLocationsFor(aze,d,feb2020),['context-frontier-aze-irn'],'Do not backdate Georgia, Russia or Türkiye to Iran’s February closure');
+assert.deepEqual(C.mapLocationsFor(get('CC003'),d,feb2020),['context-frontier-aze-irn'],'Historical staggered-onset geography must agree with the source-specific dates');
+assert.equal(C.mapLocationsFor(aze,d,{...feb2020,month:C.monthOrdinal('2020-03')}).length,4);
+assert(C.recordsForLocation([aze],'context-frontier-aze-irn',d,feb2020)[0].map_status_periods.every(p=>p.scope.endsWith('Iran')));
+const snapshotSource=JSON.parse(JSON.stringify(source));snapshotSource.observations=[snapshotSource.observations[0]];delete snapshotSource.observations[0].timeline_periods;
+const snapshot=S.compile(snapshotSource)[0];assert.equal(snapshot.start,null);assert.equal(C.temporalState(snapshot,sep.month),'none','A bare current check is still not continuity evidence');assert.equal(C.temporalState(snapshot,oct.month),'closed');
+assert(S.periodDates(snapshot.map_status_periods[0]).includes('start not established'));
+assert.equal(source.audit.chronology_followup.reviewed_observations,33);assert.equal(source.audit.chronology_followup.timeline_periods,45);assert.equal(source.audit.chronology_followup.pre_window_regimes,6);
+for(const o of source.observations){
+ const e=get(o.id);assert.equal(e.map_status_periods.length,o.timeline_periods.length);
+ for(const p of e.map_status_periods){assert.equal(C.statusTemporalState(p,C.monthOrdinal(p.start_earliest)),p.status);assert.equal(C.statusTemporalState(p,C.monthOrdinal(p.start_earliest)-1),'none');}
+ assert.equal(C.temporalState(e,C.monthOrdinal(o.observed_at)+1),'none');
+ assert.equal(C.matchesTime(e,'onsets',oct.month),false);
 }
 for(const e of d.events.filter(S.isStatus))for(const id of C.mapLocationsFor(e,d,oct))assert(features.has(id),'Known geography '+id);
 const old=get('H08');assert.equal(C.temporalState(old,oct.month),'unresolved','Evidence for one frontier must not resolve an unmatched frontier');
@@ -69,7 +111,7 @@ for(const r of newBounds){
 }
 for(const r of source.audit.records)assert.equal(get(r.record_id).later_status_review.record_id,r.record_id,'All findings attached to records');
 assert.equal(d.events.filter(e=>!S.isSupplement(e)&&!C.excluded(e)).length,825);
-const csv=CSV.build({records:[get('STATUS-RAFAH-202610'),old],state:oct});assert(csv.content.includes('Later-status evidence'));assert(csv.content.includes('Not calculated: separately dated border-access status'));assert(csv.content.includes('no continuing closure')||csv.content.includes('does not assert continuing closure'));
+const csv=CSV.build({records:[get('STATUS-RAFAH-202610'),get('STATUS-RUS-UKR-202610'),old],state:oct});assert(csv.content.includes('Later-status evidence'));assert(csv.content.includes('Not calculated: separately dated border-access status'));assert(csv.content.includes('no continuing closure')||csv.content.includes('does not assert continuing closure'));assert(csv.content.includes('From 2022-02-28; confirmed through 2026-10-25'),'CSV separates effective dates and checks');assert(csv.content.includes('From 2025-02-01; until 2025-03-18'),'CSV retains limited reopening phases');
 const app=fs.readFileSync(root+'/app.js','utf8'),index=fs.readFileSync(root+'/index.html','utf8');
 const auditHTML=fs.readFileSync(root+'/status-audit.html','utf8');
 assert.equal((auditHTML.match(/class="record" id=/g)||[]).length,221);
@@ -80,4 +122,4 @@ assert(resolvedCSV.content.includes(paraguay.later_status_review.sources[0].url)
 assert(app.includes('Unmarked borders are not necessarily open.'));assert(!index.includes('id="last-month"'));assert(!app.includes("$('last-month')"));
 assert(!d.events.some(e=>e.record_kind==='national_policy'&&e.countries.includes('United Kingdom')));
 const aus=get('NATIONAL-NAT-AUS-ENTRY-COVID');assert.equal(C.temporalState(aus,C.monthOrdinal('2021-06')),'policy');
-console.log('Status review passed: all 221 assessments, 106 records with adopted findings, 21 further COVID phase bounds absent in 2025, 118 records retaining uncertainty, 33 dated observations, separate reclosures and unchanged historical durations/statistics.');
+console.log('Status review passed: 221 assessments, 106 records with adopted findings, 21 further COVID bounds, 118 records retaining uncertainty, 33 chronology reviews / 45 scoped periods, effective dates distinct from checks, separate reclosures and unchanged historical durations/statistics.');
