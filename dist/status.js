@@ -8,14 +8,15 @@
     if(!source||isSupplement(record))return record;
     const review=source.unresolved.find(r=>r.record_id===record.id);
     if(!review)return record;
-    return {...record,map_status_periods:review.phases.map(p=>({
+    const finding=source.audit?.records.find(r=>r.record_id===record.id);
+    return {...record,later_status_review:finding||null,map_status_periods:review.phases.map(p=>({
       period_id:p.phase_id+'-LATER',source_phase_id:p.phase_id,map_status:true,
       status:'unresolved',kind:'status_context',measure_type:'status_context',
       start_earliest:p.last_confirmed,start_latest:p.last_confirmed,
       end_earliest:null,end_latest:source.reviewed_at,last_confirmed:p.last_confirmed,
       evidence_dates:[],minimum_days:null,maximum_days:null,observed_reopening:'Unknown',
       endpoint_status:'status_unverified',scope:p.scope,
-      display:'Last confirmed '+p.last_confirmed+'. Later status has not been established. This mark does not assert continuing closure.',
+      display:'Last confirmed '+p.last_confirmed+'. '+(p.resolved_from?'Later evidence is available from '+p.resolved_from+'; the intervening status has not been established.':'Later status has not been established.')+' This mark does not assert continuing closure.',
       source_urls:[],label:'Later status unverified',
       resolved_from:p.resolved_from||null
     }))};
@@ -51,7 +52,7 @@
     data.events.push(...observations);
     data.meta.status_review={version:source.version,reviewed_at:source.reviewed_at,
       unresolved_records:source.unresolved.length,observations:observations.length,
-      method:source.method};
+      audit:source.audit?.counts,method:source.method};
     return data;
   }
   const api={attach,compile,decorateRecord,isStatus,isSupplement};

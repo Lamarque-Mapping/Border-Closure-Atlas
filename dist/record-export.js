@@ -11,7 +11,7 @@
   }
   function sources(record){
     const found=new Map();
-    for(const source of array(record.sources)){const href=url(source.url);if(href&&!found.has(href))found.set(href,{...source,url:href});}
+    for(const source of [...array(record.sources),...array(record.later_status_review?.sources)]){const href=url(source.url);if(href&&!found.has(href))found.set(href,{...source,url:href});}
     for(const value of [...array(record.source_urls),...array(record.duration_periods).flatMap(p=>array(p.source_urls)),...array(record.map_status_periods).flatMap(p=>array(p.source_urls))]){
       const href=url(typeof value==='string'?value:value?.url);
       if(href&&!found.has(href))found.set(href,{url:href,publisher:new URL(href).hostname.replace(/^www\./,'')});
@@ -45,7 +45,7 @@
       const timing=periods.map(p=>[p.period_id,p.scope,p.basis,p.qualification,'Observed reopening: '+p.observed_reopening,'Endpoint inclusion: '+p.endpoint_inclusion,p.reported_schedule,p.temporal_display_rule,p.map_scope_note].filter(Boolean).join(' · ')).join('\n\n');
       return [record.id,clean(record.title||record.id,'title'),text(record.countries),clean(record.crossings,'Crossings'),clean(record.scope,'scope'),clean(record.movement,'Affected movement'),clean(record.direction,'Direction'),text(record.rationales)||record.rationale_coding_status||'No assigned category',
         periods.length?periods.map(periodDates).join('\n'):record.record_kind==='border_status'?'Status observed '+record.start:'Not established',duration,clean(timing||record.current_timing,'duration'),clean(record.context,'Context'),clean(record.official_rationale,'Stated justification'),clean(record.exceptions,'Exceptions'),clean(record.uncertainty,'uncertainty'),
-        linked.map(s=>[s.publisher||new URL(s.url).hostname,s.title,s.publication_date].filter(Boolean).join(' · ')).join('\n'),linked.map(s=>s.url).join('\n'),recordURL(record.id),record.region,record.current_review?.outcome,record.quarantined||record.excluded_from_map?'Yes':'No',filters,record.record_kind?record.record_type:'Land-border record',text(record.linked_land_ids),mappingStatus(record),array(record.map_status_periods).map(p=>p.label+' · '+(p.last_confirmed||p.start_earliest)+' · '+p.scope+' · '+p.display).join('\n')];
+        linked.map(s=>[s.publisher||new URL(s.url).hostname,s.title,s.publication_date].filter(Boolean).join(' · ')).join('\n'),linked.map(s=>s.url).join('\n'),recordURL(record.id),record.region,record.current_review?.outcome,record.quarantined||record.excluded_from_map?'Yes':'No',filters,record.record_kind?record.record_type:'Land-border record',text(record.linked_land_ids),mappingStatus(record),[record.later_status_review?'Review '+record.later_status_review.checked_at+' · '+record.later_status_review.outcome+' · '+record.later_status_review.finding+' '+record.later_status_review.limitations:'',...array(record.map_status_periods).map(p=>p.label+' · '+(p.last_confirmed||p.start_earliest)+' · '+p.scope+' · '+p.display)].filter(Boolean).join('\n')];
     });
     const label=String(state.query?.trim()||locationLabel||state.continent||'filtered').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,60)||'filtered';
     return {filename:'border-closures-'+label+'-'+records.length+'-records.csv',content:'\ufeff'+[headers,...rows].map(row=>row.map(cell).join(',')).join('\r\n')+'\r\n',type:'text/csv;charset=utf-8',count:records.length};

@@ -204,7 +204,7 @@
     const summary=data.meta.atlas_summary||{};
     const method=data.meta.research_method||{};
     const researchHistory=data.meta.release_method?.full_text||method.full_text||method.verification_statement;
-    $('research-method').innerHTML='<h2>How was the research checked?</h2>'+(researchHistory?'<p>'+escape(researchHistory)+'</p>':'')+'<p>These are AI source reviews, not independent human or different-model verification of every entry. The catalogue counts recorded URLs, not independent reporting origins or full-text inspections. Current findings retain source-access limitations and unresolved questions.</p>';
+    $('research-method').innerHTML='<h2>How was the research checked?</h2>'+(researchHistory?'<p>'+escape(researchHistory)+'</p>':'')+'<p>These are AI source reviews, not independent human or different-model verification of every entry. The catalogue counts recorded URLs, not independent reporting origins or full-text inspections. Current findings retain source-access limitations and unresolved questions.</p><p><a href="status-audit.html">Later-status audit: findings and sources for all 221 ambiguous records →</a>. Checked 25 October 2026; unresolved findings remain explicit.</p>';
     const coverage=summary.chronology_coverage||{};
     const nationalCount=events.filter(C.isSupplement).length;
     $('release-method').innerHTML='<p><strong>'+(events.length-excludedCount-nationalCount)+' land-border records are included</strong>. Land dataset dated '+escape(dateText(data.meta.snapshot_date))+'. <a href="#dataset">Browse and download the dataset →</a></p><details class="excluded-records-note"><summary>'+excludedCount+' further entries are retained for reference</summary><p>These entries are kept so readers can see why they were set aside, but are excluded from the map and charts: <a href="#dataset/record-GL18">Burundi’s reported entry ban on travellers from AFC–M23 areas (GL18)</a> is not sufficiently verified; the <a href="#dataset/record-SA025">August 2024 India–Bangladesh trade interruption (SA025)</a> is not established as an imposed border closure; <a href="#dataset/record-SUP-004">Benin’s January 2026 election closure order (SUP-004)</a> was cancelled before taking effect; and the evidence for the <a href="#dataset/record-R3-SC-004">Madaniyat pedestrian-post restriction (R3-SC-004)</a> does not establish an eligible closure at the stated crossing and scope.</p></details>';
@@ -513,7 +513,10 @@
   function field(title,value){value=publicText(value,title,selected);return value?'<section class="detail-field"><h3>'+escape(title)+'</h3><p>'+escape(text(value))+'</p></section>':'';}
   function statusNotesHTML(e){
     const marks=C.statusPeriods(e,{...state,mode:state.mode==='onsets'?'all':state.mode});
-    return marks.length?'<section class="detail-field status-review-note"><h3>Later status</h3>'+marks.map(p=>'<p>'+escape(p.display)+'</p>').join('')+'</section>':'';
+    const review=e.later_status_review;
+    if(!marks.length&&!review)return '';
+    const finding=review?'<p><b>Review checked '+escape(dateText(review.checked_at))+'</b>'+(review.evidence_date?' · Evidence dated '+escape(dateText(review.evidence_date)):'')+'</p><p>'+escape(review.finding)+'</p><p class="qualification">'+escape(review.limitations)+'</p><p><a href="status-audit.html#'+encodeURIComponent(e.id)+'">Assessment, phase decisions and sources →</a></p>':'';
+    return '<section class="detail-field status-review-note"><h3>Later status</h3>'+finding+marks.map(p=>'<p>'+escape(p.display)+'</p>').join('')+'</section>';
   }
   function statusDetailHTML(e){
     const o=e.status_review;
@@ -529,7 +532,7 @@
       '<section class="detail-field"><h3>Sources</h3><ul>'+sources.map(s=>'<li><a href="'+escape(s.url)+'" target="_blank" rel="noopener noreferrer">'+escape(s.publisher)+': '+escape(s.label)+' ↗</a></li>').join('')+'</ul></section>'+field('How this appears on the map',e.geography_note+' Policy histories are kept separate from the land-border duration charts.');
   }
   function openSharedRecord(){
-    const match=location.hash.match(/^#map\/record-(NATIONAL-[A-Za-z0-9_-]+)$/);
+    const match=location.hash.match(/^#map\/record-([A-Za-z0-9_-]+)$/);
     if(!data||!match||!events.some(e=>e.id===match[1]))return;
     window.AtlasNavigation.show('map',{address:false});resetFilters();populateRegions();state.mode='all';$('time-mode').value='all';render();showEvent(match[1],true);
   }

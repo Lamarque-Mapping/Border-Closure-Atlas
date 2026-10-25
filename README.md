@@ -19,18 +19,30 @@ supported. The atlas describes historical evidence, not live border conditions.
 ## Later-status correction — 25 October 2026
 
 The map now distinguishes an observed reopening from the last report of closure.
-The status review identifies 221 records containing 250 last-confirmed endpoints
-that otherwise disappear from the October view. Grey dashed lines and hollow
-marks show that later status is unverified; they do not assert continuing closure.
-These are an evidence-review queue, not 221 presumed ongoing closures.
+All **221 records / 250 last-confirmed phases** in the review inventory have now
+received a later-status assessment. Evidence supports map updates to **88 records**
+and resolves **101 phase markers**. **136 records retain at least one unverified
+phase (149 phases)**; the groups overlap for partial resolutions. Grey dashed
+lines and hollow marks identify that uncertainty, not continuing closure.
+The searchable [audit reader](https://lamarque-mapping.github.io/Border-Closure-Atlas/status-audit.html)
+provides every finding, phase decision, source and access limitation.
 
-Eleven separately sourced October status observations include the Ukraine–Russia
+The outcomes are 57 later access bounds, 26 confirmed restrictions, one
+operator-reported restriction, 13 scope changes, 22 partial findings, five later
+closure confirmations, three conflicting findings and 94 unresolved findings.
+A later access bound does not assert that a border is currently open or supply
+an exact historical reopening date. Only supported matching phases are updated.
+Chile's partial reopening is not extended to all crossings; Burkina Faso's July
+lifting and October reimposition of its flour-export ban remain distinct.
+
+Thirty-three separately sourced October status observations include the Ukraine–Russia
 and inter-Korean borders and restricted Rafah passenger access. Each carries its
 actual observation date, scope, exceptions and evidence. The observations do not
 interpolate earlier months, enter closure-duration statistics or count as new
 closure episodes. Some were checked after the original 21 October study cutoff;
 their actual dates remain visible. The historical 829-record reader is unchanged.
 The companion ZIP and `downloads/border-status-review.json` include this review.
+The review was an AI source assessment, not independent field verification.
 
 Country outlines are restricted to the separately sourced Australia and New
 Zealand broad foreign-visitor admission bans. Testing, quarantine, targeted-origin
