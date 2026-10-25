@@ -47,6 +47,7 @@ assert.equal(C.temporalState(flour,oct.month),'restricted');
 assert.equal(C.matchesTime(flour,'onsets',oct.month),false);
 assert.equal(flour.duration_periods.length,0);
 const unmapped=get('STATUS-AUDIT-C7-EU-002-20261025');assert.deepEqual(C.mapLocationsFor(unmapped,d,oct),[],'Named posts without approved points must not fall back to entire frontiers');
+assert.equal(get('STATUS-AUDIT-EA024-20261001').map_status_periods[0].label,'Restriction reported by operator','Operational reporting must retain its evidence label on the map');
 assert.equal(C.statusPeriods(get('R3-EU-005'),oct).length,1,'Road access must not resolve the separate railway phase');
 for(const r of source.audit.records)assert.equal(get(r.record_id).later_status_review.record_id,r.record_id,'All findings attached to records');
 assert.equal(d.events.filter(e=>!S.isSupplement(e)&&!C.excluded(e)).length,825);

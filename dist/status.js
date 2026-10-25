@@ -35,7 +35,7 @@
         kind:'status_context',measure_type:'status_context',start_earliest:o.observed_at,
         start_latest:o.observed_at,end_earliest:o.observed_at,end_latest:o.observed_at,
         evidence_dates:[o.observed_at],minimum_days:null,maximum_days:null,
-        scope:o.scope,display:o.summary,label:o.status==='restricted'?'Restricted access confirmed':'Ordinary crossing closed',
+        scope:o.scope,display:o.summary,label:source.audit?.records.some(r=>r.outcome==='reported_current'&&(o.linked_land_ids||[]).includes(r.record_id))?'Restriction reported by operator':o.status==='restricted'?'Restricted access confirmed':'Ordinary crossing closed',
         source_urls:o.sources.map(s=>s.url),location_ids:o.location_ids,observed_reopening:'Not a reopening date'}],
       status_observation:o.summary,status_review:o,source_urls:o.sources.map(s=>s.url),sources:o.sources,
       current_review:{outcome:'Status evidence checked '+source.reviewed_at,claims:[]},
