@@ -40,6 +40,7 @@
       ||/^national (?:land[ /-]?(?:water )?)?(?:border|frontier)(?:s|[- ](?:passenger|entry|exit|closure|restriction|policy|regime|order))\b/i.test(text);
   }
   function scopeStyle(records=[]){
+    if(records.length&&records.every(e=>e.record_kind==='border_status'&&/^Whole /.test(e.scope||'')))return {broad:true,limited:false,label:'Border-wide passenger status'};
     if(records.some(e=>e.record_kind==='national_policy'))return {broad:false,limited:false,national:true,conditionsOnly:records.every(e=>e.national_kind==='entry_conditions'),label:'International passenger rules'};
     const scopes=records.flatMap(e=>e.duration_periods?.length?e.duration_periods.map(p=>p.scope||''):[e.scope||'']);
     const broad=scopes.length>0&&scopes.every(broadScope);
@@ -48,10 +49,12 @@
   // Screen-space symbols aid legibility; their size does not encode severity
   // or the geographical extent of a closure. Shared by the map and PNG export.
   function symbolStyle(properties={},options={}){
+    const supplied=options.records||[],unresolved=options.unresolved===true||supplied.length>0&&supplied.every(e=>e.map_status_unresolved);
+    if(!unresolved&&supplied.some(e=>e.map_status_unresolved))options={...options,records:supplied.filter(e=>!e.map_status_unresolved)};
     const role=properties.display_role||'crossing_reference',national=role==='national_policy',country=role==='country_context'||national,frontier=role==='frontier_context',context=country||frontier,selected=Boolean(options.selected);
     const rationale=options.rationale||rationaleStyle(options.records,options.rationaleFilter),scope=options.scope||scopeStyle(options.records);
     const radius=pointDiameter(options.zoom)/2;
-    return {role,country,national,frontier,context,scope,colour:rationale.colour,rationale,selected,approximate:/approx|locality|town|centroid|indicative|unresolved/i.test(String(properties.precision||'')),radius,pointShape:'crossing',pointLength:restrictionDotLength,pointStroke:'none',pointStrokeWidth:0,pointFill:rationale.colour,hitRadius:22,selectedHaloRadius:radius+3,width:selected?3.8:national?2.4:country?1.5:restrictionWidth,opacity:national?.9:country?.55:1,dash:national?[]:country?[2,5]:scope.limited?[restrictionDotLength,7]:[],fillOpacity:0};
+    return {role,country,national,frontier,context,scope,colour:rationale.colour,rationale,selected,approximate:/approx|locality|town|centroid|indicative|unresolved/i.test(String(properties.precision||'')),radius,pointShape:'crossing',pointLength:restrictionDotLength,pointStroke:'none',pointStrokeWidth:0,pointFill:rationale.colour,hitRadius:22,selectedHaloRadius:radius+3,width:selected?3.8:national?2.4:country?1.5:restrictionWidth,opacity:national?.9:country?.55:1,dash:national?[]:country?[2,5]:scope.limited?[restrictionDotLength,7]:[],fillOpacity:0,unresolved,...(unresolved?{colour:'#7d8884',pointFill:'none',pointStroke:'#7d8884',pointStrokeWidth:1.3,radius:3,width:selected?3:1.6,dash:[3,5],opacity:.8}:{})};
   }
   const cache=new WeakMap();
   // Area is used only to order and space reference labels. It is not a

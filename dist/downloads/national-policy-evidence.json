@@ -863,9 +863,9 @@
       "Reviewers / provenance": "AI national-policy reviewer; root primary-source spot-checks recorded separately."
     }
   ],
-  "version": "20261024-passenger-rule-outlines",
-  "method": "Green country outlines identify international passenger entry or departure bans and entry conditions. Outlines are country references; each record specifies the legal jurisdiction, affected travellers and modes. England-only rules use the UK outline for reference, without drawing constituent-country boundaries. The outline does not establish the legal extent of a rule or closure of every crossing. The displayed periods follow the rule through changes to the groups and exceptions it covered. These records have no single duration and are excluded from the land-border charts. Where the evidence supplies only individual dates, the record appears only in those months. Missing end dates are not extended to the present.",
-  "review_date": "2026-10-23",
+  "version": "20261025-broad-entry-bans",
+  "method": "Country outlines identify broad national bans on ordinary foreign-visitor entry. Testing, forms and quarantine alone do not qualify; origin-specific bans and departure rules do not create a whole-country entry-ban outline. Australia and New Zealand are retained as separately sourced context. Exceptions and staged reopening remain explicit. The original policy evidence is preserved, including histories that do not qualify for an outline. No airport closure or exact closed-days total is inferred.",
+  "review_date": "2026-10-25",
   "policies": [
     {
       "id": "NAT-AUS-ENTRY-COVID",
@@ -884,7 +884,8 @@
           "https://www.anao.gov.au/work/performance-audit/management-international-travel-restrictions-during-covid-19",
           "https://minister.homeaffairs.gov.au/KarenAndrews/Pages/reopening-to-tourists-and-other-international-travellers-to-secure-our-economic-recovery.aspx"
         ]
-      }
+      },
+      "map_eligible": true
     },
     {
       "id": "NAT-AUS-EXIT-COVID",
@@ -902,7 +903,8 @@
           "https://www.anao.gov.au/work/performance-audit/management-international-travel-restrictions-during-covid-19",
           "https://minister.homeaffairs.gov.au/KarenAndrews/Pages/fully-vax-australians-ready-for-take-off-1-nov-21.aspx"
         ]
-      }
+      },
+      "map_eligible": false
     },
     {
       "id": "NAT-NZL-ADMISSION-COVID",
@@ -921,7 +923,8 @@
           "https://www.beehive.govt.nz/release/government-reopens-new-zealand-tourism",
           "https://www.beehive.govt.nz/release/new-zealand%E2%80%99s-border-fully-open-visitors-and-students"
         ]
-      }
+      },
+      "map_eligible": true
     },
     {
       "id": "NAT-NZL-ARRIVAL-CONDITIONS-COVID",
@@ -929,7 +932,8 @@
       "map_country": "NZL",
       "kind": "entry_conditions",
       "title": "New Zealand relaxed isolation requirements for eligible arrivals",
-      "summary": "These February and March 2022 changes replaced managed isolation or removed isolation for specified groups allowed to enter New Zealand. Testing and admission eligibility remained separate requirements. They are changes to entry conditions, not additional border closures. Only the dated observations are shown; the intervening amendment history is incomplete."
+      "summary": "These February and March 2022 changes replaced managed isolation or removed isolation for specified groups allowed to enter New Zealand. Testing and admission eligibility remained separate requirements. They are changes to entry conditions, not additional border closures. Only the dated observations are shown; the intervening amendment history is incomplete.",
+      "map_eligible": false
     },
     {
       "id": "NAT-GBR-ARRIVAL-CONDITIONS-COVID",
@@ -937,7 +941,8 @@
       "map_country": "GBR",
       "kind": "entry_conditions",
       "title": "UK COVID-19 arrival conditions: quarantine, testing and passenger forms",
-      "summary": "UK-wide notices introduced isolation and passenger-information requirements in June 2020 and removed remaining COVID-19 testing and passenger-locator requirements in March 2022. These were conditions on admission, not a universal UK entry ban. Rules and enforcement differed between the UK nations and changed over time. This record shows the two documented changes, not an uninterrupted period with identical rules."
+      "summary": "UK-wide notices introduced isolation and passenger-information requirements in June 2020 and removed remaining COVID-19 testing and passenger-locator requirements in March 2022. These were conditions on admission, not a universal UK entry ban. Rules and enforcement differed between the UK nations and changed over time. This record shows the two documented changes, not an uninterrupted period with identical rules.",
+      "map_eligible": false
     },
     {
       "id": "R6-EU-004",
@@ -955,7 +960,8 @@
           "https://www.legislation.gov.uk/uksi/2021/364/pdfs/uksi_20210364_en.pdf",
           "https://www.legislation.gov.uk/uksi/2021/585/pdfs/uksi_20210585_en.pdf"
         ]
-      }
+      },
+      "map_eligible": false
     },
     {
       "id": "NAT-GBR-ENG-REDLIST-COVID",
@@ -963,7 +969,8 @@
       "map_country": "GBR",
       "kind": "prohibition",
       "title": "England restricted entry after travel through four red-list countries",
-      "summary": "From 9 April 2021, England refused entry to non-exempt visitors who had recently been in the Philippines, Pakistan, Kenya or Bangladesh. British and Irish citizens and people with UK residence rights were excepted, but faced hotel quarantine and testing. This was an entry prohibition for a defined traveller group, not a universal UK closure or a direct flight ban. The later amendment chain is incomplete, so this record appears only at its documented date."
+      "summary": "From 9 April 2021, England refused entry to non-exempt visitors who had recently been in the Philippines, Pakistan, Kenya or Bangladesh. British and Irish citizens and people with UK residence rights were excepted, but faced hotel quarantine and testing. This was an entry prohibition for a defined traveller group, not a universal UK closure or a direct flight ban. The later amendment chain is incomplete, so this record appears only at its documented date.",
+      "map_eligible": false
     }
   ],
   "compatible_data_sha256": "5baf139f914593184ed2eee3f5a9dfd783cb264332415f98e645b409c314a415",

@@ -188,11 +188,11 @@ for(const [code,name] of [['GBR','United Kingdom'],['AUS','Australia'],['NZL','N
  assert(!canvas.context.rectFills.some(mark=>mark.colour==='#287e67'));assert(!canvas.context.rectStrokes.some(mark=>mark.colour==='#287e67'),'national squares are absent');
  const baseline=canvas.context.operations.findIndex(operation=>operation.type==='stroke'&&operation.mark.colour===K.colours.border),outline=canvas.context.operations.findIndex(operation=>operation.mark===stroke);
  assert(baseline>=0&&outline>baseline,'green country edges draw after the baseline borders');
- assert(canvas.context.texts.includes('International passenger rules'));
+ assert(canvas.context.texts.includes('Broad visitor-entry ban'));
  assert(!canvas.context.texts.includes('Named crossing'),'policy-only key does not advertise a crossing');
  const notes=E.notes(snapshot,'Passenger rules');
- assert(notes.includes('international passenger-rule country reference'));assert(notes.includes('legal jurisdiction'));assert(!/square/i.test(notes));
- if(code==='GBR'){assert(notes.includes('Recorded scope: England'));assert(notes.includes('Where a record specifies England, its legal scope remains England.'));assert(!snapshot.references.some(ref=>ref.feature.properties.location_id==='unused-England-boundary'));}
+ assert(notes.includes('international passenger-rule country reference'));assert(notes.includes('broad bans on ordinary foreign-visitor entry')); assert(!/square/i.test(notes));
+ if(code==='GBR'){assert(notes.includes('Recorded scope: England'));assert(!notes.includes('Where a record specifies England, its legal scope remains England.'));assert(!snapshot.references.some(ref=>ref.feature.properties.location_id==='unused-England-boundary'));}
 }
 
 // Exercise the real save handler: capture before asynchronous evidence loading,

@@ -36,8 +36,8 @@
     },
     "companion_zip": {
       "path": "source/Global_Border_Closures_Data_2016_2026.zip",
-      "sha256": "42bde5b01a5e6b6ed436585ada87771a42c241af2b664fe26796e41ea8fabb2a",
-      "bytes": 9043401
+      "sha256": "ddda48169a09fbaa639fe7c13f36a90a629004e781533240b099dfb6bf1000bf",
+      "bytes": 9064362
     },
     "geography_reference": {
       "path": "source/geography-reference.json",
@@ -66,8 +66,13 @@
     },
     "national_display": {
       "path": "source/national-map-display.json",
-      "sha256": "86ce3a62683e17d36be236828ad3d72296fa4f3b4adfca65754dd5d7150b7604",
-      "bytes": 7908
+      "sha256": "bd2a4ce3cf5a21d48742b373c0647f80122e90076d4ef35d95b8e0e2eb4b8e76",
+      "bytes": 8337
+    },
+    "status_review": {
+      "path": "source/border-status-review.json",
+      "sha256": "0e7a9d79ebe25e2c63a7f8b2e1fe85d7394a3f08a8fbc90aff01ac5356727e2d",
+      "bytes": 124467
     }
   },
   "downloads": {
@@ -83,7 +88,7 @@
     },
     "companion_zip": {
       "path": "downloads/Global_Border_Closures_Data_2016_2026.zip",
-      "sha256": "42bde5b01a5e6b6ed436585ada87771a42c241af2b664fe26796e41ea8fabb2a",
+      "sha256": "ddda48169a09fbaa639fe7c13f36a90a629004e781533240b099dfb6bf1000bf",
       "source_file": "source/Global_Border_Closures_Data_2016_2026.zip"
     }
   },
@@ -103,6 +108,7 @@
   "national_supplement": {
     "policy_histories": 7,
     "observations": 18,
+    "mapped_entry_bans": 2,
     "included_in_land_statistics": false
   }
 }

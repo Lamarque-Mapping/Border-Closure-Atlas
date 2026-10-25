@@ -26,7 +26,7 @@ function analysisEvent(e){
   sources:e.sources.map(s=>({"Source ID":s.source_id,Publisher:s.publisher,"Original reporting source":s.origin,Title:s.title,"Publication date":s.publication_date,"Source type":s.source_type,"Access level":s.content_access,"Supports fields":(s.supports||[]).join("; "),"Evidence note":s.evidence_note,URL:s.url,access_history:s.access_history||[]}))};
 }
 // National histories remain separate from land-closure statistics.
-const EVENTS = shared.events.filter(e=>e.record_kind!=='national_policy').map(analysisEvent);
+const EVENTS = shared.events.filter(e=>e.record_kind!=='national_policy'&&e.record_kind!=='border_status').map(analysisEvent);
 const INCLUDED=EVENTS.filter(e=>!e.quarantined);
 const DATA={meta:shared.meta,events:EVENTS,summary:{codes:shared.meta.rationale_counts}};
 const CODES=DATA.meta.rationale_categories;

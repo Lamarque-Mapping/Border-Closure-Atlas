@@ -21,11 +21,11 @@ function check(state){
 }
 // Counts and default IDs independently reconciled to Register / Chronology
 // phases / Phase locations in the 23 October replacement workbook.
-const all=check({mode:'all',query:''});assert.equal(all.records.length,697);assert(all.rows.length>50);
+const all=check({mode:'all',query:''});assert.equal(all.records.length,825);assert(all.rows.length>50);
 const rwanda=check({mode:'all',query:'Rwanda'});assert(rwanda.records.length>1&&rwanda.records.length<all.records.length);
 const dated=check({mode:'intervals',query:'',month:C.monthOrdinal(data.meta.window_start)});
 assert.deepEqual(dated.records.map(e=>e.id).sort(),['CC004','CC028','CC029','EA025','FU-COV-EAS-003','H01','H02','ME004','ME005','ME030','NA001','NA019','R16-AN-002','R2-SC-010','R3-ME-010','R3-SC-005','R4-SC-001','R6-AWN-001','SC06']);
-const excluded=check({mode:'all',query:'',includeExcluded:true});assert.equal(excluded.records.length,701);
+const excluded=check({mode:'all',query:'',includeExcluded:true});assert.equal(excluded.records.length,829);
 const gl=rwanda.rows.find(row=>row[0]==='GL01');assert(gl[rwanda.header.indexOf('Documented dates')].includes('Held / contested'));assert(gl[rwanda.header.indexOf('Duration (days)')].includes('numeric duration withheld'));
 for(let i=1;i<=6;i++)assert(gl[rwanda.header.indexOf('Documented dates')].includes('GL01-C7RWP'+i),'CSV retains each corrected Rwanda passenger phase');
 const edge={...rwanda.records[0],id:'TEST',title:'\t=1+1',context:'Quoted "text", comma\nand another line: Côte d’Ivoire',scope:'@command',exceptions:'-danger'};
@@ -65,5 +65,5 @@ assert(frontier);ctx.activateLocation(frontier,rwanda.records.filter(e=>C.displa
  const rows=parse(ctx.output.content);assert.deepEqual(rows.slice(1).map(row=>row[0]),rwanda.records.map(e=>e.id),'export retains the selection captured before asynchronous loading');assert(ctx.output.filename.includes('rwanda'));assert.equal(node('download-records').disabled,false);
  ctx.output=null;ctx.window.AtlasData.getResearchData=async()=>({...data,events:[]});await ctx.downloadRecords();assert.equal(ctx.output,null);assert(ctx.notice.includes('do not match'));assert.equal(node('download-records').disabled,false);
  ctx.visible=[];ctx.output=null;await ctx.downloadRecords();assert.equal(ctx.output,null);
- console.log('CSV and reader passed: '+rwanda.records.length+' Rwanda matches; exact filtered IDs, all 697 included records beyond pagination, dated/excluded filters, corrected Rwanda phase/source preservation, UTF-8/quotes/newlines, formula-safe text, asynchronous snapshot, missing-data error, and wide-view open/return.');
+ console.log('CSV and reader passed: '+rwanda.records.length+' Rwanda matches; exact filtered IDs, all 825 included records beyond pagination, dated/excluded filters, corrected Rwanda phase/source preservation, UTF-8/quotes/newlines, formula-safe text, asynchronous snapshot, missing-data error, and wide-view open/return.');
 })().catch(error=>{console.error(error);process.exitCode=1});

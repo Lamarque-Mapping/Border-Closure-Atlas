@@ -184,7 +184,7 @@
     $('time-mode').value=state.mode;$('include-excluded').checked=false;$('show-history').checked=false;
   }
   function renderOverviewEvidence(){
-    const included=events.filter(e=>!C.excluded(e)&&e.record_kind!=='national_policy'),n=included.length;
+    const included=events.filter(e=>!C.excluded(e)&&!C.isSupplement(e)),n=included.length;
     const count=key=>included.filter(e=>e.timing_coverage?.[key]).length;
     const assigned=included.filter(e=>C.array(e.rationales).length).length;
     const rows=entries=>'<dl class="overview-evidence-counts">'+entries.map(([label,value])=>'<div><dt>'+escape(label)+'</dt><dd>'+value+'</dd></div>').join('')+'</dl>';
@@ -200,13 +200,13 @@
     const excludedCount=events.filter(C.excluded).length;
     $('excluded-count').textContent='('+excludedCount+')';
     $('release-label').textContent=data.meta.window_start.slice(0,4)+'–'+data.meta.window_end.slice(0,4);document.title='Border closures · Global atlas';
-    const min=C.monthOrdinal(data.meta.window_start),max=C.monthOrdinal(data.meta.window_end);$('month-slider').min=min;$('month-slider').max=max;$('month-slider').value=min;$('last-month').textContent=monthLabel(max);
+    const min=C.monthOrdinal(data.meta.window_start),max=C.monthOrdinal(data.meta.window_end);$('month-slider').min=min;$('month-slider').max=max;$('month-slider').value=min;
     const summary=data.meta.atlas_summary||{};
     const method=data.meta.research_method||{};
     const researchHistory=data.meta.release_method?.full_text||method.full_text||method.verification_statement;
     $('research-method').innerHTML='<h2>How was the research checked?</h2>'+(researchHistory?'<p>'+escape(researchHistory)+'</p>':'')+'<p>These are AI source reviews, not independent human or different-model verification of every entry. The catalogue counts recorded URLs, not independent reporting origins or full-text inspections. Current findings retain source-access limitations and unresolved questions.</p>';
     const coverage=summary.chronology_coverage||{};
-    const nationalCount=events.filter(e=>e.record_kind==='national_policy').length;
+    const nationalCount=events.filter(C.isSupplement).length;
     $('release-method').innerHTML='<p><strong>'+(events.length-excludedCount-nationalCount)+' land-border records are included</strong>. Land dataset dated '+escape(dateText(data.meta.snapshot_date))+'. <a href="#dataset">Browse and download the dataset →</a></p><details class="excluded-records-note"><summary>'+excludedCount+' further entries are retained for reference</summary><p>These entries are kept so readers can see why they were set aside, but are excluded from the map and charts: <a href="#dataset/record-GL18">Burundi’s reported entry ban on travellers from AFC–M23 areas (GL18)</a> is not sufficiently verified; the <a href="#dataset/record-SA025">August 2024 India–Bangladesh trade interruption (SA025)</a> is not established as an imposed border closure; <a href="#dataset/record-SUP-004">Benin’s January 2026 election closure order (SUP-004)</a> was cancelled before taking effect; and the evidence for the <a href="#dataset/record-R3-SC-004">Madaniyat pedestrian-post restriction (R3-SC-004)</a> does not establish an eligible closure at the stated crossing and scope.</p></details>';
 
     renderOverviewEvidence();resetMapLayers();showBrowse();render();fitContinent();openSharedRecord();if(loaded)notify('Atlas data updated.');
@@ -222,10 +222,10 @@
     updateHistoryLocations();
     const mappedRecords=visible.filter(e=>mapLocationIDs(e).length).length;
     const excludedCount=visible.filter(C.excluded).length;const pendingCount=visible.filter(e=>C.mappingStatus(e,data,state).pending).length;
-    const nationalCount=visible.filter(e=>e.record_kind==='national_policy').length;
-    $('record-count').textContent=visible.length.toLocaleString('en-GB');$('count-label').textContent=visible.length===1?'record':'records';$('mapped-count').textContent=(nationalCount?(visible.length-nationalCount)+' land · '+nationalCount+' national '+(nationalCount===1?'record':'records')+' · ':'')+mappedRecords+' on map'+(pendingCount?' · '+pendingCount+' need location checks':'')+(excludedCount?' · '+excludedCount+' excluded':'');
-    const modeLabel=state.mode==='all'?'Matching records across the full study period, including those without confirmed dates. These closures did not all happen at once.':state.mode==='onsets'?'Records with a supported phase start in the selected month. Observed closures, policy periods and announced dates remain separately labelled. These phases are not a count of unique new closure decisions.':'Dated evidence overlapping part of this month. Ordered windows and intermittent regimes do not establish continuous closure. Possible date overlap is labelled.';
-    $('result-context').textContent=modeLabel+' Dots mark crossings; green country outlines identify international passenger rules. Read each entry for affected people, routes and exceptions. Unmarked does not necessarily mean open.';
+    const nationalCount=visible.filter(e=>e.record_kind==='national_policy').length,statusCount=visible.filter(e=>e.record_kind==='border_status').length,unknownCount=state.mode==='intervals'?visible.filter(e=>C.temporalState(e,state.month,state.measureType)==='unresolved').length:0;
+    $('record-count').textContent=visible.length.toLocaleString('en-GB');$('count-label').textContent=visible.length===1?'record':'records';$('mapped-count').textContent=(nationalCount||statusCount?(visible.length-nationalCount-statusCount)+' historical · '+nationalCount+' national · '+statusCount+' status · ':'')+(unknownCount?unknownCount+' later status unverified · ':'')+mappedRecords+' on map'+(pendingCount?' · '+pendingCount+' need location checks':'')+(excludedCount?' · '+excludedCount+' excluded':'');
+    const modeLabel=state.mode==='all'?'Matching records across the full study period, including those without confirmed dates. These closures did not all happen at once.':state.mode==='onsets'?'Records with a supported phase start in the selected month. Observed closures, policy periods and announced dates remain separately labelled. These phases are not a count of unique new closure decisions.':'Coloured marks show dated restriction evidence or sourced status observations this month. Grey marks identify earlier restrictions whose later status is unverified; they do not assert continuing closure.';
+    $('result-context').textContent=modeLabel+' Dots mark crossings; green country outlines identify broad visitor-entry bans. Read each entry for affected people, routes and exceptions. Unmarked does not necessarily mean open.';
     $('map-note').textContent=(state.continent||'World')+' · '+(state.mode==='all'?'all recorded closures':state.mode==='onsets'?'phase starts · '+monthLabel(state.month):'Border Restrictions · '+monthLabel(state.month));
     $('month-label').textContent=state.mode==='all'?data.meta.window_start.slice(0,4)+'–'+data.meta.window_end.slice(0,4):monthLabel(state.month);$('month-slider').value=state.month;$('month-slider').setAttribute('aria-valuetext',monthLabel(state.month));
     $('month-label').setAttribute('aria-label',(state.mode==='all'?'All recorded dates':monthLabel(state.month))+'. Choose a month and year');
@@ -233,7 +233,7 @@
     $('month-slider').style.setProperty('--timeline-progress',progress+'%');
     $('month-slider').disabled=state.mode==='all';$('previous-button').disabled=state.mode==='all'||state.month<=Number($('month-slider').min);$('next-button').disabled=state.mode==='all'||state.month>=Number($('month-slider').max);
     $('include-excluded').disabled=state.mode!=='all';$('excluded-note').textContent=state.mode==='all'?'Excluded records are list-only and never animated.':'Excluded records are unavailable in timeline views.';
-    $('time-note').textContent=state.mode==='all'?'Full study period':state.mode==='onsets'?'Supported phase starts in this month':'Unmarked borders are not necessarily closed.';
+    $('time-note').textContent=state.mode==='all'?'Full study period':state.mode==='onsets'?'Supported phase starts in this month':'Unmarked borders are not necessarily open.';
     $('location-filter').hidden=!state.location;$('location-filter-label').textContent=state.location?'Linked to '+(locations.get(state.location)?.properties?.label||locations.get(state.location)?.properties?.name||state.location):'';
     const activeFilters=[state.region,state.rationale,state.measureType?C.measureLabel(state.measureType):'',({crossing_reference:'Crossing points / national rules',context:'Wider border references',unlocated:'Locations awaiting checks'})[state.precision],state.includeExcluded&&state.mode==='all'?'Including excluded records':''].filter(Boolean);
     $('filter-summary').textContent=activeFilters.join(' · ');$('filter-summary').hidden=!activeFilters.length;
@@ -243,7 +243,7 @@
   }
   function renderListContent(){
     const list=$('event-list');list.replaceChildren();
-    const sorted=[...visible].sort((a,b)=>(text(a.start)||'9999').localeCompare(text(b.start)||'9999')||a.id.localeCompare(b.id));
+    const sorted=[...visible].sort((a,b)=>Number(C.temporalState(a,state.month)==='unresolved')-Number(C.temporalState(b,state.month)==='unresolved')||Number(b.record_kind==='border_status')-Number(a.record_kind==='border_status')||(text(a.start)||'9999').localeCompare(text(b.start)||'9999')||a.id.localeCompare(b.id));
     $('show-more').hidden=sorted.length<=listLimit;$('list-page-label').textContent=sorted.length?'Showing '+Math.min(sorted.length,listLimit)+' of '+sorted.length+' matching records':'';
     if(!sorted.length){const p=document.createElement('p');p.className='empty';p.textContent=state.mode!=='all'&&state.query?'No evidence matches this month. Switch to All recorded closures to find records outside the selected dates. An unmarked border does not necessarily mean it was open.':'No records match this selection. An unmarked border does not necessarily mean it was open.';list.append(p);return;}
     for(const e of sorted.slice(0,listLimit)){
@@ -270,6 +270,7 @@
     return dateText(first)+' – '+dateText(last);
   }
   function cardPeriodDates(p){
+    if(p.map_status)return p.status==='unresolved'?'Last confirmed '+dateText(p.last_confirmed):'Observed '+dateText(p.start_earliest);
     const start=cardBoundary(p.start_earliest,p.start_latest),end=cardBoundary(p.end_earliest,p.end_latest);
     if(p.national_observation)return start;
     if(p.contested)return C.periodEvidenceDates(p).map(dateText).join('; ')||'Dates not established';
@@ -278,8 +279,9 @@
     return start+' – '+end+(p.endpoint_status==='last_confirmed'?' (last report)':p.observed_reopening==='Yes'?' (reopened)':'');
   }
   function cardPeriods(e){return C.periodsForView(e,state);}
-  function periodLabel(p){return p.national_label|| (p.contested?'Dates disputed':p.kind==='same_day'?'Same-day closure':p.temporal_display_rule==='dated_evidence_only_no_continuity_inference'?'Dated reports':C.measureLabel(p.measure_type));}
+  function periodLabel(p){return p.map_status?p.label:p.national_label|| (p.contested?'Dates disputed':p.kind==='same_day'?'Same-day closure':p.temporal_display_rule==='dated_evidence_only_no_continuity_inference'?'Dated reports':C.measureLabel(p.measure_type));}
   function periodDuration(p){
+    if(p.map_status)return p.display;
     if(p.national_display_period||p.national_observation)return p.display;
     if(p.contested)return 'The dates are disputed; a continuous closure cannot be established.';
     if(p.kind==='same_day'||p.temporal_display_rule==='day_marker_no_whole_day_duration')return 'Same-day event; exact hours are not established.';
@@ -386,7 +388,7 @@
       action.addEventListener('click',()=>{map.closePopup();activateLocation(id,items);});card.append(action);
     }
     const notes=document.createElement('p');notes.className='location-map-note';
-    notes.textContent=p.display_role==='national_policy'?'The outline is a country reference for international passenger rules. Each entry identifies the jurisdiction, travellers and journeys covered; England-only rules use the UK outline for reference.':f.geometry.type==='Point'?'The dot marks an approximate crossing area. It does not indicate closure along the rest of the border.':'The line locates the border. The description identifies the affected crossings and travellers.';card.append(notes);
+    notes.textContent=p.display_role==='national_policy'?'The outline identifies a broad national ban on ordinary foreign-visitor entry. Citizens, residents and other exempt travellers could still enter.':f.geometry.type==='Point'?'The dot marks an approximate crossing area. It does not indicate closure along the rest of the border.':'The line locates the border. The description identifies the affected crossings and travellers.';card.append(notes);
     stop();map.closePopup();cardLocation=id;renderLocations();if(mobile)setPanelOpen(false);
     const padding=viewPadding();
     const availableHeight=$('map-page').getBoundingClientRect().height-padding.paddingTopLeft[1]-padding.paddingBottomRight[1]-58;
@@ -449,11 +451,11 @@
       const p=f.properties||{},isSelected=id===cardLocation||id===state.location||items.some(e=>e.id===selected),style=K.symbolStyle(p,{selected:isSelected,zoom:map.getZoom(),records:styleRecords,rationaleFilter:state.rationale});
       const timePossible=state.mode==='intervals'&&items.every(e=>C.temporalState(e,state.month,state.measureType)==='possible');
       const label=locationTitle(p,id),point=f.geometry.type==='Point';
-      const tooltip='<strong class="map-tip-title">'+escape(label)+'</strong><span class="map-tip-meta">'+items.length+' record'+(items.length===1?'':'s')+'</span>'+rationaleHTML(items)+(style.rationale.hasUncoded&&style.rationale.codes.length?'<span class="map-tip-meta">Some records uncoded</span>':'')+(timePossible?'<span class="map-tip-meta">Possible month overlap</span>':'')+'<span class="map-tip-hint">Click for records &amp; sources →</span>';
+      const tooltip='<strong class="map-tip-title">'+escape(label)+'</strong><span class="map-tip-meta">'+items.length+' record'+(items.length===1?'':'s')+'</span>'+(style.unresolved?'<span class="map-tip-meta">Later status unverified · no continuing closure asserted</span>':rationaleHTML(items))+(style.rationale.hasUncoded&&style.rationale.codes.length?'<span class="map-tip-meta">Some records uncoded</span>':'')+(timePossible?'<span class="map-tip-meta">Possible month overlap</span>':'')+'<span class="map-tip-hint">Click for records &amp; sources →</span>';
       let target;
       if(point){
         const [lng,lat]=f.geometry.coordinates;
-        const mark='<span class="closure-marker-dot" style="--dot-size:'+(style.radius*2)+'px;--dot-length:'+style.pointLength+'px;--dot-colour:'+style.colour+';opacity:'+(timePossible?.3:1)+'"></span>';
+        const mark='<span class="closure-marker-dot'+(style.unresolved?' unresolved-marker':'')+'" style="--dot-size:'+(style.radius*2)+'px;--dot-length:'+style.pointLength+'px;--dot-colour:'+style.colour+';opacity:'+(timePossible?.3:style.opacity)+'"></span>';
         target=L.marker([lat,lng],{pane:'points',keyboard:true,title:label,alt:label,icon:L.divIcon({className:'closure-marker'+(isSelected?' is-selected':''),iconSize:[44,44],iconAnchor:[22,22],html:mark})}).addTo(featureGroup);
         const element=target.getElement();if(element){element.dataset.locationId=id;element.setAttribute('role','button');element.setAttribute('aria-label',label+' · '+items.length+' record'+(items.length===1?'':'s')+'. Open closure details');element.addEventListener('keydown',event=>{if(event.key===' '){event.preventDefault();openLocationCard(id,allItems,L.latLng(lat,lng),true);}});}
       }else{
@@ -509,6 +511,14 @@
   }
   function showBrowse(){const wasRecord=Boolean(selected);selected=null;setRecordView(false);if(wasRecord)$('panel-scroll').scrollTop=recordsListScroll;if(data)renderLocations();}
   function field(title,value){value=publicText(value,title,selected);return value?'<section class="detail-field"><h3>'+escape(title)+'</h3><p>'+escape(text(value))+'</p></section>':'';}
+  function statusNotesHTML(e){
+    const marks=C.statusPeriods(e,{...state,mode:state.mode==='onsets'?'all':state.mode});
+    return marks.length?'<section class="detail-field status-review-note"><h3>Later status</h3>'+marks.map(p=>'<p>'+escape(p.display)+'</p>').join('')+'</section>':'';
+  }
+  function statusDetailHTML(e){
+    const o=e.status_review;
+    return '<div class="detail-id">Border-access status · '+escape(dateText(o.observed_at))+'</div><h2 class="detail-title">'+escape(e.title)+'</h2><p class="event-summary">'+escape(o.summary)+'</p>'+rationaleHTML([e])+field('Scope',o.scope)+field('Affected movement',o.movement)+field('Exceptions',o.exceptions)+field('Evidence limits',o.qualification)+'<p class="qualification">This is a dated status observation. It does not count as a new closure episode or establish an exact duration.</p><section class="detail-field"><h3>Sources</h3><ul>'+eventSources(e).map(s=>'<li><a href="'+escape(s.url)+'" target="_blank" rel="noopener noreferrer">'+escape(s.label)+' ↗</a></li>').join('')+'</ul></section>'+(e.linked_land_ids.length?'<section class="detail-field"><h3>Related historical records</h3>'+e.linked_land_ids.map(id=>'<p><a href="#map/record-'+encodeURIComponent(id)+'">'+escape(id)+'</a></p>').join('')+'</section>':'');
+  }
   function nationalDetailHTML(e){
     const main=e.duration_periods.find(p=>p.national_display_period),sources=eventSources(e);
     return '<div class="detail-id">International passenger rules · '+escape(e.countries.join(' – '))+'</div><h2 class="detail-title">'+escape(e.title)+'</h2><p class="event-summary">'+escape(e.national_summary)+'</p>'+rationaleHTML([e])+
@@ -537,6 +547,11 @@
       const retry=document.createElement('button');retry.textContent='Try again';retry.addEventListener('click',()=>showEvent(id,zoom));$('event-detail').append(retry);return;
     }
     if(selected!==id)return;
+    if(e.record_kind==='border_status'){
+      $('event-detail').innerHTML=statusDetailHTML(e);renderLocations();
+      if(zoom){const features=mapLocationIDs(e).map(lid=>locations.get(lid));if(features.length)map.fitBounds(L.geoJSON({type:'FeatureCollection',features}).getBounds(),{...viewPadding(12),maxZoom:7,animate:false});}
+      return;
+    }
     if(e.record_kind==='national_policy'){
       $('event-detail').innerHTML=nationalDetailHTML(e);renderLocations();
       if(zoom&&!fitNationalRecords([e])){const features=mapLocationIDs(e).map(lid=>locations.get(lid));if(features.length)map.fitBounds(L.geoJSON({type:'FeatureCollection',features}).getBounds(),{...viewPadding(12),maxZoom:nationalViewZoom([e]),animate:false});}
@@ -569,7 +584,7 @@
     const scopeHTML=scopes.length===1?field('Crossings and geographical scope',scopes[0]):scopes.length>1?'<details class="detail-field"><summary>Locations and traffic by dated stage</summary>'+allPeriods.map(p=>field(cardPeriodDates(p),[p.scope,p.movement].filter(Boolean).join('\n'))).join('')+'</details>':field('Crossings and geographical scope',e.scope);
     const movementHTML=movements.length===1?field('Affected movement',movements[0]):!allPeriods.length?field('Affected movement',e.movement):'';
     $('event-detail').innerHTML='<div class="detail-id">'+escape(e.id)+(e.countries.length?' · '+escape(e.countries.join(' – ')):'')+'</div><h2 class="detail-title">'+escape(publicText(e.title||e.id,'title',e.id))+'</h2>'+(description?'<p class="event-summary">'+escape(description)+'</p>':'')+(C.excluded(e)?'<p class="qualification">Excluded from mapping and analysis. '+escape(e.quarantine_reason||'')+'</p>':'')+
-      '<section class="detail-field"><h3>Coded rationale</h3><p>'+rationaleHTML([e])+'</p></section><section class="detail-field"><h3>Dates and duration</h3>'+datesHTML+'</section>'+scopeHTML+movementHTML+
+      statusNotesHTML(e)+'<section class="detail-field"><h3>Coded rationale</h3><p>'+rationaleHTML([e])+'</p></section><section class="detail-field"><h3>Dates and duration</h3>'+datesHTML+'</section>'+scopeHTML+movementHTML+
       (sources.length?'<section class="detail-field"><h3>Sources</h3><ul>'+sources.map(s=>'<li><a href="'+escape(s.url)+'" target="_blank" rel="noopener noreferrer">'+escape(s.label||new URL(s.url).hostname.replace(/^www\./,''))+' ↗</a></li>').join('')+'</ul></section>':'')+
       '<details class="detail-field"><summary>Detailed timing evidence</summary>'+field('Dates, sources and qualifications',temporal)+'</details>'+
       '<details class="detail-field"><summary>Rationale and context</summary>'+field('Stated justification',e.official_rationale)+field('Context',e.context)+field('Overall record scope',e.scope)+field('Direction',e.direction)+field('Exceptions',e.exceptions)+field('Rationale subcategories',Object.entries(e.rationale_subcategories||{}).map(([k,v])=>k+': '+v.join('; ')).join('\n'))+field('Attribution and phase',C.array(e.rationale_assignments).map(a=>a['Broad rationale']+': '+a['Evidence attribution']+'. '+a['Phase / overlap']+'. '+a['Coding decision and qualification']).join('\n\n'))+'</details>'+

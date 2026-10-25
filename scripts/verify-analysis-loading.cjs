@@ -17,7 +17,7 @@ for(const pop of ['all','operational_complete','operational_exact_complete']){
 }
 const html=read('analysis.html');
 assert.ok(html.includes('const shared=await (provider.getAnalysisData?provider.getAnalysisData():provider.ready());'));
-assert.ok(html.includes("shared.events.filter(e=>e.record_kind!=='national_policy')"),'national additions remain outside Analysis');
+assert.ok(html.includes("shared.events.filter(e=>e.record_kind!=='national_policy'&&e.record_kind!=='border_status')"),'national additions remain outside Analysis');
 assert.ok(html.includes(fs.readFileSync(path.join(__dirname,'analysis-metrics.js'),'utf8').trim()),'deployed chart arithmetic matches the checked metric functions');
 const index=read('index.html'),source=index.match(/data-analysis-src="([^"]+)"/)[1],sha=index.match(/data-source-sha="([^"]+)"/)[1];
 assert.equal(sha,analysis.meta.source_sha256);assert.ok(html.includes('script.dataset.analysisSrc="'+source+'"'));

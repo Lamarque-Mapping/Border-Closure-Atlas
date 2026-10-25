@@ -24,7 +24,17 @@
   function contextLocationsFor(locationId,data){return [...new Set(array(geographyIndex(data).contexts.get(locationId)))];}
   function displayLocationsFor(e,data){const ids=locationsFor(e,data);return [...new Set([...ids,...ids.flatMap(id=>contextLocationsFor(id,data))])];}
   const PERIOD_KINDS=['closed_interval','bounded_interval','same_day','confirmed_through','policy_period','ordered_window','intermittent_regime'];
-  const TEMPORAL_ORDER=['supported','possible','observation','policy','ordered','intermittent','held'];
+  const TEMPORAL_ORDER=['supported','closed','restricted','possible','observation','policy','ordered','intermittent','held','unresolved'];
+  const isSupplement=e=>e?.record_kind==='national_policy'||e?.record_kind==='border_status';
+  function statusTemporalState(p,month){
+    if(!p?.map_status||!Number.isInteger(month))return 'none';
+    if(p.status==='unresolved')return month>monthOrdinal(p.last_confirmed)&&month<=monthOrdinal(p.end_latest)&&(!p.resolved_from||month<monthOrdinal(p.resolved_from))?'unresolved':'none';
+    return month===monthOrdinal(p.start_earliest)?p.status:'none';
+  }
+  function statusPeriods(e,state={}){
+    if(state.mode==='onsets'||state.measureType)return [];
+    return array(e.map_status_periods).filter(p=>state.mode==='all'||statusTemporalState(p,state.month)!=='none');
+  }
   function periodEvidenceDates(p){
     return [...new Set([...array(p?.evidence_dates),p?.start_earliest,p?.start_latest,p?.end_earliest,p?.end_latest,p?.last_confirmed].filter(v=>day(v)!==null))];
   }
@@ -69,18 +79,18 @@
   // applicable state for callers that need one presentation class; it is not an
   // assertion that every phase of a parent has that status.
   function temporalStates(e,month,measureType=''){
-    const states=new Set(periods(e,measureType).map(p=>phaseTemporalState(p,month)));
+    const states=new Set([...periods(e,measureType).map(p=>phaseTemporalState(p,month)),...statusPeriods(e,{mode:'intervals',month,measureType}).map(p=>statusTemporalState(p,month))]);
     return TEMPORAL_ORDER.filter(state=>states.has(state));
   }
   function temporalState(e,month,measureType=''){return temporalStates(e,month,measureType)[0]||'none';}
   function periodsForView(e,state={}){
     const onsetIDs=state.mode==='onsets'&&Array.isArray(e.phase_onsets)?new Set(e.phase_onsets.filter(p=>monthOrdinal(p.month)===state.month&&(!state.measureType||p.measure_type===state.measureType)).map(p=>p.phase_id)):null;
-    return (state.mode==='intervals'?periods(e,state.measureType):array(e.duration_periods).filter(p=>!state.measureType||p.measure_type===state.measureType)).filter(p=>state.mode!=='intervals'||phaseTemporalState(p,state.month)!=='none').filter(p=>!onsetIDs||onsetIDs.has(p.period_id));
+    return [...(state.mode==='intervals'?periods(e,state.measureType):array(e.duration_periods).filter(p=>!state.measureType||p.measure_type===state.measureType)).filter(p=>state.mode!=='intervals'||phaseTemporalState(p,state.month)!=='none').filter(p=>!onsetIDs||onsetIDs.has(p.period_id)),...statusPeriods(e,state)];
   }
   function mappingRows(e,data,state={}){
-    if(excluded(e)||e.record_kind==='national_policy'||!data.crossing_map)return [];
+    if(excluded(e)||isSupplement(e)||!data.crossing_map)return [];
     const phases=periodsForView(e,state);
-    if(phases.length)return phases.map(p=>data.crossing_map.phases[p.period_id]).filter(row=>row?.record_id===e.id);
+    if(phases.length)return phases.map(p=>data.crossing_map.phases[p.source_phase_id||p.period_id]).filter(row=>row?.record_id===e.id);
     return !array(e.duration_periods).length&&data.crossing_map.undated[e.id]?[data.crossing_map.undated[e.id]]:[];
   }
   function phaseLocationIDs(e,row,data){
@@ -93,11 +103,14 @@
   }
   function mapLocationsFor(e,data,state={}){
     if(excluded(e))return [];
-    if(e.record_kind==='national_policy'||!data.crossing_map)return displayLocationsFor(e,data);
+    if(isSupplement(e)||!data.crossing_map)return displayLocationsFor(e,data);
     return [...new Set(mappingRows(e,data,state).flatMap(row=>phaseLocationIDs(e,row,data)))];
   }
   function recordsForLocation(records,id,data,state={}){
-    return records.filter(e=>mapLocationsFor(e,data,state).includes(id)).map(e=>({...e,duration_periods:periodsForView(e,state).filter(p=>e.record_kind==='national_policy'||!data.crossing_map||phaseLocationIDs(e,data.crossing_map.phases[p.period_id],data).includes(id))}));
+    return records.filter(e=>mapLocationsFor(e,data,state).includes(id)).map(e=>{
+      const phases=periodsForView(e,state).filter(p=>isSupplement(e)||!data.crossing_map||phaseLocationIDs(e,data.crossing_map.phases[p.source_phase_id||p.period_id],data).includes(id));
+      return {...e,duration_periods:phases.filter(p=>!p.map_status),map_status_periods:phases.filter(p=>p.map_status),map_status_only:phases.length>0&&phases.every(p=>p.map_status),map_status_unresolved:phases.length>0&&phases.every(p=>p.map_status&&p.status==='unresolved')};
+    });
   }
   function mappingStatus(e,data,state={}){
     const ids=mapLocationsFor(e,data,state),features=geographyIndex(data).features;
@@ -106,7 +119,7 @@
     const label=excluded(e)?'Excluded · list only':e.record_kind==='national_policy'?'National rule mapped':!ids.length?'Location awaiting mapping':pending?'Some locations awaiting mapping':pointCount&&lineCount?'Crossings and wider border rules':pointCount?'Crossing'+(pointCount===1?'':'s')+' mapped':'Wider border rule mapped';
     return {ids,mapped:ids.length>0,pending,pointCount,lineCount,label};
   }
-  function temporalLabel(state){return {supported:'Restriction reported this month',possible:'Dates may overlap this month',observation:'Reported on specific dates',policy:'Policy in force',ordered:'Announced closure dates',intermittent:'Repeated closures',held:'Dates disputed',none:'No evidence dated to this month'}[state]||'Dated evidence';}
+  function temporalLabel(state){return {supported:'Restriction reported this month',closed:'Ordinary crossing closed',restricted:'Restricted access confirmed',unresolved:'Later status unverified',possible:'Dates may overlap this month',observation:'Reported on specific dates',policy:'Policy in force',ordered:'Announced closure dates',intermittent:'Repeated closures',held:'Dates disputed',none:'No evidence dated to this month'}[state]||'Dated evidence';}
   function matchesTime(e,mode,month,measureType=''){
     if(mode==='all')return true;
     if(excluded(e))return false;
@@ -130,7 +143,7 @@
     const q=String(state.query||'').trim().toLowerCase();
     return data.events.filter(e=>!excluded(e)||(state.includeExcluded===true&&state.mode==='all')).filter(e=>!state.continent||array(e.continents).includes(state.continent)).filter(e=>!state.region||e.region===state.region).filter(e=>!state.rationale||array(e.rationales).includes(state.rationale)).filter(e=>matchesPrecision(e,state.precision,data,state)).filter(e=>!q||[e.id,e.title,e.region,e.scope,e.crossings,e.movement,e.direction,...array(e.countries),...array(e.rationales)].join(' ').toLowerCase().includes(q)).filter(e=>!state.location||mapLocationsFor(e,data,state).includes(state.location)).filter(e=>!state.measureType||(state.mode==='all'?array(e.duration_periods).some(p=>p.measure_type===state.measureType):periods(e,state.measureType).length)).filter(e=>matchesTime(e,state.mode,state.month,state.measureType));
   }
-  const api={array,CONTINENTS,monthOrdinal,monthISO,day,quarantined,excluded,locationsFor,locationFeatures,contextLocationsFor,displayLocationsFor,mapLocationsFor,mappingRows,recordsForLocation,mappingStatus,periodEvidenceDates,validPeriod,periods,periodsForView,measureLabel,phaseTemporalState,temporalStates,temporalState,temporalLabel,intervalEligible,matchesTime,precision,matchesPrecision,availableContinents,continentCounts,validate,filterEvents};
+  const api={array,CONTINENTS,monthOrdinal,monthISO,day,quarantined,excluded,isSupplement,statusPeriods,statusTemporalState,locationsFor,locationFeatures,contextLocationsFor,displayLocationsFor,mapLocationsFor,mappingRows,recordsForLocation,mappingStatus,periodEvidenceDates,validPeriod,periods,periodsForView,measureLabel,phaseTemporalState,temporalStates,temporalState,temporalLabel,intervalEligible,matchesTime,precision,matchesPrecision,availableContinents,continentCounts,validate,filterEvents};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.BorderCore=api;
 })(typeof window!=='undefined'?window:globalThis);
 

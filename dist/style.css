@@ -385,3 +385,8 @@ body[data-page="analysis"] #header-search-slot,body[data-page="briefing"] #heade
  .records-dialog .detail-title{font-size:23px}
 }
 
+
+/* Unknown later status is deliberately distinct from a restriction colour. */
+.closure-marker-dot.unresolved-marker{background:transparent!important;border:1.3px solid #7d8884!important;box-sizing:border-box;width:6px!important;height:6px!important;border-radius:50%}
+.legend-unresolved{display:inline-block;width:20px;border-top:1.6px dashed #7d8884}
+.status-review-note{border-left:3px solid #7d8884;padding-left:12px}

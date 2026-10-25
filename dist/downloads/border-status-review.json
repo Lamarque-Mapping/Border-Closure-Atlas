@@ -1,0 +1,3252 @@
+{
+  "version": "20261025-status-review-1",
+  "reviewed_at": "2026-10-25",
+  "source_sha256": "5baf139f914593184ed2eee3f5a9dfd783cb264332415f98e645b409c314a415",
+  "method": "Later-status review supplements the historical episode register. Automatically identified last-confirmed endpoints remain unverified after their final evidence month; grey marks do not assert continuing closure. Separately sourced status observations appear only in their observation month. They do not fill historical gaps, change measured durations, establish exact reopening dates or count as new closure episodes. The October status observations may postdate the original 21 October study cutoff and carry their actual observation dates. Coverage is targeted, not a complete current-status audit of every frontier.",
+  "observations": [
+    {
+      "id": "STATUS-RUS-UKR-202610",
+      "title": "Ukraine–Russia: ordinary border crossing closed",
+      "status": "closed",
+      "observed_at": "2026-10-25",
+      "region": "Europe",
+      "continents": [
+        "Europe"
+      ],
+      "countries": [
+        "Ukraine",
+        "Russia"
+      ],
+      "location_ids": [
+        "context-frontier-rus-ukr"
+      ],
+      "linked_land_ids": [
+        "EU031"
+      ],
+      "rationales": [
+        "Security"
+      ],
+      "scope": "Whole Ukraine–Russia land frontier for ordinary civilian border crossing",
+      "movement": "Ordinary civilian passenger crossing",
+      "exceptions": "Exceptional returns, humanitarian arrangements and movement through occupied territory are not classified as ordinary authorised border passage.",
+      "summary": "Current FCDO guidance describes Ukraine's border with Russia as closed.",
+      "qualification": "Status checked on 25 October 2026. This observation does not turn the earlier October 2023 last-confirmed date into a reopening, or establish an uninterrupted operational duration for every checkpoint.",
+      "sources": [
+        {
+          "url": "https://www.gov.uk/foreign-travel-advice/ukraine/entry-requirements",
+          "publisher": "UK Foreign, Commonwealth and Development Office",
+          "title": "Ukraine entry requirements — border with Russia",
+          "checked_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": "STATUS-KOR-PRK-202610",
+      "title": "North–South Korea: ordinary cross-border travel unavailable",
+      "status": "closed",
+      "observed_at": "2026-10-15",
+      "region": "East and Southeast Asia and Oceania",
+      "continents": [
+        "Asia"
+      ],
+      "countries": [
+        "South Korea",
+        "North Korea"
+      ],
+      "location_ids": [
+        "context-frontier-kor-prk"
+      ],
+      "linked_land_ids": [
+        "EA025"
+      ],
+      "rationales": [
+        "Security",
+        "Interstate disputes and pressure"
+      ],
+      "scope": "Whole inter-Korean boundary for ordinary civilian travel",
+      "movement": "Ordinary civilian passenger crossing",
+      "exceptions": "Specially authorised diplomatic or military movements are outside this ordinary-travel status.",
+      "summary": "Canadian government advice updated on 15 October states that travellers cannot enter either Korea from the other.",
+      "qualification": "This broader status observation is distinct from the historical Kaesong industrial-access record. It does not broaden the scope or calculated duration of that record.",
+      "sources": [
+        {
+          "url": "https://travel.gc.ca/destinations/north-korea",
+          "publisher": "Government of Canada",
+          "title": "North Korea travel advice — other entry information",
+          "publication_date": "2026-10-15",
+          "checked_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": "STATUS-RAFAH-202610",
+      "title": "Rafah: restricted passenger access with medical exceptions",
+      "status": "restricted",
+      "observed_at": "2026-10-12",
+      "region": "North Africa",
+      "continents": [
+        "Africa",
+        "Asia"
+      ],
+      "countries": [
+        "Egypt",
+        "Palestine"
+      ],
+      "location_ids": [
+        "post-rafah"
+      ],
+      "linked_land_ids": [
+        "NA014",
+        "NA015",
+        "NA016"
+      ],
+      "rationales": [
+        "Security"
+      ],
+      "crossings": "Rafah passenger crossing",
+      "scope": "Rafah passenger crossing; ordinary access remains restricted, with documented exceptional movement",
+      "movement": "Passenger movement, including coordinated medical evacuation",
+      "exceptions": "UN reporting documents medical evacuations through Rafah in the reporting period. EU mission data also records controlled passenger movements. These are not evidence of unrestricted passage.",
+      "summary": "UN reporting covering 29 September–12 October records medical evacuations via Rafah and Kerem Shalom. The earlier resumption of limited operations must not be read as ordinary passenger access having fully reopened.",
+      "qualification": "The sources describe limited operations and recurrent closures; FCDO Egypt guidance also describes Rafah as closed. No claim is made that all movement was stopped, or that exceptional operations continued every day in October. This point locates Rafah and does not infer the status of other crossings or cargo routes.",
+      "sources": [
+        {
+          "url": "https://www.ochaopt.org/content/humanitarian-situation-report-15-october-2026",
+          "publisher": "UN OCHA",
+          "title": "Humanitarian Situation Report — 15 October 2026",
+          "publication_date": "2026-10-19",
+          "checked_at": "2026-10-25"
+        },
+        {
+          "url": "https://www.eeas.europa.eu/eu-border-assistance-mission-rafah-crossing-point/eubam-rafah-rafah-crossing-point-data_en",
+          "publisher": "EUBAM Rafah",
+          "title": "Rafah Crossing Point passenger data",
+          "checked_at": "2026-10-25"
+        },
+        {
+          "url": "https://www.gov.uk/foreign-travel-advice/egypt",
+          "publisher": "UK Foreign, Commonwealth and Development Office",
+          "title": "Egypt travel advice — entering Egypt from Gaza",
+          "checked_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": "STATUS-ARM-AZE-202610",
+      "title": "Armenia–Azerbaijan: ordinary land crossing closed",
+      "status": "closed",
+      "observed_at": "2026-10-25",
+      "region": "Central Asia and Caucasus",
+      "continents": [
+        "Asia"
+      ],
+      "countries": [
+        "Armenia",
+        "Azerbaijan"
+      ],
+      "location_ids": [
+        "context-frontier-arm-aze"
+      ],
+      "linked_land_ids": [
+        "CC028"
+      ],
+      "rationales": [
+        "Interstate disputes and pressure"
+      ],
+      "scope": "Whole Armenia–Azerbaijan land frontier for ordinary passenger crossing",
+      "movement": "Ordinary passenger crossing",
+      "exceptions": "No unrestricted civilian reopening established by this source.",
+      "summary": "Current FCDO regional advice states that the border with Azerbaijan remains closed.",
+      "qualification": "A current-status observation, not a new start date or an exact-duration finding.",
+      "sources": [
+        {
+          "url": "https://www.gov.uk/foreign-travel-advice/armenia/regional-risks",
+          "publisher": "UK Foreign, Commonwealth and Development Office",
+          "title": "Armenia regional risks — Azerbaijan border",
+          "checked_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": "STATUS-ARM-TUR-202610",
+      "title": "Armenia–Turkey: ordinary land crossing closed",
+      "status": "closed",
+      "observed_at": "2026-10-25",
+      "region": "Central Asia and Caucasus",
+      "continents": [
+        "Asia"
+      ],
+      "countries": [
+        "Armenia",
+        "Turkey"
+      ],
+      "location_ids": [
+        "context-frontier-arm-tur"
+      ],
+      "linked_land_ids": [
+        "CC004"
+      ],
+      "rationales": [
+        "Interstate disputes and pressure"
+      ],
+      "scope": "Whole Armenia–Turkey land frontier for ordinary passenger crossing",
+      "movement": "Ordinary passenger crossing",
+      "exceptions": "Direct flights are distinct from land-border access; exceptional humanitarian or official movements do not establish ordinary reopening.",
+      "summary": "Current FCDO regional advice describes the land border with Turkey as closed.",
+      "qualification": "A current-status observation; exceptional passage and proposals to reopen are not treated as general reopening.",
+      "sources": [
+        {
+          "url": "https://www.gov.uk/foreign-travel-advice/armenia/regional-risks",
+          "publisher": "UK Foreign, Commonwealth and Development Office",
+          "title": "Armenia regional risks — Turkey border",
+          "checked_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": "STATUS-DZA-MAR-202610",
+      "title": "Algeria–Morocco: ordinary land crossing closed",
+      "status": "closed",
+      "observed_at": "2026-10-25",
+      "region": "North Africa",
+      "continents": [
+        "Africa"
+      ],
+      "countries": [
+        "Algeria",
+        "Morocco"
+      ],
+      "location_ids": [
+        "context-frontier-dza-mar"
+      ],
+      "linked_land_ids": [
+        "NA001"
+      ],
+      "rationales": [
+        "Interstate disputes and pressure"
+      ],
+      "scope": "Whole Algeria–Morocco land frontier for ordinary passenger crossing",
+      "movement": "Ordinary passenger crossing",
+      "exceptions": "Special authorisation is distinct from ordinary access.",
+      "summary": "Current FCDO guidance for both countries states that the land border is closed.",
+      "qualification": "Later status is separately confirmed; no new closure onset or precise duration is inferred.",
+      "sources": [
+        {
+          "url": "https://www.gov.uk/foreign-travel-advice/morocco/regional-risks",
+          "publisher": "UK Foreign, Commonwealth and Development Office",
+          "title": "Morocco regional risks — Algeria border",
+          "checked_at": "2026-10-25"
+        },
+        {
+          "url": "https://www.gov.uk/foreign-travel-advice/algeria/safety-and-security",
+          "publisher": "UK Foreign, Commonwealth and Development Office",
+          "title": "Algeria safety and security — Morocco border",
+          "checked_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": "STATUS-FIN-RUS-202610",
+      "title": "Finland–Russia: land passenger crossings closed",
+      "status": "closed",
+      "observed_at": "2026-10-25",
+      "region": "Europe",
+      "continents": [
+        "Europe"
+      ],
+      "countries": [
+        "Finland",
+        "Russia"
+      ],
+      "location_ids": [
+        "context-frontier-fin-rus"
+      ],
+      "linked_land_ids": [
+        "EU002"
+      ],
+      "rationales": [
+        "Security",
+        "Migration"
+      ],
+      "scope": "Whole Finland–Russia land frontier for ordinary passenger crossing",
+      "movement": "Ordinary passenger crossing",
+      "exceptions": "This passenger status does not assert that all freight movements or all modes ceased.",
+      "summary": "Current FCDO guidance says all land border crossing points remain closed until further notice; the Finnish government decision provides the policy context.",
+      "qualification": "Current passenger status is separate from a daily operational history or a claim about rail freight.",
+      "sources": [
+        {
+          "url": "https://www.gov.uk/foreign-travel-advice/finland/entry-requirements",
+          "publisher": "UK Foreign, Commonwealth and Development Office",
+          "title": "Finland entry requirements — Russian border",
+          "checked_at": "2026-10-25"
+        },
+        {
+          "url": "https://valtioneuvosto.fi/en/-/44957406/government-finland-s-eastern-border-to-remain-closed-until-further-notice",
+          "publisher": "Finnish Government",
+          "title": "Eastern border remains closed until further notice",
+          "publication_date": "2025-04-16",
+          "checked_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": "STATUS-BDI-RWA-202610",
+      "title": "Burundi–Rwanda: land border remains closed",
+      "status": "closed",
+      "observed_at": "2026-10-25",
+      "region": "Great Lakes",
+      "continents": [
+        "Africa"
+      ],
+      "countries": [
+        "Burundi",
+        "Rwanda"
+      ],
+      "location_ids": [
+        "context-frontier-bdi-rwa"
+      ],
+      "linked_land_ids": [
+        "GL11"
+      ],
+      "rationales": [
+        "Security",
+        "Interstate disputes and pressure"
+      ],
+      "scope": "Whole Burundi–Rwanda land frontier for ordinary passenger crossing",
+      "movement": "Ordinary passenger crossing",
+      "exceptions": "Flights between the capitals remain distinct from land access.",
+      "summary": "Current FCDO Burundi guidance describes the Rwanda land border as closed and distinguishes continuing air connections.",
+      "qualification": "Current status is confirmed without calculating additional closed days or assuming every exceptional movement was prohibited.",
+      "sources": [
+        {
+          "url": "https://www.gov.uk/foreign-travel-advice/burundi/safety-and-security",
+          "publisher": "UK Foreign, Commonwealth and Development Office",
+          "title": "Burundi safety and security — political situation",
+          "checked_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": "STATUS-KEN-SOM-202610",
+      "title": "Kenya–Somalia: ordinary land crossing closed",
+      "status": "closed",
+      "observed_at": "2026-10-25",
+      "region": "Horn of Africa",
+      "continents": [
+        "Africa"
+      ],
+      "countries": [
+        "Kenya",
+        "Somalia"
+      ],
+      "location_ids": [
+        "context-frontier-ken-som"
+      ],
+      "linked_land_ids": [
+        "H01"
+      ],
+      "rationales": [
+        "Security"
+      ],
+      "scope": "Whole Kenya–Somalia land frontier for ordinary civilian crossing",
+      "movement": "Ordinary civilian passenger crossing",
+      "exceptions": "The guidance does not supply a complete inventory of official or humanitarian exemptions.",
+      "summary": "Current FCDO Somalia guidance states that the Kenya land border is closed, attributing the closure to cross-border terrorist activity.",
+      "qualification": "A status observation; informal movement does not establish ordinary authorised passage.",
+      "sources": [
+        {
+          "url": "https://www.gov.uk/foreign-travel-advice/somalia/regional-risks",
+          "publisher": "UK Foreign, Commonwealth and Development Office",
+          "title": "Somalia regional risks — border areas",
+          "checked_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": "STATUS-KHM-THA-202610",
+      "title": "Thailand–Cambodia: land crossings suspended",
+      "status": "closed",
+      "observed_at": "2026-10-25",
+      "region": "East and Southeast Asia and Oceania",
+      "continents": [
+        "Asia"
+      ],
+      "countries": [
+        "Thailand",
+        "Cambodia"
+      ],
+      "location_ids": [
+        "context-frontier-khm-tha"
+      ],
+      "linked_land_ids": [
+        "EA001",
+        "EA002"
+      ],
+      "rationales": [
+        "Security",
+        "Interstate disputes and pressure"
+      ],
+      "scope": "Whole Thailand–Cambodia land frontier for ordinary passenger crossing",
+      "movement": "Ordinary passenger crossing",
+      "exceptions": "No claim is made about every specially authorised movement or freight category.",
+      "summary": "Current FCDO guidance for both countries says land borders and crossings continue to be suspended after the 2025 fighting.",
+      "qualification": "This October observation does not interpolate every earlier gate-specific opening or restriction.",
+      "sources": [
+        {
+          "url": "https://www.gov.uk/foreign-travel-advice/thailand/regional-risks",
+          "publisher": "UK Foreign, Commonwealth and Development Office",
+          "title": "Thailand regional risks — Cambodia border",
+          "checked_at": "2026-10-25"
+        },
+        {
+          "url": "https://www.gov.uk/foreign-travel-advice/cambodia",
+          "publisher": "UK Foreign, Commonwealth and Development Office",
+          "title": "Cambodia travel advice — Thailand border",
+          "checked_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": "STATUS-BLR-UKR-202610",
+      "title": "Belarus–Ukraine: ordinary border crossing closed",
+      "status": "closed",
+      "observed_at": "2026-10-25",
+      "region": "Europe",
+      "continents": [
+        "Europe"
+      ],
+      "countries": [
+        "Belarus",
+        "Ukraine"
+      ],
+      "location_ids": [
+        "context-frontier-blr-ukr"
+      ],
+      "linked_land_ids": [
+        "EU031"
+      ],
+      "rationales": [
+        "Security"
+      ],
+      "scope": "Whole Belarus–Ukraine land frontier for ordinary civilian crossing",
+      "movement": "Ordinary civilian passenger crossing",
+      "exceptions": "Exceptional return or humanitarian arrangements are not treated as ordinary reopening.",
+      "summary": "Current FCDO Ukraine guidance describes the border with Belarus as closed; Belarus guidance separately states that British nationals cannot currently cross it.",
+      "qualification": "Current status does not alter the narrower historical phases for particular Ukrainian checkpoint lists.",
+      "sources": [
+        {
+          "url": "https://www.gov.uk/foreign-travel-advice/ukraine/entry-requirements",
+          "publisher": "UK Foreign, Commonwealth and Development Office",
+          "title": "Ukraine entry requirements — border with Belarus",
+          "checked_at": "2026-10-25"
+        },
+        {
+          "url": "https://www.gov.uk/foreign-travel-advice/belarus/safety-and-security",
+          "publisher": "UK Foreign, Commonwealth and Development Office",
+          "title": "Belarus safety and security — Ukraine border",
+          "checked_at": "2026-10-25"
+        }
+      ]
+    }
+  ],
+  "resolutions": [],
+  "unresolved": [
+    {
+      "record_id": "AM023",
+      "title": "Paraguay COVID nonresident entry restrictions",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "AM023-FU1",
+          "last_confirmed": "2020-04-28",
+          "scope": "Paraguay land entry"
+        }
+      ]
+    },
+    {
+      "record_id": "AM035",
+      "title": "French Guiana Suriname Maroni border COVID closure",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "AM035-D1",
+          "last_confirmed": "2020-07-21",
+          "scope": "Suriname-imposed restriction at the French Guiana–Suriname Maroni frontier, with later hearing evidence of continued border restrictions."
+        }
+      ]
+    },
+    {
+      "record_id": "AM021",
+      "title": "Uruguay COVID Argentina-border entry restrictions",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "AM021-C7P1",
+          "last_confirmed": "2020-03-23",
+          "scope": "Uruguay entry from Argentina under Decree 94/020, outside citizens/residents and freight-related exceptions"
+        }
+      ]
+    },
+    {
+      "record_id": "AM016",
+      "title": "Chile COVID restrictions on foreign land entry",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "AM016-FU1",
+          "last_confirmed": "2020-03-18",
+          "scope": "Chilean land ports covered by Decreto 102"
+        }
+      ]
+    },
+    {
+      "record_id": "AM019",
+      "title": "Brazil COVID foreign-entry restrictions on eight land frontiers",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "AM019-FU1",
+          "last_confirmed": "2020-03-19",
+          "scope": "Brazil land entry from Argentina, Bolivia, Colombia, French Guiana, Guyana, Paraguay, Peru and Suriname"
+        }
+      ]
+    },
+    {
+      "record_id": "AM030",
+      "title": "Belize COVID land-entry restrictions with separate tourist and citizen/resident phases",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "AM030-C7P1",
+          "last_confirmed": "2020-04-05",
+          "scope": "Belize land-entry restriction extended to returning Belizeans and residents outside authorized emergency cases"
+        }
+      ]
+    },
+    {
+      "record_id": "AM049",
+      "title": "Ecuador 2025 presidential-runoff foreign land-entry ban",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "AM049-C7P1",
+          "last_confirmed": "2025-04-12",
+          "scope": "Ecuadorian foreign-entry checks at Huaquillas"
+        }
+      ]
+    },
+    {
+      "record_id": "CC028",
+      "title": "Armenia–Azerbaijan longstanding closure of ordinary transport links",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "CC028-R1",
+          "last_confirmed": "2025-06-12",
+          "scope": "Ordinary direct Armenia–Azerbaijan interstate passenger and commercial road/rail links; separate Lachin and humanitarian regimes excluded"
+        }
+      ]
+    },
+    {
+      "record_id": "CC004",
+      "title": "Turkey–Armenia longstanding land-border closure",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "CC004-D1",
+          "last_confirmed": "2026-05-13",
+          "scope": "Ordinary direct land travel across the Turkey–Armenia frontier, excluding individually authorised humanitarian crossings."
+        }
+      ]
+    },
+    {
+      "record_id": "CC029",
+      "title": "Abkhaz de facto authorities close Shamgona–Tagiloni crossing",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "CC029-D1",
+          "last_confirmed": "2017-11-16",
+          "scope": "Ordinary passage at Shamgona–Tagiloni, as documented in the 2017 Public Defender report."
+        }
+      ]
+    },
+    {
+      "record_id": "CC015",
+      "title": "Abkhaz de facto authorities abolish two local crossing points",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "CC015-D1",
+          "last_confirmed": "2017-11-16",
+          "scope": "Ordinary operation of Khurcha–Nabakevi and Orsantia–Otobaia, through the dated Public Defender account."
+        }
+      ]
+    },
+    {
+      "record_id": "CC003",
+      "title": "Azerbaijan prolonged pandemic land-entry closure",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "CC003-D1",
+          "last_confirmed": "2026-09-03",
+          "scope": "Ordinary non-permitted foreign road entry into mainland Azerbaijan across the Georgia, Russia and Iran frontiers; freight and individually authorised entry excluded."
+        }
+      ]
+    },
+    {
+      "record_id": "CC024",
+      "title": "Aqina trade disruption with reported Taliban access-road blockade",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "CC024-FU1",
+          "last_confirmed": "2021-07-04",
+          "scope": "Reported road obstruction affecting cargo access to Aqina; exact roadblock location unresolved"
+        }
+      ]
+    },
+    {
+      "record_id": "CC020",
+      "title": "Lachin corridor obstruction and tightening access restrictions",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "CC020-D1",
+          "last_confirmed": "2023-08-18",
+          "scope": "Phased restriction of ordinary and humanitarian access along Lachin from the December protest obstruction through the August aid-access crisis; movement classes and mechanisms changed."
+        }
+      ]
+    },
+    {
+      "record_id": "EA025",
+      "title": "Kaesong industrial complex cross-border access shutdown",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EA025-D1",
+          "last_confirmed": "2026-02-10",
+          "scope": "Ordinary cross-border industrial access for the Kaesong complex, confirmed through the tenth-anniversary ministry account."
+        }
+      ]
+    },
+    {
+      "record_id": "EA013",
+      "title": "Malaysia COVID ordinary passenger land-border restrictions",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EA013-C7P2",
+          "last_confirmed": "2020-05-15",
+          "scope": "Selected May15 observation of Malaysian foreign-passenger admission restrictions"
+        },
+        {
+          "phase_id": "EA013-C7P4",
+          "last_confirmed": "2020-08-10",
+          "scope": "Permission-controlled expatriate entry/exit documented at MYEntry introduction"
+        }
+      ]
+    },
+    {
+      "record_id": "EA014",
+      "title": "Vietnam suspends individual crossings with Laos and Cambodia",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EA014-R1",
+          "last_confirmed": "2020-04-05",
+          "scope": "Vietnam-side main/secondary gates and trails on Laos frontier, individual travel"
+        }
+      ]
+    },
+    {
+      "record_id": "EA012",
+      "title": "China’s phased restrictions on northern and eastern Shan border gates",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EA012-R1",
+          "last_confirmed": "2024-08-28",
+          "scope": "Manhkar–Namtit gate; reported complete closure affecting supplies and medical travel"
+        }
+      ]
+    },
+    {
+      "record_id": "EA024",
+      "title": "Rason foreign tourist land access suspended after brief reopening",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EA024-D1",
+          "last_confirmed": "2025-06-16",
+          "scope": "Ordinary foreign land tours to Rason via Quanhe–Wonjong, through the operator's June update."
+        }
+      ]
+    },
+    {
+      "record_id": "EA001",
+      "title": "Thailand Cambodia closure following border confrontation",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EA001-FU1",
+          "last_confirmed": "2025-06-23",
+          "scope": "Thai-side checkpoints covered by June 23 directives: 1st and 2nd Army regions and Chanthaburi–Trat command"
+        },
+        {
+          "phase_id": "REC50-R28-PH001",
+          "last_confirmed": "2025-06-08",
+          "scope": "Aranyaprathet–Poipet rule restricting Thai outbound tourism and gambling, confirmed by the 8 June 2025 MFA briefing."
+        }
+      ]
+    },
+    {
+      "record_id": "EA002",
+      "title": "Cambodian goods-crossing ban at Thailand frontier during dispute",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EA002-FU1",
+          "last_confirmed": "2025-06-29",
+          "scope": "Cambodian international and regional gates on the Thailand frontier"
+        }
+      ]
+    },
+    {
+      "record_id": "EU032",
+      "title": "Spain enforces essential-purpose restrictions at Gibraltar frontier",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EU032-FU1",
+          "last_confirmed": "2020-03-16",
+          "scope": "La Línea–Gibraltar frontier under Spanish emergency movement enforcement"
+        }
+      ]
+    },
+    {
+      "record_id": "EU022",
+      "title": "Norway pandemic foreigner-entry rejection regime",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EU022-C7P1",
+          "last_confirmed": "2020-07-01",
+          "scope": "Successor Norwegian foreign-entry rejection framework, including land arrivals"
+        }
+      ]
+    },
+    {
+      "record_id": "EU014",
+      "title": "Hungary first pandemic foreigner-entry prohibition",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EU014-FU1",
+          "last_confirmed": "2020-03-17",
+          "scope": "Hungarian land entry under initial nationwide regime"
+        }
+      ]
+    },
+    {
+      "record_id": "EU015",
+      "title": "Hungary reintroduces pandemic foreigner-entry prohibition",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EU015-FU1",
+          "last_confirmed": "2020-10-01",
+          "scope": "Hungarian land entry under second-wave national rules"
+        }
+      ]
+    },
+    {
+      "record_id": "EU031",
+      "title": "Ukraine closes listed Russia, Belarus and Transnistrian-segment checkpoints after invasion",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EU031-R1",
+          "last_confirmed": "2023-10-10",
+          "scope": "Ukrainian formal suspension of road and railway checkpoints listed in order 188-r on Russia, Belarus and Transnistrian frontier, excluding Kuchurhan railway entry 512100; excludes air entries from this land-border phase"
+        }
+      ]
+    },
+    {
+      "record_id": "EU011",
+      "title": "Latvia prohibits Russian short-stay visa holders’ nonessential entry",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EU011-D1",
+          "last_confirmed": "2025-09-01",
+          "scope": "Latvian policy barring non-essential external-border entry by Russian short-stay visa holders."
+        }
+      ]
+    },
+    {
+      "record_id": "EU035",
+      "title": "Estonia prohibits Russian short-stay visa holders’ nonessential entry",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EU035-C7P1",
+          "last_confirmed": "2026-01-25",
+          "scope": "Amended Estonian Russian-national external-border entry regime under Order247, including changed diplomatic exceptions"
+        }
+      ]
+    },
+    {
+      "record_id": "EU036",
+      "title": "Poland restricts Russian nationals’ nonessential external-border entry",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EU036-R1",
+          "last_confirmed": "2024-07-19",
+          "scope": "Entry into Poland across Schengen external road and rail border crossings by Russian citizens outside the operative section 3a exceptions"
+        }
+      ]
+    },
+    {
+      "record_id": "EU037",
+      "title": "Finland prohibits Russian tourism and related transit",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EU037-C7P1",
+          "last_confirmed": "2025-09-10",
+          "scope": "Successor Finnish prohibition of nonessential Russian travel and tourism transit"
+        }
+      ]
+    },
+    {
+      "record_id": "EU006",
+      "title": "Lithuania closes Šumskas and Tverečius crossings",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EU006-D1",
+          "last_confirmed": "2025-10-30",
+          "scope": "Operation of Lithuania's Sumskas and Tverecius road crossings, through October 30 2025 retrospective confirmation."
+        }
+      ]
+    },
+    {
+      "record_id": "EU008",
+      "title": "Latvia suspends Silene crossing",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EU008-D1",
+          "last_confirmed": "2026-08-11",
+          "scope": "Ordinary passenger and goods operation of Silene, through the dated transport-ministry confirmation."
+        }
+      ]
+    },
+    {
+      "record_id": "EU002",
+      "title": "Finland renewed full road-crossing closure with Russia",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EU002-D1",
+          "last_confirmed": "2026-06-04",
+          "scope": "Finland’s eastern land-border crossing points for road traffic under the renewed closure."
+        }
+      ]
+    },
+    {
+      "record_id": "EU007",
+      "title": "Lithuania closes Lavoriškės and Raigardas and restricts remaining crossings",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EU007-R1",
+          "last_confirmed": "2025-10-30",
+          "scope": "Lavoriškės and Raigardas road crossing operations on Lithuania–Belarus frontier"
+        },
+        {
+          "phase_id": "EU007-C7P1",
+          "last_confirmed": "2024-03-01",
+          "scope": "Pedestrian and cycle passage at Medininkai and Šalčininkai road posts"
+        },
+        {
+          "phase_id": "EU007-C7P2",
+          "last_confirmed": "2024-03-01",
+          "scope": "Passenger boarding/alighting at Kena and Kybartai railway border posts"
+        }
+      ]
+    },
+    {
+      "record_id": "EU010",
+      "title": "Norway bans nonessential entry by Russian visa holders",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EU010-R1",
+          "last_confirmed": "2024-08-01",
+          "scope": "Norwegian rejection of Russian citizens arriving for tourism or other non-essential purposes at Storskog under the May 2024 policy, subject to exceptions"
+        }
+      ]
+    },
+    {
+      "record_id": "EU038",
+      "title": "Estonia shuts transit road through Russia’s Saatse Boot",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "EU038-R1",
+          "last_confirmed": "2025-10-23",
+          "scope": "Original Värska–Ulitina road transit through the Saatse Boot in Russian territory, blocked by Estonian authorities"
+        }
+      ]
+    },
+    {
+      "record_id": "GL01",
+      "title": "Rwanda restriction at Gatuna and on travel to Uganda",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "GL01-C7RWP1",
+          "last_confirmed": "2019-03-01",
+          "scope": "Observed denial of Rwandan passenger exit at Gatuna; foreign travelers remained able to cross"
+        },
+        {
+          "phase_id": "GL01-C7RWP2",
+          "last_confirmed": "2019-06-23",
+          "scope": "Rwandan travel toward Uganda still restricted at Gatuna despite June truck trial"
+        },
+        {
+          "phase_id": "GL01-C7RWP3",
+          "last_confirmed": "2020-01-03",
+          "scope": "Selective permission and refusal for Rwandan travel to Uganda, reported at Kagitumba and Gatuna"
+        },
+        {
+          "phase_id": "GL01-C7RWP4",
+          "last_confirmed": "2022-01-31",
+          "scope": "Ordinary passenger denials at Gatuna during cargo/returnee reopening"
+        }
+      ]
+    },
+    {
+      "record_id": "GL16",
+      "title": "Burundi COVID entry restriction from Rwanda",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "GL16-R1",
+          "last_confirmed": "2020-03-16",
+          "scope": "Ruhwa refusal of entry into Burundi from Rwanda"
+        }
+      ]
+    },
+    {
+      "record_id": "GL05",
+      "title": "Uganda national COVID passenger border restrictions",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R47-GL05-P1",
+          "last_confirmed": "2020-03-31",
+          "scope": "Uganda ordinary asylum-admission policy during COVID, with exceptional permissions and informal entry"
+        }
+      ]
+    },
+    {
+      "record_id": "GL12",
+      "title": "Congolese official prohibition of Bunagana border operations under M23 control",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "GL12-FU1",
+          "last_confirmed": "2022-06-20",
+          "scope": "Bunagana goods import/export prohibition by North Kivu authorities"
+        }
+      ]
+    },
+    {
+      "record_id": "GL10",
+      "title": "DRC election border closure extending beyond announced day at Mpondwe",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "GL10-D1",
+          "last_confirmed": "2023-12-21",
+          "scope": "Mpondwe–Kasindi election interruption, confirmed still closed at 15:00 on December 21."
+        }
+      ]
+    },
+    {
+      "record_id": "GL11",
+      "title": "Burundi reclosure of Rwanda frontier",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "GL11-D1",
+          "last_confirmed": "2026-09-09",
+          "scope": "Ordinary Burundi–Rwanda land passage under Burundi's January 2024 reclosure."
+        }
+      ]
+    },
+    {
+      "record_id": "GL13",
+      "title": "Uganda closure of Bunagana and Ishasha adjoining M23-held territory",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R26-GL13-P1",
+          "last_confirmed": "2025-03-05",
+          "scope": "URA formal routing restriction on Goma-bound goods clearance via Chanika, Katuna, Kyeshero and Ishasha"
+        }
+      ]
+    },
+    {
+      "record_id": "GL14",
+      "title": "Goma–Rubavu crossing interruption during M23 seizure of Goma",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "GL14-R2",
+          "last_confirmed": "2025-01-28",
+          "scope": "Ordinary passenger and trade suspension at Petite Barrière during the Goma battle"
+        }
+      ]
+    },
+    {
+      "record_id": "GL02",
+      "title": "Burundi restrictions on Rwanda border following political crisis",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "GL02-FU1",
+          "last_confirmed": "2022-03-07",
+          "scope": "Ruhwa: Burundian police prevent Burundians travelling to Rwanda"
+        }
+      ]
+    },
+    {
+      "record_id": "H01",
+      "title": "Kenya Somalia security closure continuing into research window",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "H01-D1",
+          "last_confirmed": "2026-05-14",
+          "scope": "Kenya's formal Somalia-frontier closure regime at the named strategic posts, not a claim of impermeable physical enforcement."
+        }
+      ]
+    },
+    {
+      "record_id": "H05",
+      "title": "Sudan closes Eritrea border under emergency order",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "H05-R1",
+          "last_confirmed": "2019-01-31",
+          "scope": "Sudan order restricting Eritrea land crossings before presidential reopening announcement"
+        }
+      ]
+    },
+    {
+      "record_id": "H03",
+      "title": "Eritrean restrictions at Zalambessa and Rama in December2018",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "H03-D1",
+          "last_confirmed": "2018-12-28",
+          "scope": "Ethiopian entry into Eritrea at Zalambessa–Serha, through Reuters's December 28 resident account."
+        },
+        {
+          "phase_id": "H03-R1",
+          "last_confirmed": "2018-12-28",
+          "scope": "Ethiopian citizens and Ethiopian-licensed vehicles entering Eritrea at Rama without newly required permits."
+        }
+      ]
+    },
+    {
+      "record_id": "H04",
+      "title": "Eritrean closure of remaining Ethiopia road crossings in April2019",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "H04-D1",
+          "last_confirmed": "2019-04-27",
+          "scope": "Bure–Debay Sima ordinary road-crossing closure, through the dated April 27 account."
+        }
+      ]
+    },
+    {
+      "record_id": "H12",
+      "title": "Gedo COVID closure of Somalia Kenya and Ethiopia crossings",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "H12-FU1",
+          "last_confirmed": "2020-04-14",
+          "scope": "Dollow bridge between Somalia and Dolo Addo, Ethiopia"
+        }
+      ]
+    },
+    {
+      "record_id": "H08",
+      "title": "Kenya COVID passenger closure at Tanzania and Somalia borders",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "H08-FU1",
+          "last_confirmed": "2020-05-17",
+          "scope": "Kenya–Tanzania and Kenya–Somalia land borders as covered by the Kenyan order"
+        }
+      ]
+    },
+    {
+      "record_id": "H21",
+      "title": "Djibouti second COVID land passenger closure in October2020",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "H21-C7P1",
+          "last_confirmed": "2020-10-21",
+          "scope": "Djibouti land-passenger restriction reported implemented October21"
+        }
+      ]
+    },
+    {
+      "record_id": "H13",
+      "title": "Kassala closes Ethiopia frontier as Tigray war begins",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "H13-NP1",
+          "last_confirmed": "2020-11-05",
+          "scope": "Kassala–Ethiopia border order"
+        }
+      ]
+    },
+    {
+      "record_id": "H20",
+      "title": "Eritrea COVID land-border closure overlay",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "H20-NP1",
+          "last_confirmed": "2020-11-13",
+          "scope": "Eritrean land-border COVID policy overlay"
+        }
+      ]
+    },
+    {
+      "record_id": "ME005",
+      "title": "Jordan Iraq Trebil conflict closure",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "ME005-R1",
+          "last_confirmed": "2017-08-30",
+          "scope": "Normal truck/passenger processing at Trebil/Karameh, excluding ceremonial delegations and temporary clearance of stranded investor goods/trucks"
+        }
+      ]
+    },
+    {
+      "record_id": "ME036",
+      "title": "Jordan national COVID passenger closure",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "ME036-D1",
+          "last_confirmed": "2020-09-27",
+          "scope": "Jordan's ordinary private land-passenger restriction, through the September 27 retrospective account."
+        }
+      ]
+    },
+    {
+      "record_id": "ME021",
+      "title": "Jordan-facing terminal restrictions after the Allenby shooting, September 2024",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R38-ME021-P1",
+          "last_confirmed": "2024-09-08",
+          "scope": "Wadi Araba / Yitzhak Rabin closure statement after the Allenby shooting"
+        },
+        {
+          "phase_id": "REC50-R38-ME021-P2",
+          "last_confirmed": "2024-09-08",
+          "scope": "Jordan River / Sheikh Hussein closure statement after the Allenby shooting"
+        }
+      ]
+    },
+    {
+      "record_id": "ME028",
+      "title": "Lebanon Syria Masnaa road severed by air strike",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "ME028-REV1",
+          "last_confirmed": "2024-10-04",
+          "scope": "Severed through-vehicle road between Masnaa and Jdeidat Yabous following the October 4 strike"
+        }
+      ]
+    },
+    {
+      "record_id": "ME023",
+      "title": "Allenby crossing renewed September 2025 political closure order",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "ME023-C7P1",
+          "last_confirmed": "2025-09-26",
+          "scope": "Renewed Allenby / King Hussein passenger closure after brief September 26 bus opening"
+        }
+      ]
+    },
+    {
+      "record_id": "ME034",
+      "title": "Iraq Iran September 2026 security review closures",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "ME034-R3",
+          "last_confirmed": "2026-09-16",
+          "scope": "Sheeb/Chazabeh cargo entering Iraq"
+        }
+      ]
+    },
+    {
+      "record_id": "NA001",
+      "title": "Algeria Morocco continuing land border closure",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "NA001-D1",
+          "last_confirmed": "2026-01-29",
+          "scope": "Ordinary Algeria–Morocco land passage; dated closure description through 29 January 2026, with exceptional handovers excluded."
+        }
+      ]
+    },
+    {
+      "record_id": "NA012",
+      "title": "Algeria Libya Ghadames Debdeb prolonged restrictions",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "NA012-C7P1",
+          "last_confirmed": "2024-08-05",
+          "scope": "Ghadames–Debdeb passenger closure observed August 5, 2024"
+        }
+      ]
+    },
+    {
+      "record_id": "SA016",
+      "title": "India suspends cross-LoC barter trade",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "SA016-R1",
+          "last_confirmed": "2026-09-18",
+          "scope": "Salamabad/Uri cross-LoC barter trade facility only"
+        }
+      ]
+    },
+    {
+      "record_id": "SA017",
+      "title": "Pakistan suspends bilateral goods trade with India",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "SA017-R1",
+          "last_confirmed": "2024-02-07",
+          "scope": "Pakistan's restriction on bilateral non-therapeutic goods trade with India, including land-route effect"
+        }
+      ]
+    },
+    {
+      "record_id": "SA003",
+      "title": "Chaman initial COVID closure",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "SA003-C7P1",
+          "last_confirmed": "2020-05-16",
+          "scope": "Chaman pedestrian eligibility restricted to scheduled Saturday access, with health conditions"
+        }
+      ]
+    },
+    {
+      "record_id": "SA019",
+      "title": "India national COVID land-passenger restrictions",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "SA019-FU1",
+          "last_confirmed": "2020-05-07",
+          "scope": "Land immigration posts within the March 23 all-107-post incoming-passenger policy; non-land posts excluded from this phase"
+        }
+      ]
+    },
+    {
+      "record_id": "SA013",
+      "title": "Chaman protest-related truck closure and phased restoration",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "SA013-D1",
+          "last_confirmed": "2024-01-24",
+          "scope": "Chaman truck movement blocked by the protest, through the dated January logistics update."
+        }
+      ]
+    },
+    {
+      "record_id": "SA018",
+      "title": "Attari passenger and goods closure after Pahalgam attack",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "SA018-D1",
+          "last_confirmed": "2025-05-07",
+          "scope": "Indian ordinary goods-movement prohibition at Attari, excluding the specified one-time Afghan perishable-cargo permission."
+        }
+      ]
+    },
+    {
+      "record_id": "SA026",
+      "title": "India excludes selected Bangladeshi imports from land ports",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "SA026-D1",
+          "last_confirmed": "2025-08-11",
+          "scope": "India's land-port prohibition on Bangladeshi ready-made garment imports, through the August amendment of the continuing regime."
+        }
+      ]
+    },
+    {
+      "record_id": "SC06",
+      "title": "Chad CAR long closure overlapping study window",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "SC06-REV1",
+          "last_confirmed": "2019-04-17",
+          "scope": "Chadian official prohibition on ordinary, non-authorized passage across the CAR border, before the documented August 2019 controlled-corridor phase"
+        }
+      ]
+    },
+    {
+      "record_id": "SC19",
+      "title": "Eswatini COVID general-travel restrictions",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "SC19-FU1",
+          "last_confirmed": "2020-03-27",
+          "scope": "Eswatini outbound non-essential travel under Regulation 16(1)"
+        }
+      ]
+    },
+    {
+      "record_id": "SC21",
+      "title": "Namibia COVID land-border restrictions",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "SC21-FU1",
+          "last_confirmed": "2020-03-24",
+          "scope": "Passenger restrictions announced for Oshikango, Katwitwi, Wenela, Buitepos, Ariamsvlei and Noordoewer land posts"
+        }
+      ]
+    },
+    {
+      "record_id": "SC20",
+      "title": "Goba Mhlumeni COVID crossing closure",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "SC20-R1",
+          "last_confirmed": "2020-04-06",
+          "scope": "Consequential Mhlumeni–Goba port closure reported by Eswatini"
+        }
+      ]
+    },
+    {
+      "record_id": "SC23",
+      "title": "Lesotho January 2021 cross-border restrictions",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "SC23-NP1",
+          "last_confirmed": "2021-01-29",
+          "scope": "Lesotho nonessential cross-border travel during red-level restrictions"
+        }
+      ]
+    },
+    {
+      "record_id": "SC24",
+      "title": "Chad closure after President Deby death",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "SC24-C1",
+          "last_confirmed": "2021-04-26",
+          "scope": "Ordinary non-humanitarian freight crossing from Kousseri into Chad at Ngueli; hospital-equipment/humanitarian exceptions excluded."
+        }
+      ]
+    },
+    {
+      "record_id": "SC08",
+      "title": "Chad Sudan closure at outbreak of war",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "SC08-FU1",
+          "last_confirmed": "2023-04-15",
+          "scope": "Chadian order closing Sudan land frontier until further notice"
+        }
+      ]
+    },
+    {
+      "record_id": "W-023",
+      "title": "Senegal COVID land-border closure",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "W-023-D1",
+          "last_confirmed": "2020-10-19",
+          "scope": "Senegal-side restriction on ordinary non-exempt passage at the Gambia frontier."
+        }
+      ]
+    },
+    {
+      "record_id": "W-022",
+      "title": "Liberia COVID land-border closure",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "W-022-FU1",
+          "last_confirmed": "2020-03-30",
+          "scope": "Liberia closure toward Guinea and Ivory Coast, first phase"
+        }
+      ]
+    },
+    {
+      "record_id": "W-017",
+      "title": "Niger Benin continued closure after regional sanctions lifted",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "W-017-R1",
+          "last_confirmed": "2026-08-05",
+          "scope": "Niger-side continued official restriction at Gaya–Malanville road bridge after ECOWAS lifting"
+        }
+      ]
+    },
+    {
+      "record_id": "W-021",
+      "title": "Guinea-Bissau partial Senegal frontier closure after communal clashes",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "W-021-FU1",
+          "last_confirmed": "2024-06-19",
+          "scope": "Unspecified part of Guinea-Bissau–Senegal border near Medina Gounass; exact posts unknown"
+        }
+      ]
+    },
+    {
+      "record_id": "W-031",
+      "title": "Gambia December 2016 presidential election closure",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "W-031-FU1",
+          "last_confirmed": "2016-12-01",
+          "scope": "Reported Gambia–Senegal election-period land-border closure; individual posts unknown"
+        }
+      ]
+    },
+    {
+      "record_id": "W-032",
+      "title": "Benin COVID restriction of nonessential land crossings",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "W-032-D1",
+          "last_confirmed": "2020-04-30",
+          "scope": "Benin formal restriction of nonessential land entry and exit, with indispensable crossings and goods excepted"
+        }
+      ]
+    },
+    {
+      "record_id": "R2-EA-005",
+      "title": "Myanmar suspends foreign visitor entry at land checkpoints",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R2-EA-005-FU1",
+          "last_confirmed": "2020-03-19",
+          "scope": "Open Myanmar land checkpoints with neighbouring countries under March 19 national foreign-entry suspension"
+        }
+      ]
+    },
+    {
+      "record_id": "R2-EA-011",
+      "title": "NMSP reinforces closure of informal Three Pagodas returnee routes",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R2-EA-011-FU1",
+          "last_confirmed": "2020-04-25",
+          "scope": "NMSP-controlled Three Pagodas-area routes including Palangjapan and Guu Bar"
+        }
+      ]
+    },
+    {
+      "record_id": "R2-EA-003",
+      "title": "Three Pagodas closure during DKBA–Thai road-maintenance dispute",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R2-EA-003-R1",
+          "last_confirmed": "2024-07-02",
+          "scope": "Payathonzu/Three Pagodas informal trade post, large cargo-container/12-wheel trucks"
+        },
+        {
+          "phase_id": "R2-EA-003-NP1",
+          "last_confirmed": "2024-08-20",
+          "scope": "Three Pagodas vehicle restriction after pedestrian reopening"
+        }
+      ]
+    },
+    {
+      "record_id": "R2-RT-002",
+      "title": "Cyprus: Turkish Cypriot Limnitis crossing suspension, March–June 2020",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R2-RT-002-C7P1",
+          "last_confirmed": "2020-07-06",
+          "scope": "Return passage for affected Kato Pyrgos commuters through the Limnitis route under changed testing requirements"
+        }
+      ]
+    },
+    {
+      "record_id": "R2-EU-014",
+      "title": "Slovakia bars nonresident foreign entry at four neighbouring land frontiers",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R2-EU-014-FU1",
+          "last_confirmed": "2020-03-18",
+          "scope": "Slovak entry across Austrian, Czech, Ukrainian and Hungarian land frontiers"
+        },
+        {
+          "phase_id": "R2-EU-014-C7P1",
+          "last_confirmed": "2020-03-18",
+          "scope": "Slovak nonresident foreign-entry restriction at the Polish frontier"
+        }
+      ]
+    },
+    {
+      "record_id": "R2-EU-010",
+      "title": "Moldova restricts foreign entry across Ukrainian and Romanian frontiers",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R2-EU-010-C7P1",
+          "last_confirmed": "2020-09-01",
+          "scope": "Moldova red-origin foreign and stateless traveller entry prohibition under Decision26"
+        }
+      ]
+    },
+    {
+      "record_id": "R2-EU-008",
+      "title": "Kosovo restricts Serbian goods, later permitting them at Merdare",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R2-EU-008-C7P1",
+          "last_confirmed": "2025-09-01",
+          "scope": "Serbian-origin finished-goods import routing prohibition at Kosovo crossings other than Merdare"
+        }
+      ]
+    },
+    {
+      "record_id": "R2-EU-009",
+      "title": "Latvia suspends Vientuļi and Pededze border crossings with Russia",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R2-EU-009-R1",
+          "last_confirmed": "2025-03-18",
+          "scope": "Suspension of Vientuļi and Pededze road border crossing operations on Latvian–Russian frontier"
+        }
+      ]
+    },
+    {
+      "record_id": "R2-ME-010",
+      "title": "Gaza Israeli crossings closure and humanitarian reopening phases, May 2021",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R2-ME-010-R1",
+          "last_confirmed": "2021-05-24",
+          "scope": "Erez closure to Palestinian patients with medical referrals for treatment outside Gaza"
+        }
+      ]
+    },
+    {
+      "record_id": "R2-AF-006",
+      "title": "Chad renewed Libya-frontier security closure March 2019",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R2-AF-006-FU1",
+          "last_confirmed": "2019-03-03",
+          "scope": "Chadian formal order restricting Libya land frontier"
+        }
+      ]
+    },
+    {
+      "record_id": "R2-AF-007",
+      "title": "Chad selective three-frontier emergency restriction August 2019",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R2-AF-007-FU1",
+          "last_confirmed": "2019-08-21",
+          "scope": "Chad selective routing restriction on Libya, Sudan and CAR frontiers except named corridors"
+        }
+      ]
+    },
+    {
+      "record_id": "R2-AF-008",
+      "title": "Liberia presidential-runoff land-border closure November 2023",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R2-AF-008-FU1",
+          "last_confirmed": "2023-11-12",
+          "scope": "Liberian runoff-election order covering land borders with Guinea, Ivory Coast and Sierra Leone"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-AM-003",
+      "title": "El Amatillo La Amistad bridge blockade during Honduras postelection crisis",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-AM-003-FU1",
+          "last_confirmed": "2017-12-22",
+          "scope": "La Amistad bridge at El Amatillo"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-AM-002",
+      "title": "Desaguadero/Puerto Acosta customs closure during Bolivia political unrest",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-AM-002-D1",
+          "last_confirmed": "2019-11-23",
+          "scope": "Desaguadero/Puerto Acosta customs administration's documented inability to operate"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-AM-001",
+      "title": "Desaguadero bridges: protest blockade and staged restoration in 2023",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-AM-001-REV1",
+          "last_confirmed": "2023-03-30",
+          "scope": "Desaguadero corridor negotiated weekly passenger-access restriction regime; bridge eligibility varies by traveler"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-AM-005",
+      "title": "Paso Canoas fiscal-protest and trucker blockade, September–October 2020",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-AM-005-FU1",
+          "last_confirmed": "2020-10-08",
+          "scope": "Paso Canoas road before Panamanian customs"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-SC-009",
+      "title": "Afghan–Iran TIR transit restrictions during July 2021 conflict",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-SC-009-FU1",
+          "last_confirmed": "2021-07-27",
+          "scope": "Milak border transit bound for Tajikistan under TIR"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-EA-002",
+      "title": "Skouw–Wutung security closures amid Papua unrest and border gunfire",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-EA-002-D1",
+          "last_confirmed": "2019-10-06",
+          "scope": "Skouw–Wutung public passage in the October gunfire-related closure segment"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-EA-008",
+      "title": "Houaphanh closes ten local border posts with Vietnam",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-EA-008-FU1",
+          "last_confirmed": "2020-03-13",
+          "scope": "Ten unnamed Houaphanh local/traditional Vietnam-frontier posts"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-EA-009",
+      "title": "Attapeu and Sekong close smaller crossings with Vietnam and Cambodia",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-EA-009-FU1",
+          "last_confirmed": "2020-03-16",
+          "scope": "Eight smaller Attapeu Vietnam/Cambodia-frontier posts"
+        },
+        {
+          "phase_id": "R3-EA-009-FU2",
+          "last_confirmed": "2020-03-16",
+          "scope": "Four smaller Sekong Vietnam-frontier posts"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-EU-012",
+      "title": "Austria suspends traffic on numerous designated minor frontier routes in March2020",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-EU-012-FU1",
+          "last_confirmed": "2020-03-20",
+          "scope": "Designated fully suspended routes on Austria’s Italian, Swiss, German, Slovenian and Hungarian frontiers; Liechtenstein routes separately recorded"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-EU-005",
+      "title": "Slovenia blocks minor road links and suspends passenger rail at the Italian frontier",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-EU-005-C7P1",
+          "last_confirmed": "2020-04-14",
+          "scope": "Slovenia–Italy passenger railway suspension"
+        },
+        {
+          "phase_id": "R3-EU-005-C7P2",
+          "last_confirmed": "2020-04-14",
+          "scope": "Minor Slovenia–Italy road links outside the changing authorized checkpoint roster, excluding the separately phased Erjavčeva/Neblo pair"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-EU-007",
+      "title": "Moldova–Ukraine suspends a subset of road, rail and river crossing posts",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-EU-007-FU1",
+          "last_confirmed": "2020-03-17",
+          "scope": "Moldova–Ukraine local/interstate posts and named international road, rail and river posts in March 15 notice"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-RT-001",
+      "title": "Austria–Liechtenstein: Mauren and Schellenberg pandemic gate closures",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-RT-001-D1",
+          "last_confirmed": "2020-05-06",
+          "scope": "Mauren and Schellenberg local crossing closures"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-EU-009",
+      "title": "Norway prohibits ordinary entry through minor Innlandet–Sweden crossings",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-EU-009-FU1",
+          "last_confirmed": "2021-01-02",
+          "scope": "Innlandet–Sweden crossings other than Støa, Riksåsen and Magnormoen under initial roster"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-EU-013",
+      "title": "Russia orders suspension of seven rail border posts facing Finland, Estonia and Latvia",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-EU-013-FU1",
+          "last_confirmed": "2026-07-01",
+          "scope": "Seven named rail border posts facing Finland, Estonia and Latvia"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-ME-011",
+      "title": "Lebanon–Syria COVID passenger closure regimes and phased exceptions, 2020–2021",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-ME-011-C7P2",
+          "last_confirmed": "2020-07-01",
+          "scope": "Lebanon–Syria land passenger transport closure observed as of July 1"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-ME-005",
+      "title": "Arida renewed strike-related closure, December 2024",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-ME-005-FU1",
+          "last_confirmed": "2024-12-06",
+          "scope": "Arida / Al-Arida formal land crossing and bridge"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-ME-013",
+      "title": "Syria foreign-truck direct-entry ban and Lebanese exemptions, February 2026",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-ME-013-REV1",
+          "last_confirmed": "2026-02-23",
+          "scope": "Reciprocal customs-yard transshipment requirement restricting direct delivery by ordinary non-exempt Lebanese and Syrian trucks at Masnaa/Jdeidet Yabous"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-SC-008",
+      "title": "Sonauli vehicle closure for Nepal local elections, June 2017",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-SC-008-FU1",
+          "last_confirmed": "2017-06-26",
+          "scope": "Vehicle and freight passage at Sonauli only"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-SC-002",
+      "title": "Samdrup Jongkhar gate closes for Bhutan primary election, September 2018",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-SC-002-R1",
+          "last_confirmed": "2018-09-16",
+          "scope": "Samdrup Jongkhar main gate only"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-AF-004",
+      "title": "Maseru Bridge blocked by cross-border taxi dispute in January 2017",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-AF-004-R1",
+          "last_confirmed": "2017-01-04",
+          "scope": "Documented sequence of taxi-related obstructions at Maseru Bridge"
+        }
+      ]
+    },
+    {
+      "record_id": "R3-AF-002",
+      "title": "Equatorial Guinea extends Cameroon land closure beyond independence holiday",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R3-AF-002-D1",
+          "last_confirmed": "2020-04-03",
+          "scope": "Official suspension of ordinary persons and goods at Kye-Ossi–Ebebiyin"
+        }
+      ]
+    },
+    {
+      "record_id": "R4-AM-004",
+      "title": "La Hachadura customs-facility blockade by public-sector unionists, March 2019",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R4-AM-004-FU1",
+          "last_confirmed": "2019-03-19",
+          "scope": "La Hachadura customs facilities / Pedro de Alvarado connection"
+        }
+      ]
+    },
+    {
+      "record_id": "R4-EA-004",
+      "title": "Three Pagodas selective Thai closure during fighting near Mon villages",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R4-EA-004-R1",
+          "last_confirmed": "2019-11-29",
+          "scope": "Three Pagodas Thai travellers prevented from entering Myanmar"
+        }
+      ]
+    },
+    {
+      "record_id": "R4-EA-003",
+      "title": "Poipet security barricades selectively block access to the Thailand crossing",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R4-EA-003-FU1",
+          "last_confirmed": "2019-11-09",
+          "scope": "National Road 5 barricades controlling Poipet crossing access"
+        }
+      ]
+    },
+    {
+      "record_id": "R4-EU-002",
+      "title": "Lithuania prohibits non-exempt foreign entry during the first pandemic wave",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R4-EU-002-C7P1",
+          "last_confirmed": "2020-03-26",
+          "scope": "Lithuanian non-exempt citizen departure prohibition during initial quarantine regime"
+        }
+      ]
+    },
+    {
+      "record_id": "R4-EU-003",
+      "title": "Latvia prohibits non-exempt passenger movement at Russian and Belarusian land borders in March 2020",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R4-EU-003-C7P1",
+          "last_confirmed": "2020-06-10",
+          "scope": "Successor Latvian restrictions on non-exempt passenger movement at Russian and Belarusian land frontiers"
+        }
+      ]
+    },
+    {
+      "record_id": "R4-AES-002",
+      "title": "Malaba truck blockade over COVID testing charges in January 2022",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R4-AES-002-R1",
+          "last_confirmed": "2022-01-07",
+          "scope": "Initial Kenya-to-Uganda truck stoppage at Malaba"
+        }
+      ]
+    },
+    {
+      "record_id": "R4-ME-002",
+      "title": "Mehran prohibition on direct truck entry into Iraq, October 2019",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R4-ME-002-D1",
+          "last_confirmed": "2019-11-03",
+          "scope": "Direct Iranian/transit truck entry into Iraq at Mehran, excluding transshipment"
+        }
+      ]
+    },
+    {
+      "record_id": "R4-ME-004",
+      "title": "Erez and Kerem Shalom hostilities restrictions, November 2019",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R4-ME-004-R1",
+          "last_confirmed": "2019-11-14",
+          "scope": "Kerem Shalom non-fuel goods imports during hostilities"
+        }
+      ]
+    },
+    {
+      "record_id": "R4-AES-001",
+      "title": "Oshoek border shut during EFF solidarity protest in July 2021",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R4-AES-001-NP1",
+          "last_confirmed": "2021-07-09",
+          "scope": "Oshoek crossing protest obstruction"
+        }
+      ]
+    },
+    {
+      "record_id": "R4-AES-004",
+      "title": "Maseru Bridge obstructions in September 2025 transport-market dispute",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R4-AES-004-FU1",
+          "last_confirmed": "2025-09-15",
+          "scope": "Maseru Bridge obstruction affecting Basotho hawkers travelling in Lesotho vehicles"
+        }
+      ]
+    },
+    {
+      "record_id": "R4-AWN-001",
+      "title": "Guinea-Bissau COVID land-border closure, March 2020",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R4-AWN-001-D1",
+          "last_confirmed": "2020-03-19",
+          "scope": "Guinea-Bissau formal land-passenger restriction with humanitarian and essential-import exceptions"
+        }
+      ]
+    },
+    {
+      "record_id": "R4-AWN-002",
+      "title": "Sierra Leone COVID land-border closure and initial return window",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R4-AWN-002-D1",
+          "last_confirmed": "2020-04-01",
+          "scope": "Sierra Leone's initial formal land-border restriction, with essential commodities and temporary return window excepted"
+        }
+      ]
+    },
+    {
+      "record_id": "R4-AWN-005",
+      "title": "Mauritania restrictions on entry from Mali during April 2024 border tensions",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R4-AWN-005-R1",
+          "last_confirmed": "2024-04-25",
+          "scope": "Mauritanian entry restrictions on Malians without accepted residence/authorization; Koki Zamal specifically corroborated"
+        }
+      ]
+    },
+    {
+      "record_id": "R5-EA-001",
+      "title": "Myawaddy BGF river checkpoint shut during vehicle-smuggling crackdown",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R5-EA-001-FU1",
+          "last_confirmed": "2018-03-26",
+          "scope": "One unnamed BGF Moei River crossing near Myawaddy–Mae Sot"
+        }
+      ]
+    },
+    {
+      "record_id": "R5-AES-003",
+      "title": "Tanzanian restrictions on Kenyan truckers during May–June 2020 COVID border dispute",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R5-AES-003-R1",
+          "last_confirmed": "2020-05-19",
+          "scope": "Tanga regional commissioner's directive barring Kenyan truck-driver entry at Horohoro"
+        },
+        {
+          "phase_id": "REC50-R01-PH001",
+          "last_confirmed": "2020-06-03",
+          "scope": "Namanga Tanzanian policy statement refusing Kenyan trucks during renewed testing dispute"
+        }
+      ]
+    },
+    {
+      "record_id": "R5-SC-001",
+      "title": "Banke restricts Nepali shopping trips through Jamunaha–Rupaidiha during the 2021 COVID wave",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R5-SC-001-FU1",
+          "last_confirmed": "2021-03-25",
+          "scope": "Jamunaha–Rupaidiha outbound local shopping movement"
+        },
+        {
+          "phase_id": "R5-SC-001-FU2",
+          "last_confirmed": "2021-04-16",
+          "scope": "Jamunaha–Rupaidiha outbound local shopping movement"
+        }
+      ]
+    },
+    {
+      "record_id": "R5-AES-005",
+      "title": "Gabon COVID land-passenger restrictions beginning with northern closure in March 2020",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R5-AES-005-R1",
+          "last_confirmed": "2020-03-12",
+          "scope": "Initial Gabon northern land-frontier passenger restriction, with Kyé-Ossi/Meyo-Kyé implementation evidence"
+        }
+      ]
+    },
+    {
+      "record_id": "R5-AES-001",
+      "title": "Golela–Lavumisa export suspension during June 2021 Eswatini unrest",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R5-AES-001-FU1",
+          "last_confirmed": "2021-06-29",
+          "scope": "Golela Port of Entry export suspension"
+        }
+      ]
+    },
+    {
+      "record_id": "R6-AM-007",
+      "title": "Chile-side Santa Rosa–Chacalluta migrant road blockade, November 28, 2025",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R6-AM-007-RREV1",
+          "last_confirmed": "2025-11-28",
+          "scope": "Observed November 28 recurrent migrant obstruction of vehicle road access on Chilean side of Concordia between Chacalluta and Santa Rosa"
+        }
+      ]
+    },
+    {
+      "record_id": "R6-SC-001",
+      "title": "Kyrgyzstan China-frontier COVID closure order and phased cargo restoration",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R6-SC-001-REV1",
+          "last_confirmed": "2020-05-07",
+          "scope": "Kyrgyz order 27-р restriction on non-exempt persons at Irkeshtam-road and Torugart-road; distinct from cargo operating status"
+        }
+      ]
+    },
+    {
+      "record_id": "R6-EA-001",
+      "title": "Quang Tri suspends auxiliary gates and local routes on Laos frontier",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R6-EA-001-D1",
+          "last_confirmed": "2020-05-12",
+          "scope": "Ordinary passenger prohibition at the four Quang Tri auxiliary gates covered by the May goods-only relaxation"
+        }
+      ]
+    },
+    {
+      "record_id": "R6-EA-006",
+      "title": "Merauke closes Sota, Kali Torasi and Bupul crossings to PNG for COVID prevention",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R6-EA-006-R1",
+          "last_confirmed": "2020-03-19",
+          "scope": "Sota, Kali Torasi and Bupul international people crossings under Merauke deputy-regent order"
+        },
+        {
+          "phase_id": "R6-EA-006-REV1",
+          "last_confirmed": "2020-10-15",
+          "scope": "Sota traditional international people crossing between Merauke and Papua New Guinea"
+        }
+      ]
+    },
+    {
+      "record_id": "R6-EA-005",
+      "title": "Chi Ma–Ai Diem halts freight clearance during March–April 2022 outbreak",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R6-EA-005-FU1",
+          "last_confirmed": "2022-03-15",
+          "scope": "Chi Ma–Ai Diem bilateral freight clearance"
+        }
+      ]
+    },
+    {
+      "record_id": "R6-AWN-004",
+      "title": "Mauritania–Mali bilateral COVID passenger restriction from March 24 2020",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R6-AWN-004-FU1",
+          "last_confirmed": "2020-03-24",
+          "scope": "Bilateral Mauritania–Mali COVID border restriction; passenger movement"
+        }
+      ]
+    },
+    {
+      "record_id": "R7-PV-001",
+      "title": "Gallabat–Metema May 2022 closure after border killings and local truck obstruction",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R7-PV-001-R1",
+          "last_confirmed": "2022-05-22",
+          "scope": "Reported state closure at Gallabat–Metema in Dabanga’s second-day account"
+        }
+      ]
+    },
+    {
+      "record_id": "R8-AF-001",
+      "title": "Armed obstruction of Tigrayan civilian exit to Sudan, 2020–2021",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R8-AF-001-R1",
+          "last_confirmed": "2021-03-22",
+          "scope": "Repeated selective armed obstruction of Tigrayan civilian exit routes toward Sudan, including Dima–Hamdayet"
+        }
+      ]
+    },
+    {
+      "record_id": "R8-AF-002",
+      "title": "Gallabat–Metema protest blockade after trader kidnappings, January 2021",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R8-AF-002-D1",
+          "last_confirmed": "2021-02-01",
+          "scope": "Gallabat–Metema road/crossing and market blockage during the kidnapping protest"
+        }
+      ]
+    },
+    {
+      "record_id": "R8-AS-001",
+      "title": "Rishtan–Kaytpas inherited closure partially lifted in September 2017",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R8-AS-001-FU1",
+          "last_confirmed": "2017-09-19",
+          "scope": "Rishtan–Kaytpas crossing after intermediate opening and reclosure; excludes Apkan as a separate gate"
+        }
+      ]
+    },
+    {
+      "record_id": "R11-AM-001",
+      "title": "La Hachadura–Pedro de Alvarado truckers blockade, May2019",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R11-AM-001-FU1",
+          "last_confirmed": "2019-05-07",
+          "scope": "La Hachadura–Pedro de Alvarado freight crossing"
+        }
+      ]
+    },
+    {
+      "record_id": "R12-AS-002",
+      "title": "Cambodia closes informal Thailand frontier routes during migrant-worker crackdown",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R12-AS-002-REV1",
+          "last_confirmed": "2017-07-03",
+          "scope": "Reported Banteay Meanchey restriction at 43 unofficial crossings"
+        }
+      ]
+    },
+    {
+      "record_id": "R12-BL-001",
+      "title": "Zambia prohibits South African livestock and meat imports through Kazungula",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R12-BL-001-FU1",
+          "last_confirmed": "2019-01-22",
+          "scope": "Kazungula checkpoint enforcing Zambian prohibition of South African livestock and meat products"
+        }
+      ]
+    },
+    {
+      "record_id": "R15-AS-001",
+      "title": "Beitbridge inbound commercial cargo blockade during duty protest, June–July 2018",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R15-AS-001-NP1",
+          "last_confirmed": "2018-06-30",
+          "scope": "Beitbridge inbound commercial cargo protest obstruction"
+        }
+      ]
+    },
+    {
+      "record_id": "R15-AM-001",
+      "title": "Pino Hachado and Icalma reported closure during Chilean customs strike, May 2017",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R15-AM-001-FU1",
+          "last_confirmed": "2017-05-24",
+          "scope": "Pino Hachado customs passage; not regional roads or Samoré"
+        }
+      ]
+    },
+    {
+      "record_id": "R16-AN-002",
+      "title": "Côte d’Ivoire inherited prohibition on land exports of coffee, cocoa and cashew",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R16-AN-002-R1",
+          "last_confirmed": "2026-04-23",
+          "scope": "Documented continuing national rule prohibiting land exports of coffee, cocoa and cashew"
+        }
+      ]
+    },
+    {
+      "record_id": "R16-SM-001",
+      "title": "Petrapole–Benapole freight protest stoppage, January 8 2018",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R16-SM-001-FU1",
+          "last_confirmed": "2018-01-08",
+          "scope": "Petrapole–Benapole freight interchange"
+        }
+      ]
+    },
+    {
+      "record_id": "R16-EU-001",
+      "title": "Inherited Finland–Norway restriction on ordinary cross-border reindeer husbandry",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "R16-EU-001-R1",
+          "last_confirmed": "2026-04-30",
+          "scope": "Renewed Norway–Finland ordinary cross-border reindeer husbandry restriction under the convention effective January 1, 2017, preserving its exceptions and subsequent fence-alignment amendment."
+        }
+      ]
+    },
+    {
+      "record_id": "FU-COV-EAS-001",
+      "title": "Mae Sai–Tachileik Friendship Bridge II anti-coup protest blockades, February 2021",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "FU-COV-EAS-001-FU1",
+          "last_confirmed": "2021-02-20",
+          "scope": "Second Friendship Bridge"
+        }
+      ]
+    },
+    {
+      "record_id": "FU-COV-EAS-003",
+      "title": "Mazongshan–Naran Sevstei inherited crossing suspension for nature-reserve protection",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "FU-COV-EAS-003-FU1",
+          "last_confirmed": "2021-08-16",
+          "scope": "Mazongshan–Naran Sevstei seasonal land crossing"
+        }
+      ]
+    },
+    {
+      "record_id": "FU-COV-EUR-001",
+      "title": "Yellow-vest obstructions at Le Boulou, Ventimiglia and Strasbourg border approaches, December 2018",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "FU-COV-EUR-001-FU1",
+          "last_confirmed": "2018-12-22",
+          "scope": "Le Boulou toll on France–Spain A9 approach"
+        },
+        {
+          "phase_id": "FU-COV-EUR-001-FU2",
+          "last_confirmed": "2018-12-22",
+          "scope": "Ventimiglia motorway border crossing"
+        },
+        {
+          "phase_id": "FU-COV-EUR-001-FU4",
+          "last_confirmed": "2018-12-22",
+          "scope": "Pont de l’Europe road approach, Strasbourg"
+        }
+      ]
+    },
+    {
+      "record_id": "FU-COV-EUR-002",
+      "title": "Portuguese farmer blockades at Paymogo and Rosal border roads, February 2024",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "FU-COV-EUR-002-FU1",
+          "last_confirmed": "2024-02-02",
+          "scope": "Paymogo–Minas de Santo Domingo bridge / HU-7400 approach"
+        },
+        {
+          "phase_id": "FU-COV-EUR-002-FU2",
+          "last_confirmed": "2024-02-02",
+          "scope": "Rosal de la Frontera–Vila Verde de Ficalho road / N-433 approach"
+        }
+      ]
+    },
+    {
+      "record_id": "FU-COV-GLA-001",
+      "title": "Goma–Gisenyi Grande Barrière closure for ministerial security ceremony, November 2024",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "FU-COV-GLA-001-FU1",
+          "last_confirmed": "2024-11-05",
+          "scope": "Grande Barrière / La Corniche only"
+        }
+      ]
+    },
+    {
+      "record_id": "FU-COV-HAF-001",
+      "title": "Gallabat outbound passenger suspension after attacks on travellers, November 2023",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "FU-COV-HAF-001-FU1",
+          "last_confirmed": "2023-11-20",
+          "scope": "Gallabat–Metema"
+        }
+      ]
+    },
+    {
+      "record_id": "FU-COV-LAM-001",
+      "title": "Las Manos trucker border blockades over reciprocal visa requirements, October 2023",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "FU-COV-LAM-001-FU1",
+          "last_confirmed": "2023-10-12",
+          "scope": "Las Manos"
+        },
+        {
+          "phase_id": "FU-COV-LAM-001-FU2",
+          "last_confirmed": "2023-10-21",
+          "scope": "Las Manos"
+        }
+      ]
+    },
+    {
+      "record_id": "FU-COV-LAM-002",
+      "title": "Agua Caliente opposition blockade following Honduran election, November 2017",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "FU-COV-LAM-002-FU1",
+          "last_confirmed": "2017-11-30",
+          "scope": "Agua Caliente crossing"
+        }
+      ]
+    },
+    {
+      "record_id": "FU-COV-LAM-003",
+      "title": "Agua Caliente migration-control closure after caravan breach, October 2018",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "FU-COV-LAM-003-FU1",
+          "last_confirmed": "2018-10-20",
+          "scope": "Honduran checkpoint at Agua Caliente"
+        }
+      ]
+    },
+    {
+      "record_id": "FU-COV-MEA-002",
+      "title": "Shahn customs-protest crossing closure, March 2022",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "FU-COV-MEA-002-FU1",
+          "last_confirmed": "2022-03-06",
+          "scope": "Shahn land crossing"
+        }
+      ]
+    },
+    {
+      "record_id": "FU-COV-NAF-001",
+      "title": "Ras Jedir Libyan-side closure after armed clashes, April 2017",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "FU-COV-NAF-001-FU1",
+          "last_confirmed": "2017-04-11",
+          "scope": "Libyan side of Ras Jedir"
+        }
+      ]
+    },
+    {
+      "record_id": "FU-COV-NAM-004",
+      "title": "San Ysidro southbound vehicle closures during gasoline-price protests, January 2017",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "FU-COV-NAM-004-FU2",
+          "last_confirmed": "2017-01-08",
+          "scope": "San Ysidro–El Chaparral"
+        }
+      ]
+    },
+    {
+      "record_id": "FU-COV-NAM-006",
+      "title": "Mexicali–Calexico cargo blockade over water law, December 2025",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "FU-COV-NAM-006-FU1",
+          "last_confirmed": "2025-12-05",
+          "scope": "Mexicali–Calexico commercial crossing (precise facility/approach unresolved)"
+        }
+      ]
+    },
+    {
+      "record_id": "NP-COV-EUR-008",
+      "title": "Montenegrin April 2026 freight protests and Dračenovac passenger extension",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "NP-COV-EUR-008-P01",
+          "last_confirmed": "2026-04-14",
+          "scope": "Participating Montenegro crossings with Serbia and Bosnia"
+        }
+      ]
+    },
+    {
+      "record_id": "NP-COV-AM-002",
+      "title": "Mexico–Belize cargo obstruction attributed to extortion, March 2026",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "NP-COV-AM-002-P01",
+          "last_confirmed": "2026-03-23",
+          "scope": "Inbound Mexican cargo obstruction"
+        }
+      ]
+    },
+    {
+      "record_id": "C7-AF-001",
+      "title": "Mananga dated closure and EFF obstruction during Eswatini unrest, June–July2021",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "C7-AF-001-P1",
+          "last_confirmed": "2021-06-29",
+          "scope": "Mananga Port of Entry closure status on June29,2021"
+        },
+        {
+          "phase_id": "C7-AF-001-P2",
+          "last_confirmed": "2021-07-01",
+          "scope": "Mananga crossing obstruction by EFF protesters on July1,2021"
+        }
+      ]
+    },
+    {
+      "record_id": "C7-AF-002",
+      "title": "DRC Ebola-related restrictions on international departure for exposed travellers,2026",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "C7-AF-002-P2",
+          "last_confirmed": "2026-07-25",
+          "scope": "DRC Ebola risk-based departure restrictions following the July17 amendment"
+        }
+      ]
+    },
+    {
+      "record_id": "C7-AM-001",
+      "title": "Brazil COVID foreign land-entry restriction from Uruguay, March 2020",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "C7-AM-001-P1",
+          "last_confirmed": "2020-03-22",
+          "scope": "Foreign persons entering Brazil by land from Uruguay, excluding stated exceptions"
+        }
+      ]
+    },
+    {
+      "record_id": "C7-EH-001",
+      "title": "Eritrea suspends Sudanese entry at Laffa amid accommodation pressure, November2023",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "C7-EH-001-P1",
+          "last_confirmed": "2023-11-20",
+          "scope": "Reported Eritrean suspension of Sudanese entry at Laffa"
+        }
+      ]
+    },
+    {
+      "record_id": "C7-EU-002",
+      "title": "Latvia restricts nonmotorized entry at Pāternieki, Terehova and Grebņeva, March2025",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "C7-EU-002-P1",
+          "last_confirmed": "2025-03-21",
+          "scope": "Pedestrian and cycle entry at Pāternieki/Terehova/Grebņeva"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R01-001",
+      "title": "Loyada formal asylum-access restriction reported in October 2017",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R01-001-P1",
+          "last_confirmed": "2014-05-31",
+          "scope": "Formal admission route at Loyada for asylum-seekers arriving from Somalia"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R01-002",
+      "title": "Moyale non-exempt passenger restriction in March 2020",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R01-002-P1",
+          "last_confirmed": "2020-03-29",
+          "scope": "Non-exempt passenger crossing at Moyale and nearby unauthorised routes; goods and limited cargo crew exempt"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R01-004",
+      "title": "Busia traders and clearing agents freight protest on 23 March 2021",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R01-004-P1",
+          "last_confirmed": "2021-03-23",
+          "scope": "Busia freight crossing and clearing paperwork disrupted by traders and clearing agents"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R01-005",
+      "title": "Kenyan maize import holds at Busia and Namanga in March–April 2021",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R01-005-P1",
+          "last_confirmed": "2021-03-23",
+          "scope": "Ugandan maize stocks awaiting entry into Kenya at Busia"
+        },
+        {
+          "phase_id": "REC50-R01-005-P2",
+          "last_confirmed": "2021-04-01",
+          "scope": "Kenyan-owned maize consignments held at Namanga for Kenya entry"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R02-001",
+      "title": "Nathu La pilgrimage cancellation in 2017 and observed resumption in 2018",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R02-001-P1",
+          "last_confirmed": "2017-06-30",
+          "scope": "2017 Nathu La Kailash Manasarovar pilgrimage cancellation, as reported on June 30"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R03-001",
+      "title": "Ukraine wartime outward-travel restrictions for male-citizen cohorts, with August 2025 age exemption",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R03-001-P2",
+          "last_confirmed": "2025-09-11",
+          "scope": "Remaining general outward restriction for non-exempt Ukrainian male citizens aged 23–60 after the 18–22 exemption"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R03-003",
+      "title": "Greek customs strike restricts vehicles at Kakavija and Kapshtica, May 2018",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R03-003-P1",
+          "last_confirmed": "2018-05-30",
+          "scope": "Cars and buses at Kakavija and Kapshtica during Greek customs strike"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R06-004",
+      "title": "Beitbridge exceptional night-time passenger curfews in December 2020",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R06-004-P1",
+          "last_confirmed": "2020-12-20",
+          "scope": "Beitbridge non-exempt passenger curfew reported on 20 December 2020"
+        },
+        {
+          "phase_id": "REC50-R06-004-P2",
+          "last_confirmed": "2020-12-31",
+          "scope": "Beitbridge revised non-exempt passenger curfew reported on 31 December 2020"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R07-001",
+      "title": "Guatemala–Mexico named-crossing blockades during October 2023 protests",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R07-001-P1",
+          "last_confirmed": "2023-10-07",
+          "scope": "El Ceibo border-post or access restriction, as attributed in the dated report"
+        },
+        {
+          "phase_id": "REC50-R07-001-P2",
+          "last_confirmed": "2023-10-07",
+          "scope": "Tecun Uman border-post or access restriction, as attributed in the dated report"
+        },
+        {
+          "phase_id": "REC50-R07-001-P3",
+          "last_confirmed": "2023-10-09",
+          "scope": "El Carmen border-post or access restriction, as attributed in the dated report"
+        },
+        {
+          "phase_id": "REC50-R07-001-P4",
+          "last_confirmed": "2023-10-09",
+          "scope": "La Mesilla border-post or access restriction, as attributed in the dated report"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R07-002",
+      "title": "Agua Caliente integrated-post suspension for bridge works, September–November 2021 evidence",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R07-002-P1",
+          "last_confirmed": "2021-11-21",
+          "scope": "Agua Caliente integrated-post suspension for Bailey-bridge works; heavy-freight routing explicitly stated"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R08-001",
+      "title": "Narva 2 / Parusinka pedestrian-post suspension from November 2022",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R08-001-P1",
+          "last_confirmed": "2026-06-03",
+          "scope": "Narva 2 / Parusinka pedestrian crossing closed; Narva 1 remains an alternative"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R08-002",
+      "title": "Narva 1 / Ivangorod vehicle restriction and separate pedestrian night schedules",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R08-002-P1",
+          "last_confirmed": "2026-02-23",
+          "scope": "All road vehicles excluded through Narva 1 / Ivangorod; pedestrian crossing retained"
+        },
+        {
+          "phase_id": "REC50-R08-002-P3",
+          "last_confirmed": "2026-08-13",
+          "scope": "Narva 1 pedestrian operating hours reduced to 07:00–19:00"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R08-003",
+      "title": "Stasylos–Benekainys incoming freight-train restriction from February 2023",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R08-003-P1",
+          "last_confirmed": "2023-04-26",
+          "scope": "Freight trains arriving in Lithuania from Belarus diverted from Stasylos to Kena"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R08-004",
+      "title": "Koidula and Luhamaa road-post overnight restrictions from February 2026",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R08-004-P1",
+          "last_confirmed": "2026-08-13",
+          "scope": "Koidula and Luhamaa road crossings unavailable at night while daytime foot and vehicle passage continues"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R12-001",
+      "title": "Petrapole–Benapole freight strike, December 2020",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R12-001-P1",
+          "last_confirmed": "2020-12-21",
+          "scope": "Bilateral road-freight exchange at Petrapole–Benapole during 21 December 2020 workers strike"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R12-004",
+      "title": "Petrapole–Benapole truck-association freight strike, late July 2019",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R12-004-P1",
+          "last_confirmed": "2019-07-30",
+          "scope": "Late-July 2019 truck-association stoppage of Petrapole–Benapole goods exchange"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R17-002",
+      "title": "Zhibek Zholy–Gishtkuprik reconstruction closure from February 2025",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R17-002-P1",
+          "last_confirmed": "2026-09-29",
+          "scope": "Zhibek Zholy–Gishtkuprik road crossing, pedestrians and vehicles"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R17-003",
+      "title": "Tazhen–Daut Ata passenger and light-vehicle reconstruction restriction",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R17-003-P1",
+          "last_confirmed": "2025-12-29",
+          "scope": "Ordinary persons, passenger cars and buses at Tazhen–Daut Ata"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R17-004",
+      "title": "Atameken–Gulistan/Syrdarya and Kazygurt–S. Nazhimov shared reconstruction passenger restriction",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R17-004-P2",
+          "last_confirmed": "2025-11-25",
+          "scope": "Kazygurt–S. Nadzhimov/Nazhimov ordinary persons, cars and buses under the shared reconstruction measure"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R18-001",
+      "title": "Cristo Redentor truckers’ protest obstruction during COVID testing delays, January 2022",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R18-001-P1",
+          "last_confirmed": "2022-01-26",
+          "scope": "Freight vehicles deliberately obstructed by protesting truckers at Cristo Redentor–Los Libertadores road crossing and Argentine approach"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R21-002",
+      "title": "Ras Jedir trade and development protest campaign, December 2016–January 2017",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R21-002-P1",
+          "last_confirmed": "2016-12-14",
+          "scope": "Non-exempt passenger and goods passage at Ras Jedir crossing and Ben Guerdane approach"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R21-004",
+      "title": "Dehiba–Wazen goods-seizure protest and protective vehicle restrictions, November–December 2017",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R21-004-P1",
+          "last_confirmed": "2017-12-06",
+          "scope": "Non-exempt vehicle and ordinary commercial/social passage, with source-specific exceptions at Dehiba–Wazen crossing and approach road"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R22-002",
+      "title": "Norway restricts temporary entry of Russian-registered passenger cars, October 2023",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R22-002-P1",
+          "last_confirmed": "2024-05-23",
+          "scope": "Non-exempt Russian-registered passenger vehicles entering Norway, including at Storskog"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R22-003",
+      "title": "Finland restricts entry of Russian-registered passenger vehicles, September 2023",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R22-003-P1",
+          "last_confirmed": "2023-09-16",
+          "scope": "Non-exempt Russian-registered passenger-vehicle imports through Finland’s external-EU borders"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R22-004",
+      "title": "Estonia restricts Russian-registered vehicle entry at its external border, September 2023",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R22-004-P1",
+          "last_confirmed": "2023-09-13",
+          "scope": "Russian-registered vehicle entry at Estonia’s external border"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R22-005",
+      "title": "Norway restricts Russian road-transport undertakings at Storskog, April 2022",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R22-005-P1",
+          "last_confirmed": "2022-07-06",
+          "scope": "Norwegian prohibition on non-exempt Russian-established road carriers, with Storskog implementation evidence"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R22-006",
+      "title": "Lithuania restricts selected sanctioned Kaliningrad rail cargo, June–July 2022",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R22-006-P1",
+          "last_confirmed": "2022-06-20",
+          "scope": "Initial steel and ferrous-metal rail-transit restriction through Lithuania to/from Kaliningrad"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R23-006",
+      "title": "Angoor Adda commercial restriction observations and document-rule dispute, 2024",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R23-006-P1",
+          "last_confirmed": "2024-12-18",
+          "scope": "Angoor Adda commercial restriction observations amid document-rule disputes and reopening demands"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R26-003",
+      "title": "Kasumbalesa Zambia-entry restriction on ordinary traders observed March2020",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R26-003-P1",
+          "last_confirmed": "2020-03-27",
+          "scope": "Kasumbalesa ordinary small-trader entry into Zambia observed restricted on March27,2020"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R26-004",
+      "title": "Karombo and Goli customs-service peace protest observed May2020",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R26-004-P1",
+          "last_confirmed": "2020-05-14",
+          "scope": "Karombo and Goli/Anzida border customs-service stoppage observed May14,2020"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R27-002",
+      "title": "Agarak trucker blockade over Iranian fuel and paperwork rules, November 2024",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R27-002-P1",
+          "last_confirmed": "2024-11-17",
+          "scope": "Crossing access obstructed by Armenian truck drivers; exact passenger and freight exemptions are unknown at Agarak / Meghri on the Armenia–Iran route"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R28-001",
+      "title": "Myawaddy–Mae Sot bridge restrictions during April 2024 fighting",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R28-001-P2",
+          "last_confirmed": "2024-04-21",
+          "scope": "Observed refusal of temporary-border-pass and pass-booklet travel from Myanmar into Thailand at Friendship Bridge I on 21 April 2024."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R28-003",
+      "title": "Singkhon–Mawtaung formal opening and goods-transfer restrictions, 2026",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R28-003-P1",
+          "last_confirmed": "2026-01-21",
+          "scope": "Singkhon formal opening unavailable at the 21 January 2026 provincial meeting; limited community trade and emergency medical pathways discussed separately."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R36-004",
+      "title": "Cameroon movement restriction at Equatorial Guinea frontier during February 2023 fever outbreak",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R36-004-P1",
+          "last_confirmed": "2023-02-10",
+          "scope": "Cameroonian restriction on movement along the Equatorial Guinea frontier; exact posts and traffic classes unestablished"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R38-005",
+      "title": "Rabia–al-Yarubiyah inherited interruption and formal reopening, April 2026",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R47-R38-005-P1",
+          "last_confirmed": "2020-01-16",
+          "scope": "UN medical/humanitarian shipments through al-Yarubiyah from Iraq into northeast Syria after mandate removal"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R42-002",
+      "title": "Bulgarian farmer restrictions at Ruse and Kardam, September 2023",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R42-002-P2",
+          "last_confirmed": "2023-09-18",
+          "scope": "Kardam–Negru Voda vehicle entry restriction on September 18"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R42-003",
+      "title": "Bulgarian farmer crossing road blocks on February 6–7, 2024",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R42-003-P2",
+          "last_confirmed": "2024-02-06",
+          "scope": "Vidin–Calafat February 6 farmer road block"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R42-005",
+      "title": "Kalpaki farmer road blockade affecting Kakavia and Mertzani approaches, February 2024",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R42-005-P1",
+          "last_confirmed": "2024-02-20",
+          "scope": "Kalpaki road approach serving Kakavia and Mertzani customs crossings"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R43-001",
+      "title": "Gambia restriction on Senegal-origin poultry imports during avian influenza, 2021",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R43-001-P1",
+          "last_confirmed": "2021-01-15",
+          "scope": "Gambian import prohibition on Senegal-origin poultry and poultry products, with other affected origins mentioned"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R43-002",
+      "title": "Mali cereal and cotton-input export suspension from December 2021",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R43-002-P1",
+          "last_confirmed": "2021-12-06",
+          "scope": "Mali exports of the listed cereals and cotton inputs under order 2021-5126/MIC-MEF-SG"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R43-003",
+      "title": "Burkina Faso grain-export authorisation and commodity restrictions, separately documented in 2021–2024",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R43-003-P2",
+          "last_confirmed": "2022-02-23",
+          "scope": "Reported prohibition on exports of millet, maize and sorghum flour announced 23 February 2022"
+        },
+        {
+          "phase_id": "REC50-R43-003-P3",
+          "last_confirmed": "2024-11-13",
+          "scope": "November 2024 restatement of the national cowpea and specified cereal export prohibition"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R43-004",
+      "title": "Ghana grain-export restrictions: named land-station directive in 2022 and separate 2024 ban",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R43-004-P1",
+          "last_confirmed": "2022-12-01",
+          "scope": "Grain and soybean export-prevention directive to Tatale, Wonjuga, Bunkpurugu and Saboba customs stations"
+        },
+        {
+          "phase_id": "REC50-R43-004-P2",
+          "last_confirmed": "2024-08-26",
+          "scope": "Grain-export prohibition announced 26 August 2024, with corn and rice explicitly supported"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R43-005",
+      "title": "Burkina Faso poultry-import restriction on Benin, Togo and Côte d’Ivoire origins, August 2021",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R43-005-P1",
+          "last_confirmed": "2021-08-20",
+          "scope": "Burkina Faso import prohibition on poultry and avian products from the three named origins"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R46-001",
+      "title": "Namibia restriction on Botswana-origin animal products and potentially infectious materials, August 2022",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R46-001-P1",
+          "last_confirmed": "2022-08-31",
+          "scope": "Namibian prohibition on Botswana-origin FMD-susceptible animals, raw products and specified potentially infectious materials"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R46-002",
+      "title": "Botswana restriction on Zimbabwe-origin livestock and related products, January 2026",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R46-002-P1",
+          "last_confirmed": "2026-01-19",
+          "scope": "Botswana prohibition on Zimbabwe-origin cloven-hoofed livestock and related products"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R46-003",
+      "title": "Botswana restriction on South African livestock and animal-product imports, January 2019",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R46-003-P1",
+          "last_confirmed": "2019-01-11",
+          "scope": "Botswana restriction on South-African-origin hoofed livestock and animal products during the January 2019 FMD episode"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R47-003",
+      "title": "Bangladesh Rohingya land-admission denials at Ukhia/Ghumdhum, November–December 2016",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R47-003-P1",
+          "last_confirmed": "2016-12-01",
+          "scope": "Rohingya entry denial reported in Ukhia/Ghumdhum land-border sectors; exact gate unresolved"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R48-001",
+      "title": "Alashankou cross-border trucking suspension reported in August2021",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R48-001-P1",
+          "last_confirmed": "2021-08-20",
+          "scope": "Carrier-reported cross-border trucking suspension through Alashankou"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R48-002",
+      "title": "Latvia restricts Russian-registered vehicle entry at its Russian and Belarusian frontiers, September2023",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R48-002-P1",
+          "last_confirmed": "2023-09-12",
+          "scope": "Russian-registered vehicle entry through Latvian–Russian and Latvian–Belarusian border posts"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R48-003",
+      "title": "Lithuania restricts Russian-registered car entry, with Kaliningrad transit exceptions, September2023",
+      "review": "Endpoint classification only; no new confirmation of continuing closure",
+      "phases": [
+        {
+          "phase_id": "REC50-R48-003-P1",
+          "last_confirmed": "2023-09-29",
+          "scope": "Lithuanian entry restriction on Russian-registered cars, apart from qualified Kaliningrad transit"
+        }
+      ]
+    }
+  ]
+}

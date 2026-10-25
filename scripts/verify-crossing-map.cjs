@@ -185,14 +185,14 @@ const csv=parseCSV(withMapping.content),legacyCSV=parseCSV(withoutMapping.conten
 assert.equal(csv.length,includedCount+1,'one header and the exact included population of correctly parsed data rows');
 assert.equal(csvIndex.size,includedCount,'no CSV record IDs are lost or duplicated');
 assert(csv.every(row=>row.length===headers.length),'multiline evidence never breaks the CSV column layout');
-assert.equal(headers.at(-1),'Map location status','mapping status is an additional final column');
-assert.equal(csvIndex.get(maz.id).at(-1),'Crossing mapped','mapped named crossing is described accurately');
+const mappingColumn=headers.indexOf('Map location status');assert(mappingColumn>=0);assert.equal(headers.at(-1),'Later-status evidence');
+assert.equal(csvIndex.get(maz.id)[mappingColumn],'Crossing mapped','mapped named crossing is described accurately');
 const awaiting=singles.map(row=>byID.get(row.record_id)).find(e=>!ids(e).length);
 assert(awaiting,'at least one explicitly unresolved whole record is available for the CSV check');
-assert.equal(csvIndex.get(awaiting.id).at(-1),'Location awaiting mapping','unmapped record remains exported with clear status');
+assert.equal(csvIndex.get(awaiting.id)[mappingColumn],'Location awaiting mapping','unmapped record remains exported with clear status');
 for(let i=1;i<csv.length;i++){
- assert.deepEqual(csv[i].slice(0,-1),legacyCSV[i].slice(0,-1),'the extra status field does not modify existing evidence columns');
- assert.equal(legacyCSV[i].at(-1),'','callers that omit the optional callback get a safe empty status');
+ assert.deepEqual(csv[i].filter((_,j)=>j!==mappingColumn),legacyCSV[i].filter((_,j)=>j!==mappingColumn),'the mapping field does not modify evidence columns');
+ assert.equal(legacyCSV[i][mappingColumn],'','callers that omit the optional callback get a safe empty status');
 }
 const sourceRow=csvIndex.get('AM002'),sourceURLs=sourceRow[headers.indexOf('Source links')].split('\n'),sourceNames=sourceRow[headers.indexOf('Source names and titles')];
 assert(completeSource.source_urls.every(url=>sourceURLs.includes(typeof url==='string'?url:url.url)),'CSV preserves the complete source URLs');

@@ -17,7 +17,8 @@
   }
   if(settings.crossingReview==='required'&&!window.AtlasCrossings)throw Error('Crossing locations could not be loaded. Please reload to show the map accurately.');
   if(window.AtlasCrossings)data=window.AtlasCrossings.attach(data);
-  return window.AtlasNational?window.AtlasNational.attach(data):data;
+  if(window.AtlasNational)data=window.AtlasNational.attach(data);
+  return window.AtlasStatus?window.AtlasStatus.attach(data):data;
  }
  function ready(){
   if(window.BORDER_DATA)return Promise.resolve().then(()=>unpack(window.BORDER_DATA));
@@ -49,19 +50,19 @@
  }
  function catalogue(){return window.BORDER_DATA||initial||offline?ready():analysis||getAnalysisData();}
  async function getRecord(id){
-  const data=await (/^NATIONAL-/.test(id)?ready():catalogue());
+  const data=await (/^(?:NATIONAL-|STATUS-)/.test(id)?ready():catalogue());
   const summary=data.events.find(e=>e.id===id);if(!summary)throw Error('This record could not be found.');
-  if(summary.record_kind==='national_policy')return summary;
+  if(summary.record_kind==='national_policy'||summary.record_kind==='border_status')return summary;
   if(researchByID)return researchByID.get(id);
   if(!summary.details_file)return summary;
   if(!records.has(id))records.set(id,readJSON(summary.details_file).then(value=>{
    if(value.source_sha256!==data.meta.source_sha256||value.record?.id!==id)throw Error('The record does not match this atlas version. Please reload.');
-   return value.record;
+   return window.AtlasStatus?window.AtlasStatus.decorateRecord(value.record):value.record;
   }).catch(error=>{records.delete(id);throw error;}));
   return records.get(id);
  }
  async function getResearchData({includeNational=false}={}){
-  const data=await (includeNational?ready():catalogue()),landEvents=data.events.filter(e=>e.record_kind!=='national_policy'),nationalEvents=data.events.filter(e=>e.record_kind==='national_policy');
+  const data=await (includeNational?ready():catalogue()),landEvents=data.events.filter(e=>e.record_kind!=='national_policy'&&e.record_kind!=='border_status'),nationalEvents=data.events.filter(e=>e.record_kind==='national_policy'||e.record_kind==='border_status');
   if(!data.meta.web_assets)return {meta:data.meta,events:includeNational?data.events:landEvents,workbook_geography:data.workbook_geography,workbook_review:data.workbook_review};
   if(!research)research=readJSON(data.meta.web_assets.research).then(async value=>{
    if(value.meta?.source_sha256!==data.meta.source_sha256)throw Error('The research data does not match this atlas version. Please reload.');
@@ -72,6 +73,7 @@
    }
    const expected=new Set(landEvents.map(e=>e.id));
    if(value.events?.length!==landEvents.length||new Set(value.events.map(e=>e.id)).size!==expected.size||value.events.some(e=>!expected.has(e.id)))throw Error('The research data does not match this atlas version. Please reload.');
+   if(window.AtlasStatus)value.events=value.events.map(e=>window.AtlasStatus.decorateRecord(e));
    researchByID=new Map(value.events.map(e=>[e.id,e]));return value;
   }).catch(error=>{research=null;throw error;});
   const value=await research;

@@ -16,6 +16,28 @@ evidence. Analysis retains its chart navigation and filters. Dataset provides th
 searchable record reader and downloads. Existing section and record links remain
 supported. The atlas describes historical evidence, not live border conditions.
 
+## Later-status correction — 25 October 2026
+
+The map now distinguishes an observed reopening from the last report of closure.
+The status review identifies 221 records containing 250 last-confirmed endpoints
+that otherwise disappear from the October view. Grey dashed lines and hollow
+marks show that later status is unverified; they do not assert continuing closure.
+These are an evidence-review queue, not 221 presumed ongoing closures.
+
+Eleven separately sourced October status observations include the Ukraine–Russia
+and inter-Korean borders and restricted Rafah passenger access. Each carries its
+actual observation date, scope, exceptions and evidence. The observations do not
+interpolate earlier months, enter closure-duration statistics or count as new
+closure episodes. Some were checked after the original 21 October study cutoff;
+their actual dates remain visible. The historical 829-record reader is unchanged.
+The companion ZIP and `downloads/border-status-review.json` include this review.
+
+Country outlines are restricted to the separately sourced Australia and New
+Zealand broad foreign-visitor admission bans. Testing, quarantine, targeted-origin
+rules and departure restrictions do not independently create a country outline.
+The original UK policy evidence remains available; qualifying land records retain
+their ordinary inclusion criteria. The extra UK country outline is removed.
+
 ## Downloads and source data
 
 - **Global_Border_Closures_Master_2016_2026.xlsx** is the reader workbook, with two
@@ -129,6 +151,7 @@ python scripts/build-analysis.py
 node scripts/build-web-data.cjs
 node scripts/build-national-data.cjs
 node scripts/build-crossing-geography.cjs
+node scripts/build-status-review.cjs
 node scripts/build-evidence-pages.cjs
 node scripts/build-hosted.cjs
 ```

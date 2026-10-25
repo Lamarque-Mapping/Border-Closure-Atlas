@@ -3,7 +3,7 @@
   const array=value=>Array.isArray(value)?value:[];
   const latest=dates=>dates.length?[...dates].sort().at(-1):null;
   const title=feature=>String(feature.properties?.label||feature.properties?.name||feature.properties?.location_id||'Border').replace(/ — (?:frontier|geographic) context$/,'');
-  const eligible=(record,C)=>!C.excluded(record)&&record.record_kind!=='national_policy';
+  const eligible=(record,C)=>!C.excluded(record)&&record.record_kind!=='national_policy'&&record.record_kind!=='border_status';
   function monthBounds(C,state){
     if(!Number.isInteger(state?.month))return null;
     return {start:C.day(C.monthISO(state.month)+'-01'),end:C.day(C.monthISO(state.month+1)+'-01')};

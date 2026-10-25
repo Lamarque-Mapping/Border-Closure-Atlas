@@ -42,6 +42,7 @@ def companion_members(release,model,method):
         'release-method.json':(ROOT/'source/release-method.json').read_bytes(),
         'crossing-map-review.json':(json.dumps({**load_json(ROOT/'source/crossings/scope-review.json'),
             'geography':load_json(ROOT/'source/crossings/locations.json')},ensure_ascii=False,indent=2)+'\n').encode(),
+        'border-status-review.json':(ROOT/'source/border-status-review.json').read_bytes(),
         'national-policy-evidence.json':(json.dumps({**load_json(ROOT/'source/national-policy-supplement.json'),
             **load_json(ROOT/'source/national-map-display.json'),'compatible_data_sha256':sha256(DATA_PATH),
             'release_id':method['release_id']},ensure_ascii=False,indent=2)+'\n').encode(),
@@ -66,7 +67,7 @@ def bind_manifest(release,reader_report):
         'companion_zip':ZIP_PATH,'geography_reference':ROOT/'source/geography-reference.json',
         'crossing_scope':ROOT/'source/crossings/scope-review.json','crossing_locations':ROOT/'source/crossings/locations.json',
         'crossing_reconciliation':ROOT/'source/crossings/release-reconciliation.json',
-        'national_policies':ROOT/'source/national-policy-supplement.json','national_display':ROOT/'source/national-map-display.json'}
+        'national_policies':ROOT/'source/national-policy-supplement.json','national_display':ROOT/'source/national-map-display.json','status_review':ROOT/'source/border-status-review.json'}
     files={name:{'path':str(p.relative_to(ROOT)),'sha256':sha256(p),'bytes':p.stat().st_size} for name,p in paths.items()}
     fingerprint=files['data']['sha256']
     for name in ['crossing_scope','crossing_locations']:
@@ -76,7 +77,7 @@ def bind_manifest(release,reader_report):
     manifest={'schema_version':1,'release_id':method['release_id'],'release_date':method['release_date'],
         'data_state_sha256':release['data_state_sha256'],'counts':release['counts'],
         'files':files,'downloads':downloads,'reader_validation':reader_report,
-        'national_supplement':{'policy_histories':7,'observations':18,'included_in_land_statistics':False}}
+        'national_supplement':{'policy_histories':7,'observations':18,'mapped_entry_bans':2,'included_in_land_statistics':False}}
     MANIFEST_PATH.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
     return read_manifest()
 

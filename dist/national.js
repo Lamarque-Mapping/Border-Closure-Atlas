@@ -8,7 +8,7 @@
   const split=v=>String(v||'').split(';').map(s=>s.trim()).filter(Boolean);
   const isNational=e=>e?.record_kind==='national_policy';
   function compile(source){
-    return source.policies.map(config=>{
+    return source.policies.filter(config=>config.map_eligible===true).map(config=>{
       const observations=source.observations.filter(row=>row['Policy ID']===config.id).sort((a,b)=>a['Effective date'].localeCompare(b['Effective date']));
       const first=observations[0],country=first.Country,id='NATIONAL-'+config.id,mapCountry=config.map_country||config.geometry;
       const sourceURLs=unique([...observations.flatMap(row=>lines(row['Source URLs'])),...array(config.period?.sources)]);
@@ -18,7 +18,7 @@
         const publisher=found?.['Publishers / reporting bodies']||(host==='www.anao.gov.au'?'Australian National Audit Office':host.includes('beehive')?'New Zealand Government':host.includes('legislation.gov.uk')?'UK legislation':host.includes('homeaffairs')?'Australian Home Affairs':host.includes('gov.uk')?'UK Government':host);
         return {url,publisher,title:found?.['Source titles']?.split('\n')[0]||publisher,publication_date:found?.['Publication date(s)']||null,source_id:found?.['Source labels — all retrievals']||'National map review',supports:[],source_type:'Official policy evidence',content_access:'See source and workbook',access_history:[]};
       });
-      const base={measure_type:'formal_policy_period',kind:'policy_period',contested:false,minimum_days:null,maximum_days:null,complete_operational:false,exact_complete_operational:false,end_inclusive:false,endpoint_inclusion:'Not used for a duration',observed_reopening:'Not an airport or crossing reopening',end_is_reopening:false,map_scope_note:'The outline is a country reference for international passenger rules. Each entry identifies the jurisdiction, travellers and journeys covered; England-only rules use the UK outline for reference.'};
+      const base={measure_type:'formal_policy_period',kind:'policy_period',contested:false,minimum_days:null,maximum_days:null,complete_operational:false,exact_complete_operational:false,end_inclusive:false,endpoint_inclusion:'Not used for a duration',observed_reopening:'Not an airport or crossing reopening',end_is_reopening:false,map_scope_note:'The outline identifies a broad national prohibition on ordinary foreign-visitor entry. Citizens, residents and other exempt travellers could still enter. Health conditions alone do not qualify.'};
       const periods=observations.map(row=>({...base,period_id:row['Observation ID'],national_observation:true,national_label:({entry_prohibition:'Entry ban introduced',exit_prohibition:'Departure ban introduced',entry_condition:'Entry conditions',relaxation:'Rules relaxed'})[row['Measure class']],start_earliest:row['Effective date'],start_latest:row['Effective date'],end_earliest:null,end_latest:null,last_confirmed:null,evidence_dates:[row['Effective date']],temporal_display_rule:'dated_evidence_only_no_continuity_inference',scope:row.Jurisdiction,movement:row['Affected people'],direction:row.Direction,authority:country+' authorities',display:row['Dated policy change'],basis:row['Dated policy change'],qualification:row['Remaining evidence need'],exceptions:row.Exceptions,modes:row['Supported modes'],endpoint_status:'policy_change',source_ids:split(row['Source IDs']),source_urls:lines(row['Source URLs']),reported_schedule:row['Local time and zone']}));
       if(config.period){
         const p=config.period;

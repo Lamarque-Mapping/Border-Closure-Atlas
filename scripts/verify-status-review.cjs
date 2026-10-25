@@ -1,0 +1,36 @@
+'use strict';
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');
+const root=path.resolve(__dirname,'../dist'),C=require(root+'/core.js'),S=require(root+'/status.js'),N=require(root+'/national.js'),K=require(root+'/cartography.js'),CSV=require(root+'/record-export.js');
+const x={window:{}};vm.createContext(x);
+for(const f of ['map-data.js','national-data.js','status-data.js','crossing-geography.js'])vm.runInContext(fs.readFileSync(root+'/'+f,'utf8'),x);
+const d=x.window.BORDER_DATA,source=x.window.ATLAS_STATUS_REVIEW;
+const original=new Map(d.events.map(e=>[e.id,JSON.stringify(e.duration_periods)]));
+for(const key of ['countries','borders','disputed','locations','context_locations'])for(const f of d[key].features)f.geometry=d.geometry_pool[f.geometry];delete d.geometry_pool;
+x.window.AtlasCrossings.attach(d);N.attach(d,x.window.ATLAS_NATIONAL_DATA);S.attach(d,source);S.attach(d,source);
+assert.equal(d.events.filter(S.isStatus).length,source.observations.length);
+assert.equal(new Set(d.events.map(e=>e.id)).size,d.events.length);
+for(const e of d.events.filter(e=>!S.isSupplement(e)))assert.equal(JSON.stringify(e.duration_periods),original.get(e.id),'Historical duration unchanged: '+e.id);
+const oct={mode:'intervals',month:C.monthOrdinal('2026-10')},sep={...oct,month:C.monthOrdinal('2026-09')};
+const visible=C.filterEvents(d,oct),get=id=>d.events.find(e=>e.id===id),features=new Map(C.locationFeatures(d).map(f=>[f.properties.location_id,f]));
+for(const [id,location,status] of [['STATUS-RUS-UKR-202610','context-frontier-rus-ukr','closed'],['STATUS-KOR-PRK-202610','context-frontier-kor-prk','closed'],['STATUS-RAFAH-202610','post-rafah','restricted']]){
+ const e=get(id);assert(visible.includes(e));assert.equal(C.temporalState(e,oct.month),status);assert.equal(C.temporalState(e,sep.month),'none','A snapshot must not fill earlier months');
+ assert(C.mapLocationsFor(e,d,oct).includes(location));assert.equal(e.duration_periods.length,0);
+ assert.equal(C.matchesTime(e,'onsets',oct.month),false,'No new closure onset invented');
+ assert(e.sources.length&&e.status_review.qualification);
+}
+for(const e of d.events.filter(S.isStatus))for(const id of C.mapLocationsFor(e,d,oct))assert(features.has(id),'Known geography '+id);
+const old=get('AM023');assert.equal(C.temporalState(old,oct.month),'unresolved');
+assert.equal(C.temporalState(old,oct.month,'operational_spell'),'none','Unknown later status is not measured operational closure');
+const ids=C.mapLocationsFor(old,d,oct);assert(ids.length);
+const scoped=C.recordsForLocation([old],ids[0],d,oct);assert(scoped[0].map_status_unresolved);
+const style=K.symbolStyle(features.get(ids[0]).properties,{records:scoped});assert(style.unresolved);assert.equal(style.colour,'#7d8884');assert.deepEqual(style.dash,[3,5]);
+assert.equal(C.temporalState(get('EA025'),C.monthOrdinal('2026-01')),'supported');
+assert.equal(C.temporalState(get('EA025'),C.monthOrdinal('2026-03')),'unresolved');
+assert(source.unresolved.length===221&&source.unresolved.reduce((n,r)=>n+r.phases.length,0)===250);
+assert.equal(d.events.filter(e=>!S.isSupplement(e)&&!C.excluded(e)).length,825);
+const csv=CSV.build({records:[get('STATUS-RAFAH-202610'),old],state:oct});assert(csv.content.includes('Later-status evidence'));assert(csv.content.includes('Not calculated: separately dated border-access status'));assert(csv.content.includes('no continuing closure')||csv.content.includes('does not assert continuing closure'));
+const app=fs.readFileSync(root+'/app.js','utf8'),index=fs.readFileSync(root+'/index.html','utf8');
+assert(app.includes('Unmarked borders are not necessarily open.'));assert(!index.includes('id="last-month"'));assert(!app.includes("$('last-month')"));
+assert(!d.events.some(e=>e.record_kind==='national_policy'&&e.countries.includes('United Kingdom')));
+const aus=get('NATIONAL-NAT-AUS-ENTRY-COVID');assert.equal(C.temporalState(aus,C.monthOrdinal('2021-06')),'policy');
+console.log('Status review passed: key October borders, 221 unresolved-end records, scoped geometry, unchanged historical durations/statistics, no retrospective snapshot interpolation, COVID inclusion and footer corrections.');

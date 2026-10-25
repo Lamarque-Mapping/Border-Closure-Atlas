@@ -40,6 +40,7 @@ jobs:
         run: |
           node scripts/build-national-data.cjs
           node scripts/build-crossing-geography.cjs
+          node scripts/build-status-review.cjs
           node scripts/build-evidence-pages.cjs
           node --check dist/app.js
           node --check dist/export.js
@@ -51,6 +52,7 @@ jobs:
           node scripts/verify-analysis-loading.cjs
           node scripts/verify-analysis-metrics.cjs
           node scripts/verify-national-policies.cjs
+          node scripts/verify-status-review.cjs
           node scripts/verify-map-export.cjs
           node scripts/verify-crossing-map.cjs
           node scripts/verify-phase-onsets.cjs
