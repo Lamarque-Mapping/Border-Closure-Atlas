@@ -49,6 +49,7 @@ Object.assign(ctx,{$:node,C,data,state:{mode:'all',query:'Rwanda',location:'',co
  document:{activeElement:node('read-records')},map:{closePopup(){}},stop(){},resetList(){},showBrowse(){ctx.selected=null},setPanelOpen(){},scheduleViewport(){},showEvent(){},
  render(){ctx.visible=C.filterEvents(data,ctx.state)},notify(message){ctx.notice=message},window:{AtlasData:{getResearchData:async()=>data},AtlasNavigation:{getAnalysisURL:hash=>'https://border-closures-atlas.lamarque.chatgpt.site/#analysis'+hash.replace('#','/')},BorderRecordExport:{...E,download(output){ctx.output=output}}}});
 vm.createContext(ctx);
+vm.runInContext(app.slice(app.indexOf('  function clearLocationFilter('),app.indexOf('  function activateLocation(')),ctx);
 vm.runInContext(app.slice(app.indexOf('  function updateRecordsControls('),app.indexOf('  function setRecordView(')),ctx);
 vm.runInContext(app.slice(app.indexOf("  $('read-records').addEventListener"),app.indexOf('  const showPage=')),ctx);
 node('explore-panel').appendChild(node('panel-scroll'));node('explore-panel').appendChild(node('map-key'));
@@ -57,6 +58,7 @@ node('records-dialog').close();assert.equal(node('panel-scroll').parentNode,node
 vm.runInContext(app.slice(app.indexOf('  function activateLocation('),app.indexOf('  function cardBoundary(')),ctx);
 const frontier=[...ctx.locations.keys()].find(id=>rwanda.records.filter(e=>C.displayLocationsFor(e,data).includes(id)).length>1);
 assert(frontier);ctx.activateLocation(frontier,rwanda.records.filter(e=>C.displayLocationsFor(e,data).includes(frontier)));assert(node('records-dialog').open);assert(ctx.visible.length>1);assert(ctx.visible.every(e=>C.displayLocationsFor(e,data).includes(frontier)));node('records-dialog').close();
+assert.equal(ctx.state.location,'');assert.equal(ctx.state.query,'Rwanda');assert.deepEqual(ctx.visible.map(e=>e.id),rwanda.records.map(e=>e.id),'returning from a border restores every record matching the original search');
 (async()=>{
  ctx.state={mode:'all',query:'Rwanda',location:'',continent:'',month:0};ctx.visible=rwanda.records;
  let complete;ctx.window.AtlasData.getResearchData=()=>new Promise(resolve=>complete=resolve);

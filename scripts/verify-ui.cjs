@@ -104,9 +104,34 @@ function host(initialHash='',offline=false){
  const data=JSON.parse(fs.readFileSync(root+'data.js','utf8').replace(/^window.BORDER_DATA = /,'').replace(/;\s*$/,''));
  const summary=JSON.parse(fs.readFileSync(root+'map-data.js','utf8').replace(/^window.BORDER_DATA = /,'').replace(/;\s*$/,''));
  const timeline=env(index),tc=timeline.context,app=fs.readFileSync(root+'app.js','utf8'),core=require(root+'core.js');
+ // Returning from a border's records restores the same map selection, while
+ // zooming leaves Leaflet's existing restriction layers in place.
+ const mapNav=env(index),mc=mapNav.context,zoomHandlers=new Map();let locationRebuilds=0;
+ const mapState={mode:'intervals',month:core.monthOrdinal('2021-10'),continent:'Europe',query:'',region:'',rationale:'',location:''};
+ const beforeBorder=core.filterEvents(data,mapState).map(e=>e.id).sort();assert(beforeBorder.length>1);
+ const selectedLocation=core.filterEvents(data,mapState).flatMap(e=>core.mapLocationsFor(e,data,mapState))[0];assert(selectedLocation);
+ Object.assign(mc,{$:id=>mapNav.ids[id],state:mapState,selected:null,desktopPanelOpen:true,recordsPanelScroll:0,recordsReturnFocus:null,labelLayer:{hidden:false},data,
+  compact:()=>true,updatePanelTitle(){},scheduleViewport(){},resetList(){},showBrowse(){},renderLabels(){},
+  render(){mc.visible=core.filterEvents(data,mapState).map(e=>e.id).sort()},renderLocations(){locationRebuilds++},
+  map:{on(names,fn){for(const name of names.split(' ')){if(!zoomHandlers.has(name))zoomHandlers.set(name,[]);zoomHandlers.get(name).push(fn);}}}});
+ mapNav.ids['explore-panel'].insertBefore=()=>{};
+ const production=(from,to)=>app.slice(app.indexOf(from),app.indexOf(to,app.indexOf(from)));
+ vm.runInContext(production('  function clearLocationFilter(','  function activateLocation(')+production('  function setPanelOpen(','  function viewPadding('),mc);
+ vm.runInContext(production("  $('records-dialog').addEventListener('close'","  const showPage="),mc);
+ vm.runInContext(production("  map.on('movestart zoomstart'","  window.addEventListener('resize'"),mc);
+ for(const returnToMap of [()=>mc.setPanelOpen(false),()=>mapNav.ids['records-dialog'].emit('close')]){
+  mapState.location=selectedLocation;mc.render();assert(mc.visible.length<beforeBorder.length,'border records narrow the reading selection');
+  await returnToMap();assert.equal(mapState.location,'');assert.deepEqual(mc.visible,beforeBorder,'Back to map restores every other restriction');
+  assert.equal(mapState.month,core.monthOrdinal('2021-10'));assert.equal(mapState.continent,'Europe');
+ }
+ for(const event of ['zoomstart','zoomend','moveend','zoomstart','zoomend','moveend'])for(const fn of zoomHandlers.get(event)||[])fn();
+ assert.equal(locationRebuilds,0,'zooming must not tear down and recreate the restriction layers');
+ assert.deepEqual(mc.visible,beforeBorder,'zooming cannot narrow the record selection');
+ console.log('Map interaction passed: border-reader return restores all matching restrictions, other filters remain, and zoom keeps restriction layers in place.');
  Object.assign(tc,{C:core,$:id=>timeline.ids[id],data:null,events:[],locations:new Map(),selected:null,timer:null,playIcon:'play',pauseIcon:'pause',playbackRate:1,escape:String,dateText:String,monthLabel:String,map:{},visible:[],
   resetList(){},populateRegions(){},populateSelect(){},makeTabs(){},resetMapLayers(){},showBrowse(){},render(){},fitContinent(){},fitRecords(){},notify(){},openSharedRecord(){},setPanelOpen(open){tc.panelOpen=open},scheduleViewport(){},openRecords(){},downloadRecords(){},setInterval(){return 1},clearInterval(){}});
  vm.runInContext(app.slice(app.indexOf('  const state='),app.indexOf('  const continentViews=')),tc);
+ vm.runInContext(production('  function clearLocationFilter(','  function activateLocation('),tc);
  vm.runInContext(app.slice(app.indexOf('  function setPlayback('),app.indexOf('  function dateText(')),tc);
  vm.runInContext(app.slice(app.indexOf('  function changeMonth('),app.indexOf("  $('search').addEventListener")),tc);
  vm.runInContext(app.slice(app.indexOf('  function resetFilters('),app.indexOf('  function render(){')),tc);

@@ -147,7 +147,7 @@
     $('collapse-panel').setAttribute('aria-label',compact()?'Back to map':'Minimize search and zoom');
     $('collapse-panel').title=compact()?'Back to map':'Minimize search and zoom';
     $('collapse-panel').textContent=compact()?'Back to map':'−';
-    updatePanelTitle();scheduleViewport();
+    updatePanelTitle();if(!open)clearLocationFilter();scheduleViewport();
   }
   function viewPadding(extra=0){
     const page=$('map-page').getBoundingClientRect(),timeline=document.querySelector('.timeline').getBoundingClientRect();
@@ -254,6 +254,10 @@
     }
   }
   function renderList(){renderListContent();}
+  function clearLocationFilter(){
+    if(!state.location)return;
+    state.location='';resetList();render();
+  }
   function activateLocation(id,items){
     stop();state.location=id;selected=null;resetList();showBrowse();setPanelOpen(true);render();$('panel-scroll').scrollTop=0;
     openRecords();
@@ -624,12 +628,12 @@
     const rate=Number(event.target.value);playbackRate=[1,2,4,8].includes(rate)?rate:1;
     if(timer)schedulePlayback();
   });
-  $('back-button').addEventListener('click',showBrowse);$('fit-button').addEventListener('click',fitRecords);$('clear-location').addEventListener('click',()=>{state.location='';resetList();render();});$('reset-button').addEventListener('click',()=>{stop();resetFilters();populateRegions();showBrowse();render();fitContinent();});
+  $('back-button').addEventListener('click',showBrowse);$('fit-button').addEventListener('click',fitRecords);$('clear-location').addEventListener('click',clearLocationFilter);$('reset-button').addEventListener('click',()=>{stop();resetFilters();populateRegions();showBrowse();render();fitContinent();});
   $('read-records').addEventListener('click',openRecords);
   $('download-records').addEventListener('click',downloadRecords);$('download-reader-records').addEventListener('click',downloadRecords);
   $('records-close').addEventListener('click',()=>$('records-dialog').close());
   $('records-dialog').addEventListener('close',()=>{
-    $('explore-panel').insertBefore($('panel-scroll'),$('map-key'));showBrowse();$('explore-panel').scrollTop=recordsPanelScroll;scheduleViewport();
+    $('explore-panel').insertBefore($('panel-scroll'),$('map-key'));showBrowse();clearLocationFilter();$('explore-panel').scrollTop=recordsPanelScroll;scheduleViewport();
     if(!$('map-page').hidden){const target=recordsReturnFocus?.isConnected?recordsReturnFocus:$('map-page').classList.contains('panel-collapsed')?$('panel-toggle'):$('read-records');target.focus({preventScroll:true});}
     recordsReturnFocus=null;
   });
@@ -666,7 +670,8 @@
   });
   map.on('movestart zoomstart',()=>{if(labelLayer)labelLayer.hidden=true;});
   map.on('moveend zoomend',renderLabels);
-  map.on('zoomend',()=>{if(data)renderLocations();});
+  // Leaflet repositions the existing layers during zoom. Replacing them here
+  // can interrupt the canvas redraw during a touch gesture or popup transition.
   map.on('popupopen',()=>$('map-page').classList.add('location-card-open'));
   map.on('popupclose',()=>$('map-page').classList.remove('location-card-open'));
   window.addEventListener('resize',scheduleViewport);
