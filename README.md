@@ -20,16 +20,16 @@ supported. The atlas describes historical evidence, not live border conditions.
 
 The map now distinguishes an observed reopening from the last report of closure.
 All **221 records / 250 last-confirmed phases** in the review inventory have now
-received a later-status assessment. Evidence supports map updates to **106 records**
-and resolves **122 phase markers**. **118 records retain at least one unverified
-phase (128 phases)**; the groups overlap for partial resolutions. Grey dashed
+received a later-status assessment. Evidence supports integrated updates to **119 records**
+and resolves **136 phase markers**. **107 records retain at least one unverified
+phase (114 phases)**; the groups overlap for partial resolutions. Grey dashed
 lines and hollow marks identify that uncertainty, not continuing closure.
 The searchable [audit reader](https://lamarque-mapping.github.io/Border-Closure-Atlas/status-audit.html)
 provides every finding, phase decision, source and access limitation.
 
-The outcomes are 75 later access or policy-ending bounds, 26 confirmed restrictions,
+The outcomes are 82 later access or policy-ending bounds, 28 confirmed restrictions,
 one operator-reported restriction, 10 scope changes, 18 partial findings, five later
-closure confirmations, three conflicting findings and 83 unresolved findings.
+closure confirmations, three conflicting findings and 74 unresolved findings.
 A later access bound does not assert that a border is currently open or supply
 an exact historical reopening date. Only supported matching phases are updated.
 The COVID follow-up adds 21 phase bounds across 19 records: 18 newly integrated
@@ -40,8 +40,23 @@ reopening remains explicit; Sota's traditional access does not resolve Kali Tora
 or Bupul. Burkina Faso's July lifting and October reimposition of its flour-export
 ban remain distinct.
 
-All **33 status observations now have separately reviewed chronology**, comprising
-**45 scoped periods**. The date a restriction was checked is not its start date.
+The next open-ended review adds **14 phase decisions across 13 records**. Myanmar's
+original blanket foreign-entry suspension is superseded by **7 March 2023**, when
+Kawthaung resumed international passport entry; this does not claim all Myanmar
+crossings reopened. Botswana's January 2019 blanket animal-import restriction also
+has a partial-lifting bound. Separate dated access evidence bounds old Eswatini
+COVID and protest restrictions and the Samdrup Jongkhar election closure. Ficalho's
+February 2024 reopening does not resolve Paymogo; Kardam's September 2023 protest
+restriction is bounded on the same day. A later bound is not an exact end date or
+proof that an old closure continued until that bound.
+
+Official sources also confirm continuing closures at six named Lithuanian and
+Latvian posts, using their 2023/2024 effective dates. These are available in the
+record list; absent approved crossing points, no whole-frontier line is substituted.
+Lithuania's separate pedestrian/cycle and rail-boarding phases remain unresolved.
+
+All **36 status observations now have separately reviewed chronology**, comprising
+**48 scoped periods**. The date a restriction was checked is not its start date.
 Ukraine's Russia and Belarus ordinary-crossing suspensions appear from **28 February
 2022**, the effective date of Order 188-r. Six longstanding regimes, including the
 inter-Korean boundary, are labelled as already in force before October 2016.

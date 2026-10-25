@@ -59,7 +59,7 @@ for(const resolution of source.resolutions||[]){
  assert(!resolved.has(p.phase_id),'Duplicate phase resolution');resolved.add(p.phase_id);
  assert(C.day(resolution.from)!==null&&resolution.from>=p.last_confirmed&&resolution.from<=source.reviewed_at);
  assert(['ended_by','current_status'].includes(resolution.kind));
- if(resolution.basis)assert(resolution.kind==='ended_by'&&['policy_ended','later_access'].includes(resolution.basis),'Unknown resolution basis');
+ if(resolution.basis)assert(resolution.kind==='ended_by'&&['policy_ended','later_access','scope_changed'].includes(resolution.basis),'Unknown resolution basis');
  const finding=findings.get(resolution.finding_id);
  assert(finding?.record_id===row.record_id&&finding.sources.length,'Resolution needs matching sourced assessment');
  if(resolution.kind==='current_status'){

@@ -53,7 +53,7 @@ assert(C.recordsForLocation([aze],'context-frontier-aze-irn',d,feb2020)[0].map_s
 const snapshotSource=JSON.parse(JSON.stringify(source));snapshotSource.observations=[snapshotSource.observations[0]];delete snapshotSource.observations[0].timeline_periods;
 const snapshot=S.compile(snapshotSource)[0];assert.equal(snapshot.start,null);assert.equal(C.temporalState(snapshot,sep.month),'none','A bare current check is still not continuity evidence');assert.equal(C.temporalState(snapshot,oct.month),'closed');
 assert(S.periodDates(snapshot.map_status_periods[0]).includes('start not established'));
-assert.equal(source.audit.chronology_followup.reviewed_observations,33);assert.equal(source.audit.chronology_followup.timeline_periods,45);assert.equal(source.audit.chronology_followup.pre_window_regimes,6);
+assert.equal(source.audit.chronology_followup.reviewed_observations,36);assert.equal(source.audit.chronology_followup.timeline_periods,48);assert.equal(source.audit.chronology_followup.pre_window_regimes,6);
 for(const o of source.observations){
  const e=get(o.id);assert.equal(e.map_status_periods.length,o.timeline_periods.length);
  for(const p of e.map_status_periods){assert.equal(C.statusTemporalState(p,C.monthOrdinal(p.start_earliest)),p.status);assert.equal(C.statusTemporalState(p,C.monthOrdinal(p.start_earliest)-1),'none');}
@@ -72,8 +72,8 @@ assert.equal(C.temporalState(get('EA025'),C.monthOrdinal('2026-03')),'unresolved
 assert(source.unresolved.length===221&&source.unresolved.reduce((n,r)=>n+r.phases.length,0)===250);
 assert.equal(source.audit.records.length,221);
 assert.equal(new Set(source.audit.records.map(r=>r.record_id)).size,221);
-assert.equal(source.audit.counts.remaining_unverified_records,118);
-assert.equal(d.events.filter(e=>!S.isSupplement(e)&&C.statusPeriods(e,oct).some(p=>p.status==='unresolved')).length,118);
+assert.equal(source.audit.counts.remaining_unverified_records,107);
+assert.equal(d.events.filter(e=>!S.isSupplement(e)&&C.statusPeriods(e,oct).some(p=>p.status==='unresolved')).length,107);
 const paraguay=get('AM023');assert.equal(C.temporalState(paraguay,oct.month),'none','A sourced later access bound removes the old unknown marker without labelling the border open');
 assert.equal(C.temporalState(paraguay,C.monthOrdinal('2021-01')),'unresolved','A later access bound must not fill the earlier gap');
 assert.equal(paraguay.later_status_review.outcome,'ended_by');
@@ -109,6 +109,30 @@ for(const r of newBounds){
  const priorMonth=C.monthOrdinal(r.from)-1,phase=source.unresolved.find(x=>x.record_id===r.record_id).phases.find(p=>p.phase_id===r.phase_id);
  if(priorMonth>C.monthOrdinal(phase.last_confirmed))assert(matches({...jan2025,month:priorMonth}),'Earlier unknown gap must not be silently filled: '+r.phase_id);
 }
+const openEnded=source.audit.open_ended_followup;
+assert.equal(openEnded.updated_record_ids.length,13);
+assert.equal(openEnded.new_resolution_phase_ids.length,14);
+const furtherBounds=source.resolutions.filter(r=>openEnded.new_resolution_phase_ids.includes(r.phase_id)&&r.kind==='ended_by');
+assert.equal(furtherBounds.length,11);
+for(const r of furtherBounds){
+ const matches=month=>C.statusPeriods(get(r.record_id),{mode:'intervals',month}).some(p=>p.source_phase_id===r.phase_id);
+ assert(!matches(oct.month),'Newly bounded phase must not linger in October 2026: '+r.phase_id);
+ assert(!matches(C.monthOrdinal(r.from)),'Matching marker ends in the evidence month: '+r.phase_id);
+ const phase=source.unresolved.find(x=>x.record_id===r.record_id).phases.find(p=>p.phase_id===r.phase_id),previous=C.monthOrdinal(r.from)-1;
+ if(previous>C.monthOrdinal(phase.last_confirmed))assert(matches(previous),'Later bound must preserve the earlier uncertainty: '+r.phase_id);
+}
+assert.equal(at('R2-EA-005','2023-02'),'unresolved');
+for(const month of ['2023-03','2024-01','2025-01','2026-10'])assert.equal(at('R2-EA-005',month),'none','Old blanket Myanmar policy superseded, without claiming every port open');
+assert.equal(get('R2-EA-005').later_status_review.outcome,'scope_changed');
+assert.equal(at('R2-EA-005','2020-03'),'policy','Historical policy onset remains available');
+assert.deepEqual(Array.from(C.statusPeriods(get('FU-COV-EUR-002'),oct),p=>p.source_phase_id),['FU-COV-EUR-002-FU1'],'Ficalho reopening must not resolve the unmatched Paymogo phase');
+assert.deepEqual(Array.from(C.statusPeriods(get('EU007'),oct),p=>p.source_phase_id),['EU007-C7P1','EU007-C7P2'],'Road closures do not resolve pedestrian and rail policies');
+for(const id of openEnded.new_observation_ids){
+ const e=get(id);assert.equal(at(id,'2026-10'),'closed');assert.equal(at(id,'2026-09'),'closed');
+ assert.equal(at(id,'2026-11'),'none');assert.deepEqual(C.mapLocationsFor(e,d,oct),[],'Named posts must not mark an entire frontier');
+ assert.equal(C.temporalState(e,C.monthOrdinal(e.start)-1),'none','Current check must not invent an earlier closure');
+ assert.equal(C.temporalState(e,C.monthOrdinal(e.start)),'closed','Use the supported effective date');
+}
 for(const r of source.audit.records)assert.equal(get(r.record_id).later_status_review.record_id,r.record_id,'All findings attached to records');
 assert.equal(d.events.filter(e=>!S.isSupplement(e)&&!C.excluded(e)).length,825);
 const csv=CSV.build({records:[get('STATUS-RAFAH-202610'),get('STATUS-RUS-UKR-202610'),old],state:oct});assert(csv.content.includes('Later-status evidence'));assert(csv.content.includes('Not calculated: separately dated border-access status'));assert(csv.content.includes('no continuing closure')||csv.content.includes('does not assert continuing closure'));assert(csv.content.includes('From 2022-02-28; confirmed through 2026-10-25'),'CSV separates effective dates and checks');assert(csv.content.includes('From 2025-02-01; until 2025-03-18'),'CSV retains limited reopening phases');
@@ -116,10 +140,11 @@ const app=fs.readFileSync(root+'/app.js','utf8'),index=fs.readFileSync(root+'/in
 const auditHTML=fs.readFileSync(root+'/status-audit.html','utf8');
 assert.equal((auditHTML.match(/class="record" id=/g)||[]).length,221);
 assert(auditHTML.includes('Download the complete review (JSON)'));
+assert(auditHTML.includes('Original blanket scope superseded by 2023-03-07'));
 const resolvedCSV=CSV.build({records:[paraguay],state:oct});
 assert(resolvedCSV.content.includes(paraguay.later_status_review.finding));
 assert(resolvedCSV.content.includes(paraguay.later_status_review.sources[0].url));
 assert(app.includes('Unmarked borders are not necessarily open.'));assert(!index.includes('id="last-month"'));assert(!app.includes("$('last-month')"));
 assert(!d.events.some(e=>e.record_kind==='national_policy'&&e.countries.includes('United Kingdom')));
 const aus=get('NATIONAL-NAT-AUS-ENTRY-COVID');assert.equal(C.temporalState(aus,C.monthOrdinal('2021-06')),'policy');
-console.log('Status review passed: 221 assessments, 106 records with adopted findings, 21 further COVID bounds, 118 records retaining uncertainty, 33 chronology reviews / 45 scoped periods, effective dates distinct from checks, separate reclosures and unchanged historical durations/statistics.');
+console.log('Status review passed: 221 assessments, 119 records with adopted findings, 14 further phase decisions, 107 records retaining uncertainty, 36 chronology reviews / 48 scoped periods, scoped policy changes, effective dates distinct from checks and unchanged historical durations/statistics.');

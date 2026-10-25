@@ -1,8 +1,8 @@
 {
-  "version": "20261025-status-audit-4",
+  "version": "20261025-status-audit-5",
   "reviewed_at": "2026-10-25",
   "source_sha256": "5baf139f914593184ed2eee3f5a9dfd783cb264332415f98e645b409c314a415",
-  "method": "All 221 records (250 last-confirmed phases) in the endpoint review inventory were researched on 25 October 2026. Findings distinguish current restrictions, later access bounds, changed scope, partial evidence, conflicting evidence and unresolved status. Selected map updates received source-text, date and scope checks; unavailable full text and inadequate evidence remain qualified. Standing official guidance is dated to the check; news observations retain their event/report date. A later access bound suppresses only the matching old unknown marker from that bound onward. It does not label the border open, alter historical durations, fill gaps or merge later reclosures. Status verification dates are not closure starts. Separately reviewed timeline periods show a restriction from its sourced effective date through its latest supporting evidence, with changing scopes, exceptions and reopenings separated. Pre-window regimes are labelled as already in force, not newly starting at the window boundary. Unreviewed snapshots, if any, remain confined to their evidence month. These supplemental periods are excluded from episode and duration statistics. Coverage concerns this fixed inventory, not every world frontier. A further COVID-focused pass separates the ending of a national prohibition from reopening every individual port. Each new resolution records whether it is based on policy cessation or later access; neither establishes present-day openness.",
+  "method": "All 221 records (250 last-confirmed phases) in the endpoint review inventory were researched on 25 October 2026. Findings distinguish current restrictions, later access bounds, changed scope, partial evidence, conflicting evidence and unresolved status. Selected map updates received source-text, date and scope checks; unavailable full text and inadequate evidence remain qualified. Standing official guidance is dated to the check; news observations retain their event/report date. A later access bound suppresses only the matching old unknown marker from that bound onward. It does not label the border open, alter historical durations, fill gaps or merge later reclosures. Status verification dates are not closure starts. Separately reviewed timeline periods show a restriction from its sourced effective date through its latest supporting evidence, with changing scopes, exceptions and reopenings separated. Pre-window regimes are labelled as already in force, not newly starting at the window boundary. Unreviewed snapshots, if any, remain confined to their evidence month. These supplemental periods are excluded from episode and duration statistics. Coverage concerns this fixed inventory, not every world frontier. A further COVID-focused pass separates the ending of a national prohibition from reopening every individual port. Each new resolution records whether it is based on policy cessation or later access; neither establishes present-day openness. The subsequent open-ended follow-up also records scope_changed bounds: the original blanket policy no longer applies as stated, but narrower conditions or security restrictions may persist. This is not a declaration of whole-border reopening.",
   "observations": [
     {
       "id": "STATUS-RUS-UKR-202610",
@@ -2592,6 +2592,214 @@
         "limitations": "Dates describe the stated restriction regime and its exceptions. They do not measure uninterrupted physical closure at every checkpoint or produce additional closed-day totals."
       },
       "previous_qualification": "This is a new October restriction after the July lifting. It must not extend the old February 2022 episode without interruption. This record remains listed without an unverified map position."
+    },
+    {
+      "id": "STATUS-AUDIT-EU006-20261025",
+      "title": "Lithuania–Belarus: Šumskas and Tverečius crossings closed",
+      "status": "closed",
+      "observed_at": "2026-10-25",
+      "region": "Europe",
+      "continents": [
+        "Europe"
+      ],
+      "countries": [
+        "Lithuania",
+        "Belarus"
+      ],
+      "location_ids": [],
+      "linked_land_ids": [
+        "EU006"
+      ],
+      "rationales": [
+        "Security"
+      ],
+      "scope": "Operation of the named road crossings only: Šumskas and Tverečius",
+      "crossings": "Šumskas and Tverečius",
+      "movement": "Ordinary road crossing at the named posts",
+      "direction": "Both directions",
+      "exceptions": "Other crossing points and movement categories are outside this named-post closure.",
+      "summary": "The official checkpoint directory updated 1 October 2026 explicitly lists both Šumskas and Tverečius as temporarily closed. Together with the operative 18 August 2023 closure and the historical October 2025 confirmation, this supports the continuing named-post regime. It is not a closure of the entire Lithuania–Belarus frontier.",
+      "qualification": "Named crossing locations lack approved point geometry in this release. The restriction is available in the record list without an unverified map position; it is not drawn across the entire frontier. The effective date is separate from the 25 October 2026 source check. This supplemental chronology does not alter measured historical durations.",
+      "sources": [
+        {
+          "url": "https://pkpd.lrv.lt/lt/veiklos-sritys/administruojami-pasienio-kontroles-punktai/",
+          "title": "Official checkpoint directory, updated 1 October 2026: named road posts temporarily closed",
+          "publisher": "Lithuanian Border Crossing Infrastructure Directorate",
+          "checked_at": "2026-10-25"
+        },
+        {
+          "url": "https://vrm.lrv.lt/lt/naujienos/uzdaromi-sumsko-ir-tvereciaus-pasienio-kontroles-punktai/",
+          "title": "Šumskas and Tverečius close from 18 August 2023",
+          "publisher": "Lithuanian Ministry of the Interior",
+          "checked_at": "2026-10-25"
+        }
+      ],
+      "timeline_periods": [
+        {
+          "from_date": "2023-08-18",
+          "through_date": "2026-10-25",
+          "end_inclusive": true,
+          "start_precision": "day",
+          "status": "closed",
+          "scope": "Operation of the named road crossings only: Šumskas and Tverečius",
+          "summary": "Ordinary road crossing suspended at Šumskas and Tverečius.",
+          "basis": "The official checkpoint directory updated 1 October 2026 explicitly lists both Šumskas and Tverečius as temporarily closed. Together with the operative 18 August 2023 closure and the historical October 2025 confirmation, this supports the continuing named-post regime. It is not a closure of the entire Lithuania–Belarus frontier.",
+          "source_urls": [
+            "https://pkpd.lrv.lt/lt/veiklos-sritys/administruojami-pasienio-kontroles-punktai/",
+            "https://vrm.lrv.lt/lt/naujienos/uzdaromi-sumsko-ir-tvereciaus-pasienio-kontroles-punktai/"
+          ],
+          "historical_phase_ids": [
+            "EU006-D1"
+          ]
+        }
+      ],
+      "timeline_review": {
+        "checked_at": "2026-10-25",
+        "decision": "supported_periods",
+        "finding": "The official checkpoint directory updated 1 October 2026 explicitly lists both Šumskas and Tverečius as temporarily closed. Together with the operative 18 August 2023 closure and the historical October 2025 confirmation, this supports the continuing named-post regime. It is not a closure of the entire Lithuania–Belarus frontier.",
+        "limitations": "This is the stated restriction regime, not independent observation of every day or every exceptional movement. Named posts must not be expanded to a whole-frontier closure. Official directory full text and operative-date notice inspected."
+      }
+    },
+    {
+      "id": "STATUS-AUDIT-EU007-20261025",
+      "title": "Lithuania–Belarus: Lavoriškės and Raigardas crossings closed",
+      "status": "closed",
+      "observed_at": "2026-10-25",
+      "region": "Europe",
+      "continents": [
+        "Europe"
+      ],
+      "countries": [
+        "Lithuania",
+        "Belarus"
+      ],
+      "location_ids": [],
+      "linked_land_ids": [
+        "EU007"
+      ],
+      "rationales": [
+        "Security"
+      ],
+      "scope": "Operation of the named road crossings only: Lavoriškės and Raigardas",
+      "crossings": "Lavoriškės and Raigardas",
+      "movement": "Ordinary road crossing at the named posts",
+      "direction": "Both directions",
+      "exceptions": "Other crossing points and movement categories are outside this named-post closure.",
+      "summary": "The official checkpoint directory updated 1 October 2026 explicitly lists Lavoriškės and Raigardas as temporarily closed. The road-post closure is supported from its 1 March 2024 effective date. The separately coded pedestrian/cycle and railway boarding phases retain their unresolved later status; this road-post evidence does not resolve them.",
+      "qualification": "Named crossing locations lack approved point geometry in this release. The restriction is available in the record list without an unverified map position; it is not drawn across the entire frontier. The effective date is separate from the 25 October 2026 source check. This supplemental chronology does not alter measured historical durations.",
+      "sources": [
+        {
+          "url": "https://pkpd.lrv.lt/lt/veiklos-sritys/administruojami-pasienio-kontroles-punktai/",
+          "title": "Official checkpoint directory, updated 1 October 2026: named road posts temporarily closed",
+          "publisher": "Lithuanian Border Crossing Infrastructure Directorate",
+          "checked_at": "2026-10-25"
+        },
+        {
+          "url": "https://vrm.lrv.lt/en/news/the-operation-of-the-lavoriskes-and-raigardas-border-crossing-points-will-be-terminated-from-1-march/",
+          "title": "Lavoriškės and Raigardas closure effective 1 March 2024; other restrictions separately specified",
+          "publisher": "Lithuanian Ministry of the Interior",
+          "checked_at": "2026-10-25"
+        }
+      ],
+      "timeline_periods": [
+        {
+          "from_date": "2024-03-01",
+          "through_date": "2026-10-25",
+          "end_inclusive": true,
+          "start_precision": "day",
+          "status": "closed",
+          "scope": "Operation of the named road crossings only: Lavoriškės and Raigardas",
+          "summary": "Ordinary road crossing suspended at Lavoriškės and Raigardas.",
+          "basis": "The official checkpoint directory updated 1 October 2026 explicitly lists Lavoriškės and Raigardas as temporarily closed. The road-post closure is supported from its 1 March 2024 effective date. The separately coded pedestrian/cycle and railway boarding phases retain their unresolved later status; this road-post evidence does not resolve them.",
+          "source_urls": [
+            "https://pkpd.lrv.lt/lt/veiklos-sritys/administruojami-pasienio-kontroles-punktai/",
+            "https://vrm.lrv.lt/en/news/the-operation-of-the-lavoriskes-and-raigardas-border-crossing-points-will-be-terminated-from-1-march/"
+          ],
+          "historical_phase_ids": [
+            "EU007-R1"
+          ]
+        }
+      ],
+      "timeline_review": {
+        "checked_at": "2026-10-25",
+        "decision": "supported_periods",
+        "finding": "The official checkpoint directory updated 1 October 2026 explicitly lists Lavoriškės and Raigardas as temporarily closed. The road-post closure is supported from its 1 March 2024 effective date. The separately coded pedestrian/cycle and railway boarding phases retain their unresolved later status; this road-post evidence does not resolve them.",
+        "limitations": "This is the stated restriction regime, not independent observation of every day or every exceptional movement. Named posts must not be expanded to a whole-frontier closure. Official directory full text and operative-date notice inspected."
+      }
+    },
+    {
+      "id": "STATUS-AUDIT-R2-EU-009-20261025",
+      "title": "Latvia–Russia: Vientuļi and Pededze crossings suspended",
+      "status": "closed",
+      "observed_at": "2026-10-25",
+      "region": "Europe",
+      "continents": [
+        "Europe"
+      ],
+      "countries": [
+        "Latvia",
+        "Russia"
+      ],
+      "location_ids": [],
+      "linked_land_ids": [
+        "R2-EU-009"
+      ],
+      "rationales": [
+        "Security"
+      ],
+      "scope": "Operation of the named road crossings only: Vientuļi and Pededze",
+      "crossings": "Vientuļi and Pededze",
+      "movement": "Ordinary road crossing at the named posts",
+      "direction": "Both directions",
+      "exceptions": "Other crossing points and movement categories are outside this named-post closure.",
+      "summary": "The official legal register still marks Cabinet Order 674 in force. Its operative clauses suspend both Pededze and Vientuļi from 16 October 2023; the 13 October adoption date is not the crossing-closure date. August 2026 Cabinet minutes additionally discuss the continuing Vientuļi suspension. This is a current legal restriction on two named crossings, not a whole-frontier closure or a daily operational audit.",
+      "qualification": "Named crossing locations lack approved point geometry in this release. The restriction is available in the record list without an unverified map position; it is not drawn across the entire frontier. The effective date is separate from the 25 October 2026 source check. This supplemental chronology does not alter measured historical durations.",
+      "sources": [
+        {
+          "url": "https://likumi.lv/ta/id/346448-par-robezskersosanas-vietudarbibas-apturesanu-uz-latvijas-republikas--krievijas-federacijas-valsts-robezas",
+          "title": "Cabinet Order 674: both crossings suspended from 16 October 2023; status in force",
+          "publisher": "Latvijas Vēstnesis / Likumi.lv",
+          "checked_at": "2026-10-25"
+        },
+        {
+          "url": "https://likumi.lv/ta/en/en/id/346448",
+          "title": "Official legal-register metadata: Order 674 in force",
+          "publisher": "Latvijas Vēstnesis / Likumi.lv",
+          "checked_at": "2026-10-25"
+        },
+        {
+          "url": "https://www.vestnesis.lv/op/2026/157.8",
+          "title": "Cabinet minutes, 11 August 2026: Vientuļi suspension",
+          "publisher": "Latvijas Vēstnesis",
+          "checked_at": "2026-10-25"
+        }
+      ],
+      "timeline_periods": [
+        {
+          "from_date": "2023-10-16",
+          "through_date": "2026-10-25",
+          "end_inclusive": true,
+          "start_precision": "day",
+          "status": "closed",
+          "scope": "Operation of the named road crossings only: Vientuļi and Pededze",
+          "summary": "Ordinary road crossing suspended at Vientuļi and Pededze.",
+          "basis": "The official legal register still marks Cabinet Order 674 in force. Its operative clauses suspend both Pededze and Vientuļi from 16 October 2023; the 13 October adoption date is not the crossing-closure date. August 2026 Cabinet minutes additionally discuss the continuing Vientuļi suspension. This is a current legal restriction on two named crossings, not a whole-frontier closure or a daily operational audit.",
+          "source_urls": [
+            "https://likumi.lv/ta/id/346448-par-robezskersosanas-vietudarbibas-apturesanu-uz-latvijas-republikas--krievijas-federacijas-valsts-robezas",
+            "https://likumi.lv/ta/en/en/id/346448",
+            "https://www.vestnesis.lv/op/2026/157.8"
+          ],
+          "historical_phase_ids": [
+            "R2-EU-009-R1"
+          ]
+        }
+      ],
+      "timeline_review": {
+        "checked_at": "2026-10-25",
+        "decision": "supported_periods",
+        "finding": "The official legal register still marks Cabinet Order 674 in force. Its operative clauses suspend both Pededze and Vientuļi from 16 October 2023; the 13 October adoption date is not the crossing-closure date. August 2026 Cabinet minutes additionally discuss the continuing Vientuļi suspension. This is a current legal restriction on two named crossings, not a whole-frontier closure or a daily operational audit.",
+        "limitations": "This is the stated restriction regime, not independent observation of every day or every exceptional movement. Named posts must not be expanded to a whole-frontier closure. Official legal-register indexed text and in-force metadata inspected. Direct full-page retrieval timed out; the August 2026 Cabinet record is additional corroboration, not the sole evidence for Pededze."
+      }
     }
   ],
   "resolutions": [
@@ -3623,6 +3831,130 @@
       "finding_id": "R6-EA-006",
       "basis": "later_access",
       "from": "2022-06-07"
+    },
+    {
+      "record_id": "R2-EA-005",
+      "kind": "ended_by",
+      "finding_id": "R2-EA-005",
+      "phase_id": "R2-EA-005-FU1",
+      "from": "2023-03-07",
+      "basis": "scope_changed"
+    },
+    {
+      "record_id": "SC19",
+      "kind": "ended_by",
+      "finding_id": "SC19",
+      "phase_id": "SC19-FU1",
+      "from": "2020-10-31",
+      "basis": "later_access"
+    },
+    {
+      "record_id": "SC20",
+      "kind": "ended_by",
+      "finding_id": "SC20",
+      "phase_id": "SC20-R1",
+      "from": "2021-12-13",
+      "basis": "later_access"
+    },
+    {
+      "record_id": "R3-SC-002",
+      "kind": "ended_by",
+      "finding_id": "R3-SC-002",
+      "phase_id": "R3-SC-002-R1",
+      "from": "2022-09-23",
+      "basis": "later_access"
+    },
+    {
+      "record_id": "R4-AES-001",
+      "kind": "ended_by",
+      "finding_id": "R4-AES-001",
+      "phase_id": "R4-AES-001-NP1",
+      "from": "2021-09-20",
+      "basis": "later_access"
+    },
+    {
+      "record_id": "C7-AF-001",
+      "kind": "ended_by",
+      "finding_id": "C7-AF-001",
+      "phase_id": "C7-AF-001-P1",
+      "from": "2021-09-20",
+      "basis": "later_access"
+    },
+    {
+      "record_id": "C7-AF-001",
+      "kind": "ended_by",
+      "finding_id": "C7-AF-001",
+      "phase_id": "C7-AF-001-P2",
+      "from": "2021-09-20",
+      "basis": "later_access"
+    },
+    {
+      "record_id": "R5-AES-001",
+      "kind": "ended_by",
+      "finding_id": "R5-AES-001",
+      "phase_id": "R5-AES-001-FU1",
+      "from": "2022-08-03",
+      "basis": "later_access"
+    },
+    {
+      "record_id": "FU-COV-EUR-002",
+      "kind": "ended_by",
+      "finding_id": "FU-COV-EUR-002",
+      "phase_id": "FU-COV-EUR-002-FU2",
+      "from": "2024-02-03",
+      "basis": "later_access"
+    },
+    {
+      "record_id": "REC50-R46-003",
+      "kind": "ended_by",
+      "finding_id": "REC50-R46-003",
+      "phase_id": "REC50-R46-003-P1",
+      "from": "2019-01-30",
+      "basis": "scope_changed"
+    },
+    {
+      "record_id": "REC50-R42-002",
+      "kind": "ended_by",
+      "finding_id": "REC50-R42-002",
+      "phase_id": "REC50-R42-002-P2",
+      "from": "2023-09-18",
+      "basis": "later_access"
+    },
+    {
+      "record_id": "EU006",
+      "phase_id": "EU006-D1",
+      "kind": "current_status",
+      "finding_id": "EU006",
+      "observation_id": "STATUS-AUDIT-EU006-20261025",
+      "timeline_period_indexes": [
+        0
+      ],
+      "timeline_from": "2025-10-30",
+      "from": "2026-10-25"
+    },
+    {
+      "record_id": "EU007",
+      "phase_id": "EU007-R1",
+      "kind": "current_status",
+      "finding_id": "EU007",
+      "observation_id": "STATUS-AUDIT-EU007-20261025",
+      "timeline_period_indexes": [
+        0
+      ],
+      "timeline_from": "2025-10-30",
+      "from": "2026-10-25"
+    },
+    {
+      "record_id": "R2-EU-009",
+      "phase_id": "R2-EU-009-R1",
+      "kind": "current_status",
+      "finding_id": "R2-EU-009",
+      "observation_id": "STATUS-AUDIT-R2-EU-009-20261025",
+      "timeline_period_indexes": [
+        0
+      ],
+      "timeline_from": "2025-03-18",
+      "from": "2026-10-25"
     }
   ],
   "unresolved": [
@@ -4028,7 +4360,8 @@
         {
           "phase_id": "EU006-D1",
           "last_confirmed": "2025-10-30",
-          "scope": "Operation of Lithuania's Sumskas and Tverecius road crossings, through October 30 2025 retrospective confirmation."
+          "scope": "Operation of Lithuania's Sumskas and Tverecius road crossings, through October 30 2025 retrospective confirmation.",
+          "resolved_from": "2025-10-30"
         }
       ]
     },
@@ -4066,7 +4399,8 @@
         {
           "phase_id": "EU007-R1",
           "last_confirmed": "2025-10-30",
-          "scope": "Lavoriškės and Raigardas road crossing operations on Lithuania–Belarus frontier"
+          "scope": "Lavoriškės and Raigardas road crossing operations on Lithuania–Belarus frontier",
+          "resolved_from": "2025-10-30"
         },
         {
           "phase_id": "EU007-C7P1",
@@ -4565,7 +4899,8 @@
         {
           "phase_id": "SC19-FU1",
           "last_confirmed": "2020-03-27",
-          "scope": "Eswatini outbound non-essential travel under Regulation 16(1)"
+          "scope": "Eswatini outbound non-essential travel under Regulation 16(1)",
+          "resolved_from": "2020-10-31"
         }
       ]
     },
@@ -4589,7 +4924,8 @@
         {
           "phase_id": "SC20-R1",
           "last_confirmed": "2020-04-06",
-          "scope": "Consequential Mhlumeni–Goba port closure reported by Eswatini"
+          "scope": "Consequential Mhlumeni–Goba port closure reported by Eswatini",
+          "resolved_from": "2021-12-13"
         }
       ]
     },
@@ -4712,7 +5048,8 @@
         {
           "phase_id": "R2-EA-005-FU1",
           "last_confirmed": "2020-03-19",
-          "scope": "Open Myanmar land checkpoints with neighbouring countries under March 19 national foreign-entry suspension"
+          "scope": "Open Myanmar land checkpoints with neighbouring countries under March 19 national foreign-entry suspension",
+          "resolved_from": "2023-03-07"
         }
       ]
     },
@@ -4810,7 +5147,8 @@
         {
           "phase_id": "R2-EU-009-R1",
           "last_confirmed": "2025-03-18",
-          "scope": "Suspension of Vientuļi and Pededze road border crossing operations on Latvian–Russian frontier"
+          "scope": "Suspension of Vientuļi and Pededze road border crossing operations on Latvian–Russian frontier",
+          "resolved_from": "2025-03-18"
         }
       ]
     },
@@ -5104,7 +5442,8 @@
         {
           "phase_id": "R3-SC-002-R1",
           "last_confirmed": "2018-09-16",
-          "scope": "Samdrup Jongkhar main gate only"
+          "scope": "Samdrup Jongkhar main gate only",
+          "resolved_from": "2022-09-23"
         }
       ]
     },
@@ -5242,7 +5581,8 @@
         {
           "phase_id": "R4-AES-001-NP1",
           "last_confirmed": "2021-07-09",
-          "scope": "Oshoek crossing protest obstruction"
+          "scope": "Oshoek crossing protest obstruction",
+          "resolved_from": "2021-09-20"
         }
       ]
     },
@@ -5366,7 +5706,8 @@
         {
           "phase_id": "R5-AES-001-FU1",
           "last_confirmed": "2021-06-29",
-          "scope": "Golela Port of Entry export suspension"
+          "scope": "Golela Port of Entry export suspension",
+          "resolved_from": "2022-08-03"
         }
       ]
     },
@@ -5661,7 +6002,8 @@
         {
           "phase_id": "FU-COV-EUR-002-FU2",
           "last_confirmed": "2024-02-02",
-          "scope": "Rosal de la Frontera–Vila Verde de Ficalho road / N-433 approach"
+          "scope": "Rosal de la Frontera–Vila Verde de Ficalho road / N-433 approach",
+          "resolved_from": "2024-02-03"
         }
       ]
     },
@@ -5817,12 +6159,14 @@
         {
           "phase_id": "C7-AF-001-P1",
           "last_confirmed": "2021-06-29",
-          "scope": "Mananga Port of Entry closure status on June29,2021"
+          "scope": "Mananga Port of Entry closure status on June29,2021",
+          "resolved_from": "2021-09-20"
         },
         {
           "phase_id": "C7-AF-001-P2",
           "last_confirmed": "2021-07-01",
-          "scope": "Mananga crossing obstruction by EFF protesters on July1,2021"
+          "scope": "Mananga crossing obstruction by EFF protesters on July1,2021",
+          "resolved_from": "2021-09-20"
         }
       ]
     },
@@ -6359,7 +6703,8 @@
         {
           "phase_id": "REC50-R42-002-P2",
           "last_confirmed": "2023-09-18",
-          "scope": "Kardam–Negru Voda vehicle entry restriction on September 18"
+          "scope": "Kardam–Negru Voda vehicle entry restriction on September 18",
+          "resolved_from": "2023-09-18"
         }
       ]
     },
@@ -6490,7 +6835,8 @@
         {
           "phase_id": "REC50-R46-003-P1",
           "last_confirmed": "2019-01-11",
-          "scope": "Botswana restriction on South-African-origin hoofed livestock and animal products during the January 2019 FMD episode"
+          "scope": "Botswana restriction on South-African-origin hoofed livestock and animal products during the January 2019 FMD episode",
+          "resolved_from": "2019-01-30"
         }
       ]
     },
@@ -7919,9 +8265,9 @@
         "record_id": "EU006",
         "title": "Lithuania closes Šumskas and Tverečius crossings",
         "checked_at": "2026-10-25",
-        "outcome": "unresolved",
-        "evidence_date": null,
-        "finding": "Historical official closure confirmed; current private queue listing is not sufficient alone for an October operational assertion.",
+        "outcome": "confirmed_current",
+        "evidence_date": "2026-10-25",
+        "finding": "The official checkpoint directory updated 1 October 2026 explicitly lists both Šumskas and Tverečius as temporarily closed. Together with the operative 18 August 2023 closure and the historical October 2025 confirmation, this supports the continuing named-post regime. It is not a closure of the entire Lithuania–Belarus frontier.",
         "phases": [
           {
             "phase_id": "EU006-D1",
@@ -7931,16 +8277,43 @@
         ],
         "sources": [
           {
+            "url": "https://pkpd.lrv.lt/lt/veiklos-sritys/administruojami-pasienio-kontroles-punktai/",
+            "title": "Official checkpoint directory, updated 1 October 2026: named road posts temporarily closed",
+            "publisher": "Lithuanian Border Crossing Infrastructure Directorate",
+            "checked_at": "2026-10-25"
+          },
+          {
+            "url": "https://vrm.lrv.lt/lt/naujienos/uzdaromi-sumsko-ir-tvereciaus-pasienio-kontroles-punktai/",
+            "title": "Šumskas and Tverečius close from 18 August 2023",
+            "publisher": "Lithuanian Ministry of the Interior",
+            "checked_at": "2026-10-25"
+          },
+          {
             "url": "https://vsat.lrv.lt/lt/naujienos/nuo-kovo-1-d-uzdaromi-du-pasienio-su-baltarusija-punktai-kituose-ivedami-ribojimai-foto/",
             "title": "Nuo penktadienio uždaromi Lavoriškių ir Raigardo punktai, pasienyje su Baltarusija įsigalioja ir kiti ribojimai (foto) - Valstybės sienos apsaugos tarnyba prie Lietuvos Respublikos vidaus reikalų ministerijos",
             "publisher": "vsat.lrv.lt",
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
-        "current_status_established": false,
+        "integration": [
+          {
+            "record_id": "EU006",
+            "phase_id": "EU006-D1",
+            "kind": "current_status",
+            "finding_id": "EU006",
+            "observation_id": "STATUS-AUDIT-EU006-20261025",
+            "timeline_period_indexes": [
+              0
+            ],
+            "timeline_from": "2025-10-30",
+            "from": "2026-10-25"
+          }
+        ],
+        "current_status_established": true,
         "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "source_access": "Official directory full text and operative-date notice inspected.",
+        "previous_finding": "Historical official closure confirmed; current private queue listing is not sufficient alone for an October operational assertion.",
+        "followup_note": "Further source, date and scope review applied on 25 October 2026. Earlier findings are retained in the downloadable review."
       },
       {
         "record_id": "EU008",
@@ -8048,8 +8421,8 @@
         "title": "Lithuania closes Lavoriškės and Raigardas and restricts remaining crossings",
         "checked_at": "2026-10-25",
         "outcome": "partial",
-        "evidence_date": null,
-        "finding": "Latest official retrieved notices retain named-post and nonmotorized limits; current rail boarding and all subphases need separate confirmation.",
+        "evidence_date": "2026-10-25",
+        "finding": "The official checkpoint directory updated 1 October 2026 explicitly lists Lavoriškės and Raigardas as temporarily closed. The road-post closure is supported from its 1 March 2024 effective date. The separately coded pedestrian/cycle and railway boarding phases retain their unresolved later status; this road-post evidence does not resolve them.",
         "phases": [
           {
             "phase_id": "EU007-R1",
@@ -8069,6 +8442,18 @@
         ],
         "sources": [
           {
+            "url": "https://pkpd.lrv.lt/lt/veiklos-sritys/administruojami-pasienio-kontroles-punktai/",
+            "title": "Official checkpoint directory, updated 1 October 2026: named road posts temporarily closed",
+            "publisher": "Lithuanian Border Crossing Infrastructure Directorate",
+            "checked_at": "2026-10-25"
+          },
+          {
+            "url": "https://vrm.lrv.lt/en/news/the-operation-of-the-lavoriskes-and-raigardas-border-crossing-points-will-be-terminated-from-1-march/",
+            "title": "Lavoriškės and Raigardas closure effective 1 March 2024; other restrictions separately specified",
+            "publisher": "Lithuanian Ministry of the Interior",
+            "checked_at": "2026-10-25"
+          },
+          {
             "url": "https://vsat.lrv.lt/lt/naujienos/nuo-kovo-1-d-uzdaromi-lavoriskiu-ir-raigardo-pasienio-kontroles-punktai/",
             "title": "Nuo kovo 1 d. uždaromi Lavoriškių ir Raigardo pasienio kontrolės punktai - Valstybės sienos apsaugos tarnyba prie Lietuvos Respublikos vidaus reikalų ministerijos",
             "publisher": "vsat.lrv.lt",
@@ -8087,10 +8472,25 @@
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "EU007",
+            "phase_id": "EU007-R1",
+            "kind": "current_status",
+            "finding_id": "EU007",
+            "observation_id": "STATUS-AUDIT-EU007-20261025",
+            "timeline_period_indexes": [
+              0
+            ],
+            "timeline_from": "2025-10-30",
+            "from": "2026-10-25"
+          }
+        ],
         "current_status_established": false,
         "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "source_access": "Official directory full text and operative-date notice inspected.",
+        "previous_finding": "Latest official retrieved notices retain named-post and nonmotorized limits; current rail boarding and all subphases need separate confirmation.",
+        "followup_note": "Further source, date and scope review applied on 25 October 2026. Earlier findings are retained in the downloadable review."
       },
       {
         "record_id": "EU010",
@@ -9454,9 +9854,9 @@
         "record_id": "SC19",
         "title": "Eswatini COVID general-travel restrictions",
         "checked_at": "2026-10-25",
-        "outcome": "unresolved",
-        "evidence_date": null,
-        "finding": "Removal of entry health requirements does not by itself establish when Eswatini's outbound non-essential rule ended.",
+        "outcome": "ended_by",
+        "evidence_date": "2020-10-31",
+        "finding": "Eswatini's Ministry of Health retrospectively confirms reopening for cross-border travel at the beginning of October 2020, followed by renewed permit-only restrictions in January 2021. The original March 2020 phase is therefore bounded by the end of October 2020, a conservative month-end bound rather than an invented exact reopening day. Testing requirements did not preserve the original non-essential-travel prohibition. The later reclosure is not merged into continuous closure since March.",
         "phases": [
           {
             "phase_id": "SC19-FU1",
@@ -9465,6 +9865,12 @@
           }
         ],
         "sources": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/142311614717495991/pdf/Additional-Financing-Stakeholder-Engagement-Plan-SEP-Eswatini-COVID-19-Emergency-Response-Project-P175875.pdf",
+            "title": "Eswatini COVID-19 Emergency Response Project, January 2021, page 7: October reopening and later reclosure",
+            "publisher": "Eswatini Ministry of Health / World Bank",
+            "checked_at": "2026-10-25"
+          },
           {
             "url": "https://global-monitoring.com/gm/page/events/epidemic-0002096.mXuSoNx3qUDT.html?lang=en",
             "title": "COVID-19 pandemic - Eswatini",
@@ -9478,10 +9884,21 @@
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "SC19",
+            "kind": "ended_by",
+            "finding_id": "SC19",
+            "phase_id": "SC19-FU1",
+            "from": "2020-10-31",
+            "basis": "later_access"
+          }
+        ],
         "current_status_established": false,
         "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "source_access": "Dated source text or indexed extracts inspected for the named crossing, direction and affected movement. Official documents and attributed operational reports are identified individually; no independent field verification.",
+        "previous_finding": "Removal of entry health requirements does not by itself establish when Eswatini's outbound non-essential rule ended.",
+        "followup_note": "Further source, date and scope review applied on 25 October 2026. Earlier findings are retained in the downloadable review."
       },
       {
         "record_id": "SC21",
@@ -9514,9 +9931,9 @@
         "record_id": "SC20",
         "title": "Goba Mhlumeni COVID crossing closure",
         "checked_at": "2026-10-25",
-        "outcome": "unresolved",
-        "evidence_date": null,
-        "finding": "Original Goba closure retrieved; general Eswatini reopening does not prove this particular post resumed.",
+        "outcome": "ended_by",
+        "evidence_date": "2021-12-13",
+        "finding": "A November 2021 report announced preparations to reopen Goba after its COVID closure. A dated Mozambican official report on 13 December 2021 explicitly includes Goba among the crossings operating for festive-season passenger movements. That later operational evidence bounds the Goba–Mhlumeni closure; the precise November restart day is not established by the announcement alone.",
         "phases": [
           {
             "phase_id": "SC20-R1",
@@ -9526,16 +9943,39 @@
         ],
         "sources": [
           {
+            "url": "https://www.diarioeconomico.co.mz/2021/11/05/negocios/reaberta-a-fronteira-entre-mocambique-e-essuatini/",
+            "title": "Goba reopening announcement, 5 November 2021",
+            "publisher": "Diário Económico / migration-service spokesperson",
+            "checked_at": "2026-10-25"
+          },
+          {
+            "url": "https://mozambiquehighcommission.org.uk/ressano-garcia-border-opens-24-hours-a-day-over-festive-season.html",
+            "title": "Festive-season border operations, including Goba, 13 December 2021",
+            "publisher": "Mozambique High Commission / AIM",
+            "checked_at": "2026-10-25"
+          },
+          {
             "url": "https://www.gov.sz/index.php?id=2434",
             "title": "MINISTERIAL GUIDELINES FOLLOWING MINISTRY OF PUBLIC SERVICE",
             "publisher": "gov.sz",
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "SC20",
+            "kind": "ended_by",
+            "finding_id": "SC20",
+            "phase_id": "SC20-R1",
+            "from": "2021-12-13",
+            "basis": "later_access"
+          }
+        ],
         "current_status_established": false,
         "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "source_access": "Dated source text or indexed extracts inspected for the named crossing, direction and affected movement. Official documents and attributed operational reports are identified individually; no independent field verification.",
+        "previous_finding": "Original Goba closure retrieved; general Eswatini reopening does not prove this particular post resumed.",
+        "followup_note": "Further source, date and scope review applied on 25 October 2026. Earlier findings are retained in the downloadable review."
       },
       {
         "record_id": "SC23",
@@ -9849,8 +10289,8 @@
         "title": "Myanmar suspends foreign visitor entry at land checkpoints",
         "checked_at": "2026-10-25",
         "outcome": "scope_changed",
-        "evidence_date": "2026-09-23",
-        "finding": "Foreign entry is allowed at Kawthaung and qualifying Tachileik package tours; original blanket ban no longer describes all ports, but other routes differ.",
+        "evidence_date": "2023-03-07",
+        "finding": "The March 2020 blanket suspension of foreign entry no longer described all Myanmar land checkpoints by 7 March 2023: Kawthaung–Ranong resumed passport/visa entry, including third-country visitors. The official eVisa portal now lists Kawthaung as an eligible land entry point. This bounds the old blanket-policy marker; it is not evidence that every Myanmar frontier reopened. Subsequent security restrictions and Tachileik package-tour conditions are separate regimes.",
         "phases": [
           {
             "phase_id": "R2-EA-005-FU1",
@@ -9860,22 +10300,39 @@
         ],
         "sources": [
           {
+            "url": "https://elevenmyanmar.com/news/myanmar-reopens-kawthoung-ranong-border-gate-as-international-gateway",
+            "title": "Kawthoung–Ranong resumes international passport entry from 7 March 2023",
+            "publisher": "Eleven Media Group",
+            "checked_at": "2026-10-25"
+          },
+          {
             "url": "https://evisa.moip.gov.mm/common-items/faq",
-            "title": "Myanmar eVisa (Official Government)",
-            "publisher": "evisa.moip.gov.mm",
+            "title": "Official eVisa FAQ: Kawthaung is an eligible land entry point",
+            "publisher": "Myanmar Ministry of Immigration and Population",
             "checked_at": "2026-10-25"
           },
           {
             "url": "https://mdn.gov.mm/index.php/en/tachilek-opens-third-country-tourists-package-trips",
-            "title": "Tachilek Opens to Third-Country Tourists on Package Trips | Myanmar Digital News",
-            "publisher": "mdn.gov.mm",
+            "title": "Tachilek third-country entry: 2023 reopening, subsequent security restrictions and package tours",
+            "publisher": "Myanmar Digital News",
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "R2-EA-005",
+            "kind": "ended_by",
+            "finding_id": "R2-EA-005",
+            "phase_id": "R2-EA-005-FU1",
+            "from": "2023-03-07",
+            "basis": "scope_changed"
+          }
+        ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "limitations": "This bounds the original blanket policy only. It does not establish unrestricted access at every crossing, repeal all remaining conditions, or supply a complete history of the narrower regimes. Historical episode dates and duration totals are unchanged.",
+        "source_access": "Dated source text or indexed extracts inspected for the named crossing, direction and affected movement. Official documents and attributed operational reports are identified individually; no independent field verification.",
+        "previous_finding": "Foreign entry is allowed at Kawthaung and qualifying Tachileik package tours; original blanket ban no longer describes all ports, but other routes differ.",
+        "followup_note": "Further source, date and scope review applied on 25 October 2026. Earlier findings are retained in the downloadable review."
       },
       {
         "record_id": "R2-EA-011",
@@ -10123,9 +10580,9 @@
         "record_id": "R2-EU-009",
         "title": "Latvia suspends Vientuļi and Pededze border crossings with Russia",
         "checked_at": "2026-10-25",
-        "outcome": "partial",
-        "evidence_date": "2026-08-11",
-        "finding": "Official 2026 minutes reconfirm Vientuli suspension; Pededze needs independent current confirmation.",
+        "outcome": "confirmed_current",
+        "evidence_date": "2026-10-25",
+        "finding": "The official legal register still marks Cabinet Order 674 in force. Its operative clauses suspend both Pededze and Vientuļi from 16 October 2023; the 13 October adoption date is not the crossing-closure date. August 2026 Cabinet minutes additionally discuss the continuing Vientuļi suspension. This is a current legal restriction on two named crossings, not a whole-frontier closure or a daily operational audit.",
         "phases": [
           {
             "phase_id": "R2-EU-009-R1",
@@ -10135,16 +10592,43 @@
         ],
         "sources": [
           {
+            "url": "https://likumi.lv/ta/id/346448-par-robezskersosanas-vietudarbibas-apturesanu-uz-latvijas-republikas--krievijas-federacijas-valsts-robezas",
+            "title": "Cabinet Order 674: both crossings suspended from 16 October 2023; status in force",
+            "publisher": "Latvijas Vēstnesis / Likumi.lv",
+            "checked_at": "2026-10-25"
+          },
+          {
+            "url": "https://likumi.lv/ta/en/en/id/346448",
+            "title": "Official legal-register metadata: Order 674 in force",
+            "publisher": "Latvijas Vēstnesis / Likumi.lv",
+            "checked_at": "2026-10-25"
+          },
+          {
             "url": "https://www.vestnesis.lv/op/2026/157.8",
-            "title": "Ministru kabineta sēdes protokols - Latvijas Vēstnesis",
-            "publisher": "vestnesis.lv",
+            "title": "Cabinet minutes, 11 August 2026: Vientuļi suspension",
+            "publisher": "Latvijas Vēstnesis",
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
-        "current_status_established": false,
+        "integration": [
+          {
+            "record_id": "R2-EU-009",
+            "phase_id": "R2-EU-009-R1",
+            "kind": "current_status",
+            "finding_id": "R2-EU-009",
+            "observation_id": "STATUS-AUDIT-R2-EU-009-20261025",
+            "timeline_period_indexes": [
+              0
+            ],
+            "timeline_from": "2025-03-18",
+            "from": "2026-10-25"
+          }
+        ],
+        "current_status_established": true,
         "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "source_access": "Official legal-register indexed text and in-force metadata inspected. Direct full-page retrieval timed out; the August 2026 Cabinet record is additional corroboration, not the sole evidence for Pededze.",
+        "previous_finding": "Official 2026 minutes reconfirm Vientuli suspension; Pededze needs independent current confirmation.",
+        "followup_note": "Further source, date and scope review applied on 25 October 2026. Earlier findings are retained in the downloadable review."
       },
       {
         "record_id": "R2-ME-010",
@@ -11019,9 +11503,9 @@
         "record_id": "R3-SC-002",
         "title": "Samdrup Jongkhar gate closes for Bhutan primary election, September 2018",
         "checked_at": "2026-10-25",
-        "outcome": "unresolved",
-        "evidence_date": null,
-        "finding": "Later reopening report appears to describe the 2022 COVID reopening despite recent index date; verify event date before using an upper bound.",
+        "outcome": "ended_by",
+        "evidence_date": "2022-09-23",
+        "finding": "BBS reports observed two-way crossing and Indian visitor admission at Samdrup Jongkhar after the gate reopened on 23 September 2022. The article body/publication date and the dated BBS archive identify 2022; the site's changing 2026 masthead is not the event date. This is a conservative later-access bound on the 2018 election closure, not a claim that it lasted until 2022. The intervening COVID closure is distinct.",
         "phases": [
           {
             "phase_id": "R3-SC-002-R1",
@@ -11030,6 +11514,18 @@
           }
         ],
         "sources": [
+          {
+            "url": "https://www.bbs.bt/175257/",
+            "title": "Five Indian visitors enter Bhutan via Samdrup Jongkhar; crossings since 23 September 2022",
+            "publisher": "Bhutan Broadcasting Service",
+            "checked_at": "2026-10-25"
+          },
+          {
+            "url": "https://www.bbs.bt/author/yeshey-lhaden/page/281/",
+            "title": "Dated archive: Samdrup Jongkhar gate reopening, 23 September 2022",
+            "publisher": "Bhutan Broadcasting Service",
+            "checked_at": "2026-10-25"
+          },
           {
             "url": "https://nenow.in/north-east-news/bhutan-election-border-gate-close-for-visitors.html",
             "title": "Bhutan election: Border gate at Samdrup Jongkhar closed for visitors",
@@ -11043,10 +11539,21 @@
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "R3-SC-002",
+            "kind": "ended_by",
+            "finding_id": "R3-SC-002",
+            "phase_id": "R3-SC-002-R1",
+            "from": "2022-09-23",
+            "basis": "later_access"
+          }
+        ],
         "current_status_established": false,
         "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "source_access": "Dated source text or indexed extracts inspected for the named crossing, direction and affected movement. Official documents and attributed operational reports are identified individually; no independent field verification.",
+        "previous_finding": "Later reopening report appears to describe the 2022 COVID reopening despite recent index date; verify event date before using an upper bound.",
+        "followup_note": "Further source, date and scope review applied on 25 October 2026. Earlier findings are retained in the downloadable review."
       },
       {
         "record_id": "R3-AF-004",
@@ -11456,9 +11963,9 @@
         "record_id": "R4-AES-001",
         "title": "Oshoek border shut during EFF solidarity protest in July 2021",
         "checked_at": "2026-10-25",
-        "outcome": "unresolved",
-        "evidence_date": null,
-        "finding": "Original EFF protest closure retrieved; published standing hours alone are insufficient proof of its exact end.",
+        "outcome": "ended_by",
+        "evidence_date": "2021-09-20",
+        "finding": "A contemporaneous report of the tourism minister's 20 September 2021 entry announcement explicitly lists Ngwenya–Oshoek as open to visitors with negative tests. A later SARS customs notice also confirms normal port operations. This bounds the July protest obstruction without claiming its precise dispersal time or unrestricted pandemic-era travel.",
         "phases": [
           {
             "phase_id": "R4-AES-001-NP1",
@@ -11468,16 +11975,39 @@
         ],
         "sources": [
           {
+            "url": "https://umhambi.blogspot.com/2021/09/eswatini-current-entry-guidelines-as-of.html",
+            "title": "Report of Eswatini tourism minister's 20 September 2021 entry announcement",
+            "publisher": "TravelComments",
+            "checked_at": "2026-10-25"
+          },
+          {
+            "url": "https://www.sars.gov.za/wp-content/uploads/Docs/Customs/Letter-to-Trade-on-Land-Ports-Adjusted-Cargo-Processing-Hours-27-July-2022_Updated.2.pdf",
+            "title": "SARS letter signed 28 July 2022: cargo and other port operations",
+            "publisher": "South African Revenue Service",
+            "checked_at": "2026-10-25"
+          },
+          {
             "url": "https://www.sabcnews.com/sabcnews/call-for-king-mswatis-prosecution-as-eff-members-protest-in-solidarity-with-amaswati/",
             "title": "Call for King Mswati's prosecution as EFF members protest in solidarity with amaSwati - SABC News - Breaking news, special reports, world, business, sport coverage of all South African current events. Africa's news leader.",
             "publisher": "sabcnews.com",
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "R4-AES-001",
+            "kind": "ended_by",
+            "finding_id": "R4-AES-001",
+            "phase_id": "R4-AES-001-NP1",
+            "from": "2021-09-20",
+            "basis": "later_access"
+          }
+        ],
         "current_status_established": false,
         "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "source_access": "Dated source text or indexed extracts inspected for the named crossing, direction and affected movement. Official documents and attributed operational reports are identified individually; no independent field verification.",
+        "previous_finding": "Original EFF protest closure retrieved; published standing hours alone are insufficient proof of its exact end.",
+        "followup_note": "Further source, date and scope review applied on 25 October 2026. Earlier findings are retained in the downloadable review."
       },
       {
         "record_id": "R4-AES-004",
@@ -11854,9 +12384,9 @@
         "record_id": "R5-AES-001",
         "title": "Golela–Lavumisa export suspension during June 2021 Eswatini unrest",
         "checked_at": "2026-10-25",
-        "outcome": "unresolved",
-        "evidence_date": null,
-        "finding": "A July reopening notice may concern another year; standing passenger hours do not settle the export-specific June 2021 suspension.",
+        "outcome": "ended_by",
+        "evidence_date": "2022-08-03",
+        "finding": "SARS's letter signed 28 July 2022 specifically provides cargo-processing hours at Golela, and its 3 August customs-office update reproduced by SAICA lists Golela open. This cargo-specific evidence bounds the June 2021 export suspension by 3 August 2022. It does not supply the original reopening day, and the 2022 wage-dispute hours are a separate limitation.",
         "phases": [
           {
             "phase_id": "R5-AES-001-FU1",
@@ -11865,6 +12395,18 @@
           }
         ],
         "sources": [
+          {
+            "url": "https://www.sars.gov.za/wp-content/uploads/Docs/Customs/Letter-to-Trade-on-Land-Ports-Adjusted-Cargo-Processing-Hours-27-July-2022_Updated.2.pdf",
+            "title": "SARS letter signed 28 July 2022: Golela cargo processing hours",
+            "publisher": "South African Revenue Service",
+            "checked_at": "2026-10-25"
+          },
+          {
+            "url": "https://www.saica.org.za/resources/141448",
+            "title": "Legal and Policy, 4 August 2022: dated SARS customs-office operational update",
+            "publisher": "South African Institute of Chartered Accountants",
+            "checked_at": "2026-10-25"
+          },
           {
             "url": "https://wiki.unece.org/spaces/CTRBSBC/pages/101549007/South%2BAfrica",
             "title": "South Africa - Observatory on Border Crossings Status due to COVID-19 - UNECE Wiki",
@@ -11878,10 +12420,21 @@
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "R5-AES-001",
+            "kind": "ended_by",
+            "finding_id": "R5-AES-001",
+            "phase_id": "R5-AES-001-FU1",
+            "from": "2022-08-03",
+            "basis": "later_access"
+          }
+        ],
         "current_status_established": false,
         "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "source_access": "Dated source text or indexed extracts inspected for the named crossing, direction and affected movement. Official documents and attributed operational reports are identified individually; no independent field verification.",
+        "previous_finding": "A July reopening notice may concern another year; standing passenger hours do not settle the export-specific June 2021 suspension.",
+        "followup_note": "Further source, date and scope review applied on 25 October 2026. Earlier findings are retained in the downloadable review."
       },
       {
         "record_id": "R6-AM-007",
@@ -12725,9 +13278,9 @@
         "record_id": "FU-COV-EUR-002",
         "title": "Portuguese farmer blockades at Paymogo and Rosal border roads, February 2024",
         "checked_at": "2026-10-25",
-        "outcome": "unresolved",
-        "evidence_date": null,
-        "finding": "Reporting confirms blockades but omitted crossings in later lists do not prove both roads reopened.",
+        "outcome": "partial",
+        "evidence_date": "2024-02-03",
+        "finding": "Portuguese GNR confirmed normal traffic at Vila Verde de Ficalho after farmers dispersed around midnight on 2–3 February 2024. This resolves only the Rosal de la Frontera phase. The separate Paymogo–Minas de Santo Domingo road is not resolved by a report about Ficalho.",
         "phases": [
           {
             "phase_id": "FU-COV-EUR-002-FU1",
@@ -12741,6 +13294,12 @@
           }
         ],
         "sources": [
+          {
+            "url": "https://eco.sapo.pt/2024/02/03/agricultores-em-ficalho-beja-desmobilizaram-e-vao-reunir-se-com-ministra/",
+            "title": "GNR confirms normal traffic at Ficalho after overnight dispersal, 3 February 2024",
+            "publisher": "ECO / Lusa",
+            "checked_at": "2026-10-25"
+          },
           {
             "url": "https://www.ultimahora.es/noticias/comunidades/2024/02/02/2098213/agricultores-portugueses-mantienen-por-segundo-dia-cortes-frontera-huelva-rosal-paymogo.html",
             "title": "Agricultores portugueses mantienen por segundo día los cortes en la frontera con Huelva en Rosal y Paymogo",
@@ -12760,10 +13319,21 @@
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "FU-COV-EUR-002",
+            "kind": "ended_by",
+            "finding_id": "FU-COV-EUR-002",
+            "phase_id": "FU-COV-EUR-002-FU2",
+            "from": "2024-02-03",
+            "basis": "later_access"
+          }
+        ],
         "current_status_established": false,
         "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "source_access": "Dated source text or indexed extracts inspected for the named crossing, direction and affected movement. Official documents and attributed operational reports are identified individually; no independent field verification.",
+        "previous_finding": "Reporting confirms blockades but omitted crossings in later lists do not prove both roads reopened.",
+        "followup_note": "Further source, date and scope review applied on 25 October 2026. Earlier findings are retained in the downloadable review."
       },
       {
         "record_id": "FU-COV-GLA-001",
@@ -13160,9 +13730,9 @@
         "record_id": "C7-AF-001",
         "title": "Mananga dated closure and EFF obstruction during Eswatini unrest, June–July2021",
         "checked_at": "2026-10-25",
-        "outcome": "unresolved",
-        "evidence_date": null,
-        "finding": "Both original Mananga closure observations were found; a dated later operational source is still needed.",
+        "outcome": "ended_by",
+        "evidence_date": "2021-09-20",
+        "finding": "The tourism minister's 20 September 2021 entry announcement, reported contemporaneously, specifically lists Mananga as open. A December 2021 firsthand account describes crossing there by car, and SARS later confirms cargo processing. These establish subsequent operation after both the June 29 closure and July 1 protest. They do not establish the exact end of either interruption or continuous access between observations.",
         "phases": [
           {
             "phase_id": "C7-AF-001-P1",
@@ -13177,6 +13747,24 @@
         ],
         "sources": [
           {
+            "url": "https://umhambi.blogspot.com/2021/09/eswatini-current-entry-guidelines-as-of.html",
+            "title": "Report of Eswatini tourism minister's 20 September 2021 entry announcement",
+            "publisher": "TravelComments",
+            "checked_at": "2026-10-25"
+          },
+          {
+            "url": "https://www.coddichronicles.com/eswatini/",
+            "title": "Dated December 2021 account of crossing Mananga by car",
+            "publisher": "Coddiwomple Chronicles",
+            "checked_at": "2026-10-25"
+          },
+          {
+            "url": "https://www.sars.gov.za/wp-content/uploads/Docs/Customs/Letter-to-Trade-on-Land-Ports-Adjusted-Cargo-Processing-Hours-27-July-2022_Updated.2.pdf",
+            "title": "SARS letter signed 28 July 2022: Mananga cargo processing",
+            "publisher": "South African Revenue Service",
+            "checked_at": "2026-10-25"
+          },
+          {
             "url": "https://www.sabcnews.com/sabcnews/eff-in-mpumalanga-shuts-down-mananga-border-in-solidarity-with-poeple-of-eswatini/",
             "title": "EFF in Mpumalanga shuts down Mananga border in solidarity with people of Eswatini - SABC News - Breaking news, special reports, world, business, sport coverage of all South African current events. Africa's news leader.",
             "publisher": "sabcnews.com",
@@ -13189,10 +13777,29 @@
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "C7-AF-001",
+            "kind": "ended_by",
+            "finding_id": "C7-AF-001",
+            "phase_id": "C7-AF-001-P1",
+            "from": "2021-09-20",
+            "basis": "later_access"
+          },
+          {
+            "record_id": "C7-AF-001",
+            "kind": "ended_by",
+            "finding_id": "C7-AF-001",
+            "phase_id": "C7-AF-001-P2",
+            "from": "2021-09-20",
+            "basis": "later_access"
+          }
+        ],
         "current_status_established": false,
         "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "source_access": "Dated source text or indexed extracts inspected for the named crossing, direction and affected movement. Official documents and attributed operational reports are identified individually; no independent field verification.",
+        "previous_finding": "Both original Mananga closure observations were found; a dated later operational source is still needed.",
+        "followup_note": "Further source, date and scope review applied on 25 October 2026. Earlier findings are retained in the downloadable review."
       },
       {
         "record_id": "C7-AF-002",
@@ -14793,9 +15400,9 @@
         "record_id": "REC50-R42-002",
         "title": "Bulgarian farmer restrictions at Ruse and Kardam, September 2023",
         "checked_at": "2026-10-25",
-        "outcome": "unresolved",
-        "evidence_date": null,
-        "finding": "Ruse reopening does not establish reopening at Kardam; preserve the separate unresolved phase.",
+        "outcome": "ended_by",
+        "evidence_date": "2023-09-18",
+        "finding": "Romania’s Coast Guard confirmed that both trucks and cars were again passing normally through Negru Vodă at 13:20 on 18 September 2023. This directly bounds the Kardam–Negru Vodă phase on the day of the protest; a reopening at Ruse was not used as a substitute. The original September event remains in the historical record.",
         "phases": [
           {
             "phase_id": "REC50-R42-002-P2",
@@ -14804,6 +15411,12 @@
           }
         ],
         "sources": [
+          {
+            "url": "https://www.radioconstanta.ro/2023/09/18/update-incepand-cu-ora13-20-traficul-prin-ptf-negru-voda-se-desfasoara-in-conditii-normale-atat-pentru-autocamioane-cat-si-pentru-autoturisme-a-transmis-garda-de-coasta/",
+            "title": "Coast Guard confirms normal car and truck traffic at Negru Vodă, 13:20 on 18 September 2023",
+            "publisher": "Radio România Constanța / Romanian Coast Guard",
+            "checked_at": "2026-10-25"
+          },
           {
             "url": "https://www.politiadefrontiera.ro/ro/main/i-informare-trafic-restrictionat-la-puncte-de-trecere-a-frontierei-din-sudul-tarii-cauzate-de-protestele-fermierilor-bulgari-34780.html",
             "title": "Informare: trafic restricționat la puncte de trecere a frontierei din sudul țării, cauzate de protestele fermierilor bulgari - Politia de Frontiera",
@@ -14823,10 +15436,21 @@
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "REC50-R42-002",
+            "kind": "ended_by",
+            "finding_id": "REC50-R42-002",
+            "phase_id": "REC50-R42-002-P2",
+            "from": "2023-09-18",
+            "basis": "later_access"
+          }
+        ],
         "current_status_established": false,
         "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "source_access": "Dated source text or indexed extracts inspected for the named crossing, direction and affected movement. Official documents and attributed operational reports are identified individually; no independent field verification.",
+        "previous_finding": "Ruse reopening does not establish reopening at Kardam; preserve the separate unresolved phase.",
+        "followup_note": "Further source, date and scope review applied on 25 October 2026. Earlier findings are retained in the downloadable review."
       },
       {
         "record_id": "REC50-R42-003",
@@ -14989,11 +15613,6 @@
         ],
         "integration": [
           {
-            "kind": "new_status_observation",
-            "observation_id": "STATUS-AUDIT-REC50-R43-003-20261009",
-            "from": "2026-10-09"
-          },
-          {
             "record_id": "REC50-R43-003",
             "phase_id": "REC50-R43-003-P2",
             "from": "2026-07-22",
@@ -15155,7 +15774,7 @@
         "checked_at": "2026-10-25",
         "outcome": "scope_changed",
         "evidence_date": "2019-01-30",
-        "finding": "January 30 relaxation permits qualifying imports from unaffected South African areas; regional and health conditions prevent a blanket-open classification.",
+        "finding": "Botswana's agriculture ministry announced on 30 January 2019 that live cloven-hoofed animals from unaffected South African provinces, specified processed products and animal feed could again be imported under conditions. The initial countrywide blanket restriction had changed scope by that date. Limpopo-origin and health-condition restrictions were not removed wholesale; the old blanket phase must not be displayed as a continuing nationwide ban through 2026.",
         "phases": [
           {
             "phase_id": "REC50-R46-003-P1",
@@ -15166,8 +15785,8 @@
         "sources": [
           {
             "url": "https://www.xinhuanet.com/english/2019-01/31/c_137787989.htm",
-            "title": "Botswana loosens total ban on imports of cloven-hoofed animal, meat products from South Africa - Xinhua | English.news.cn",
-            "publisher": "xinhuanet.com",
+            "title": "Botswana ministry announces partial lifting of the South African animal-import ban, 30 January 2019",
+            "publisher": "Xinhua / Botswana Ministry of Agricultural Development and Food Security",
             "checked_at": "2026-10-25"
           },
           {
@@ -15177,10 +15796,21 @@
             "checked_at": "2026-10-25"
           }
         ],
-        "integration": [],
+        "integration": [
+          {
+            "record_id": "REC50-R46-003",
+            "kind": "ended_by",
+            "finding_id": "REC50-R46-003",
+            "phase_id": "REC50-R46-003-P1",
+            "from": "2019-01-30",
+            "basis": "scope_changed"
+          }
+        ],
         "current_status_established": false,
-        "limitations": "A later access bound does not assert that the border is open now, continuous access since the bound, or an exact historical reopening. A current observation does not establish continuity since the original last-confirmed date. Unresolved and partial findings do not change historical durations.",
-        "source_access": "Indexed source extracts inspected; no claim of complete full-text inspection."
+        "limitations": "This bounds the original blanket policy only. It does not establish unrestricted access at every crossing, repeal all remaining conditions, or supply a complete history of the narrower regimes. Historical episode dates and duration totals are unchanged.",
+        "source_access": "Dated source text or indexed extracts inspected for the named crossing, direction and affected movement. Official documents and attributed operational reports are identified individually; no independent field verification.",
+        "previous_finding": "January 30 relaxation permits qualifying imports from unaffected South African areas; regional and health conditions prevent a blanket-open classification.",
+        "followup_note": "Further source, date and scope review applied on 25 October 2026. Earlier findings are retained in the downloadable review."
       },
       {
         "record_id": "REC50-R47-003",
@@ -15353,20 +15983,20 @@
     ],
     "counts": {
       "outcomes": {
-        "ended_by": 75,
-        "confirmed_current": 26,
-        "unresolved": 83,
+        "ended_by": 82,
+        "confirmed_current": 28,
+        "unresolved": 74,
         "scope_changed": 10,
         "reported_current": 1,
         "later_confirmation": 5,
         "partial": 18,
         "conflicting": 3
       },
-      "records_with_integrated_findings": 106,
-      "resolved_phases": 122,
-      "remaining_unverified_phases": 128,
-      "remaining_unverified_records": 118,
-      "status_observations": 33
+      "records_with_integrated_findings": 119,
+      "resolved_phases": 136,
+      "remaining_unverified_phases": 114,
+      "remaining_unverified_records": 107,
+      "status_observations": 36
     },
     "covid_followup": {
       "checked_at": "2026-10-25",
@@ -15412,11 +16042,68 @@
     },
     "chronology_followup": {
       "checked_at": "2026-10-25",
-      "reviewed_observations": 33,
-      "observations_with_supported_periods": 33,
-      "timeline_periods": 45,
+      "reviewed_observations": 36,
+      "observations_with_supported_periods": 36,
+      "timeline_periods": 48,
       "pre_window_regimes": 6,
-      "method": "Each of the 33 status observations was checked against its prior chronology and source evidence. Effective dates, pre-window regimes, changes of legal scope and genuine reclosures are separate from observation/check dates. Continuity describes the stated access regime with exceptions, not a measured daily closure duration. Source-access limits remain visible in the underlying record and the observation notes."
+      "method": "Each status observation was checked against its prior chronology and source evidence. Effective dates, pre-window regimes, changes of legal scope and genuine reclosures are separate from observation/check dates. Continuity describes the stated access regime with exceptions, not a measured daily closure duration. Source-access limits remain visible in the underlying record and the observation notes."
+    },
+    "open_ended_followup": {
+      "checked_at": "2026-10-25",
+      "updated_record_ids": [
+        "R2-EA-005",
+        "SC19",
+        "SC20",
+        "R3-SC-002",
+        "R4-AES-001",
+        "C7-AF-001",
+        "R5-AES-001",
+        "FU-COV-EUR-002",
+        "REC50-R46-003",
+        "REC50-R42-002",
+        "EU006",
+        "EU007",
+        "R2-EU-009"
+      ],
+      "new_observation_ids": [
+        "STATUS-AUDIT-EU006-20261025",
+        "STATUS-AUDIT-EU007-20261025",
+        "STATUS-AUDIT-R2-EU-009-20261025"
+      ],
+      "new_resolution_phase_ids": [
+        "R2-EA-005-FU1",
+        "SC19-FU1",
+        "SC20-R1",
+        "R3-SC-002-R1",
+        "R4-AES-001-NP1",
+        "C7-AF-001-P1",
+        "C7-AF-001-P2",
+        "R5-AES-001-FU1",
+        "FU-COV-EUR-002-FU2",
+        "REC50-R46-003-P1",
+        "REC50-R42-002-P2",
+        "EU006-D1",
+        "EU007-R1",
+        "R2-EU-009-R1"
+      ],
+      "previous_counts": {
+        "outcomes": {
+          "ended_by": 75,
+          "confirmed_current": 26,
+          "unresolved": 83,
+          "scope_changed": 10,
+          "reported_current": 1,
+          "later_confirmation": 5,
+          "partial": 18,
+          "conflicting": 3
+        },
+        "records_with_integrated_findings": 106,
+        "resolved_phases": 122,
+        "remaining_unverified_phases": 128,
+        "remaining_unverified_records": 118,
+        "status_observations": 33
+      },
+      "method": "Follow-up checks distinguish exact policy changes, observed resumption, later-access bounds and continuing named-post restrictions. A changed blanket policy can stop the old broad marker without establishing unrestricted entry at every port. Dated event text takes precedence over page mastheads; plans and announced expiry dates are not observed reopenings. No global pandemic cutoff is used. Continuing restrictions are dated from their effective date, not this review date; no whole-frontier geometry is substituted for unlocated named posts."
     }
   },
   "geography_windows": [
