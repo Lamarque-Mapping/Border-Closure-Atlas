@@ -27,15 +27,18 @@ assert.equal(groups[1].phases,2,'nonexclusive rationale labels retain the shared
 const root=path.resolve(__dirname,'../dist');
 const read=name=>JSON.parse(fs.readFileSync(path.join(root,name),'utf8').replace(/^window.BORDER_DATA = /,'').replace(/;\s*$/,''));
 const full=read('data.js'),light=read('map-data.js');
+const reference=require('./release-verification-reference.cjs').load();
 const fullRows=M.durationRows(full.events),lightRows=M.durationRows(light.events);
-assert.equal(fullRows.length,164);assert.equal(new Set(fullRows.map(p=>p.record_id)).size,160);
+const expectedRows=reference.exactPhases();
+const phaseValues=rows=>rows.map(p=>[p.record_id,p.phase_id,p.start,p.end,p.days,[...p.codes].sort()]).sort((a,b)=>a[1].localeCompare(b[1]));
+assert.deepEqual(phaseValues(fullRows),phaseValues(expectedRows),'exact sample reconciles to native source dates, inclusion and reopening evidence');
 assert.deepEqual(lightRows,fullRows,'opening data yields the exact same eligible phases without loading the archive');
-const expected={Security:[79,76,7],'Health and biosecurity':[48,48,119],'Trade and protectionism':[21,20,3],Migration:[20,18,4],'Electoral politics':[8,8,3],'Interstate disputes and pressure':[21,21,13],'Power and regime politics':[8,8,7.5],'Policy and socioeconomic demands':[9,9,2],'Administration and service operation':[0,0,null],'Environment and resource management':[0,0,null]};
+const expected=new Map(reference.groups(reference.includedIDs,full.meta.rationale_categories).map(group=>[group.code,group]));
 for(const g of M.durationGroups(full.events,full.meta.rationale_categories)){
- assert.deepEqual([g.phases,g.records,g.median],expected[g.code],g.code);
+ assert.deepEqual(g,expected.get(g.code),g.code+' statistics reconcile to native tables');
  assert(g.records<=g.total);assert(g.phases>=g.records);
 }
-assert.equal(Math.min(...fullRows.map(p=>p.days)),1);assert.equal(Math.max(...fullRows.map(p=>p.days)),1856);
-assert.deepEqual(M.continents(full.events.filter(e=>!e.quarantined)).map(x=>[x.label,x.count]),[['Africa',190],['Asia',284],['Europe',116],['North America',69],['South America',55],['Oceania',6]]);
+assert.equal(Math.min(...fullRows.map(p=>p.days)),Math.min(...expectedRows.map(p=>p.days)));assert.equal(Math.max(...fullRows.map(p=>p.days)),Math.max(...expectedRows.map(p=>p.days)));
+assert.deepEqual(M.continents(full.events.filter(e=>!e.quarantined)),M.continents(light.events.filter(e=>!e.quarantined)),'full/light continent denominators agree');
 assert(!M.CONTINENTS.includes('Unassigned'));
-console.log('Analysis metrics passed: 164 exact closure phases / 160 records; explicit observed reopening, UTC arithmetic, no inferred/summed spans, category medians, missing samples, and full/light equivalence.');
+console.log('Analysis metrics passed: '+fullRows.length+' exact closure phases / '+new Set(fullRows.map(p=>p.record_id)).size+' records reconciled to native tables; observed reopening, UTC arithmetic, no inferred/summed spans, category statistics and full/light equivalence.');

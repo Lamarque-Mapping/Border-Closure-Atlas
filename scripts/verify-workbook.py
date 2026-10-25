@@ -1,20 +1,24 @@
 #!/usr/bin/env python3
-"""Reconcile the compiled release independently against its read-only workbook.
+"""Reconcile the compiled release independently against its native source tables.
 
 Does not import the compiler, fetch sources, mutate the workbook or require HTML.
 Missing dates, provenance notes and historical/current separation are checked.
 """
 import collections
+import csv
 import datetime as dt
 import hashlib
 import json
+import io
+import zipfile
 from pathlib import Path
-import openpyxl
+from release_common import load_json,read_manifest,sha256,native_sheets,validate_native,validate_reader
 
 ROOT = Path(__file__).resolve().parents[1]
 WEB = ROOT/'dist' if (ROOT/'dist').exists() else ROOT/'releases/current_public/web'
-EXPECTED_SHA = 'b7290c0ce1056ed7f045ff66e7354edd1d5593db001b12f4d65372318185c6f1'
-MODEL_SHA = '166953024ad9fb169d6c7c6067455aaf72429fcab467b934db9e4bf79ff5ae3e'
+manifest=read_manifest()
+EXPECTED_SHA=manifest['files']['data']['sha256']
+release=load_json(ROOT/manifest['files']['data']['path']);validate_native(release)
 
 def check(actual, expected, label):
     assert actual == expected, label + ': compiled value differs from current workbook'
@@ -38,11 +42,17 @@ source = ROOT/'source'/m['source_filename']; source_bytes = source.read_bytes()
 check(hashlib.sha256(source_bytes).hexdigest(), EXPECTED_SHA, 'Replacement source identity')
 check(m['source_sha256'], EXPECTED_SHA, 'Compiled workbook SHA')
 check(m['research_method']['source_sha256'], EXPECTED_SHA, 'Method workbook SHA')
-check((WEB/'downloads'/m['source_filename']).read_bytes(), source_bytes, 'Workbook download bytes')
-w = openpyxl.load_workbook(source, read_only=True, data_only=True)
-sheets = {s.title:[[normalized(v) for v in r] for r in s.iter_rows(values_only=True)
-                   if any(v is not None for v in r)] for s in w}
-w.close()
+check((WEB/m['download_companion_json']).read_bytes(),source_bytes,'Native data download bytes')
+check(m['data_state_sha256'],release['data_state_sha256'],'Canonical research state')
+check(m['release_method'],load_json(ROOT/'source/release-method.json'),'Full method account')
+reader_report=validate_reader(release=release)
+check(reader_report,manifest['reader_validation'],'Reader checks remain bound to this release')
+for key,field in [('reader','workbook'),('companion_json','companion_json'),('companion_zip','companion_zip')]:
+    item=manifest['downloads'][key]
+    check(m['download_'+field],item['path'],'Download path '+key)
+    check(m['download_'+field+'_sha256'],item['sha256'],'Download metadata hash '+key)
+    check(sha256(WEB/item['path']),item['sha256'],'Actual download bytes '+key)
+sheets=native_sheets(release)
 def table(name, header=0):
     rows=sheets[name]
     return [dict(zip(rows[header],r)) for r in rows[header+1:] if r[0] is not None]
@@ -51,15 +61,15 @@ register=table('Register',2); ids=[r['ID'] for r in register]
 dimensions={r['ID']:r for r in table('Dimensions')}
 durations={r['Record ID']:r for r in table('Durations')}
 audits={r['Record ID']:r for r in table('Audit review')}
-check(len(ids),701,'Source parent count'); check(len(set(ids)),701,'Unique source IDs')
+check(len(ids),release['counts']['records'],'Source parent count'); check(len(set(ids)),len(ids),'Unique source IDs')
 check([e['id'] for e in events],ids,'Exact compiled IDs and workbook order')
-check(len(by_id),701,'Unique compiled IDs')
+check(len(by_id),len(ids),'Unique compiled IDs')
 # Dimensions was not extended for the 48 added parents. They must still import.
 new=set(ids)-set(dimensions)
-check(len(dimensions),653,'Historical Dimensions rows'); check(len(new),48,'Added parent IDs')
+check(len(new),48,'Retained parents without native Dimensions rows')
 check(collections.Counter(r.split('-')[0] for r in new),{'FU':21,'NP':12,'C7':15},'Added parent groups')
 check(collections.Counter(r['Analysis inclusion'] for r in register),
-      {'Included':697,'Quarantined':3,'Excluded':1},'Inclusion counts')
+      {'Included':release['counts']['included'],'Quarantined':3,'Excluded':1},'Inclusion counts')
 check({r['ID'] for r in register if r['Analysis inclusion']=='Quarantined'},
       {'GL18','SA025','R3-SC-004'},'Quarantined IDs')
 check({r['ID'] for r in register if r['Analysis inclusion']=='Excluded'},{'SUP-004'},'Excluded ID')
@@ -89,6 +99,7 @@ flags={
  'formal_policy':('Formal policy (1=yes)','Formal policy',213),
  'ordered_window':('Ordered window (1=yes)','Ordered window',85),
  'intermittent_regime':('Intermittent regime (1=yes)','Intermittent regime',23)}
+flags={key:(column,label,sum(bool(durations[rid][column]) for rid in included_ids)) for key,(column,label,_) in flags.items()}
 record_fields={'title':'Closure or restriction episode','region':'Region',
  'start':'Original start','end':'Original stated endpoint','endpoint_type':'Original endpoint meaning',
  'policy_group':'Related policy / campaign','official_rationale':'Historical recorded justification',
@@ -144,11 +155,13 @@ for r in register:
             expected[field]='; '.join(dict.fromkeys(str(p[column]) for p in phase_groups[rid] if p.get(column))) or None
     if not expected['crossings']:
         expected['crossings']='; '.join(dict.fromkeys(row['Name / original scope text'] for row in location_groups[rid])) or None
-    check(e['countries'],parts(dim.get('Countries or territories')) or
-          sorted({c for row in location_groups[rid] for c in parts(row['Countries'])}),rid+' countries from current source only')
+    check(e['countries'],release['countries_by_record'][rid],rid+' audited country/entity filters')
+    check(e['release_review'],release['current_review_by_record'][rid],rid+' scoped current review metadata')
     for line in str(r['Current record corrections'] or '').splitlines():
         key,sep,value=line.partition(':')
         if sep and key in correction_fields: expected[correction_fields[key]]=value.strip() or None
+    limit=release.get('country_scope_limits_by_record',{}).get(rid)
+    if limit:expected['uncertainty']='\n\n'.join(v for v in [expected.get('uncertainty'),limit] if v)
     for f,v in expected.items(): check(e.get(f),v,rid+' current '+f)
     for f,c in historical_fields.items(): check(e['historical'][f],r[c],rid+' historical '+f)
     check(e['historical']['claim_checks'],claims[rid],rid+' historical claims')
@@ -161,6 +174,8 @@ for r in register:
     for f,(col,_,_) in flags.items(): check(e['timing_coverage'][f],bool(dur[col]),rid+' '+f)
     check(e['current_review']['outcome'],r['Current audit outcome'],rid+' current outcome')
     check(e['current_review']['claims'],[],rid+' initial claims must not be current')
+    check(e['current_review']['completed'],release['current_review_by_record'][rid]['completed'],rid+' accepted current review date')
+    check(e['current_review']['review_scope'],release['current_review_by_record'][rid]['review_scope'],rid+' review scope retained')
     check(e['current_review']['open_evidence_needs'],audit['Current open evidence needs'],rid+' current needs')
     for f in ['occurrence','start','endpoint','scope','continuity','rationale']:
         claim=next(c for c in e['initial_review']['claims'] if c['field']==f)
@@ -217,6 +232,17 @@ for r in register:
             and h.get('inspected')==row['Evidence by retrieval label'] and h.get('limitation')==row['Access limits by retrieval label']
             and h.get('claims')==row['Claims by retrieval label'] and h.get('statuses')==row['Access statuses — see labelled notes']
             and h.get('provenance')==row['Reviewers / provenance'] for h in s['access_history']),rid+' truncated retrieval notes'
+    expected_onsets=[]
+    if rid in included_ids:
+        for p in phase_groups[rid]:
+            a,b=p['Start earliest'],p['Start latest']
+            if p['Contested / held (1=yes)'] or not a or not b:continue
+            try:first,last=dt.date.fromisoformat(a),dt.date.fromisoformat(b)
+            except (ValueError,TypeError):continue
+            if first<=last and a[:7]==b[:7]:expected_onsets.append({'phase_id':p['Phase ID'],'month':a[:7],'measure_type':p['Evidence category']})
+    check(e['phase_onsets'],expected_onsets,rid+' phase start months and evidence categories')
+    check(e['onset_months'],sorted({p['month'] for p in expected_onsets}),rid+' supported onset month set')
+    check(set(e['source_urls']),set(release['source_urls_by_record'][rid]),rid+' companion source links')
 
 summary=m['atlas_summary']['chronology_coverage']; coverage=table('Timing coverage')[0]
 for flag,(column,coverage_column,expected) in flags.items():
@@ -225,27 +251,23 @@ for flag,(column,coverage_column,expected) in flags.items():
     check(sum(e['timing_coverage'][flag] for e in included),expected,flag+' compiled count')
     check(summary[flag],expected,flag+' metadata count')
 check({rid for rid in included_ids if not durations[rid]['Any dated phase (1=yes)']},{'H06','R2-EA-002'},'Undated records')
-check(len(phases),827,'Source phase count'); check(len({p['Phase ID'] for p in phases}),827,'Unique phase IDs')
-check(sum(len(e['duration_periods']) for e in events),827,'Compiled phase count')
-check(sum(len(e['duration_periods']) for e in included),825,'Included phases')
-check(sum(p['contested'] for e in included for p in e['duration_periods']),19,'Included held phases')
-rationale_counts={'Security':292,'Health and biosecurity':253,'Trade and protectionism':69,'Migration':45,
- 'Electoral politics':80,'Interstate disputes and pressure':66,'Power and regime politics':36,
- 'Policy and socioeconomic demands':49,'Administration and service operation':3,'Environment and resource management':2}
+check(len(phases),release['counts']['phases'],'Source phase count');check(len({p['Phase ID'] for p in phases}),len(phases),'Unique phase IDs')
+check(sum(len(e['duration_periods']) for e in events),len(phases),'Compiled phase count')
+check(sum(len(e['duration_periods']) for e in included),sum(p['Parent record ID'] in included_ids for p in phases),'Included phases')
+check(sum(p['contested'] for e in included for p in e['duration_periods']),sum(bool(p['Contested / held (1=yes)']) for p in phases if p['Parent record ID'] in included_ids),'Included held phases')
+rationale_counts={category:len({r['Record ID'] for r in assignment_rows if r['Record ID'] in included_ids and r['Broad rationale']==category}) for category in {r['Broad rationale'] for r in assignment_rows if r['Broad rationale']!='Uncoded'}}
 check(set(m['rationale_categories']),set(rationale_counts),'Ten current rationale categories')
 for category,expected in rationale_counts.items():
     check(len({r['Record ID'] for r in assignment_rows if r['Record ID'] in included_ids and r['Broad rationale']==category}),expected,category+' source count')
     check(sum(category in e['rationales'] for e in included),expected,category+' compiled count')
 check(m['rationale_counts'],rationale_counts,'Rationale metadata')
-check(sum(not e['rationales'] for e in included),20,'No assigned category count')
-check(len(followups),368,'Follow-up rows'); check(m['followup_review_count'],368,'Follow-up metadata')
+check(sum(not e['rationales'] for e in included),sum(not any(r['Broad rationale']!='Uncoded' for r in assignments[rid]) for rid in included_ids),'No assigned category count')
+check(m['followup_review_count'],len(followups),'Follow-up metadata')
 check(m['followup_parent_count'],len({r['Record ID'] for r in followups if r['Record ID'] in by_id}),'Follow-up parent metadata')
-check(len(issues),371,'Open evidence rows'); check(len({r['Record ID'] for r in issues}),218,'Open evidence parents')
-check(m['review_queue_items'],371,'Open evidence metadata'); check(m['open_issue_parent_count'],218,'Open parent metadata')
-check(len(index_rows),4376,'Grouped record–URL entries'); check(m['source_index_rows'],4376,'Source metadata')
-check(len({(r['Record ID'],r['Source URL']) for r in index_rows}),4376,'Unique record–URL entries')
-check(len(bindings),836,'Phase binding rows')
-binding_counts={'approved_approximate':16,'unlocated':811,'rejected_wrong_crossing':5,'unverified_phase_applicability':4}
+check(m['review_queue_items'],len(issues),'Open evidence metadata');check(m['open_issue_parent_count'],len({r['Record ID'] for r in issues}),'Open parent metadata')
+check(m['source_index_rows'],len(index_rows),'Source metadata')
+check(len({(r['Record ID'],r['Source URL']) for r in index_rows}),len(index_rows),'Unique record–URL entries')
+binding_counts=dict(collections.Counter(r['Binding decision'] for r in bindings))
 check(dict(collections.Counter(r['Binding decision'] for r in bindings)),binding_counts,'Source binding counts')
 check(m['phase_binding_counts'],binding_counts,'Binding metadata')
 for field,sheet in [('locations','Locations'),('phase_locations','Phase locations')]:
@@ -254,13 +276,37 @@ for field,sheet in [('followup_review','Follow-up review'),('audit_changes','Aud
                     ('relationships','Relationships'),('country_year_coverage','Country-year coverage')]:
     check(x['workbook_review'][field],table(sheet),'Complete '+sheet+' table')
 codebook={r[0]:r[1] for r in sheets['Codebook'][1:]}
-check(m['codebook'],codebook,'Replacement Codebook'); check(m['release_summary'],table('Release summary'),'Replacement Release summary')
-check(m['source_model_sha256'],codebook['Corrected model identity'],'Workbook model identity')
-check(m['source_model_sha256'],MODEL_SHA,'Correction model SHA')
-check(m['research_method']['verification_statement'],codebook['Correction release 23 October 2026'],'Current review provenance')
-check(m['snapshot_date'],'2026-10-23','Snapshot date')
+check(m['historical_codebook'],codebook,'Preserved historical Codebook')
+check(m['historical_release_summary'],table('Release summary'),'Explicitly historical Release summary')
+check(m['historical_source_model_sha256'],codebook['Corrected model identity'],'Historical workbook model identity')
+check(m['source_model_sha256'],release['data_state_sha256'],'Current canonical research state identity')
+for key,value in release['release_metadata']['research_method'].items():check(m['research_method'][key],value,'Current method '+key)
+check(m['audit_metadata_rows'],len(audits),'Audit metadata row count, not REC50 audit population')
+assert 'reviewed_records' not in m
+current_summary={r['Measure']:r['Release value'] for r in m['release_summary']}
+check(current_summary['Parent records'],len(register),'Current summary records')
+check(current_summary['Chronology phases'],len(phases),'Current summary phases')
+check(current_summary['Evidence queue rows'],len(issues),'Current summary queue rows')
+check(current_summary['Canonical research state'],release['data_state_sha256'],'Current summary model state')
+check(m['codebook']['Phase geometry and traffic rules'],m['research_method']['duration_review']['mapping_rule'],'Current phase-geography rules')
+check(m['snapshot_date'],m['release_method']['release_date'],'Snapshot date')
+check(m['distinct_recorded_urls'],len({u for e in events for u in e['source_urls']}),'Distinct recorded URL catalogue')
+check(m['distinct_recorded_urls'],m['release_method']['counts']['distinct_recorded_urls'],'Method URL count')
 check(m['window_start'],'2016-10-21','Study start'); check(m['window_end'],'2026-10-21','Study end')
-print(f'Workbook reconciliation passed: identical source/download; 701 ordered IDs including 48 additions; '
-      f'697 included; 827 phases; {numeric_checks} numeric minima; endpoint/missing-date safeguards; '
-      '10 rationale groups; initial/current separation; 368 follow-ups; 371 issues; '
-      '4,376 source histories; 836 location decisions; current Codebook/model identity.')
+with zipfile.ZipFile(WEB/m['download_companion_zip']) as archive:
+    check(archive.read('Global_Border_Closures_Data_2016_2026.json.gz'),source_bytes,'ZIP native companion identity')
+    master_csv=list(csv.reader(io.StringIO(archive.read('Global_Border_Closures_Master_2016_2026.csv').decode('utf-8-sig'))))
+    check([row[0] for row in master_csv[1:]],ids,'ZIP master CSV complete ordered IDs')
+    assert all(len(row)==18 for row in master_csv)
+    phase_csv=list(csv.DictReader(io.StringIO(archive.read('Global_Border_Closure_Phases_2016_2026.csv').decode('utf-8-sig'))))
+    check([p['Phase ID'] for p in phase_csv],[p['Phase ID'] for p in phases],'ZIP phase CSV IDs')
+    for actual,expected in zip(phase_csv,phases):
+        for field,value in expected.items():
+            encoded='' if value is None else str(value)
+            if encoded.startswith(('=','+','-','@','\t','\r')):encoded="'"+encoded
+            check(actual[field],encoded,'ZIP native phase field '+expected['Phase ID']+' '+field)
+    check(json.loads(archive.read('crossing-map-review.json')),json.loads((WEB/'downloads/crossing-map-review.json').read_text()),'ZIP geography matches current site review')
+    check(json.loads(archive.read('national-policy-evidence.json')),json.loads((WEB/'downloads/national-policy-evidence.json').read_text()),'ZIP separate national supplement matches site')
+print(f'Release reconciliation passed: {len(ids)} ordered parents; {len(included)} included; {len(phases)} phases; '
+      f'{numeric_checks} numeric minima; {len(index_rows)} source histories; {len(bindings)} native location decisions; '
+      'all raw phases and source links preserved; current/historical separation; held, endpoint and phase-onset safeguards; reader/download/manifest identities.')

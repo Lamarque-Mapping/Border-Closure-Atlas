@@ -74,7 +74,8 @@
   }
   function temporalState(e,month,measureType=''){return temporalStates(e,month,measureType)[0]||'none';}
   function periodsForView(e,state={}){
-    return (state.mode==='intervals'?periods(e,state.measureType):array(e.duration_periods).filter(p=>!state.measureType||p.measure_type===state.measureType)).filter(p=>state.mode!=='intervals'||phaseTemporalState(p,state.month)!=='none');
+    const onsetIDs=state.mode==='onsets'&&Array.isArray(e.phase_onsets)?new Set(e.phase_onsets.filter(p=>monthOrdinal(p.month)===state.month&&(!state.measureType||p.measure_type===state.measureType)).map(p=>p.phase_id)):null;
+    return (state.mode==='intervals'?periods(e,state.measureType):array(e.duration_periods).filter(p=>!state.measureType||p.measure_type===state.measureType)).filter(p=>state.mode!=='intervals'||phaseTemporalState(p,state.month)!=='none').filter(p=>!onsetIDs||onsetIDs.has(p.period_id));
   }
   function mappingRows(e,data,state={}){
     if(excluded(e)||e.record_kind==='national_policy'||!data.crossing_map)return [];
@@ -109,7 +110,7 @@
   function matchesTime(e,mode,month,measureType=''){
     if(mode==='all')return true;
     if(excluded(e))return false;
-    if(mode==='onsets')return month!==null&&month!==undefined&&monthOrdinal(e.onset_month)===month;
+    if(mode==='onsets')return month!==null&&month!==undefined&&(Array.isArray(e.phase_onsets)?e.phase_onsets.some(p=>monthOrdinal(p.month)===month&&(!measureType||p.measure_type===measureType)):monthOrdinal(e.onset_month)===month);
     if(mode==='intervals')return temporalState(e,month,measureType)!=='none';
     return false;
   }

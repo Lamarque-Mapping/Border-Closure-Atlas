@@ -7,10 +7,13 @@ const crypto=require('node:crypto');
 const os=require('node:os');
 const {execFileSync}=require('node:child_process');
 const root=path.resolve(__dirname,'..');
-const filename='Global_Border_Closures_Register_2016_2026.xlsx';
+const manifest=JSON.parse(fs.readFileSync(path.join(root,'source/current-release-manifest.json'),'utf8'));
+const filename=path.basename(manifest.downloads.reader.path);
 const workbookType='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
 const workbook=fs.readFileSync(path.join(root,'dist/downloads',filename));
 const workbookHash=crypto.createHash('sha256').update(workbook).digest('hex');
+assert.equal(workbookHash,manifest.downloads.reader.sha256,'Reader download matches the bound release manifest');
+for(const item of Object.values(manifest.downloads))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'dist',item.path))).digest('hex'),item.sha256,'Every companion download matches its bound bytes');
 
 function spreadsheetLinks(html){
  return [...html.matchAll(/<a\b[^>]*>/gi)].map(match=>Object.fromEntries(
@@ -32,10 +35,20 @@ function checkLinks(file,expectedVersion=workbookHash){
  }
  return links.length;
 }
+function checkCompanions(file){
+ const html=fs.readFileSync(path.join(root,file),'utf8');
+ const anchors=[...html.matchAll(/<a\b[^>]*>/gi)].map(match=>Object.fromEntries([...match[0].matchAll(/\b([\w-]+)\s*=\s*"([^"]*)"/g)].map(a=>[a[1],a[2]])));
+ for(const key of ['companion_json','companion_zip']){
+  const item=manifest.downloads[key],links=anchors.filter(a=>(a.href||'').split('?')[0]===item.path);
+  assert(links.length>0,file+': companion link is present '+key);
+  for(const link of links){const url=new URL(link.href,'https://atlas.invalid/');assert.equal(url.searchParams.get('v'),item.sha256,'Companion cache version matches actual bytes');assert.equal(link.download,path.basename(item.path),'Companion download filename matches its format');}
+ }
+}
 
 (async()=>{
- const templateCount=checkLinks('scripts/analysis-template.html','{{SOURCE_SHA256}}');
+ const templateCount=checkLinks('scripts/analysis-template.html','{{WORKBOOK_SHA256}}');
  const generatedCount=checkLinks('dist/analysis.html');
+ checkCompanions('dist/analysis.html');
  const mainCount=checkLinks('dist/index.html');
  assert.equal(templateCount,1,'Dataset offers one complete workbook');
  assert.equal(generatedCount,templateCount,'generated page retains the download');

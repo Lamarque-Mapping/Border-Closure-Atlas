@@ -1,6 +1,8 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const root=path.resolve(__dirname,'../dist'),C=require(root+'/core.js'),K=require(root+'/cartography.js'),N=require(root+'/national.js'),CSV=require(root+'/record-export.js');
+const manifest=JSON.parse(fs.readFileSync(path.join(root,'../source/current-release-manifest.json'),'utf8'));
+const landCount=manifest.counts.records,includedCount=manifest.counts.included;
 const ctx={window:{},URL};vm.createContext(ctx);
 for(const name of ['map-data.js','national-data.js'])vm.runInContext(fs.readFileSync(root+'/'+name,'utf8'),ctx);
 const data=ctx.window.BORDER_DATA,source=ctx.window.ATLAS_NATIONAL_DATA;
@@ -10,9 +12,9 @@ delete data.geometry_pool;
 N.attach(data,source);N.attach(data,source);
 const national=data.events.filter(N.isNational),land=data.events.filter(e=>!N.isNational(e));
 assert.equal(JSON.stringify(land),originalLand,'supplement must not alter any land record');
-assert.equal(land.length,701);assert.equal(national.length,7);
-assert.equal(C.filterEvents({events:land},{mode:'all'}).length,697);
-assert.equal(C.filterEvents(data,{mode:'all'}).length,704);
+assert.equal(land.length,landCount);assert.equal(national.length,7);
+assert.equal(C.filterEvents({events:land},{mode:'all'}).length,includedCount);
+assert.equal(C.filterEvents(data,{mode:'all'}).length,includedCount+7);
 assert.equal(data.context_locations.features.filter(f=>f.properties.display_role==='national_policy').length,3);
 assert.equal(national.reduce((n,e)=>n+e.national_observations.length,0),18);
 assert.equal(new Set(data.events.map(e=>e.id)).size,data.events.length);
@@ -71,10 +73,10 @@ async function loaderCheck(withManifest){
  const env={window,document:{currentScript:{dataset:{}}},setTimeout,clearTimeout,AbortController,fetch:async file=>{fetched.push(file);return {ok:true,json:async()=>file==='research.json'?{meta:{source_sha256:fixture.meta.source_sha256},events_parts:['land-part.json']}:file==='land-part.json'?{source_sha256:fixture.meta.source_sha256,events:landCopy}:{source_sha256:fixture.meta.source_sha256,record:landCopy.find(e=>e.details_file===file)}};}};
  vm.runInNewContext(fs.readFileSync(root+'/data-loader.js','utf8'),env);
  assert.equal((await window.AtlasData.getRecord(aus.id)).id,aus.id);assert.equal(fetched.length,0);
- assert.equal((await window.AtlasData.getResearchData()).events.length,701);
- assert.equal((await window.AtlasData.getResearchData({includeNational:true})).events.length,708);
+ assert.equal((await window.AtlasData.getResearchData()).events.length,landCount);
+ assert.equal((await window.AtlasData.getResearchData({includeNational:true})).events.length,landCount+7);
  assert.equal((await window.AtlasData.getRecord(aus.id)).national_observations.length,3,'national record still accessible after full evidence loads');
  assert.equal((await window.AtlasData.getRecord(landCopy[0].id)).id,landCopy[0].id);
  if(withManifest)assert.deepEqual(fetched,['research.json','land-part.json']);
 }
-Promise.all([loaderCheck(true),loaderCheck(false)]).then(()=>console.log('Passenger policies passed: 18 observations, 7 histories, 3 complete country reference outlines; precise England jurisdiction retained, no UK constituent boundaries, unfilled solid green outlines, unchanged timelines, no inferred durations, CSV evidence, source isolation, loader cache, and unchanged 697-record land analysis.')).catch(error=>{console.error(error);process.exitCode=1;});
+Promise.all([loaderCheck(true),loaderCheck(false)]).then(()=>console.log('Passenger policies passed: 18 observations, 7 histories, 3 complete country reference outlines; precise England jurisdiction retained, no UK constituent boundaries, unfilled solid green outlines, unchanged timelines, no inferred durations, CSV evidence, source isolation, loader cache, and unchanged land-analysis population.')).catch(error=>{console.error(error);process.exitCode=1;});

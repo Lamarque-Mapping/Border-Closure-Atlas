@@ -9,6 +9,7 @@ from pathlib import Path
 import subprocess
 import xml.etree.ElementTree as ET
 from zipfile import ZipFile
+from release_common import READER_PATH,load_json,DATA_PATH,validate_reader
 
 ROOT=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('reader_layout',ROOT/'scripts/workbook-reader-layout.py')
@@ -17,8 +18,11 @@ READER=importlib.util.module_from_spec(spec);spec.loader.exec_module(READER)
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--workbook',type=Path,default=ROOT/'source/Global_Border_Closures_Register_2016_2026.xlsx')
+    parser.add_argument('--workbook',type=Path,default=READER_PATH)
     args=parser.parse_args()
+    if args.workbook.resolve()==READER_PATH.resolve():
+        print(json.dumps(validate_reader(path=args.workbook,release=load_json(DATA_PATH)),indent=2))
+        return
     original=subprocess.run(['git','show','HEAD:source/Global_Border_Closures_Register_2016_2026.xlsx'],cwd=ROOT,check=True,capture_output=True).stdout
     with ZipFile(io.BytesIO(original)) as package:before={name:package.read(name) for name in package.namelist()}
     _,after,_=READER.read_package(args.workbook)

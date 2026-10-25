@@ -36,7 +36,7 @@ def bundle(web: Path) -> str:
         html = html.replace('url(' + quote + 'vendor/AtlasSans.ttf' + quote + ')',
                             "url('data:font/ttf;base64," + font + "')")
     # Embed the exact workbook and consume its cache version along with the URL.
-    workbook = web / 'downloads/Global_Border_Closures_Register_2016_2026.xlsx'
+    workbook = web / 'downloads/Global_Border_Closures_Master_2016_2026.xlsx'
     html = inline_workbook_downloads(html, workbook.name, workbook.read_bytes())
     licence = (web / 'vendor/AtlasSans-LICENSE.txt').read_text(encoding='utf-8').replace('--', '—')
     return html.replace('</head>', '<!-- Bundled font licence\n' + licence + '\n-->\n</head>')

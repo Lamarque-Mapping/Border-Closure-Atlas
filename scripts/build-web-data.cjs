@@ -9,7 +9,7 @@ const serialise=v=>JSON.stringify(v).replace(/</g,'\\u003c');
 const pick=(v,keys)=>Object.fromEntries(keys.filter(k=>v[k]!==undefined).map(k=>[k,v[k]]));
 const recordDir=path.join(web,'records');fs.mkdirSync(recordDir,{recursive:true});
 const currentFiles=new Set();
-const recordFields=['id','title','region','countries','continents','location_ids','mapping_precision','start','end','scope','crossings','movement','direction','rationales','rationale_coding_status','quarantined','inclusion_status','excluded_from_map','evidence_status','quarantine_reason','current_timing','timing_coverage','onset_month','policy_group'];
+const recordFields=['id','title','region','countries','continents','location_ids','mapping_precision','start','end','scope','crossings','movement','direction','rationales','rationale_coding_status','quarantined','inclusion_status','excluded_from_map','evidence_status','quarantine_reason','current_timing','timing_coverage','onset_month','onset_months','phase_onsets','onset_status','policy_group'];
 const phaseFields=['period_id','kind','measure_type','contested','start_earliest','start_latest','end_earliest','end_latest','last_confirmed','minimum_days','maximum_days','endpoint_status','end_inclusive','endpoint_inclusion','observed_reopening','temporal_display_rule','evidence_dates','scope','complete_operational','exact_complete_operational'];
 const events=data.events.map(e=>{
  const body=serialise({source_sha256:data.meta.source_sha256,record:e});

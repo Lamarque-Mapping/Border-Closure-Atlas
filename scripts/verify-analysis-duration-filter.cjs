@@ -44,13 +44,15 @@ assert.equal(M.durationGroups(M.filterRecords(fixtures,'all','over1'),['A'],'ove
 
 const read=name=>JSON.parse(fs.readFileSync(path.join(root,'dist',name),'utf8').replace(/^window.BORDER_DATA = /,'').replace(/;\s*$/,''));
 const full=read('data.js'),light=read('map-data.js'),data=read('analysis-data.json');
-const counts={all:[697,250],complete:[252,215],exact:[163,144]};
+const reference=require('./release-verification-reference.cjs').load();
+const counts=Object.fromEntries(['all','complete','exact'].map(population=>[population,['all','over1'].map(duration=>reference.populationIDs(population,duration).length)]));
+const phaseValues=rows=>rows.map(p=>[p.record_id,p.phase_id,p.start,p.end,p.days,[...p.codes].sort()]).sort((a,b)=>a[1].localeCompare(b[1]));
 for(const population of Object.keys(counts))for(const duration of ['all','over1']){
  const selected=M.filterRecords(data.events,population,duration),expected=counts[population][duration==='over1'?1:0];
  assert.equal(selected.length,expected,population+' / '+duration+' parent population');
  const phases=M.durationRows(selected,duration);
- assert.equal(phases.length,duration==='over1'?142:164);
- assert.equal(new Set(phases.map(p=>p.record_id)).size,duration==='over1'?140:160);
+ assert.deepEqual(selected.map(e=>e.id).sort(),reference.populationIDs(population,duration).sort(),'parent selection reconciles to native duration summaries and phase bounds');
+ assert.deepEqual(phaseValues(phases),phaseValues(reference.exactPhases(reference.populationIDs(population,duration),duration)),'phase selection reconciles to native evidence');
  if(duration==='over1')assert(phases.every(p=>p.days>1));
  for(const source of [full,light]){
   const other=M.filterRecords(source.events,population,duration);
@@ -69,8 +71,8 @@ for(const id of ['AM010','CC004','CC028','GL14','ME034','NP-COV-EUR-006'])assert
 for(const id of ['CC022','H14','EA030'])assert(!selectedIDs.has(id),id+' has only a one-day or threshold-uncertain interval');
 const plotted=M.durationRows(selected,'over1');
 for(const id of ['GL14-R1','ME034-R1','NP-COV-EUR-006-P02'])assert(!plotted.some(p=>p.phase_id===id),'real short phase cannot leak: '+id);
-const expectedMedians={Security:9,'Health and biosecurity':141,'Trade and protectionism':3,Migration:26,'Electoral politics':3,'Interstate disputes and pressure':22,'Power and regime politics':16,'Policy and socioeconomic demands':2,'Administration and service operation':null,'Environment and resource management':null};
-for(const group of M.durationGroups(selected,data.meta.rationale_categories,'over1'))assert.equal(group.median,expectedMedians[group.code]);
+const expectedGroups=new Map(reference.groups(reference.populationIDs('all','over1'),data.meta.rationale_categories,'over1').map(group=>[group.code,group]));
+for(const group of M.durationGroups(selected,data.meta.rationale_categories,'over1'))assert.deepEqual(group,expectedGroups.get(group.code));
 
 // Execute the real chart, Dataset drill-through and export handlers with a small
 // DOM surface, so both selectors and every chart population share the same gate.
@@ -136,20 +138,20 @@ for(const population of Object.keys(counts))for(const duration of ['all','over1'
   assert(download.rows.slice(1).every(row=>String(row[populationColumn]).includes('>1 day')===(duration==='over1')));
   if(duration==='over1')assert(download.rows.slice(1).every(row=>String(row[populationColumn]).includes('minimum date difference >1 day in at least one operational phase')));
   if(id==='exportDuration'){
-   assert.equal(download.rows.length,duration==='over1'?143:165);
+   assert.equal(download.rows.length,reference.exactPhases(reference.populationIDs(population,duration),duration).length+1,'phase CSV contains the native eligible sample plus its header');
    assert(download.rows.slice(1).every(row=>duration==='all'||row[6]>1),'phase CSV applies the same phase cutoff');
   }
  }
 }
 node('chartPopulation').value='all';node('chartDuration').value='over1';context.renderCharts();context.filterFromChart('code','Security');
 node('exportRows').emit('click');
-assert.equal(downloads.at(-1).recordIDs.length,121);assert(downloads.at(-1).filename.endsWith('-over-1-day.csv'));
+assert.deepEqual(downloads.at(-1).recordIDs.sort(),reference.populationIDs('all','over1').filter(id=>reference.rationalesByID.get(id).has('Security')).sort());assert(downloads.at(-1).filename.endsWith('-over-1-day.csv'));
 node('exportAllRows').emit('click');
-assert.equal(downloads.at(-1).recordIDs.length,697,'full included-record export remains full while charts/Dataset are filtered');
+assert.equal(downloads.at(-1).recordIDs.length,reference.counts.included,'full included-record export remains full while charts/Dataset are filtered');
 assert.equal(downloads.at(-1).filename,'border-closures-included-records.csv');
 assert(template.includes('All {{INCLUDED}} included records; unaffected by filters'));
-node('filters').reset();context.renderRecords();assert.equal(context.filtered.length,697,'reset restores unfiltered Dataset');
-node('chartDuration').value='all';context.renderCharts();assert.equal(context.currentCharts.durationRows.length,164,'Any duration restores the original exact distribution');
+node('filters').reset();context.renderRecords();assert.equal(context.filtered.length,reference.counts.included,'reset restores unfiltered Dataset');
+node('chartDuration').value='all';context.renderCharts();assert.equal(context.currentCharts.durationRows.length,reference.exactPhases().length,'Any duration restores the complete exact distribution');
 assert(ui.includes('$("chartDuration").addEventListener("change",renderCharts)'));
 for(const id of ['chartDuration','durationFilter'])assert(template.includes('id="'+id+'" aria-describedby='));
-console.log('Analysis duration filter passed: all697→250 / complete252→215 / exact163→144; exact phases164→142 (160→140 parents); conservative bounds, explicit censoring, no short-phase leakage, all chart denominators, Dataset drill-through, filtered CSV metadata, and full697-record export preserved.');
+console.log('Analysis duration filter passed against native release tables: '+JSON.stringify(counts)+'; conservative bounds, explicit censoring, no short-phase leakage, all chart denominators, Dataset drill-through, filtered CSV metadata, and full included-record export preserved.');

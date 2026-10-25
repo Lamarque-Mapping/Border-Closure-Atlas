@@ -6,14 +6,18 @@ This map layer is separate from the historical dataset. It changes which geometr
 
 - `scope-review.json`: one geographical-scope decision for each included dated phase, plus the two undated records. The initial classification is a conservative reading of the recorded phase scope, not a new adjudication of historical evidence.
 - `locations.json`: sourced crossing-area positions and individually reviewed phase bindings. Source versions, coordinate methods, qualifications and unresolved or rejected matches are retained.
+- `release-reconciliation.json`: explicit decisions for the added phases, preserved-review provenance, and any new applicability bindings to previously sourced crossing positions. No new coordinates are introduced by the REC50 release reconciliation.
+- `scripts/reconcile-release-geography.py`: the reviewed, explicit reconciliation of the preserved geography with the final native source; run before binding a new release manifest.
 - `scripts/build-crossing-geography.cjs`: validates these files and produces `dist/crossing-geography.js` plus the downloadable location review.
 - `scripts/verify-crossing-map.cjs`: verifies phase mapping, release identity, evidence preservation, timeline populations, geometry types and export behaviour.
 
-Run the builder and crossing checks whenever this layer changes. A replacement workbook needs its own phase-scope review; the runtime rejects a source hash mismatch rather than silently applying old bindings.
+Run the builder and crossing checks whenever this layer changes. A replacement native dataset needs its own phase-scope review; the builder checks every included phase, each exact current scope string, location/scope input identities and source-bound positions. The runtime rejects a source hash mismatch rather than silently applying old bindings. The readable workbook has its own independent download fingerprint.
 
 ## Map rules
 
 A single identified crossing uses one point. Several identified crossings can use separate points; mark a multi-site phase complete only when its full named site set has been mapped. Wider rules can use the existing border references, with the established solid/dotted extent distinction. Uncertain scope and unlocated crossings receive no inferred geometry. They remain in search, counts, full records, Analysis and CSV downloads. Never fall back from an unlocated post to a whole-border highlight.
+
+An explicit `complete: false` binding takes precedence over any complete binding. This also applies to a named crossing whose wider approach or informal routes remain unlocated. A sourced point is not an approval of every phase date, and held phases remain held.
 
 Bindings apply to active dated phases. A point must not inherit unrelated national phases or the full parent record's chronology. A last-confirmed observation is not extended to today; contested dates remain observations at their recorded dates.
 

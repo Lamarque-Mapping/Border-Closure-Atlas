@@ -16,9 +16,10 @@ import sys
 import tempfile
 import xml.etree.ElementTree as ET
 from zipfile import ZipFile
+from release_common import READER_PATH,load_json,DATA_PATH,validate_reader
 
 ROOT = Path(__file__).resolve().parents[1]
-WORKBOOK = ROOT / "source/Global_Border_Closures_Register_2016_2026.xlsx"
+WORKBOOK = READER_PATH
 ORIGINAL_SHA = "f96ad671372e6fb9c1afd564373d954c717f4bf809b75a757b48f54ee08ca024"
 spec = importlib.util.spec_from_file_location("presentation", ROOT / "scripts/workbook-presentation.py")
 PRESENTATION = importlib.util.module_from_spec(spec)
@@ -30,6 +31,9 @@ def main():
     parser.add_argument('--workbook', type=Path, default=WORKBOOK)
     args = parser.parse_args()
     workbook = args.workbook
+    if workbook.resolve()==READER_PATH.resolve():
+        print(json.dumps(validate_reader(path=workbook,release=load_json(DATA_PATH)),indent=2))
+        return
     original_bytes = subprocess.run(["git", "show", "HEAD:source/Global_Border_Closures_Register_2016_2026.xlsx"],
                                     cwd=ROOT, check=True, capture_output=True).stdout
     assert hashlib.sha256(original_bytes).hexdigest() == ORIGINAL_SHA
