@@ -287,10 +287,29 @@
 .duration-toggle button{min-width:54px;min-height:44px;padding:6px 12px;margin:0;border:0;border-radius:6px;background:transparent;color:#315a50;font:600 13px/1.2 Atlas,Arial,sans-serif;cursor:pointer;touch-action:manipulation}
 .duration-toggle button[aria-pressed="true"]{background:#27766b;color:#fff}
 .duration-toggle button:focus-visible{outline:2px solid #27766b;outline-offset:2px}
-.map-duration{position:absolute;top:100px;left:60px;z-index:510}
-.atlas-pending .map-duration,.location-card-open .map-duration{visibility:hidden}
+.map-control-buttons{gap:4px}
+#map-page .leaflet-control-scale{align-items:flex-end}
+#map-page .map-control-buttons .country-label-toggle{width:100%;margin-left:0}
+.map-duration{position:relative;isolation:isolate;min-width:100px;height:28px;gap:0;padding:0;border:0;border-radius:var(--atlas-control-radius);background:transparent;box-shadow:none}
+.map-duration::before{content:'';position:absolute;inset:0;z-index:-1;border:1px solid var(--atlas-control-edge);border-radius:var(--atlas-control-radius);background:#fffffff2;box-shadow:var(--atlas-control-shadow)}
+.map-duration button{position:relative;isolation:isolate;flex:1;min-width:44px;min-height:28px;height:28px;padding:3px 8px;color:#61736a;font:500 11px/1.2 Atlas,Arial,sans-serif}
+.map-duration button::before{content:'';position:absolute;inset:1px;z-index:-1;border-radius:6px}
+.map-duration button[aria-pressed="true"]{background:transparent;color:#fff}
+.map-duration button[aria-pressed="true"]::before{background:#27766b}
+.atlas-pending .map-duration{visibility:hidden}
+@media(min-width:761px) and (min-height:501px), (min-width:951px){
+ #map-page.panel-collapsed .map-caption{bottom:calc(var(--timeline-clearance,150px) + 76px)}
+}
+@media(pointer:coarse), (max-width:760px), (max-width:950px) and (max-height:500px){
+ .map-duration,.map-duration button{height:44px;min-height:44px}
+ .map-duration::before{inset:6px 0}
+ .map-duration button::before{inset:7px 1px}
+}
 @media(max-width:760px), (max-width:950px) and (max-height:500px){
- .map-duration{left:62px;top:100px}
+ #map-page .leaflet-control-scale{flex-wrap:wrap}
+ #map-page .leaflet-control-scale-line,#map-page .map-control-buttons{flex-shrink:0}
+ #map-page .map-control-buttons .map-duration{width:100px}
+ #map-page .map-control-buttons .country-label-toggle{width:auto}
  #map-page:not(.panel-collapsed) .map-duration{visibility:hidden}
  #map-page .startup-panel{top:50%;left:50%;right:auto;width:calc(100% - 32px);max-width:460px;margin:0;padding:20px;transform:translate(-50%,-50%);text-align:center;max-height:calc(100% - 32px);overflow:auto}
  #map-page .startup-panel details{text-align:left}
