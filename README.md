@@ -1,207 +1,203 @@
-# Border Closures Atlas
+# Global Border Closures Atlas
 
-The core land dataset uses the replacement workbook below for its historical
-records, dates, rationales and Analysis. Separately reviewed crossing coordinates
-control map positions without changing those findings. Selected national COVID
-rules remain in the separate supplement and are excluded from core Analysis.
+Release **2026.10.25-rec50**, prepared on 25 October 2026. The study window is
+**21 October 2016–21 October 2026**.
 
-Source: `source/Global_Border_Closures_Register_2016_2026.xlsx`
-Snapshot: 23 October 2026 (`border-corrections-20261023`).
-Study window: 21 October 2016–21 October 2026.
+The final register contains **829 records**, of which **825 are included** in the
+land-border analysis, and **1,010 separate phases**. The union of its per-record
+source catalogues contains **4,680 distinct URLs**. This is not a recursive count
+of every URL string in supporting or historical materials, nor a count of
+independent reports or successful full-text inspections.
+Coverage remains incomplete and differs by place, period and source access.
 
-The public navigation is Map / Overview / Analysis / Dataset. Overview gives
-the introduction, methods, and full-dataset summaries of rationale coding and
-date evidence. Analysis has its own chart navigation with five illustrated
-chart links. Its optional More than 1 day filter selects records with a supported
-operational duration above one day; each phase in the exact-duration plot must
-also pass that cutoff. Policy-only dates and uncertain lengths do not qualify.
-Dataset provides the browser reader, workbook and CSV exports. Legacy Analysis and record links continue to resolve. The map date
-button selects a month and year directly, and Cite provides the Harvard
-reference with the reader's access date. Location and national-policy sources
-have readable HTML pages, with JSON retained as an optional technical download.
-On phones, the timeline is docked to the bottom edge. Play, date and speed controls
-are evenly spaced across the top row. Back and forward arrows flank the slider
-on the second row, and compact Cite/Contact links align with the status note
-in one footer line. The desktop control layout is unchanged.
+The public site keeps the Map / Overview / Analysis / Dataset presentation.
+Overview contains the research methods and summaries of rationale and date
+evidence. Analysis retains its chart navigation and filters. Dataset provides the
+searchable record reader and downloads. Existing section and record links remain
+supported. The atlas describes historical evidence, not live border conditions.
 
-International passenger rules use green country reference outlines for Australia,
-New Zealand and the UK; each entry retains its precise legal jurisdiction.
-England-only measures use the full UK outline without marking an internal boundary.
-Earlier crossing records are optional and off by default, with a toggle under
-Search & zoom → Filters → Map detail & other records. Their hollow grey rings
-include records with reported reopenings and records whose ending is unresolved.
-Neutral bilateral boundary references open explicitly associated records. These
-references do not establish later status or enter the dated selection counts,
-charts or CSV exports; coloured restriction marks retain the existing date rules.
+## Downloads and source data
 
-The downloadable workbook opens on Start here, which links to the existing
-Register and the current phase dates, duration summaries, rationale coding and
-source index. Those six sheets form the default tab view. The other 50 sheets
-remain available through Unhide, including current supporting reviews and
-historical research. Clearly historical Register columns are hidden; current
-correction notes remain visible and take precedence over earlier descriptions.
-Automated readers should select the Register worksheet by name.
+- **Global_Border_Closures_Master_2016_2026.xlsx** is the reader workbook, with two
+  visible tabs: **Closures** and **Methodology**. It replaces the earlier workbook
+  presentation with dozens of supporting and historical sheets. For unusually
+  long cells, expand the formula bar to read the complete text. Complete phase
+  and source detail is also available in the data companion.
+- **Global_Border_Closures_Data_2016_2026.json.gz** is the structured data companion.
+  It retains the current research tables, phase-level chronology, source access,
+  review histories, unresolved findings and provenance.
+- **Global_Border_Closures_Data_2016_2026.zip** packages the data companion and
+  supporting tables/documentation. The master workbook is also offered separately.
+- The site continues to export included records, filtered records, chronology
+  phases, timing coverage, the website snapshot and current review information.
+  The included-record CSV contains all 825 included land records, regardless of
+  active browser filters.
 
-The 24 October workbook compatibility repair gives internal table IDs unique
-values and synchronizes table-column metadata with the existing worksheet
-headings. The latter corrects mismatches in `table4.xml` and `table10.xml`, the
-two table parts identified by an Excel recovery log. Research values, formulas and original worksheet names remain unchanged.
-The repository retains the original research workbook. Before publication,
-`scripts/prepare-release-workbook.py` applies and checks the repair and the
-download's presentation formatting, then the build regenerates the downloadable
-workbook and all data assets. The published fingerprint identifies that prepared
-package; historical research-input fingerprints remain unchanged.
-The presentation uses consistent fonts and table headers, restrained alternating
-rows, fitted text columns, frozen headings and identifying columns, and a compact
-release summary. Original number/date formats and native research features are
-preserved. Presentation resources are authored with the spreadsheet artifact
-tool and checked into `source/workbook-presentation.json`; the release assembler
-uses those resources without requiring that authoring runtime on GitHub Actions.
+The build reads `source/current-release.json.gz`. The shared methodology is
+`source/release-method.json`; its complete account is used in Overview and the
+standalone Analysis page. These files define the release input. The two-tab
+workbook is a reader download, not the input schema for the website importer.
 
-There are 701 parent records: 697 included, three quarantined and one excluded.
-Of the included records, 695 have dated evidence and 252 have a complete
-operational duration for their stated scope, including 163 with exact dates.
-The 827 phase rows remain separate. Nineteen held phases in included records
-supply labelled evidence dates, not confirmed intervals. Only H06 and R2-EA-002
-have no dated phase. There are 371 open evidence items across 218 records.
+The compressed source-file hash, canonical research-state hash and downloadable
+workbook hash identify different objects. Download metadata records each file's
+own SHA-256; a workbook fingerprint is never substituted for a research-state or
+data-source fingerprint.
 
-Ten nonexclusive rationale categories use distinct parent-record counts.
-The current taxonomy includes Administration and service operation and
-Environment and resource management. Twenty included records have no assigned
-category, including unknown reasons and documented reasons outside the taxonomy.
-Categories, related parents and phases can overlap; do not sum them as independent
-closures or aggregate their days. Short land closures remain included; airport
-and sea-only restrictions are outside this release.
+## Research and review
 
-The map and PNG export use phase-specific geography. Named crossings appear as
-the same small rationale-coloured dots used in dotted border lines; larger
-invisible controls support touch and keyboard use. Their size does not encode duration,
-severity or record count. Wider rules retain the established line styles.
+The dataset was compiled using OpenAI’s GPT‑6 Astra with Ultra reasoning, with GPT‑6 Astra Pro documented in the final research and review logs. The work comprised 16 initial research rounds, including three full-register verification exercises, followed by two further register-wide reviews and 50 additional research and review cycles. Six regional AI reviewers contributed to major assessments, with research, challenge and adjudication conducted in separate contexts of the same model. Reviewers checked whether each restriction occurred, its start and endpoint, the crossings and types of movement affected, continuity, and the reported reasons against linked source evidence. The two subsequent register-wide exercises comprised a blind reconstruction and challenge of 653 records, producing 3,918 claim assessments, and a further assessment of all 686 records and 738 phases in the expanded register. Additional chronology work assessed 519 cases and subjected 272 unresolved cases to fresh research and separate review. The final 50 cycles comprised 30 coverage-search cycles, ten targeted-verification cycles and ten audits of preselected records, providing full-record source reviews of 160 entries and addressing 176 targeted questions across 162 entries. Proposed additions were checked against existing episodes to avoid duplication, while partial reopenings and changes in restrictions were recorded as separate phases. The resulting register contains 829 records and 1,010 phases, supported by a catalogue of 4,680 distinct recorded URLs. Automated consistency checks covered the complete final dataset; uncertain dates, source-access limitations and unresolved claims remain explicit. The five register-wide reviews covered successive versions of the dataset, while the later targeted audits examined selected records.
 
-The 24 October 2026 location review contains 78 sourced crossing-area positions,
-with 205 bindings covering 202 phases in 180 records. It covers all six
-China–Mongolia phases at five road crossings. Of 431 single-crossing phases,
-199 have reviewed positions and 232 remain awaiting location checks. A known
-single-post restriction never falls back to a whole-border highlight. Partial
-multi-site and unresolved cases remain searchable, counted and downloadable,
-with their mapping status stated. All 697 included records, dates and Analysis
-figures remain unchanged.
+The reviews used separate contexts within the same model. They do not constitute
+independent human or different-model verification of every record. The three
+initial register-wide checks are included in the 16 initial rounds. The five
+register-wide reviews covered successive versions, not five reviews of the final
+829-record edition. The final 160 full-record audits and 176 targeted questions
+across 162 records are cumulative review measures and can overlap. A record's
+latest review label does not describe its complete review history.
 
-See `source/crossings/README.md` for the review files and update procedure.
-The 16 workbook-approved approximate bindings are retained; rejected and
-unverified old bindings are not silently upgraded. Coordinates are approximate
-crossing-area references, not surveys of historical gates or obstructions.
+Completing a review does not establish every date, attribute or claimed
+explanation. Current conclusions take precedence over labelled historical
+findings, while unresolved questions and failed source-access attempts remain
+visible. Different websites can reproduce the same report. The evidence catalogue
+preserves reporting origins and access limits where recorded.
 
-OSM reference research lives in `research/osm/`, with a reproducible Uganda
-pilot, candidate review tables and source geometries. It is separate from the
-workbook. Only explicitly re-reviewed phase bindings are promoted into the
-crossing layer; the research directory itself is not loaded by the website. See `research/osm/README.md`.
+## Reading the maps and analysis
 
-Current conclusions come from Register, Durations, Chronology phases and Follow-up
-review. Initial Audit review claims, original parent dates and numbered research
-rounds remain explicitly historical. Earlier Codebook snapshots and historical
-Timing coverage columns do not describe the current release. Source index groups
-retrieval histories by record and URL, preserving full, indexed and failed access
-and shared reporting origins. The correction pass used six regional AI reviewers
-and root integration within the same model; no human or different-model validation
-is claimed. Review completion does not establish resolution of every attribute.
+The land register includes restrictions at international land borders and
+cross-border river ferries, including restrictions on particular people or goods.
+Routine opening hours, individual visa refusals and checks that still permit
+passage are outside its scope. Airport and sea-only restrictions are excluded from
+the core land analysis. Selected national COVID-19 passenger rules for Australia,
+New Zealand and the UK remain a separate contextual supplement and do not enter
+the land-border charts.
 
-The base geometry is a reference asset, not a second research source for dates or
-closure findings. Record geography is reconciled against the replacement workbook;
-a phase applies only to its stated scope, traffic and direction. No record content
-or editorial overrides from the previous release are merged. A last observation,
-legal transition or scheduled expiry is not an observed reopening. Endpoint truth
-and inclusion are retained explicitly; date arithmetic never adds a day merely
-because an endpoint is inclusive. Isolated and held observations do not fill gaps.
+A parent record can contain several phases with different dates, directions,
+locations and affected movement. Related parents can describe parts of the same
+policy or event. Record counts are not counts of independent closure decisions;
+phases and their days should not be summed into an assumed continuous closure.
+The ten rationale categories overlap and retain their source attribution.
 
-## Rebuild
+**Border Restrictions** shows the recorded evidence for the selected month.
+**Phases beginning** shows records with a supported phase start in that month,
+including separately labelled operational, policy and scheduled phases. It does
+not measure the incidence of unique new closure decisions. **All recorded
+closures** searches the full study period, including records without confirmed
+dates.
 
-Python 3 with openpyxl is required; Node.js is needed for interaction checks.
-No build system or package installation is required to run the website.
+The date button selects a month and year directly. Playback retains the 1×, 2×,
+4× and 8× speed choices. On compact screens, Play, date and speed fill their row
+with proportional widths and consistent gaps; the previous/next arrows flank the
+slider below. Navigation and other controls keep the existing public layout.
 
-```
-python scripts/rebuild.py --output releases/current_public
-```
+An observed restriction, a policy in force, an announced schedule, a last report
+of closure and an observed reopening are different facts. Unknown endpoints are
+not extended to the present. Held and isolated observations remain visible
+without filling gaps. Date subtraction measures calendar-day differences; it
+never adds a day merely because an endpoint is described as inclusive.
 
-This reads the workbook, renders the Analysis page, builds the self-contained
-HTML and CSV/JSON exports, and regenerates the GeoPackage/QGIS project.
-Use `--skip-gis` during web-only development. The website is the generated `web`
-folder. An input replacement is a complete replacement, matched by record ID.
-New IDs without reference geometry remain unlocated until geographical review.
+The exact-duration chart requires eligible operational phases with exact dates
+and an observed reopening. The optional **More than 1 day** filter requires a
+supported operational lower bound above one day; every phase plotted in the
+exact-duration chart must also pass that threshold. The accompanying coverage
+chart shows the contributing sample. The charts describe collected evidence,
+not worldwide closure rates or causal effects of rationales.
 
-For this hosted source checkout, `dist` contains the full release and `out` is
-the generated hosting directory. To update them:
+Map dots locate reviewed crossing-area references. Their size does not encode
+duration, severity or record count. Wider restrictions retain the established
+line styles. A known single-post restriction never falls back to a whole-border
+highlight. Unresolved or partially located records remain searchable and
+available in the data, with their mapping limits stated. Neutral boundary
+references and optional earlier-record rings do not establish a border's later
+status. Phase-specific mapping uses the reviewed scope, traffic and direction.
 
-```
-python scripts/prepare-release-workbook.py
+See `source/crossings/README.md` for the location inputs and review procedure.
+OSM research is retained separately under `research/osm/`; only explicitly
+reviewed bindings enter the public crossing layer.
+
+## Rebuild the hosted site
+
+The build uses Python 3 and Node.js. Spreadsheet checks also use openpyxl. The
+website itself is static and requires no API keys, database or external tile
+server. Evidence links require an internet connection.
+
+After the current source data, master workbook and companion downloads have been
+prepared and checked, the hosted build is:
+
+```sh
 python scripts/import-workbook.py
 python scripts/build-analysis.py
 node scripts/build-web-data.cjs
+node scripts/build-national-data.cjs
 node scripts/build-crossing-geography.cjs
 node scripts/build-evidence-pages.cjs
-node scripts/verify-crossing-map.cjs
 node scripts/build-hosted.cjs
-python scripts/verify-workbook.py
-python scripts/verify-workbook-package.py
-python scripts/verify-workbook-presentation.py
-node scripts/verify-downloads.cjs
-python scripts/verify-standalone-downloads.py
-node scripts/verify-ui.cjs
-node scripts/verify-cards.cjs
 ```
 
-The import report includes the input SHA-256 and reconciled counts. Exact source
-spelling remains in raw data; the interface formats duration units as “days”.
+An ordinary rebuild from a clean public checkout uses the checked-in
+`source/current-release.json.gz`, `source/current-reader-model.json` and final
+reader/download files. It does not require the preserved research programme or
+its private archive.
 
-The hosted atlas opens with `map-data.js`: browsing fields, timeline dates and
-the original map coordinates. Full evidence loads by record when opened. The
-complete research archive loads for exports. `data.js` is generated from the
-tracked source workbook and embedded by the standalone builder for offline use.
-It is excluded from Git because the complete generated file exceeds the source
-hosting limit; the versioned record files retain the same data for the website. Run
-`build-web-data.cjs` after changing the dataset; it writes versioned record files
-and an updated map asset URL. The build does not change any research findings.
+Re-preparing this particular release is a separate maintenance operation.
+`scripts/prepare-current-release.py --programme PATH` requires the programme's
+`compact/data/current-state.json.gz`, the original R50 data gzip, reader model and
+research summary, and the accepted patch and completion receipt for all 50
+rounds. Those archival inputs are not ordinary public-build prerequisites. The
+preparer is deliberately bound to the R50 state and counts; it is not a generic
+importer for future replacement spreadsheets.
 
-## GitHub Pages
+The GitHub Pages workflow specifies the complete release sequence and its checks.
+The earlier workbook repair/layout scripts retain the old workbook assumptions;
+they are not the source of the two-tab R50 reader or a substitute for the current
+data importer.
 
-The `Publish Border Closure Atlas` workflow publishes `out` on pushes to `main`
-and can also be run from the Actions tab. Select **GitHub Actions** as the source
-under **Settings → Pages**. The workflow sets the public URL from GitHub's Pages
-configuration, keeping startup and offline links on the published host. Assets,
-record downloads and Analysis links use relative paths and support a project
-URL such as `/Border-Closure-Atlas/`.
+`dist/index.html`, the runtime scripts and CSS provide the public shell.
+`scripts/analysis-template.html` and `scripts/analysis-ui.js` generate
+`dist/analysis.html`; edit those source files rather than only the generated page.
+`build-web-data.cjs` generates the map payload, content-addressed record files and
+research archive manifest. `build-analysis-data.cjs` generates the light Analysis
+payload and updates its fingerprints. The evidence-page builder generates the
+readable crossing and national-policy source pages.
 
-The website is static and needs no API keys or external database. The downloadable
-workbook and record evidence are published with it. The separate `.openai`
-configuration belongs to the existing ChatGPT-hosted copy; GitHub Pages publishes
-only `out`.
+`dist/data.js` is the complete generated browser-data model. Hosted pages open the
+light map or Analysis payload and request full evidence when needed. The hosted
+builder copies the release to `out/`, excluding the large offline `data.js`.
+Versioned record parts support complete website exports. All hosted assets remain
+subject to the size limit enforced by the builder.
 
-## Verification
+## Verification and publication
 
-Workbook table metadata, totals, phase arithmetic, inclusion, URL joins, current review fields,
-category counts, timeline exclusions and CSV/JSON exports are checked. Navigation
-and all record/card render paths are exercised in a JavaScript DOM harness.
-The workbook link declares an explicit `.xlsx` filename and spreadsheet MIME
-type; the download check can also verify the public HTTP headers and file bytes.
-File associations and default viewer suggestions are controlled by the reader's
-device and browser. Native Microsoft Excel validation is not available in this
-environment; package and data-preservation checks do not replace that application
-check.
-Crossing-point layouts and interactions have been checked in a browser at laptop,
-portrait-phone and landscape-phone sizes. This is responsive-layout verification,
-not testing on physical iOS and Android devices. QGIS output is
-checked structurally (SQLite integrity, geometry decoding and relative paths);
-native QGIS rendering was not run. Temporal GIS outputs must use the current phase
-dates, endpoint meanings and binding decisions; all phases remain in the chronology
-table.
+The checks reconcile the source tables with inclusion, phases, date arithmetic,
+review coverage, source references, downloads and browser outputs. Analysis
+expectations are derived independently from native release tables; behavioural
+fixtures cover leap dates, uncertain bounds, reopening requirements, held phases,
+nonexclusive rationales and filtered exports. Navigation and record interactions
+also have a JavaScript DOM harness. The workflow runs the required release gates
+before uploading `out`.
 
-## Reference assets
+The public navigation, Methods routing and mobile controls must be checked after
+regeneration. Browser layout checks are not tests on physical iOS or Android
+devices. XLSX package and content checks do not claim native Microsoft Excel
+validation. Historical GIS/export tools must retain the current phase dates,
+endpoint meanings and binding decisions if used for a new export.
 
-Natural Earth reference boundaries and countries are bundled. Crossing geometry
-retains its per-feature OpenStreetMap or other recorded location provenance;
-OpenStreetMap data is © OpenStreetMap contributors (ODbL). Leaflet and font
-licences are included with the web assets. No external tile server is required.
-Evidence links require an internet connection.
+The **Publish Border Closure Atlas** workflow publishes `out` on pushes to `main`
+and can be run from the Actions tab. GitHub Pages uses **GitHub Actions** as its
+source. Assets and links are relative and support the project's `/Border-Closure-Atlas/`
+path. Preparing or rebuilding a local release does not itself publish it.
 
-Hosting uses the generated `out` directory. It excludes the full offline `data.js`; exports load the checked manifest and its record parts on demand. All hosted files are checked to be smaller than 10 MB.
+## Citation and reuse
 
+Lamarque, H. (2026) *Global Border Closures Atlas*. Version 2026.10.25-rec50.
+Available at: https://lamarque-mapping.github.io/Border-Closure-Atlas/
+(include your access date). Machine-readable citation metadata is in `CITATION.cff`.
+
+Research by Dr. Hugh Lamarque, with thanks to Dr. Robert Macdonald for review and
+feedback. Framework and selected prose are adapted from Hugh Lamarque's
+*Border Closures in Africa*.
+
+This release does not introduce a new licence grant for the atlas code or compiled
+research dataset. Natural Earth reference geography is bundled; crossing features
+retain their recorded OpenStreetMap or other source attribution. OpenStreetMap
+data is © OpenStreetMap contributors (ODbL). Leaflet and font licences are included
+with the web assets. Source publications retain their own terms.

@@ -13,6 +13,9 @@ ROOT = Path(__file__).resolve().parents[1]
 def build(web):
     data = json.loads((web/'data.js').read_text().split('=',1)[1].strip().rstrip(';'))
     m=data['meta']; s=m['atlas_summary']; c=s['chronology_coverage']
+    release_method=m['release_method']
+    assert release_method['counts']['records']==s['rows'], 'Methods account belongs to another release'
+    assert release_method['counts']['phases']==c['phases'], 'Methods phase count differs from the data'
     snapshot=dt.date.fromisoformat(m['snapshot_date'])
     included=[e for e in data['events'] if not e['quarantined']]
     definitions={
@@ -31,12 +34,19 @@ def build(web):
         'CODED':sum(bool(e['rationales']) for e in included),'UNCODED':sum(not e['rationales'] for e in included),
         'DATED':c['any_dated_evidence'],'COMPLETE':c['operational_complete'],
         'EXACT':c['operational_exact_complete'],'UNDATED':c['without_dated_evidence'],'HELD':c['held_phases'],
-        'SOURCE_ROWS':format(m['source_index_rows'],','),'QUEUE_ITEMS':m['review_queue_items'],
+        'SOURCE_ROWS':format(m['source_index_rows'],','),'DISTINCT_SOURCE_URLS':format(m['distinct_recorded_urls'],','),
+        'QUEUE_ITEMS':m['review_queue_items'],
         'QUEUE_RECORDS':sum(bool(e['unresolved_issues']) for e in data['events']),
         'CATEGORY_COUNT':len(m['rationale_categories']),
         'SNAPSHOT':f'{snapshot.day} {snapshot:%B %Y}',
         'SOURCE_FILENAME':html.escape(m['source_filename']),
         'SOURCE_SHA256':m['source_sha256'],
+        'WORKBOOK_SHA256':m['download_workbook_sha256'],
+        'DOWNLOAD_COMPANION_JSON_URL':html.escape(m['download_companion_json']+'?v='+m['download_companion_json_sha256']),
+        'DOWNLOAD_COMPANION_JSON_FILENAME':html.escape(Path(m['download_companion_json']).name),
+        'DOWNLOAD_COMPANION_ZIP_URL':html.escape(m['download_companion_zip']+'?v='+m['download_companion_zip_sha256']),
+        'DOWNLOAD_COMPANION_ZIP_FILENAME':html.escape(Path(m['download_companion_zip']).name),
+        'RESEARCH_HISTORY':'<p>'+html.escape(release_method['full_text'])+'</p>',
         'REVIEW_LIMITS':html.escape(m['research_method']['verification_statement']+' '+m['research_method']['review_limits']),
         'TYPOLOGY':typology}
     text=(ROOT/'scripts/analysis-template.html').read_text()

@@ -1,0 +1,1461 @@
+{
+  "release_id": "2026.10.25-rec50",
+  "data_state_sha256": "d9036cb8d241de5bcef39e99c6d97d62e573b59e5e02097a79a10cbf355eb39e",
+  "source_sha256": "5baf139f914593184ed2eee3f5a9dfd783cb264332415f98e645b409c314a415",
+  "previous_scope_file_sha256": "2f284c9153d68f0cc56e725b599d061c166b42c58f6f6184a4372fcb7f0b6fd4",
+  "previous_locations_file_sha256": "2c118599d525c02396618965c00e82c7ea11b05a692781f866967fb8ef25bd3f",
+  "reviewed_new_phases_since_github": 183,
+  "new_scope_decisions_after_preserved_review": 138,
+  "new_coordinate_points": 0,
+  "additional_bindings_to_existing_sourced_sites": 31,
+  "changed_existing_binding_applicability": {
+    "CC022-D1": "The current qualification narrows the first returned cohort to an Iran-to-Afghanistan cargo truck; it still names Islam Qala–Dogharoun.",
+    "R3-AF-007-D1": "The current endpoint is a Uganda-to-South Sudan bus observation. The same Nimule–Elegu crossing-area reference remains applicable.",
+    "ME026-C7P1": "The current scope still identifies Kerem Shalom, while eligibility remains held. The point is reference geography and does not resolve the disputed restriction."
+  },
+  "method": "Read current recorded phase scopes and existing source-backed location identities; no new source retrieval or coordinate estimation. Broader rules do not borrow narrower gate coordinates. Explicit incomplete coverage takes precedence over complete bindings.",
+  "category_counts": {
+    "wider_border": 298,
+    "single_site": 575,
+    "multiple_named_sites": 72,
+    "needs_review": 65
+  },
+  "screened_phases": 1008,
+  "undated_records": 2,
+  "mapped_phases": 274,
+  "new_decisions": [
+    {
+      "category": "single_site",
+      "site_label": "Khorgos International Centre for Border Cooperation",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R11-001-P1",
+      "current_phase_scope": "Kazakh visitor passage into the Chinese section of the Khorgos International Centre for Border Cooperation"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Manzhouli railway port",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R11-002-P1",
+      "current_phase_scope": "Manzhouli non-container timber and mineral-powder rail imports requiring manual handling, to their reported return on 14 January 2022"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Manzhouli road port",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R11-002-P2",
+      "current_phase_scope": "Manzhouli road-port goods export suspension, to effective authorisation for trailer-exchange exports"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Suifenhe railway port",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R11-003-P1",
+      "current_phase_scope": "Suifenhe selected non-container rail imports requiring manual handling, to a reported permission for selected cargo with wagon exceptions"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Erenhot–Zamyn-Uud railway crossing",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R11-004-P1",
+      "current_phase_scope": "Erenhot rail imports of selected non-container cargo, scoped to iron ore, coal and bagged goods in open wagons covered by the January permission"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Erenhot–Zamyn-Uud railway crossing",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R11-EA003-P1",
+      "current_phase_scope": "Regional Erenhot–Ulaanbaatar international passenger-train suspension, to the first observed Ulaanbaatar-to-Erenhot return"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Petrapole–Benapole",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R12-001-P1",
+      "current_phase_scope": "Bilateral road-freight exchange at Petrapole–Benapole during 21 December 2020 workers strike"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Petrapole–Benapole",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R12-002-P1",
+      "current_phase_scope": "Bilateral road-freight exchange during the January–February 2021 port-user strike"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Petrapole–Benapole",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R12-003-P1",
+      "current_phase_scope": "Bilateral freight exchange at Petrapole–Benapole during the January–February 2022 port-user strike"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Petrapole–Benapole",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R12-004-P1",
+      "current_phase_scope": "Late-July 2019 truck-association stoppage of Petrapole–Benapole goods exchange"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Petrapole–Benapole",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R12-006-P2",
+      "current_phase_scope": "Benapole / Petrapole freight operations during the complete NBR strike shutdown of 28–30 June 2025"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Petrapole–Benapole",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R33-004-P1",
+      "current_phase_scope": "Cross-border goods interchange at Benapole–Petrapole under the October Puja holiday"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Petrapole–Benapole",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R33-006-P1",
+      "current_phase_scope": "Bilateral import/export freight through Benapole–Petrapole over the election/public-holiday shutdown"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Petrapole–Benapole",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R33-006-P2",
+      "current_phase_scope": "Restricted entry into India of ordinary Bangladeshi passport holders through Benapole–Petrapole"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Hili",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R12-005-P1",
+      "current_phase_scope": "Bilateral goods interchange at Hili during the August–September 2026 exporters strike"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Hili",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R33-002-P1",
+      "current_phase_scope": "Bilateral goods interchange at Hili during the local Puja holiday"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Sonamasjid–Mahadipur",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R12-006-P1",
+      "current_phase_scope": "Sonamasjid / Mahadipur freight operations during the complete NBR strike shutdown of 28–30 June 2025"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Sonamasjid–Mahadipur",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R33-001-P1",
+      "current_phase_scope": "Cross-border goods interchange through Sonamasjid during the local Puja holiday"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Dehiba–Wazen",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R13-001-P1",
+      "current_phase_scope": "Ordinary crossing service at Dehiba/Wazen during mourning for the crossing commander, excluding exceptional and urgent passage"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Dehiba–Wazen",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R13-002-P1",
+      "current_phase_scope": "Passenger and goods passage through Wazen/Dehiba interrupted during Tunisian-side protests"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Dehiba–Wazen",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R13-003-P1",
+      "current_phase_scope": "Dehiba/Wazen travel other than Tunisians returning to Tunisia and Libyans returning to Libya"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Dehiba–Wazen",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R13-004-P1",
+      "current_phase_scope": "Commercial traffic through Dehiba/Wazen interrupted by the Libyan side; ordinary passenger traffic unaffected"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Dehiba–Wazen",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R21-001-P1",
+      "current_phase_scope": "People and goods passage at Wazen–Dehiba crossing and Tunisian approach"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Dehiba–Wazen",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R21-003-P1",
+      "current_phase_scope": "Ordinary crossing access through the blocked road and locked gates at Dehiba–Wazen crossing and Tunisian approach"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Dehiba–Wazen",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R21-004-P1",
+      "current_phase_scope": "Non-exempt vehicle and ordinary commercial/social passage, with source-specific exceptions at Dehiba–Wazen crossing and approach road"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Dehiba–Wazen",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R48-005-P1",
+      "current_phase_scope": "Ordinary Dehiba–Wazen crossing passage apart from reported returning-national permission"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Rafah",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R13-005-P1",
+      "current_phase_scope": "Rafah Egypt-to-Gaza entry of Palestinians stranded in Egypt"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Rafah",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R13-005-P2",
+      "current_phase_scope": "Rafah outgoing passenger passage from Gaza to Egypt"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Kerem Shalom–Karm Abu Salem",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R13-006-P1",
+      "current_phase_scope": "Kerem Shalom / Karm Abu Salem commercial entry from Israel into Gaza during a tunnel-neutralisation operation"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Kerem Shalom–Karm Abu Salem",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R13-007-P1",
+      "current_phase_scope": "Fuel through Kerem Shalom for Gaza’s sole power plant"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Kerem Shalom–Karm Abu Salem",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R13-ME026-P1",
+      "current_phase_scope": "Kerem Shalom aid-entry interruption, with a documented return for one Jordan food convoy by 9 May 2024"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Kaplanbek–Navoi / Zangiota",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R17-001-P1",
+      "current_phase_scope": "Ordinary personal passage at Kaplanbek–Navoi/Zangiota; partial passenger restoration only"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Zhibek Zholy–Gishtkuprik",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R17-002-P1",
+      "current_phase_scope": "Zhibek Zholy–Gishtkuprik road crossing, pedestrians and vehicles"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Tazhen–Daut Ata",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R17-003-P1",
+      "current_phase_scope": "Ordinary persons, passenger cars and buses at Tazhen–Daut Ata"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Atameken–Gulistan / Syrdarya",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R17-004-P1",
+      "current_phase_scope": "Atameken–Gulistan/Uzbek Syrdarya ordinary personal passage under the shared reconstruction measure"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Kazygurt–S. Nadzhimov",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R17-004-P2",
+      "current_phase_scope": "Kazygurt–S. Nadzhimov/Nazhimov ordinary persons, cars and buses under the shared reconstruction measure"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Ken-Sai–Uch-Kurgan",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R17-006-P1",
+      "current_phase_scope": "Ken-Sai–Uch-Kurgan multilateral road-post traffic restored in September 2024"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Cristo Redentor–Los Libertadores crossing and Argentine approach",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R18-001-P1",
+      "current_phase_scope": "Freight vehicles deliberately obstructed by protesting truckers at Cristo Redentor–Los Libertadores road crossing and Argentine approach"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Yacuiba–Salvador Mazza bridge and access",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R18-002-P1",
+      "current_phase_scope": "Bridge traffic, with observed resumed passage specifically of passenger buses and small vehicles at Yacuiba–Salvador Mazza international bridge"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Yacuiba–Salvador Mazza bridge and access",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R18-003-P1",
+      "current_phase_scope": "Freight passage disrupted by the bridge blockade; source also reports affected personal movement at Yacuiba–Salvador Mazza international bridge"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Yacuiba–Salvador Mazza bridge and access",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R18-004-P1",
+      "current_phase_scope": "Vehicles including international buses and freight, with documented temporary authorised passage at Yacuiba–Salvador Mazza international bridge"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Yacuiba–Salvador Mazza bridge and access",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R18-005-P1",
+      "current_phase_scope": "Access for permitted international freight through the binational bridge at Yacuiba–Salvador Mazza international bridge"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Yacuiba–Salvador Mazza bridge and access",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R18-006-P1",
+      "current_phase_scope": "Freight access under a protest blockade with negotiated perishable-cargo passage at Yacuiba–Salvador Mazza international bridge and immediate access"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Ras Jedir crossing and Ben Guerdane approach",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R21-002-P1",
+      "current_phase_scope": "Non-exempt passenger and goods passage at Ras Jedir crossing and Ben Guerdane approach"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Ras Jedir crossing and Ben Guerdane approach",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R21-002-P2",
+      "current_phase_scope": "Non-emergency vehicle passage to and from Libya at Ras Jedir crossing and Ben Guerdane approach"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Ghulam Khan",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R23-001-P1",
+      "current_phase_scope": "Ghulam Khan freight from Pakistan into Afghanistan at first reported March 2018 return"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Kharlachi",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R23-002-P1",
+      "current_phase_scope": "Kharlachi bilateral goods trade during the 2020 COVID restriction"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Chaman–Spin Boldak",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R23-003-P1",
+      "current_phase_scope": "Chaman/Spin Boldak commercial freight into Afghanistan restored in July 2021"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Chaman–Spin Boldak",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R23-004-P1",
+      "current_phase_scope": "Chaman/Spin Boldak crossing interruption during the December 11, 2022 clash"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Chaman–Spin Boldak",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R23-005-P1",
+      "current_phase_scope": "Ordinary cross-border traffic at Chaman during the September 2019 Afghan presidential-election closure"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Angoor Adda",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R23-006-P1",
+      "current_phase_scope": "Angoor Adda commercial restriction observations amid document-rule disputes and reopening demands"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Kasumbalesa",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R26-001-P1",
+      "current_phase_scope": "Kasumbalesa Congolese-side border-service obstruction and import/export vehicle return"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Kasumbalesa",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R26-002-P1",
+      "current_phase_scope": "Kasumbalesa Zambian-side driver blockade of import/export trucks"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Kasumbalesa",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R26-003-P1",
+      "current_phase_scope": "Kasumbalesa ordinary small-trader entry into Zambia observed restricted on March27,2020"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Kasindi–Mpondwe",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R26-005-P2",
+      "current_phase_scope": "Kasindi–Mpondwe ordinary cross-border movement observations during the 2026 Ebola response"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Bagratashen–Sadakhlo",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R27-001-P1",
+      "current_phase_scope": "Reported trucker obstruction of checkpoint access; affected vehicle categories are not exhaustively identified at Bagratashen–Sadakhlo"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Agarak–Meghri",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R27-002-P1",
+      "current_phase_scope": "Crossing access obstructed by Armenian truck drivers; exact passenger and freight exemptions are unknown at Agarak / Meghri on the Armenia–Iran route"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Enguri bridge",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R27-003-P1",
+      "current_phase_scope": "Ordinary departures from Abkhazia, excluding people needing medical assistance at Enguri bridge"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Enguri bridge",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R44-ENGURI-P1",
+      "current_phase_scope": "Ordinary departure restriction at Enguri, with restoration reported by 1 November 2021"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Myawaddy–Mae Sot Friendship Bridge II",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R28-001-P1",
+      "current_phase_scope": "Cargo at Myawaddy–Mae Sot Friendship Bridge II during April 2024 fighting; disputed closure onset, observed truck return on 30 April."
+    },
+    {
+      "category": "single_site",
+      "site_label": "Myawaddy–Mae Sot Friendship Bridge I",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R28-001-P2",
+      "current_phase_scope": "Observed refusal of temporary-border-pass and pass-booklet travel from Myanmar into Thailand at Friendship Bridge I on 21 April 2024."
+    },
+    {
+      "category": "single_site",
+      "site_label": "Maungdaw–Teknaf river cargo service",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R28-002-P1",
+      "current_phase_scope": "Maungdaw-origin river cargo arriving at Teknaf land port, ending at the first reported wood-laden boat return on 1 May 2026."
+    },
+    {
+      "category": "single_site",
+      "site_label": "Singkhon–Mawtaung border area",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R28-003-P1",
+      "current_phase_scope": "Singkhon formal opening unavailable at the 21 January 2026 provincial meeting; limited community trade and emergency medical pathways discussed separately."
+    },
+    {
+      "category": "single_site",
+      "site_label": "Singkhon–Mawtaung border area",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R28-003-P2",
+      "current_phase_scope": "Singkhon goods-transfer schedule restricted to Tuesday and Saturday mornings before a formal relaxation effective 17 April 2026."
+    },
+    {
+      "category": "single_site",
+      "site_label": "Aranyaprathet–Poipet road crossing",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R28-PH001",
+      "current_phase_scope": "Aranyaprathet–Poipet rule restricting Thai outbound tourism and gambling, confirmed by the 8 June 2025 MFA briefing."
+    },
+    {
+      "category": "single_site",
+      "site_label": "Pharr–Reynosa International Bridge",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R31-001-P1",
+      "current_phase_scope": "Commercial lanes obstructed by trucker protesters at Pharr–Reynosa International Bridge"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Pharr–Reynosa International Bridge",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R31-003-P1",
+      "current_phase_scope": "Reported northbound bridge circulation at Pharr–Reynosa International Bridge"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Pharr–Reynosa International Bridge",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R31-004-P1",
+      "current_phase_scope": "Freight and private-vehicle access obstructed at the entry gates at Pharr–Reynosa International Bridge"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Ysleta–Zaragoza International Bridge",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R31-001-P2",
+      "current_phase_scope": "Commercial lanes obstructed by trucker protesters at Ysleta–Zaragoza International Bridge"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Bridge of the Americas cargo lot",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R31-002-P1",
+      "current_phase_scope": "CBP cargo-lot commercial services at Bridge of the Americas, El Paso"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Seaway bridge system / North Channel approach",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R31-005-P1",
+      "current_phase_scope": "Non-emergency bridge-system traffic interrupted by a North Channel protest at Seaway International Bridge system / Cornwall–Cornwall Island approach"
+    },
+    {
+      "category": "single_site",
+      "site_label": "San Antonio principal customs access (bridge unresolved)",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R32-002-P1",
+      "current_phase_scope": "Ordinary pedestrian and vehicle passage at San Antonio’s principal customs access on the Venezuela–Colombia frontier during the May 2025 election restriction."
+    },
+    {
+      "category": "single_site",
+      "site_label": "San Antonio–Simón Bolívar bridge",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R32-003-P1",
+      "current_phase_scope": "San Antonio customs access to Simón Bolívar bridge between Venezuela and Colombia; ordinary pedestrians and vehicles, excluding documented humanitarian passage."
+    },
+    {
+      "category": "single_site",
+      "site_label": "Banglabandha–Phulbari",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R33-003-P1",
+      "current_phase_scope": "Freight exchange through Banglabandha–Phulbari under the local trader holiday arrangement"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Banglabandha–Phulbari",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R44-BANGLABANDHA-P1",
+      "current_phase_scope": "Banglabandha–Phulbari freight interchange during the September–October 2022 holiday"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Jamunaha",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R33-005-P1",
+      "current_phase_scope": "Jamunaha border point in Nepalgunj during the Uttar Pradesh assembly election window"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Rasuwagadhi",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R33-R2SC008-P1",
+      "current_phase_scope": "Observed Rasuwa/Rasuwagadhi freight return after the November 2017 election restriction"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Erez–Beit Hanoun",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R38-001-P1",
+      "current_phase_scope": "Previously eligible non-exempt passenger passage at Erez/Beit Hanoun"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Erez–Beit Hanoun",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R38-002-P1",
+      "current_phase_scope": "Formal additional restriction on non-exempt eligible Erez passenger access"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Semalka–Faysh Khabur",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R38-003-P1",
+      "current_phase_scope": "Semalka passenger-service interruption with cohort exceptions and selected-category restoration"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Semalka–Faysh Khabur",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R38-004-P1",
+      "current_phase_scope": "Announced Semalka restriction on passage of Iraqi/KRG residency holders toward Iraqi Kurdistan"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Rabia–al-Yarubiyah",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R38-005-P1",
+      "current_phase_scope": "Endpoint-only formal restoration of ordinary civilian and commercial access at Rabia–al-Yarubiyah"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Rabia–al-Yarubiyah",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R47-R38-005-P1",
+      "current_phase_scope": "UN medical/humanitarian shipments through al-Yarubiyah from Iraq into northeast Syria after mandate removal"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Wadi Araba–Yitzhak Rabin",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R38-ME021-P1",
+      "current_phase_scope": "Wadi Araba / Yitzhak Rabin closure statement after the Allenby shooting"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Jordan River–Sheikh Hussein",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R38-ME021-P2",
+      "current_phase_scope": "Jordan River / Sheikh Hussein closure statement after the Allenby shooting"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Shiveekhuren–Ceke",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R41-001-P1",
+      "current_phase_scope": "Coal exports through Shiveekhuren–Ceke during the late-2021 restriction and limited May 2022 return"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Gashuunsukhait–Ganqimaodu",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R41-002-P1",
+      "current_phase_scope": "Gashuunsukhait–Ganqimaodu coal-export interruption preceding the reported August 2021 restart"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Tsagaannuur–Tashanta",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R41-003-P1",
+      "current_phase_scope": "Freight component of the Tsagaannuur–Tashanta November 2020 closure agreement"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Ruse–Giurgiu crossing approach",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R42-001-P1",
+      "current_phase_scope": "Ruse / Giurgiu, Danube Bridge approach short farmer road block"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Ruse–Giurgiu crossing approach",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R42-002-P1",
+      "current_phase_scope": "Ruse–Giurgiu first reported September 18 farmer road block"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Ruse–Giurgiu crossing approach",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R42-003-P1",
+      "current_phase_scope": "Giurgiu–Ruse February 6 farmer blockade"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Ruse–Giurgiu crossing approach",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R42-003-P3",
+      "current_phase_scope": "Giurgiu / Ruse February 7 short farmer blockade"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Kardam–Negru Voda crossing approach",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R42-001-P2",
+      "current_phase_scope": "Kardam / Negru Voda approach short farmer road block"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Kardam–Negru Voda crossing approach",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R42-002-P2",
+      "current_phase_scope": "Kardam–Negru Voda vehicle entry restriction on September 18"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Kardam–Negru Voda crossing approach",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R42-003-P6",
+      "current_phase_scope": "Negru Voda / Kardam February 7 short farmer blockade"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Vidin–Calafat crossing approach",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R42-001-P3",
+      "current_phase_scope": "Vidin / Calafat, international road to Danube Bridge 2 short farmer road block"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Vidin–Calafat crossing approach",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R42-003-P2",
+      "current_phase_scope": "Vidin–Calafat February 6 farmer road block"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Vidin–Calafat crossing approach",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R42-003-P4",
+      "current_phase_scope": "Calafat / Vidin February 7 short farmer blockade"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Vama Veche–Durankulak crossing approach",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R42-003-P5",
+      "current_phase_scope": "Vama Veche / Durankulak February 7 short farmer blockade"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Evzoni–Bogorodica",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R42-004-P1",
+      "current_phase_scope": "Bogorodica–Evzoni passenger and cargo vehicle blockade"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Canawaima / Moleson Creek–South Drain ferry",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R46-004-P1",
+      "current_phase_scope": "Late-August 2026 regulatory suspension of Canawaima ferry operation on the Moleson Creek–South Drain service"
+    },
+    {
+      "category": "single_site",
+      "site_label": "La Gabrielle / Saint-Laurent-du-Maroni–Albina ferry",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R46-005-P1",
+      "current_phase_scope": "Planned La Gabrielle international ferry stop between Saint-Laurent-du-Maroni and Albina"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Adré",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R47-001-P1",
+      "current_phase_scope": "Sudan-side authorisation for Chad-to-Darfur humanitarian consignments through Adré"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Adré",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R47-001-P2",
+      "current_phase_scope": "WFP food-truck entry through Adré following renewed Sudanese permission"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Bab al-Hawa–Cilvegözü",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R47-002-P1",
+      "current_phase_scope": "UN humanitarian convoy service from Türkiye into northwest Syria through Bab al-Hawa"
+    },
+    {
+      "category": "single_site",
+      "site_label": "Alashankou road crossing (railway excluded)",
+      "note": "Current phase names one crossing/service. A point, if available, is only a sourced crossing-area reference; exact access obstructions and facilities may remain unlocated.",
+      "phase_id": "REC50-R48-001-P1",
+      "current_phase_scope": "Carrier-reported cross-border trucking suspension through Alashankou"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "National vehicle/carrier admissibility rule; a named implementation site does not delimit the whole legal rule.",
+      "phase_id": "REC50-R22-002-P1",
+      "current_phase_scope": "Non-exempt Russian-registered passenger vehicles entering Norway, including at Storskog"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "National vehicle/carrier admissibility rule; a named implementation site does not delimit the whole legal rule.",
+      "phase_id": "REC50-R22-003-P1",
+      "current_phase_scope": "Non-exempt Russian-registered passenger-vehicle imports through Finland’s external-EU borders"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "National vehicle/carrier admissibility rule; a named implementation site does not delimit the whole legal rule.",
+      "phase_id": "REC50-R22-004-P1",
+      "current_phase_scope": "Russian-registered vehicle entry at Estonia’s external border"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "National vehicle/carrier admissibility rule; a named implementation site does not delimit the whole legal rule.",
+      "phase_id": "REC50-R22-005-P1",
+      "current_phase_scope": "Norwegian prohibition on non-exempt Russian-established road carriers, with Storskog implementation evidence"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "National vehicle/carrier admissibility rule; a named implementation site does not delimit the whole legal rule.",
+      "phase_id": "REC50-R48-002-P1",
+      "current_phase_scope": "Russian-registered vehicle entry through Latvian–Russian and Latvian–Belarusian border posts"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "National vehicle/carrier admissibility rule; a named implementation site does not delimit the whole legal rule.",
+      "phase_id": "REC50-R48-003-P1",
+      "current_phase_scope": "Lithuanian entry restriction on Russian-registered cars, apart from qualified Kaliningrad transit"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "National vehicle/carrier admissibility rule; a named implementation site does not delimit the whole legal rule.",
+      "phase_id": "REC50-R48-004-P1",
+      "current_phase_scope": "Announced prohibition on Russian-registered passenger-car imports/entry at Polish external border crossings"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "National land-frontier rule; no evidence that every gate was operationally closed.",
+      "phase_id": "REC50-R26-005-P1",
+      "current_phase_scope": "Uganda May27,2026 formal restriction on nonexempt movement to and from DRC"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "National land-frontier rule; no evidence that every gate was operationally closed.",
+      "phase_id": "REC50-R32-001-P1",
+      "current_phase_scope": "Colombia’s authorised land and river border posts under Article 31 of decree 1702; local preannouncements explicitly name Rumichaca, Mataje and San Miguel."
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "National land-frontier rule; no evidence that every gate was operationally closed.",
+      "phase_id": "REC50-R36-001-P1",
+      "current_phase_scope": "National land-border closure order; crossing-level operation not established"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "National land-frontier rule; no evidence that every gate was operationally closed.",
+      "phase_id": "REC50-R36-002-P1",
+      "current_phase_scope": "National land-border closure order; crossing-level operation not established"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "National land-frontier rule; no evidence that every gate was operationally closed.",
+      "phase_id": "REC50-R36-003-P1",
+      "current_phase_scope": "National land-border closure order; crossing-level operation not established"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "National land-frontier rule; no evidence that every gate was operationally closed.",
+      "phase_id": "REC50-R36-004-P1",
+      "current_phase_scope": "Cameroonian restriction on movement along the Equatorial Guinea frontier; exact posts and traffic classes unestablished"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "National land-frontier rule; no evidence that every gate was operationally closed.",
+      "phase_id": "REC50-R47-GL05-P1",
+      "current_phase_scope": "Uganda ordinary asylum-admission policy during COVID, with exceptional permissions and informal entry"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "Commodity/permit policy applies beyond a named gate. Origin and destination qualifications remain in the phase; a country reference is not an observed enforcement footprint.",
+      "phase_id": "REC50-R43-001-P1",
+      "current_phase_scope": "Gambian import prohibition on Senegal-origin poultry and poultry products, with other affected origins mentioned"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "Commodity/permit policy applies beyond a named gate. Origin and destination qualifications remain in the phase; a country reference is not an observed enforcement footprint.",
+      "phase_id": "REC50-R43-002-P1",
+      "current_phase_scope": "Mali exports of the listed cereals and cotton inputs under order 2021-5126/MIC-MEF-SG"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "Commodity/permit policy applies beyond a named gate. Origin and destination qualifications remain in the phase; a country reference is not an observed enforcement footprint.",
+      "phase_id": "REC50-R43-003-P1",
+      "current_phase_scope": "Suspension of issuance of new special export authorisations for millet, maize and sorghum"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "Commodity/permit policy applies beyond a named gate. Origin and destination qualifications remain in the phase; a country reference is not an observed enforcement footprint.",
+      "phase_id": "REC50-R43-003-P2",
+      "current_phase_scope": "Reported prohibition on exports of millet, maize and sorghum flour announced 23 February 2022"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "Commodity/permit policy applies beyond a named gate. Origin and destination qualifications remain in the phase; a country reference is not an observed enforcement footprint.",
+      "phase_id": "REC50-R43-003-P3",
+      "current_phase_scope": "November 2024 restatement of the national cowpea and specified cereal export prohibition"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "Commodity/permit policy applies beyond a named gate. Origin and destination qualifications remain in the phase; a country reference is not an observed enforcement footprint.",
+      "phase_id": "REC50-R43-004-P2",
+      "current_phase_scope": "Grain-export prohibition announced 26 August 2024, with corn and rice explicitly supported"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "Commodity/permit policy applies beyond a named gate. Origin and destination qualifications remain in the phase; a country reference is not an observed enforcement footprint.",
+      "phase_id": "REC50-R43-005-P1",
+      "current_phase_scope": "Burkina Faso import prohibition on poultry and avian products from the three named origins"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "Commodity/permit policy applies beyond a named gate. Origin and destination qualifications remain in the phase; a country reference is not an observed enforcement footprint.",
+      "phase_id": "REC50-R46-001-P1",
+      "current_phase_scope": "Namibian prohibition on Botswana-origin FMD-susceptible animals, raw products and specified potentially infectious materials"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "Commodity/permit policy applies beyond a named gate. Origin and destination qualifications remain in the phase; a country reference is not an observed enforcement footprint.",
+      "phase_id": "REC50-R46-002-P1",
+      "current_phase_scope": "Botswana prohibition on Zimbabwe-origin cloven-hoofed livestock and related products"
+    },
+    {
+      "category": "wider_border",
+      "site_label": null,
+      "note": "Commodity/permit policy applies beyond a named gate. Origin and destination qualifications remain in the phase; a country reference is not an observed enforcement footprint.",
+      "phase_id": "REC50-R46-003-P1",
+      "current_phase_scope": "Botswana restriction on South-African-origin hoofed livestock and animal products during the January 2019 FMD episode"
+    },
+    {
+      "category": "multiple_named_sites",
+      "site_label": "Karombo and Goli–Anzida",
+      "note": "Each named site needs its own phase-specific coordinate approval. No midpoint or whole-frontier fallback.",
+      "phase_id": "REC50-R26-004-P1",
+      "current_phase_scope": "Karombo and Goli/Anzida border customs-service stoppage observed May14,2020"
+    },
+    {
+      "category": "multiple_named_sites",
+      "site_label": "Chanika, Katuna, Kyeshero and Ishasha customs routes",
+      "note": "Each named site needs its own phase-specific coordinate approval. No midpoint or whole-frontier fallback.",
+      "phase_id": "REC50-R26-GL13-P1",
+      "current_phase_scope": "URA formal routing restriction on Goma-bound goods clearance via Chanika, Katuna, Kyeshero and Ishasha"
+    },
+    {
+      "category": "multiple_named_sites",
+      "site_label": "Tatale, Wonjuga, Bunkpurugu and Saboba customs stations",
+      "note": "Each named site needs its own phase-specific coordinate approval. No midpoint or whole-frontier fallback.",
+      "phase_id": "REC50-R43-004-P1",
+      "current_phase_scope": "Grain and soybean export-prevention directive to Tatale, Wonjuga, Bunkpurugu and Saboba customs stations"
+    },
+    {
+      "category": "needs_review",
+      "site_label": null,
+      "note": "Specific sanctioned railway corridor through Lithuania; no complete gate/rail alignment review. Do not substitute road crossings or an entire land frontier.",
+      "phase_id": "REC50-R22-006-P1",
+      "current_phase_scope": "Initial steel and ferrous-metal rail-transit restriction through Lithuania to/from Kaliningrad"
+    },
+    {
+      "category": "needs_review",
+      "site_label": null,
+      "note": "The observed cement train names Kena within a longer transit corridor; route applicability and railway coordinates need review. Do not use a nearby road point.",
+      "phase_id": "REC50-R22-006-P2",
+      "current_phase_scope": "Cement cargo returning by rail through Lithuania to Kaliningrad, including a Kena-checked train"
+    },
+    {
+      "category": "needs_review",
+      "site_label": null,
+      "note": "Djibouti–Ethiopia passenger-train service, without a named border rail position. Do not substitute national land-passenger geography.",
+      "phase_id": "REC50-R37-H11-P1",
+      "current_phase_scope": "Djibouti–Ethiopia passenger train suspension announced by Djibouti transport ministry"
+    },
+    {
+      "category": "needs_review",
+      "site_label": null,
+      "note": "The obstruction is at Kalpaki on the approach serving two customs crossings. Neither crossing point establishes the roadblock location.",
+      "phase_id": "REC50-R42-005-P1",
+      "current_phase_scope": "Kalpaki road approach serving Kakavia and Mertzani customs crossings"
+    },
+    {
+      "category": "needs_review",
+      "site_label": null,
+      "note": "Ukhia/Ghumdhum are sector descriptions; no exact gate or complete restricted segment is established.",
+      "phase_id": "REC50-R47-003-P1",
+      "current_phase_scope": "Rohingya entry denial reported in Ukhia/Ghumdhum land-border sectors; exact gate unresolved"
+    }
+  ],
+  "additional_bindings": [
+    {
+      "record_id": "REC50-R12-001",
+      "phase_id": "REC50-R12-001-P1",
+      "site_id": "post-petrapole-benapole",
+      "current_phase_scope": "Bilateral road-freight exchange at Petrapole–Benapole during 21 December 2020 workers strike",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://www.thedailystar.net/country/news/strike-indias-petrapole-import-export-through-benapole-suspended-2014941"
+      ]
+    },
+    {
+      "record_id": "REC50-R12-002",
+      "phase_id": "REC50-R12-002-P1",
+      "site_id": "post-petrapole-benapole",
+      "current_phase_scope": "Bilateral road-freight exchange during the January–February 2021 port-user strike",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://www.thedailystar.net/business/news/trade-thru-benapole-land-port-suspended-2037137",
+        "https://www.thedailystar.net/business/port-and-shipping/news/import-export-through-benapole-suspended-due-petrapole-port-workers-strike-2036929",
+        "https://www.unb.com.bd/category/Bangladesh/trade-hallted-for-day-2-in-benapole-port/64245",
+        "https://www.dhakatribune.com/amp/bangladesh/237443/trade-resumes-through-benapole-port-after-2-days%E2%80%99",
+        "https://unb.com.bd/category/Bangladesh/trade-hallted-for-day-2-in-benapole-port/64245"
+      ]
+    },
+    {
+      "record_id": "REC50-R12-003",
+      "phase_id": "REC50-R12-003-P1",
+      "site_id": "post-petrapole-benapole",
+      "current_phase_scope": "Bilateral freight exchange at Petrapole–Benapole during the January–February 2022 port-user strike",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://www.thedailystar.net/business/economy/industries/ports-and-shipping/news/trade-through-benapole-suspended-indefinitely-2951426",
+        "https://www.thedailystar.net/business/news/strike-petrapole-trade-through-benapole-port-resumes-after-5-days-2954821",
+        "https://theindianawaaz.com/export-import-resumes-at-india-bangladesh-border-point-at-benapole/",
+        "https://timesofindia.indiatimes.com/city/kolkata/trucks-roll-out-as-petrapole-strike-ends/articleshow/89375090.cms",
+        "https://timesofindia.indiatimes.com/city/kolkata/high-level-meet-held-to-end-petrapole-stir/amp_articleshow/89309209.cms"
+      ]
+    },
+    {
+      "record_id": "REC50-R12-004",
+      "phase_id": "REC50-R12-004-P1",
+      "site_id": "post-petrapole-benapole",
+      "current_phase_scope": "Late-July 2019 truck-association stoppage of Petrapole–Benapole goods exchange",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://www.thedailystar.net/business/news/indian-strike-halts-trade-benapole-1779451",
+        "https://sawtee.org/newsletters/07_Trade_Climate_Change_and_Development_Monitor-July_2019.pdf",
+        "https://www.unb.com.bd/category/Bangladesh/export-import-through-benapole-suspended-over-indian-truckers-strike/24820"
+      ]
+    },
+    {
+      "record_id": "REC50-R12-006",
+      "phase_id": "REC50-R12-006-P2",
+      "site_id": "post-petrapole-benapole",
+      "current_phase_scope": "Benapole / Petrapole freight operations during the complete NBR strike shutdown of 28–30 June 2025",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://www.jagonews24.com/en/biz-econ/news/83763"
+      ]
+    },
+    {
+      "record_id": "REC50-R33-004",
+      "phase_id": "REC50-R33-004-P1",
+      "site_id": "post-petrapole-benapole",
+      "current_phase_scope": "Cross-border goods interchange at Benapole–Petrapole under the October Puja holiday",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://www.dhakatribune.com/bangladesh/277674/durga-puja-holidays-trade-through-benapole-port"
+      ]
+    },
+    {
+      "record_id": "REC50-R33-006",
+      "phase_id": "REC50-R33-006-P1",
+      "site_id": "post-petrapole-benapole",
+      "current_phase_scope": "Bilateral import/export freight through Benapole–Petrapole over the election/public-holiday shutdown",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://dailycountrytodaybd.com/story/petrapole-benapole-immigration-closed-for-three-days-due-to-election",
+        "https://www.dhakatribune.com/bangladesh/347258/trade-with-india-through-benapole-resumes-after-5"
+      ]
+    },
+    {
+      "record_id": "REC50-R33-006",
+      "phase_id": "REC50-R33-006-P2",
+      "site_id": "post-petrapole-benapole",
+      "current_phase_scope": "Restricted entry into India of ordinary Bangladeshi passport holders through Benapole–Petrapole",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://www.thedailystar.net/news/bangladesh/news/india-imposes-3-day-ban-bangladeshi-travellers-thru-benapole-3612726",
+        "https://dailycountrytodaybd.com/story/petrapole-benapole-immigration-closed-for-three-days-due-to-election",
+        "https://www.dhakatribune.com/bangladesh/347258/trade-with-india-through-benapole-resumes-after-5",
+        "https://www.dhakatimes24.com/2024/05/23/354389",
+        "https://www.ajkerpatrika.com/bangladesh/jashore/ajpc333lli496"
+      ]
+    },
+    {
+      "record_id": "REC50-R13-005",
+      "phase_id": "REC50-R13-005-P1",
+      "site_id": "post-rafah",
+      "current_phase_scope": "Rafah Egypt-to-Gaza entry of Palestinians stranded in Egypt",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://www.ochaopt.org/content/response-escalation-opt-situation-report-no-9-august-2021",
+        "https://www.timesofisrael.com/egypt-reopens-gaza-crossing-after-4-days-as-israel-eases-restrictions/"
+      ]
+    },
+    {
+      "record_id": "REC50-R13-005",
+      "phase_id": "REC50-R13-005-P2",
+      "site_id": "post-rafah",
+      "current_phase_scope": "Rafah outgoing passenger passage from Gaza to Egypt",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://www.ochaopt.org/content/response-escalation-opt-situation-report-no-9-august-2021",
+        "https://www.timesofisrael.com/egypt-reopens-gaza-crossing-after-4-days-as-israel-eases-restrictions/",
+        "https://www.aa.com.tr/en/middle-east/egypt-reopens-gaza-crossing-after-closure/2349650"
+      ]
+    },
+    {
+      "record_id": "REC50-R13-006",
+      "phase_id": "REC50-R13-006-P1",
+      "site_id": "post-kerem-shalom",
+      "current_phase_scope": "Kerem Shalom / Karm Abu Salem commercial entry from Israel into Gaza during a tunnel-neutralisation operation",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://www.idf.il/en/mini-sites/hamas/thwarting-hamas-terror-one-tunnel-at-a-time/",
+        "https://www.timesofisrael.com/liveblog_entry/idf-says-gaza-crossing-to-reopen-after-closure-during-tunnel-destruction/",
+        "https://english.wafa.ps/Pages/Details/92324"
+      ]
+    },
+    {
+      "record_id": "REC50-R13-007",
+      "phase_id": "REC50-R13-007-P1",
+      "site_id": "post-kerem-shalom",
+      "current_phase_scope": "Fuel through Kerem Shalom for Gaza’s sole power plant",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://www.aa.com.tr/en/middle-east/israel-allows-fuel-to-enter-gaza-after-3-day-hiatus-/1518180",
+        "https://www.voanews.com/a/middle-east_israel-eases-some-restrictions-gaza-unofficial-truce/6170781.html",
+        "https://www.terrorism-info.org.il/en/news-terrorism-israeli-palestinian-conflict-june-19-25-2019/",
+        "https://www.terrorism-info.org.il/app/uploads/2019/06/E_138_19.pdf"
+      ]
+    },
+    {
+      "record_id": "ME026",
+      "phase_id": "REC50-R13-ME026-P1",
+      "site_id": "post-kerem-shalom",
+      "current_phase_scope": "Kerem Shalom aid-entry interruption, with a documented return for one Jordan food convoy by 9 May 2024",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-163",
+        "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-164",
+        "https://www.ochaopt.org/content/gaza-humanitarian-response-update-6-12-may-2024",
+        "https://www.ochaopt.org/content/humanitarian-access-snapshot-gaza-strip-1-31-may-2024"
+      ]
+    },
+    {
+      "record_id": "REC50-R21-002",
+      "phase_id": "REC50-R21-002-P1",
+      "site_id": "post-ras-jedir",
+      "current_phase_scope": "Non-exempt passenger and goods passage at Ras Jedir crossing and Ben Guerdane approach",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": false,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged. The wider Ben Guerdane approach remains unlocated.",
+      "phase_source_urls": [
+        "https://directinfo.webmanagercenter.com/2016/12/14/tunisie-medenine-le-passage-frontalier-de-ras-jedir-bloque-par-des-sit-inneurs-de-ben-guerdane/",
+        "https://www.webdo.tn/fr/actualite/national/tunisie-passage-frontalier-de-ras-jedir-bloque-sit-inneurs/161398/"
+      ]
+    },
+    {
+      "record_id": "REC50-R21-002",
+      "phase_id": "REC50-R21-002-P2",
+      "site_id": "post-ras-jedir",
+      "current_phase_scope": "Non-emergency vehicle passage to and from Libya at Ras Jedir crossing and Ben Guerdane approach",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": false,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged. The wider Ben Guerdane approach remains unlocated.",
+      "phase_source_urls": [
+        "https://libyaherald.com/2017/01/traffic-finally-moving-at-ras-jedir-border-crossing",
+        "https://www.webdo.tn/fr/actualite/national/agitations-a-ben-guerdane-a-cause-poste-frontalier-de-ras-jedir/161042/"
+      ]
+    },
+    {
+      "record_id": "REC50-R23-003",
+      "phase_id": "REC50-R23-003-P1",
+      "site_id": "post-chaman-friendship-gate",
+      "current_phase_scope": "Chaman/Spin Boldak commercial freight into Afghanistan restored in July 2021",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://www.euronews.com/2021/07/26/us-afghanistan-conflict-pakistan",
+        "https://www.brecorder.com/news/40108969"
+      ]
+    },
+    {
+      "record_id": "REC50-R23-004",
+      "phase_id": "REC50-R23-004-P1",
+      "site_id": "post-chaman-friendship-gate",
+      "current_phase_scope": "Chaman/Spin Boldak crossing interruption during the December 11, 2022 clash",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://www.euronews.com/2022/12/12/pakistan-afghanistan",
+        "https://www.arabnews.pk/pakistan/pm-sharif-condemns-unfortunate-shelling-at-pak-afghan-chaman-border-2214736",
+        "https://www.aljazeera.com/news/2022/12/13/pakistan-afghanistan-border-crossing-reopens-after-deadly-firing"
+      ]
+    },
+    {
+      "record_id": "REC50-R23-005",
+      "phase_id": "REC50-R23-005-P1",
+      "site_id": "post-chaman-friendship-gate",
+      "current_phase_scope": "Ordinary cross-border traffic at Chaman during the September 2019 Afghan presidential-election closure",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://www.dawn.com/news/1507770/chaman-border-closed-due-to-afghan-polls",
+        "https://english.aaj.tv/news/10458102/pak-afghan-border-crossings-reopened-for-trade-traffic"
+      ]
+    },
+    {
+      "record_id": "REC50-R26-001",
+      "phase_id": "REC50-R26-001-P1",
+      "site_id": "post-kasumbalesa",
+      "current_phase_scope": "Kasumbalesa Congolese-side border-service obstruction and import/export vehicle return",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://www.radiookapi.net/node/183941",
+        "https://actualite.cd/2018/08/03/rdc-la-route-de-kasumbalesa-vers-la-frontiere-rdczambie-bloquee",
+        "https://jambordc.info/rdc-7-oddh-condamnent-la-fermeture-de-la-frontiere-de-kasumbalesa-et-parlent-dune-atteinte-a-la-liberte-communique/"
+      ]
+    },
+    {
+      "record_id": "REC50-R26-002",
+      "phase_id": "REC50-R26-002-P1",
+      "site_id": "post-kasumbalesa",
+      "current_phase_scope": "Kasumbalesa Zambian-side driver blockade of import/export trucks",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://www.radiookapi.net/2019/03/25/actualite/societe/haut-katanga-les-chauffeurs-zambiens-bloquent-la-frontiere-de",
+        "https://www.radiookapi.net/2019/03/27/actualite/societe/lubumbashi-reouverture-des-frontieres-entre-la-rdc-et-la-zambie"
+      ]
+    },
+    {
+      "record_id": "REC50-R26-003",
+      "phase_id": "REC50-R26-003-P1",
+      "site_id": "post-kasumbalesa",
+      "current_phase_scope": "Kasumbalesa ordinary small-trader entry into Zambia observed restricted on March27,2020",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://actualite.cd/index.php/2020/03/27/covid-19-la-zambie-ferme-sa-frontiere-du-cote-de-kasumbalesa-par-prevention",
+        "https://www.adiac-congo.com/content/rdc-zambie-le-poste-frontalier-de-kasumbalesa-reprend-du-service-115011",
+        "https://www.radiookapi.net/2020/03/29/actualite/sante/haut-katanga-la-frontiere-de-kasumbalesa-fermee-0",
+        "https://www.radiookapi.net/node/200913",
+        "https://www.tradebarriers.org/complaint/NTB-000-950",
+        "https://paulshalala.blogspot.com/2020/03/?m=0"
+      ]
+    },
+    {
+      "record_id": "REC50-R26-005",
+      "phase_id": "REC50-R26-005-P2",
+      "site_id": "post-mpondwe-kasindi",
+      "current_phase_scope": "Kasindi–Mpondwe ordinary cross-border movement observations during the 2026 Ebola response",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://acp.cd/province/ebola-au-nord-kivu-inquietude-generalisee-pour-la-fermeture-de-la-frontiere-de-kasindi/",
+        "https://acp.cd/province/ebola-au-nord-kivu-la-fermeture-frontaliere-ougandaise-asphyxie-leconomie-locale-a-kasindi/",
+        "https://acp.cd/province/rdc-ouganda-lallegement-des-mesures-de-restriction-frontaliere-face-a-ebola-salue-a-kasindi/",
+        "https://www.monitor.co.ug/uganda/news/national/ebola-restrictions-hurt-businesses-at-kasese-mpondwe-border-5632728",
+        "https://ubc.go.ug/2026/05/21/no-local-ebola-cases-recorded-in-uganda-as-recovered-congolese-patient-tests-negative/",
+        "https://health.go.ug/download/press-statement-on-evd-update-27th-may-2026?download=1",
+        "https://health.go.ug/download/press-release-15th-june-2026-ebola-travel-advisory?download=1"
+      ]
+    },
+    {
+      "record_id": "REC50-R27-003",
+      "phase_id": "REC50-R27-003-P1",
+      "site_id": "post-enguri",
+      "current_phase_scope": "Ordinary departures from Abkhazia, excluding people needing medical assistance at Enguri bridge",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://civil.ge/archives/450654",
+        "https://1tv.ge/lang/ru/news/sgb-de-fakto-vlasti-okkupirovannoj-abkhazii-ogranichili-vezd-na-territoriju-kontroliruemuju-centralnoj-vlastju/",
+        "https://civil.ge/ru/archives/450807",
+        "https://rustavi2.ge/en/news/213677"
+      ]
+    },
+    {
+      "record_id": "REC50-R27-003",
+      "phase_id": "REC50-R44-ENGURI-P1",
+      "site_id": "post-enguri",
+      "current_phase_scope": "Ordinary departure restriction at Enguri, with restoration reported by 1 November 2021",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://civil.ge/archives/450654",
+        "https://rustavi2.ge/en/news/213677"
+      ]
+    },
+    {
+      "record_id": "EA001",
+      "phase_id": "REC50-R28-PH001",
+      "site_id": "post-poipet-khlong-luek",
+      "current_phase_scope": "Aranyaprathet–Poipet rule restricting Thai outbound tourism and gambling, confirmed by the 8 June 2025 MFA briefing.",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://www.mfa.go.th/en/content/press-conf-devts-thailand-cambodia-situation-4?cate=5d5bcb4e15e39c306000683c"
+      ]
+    },
+    {
+      "record_id": "REC50-R31-001",
+      "phase_id": "REC50-R31-001-P2",
+      "site_id": "post-ysleta-zaragoza",
+      "current_phase_scope": "Commercial lanes obstructed by trucker protesters at Ysleta–Zaragoza International Bridge",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://www.texastribune.org/2022/04/11/texas-border-inspections-truckers-protest/",
+        "https://www.freightwaves.com/news/truck-drivers-from-mexico-end-blockade-of-texas-bridges"
+      ]
+    },
+    {
+      "record_id": "REC50-R31-002",
+      "phase_id": "REC50-R31-002-P1",
+      "site_id": "post-bridge-of-the-americas",
+      "current_phase_scope": "CBP cargo-lot commercial services at Bridge of the Americas, El Paso",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/354cf2f",
+        "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/3558dca",
+        "https://content.govdelivery.com/attachments/USDHSCBP/2023/04/18/file_attachments/2470649/TIN_FY-2023-2400-04_April%2017%2C%202023.pdf"
+      ]
+    },
+    {
+      "record_id": "REC50-R38-001",
+      "phase_id": "REC50-R38-001-P1",
+      "site_id": "post-erez-beit-hanoun",
+      "current_phase_scope": "Previously eligible non-exempt passenger passage at Erez/Beit Hanoun",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://www.timesofisrael.com/palestinian-media-israel-closing-northern-gaza-border-crossing/amp/",
+        "https://www.timesofisrael.com/israel-reopens-erez-crossing-with-gaza-after-period-of-relative-calm/amp/",
+        "https://www.xinhuanet.com/english/2018-08/28/c_137423442.htm"
+      ]
+    },
+    {
+      "record_id": "REC50-R38-002",
+      "phase_id": "REC50-R38-002-P1",
+      "site_id": "post-erez-beit-hanoun",
+      "current_phase_scope": "Formal additional restriction on non-exempt eligible Erez passenger access",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://english.wafa.ps/Pages/Details/95440",
+        "https://www.timesofisrael.com/israel-shutters-gaza-pedestrian-crossing-after-border-clashes/amp/",
+        "https://english.wafa.ps/Pages/Details/95457",
+        "https://www.timesofisrael.com/israel-closes-gaza-border-till-next-thursday-blames-recent-riots/amp/",
+        "https://www.timesofisrael.com/israel-reopens-the-sole-gaza-crossing-for-people-after-repairs/amp/",
+        "https://www.nad.ps/en/violations-reports/daily-report/daily-report-september-13-2018"
+      ]
+    },
+    {
+      "record_id": "REC50-R41-001",
+      "phase_id": "REC50-R41-001-P1",
+      "site_id": "post-shiveekhuren-ceke",
+      "current_phase_scope": "Coal exports through Shiveekhuren–Ceke during the late-2021 restriction and limited May 2022 return",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://6ix.com/news/southgobi-announces-fourth-quarter-and-full-year-2021-financial-and-operating-results-1",
+        "https://en.sxcoal.com/news/detail/4653271"
+      ]
+    },
+    {
+      "record_id": "REC50-R41-002",
+      "phase_id": "REC50-R41-002-P1",
+      "site_id": "post-gashuunsukhait-ganqimaodu",
+      "current_phase_scope": "Gashuunsukhait–Ganqimaodu coal-export interruption preceding the reported August 2021 restart",
+      "review_date": "2026-10-25",
+      "release_review_date": "2026-10-25",
+      "complete": true,
+      "note": "Current recorded phase scope was checked against this already sourced crossing identity. Coordinates are reused as an approximate crossing-area reference; source cohorts, directions and temporal rules are unchanged.",
+      "phase_source_urls": [
+        "https://montsame.mn/en/read/273760",
+        "https://www.miningweekly.com/article/china-opens-border-to-mongolian-coal-but-market-remains-tight-2021-09-01"
+      ]
+    }
+  ]
+}

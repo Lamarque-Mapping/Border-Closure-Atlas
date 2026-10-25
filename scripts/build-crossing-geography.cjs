@@ -4,14 +4,19 @@ const root=path.resolve(__dirname,'..'),source=path.join(root,'source/crossings'
 const scope=JSON.parse(fs.readFileSync(path.join(source,'scope-review.json'),'utf8'));
 const locations=JSON.parse(fs.readFileSync(path.join(source,'locations.json'),'utf8'));
 const data=JSON.parse(fs.readFileSync(path.join(root,'dist/map-data.js'),'utf8').replace(/^window.BORDER_DATA = /,'').replace(/;\s*$/,''));
-assert.equal(scope.source_sha256,data.meta.source_sha256,'review must match the core workbook');
+assert.equal(scope.source_sha256,data.meta.source_sha256,'review must match the native data release');
+assert.equal(locations.source_sha256,scope.source_sha256,'location bindings and scope review must match the same release');
+const expected=new Map(data.events.filter(e=>!e.quarantined&&!e.excluded_from_map).flatMap(e=>e.duration_periods.length?e.duration_periods.map(p=>[p.period_id,{record_id:e.id,scope:p.scope}]):[[e.id,{record_id:e.id,scope:null}]]));
 const categories=new Set(['single_site','multiple_named_sites','wider_border','needs_review']),phases={},undated={};
 for(const row of scope.rows){
   assert(categories.has(row.category));
   const index=row.phase_id?phases:undated,key=row.phase_id||row.record_id;
   assert(!index[key],'duplicate reviewed phase '+key);
+  assert(expected.has(key)&&expected.get(key).record_id===row.record_id,'scope decision belongs to this included record/phase');
+  assert.equal(row.current_phase_scope,expected.get(key).scope,'phase scope changed after geography reconciliation');
   index[key]={record_id:row.record_id,phase_id:row.phase_id||null,category:row.category,site_label:row.site_label||'',site_ids:[],partial:row.category==='multiple_named_sites'};
 }
+assert.equal(scope.rows.length,expected.size,'every included phase and undated record needs one scope decision');
 const sites=[],ids=new Set();
 for(const site of locations.sites){
   assert(site.id&&site.name&&!ids.has(site.id),'duplicate/unnamed crossing');ids.add(site.id);
@@ -26,7 +31,14 @@ for(const binding of locations.bindings){
   assert(['single_site','multiple_named_sites'].includes(row.category),'only identified crossing phases can receive crossing points');
   assert(ids.has(binding.site_id),'binding must have sourced coordinates');
   if(!row.site_ids.includes(binding.site_id))row.site_ids.push(binding.site_id);
-  if(binding.complete===true)row.partial=false;
+  assert.equal(binding.current_phase_scope,expected.get(binding.phase_id||binding.record_id).scope,'binding applicability must match the current phase scope');
+  if(binding.complete===false)row.explicitly_partial=true;
+  if(binding.complete===true)row.explicitly_complete=true;
+}
+for(const row of [...Object.values(phases),...Object.values(undated)]){
+  if(row.explicitly_partial)row.partial=true;
+  else if(row.explicitly_complete)row.partial=false;
+  delete row.explicitly_partial;delete row.explicitly_complete;
 }
 for(const row of Object.values(phases))if(row.category==='single_site')assert(row.site_ids.length<=1,'one crossing per single-site phase');
 const review={source_sha256:scope.source_sha256,review_date:scope.review_date,phases,undated,sites};

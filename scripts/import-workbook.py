@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Compile the workbook's current conclusions, preserving historical claims separately.
+"""Compile current native tables, preserving historical claims separately.
 
-Usage: python scripts/import-workbook.py [--workbook PATH] [--output PATH]
-Requires openpyxl for read-only workbook extraction. Geometry is reference context,
+Usage: python scripts/import-workbook.py [--release PATH] [--output PATH]
+Explicit --workbook retains legacy extraction for historical comparisons.
+The two-tab public reader is validated separately. Geometry is reference context,
 not a reconstruction of each timed phase. No external research is performed here.
 """
 import argparse
@@ -13,6 +14,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
+from release_common import DATA_PATH, MANIFEST_PATH, load_json, native_sheets, read_manifest, sha256
 
 ROOT = Path(__file__).resolve().parents[1]
 CATEGORY_ORDER = ['Security', 'Health and biosecurity', 'Trade and protectionism', 'Migration',
@@ -51,7 +53,7 @@ def table(sheets, name, header=0):
     rows = sheets[name]
     return [dict(zip(rows[header], row)) for row in rows[header+1:] if row[0] is not None]
 
-def compile_workbook(sheets, reference, workbook_name, workbook_hash):
+def compile_workbook(sheets, reference, workbook_name, workbook_hash, release=None):
     registers = table(sheets, 'Register', 2)
     categories = [c for c in CATEGORY_ORDER if c in sheets['Durations'][0]]
     assert set(categories) == {r['Broad rationale'] for r in table(sheets, 'Rationale coding') if r['Broad rationale'] != 'Uncoded'}, 'Unrecognised rationale category'
@@ -115,7 +117,8 @@ def compile_workbook(sheets, reference, workbook_name, workbook_hash):
         geo = copy.deepcopy(maps.get(rid, {}))
         e = {k: v for k, v in geo.items() if k in ['location_ids','continents','mapping_precision']}
         workbook_locations=location_rows[rid]
-        countries=split(dim['Countries or territories']) or sorted({c for row in workbook_locations for c in split(row['Countries'])})
+        countries=(release['countries_by_record'][rid] if release is not None else
+            split(dim['Countries or territories']) or sorted({c for row in workbook_locations for c in split(row['Countries'])}))
         phases=grouped['Chronology phases'][rid]
         def phase_values(column):return '; '.join(dict.fromkeys(str(p[column]) for p in phases if p.get(column))) or None
         e.update(id=rid, title=r['Closure or restriction episode'], region=r['Region'],
@@ -255,21 +258,31 @@ def compile_workbook(sheets, reference, workbook_name, workbook_hash):
             for url in p['source_urls']:
                 sources.setdefault(url, {'url': url, 'title': 'Chronology evidence', 'supports': [], 'access_history': []})
         e['sources'] = list(sources.values()); e['source_urls'] = list(sources)
-        e['onset_month'] = None
-        # An initial audit cannot validate a later correction. A parent start is
-        # used only when the current, non-held chronology corroborates its month.
-        corroborated_start=any(not p['contested'] and p['start_earliest'] and p['start_latest'] and
-            p['start_earliest'][:7]==p['start_latest'][:7]==str(e['start'] or '')[:7] for p in periods)
-        if not excluded and corroborated_start and re.match(r'^\d{4}-\d{2}(?:-\d{2})?$', str(e['start'] or '')):
-            e['onset_month'] = e['start'][:7]
-        e['onset_status'] = 'current_parent_start' if e['onset_month'] else 'current_start_unresolved'
-        e['onset_basis'] = 'Current parent start, with any explicit workbook correction. Narrower phase starts are shown in dated restrictions.' if e['onset_month'] else 'A supported parent start month is not established by the current review.'
+        # Phase starts need not be the first start of the parent episode. Keep
+        # every supported month with its evidence category, without filling the
+        # deliberately historical Original start field or using held dates.
+        e['phase_onsets'] = []
+        for p in periods:
+            a,b=p['start_earliest'],p['start_latest']
+            if excluded or p['contested'] or not a or not b: continue
+            try: first,last=dt.date.fromisoformat(a),dt.date.fromisoformat(b)
+            except (ValueError,TypeError): continue
+            if first<=last and a[:7]==b[:7]:
+                e['phase_onsets'].append({'phase_id':p['period_id'],'month':a[:7],
+                    'measure_type':p['measure_type']})
+        e['onset_months'] = sorted({p['month'] for p in e['phase_onsets']})
+        e['onset_month'] = next(iter(e['onset_months']),None)
+        e['onset_status'] = 'supported_phase_starts' if e['phase_onsets'] else 'current_start_unresolved'
+        e['onset_basis'] = ('Current non-held phase start bounds fall within the same calendar month. '
+            'Operational, legal-policy, announced-window and intermittent starts retain their evidence categories; '
+            'a later scoped phase is not a new independent parent episode.')
         e.update(interval_eligible=False, interval_start=None, interval_end=None,
                  interval_status='use_current_scoped_phases', interval_exclusion_reasons=[],
                  interval_basis='Current chronology phases supersede historical single-interval calculations.',
                  source_interval_days=r['Original calendar-day calculation'], source_continuity_flag=None)
-        if not geo:
-            continents=sorted({country_continents[c] for c in countries if country_continents.get(c)})
+        if not geo or release is not None:
+            continents_by_key={country_key(k):v for k,v in country_continents.items()}
+            continents=sorted({continents_by_key[country_key(c)] for c in countries if continents_by_key.get(country_key(c))})
             e.update(location_ids=[], location_links=[], continents=continents or region_continents.get(e['region'],['Unassigned']), mapping_precision='unlocated',
                      geography_note='This new record requires geographical review before mapping.', spatial_review_current=False)
         # Rebuild record-reference associations from the replacement's countries.
@@ -303,6 +316,15 @@ def compile_workbook(sheets, reference, workbook_name, workbook_hash):
             e['location_ids'] = []; e['location_links'] = []; e['mapping_precision'] = 'excluded'
         e['geography_reference_hash'] = geo.get('event_hash')
         e['event_hash'] = hashlib.sha256(json.dumps({'register': r, 'dimensions': dim, 'phases': periods, 'review': audit}, sort_keys=True).encode()).hexdigest()
+        if release is not None:
+            e['release_review'] = copy.deepcopy(release.get('current_review_by_record',{}).get(rid,{}))
+            e['country_display'] = release.get('country_display_by_record',{}).get(rid)
+            current=e['release_review']
+            for key in ['outcome','completed','adjudication','provenance','review_scope','latest_cycle',
+                        'completed_at_utc','ever_full_record_audit','latest_verification_label']:
+                if key in current:e['current_review'][key]=copy.deepcopy(current[key])
+            limit=release.get('country_scope_limits_by_record',{}).get(rid)
+            if limit:e['uncertainty']='\n\n'.join(v for v in [e.get('uncertainty'),limit] if v)
         e['review_status'] = 'current_workbook'; e['change_status'] = 'workbook_import'
         events.append(e)
     included = [e for e in events if not e['quarantined']]
@@ -378,31 +400,112 @@ def compile_workbook(sheets, reference, workbook_name, workbook_hash):
     return data, {'workbook_sha256': workbook_hash, 'summary': summary, 'rationale_counts': codes,
                   'excluded_ids': sorted(excluded_ids), 'changed_geography_fields': geography_changes}
 
+def compile_release(release, reference, source_name, source_hash, manifest, method):
+    """Adapt native tables; the two-tab workbook is a reader, not a data parser."""
+    data,report=compile_workbook(native_sheets(release),reference,source_name,source_hash,release)
+    meta=data['meta'];counts=release['counts']
+    assert (len(data['events']),sum(len(e['duration_periods']) for e in data['events']))==(counts['records'],counts['phases'])
+    assert counts['included']==meta['atlas_summary']['included_rows']
+    meta['data_state_sha256']=release['data_state_sha256']
+    meta['release_id']=method['release_id'];meta['release_method']=copy.deepcopy(method)
+    meta['snapshot_date']=release.get('release_metadata',{}).get('snapshot_date',method['release_date'])
+    # The preserved workbook includes older release summaries and codebooks.
+    # Keep those available as history; none is a current release assertion.
+    meta['historical_release_summary']=meta.pop('release_summary')
+    meta['historical_source_model_sha256']=meta['source_model_sha256']
+    meta['source_model_sha256']=release['data_state_sha256']
+    meta['historical_research_method']=meta.pop('research_method')
+    meta['historical_research_method'].pop('source_sha256',None)
+    meta['historical_research_method']['original_workbook_sha256']=release['workbook_origin_sha256']
+    meta['historical_codebook']=meta.pop('codebook')
+    meta['audit_metadata_rows']=meta.pop('reviewed_records')
+    current_method=copy.deepcopy(release['release_metadata']['research_method'])
+    rules={
+        'precision_rule':'Retain supported date bounds and endpoint meanings. Observed same-cohort reopening, legal change, announced expiry and last-confirmed observation are distinct. Partial resumption applies only to its stated traffic and direction.',
+        'counting_rule':'Minimum and maximum durations are calendar-date boundary differences, not measured elapsed hours. Endpoint inclusion is recorded separately and never adds an automatic day. Same-day and intermittent regimes have no continuous whole-day duration.',
+        'mapping_rule':'Each included phase has its own reviewed geographical-scope decision. Sourced crossing-area coordinates are attached only to explicitly applicable phases. Unlocated or rejected matches acquire no inferred point or whole-frontier fallback. Wider lines and country outlines are reference context, not closure footprints; incomplete coverage remains explicit.',
+        'coverage_rule':'This is an incomplete, nonrandom inventory. Search and evidence coverage do not measure closure incidence, prove absence, or support causal comparisons. Overlapping parents, phases and rationale groups are not independent counts.',
+        'rationale_rule':'Rationale assignments are attributed and nonexclusive. Preserve official explanations, protest demands and analytical coding with their evidence and qualifications; a documented reason does not establish every motive.',
+        'verification_rule':current_method['verification_statement'],
+        'continuity_rule':'Temporal display follows each current phase and its explicit rule. Evidence does not extend beyond its dated limit; a last observation is not reopening or proof of later continued closure.',
+        'held_rule':'Held or contested phases remain discoverable at their recorded evidence dates. They are excluded from numeric continuous-duration claims, confirmed interval animation and supported phase-start filtering.',
+        'scope_rule':'The core register covers land-frontier restrictions, including international river-crossing services. Selected Australia, New Zealand and United Kingdom passenger-policy histories remain a separate country-context supplement and do not enter land-border counts or duration charts.'}
+    current_method.update(model=method['models']['final_logs'],source_sha256=source_hash,
+        data_state_sha256=release['data_state_sha256'],full_history=method['full_text'],
+        review_counts=copy.deepcopy(release['review_counts']),duration_review=rules)
+    meta['research_method']=current_method
+    meta['codebook']={**meta['rationale_definitions'],
+        'Release identity':method['release_id'],'Canonical research state':release['data_state_sha256'],
+        'Current versus historical':current_method['current_vs_historical'],
+        'Endpoint meanings':rules['precision_rule'],'Duration arithmetic':rules['counting_rule'],
+        'Phase geometry and traffic rules':rules['mapping_rule'],'Coverage and missingness':rules['coverage_rule'],
+        'Rationale and phase rules':rules['rationale_rule'],'Review and evidence provenance':rules['verification_rule'],
+        'Map continuity':rules['continuity_rule'],'Held evidence visibility':rules['held_rule'],'Land and national-policy scope':rules['scope_rule']}
+    meta['distinct_recorded_urls']=len({u for e in data['events'] for u in e['source_urls']})
+    meta['record_url_associations']=sum(len(e['source_urls']) for e in data['events'])
+    assert meta['distinct_recorded_urls']==method['counts']['distinct_recorded_urls']
+    meta['source_url_definition']=current_method['source_url_definition']
+    phase_rows=release['tables']['Chronology phases'];stats=release['review_counts']
+    values=[
+        ('Release',method['release_id'],'Current release; study window 21 October 2016 to 21 October 2026.'),
+        ('Parent records',counts['records'],f"{counts['included']} included; {counts['records']-counts['included']} retained reference/excluded records."),
+        ('Chronology phases',counts['phases'],'Separate cohorts, directions, authorities and endpoint meanings remain explicit.'),
+        ('Evidence queue rows',meta['review_queue_items'],'Rows retain unresolved, narrowed and recorded follow-up dispositions; not a count of independent unresolved closures.'),
+        ('Complete operational phases',sum(bool(p['Complete operational (1=yes)']) for p in phase_rows),'Scoped calendar-date differences, not exact hours or whole-frontier totals.'),
+        ('Exact complete operational phases',sum(bool(p['Exact complete operational (1=yes)']) for p in phase_rows),'Day-precision operational subset; policy and announced periods remain separate.'),
+        ('Held phases',sum(bool(p['Contested / held (1=yes)']) for p in phase_rows),'Visible evidence, excluded from numeric continuous-duration claims.'),
+        ('Completed REC50 cycles',stats['completed_checkpoint_verified_cycles'],'Coverage searches, targeted verification and preselected full-record audits.'),
+        ('REC50 full-record audit parents',stats['distinct_full_record_audit_parents'],'Selected full-record source audits; not all parents in the final register.'),
+        ('REC50 targeted questions',stats['targeted_questions'],f"Across {stats['distinct_targeted_question_parents']} parents; populations overlap with full-record audits."),
+        ('Distinct recorded URLs',meta['distinct_recorded_urls'],current_method['source_url_definition']),
+        ('Canonical research state',release['data_state_sha256'],'Native research state before separately audited country/review presentation metadata; compressed release input has its own SHA-256.')]
+    meta['release_summary']=[{'Measure':name,'Release value':value,'Meaning / limitation':note} for name,value,note in values]
+    for kind,key in [('reader','workbook'),('companion_json','companion_json'),('companion_zip','companion_zip')]:
+        item=manifest['downloads'][kind]
+        meta['download_'+key]=item['path'];meta['download_'+key+'_sha256']=item['sha256']
+    meta['download_source_href']=meta['download_companion_json']
+    meta['release_manifest']='downloads/release-manifest.json'
+    meta['native_supporting_tables']=len(release['tables'])
+    report.update(input_format=release['format'],data_state_sha256=release['data_state_sha256'],
+        source_sha256=source_hash,reader_sha256=manifest['files']['reader']['sha256'],
+        release_id=method['release_id'],native_supporting_tables=len(release['tables']))
+    return data,report
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--workbook', type=Path, default=ROOT/'source/Global_Border_Closures_Register_2016_2026.xlsx')
+    parser.add_argument('--release', type=Path, default=DATA_PATH)
+    parser.add_argument('--manifest', type=Path, default=MANIFEST_PATH)
+    parser.add_argument('--workbook', type=Path, help='Explicit legacy worksheet input; not the public two-tab reader')
     parser.add_argument('--sheets-json', type=Path)
     parser.add_argument('--reference', type=Path, default=ROOT/'source/geography-reference.json')
     parser.add_argument('--output', type=Path, default=ROOT/'dist')
     args = parser.parse_args()
-    sheets = json.loads(args.sheets_json.read_text()) if args.sheets_json else read_workbook(args.workbook)
-    data, report = compile_workbook(sheets, json.loads(args.reference.read_text()), args.workbook.name, hashlib.sha256(args.workbook.read_bytes()).hexdigest())
+    if args.workbook:
+        sheets = json.loads(args.sheets_json.read_text()) if args.sheets_json else read_workbook(args.workbook)
+        data,report=compile_workbook(sheets,load_json(args.reference),args.workbook.name,sha256(args.workbook))
+    else:
+        manifest=read_manifest(args.manifest)
+        assert args.release.resolve()==(ROOT/manifest['files']['data']['path']).resolve()
+        release=load_json(args.release)
+        data,report=compile_release(release,load_json(args.reference),args.release.name,sha256(args.release),
+            manifest,load_json(ROOT/manifest['files']['methodology']['path']))
     args.output.mkdir(parents=True, exist_ok=True)
     (args.output/'data.js').write_text('window.BORDER_DATA = '+json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')+';\n')
     write(ROOT/'source/workbook-import-report.json', report)
     write(ROOT/'source/SOURCE_PROVENANCE.json', {
-        'sole_research_source': args.workbook.name,
+        'sole_research_source': data['meta']['source_filename'],
         'sha256': data['meta']['source_sha256'],
         'source_snapshot': data['meta']['snapshot_date'],
         'source_model_sha256': data['meta']['source_model_sha256'],
-        'replacement_policy': 'Complete replacement of the previous workbook. No previous research records or editorial overrides are merged.',
-        'historical_fields': 'Only historical material explicitly retained in the replacement workbook.',
+        'replacement_policy': 'Complete replacement from the native REC50 tables, with separately audited release country and review metadata. The two-tab workbook is the readable projection of this source.',
+        'historical_fields': 'Historical supporting tables and original values are explicitly retained in the native release and override audit.',
         'reference_geometry': 'Retained base geometry is record reference only, not an approved closure footprint. Workbook phase location decisions are preserved separately without inheriting another phase’s coordinates.',
         'verification_statement': data['meta']['research_method']['verification_statement'],
         'summary': data['meta']['atlas_summary'],
         'phase_binding_counts': data['meta']['phase_binding_counts']})
     downloads=args.output/'downloads'; downloads.mkdir(parents=True,exist_ok=True)
-    (downloads/'Global_Border_Closures_Register_2016_2026.xlsx').write_bytes(args.workbook.read_bytes())
+    if args.workbook:
+        (downloads/args.workbook.name).write_bytes(args.workbook.read_bytes())
     print(json.dumps({'records':len(data['events']), **data['meta']['atlas_summary']['chronology_coverage']}))
 
 if __name__ == '__main__': main()

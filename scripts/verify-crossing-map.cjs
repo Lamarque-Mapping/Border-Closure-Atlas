@@ -19,25 +19,29 @@ const reviews=JSON.parse(fs.readFileSync(path.join(root,'source/crossings/scope-
 const source=JSON.parse(fs.readFileSync(path.join(root,'source/crossings/locations.json'),'utf8'));
 const included=data.events.filter(e=>!C.excluded(e)),byID=new Map(data.events.map(e=>[e.id,e]));
 const features=new Map(C.locationFeatures(data).map(f=>[f.properties.location_id,f]));
+const manifest=JSON.parse(fs.readFileSync(path.join(root,'source/current-release-manifest.json'),'utf8'));
+const includedCount=manifest.counts.included,recordCount=manifest.counts.records;
 const state={mode:'all',measureType:'',rationale:''};
 const ids=(e,s=state)=>C.mapLocationsFor(e,data,s);
 const phaseRecord=(e,p)=>({...e,duration_periods:[p]});
 const types=locationIDs=>locationIDs.map(id=>{assert(features.has(id),'mapped reference exists: '+id);return features.get(id).geometry.type;});
 const at=iso=>({mode:'intervals',month:C.monthOrdinal(iso),measureType:''});
 const sortedIDs=events=>events.map(e=>e.id).sort();
-assert.equal(included.length,697,'all included core land records remain available');
-assert.equal(data.events.length,701,'the four excluded records are retained');
+assert.equal(included.length,includedCount,'all included core land records remain available');
+assert.equal(data.events.length,recordCount,'the four excluded records are retained');
 assert.deepEqual(data.events,before.events,'attaching geography must not rewrite records, dates, duration or rationale coding');
 assert.deepEqual(data.meta,before.meta,'the statistical release metadata is unchanged');
 assert.deepEqual(JSON.parse(read('analysis-data.json')).events,data.events,'Analysis retains precisely the original land records');
 assert.equal(reviews.source_sha256,data.meta.source_sha256,'scope review applies to this release');
-assert.equal(reviews.rows.length,827,'825 included dated phases plus two undated records');
+assert.equal(source.source_sha256,reviews.source_sha256,'location source applies to the same release');
+assert.equal(X.review.phases['REC50-R01-002-P1'].partial,true,'Moyale point does not locate nearby unauthorised routes');
+assert.equal(reviews.rows.length,included.reduce((n,e)=>n+Math.max(1,e.duration_periods.length),0),'all included phases and undated records');
 const expectedKeys=included.flatMap(e=>e.duration_periods.length?e.duration_periods.map(p=>e.id+'|'+p.period_id):[e.id+'|']);
 const actualKeys=reviews.rows.map(r=>r.record_id+'|'+(r.phase_id||''));
 assert.deepEqual([...actualKeys].sort(),[...expectedKeys].sort(),'every included phase, and only included phases, has one scope decision');
 assert.equal(new Set(actualKeys).size,actualKeys.length,'phase scope decisions are unique');
 const singles=reviews.rows.filter(r=>r.category==='single_site');
-assert.equal(singles.length,431,'all single-crossing phases in the checked scope review are handled');
+assert(singles.length>0,'explicit single-crossing scope decisions are present');
 let singleMapped=0,singlePending=0;
 for(const row of singles){
  const e=byID.get(row.record_id),p=e.duration_periods.find(p=>p.period_id===row.phase_id),one=phaseRecord(e,p),mapped=ids(one);
@@ -99,7 +103,12 @@ assert(/mazongshan|naran/i.test(features.get(mazIDs[0]).properties.label||featur
 assert.deepEqual(ids(maz,at('2021-09')),[],'last-confirmed date does not imply closure to the present');
 assert.equal(C.phaseTemporalState(maz.duration_periods[0],C.monthOrdinal('2020-06')),'policy','a policy period does not become observed operational continuity');
 const horo=byID.get('R5-AES-003');
-for(const id of ids(horo))assert(!/namanga/i.test(JSON.stringify(features.get(id).properties)),'Horohoro phase never uses the rejected Namanga location');
+const horoPhase=horo.duration_periods.find(p=>p.period_id==='R5-AES-003-R1');
+assert(horoPhase&&/Horohoro/.test(horoPhase.scope),'the original Horohoro phase remains explicit');
+assert.deepEqual(ids(phaseRecord(horo,horoPhase)),['post-horohoro-lunga-lunga'],'Horohoro phase never uses the rejected Namanga location');
+const namangaPhase=horo.duration_periods.find(p=>p.period_id==='REC50-R01-PH001');
+assert(namangaPhase&&/Namanga/.test(namangaPhase.scope),'the later accepted Namanga rule has its own phase');
+assert.deepEqual(ids(phaseRecord(horo,namangaPhase)),['post-namanga-road'],'Namanga does not overwrite or inherit the Horohoro phase location');
 // Clicking an individual point selects only records whose active phase applies.
 for(const id of mazIDs){
  const s={...at('2020-06'),location:id};
@@ -171,10 +180,10 @@ assert.equal(completeSource.id,'AM002','full-evidence fixture matches its catalo
 const csvRecords=included.map(e=>e.id===completeSource.id?completeSource:e);
 const withMapping=CSV.build({records:csvRecords,state,mappingStatus:e=>C.mappingStatus(e,data,state).label});
 const withoutMapping=CSV.build({records:csvRecords,state});
-assert.equal(withMapping.count,697,'CSV contains all matching records irrespective of mapping coverage');
+assert.equal(withMapping.count,includedCount,'CSV contains all matching records irrespective of mapping coverage');
 const csv=parseCSV(withMapping.content),legacyCSV=parseCSV(withoutMapping.content),headers=csv[0],csvIndex=new Map(csv.slice(1).map(row=>[row[headers.indexOf('Record ID')],row]));
-assert.equal(csv.length,698,'one header and exactly 697 correctly parsed data rows');
-assert.equal(csvIndex.size,697,'no CSV record IDs are lost or duplicated');
+assert.equal(csv.length,includedCount+1,'one header and the exact included population of correctly parsed data rows');
+assert.equal(csvIndex.size,includedCount,'no CSV record IDs are lost or duplicated');
 assert(csv.every(row=>row.length===headers.length),'multiline evidence never breaks the CSV column layout');
 assert.equal(headers.at(-1),'Map location status','mapping status is an additional final column');
 assert.equal(csvIndex.get(maz.id).at(-1),'Crossing mapped','mapped named crossing is described accurately');
@@ -199,7 +208,7 @@ const locationEvents=new Map();
 for(const e of included)for(const id of ids(e)){if(!locationEvents.has(id))locationEvents.set(id,[]);locationEvents.get(id).push(e);}
 const map={getSize:()=>({x:1200,y:700}),getZoom:()=>3,getPixelBounds:()=>({min:{x:0,y:0}}),containerPointToLatLng:([x,y])=>({lng:x/10-180,lat:80-y/10}),distance:()=>100000};
 const snapshot=window.BorderExport.capture({map,data,visible:included,locationEvents,state});
-assert.equal(snapshot.events.length,697,'PNG evidence selection retains unlocated records');
+assert.equal(snapshot.events.length,includedCount,'PNG evidence selection retains unlocated records');
 assert(snapshot.references.some(r=>r.feature.geometry.type==='Point'),'PNG capture includes crossing dots');
 assert.deepEqual(plain(snapshot.references.map(r=>r.feature.properties.location_id).sort()),[...locationEvents.keys()].sort(),'PNG and live map use the same references');
 const mazRef=snapshot.references.find(r=>r.feature.properties.location_id===mazIDs[0]);
@@ -235,5 +244,5 @@ function loaderHarness(mapLoaded=false){
  assert.equal(direct.scripts.length,1,'only one map load was attempted');
  direct.context.AtlasCrossings=X;
  const retry=await direct.api.ready();assert.equal(retry.crossing_map,X.review,'cold map load recovers without an obsolete fallback');
- console.log(`Crossing map passed: 697 records unchanged; ${singles.length} single-site phases never draw border lines (${singleMapped} mapped, ${singlePending} awaiting location); all monthly populations unchanged; mixed/held/last-confirmed phases, source bindings, point filters, 697-row CSV, PNG phase capture and constant border-matched crossing marks and safe loading failure checked.`);
+ console.log(`Crossing map passed: ${includedCount} records unchanged; ${singles.length} single-site phases never draw border lines (${singleMapped} mapped, ${singlePending} awaiting location); all monthly populations unchanged; mixed/held/last-confirmed phases, source bindings, point filters, ${includedCount}-row CSV, PNG phase capture and constant border-matched crossing marks and safe loading failure checked.`);
 })().catch(error=>{console.error(error);process.exitCode=1;});

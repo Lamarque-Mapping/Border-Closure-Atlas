@@ -3,25 +3,23 @@ name: Publish Border Closure Atlas
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: github-pages
+  group: atlas-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  verify:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out atlas
         uses: actions/checkout@v6
@@ -31,7 +29,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Build the verified workbook and research data
+      - name: Validate the checked-in reader and build research data
         run: |
           python -m pip install --disable-pip-version-check openpyxl==3.1.5
           python scripts/prepare-release-workbook.py
@@ -51,26 +49,52 @@ jobs:
           node --check dist/national.js
           node --check dist/data-loader.js
           node scripts/verify-analysis-loading.cjs
+          node scripts/verify-analysis-metrics.cjs
           node scripts/verify-national-policies.cjs
           node scripts/verify-map-export.cjs
           node scripts/verify-crossing-map.cjs
+          node scripts/verify-phase-onsets.cjs
           python scripts/verify-workbook.py
           python scripts/verify-workbook-package.py
-          python scripts/verify-workbook-presentation.py
-          python scripts/verify-workbook-reader-layout.py
           node scripts/verify-downloads.cjs
           python scripts/verify-standalone-downloads.py
           node scripts/verify-ui.cjs
           node scripts/verify-analysis-sections.cjs
           node scripts/verify-analysis-duration-filter.cjs
           node scripts/verify-border-history.cjs
+      - name: Prepare website
+        env:
+          ATLAS_PUBLIC_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: node scripts/build-hosted.cjs
+      - name: Preserve validated website
+        uses: actions/upload-artifact@v4
+        with:
+          name: validated-atlas
+          path: out
+          retention-days: 7
+  publish:
+    needs: verify
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: github-pages-publication
+      cancel-in-progress: false
+    steps:
+      - name: Retrieve validated website
+        uses: actions/download-artifact@v4
+        with:
+          name: validated-atlas
+          path: out
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Prepare website
-        env:
-          ATLAS_PUBLIC_URL: ${{ steps.pages.outputs.base_url }}
-        run: node scripts/build-hosted.cjs
       - name: Upload website
         uses: actions/upload-pages-artifact@v4
         with:

@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
-"""Regress the Atlas XLSX table-package checks without resaving any workbook.
+"""Validate the current two-tab reader's package without resaving it.
 
-The current release must pass all 55 table/532 header checks. The historical
-original and b729 ID-only repair are reconstructed from their exact metadata
-defects and must fail; optional --original/--previous files verify those complete
-package payloads against the real archived releases. Small independent OOXML
-fixtures exercise structural faults and the repair's narrow change boundary.
+The current release has one native table with 18 headers. Explicit historical
+workbook arguments retain the old55-table metadata regressions. Independent
+OOXML fixtures exercise structural defects for either input contract.
 """
 
 import argparse
@@ -15,6 +13,7 @@ import json
 from pathlib import Path
 import xml.etree.ElementTree as ET
 from xml.sax.saxutils import escape, quoteattr
+from release_common import READER_PATH,MODEL_PATH,load_json,read_manifest
 
 ROOT = Path(__file__).resolve().parents[1]
 SPEC = importlib.util.spec_from_file_location("workbook_package", Path(__file__).with_name("repair-workbook-package.py"))
@@ -191,7 +190,7 @@ def historical_regressions(current, original_path=None, previous_path=None):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--workbook", type=Path,
-                        default=ROOT / "source/Global_Border_Closures_Register_2016_2026.xlsx")
+                        default=READER_PATH)
     parser.add_argument("--original", type=Path)
     parser.add_argument("--previous", type=Path)
     parser.add_argument("--self-test-only", action="store_true")
@@ -200,12 +199,18 @@ def main():
     if not args.self_test_only:
         _, current, _ = PACKAGE.load_package(args.workbook)
         current_report, _ = PACKAGE.inspect(current)
-        assert current_report["worksheets"] in {55, 56} and current_report["tables"] == 55
-        assert current_report["table_headers_checked"] == 532
-        report.update(historical_regressions(current, args.original, args.previous))
+        if args.workbook.resolve()==READER_PATH.resolve():
+            manifest=read_manifest();model=load_json(MODEL_PATH)
+            assert hashlib.sha256(args.workbook.read_bytes()).hexdigest()==manifest['files']['reader']['sha256']
+            assert current_report['worksheets']==2 and current_report['tables']==1
+            assert current_report['table_headers_checked']==len(model['columns'])==18
+        else:
+            assert current_report["worksheets"] in {55, 56} and current_report["tables"] == 55
+            assert current_report["table_headers_checked"] == 532
+            report.update(historical_regressions(current, args.original, args.previous))
         report.update({"workbook": str(args.workbook),
                        "sha256": hashlib.sha256(args.workbook.read_bytes()).hexdigest(),
-                       "worksheets_checked": current_report["worksheets"], "tables_checked": 55, "headers_checked": 532})
+                       "worksheets_checked": current_report["worksheets"], "tables_checked": current_report['tables'], "headers_checked": current_report['table_headers_checked']})
     print(json.dumps(report, indent=2))
 
 

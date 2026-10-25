@@ -1,5 +1,8 @@
 const fs=require('fs'),vm=require('vm'),assert=require('node:assert/strict');
 const root=require('path').resolve(__dirname,fs.existsSync(require('path').resolve(__dirname,'../dist'))?'../dist':'../releases/current_public/web')+'/';
+const reference=require('./release-verification-reference.cjs').load();
+const releaseMethod=JSON.parse(fs.readFileSync(require('path').resolve(__dirname,'../source/release-method.json'),'utf8'));
+const expectedGroups=new Map(reference.groups().map(group=>[group.code,group])),expectedExact=reference.exactPhases();
 function element(id=''){
  const events={};const classes=new Set();
  return {id,hidden:false,value:'',dataset:{},style:{setProperty(k,v){this[k]=v}},classList:{add(...values){values.forEach(c=>classes.add(c))},remove(...values){values.forEach(c=>classes.delete(c))},toggle(c,on){(on===undefined?!classes.has(c):on)?classes.add(c):classes.delete(c)},contains(c){return classes.has(c)}},attrs:{},textContent:'',innerHTML:'',children:[],events,
@@ -108,6 +111,8 @@ function host(initialHash='',offline=false){
  vm.runInContext(app.slice(app.indexOf('  function changeMonth('),app.indexOf("  $('search').addEventListener")),tc);
  vm.runInContext(app.slice(app.indexOf('  function resetFilters('),app.indexOf('  function render(){')),tc);
  tc.applyData(data);const timelineState=vm.runInContext('state',tc);
+ assert(timeline.ids['research-method'].innerHTML.includes(releaseMethod.full_text),'Overview retains the complete supplied research account');
+ assert(timeline.ids['research-method'].innerHTML.includes('not independent human or different-model verification'),'AI-review limits stay explicit');
  // Overview totals describe the complete land dataset. Execute the production
  // renderer on the real browsing summaries, including the actual separate
  // national-policy histories, and reconcile against the full research records.
@@ -124,7 +129,7 @@ function host(initialHash='',offline=false){
  const total=key=>fullLand.reduce((count,record)=>count+Number(Boolean(record.timing_coverage?.[key])),0);
  const unassigned=Object.fromEntries([...new Set(fullLand.filter(record=>!record.rationales.length).map(record=>record.rationale_coding_status||'No category assigned'))].map(label=>[label,fullLand.filter(record=>!record.rationales.length&&(record.rationale_coding_status||'No category assigned')===label).length]));
  const displayedRows=id=>Object.fromEntries([...overview.ids[id].innerHTML.matchAll(/<dt>([^<]+)<\/dt><dd>(\d+)<\/dd>/g)].map(match=>[match[1],Number(match[2])]));
- assert.equal(fullLand.length,697);assert.equal(assigned,677);
+ assert.equal(fullLand.length,reference.counts.included);assert.equal(assigned,reference.counts.assigned);
  assert(overview.ids['rationale-evidence-summary'].innerHTML.includes(assigned+' of '+fullLand.length+' included land-border records'));
  assert(overview.ids['rationale-evidence-summary'].innerHTML.includes('; '+(fullLand.length-assigned)+' do not.'));
  assert.deepEqual(displayedRows('rationale-evidence-summary'),unassigned,'Overview retains the distinct reasons for missing rationale categories');
@@ -132,13 +137,13 @@ function host(initialHash='',offline=false){
  assert(overview.ids['date-evidence-summary'].innerHTML.includes('Of these, '+total('operational_exact_complete')+' have exact start and end dates.'));
  assert.deepEqual(displayedRows('date-evidence-summary'),{'At least one dated observation':total('any_dated_evidence'),'No dated evidence':fullLand.length-total('any_dated_evidence')});
  assert.deepEqual(displayedRows('date-evidence-kinds'),{'Closed on a later reported date':total('operational_censored'),'Same-day interruption reported':total('same_day'),'Policy in force':total('formal_policy'),'Announced closure dates':total('ordered_window'),'Repeated closures':total('intermittent_regime')});
- assert.equal(total('operational_complete'),252);assert.equal(total('operational_exact_complete'),163);assert.equal(total('any_dated_evidence'),695);
+ for(const [key,count] of Object.entries(reference.timingCounts))assert.equal(total(key),count,key+' reconciles to native duration summaries');
  const overviewBefore=['rationale-evidence-summary','date-evidence-summary','date-evidence-kinds'].map(id=>overview.ids[id].innerHTML);
  Object.assign(oc.state,{query:'Norway',continent:'Asia',mode:'all',includeExcluded:true});oc.visible=summary.events.slice(0,1);oc.renderOverviewEvidence();
  assert.deepEqual(['rationale-evidence-summary','date-evidence-summary','date-evidence-kinds'].map(id=>overview.ids[id].innerHTML),overviewBefore,'map filters, the visible selection and excluded-record controls cannot change global Overview denominators');
- console.log('Overview evidence passed: actual renderer, 697 included land records, 677 assigned rationales, 252 estimable durations, 163 exact dates, 695 dated records, separate national histories excluded, all timing categories and global/filter-independent denominators.');
+ console.log('Overview evidence passed: complete shared methods; '+fullLand.length+' included land records, native-table rationale/timing totals, separate national histories excluded, and filter-independent denominators.');
  assert.equal(timelineState.mode,'intervals');assert.equal(timeline.ids['time-mode'].value,'intervals');
- assert.equal(timelineState.month,core.monthOrdinal(data.meta.window_start));assert.equal(core.filterEvents(data,timelineState).length,19,'default October 2016 evidence reconciles to current Chronology phases and Phase locations');
+ assert.equal(timelineState.month,core.monthOrdinal(data.meta.window_start));assert.deepEqual(core.filterEvents(data,timelineState).map(e=>e.id).sort(),reference.recordIDsInMonth(data.meta.window_start.slice(0,7)).sort(),'default month selection reconciles to native phase dates and temporal bindings');
  assert(core.filterEvents(data,timelineState).some(e=>e.id==='FU-COV-EAS-003'),'include the replacement workbook conservation-policy record');
  assert.equal((index.match(/id="time-mode"/g)||[]).length,1);assert(!index.slice(index.indexOf('<div class="timeline">')).includes('id="time-mode"'),'view selector belongs in the records panel');
  vm.runInContext(app.slice(app.indexOf("  $('search').addEventListener"),app.indexOf('  const showPage=')),tc);
@@ -146,11 +151,12 @@ function host(initialHash='',offline=false){
  timelineState.location='old-map-selection';tc.timer=1;
  await timeline.ids.search.emit('input',{target:{value:'Norway'}});
  assert.equal(timelineState.mode,'all');assert.equal(timeline.ids['time-mode'].value,'all');assert.equal(timelineState.location,'');assert.equal(tc.timer,null);assert.equal(tc.panelOpen,true);
- assert.equal(core.filterEvents(data,timelineState).length,8,'search must find Norway records beyond the default month');
+ const norwayIDs=reference.tables.Dimensions.filter(row=>String(row['Countries or territories']||'').split(';').some(country=>country.trim()==='Norway')).map(row=>row.ID).filter(id=>reference.includedIDs.includes(id)).sort();
+ assert.deepEqual(core.filterEvents(data,timelineState).map(e=>e.id).sort(),norwayIDs,'search finds native Norway records, including later additions beyond the default month');
  assert.equal(core.filterEvents(data,{...timelineState,mode:'intervals'}).length,0,'these records would be hidden by the default month');
  await timeline.ids['time-mode'].emit('change',{target:{value:'onsets'}});assert.equal(timelineState.mode,'onsets','a date mode can still be chosen explicitly after searching');
  await timeline.ids.search.emit('input',{target:{value:'Russia'}});assert.equal(timelineState.mode,'all','editing a query searches all recorded closures again');
- await timeline.ids.search.emit('input',{target:{value:''}});assert.equal(timelineState.mode,'all','clearing search retains the full-period view');assert.equal(core.filterEvents(data,timelineState).length,697);
+ await timeline.ids.search.emit('input',{target:{value:''}});assert.equal(timelineState.mode,'all','clearing search retains the full-period view');assert.equal(core.filterEvents(data,timelineState).length,reference.counts.included);
  timelineState.mode='all';timelineState.query='Norway';timelineState.includeExcluded=true;timelineState.month=core.monthOrdinal(data.meta.window_end);
  await timeline.ids['reset-button'].emit('click');assert.equal(timelineState.mode,'intervals');assert.equal(timeline.ids['time-mode'].value,'intervals');assert.equal(timelineState.query,'');assert.equal(timelineState.includeExcluded,false);assert.equal(timelineState.month,core.monthOrdinal(data.meta.window_start));
  timelineState.mode='all';timeline.ids['time-mode'].value='all';await timeline.ids['play-button'].emit('click');assert.equal(timelineState.mode,'intervals');assert.equal(timeline.ids['time-mode'].value,'intervals');assert.equal(tc.timer,1);
@@ -186,24 +192,26 @@ function host(initialHash='',offline=false){
  await vm.runInContext(ui,a.context);
  const t=a.context.TEST;assert(t,'Analysis initialization failed');
  assert.equal(detailRequests,0,'Analysis charts and register must not fetch full records on opening');assert.equal(archiveRequests,0);
- assert.equal(a.ids.resultCount.textContent,'697 matching records');assert.equal(a.ids.pageNote.textContent,'1–12 of 697');
+ assert.equal(a.ids.resultCount.textContent,reference.counts.included+' matching records');assert.equal(a.ids.pageNote.textContent,'1–12 of '+reference.counts.included);
  assert(a.ids.codeChart.innerHTML.includes('Health and biosecurity'));assert(a.ids.codeChart.innerHTML.includes('Policy and socioeconomic demands'));
  assert(a.ids.codeChart.innerHTML.includes('Administration and service operation'));assert(a.ids.codeChart.innerHTML.includes('Environment and resource management'));
- assert.equal(t.currentCharts.durationRows.length,164);assert(a.ids.durationComparisonNote.textContent.includes('160 records'));
- assert(a.ids.durationRationaleChart.innerHTML.includes('119 days'));assert(a.ids.durationRationaleChart.innerHTML.includes('No eligible phases'));
- assert(a.ids.durationCoverageChart.innerHTML.includes('76 / 292 records'));
+ assert.equal(t.currentCharts.durationRows.length,expectedExact.length);assert(a.ids.durationComparisonNote.textContent.includes(new Set(expectedExact.map(p=>p.record_id)).size+' records'));
+ assert(a.ids.durationRationaleChart.innerHTML.includes(expectedGroups.get('Health and biosecurity').median+' days'));assert(a.ids.durationRationaleChart.innerHTML.includes('No eligible phases'));
+ const security=expectedGroups.get('Security');assert(a.ids.durationCoverageChart.innerHTML.includes(security.records+' / '+security.total+' records'));
  assert(!a.ids.continentChart.innerHTML.includes('Unassigned'));assert(a.ids.continentChart.innerHTML.includes('North America'));
  assert(!a.ids.regionChart.innerHTML.includes('data-chart-value="Europe"'));assert(a.ids.broadRegionChart.innerHTML.includes('data-chart-value="Europe"'));
  assert(!a.ids.regionChart.innerHTML.includes('data-chart-value="South Asia, Central Asia and Caucasus"'));assert(a.ids.broadRegionChart.innerHTML.includes('data-chart-value="South Asia, Central Asia and Caucasus"'));
  for(const [legacy,target] of movedSections){await a.context.AtlasAnalysis.navigate('#'+legacy);assert.equal(parentLocation.hash,'#overview/'+target,'an old embedded Analysis anchor redirects to Overview');}
- t.filterFromChart('continent','Africa');assert.equal(t.applyFilters().length,190);assert.equal(atlas.page,'dataset');assert.equal(a.context.AtlasAnalysis.getView(),'dataset');
- a.context.AtlasAnalysis.setView('overview');a.context.AtlasAnalysis.setView('dataset');assert.equal(a.ids.continentFilter.value,'Africa','switching views preserves Dataset filters');assert.equal(t.applyFilters().length,190);a.ids.filters.reset();
+ const africaIDs=fullLand.filter(e=>e.continents.includes('Africa')).map(e=>e.id).sort();
+ t.filterFromChart('continent','Africa');assert.deepEqual(Array.from(t.applyFilters(),e=>e.id).sort(),africaIDs);assert.equal(atlas.page,'dataset');assert.equal(a.context.AtlasAnalysis.getView(),'dataset');
+ a.context.AtlasAnalysis.setView('overview');a.context.AtlasAnalysis.setView('dataset');assert.equal(a.ids.continentFilter.value,'Africa','switching views preserves Dataset filters');assert.deepEqual(Array.from(t.applyFilters(),e=>e.id).sort(),africaIDs);a.ids.filters.reset();
 
- for(const [code,count] of [['Security',292],['Administration and service operation',3],['Environment and resource management',2]]){t.filterFromChart('code',code);assert.equal(t.applyFilters().length,count,code+' count reconciles to current Register');}
- for(const [value,count] of [['complete',252],['exact',163],['undated',2],['quarantined',4],['held',18]]){
+ for(const code of ['Security','Administration and service operation','Environment and resource management']){t.filterFromChart('code',code);assert.equal(t.applyFilters().length,expectedGroups.get(code).total,code+' count reconciles to current native rationale assignments');}
+ const heldParents=reference.includedIDs.filter(id=>reference.phasesByRecord.get(id).some(p=>p['Contested / held (1=yes)']===1)).length;
+ for(const [value,count] of [['complete',reference.timingCounts.operational_complete],['exact',reference.timingCounts.operational_exact_complete],['undated',reference.counts.included-reference.timingCounts.any_dated_evidence],['quarantined',reference.counts.excluded],['held',heldParents]]){
   a.ids.filters.reset();a.ids.statusFilter.value=value;t.renderRecords();assert.equal(t.applyFilters().length,count,value);
  }
- a.ids.filters.reset();a.ids.codeFilter.value='__uncoded';t.renderRecords();assert.equal(t.applyFilters().length,20);
+ a.ids.filters.reset();a.ids.codeFilter.value='__uncoded';t.renderRecords();assert.equal(t.applyFilters().length,reference.counts.included-reference.counts.assigned);
  a.ids.filters.reset();atlas.hash='#patterns';a.context.AtlasAnalysis.setView('overview');await t.openRecord('R16-EU-005',true);assert.equal(a.ids.recordDialog.open,true);assert.equal(atlas.hash,'#record-R16-EU-005');
  await a.ids.copyRecordLink.emit('click');assert.equal(a.context.copied,'https://lamarque-mapping.github.io/Border-Closure-Atlas/#dataset/record-R16-EU-005');
  t.closeRecord();assert.equal(a.ids.recordDialog.open,false);assert.equal(atlas.hash,'#patterns','closing an example returns to its originating Analysis section');
@@ -214,20 +222,21 @@ function host(initialHash='',offline=false){
  await t.openRecord('EA020',false);assert(a.ids.dialogBody.innerHTML.includes('Dates disputed'));
  await t.openRecord('R2-SC-012',false);assert(a.ids.dialogBody.innerHTML.includes('2–7 days'));
  t.closeRecord();a.ids.filters.reset();t.renderRecords();
- a.ids.chartPopulation.value='complete';t.renderCharts();assert(a.ids.chartPopulationNote.textContent.startsWith('252 records'));
- a.ids.chartPopulation.value='exact';t.renderCharts();assert(a.ids.chartPopulationNote.textContent.startsWith('163 records'));
+ a.ids.chartPopulation.value='complete';t.renderCharts();assert(a.ids.chartPopulationNote.textContent.startsWith(reference.timingCounts.operational_complete+' records'));
+ a.ids.chartPopulation.value='exact';t.renderCharts();assert(a.ids.chartPopulationNote.textContent.startsWith(reference.timingCounts.operational_exact_complete+' records'));
  a.ids.chartPopulation.value='all';t.renderCharts();
  const downloads=[];t.setDownload((filename,body,type)=>downloads.push({filename,body,type}));
  for(const id of ['exportRows','exportCodes','exportSnapshot','exportAudit','exportPhases','exportCoverage','exportDuration','exportDurationCoverage','exportContinents'])await a.ids[id].emit('click');
- assert.equal(downloads.length,9);assert(downloads[0].body.startsWith('\ufeff"ID"'));assert.equal(JSON.parse(downloads[2].body).events.length,701);assert.equal(JSON.parse(downloads[3].body).records.length,701);
+ assert.equal(downloads.length,9);assert(downloads[0].body.startsWith('\ufeff"ID"'));assert.equal(JSON.parse(downloads[2].body).events.length,reference.counts.records);assert.equal(JSON.parse(downloads[3].body).records.length,reference.counts.records);
+ assert.deepEqual(JSON.parse(downloads[3].body).meta.cumulative_review_coverage,releaseMethod.rec50,'current-review export retains cumulative audit coverage');
  assert.deepEqual(JSON.parse(downloads[2].body),completeResearch,'snapshot must contain complete evidence and workbook review/geography tables, not browsing summaries');
  const auditRecords=new Map(JSON.parse(downloads[3].body).records.map(record=>[record.event_id,record]));
  for(const record of data.events){assert.deepEqual(auditRecords.get(record.id).initial_review,record.initial_review,record.id+' historical initial review');assert.deepEqual(auditRecords.get(record.id).followup_reviews,record.followup_reviews,record.id+' later review evidence');}
  assert(downloads[6].body.includes('Observed reopening date'));assert(downloads[6].body.includes('Exact dates; operational closure; observed reopening'));assert(downloads[7].body.includes('Median days'));assert(downloads[8].body.includes('North America'));
- assert(downloads[4].body.includes('EA020-D1'));assert(downloads[4].body.includes('GL01-C7RWP6'));assert(downloads[5].body.includes('697'));
+ assert(downloads[4].body.includes('EA020-D1'));assert(downloads[4].body.includes('GL01-C7RWP6'));assert(downloads[5].body.includes(String(reference.counts.included)));
  t.filterFromChart('continent','Africa');await a.ids.exportAllRows.emit('click');assert.equal(downloads.length,10);assert.equal(downloads[9].filename,'border-closures-included-records.csv');
  for(const event of t.INCLUDED)assert(downloads[9].body.includes('"'+event.id+'",'),'all-included export retains '+event.id);
  for(const event of t.EVENTS.filter(e=>e.quarantined))assert(!downloads[9].body.includes('\r\n"'+event.id+'",'),'all-included export omits '+event.id);
  assert.equal(a.ids.continentFilter.value,'Africa','full CSV export does not reset the current search');
- console.log('Analysis passed: shared current dataset, 697 included, 20 records without an assigned rationale category, all 701 detail views, current audit, held phases, ten categories, timing subsets, view/filter preservation, source-backed record links, continent/research-area separation, phase duration distributions, and ten CSV/JSON exports.');
+ console.log('Analysis passed: '+reference.counts.included+' included / '+reference.counts.records+' total records; native-table sample counts, all detail views, cumulative review metadata, held phases, ten categories, filter preservation, evidence links and ten CSV/JSON exports.');
 })().catch(e=>{console.error(e);process.exitCode=1});

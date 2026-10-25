@@ -31,7 +31,10 @@ const INCLUDED=EVENTS.filter(e=>!e.quarantined);
 const DATA={meta:shared.meta,events:EVENTS,summary:{codes:shared.meta.rationale_counts}};
 const CODES=DATA.meta.rationale_categories;
 const outcomeCounts={};INCLUDED.forEach(e=>outcomeCounts[e.status]=(outcomeCounts[e.status]||0)+1);
-const AUDIT={meta:{workbook:DATA.meta.source_filename,sha256:DATA.meta.source_sha256,limits:DATA.meta.research_method.review_limits},
+const AUDIT={meta:{source_file:DATA.meta.source_filename,source_sha256:DATA.meta.source_sha256,data_state_sha256:DATA.meta.data_state_sha256,
+ release_id:DATA.meta.release_method?.release_id,limits:DATA.meta.research_method.review_limits,
+ cumulative_review_coverage:DATA.meta.release_method?.rec50,
+ coverage_note:"Cumulative review coverage can overlap. A record's latest review status is not its full review history."},
  records:EVENTS.map(e=>({event_id:e.id,classification_key:e.status,...e.current_review,unresolved_issues:e.unresolved_issues})),
  groups:Object.entries(outcomeCounts).map(([key,count])=>({key,label:key,count}))};
 const AUDIT_BY_ID=new Map(AUDIT.records.map(r=>[r.event_id,r]));
@@ -81,7 +84,7 @@ METRICS.CONTINENTS.forEach(function(c){$("continentFilter").appendChild(option(c
 CODES.forEach(function(c){$("codeFilter").appendChild(option(c,c));});
 AUDIT.groups.forEach(function(g){$("auditFilter").appendChild(option(g.key,g.label+" ("+g.count+")"));});
 document.querySelectorAll("[data-count]").forEach(function(el){el.textContent=String(DATA.summary.codes[el.dataset.count]||0)+" records";});
-$("sourceHash").textContent="Workbook SHA-256: "+DATA.meta.source_sha256;
+$("sourceHash").textContent="Master workbook SHA-256: "+DATA.meta.download_workbook_sha256+" · Data source SHA-256: "+DATA.meta.source_sha256+" · Data state: "+DATA.meta.data_state_sha256;
 EVENTS.forEach(function(e){
  e.searchText=norm(e.search_text||[e.id,e.title,e.region,e.justification,e.context,e.uncertainty,e.policy].concat(Object.values(e.dimensions)).concat(e.sources.map(function(s){return s.Title;}).concat(e.duration_periods.map(p=>p.scope)).concat(e.rationale_assignments.map(a=>a.Subcategory))).join(" "));
 });
@@ -331,11 +334,11 @@ $("exportCodes").addEventListener("click",()=>downloadCSV(filteredFilename('rati
 $("exportRegions").addEventListener("click",()=>downloadCSV(filteredFilename('regional-counts.csv',currentCharts.durationFilter),[["Original region label","Records","Denominator","Share of selected records","Population"],...currentCharts.regions]));
 $("exportContinents").addEventListener("click",()=>downloadCSV(filteredFilename('continent-counts.csv',currentCharts.durationFilter),[["Continent","Records","All selected records","Share of selected records","Population"],...currentCharts.continents]));
 $("exportDuration").addEventListener("click",()=>downloadCSV(filteredFilename('duration-by-rationale-phases.csv',currentCharts.durationFilter),[
- ['Record ID','Phase ID','Event','Phase scope','Start date','Observed reopening date','Days (date difference)','Parent record rationale labels','Endpoint inclusion','Eligibility','Population','Workbook SHA-256'],
+ ['Record ID','Phase ID','Event','Phase scope','Start date','Observed reopening date','Days (date difference)','Parent record rationale labels','Endpoint inclusion','Eligibility','Population','Data source SHA-256'],
  ...currentCharts.durationRows.map(p=>[p.record_id,p.phase_id,p.title,p.scope,p.start,p.end,p.days,p.codes.join('; '),p.endpoint_inclusion,'Exact dates; operational closure; observed reopening; not disputed; '+(currentCharts.durationFilter==='over1'?'more than one day (date difference)':'at least one date-boundary day'),currentCharts.durationPopulation,DATA.meta.source_sha256])
 ]));
 $("exportDurationCoverage").addEventListener("click",()=>downloadCSV(filteredFilename('duration-by-rationale-coverage.csv',currentCharts.durationFilter),[
- ['Parent record rationale','Eligible phases','Records with eligible phases','All selected records in category','Share of category records','Shortest days','25th percentile days','Median days','75th percentile days','Longest days','Population','Workbook SHA-256'],
+ ['Parent record rationale','Eligible phases','Records with eligible phases','All selected records in category','Share of category records','Shortest days','25th percentile days','Median days','75th percentile days','Longest days','Population','Data source SHA-256'],
  ...currentCharts.durationGroups.map(g=>[g.code,g.phases,g.records,g.total,g.total?pct(g.records,g.total):'',g.min,g.q1,g.median,g.q3,g.max,currentCharts.durationPopulation,DATA.meta.source_sha256])
 ]));
 $("exportSnapshot").addEventListener("click",()=>withResearch('exportSnapshot',full=>download('border-closures-current-snapshot.json',JSON.stringify(full,null,2),'application/json;charset=utf-8')));

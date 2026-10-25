@@ -2,6 +2,7 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..'),template=fs.readFileSync(path.join(__dirname,'analysis-template.html'),'utf8'),ui=fs.readFileSync(path.join(__dirname,'analysis-ui.js'),'utf8');
 const metrics=require('./analysis-metrics.js'),data=JSON.parse(fs.readFileSync(path.join(root,'dist/analysis-data.json'),'utf8'));
+const reference=require('./release-verification-reference.cjs').load();
 const included=data.events.filter(event=>!event.quarantined);
 for(const population of ['all','operational_complete','operational_exact_complete']){
  const rows=included.filter(event=>population==='all'||event.timing_coverage[population]);
@@ -12,9 +13,17 @@ for(const population of ['all','operational_complete','operational_exact_complet
  }
 }
 const security=metrics.durationGroups(included,data.meta.rationale_categories).find(group=>group.code==='Security');
-assert.equal(included.length,697);assert.equal(security.total,292);assert.equal(security.records,76);
-assert.equal(included.filter(event=>event.timing_coverage.operational_exact_complete).length,163);
-assert.equal(new Set(metrics.durationRows(included).map(phase=>phase.record_id)).size,160);
+const nativeSecurity=reference.groups(reference.includedIDs,['Security'])[0];
+assert.equal(included.length,reference.counts.included);assert.equal(security.total,nativeSecurity.total);assert.equal(security.records,nativeSecurity.records);
+assert.equal(included.filter(event=>event.timing_coverage.operational_exact_complete).length,reference.timingCounts.operational_exact_complete);
+assert.equal(new Set(metrics.durationRows(included).map(phase=>phase.record_id)).size,new Set(reference.exactPhases().map(phase=>phase.record_id)).size);
+const method=JSON.parse(fs.readFileSync(path.join(root,'source/release-method.json'),'utf8'));
+assert.deepEqual(data.meta.release_method,method,'Methods uses the complete shared release account');
+const rendered=fs.readFileSync(path.join(root,'dist/analysis.html'),'utf8');
+const escapedMethod=method.full_text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#x27;');
+assert(rendered.includes(escapedMethod),'standalone Analysis retains the complete supplied method account');
+assert.equal(data.meta.distinct_recorded_urls,method.counts.distinct_recorded_urls,'URL catalogue count is distinct from source-index rows');
+assert(template.includes('two tabs: Closures and Methodology')&&template.includes('Data companion · ZIP'),'reader and structured evidence downloads remain explicit');
 assert(!template.includes('How much evidence does each category have?'));
 assert.match(template,/<details\b[^>]*id="research-areas"[^>]*\bopen>/);
 const targets=[...template.matchAll(/\bid="([^"]+)"[^>]*\bdata-analysis-section="([^"]+)"/g)].map(match=>({id:match[1],label:match[2]}));
