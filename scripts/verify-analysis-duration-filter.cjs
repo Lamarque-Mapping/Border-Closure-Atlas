@@ -87,7 +87,8 @@ function node(id){
 for(const id of ['chartPopulation','chartDuration','durationFilter'])node(id).value='all';
 node('sortRecords').value='id';
 node('filters').reset=()=>{for(const id of ['query','continentFilter','regionFilter','codeFilter','statusFilter','auditFilter'])node(id).value='';node('durationFilter').value='all';};
-const events=data.events.map(e=>({...e,codes:e.rationales,searchText:(e.search_text||'').toLowerCase()}));
+const regions=require('./analysis-regions.js');
+const events=data.events.map(e=>({...e,research_area:regions.area(e),codes:e.rationales,searchText:(e.search_text||'').toLowerCase()}));
 const downloads=[];
 const context={$:node,METRICS:M,EVENTS:events,INCLUDED:events.filter(e=>!e.quarantined),CODES:data.meta.rationale_categories,
  DATA:{meta:data.meta},AUDIT_BY_ID:new Map(),currentCharts:{},filtered:[],page:0,PAGE_SIZE:12,
@@ -123,17 +124,22 @@ for(const population of Object.keys(counts))for(const duration of ['all','over1'
  for(const row of context.currentCharts.continents)assert.equal(row[1],expectedRecords.filter(e=>e.continents.includes(row[0])).length);
  for(const group of context.currentCharts.durationGroups)assert.equal(group.total,context.currentCharts.codes.find(row=>row[0]===group.code)[1]);
  assert(context.currentCharts.durationRows.every(p=>duration==='all'||reference.over24Hours(nativePhases.get(p.phase_id))));
- for(const [kind,value] of [['code','Security'],['region','Americas'],['continent','Asia']]){
+ for(const [kind,value] of [['code','Security'],['continent','Asia'],...context.currentCharts.regions.map(row=>['region',row[0]])]){
   context.filterFromChart(kind,value);
   assert.equal(node('durationFilter').value,duration,'drill-through preserves duration threshold');
-  const expected=expectedRecords.filter(e=>kind==='code'?e.codes.includes(value):kind==='region'?e.region===value:e.continents.includes(value));
+  const expected=expectedRecords.filter(e=>kind==='code'?e.codes.includes(value):kind==='region'?e.research_area===value:e.continents.includes(value));
   assert.deepEqual(Array.from(context.filtered,e=>e.id).sort(),expected.map(e=>e.id).sort(),population+' / '+duration+' / '+kind+' drill-through');
+  if(kind==='region')assert.equal(expected.length,context.currentCharts.regions.find(row=>row[0]===value)[1],'research-area bar and Dataset agree');
  }
  for(const id of csvActions){
   node(id).emit('click');
   const download=downloads.at(-1);
   assert.equal(download.filename.includes('-over-1-day.csv'),duration==='over1',id+' identifies active filter');
   if(id==='exportCodes')assert.equal(download.filename,duration==='over1'?'rationale-counts-over-1-day.csv':'rationale-counts.csv');
+  if(id==='exportRegions'){
+   assert.equal(download.rows[0][0],'Research area');
+   assert.deepEqual(download.rows.slice(1),context.currentCharts.regions,'regional export matches the single chart');
+  }
   const header=download.rows[0],populationColumn=header.indexOf('Population');
   assert(populationColumn>=0);
   assert(download.rows.slice(1).every(row=>String(row[populationColumn]).includes('strictly longer than 24 hours')===(duration==='over1')));

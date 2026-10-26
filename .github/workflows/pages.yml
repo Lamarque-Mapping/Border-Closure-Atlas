@@ -63,6 +63,7 @@ jobs:
           python scripts/verify-standalone-downloads.py
           node scripts/verify-ui.cjs
           node scripts/verify-analysis-sections.cjs
+          node scripts/verify-analysis-regions.cjs
           node scripts/verify-analysis-duration-filter.cjs
           node scripts/verify-audited-presentation.cjs
           node scripts/verify-phase-rationales.cjs

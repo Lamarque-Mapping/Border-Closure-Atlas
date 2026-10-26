@@ -18,10 +18,11 @@ if(!provider){
 }
 const shared=await (provider.getAnalysisData?provider.getAnalysisData():provider.ready());
 const METRICS=window.BorderAnalysisMetrics;
+const REGIONS=window.BorderAnalysisRegions;
 const cleanText = value => String(value==null?"":value).replace(/(\d)(calendar)/gi,"$1 $2").replace(/\bcalendar-day differences?\b/gi,"days").replace(/;\s*scoped endpoint only\b/gi,"; for the stated movement and location").replace(/\bcalendar(?:-date)? (days?)\b/gi,"$1").replace(/\s+to (?:the )?scoped endpoint\b/gi,"").replace(/\bscoped endpoint(s?)\b/gi,"endpoint$1").replace(/\bFormal policy:\s*/gi,"Policy: ").replace(/\b(days?) in policy period\b/gi,"$1").replace(/\boperational continuity not established\b/gi,"continuous closure not confirmed").replace(/\boperational continuity\b/gi,"continuous closure").replace(/\b1 days\b/g,"1 day");
 function analysisEvent(e){
  const d={"Countries or territories":e.countries.join("; "),"Imposing authority":e.imposing_authority,"Geographical scope":e.scope,"Crossing points":e.crossings,Direction:e.direction,"Affected people or goods":e.movement,Exceptions:e.exceptions,"Enforcement evidence":e.enforcement,"Consequences evidence":e.consequences,"Last confirmed closed":e.last_confirmed_closed,"Record type":e.record_type,"Status observation":e.status_observation,Relationship:e.relationship};
- return {...e,codes:e.rationales,status:e.current_review.outcome,justification:e.official_rationale,policy:e.policy_group,dimensions:d,
+ return {...e,research_area:REGIONS.area(e),codes:e.rationales,status:e.current_review.outcome,justification:e.official_rationale,policy:e.policy_group,dimensions:d,
   claims:e.current_review.claims.map(c=>({Field:c.field,"Evidence assessment":c.assessment,"Assessment note":c.note})),
   sources:e.sources.map(s=>({"Source ID":s.source_id,Publisher:s.publisher,"Original reporting source":s.origin,Title:s.title,"Publication date":s.publication_date,"Source type":s.source_type,"Access level":s.content_access,"Supports fields":(s.supports||[]).join("; "),"Evidence note":s.evidence_note,URL:s.url,access_history:s.access_history||[]}))};
 }
@@ -46,7 +47,7 @@ const pct = function(n,d){return d ? (100*n/d).toFixed(1)+"%" : "0.0%";};
 const norm = function(v){return String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();};
 const frequencies = function(list, key){const out={};list.forEach(function(e){const v=key(e);out[v]=(out[v]||0)+1;});return out;};
 const rationale = function(e){return e.claims.find(function(c){return c.Field==="rationale";}) || {};};
-const regions = Array.from(new Set(INCLUDED.map(function(e){return e.region;}))).sort();
+const regions = Array.from(new Set(INCLUDED.map(function(e){return e.research_area;}))).sort();
 const currentCharts = {codes:[],regions:[],continents:[],durationRows:[],durationGroups:[]};
 let filtered = [];
 let page = 0;
@@ -86,7 +87,7 @@ AUDIT.groups.forEach(function(g){$("auditFilter").appendChild(option(g.key,g.lab
 document.querySelectorAll("[data-count]").forEach(function(el){el.textContent=String(DATA.summary.codes[el.dataset.count]||0)+" records";});
 $("sourceHash").textContent="Master workbook SHA-256: "+DATA.meta.download_workbook_sha256+" · Data source SHA-256: "+DATA.meta.source_sha256+" · Data state: "+DATA.meta.data_state_sha256;
 EVENTS.forEach(function(e){
- e.searchText=norm(e.search_text||[e.id,e.title,e.region,e.justification,e.context,e.uncertainty,e.policy].concat(Object.values(e.dimensions)).concat(e.sources.map(function(s){return s.Title;}).concat(e.duration_periods.map(p=>p.scope)).concat(e.rationale_assignments.map(a=>a.Subcategory))).join(" "));
+ e.searchText=norm((e.search_text||[e.id,e.title,e.region,e.justification,e.context,e.uncertainty,e.policy].concat(Object.values(e.dimensions)).concat(e.sources.map(function(s){return s.Title;}).concat(e.duration_periods.map(p=>p.scope)).concat(e.rationale_assignments.map(a=>a.Subcategory))).join(" "))+' '+e.research_area);
 });
 function download(filename,body,type){
  const blob=new Blob([body],{type:type||"text/plain;charset=utf-8"});
@@ -146,10 +147,8 @@ function renderCharts(){
  $("chartPopulationNote").textContent=n+" records"+(duration==='over1'?" · more than 24 hours":"")+" · select a bar to explore";
  $("chartDurationNote").hidden=duration!=='over1';$("chartDurationNote").textContent=duration==='over1'?durationExplanation:'';
  $("motivationDenominatorNote").textContent="Percentages use all "+n+" selected records, including those without a category.";
- const rc=Object.entries(frequencies(rows,function(e){return e.region;})).sort(function(a,b){return b[1]-a[1];});
- const broad=new Set(['Americas','Europe','East and Southeast Asia and Oceania','South Asia, Central Asia and Caucasus']);
- $("regionChart").innerHTML=rc.filter(x=>!broad.has(x[0])).map(function(x){return bar(x[0],x[1],n,rc[0]?.[1]||1,"region",false);}).join("");
- $("broadRegionChart").innerHTML=rc.filter(x=>broad.has(x[0])).map(function(x){return bar(x[0],x[1],n,rc[0]?.[1]||1,"region",false);}).join("");
+ const rc=Object.entries(frequencies(rows,function(e){return e.research_area;})).sort(function(a,b){return b[1]-a[1]||a[0].localeCompare(b[0]);});
+ $("regionChart").innerHTML=rc.map(function(x){return bar(x[0],x[1],n,rc[0]?.[1]||1,"region",false);}).join("");
  currentCharts.regions=rc.map(function(x){return [x[0],x[1],n,pct(x[1],n),selection];});
  const cc=METRICS.continents(rows).sort((a,b)=>b.count-a.count);
  $("continentChart").innerHTML=cc.map(x=>bar(x.label,x.count,n,cc[0]?.count||1,'continent',false)).join('');
@@ -191,7 +190,7 @@ function applyFilters(){
  let result=EVENTS.filter(function(e){
   if(s==="quarantined"){if(!e.quarantined)return false;}
   else {if(e.quarantined)return false;if(s && !populationMatch(e,s))return false;}
-  return METRICS.durationMatch(e,duration) && (!q||e.searchText.includes(q)) && (!continent||e.continents.includes(continent)) && (!r||e.region===r) && (!c||(c==="__uncoded"?!e.codes.length:e.codes.includes(c))) && (!a||(AUDIT_BY_ID.has(e.id)&&AUDIT_BY_ID.get(e.id).classification_key===a));
+  return METRICS.durationMatch(e,duration) && (!q||e.searchText.includes(q)) && (!continent||e.continents.includes(continent)) && (!r||e.research_area===r) && (!c||(c==="__uncoded"?!e.codes.length:e.codes.includes(c))) && (!a||(AUDIT_BY_ID.has(e.id)&&AUDIT_BY_ID.get(e.id).classification_key===a));
  });
  const sort=$("sortRecords").value;
  result.sort(function(a,b){
@@ -229,7 +228,7 @@ function renderRecords(){
  $("recordList").innerHTML=filtered.length?filtered.slice(start,start+PAGE_SIZE).map(function(e){
   return '<button type="button" class="record-row" data-record="'+escapeHTML(e.id)+'" aria-label="Open '+escapeHTML(e.id)+': '+escapeHTML(e.title)+'">'+
   '<span class="record-id">'+escapeHTML(e.id)+'</span><span><span class="record-title">'+escapeHTML(e.title)+'</span>'+
-  '<span class="record-meta">'+escapeHTML(e.region)+' · '+escapeHTML(e.codes.join(" · ")||"No code assigned")+'</span>'+
+  '<span class="record-meta">'+escapeHTML(e.research_area)+' · '+escapeHTML(e.codes.join(" · ")||"No code assigned")+'</span>'+
   '</span><span class="record-dates">'+escapeHTML(recordTimingLabel(e))+'<br><span aria-hidden="true">↗</span></span></button>';
  }).join(""):'<p class="empty-state">No matching records. Try a broader search or reset the filters.</p>';
  $("prevPage").disabled=page===0;$("nextPage").disabled=page>=pages-1;
@@ -281,7 +280,7 @@ async function openRecord(id,changeHash){
  const request=++recordRequest;
  if(changeHash!==false){recordBeforeHash=routeHash().startsWith("#record-")?"#register":routeHash()||"#register";replaceRoute("#record-"+encodeURIComponent(id));}
  currentRecord=summary;
- $("dialogId").textContent=summary.id+" · "+summary.region;
+ $("dialogId").textContent=summary.id+" · "+summary.research_area;
  $("dialogBody").innerHTML='<h2 id="dialogTitle">'+escapeHTML(summary.title)+'</h2><p role="status">Loading closure details…</p>';
  if(!dialog.open)dialog.showModal();dialog.scrollTop=0;
  let e;
@@ -292,13 +291,13 @@ async function openRecord(id,changeHash){
  }
  if(request!==recordRequest)return;
  currentRecord=e;
- $("dialogId").textContent=e.id+" · "+e.region;
+ $("dialogId").textContent=e.id+" · "+e.research_area;
  const d=e.dimensions;
  $("dialogBody").innerHTML='<div class="dialog-heading"><p>Closure record</p><h2 id="dialogTitle">'+escapeHTML(e.title)+'</h2><p class="event-description">'+escapeHTML(window.BorderSummary.describe(e,{periods:e.duration_periods}))+'</p>'+
  '<div>'+((e.codes.length?e.codes:[e.rationale_coding_status||"No category assigned"]).map(c=>'<span class="tag">'+escapeHTML(c)+categoryHelp(c)+'</span>').join(''))+'</div>'+
  (e.quarantined?'<div class="quarantine-note">Excluded from analysis, mapping and playback. '+escapeHTML(e.quarantine_reason)+'</div>':'')+'</div>'+
  section("Dates and duration",e.duration_periods.length?e.duration_periods.map(p=>phaseHTML(p,e.sources)).join(''):'<p>The evidence does not establish a duration.</p>')+
- section("Location and movement",'<div class="field-grid">'+field('Countries or territories',d['Countries or territories'])+field('Crossings',e.crossings)+field('Geographical scope',e.scope,true)+field('Direction',e.direction,true)+field('Affected people or goods',e.movement,true)+field('Exceptions',e.exceptions,true)+'</div>')+
+ section("Location and movement",'<div class="field-grid">'+field('Research area',e.research_area)+field('Original workbook group',e.region)+field('Countries or territories',d['Countries or territories'])+field('Crossings',e.crossings)+field('Geographical scope',e.scope,true)+field('Direction',e.direction,true)+field('Affected people or goods',e.movement,true)+field('Exceptions',e.exceptions,true)+'</div>')+
  (e.uncertainty?section('Qualifications','<p>'+escapeHTML(e.uncertainty)+'</p>'):'')+
  '<details class="disclosure"><summary>Rationale, attribution and context</summary><div class="disclosure-body">'+section('Recorded explanation','<p>'+escapeHTML(e.justification||'Not established')+'</p><p>'+escapeHTML(e.context)+'</p>')+
  e.rationale_assignments.map(a=>'<article class="evidence-check"><strong>'+escapeHTML(a['Broad rationale'])+' · '+escapeHTML(a.Subcategory)+'</strong><p>'+escapeHTML(a['Evidence attribution'])+'</p><p>'+escapeHTML(a['Phase / overlap'])+'</p><p>'+escapeHTML(a['Coding decision and qualification'])+'</p></article>').join('')+'</div></details>'+
@@ -360,13 +359,13 @@ async function withResearch(buttonID,action){
 }
 function exportRecordRows(full,selected,filename){
  const byID=new Map(full.events.map(e=>[e.id,analysisEvent(e)]));
- const headings=['ID','Region','Episode','Countries','Crossings','Current timing','Current review','Included','Rationales','Rationale attribution','Scope','Direction','Affected movement','Exceptions','Current uncertainty','Any dated evidence','Complete operational duration','Exact operational duration','Original start (historical)','Original endpoint (historical)','Source URLs'];
- downloadCSV(filename,[headings,...selected.map(e=>byID.get(e.id)).map(e=>[e.id,e.region,e.title,e.countries.join('; '),e.crossings,cleanText(e.current_timing),e.status,!e.quarantined,e.codes.join('; '),e.rationale_assignments.map(a=>a['Broad rationale']+': '+a['Evidence attribution']).join(' | '),e.scope,e.direction,e.movement,e.exceptions,e.uncertainty,e.timing_coverage.any_dated_evidence,e.timing_coverage.operational_complete,e.timing_coverage.operational_exact_complete,e.historical.start,e.historical.end,e.sources.map(s=>s.URL).join(' | ')])]);
+ const headings=['ID','Region','Episode','Countries','Crossings','Current timing','Current review','Included','Rationales','Rationale attribution','Scope','Direction','Affected movement','Exceptions','Current uncertainty','Any dated evidence','Complete operational duration','Exact operational duration','Original start (historical)','Original endpoint (historical)','Source URLs','Research area'];
+ downloadCSV(filename,[headings,...selected.map(e=>byID.get(e.id)).map(e=>[e.id,e.region,e.title,e.countries.join('; '),e.crossings,cleanText(e.current_timing),e.status,!e.quarantined,e.codes.join('; '),e.rationale_assignments.map(a=>a['Broad rationale']+': '+a['Evidence attribution']).join(' | '),e.scope,e.direction,e.movement,e.exceptions,e.uncertainty,e.timing_coverage.any_dated_evidence,e.timing_coverage.operational_complete,e.timing_coverage.operational_exact_complete,e.historical.start,e.historical.end,e.sources.map(s=>s.URL).join(' | '),e.research_area])]);
 }
 $("exportRows").addEventListener("click",()=>withResearch('exportRows',full=>exportRecordRows(full,filtered,filteredFilename('border-closures-current.csv',$("durationFilter").value))));
 $("exportAllRows").addEventListener("click",()=>withResearch('exportAllRows',full=>exportRecordRows(full,INCLUDED,'border-closures-included-records.csv')));
 $("exportCodes").addEventListener("click",()=>downloadCSV(filteredFilename('rationale-counts.csv',currentCharts.durationFilter),[["Current code","Records","Denominator","Share of selected records","Population"],...currentCharts.codes]));
-$("exportRegions").addEventListener("click",()=>downloadCSV(filteredFilename('regional-counts.csv',currentCharts.durationFilter),[["Original region label","Records","Denominator","Share of selected records","Population"],...currentCharts.regions]));
+$("exportRegions").addEventListener("click",()=>downloadCSV(filteredFilename('regional-counts.csv',currentCharts.durationFilter),[["Research area","Records","Denominator","Share of selected records","Population"],...currentCharts.regions]));
 $("exportContinents").addEventListener("click",()=>downloadCSV(filteredFilename('continent-counts.csv',currentCharts.durationFilter),[["Continent","Records","All selected records","Share of selected records","Population"],...currentCharts.continents]));
 $("exportDuration").addEventListener("click",()=>downloadCSV(filteredFilename('duration-by-rationale-phases.csv',currentCharts.durationFilter),[
  ['Record ID','Phase ID','Event','Phase scope','Start date','Observed reopening date','Days (date difference)','Parent record rationale labels','Endpoint inclusion','Eligibility','Population','Data source SHA-256'],

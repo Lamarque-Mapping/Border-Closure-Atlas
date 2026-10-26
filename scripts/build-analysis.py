@@ -54,7 +54,7 @@ def build(web):
     text=(ROOT/'scripts/analysis-template.html').read_text()
     for k,v in values.items(): text=text.replace('{{'+k+'}}',str(v))
     assert not re.search(r'\{\{[A-Z_]+\}\}',text), 'Unresolved Analysis template value'
-    script='window.BorderCategoryExplanations='+json.dumps(definitions,ensure_ascii=False).replace('<','\\u003c')+';\n'+(web/'duration.js').read_text()+'\n'+(web/'record-summary.js').read_text()+'\n'+(ROOT/'scripts/analysis-metrics.js').read_text()+'\n'+(ROOT/'scripts/analysis-ui.js').read_text()
+    script='window.BorderCategoryExplanations='+json.dumps(definitions,ensure_ascii=False).replace('<','\\u003c')+';\n'+(web/'duration.js').read_text()+'\n'+(web/'record-summary.js').read_text()+'\n'+(ROOT/'scripts/analysis-metrics.js').read_text()+'\n'+(ROOT/'scripts/analysis-regions.js').read_text()+'\n'+(ROOT/'scripts/analysis-ui.js').read_text()
     text=text.replace('<!-- ANALYSIS_SCRIPT -->','<script>\n'+script+'\n</script>')
     (web/'analysis.html').write_text(text)
     if (web/'map-data.js').exists():
