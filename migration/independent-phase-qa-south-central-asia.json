@@ -1,0 +1,575 @@
+{
+  "baseline": "cc671f6",
+  "counts": {
+    "africa": {
+      "records": 98,
+      "phases": 156
+    },
+    "americas": {
+      "records": 50,
+      "phases": 65
+    },
+    "east_asia_southern_africa": {
+      "records": 80,
+      "phases": 102
+    },
+    "europe": {
+      "records": 90,
+      "phases": 120
+    },
+    "middle_east_north_africa": {
+      "records": 117,
+      "phases": 175
+    },
+    "root": {
+      "records": 10,
+      "phases": 10
+    },
+    "south_central_asia": {
+      "records": 69,
+      "phases": 97
+    }
+  },
+  "records": 514,
+  "phases": 725,
+  "new_phases": [
+    {
+      "owner": "africa",
+      "record_id": "EU005",
+      "phase_id": "EU005-FA1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "africa",
+      "record_id": "EU009",
+      "phase_id": "EU009-R3",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "africa",
+      "record_id": "R16-EU-009",
+      "phase_id": "R16-EU-009-D2",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "africa",
+      "record_id": "R3-EU-004",
+      "phase_id": "R3-EU-004-R1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "africa",
+      "record_id": "R3-EU-004",
+      "phase_id": "R3-EU-004-R2",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "africa",
+      "record_id": "R3-EU-004",
+      "phase_id": "R3-EU-004-R3",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "africa",
+      "record_id": "R3-EU-011",
+      "phase_id": "R3-EU-011-R2",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "africa",
+      "record_id": "R3-EU-011",
+      "phase_id": "R3-EU-011-R3",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "africa",
+      "record_id": "R3-EU-011",
+      "phase_id": "R3-EU-011-R4",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "africa",
+      "record_id": "R3-EU-011",
+      "phase_id": "R3-EU-011-R5",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "africa",
+      "record_id": "R3-EU-012",
+      "phase_id": "R3-EU-012-R2",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "africa",
+      "record_id": "REC50-R31-004",
+      "phase_id": "REC50-R31-004-P2",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "africa",
+      "record_id": "REC50-R42-001",
+      "phase_id": "REC50-R42-001-P4",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "africa",
+      "record_id": "REC50-R42-001",
+      "phase_id": "REC50-R42-001-P5",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "africa",
+      "record_id": "REC50-R42-001",
+      "phase_id": "REC50-R42-001-P6",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "africa",
+      "record_id": "REC50-R42-001",
+      "phase_id": "REC50-R42-001-P7",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "africa",
+      "record_id": "REC50-R42-001",
+      "phase_id": "REC50-R42-001-P8",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "africa",
+      "record_id": "REC50-R42-001",
+      "phase_id": "REC50-R42-001-P9",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "americas",
+      "record_id": "CC028",
+      "phase_id": "CC028-AUDIT20261026-1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "americas",
+      "record_id": "SA006",
+      "phase_id": "SA006-AUDIT20261026-1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "americas",
+      "record_id": "SA018",
+      "phase_id": "SA018-AUDIT20261026-1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "americas",
+      "record_id": "SA021",
+      "phase_id": "SA021-AUDIT20261026-1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "americas",
+      "record_id": "SA025",
+      "phase_id": "SA025-AUDIT20261026-1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "east_asia_southern_africa",
+      "record_id": "ME007",
+      "phase_id": "ME007-FA1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "east_asia_southern_africa",
+      "record_id": "ME008",
+      "phase_id": "ME008-FA1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "east_asia_southern_africa",
+      "record_id": "ME022",
+      "phase_id": "ME022-R2P1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "east_asia_southern_africa",
+      "record_id": "ME034",
+      "phase_id": "ME034-R2P1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "east_asia_southern_africa",
+      "record_id": "R2-ME-002",
+      "phase_id": "R2-ME-002-R2P1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "europe",
+      "record_id": "H04",
+      "phase_id": "H04-R2-OMHAJER",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "europe",
+      "record_id": "H06",
+      "phase_id": "H06-R2-2016",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "europe",
+      "record_id": "H09",
+      "phase_id": "H09-FA1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "europe",
+      "record_id": "REC50-R43-003",
+      "phase_id": "REC50-R43-003-P4",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "middle_east_north_africa",
+      "record_id": "AM023",
+      "phase_id": "AM023-R2P1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "middle_east_north_africa",
+      "record_id": "AM030",
+      "phase_id": "AM030-R2P1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "middle_east_north_africa",
+      "record_id": "AM036",
+      "phase_id": "AM036-R2P1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "middle_east_north_africa",
+      "record_id": "FU-COV-NAM-001",
+      "phase_id": "FU-COV-NAM-001-R2P1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "middle_east_north_africa",
+      "record_id": "FU-COV-NAM-002",
+      "phase_id": "FU-COV-NAM-002-AUDIT20261025-1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "middle_east_north_africa",
+      "record_id": "R12-AM-001",
+      "phase_id": "R12-AM-001-R2P1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "middle_east_north_africa",
+      "record_id": "R3-AM-001",
+      "phase_id": "R3-AM-001-R2OBS1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "middle_east_north_africa",
+      "record_id": "R3-AM-005",
+      "phase_id": "R3-AM-005-R2P1",
+      "manual_review": "Eligibility follow-up: several days of preceding freight suspension in approved reader can support >24 hours separately from unknown exact onset/complete duration. Owner agrees; root notified before edit."
+    },
+    {
+      "owner": "middle_east_north_africa",
+      "record_id": "R3-AM-011",
+      "phase_id": "R3-AM-011-R2OBS1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "middle_east_north_africa",
+      "record_id": "R4-AM-005",
+      "phase_id": "R4-AM-005-AUDIT20261025-1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "middle_east_north_africa",
+      "record_id": "R4-AM-005",
+      "phase_id": "R4-AM-005-R2P1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "middle_east_north_africa",
+      "record_id": "R4-AM-005",
+      "phase_id": "R4-AM-005-R2P2",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "middle_east_north_africa",
+      "record_id": "R4-AM-005",
+      "phase_id": "R4-AM-005-R2P3",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "middle_east_north_africa",
+      "record_id": "R5-AM-001",
+      "phase_id": "R5-AM-001-AUDIT20261025-1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "middle_east_north_africa",
+      "record_id": "R5-EU-005",
+      "phase_id": "R5-EU-005-R2P1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "middle_east_north_africa",
+      "record_id": "REC50-R03-002",
+      "phase_id": "REC50-R03-002-AUDIT20261025-1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "middle_east_north_africa",
+      "record_id": "REC50-R18-001",
+      "phase_id": "REC50-R18-001-R2P2",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "root",
+      "record_id": "SA032",
+      "phase_id": "SA032-R2P1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "south_central_asia",
+      "record_id": "EA002",
+      "phase_id": "EA002-AUDIT20261025-1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "south_central_asia",
+      "record_id": "EA002",
+      "phase_id": "EA002-R2-P1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "south_central_asia",
+      "record_id": "EA014",
+      "phase_id": "EA014-AUDIT20261025-1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "south_central_asia",
+      "record_id": "EA017",
+      "phase_id": "EA017-AUDIT20261025-1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "south_central_asia",
+      "record_id": "EA018",
+      "phase_id": "EA018-AUDIT20261025-1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "south_central_asia",
+      "record_id": "EA019",
+      "phase_id": "EA019-AUDIT20261025-1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "south_central_asia",
+      "record_id": "EA019",
+      "phase_id": "EA019-AUDIT20261025-2",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "south_central_asia",
+      "record_id": "R2-EA-012",
+      "phase_id": "R2-EA-012-AUDIT20261025-1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    },
+    {
+      "owner": "south_central_asia",
+      "record_id": "REC50-R11-002",
+      "phase_id": "REC50-R11-002-AUDIT20261025-1",
+      "manual_review": "Dates, bounds, scope and inclusion agree with approved final reader."
+    }
+  ],
+  "missing_records": [],
+  "extra_records": [],
+  "issues_for_manual_review": [
+    [
+      "africa",
+      "R16-EU-009-D2",
+      "date_not_literal_in_reader",
+      "Start earliest",
+      "2026-09-05"
+    ],
+    [
+      "africa",
+      "R16-EU-009-D2",
+      "date_not_literal_in_reader",
+      "Start latest",
+      "2026-09-06"
+    ],
+    [
+      "africa",
+      "R16-EU-009-D2",
+      "date_not_literal_in_reader",
+      "Endpoint earliest",
+      "2026-09-06"
+    ],
+    [
+      "africa",
+      "R16-EU-009-D2",
+      "date_not_literal_in_reader",
+      "Endpoint latest",
+      "2026-09-06"
+    ],
+    [
+      "east_asia_southern_africa",
+      "ME036-D1",
+      "bound_with_numeric_or_complete",
+      180,
+      null
+    ],
+    [
+      "east_asia_southern_africa",
+      "R4-ME-004-R1",
+      "bound_with_numeric_or_complete",
+      2,
+      null
+    ],
+    [
+      "europe",
+      "FU-COV-HAF-003-FU1",
+      "date_not_literal_in_reader",
+      "Last confirmed (not reopening)",
+      "2023-08-10"
+    ],
+    [
+      "middle_east_north_africa",
+      "AM023-FU1",
+      "bound_with_numeric_or_complete",
+      43,
+      null
+    ],
+    [
+      "middle_east_north_africa",
+      "R4-AM-001-D1",
+      "explicit_over24_not_retained",
+      "R4-AM-001-D1 — Observed operation\nInitial military-exercise stoppage at Pacaraima–Santa Elena de Uairen\nStart: 2025-01-22.\nObserved scoped reopening: 2025-01-22 to 2025-01-23.\n0–1 calendar-day difference; scoped endpoint only\nCompeting reports: CNN Brasil reports reopening at 19:00 on 22 January, after approximately 12 hours; EFE reports reopening on 23 January after slightly more than 24 hours. The discrepancy remains unresolved."
+    ],
+    [
+      "root",
+      "REC50-R46-004-P1",
+      "date_not_literal_in_reader",
+      "Last confirmed (not reopening)",
+      "2026-08-25"
+    ]
+  ],
+  "reviewed_at_utc": "2026-10-26T10:25:27.767904+00:00",
+  "patch_sha256": {
+    "africa.json": "a5131ca8ad1f2f387d06b4adc9b500c43b7f38fd11848044c41cda577be260bd",
+    "americas.json": "23ce26eaf85c9dc71875c09b2ef93da16aca5b4740b590ad708e83fc664f9809",
+    "east_asia_southern_africa.json": "86cde70cebda85c7d81355a46544dcdf3f16d67b7c28d82bb94062ac5b0435aa",
+    "europe.json": "32b57789dc48a5988200b281a90136e2db7117b6fe0d0fe9db3250c9ebc774de",
+    "middle_east_north_africa.json": "aba17e93bf138c51057bf0efa8a02591a67ac6ac05b2b857201fae7b86734661",
+    "root.json": "ef40a3b2aa2fd3736b2e66a7ffa78ba6b1e7afa2a48ae82ad103154a58e552a8",
+    "south_central_asia.json": "2f12ea0fac0cac01bb6d5648bf3cd1360779ff6a24b2d846bf6c0f23aa87558a"
+  },
+  "manual_new_phase_review": {
+    "count": 59,
+    "method": "Read every new native phase alongside its final approved reader phase text. Compared onset precision, endpoint kind and bounds, scope, greater-than-24-hour assessment, continuity, inclusion and duration fields. No new research or independent source claims added.",
+    "result": "All 59 new phase IDs and approved phase counts are preserved. One >24-hour follow-up requested for a supported qualitative freight suspension; other dates and qualifications agree."
+  },
+  "scanner_dispositions": [
+    {
+      "phase_id": "R16-EU-009-D2",
+      "result": "False positive: final approved reader spells September 5–6, 2026 in prose; ISO translation is accurate. Overnight short episode remains >24 false."
+    },
+    {
+      "phase_id": "ME036-D1",
+      "result": "Retained historical minimum 180 through September 27, not a duration to October 29. Maximum and complete withheld. Approved reader explicitly supports the 180-day lower bound."
+    },
+    {
+      "phase_id": "R4-ME-004-R1",
+      "result": "Retained minimum 2 through November 14, not five days to November 17. Approved reader excludes the weekend from conflict-closure duration."
+    },
+    {
+      "phase_id": "AM023-FU1",
+      "result": "Retained policy minimum 43 through April 28, not a duration to October 21. Later conditional permission remains a bound."
+    },
+    {
+      "phase_id": "FU-COV-HAF-003-FU1",
+      "result": "False positive: August 10 joint monitoring observation appears in prose within the explicitly 2023 phase; ISO date is accurate."
+    },
+    {
+      "phase_id": "R4-AM-001-D1",
+      "result": ">24 null is correct: competing contemporary reports say about 12 hours versus slightly more than 24; do not prefer one without adjudication."
+    },
+    {
+      "phase_id": "REC50-R46-004-P1",
+      "result": "Old August 25 last-confirmed observation is internal to the approved August 22–28 completed policy. Not in current reader, but no interval inflation; root informed as optional stale-field cleanup."
+    }
+  ],
+  "critical_cases": [
+    {
+      "record_id": "EU031",
+      "result": "Historical onset 2022-02-28 retained; current 2026 legal/advice confirmation is last-confirmed, not onset. Kuchurhan rail separately ends 2023-10-10; Transnistrian operational uncertainty preserved."
+    },
+    {
+      "record_id": "REC50-R03-001",
+      "result": "Original 2022 restriction and 2025 age-cohort exemption transition kept separate. August 2025 is not substituted for original onset."
+    },
+    {
+      "record_id": "R2-EA-005",
+      "result": "Myanmar March 19,2020 foreign-entry policy bounded by March 7,2023 scoped visa/passport access; no nationwide repeal or continuous six-year interval invented."
+    },
+    {
+      "record_id": "R2-EA-012",
+      "result": "Singapore original March 23,2020 restriction and later VTL-specific phase preserved; broader eligible traveller access by April 1,2022 bounds blanket scope without proving uninterrupted 2020–2022 closure."
+    },
+    {
+      "record_id": "EA014",
+      "result": "National foreign-arrival procedure restoration March 15,2022 is explicit later policy evidence for both frontiers. Minor-gate actual operation remains unproved."
+    },
+    {
+      "record_id": "EA025",
+      "result": "Baseline unchanged Kaesong phase starts 2016-02-11, confirmed through 2026-02-10. This is industrial-access scope, not a newly invented universal inter-Korean episode. Current status overlay reviewed by its separate owner."
+    },
+    {
+      "record_id": "EA023/EA024",
+      "result": "Rason ordinary-tour restoration February 20,2025 and new March 5 suspension remain separate; October 2026 observation does not extend earlier calculated interval."
+    },
+    {
+      "record_id": "NA014/NA015/NA016",
+      "result": "Rafah medical evacuation phases retain scoped 2025/2026 resumptions; those do not imply ordinary public border openness. Current status overlay has separate owner."
+    },
+    {
+      "record_id": "R2-AM-009/R2-AM-010/R2-AM-011",
+      "result": "PedWest closures retain separate dated facility episodes 2020–2023,September–November 2023 andDecember 2023–January 2024 with local pedestrian scope."
+    },
+    {
+      "record_id": "R6-EU-004",
+      "result": "Retained England phase is explicit non-excused overseas-departure prohibition March 29–May 17,2021, not testing-only entry conditions."
+    }
+  ],
+  "own_geography": {
+    "new_phases": 9,
+    "wider_border": 5,
+    "single_site_unlocated": 4,
+    "new_coordinates": 0,
+    "note": "No approved exact existing coordinates for Motaain–Batugade, Wutung–Skouw, Sungai Tujoh or Manzhouli rail; no road-port/city substitutions."
+  },
+  "own_later_access_observations": {
+    "observations": 70,
+    "applies_to_entire_phase_true": 25,
+    "partial_or_other_evidence_false": 45,
+    "note": "Flags added for status reconciliation. Scope_changed means original blanket scope superseded, not unrestricted reopening."
+  },
+  "actionable_followups": [
+    {
+      "record_id": "R3-AM-005",
+      "phase_id": "R3-AM-005-R2P1",
+      "owner": "middle_east_north_africa",
+      "proposed_change": {
+        "Strictly over 24 hours": true
+      },
+      "status": "Owner agrees; awaiting root authorisation/edit to avoid concurrent writes. All dates/numeric duration unchanged."
+    }
+  ]
+}

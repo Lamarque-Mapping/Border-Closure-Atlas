@@ -8,7 +8,7 @@
   return Number.isFinite(time)&&new Date(time).toISOString().slice(0,10)===value?time/86400000:null;
  }
  function minimumDays(p){
-  if(!p||p.contested)return null;
+  if(!p||p.contested||p.analysis_included===false)return null;
   const policy=p.measure_type==='formal_policy_period'&&p.temporal_display_rule==='legal_policy_layer_only_not_operational_closure';
   const complete=p.measure_type==='operational_spell'&&p.complete_operational&&['closed_interval','bounded_interval'].includes(p.kind)
    &&p.temporal_display_rule==='scoped_interval_with_endpoint_uncertainty';
@@ -32,11 +32,16 @@
   return start!==null&&end!==null&&end>=start?end-start:null;
  }
  function qualifies(p,event){
+  if(!p||p.analysis_included===false||p.contested)return false;
   if(p?.status==='unresolved'){
    // The age of an unanswered report is never a duration. Use only its source phase.
    const source=(event?.duration_source_periods||event?.duration_periods)?.find(q=>q.period_id===p.source_phase_id);
-   return minimumDays(source)>1;
+   return source?qualifies(source,event):false;
   }
+  // A reviewed elapsed-time finding can establish >24 hours without supplying
+  // an exact reopening or a defensible numeric duration. False includes exactly
+  // 24 hours; null means unestablished and must not inherit stale arithmetic.
+  if(Object.prototype.hasOwnProperty.call(p,'strictly_over_24_hours'))return p.strictly_over_24_hours===true;
   return minimumDays(p)>1||reviewedSpan(p)>1;
  }
  function matches(event,value='all'){

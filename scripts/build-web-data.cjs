@@ -9,14 +9,16 @@ const serialise=v=>JSON.stringify(v).replace(/</g,'\\u003c');
 const pick=(v,keys)=>Object.fromEntries(keys.filter(k=>v[k]!==undefined).map(k=>[k,v[k]]));
 const recordDir=path.join(web,'records');fs.mkdirSync(recordDir,{recursive:true});
 const currentFiles=new Set();
-const recordFields=['id','title','region','countries','continents','location_ids','mapping_precision','start','end','scope','crossings','movement','direction','rationales','rationale_coding_status','quarantined','inclusion_status','excluded_from_map','evidence_status','quarantine_reason','current_timing','timing_coverage','onset_month','onset_months','phase_onsets','onset_status','policy_group'];
-const phaseFields=['period_id','kind','measure_type','contested','start_earliest','start_latest','end_earliest','end_latest','last_confirmed','minimum_days','maximum_days','endpoint_status','end_inclusive','endpoint_inclusion','observed_reopening','temporal_display_rule','evidence_dates','scope','complete_operational','exact_complete_operational'];
+const recordFields=['id','title','region','countries','continents','location_ids','mapping_precision','start','end','scope','crossings','movement','direction','rationales','rationale_coding_status','quarantined','inclusion_status','excluded_from_map','evidence_status','quarantine_reason','timing_coverage','onset_month','onset_months','phase_onsets','onset_status','policy_group','audit_current'];
+const phaseFields=['period_id','kind','measure_type','contested','start_earliest','start_latest','end_earliest','end_latest','last_confirmed','minimum_days','maximum_days','endpoint_status','end_inclusive','endpoint_inclusion','observed_reopening','temporal_display_rule','evidence_dates','scope','complete_operational','exact_complete_operational','analysis_included','strictly_over_24_hours','over_24_hours_basis','rationales'];
 const events=data.events.map(e=>{
  const body=serialise({source_sha256:data.meta.source_sha256,record:e});
  const file='records/'+hash(body)+'.json';currentFiles.add(path.basename(file));fs.writeFileSync(path.join(web,file),body);
  // Preserve the existing Analysis search vocabulary without loading its source histories.
  const dimensions=[e.countries.join('; '),e.imposing_authority,e.scope,e.crossings,e.direction,e.movement,e.exceptions,e.enforcement,e.consequences,e.last_confirmed_closed,e.record_type,e.status_observation,e.relationship];
- const search=[e.id,e.title,e.region,e.official_rationale,e.context,e.uncertainty,e.policy_group,...dimensions,...e.sources.map(s=>s.title),...e.duration_periods.map(p=>p.scope),...e.rationale_assignments.map(a=>a.Subcategory)].join(' ');
+ const search=[...new Set([e.id,e.title,e.region,e.official_rationale,e.context,e.uncertainty,e.policy_group,...dimensions,...e.sources.map(s=>s.title),...e.duration_periods.map(p=>p.scope),...e.rationale_assignments.map(a=>a.Subcategory)].filter(Boolean))].join(' ');
+ // Deduplicate repeated complete source fields; preserve phrases and all full
+ // evidence in the lazily loaded record and downloadable source.
  return {...pick(e,recordFields),details_file:file,search_text:search,
   duration_periods:e.duration_periods.map(p=>pick(p,phaseFields)),duration_review:{display:e.duration_review.display},
   current_review:{outcome:e.current_review.outcome,claims:e.current_review.claims.map(c=>pick(c,['field','assessment']))},sources:[],rationale_assignments:[],unresolved_issues:[]};

@@ -100,7 +100,7 @@ if(!process.argv.includes('--synthetic-only')){
  for(const e of data.events.filter(e=>!C.excluded(e))){
   for(const p of e.duration_periods.filter(p=>p.contested)){
    const recordedMonths=new Set([...(p.evidence_dates||[]),p.start_earliest,p.start_latest,p.end_earliest,p.end_latest,p.last_confirmed].filter(Boolean).map(month));
-   for(let m=month(data.meta.window_start);m<=month(data.meta.window_end);m++)assert.equal(C.phaseTemporalState(p,m),recordedMonths.has(m)?'held':'none',p.period_id+' '+C.monthISO(m));
+   for(let m=month(data.meta.window_start);m<=month(data.meta.window_end);m++)assert.equal(C.phaseTemporalState(p,m),p.analysis_included!==false&&recordedMonths.has(m)?'held':'none',p.period_id+' '+C.monthISO(m));
   }
  }
  console.log('Corrected workbook regressions passed: Rwanda passenger dates, all-held records, Ecuador ordered onsets and endpoint-only evidence, and every included held phase.');

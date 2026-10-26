@@ -64,19 +64,27 @@ audits={r['Record ID']:r for r in table('Audit review')}
 check(len(ids),release['counts']['records'],'Source parent count'); check(len(set(ids)),len(ids),'Unique source IDs')
 check([e['id'] for e in events],ids,'Exact compiled IDs and workbook order')
 check(len(by_id),len(ids),'Unique compiled IDs')
-# Dimensions was not extended for the 48 added parents. They must still import.
+# Some historical parents lack Dimensions rows. Audit-populated rows may now
+# fill those gaps; the per-record check below still rejects invented fields.
 new=set(ids)-set(dimensions)
-check(len(new),48,'Retained parents without native Dimensions rows')
-check(collections.Counter(r.split('-')[0] for r in new),{'FU':21,'NP':12,'C7':15},'Added parent groups')
+assert all(r.split('-')[0] in {'FU','NP','C7'} for r in new),'Unexpected parent without native Dimensions'
 check(collections.Counter(r['Analysis inclusion'] for r in register),
-      {'Included':release['counts']['included'],'Quarantined':3,'Excluded':1},'Inclusion counts')
+      {'Included':release['counts']['included'],'Quarantined':2,'Excluded':1},'Inclusion counts')
 check({r['ID'] for r in register if r['Analysis inclusion']=='Quarantined'},
-      {'GL18','SA025','R3-SC-004'},'Quarantined IDs')
+      {'GL18','R3-SC-004'},'Quarantined IDs')
 check({r['ID'] for r in register if r['Analysis inclusion']=='Excluded'},{'SUP-004'},'Excluded ID')
+check(by_id['SA025']['inclusion_status'],'Included','SA025 admitted scoped phase is included')
 included_ids={r['ID'] for r in register if r['Analysis inclusion']=='Included'}
 included=[e for e in events if e['id'] in included_ids]
 
 phases=table('Chronology phases'); phase_groups=grouped(phases,'Parent record ID')
+sa025_phases={p['Phase ID']:p for p in phase_groups['SA025']}
+check(sa025_phases['SA025-D1'].get('Analysis included (1=yes)'),0,'SA025 road phase remains excluded')
+check(sa025_phases['SA025-AUDIT20261026-1'].get('Analysis included (1=yes)'),1,'SA025 rail policy admitted separately')
+check(sa025_phases['SA025-AUDIT20261026-1']['Evidence category'],'formal_policy_period','SA025 rail evidence remains policy rather than observed road closure')
+check(sa025_phases['SA025-AUDIT20261026-1'].get('Strictly over 24 hours'),True,'SA025 continuing rail policy exceeds 24 hours')
+for field in ['Complete operational (1=yes)','Exact operational (1=yes)']:
+    check(durations['SA025'][field],0,'SA025 has no complete observed operational duration: '+field)
 bindings=table('Phase locations'); phase_bindings=grouped(bindings,'Phase ID')
 assignment_rows=table('Rationale coding'); assignments=grouped(assignment_rows,'Record ID')
 followups=table('Follow-up review'); followup_groups=grouped(followups,'Record ID')
@@ -135,10 +143,35 @@ phase_fields={'kind':'Interval type','measure_type':'Evidence category','start_e
  'review_type':'Current review provenance','calculation_rule':'Calculation rule',
  'reported_duration':'Reported duration detail','reported_schedule':'Reported schedule / clock detail',
  'endpoint_inclusion':'Endpoint inclusion recorded','observed_reopening':'Endpoint is observed reopening'}
+date_fields=['Start earliest','Start latest','Endpoint earliest','Endpoint latest','Last confirmed (not reopening)']
+phase_flags_by_record={}
+def native_phase_flags(rows):
+    return {
+        'any_dated_evidence':any(any(p.get(field) for field in date_fields) for p in rows),
+        'operational_complete':any(bool(p['Complete operational (1=yes)']) for p in rows),
+        'operational_exact_complete':any(bool(p['Exact complete operational (1=yes)']) for p in rows),
+        'operational_censored':any(p['Evidence category']=='operational_spell' and p['Interval type']=='confirmed_through' and not p['Contested / held (1=yes)'] for p in rows),
+        'same_day':any(p['Evidence category']=='operational_spell' and p['Interval type']=='same_day' for p in rows),
+        'formal_policy':any(p['Evidence category']=='formal_policy_period' for p in rows),
+        'ordered_window':any(p['Evidence category']=='ordered_window' for p in rows),
+        'intermittent_regime':any(p['Evidence category']=='intermittent_regime' for p in rows)}
 known={f['properties']['location_id'] for key in ['locations','context_locations'] for f in x[key]['features']}
 numeric_checks=0
 for r in register:
     rid=r['ID']; e=by_id[rid]; dur=durations[rid]; audit=audits[rid]
+    eligible_phases=[p for p in phase_groups[rid] if p.get('Analysis included (1=yes)',p['Parent included (1=yes)'])!=0]
+    phase_flags_by_record[rid]=native_phase_flags(eligible_phases)
+    for key,(column,_,_) in flags.items():
+        check(dur[column],int(phase_flags_by_record[rid][key]),rid+' native duration flag from eligible phases: '+key)
+    check(dur['Linked phase count'],len(phase_groups[rid]),rid+' native total phase count retains excluded evidence')
+    single=eligible_phases[0] if len(eligible_phases)==1 else {}
+    for column,phase_column in {'Start earliest':'Start earliest','Start latest':'Start latest',
+            'Endpoint earliest':'Endpoint earliest','Endpoint latest':'Endpoint latest',
+            'Confirmed through (not reopening)':'Last confirmed (not reopening)',
+            'Minimum calendar days':'Minimum date difference (days)',
+            'Maximum calendar days':'Maximum date difference (days)'}.items():
+        check(dur[column],single.get(phase_column),rid+' native parent interval does not aggregate phases: '+column)
+    check(dur['Period type'],single.get('Interval type') or ('multiple_phases' if eligible_phases else 'no_included_phase'),rid+' native parent period type')
     check(e['source_register'],r,rid+' complete Register row')
     check(e['source_duration'],dur,rid+' complete Durations row')
     if rid in dimensions: check(e['source_dimensions'],dimensions[rid],rid+' Dimensions row')
@@ -160,6 +193,21 @@ for r in register:
     for line in str(r['Current record corrections'] or '').splitlines():
         key,sep,value=line.partition(':')
         if sep and key in correction_fields: expected[correction_fields[key]]=value.strip() or None
+    audited_reader=release.get('audited_reader_by_record',{}).get(rid)
+    if audited_reader:
+        check(e.get('audited_reader'),audited_reader,rid+' complete accepted audit reader')
+        check(e.get('audit_current'),True,rid+' current audit provenance marker')
+        for field,column in {'title':'Closure or restriction','scope':'Crossing and scope',
+                'movement':'Traffic, direction and exceptions','official_rationale':'Rationales and attribution',
+                'uncertainty':'Current uncertainty / qualification','current_timing':'Phase dates and scope',
+                'crossings':'Crossing and scope'}.items():
+            expected[field]=audited_reader[column]
+        for field in ['direction','exceptions']:
+            expected[field]='See the combined traffic, direction and exceptions description.'
+        for column,reader_column in {'Current duration interpretation':'Phase dates and scope',
+                'Qualification':'Current uncertainty / qualification',
+                'Movement / direction / phase':'Traffic, direction and exceptions'}.items():
+            check(dur[column],audited_reader[reader_column],rid+' native duration summary uses accepted '+reader_column)
     limit=release.get('country_scope_limits_by_record',{}).get(rid)
     if limit:expected['uncertainty']='\n\n'.join(v for v in [expected.get('uncertainty'),limit] if v)
     for f,v in expected.items(): check(e.get(f),v,rid+' current '+f)
@@ -172,8 +220,12 @@ for r in register:
     check(set(e['rationales']),codes,rid+' rationale assignments')
     check(set(parts(r['Current broad rationales'])) & set(m['rationale_categories']),codes,rid+' Register rationale join')
     for f,(col,_,_) in flags.items(): check(e['timing_coverage'][f],bool(dur[col]),rid+' '+f)
-    check(e['current_review']['outcome'],r['Current audit outcome'],rid+' current outcome')
-    check(e['current_review']['claims'],[],rid+' initial claims must not be current')
+    check(e['current_review']['outcome'],release['current_review_by_record'][rid].get('outcome',r['Current audit outcome']),rid+' current outcome')
+    current_claims=release['current_review_by_record'][rid].get('claims',[])
+    expected_claims=[{'field':c.get('field') or c.get('claim'),
+        'assessment':c.get('assessment') or c.get('status'),
+        'note':c.get('note') or c.get('detail'),'source_urls':c.get('source_urls',[])} for c in current_claims]
+    check(e['current_review']['claims'],expected_claims,rid+' latest audit claim assessments and sources')
     check(e['current_review']['completed'],release['current_review_by_record'][rid]['completed'],rid+' accepted current review date')
     check(e['current_review']['review_scope'],release['current_review_by_record'][rid]['review_scope'],rid+' review scope retained')
     check(e['current_review']['open_evidence_needs'],audit['Current open evidence needs'],rid+' current needs')
@@ -202,6 +254,16 @@ for r in register:
         check(p['end_inclusive'],raw['Endpoint inclusion recorded']=='Inclusive',pid+' inclusion truth')
         for f,col in [('contested','Contested / held (1=yes)'),('complete_operational','Complete operational (1=yes)'),
                       ('exact_complete_operational','Exact complete operational (1=yes)')]: check(p[f],bool(raw[col]),pid+' '+f)
+        check(p['analysis_included'],raw.get('Analysis included (1=yes)',raw['Parent included (1=yes)'])!=0,pid+' phase analysis inclusion')
+        if raw.get('Over 24 hours basis') or raw.get('Strictly over 24 hours') is not None:
+            check(p.get('strictly_over_24_hours'),raw.get('Strictly over 24 hours'),pid+' explicit strict >24h finding')
+            check(p.get('over_24_hours_basis'),raw.get('Over 24 hours basis'),pid+' >24h evidence basis')
+            value=p.get('strictly_over_24_hours')
+            assert value is None or type(value) is bool,pid+' invalid duration classification'
+        if isinstance(raw.get('Phase broad rationales'),list):
+            check(p.get('rationales'),raw['Phase broad rationales'],pid+' phase-specific rationales')
+        if raw.get('Later access observations'):
+            check(p.get('later_access_observations'),raw['Later access observations'],pid+' later access observations')
         check(p['source_ids'],parts(raw['Source IDs']),pid+' source IDs')
         check(p['source_urls'],parts(raw['Source URLs'],'\n'),pid+' source URLs')
         check(p['location_bindings'],phase_bindings[pid],pid+' location decisions')
@@ -211,6 +273,8 @@ for r in register:
         check(p['evidence_dates'],dates,pid+' no invented evidence dates')
         if p['contested'] or p['kind']=='same_day' or p['measure_type']=='intermittent_regime':
             assert p['minimum_days'] is None and p['maximum_days'] is None,pid+' inappropriate numeric duration'
+        if p['kind']=='same_day':
+            assert p.get('strictly_over_24_hours') is not True,pid+' same-day episode cannot exceed 24 hours'
         if p['contested']: assert not p['complete_operational'] and not p['exact_complete_operational'],pid+' held promoted'
         bounds=[p[k] for k in ['start_earliest','start_latest','end_earliest','end_latest']]
         if all(bounds) and p['calculation_rule']=='calendar_bounds':
@@ -223,6 +287,9 @@ for r in register:
     urls={s['URL'] for s in evidence[rid]+chronology_sources[rid] if s['URL']}
     urls.update(s['Source URL'] for s in index_groups[rid] if s['Source URL'])
     urls.update(u for p in phase_groups[rid] for u in parts(p['Source URLs'],'\n'))
+    # The accepted audit may record a source that corrects reader prose without
+    # creating another native chronology phase or historical Evidence row.
+    urls.update(release['source_urls_by_record'].get(rid,[]))
     sources={s['url']:s for s in e['sources']}
     check(set(sources),urls,rid+' full current source URLs'); check(set(e['source_urls']),urls,rid+' URL index')
     check(len(e['sources']),len(urls),rid+' URL deduplication')
@@ -236,7 +303,7 @@ for r in register:
     if rid in included_ids:
         for p in phase_groups[rid]:
             a,b=p['Start earliest'],p['Start latest']
-            if p['Contested / held (1=yes)'] or not a or not b:continue
+            if p.get('Analysis included (1=yes)',p['Parent included (1=yes)'])==0 or p['Contested / held (1=yes)'] or not a or not b:continue
             try:first,last=dt.date.fromisoformat(a),dt.date.fromisoformat(b)
             except (ValueError,TypeError):continue
             if first<=last and a[:7]==b[:7]:expected_onsets.append({'phase_id':p['Phase ID'],'month':a[:7],'measure_type':p['Evidence category']})
@@ -250,11 +317,33 @@ for flag,(column,coverage_column,expected) in flags.items():
     check(coverage[coverage_column],expected,flag+' coverage table')
     check(sum(e['timing_coverage'][flag] for e in included),expected,flag+' compiled count')
     check(summary[flag],expected,flag+' metadata count')
-check({rid for rid in included_ids if not durations[rid]['Any dated phase (1=yes)']},{'H06','R2-EA-002'},'Undated records')
+check({rid for rid in included_ids if not durations[rid]['Any dated phase (1=yes)']},{'R2-EA-002'},'Undated records after the sourced H06 phase addition')
+for row in table('Timing coverage'):
+    dimension,group=row['Dimension'],row['Group']
+    if dimension=='All': selected_ids=included_ids
+    elif dimension=='region': selected_ids={r['ID'] for r in register if r['ID'] in included_ids and r['Region']==group}
+    elif dimension=='rationale': selected_ids={rid for rid in included_ids if any(a['Broad rationale']==group for a in assignments[rid])}
+    else:
+        assert str(dimension).startswith('Counts are parent records, not phases.') and group is None,'Unknown current coverage dimension: '+str(dimension)
+        assert all(row[column] is None for column in ['Included records','No dated evidence','No complete operational duration','Complete operational coverage']+[spec[1] for spec in flags.values()]),'Explanatory coverage footer contains unexplained counts'
+        continue
+    label='Native timing coverage '+str(dimension)+' / '+str(group)
+    check(row['Included records'],len(selected_ids),label+' population')
+    for key,(_,coverage_column,_) in flags.items():
+        check(row[coverage_column],sum(phase_flags_by_record[rid][key] for rid in selected_ids),label+' '+coverage_column)
+    dated=sum(phase_flags_by_record[rid]['any_dated_evidence'] for rid in selected_ids)
+    complete=sum(phase_flags_by_record[rid]['operational_complete'] for rid in selected_ids)
+    check(row['No dated evidence'],len(selected_ids)-dated,label+' no dated evidence')
+    check(row['No complete operational duration'],len(selected_ids)-complete,label+' no complete operational duration')
+    check(row['Complete operational coverage'],complete/len(selected_ids) if selected_ids else 0,label+' coverage fraction')
 check(len(phases),release['counts']['phases'],'Source phase count');check(len({p['Phase ID'] for p in phases}),len(phases),'Unique phase IDs')
 check(sum(len(e['duration_periods']) for e in events),len(phases),'Compiled phase count')
-check(sum(len(e['duration_periods']) for e in included),sum(p['Parent record ID'] in included_ids for p in phases),'Included phases')
-check(sum(p['contested'] for e in included for p in e['duration_periods']),sum(bool(p['Contested / held (1=yes)']) for p in phases if p['Parent record ID'] in included_ids),'Included held phases')
+included_phase_count=sum(p['Parent record ID'] in included_ids and p.get('Analysis included (1=yes)',p['Parent included (1=yes)'])!=0 for p in phases)
+included_held_count=sum(bool(p['Contested / held (1=yes)']) for p in phases if p['Parent record ID'] in included_ids and p.get('Analysis included (1=yes)',p['Parent included (1=yes)'])!=0)
+check(sum(p['analysis_included'] for e in included for p in e['duration_periods']),included_phase_count,'Included phases')
+check(sum(p['contested'] and p['analysis_included'] for e in included for p in e['duration_periods']),included_held_count,'Included held phases')
+check(m['atlas_summary']['chronology_coverage']['included_phases'],included_phase_count,'Metadata analysis-included phases')
+check(m['atlas_summary']['chronology_coverage']['held_phases'],included_held_count,'Metadata included held phases')
 rationale_counts={category:len({r['Record ID'] for r in assignment_rows if r['Record ID'] in included_ids and r['Broad rationale']==category}) for category in {r['Broad rationale'] for r in assignment_rows if r['Broad rationale']!='Uncoded'}}
 check(set(m['rationale_categories']),set(rationale_counts),'Ten current rationale categories')
 for category,expected in rationale_counts.items():

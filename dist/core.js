@@ -46,7 +46,7 @@
   }
   // A displayable phase need not have a measurable interval: observations,
   // incomplete bounds and held dates remain discoverable on their recorded dates.
-  function validPeriod(p){return !!p&&PERIOD_KINDS.includes(p.kind)&&periodEvidenceDates(p).length>0;}
+  function validPeriod(p){return !!p&&p.analysis_included!==false&&PERIOD_KINDS.includes(p.kind)&&periodEvidenceDates(p).length>0;}
   function periodBounds(p){
     const values=[p.start_earliest,p.start_latest,p.end_earliest||p.last_confirmed,p.end_latest||p.last_confirmed].map(day);
     const [a,b,c,d]=values;
@@ -89,9 +89,15 @@
     return TEMPORAL_ORDER.filter(state=>states.has(state));
   }
   function temporalState(e,month,measureType=''){return temporalStates(e,month,measureType)[0]||'none';}
+  function phaseRationales(e,p){
+    if(Array.isArray(p.rationales))return p.rationales;
+    const source=p.source_phase_id&&array(e.duration_source_periods||e.duration_periods).find(q=>q.period_id===p.source_phase_id);
+    return Array.isArray(source?.rationales)?source.rationales:array(e.rationales);
+  }
+  function selectedRationales(e,phases){return [...new Set(phases.flatMap(p=>phaseRationales(e,p)))];}
   function periodsForView(e,state={}){
     const onsetIDs=state.mode==='onsets'&&Array.isArray(e.phase_onsets)?new Set(e.phase_onsets.filter(p=>monthOrdinal(p.month)===state.month&&(!state.measureType||p.measure_type===state.measureType)).map(p=>p.phase_id)):null;
-    return [...(state.mode==='intervals'?periods(e,state.measureType):array(e.duration_periods).filter(p=>!state.measureType||p.measure_type===state.measureType)).filter(p=>state.mode!=='intervals'||phaseTemporalState(p,state.month)!=='none').filter(p=>!onsetIDs||onsetIDs.has(p.period_id)),...statusPeriods(e,state)].filter(p=>state.duration!=='over1'||D.qualifies(p,e));
+    return [...(state.mode==='intervals'?periods(e,state.measureType):array(e.duration_periods).filter(p=>p.analysis_included!==false&&(!state.measureType||p.measure_type===state.measureType))).filter(p=>state.mode!=='intervals'||phaseTemporalState(p,state.month)!=='none').filter(p=>!onsetIDs||onsetIDs.has(p.period_id)),...statusPeriods(e,state)].filter(p=>state.duration!=='over1'||D.qualifies(p,e)).filter(p=>!state.rationale||phaseRationales(e,p).includes(state.rationale));
   }
   function mappingRows(e,data,state={}){
     if(excluded(e)||isSupplement(e)||!data.crossing_map)return [];
@@ -116,7 +122,7 @@
   function recordsForLocation(records,id,data,state={}){
     return records.filter(e=>mapLocationsFor(e,data,state).includes(id)).map(e=>{
       const phases=periodsForView(e,state).filter(p=>e.record_kind==='border_status'?array(p.location_ids).includes(id):isSupplement(e)||!data.crossing_map||phaseLocationIDs(e,data.crossing_map.phases[p.source_phase_id||p.period_id],data).includes(id));
-      return {...e,duration_source_periods:e.duration_source_periods||e.duration_periods,duration_periods:phases.filter(p=>!p.map_status),map_status_periods:phases.filter(p=>p.map_status),map_status_only:phases.length>0&&phases.every(p=>p.map_status),map_status_unresolved:phases.length>0&&phases.every(p=>p.map_status&&p.status==='unresolved')};
+      return {...e,rationales:phases.length?selectedRationales(e,phases):array(e.rationales),duration_source_periods:e.duration_source_periods||e.duration_periods,duration_periods:phases.filter(p=>!p.map_status),map_status_periods:phases.filter(p=>p.map_status),map_status_only:phases.length>0&&phases.every(p=>p.map_status),map_status_unresolved:phases.length>0&&phases.every(p=>p.map_status&&p.status==='unresolved')};
     });
   }
   function mappingStatus(e,data,state={}){
@@ -148,7 +154,7 @@
   }
   function filterEvents(data,state){
     const q=String(state.query||'').trim().toLowerCase();
-    return data.events.map(e=>state.duration==='over1'?D.scopedEvent(e,state.duration):e).filter(Boolean).filter(e=>!excluded(e)||(state.includeExcluded===true&&state.mode==='all')).filter(e=>!state.continent||array(e.continents).includes(state.continent)).filter(e=>!state.region||e.region===state.region).filter(e=>!state.rationale||array(e.rationales).includes(state.rationale)).filter(e=>matchesPrecision(e,state.precision,data,state)).filter(e=>!q||[e.id,e.title,e.region,e.scope,e.crossings,e.movement,e.direction,...array(e.countries),...array(e.rationales)].join(' ').toLowerCase().includes(q)).filter(e=>!state.location||mapLocationsFor(e,data,state).includes(state.location)).filter(e=>!state.measureType||(state.mode==='all'?array(e.duration_periods).some(p=>p.measure_type===state.measureType):periods(e,state.measureType).length)).filter(e=>matchesTime(e,state.mode,state.month,state.measureType));
+    return data.events.map(e=>state.duration==='over1'?D.scopedEvent(e,state.duration):e).filter(Boolean).filter(e=>!excluded(e)||(state.includeExcluded===true&&state.mode==='all')).filter(e=>!state.continent||array(e.continents).includes(state.continent)).filter(e=>!state.region||e.region===state.region).filter(e=>!state.rationale||(array(e.duration_periods).length||array(e.map_status_periods).length?selectedRationales(e,periodsForView(e,state)):array(e.rationales)).includes(state.rationale)).filter(e=>matchesPrecision(e,state.precision,data,state)).filter(e=>!q||[e.id,e.title,e.region,e.scope,e.crossings,e.movement,e.direction,...array(e.countries),...array(e.rationales)].join(' ').toLowerCase().includes(q)).filter(e=>!state.location||mapLocationsFor(e,data,state).includes(state.location)).filter(e=>!state.measureType||(state.mode==='all'?array(e.duration_periods).some(p=>p.analysis_included!==false&&p.measure_type===state.measureType):periods(e,state.measureType).length)).filter(e=>matchesTime(e,state.mode,state.month,state.measureType));
   }
   const api={array,CONTINENTS,monthOrdinal,monthISO,day,quarantined,excluded,isSupplement,statusPeriods,statusTemporalState,locationsFor,locationFeatures,contextLocationsFor,displayLocationsFor,mapLocationsFor,mappingRows,recordsForLocation,mappingStatus,periodEvidenceDates,validPeriod,periods,periodsForView,measureLabel,phaseTemporalState,temporalStates,temporalState,temporalLabel,intervalEligible,matchesTime,precision,matchesPrecision,availableContinents,continentCounts,validate,filterEvents};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.BorderCore=api;

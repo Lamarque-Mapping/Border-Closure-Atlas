@@ -1,33 +1,38 @@
 {
   "schema_version": 1,
-  "release_id": "2026.10.25-rec50",
-  "release_date": "2026-10-25",
-  "data_state_sha256": "d9036cb8d241de5bcef39e99c6d97d62e573b59e5e02097a79a10cbf355eb39e",
+  "release_id": "2026.10.26-full-audit-2",
+  "release_date": "2026-10-26",
+  "data_state_sha256": "da65beb355566d6a74bd70f5757f27e62c4c550c41be53e97f206084a02131c2",
   "counts": {
-    "included": 825,
-    "phases": 1010,
-    "records": 829
+    "records": 829,
+    "included": 826,
+    "phases": 1069
   },
   "files": {
     "data": {
       "path": "source/current-release.json.gz",
-      "sha256": "5baf139f914593184ed2eee3f5a9dfd783cb264332415f98e645b409c314a415",
-      "bytes": 7985197
+      "sha256": "d33692ed2f2a4ef3ea32be7171987d8840a5ad07e8ed9e9c0c6511d85ccbc033",
+      "bytes": 11015223
     },
     "reader": {
       "path": "source/Global_Border_Closures_Master_2016_2026.xlsx",
-      "sha256": "c7efe7071aa3346f3180e7a57b9023bede8108763a2b9a0cf040a9059f0121b4",
-      "bytes": 642897
+      "sha256": "cc7a96b96350adcc95b1fecfc0c0f8e77327cbb6c7fbe82056963f39141f5b02",
+      "bytes": 922875
     },
     "reader_model": {
       "path": "source/current-reader-model.json",
-      "sha256": "8a48c3687b01a7593527bceff0d8ac984c497f48d61007de0fe0fe99f2143f5c",
-      "bytes": 4445644
+      "sha256": "80149b579cbbbf8e8d4a4f57e3ff6965d1c0ce3d63ef0401b0ecea3417655bd1",
+      "bytes": 9282742
+    },
+    "audit_history": {
+      "path": "migration/audit-inputs.json.gz",
+      "sha256": "ac2154e9b51ee1b9b280c8aa61405185c9c5d8aec876791a1ef8e2cb46e71c35",
+      "bytes": 2946346
     },
     "methodology": {
       "path": "source/release-method.json",
-      "sha256": "7b9907947c1e19b818e7cae389c6c65e46fa77938f8dfc9b2bedd1667e2a8e32",
-      "bytes": 3639
+      "sha256": "f99d35d7565d59b5ed00395f0e979eac1a23428b1a60ac20408872b2dcf60758",
+      "bytes": 6041
     },
     "overrides": {
       "path": "source/release-overrides.json",
@@ -36,8 +41,8 @@
     },
     "companion_zip": {
       "path": "source/Global_Border_Closures_Data_2016_2026.zip",
-      "sha256": "385692cf7b40295ef85d1d4d45192fec296ffac1e0389510d70c0dcaca3a056a",
-      "bytes": 9167960
+      "sha256": "3687e33932e8aff7ba95a6844d0f58b699dc6a03e3eee198c36659bc13921e3b",
+      "bytes": 15999551
     },
     "geography_reference": {
       "path": "source/geography-reference.json",
@@ -46,18 +51,18 @@
     },
     "crossing_scope": {
       "path": "source/crossings/scope-review.json",
-      "sha256": "2a6aa205100904e1bd8d75e6359a2e5cb5811d1e8d333bf3050bcbcddea4e060",
-      "bytes": 464542
+      "sha256": "631564f15ade355a7c98045faaa02e5bd7af86fc89cf32b3266187ca1399e15c",
+      "bytes": 583253
     },
     "crossing_locations": {
       "path": "source/crossings/locations.json",
-      "sha256": "d996a9f02bb52d2c37711e5079ab6e70e9fd3c4d5ed571268edfc956ba31dfbc",
-      "bytes": 763557
+      "sha256": "e4b81d220480cfe8eebe6b5eea093b4ee40789bda62db567470ef81cc8605601",
+      "bytes": 1345261
     },
     "crossing_reconciliation": {
       "path": "source/crossings/release-reconciliation.json",
-      "sha256": "c2a4ac6cc0f8c237f82776b0898a39ca85b782ecd9ca7b065245b972698e7e47",
-      "bytes": 90250
+      "sha256": "2ba1c3dcf493d092c522479b535d8b5dac7027dd5a276fe0a7b37bc943a684bf",
+      "bytes": 30635
     },
     "national_policies": {
       "path": "source/national-policy-supplement.json",
@@ -71,31 +76,36 @@
     },
     "status_review": {
       "path": "source/border-status-review.json",
-      "sha256": "7765686e85df0acd9e32865cc0ccec512fc604f46aaa0f228fa47b085d0f19f3",
-      "bytes": 799843
+      "sha256": "f55bf11db7ced593222f0f1913ec4ea3025f99e78bd0261533b6cfba93c38550",
+      "bytes": 2572454
     }
   },
   "downloads": {
     "reader": {
       "path": "downloads/Global_Border_Closures_Master_2016_2026.xlsx",
-      "sha256": "c7efe7071aa3346f3180e7a57b9023bede8108763a2b9a0cf040a9059f0121b4",
+      "sha256": "cc7a96b96350adcc95b1fecfc0c0f8e77327cbb6c7fbe82056963f39141f5b02",
       "source_file": "source/Global_Border_Closures_Master_2016_2026.xlsx"
     },
     "companion_json": {
       "path": "downloads/Global_Border_Closures_Data_2016_2026.json.gz",
-      "sha256": "5baf139f914593184ed2eee3f5a9dfd783cb264332415f98e645b409c314a415",
+      "sha256": "d33692ed2f2a4ef3ea32be7171987d8840a5ad07e8ed9e9c0c6511d85ccbc033",
       "source_file": "source/current-release.json.gz"
     },
     "companion_zip": {
       "path": "downloads/Global_Border_Closures_Data_2016_2026.zip",
-      "sha256": "385692cf7b40295ef85d1d4d45192fec296ffac1e0389510d70c0dcaca3a056a",
+      "sha256": "3687e33932e8aff7ba95a6844d0f58b699dc6a03e3eee198c36659bc13921e3b",
       "source_file": "source/Global_Border_Closures_Data_2016_2026.zip"
+    },
+    "audit_history": {
+      "path": "downloads/Full_Register_Source_Audits_2026.json.gz",
+      "sha256": "ac2154e9b51ee1b9b280c8aa61405185c9c5d8aec876791a1ef8e2cb46e71c35",
+      "source_file": "migration/audit-inputs.json.gz"
     }
   },
   "reader_validation": {
     "status": "passed",
-    "reader_sha256": "c7efe7071aa3346f3180e7a57b9023bede8108763a2b9a0cf040a9059f0121b4",
-    "data_state_sha256": "d9036cb8d241de5bcef39e99c6d97d62e573b59e5e02097a79a10cbf355eb39e",
+    "reader_sha256": "cc7a96b96350adcc95b1fecfc0c0f8e77327cbb6c7fbe82056963f39141f5b02",
+    "data_state_sha256": "da65beb355566d6a74bd70f5757f27e62c4c550c41be53e97f206084a02131c2",
     "sheets": [
       "Closures",
       "Methodology"

@@ -1,12 +1,12 @@
 {
-  "release_id": "2026.10.25-rec50",
-  "release_date": "2026-10-25",
+  "release_id": "2026.10.26-full-audit-2",
+  "release_date": "2026-10-26",
   "study_window": [
     "2016-10-21",
     "2026-10-21"
   ],
-  "full_text": "The dataset was compiled using OpenAI’s GPT‑6 Astra with Ultra reasoning, with GPT‑6 Astra Pro documented in the final research and review logs. The work comprised 16 initial research rounds, including three full-register verification exercises, followed by two further register-wide reviews and 50 additional research and review cycles. Six regional AI reviewers contributed to major assessments, with research, challenge and adjudication conducted in separate contexts of the same model. Reviewers checked whether each restriction occurred, its start and endpoint, the crossings and types of movement affected, continuity, and the reported reasons against linked source evidence. The two subsequent register-wide exercises comprised a blind reconstruction and challenge of 653 records, producing 3,918 claim assessments, and a further assessment of all 686 records and 738 phases in the expanded register. Additional chronology work assessed 519 cases and subjected 272 unresolved cases to fresh research and separate review. The final 50 cycles comprised 30 coverage-search cycles, ten targeted-verification cycles and ten audits of preselected records, providing full-record source reviews of 160 entries and addressing 176 targeted questions across 162 entries. Proposed additions were checked against existing episodes to avoid duplication, while partial reopenings and changes in restrictions were recorded as separate phases. The resulting register contains 829 records and 1,010 phases, supported by a catalogue of 4,680 distinct recorded URLs. Automated consistency checks covered the complete final dataset; uncertain dates, source-access limitations and unresolved claims remain explicit. The five register-wide reviews covered successive versions of the dataset, while the later targeted audits examined selected records.",
-  "account_source": "Full methods account supplied by Hugh Lamarque on 25 October 2026; final record, phase, source-URL and REC50 counts reconciled to the preserved dataset.",
+  "full_text": "The dataset was compiled using OpenAI’s GPT‑6 Astra with Ultra reasoning, with GPT‑6 Astra Pro documented in the final research and review logs. The work comprised 16 initial research rounds, including three full-register verification exercises, followed by two further register-wide reviews and 50 additional research and review cycles. Six regional AI reviewers contributed to major assessments, with research, challenge and adjudication conducted in separate contexts of the same model. Reviewers checked whether each restriction occurred, its start and endpoint, the crossings and types of movement affected, continuity, and the reported reasons against linked source evidence. The two subsequent register-wide exercises comprised a blind reconstruction and challenge of 653 records, producing 3,918 claim assessments, and a further assessment of all 686 records and 738 phases in the expanded register. Additional chronology work assessed 519 cases and subjected 272 unresolved cases to fresh research and separate review. The final 50 cycles comprised 30 coverage-search cycles, ten targeted-verification cycles and ten audits of preselected records, providing full-record source reviews of 160 entries and addressing 176 targeted questions across 162 entries. Proposed additions were checked against existing episodes to avoid duplication, while partial reopenings and changes in restrictions were recorded as separate phases. At that stage the register contained 829 records and 1,010 phases. Automated consistency checks covered the complete final dataset; uncertain dates, source-access limitations and unresolved claims remain explicit. Those five register-wide reviews covered successive versions of the dataset; the REC50 targeted audits examined selected records.\n\nTwo additional full-register source audits then each assessed all 829 entries, using six regional AI reviewers and coordinator adjudication. Regional assignments were rotated for the second pass. Reviewers checked cited evidence and searched for missing or suspicious dates, reopening information, affected movement, exceptions and rationale attribution. The first pass made substantive corrections to 292 records; the second made further substantive corrections to 339 records and presentation-only changes to nine. Across the two passes, 505 distinct records received substantive changes. The passes added 26 and 33 phases respectively, bringing the register to 1,069 phases and 826 records with at least one included phase. The excluded road disruption and included rail suspension within SA025 remain separate. Each record received a fresh readable key-source check in the second pass; some other sources were available only as indexed extracts or remained inaccessible. Completion records an assessment, not verification of every claim. Conflicting dates, unmatched reopenings and limits on continuity remain explicit. These AI source reviews do not constitute independent human or different-model validation. The original study window ends on 21 October 2026; later checks through 26 October retain their actual evidence dates and do not backdate an onset or extrapolate closure. The current source catalogue contains 5,548 distinct recorded URLs, not a count of independent reports or successful full-text inspections.",
+  "account_source": "Historical programme account supplied by Hugh Lamarque; additional full-register audit counts reconciled to saved findings, adjudications and phase migration.",
   "models": {
     "user_described": "OpenAI GPT-6 Astra with Ultra reasoning",
     "final_logs": "GPT-6 Astra Pro",
@@ -17,7 +17,7 @@
     "initial_research_rounds": 16,
     "register_wide_reviews_within_initial_rounds": 3,
     "subsequent_register_wide_reviews": 2,
-    "total_register_wide_reviews": 5,
+    "total_register_wide_reviews": 7,
     "blind_reconstruction": {
       "records": 653,
       "claim_assessments": 3918
@@ -27,7 +27,8 @@
       "phases": 738
     },
     "chronology_cases": 519,
-    "unresolved_cases_researched_and_reviewed": 272
+    "unresolved_cases_researched_and_reviewed": 272,
+    "additional_full_register_reviews": 2
   },
   "rec50": {
     "cycles": 50,
@@ -40,14 +41,30 @@
   },
   "counts": {
     "records": 829,
-    "included_records": 825,
-    "phases": 1010,
-    "distinct_recorded_urls": 4680
+    "included_records": 826,
+    "phases": 1069,
+    "distinct_recorded_urls": 5548
   },
   "counting_notes": [
     "The three initial register-wide reviews are included in the 16 initial research rounds.",
     "The five register-wide reviews covered successive versions, not five reviews of the final 829-record edition.",
     "The final full-record and targeted-review populations overlap.",
-    "Distinct recorded URLs are not a count of independent sources or full-text inspections."
-  ]
+    "Distinct recorded URLs are not a count of independent sources or full-text inspections.",
+    "Two further whole-register audits each covered all 829 records; their changes overlap, so 292 and 339 must not be added as distinct changed records.",
+    "There are 826 included parents, but phase-level exclusions still apply.",
+    "The default >24h view requires evidence of a strictly longer restriction; exact numeric duration is a separate, more restrictive analysis subset."
+  ],
+  "evidence_cutoff": "2026-10-26",
+  "full_register_audits": {
+    "baseline_commit": "cc671f6a8ce83491d9db01f18c9fe0728239c129",
+    "review_date": "2026-10-26",
+    "passes": 2,
+    "records_per_pass": 829,
+    "changed_first_pass": 292,
+    "changed_second_pass": 339,
+    "formatting_only_second_pass": 9,
+    "distinct_content_changed": 505,
+    "added_phases": 59,
+    "note": "All records assessed in each pass; this does not mean all claims or endpoints were established."
+  }
 }

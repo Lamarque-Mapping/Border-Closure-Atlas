@@ -11,7 +11,7 @@ const rosso=data.events.find(e=>e.id==='R16-AN-001'),html=context.locationRecord
 assert(html.includes('March 2018 – 11 Jul 2025'));
 assert(!html.includes('(reopened)'),'a formal transport agreement is not an observed reopening');
 assert(html.includes('Policy documented for 2659–2689 days; this does not measure continuous closure.'));
-assert(html.includes('Cargo itself was not banned.'),'the immediate paragraph must explain affected traffic');
+assert(html.includes('Senegalese freight vehicles; cargo could cross after transshipment'),'the immediate paragraph distinguishes vehicle restrictions from permitted transferred cargo');
 assert(!html.includes('Unknown'));assert(!html.includes('Green point'));
 assert(html.includes('https://www.wto.org/english/tratop_e/tpr_e/s371_e.pdf'));
 assert(html.includes('https://ami.mr/fr/archives/275255'));
@@ -36,7 +36,8 @@ const unresolved=data.events.find(e=>!C.excluded(e)&&!e.duration_periods.length)
 assert(context.locationRecordHTML(unresolved).includes('Dates and duration are not established.'));
 const through=data.events.find(e=>e.id==='R8-AS-001');
 assert(context.locationRecordHTML(through).includes('Evidence dated: 19 Sept 2017'));
-assert(context.locationRecordHTML(through).includes('Duration and reopening date are not established.'));
+assert(context.locationRecordHTML(through).includes('These reports do not establish a continuous closure between the dates.'),'Kaytpas dated reports must not imply uninterrupted closure or a measured duration');
+assert(context.locationRecordHTML(through).includes('excludes Apkan as a separate gate'),'Kaytpas evidence must not become a reopening of the full Sokh route');
 for(const type of ['formal_policy_period','ordered_window','intermittent_regime']){
  const e=data.events.find(e=>C.periods(e).some(p=>p.measure_type===type));
  const markup=context.locationRecordHTML(e);assert(markup.includes(C.measureLabel(type)));assert(!markup.includes('numeric duration withheld'));
@@ -44,7 +45,7 @@ for(const type of ['formal_policy_period','ordered_window','intermittent_regime'
 const phased=data.events.find(e=>e.id==='GL01');assert(context.locationRecordHTML(phased).includes('7 more dated stages'));
 const phasedHTML=context.locationRecordHTML(phased);
 assert(phasedHTML.indexOf('Dated reports')<phasedHTML.indexOf('Dates disputed'),'lead with dated passenger evidence, retaining disputed freight stages in the disclosure');
-assert(phasedHTML.includes('do not show an uninterrupted 2019–2022 closure of all traffic'));
+assert(phasedHTML.includes('These reports do not establish a continuous closure between the dates.'),'dated passenger observations must not become a continuous all-traffic closure');
 assert(!phasedHTML.includes('Disputed evidence · dates onlyDocumented'));
 assert.equal(context.cardPeriodDates({observed_reopening:'Yes',temporal_display_rule:'dated_evidence_only_no_continuity_inference',evidence_dates:['2019-03-01','2019-03-03']}),'Evidence dated: 1 Mar 2019; 3 Mar 2019','a union of evidence dates must not label every date a reopening');
 context.state.mode='intervals';context.state.month=C.monthOrdinal('2019-03');
@@ -54,14 +55,15 @@ assert.deepEqual(Array.from(context.cardPeriods(phased),p=>p.period_id).sort(),[
 context.state.mode='all';
 for(const e of data.events){const markup=context.locationRecordHTML(e);assert(!/undefined|NaN|Invalid Date/.test(markup),e.id);assert(!/scoped endpoint|calendar days|calendar-day difference|days in policy period|operational continuity|numeric duration withheld/.test(markup),e.id);assert(markup.includes('class="location-summary"'),e.id+' paragraph');assert(markup.includes('data-record-id="'+e.id+'"'),e.id);for(const rationale of e.rationales)assert(markup.includes(context.escape(rationale)),e.id+' rationale');assert(!/>(?:Source )?\d+ ↗<\/a>/.test(markup),e.id+' named sources');}
 assert(context.locationRecordHTML({...rosso,title:'<script>bad</script>'}).includes('&lt;script&gt;bad&lt;/script&gt;'));
-console.log('Passed: all 701 cards render; Rosso uses reviewed policy dates and occurrence/endpoint sources; same-day, unresolved, last-confirmed, ordered, intermittent and multiple phases stay qualified; Rwanda passenger observations and held dates remain distinct; timeline filters and escaped text preserved.');
+console.log(`Passed: all ${data.events.length} cards render; Rosso uses reviewed policy dates, permitted cargo transfer and occurrence/endpoint sources; same-day, unresolved, last-confirmed, ordered, intermittent and multiple phases stay qualified; Rwanda passenger observations and held dates remain distinct; timeline filters and escaped text preserved.`);
 
 const held=data.events.find(e=>e.duration_periods.some(p=>p.contested)&&!C.excluded(e));assert(context.locationRecordHTML(held).includes('Dates disputed'));
 
 // Exercise full-record loading, return navigation and stale request handling.
 const nodes=new Map(),skip={};
 context.$=id=>{if(!nodes.has(id)){const classes=new Set();nodes.set(id,{hidden:false,innerHTML:'',textContent:'',attrs:{},classList:{toggle(k,on){on?classes.add(k):classes.delete(k)},contains:k=>classes.has(k)},setAttribute(k,v){this.attrs[k]=v},focus(){this.focused=true}});}return nodes.get(id);};
-Object.assign(context,{data,events:data.events,locations:new Map(),selected:null,AtlasData:{getRecord:async id=>data.events.find(e=>e.id===id)},document:{querySelector:()=>skip},compact:()=>true,scheduleViewport(){},setPanelOpen(){},renderLocations(){},map:{closePopup(){}},stop(){},openRecords(){},mapLocationIDs:()=>[],mapLocationNote:()=>''});
+Object.assign(context,{data,events:data.events,locations:new Map(),selected:null,AtlasData:{getRecord:async id=>data.events.find(e=>e.id===id)},document:{querySelector:()=>skip},addEventListener(){},compact:()=>true,scheduleViewport(){},setPanelOpen(){},renderLocations(){},map:{closePopup(){}},stop(){},openRecords(){},mapLocationIDs:()=>[],mapLocationNote:()=>''});
+vm.runInContext(app.slice(app.indexOf('  function updatePanelTitle('),app.indexOf('  function setPanelOpen(')),context);
 vm.runInContext(app.slice(app.indexOf('  function setRecordView('),app.indexOf('  function changeMonth(')),context);
 context.$('map-search').parentNode=context.$('panel-search-slot');
 (async()=>{

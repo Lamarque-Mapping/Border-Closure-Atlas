@@ -15,17 +15,23 @@ for(const e of D.events){
   min=Math.min(min,size);max=Math.max(max,size);total+=size;
 }
 assert.equal(before,hash(D.events),'descriptions never change research fields');
-const gl=S.describe(byID.get('GL01'));assert(gl.includes('do not show an uninterrupted 2019–2022 closure of all traffic'));assert(gl.includes('remain contested'));
-assert.notEqual(S.describe({...byID.get('GL01'),event_hash:'replacement-record'}),gl,'a replacement source record must not inherit the older editorial description');
-const maz=S.describe(byID.get('FU-COV-EAS-003'));assert(maz.includes('August 2021'));assert(maz.includes('one crossing'));assert(maz.includes('according to the Chinese official port history'));assert(!maz.includes('2019 only'));
-const norway=S.describe(byID.get('EU022'));assert(norway.includes('legal changes'));assert(norway.includes('do not establish that every land crossing'));
-const rosso=S.describe(byID.get('R16-AN-001'));assert(rosso.includes('Cargo itself was not banned'));assert(rosso.includes('original start'));
-const korczowa=S.describe(byID.get('R3-EU-004'));assert(korczowa.includes('current dated evidence concerns Korczowa'));assert(korczowa.includes('Dorohusk had an interruption'));
-assert(S.describe(byID.get('SC12')).includes('specifically to ordinary passengers at Tlokweng'));
-assert(S.describe(byID.get('R2-ME-010')).includes('Palestinian patients with medical referrals'));
-assert(S.describe(byID.get('R15-SM-003')).includes('does not describe a continuous 2–5 July closure'));
-assert(S.describe(byID.get('SA025')).includes('excluded from the analysis'));
-assert(S.describe(byID.get('NP-COV-AM-001')).includes('The dates are two days apart; the exact hours are not established.'));
+// Current audit evidence takes priority even if a legacy event hash survives.
+const legacyHashes={GL01:'9c9e6a17200b78097bc980979d975661bc85edd31191ddbb0c650dba8dd3d502',EU022:'21c35d7d251be32aa724b5c672f2289f8fb490883b902aa675adfc61dcae5a4c','R3-EU-004':'aef9bbca965405b6a734f57f621c3dc5c5d604cd5cec36547136fbfe4c2b946b'};
+for(const [id,hash] of Object.entries(legacyHashes)){
+ const e=byID.get(id);assert(e.audited_reader,id+' current accepted reader is retained');
+ assert.notEqual(e.event_hash,hash,id+' source identity changed with audited evidence');
+ assert.equal(S.describe(e),S.describe({...e,event_hash:'replacement-audited-record'}),id+' current fields drive the replacement summary');
+ assert.equal(S.describe(e),S.describe({...e,event_hash:hash}),id+' cannot revive its old editorial paragraph');
+ assert.equal(S.describe({...e,audit_current:true,audited_reader:undefined,event_hash:hash}),S.describe({...e,audit_current:true,audited_reader:undefined,event_hash:'replacement-audited-record'}),id+' compact audit flag also blocks old editorial prose');
+}
+assert(!S.describe(byID.get('EU022')).includes('later tightening and final repeal are not fully reconstructed'),'documented policy easing does not retain the obsolete research gap');
+assert(!S.describe(byID.get('R3-EU-004')).includes('current dated evidence concerns Korczowa'),'new Hrebenne and Dorohusk phases are not reduced to the old Korczowa-only description');
+assert.equal(byID.get('SA025').inclusion_status,'Included');
+assert(!S.describe(byID.get('SA025')).includes('This entry is excluded from the analysis'),'an included scoped phase is not described as a wholly excluded parent');
+const sa025=byID.get('SA025'),eligibleRail=sa025.duration_periods.filter(p=>p.analysis_included!==false);
+assert.equal(S.describe(sa025),S.describe(sa025,{periods:eligibleRail}),'SA025 default summary uses the eligible rail evidence without excluded road qualifications');
+assert.equal(S.describe(sa025,{periods:sa025.duration_periods}),S.describe(sa025,{periods:eligibleRail}),'explicit summary periods cannot reintroduce excluded road evidence');
+for(const e of D.events.filter(e=>e.inclusion_status==='Excluded'||e.inclusion_status==='Quarantined'))assert(S.describe(e).includes('excluded from the analysis'),e.id+' actual exclusion remains explicit');
 // Parent fields can name a broader set of crossings and traffic than the phase.
 const narrow={id:'test',scope:'International border',crossings:'Apex checkpoint; Birch checkpoint',movement:'Passengers and freight',official_rationale:'Security concerns',context:'Outdated all-border closure',uncertainty:'',duration_periods:[{scope:'Birch checkpoint only',movement:'Passengers',measure_type:'operational_spell',observed_reopening:'Yes',qualification:'Cargo remained exempt.'}]};
 const narrowText=S.describe(narrow);assert(narrowText.includes('passengers at Birch checkpoint'));assert(!narrowText.includes('Apex'));assert(!narrowText.includes('Passengers and freight'));assert(!narrowText.includes('Outdated'));assert(narrowText.includes('Cargo remained exempt'));

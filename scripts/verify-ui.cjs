@@ -174,9 +174,12 @@ function host(initialHash='',offline=false){
  assert.equal(timelineState.mode,'intervals');assert.equal(timeline.ids['time-mode'].value,'intervals');
  assert.equal(timelineState.month,core.monthOrdinal(data.meta.window_start));assert.deepEqual(core.filterEvents(data,timelineState).map(e=>e.id).sort(),reference.recordIDsInMonth(data.meta.window_start.slice(0,7),'over1').sort(),'default month selection reconciles to native phase dates and temporal bindings');
  assert.equal(timelineState.duration,'over1','map defaults to strictly more than 24 hours');
- assert(!core.filterEvents(data,timelineState).some(e=>e.id==='FU-COV-EAS-003'),'unmeasured conservation-policy record does not qualify');
+ const initialMonth=data.meta.window_start.slice(0,7),initialOver24=new Set(reference.recordIDsInMonth(initialMonth,'over1'));
+ const initialAll=reference.recordIDsInMonth(initialMonth,'all'),initialUnqualified=initialAll.filter(id=>!initialOver24.has(id));
+ assert(initialUnqualified.length>0,'the initial month contains native phases without established >24h eligibility');
+ assert(!core.filterEvents(data,timelineState).some(e=>initialUnqualified.includes(e.id)),'the >24h default excludes every unqualified initial-month record');
  timelineState.duration='all';
- assert(core.filterEvents(data,timelineState).some(e=>e.id==='FU-COV-EAS-003'),'All restores unmeasured records');
+ assert.deepEqual(core.filterEvents(data,timelineState).map(e=>e.id).sort(),initialAll.sort(),'All restores the exact native initial-month population, including duration-unqualified records');
  assert.equal((index.match(/id="time-mode"/g)||[]).length,1);assert(!index.slice(index.indexOf('<div class="timeline">')).includes('id="time-mode"'),'view selector belongs in the records panel');
  vm.runInContext(app.slice(app.indexOf("  $('search').addEventListener"),app.indexOf('  const showPage=')),tc);
  await timeline.ids.search.emit('input',{target:{value:' '}});assert.equal(timelineState.mode,'intervals','blank input leaves the initial dated view intact');
@@ -225,7 +228,7 @@ function host(initialHash='',offline=false){
  await vm.runInContext(ui,a.context);
  const t=a.context.TEST;assert(t,'Analysis initialization failed');
  assert.equal(detailRequests,0,'Analysis charts and register must not fetch full records on opening');assert.equal(archiveRequests,0);
- assert.equal(a.ids.resultCount.textContent,'408 matching records · more than 1 day','Dataset starts with >24h');
+ assert.equal(a.ids.resultCount.textContent,reference.populationIDs('all','over1').length+' matching records · more than 24 hours','Dataset starts with native >24h eligibility');
  assert.equal(a.ids.chartDuration.value,'over1');
  a.context.AtlasAnalysis.setDuration('all');
  assert.equal(a.ids.resultCount.textContent,reference.counts.included+' matching records');assert.equal(a.ids.pageNote.textContent,'1–12 of '+reference.counts.included);

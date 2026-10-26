@@ -2,6 +2,7 @@ const fs=require('fs'),vm=require('vm'),assert=require('node:assert/strict'),{sp
 const path=require('node:path'),root=path.resolve(__dirname,'../dist');
 const data=JSON.parse(fs.readFileSync(path.join(root,'data.js'),'utf8').replace(/^window.BORDER_DATA = /,'').replace(/;\s*$/,''));
 const C=require(path.join(root,'core.js')),E=require(path.join(root,'record-export.js'));
+const reference=require('./release-verification-reference.cjs').load();
 const publicContext={};vm.createContext(publicContext);vm.runInContext(fs.readFileSync(path.join(root,'public-text.js'),'utf8'),publicContext);
 const cleanText=publicContext.BorderPublic.text;
 function parse(content){
@@ -15,18 +16,22 @@ function check(state){
   assert.equal(rows[i].length,header.length);
   assert.equal(rows[i][header.indexOf('Closure')],cleanText(records[i].title,'title',records[i].id));
   for(const source of records[i].sources||[])if(/^https?:/.test(source.url))assert(rows[i][header.indexOf('Source links')].includes(new URL(source.url).href),records[i].id+' source');
-  for(const period of records[i].duration_periods||[])assert(rows[i][header.indexOf('Documented dates')].includes(period.period_id),records[i].id+' phase');
+  for(const period of records[i].duration_periods||[]){
+   assert(rows[i][header.indexOf('Documented dates')].includes(period.period_id),records[i].id+' phase');
+   assert(rows[i][header.indexOf('Duration (days)')].includes(period.period_id+': '+cleanText(period.display||'Duration not established','duration')),period.period_id+' current duration description is exported');
+  }
  }
  return {records,rows,header,file};
 }
 // Counts and default IDs independently reconciled to Register / Chronology
-// phases / Phase locations in the 23 October replacement workbook.
-const all=check({mode:'all',query:''});assert.equal(all.records.length,825);assert(all.rows.length>50);
+// phases / Phase locations in the accepted audited release.
+const all=check({mode:'all',query:''});assert.deepEqual(all.records.map(e=>e.id).sort(),[...reference.includedIDs].sort());assert(all.rows.length>50);
 const rwanda=check({mode:'all',query:'Rwanda'});assert(rwanda.records.length>1&&rwanda.records.length<all.records.length);
 const dated=check({mode:'intervals',query:'',month:C.monthOrdinal(data.meta.window_start)});
-assert.deepEqual(dated.records.map(e=>e.id).sort(),['CC004','CC028','CC029','EA025','FU-COV-EAS-003','H01','H02','ME004','ME005','ME030','NA001','NA019','R16-AN-002','R2-SC-010','R3-ME-010','R3-SC-005','R4-SC-001','R6-AWN-001','SC06']);
-const excluded=check({mode:'all',query:'',includeExcluded:true});assert.equal(excluded.records.length,829);
-const gl=rwanda.rows.find(row=>row[0]==='GL01');assert(gl[rwanda.header.indexOf('Documented dates')].includes('Held / contested'));assert(gl[rwanda.header.indexOf('Duration (days)')].includes('numeric duration withheld'));
+assert.deepEqual(dated.records.map(e=>e.id).sort(),reference.recordIDsInMonth(data.meta.window_start.slice(0,7)).sort(),'dated exports reconcile to native phase scope and inclusion');
+const excluded=check({mode:'all',query:'',includeExcluded:true});assert.equal(excluded.records.length,reference.counts.records);
+const gl=rwanda.rows.find(row=>row[0]==='GL01');assert(gl[rwanda.header.indexOf('Documented dates')].includes('Held / contested'));
+for(const p of rwanda.records.find(e=>e.id==='GL01').duration_periods.filter(p=>p.contested))assert(p.minimum_days===null&&p.maximum_days===null,p.period_id+' contested freight phase has no exported numeric duration');
 for(let i=1;i<=6;i++)assert(gl[rwanda.header.indexOf('Documented dates')].includes('GL01-C7RWP'+i),'CSV retains each corrected Rwanda passenger phase');
 const edge={...rwanda.records[0],id:'TEST',title:'\t=1+1',context:'Quoted "text", comma\nand another line: Côte d’Ivoire',scope:'@command',exceptions:'-danger'};
 const edgeRows=parse(E.build({records:[edge],state:{mode:'all'},cleanText:v=>String(v??'')}).content),edgeRow=edgeRows[1],edgeHeader=edgeRows[0];
@@ -67,5 +72,5 @@ assert.equal(ctx.state.location,'');assert.equal(ctx.state.query,'Rwanda');asser
  const rows=parse(ctx.output.content);assert.deepEqual(rows.slice(1).map(row=>row[0]),rwanda.records.map(e=>e.id),'export retains the selection captured before asynchronous loading');assert(ctx.output.filename.includes('rwanda'));assert.equal(node('download-records').disabled,false);
  ctx.output=null;ctx.window.AtlasData.getResearchData=async()=>({...data,events:[]});await ctx.downloadRecords();assert.equal(ctx.output,null);assert(ctx.notice.includes('do not match'));assert.equal(node('download-records').disabled,false);
  ctx.visible=[];ctx.output=null;await ctx.downloadRecords();assert.equal(ctx.output,null);
- console.log('CSV and reader passed: '+rwanda.records.length+' Rwanda matches; exact filtered IDs, all 825 included records beyond pagination, dated/excluded filters, corrected Rwanda phase/source preservation, UTF-8/quotes/newlines, formula-safe text, asynchronous snapshot, missing-data error, and wide-view open/return.');
+ console.log('CSV and reader passed: '+rwanda.records.length+' Rwanda matches; exact filtered IDs, all '+reference.counts.included+' included records beyond pagination, dated/excluded filters, corrected Rwanda phase/source preservation, UTF-8/quotes/newlines, formula-safe text, asynchronous snapshot, missing-data error, and wide-view open/return.');
 })().catch(error=>{console.error(error);process.exitCode=1});

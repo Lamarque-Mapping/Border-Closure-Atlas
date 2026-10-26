@@ -23,6 +23,6 @@ fs.writeFileSync(navigation,fs.readFileSync(navigation,'utf8').replace(/analysis
 const index=path.join(output,'index.html');
 fs.writeFileSync(index,fs.readFileSync(index,'utf8').replace(/(\s(?:src|href))="([^":?#]+\.(?:js|css))(?:\?[^"]*)?"/g,
  (_,attribute,file)=>attribute+'="'+file+'?v='+fingerprint(file)+'"'));
-function check(dir){for(const name of fs.readdirSync(dir)){const file=path.join(dir,name),stat=fs.statSync(file);if(stat.isDirectory())check(file);else if(stat.size>10*1024*1024)throw Error('Hosted asset exceeds 10 MB: '+path.relative(output,file));}}
+function check(dir){for(const name of fs.readdirSync(dir)){const file=path.join(dir,name),stat=fs.statSync(file);if(stat.isDirectory())check(file);else {const limit=path.relative(output,file).startsWith('downloads'+path.sep)?30:10;if(stat.size>limit*1024*1024)throw Error('Hosted asset exceeds '+limit+' MB: '+path.relative(output,file));}}}
 check(output);
 console.log('Hosted assets prepared; full evidence loads only when requested.');

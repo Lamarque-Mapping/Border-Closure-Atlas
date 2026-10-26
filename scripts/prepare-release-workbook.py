@@ -37,6 +37,7 @@ def companion_members(release,model,method):
         "Geography references retained in the research envelope are historical inputs. The current scope/location review is supplied separately as crossing-map-review.json.\n"
         f"Canonical research state: {release['data_state_sha256']}\nNative release input SHA-256: {sha256(DATA_PATH)}\n")
     return {PUBLIC_JSON:DATA_PATH.read_bytes(),
+        'Full_Register_Source_Audits_2026.json.gz':(ROOT/'migration/audit-inputs.json.gz').read_bytes(),
         'Global_Border_Closures_Master_2016_2026.csv':csv_bytes([[c['name'] for c in model['columns']]]+master),
         'Global_Border_Closure_Phases_2016_2026.csv':csv_bytes([headers]+[[p[h] for h in headers] for p in release['tables']['Chronology phases']]),
         'release-method.json':(ROOT/'source/release-method.json').read_bytes(),
@@ -63,6 +64,7 @@ def bind_manifest(release,reader_report):
         assert load_json(ROOT/'source/crossings'/name)['source_sha256']==sha256(DATA_PATH),'Reconcile current geography first'
     ZIP_PATH.write_bytes(zip_bytes(companion_members(release,model,method)))
     paths={'data':DATA_PATH,'reader':READER_PATH,'reader_model':MODEL_PATH,
+        'audit_history':ROOT/'migration/audit-inputs.json.gz',
         'methodology':ROOT/'source/release-method.json','overrides':ROOT/'source/release-overrides.json',
         'companion_zip':ZIP_PATH,'geography_reference':ROOT/'source/geography-reference.json',
         'crossing_scope':ROOT/'source/crossings/scope-review.json','crossing_locations':ROOT/'source/crossings/locations.json',
@@ -74,6 +76,8 @@ def bind_manifest(release,reader_report):
         assert load_json(paths[name])['source_sha256']==fingerprint,'Geography must be reconciled before manifest binding'
     downloads={name:{'path':'downloads/'+filename,'sha256':files[key]['sha256'],'source_file':files[key]['path']}
         for name,key,filename in [('reader','reader',READER_PATH.name),('companion_json','data',PUBLIC_JSON),('companion_zip','companion_zip',ZIP_PATH.name)]}
+    downloads['audit_history']={'path':'downloads/Full_Register_Source_Audits_2026.json.gz',
+        'sha256':files['audit_history']['sha256'],'source_file':files['audit_history']['path']}
     manifest={'schema_version':1,'release_id':method['release_id'],'release_date':method['release_date'],
         'data_state_sha256':release['data_state_sha256'],'counts':release['counts'],
         'files':files,'downloads':downloads,'reader_validation':reader_report,
@@ -86,12 +90,19 @@ def main():
     parser.add_argument('--bind-manifest',action='store_true',help='Explicit local binding after the reader and geography are final')
     args=parser.parse_args();release=load_json(DATA_PATH)
     validate_native(release);report=validate_reader(release=release)
+    # The companion is deterministic generated output. Fresh checkouts rebuild
+    # it from the pinned inputs, then verify its bytes against the manifest.
+    if not args.bind_manifest and not ZIP_PATH.exists():
+        ZIP_PATH.write_bytes(zip_bytes(companion_members(release,load_json(MODEL_PATH),load_json(ROOT/'source/release-method.json'))))
     manifest=bind_manifest(release,report) if args.bind_manifest else read_manifest()
     assert report==manifest['reader_validation'],'Reader validation does not match the bound release'
     downloads=ROOT/'dist/downloads';downloads.mkdir(parents=True,exist_ok=True)
     for item in manifest['downloads'].values():
         destination=ROOT/'dist'/item['path'];shutil.copyfile(ROOT/item['source_file'],destination)
         assert sha256(destination)==item['sha256']
+    # Preserve the old download URL while replacing its contents with the same
+    # audited reader. It must never serve an earlier dataset beside the master.
+    shutil.copyfile(READER_PATH,downloads/'Global_Border_Closures_Register_2016_2026.xlsx')
     shutil.copyfile(MANIFEST_PATH,downloads/'release-manifest.json')
     print(json.dumps({'release_id':manifest['release_id'],'source_sha256':manifest['files']['data']['sha256'],
         'reader_sha256':manifest['files']['reader']['sha256'],'counts':manifest['counts'],'reader':report}))

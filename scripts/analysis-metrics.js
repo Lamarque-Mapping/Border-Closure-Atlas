@@ -8,7 +8,7 @@
   return Number.isFinite(time)&&new Date(time).toISOString().slice(0,10)===value?time/86400000:null;
  }
  function exactDays(p){
-  if(!p||p.measure_type!=='operational_spell'||!p.exact_complete_operational||p.contested||p.observed_reopening!=='Yes')return null;
+  if(!p||p.analysis_included===false||p.measure_type!=='operational_spell'||!p.exact_complete_operational||p.contested||p.observed_reopening!=='Yes')return null;
   if(!['closed_interval','bounded_interval'].includes(p.kind))return null;
   if(/held|dated_evidence_only|intermittent/.test(p.temporal_display_rule||''))return null;
   if(p.start_earliest!==p.start_latest||p.end_earliest!==p.end_latest)return null;
@@ -40,9 +40,9 @@
    if(e.quarantined||e.inclusion_status&&e.inclusion_status!=='Included')continue;
    for(const p of e.duration_periods||[]){
     const days=exactDays(p),key=e.id+'\t'+p.period_id;
-    if(days===null||duration==='over1'&&days<=1||!p.period_id||seen.has(key))continue;
+    if(days===null||duration==='over1'&&!D.qualifies(p,e)||!p.period_id||seen.has(key))continue;
     seen.add(key);rows.push({record_id:e.id,phase_id:p.period_id,title:e.title,scope:p.scope,
-     start:p.start_earliest,end:p.end_latest,days,codes:[...new Set(e.rationales||e.codes||[])],
+     start:p.start_earliest,end:p.end_latest,days,codes:[...new Set(p.rationales||e.rationales||e.codes||[])],
      endpoint_inclusion:p.endpoint_inclusion,observed_reopening:p.observed_reopening});
    }
   }

@@ -6,12 +6,20 @@ const context={window:{}};vm.createContext(context);vm.runInContext(fs.readFileS
 const data=context.window.BORDER_DATA;
 assert.equal(source.source_sha256,data.meta.source_sha256);
 const month=C.monthOrdinal(source.reviewed_at);
-const unresolved=data.events.filter(e=>!C.excluded(e)&&C.temporalState(e,month)==='none'&&e.duration_periods.some(p=>p.endpoint_status==='last_confirmed'));
-const derived=unresolved.map(e=>({record_id:e.id,title:e.title,review:'Endpoint classification only; no new confirmation of continuing closure',phases:e.duration_periods.filter(p=>p.endpoint_status==='last_confirmed').map(p=>({phase_id:p.period_id,last_confirmed:p.last_confirmed||p.end_latest||p.start_latest,scope:p.scope}))}));
+const unresolved=data.events.filter(e=>!C.excluded(e)&&C.temporalState(e,month)==='none'&&e.duration_periods.some(p=>p.analysis_included!==false&&p.endpoint_status==='last_confirmed'));
+const derived=unresolved.map(e=>({record_id:e.id,title:e.title,review:'Endpoint classification only; no new confirmation of continuing closure',phases:e.duration_periods.filter(p=>p.analysis_included!==false&&p.endpoint_status==='last_confirmed').map(p=>({phase_id:p.period_id,last_confirmed:p.last_confirmed||p.end_latest||p.start_latest,scope:p.scope}))}));
 assert.equal(JSON.stringify(source.unresolved),JSON.stringify(derived),'Stored unresolved-end ledger must match the release');
 for(const r of source.unresolved)for(const p of r.phases)assert(C.day(p.last_confirmed)!==null,'Missing last-confirmed date: '+p.phase_id);
 const ids=new Set(data.events.map(e=>e.id));
 const audit=source.audit;
+if(source.historical_audit){
+ const history=source.historical_audit;
+ assert(history.reviewed_at<source.reviewed_at,'Historical audit must retain its original earlier date');
+ assert.deepEqual(source.observations,history.observations,'Reconciliation must preserve every original status observation and check date');
+ assert.equal(history.audit.records.length,history.unresolved.length,'Historical review inventory remains complete');
+ assert.equal(source.reconciliation.pending_scope_decisions.length,0,'Unadjudicated legacy scope resolution');
+}
+
 assert(audit&&audit.records.length===source.unresolved.length,'Review must cover the complete inventory');
 assert.equal(new Set(audit.records.map(r=>r.record_id)).size,audit.records.length,'Duplicate assessment');
 const findings=new Map(audit.records.map(r=>[r.record_id,r]));
@@ -32,12 +40,13 @@ for(const r of source.unresolved){
 for(const o of source.observations){
  assert(!ids.has(o.id));ids.add(o.id);assert(['closed','restricted'].includes(o.status));
  assert(C.day(o.observed_at)!==null&&o.observed_at<=source.reviewed_at);
+ for(const s of o.sources)if(s.checked_at)assert(C.day(s.checked_at)!==null&&s.checked_at<=source.reviewed_at,'Invalid original source check date');
  assert(o.sources.length&&o.sources.every(s=>/^https:\/\//.test(s.url)));
  assert(Array.isArray(o.location_ids)&&o.scope&&o.qualification);
  if(!o.location_ids.length)assert(/without an unverified map position/.test(o.qualification),'Unmapped status needs an explicit qualification');
  for(const id of o.linked_land_ids||[])assert(ids.has(id),'Unknown linked record '+id);
  if(o.timeline_periods){
-  assert(o.timeline_periods.length&&o.timeline_review?.checked_at===source.reviewed_at&&o.timeline_review.finding);
+  assert(o.timeline_periods.length&&C.day(o.timeline_review?.checked_at)!==null&&o.timeline_review.checked_at<=source.reviewed_at&&o.timeline_review.finding);
   const urls=new Set(o.sources.map(s=>s.url));
   for(const p of o.timeline_periods){
    assert(C.day(p.from_date)!==null&&C.day(p.through_date)!==null&&p.from_date<=p.through_date&&p.through_date<=o.observed_at,'Invalid supported timeline bounds: '+o.id);
@@ -85,7 +94,14 @@ assert.equal(chronology.reviewed_observations,source.observations.length);
 assert.equal(chronology.observations_with_supported_periods,source.observations.filter(o=>o.timeline_periods?.length).length);
 assert.equal(chronology.timeline_periods,source.observations.reduce((n,o)=>n+(o.timeline_periods?.length||0),0));
 assert.equal(chronology.pre_window_regimes,source.observations.filter(o=>o.timeline_periods?.some(p=>p.start_precision==='pre_window')).length);
-fs.writeFileSync(path.join(root,'dist/status-data.js'),'window.ATLAS_STATUS_REVIEW = '+JSON.stringify(source).replace(/</g,'\\u003c')+';\n');
+// The map needs active findings and dated observations, not the complete
+// historical research archive. The full source/download/page remain intact.
+const historical=source.historical_audit;
+const runtime={...source,audit:{...audit,records:audit.records.map(({source_access,later_access_observations,...record})=>record)},
+ operator_report_observation_ids:source.observations.filter(o=>[...audit.records,...(historical?.audit?.records||[])].some(r=>r.outcome==='reported_current'&&(o.linked_land_ids||[]).includes(r.record_id))).map(o=>o.id)};
+delete runtime.reconciliation;
+if(historical)runtime.historical_audit={version:historical.version,reviewed_at:historical.reviewed_at,records_reviewed:historical.audit.records.length,phases_reviewed:historical.unresolved.reduce((n,r)=>n+r.phases.length,0),counts:historical.audit.counts,complete_review:'downloads/border-status-review.json'};
+fs.writeFileSync(path.join(root,'dist/status-data.js'),'window.ATLAS_STATUS_REVIEW = '+JSON.stringify(runtime).replace(/</g,'\\u003c')+';\n');
 fs.writeFileSync(path.join(root,'dist/downloads/border-status-review.json'),JSON.stringify(source,null,2)+'\n');
 fs.writeFileSync(path.join(root,'dist/status-audit.html'),require('./status-audit-page.cjs')(source));
 console.log(JSON.stringify({reviewedRecords:audit.records.length,...audit.counts}));

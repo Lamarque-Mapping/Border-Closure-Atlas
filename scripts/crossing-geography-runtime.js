@@ -8,7 +8,7 @@
     if(data.meta?.source_sha256!==review.source_sha256)throw Error('The crossing locations do not match this dataset version. Please reload.');
     const events=new Map(data.events.map(e=>[e.id,e]));
     const included=[...events.values()].filter(e=>e.record_kind!=='national_policy'&&!e.quarantined&&!e.excluded_from_map);
-    const expected=new Map(included.flatMap(e=>(e.duration_periods||[]).map(p=>[p.period_id,e.id])));
+    const expected=new Map(included.flatMap(e=>(e.duration_periods||[]).filter(p=>p.analysis_included!==false).map(p=>[p.period_id,e.id])));
     if(expected.size!==Object.keys(review.phases).length)throw Error('The crossing review is incomplete for this dataset.');
     for(const [id,row] of Object.entries(review.phases))if(expected.get(id)!==row.record_id)throw Error('A crossing phase does not match its record.');
     const undated=included.filter(e=>!e.duration_periods?.length);

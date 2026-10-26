@@ -213,6 +213,12 @@ def compile_workbook(sheets, reference, workbook_name, workbook_hash, release=No
                 'map_scope_note': 'Coloured border lines locate the record only; they are not approved phase geometry or a closure footprint.',
                 'source_phase':p, 'location_bindings':phase_bindings[p['Phase ID']],
                 'evidence_dates':sorted({date(p[k]) for k in ['Start earliest','Start latest','Endpoint earliest','Endpoint latest','Last confirmed (not reopening)'] if p[k]})}
+            q['analysis_included']=p.get('Analysis included (1=yes)',p['Parent included (1=yes)'])!=0
+            if p.get('Over 24 hours basis') or p.get('Strictly over 24 hours') is not None:
+                q['strictly_over_24_hours']=p.get('Strictly over 24 hours')
+                q['over_24_hours_basis']=p.get('Over 24 hours basis')
+            if isinstance(p.get('Phase broad rationales'),list):q['rationales']=p['Phase broad rationales']
+            if p.get('Later access observations'):q['later_access_observations']=p['Later access observations']
             rules={b['Temporal display rule'] for b in q['location_bindings']}
             assert len(rules)==1,(rid,p['Phase ID'],rules)
             q['temporal_display_rule']=rules.pop()
@@ -264,7 +270,7 @@ def compile_workbook(sheets, reference, workbook_name, workbook_hash, release=No
         e['phase_onsets'] = []
         for p in periods:
             a,b=p['start_earliest'],p['start_latest']
-            if excluded or p['contested'] or not a or not b: continue
+            if excluded or not p['analysis_included'] or p['contested'] or not a or not b: continue
             try: first,last=dt.date.fromisoformat(a),dt.date.fromisoformat(b)
             except (ValueError,TypeError): continue
             if first<=last and a[:7]==b[:7]:
@@ -317,12 +323,31 @@ def compile_workbook(sheets, reference, workbook_name, workbook_hash, release=No
         e['geography_reference_hash'] = geo.get('event_hash')
         e['event_hash'] = hashlib.sha256(json.dumps({'register': r, 'dimensions': dim, 'phases': periods, 'review': audit}, sort_keys=True).encode()).hexdigest()
         if release is not None:
+            reader=release.get('audited_reader_by_record',{}).get(rid)
+            if reader:
+                e['audited_reader']=copy.deepcopy(reader)
+                e['audit_current']=True
+                e.update(title=reader['Closure or restriction'],scope=reader['Crossing and scope'],
+                    movement=reader['Traffic, direction and exceptions'],official_rationale=reader['Rationales and attribution'],
+                    uncertainty=reader['Current uncertainty / qualification'],current_timing=reader['Phase dates and scope'],
+                    crossings=reader['Crossing and scope'],
+                    direction='See the combined traffic, direction and exceptions description.',
+                    exceptions='See the combined traffic, direction and exceptions description.')
+                # Native source fields retain historical values and are downloadable.
+                # Current prose is the accepted reader, not a stale earlier summary.
+                for url in release['source_urls_by_record'][rid]:
+                    if url not in e['source_urls']:
+                        e['source_urls'].append(url);e['sources'].append({'url':url,'title':'Recorded audit evidence','access_history':[],'supports':[]})
             e['release_review'] = copy.deepcopy(release.get('current_review_by_record',{}).get(rid,{}))
             e['country_display'] = release.get('country_display_by_record',{}).get(rid)
             current=e['release_review']
             for key in ['outcome','completed','adjudication','provenance','review_scope','latest_cycle',
                         'completed_at_utc','ever_full_record_audit','latest_verification_label']:
                 if key in current:e['current_review'][key]=copy.deepcopy(current[key])
+            if 'claims' in current:
+                e['current_review']['claims']=[{'field':c.get('field') or c.get('claim'),
+                    'assessment':c.get('assessment') or c.get('status'),'note':c.get('note') or c.get('detail'),
+                    'source_urls':c.get('source_urls',[])} for c in current['claims']]
             limit=release.get('country_scope_limits_by_record',{}).get(rid)
             if limit:e['uncertainty']='\n\n'.join(v for v in [e.get('uncertainty'),limit] if v)
         e['review_status'] = 'current_workbook'; e['change_status'] = 'workbook_import'
@@ -339,9 +364,9 @@ def compile_workbook(sheets, reference, workbook_name, workbook_hash, release=No
         without_complete_operational_duration=len(included)-counts['operational_complete'],
         complete_operational_coverage=counts['operational_complete']/len(included),
         phases=sum(len(e['duration_periods']) for e in events),
-        included_phases=sum(len(e['duration_periods']) for e in included),
-        held_phases=sum(p['contested'] for e in included for p in e['duration_periods']),
-        playback_eligible_records=sum(any(p['evidence_dates'] for p in e['duration_periods']) for e in included))
+        included_phases=sum(p['analysis_included'] for e in included for p in e['duration_periods']),
+        held_phases=sum(p['contested'] and p['analysis_included'] for e in included for p in e['duration_periods']),
+        playback_eligible_records=sum(any(p['evidence_dates'] and p['analysis_included'] for p in e['duration_periods']) for e in included))
     codes = {c: sum(c in e['rationales'] for e in included) for c in categories}
     method = {'model': 'AI-assisted research', 'verification_statement': codebook['Correction release 23 October 2026'],
         'review_limits': 'Source access and unresolved attributes remain explicit. Initial findings are retained as historical review, with subsequent findings in Follow-up review. '+codebook['Coverage and missingness'],

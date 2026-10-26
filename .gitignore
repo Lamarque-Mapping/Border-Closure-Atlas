@@ -6,3 +6,27 @@ __pycache__/
 /out/
 /dist/data.js
 /source/workbook-release-report.json
+
+# Rebuilt and verified in CI from the current release; never retain stale copies.
+/dist/records/
+/dist/downloads/
+/dist/map-data.js
+/dist/analysis-data.json
+/dist/analysis.html
+/dist/crossing-geography.js
+/dist/crossing-sources.html
+/dist/national-data.js
+/dist/national-sources.html
+/dist/status-data.js
+/dist/status-audit.html
+/migration/*preview*.json
+/migration/workbook-preview/
+
+*.inspect.ndjson
+/migration/geography-check.json
+
+# One-off reviewer construction helpers; adjudicated JSON patches are the inputs.
+/migration/build-*.py
+/migration/europe-later-access.py
+
+/source/Global_Border_Closures_Data_2016_2026.zip

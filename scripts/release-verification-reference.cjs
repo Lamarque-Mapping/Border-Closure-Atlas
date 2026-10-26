@@ -51,7 +51,8 @@ function fromNative(native){
   assert.equal(yes(durations.get(row.ID)['Included (1=yes)']),row['Analysis inclusion']==='Included','Native inclusion agrees for '+row.ID);
  }
  const temporalRule=phase=>[...bindingRules.get(phase['Phase ID'])][0];
- const validOperational=phase=>phase['Evidence category']==='operational_spell'
+ const phaseIncluded=phase=>(phase['Analysis included (1=yes)']??phase['Parent included (1=yes)'])!==0;
+ const validOperational=phase=>phaseIncluded(phase)&&phase['Evidence category']==='operational_spell'
   &&!yes(phase['Contested / held (1=yes)'])
   &&!String(phase['Calculation rule']||'').startsWith('withheld_');
  function exactLength(phase){
@@ -90,7 +91,7 @@ function fromNative(native){
   return minimum;
  }
  function policyLowerBound(phase){
-  if(phase['Evidence category']!=='formal_policy_period'||yes(phase['Contested / held (1=yes)'])
+  if(!phaseIncluded(phase)||phase['Evidence category']!=='formal_policy_period'||yes(phase['Contested / held (1=yes)'])
    ||String(phase['Calculation rule']||'').startsWith('withheld_')||temporalRule(phase)!=='legal_policy_layer_only_not_operational_closure')return null;
   const censored=phase['Endpoint status']==='last_confirmed',last=phase['Last confirmed (not reopening)'];
   const dates=[phase['Start earliest'],phase['Start latest'],censored?last:phase['Endpoint earliest'],censored?last:phase['Endpoint latest']].map(calendarDay);
@@ -100,10 +101,17 @@ function fromNative(native){
   if(censored&&(phase['Maximum date difference (days)']!=null||[phase['Endpoint earliest']||last,phase['Endpoint latest']||last].some(value=>value!==last)))return null;
   return minimum;
  }
+ function over24Hours(phase){
+  if(!phaseIncluded(phase)||yes(phase['Contested / held (1=yes)']))return false;
+  // An explicit audit result is independent of exact endpoint availability.
+  // A qualified null result must not fall back to superseded arithmetic.
+  if(typeof phase['Strictly over 24 hours']==='boolean'||phase['Over 24 hours basis'])return phase['Strictly over 24 hours']===true;
+  return lowerBound(phase)>1||policyLowerBound(phase)>1;
+ }
  function populationIDs(population='all',duration='all'){
   const flag=population==='complete'?'Complete operational (1=yes)':population==='exact'?'Exact operational (1=yes)':null;
   return includedIDs.filter(id=>(!flag||yes(durations.get(id)[flag]))
-   &&(duration!=='over1'||phasesByRecord.get(id).some(phase=>lowerBound(phase)>1||policyLowerBound(phase)>1)));
+   &&(duration!=='over1'||phasesByRecord.get(id).some(over24Hours)));
  }
  function exactPhases(ids=includedIDs,duration='all'){
   const selected=new Set(ids),rows=[];
@@ -111,8 +119,9 @@ function fromNative(native){
    const id=phase['Parent record ID'];
    if(!selected.has(id)||byID.get(id)['Analysis inclusion']!=='Included')continue;
    const days=exactLength(phase);
-   if(days===null||(duration==='over1'&&days<=1))continue;
-   rows.push({record_id:id,phase_id:phase['Phase ID'],start:phase['Start earliest'],end:phase['Endpoint latest'],days,codes:[...rationalesByID.get(id)]});
+   if(days===null||(duration==='over1'&&!over24Hours(phase)))continue;
+   const codes=Array.isArray(phase['Phase broad rationales'])?phase['Phase broad rationales']:[...rationalesByID.get(id)];
+   rows.push({record_id:id,phase_id:phase['Phase ID'],start:phase['Start earliest'],end:phase['Endpoint latest'],days,codes:[...new Set(codes)]});
   }
   return rows;
  }
@@ -122,7 +131,7 @@ function fromNative(native){
   const kinds=new Set(['closed_interval','bounded_interval','same_day','confirmed_through','policy_period','ordered_window','intermittent_regime']);
   const pointRules=new Set(['held_evidence_do_not_animate_as_confirmed','dated_evidence_only_no_continuity_inference','day_marker_no_whole_day_duration']);
   return includedIDs.filter(id=>phasesByRecord.get(id).some(phase=>{
-   if(!kinds.has(phase['Interval type'])||duration==='over1'&&!(lowerBound(phase)>1||policyLowerBound(phase)>1))return false;
+   if(!phaseIncluded(phase)||!kinds.has(phase['Interval type'])||duration==='over1'&&!over24Hours(phase))return false;
    const dates=['Start earliest','Start latest','Endpoint earliest','Endpoint latest','Last confirmed (not reopening)'].map(key=>calendarDay(phase[key]));
    const recorded=dates.some(value=>value!==null&&value>=first&&value<next);
    const [a,b]=dates,c=dates[2]??dates[4],d=dates[3]??dates[4];
@@ -145,7 +154,7 @@ function fromNative(native){
  const counts={records:records.length,included:included.length,excluded:records.length-included.length,phases:phases.length,
   assigned:includedIDs.filter(id=>rationalesByID.get(id).size>0).length,held:phases.filter(phase=>yes(phase['Contested / held (1=yes)'])).length};
  return {native,tables,records,byID,included,includedIDs,durations,phases,phasesByRecord,rationalesByID,bindingRules,
-  counts,timingCounts,populationIDs,exactPhases,groups,exactLength,lowerBound,recordIDsInMonth};
+  counts,timingCounts,populationIDs,exactPhases,groups,exactLength,lowerBound,over24Hours,phaseIncluded,recordIDsInMonth};
 }
 function load(file=path.resolve(__dirname,'../source/current-release.json.gz')){
  const bytes=fs.readFileSync(file);

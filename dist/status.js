@@ -13,11 +13,12 @@
   function decorateRecord(record,source=root.ATLAS_STATUS_REVIEW){
     if(!source||isSupplement(record))return record;
     const review=source.unresolved.find(r=>r.record_id===record.id);
-    if(!review)return record;
     const finding=source.audit?.records.find(r=>r.record_id===record.id);
+    const geography=array(source.geography_windows).filter(w=>w.record_id===record.id);
+    if(!review&&!finding&&!geography.length)return record;
     return {...record,later_status_review:finding||null,
-      map_geography_windows:array(source.geography_windows).filter(w=>w.record_id===record.id),
-      map_status_periods:review.phases.map(p=>({
+      map_geography_windows:geography,
+      map_status_periods:array(review?.phases).map(p=>({
       period_id:p.phase_id+'-LATER',source_phase_id:p.phase_id,map_status:true,
       status:'unresolved',kind:'status_context',measure_type:'status_context',
       start_earliest:p.last_confirmed,start_latest:p.last_confirmed,
@@ -31,14 +32,16 @@
   }
   function compile(source){
     return source.observations.map(o=>{
-      const reviewed=array(o.timeline_periods),reported=source.audit?.records.some(r=>r.outcome==='reported_current'&&(o.linked_land_ids||[]).includes(r.record_id));
+      const reviewed=array(o.timeline_periods),checkedAt=o.timeline_review?.checked_at||o.checked_at||o.sources?.map(s=>s.checked_at).filter(Boolean).sort().at(-1)||o.observed_at;
+      const findings=[...array(source.audit?.records),...array(source.historical_audit?.audit?.records)];
+      const reported=array(source.operator_report_observation_ids).includes(o.id)||findings.some(r=>r.outcome==='reported_current'&&(o.linked_land_ids||[]).includes(r.record_id));
       const entries=reviewed.length?reviewed:[{from_date:o.observed_at,through_date:o.observed_at,status:o.status,scope:o.scope,summary:o.summary,source_urls:o.sources.map(s=>s.url),end_inclusive:true}];
       const statusPeriods=entries.map((p,i)=>({
         period_id:o.id+(reviewed.length?'-T'+(i+1):'-OBS'),map_status:true,status:p.status,
         status_timeline:reviewed.length>0,duration_pattern:p.duration_pattern||null,start_precision:p.start_precision,start_label:p.start_label,
         kind:'status_context',measure_type:'status_context',start_earliest:p.from_date,
         start_latest:p.from_date,end_earliest:p.through_date,end_latest:p.through_date,
-        end_inclusive:p.end_inclusive,observed_at:o.observed_at,checked_at:source.reviewed_at,
+        end_inclusive:p.end_inclusive,observed_at:o.observed_at,checked_at:checkedAt,
         continues_through_observation:reviewed.length>0&&p.end_inclusive&&p.through_date===o.observed_at,
         evidence_dates:[p.from_date,p.through_date],minimum_days:null,maximum_days:null,
         scope:p.scope,display:p.summary,basis:p.basis,
@@ -57,8 +60,8 @@
       record_type:reviewed.length?'Border-access restriction chronology':'Border-access status observation',duration_periods:[],
       map_status_periods:statusPeriods,
       status_observation:o.summary,status_review:o,source_urls:o.sources.map(s=>s.url),sources:o.sources,
-      current_review:{outcome:'Status evidence checked '+source.reviewed_at,claims:[]},
-      current_timing:statusPeriods.map(p=>periodDates(p)).join('; ')+' · checked '+source.reviewed_at,
+      current_review:{outcome:'Status evidence checked '+checkedAt,claims:[]},
+      current_timing:statusPeriods.map(p=>periodDates(p)).join('; ')+' · checked '+checkedAt,
       timing_coverage:{any_dated_evidence:true,operational_complete:false,operational_exact_complete:false},
       duration_review:{display:'Supplemental restriction chronology; no closed-days total calculated.'}
     };});

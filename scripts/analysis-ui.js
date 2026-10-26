@@ -110,8 +110,8 @@ function setDuration(value){
  page=0;renderCharts();renderRecords();
 }
 function chooseDuration(value){if(ATLAS_HOST?.setDuration)ATLAS_HOST.setDuration(value);setDuration(value);}
-const durationExplanation="Includes records with at least one documented restriction period whose minimum date difference exceeds one day. A continuing closure can qualify through its last confirmed date, without implying a reopening or later duration. Documented official policy periods also qualify. Short, uncertain and unknown durations remain available under All. Days use date differences, not hour-by-hour measurements.";
-const durationSelection=(population,duration)=>population+(duration==='over1'?'; minimum date difference >1 day in at least one observed-closure or formal-policy phase; confirmed-through lower bounds allowed':'');
+const durationExplanation="Includes records with at least one restriction supported as lasting strictly more than 24 hours. Evidence may establish this threshold without an exact reopening or numeric duration. Observed restrictions, policies and announced windows retain their separate evidence labels. Exactly 24 hours, shorter episodes and unestablished durations remain under All. Duration charts use only eligible completed operational phases.";
+const durationSelection=(population,duration)=>population+(duration==='over1'?'; at least one phase supported as strictly longer than 24 hours; evidence type retained':'');
 const filteredFilename=(filename,duration)=>duration==='over1'?filename.replace(/\.csv$/,'-over-1-day.csv'):filename;
 function bar(label,value,total,max,kind,uncoded){
  const width=max?Math.max(0,100*value/max):0;
@@ -127,7 +127,7 @@ function renderCharts(){
  const max=Math.max(1,...counts.map(function(x){return x.count;}),blank);
  $("codeChart").innerHTML=counts.map(function(x){return bar(x.label,x.count,n,max,"code",false);}).join("")+bar("No code assigned",blank,n,max,"code",true);
  currentCharts.codes=counts.concat({label:"No code assigned",count:blank}).map(function(x){return [x.label,x.count,n,pct(x.count,n),selection];});
- $("chartPopulationNote").textContent=n+" records"+(duration==='over1'?" · more than 1 day":"")+" · select a bar to explore";
+ $("chartPopulationNote").textContent=n+" records"+(duration==='over1'?" · more than 24 hours":"")+" · select a bar to explore";
  $("chartDurationNote").hidden=duration!=='over1';$("chartDurationNote").textContent=duration==='over1'?durationExplanation:'';
  $("motivationDenominatorNote").textContent="Percentages use all "+n+" selected records, including those without a category.";
  const rc=Object.entries(frequencies(rows,function(e){return e.region;})).sort(function(a,b){return b[1]-a[1];});
@@ -146,7 +146,7 @@ function renderDurationComparison(rows,population,duration='all'){
  const parentIDs=new Set(phases.map(p=>p.record_id)),parents=parentIDs.size,uncoded=phases.filter(p=>!p.codes.length).length;
  const eligibleParents=new Set(METRICS.durationRows(rows).map(p=>p.record_id));
  const extraChecks=rows.filter(e=>e.timing_coverage.operational_exact_complete&&!eligibleParents.has(e.id)).length;
- $("durationComparisonNote").textContent=phases.length+' eligible phases from '+parents+' records. A phase is one documented period for a particular movement and location.'+(duration==='over1'?' Only phases longer than one day are plotted; shorter phases from the same record are excluded.':'')+(extraChecks?' '+extraChecks+' other records have exact date ranges but do not meet this chart’s further checks, including a confirmed reopening.':'')+' The horizontal scale is logarithmic: the marks 1, 10, 100 and 1,000 days are equally spaced.'+(uncoded?' '+uncoded+' phase'+(uncoded===1?' has':'s have')+' no rationale label and '+(uncoded===1?'is':'are')+' not plotted.':'');
+ $("durationComparisonNote").textContent=phases.length+' eligible phases from '+parents+' records. A phase is one documented period for a particular movement and location.'+(duration==='over1'?' Only phases supported as longer than 24 hours are plotted; shorter phases from the same record are excluded.':'')+(extraChecks?' '+extraChecks+' other records have exact date ranges but do not meet this chart’s further checks, including a confirmed reopening.':'')+' The horizontal scale is logarithmic: the marks 1, 10, 100 and 1,000 days are equally spaced.'+(uncoded?' '+uncoded+' phase'+(uncoded===1?' has':'s have')+' no rationale label and '+(uncoded===1?'is':'are')+' not plotted.':'');
  const maximum=Math.max(1,...phases.map(p=>p.days)),cap=[10,30,100,300,1000,3000,10000,30000].find(x=>x>=maximum)||Math.pow(10,Math.ceil(Math.log10(maximum))),position=value=>(100*Math.log10(value)/Math.log10(cap)).toFixed(3)+'%';
  const ticks=[1,10,100,1000,10000].filter(t=>t<=cap),number=value=>Number.isInteger(value)?value.toLocaleString('en-GB'):Number(value.toFixed(1)).toLocaleString('en-GB');
  const axis='<div class="distribution-axis"><span>Days · log scale</span><svg aria-hidden="true">'+ticks.map(t=>'<text x="'+position(t)+'" y="25" text-anchor="'+(t===1?'start':'middle')+'" font-size="10" fill="#65756f">'+number(t)+'</text>').join('')+'</svg><span>Median · sample</span></div>';
@@ -208,7 +208,7 @@ function renderRecords(){
  page=Math.min(page,pages-1);
  const start=page*PAGE_SIZE;
  const longOnly=$("durationFilter").value==='over1';
- $("resultCount").textContent=filtered.length+" matching "+(filtered.length===1?"record":"records")+(longOnly?" · more than 1 day":"")+($("statusFilter").value==="quarantined"?" · excluded from analysis":"");
+ $("resultCount").textContent=filtered.length+" matching "+(filtered.length===1?"record":"records")+(longOnly?" · more than 24 hours":"")+($("statusFilter").value==="quarantined"?" · excluded from analysis":"");
  $("datasetDurationNote").hidden=!longOnly;$("datasetDurationNote").textContent=longOnly?durationExplanation:'';
  $("recordList").innerHTML=filtered.length?filtered.slice(start,start+PAGE_SIZE).map(function(e){
   return '<button type="button" class="record-row" data-record="'+escapeHTML(e.id)+'" aria-label="Open '+escapeHTML(e.id)+': '+escapeHTML(e.title)+'">'+
@@ -245,8 +245,9 @@ function phaseSourceLink(url,sources){
 }
 function phaseHTML(p,sources){
  const label={operational_spell:'Observed closure',formal_policy_period:'Policy in force',ordered_window:'Announced closure dates',intermittent_regime:'Repeated closures'}[p.measure_type]||'Recorded dates';
+ const reference=p.analysis_included===false;
  const summary=p.contested?'The dates are disputed; no duration is calculated.':p.kind==='same_day'?(p.observed_reopening==='Yes'?'Closed and reopened the same day; no whole-day duration is calculated.':'Same-day interruption reported; no whole-day duration is calculated.'):p.measure_type==='formal_policy_period'?'These dates describe a policy, not a confirmed continuous closure.':p.measure_type==='ordered_window'?'This is an announced schedule. Actual enforcement is not established.':p.measure_type==='intermittent_regime'?'Closures recurred during this period. Total closed days are unknown.':p.temporal_display_rule==='dated_evidence_only_no_continuity_inference'||!p.start_earliest||!p.end_latest?'These are dated observations; they do not establish the whole closure duration.':cleanText(p.display);
- return '<article class="evidence-check"><strong>'+escapeHTML(label)+(p.contested?' · Dates disputed':'')+'</strong><p>'+escapeHTML(phaseDates(p))+'</p><p>'+escapeHTML(summary)+'</p><p>'+escapeHTML(p.scope)+'</p><details><summary>Evidence and date details</summary><p>'+escapeHTML(p.basis)+'</p><p>'+escapeHTML(p.qualification)+'</p><p>'+escapeHTML(p.movement)+' · '+escapeHTML(p.direction)+'</p><p>Observed reopening: '+escapeHTML(p.observed_reopening)+'. Endpoint inclusion: '+escapeHTML(p.endpoint_inclusion)+'.</p>'+(p.display?'<p>Workbook timing: '+escapeHTML(p.display)+'</p>':'')+(p.reported_duration?'<p>'+escapeHTML(p.reported_duration)+'</p>':'')+(p.reported_schedule?'<p>'+escapeHTML(p.reported_schedule)+'</p>':'')+'<p>'+p.source_urls.filter(u=>/^https?:\/\//.test(u)).map(u=>phaseSourceLink(u,sources)).join(' · ')+'</p></details></article>';
+ return '<article class="evidence-check"><strong>'+escapeHTML(reference?'Reference only':label)+(p.contested?' · Dates disputed':'')+'</strong>'+(reference?'<p>Excluded from mapping and analysis; retained here as reference evidence.</p>':'')+'<p>'+escapeHTML(phaseDates(p))+'</p><p>'+escapeHTML(summary)+'</p><p>'+escapeHTML(p.scope)+'</p><details><summary>Evidence and date details</summary><p>'+escapeHTML(p.basis)+'</p><p>'+escapeHTML(p.qualification)+'</p><p>'+escapeHTML(p.movement)+' · '+escapeHTML(p.direction)+'</p><p>Observed reopening: '+escapeHTML(p.observed_reopening)+'. Endpoint inclusion: '+escapeHTML(p.endpoint_inclusion)+'.</p>'+(p.display?'<p>Workbook timing: '+escapeHTML(p.display)+'</p>':'')+(p.reported_duration?'<p>'+escapeHTML(p.reported_duration)+'</p>':'')+(p.reported_schedule?'<p>'+escapeHTML(p.reported_schedule)+'</p>':'')+'<p>'+p.source_urls.filter(u=>/^https?:\/\//.test(u)).map(u=>phaseSourceLink(u,sources)).join(' · ')+'</p></details></article>';
 }
 function sourceLink(s){
  const safe=/^https?:\/\//i.test(s.URL||"");
@@ -345,7 +346,7 @@ $("exportRegions").addEventListener("click",()=>downloadCSV(filteredFilename('re
 $("exportContinents").addEventListener("click",()=>downloadCSV(filteredFilename('continent-counts.csv',currentCharts.durationFilter),[["Continent","Records","All selected records","Share of selected records","Population"],...currentCharts.continents]));
 $("exportDuration").addEventListener("click",()=>downloadCSV(filteredFilename('duration-by-rationale-phases.csv',currentCharts.durationFilter),[
  ['Record ID','Phase ID','Event','Phase scope','Start date','Observed reopening date','Days (date difference)','Parent record rationale labels','Endpoint inclusion','Eligibility','Population','Data source SHA-256'],
- ...currentCharts.durationRows.map(p=>[p.record_id,p.phase_id,p.title,p.scope,p.start,p.end,p.days,p.codes.join('; '),p.endpoint_inclusion,'Exact dates; operational closure; observed reopening; not disputed; '+(currentCharts.durationFilter==='over1'?'more than one day (date difference)':'at least one date-boundary day'),currentCharts.durationPopulation,DATA.meta.source_sha256])
+ ...currentCharts.durationRows.map(p=>[p.record_id,p.phase_id,p.title,p.scope,p.start,p.end,p.days,p.codes.join('; '),p.endpoint_inclusion,'Exact dates; operational closure; observed reopening; not disputed; '+(currentCharts.durationFilter==='over1'?'source-supported strictly more than 24 hours':'at least one date-boundary day'),currentCharts.durationPopulation,DATA.meta.source_sha256])
 ]));
 $("exportDurationCoverage").addEventListener("click",()=>downloadCSV(filteredFilename('duration-by-rationale-coverage.csv',currentCharts.durationFilter),[
  ['Parent record rationale','Eligible phases','Records with eligible phases','All selected records in category','Share of category records','Shortest days','25th percentile days','Median days','75th percentile days','Longest days','Population','Data source SHA-256'],

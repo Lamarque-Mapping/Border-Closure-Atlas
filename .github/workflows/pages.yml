@@ -64,6 +64,8 @@ jobs:
           node scripts/verify-ui.cjs
           node scripts/verify-analysis-sections.cjs
           node scripts/verify-analysis-duration-filter.cjs
+          node scripts/verify-audited-presentation.cjs
+          node scripts/verify-phase-rationales.cjs
           node scripts/verify-map-duration.cjs
           node scripts/verify-border-history.cjs
       - name: Prepare website

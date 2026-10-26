@@ -45,6 +45,7 @@ assert.equal(M.durationGroups(M.filterRecords(fixtures,'all','over1'),['A'],'ove
 const read=name=>JSON.parse(fs.readFileSync(path.join(root,'dist',name),'utf8').replace(/^window.BORDER_DATA = /,'').replace(/;\s*$/,''));
 const full=read('data.js'),light=read('map-data.js'),data=read('analysis-data.json');
 const reference=require('./release-verification-reference.cjs').load();
+const nativePhases=new Map(reference.phases.map(p=>[p['Phase ID'],p]));
 const counts=Object.fromEntries(['all','complete','exact'].map(population=>[population,['all','over1'].map(duration=>reference.populationIDs(population,duration).length)]));
 const phaseValues=rows=>rows.map(p=>[p.record_id,p.phase_id,p.start,p.end,p.days,[...p.codes].sort()]).sort((a,b)=>a[1].localeCompare(b[1]));
 for(const population of Object.keys(counts))for(const duration of ['all','over1']){
@@ -53,7 +54,7 @@ for(const population of Object.keys(counts))for(const duration of ['all','over1'
  const phases=M.durationRows(selected,duration);
  assert.deepEqual(selected.map(e=>e.id).sort(),reference.populationIDs(population,duration).sort(),'parent selection reconciles to native duration summaries and phase bounds');
  assert.deepEqual(phaseValues(phases),phaseValues(reference.exactPhases(reference.populationIDs(population,duration),duration)),'phase selection reconciles to native evidence');
- if(duration==='over1')assert(phases.every(p=>p.days>1));
+ if(duration==='over1')assert(phases.every(p=>reference.over24Hours(nativePhases.get(p.phase_id))),'a reviewed elapsed threshold is distinct from calendar-date difference');
  for(const source of [full,light]){
   const other=M.filterRecords(source.events,population,duration);
   assert.deepEqual(other.map(e=>e.id),selected.map(e=>e.id),'full/map/analysis parent selections agree');
@@ -67,8 +68,8 @@ for(const population of Object.keys(counts))for(const duration of ['all','over1'
  }
 }
 const selected=M.filterRecords(data.events,'all','over1'),selectedIDs=new Set(selected.map(e=>e.id));
-for(const id of ['AM010','CC004','CC028','GL14','ME034','NP-COV-EUR-006'])assert(selectedIDs.has(id),id+' has a supported long operational interval');
-for(const id of ['CC022','H14','EA030'])assert(!selectedIDs.has(id),id+' has only a one-day or threshold-uncertain interval');
+for(const id of ['AM010','CC004','CC028','GL14','ME034','NP-COV-EUR-006','EA030'])assert(selectedIDs.has(id),id+' has a supported >24h restriction');
+for(const id of ['CC022','H14'])assert(!selectedIDs.has(id),id+' has only a one-day or threshold-uncertain interval');
 const plotted=M.durationRows(selected,'over1');
 for(const id of ['GL14-R1','ME034-R1','NP-COV-EUR-006-P02'])assert(!plotted.some(p=>p.phase_id===id),'real short phase cannot leak: '+id);
 const expectedGroups=new Map(reference.groups(reference.populationIDs('all','over1'),data.meta.rationale_categories,'over1').map(group=>[group.code,group]));
@@ -108,11 +109,11 @@ for(const population of Object.keys(counts))for(const duration of ['all','over1'
  const expectedRecords=M.filterRecords(events,population,duration),expectedCount=counts[population][duration==='over1'?1:0];
  assert.equal(context.currentCharts.codes[0][2],expectedCount);
  assert.equal(node('chartDurationNote').hidden,duration!=='over1');
- assert.equal(node('chartPopulationNote').textContent.includes('more than 1 day'),duration==='over1');
+ assert.equal(node('chartPopulationNote').textContent.includes('more than 24 hours'),duration==='over1');
  if(duration==='over1'){
-  assert(node('chartDurationNote').textContent.includes('date differences, not hour-by-hour measurements'));
-  assert(node('chartDurationNote').textContent.includes('at least one documented restriction period'));
-  assert(node('chartDurationNote').textContent.includes('last confirmed date, without implying a reopening or later duration'));
+  assert(node('chartDurationNote').textContent.includes('strictly more than 24 hours'));
+  assert(node('chartDurationNote').textContent.includes('without an exact reopening or numeric duration'));
+  assert(node('chartDurationNote').textContent.includes('Exactly 24 hours, shorter episodes and unestablished durations remain under All'));
  }
  for(const row of context.currentCharts.codes){
   const expected=expectedRecords.filter(e=>row[0]==='No code assigned'?!e.codes.length:e.codes.includes(row[0])).length;
@@ -121,7 +122,7 @@ for(const population of Object.keys(counts))for(const duration of ['all','over1'
  assert.equal(context.currentCharts.regions.reduce((n,row)=>n+row[1],0),expectedCount);
  for(const row of context.currentCharts.continents)assert.equal(row[1],expectedRecords.filter(e=>e.continents.includes(row[0])).length);
  for(const group of context.currentCharts.durationGroups)assert.equal(group.total,context.currentCharts.codes.find(row=>row[0]===group.code)[1]);
- assert(context.currentCharts.durationRows.every(p=>duration==='all'||p.days>1));
+ assert(context.currentCharts.durationRows.every(p=>duration==='all'||reference.over24Hours(nativePhases.get(p.phase_id))));
  for(const [kind,value] of [['code','Security'],['region','Americas'],['continent','Asia']]){
   context.filterFromChart(kind,value);
   assert.equal(node('durationFilter').value,duration,'drill-through preserves duration threshold');
@@ -135,11 +136,11 @@ for(const population of Object.keys(counts))for(const duration of ['all','over1'
   if(id==='exportCodes')assert.equal(download.filename,duration==='over1'?'rationale-counts-over-1-day.csv':'rationale-counts.csv');
   const header=download.rows[0],populationColumn=header.indexOf('Population');
   assert(populationColumn>=0);
-  assert(download.rows.slice(1).every(row=>String(row[populationColumn]).includes('>1 day')===(duration==='over1')));
-  if(duration==='over1')assert(download.rows.slice(1).every(row=>String(row[populationColumn]).includes('minimum date difference >1 day in at least one observed-closure or formal-policy phase')));
+  assert(download.rows.slice(1).every(row=>String(row[populationColumn]).includes('strictly longer than 24 hours')===(duration==='over1')));
+  if(duration==='over1')assert(download.rows.slice(1).every(row=>String(row[populationColumn]).includes('evidence type retained')));
   if(id==='exportDuration'){
    assert.equal(download.rows.length,reference.exactPhases(reference.populationIDs(population,duration),duration).length+1,'phase CSV contains the native eligible sample plus its header');
-   assert(download.rows.slice(1).every(row=>duration==='all'||row[6]>1),'phase CSV applies the same phase cutoff');
+   assert(download.rows.slice(1).every(row=>duration==='all'||reference.over24Hours(nativePhases.get(row[1]))),'phase CSV applies the same source-backed phase cutoff');
   }
  }
 }
@@ -156,6 +157,6 @@ assert(ui.includes('$("chartDuration").addEventListener("change",()=>chooseDurat
 assert(template.includes('value="over1" selected'));
 assert(template.includes('data-duration="over1" aria-pressed="true"'));
 assert(selectedIDs.has('EU031'),'Ukraine policy qualifies');
-assert.equal(selected.length,408);
+assert.equal(selected.length,reference.populationIDs('all','over1').length);
 for(const id of ['chartDuration','durationFilter'])assert(template.includes('id="'+id+'" aria-describedby='));
 console.log('Analysis duration filter passed against native release tables: '+JSON.stringify(counts)+'; conservative bounds, explicit censoring, no short-phase leakage, all chart denominators, Dataset drill-through, filtered CSV metadata, and full included-record export preserved.');

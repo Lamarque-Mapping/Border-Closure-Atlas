@@ -28,15 +28,15 @@ const types=locationIDs=>locationIDs.map(id=>{assert(features.has(id),'mapped re
 const at=iso=>({mode:'intervals',month:C.monthOrdinal(iso),measureType:''});
 const sortedIDs=events=>events.map(e=>e.id).sort();
 assert.equal(included.length,includedCount,'all included core land records remain available');
-assert.equal(data.events.length,recordCount,'the four excluded records are retained');
+assert.equal(data.events.length,recordCount,'excluded parents and phase-level evidence remain in the archive');
 assert.deepEqual(data.events,before.events,'attaching geography must not rewrite records, dates, duration or rationale coding');
 assert.deepEqual(data.meta,before.meta,'the statistical release metadata is unchanged');
 assert.deepEqual(JSON.parse(read('analysis-data.json')).events,data.events,'Analysis retains precisely the original land records');
 assert.equal(reviews.source_sha256,data.meta.source_sha256,'scope review applies to this release');
 assert.equal(source.source_sha256,reviews.source_sha256,'location source applies to the same release');
 assert.equal(X.review.phases['REC50-R01-002-P1'].partial,true,'Moyale point does not locate nearby unauthorised routes');
-assert.equal(reviews.rows.length,included.reduce((n,e)=>n+Math.max(1,e.duration_periods.length),0),'all included phases and undated records');
-const expectedKeys=included.flatMap(e=>e.duration_periods.length?e.duration_periods.map(p=>e.id+'|'+p.period_id):[e.id+'|']);
+const expectedKeys=included.flatMap(e=>e.duration_periods.length?e.duration_periods.filter(p=>p.analysis_included!==false).map(p=>e.id+'|'+p.period_id):[e.id+'|']);
+assert.equal(reviews.rows.length,expectedKeys.length,'all analysis-included phases and undated records');
 const actualKeys=reviews.rows.map(r=>r.record_id+'|'+(r.phase_id||''));
 assert.deepEqual([...actualKeys].sort(),[...expectedKeys].sort(),'every included phase, and only included phases, has one scope decision');
 assert.equal(new Set(actualKeys).size,actualKeys.length,'phase scope decisions are unique');
@@ -71,6 +71,10 @@ for(let month=C.monthOrdinal(data.meta.window_start);month<=C.monthOrdinal(data.
  assert.deepEqual(sortedIDs(C.filterEvents(data,{mode:'intervals',month})),sortedIDs(C.filterEvents(before,{mode:'intervals',month})),'dated record population is unchanged in '+C.monthISO(month));
 }
 for(const e of data.events.filter(C.excluded))assert.deepEqual(ids(e),[],'excluded records never acquire symbols');
+for(const e of included)for(const p of e.duration_periods.filter(p=>p.analysis_included===false)){
+ assert.deepEqual(ids(phaseRecord(e,p)),[],p.period_id+' excluded phase cannot borrow its included parent geography');
+ assert(!reviews.rows.some(row=>row.phase_id===p.period_id),p.period_id+' excluded phase has no map-scope approval');
+}
 // Ecuador moves between national passenger rules and an observed reopening at
 // Rumichaca. Reading the broad parent must not expand the later single site.
 const ec=byID.get('AM018'),ecEarly=ids(ec,at('2020-03')),ecLate=ids(ec,at('2021-12'));
@@ -96,12 +100,13 @@ const janPhases=C.periodsForView(gatuna,at('2020-01'));
 assert.deepEqual(janPhases.map(p=>p.period_id),['GL01-C7RWP3'],'January evidence names Gatuna and Kagitumba only in its own phase');
 for(const id of ids(gatuna,at('2020-01')))assert.deepEqual(C.recordsForLocation([gatuna],id,data,at('2020-01'))[0].duration_periods.map(p=>p.period_id),['GL01-C7RWP3']);
 // The motivating example is an approximate post location, not 4,600 km of line.
-const maz=byID.get('FU-COV-EAS-003'),mazIDs=ids(maz,at('2020-06'));
+const maz=byID.get('FU-COV-EAS-003'),mazIDs=ids(maz,at('2021-08'));
 assert.equal(mazIDs.length,1,'Mazongshan has its reviewed crossing-area position');
 assert.equal(features.get(mazIDs[0]).geometry.type,'Point');
 assert(/mazongshan|naran/i.test(features.get(mazIDs[0]).properties.label||features.get(mazIDs[0]).properties.name),'Mazongshan does not borrow another Mongolia post');
 assert.deepEqual(ids(maz,at('2021-09')),[],'last-confirmed date does not imply closure to the present');
-assert.equal(C.phaseTemporalState(maz.duration_periods[0],C.monthOrdinal('2020-06')),'policy','a policy period does not become observed operational continuity');
+assert.deepEqual(ids(maz,at('2020-06')),[],'seasonal-port observations do not establish an intervening continuous policy interval');
+assert.equal(C.phaseTemporalState(maz.duration_periods[0],C.monthOrdinal('2021-08')),'observation','dated formal-policy evidence does not become operational continuity');
 const horo=byID.get('R5-AES-003');
 const horoPhase=horo.duration_periods.find(p=>p.period_id==='R5-AES-003-R1');
 assert(horoPhase&&/Horohoro/.test(horoPhase.scope),'the original Horohoro phase remains explicit');
@@ -111,7 +116,7 @@ assert(namangaPhase&&/Namanga/.test(namangaPhase.scope),'the later accepted Nama
 assert.deepEqual(ids(phaseRecord(horo,namangaPhase)),['post-namanga-road'],'Namanga does not overwrite or inherit the Horohoro phase location');
 // Clicking an individual point selects only records whose active phase applies.
 for(const id of mazIDs){
- const s={...at('2020-06'),location:id};
+ const s={...at('2021-08'),location:id};
  const selected=C.filterEvents(data,s);
  assert(selected.some(e=>e.id===maz.id),'point click finds the source record');
  assert(selected.every(e=>ids(e,s).includes(id)),'point filter respects the active geography');
@@ -120,7 +125,7 @@ for(const id of mazIDs){
 // No site without provenance, invalid coordinates or foreign phase can enter
 // the compiled location layer. The source remains reusable for later reviews.
 assert.equal(new Set(source.sites.map(s=>s.id)).size,source.sites.length,'crossing IDs are unique');
-const siteIDs=new Set(source.sites.map(s=>s.id)),phaseOwners=new Map(included.flatMap(e=>e.duration_periods.map(p=>[p.period_id,e.id])));
+const siteIDs=new Set(source.sites.map(s=>s.id)),phaseOwners=new Map(included.flatMap(e=>e.duration_periods.filter(p=>p.analysis_included!==false).map(p=>[p.period_id,e.id])));
 for(const site of source.sites){
  assert(Array.isArray(site.coordinates)&&site.coordinates.length===2&&site.coordinates.every(Number.isFinite),site.id+' has numeric lon/lat');
  assert(Math.abs(site.coordinates[0])<=180&&Math.abs(site.coordinates[1])<=90,site.id+' has valid lon/lat');

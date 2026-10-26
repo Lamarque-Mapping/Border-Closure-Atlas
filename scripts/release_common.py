@@ -49,6 +49,9 @@ def validate_native(release):
             assert not p['Complete operational (1=yes)'] and not p['Exact complete operational (1=yes)']
         if p['Exact complete operational (1=yes)']:
             assert p['Complete operational (1=yes)'] and p['Evidence category']=='operational_spell'
+        if p.get('Phase broad rationales') is not None:
+            assert isinstance(p['Phase broad rationales'],list)
+            assert set(p['Phase broad rationales'])<=set(tables['Durations'][0]),('Invalid phase rationale',p['Phase ID'])
     assert set(release['source_urls_by_record'])==set(ids)
     assert release['review_counts']['completed_checkpoint_verified_cycles']==50
     return {'records':len(ids),'phases':len(pids),'held_phases':sum(bool(p['Contested / held (1=yes)']) for p in phases)}
@@ -95,7 +98,7 @@ def validate_reader(path=READER_PATH, model_path=MODEL_PATH, release=None):
                     assert cell.data_type!='f',('Unexpected reader formula',i,j)
                 assert cache not in ('#REF!','#DIV/0!','#VALUE!','#NAME?','#N/A','#NUM!','#SPILL!')
         assert sum(r[15] for r in model['rows'])==model['counts']['phases']
-        assert sum(r[17]=='Included' for r in model['rows'])==model['counts']['included']
+        assert sum(str(r[17]).startswith('Included') for r in model['rows'])==model['counts']['included']
         method_values=[c.value for row in formulas['Methodology'] for c in row if c.value is not None]
         for value in [model['title'],model['subtitle'],model['data_state_sha256']]+[v for row in model['methods'] for v in row]:
             assert value in method_values,('Methodology text missing or changed',str(value)[:90])

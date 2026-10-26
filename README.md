@@ -1,14 +1,16 @@
 # Global Border Closures Atlas
 
-Release **2026.10.25-rec50**, prepared on 25 October 2026. The study window is
-**21 October 2016–21 October 2026**.
+Release **2026.10.26-full-audit-2**, prepared on 26 October 2026. The study
+window is **21 October 2016–21 October 2026**.
 
-The final register contains **829 records**, of which **825 are included** in the
-land-border analysis, and **1,010 separate phases**. The union of its per-record
-source catalogues contains **4,680 distinct URLs**. This is not a recursive count
-of every URL string in supporting or historical materials, nor a count of
-independent reports or successful full-text inspections.
-Coverage remains incomplete and differs by place, period and source access.
+The register contains **829 records**, of which **826 are included** in the
+land-border analysis, and **1,069 phases** across all records. Inclusion is also
+checked at phase level: SA025's supported rail phase is included, while its
+unsupported road phase remains excluded. The union of the per-record source
+catalogues contains **5,548 distinct URLs**. This is not a recursive count of
+every URL in supporting or historical materials, nor a count of independent
+reports or successful full-text inspections. Coverage remains incomplete and
+differs by place, period and source access.
 
 The public site keeps the Map / Overview / Analysis / Dataset presentation.
 Overview contains the research methods and summaries of rationale and date
@@ -16,67 +18,48 @@ evidence. Analysis retains its chart navigation and filters. Dataset provides th
 searchable record reader and downloads. Existing section and record links remain
 supported. The atlas describes historical evidence, not live border conditions.
 
-## Later-status correction — 25 October 2026
+## Full-register audits — 26 October 2026
 
-The map now distinguishes an observed reopening from the last report of closure.
-All **221 records / 250 last-confirmed phases** in the review inventory have now
-received a later-status assessment. Evidence supports integrated updates to **119 records**
-and resolves **136 phase markers**. **107 records retain at least one unverified
-phase (114 phases)**; the groups overlap for partial resolutions. Grey dashed
-lines and hollow marks identify that uncertainty, not continuing closure.
-The searchable [audit reader](https://lamarque-mapping.github.io/Border-Closure-Atlas/status-audit.html)
-provides every finding, phase decision, source and access limitation.
+This release incorporates **two further complete audits of all 829 records**.
+The first pass produced accepted content changes to **292 records**; the second
+produced accepted content changes to **339 records**, plus **nine formatting-only
+changes**. The content-change groups overlap: **505 distinct records** changed
+across the two passes. **59 phases were added**, taking the chronology from 1,010
+to 1,069 phases. These are review and revision counts, not counts of newly
+discovered closure decisions or independently verified facts.
 
-The outcomes are 82 later access or policy-ending bounds, 28 confirmed restrictions,
-one operator-reported restriction, 10 scope changes, 18 partial findings, five later
-closure confirmations, three conflicting findings and 74 unresolved findings.
-A later access bound does not assert that a border is currently open or supply
-an exact historical reopening date. Only supported matching phases are updated.
-The COVID follow-up adds 21 phase bounds across 19 records: 18 newly integrated
-records and further resolution of Slovenia's railway phase. Each old phase marker
-ends at its own supported bound throughout the timeline. The national policy endings for Chile and Vietnam do not
-assert that every crossing physically reopened. Chile's 22-of-40 operational
-reopening remains explicit; Sota's traditional access does not resolve Kali Torasi
-or Bupul. Burkina Faso's July lifting and October reimposition of its flour-export
-ban remain distinct.
+Regional reviewers checked the current claims against identified sources and
+searched for missing or suspicious dates, reopening evidence, traffic scope and
+geography. The second pass reassigned records to reviewers to challenge the
+accepted first-pass version. Accepted corrections were reconciled into the native
+phase tables as well as the reader: phase inclusion, date bounds, endpoint
+meaning, strict duration eligibility and mapped scope must agree. Unresolved
+claims and source-access limits remain explicit; completing both passes does
+not establish every historical fact.
 
-The next open-ended review adds **14 phase decisions across 13 records**. Myanmar's
-original blanket foreign-entry suspension is superseded by **7 March 2023**, when
-Kawthaung resumed international passport entry; this does not claim all Myanmar
-crossings reopened. Botswana's January 2019 blanket animal-import restriction also
-has a partial-lifting bound. Separate dated access evidence bounds old Eswatini
-COVID and protest restrictions and the Samdrup Jongkhar election closure. Ficalho's
-February 2024 reopening does not resolve Paymogo; Kardam's September 2023 protest
-restriction is bounded on the same day. A later bound is not an exact end date or
-proof that an old closure continued until that bound.
+The earlier **25 October 2026 later-status review** covered an inventory of
+221 records and 250 last-confirmed phases. Its
+[audit reader](https://lamarque-mapping.github.io/Border-Closure-Atlas/status-audit.html)
+and companion review preserve that dated assessment and its evidence. Those
+inventory and outcome counts describe the earlier review, not the coverage or
+remaining uncertainty of this full-register release. The current record reader
+and native phase chronology incorporate the subsequent accepted findings.
 
-Official sources also confirm continuing closures at six named Lithuanian and
-Latvian posts, using their 2023/2024 effective dates. These are available in the
-record list; absent approved crossing points, no whole-frontier line is substituted.
-Lithuania's separate pedestrian/cycle and rail-boarding phases remain unresolved.
-
-All **36 status observations now have separately reviewed chronology**, comprising
-**48 scoped periods**. The date a restriction was checked is not its start date.
-Ukraine's Russia and Belarus ordinary-crossing suspensions appear from **28 February
-2022**, the effective date of Order 188-r. Six longstanding regimes, including the
-inter-Korean boundary, are labelled as already in force before October 2016.
-Rafah's passenger closures and controlled reopenings are separate phases from May
-2024 onward; Finland's December 2023 reclosure, changes to Ukraine's exit-age rule,
-Narva's changing hours and Azerbaijan's different frontier dates remain distinct.
-Source-supported continuity concerns the stated restriction regime with exceptions,
-not uninterrupted physical closure at every checkpoint. A check without supported
-chronology would remain a labelled snapshot with no invented start.
-These supplements do not enter closure-duration statistics or count as new closure
-episodes. Some checks postdate the original 21 October study cutoff; their actual
-dates remain visible. The historical 829-record reader is unchanged.
-The companion ZIP and `downloads/border-status-review.json` include this review.
-The review was an AI source assessment, not independent field verification.
+An observed reopening, a formal policy ending, later evidence of access and the
+last report of closure are different facts. A later access report can establish
+an outer bound without revealing the exact reopening date. Neither that bound
+nor an isolated closure observation establishes uninterrupted closure between
+reports. Evidence is not extended through silence to the end of the timeline.
+Separately sourced status supplements retain their chronology and exceptions;
+the date they were checked is not substituted for their start. Supplements do
+not count as new core closure episodes or enter core closure-duration statistics.
+Some checks postdate the 21 October study cutoff; their actual dates remain visible.
 
 Country outlines are restricted to the separately sourced Australia and New
 Zealand broad foreign-visitor admission bans. Testing, quarantine, targeted-origin
 rules and departure restrictions do not independently create a country outline.
 The original UK policy evidence remains available; qualifying land records retain
-their ordinary inclusion criteria. The extra UK country outline is removed.
+their ordinary inclusion criteria.
 
 ## Downloads and source data
 
@@ -92,10 +75,11 @@ their ordinary inclusion criteria. The extra UK country outline is removed.
   supporting tables/documentation. The master workbook is also offered separately.
 - The site continues to export included records, filtered records, chronology
   phases, timing coverage, the website snapshot and current review information.
-  The included-record CSV contains all 825 included land records, regardless of
-  active browser filters.
+  The included-record CSV contains all 826 included parent records, regardless
+  of active browser filters. Phase-level exclusions remain explicit in the
+  chronology; inclusion of a parent does not include every one of its phases.
 
-The build reads `source/current-release.json.gz`. The shared methodology is
+The build reads `source/current-release.json.gz`. The large data companion ZIP is generated deterministically in CI and checked against the release manifest. Both complete additional audits are included in that ZIP as `Full_Register_Source_Audits_2026.json.gz`, also available as a separate download. The shared methodology is
 `source/release-method.json`; its complete account is used in Overview and the
 standalone Analysis page. These files define the release input. The two-tab
 workbook is a reader download, not the input schema for the website importer.
@@ -107,21 +91,48 @@ data-source fingerprint.
 
 ## Research and review
 
-The dataset was compiled using OpenAI’s GPT‑6 Astra with Ultra reasoning, with GPT‑6 Astra Pro documented in the final research and review logs. The work comprised 16 initial research rounds, including three full-register verification exercises, followed by two further register-wide reviews and 50 additional research and review cycles. Six regional AI reviewers contributed to major assessments, with research, challenge and adjudication conducted in separate contexts of the same model. Reviewers checked whether each restriction occurred, its start and endpoint, the crossings and types of movement affected, continuity, and the reported reasons against linked source evidence. The two subsequent register-wide exercises comprised a blind reconstruction and challenge of 653 records, producing 3,918 claim assessments, and a further assessment of all 686 records and 738 phases in the expanded register. Additional chronology work assessed 519 cases and subjected 272 unresolved cases to fresh research and separate review. The final 50 cycles comprised 30 coverage-search cycles, ten targeted-verification cycles and ten audits of preselected records, providing full-record source reviews of 160 entries and addressing 176 targeted questions across 162 entries. Proposed additions were checked against existing episodes to avoid duplication, while partial reopenings and changes in restrictions were recorded as separate phases. The resulting register contains 829 records and 1,010 phases, supported by a catalogue of 4,680 distinct recorded URLs. Automated consistency checks covered the complete final dataset; uncertain dates, source-access limitations and unresolved claims remain explicit. The five register-wide reviews covered successive versions of the dataset, while the later targeted audits examined selected records.
+The historical research programme was compiled using OpenAI's GPT-6 Astra with
+Ultra reasoning, with GPT-6 Astra Pro documented in its final research and review
+logs. It comprised 16 initial research rounds, including three full-register
+verification exercises, followed by two further register-wide reviews and 50
+additional research and review cycles. Six regional AI reviewers contributed to
+major assessments, with research, challenge and adjudication conducted in separate
+contexts of the same model.
 
-The reviews used separate contexts within the same model. They do not constitute
-independent human or different-model verification of every record. The three
-initial register-wide checks are included in the 16 initial rounds. The five
-register-wide reviews covered successive versions, not five reviews of the final
-829-record edition. The final 160 full-record audits and 176 targeted questions
-across 162 records are cumulative review measures and can overlap. A record's
-latest review label does not describe its complete review history.
+The two subsequent historical register-wide exercises comprised a blind
+reconstruction and challenge of 653 records, producing 3,918 claim assessments,
+and a further assessment of all 686 records and 738 phases in the expanded
+register. Additional chronology work assessed 519 cases and subjected 272
+unresolved cases to fresh research and separate review. The 50 additional cycles
+comprised 30 coverage-search cycles, ten targeted-verification cycles and ten
+audits of preselected records, providing full-record source reviews of 160 entries
+and addressing 176 targeted questions across 162 entries. That programme produced
+the 25 October edition of 829 records and 1,010 phases, with 4,680 distinct recorded
+URLs. These historical totals are retained as provenance, not current release
+counts.
 
-Completing a review does not establish every date, attribute or claimed
-explanation. Current conclusions take precedence over labelled historical
-findings, while unresolved questions and failed source-access attempts remain
-visible. Different websites can reproduce the same report. The evidence catalogue
-preserves reporting origins and access limits where recorded.
+The five historical register-wide reviews covered successive dataset versions,
+not five reviews of the final 829-record edition. The three initial checks are
+included in the 16 rounds. The 160 full-record audits and 176 targeted questions
+are cumulative measures and can overlap. The two additional 829-record audits
+reported above are separate from that programme. No model/version attribution
+for these additional passes is inferred from the historical programme's logs.
+Separate AI review contexts do not constitute independent human or different-model
+verification.
+
+Across the work, reviewers checked whether each restriction occurred, its start
+and endpoint, the crossings and movement affected, continuity, and reported
+reasons against source evidence. Additions were checked against existing episodes
+to avoid duplication. Partial reopenings and material changes in restrictions
+were represented as separate phases where supported. Automated consistency
+checks cover the full release, but do not replace source assessment.
+
+Current conclusions take precedence over labelled historical findings. A record's
+latest review label does not describe its complete review history. Uncertain
+dates, unresolved questions and failed source-access attempts remain visible.
+Different websites can reproduce the same report, so the URL count does not
+measure independent corroboration. The evidence catalogue preserves reporting
+origins and access limits where recorded.
 
 ## Reading the maps and analysis
 
@@ -157,12 +168,21 @@ not extended to the present. Held and isolated observations remain visible
 without filling gaps. Date subtraction measures calendar-day differences; it
 never adds a day merely because an endpoint is described as inclusive.
 
-The exact-duration chart requires eligible operational phases with exact dates
-and an observed reopening. The optional **More than 1 day** filter requires a
-supported operational lower bound above one day; every phase plotted in the
-exact-duration chart must also pass that threshold. The accompanying coverage
-chart shows the contributing sample. The charts describe collected evidence,
-not worldwide closure rates or causal effects of rationales.
+The default **>24h** view requires source support that at least one included
+phase lasted strictly longer than 24 hours. A restriction described as exactly
+24 hours does not qualify, and dates on consecutive calendar days alone do not
+prove it exceeded 24 hours. Explicit evidence of a sustained restriction can
+support eligibility even when its precise onset or reopening is unknown. Sparse
+observations alone cannot establish continuity. **All** also shows shorter phases
+and records whose duration eligibility remains uncertain.
+
+This threshold is separate from eligibility for exact-duration statistics. The
+exact-duration chart requires eligible operational phases with sufficiently exact
+dates and an observed reopening; formal policy periods, scheduled endings, later
+access bounds and isolated observations are not silently converted into exact
+operational durations. The accompanying coverage chart shows the contributing
+sample. The charts describe collected evidence, not worldwide closure rates or
+causal effects of rationales.
 
 Map dots locate reviewed crossing-area references. Their size does not encode
 duration, severity or record count. Wider restrictions retain the established
@@ -182,10 +202,10 @@ The build uses Python 3 and Node.js. Spreadsheet checks also use openpyxl. The
 website itself is static and requires no API keys, database or external tile
 server. Evidence links require an internet connection.
 
-After the current source data, master workbook and companion downloads have been
-prepared and checked, the hosted build is:
+From the checked-in current source data and reader model, the hosted build is:
 
 ```sh
+python scripts/prepare-release-workbook.py
 python scripts/import-workbook.py
 python scripts/build-analysis.py
 node scripts/build-web-data.cjs
@@ -197,11 +217,14 @@ node scripts/build-hosted.cjs
 ```
 
 An ordinary rebuild from a clean public checkout uses the checked-in
-`source/current-release.json.gz`, `source/current-reader-model.json` and final
-reader/download files. It does not require the preserved research programme or
-its private archive.
+`source/current-release.json.gz`, `source/current-reader-model.json`, shared
+methodology and reviewed geography/status inputs. CI regenerates and checks the
+workbook, companion downloads, browser data, record parts and generated evidence
+pages from these inputs. Generated copies are ignored by Git and are not release
+source files; do not edit or commit them in place of their generators. The public
+build does not require the preserved research programme or its private archive.
 
-Re-preparing this particular release is a separate maintenance operation.
+Re-preparing the historical R50 programme is a separate maintenance operation.
 `scripts/prepare-current-release.py --programme PATH` requires the programme's
 `compact/data/current-state.json.gz`, the original R50 data gzip, reader model and
 research summary, and the accepted patch and completion receipt for all 50
@@ -211,8 +234,10 @@ importer for future replacement spreadsheets.
 
 The GitHub Pages workflow specifies the complete release sequence and its checks.
 The earlier workbook repair/layout scripts retain the old workbook assumptions;
-they are not the source of the two-tab R50 reader or a substitute for the current
-data importer.
+they are not the source of the current two-tab reader or a substitute for the
+current data importer. The full-audit migration is retained under `migration/`;
+ordinary CI builds consume its accepted release output rather than rerunning
+source research or the historical programme preparer.
 
 `dist/index.html`, the runtime scripts and CSS provide the public shell.
 `scripts/analysis-template.html` and `scripts/analysis-ui.js` generate
@@ -251,7 +276,7 @@ path. Preparing or rebuilding a local release does not itself publish it.
 
 ## Citation and reuse
 
-Lamarque, H. (2026) *Global Border Closures Atlas*. Version 2026.10.25-rec50.
+Lamarque, H. (2026) *Global Border Closures Atlas*. Version 2026.10.26-full-audit-2.
 Available at: https://lamarque-mapping.github.io/Border-Closure-Atlas/
 (include your access date). Machine-readable citation metadata is in `CITATION.cff`.
 

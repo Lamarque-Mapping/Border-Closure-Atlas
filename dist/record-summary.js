@@ -107,7 +107,20 @@
   function describe(e,options={}){
     if(!e)return '';
     if(e.record_kind==='national_policy')return e.national_summary;
-    const periods=Array.isArray(options.periods)?options.periods:array(e.duration_periods);
+    const periods=(Array.isArray(options.periods)?options.periods:array(e.duration_periods)).filter(p=>p.analysis_included!==false);
+    if(e.audit_current||e.audited_reader){
+      // Accepted scope includes its own exclusions and direction limits. Keep
+      // the complete field rather than stitching older parent attributes into
+      // new claims or truncating a qualifying clause at a semicolon.
+      const scope=known(periods.length===1?periods[0].scope:'')||known(e.audited_reader?.['Crossing and scope'])||known(e.scope);
+      const parts=[scope?sentence('Recorded scope: '+readable(scope)):'The precise location and affected traffic are not established.'];
+      const movement=known(periods.length===1?periods[0].movement:'');
+      if(movement&&!clean(scope).toLowerCase().includes(clean(movement).toLowerCase()))parts.push(sentence('Affected movement: '+readable(movement)));
+      if(e.quarantined||e.inclusion_status==='Excluded'||e.inclusion_status==='Quarantined')parts.push('This entry is excluded from the analysis.');
+      const qualification=timingQualification(periods);if(qualification)parts.push(qualification);
+      parts.push('Dates, exceptions and evidence limits are recorded separately for each dated stage.');
+      return parts.join(' ');
+    }
     if(descriptions[e.id]&&descriptionHashes[e.id]===e.event_hash)return descriptions[e.id];
     const scope=known(e.scope),movement=known(periods.length===1?periods[0].movement:'')||known(e.movement),crossings=known(e.crossings),parts=[];
     const allPolicy=periods.length&&periods.every(p=>p.measure_type==='formal_policy_period');

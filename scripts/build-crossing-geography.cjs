@@ -6,7 +6,7 @@ const locations=JSON.parse(fs.readFileSync(path.join(source,'locations.json'),'u
 const data=JSON.parse(fs.readFileSync(path.join(root,'dist/map-data.js'),'utf8').replace(/^window.BORDER_DATA = /,'').replace(/;\s*$/,''));
 assert.equal(scope.source_sha256,data.meta.source_sha256,'review must match the native data release');
 assert.equal(locations.source_sha256,scope.source_sha256,'location bindings and scope review must match the same release');
-const expected=new Map(data.events.filter(e=>!e.quarantined&&!e.excluded_from_map).flatMap(e=>e.duration_periods.length?e.duration_periods.map(p=>[p.period_id,{record_id:e.id,scope:p.scope}]):[[e.id,{record_id:e.id,scope:null}]]));
+const expected=new Map(data.events.filter(e=>!e.quarantined&&!e.excluded_from_map).flatMap(e=>e.duration_periods.length?e.duration_periods.filter(p=>p.analysis_included!==false).map(p=>[p.period_id,{record_id:e.id,scope:p.scope}]):[[e.id,{record_id:e.id,scope:null}]]));
 const categories=new Set(['single_site','multiple_named_sites','wider_border','needs_review']),phases={},undated={};
 for(const row of scope.rows){
   assert(categories.has(row.category));
