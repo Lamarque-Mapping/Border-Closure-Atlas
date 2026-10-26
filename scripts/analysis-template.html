@@ -73,6 +73,14 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
 .duration-toggle button[aria-pressed="true"]{background:#27766b;color:#fff}
 .duration-toggle button:focus-visible{outline:2px solid #27766b;outline-offset:2px}
 .duration-control>span{display:block;font-size:12px;font-weight:550;color:#51685b;margin-bottom:6px}.duration-control select[hidden]{display:none}
+/* Small visible symbol with a generous touch target. */
+.category-help{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;width:28px;min-width:28px;height:28px;min-height:28px;margin:0 0 0 3px;padding:0;border:0;background:transparent;color:var(--ink);cursor:pointer;border-radius:50%;font-size:12px;line-height:1}
+.category-help span{display:inline-flex;align-items:center;justify-content:center;width:17px;height:17px;border:1px solid #91a69b;border-radius:50%;font-weight:600}
+.category-help:hover{background:#e6eee8}.category-help:focus-visible,.category-filter:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.category-bar .bar-label{display:flex;align-items:center;gap:0}.category-filter{font:inherit;color:inherit;text-align:left;border:0;background:transparent;padding:0;min-width:0;cursor:pointer}.category-track{padding:0;border:0;min-height:0;cursor:pointer}.category-bar .bar-fill{display:block;height:100%}
+#categoryHelpDialog{width:min(540px,calc(100% - 24px));max-height:85dvh;margin:auto}#categoryHelpDialog .dialog-bar{position:sticky;top:0}#categoryHelpTitle{font-size:20px;line-height:1.25;margin:0}#categoryHelpBody{padding:8px 22px 20px;font-size:16px;line-height:1.55}#categoryHelpBody h3{font-size:17px;margin:18px 0 5px}.category-help-note{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+@media(max-width:680px){.category-help{width:36px;min-width:36px;height:44px;min-height:44px}.category-filter{min-height:44px}.category-bar .bar-label{flex-wrap:wrap}.category-track{min-height:0}}
+@media print{.category-help{display:none!important}}
 </style>
 </head>
 <body>
@@ -169,7 +177,7 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
     <label class="search-label">Search records<input id="query" type="search" placeholder="Place, actor or record ID" autocomplete="off"></label>
     <label>Continent<select id="continentFilter"><option value="">All continents</option></select></label>
     <label>Research area<select id="regionFilter"><option value="">All research areas</option></select></label>
-    <label>Rationale code<select id="codeFilter"><option value="">All codes</option><option value="__uncoded">No code assigned</option></select></label>
+    <label>Rationale code <button type="button" class="category-help" data-category-help="selected" aria-label="Explain rationale categories" aria-haspopup="dialog"><span aria-hidden="true">?</span></button><select id="codeFilter"><option value="">All codes</option><option value="__uncoded">No code assigned</option></select></label>
     <label>Timing or inclusion<select id="statusFilter"><option value="">All included records</option><option value="complete">Closure length can be estimated</option><option value="exact">Exact closure dates recorded</option><option value="undated">No dated evidence</option><option value="held">Has disputed date evidence</option><option value="quarantined">Excluded from analysis</option></select></label>
     <div class="duration-control"><span>Duration</span><select id="durationFilter" aria-describedby="datasetDurationNote" hidden><option value="over1" selected>More than 24 hours</option><option value="all">All durations</option></select><div class="duration-toggle" role="group" aria-label="Restriction duration" aria-describedby="datasetDurationNote"><button type="button" data-duration="over1" aria-pressed="true">&gt;24h</button><button type="button" data-duration="all" aria-pressed="false">All</button></div></div>
     <label>Current review outcome<select id="auditFilter"><option value="">Any review status</option></select></label>
@@ -202,6 +210,7 @@ html[data-analysis-view="dataset"] #register{margin-top:0}
   <footer><div><p>Research by Dr. Hugh Lamarque</p><p class="review-credit">With thanks to Dr. Robert Macdonald for review and feedback.</p></div><a href="#top">Back to top ↑</a></footer>
  </div>
 </main>
+<dialog id="categoryHelpDialog" aria-labelledby="categoryHelpTitle"><div class="dialog-bar"><h2 id="categoryHelpTitle">Category explanation</h2><button type="button" id="closeCategoryHelp" class="close-button" aria-label="Close category explanation">×</button></div><div id="categoryHelpBody"></div></dialog>
 <dialog id="recordDialog" aria-labelledby="dialogTitle"><div class="dialog-bar"><span id="dialogId"></span><div><button id="copyRecordLink" class="quiet">Copy record link</button><button id="closeDialog" class="close-button" aria-label="Close record">×</button></div></div><div id="dialogBody"></div></dialog>
 <p id="analysisError" class="noscript-note" role="alert" hidden></p>
 <div id="toast" role="status" aria-live="polite"></div>

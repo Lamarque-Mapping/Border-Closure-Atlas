@@ -113,8 +113,24 @@ function chooseDuration(value){if(ATLAS_HOST?.setDuration)ATLAS_HOST.setDuration
 const durationExplanation="Includes records with at least one restriction supported as lasting strictly more than 24 hours. Evidence may establish this threshold without an exact reopening or numeric duration. Observed restrictions, policies and announced windows retain their separate evidence labels. Exactly 24 hours, shorter episodes and unestablished durations remain under All. Duration charts use only eligible completed operational phases.";
 const durationSelection=(population,duration)=>population+(duration==='over1'?'; at least one phase supported as strictly longer than 24 hours; evidence type retained':'');
 const filteredFilename=(filename,duration)=>duration==='over1'?filename.replace(/\.csv$/,'-over-1-day.csv'):filename;
+function categoryHelp(code){
+ return CODES.includes(code)?'<button type="button" class="category-help" data-category-help="'+escapeHTML(code)+'" aria-label="Explain '+escapeHTML(code)+'" aria-haspopup="dialog"><span aria-hidden="true">?</span></button>':'';
+}
+function showCategoryHelp(code){
+ const explanations=window.BorderCategoryExplanations||{};
+ const selected=code==='selected'?$('codeFilter').value:code;
+ const codes=CODES.includes(selected)?[selected]:CODES;
+ $('categoryHelpTitle').textContent=codes.length===1?codes[0]:'What do the categories mean?';
+ $('categoryHelpBody').innerHTML=codes.map(c=>(codes.length>1?'<h3>'+escapeHTML(c)+'</h3>':'')+'<p>'+escapeHTML(explanations[c]||DATA.meta.rationale_definitions[c]||'No explanation available.')+'</p>').join('')+'<p class="category-help-note">A record can have more than one category. These labels record supported or attributed explanations; they do not establish every actor’s underlying motive.</p>';
+ $('categoryHelpDialog').showModal();
+}
 function bar(label,value,total,max,kind,uncoded){
  const width=max?Math.max(0,100*value/max):0;
+ if(kind==='code'&&!uncoded){
+  const attrs=' data-chart-kind="code" data-chart-value="'+escapeHTML(label)+'"';
+  return '<div class="bar-row category-bar"'+attrs+'><span class="bar-label"><button type="button" class="category-filter"'+attrs+'>'+escapeHTML(label)+'</button>'+categoryHelp(label)+'</span><button type="button" class="bar-track category-track"'+attrs+' aria-label="Inspect '+escapeHTML(label)+': '+value+' records"><span class="bar-fill" style="width:'+width+'%"></span></button><span class="bar-value">'+value+'<small>'+pct(value,total)+'</small></span></div>';
+ }
+
  return '<button type="button" class="bar-row'+(uncoded?' uncoded':'')+'" data-chart-kind="'+kind+'" data-chart-value="'+escapeHTML(label)+'" aria-label="'+escapeHTML(label)+': '+value+' records, '+pct(value,total)+'. Inspect records.">'+
  '<span class="bar-label">'+escapeHTML(label)+'</span><span class="bar-track" aria-hidden="true"><span class="bar-fill" style="width:'+width+'%"></span></span><span class="bar-value">'+value+'<small>'+pct(value,total)+'</small></span></button>';
 }
@@ -153,12 +169,12 @@ function renderDurationComparison(rows,population,duration='all'){
  $("durationRationaleChart").innerHTML=axis+groups.map(g=>{
   const description=g.phases?g.code+': median '+number(g.median)+' days; middle half '+number(g.q1)+' to '+number(g.q3)+' days; shortest '+number(g.min)+', longest '+number(g.max)+' days; '+g.phases+' phases from '+g.records+' records.':g.code+': no eligible phases.';
   const plot=g.phases?'<svg class="distribution-plot" role="img" aria-label="'+escapeHTML(description)+'"><title>'+escapeHTML(description)+'</title>'+ticks.map(t=>'<line x1="'+position(t)+'" x2="'+position(t)+'" y1="0" y2="32" stroke="#e2e9e4"/>').join('')+'<line x1="'+position(g.min)+'" x2="'+position(g.max)+'" y1="16" y2="16" stroke="#9ab0a4" stroke-width="2"/><line x1="'+position(g.q1)+'" x2="'+position(g.q3)+'" y1="16" y2="16" stroke="#709784" stroke-width="8" stroke-linecap="round"/><circle cx="'+position(g.median)+'" cy="16" r="4" fill="#244e46" stroke="#fff" stroke-width="1.2"/></svg>':'<span class="distribution-none">No eligible phases</span>';
-  return '<div class="distribution-row"><span class="distribution-label">'+escapeHTML(g.code)+'</span>'+plot+'<span class="distribution-value">'+(g.phases?number(g.median)+' days':'—')+'<small>'+g.phases+' phases · '+g.records+' records</small></span></div>';
+  return '<div class="distribution-row"><span class="distribution-label">'+escapeHTML(g.code)+categoryHelp(g.code)+'</span>'+plot+'<span class="distribution-value">'+(g.phases?number(g.median)+' days':'—')+'<small>'+g.phases+' phases · '+g.records+' records</small></span></div>';
  }).join('');
  const coverageGroups=[...groups].sort((a,b)=>b.total-a.total||CODES.indexOf(a.code)-CODES.indexOf(b.code));
  const example=coverageGroups.find(g=>g.total);
  $("durationCoverageExample").textContent=example?'For example, '+example.code+' appears in '+example.total+' selected records. Of these, '+example.records+' can contribute to the duration comparison: '+pct(example.records,example.total)+' of that category.':'No selected records are available for this comparison.';
- $("durationCoverageChart").innerHTML='<table><caption>The categories follow the same order as the rationale chart. “Used” means a record contributes at least one phase to the duration comparison.</caption><thead><tr><th scope="col">Recorded rationale</th><th scope="col">Used / category total</th><th scope="col">Share used</th></tr></thead><tbody>'+coverageGroups.map(g=>'<tr><th scope="row">'+escapeHTML(g.code)+'</th><td class="sample-total">'+(g.total?g.records+' / '+g.total+' records':'No selected records')+'</td><td>'+(g.total?pct(g.records,g.total):'—')+'</td></tr>').join('')+'</tbody></table>';
+ $("durationCoverageChart").innerHTML='<table><caption>The categories follow the same order as the rationale chart. “Used” means a record contributes at least one phase to the duration comparison.</caption><thead><tr><th scope="col">Recorded rationale</th><th scope="col">Used / category total</th><th scope="col">Share used</th></tr></thead><tbody>'+coverageGroups.map(g=>'<tr><th scope="row">'+escapeHTML(g.code)+categoryHelp(g.code)+'</th><td class="sample-total">'+(g.total?g.records+' / '+g.total+' records':'No selected records')+'</td><td>'+(g.total?pct(g.records,g.total):'—')+'</td></tr>').join('')+'</tbody></table>';
 }
 function filterFromChart(kind,value){
  resetRecordFilters();
@@ -279,7 +295,7 @@ async function openRecord(id,changeHash){
  $("dialogId").textContent=e.id+" · "+e.region;
  const d=e.dimensions;
  $("dialogBody").innerHTML='<div class="dialog-heading"><p>Closure record</p><h2 id="dialogTitle">'+escapeHTML(e.title)+'</h2><p class="event-description">'+escapeHTML(window.BorderSummary.describe(e,{periods:e.duration_periods}))+'</p>'+
- '<div>'+((e.codes.length?e.codes:[e.rationale_coding_status||"No category assigned"]).map(c=>'<span class="tag">'+escapeHTML(c)+'</span>').join(''))+'</div>'+
+ '<div>'+((e.codes.length?e.codes:[e.rationale_coding_status||"No category assigned"]).map(c=>'<span class="tag">'+escapeHTML(c)+categoryHelp(c)+'</span>').join(''))+'</div>'+
  (e.quarantined?'<div class="quarantine-note">Excluded from analysis, mapping and playback. '+escapeHTML(e.quarantine_reason)+'</div>':'')+'</div>'+
  section("Dates and duration",e.duration_periods.length?e.duration_periods.map(p=>phaseHTML(p,e.sources)).join(''):'<p>The evidence does not establish a duration.</p>')+
  section("Location and movement",'<div class="field-grid">'+field('Countries or territories',d['Countries or territories'])+field('Crossings',e.crossings)+field('Geographical scope',e.scope,true)+field('Direction',e.direction,true)+field('Affected people or goods',e.movement,true)+field('Exceptions',e.exceptions,true)+'</div>')+
@@ -302,6 +318,9 @@ function closeRecord(){
 }
 function toast(message){$("toast").textContent=message;$("toast").style.display="block";setTimeout(function(){$("toast").style.display="none";},3500);}
 document.addEventListener("click",function(event){
+ const help=event.target.closest('[data-category-help]');
+ if(help){event.preventDefault();showCategoryHelp(help.dataset.categoryHelp);return;}
+
  const durationButton=event.target.closest("[data-duration]");
  if(durationButton){chooseDuration(durationButton.dataset.duration);return;}
  const record=event.target.closest("[data-record]");
@@ -322,6 +341,11 @@ $("filters").addEventListener("reset",function(){setTimeout(function(){chooseDur
 $("sortRecords").addEventListener("change",function(){page=0;renderRecords();});
 $("prevPage").addEventListener("click",function(){page--;renderRecords();$("recordList").scrollIntoView({behavior:"smooth",block:"start"});});
 $("nextPage").addEventListener("click",function(){page++;renderRecords();$("recordList").scrollIntoView({behavior:"smooth",block:"start"});});
+$('closeCategoryHelp').addEventListener('click',()=>$('categoryHelpDialog').close());
+$('categoryHelpDialog').addEventListener('click',event=>{
+ const box=$('categoryHelpDialog').getBoundingClientRect();
+ if(event.target===$('categoryHelpDialog')&&(event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom))$('categoryHelpDialog').close();
+});
 $("closeDialog").addEventListener("click",closeRecord);
 dialog.addEventListener("cancel",function(event){event.preventDefault();closeRecord();});
 dialog.addEventListener("click",function(event){if(event.target===dialog){const box=dialog.getBoundingClientRect();if(event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom)closeRecord();}});

@@ -27,9 +27,11 @@ def build(web):
       'Interstate disputes and pressure':'Documented sanctions, diplomatic retaliation and disputes over territory or frontier administration. Cross-border effects alone do not establish political pressure.',
       'Power and regime politics':'Coups, succession, opposition, political reform and contested governing authority. Policy or livelihood demands alone do not establish a struggle for governing power.',
       'Policy and socioeconomic demands':'Blockades or restrictions used to press demands over jobs, services, livelihoods, rights or public policy, including protests against health restrictions. An unspecified protest does not establish a particular demand.',
-      'Administration and service operation':'Documented decisions about authorised checkpoints, consolidation of crossing services or deliberate temporary service suspensions. An administrative act does not by itself establish a security or political motive; accidental outages and routine overnight hours remain distinct.',
+      'Administration and service operation':'Crossing management and maintenance: restrictions imposed to organise or run a crossing itself. This includes three different situations: maintenance or reconstruction; deliberate service suspensions, such as customs holidays; and decisions about which checkpoints are authorised to operate. Examples include reconstruction at Kaplanbek–Navoi and authorisation restrictions at Ak-Tash–Birlishken. An administrative decision alone does not qualify: the source must identify crossing management or service operation as the reason. Security, health and political pressure are coded separately when supported. Accidental outages and routine overnight opening hours are not included simply as administrative closures.',
       'Environment and resource management':'Documented nature conservation or control of cross-border herds and grazing. Disease prevention needs its own evidence and code; location alone does not establish an environmental purpose.'}
-    typology='<div class="typology">'+''.join('<details><summary><h3>'+html.escape(cat)+'</h3><span class="type-count" data-count="'+html.escape(cat)+'">'+str(m['rationale_counts'][cat])+' records</span></summary><div><p>'+html.escape(definitions[cat])+'</p><button class="text-button code-filter" data-code="'+html.escape(cat)+'">Explore these records →</button></div></details>' for cat in m['rationale_categories'])+'</div>'
+    def help_button(cat):
+        return '<button type="button" class="category-help" data-category-help="'+html.escape(cat,quote=True)+'" aria-label="Explain '+html.escape(cat,quote=True)+'" aria-haspopup="dialog"><span aria-hidden="true">?</span></button>'
+    typology='<div class="typology">'+''.join('<details><summary><h3>'+html.escape(cat)+help_button(cat)+'</h3><span class="type-count" data-count="'+html.escape(cat)+'">'+str(m['rationale_counts'][cat])+' records</span></summary><div><p>'+html.escape(definitions[cat])+'</p><button class="text-button code-filter" data-code="'+html.escape(cat)+'">Explore these records →</button></div></details>' for cat in m['rationale_categories'])+'</div>'
     values={'INCLUDED':s['included_rows'],'EXCLUDED':s['excluded_rows'],
         'CODED':sum(bool(e['rationales']) for e in included),'UNCODED':sum(not e['rationales'] for e in included),
         'DATED':c['any_dated_evidence'],'COMPLETE':c['operational_complete'],
@@ -52,7 +54,7 @@ def build(web):
     text=(ROOT/'scripts/analysis-template.html').read_text()
     for k,v in values.items(): text=text.replace('{{'+k+'}}',str(v))
     assert not re.search(r'\{\{[A-Z_]+\}\}',text), 'Unresolved Analysis template value'
-    script=(web/'duration.js').read_text()+'\n'+(web/'record-summary.js').read_text()+'\n'+(ROOT/'scripts/analysis-metrics.js').read_text()+'\n'+(ROOT/'scripts/analysis-ui.js').read_text()
+    script='window.BorderCategoryExplanations='+json.dumps(definitions,ensure_ascii=False).replace('<','\\u003c')+';\n'+(web/'duration.js').read_text()+'\n'+(web/'record-summary.js').read_text()+'\n'+(ROOT/'scripts/analysis-metrics.js').read_text()+'\n'+(ROOT/'scripts/analysis-ui.js').read_text()
     text=text.replace('<!-- ANALYSIS_SCRIPT -->','<script>\n'+script+'\n</script>')
     (web/'analysis.html').write_text(text)
     if (web/'map-data.js').exists():
