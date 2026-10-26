@@ -225,6 +225,7 @@ function host(initialHash='',offline=false){
  vm.runInContext(fs.readFileSync(root+'duration.js','utf8'),a.context);
  vm.runInContext(fs.readFileSync(root+'record-summary.js','utf8'),a.context);
  vm.runInContext(fs.readFileSync(require('path').resolve(__dirname,'analysis-metrics.js'),'utf8'),a.context);
+ vm.runInContext(fs.readFileSync(require('path').resolve(__dirname,'analysis-regions.js'),'utf8'),a.context);
  await vm.runInContext(ui,a.context);
  const t=a.context.TEST;assert(t,'Analysis initialization failed');
  assert.equal(detailRequests,0,'Analysis charts and register must not fetch full records on opening');assert.equal(archiveRequests,0);
@@ -238,8 +239,9 @@ function host(initialHash='',offline=false){
  assert(a.ids.durationRationaleChart.innerHTML.includes(expectedGroups.get('Health and biosecurity').median+' days'));assert(a.ids.durationRationaleChart.innerHTML.includes('No eligible phases'));
  const security=expectedGroups.get('Security');assert(a.ids.durationCoverageChart.innerHTML.includes(security.records+' / '+security.total+' records'));
  assert(!a.ids.continentChart.innerHTML.includes('Unassigned'));assert(a.ids.continentChart.innerHTML.includes('North America'));
- assert(!a.ids.regionChart.innerHTML.includes('data-chart-value="Europe"'));assert(a.ids.broadRegionChart.innerHTML.includes('data-chart-value="Europe"'));
- assert(!a.ids.regionChart.innerHTML.includes('data-chart-value="South Asia, Central Asia and Caucasus"'));assert(a.ids.broadRegionChart.innerHTML.includes('data-chart-value="South Asia, Central Asia and Caucasus"'));
+ assert(!a.ids.broadRegionChart,'the old broad-group chart is removed');
+ for(const group of ['Europe','Americas'])assert(!a.ids.regionChart.innerHTML.includes('data-chart-value="'+group+'"'));
+ for(const area of ['Northern Europe','Western Europe','Southern Europe','Eastern Europe','North America','Central America','Caribbean','South America','East and Southeast Asia and Oceania','South Asia, Central Asia and Caucasus'])assert(a.ids.regionChart.innerHTML.includes('data-chart-value="'+area+'"'),area+' belongs to the single regional list');
  for(const [legacy,target] of movedSections){await a.context.AtlasAnalysis.navigate('#'+legacy);assert.equal(parentLocation.hash,'#overview/'+target,'an old embedded Analysis anchor redirects to Overview');}
  const africaIDs=fullLand.filter(e=>e.continents.includes('Africa')).map(e=>e.id).sort();
  t.filterFromChart('continent','Africa');assert.deepEqual(Array.from(t.applyFilters(),e=>e.id).sort(),africaIDs);assert.equal(atlas.page,'dataset');assert.equal(a.context.AtlasAnalysis.getView(),'dataset');
