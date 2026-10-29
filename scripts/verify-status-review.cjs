@@ -19,6 +19,16 @@ for(const [id,location,status] of [['STATUS-RUS-UKR-202610','context-frontier-ru
  assert(e.sources.length&&e.status_review.qualification);
 }
 const at=(id,month)=>C.temporalState(get(id),C.monthOrdinal(month));
+// Reopened Austrian minor routes must not linger as unresolved COVID markers.
+const austria=get('R3-EU-012');
+assert.notEqual(at(austria.id,'2020-03'),'none','Retain the historical Austrian restriction');
+for(const month of ['2020-07','2021-06','2025-06','2026-10']){
+ assert.equal(at(austria.id,month),'none','Austrian COVID suspension ended in 2020: '+month);
+ assert.equal(C.statusPeriods(austria,{...oct,month:C.monthOrdinal(month)}).length,0);
+}
+assert.equal(austria.later_status_review.checked_at,'2026-10-29');
+assert.equal(get('AM021').later_status_review.checked_at,'2026-10-26','A targeted follow-up must not restamp other reviews');
+assert.deepEqual(Array.from(source.resolutions.filter(r=>r.record_id===austria.id),r=>[r.phase_id,r.from]),[['R3-EU-012-FU1','2020-06-26'],['R3-EU-012-R2','2020-06-16']]);
 for(const id of ['STATUS-RUS-UKR-202610','STATUS-BLR-UKR-202610']){
  assert.equal(get(id).start,'2022-02-28','Use the operative date, not the order adoption, invasion or check date');
  assert.equal(at(id,'2022-01'),'none');

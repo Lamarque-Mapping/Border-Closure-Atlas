@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Restore byte-exact geography JSON from small, verified gzip chunks.
+"""Restore byte-exact geography and status JSON from verified gzip chunks.
 
 Use --pack after intentional edits, before --bind-manifest. The default never
 overwrites a changed local JSON file. Stored payloads, not hydrated JSON, belong
@@ -24,6 +24,7 @@ TARGETS = {
     'audit-decisions': 'research/geography-audit-2026-10-29/reconciled-decisions.json',
     'review-americas-europe': 'research/geography-audit-2026-10-29/reconciliation-americas-europe.json',
     'review-africa-middle-east': 'research/geography-audit-2026-10-29/reconciliation-africa-middle-east.json',
+    'status-review': 'source/border-status-review.json',
 }
 CHUNK_NAME = re.compile(r'^(?:'+ '|'.join(TARGETS) + r')-[0-9a-f]{16}\.json\.gz\.part[0-9]{3}$')
 
@@ -43,13 +44,14 @@ def atomic_replace(path, data):
         temporary.unlink(missing_ok=True)
 
 
-def read_manifest(root):
+def read_manifest(root, allow_new_targets=False):
     manifest = json.loads((root/MANIFEST).read_text())
     if manifest.get('format') != 'geography-audit-gzip-chunks' or manifest.get('version') != 1:
         raise ValueError('Unknown geography payload format')
     files = manifest.get('files', [])
-    if len(files) != len(TARGETS) or {f['path'] for f in files} != set(TARGETS.values()):
-        raise ValueError('Payload manifest must name exactly the five canonical targets')
+    paths = {f['path'] for f in files}
+    if len(paths) != len(files) or (not paths <= set(TARGETS.values()) if allow_new_targets else paths != set(TARGETS.values())):
+        raise ValueError('Payload manifest must name exactly the canonical targets')
     seen = set()
     for item in files:
         owner = next(key for key, value in TARGETS.items() if value == item['path'])
@@ -66,7 +68,7 @@ def read_manifest(root):
 
 
 def pack(root=ROOT):
-    old = read_manifest(root) if (root/MANIFEST).exists() else None
+    old = read_manifest(root, allow_new_targets=True) if (root/MANIFEST).exists() else None
     # Read and validate every target before changing any stored payload.
     originals = {name: (root/target).read_bytes() for name, target in TARGETS.items()}
     for raw in originals.values():

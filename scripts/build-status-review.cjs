@@ -33,7 +33,7 @@ for(const w of source.geography_windows||[]){
 for(const r of source.unresolved){
  const finding=findings.get(r.record_id);assert(finding,'Missing assessment '+r.record_id);
  assert.equal(JSON.stringify(finding.phases),JSON.stringify(r.phases),'Assessment scope changed: '+r.record_id);
- assert(finding.finding&&finding.source_access&&finding.checked_at===source.reviewed_at);
+ assert(finding.finding&&finding.source_access&&C.day(finding.checked_at)!==null&&finding.checked_at<=source.reviewed_at,'Assessment must retain its actual check date');
  assert(finding.sources.every(s=>/^https:\/\//.test(s.url)));
  if(finding.evidence_date)assert(C.day(finding.evidence_date)!==null&&finding.evidence_date<=source.reviewed_at);
 }
