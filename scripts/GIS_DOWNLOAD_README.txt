@@ -16,7 +16,7 @@ observations are separate from this register; they are not included here.
 CURRENT MAPPING COVERAGE
 
 WHAT A FEATURE MEANS
-Each spatial feature represents ONE RECORD PHASE AT ONE REVIEWED LOCATION.
+Each spatial feature represents ONE RECORD PHASE AT ONE LOCATION OR BORDER REFERENCE.
 A phase describes one stage of a restriction. Several phases can share a
 crossing, and a phase can cover several crossings or border references.
 Count distinct record_id for record totals; feature counts are not counts of
@@ -25,14 +25,21 @@ not a map of borders currently closed.
 
 crossing_points: sourced, approximate crossing locations. A coordinate does
 not establish the exact position of a barrier or its historical footprint.
-border_lines: the same wider-border references used by the website. The line
-does not establish that every crossing along it was closed. Read scope,
-scope_category, locations_partial, geometry_note and qualification.
+border_lines: wider-policy geography and dotted known-border references used
+by the website. map_representation="border_reference" means the affected
+border is established but the precise crossing or extent remains unresolved.
+The line does not establish closure along the entire border. Read scope,
+scope_category, locations_partial, geometry_note, border_reference_qualification
+and qualification. For these reference features the original single-site or
+other scope_category remains intact; it is not upgraded to wider-border scope.
 context_areas, when present: reference areas only, not closure footprints.
 
-Only the current phase-specific geography review supplies features. A named
-crossing with no reviewed coordinate is never replaced by a guessed point or
-whole-frontier line. All records, including excluded records, remain in the
+Only the current phase-specific geography reviews supply features. A named
+crossing with no reviewed coordinate can use a clearly labelled border reference
+when the affected border is established in both saved source reconstructions.
+This is a reference line, not a reconstructed restriction footprint. In counts,
+located_records and border_reference_only_records distinguish these levels;
+mapped_records includes both. All records, including excluded records, remain in the
 records table. All phases remain in phases. Unmapped included phases are
 listed in unmapped_phases; records without any geometry have mapped_features=0.
 Some mapped records also contain unmapped or partially mapped phases.

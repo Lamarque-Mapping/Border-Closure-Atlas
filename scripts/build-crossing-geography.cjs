@@ -1,5 +1,5 @@
 /* Build a small, phase-specific map overlay without changing the dataset. */
-const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..'),source=path.join(root,'source/crossings');
 const scope=JSON.parse(fs.readFileSync(path.join(source,'scope-review.json'),'utf8'));
 const locations=JSON.parse(fs.readFileSync(path.join(source,'locations.json'),'utf8'));
@@ -51,6 +51,38 @@ for(const binding of locations.border_bindings||[]){
   if(binding.complete===false)row.explicitly_partial=true;
   if(binding.complete===true)row.explicitly_complete=true;
 }
+// A separately reviewed border association can locate a dated restriction at
+// border level while retaining its unresolved crossing/extent qualification.
+const borderReferences=JSON.parse(fs.readFileSync(path.join(source,'border-reference-review.json'),'utf8'));
+assert.equal(borderReferences.source_sha256,scope.source_sha256,'border references match this release');
+const referenceKeys=new Set();
+for(const binding of borderReferences.bindings){
+  const row=phases[binding.phase_id],key=binding.phase_id+'|'+binding.location_id;
+  assert(row&&row.record_id===binding.record_id,'border reference belongs to its phase');
+  assert.equal(binding.current_phase_scope,expected.get(binding.phase_id).scope,'border reference matches current phase scope');
+  assert(!row.site_ids.length&&!row.border_ids?.length,'border references cannot replace approved phase geography');
+  assert(!referenceKeys.has(key),'duplicate phase border reference');referenceKeys.add(key);
+  const feature=referenceFeatures.get(binding.location_id),geometry=typeof feature?.geometry==='number'?data.geometry_pool?.[feature.geometry]:feature?.geometry;
+  assert(/^(Multi)?LineString$/.test(geometry?.type||''),'border reference requires existing line geometry');
+  assert(binding.phase_source_urls?.length&&binding.phase_source_urls.every(url=>/^https?:\/\//.test(url)),'border reference needs phase evidence');
+  assert(binding.qualification&&binding.rationale,'border reference needs explicit scope and evidence qualifications');
+  assert.equal(binding.audit_passes?.length,2,'border association needs two saved reconstructions');
+  const reviewPaths=new Set(),reviewAgents=new Set();
+  for(const pin of binding.audit_passes){
+    assert(/^research\/geography-audit-2026-10-29\/pass-[ab]\/[A-Za-z0-9-]+\.json$/.test(pin.path),'only frozen geography reviews are accepted');
+    const bytes=fs.readFileSync(path.join(root,pin.path)),review=JSON.parse(bytes);
+    assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),pin.sha256,'border association review bytes must remain pinned');
+    assert.equal(review.record_id,binding.record_id,'border association review belongs to the record');
+    assert(typeof review.agent==='string'&&review.agent.trim(),'each saved review identifies its independent agent');
+    reviewAgents.add(review.agent);reviewPaths.add(pin.path.split('/')[2]);
+  }
+  assert.equal(reviewPaths.size,2,'both original passes are required');
+  assert.equal(reviewAgents.size,2,'border association needs separate original reviewers');
+  row.reference_border_ids??=[];row.reference_border_notes??=[];
+  row.reference_border_ids.push(binding.location_id);
+  row.reference_border_notes.push({location_id:binding.location_id,qualification:binding.qualification});
+  row.explicitly_partial=true;
+}
 for(const row of [...Object.values(phases),...Object.values(undated)]){
   if(row.explicitly_partial)row.partial=true;
   else if(row.explicitly_complete)row.partial=false;
@@ -61,6 +93,6 @@ const review={source_sha256:scope.source_sha256,review_date:scope.review_date,ph
 const runtime=fs.readFileSync(path.join(__dirname,'crossing-geography-runtime.js'),'utf8');
 fs.writeFileSync(path.join(root,'dist/crossing-geography.js'),runtime.replace('__CROSSING_REVIEW__',JSON.stringify(review).replace(/</g,'\\u003c')));
 fs.mkdirSync(path.join(root,'dist/downloads'),{recursive:true});
-fs.writeFileSync(path.join(root,'dist/downloads/crossing-map-review.json'),JSON.stringify({...scope,geography:locations},null,2)+'\n');
+fs.writeFileSync(path.join(root,'dist/downloads/crossing-map-review.json'),JSON.stringify({...scope,geography:locations,border_references:borderReferences},null,2)+'\n');
 const bound=Object.values(phases).filter(row=>row.site_ids.length);
 console.log(JSON.stringify({sites:sites.length,mappedPhases:bound.length,mappedRecords:new Set(bound.map(row=>row.record_id)).size,screenedPhases:Object.keys(phases).length,undated:Object.keys(undated).length}));

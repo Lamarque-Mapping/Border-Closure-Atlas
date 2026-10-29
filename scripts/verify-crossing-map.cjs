@@ -1,4 +1,4 @@
-/* Geographic scope must not inflate a named crossing into its whole frontier.
+/* Geographic scope must not inflate a named crossing into a whole-frontier closure.
  * This check uses the real release and independently asserts its known mixed,
  * disputed and open-ended cases. It also protects the unchanged Analysis inputs. */
 'use strict';
@@ -46,7 +46,8 @@ let singleMapped=0,singlePending=0;
 for(const row of singles){
  const e=byID.get(row.record_id),p=e.duration_periods.find(p=>p.period_id===row.phase_id),one=phaseRecord(e,p),mapped=ids(one);
  assert(mapped.length<=1,row.phase_id+' must not silently become multiple crossing positions');
- assert(types(mapped).every(t=>t==='Point'),row.phase_id+' must never colour a whole frontier');
+ const refs=X.review.phases[row.phase_id]?.reference_border_ids||[];
+ assert(mapped.every(id=>refs.includes(id)||features.get(id).geometry.type==='Point'),row.phase_id+' line requires explicit border-reference review');
  const status=C.mappingStatus(one,data,state);
  assert.deepEqual(status.ids,mapped,row.phase_id+' status and drawing use the same geography');
  if(mapped.length)singleMapped++;else{singlePending++;assert.equal(status.pending,true,row.phase_id+' without coordinates remains visibly awaiting mapping');}
@@ -59,7 +60,7 @@ for(const row of reviews.rows.filter(r=>r.category==='wider_border')){
 }
 for(const row of reviews.rows.filter(r=>r.category==='needs_review')){
  const e=byID.get(row.record_id),p=e.duration_periods.find(p=>p.period_id===row.phase_id),one=p?phaseRecord(e,p):e;
- assert.equal(ids(one).length,0,row.phase_id||row.record_id+' cannot substitute a guessed border line for unresolved scope');
+ assert.deepEqual(ids(one),(X.review.phases[row.phase_id]?.reference_border_ids||[]),row.phase_id||row.record_id+' unresolved scope requires explicitly reviewed border reference');
  assert.equal(C.mappingStatus(one,data,state).pending,true,'unresolved scope is declared');
 }
 // A geography-only update must preserve every unfiltered/filtered record set,
@@ -263,5 +264,5 @@ function loaderHarness(mapLoaded=false){
  assert.equal(direct.scripts.length,1,'only one map load was attempted');
  direct.context.AtlasCrossings=X;
  const retry=await direct.api.ready();assert.equal(retry.crossing_map,X.review,'cold map load recovers without an obsolete fallback');
- console.log(`Crossing map passed: ${includedCount} records unchanged; ${singles.length} single-site phases never draw border lines (${singleMapped} mapped, ${singlePending} awaiting location); all monthly populations unchanged; mixed/held/last-confirmed phases, source bindings, point filters, ${includedCount}-row CSV, PNG phase capture and constant border-matched crossing marks and safe loading failure checked.`);
+ console.log(`Crossing map passed: ${includedCount} records unchanged; ${singles.length} single-site phases use points or explicitly reviewed border references (${singleMapped} displayed, ${singlePending} awaiting location); all monthly populations unchanged; mixed/held/last-confirmed phases, source bindings, point filters, ${includedCount}-row CSV, PNG phase capture and constant border-matched crossing marks and safe loading failure checked.`);
 })().catch(error=>{console.error(error);process.exitCode=1;});

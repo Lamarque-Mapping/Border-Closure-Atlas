@@ -30,6 +30,10 @@ def csv_bytes(rows):
 def build(output):
     plan = json.loads((AUDIT/'audit-plan.json').read_text())
     decisions = json.loads((AUDIT/'reconciled-decisions.json').read_text())
+    reference_path = ROOT/'source/crossings/border-reference-review.json'
+    reference_review = json.loads(reference_path.read_text())
+    reference_bindings = reference_review['bindings']
+    assert reference_review['source_sha256'] == plan['source_sha256']
     accepted = {d['record_id']: d for d in decisions['decisions']}
     assert len(accepted) == len(decisions['decisions']), 'duplicate reconciliation'
     data = json.loads(re.sub(r';\s*$', '', (ROOT/'dist/data.js').read_text().removeprefix('window.BORDER_DATA = ')))
@@ -39,6 +43,7 @@ def build(output):
     for group, ids in plan['groups'].items():
         for record_id in ids:
             event = events[record_id]
+            record_references = [b for b in reference_bindings if b['record_id'] == record_id]
             reviews = {}
             for letter in ['a', 'b']:
                 path = AUDIT/f'pass-{letter}/{record_id}.json'
@@ -62,6 +67,7 @@ def build(output):
             for original in event.get('duration_periods', []):
                 phase_id = original['period_id']
                 phase = decided.get(phase_id, {})
+                border_references = [b for b in record_references if b['phase_id'] == phase_id]
                 note = phase.get('qualification') or phase.get('rationale', '')
                 if note:
                     notes.append(phase_id+': '+note)
@@ -70,6 +76,10 @@ def build(output):
                     'original_scope': original.get('scope', ''),
                     'analysis_included': original.get('analysis_included') is not False,
                     'decision': phase.get('decision', 'pending'),
+                    'border_reference_only': bool(border_references),
+                    'dotted_reference_ids': ' | '.join(b['location_id'] for b in border_references),
+                    'dotted_reference_qualification': '\n'.join(dict.fromkeys(b['qualification'] for b in border_references)),
+                    'dotted_reference_reason': '\n'.join(dict.fromkeys(b['rationale'] for b in border_references)),
                     'geography_category': phase.get('category', ''),
                     'complete_geography': phase.get('complete', False),
                     'site_names': ' | '.join(s['name'] for s in phase.get('sites', [])),
@@ -88,7 +98,10 @@ def build(output):
                 'pass_b_status': reviews.get('b', {}).get('verification_status', 'pending'),
                 'pass_b_agent': reviews.get('b', {}).get('agent', ''),
                 'both_passes_saved': len(reviews) == 2,
-                'reconciliation': 'pending' if pending else 'mapped_at_least_one_phase' if mapped else 'held_unmapped',
+                'reconciliation': 'pending' if pending else 'mapped_at_least_one_phase' if mapped else 'held_precise_geography',
+                'current_map_representation': 'located' if mapped else 'border_reference' if record_references else 'unmapped',
+                'border_reference_only': bool(record_references) and not mapped,
+                'border_reference_phase_count': len({b['phase_id'] for b in record_references}),
                 'accepted_phase_count': len(mapped),
                 'partial_geography_phase_count': sum(p['decision'] == 'partial' for p in mapped),
                 'held_phase_count': sum(p['decision'] == 'hold' for p in decided.values()),
@@ -102,7 +115,9 @@ def build(output):
         'both_passes_saved': sum(r['both_passes_saved'] for r in records),
         'reconciled_records': len(accepted),
         'newly_mapped_records': sum(r['reconciliation'] == 'mapped_at_least_one_phase' for r in records),
-        'held_unmapped_records': sum(r['reconciliation'] == 'held_unmapped' for r in records),
+        'held_precise_geography_records': sum(r['reconciliation'] == 'held_precise_geography' for r in records),
+        'border_reference_records': sum(r['border_reference_only'] for r in records),
+        'held_unmapped_records': sum(r['reconciliation'] == 'held_precise_geography' and not r['border_reference_only'] for r in records),
         'pending_reconciliation_records': sum(r['reconciliation'] == 'pending' for r in records)}
     assert counts['assigned_records'] == plan['baseline']['unmapped_records']
     summary = {'audit_id': plan['audit_id'], 'review_date': '2026-10-29',
@@ -113,6 +128,7 @@ def build(output):
               'geography-audit-phases.csv': csv_bytes(phases),
               'geography-audit-summary.json': json_bytes(summary)}
     members.update(common)
+    members['border-reference-review.json'] = reference_path.read_bytes()
     for name in ['README.md', 'audit-plan.json', 'reconciled-decisions.json',
                  'new-site-metadata-corrections.json']:
         members[name] = (AUDIT/name).read_bytes()
@@ -122,10 +138,10 @@ def build(output):
         'It does not re-audit all 826 included records. The original 439 mapped records are protected by regression checks.\n\n'
         'Open geography-audit-records.csv for one row per assigned record, and geography-audit-phases.csv for phase decisions. '
         'The two pass folders preserve separate AI source reconstructions, access limits and original links. '
-        'Reconciled decisions are the only mapping approvals; pending reviews and proposals are not approvals. '
+        'Reconciled decisions approve located crossing or wider-policy geography. The separate border-reference-review.json approves dotted border-level references when precise geography remains held. Pending reviews and proposals are not approvals. '
         'Map means supported geography for that phase, not present closure or a resolved duration. '
         'Partial means only part of the scope or an approximate crossing-area reference is located. '
-        'Hold means evidence is not sufficient for a supported mapping decision.\n\n'
+        'Hold in the original reconciliation means evidence is insufficient for precise geography. A later dotted border reference can identify the affected bilateral border without claiming closure along its full length. The border_reference_only and dotted_reference fields disclose this distinction.\n\n'
         'The native chronology, movement cohorts, exclusions and duration rules were not changed by this geography audit. '
         'Short and uncertain-duration records remain available under All; the >24h default still applies on the site. '
         'Later-status and national-policy supplements are separate. '

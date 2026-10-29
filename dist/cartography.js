@@ -40,6 +40,7 @@
       ||/^national (?:land[ /-]?(?:water )?)?(?:border|frontier)(?:s|[- ](?:passenger|entry|exit|closure|restriction|policy|regime|order))\b/i.test(text);
   }
   function scopeStyle(records=[]){
+    if(records.some(e=>e.map_border_reference))return {broad:false,limited:true,borderReference:true,label:'Border identified · precise crossing or extent unresolved'};
     if(records.length&&records.every(e=>e.record_kind==='border_status'&&/^Whole /.test(e.scope||'')))return {broad:true,limited:false,label:'Border-wide passenger status'};
     if(records.some(e=>e.record_kind==='national_policy'))return {broad:false,limited:false,national:true,conditionsOnly:records.every(e=>e.national_kind==='entry_conditions'),label:'International passenger rules'};
     const scopes=records.flatMap(e=>e.duration_periods?.length?e.duration_periods.map(p=>p.scope||''):[e.scope||'']);

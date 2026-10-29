@@ -44,8 +44,10 @@ def companion_members(release,model,method):
         'Global_Border_Closure_Phases_2016_2026.csv':csv_bytes([headers]+[[p[h] for h in headers] for p in release['tables']['Chronology phases']]),
         'release-method.json':(ROOT/'source/release-method.json').read_bytes(),
         'crossing-map-review.json':(json.dumps({**load_json(ROOT/'source/crossings/scope-review.json'),
-            'geography':load_json(ROOT/'source/crossings/locations.json')},ensure_ascii=False,indent=2)+'\n').encode(),
+            'geography':load_json(ROOT/'source/crossings/locations.json'),
+            'border_references':load_json(ROOT/'source/crossings/border-reference-review.json')},ensure_ascii=False,indent=2)+'\n').encode(),
         'border-status-review.json':(ROOT/'source/border-status-review.json').read_bytes(),
+        'border-reference-review.json':(ROOT/'source/crossings/border-reference-review.json').read_bytes(),
         'national-policy-evidence.json':(json.dumps({**load_json(ROOT/'source/national-policy-supplement.json'),
             **load_json(ROOT/'source/national-map-display.json'),'compatible_data_sha256':sha256(DATA_PATH),
             'release_id':method['release_id']},ensure_ascii=False,indent=2)+'\n').encode(),
@@ -62,7 +64,7 @@ def zip_bytes(members):
 def bind_manifest(release,reader_report):
     method=load_json(ROOT/'source/release-method.json');model=load_json(MODEL_PATH)
     # Do not produce a package from a stale overlay even in explicit bind mode.
-    for name in ['scope-review.json','locations.json']:
+    for name in ['scope-review.json','locations.json','border-reference-review.json']:
         assert load_json(ROOT/'source/crossings'/name)['source_sha256']==sha256(DATA_PATH),'Reconcile current geography first'
     ZIP_PATH.write_bytes(zip_bytes(companion_members(release,model,method)))
     paths={'data':DATA_PATH,'reader':READER_PATH,'reader_model':MODEL_PATH,
@@ -71,6 +73,7 @@ def bind_manifest(release,reader_report):
         'companion_zip':ZIP_PATH,'geography_reference':ROOT/'source/geography-reference.json',
         'crossing_scope':ROOT/'source/crossings/scope-review.json','crossing_locations':ROOT/'source/crossings/locations.json',
         'crossing_reconciliation':ROOT/'source/crossings/release-reconciliation.json',
+        'border_reference_review':ROOT/'source/crossings/border-reference-review.json',
         'national_policies':ROOT/'source/national-policy-supplement.json','national_display':ROOT/'source/national-map-display.json','status_review':ROOT/'source/border-status-review.json'}
     files={name:{'path':str(p.relative_to(ROOT)),'sha256':sha256(p),'bytes':p.stat().st_size} for name,p in paths.items()}
     fingerprint=files['data']['sha256']

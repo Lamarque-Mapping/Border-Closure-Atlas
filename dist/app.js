@@ -70,7 +70,7 @@
   function mapLocationNote(e){
     const status=C.mappingStatus(e,data,{mode:'all'}),points=status.ids.filter(id=>locations.get(id)?.geometry?.type==='Point');
     const names=points.map(id=>locationTitle(locations.get(id).properties,id));
-    return '<section class="detail-field crossing-location-note"><h3>How this record is mapped</h3><p>'+escape(status.label)+'.</p>'+(names.length?'<p>'+escape(names.join('; '))+'. Dots locate the crossing area; they do not represent closure of the whole border.</p>':'')+(status.pending?'<p>Some locations still need checking. They remain in the dataset and downloads, without a whole-border line substituted for an unknown point.</p>':'')+'</section>';
+    return '<section class="detail-field crossing-location-note"><h3>How this record is mapped</h3><p>'+escape(status.label)+'.</p>'+(names.length?'<p>'+escape(names.join('; '))+'. Dots locate the crossing area; they do not represent closure of the whole border.</p>':'')+(status.referenceCount?'<p>Border identified; exact crossing or extent unresolved. The coloured dotted line identifies the affected border, not closure along its full length.</p>':'')+(status.pending?'<p>Precise locations or the full affected extent still need checking. The record remains in the dataset and downloads with these qualifications.</p>':'')+'</section>';
   }
   const mapLocationIDs=e=>C.mapLocationsFor(e,data,state).filter(id=>K.isMapReference(locations.get(id)));
   function currentLocationIDs(){return [...new Set(visible.flatMap(mapLocationIDs))];}
@@ -336,7 +336,8 @@
     const duration=first?cardPeriodHTML(first)+(other.length?'<details class="location-extra-periods"><summary>'+other.length+' more dated stage'+(other.length===1?'':'s')+'</summary>'+other.map(cardPeriodHTML).join('')+'</details>':''):'<p class="location-period-duration">Dates and duration are not established.</p>';
     const rationales=C.array(e.rationales);
     const description=window.BorderSummary?.describe(e,{periods});
-    return '<article data-location-record-id="'+escape(e.id)+'"><h3 class="location-closure-title">'+escape(publicText(e.title||e.id,'title',e.id))+'</h3>'+(description?'<p class="location-summary">'+escape(description)+'</p>':'')+'<p class="location-rationales"><span>Coded rationale'+(rationales.length>1?'s':'')+':</span> '+rationaleHTML([e])+'</p>'+duration+
+    const referenceNote=e.map_border_reference?'<p class="qualification border-reference-note"><strong>Border identified; exact crossing or extent unresolved.</strong> The dotted line identifies the border, not closure along its full length.</p>':'';
+    return '<article data-location-record-id="'+escape(e.id)+'"><h3 class="location-closure-title">'+escape(publicText(e.title||e.id,'title',e.id))+'</h3>'+referenceNote+(description?'<p class="location-summary">'+escape(description)+'</p>':'')+'<p class="location-rationales"><span>Coded rationale'+(rationales.length>1?'s':'')+':</span> '+rationaleHTML([e])+'</p>'+duration+
       '<div class="location-card-links">'+(linked.length?'<div class="location-sources"><span class="location-sources-label">Sources</span><div class="location-source-list">'+sourceHTML+'</div></div>':'')+
       '<button type="button" class="location-record-link" data-record-id="'+escape(e.id)+'">Full record <span aria-hidden="true">→</span></button></div></article>';
   }
@@ -477,7 +478,7 @@
       const p=f.properties||{},isSelected=id===cardLocation||id===state.location||items.some(e=>e.id===selected),style=K.symbolStyle(p,{selected:isSelected,zoom:map.getZoom(),records:styleRecords,rationaleFilter:state.rationale});
       const timePossible=state.mode==='intervals'&&items.every(e=>C.temporalState(e,state.month,state.measureType)==='possible');
       const label=locationTitle(p,id),point=f.geometry.type==='Point';
-      const tooltip='<strong class="map-tip-title">'+escape(label)+'</strong><span class="map-tip-meta">'+items.length+' record'+(items.length===1?'':'s')+'</span>'+(style.unresolved?'<span class="map-tip-meta">Later status unverified · no continuing closure asserted</span>':rationaleHTML(items))+(style.rationale.hasUncoded&&style.rationale.codes.length?'<span class="map-tip-meta">Some records uncoded</span>':'')+(timePossible?'<span class="map-tip-meta">Possible month overlap</span>':'')+'<span class="map-tip-hint">Click for records &amp; sources →</span>';
+      const tooltip='<strong class="map-tip-title">'+escape(label)+'</strong><span class="map-tip-meta">'+items.length+' record'+(items.length===1?'':'s')+'</span>'+(style.unresolved?'<span class="map-tip-meta">Later status unverified · no continuing closure asserted</span>':rationaleHTML(items))+(style.rationale.hasUncoded&&style.rationale.codes.length?'<span class="map-tip-meta">Some records uncoded</span>':'')+(style.scope.borderReference?'<span class="map-tip-meta">Border identified · exact crossing or extent unresolved</span>':'')+(timePossible?'<span class="map-tip-meta">Possible month overlap</span>':'')+'<span class="map-tip-hint">Click for records &amp; sources →</span>';
       let target;
       if(point){
         const [lng,lat]=f.geometry.coordinates;

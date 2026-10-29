@@ -107,8 +107,10 @@
   }
   function phaseLocationIDs(e,row,data){
     if(!row)return [];
-    // Only a wider-scope phase can use the existing border reference. A named
-    // crossing with no approved position must never fall back to that line.
+    // Border-level references are explicit reviewed associations, never an
+    // automatic fallback from a missing crossing coordinate or country name.
+    const referenceIDs=array(row.reference_border_ids).filter(id=>/^(?:Multi)?LineString$/.test(geographyIndex(data).features.get(id)?.geometry?.type||''));
+    if(referenceIDs.length)return referenceIDs;
     if(row.category!=='wider_border')return array(row.site_ids);
     const features=geographyIndex(data).features;
     if(Array.isArray(row.border_ids))return row.border_ids.filter(id=>/^(?:Multi)?LineString$/.test(features.get(id)?.geometry?.type||''));
@@ -123,15 +125,18 @@
   function recordsForLocation(records,id,data,state={}){
     return records.filter(e=>mapLocationsFor(e,data,state).includes(id)).map(e=>{
       const phases=periodsForView(e,state).filter(p=>e.record_kind==='border_status'?array(p.location_ids).includes(id):isSupplement(e)||!data.crossing_map||phaseLocationIDs(e,data.crossing_map.phases[p.source_phase_id||p.period_id],data).includes(id));
-      return {...e,rationales:phases.length?selectedRationales(e,phases):array(e.rationales),duration_source_periods:e.duration_source_periods||e.duration_periods,duration_periods:phases.filter(p=>!p.map_status),map_status_periods:phases.filter(p=>p.map_status),map_status_only:phases.length>0&&phases.every(p=>p.map_status),map_status_unresolved:phases.length>0&&phases.every(p=>p.map_status&&p.status==='unresolved')};
+      const referencePhases=phases.filter(p=>array(data.crossing_map?.phases[p.source_phase_id||p.period_id]?.reference_border_ids).includes(id));
+      const referenceNotes=[...new Set(referencePhases.flatMap(p=>array(data.crossing_map.phases[p.source_phase_id||p.period_id].reference_border_notes).filter(n=>n.location_id===id).map(n=>n.qualification)))];
+      return {...e,map_border_reference:referencePhases.length>0,map_border_reference_only:phases.length>0&&referencePhases.length===phases.length,map_border_reference_notes:referenceNotes,rationales:phases.length?selectedRationales(e,phases):array(e.rationales),duration_source_periods:e.duration_source_periods||e.duration_periods,duration_periods:phases.filter(p=>!p.map_status),map_status_periods:phases.filter(p=>p.map_status),map_status_only:phases.length>0&&phases.every(p=>p.map_status),map_status_unresolved:phases.length>0&&phases.every(p=>p.map_status&&p.status==='unresolved')};
     });
   }
   function mappingStatus(e,data,state={}){
     const ids=mapLocationsFor(e,data,state),features=geographyIndex(data).features;
     const pointCount=ids.filter(id=>features.get(id)?.geometry?.type==='Point').length,lineCount=ids.length-pointCount;
     const rows=mappingRows(e,data,state),pending=!excluded(e)&&(rows.some(row=>row.partial||!phaseLocationIDs(e,row,data).length)||!ids.length);
-    const label=excluded(e)?'Excluded · list only':e.record_kind==='national_policy'?'National rule mapped':!ids.length?'Location awaiting mapping':pending?'Some locations awaiting mapping':pointCount&&lineCount?'Crossings and wider border rules':pointCount?'Crossing'+(pointCount===1?'':'s')+' mapped':'Wider border rule mapped';
-    return {ids,mapped:ids.length>0,pending,pointCount,lineCount,label};
+    const referenceIDs=[...new Set(rows.flatMap(row=>array(row.reference_border_ids)))].filter(id=>ids.includes(id)),referenceCount=referenceIDs.length,referenceOnly=ids.length>0&&ids.every(id=>referenceIDs.includes(id)),preciselyMapped=ids.some(id=>!referenceIDs.includes(id));
+    const label=excluded(e)?'Excluded · list only':e.record_kind==='national_policy'?'National rule mapped':!ids.length?'Location awaiting mapping':referenceOnly?'Border identified · precise location unresolved':pending?'Some locations awaiting mapping':pointCount&&lineCount?'Crossings and wider border rules':pointCount?'Crossing'+(pointCount===1?'':'s')+' mapped':'Wider border rule mapped';
+    return {ids,mapped:ids.length>0,preciselyMapped,referenceOnly,referenceCount,referenceIDs,pending,pointCount,lineCount,label};
   }
   function temporalLabel(state){return {supported:'Restriction reported this month',closed:'Ordinary crossing closed',restricted:'Restricted access confirmed',unresolved:'Later status unverified',possible:'Dates may overlap this month',observation:'Reported on specific dates',policy:'Policy in force',ordered:'Announced closure dates',intermittent:'Repeated closures',held:'Dates disputed',none:'No evidence dated to this month'}[state]||'Dated evidence';}
   function matchesTime(e,mode,month,measureType=''){

@@ -28,7 +28,9 @@ assert 'mapping work is incomplete' in html
 audit_summary = json.loads((DOWNLOADS/'geography-audit-summary.json').read_text())
 assert audit_summary['source_sha256'] == expected['meta']['source_sha256']
 assert audit_summary['counts']['assigned_records'] == 387
-assert (audit_summary['baseline']['mapped_records'] + audit_summary['counts']['newly_mapped_records']) == manifest['counts']['mapped_records']
+assert (audit_summary['baseline']['mapped_records'] + audit_summary['counts']['newly_mapped_records']) == manifest['counts']['located_records']
+assert audit_summary['counts']['border_reference_records'] == manifest['counts']['border_reference_only_records']
+assert manifest['counts']['located_records'] + manifest['counts']['border_reference_only_records'] == manifest['counts']['mapped_records']
 audit_zip = DOWNLOADS/'Global_Border_Closures_Geography_Audit.zip'
 assert ('href="downloads/'+audit_zip.name+'?v='+hashlib.sha256(audit_zip.read_bytes()).hexdigest()+'"') in html
 with zipfile.ZipFile(audit_zip) as z:
@@ -36,8 +38,12 @@ with zipfile.ZipFile(audit_zip) as z:
     assert json.loads(z.read('geography-audit-summary.json')) == audit_summary
     audit_rows = list(csv.DictReader(io.StringIO(z.read('geography-audit-records.csv').decode('utf-8-sig'))))
     assert len(audit_rows) == len({r['record_id'] for r in audit_rows}) == 387
+    assert sum(r['border_reference_only'] == 'True' for r in audit_rows) == audit_summary['counts']['border_reference_records']
+    reference_review = json.loads(z.read('border-reference-review.json'))
+    assert reference_review == json.loads((ROOT/'source/crossings/border-reference-review.json').read_text())
     assert sum(r['both_passes_saved'] == 'True' for r in audit_rows) == audit_summary['counts']['both_passes_saved']
-    for d in json.loads(z.read('reconciled-decisions.json'))['decisions']:
+    assert len({b['record_id'] for b in reference_review['bindings']}) == audit_summary['counts']['border_reference_records']
+    for d in [*json.loads(z.read('reconciled-decisions.json'))['decisions'], *reference_review['bindings']]:
         reviewers = []
         for ref in d['audit_passes']:
             key = ref['path'].split('geography-audit-2026-10-29/', 1)[1]
@@ -94,7 +100,9 @@ with tempfile.TemporaryDirectory(prefix='verify-atlas-gis-') as temp:
                         if geom['type'] == 'MultiPolygon' and target['type'] == 'Polygon':
                             target = {'type': 'MultiPolygon', 'coordinates': [target['coordinates']]}
                         assert geom == target, table+' geometry changed through GDAL'
-        assert db.execute('SELECT count(*) FROM border_lines WHERE scope_category != "wider_border"').fetchone()[0] == 0
+        assert db.execute('SELECT count(*) FROM border_lines WHERE scope_category != "wider_border" AND map_representation != "border_reference"').fetchone()[0] == 0
+        assert db.execute('SELECT count(DISTINCT record_id) FROM border_lines WHERE map_representation = "border_reference"').fetchone()[0] == manifest['counts']['border_reference_only_records']
+        assert db.execute('SELECT count(*) FROM border_lines WHERE map_representation = "border_reference" AND (border_reference_qualification IS NULL OR geometry_note IS NULL)').fetchone()[0] == 0
         assert db.execute('SELECT count(*) FROM crossing_points WHERE scope_category NOT IN ("single_site","multiple_named_sites")').fetchone()[0] == 0
         # Full sources and dates must remain usable, including text beyond DBF limits.
         assert db.execute('SELECT max(length(source_urls)) FROM records').fetchone()[0] > 255

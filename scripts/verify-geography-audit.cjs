@@ -16,6 +16,8 @@ const progress=JSON.parse(execFileSync(process.execPath,[path.join(root,'scripts
 assert.deepEqual(progress.problems,[],'every saved reconstruction has valid identity, phase coverage and evidence fields');
 if(audit.status==='complete')assert.equal(decisions.size,scopeIDs.size,'complete audit covers every assigned record');
 const applied=new Set();
+const borderReferences=read(path.join(root,'source/crossings/border-reference-review.json'));
+const referenced=new Set(borderReferences.bindings.map(b=>b.record_id));
 for(const decision of decisions.values()){
  assert(scopeIDs.has(decision.record_id),'only assigned previously unmapped records');
  const rows=decision.audit_passes.map(ref=>{
@@ -57,10 +59,14 @@ for(const [id,old] of Object.entries(baseline.records)){
  const e=events.get(id);assert(e&&!C.excluded(e));
  const now=C.mapLocationsFor(e,data,{mode:'all',duration:'all'}).sort(),long=C.mapLocationsFor(e,data,{mode:'all',duration:'over1'}).sort();
  if(!scopeIDs.has(id)){assert.deepEqual(now,old.all,'prior all-duration geography preserved: '+id);assert.deepEqual(long,old.over24,'prior >24h geography preserved: '+id);}
- else if(!applied.has(id))assert.equal(now.length,0,'unreconciled records remain unmapped: '+id);
+ else if(!applied.has(id)){
+  const refs=[...new Set(borderReferences.bindings.filter(b=>b.record_id===id).map(b=>b.location_id))].sort();
+  assert.deepEqual(now,refs,'held precise geography receives only explicit border references: '+id);
+ }
  else assert(now.length,'newly approved record actually appears: '+id);
  if(now.length)mapped++;if(long.length)over24++;
 }
-assert.equal(mapped,plan.baseline.mapped_records+applied.size,'coverage gain counts records, not phases/features');
+assert([...referenced].every(id=>scopeIDs.has(id)&&!applied.has(id)),'reference-only additions are separate from precise mapped records');
+assert.equal(mapped,plan.baseline.mapped_records+applied.size+referenced.size,'coverage gain counts records, not phases/features');
 assert.equal(source.geography_audit.mapped_records,applied.size);
 console.log(JSON.stringify({check:'independent geography audit passed',reconciled_records:decisions.size,newly_mapped_records:applied.size,total_mapped:mapped,mapped_over24:over24,unchanged_prior_mapped:baseline.mapped.all}));

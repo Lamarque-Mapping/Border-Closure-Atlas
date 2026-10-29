@@ -19,6 +19,16 @@ The remaining 145 records retain explicit hold reasons. An approved record may
 still have unmapped phases or only partial spatial coverage. This is coverage
 across the historical register, not the number of closures at any one date.
 
+A subsequent display review uses `source/crossings/border-reference-review.json`
+to show a dotted reference line for held records where both original passes
+establish the affected bilateral border. The line identifies the border; it
+does not claim that the entire frontier was closed or locate the obstruction.
+This separate overlay leaves the original precise-geography decisions intact.
+Its phase-specific bindings preserve the existing dates, movement restrictions
+and duration filters. The public coverage figures distinguish these border-only
+references from the 681 records with reviewed crossing or policy geography.
+The additional review and its qualifications are included in the audit download.
+
 The final metadata review corrected 27 facility-country labels and consolidated
 two duplicate facility IDs. It also prompted withdrawal of two provisional
 Santa Rosa markers whose independent passes selected opposite-country controls.

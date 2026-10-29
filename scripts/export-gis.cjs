@@ -39,7 +39,7 @@ function build(data,review,statusSource){
       verification:reader['Latest verification']||'',review_date:reader['Review date']||null,
       source_access:reader['Recorded source-access limits']||'',
       exclusion_reason:included?null:e.quarantine_reason||e.inclusion_status,
-      source_urls:allURLs.join('\n'),record_url:recordURL,mapped_phases:0,mapped_features:0,unmapped_phases:0};
+      source_urls:allURLs.join('\n'),record_url:recordURL,mapped_phases:0,mapped_features:0,located_phases:0,border_reference_phases:0,unmapped_phases:0};
     for(const s of e.sources||[])sources.push(flatten({record_id:e.id,...s}));
     const catalogued=new Set((e.sources||[]).map(s=>s.url));
     for(const url of allURLs)if(!catalogued.has(url))sources.push({record_id:e.id,url,
@@ -48,20 +48,26 @@ function build(data,review,statusSource){
       const phaseIncluded=included&&p.analysis_included!==false;
       const row=review.review.phases[p.period_id];
       const ids=phaseIncluded?C.mapLocationsFor({...e,duration_periods:[p]},data,{mode:'all',duration:'all'}):[];
+      const referenceIDs=new Set(row?.reference_border_ids||[]);
+      const referenceOnly=ids.length>0&&ids.every(id=>referenceIDs.has(id));
+      const referenceNotes=(row?.reference_border_notes||[]).map(note=>note.qualification);
       const props=flatten({record_id:e.id,phase_id:p.period_id,
         ...Object.fromEntries(phaseFields.map(key=>[key,p[key]??null])),
         record_included:Number(included),included:Number(phaseIncluded),
         over_24h:Number(phaseIncluded&&D.qualifies(p,e)),rationales:textList(p.rationales||e.rationales),
         source_ids:textList(p.source_ids),source_urls:urls(p.source_urls||[]).join('\n'),
         scope_category:row?.category||null,locations_partial:row?Number(row.partial||!ids.length):null,
-        mapping_status:!phaseIncluded?'Excluded':!ids.length?'Unmapped':row?.partial?'Partly mapped':'Mapped',
+        mapping_status:!phaseIncluded?'Excluded':!ids.length?'Unmapped':referenceOnly?'Border reference only':row?.partial?'Partly mapped':'Mapped',
+        map_representation:!ids.length?'unmapped':referenceOnly?'border_reference':'located',
+        border_reference_qualification:referenceOnly?unique(referenceNotes).join(' '):null,
         mapped_features:ids.length,record_url:recordURL});
       phases.push(props);
-      if(ids.length){record.mapped_phases++;record.mapped_features+=ids.length;}
+      if(ids.length){record.mapped_phases++;record.mapped_features+=ids.length;if(referenceOnly)record.border_reference_phases++;else record.located_phases++;}
       else if(phaseIncluded){record.unmapped_phases++;unmapped.push({...props,title:e.title,countries:record.countries});}
       for(const id of ids){
         const feature=locations.get(id);assert(feature?.geometry,'Unresolved geometry '+id);
         const g=feature.geometry,loc=feature.properties;
+        const featureReferenceNotes=(row?.reference_border_notes||[]).filter(note=>note.location_id===id).map(note=>note.qualification);
         const layer=g.type==='Point'?'crossing_points':/^(Multi)?LineString$/.test(g.type)?'border_lines':/^(Multi)?Polygon$/.test(g.type)?'context_areas':null;
         assert(layer,'Unsupported reviewed geometry '+g.type);
         const window=(statusSource.geography_windows||[]).find(w=>w.record_id===e.id&&w.phase_id===p.period_id&&w.location_id===id);
@@ -69,9 +75,9 @@ function build(data,review,statusSource){
           feature_id:e.id+'|'+p.period_id+'|'+id,
           title:e.title,countries:record.countries,research_area:record.research_area,
           location_id:id,location_name:loc.label||loc.name||id,
-          geometry_role:layer==='crossing_points'?'Approximate crossing reference':layer==='border_lines'?'Wider border reference':'Country/area context only',
+          geometry_role:referenceIDs.has(id)?'Known border only; exact crossing or extent unresolved':layer==='crossing_points'?'Approximate crossing reference':layer==='border_lines'?'Wider border reference':'Country/area context only',
           geometry_precision:loc.precision||'Generalised reference',
-          geometry_note:loc.review_note||loc.source_note||e.geography_note||'',
+          geometry_note:referenceIDs.has(id)?unique(featureReferenceNotes).join(' '):loc.review_note||loc.source_note||e.geography_note||'',
           geometry_source_urls:urls([loc.source_url,...(loc.source_urls||[]),...(loc.sources||[]).map(s=>s.url)]).join('\n'),
           geometry_valid_from:window?.from_date||null,
           geometry_time_note:window?'This location applies from '+window.from_date+' within the recorded staggered onset; the phase dates have not been rewritten.':null,
@@ -89,6 +95,9 @@ function build(data,review,statusSource){
   const counts={records:records.length,included_records:records.filter(r=>r.included).length,
     phases:phases.length,included_phases:phases.filter(p=>p.included).length,
     mapped_records:records.filter(r=>r.mapped_features).length,
+    located_records:records.filter(r=>r.located_phases).length,
+    border_reference_only_records:records.filter(r=>r.border_reference_phases&&!r.located_phases).length,
+    border_reference_phases:records.reduce((n,r)=>n+r.border_reference_phases,0),
     mapped_phases:records.reduce((n,r)=>n+r.mapped_phases,0),
     included_records_without_geometry:records.filter(r=>r.included&&!r.mapped_features).length,
     sources:sources.length,features:Object.fromEntries(Object.entries(layers).map(([name,rows])=>[name,rows.length]))};

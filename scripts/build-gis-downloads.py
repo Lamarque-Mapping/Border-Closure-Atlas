@@ -18,7 +18,7 @@ NAMES = {'geopackage': 'Global_Border_Closures_GeoPackage.zip',
          'geojson': 'Global_Border_Closures_GeoJSON.zip'}
 DESCRIPTIONS = {
     'crossing_points': 'Record-phase references at sourced approximate crossing locations; not physical obstruction footprints.',
-    'border_lines': 'Record-phase wider-border references; inspect scope, uncertainty and geometry qualifications before interpreting extent.',
+    'border_lines': 'Wider-border geography and explicitly labelled known-border references; filter map_representation and inspect scope before interpreting extent.',
     'context_areas': 'Country/area context only, not an assertion that all crossings or a whole area were closed.',
     'records': 'All register records, including excluded and unmapped records. Count distinct record_id.',
     'phases': 'All dated and undated phase evidence; no inferred reopening or continuing closure.',
@@ -55,11 +55,14 @@ def build():
     tables = data['tables']
     layers = {name: rows for name, rows in data['layers'].items() if rows}
     counts = data['meta']['counts']
-    coverage = ('Reviewed map geometry is available for '
-                f"{counts['mapped_records']} of {counts['included_records']} included records "
-                f"({100*counts['mapped_records']/counts['included_records']:.1f}%). "
+    coverage = (f"The map represents {counts['mapped_records']} of {counts['included_records']} included records "
+                f"({100*counts['mapped_records']/counts['included_records']:.1f}%): "
+                f"{counts['located_records']} have reviewed crossing or wider-policy geography, and "
+                f"{counts['border_reference_only_records']} appear only as dotted border references because the "
+                'affected border is established but the precise crossing or extent is unresolved. '
+                'Dotted reference lines do not imply closure along the entire border. '
                 f"The other {counts['included_records_without_geometry']} remain in the tables without spatial features; "
-                'mapping work is incomplete. Coverage means at least one mapped phase, '
+                'mapping work is incomplete. Coverage means at least one represented phase, '
                 'not every phase or the selected month.')
     with tempfile.TemporaryDirectory(prefix='atlas-gis-') as temp:
         gpkg = Path(temp)/'Global_Border_Closures.gpkg'
@@ -100,7 +103,8 @@ def build():
     audit_text = (f"Geography audit: {audit_counts['both_passes_saved']} of {audit_counts['assigned_records']} "
                   'previously unmapped records have two separately saved AI source reconstructions; '
                   f"{audit_counts['reconciled_records']} have been reconciled, adding geography for "
-                  f"{audit_counts['newly_mapped_records']} records. "
+                  f"{audit_counts['newly_mapped_records']} records. A subsequent border-level review adds dotted references for "
+                  f"{audit_counts['border_reference_records']} further records while retaining their unresolved precise geography. "
                   'The audit download retains both reviews, source links, partial coverage and unresolved cases.')
     html, count = re.subn(r'(<p class="figure-note" id="geography-audit-coverage">).*?(</p>)',
                          lambda match: match[1]+audit_text+match[2], html)
