@@ -1,0 +1,55 @@
+{
+  "record_id": "FU-COV-SCA-001",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Road operations at Ramatlabama Botswana–SouthAfrica crossing suspended because protesting truckers obstructed SouthAfrican approach roads. Railway nearby is not within evidence.",
+  "source_checks": [
+    {
+      "url": "https://satrucker.co.za/ramatlabama-border-briefly-closed-by-protesting-south-african-truck-drivers/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full May21 original report inspected:BURS warned roads inaccessible then spokesperson told outlet situation contained and business as usual. Category exemptions and first resumedvehicle not independently observed.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-28.json"
+    },
+    {
+      "url": "https://www.l2b.co.za/projects/ramatlabama-bray-makgobistad-and-skilpadshek-lpoe/34100",
+      "access_status": "fresh_search_extract_inspected_public_page_abbreviated",
+      "finding": "Indexed construction project specifically says GPS placed atRamatlabama land port. GeoNames-derived border-post position25.57594,-25.64876 is within50m, but village/rail descriptions are not used as rail closure evidence.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-29.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-SCA-001-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-ramatlabama-road",
+          "name": "Ramatlabama South African road land port of entry",
+          "coordinates": [
+            25.5763333,
+            -25.6488611
+          ],
+          "coordinate_method": "Converted explicitly labelled Ramatlabama border-post GPS25°38′55.9″S25°34′34.8″E from L2B project research indexed extract; opened public page abbreviates subscriber detail.",
+          "precision": "Approximately1km road-port area; exact2024 truck blockade location and length not established.",
+          "source_urls": [
+            "https://www.l2b.co.za/projects/ramatlabama-bray-makgobistad-and-skilpadshek-lpoe/34100",
+            "https://mapcarta.com/14272300"
+          ],
+          "evidence_note": "Indexed construction project specifically says GPS placed atRamatlabama land port. GeoNames-derived border-post position25.57594,-25.64876 is within50m, but village/rail descriptions are not used as rail closure evidence.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-29.json"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: single_site. Canonical same-dayMay21 road interruption only; no railway closure, exact hours or universal direction/category inference.",
+      "unresolved": [
+        "Known road port mapped partially; exact approach blockade positions and extent remain unlocated."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"same_day\", \"start_earliest\": \"2024-05-21\", \"start_latest\": \"2024-05-21\", \"end_earliest\": \"2024-05-21\", \"end_latest\": \"2024-05-21\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: Reported same-calendar-day closure and BURS reopening status; no elapsed hours or whole-day duration. Passenger/freight, direction-specific and emergency exemptions remain unestablished. The reported authority status is not independent observation of the first returning vehicle, and the two reports partly share BURS provenance."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

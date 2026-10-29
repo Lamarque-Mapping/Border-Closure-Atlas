@@ -1,0 +1,84 @@
+{
+  "record_id": "R13-AS-001",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Cambodian traders obstructed the same Ban Khao Din–Sampov Loun bridge on January5,2017. The morning closure and reported lifting remain a distinct short episode.",
+  "source_checks": [
+    {
+      "url": "https://www.matichon.co.th/local/news_417140",
+      "access_status": "full_text_web",
+      "finding": "Original Matichon names opposite Sampov Loun, Battambang; reports failure to open at06:00, negotiations at mid-bridge and lifting about08:00.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r11-1.json",
+      "sha256": "433e6fbf5bfb8b17a0eaab1dd5b23794e172d190f8bccb69fc98d251a505aa8e"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/7204472878",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Cambodian checkpoint inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/84227fbcdf7f5db7993e.xml",
+      "sha256": "610d19749093342b568488a990c032caa9a0e765ab92f8397f225752e0e3da61",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/84227fbcdf7f5db7993e.txt",
+      "text_sha256": "610d19749093342b568488a990c032caa9a0e765ab92f8397f225752e0e3da61",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=102.355,13.430,102.361,13.435",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Bridge and named Thai customs post distinguish facility from nearby village.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/8967bd9846cc0d7c2bee.xml",
+      "sha256": "5ae639606c69d967978e7d13b6a6d7954a790ed64b5fd1ceee86f997110d258e",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/8967bd9846cc0d7c2bee.txt",
+      "text_sha256": "5ae639606c69d967978e7d13b6a6d7954a790ed64b5fd1ceee86f997110d258e",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R13-AS-001-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-khao-din-sampov-loun",
+          "name": "Ban Khao Din–Sampov Loun bridge, Cambodian end",
+          "coordinates": [
+            102.3588861,
+            13.4323333
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/7204472878"
+          ],
+          "evidence_note": "Explicit named Sampov Lun border_control immediately east of bridge way593089110; the west side has named Ban Khao Din Customs Clearing Point. Original Thai reporting identifies Cambodian bridgehead at this exact pair, not Ban Khao Din village or Phsar Prom.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/84227fbcdf7f5db7993e.xml",
+          "sha256": "610d19749093342b568488a990c032caa9a0e765ab92f8397f225752e0e3da61"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Cambodian traders obstructed the same Ban Khao Din–Sampov Loun bridge on January5,2017. The morning closure and reported lifting remain a distinct short episode.",
+      "date_scope_check": {
+        "start_earliest": "2017-01-05",
+        "start_latest": "2017-01-05",
+        "end_earliest": "2017-01-05",
+        "end_latest": "2017-01-05",
+        "last_confirmed": null,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Shown as an episode occurring on this date, not a whole-day closure. Accounts share named sources and are not treated as independent confirmations. Crowd estimates differ and are omitted. Around06:00 onset and around08:00 dispersal are reported clock times, not a measured duration. Temporary trading accommodation is not proof of a lasting hours policy."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "aa06427e987fc2da35b26275c556e57679c4dc143d9d6d21140df6d1a4624362",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

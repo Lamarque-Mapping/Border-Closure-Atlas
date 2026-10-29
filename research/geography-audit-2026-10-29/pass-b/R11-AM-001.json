@@ -1,0 +1,63 @@
+{
+  "record_id": "R11-AM-001",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Truck protest at La Hachadura–Pedro de Alvarado road freight crossing during May 2019 DUCA disruption. Separate from processing delays at other Salvadoran frontiers.",
+  "source_checks": [
+    {
+      "url": "https://diario.elmundo.sv/economia/reportan-250000-en-perdidas-por-caida-de-sistema-en-aduanas",
+      "access_status": "full_retrieved",
+      "finding": "May reporting explicitly says truckers closed La Hachadura Tuesday night and DGA subsequently reported passage open; broader queues are not all crossing closures."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/388313799/full",
+      "access_status": "full_retrieved",
+      "finding": "Inspected OSM customs installation identifies Salvadoran side; geometry reused from independently inspected XML with retained hash."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R11-AM-001-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "geo-la-hachadura-customs",
+          "name": "La Hachadura Salvadoran road customs",
+          "coordinates": [
+            -90.08711423076923,
+            13.85990966923077
+          ],
+          "coordinate_method": "Directly inspected OSM way/388313799 mean of geometry vertices; XML sha256 ddc4956eba6953937a7a2490e3f899ba05162836618740904845d80f7679deb2",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/388313799/full"
+          ],
+          "evidence_note": "Named Salvadoran customs installation locates freight crossing; exact 2019 protest barrier on bridge/approach not demonstrated."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "La Hachadura–Pedro de Alvarado freight crossing; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "bounded_interval",
+        "start_earliest": "2019-05-07",
+        "start_latest": "2019-05-07",
+        "end_earliest": "2019-05-07",
+        "end_latest": "2019-05-19",
+        "last_confirmed": "2019-05-07",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Customs-area marker only; exact Puente Arce/approach obstruction not surveyed. Retrieved early reopening observation does not independently prove continuous obstruction through the full canonical bounded envelope; chronology retained."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Customs-area marker only; exact Puente Arce/approach obstruction not surveyed. Retrieved early reopening observation does not independently prove continuous obstruction through the full canonical bounded envelope; chronology retained."
+  ]
+}

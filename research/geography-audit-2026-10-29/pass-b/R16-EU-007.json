@@ -1,0 +1,63 @@
+{
+  "record_id": "R16-EU-007",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "January 2024 intermittent Romanian protest before Vicovu de Sus–Krasnoilsk road crossing, scoped to eligible empty trucks; passenger cars continued in both directions.",
+  "source_checks": [
+    {
+      "url": "https://customs.gov.ua/news/zagalne-20/post/trivaie-blokuvannia-rumunskimi-straikariami-rukhu-vantazhivok-pered-punktami-propusku-siret-porubne-ta-vikovu-de-sus-krasnoyilsk-1450",
+      "access_status": "full_retrieved",
+      "finding": "Ukrainian customs January17 notice names Romanian protesters before this gate, Ukrainian-exit truck queue and uninterrupted passenger cars in both directions."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1162384072/full",
+      "access_status": "full_retrieved",
+      "finding": "Direct OSM XML: named Romanian motor-vehicle border-control building, not rail station."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R16-EU-007-R1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "geo-vicovu-de-sus-road-control",
+          "name": "Vicovu de Sus Romanian road control",
+          "coordinates": [
+            25.62115192857143,
+            47.94658837142857
+          ],
+          "coordinate_method": "Directly inspected OSM way/1162384072 mean of geometry vertices; XML sha256 25c4e1190e2ca8b543fc4844270f6247573d014c41253354b974fc30c9db294e",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/1162384072/full"
+          ],
+          "evidence_note": "OSM names Vama Vicovu de Sus with motor_vehicle border_control tags. Romanian side customs building is representative for adjacent truck protest, not Ukrainian Krasnoilsk office."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Protester obstruction of eligible empty-truck traffic at Vicovu de Sus–Krasnoilsk only; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "intermittent_regime",
+        "start_earliest": "2024-01-15",
+        "start_latest": "2024-01-15",
+        "end_earliest": "2024-01-19",
+        "end_latest": "2024-01-19",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Building centroid locates named gate; exact agricultural-vehicle barrier on Romanian approach not independently surveyed. Retrieved notice does not itself restate empty-truck eligibility; canonical narrowed traffic scope retained."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Building centroid locates named gate; exact agricultural-vehicle barrier on Romanian approach not independently surveyed. Retrieved notice does not itself restate empty-truck eligibility; canonical narrowed traffic scope retained."
+  ]
+}

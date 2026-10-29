@@ -1,0 +1,199 @@
+{
+  "record_id": "REC50-R11-002",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Separate Manzhouli railway import categories and road-export closure during the late2021 outbreak. Rail cargo uses the Zabaykalsk railway gateway; road cargo uses the separate road freight control. December30 grain/fertilizer restoration is distinct from January14 timber/mineral and road permission.",
+  "source_checks": [
+    {
+      "url": "https://en.nhc.gov.cn/2021-12/06/c_85287.htm",
+      "access_status": "full_text_web",
+      "finding": "NHC-hosted original identifies December1 non-container rail imports and December3 land-port operations separately.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r11-4.json",
+      "sha256": "f90f0225ebc8c58cbbc285d65cbf5e4c8b94522c5119d69bdd26b5b9967aa6a1"
+    },
+    {
+      "url": "https://city.cri.cn/20220114/2a3bae4b-2377-c8b6-2210-1c42f3e0ceeb.html",
+      "access_status": "full_text_web",
+      "finding": "CRI original reproduces January14 permission for road exports and listed railway categories; actual first movement remains qualified.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r11-5.json",
+      "sha256": "783b2a3872d653ebff5cb29c60ab11348beffd4edfcbb6ff6f839104014e9c65"
+    },
+    {
+      "url": "https://nm.people.com.cn/n2/2022/0117/c347199-35098234.html",
+      "access_status": "indexed_extract_only",
+      "finding": "People original indexed text separately dates grain, fertilizer and LPG restoration to December30.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-42.json",
+      "sha256": "f3cf94052d07a3c8a78efca8c92af18e93e1e02c7e0fa10cd00ce12b5c51c224"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/9989738820",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Railway border node and separate track gauges inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/c9392d7cc1e1f2a2a080.xml",
+      "sha256": "954409f2d26bea53d544e0c204e055a2f1b2e348c3762add736ee9ddfa70f878",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/c9392d7cc1e1f2a2a080.txt",
+      "text_sha256": "954409f2d26bea53d544e0c204e055a2f1b2e348c3762add736ee9ddfa70f878",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=117.334,49.626,117.346,49.634",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Binzhou international tracks and railway-border nodes inspect the rail gateway separately from road.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/f53e7f8c3bbaffb75803.xml",
+      "sha256": "3552368dd1ca3032e9bf62cc21e5a5473be5df3e5111243057ecff81415b3322",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/f53e7f8c3bbaffb75803.txt",
+      "text_sha256": "3552368dd1ca3032e9bf62cc21e5a5473be5df3e5111243057ecff81415b3322",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/10548298273",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Explicit international freight road checkpoint node inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/1701f3deef88ee9eb5bb.xml",
+      "sha256": "d30d93015880bb4e1ef8ae1a838063a96fe6d2b5bda57530df8a7f7acd29e021",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/1701f3deef88ee9eb5bb.txt",
+      "text_sha256": "d30d93015880bb4e1ef8ae1a838063a96fe6d2b5bda57530df8a7f7acd29e021",
+      "status": 200
+    },
+    {
+      "url": "https://www.unescap.org/sites/default/files/Study%20on%20Railway%20Border%20crossings%2046218.pdf",
+      "access_status": "indexed_extract_only",
+      "finding": "UNESCAP identifies the Zabaykalsk/Manzhouli rail crossing and receiving-side handover procedures, distinct from road.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-45.json",
+      "sha256": "cc2bad6383cd26bdcd78f0603b8c74bc29b426c4390946025ddaf62e3d508656"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R11-002-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-manzhouli-zabaykalsk-rail",
+          "name": "Manzhouli–Zabaykalsk railway boundary",
+          "coordinates": [
+            117.3395418,
+            49.6301082
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/9989738820"
+          ],
+          "evidence_note": "OSM railway=border node among the parallel 1435/1520mm tracks at the international gateway. Wikimedia geolocated railway-crossing photographs and UNESCAP railway study independently establish the named international rail connection before2021. Not the road port or tourist gate building.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/c9392d7cc1e1f2a2a080.xml",
+          "sha256": "954409f2d26bea53d544e0c204e055a2f1b2e348c3762add736ee9ddfa70f878"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Separate Manzhouli railway import categories and road-export closure during the late2021 outbreak. Rail cargo uses the Zabaykalsk railway gateway; road cargo uses the separate road freight control. December30 grain/fertilizer restoration is distinct from January14 timber/mineral and road permission.",
+      "date_scope_check": {
+        "start_earliest": "2021-12-01",
+        "start_latest": "2021-12-01",
+        "end_earliest": "2022-01-14",
+        "end_latest": "2022-01-14",
+        "last_confirmed": null,
+        "temporal_display_rule": "",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "REC50-R11-002-P1: CNR’s substantive indexed report gives the December onset and matching timber/mineral-powder arrivals on 14 January. Direct page access failed. The 44-day operational phase is limited to that returning cargo. Container traffic lies outside the cited selected non-container restriction; no uninterrupted container-service history or uniform endpoint for other commodities is inferred.\n\nREC50-R11-002-P2: The 13 January dispatch announces permission from 14 January midnight and describes preparations. Its republication on 14 January is not operational observation. Passenger restrictions under EA005 and rail cargo under P1 remain separate.\n\nThe first actual road-export passage is unverified. Selected rail commodities have different restoration dates, as specified below.\n\nThe January 17, 2022 Inner Mongolia Daily report hosted by People’s Daily states that bulk grain and fertilizer import business had resumed on December 30, 2021. This earlier commodity transition leaves timber/mineral-powder January 14 and road-export permission unchanged. LPG’s initial suspension remains unestablished. Direct People’s Daily access failed; substantive indexed text was inspected."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "REC50-R11-002-P2",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-manzhouli-road-cargo",
+          "name": "Manzhouli road freight checkpoint",
+          "coordinates": [
+            117.3777412,
+            49.6279132
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/10548298273"
+          ],
+          "evidence_note": "Explicit border_control named international cargo checkpoint Manzhouli in Russian, within the named Manzhouli road port grounds. Passenger gates are separately mapped farther west; railway crossing lies about2.8km west.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/1701f3deef88ee9eb5bb.xml",
+          "sha256": "d30d93015880bb4e1ef8ae1a838063a96fe6d2b5bda57530df8a7f7acd29e021"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Road-port goods export suspension and trailer-exchange authorisation only; not rail imports or passenger gates.",
+      "date_scope_check": {
+        "start_earliest": "2021-12-03",
+        "start_latest": "2021-12-03",
+        "end_earliest": "2022-01-14",
+        "end_latest": "2022-01-14",
+        "last_confirmed": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "REC50-R11-002-P1: CNR’s substantive indexed report gives the December onset and matching timber/mineral-powder arrivals on 14 January. Direct page access failed. The 44-day operational phase is limited to that returning cargo. Container traffic lies outside the cited selected non-container restriction; no uninterrupted container-service history or uniform endpoint for other commodities is inferred.\n\nREC50-R11-002-P2: The 13 January dispatch announces permission from 14 January midnight and describes preparations. Its republication on 14 January is not operational observation. Passenger restrictions under EA005 and rail cargo under P1 remain separate.\n\nThe first actual road-export passage is unverified. Selected rail commodities have different restoration dates, as specified below.\n\nThe January 17, 2022 Inner Mongolia Daily report hosted by People’s Daily states that bulk grain and fertilizer import business had resumed on December 30, 2021. This earlier commodity transition leaves timber/mineral-powder January 14 and road-export permission unchanged. LPG’s initial suspension remains unestablished. Direct People’s Daily access failed; substantive indexed text was inspected."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "REC50-R11-002-AUDIT20261025-1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-manzhouli-zabaykalsk-rail",
+          "name": "Manzhouli–Zabaykalsk railway boundary",
+          "coordinates": [
+            117.3395418,
+            49.6301082
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/9989738820"
+          ],
+          "evidence_note": "OSM railway=border node among the parallel 1435/1520mm tracks at the international gateway. Wikimedia geolocated railway-crossing photographs and UNESCAP railway study independently establish the named international rail connection before2021. Not the road port or tourist gate building.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/c9392d7cc1e1f2a2a080.xml",
+          "sha256": "954409f2d26bea53d544e0c204e055a2f1b2e348c3762add736ee9ddfa70f878"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Separate Manzhouli railway import categories and road-export closure during the late2021 outbreak. Rail cargo uses the Zabaykalsk railway gateway; road cargo uses the separate road freight control. December30 grain/fertilizer restoration is distinct from January14 timber/mineral and road permission.",
+      "date_scope_check": {
+        "start_earliest": "2021-12-01",
+        "start_latest": "2021-12-01",
+        "end_earliest": "2021-12-30",
+        "end_latest": "2021-12-30",
+        "last_confirmed": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "REC50-R11-002-P1: CNR’s substantive indexed report gives the December onset and matching timber/mineral-powder arrivals on 14 January. Direct page access failed. The 44-day operational phase is limited to that returning cargo. Container traffic lies outside the cited selected non-container restriction; no uninterrupted container-service history or uniform endpoint for other commodities is inferred.\n\nREC50-R11-002-P2: The 13 January dispatch announces permission from 14 January midnight and describes preparations. Its republication on 14 January is not operational observation. Passenger restrictions under EA005 and rail cargo under P1 remain separate.\n\nThe first actual road-export passage is unverified. Selected rail commodities have different restoration dates, as specified below.\n\nThe January 17, 2022 Inner Mongolia Daily report hosted by People’s Daily states that bulk grain and fertilizer import business had resumed on December 30, 2021. This earlier commodity transition leaves timber/mineral-powder January 14 and road-export permission unchanged. LPG’s initial suspension remains unestablished. Direct People’s Daily access failed; substantive indexed text was inspected."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "f60c3a5ef625b08f8b62828b0009fe0bd1a7a193ad361ae33b5ee3b85fe2d695",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

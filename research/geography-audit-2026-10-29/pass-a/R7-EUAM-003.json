@@ -1,0 +1,72 @@
+{
+  "record_id": "R7-EUAM-003",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "April5 initial episode blocks Bermejo–AguasBlancas vehicle bridge until late-afternoon negotiated pause. Regional road and separate boat-port protests are not substituted.",
+  "source_checks": [
+    {
+      "url": "https://fmalba.com.ar/internacionales-bagayeros-levantan-bloqueo-en-bermejo-e-ingresan-a-cuarto-intermedio/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "April6 report dates Friday blockade from early hours to lateafternoon, identifies about50 demonstrators at internationalbridge, and distinguishes occupied regionalroad.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-077.json"
+    },
+    {
+      "url": "https://mapcarta.com/W427747533",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named international bridge withBolivianmigration140mwest andArgentineAFIP200meast; not Tarija–Bermejo inlandbridge or chalanas passenger riverport.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-080.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R7-EUAM-003-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-bermejo-aguas-blancas-road-bridge",
+          "name": "Bermejo–Aguas Blancas international road bridge",
+          "coordinates": [
+            -64.36956,
+            -22.72632
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 427747533; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W427747533",
+            "https://www.openstreetmap.org/way/427747533"
+          ],
+          "evidence_note": "Named international bridge withBolivianmigration140mwest andArgentineAFIP200meast; not Tarija–Bermejo inlandbridge or chalanas passenger riverport.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-080.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Initial April 5 vehicle bridge blockade at Bermejo–Aguas Blancas to the negotiated late-afternoon pause",
+      "date_scope_check": {
+        "start_earliest": "2019-04-05",
+        "start_latest": "2019-04-05",
+        "end_earliest": "2019-04-05",
+        "end_latest": "2019-04-05",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Bridge reference, not exact protest position. Phase is hours-long; no artificial extension."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "83913f14918331bd05f01fdbc400eed747ab0b5c737ba39abea36c906e2268c5"
+}

@@ -27,6 +27,13 @@ def main():
              for p in (ROOT/AUDIT/part).glob('*.json')}
     review_count = len(paths)
     contents = {p: (ROOT/p).read_text() for p in paths}
+    # Reconciliation pins exact independent-pass bytes; reject a racing rewrite.
+    decisions = json.loads((ROOT/AUDIT/'reconciled-decisions.json').read_text())
+    for decision in decisions['decisions']:
+        for ref in decision['audit_passes']:
+            actual = hashlib.sha256(contents[Path(ref['path'])].encode()).hexdigest()
+            if actual != ref['sha256']:
+                raise ValueError('Reconcile changed evidence before checkpoint: '+ref['path'])
     for text in list(contents.values()):
         record = json.loads(text)
         for phase in record.get('phase_decisions', []):

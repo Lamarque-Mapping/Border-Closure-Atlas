@@ -1,0 +1,53 @@
+{
+  "record_id": "R10-EU-001",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Swedish conditional admission of non-exempt EEA/Nordic arrivals during the 48-hour-test-only phase. Direct road observations are at Lernacken toll plaza on the Swedish side of the combined Oresund road/rail link; neither the entire strait nor a Denmark-wide closure.",
+  "source_checks": [
+    {
+      "url": "https://www.newsoresund.se/koer-vid-inresa-till-sverige-trots-att-97-procent-av-passagerarna-over-oresundsbron-har-korrekta-handlingar/",
+      "access_status": "full_retrieved",
+      "finding": "January 5 reporting explicitly locates Sweden-bound vehicle checks at Lernacken and distinguishes exempt travellers, correct-document arrivals and refused entry."
+    },
+    {
+      "url": "https://www.government.se/articles/2022/01/several-new-measures-against-covid-19-introduced-in-january-2022/",
+      "access_status": "full_retrieved",
+      "finding": "Official January summary explicitly replaces the December 28 special 48-hour-test requirement on January 21 with certificate alternatives; not an unconditional reopening."
+    },
+    {
+      "url": "https://data.oresundsbron.com/cms/download/The%20traffic%20centre%20and%20toll%20station.pdf",
+      "access_status": "extract_only",
+      "finding": "Operator document identifies Lernacken on Swedish side and distinct road and railway levels; indexed extract does not supply verified site coordinates."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R10-EU-001-D1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Selected Swedish negative-test-only 48-hour admission phase for non-exempt EEA/Nordic arrivals, including Oresund; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "policy_period",
+        "start_earliest": "2021-12-28",
+        "start_latest": "2021-12-28",
+        "end_earliest": "2022-01-21",
+        "end_latest": "2022-01-21",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Precise Lernacken road-check geometry and phase-specific rail control location not independently geolocated. A 2025 list of Hyllie controls cannot establish its exact 2021-22 phase applicability. No bridge-centre or national frontier substituted."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Precise Lernacken road-check geometry and phase-specific rail control location not independently geolocated. A 2025 list of Hyllie controls cannot establish its exact 2021-22 phase applicability. No bridge-centre or national frontier substituted."
+  ]
+}

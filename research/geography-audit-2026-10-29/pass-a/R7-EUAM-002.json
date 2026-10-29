@@ -1,0 +1,78 @@
+{
+  "record_id": "R7-EUAM-002",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "June13 afternoon mototaxi protest blocks road traffic on Posadas–Encarnación SanRoqueGonzález bridge. It is not continuous with Monday episode and does not establish railway service closure.",
+  "source_checks": [
+    {
+      "url": "https://misionesonline.net/2017/06/13/se-levanto-corte-puente-posadas-encarnacion-realizaban-los-mototaxistas-paraguayos-protestaban-controles-del-lado-argentino/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "June13 20:47 original says protest since afternoon ended, against Argentine gendarme controls.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-077.json"
+    },
+    {
+      "url": "https://www.argentina.gob.ar/node/464590",
+      "access_status": "fresh_search_extract",
+      "finding": "Government directory explicitly identifies SanRoqueGonzález crossing, RN12/PY01 and both road and rail use.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-083.json"
+    },
+    {
+      "url": "https://latitude.to/articles-by-country/ar/argentina/118727/san-roque-gonzalez-de-santa-cruz-bridge",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named bridge between the two cities has published DMS coordinates, converted transparently.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-080.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R7-EUAM-002-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-posadas-encarnacion-bridge-reference",
+          "name": "San Roque González de Santa Cruz bridge reference",
+          "coordinates": [
+            -55.8719167,
+            -27.3731389
+          ],
+          "coordinate_method": "Published named bridge DMS coordinate converted to decimal degrees:55°52′18.90″W,27°22′23.30″S",
+          "precision": "Approximate bridge reference; published DMS precision not survey accuracy or exact protest position.",
+          "source_urls": [
+            "https://latitude.to/articles-by-country/ar/argentina/118727/san-roque-gonzalez-de-santa-cruz-bridge",
+            "https://www.argentina.gob.ar/node/464590"
+          ],
+          "evidence_note": "Coordinate source explicitly identifies Paraná bridge between Posadas andEncarnación; Argentine official directory confirms road/rail bridge identity. Phase concerns road mototaxi obstruction only.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-080.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Posadas mototaxi episode on Tuesday 13 June 2017; Monday is not joined into a continuous period.",
+      "date_scope_check": {
+        "start_earliest": "2017-06-13",
+        "start_latest": "2017-06-13",
+        "end_earliest": "2017-06-13",
+        "end_latest": "2017-06-13",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact road approach/protest position on long mixed road-rail bridge unlocated. Short event retained."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "b005741d00422b8675b9ddca08b50679562a81331e3b7666f6544e3a4581da6f"
+}

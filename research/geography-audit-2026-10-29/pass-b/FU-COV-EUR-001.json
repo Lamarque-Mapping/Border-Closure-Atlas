@@ -1,0 +1,147 @@
+{
+  "record_id": "FU-COV-EUR-001",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Four separate December22 2018 road phases: A9 Le Boulou mainline toll/entry ramp, Italian A10 toll plaza at Ventimiglia (freight and non-freight separately), and French approach to Pont de l Europe at Strasbourg. No full France frontier line.",
+  "source_checks": [
+    {
+      "url": "https://www.publicsenat.fr/actualites/politique/des-centaines-de-gilets-jaunes-deloges-d-un-peage-a-la-frontiere-franco-espagnole",
+      "access_status": "full_retrieved",
+      "finding": "Full report describes Le Boulou action moving from ramp to final toll before Spain, cars allowed while trucks obstructed."
+    },
+    {
+      "url": "https://www.tf1info.fr/societe/gilets-jaunes-des-actions-aux-frontieres-avec-l-espagne-la-belgique-et-l-allemagne-2108304.html",
+      "access_status": "inaccessible",
+      "finding": "Direct original returned HTTP403; no inferred geography from failed fetch."
+    },
+    {
+      "url": "https://www.primocanale.it/archivio-news/203721-manifestazione-dei-gilet-gialli-alla-frontiera-di-ventimiglia-traffico-tornato-regolare.html",
+      "access_status": "extract_only",
+      "finding": "Direct retrieval429; indexed original article inspected: Italian A10 toll plaza from about noon until after15:00; separate coastal Ponte San Ludovico diversions."
+    },
+    {
+      "url": "https://www.dna.fr/actualite/2018/12/22/gilets-jaunes-deux-interpellations-a-strasbourg-apres-un-blocage-avant-le-pont-de-l-europe",
+      "access_status": "full_retrieved",
+      "finding": "Full article/photo captions identify barricade before Pont de l Europe; afternoon filtering and French-police France-to-Germany interruption until16:30. Gambsheim is separately reported, not this canonical phase."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/36967326",
+      "access_status": "full_retrieved",
+      "finding": "OSM node names Peage du Perthus, ASF, highway A9; mainline toll identity matched."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-EUR-001-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "geo-le-boulou-perthus-toll",
+          "name": "Le Boulou / Perthus A9 mainline toll",
+          "coordinates": [
+            2.8211369,
+            42.5278851
+          ],
+          "coordinate_method": "Directly inspected OSM node/36967326 node; XML sha256 b39911b310d1dbc44c7b09dbe9c96029eb0ba6740a312adfc11181eeda2dc16a",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/36967326"
+          ],
+          "evidence_note": "Mainline A9 toll identified as Peage du Perthus in Le Boulou; separate from southwest Le Boulou entry-ramp toll. Source describes activity moving from entry ramp to last mainline toll before Spain."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Le Boulou toll on France–Spain A9 approach; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "confirmed_through",
+        "start_earliest": "2018-12-22",
+        "start_latest": "2018-12-22",
+        "end_earliest": "2018-12-22",
+        "end_latest": "2018-12-22",
+        "last_confirmed": "2018-12-22",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Point identifies mainline toll, while initial ramp action and exact temporary barrier positions are not separately geolocated."
+      ]
+    },
+    {
+      "phase_id": "FU-COV-EUR-001-FU2",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ventimiglia motorway border crossing, freight obstruction; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2018-12-22",
+        "start_latest": "2018-12-22",
+        "end_earliest": "2018-12-22",
+        "end_latest": "2018-12-22",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Italian A10 border toll plaza identified; exact plaza geometry not yet verified. Do not substitute Ponte San Ludovico coastal crossing."
+      ]
+    },
+    {
+      "phase_id": "FU-COV-EUR-001-FU3",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ventimiglia motorway border crossing; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2018-12-22",
+        "start_latest": "2018-12-22",
+        "end_earliest": "2018-12-22",
+        "end_latest": "2018-12-22",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Same Italian A10 plaza; source says slowing and blocked access, but non-freight complete stoppage differs from truck obstruction. Geometry unverified."
+      ]
+    },
+    {
+      "phase_id": "FU-COV-EUR-001-FU4",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Pont de l’Europe road approach, Strasbourg; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2018-12-22",
+        "start_latest": "2018-12-22",
+        "end_earliest": "2018-12-22",
+        "end_latest": "2018-12-22",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "French Pont de l Europe approach rather than rail, tram or Gambsheim bridges. Exact barricade position not geolocated."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Multiple phase footprints incompletely geolocated; individual decisions retain scope-specific limitations."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "record_id": "R5-EA-001",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Reporter encountered a BGF-controlled informal Moei River crossing used for auto smuggling near Myawaddy. The article distinguishes another disused crossing but supplies neither gate number nor sufficiently precise location.",
+  "source_checks": [
+    {
+      "url": "https://www.irrawaddy.com/news/burma/army-shutters-myawaddy-checkpoint-clampdown-auto-smuggling.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Reporter denied access at one unnamed BGF river crossing; account distinguishes another disused auto-smuggling checkpoint.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-53.json",
+      "sha256": "681bcbff068fc8a2005d3d4fc12960706f46fbc639810d1de746b9b98ef23eee"
+    },
+    {
+      "url": "https://www.xcept-research.org/publication/junta-trade-policies-spark-a-smuggling-revival-at-thai-border/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.jiffa.or.jp/en/news/entry-5159.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-EA-001-FU1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "One unnamed BGF Moei River crossing near Myawaddy–Mae Sot",
+      "date_scope_check": {
+        "scope": "One unnamed BGF Moei River crossing near Myawaddy–Mae Sot",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2018-03-26",
+        "end_latest": "2018-03-26",
+        "last_confirmed": "2018-03-26",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "March 26 2018 observation retained; onset and reopening unknown."
+      },
+      "unresolved": [
+        "Unnamed informal river checkpoint cannot be matched to a verified coordinate; Friendship Bridges and later numbered gates are not substitutes."
+      ]
+    }
+  ],
+  "unresolved": []
+}

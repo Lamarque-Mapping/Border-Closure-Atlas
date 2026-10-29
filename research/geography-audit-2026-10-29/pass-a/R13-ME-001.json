@@ -1,0 +1,59 @@
+{
+  "record_id": "R13-ME-001",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "First April7 2026 precautionary suspension of vehicles on King Fahd Causeway, Saudi Arabia–Bahrain international road link. It is distinct from renewed evening closure.",
+  "source_checks": [
+    {
+      "url": "https://www.aa.com.tr/en/middle-east/saudi-arabia-suspends-traffic-on-king-fahd-causeway-to-bahrain/3895647",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full updated April7 article inspected: authority says vehicles resumed after several-hour precautionary closure earlier Tuesday. This is first phase, not an all-day continuous closure; authority original X post not separately inspected.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-25.json"
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/map?bbox=50.30,26.17,50.35,26.20",
+      "access_status": "cached_original_osm_xml_inspected",
+      "finding": "Cached original OSM node 30931448, version 5, timestamp 2023-07-30T11:05:28Z; tags {\"barrier\": \"border_control\", \"note\": \"Saudi\"}. Reference geography only; closure scope is independently reconstructed from historical sources. Target is border_control tagged Saudi, adjacent to named King Fahd Causeway ways and named Passport Island in same original XML; Saudi reference encyclopedia independently places passport/customs facilities on this island.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/a602c28dded1a964.raw"
+    },
+    {
+      "url": "https://saudipedia.com/en/king-fahd-causeway",
+      "access_status": "fresh_search_text_inspected",
+      "finding": "Primary Saudi reference text inspected in search:25km road bridge between Aziziyah/Khobar and AlJasra, passport/customs complex on island embankment4; no ferry/rail.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-31.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R13-ME-001-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-king-fahd-causeway",
+          "name": "King Fahd Causeway border-control complex on Passport Island",
+          "coordinates": [
+            50.3231049,
+            26.1846306
+          ],
+          "coordinate_method": "Coordinates transcribed from independently inspected cached original OSM node XML.",
+          "precision": "Approximately 1 km control-complex reference; not the entire25km causeway footprint or exact barrier used in2026.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/map?bbox=50.30,26.17,50.35,26.20"
+          ],
+          "evidence_note": "Cached original OSM node 30931448, version 5, timestamp 2023-07-30T11:05:28Z; tags {\"barrier\": \"border_control\", \"note\": \"Saudi\"}. Reference geography only; closure scope is independently reconstructed from historical sources. Target is border_control tagged Saudi, adjacent to named King Fahd Causeway ways and named Passport Island in same original XML; Saudi reference encyclopedia independently places passport/customs facilities on this island.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/a602c28dded1a964.raw",
+          "evidence_sha256": "c26d339ffd233147f39a64d7f5420f20c7091bc1a10d61f4f3a415c760ad4238"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Modal scope: single_site. Road vehicles, canonical first same-dayApril7 spell only. Point identifies sole crossing complex, not extent of blocked queue, and does not merge intervening reopening with next phase.",
+      "unresolved": [],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"same_day\", \"start_earliest\": \"2026-04-07\", \"start_latest\": \"2026-04-07\", \"end_earliest\": \"2026-04-07\", \"end_latest\": \"2026-04-07\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: Shown as an episode occurring on this date, not a whole-day closure. Reported morning closure and same-day reopening. Morning versus afternoon reopening language differs between reports. All decisive operation claims ultimately rely on the causeway authority; no primary X post successfully opened. Later renewed suspension is a separate linked phase."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

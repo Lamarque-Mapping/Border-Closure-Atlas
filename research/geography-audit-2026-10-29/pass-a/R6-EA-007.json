@@ -1,0 +1,107 @@
+{
+  "record_id": "R6-EA-007",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Kenglat/Kyainglap–Houay Koum Friendship Bridge is the unique Mekong road bridge, commonly described as Xieng Kok. May 2022 endpoint concerns controlled cargo permission; ordinary passenger restrictions and unknown first cargo movement persist.",
+  "source_checks": [
+    {
+      "url": "https://www.myanmaritv.com/news/transport-sector-myanmar-laos-friendship-bridge-reopened",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Full state-TV report locates bridge at Kyainglap and describes controlled driver vaccination/testing and designated-area conditions.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-52.json",
+      "sha256": "467967369ce7f535966ebb8a13c6e0eaca234a8346ce50ce2451c35e04e29477"
+    },
+    {
+      "url": "https://www.laotradeportal.gov.la/en-gb/site/display/846",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Official Lao trade portal identifies exact village pair, road links and 691.6-metre Mekong bridge, distinguishing Xieng Kok village.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-53.json",
+      "sha256": "681bcbff068fc8a2005d3d4fc12960706f46fbc639810d1de746b9b98ef23eee"
+    },
+    {
+      "url": "https://www.gnlm.com.mm/myanmar-laos-friendship-bridge-reopens/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://cnimyanmar.com/index.php/english-edition/20064-myanmar-laos-friendship-bridge-reopens",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.myanmaritv.com/news/friendly-relations-opening-ceremony-myanmar-laos-friendship-bridge",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.moi.gov.mm/moi:eng/news/11513",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-EA-007-FU1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "bridge-myanmar-laos-kenglat",
+          "name": "Myanmar–Laos Friendship Bridge (Kenglat–Houay Koum)",
+          "coordinates": [
+            100.5422855,
+            20.8719434
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/913615103",
+          "precision": "Bridge-area reference, approximately 500 m; span segment centroid, not boundary survey point.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/913615103",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=100.53,20.86,100.56,20.89",
+            "https://www.laotradeportal.gov.la/en-gb/site/display/846"
+          ],
+          "evidence_note": "Named bridge span over Mekong; official Lao trade portal locates crossing at Houay Koum north of Xieng Kok opposite Kenglap and connecting Lao Road 17 to Myanmar road. Not Xieng Kok village ferry.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-myanmar-laos-bridge.xml",
+          "sha256": "285b4836122e2f0756ea8da318782a90bd7c42f86a2d720709a99404607c8b3e",
+          "osm_feature": "way/913615103",
+          "osm_version": "2",
+          "osm_timestamp": "2025-08-08T15:56:06Z",
+          "identity_tags": {
+            "bridge": "yes",
+            "highway": "trunk",
+            "layer": "1",
+            "name:en": "Myanmar–Laos Friendship Bridge",
+            "ref": "17"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Myanmar–Laos Friendship Bridge at Kenglat/Tachileik–Laos",
+      "date_scope_check": {
+        "scope": "Myanmar–Laos Friendship Bridge at Kenglat/Tachileik–Laos",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2022-05-13",
+        "end_latest": "2022-05-13",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Unknown onset and May 13 2022 permission endpoint retained. 2023 shipments and 2024 ceremony do not establish a first restoration or uninterrupted closure since 2020."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,103 @@
+{
+  "record_id": "R5-SC-004",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "November 2019 election order names Jhulaghat transit bridge, with discretionary emergency opening.",
+  "source_checks": [
+    {
+      "url": "https://www.myrepublica.nagariknetwork.com/index.php/news/transit-point-to-be-closed",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "RSS account quotes Baitadi authority announcing Jhulaghat November 22–25 closure with emergency discretion.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-51.json",
+      "sha256": "8dffd7357129f3aae401dd238d245594a2cdf64323b298b32a76d52dbcf4d99d"
+    },
+    {
+      "url": "https://pwduk.in/im/bridgReport/2136/print",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Official PWD inventory names Jhulaghat pedestrian suspension bridge on Kali River and supplies explicit coordinates; its provisional status retained.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-54.json",
+      "sha256": "35c23b83e9a7c13c039d934fbc15ce3ccda4bbf88635084a48e75ee7844ebdda"
+    },
+    {
+      "url": "https://english.ratopati.com/story/11084/closed",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://english.ratopati.com/story/16500",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://sports.nagariknews.com/news/transit-point-to-be-closed",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-SC-004-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-jhulaghat",
+          "name": "Jhulaghat suspension bridge",
+          "coordinates": [
+            80.3826994,
+            29.5713596
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/345105709",
+          "precision": "Bridge-area reference, approximately 100 m; official inventory is labelled data not yet finalized.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/345105709",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=80.36,29.56,80.39,29.59",
+            "https://pwduk.in/im/bridgReport/2136/print"
+          ],
+          "evidence_note": "OSM pedestrian-only bridge on old F50 at Kali River; independently matched to Uttarakhand PWD inventory 2136 named Jhulaghat suspension/pedestrian bridge with coordinate 80.38277778,29.57111110, about 30 m from mapped span.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-jhulaghat.xml",
+          "sha256": "98a167d8374ddf49c9a2e6bc78b0db5d70891d1628f481c6c596c556f60e890f",
+          "osm_feature": "way/345105709",
+          "osm_version": "3",
+          "osm_timestamp": "2024-09-01T13:48:39Z",
+          "identity_tags": {
+            "bicycle": "no",
+            "bridge": "yes",
+            "highway": "primary",
+            "horse": "no",
+            "layer": "1",
+            "motor_vehicle": "no",
+            "ref:old": "F50",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Jhulaghat crossing restriction for Indian legislative election, emergency permission retained",
+      "date_scope_check": {
+        "scope": "Jhulaghat crossing restriction for Indian legislative election, emergency permission retained",
+        "start_earliest": "2019-11-22",
+        "start_latest": "2019-11-22",
+        "end_earliest": "2019-11-25",
+        "end_latest": "2019-11-25",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "assessment": "November 22–25 ordered dates retained; onset clock and actual restoration remain unknown."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

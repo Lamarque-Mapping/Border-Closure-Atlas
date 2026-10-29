@@ -1,0 +1,53 @@
+{
+  "record_id": "R12-BL-001",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Zambian admission restriction on South African-origin livestock and meat at Kazungula–Botswana, then a road-vehicle ferry crossing. Source also mentions Livingstone–Zimbabwe and Chirundu, but canonical phase specifically covers Kazungula.",
+  "source_checks": [
+    {
+      "url": "https://www.lusakatimes.com/2019/01/22/zambia-bans-the-importation-of-meat-products-from-south-africa/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full relevant original January22 NAIS interview inspected: veterinary officer confirms checkpoints at Kazungula–Botswana, Livingstone–Zimbabwe and Chirundu; specific livestock/meat origin prohibition, not general traffic closure.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-26.json"
+    },
+    {
+      "url": "https://www.namibweb.com/camping-coordinates-botswana.htm",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full named Kazungula Ferry row inspected, separately lists Bots-Zim Border. Cached original AU-PIDA text names historical ferry and later bridge, with S2 location25.26201,-17.79356. Ferry reference applies to2019; modern2021 bridge is not substituted.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-31.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R12-BL-001-FU1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "crossing-kazungula-historic-ferry",
+          "name": "Kazungula Zambia–Botswana ferry crossing (historical)",
+          "coordinates": [
+            25.2622833,
+            -17.79375
+          ],
+          "coordinate_method": "Converted published named ferry GPS row 17.47.625 S / 025.15.737 E from degrees and decimal minutes to longitude/latitude. Nearby AU-PIDA S2 coordinate independently corroborates crossing area, not transport mode.",
+          "precision": "Approximately 1 km ferry crossing area; not a surveyed Zambian veterinary inspection booth.",
+          "source_urls": [
+            "https://www.namibweb.com/camping-coordinates-botswana.htm",
+            "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "Full named Kazungula Ferry row inspected, separately lists Bots-Zim Border. Cached original AU-PIDA text names historical ferry and later bridge, with S2 location25.26201,-17.79356. Ferry reference applies to2019; modern2021 bridge is not substituted.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-31.json"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Modal scope: single_site. Ferry/road cargo category only; January22 implementation confirmation remains last-confirmed evidence, not original onset or reopening. No duration or modern bridge claim.",
+      "unresolved": [],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"confirmed_through\", \"start_earliest\": null, \"start_latest\": null, \"end_earliest\": \"2019-01-22\", \"end_latest\": \"2019-01-22\", \"last_confirmed\": \"2019-01-22\", \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: Dated implementation confirmation, not original onset. National January ban and later policies are not precise Kazungula start/end; cargo-category restriction only, not general border closure."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

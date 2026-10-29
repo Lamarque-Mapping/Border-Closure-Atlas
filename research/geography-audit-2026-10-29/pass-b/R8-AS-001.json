@@ -1,0 +1,103 @@
+{
+  "record_id": "R8-AS-001",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Rishtan–Kaytpas bilateral road crossing after a short intermediate opening and renewed closure observed in September2017. Citizen passage from September25 is a qualified later-access bound. Apkan and the complete Sokh through-route are separate and are not mapped.",
+  "source_checks": [
+    {
+      "url": "https://www.ozodlik.org/a/sokh-rishton-chegara-fargona-botken/28744649.html",
+      "access_status": "full_text_web",
+      "finding": "Original September19 report says Kaytpas reopened three days earlier then reclosed while Apkan stayed closed.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r11-1.json",
+      "sha256": "433e6fbf5bfb8b17a0eaab1dd5b23794e172d190f8bccb69fc98d251a505aa8e"
+    },
+    {
+      "url": "https://www.ozodlik.org/a/rishton-sox-sux-sokh-cegara-vodil/28760623.html",
+      "access_status": "full_text_web",
+      "finding": "September27 original reports September25 citizen-only daytime passage through Rishtan–Kaytpas and continued Apkan closure.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r11-1.json",
+      "sha256": "433e6fbf5bfb8b17a0eaab1dd5b23794e172d190f8bccb69fc98d251a505aa8e"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/1827188518",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Explicit Rishton road checkpoint inspected; present permissions are not used as historical evidence.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/8e47ef5f256177440567.xml",
+      "sha256": "ee966b2f933584f95d9a0a0131e9a023fbe929100ce8128d394c17df4bdf25b7",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/8e47ef5f256177440567.txt",
+      "text_sha256": "ee966b2f933584f95d9a0a0131e9a023fbe929100ce8128d394c17df4bdf25b7",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=71.26,40.32,71.29,40.345",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Paired border-control nodes and nearby Kaytpas village inspected; village point rejected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/7160874bb29ec2037024.xml",
+      "sha256": "344e2873a4aedc6a7f9adc217ffde87787c3a9ebfda592dec96ef8e2cd30db44",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/7160874bb29ec2037024.txt",
+      "text_sha256": "344e2873a4aedc6a7f9adc217ffde87787c3a9ebfda592dec96ef8e2cd30db44",
+      "status": 200
+    },
+    {
+      "url": "https://digitalborder.gps.gov.kg/ru/home/checkpoints",
+      "access_status": "indexed_extract_only",
+      "finding": "Indexed official Kaytpas coordinates40.203155,71.162127 conflict with the named Rishtan gate location; direct page is script-only. Coordinate not adopted.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/ffb1bf1e1a4d93bf9649.html",
+      "sha256": "0b0bcde974f2d1c20723545b7c8b83ac5a022e4223211898271ac0e0a63a2c89",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/ffb1bf1e1a4d93bf9649.txt",
+      "text_sha256": "f34c899b1b922a89ae3c7e3c0d98ee29360c81271a29c79b9a9af6b9242b954d",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-40.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R8-AS-001-FU1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-rishtan-kaytpas-road",
+          "name": "Rishtan–Kaytpas road checkpoint, Uzbek side",
+          "coordinates": [
+            71.2733799,
+            40.3432613
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/1827188518"
+          ],
+          "evidence_note": "Explicit Rishton border_control node on the road south from Rishtan into Kyrgyzstan. Adjacent Kyrgyz node is currently labelled Kyrgyz-Kyshtak; original 2017 reports explicitly pair Rishtan with Kaytpas. The official indexed Kaytpas coordinate lies far away and is not adopted.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/8e47ef5f256177440567.xml",
+          "sha256": "ee966b2f933584f95d9a0a0131e9a023fbe929100ce8128d394c17df4bdf25b7"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Rishtan–Kaytpas bilateral road crossing after a short intermediate opening and renewed closure observed in September2017. Citizen passage from September25 is a qualified later-access bound. Apkan and the complete Sokh through-route are separate and are not mapped.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2017-09-19",
+        "end_latest": "2017-09-19",
+        "last_confirmed": "2017-09-19",
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "R8-AS-001-FU1: September 19 reporting confirms renewed closure after an intermediate opening. Exact reclosure onset and uninterrupted enforcement are unknown. A September 27 report states that Rishtan–Kaytpas resumed passage for Kyrgyz and Uzbek citizens from September 25, 2017, between 07:00 and 19:00. This is a qualified later-access bound for that citizen cohort, not an exact first-traveller observation or a continuous September 19–25 closure duration. Apkan remained closed; the complete Sokh–Rishtan route, freight and third-country eligibility are not established. Do not carry the 2013 closure uninterrupted to 2017."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "dbece76cd71b2c1dffd5260e8d1593cb0af6c500b419405e35af31dbf8202b5e",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

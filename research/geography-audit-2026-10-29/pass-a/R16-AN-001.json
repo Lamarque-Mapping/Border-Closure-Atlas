@@ -1,0 +1,59 @@
+{
+  "record_id": "R16-AN-001",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Senegalese freight vehicles subject to Mauritanian compulsory cargo transfer; reciprocal pattern reported at Rosso ferry road-cargo corridor. Goods could continue in local trucks; no prohibition of cargo itself or total frontier seal.",
+  "source_checks": [
+    {
+      "url": "https://www.wto.org/english/tratop_e/tpr_e/s371_e.pdf",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Original PDF text paragraphs4.106–4.107 inspected: atMarch2018 Senegalese freight vehicles required transfer to Mauritanian trucks; Moroccan trucks operated. Documentary boundary, not original onset.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-30.json"
+    },
+    {
+      "url": "https://ladepeche.mr/?p=16873",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full July14 report inspected: bilateral entry-into-force ceremony precedingFridayJuly11 at ferry operator, abolishes transshipment; Rosso bridge still under construction. Does not prove first physical through-passage.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-30.json"
+    },
+    {
+      "url": "https://mr.geoview.info/rwsw%2C22260206n",
+      "access_status": "fresh_indexed_text_inspected_direct_429",
+      "finding": "Indexed derivative explicitly identifies ferry terminal, ferry=yes, nameRosso, coordinates16.50873,-15.81176 and nearby Mauritanian ferry slip. Direct page429. Current location reference does not establish historical enforcement at every terminal yard.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-29.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R16-AN-001-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "existing_site_id": "post-rosso-ferry",
+          "name": "Rosso international ferry (Mauritanian landing reference)",
+          "coordinates": [
+            -15.81176,
+            16.50873
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected indexed GeoView rendering of OSM ferry terminal node22260206; original API not available for fresh inspection.",
+          "precision": "Approximately1km ferry/transfer area; not a surveyed cargo unloading yard or new road bridge.",
+          "source_urls": [
+            "https://mr.geoview.info/rwsw%2C22260206n",
+            "https://www.openstreetmap.org/node/22260206"
+          ],
+          "evidence_note": "Indexed derivative explicitly identifies ferry terminal, ferry=yes, nameRosso, coordinates16.50873,-15.81176 and nearby Mauritanian ferry slip. Direct page429. Current location reference does not establish historical enforcement at every terminal yard.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-29.json"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Modal scope: single_site. Rosso ferry/road freight through-carriage policy segmentMarch2018–July11 2025 only. Preserve laterNovember2025 lifting discrepancy in native qualification; no other posts or operational endpoint inferred.",
+      "unresolved": [],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"policy_period\", \"start_earliest\": \"2018-03-01\", \"start_latest\": \"2018-03-31\", \"end_earliest\": \"2025-07-11\", \"end_latest\": \"2025-07-11\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": true}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: R16-AN-001-R1: March 2018 is a documentary boundary, not the original onset. The WTO describes Senegalese trucks transferring loads to Mauritanian vehicles while Moroccan trucks continued operating; cargo itself was not prohibited. The reported July 11, 2025 agreement ended compulsory transshipment formally. A January 2026 bilateral communiqué instead dates lifting of the practice to November 2025. These accounts do not establish the first operational through-passage or explain the intervening implementation. The retrospective 2010 claim is not adopted as an exact original onset. Original policy rationale and uninterrupted operational enforcement remain unestablished."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

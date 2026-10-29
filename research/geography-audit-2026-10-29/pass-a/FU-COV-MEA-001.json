@@ -1,0 +1,61 @@
+{
+  "record_id": "FU-COV-MEA-001",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Intermittent protesters obstruction of Iraqi crude-oil tankers headed to Jordan on Trebil approach. Ordinary goods were not the restricted category; unloading/delivery chronology is not an all-traffic border closure.",
+  "source_checks": [
+    {
+      "url": "https://www.ammonnews.net/article/808926",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full October26 original interview inspected:7 oil tankers enteredJordan among outstanding consignments, roads had been blocked by demonstrations, no governmental dispute. Supports mixed passage and intermittence.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-28.json"
+    },
+    {
+      "url": "https://petra.gov.jo/ar/index.php/ar/news/الطاقة-دخول-كامل-صهاريج-النفط-العراقي-إلى-المملكة",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full official October27 statement inspected:remaining33 tankers entered viaTrebil, completing monthly quantity. Episode-completion upperbound, not exact first reopening.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-32.json"
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/node/4200458071",
+      "access_status": "cached_original_osm_xml_inspected",
+      "finding": "Cached original OSM node 4200458071, version 1, timestamp 2016-05-22T16:19:32Z; tags {\"military\": \"checkpoint\", \"name\": \"Al Karamah Border Crossing\"}. Reference geography only; closure scope is independently reconstructed from historical sources.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/38207f21ce6323de.raw"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-MEA-001-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "name": "Trebil–Al Karamah paired road crossing (Jordan control reference)",
+          "coordinates": [
+            38.9796397,
+            32.7265004
+          ],
+          "coordinate_method": "Coordinates transcribed from independently inspected cached original OSM node XML.",
+          "precision": "Approximately2km paired-crossing reference; Iraqi approach blockade may be farther away and is not represented as located.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/4200458071"
+          ],
+          "evidence_note": "Cached original OSM node 4200458071, version 1, timestamp 2016-05-22T16:19:32Z; tags {\"military\": \"checkpoint\", \"name\": \"Al Karamah Border Crossing\"}. Reference geography only; closure scope is independently reconstructed from historical sources.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/38207f21ce6323de.raw",
+          "evidence_sha256": "cb87b43e6f1fa1dec5d29fce4fd2a4c977c986ca66b091f94b8bc68bc4016474",
+          "existing_site_id": "post-trebil-karameh"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: single_site. Road oil tankers Iraq→Jordan, canonical intermittent regime no later thanOctober25 to completion byOctober27. Known paired crossing only; no continuous spell claimed.",
+      "unresolved": [
+        "Exact Iraqi approach-road blockade positions and length unresolved. Existing coordinate is Jordan control reference, not the protest barrier."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"intermittent_regime\", \"start_earliest\": null, \"start_latest\": \"2023-10-25\", \"end_earliest\": null, \"end_latest\": \"2023-10-27\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: October 27 is an episode-completion upper bound, not exact first reopening or a claim of continuous blockage. October 26 mixed observations and imprecise earliest onset remain; ordinary goods were not the restricted category."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

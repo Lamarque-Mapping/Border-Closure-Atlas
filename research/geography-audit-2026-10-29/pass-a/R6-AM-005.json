@@ -1,0 +1,84 @@
+{
+  "record_id": "R6-AM-005",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "February17 protest affects access to the Canadian span of the ThousandIslands bridge system. Both Canadian-span ends were obstructed; the US span and short international span must not be conflated with the protest site.",
+  "source_checks": [
+    {
+      "url": "https://www.wwnytv.com/2020/02/17/protest-blocks-canadian-access-ti-bridge/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Bridge-authority and OPP reporting identifies both ends of Canadian span, approximately40 protesters, reopened around15:00 after roughly3hours.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-085.json"
+    },
+    {
+      "url": "https://www.btpm.org/binational/2020-02-19/thousand-islands-bridge-reopens-following-anti-pipeline-protest",
+      "access_status": "fresh_full_text_extract",
+      "finding": "BTPM reports bridge authority closure13:15–15:00; onset differs from other reporting, preserving canonical time qualification.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-080.json"
+    },
+    {
+      "url": "https://cbsa.gc.ca/transparency-transparence/pd-dp/bbp-rpp/secu/2020-02-26/issues-enjeux-eng.html",
+      "access_status": "fresh_search_extract",
+      "finding": "CBSA indexed briefing confirms temporary vehicular access closure at ThousandIslands February17.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-073.json"
+    },
+    {
+      "url": "https://mapcarta.com/W983638788",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named Canadian toll booth on approach to Canadian span; not American suspension span, which lies6km south. Protest occurred at both ends of Canadian span; toll point locates only northern approach.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-084.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-AM-005-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-thousand-islands-canadian-approach",
+          "name": "Thousand Islands Canadian approach reference",
+          "coordinates": [
+            -75.98246,
+            44.36685
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 983638788; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W983638788",
+            "https://www.openstreetmap.org/way/983638788"
+          ],
+          "evidence_note": "Named Canadian toll booth on approach to Canadian span; not American suspension span, which lies6km south. Protest occurred at both ends of Canadian span; toll point locates only northern approach.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-084.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Thousand Islands episode on 17 February 2020.",
+      "date_scope_check": {
+        "start_earliest": "2020-02-17",
+        "start_latest": "2020-02-17",
+        "end_earliest": "2020-02-17",
+        "end_latest": "2020-02-17",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Southern end of Canadian span and exact protest positions not mapped; northern toll approach is partial reference. Short duration remains eligible."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "272ce3a0c68d47790b7f135a485b663eb597fcd3c68d35e5419f7429b86e46f4"
+}

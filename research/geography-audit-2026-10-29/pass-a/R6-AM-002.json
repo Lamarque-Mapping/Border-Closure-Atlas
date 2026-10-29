@@ -1,0 +1,112 @@
+{
+  "record_id": "R6-AM-002",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Haitian-side passenger restrictions cover four official land posts: Malpasse,Jimaní counterpart; Belladère,EliasPiña counterpart; Ouanaminthe,Dajabón counterpart; and Anse-à-Pitres,Pedernales counterpart. Goods with reduced crews were exempt; Haitian June reopening does not imply Dominican market reopening.",
+  "source_checks": [
+    {
+      "url": "https://eldia.com.do/haiti-cierra-su-frontera-con-rd-por-coronavirus-arrecian-medidas/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "March16 report attributes announcement to prime minister, effective midnight, excluding merchandise with reduced crews.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-076.json"
+    },
+    {
+      "url": "https://www.voanews.com/a/covid-19-pandemic_haiti-reopens-international-airports-borders-amid-pandemic/6192035.html",
+      "access_status": "fresh_full_text_extract",
+      "finding": "July1 VOA original explicitly names all four crossings reopened TuesdayJune30. Airport restrictions are separately described.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-078.json"
+    },
+    {
+      "url": "https://www.douane.gouv.ht/contacts/",
+      "access_status": "fresh_raw_full_text_inspected",
+      "finding": "Raw official directory inspected; lists Malpasse,Belladere,Ouanaminthe andAnse-a-Pitre customs offices, but no usable coordinates recovered.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/8ea890e18a11cf74577e.html",
+      "source_sha256": "c9a9322fce49235d3743b97fbf633e6de95b15891f28670a03d4059daf486385"
+    },
+    {
+      "url": "https://mapcarta.com/N330935496",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named Haitian customs border node next to Malpasse immigration and police, distinct from Dominican control1km southeast and settlement centroid.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-081.json"
+    },
+    {
+      "url": "https://mapcarta.com/W48766019",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Previously inspected Dajabón customs geographic reference identifies opposite side of Ouanaminthe route, not Haitian restriction gate.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-032.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-AM-002-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-malpasse-haiti-control",
+          "name": "Malpasse Haitian border-control reference",
+          "coordinates": [
+            -71.89034,
+            18.49504
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 330935496; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N330935496",
+            "https://www.openstreetmap.org/node/330935496"
+          ],
+          "evidence_note": "Named Haitian customs border node next to Malpasse immigration and police, distinct from Dominican control1km southeast and settlement centroid.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-081.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-dajabon-customs",
+          "name": "Dajabón customs crossing reference",
+          "coordinates": [
+            -71.71188,
+            19.5509
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 48766019; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W48766019",
+            "https://www.openstreetmap.org/way/48766019"
+          ],
+          "evidence_note": "Named customs centre immediately beside binational road bridge and market; separate nearby pedestrian bridge exists, so exact food-commerce gate not asserted.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-032.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Haitian-side passenger restriction at Malpasse, Belladere, Ouanaminthe and Anse-a-Pitre",
+      "date_scope_check": {
+        "start_earliest": "2020-03-16",
+        "start_latest": "2020-03-17",
+        "end_earliest": "2020-06-30",
+        "end_latest": "2020-06-30",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Belladère andAnse-à-Pitres coordinates unresolved; Ouanaminthe represented only by opposite Dajabón customs reference. No whole-border replacement."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "bdc3f7c891be37cb12e1aba78c1eff04c598ccafc1d1d48d99f3c43a9f204e44"
+}

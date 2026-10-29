@@ -1,0 +1,91 @@
+{
+  "record_id": "C7-SC-003",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Civilian crossing closure order across the South Ossetian administrative boundary for May24–26,2019 school celebrations. Odzisi–Mosabruni is a supported member; the article does not enumerate the full crossing set.",
+  "source_checks": [
+    {
+      "url": "https://www.eng.kavkaz-uzel.eu/articles/47275/",
+      "access_status": "full_text_web",
+      "finding": "Caucasian Knot original reports all crossing points closed20:00 May24 to06:00 May26 for school celebrations, without naming them.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r11-3.json",
+      "sha256": "722698daf53cbf1ca4c62b0c93c1bad81019cadfe0e8f6bf7cf7f41a2574a7d5"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/1203169771",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Razdakhan-Mosabruni border-control point inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3136f4dca29f516fb338.xml",
+      "sha256": "f19d07825a2d92dbb28f11dfb4ce7cf2db0db05bc6fdecd3d49ca5c7b9dbcbdc",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3136f4dca29f516fb338.txt",
+      "text_sha256": "f19d07825a2d92dbb28f11dfb4ce7cf2db0db05bc6fdecd3d49ca5c7b9dbcbdc",
+      "status": 200
+    },
+    {
+      "url": "https://www.iccn.ge/files/coe_report_march_2017.pdf",
+      "access_status": "full_text_pdf_extract",
+      "finding": "Contemporary Council of Europe reporting supports civilian crossing at Odzisi before this order; preserved text inspected.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-coe-2017-18.json",
+      "sha256": "b3de463c482861ae95ab1384cf6b60c72fe43bc24dab8ebd98ed670867498540"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "C7-SC-003-P1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-odzisi-mosabruni",
+          "name": "Odzisi–Mosabruni / Razdakhan crossing",
+          "coordinates": [
+            44.4871514,
+            42.0682341
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/1203169771"
+          ],
+          "evidence_note": "OSM named Razdakhan-Mosabruni border_control; DRI 2024 report explicitly equates Odzisi-Mosabruni with Razdakhani. EUMM names Odzisi in the 2019, 2022 and 2026 phase evidence.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3136f4dca29f516fb338.xml",
+          "sha256": "f19d07825a2d92dbb28f11dfb4ce7cf2db0db05bc6fdecd3d49ca5c7b9dbcbdc"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Civilian crossing closure order across the South Ossetian administrative boundary for May24–26,2019 school celebrations. Odzisi–Mosabruni is a supported member; the article does not enumerate the full crossing set.",
+      "date_scope_check": {
+        "start_earliest": "2019-05-24",
+        "start_latest": "2019-05-24",
+        "end_earliest": "2019-05-26",
+        "end_latest": "2019-05-26",
+        "last_confirmed": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "C7-SC-003-P1: The KGB-announced window is 34 hours, from 20:00 on 24 May to 06:00 on 26 May 2019. Actual implementation at individual posts and completed reopening were not established. The duration describes the order, not verified elapsed closure."
+      },
+      "unresolved": [
+        "Only Odzisi–Mosabruni has verified identity, coordinates and historical applicability; remaining civilian crossing roster and locations are not established by this order."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Only Odzisi–Mosabruni has verified identity, coordinates and historical applicability; remaining civilian crossing roster and locations are not established by this order."
+  ],
+  "input_sha256": "48dfc64036283acad37f8e2df9dfa30e0901860643b6300319193a49722dcd19",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted.",
+  "additional_evidence": [
+    {
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-coe-crossings.json",
+      "sha256": "ddf650ccb807a7b50b08b8509e64f98559d2bab8313f39a8c563bbdfca9276f2"
+    }
+  ]
+}

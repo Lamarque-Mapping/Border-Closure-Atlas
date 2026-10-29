@@ -1,0 +1,132 @@
+{
+  "record_id": "R5-SC-005",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Samtse district official notice names three gates for West Bengal elections: Lhamoizingkha, Phuentsholing and Samtse. Two main gates are geolocated; Lhamoizingkha–Kulkuli is identified as a pair but its control point remains unresolved.",
+  "source_checks": [
+    {
+      "url": "https://samtse.gov.bt/2026/04/public-notification/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Official notice explicitly names all three gates and scheduled April 20 17:00 to April 23 18:00 closure.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-50.json",
+      "sha256": "179f5eb7676d73ab39a113a69865403fadbe875437b54a56c85edfe5caff9b08"
+    },
+    {
+      "url": "https://www.ecms.gov.bt/frontend/images/publication/1839588688211314.pdf",
+      "access_status": "search_indexed_official_pdf",
+      "finding": "Official customs annex pairs Lhamoizingkha–Kulkuli and Samtse Main Gate–Chamurchi; separately lists Phuntsholing MDP and Allay.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-52.json",
+      "sha256": "467967369ce7f535966ebb8a13c6e0eaca234a8346ce50ce2451c35e04e29477"
+    },
+    {
+      "url": "https://goo.gl/maps/ZKaFaFzBkdzQXu937",
+      "access_status": "inaccessible",
+      "finding": "CSEP Kulkuli location link could not be opened; no coordinate inferred.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-55.json",
+      "sha256": "277aa3ac89e047b188e0ce509eb401c9927dcbac25a023914c37ef5b4b62eef7"
+    },
+    {
+      "url": "https://ndtv.in/india/bhutan-gate-in-jaigaon-sealed-ahead-of-phase-1-voting-in-bengal-movement-restricted-11384959",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.newsonair.gov.in/west-bengal-assembly-elections-campaigning-enters-final-two-days/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://samtse.gov.bt/wp-content/uploads/2026/04/Public-Notification.pdf",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-SC-005-R1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-phuentsholing-jaigaon-main",
+          "name": "Phuentsholing–Jaigaon main gate",
+          "coordinates": [
+            89.3808135,
+            26.8612827
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/1342208102",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1342208102",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=89.36,26.85,89.4,26.87"
+          ],
+          "evidence_note": "Named Bhutan Gate building colocated with border-control node, adjacent immigration office. Does not assert Allay freight facility coverage.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-phuentsholing.xml",
+          "sha256": "715bd40d30bb4bf7ca56d1422295825f9d26ef4a70ea91635d34cfad44549759",
+          "osm_feature": "way/1342208102",
+          "osm_version": "1",
+          "osm_timestamp": "2024-12-12T18:00:30Z",
+          "identity_tags": {
+            "building": "yes",
+            "historic": "monument",
+            "name": "Bhutan Gate",
+            "name:en": "Bhutan Gate"
+          }
+        },
+        {
+          "proposed_site_id": "post-samtse-chamurchi",
+          "name": "Samtse–Chamurchi main gate",
+          "coordinates": [
+            89.0953841,
+            26.8919731
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/1988646265",
+          "precision": "Main gate-area reference, approximately 500 m; unnamed OSM control matched by road topology and official pair.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1988646265",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=89.07,26.87,89.12,26.92",
+            "https://www.ecms.gov.bt/frontend/images/publication/1839588688211314.pdf"
+          ],
+          "evidence_note": "Border control on secondary cross-frontier road at Samtse southern gate; official Bhutan customs annex explicitly pairs Samtse Main Gate with Chamurchi.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-samtse.xml",
+          "sha256": "4dbdbd667fd021cb42bd7d371a290ae01be6fefbccfb51b3fbd9ecc8e9f075b2",
+          "osm_feature": "node/1988646265",
+          "osm_version": "3",
+          "osm_timestamp": "2015-08-04T00:52:49Z",
+          "identity_tags": {
+            "barrier": "border_control"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Lhamoizingkha, Phuentsholing and Samtse international exit/entry gates under Bhutan election-related notice",
+      "date_scope_check": {
+        "scope": "Lhamoizingkha, Phuentsholing and Samtse international exit/entry gates under Bhutan election-related notice",
+        "start_earliest": "2026-04-20",
+        "start_latest": "2026-04-20",
+        "end_earliest": "2026-04-23",
+        "end_latest": "2026-04-23",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "assessment": "April 20–23 2026 official schedule retained; conflicting Jaigaon onset hour and actual enforcement/reopening uncertainty preserved."
+      },
+      "unresolved": [
+        "Lhamoizingkha–Kulkuli gate coordinate not securely obtained; town coordinates rejected.",
+        "Phuentsholing main-gate marker does not independently establish separate Allay freight-facility scope."
+      ]
+    }
+  ],
+  "unresolved": []
+}

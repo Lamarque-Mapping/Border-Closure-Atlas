@@ -1,0 +1,81 @@
+{
+  "record_id": "REC50-R11-003",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Selected non-container railway imports through Grodekovo–Suifenhe from November30,2021, with December6 permission for selected cargo and continuing wagon exceptions. The Suifenhe road port and current passenger station do not substitute for the freight rail facility.",
+  "source_checks": [
+    {
+      "url": "https://www.thestandard.com.hk/china/article/183682/Chinese-city-on-Russian-border-halts-rail-imports-over-Covid-fears",
+      "access_status": "full_text_web",
+      "finding": "Original report identifies Suifenhe rail imports of manual-handling cargo.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r11-5.json",
+      "sha256": "783b2a3872d653ebff5cb29c60ab11348beffd4edfcbb6ff6f839104014e9c65"
+    },
+    {
+      "url": "https://www.interfax.ru/business/805805",
+      "access_status": "full_text_web",
+      "finding": "Interfax relays Russian Railways specifying Grodekovo–Suifenhe November30 and distinct Zabaykalsk–Manzhouli December1 starts.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r11-5.json",
+      "sha256": "783b2a3872d653ebff5cb29c60ab11348beffd4edfcbb6ff6f839104014e9c65"
+    },
+    {
+      "url": "https://www.mucaizhijia.com/news/details/1122_1.html",
+      "access_status": "indexed_extract_only",
+      "finding": "Indexed original trade report says selected Suifenhe cargo permitted from December6, covered/temperature-controlled wagons excluded; its Erenhot paragraph concerns road freight.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-42.json",
+      "sha256": "f3cf94052d07a3c8a78efca8c92af18e93e1e02c7e0fa10cd00ce12b5c51c224"
+    },
+    {
+      "url": "https://www.caop.org.cn/kaifangkouan/yunshufangshi/tielukouan/2019-02-19/126.html",
+      "access_status": "indexed_extract_only",
+      "finding": "Port association identifies the Bin-Sui/Far Eastern railway connection, corresponding Grodekovo station26km away.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-46.json",
+      "sha256": "5960cbd3220b2ae62779525ab94b23a660befe87116a59ee11c51ceeed0edd6e"
+    },
+    {
+      "url": "https://www.xinhuanet.com/photo/20250126/4e559a505743474ab52f2a43b1c212f2/c.html",
+      "access_status": "indexed_extract_only",
+      "finding": "2025 construction report says new tunnel will replace three historic tunnels, making unverified current route geometry unsuitable for2021.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-46.json",
+      "sha256": "5960cbd3220b2ae62779525ab94b23a660befe87116a59ee11c51ceeed0edd6e"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R11-003-P1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Selected non-container railway imports through Grodekovo–Suifenhe from November30,2021, with December6 permission for selected cargo and continuing wagon exceptions. The Suifenhe road port and current passenger station do not substitute for the freight rail facility.",
+      "date_scope_check": {
+        "start_earliest": "2021-11-30",
+        "start_latest": "2021-11-30",
+        "end_earliest": "2021-12-06",
+        "end_latest": "2021-12-06",
+        "last_confirmed": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "REC50-R11-003-P1: Reuters describes the 29–30 November midnight boundary; Interfax reports Russian Railways explicitly dating the Suifenhe suspension to 30 November 2021. A 9 December Logirus report, attributed to Russia’s Ministry of Industry and Trade and trade representation in China, corroborates 6 December permission for specified goods, retaining covered and temperature-controlled wagon restrictions. EastRussia independently reports the same permission date through Biang. Original Chinese notices and the first matching returning train remain unavailable, so this is a reported policy interval, not a verified operational reopening. The Logirus article contains an impossible retrospective reference to 30 December in its final paragraph; that date is not used. Container traffic and EA006 road-passenger restrictions are separate."
+      },
+      "unresolved": [
+        "Historical freight railway gateway or station-yard reference is not yet georeferenced to2021. New passenger station, road national-gate attraction and2025 tunnel alignment are rejected as substitutes."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Historical freight railway gateway or station-yard reference is not yet georeferenced to2021. New passenger station, road national-gate attraction and2025 tunnel alignment are rejected as substitutes."
+  ],
+  "input_sha256": "14bafeaf6a3ca4d5a87a02dbbec6fe28d0656fec8c0fdddcedc4d7cfc13b5e31",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

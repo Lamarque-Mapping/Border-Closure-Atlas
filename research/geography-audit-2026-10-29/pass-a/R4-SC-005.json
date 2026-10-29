@@ -1,0 +1,138 @@
+{
+  "record_id": "R4-SC-005",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "October 2019 order concerns Jhulaghat suspension bridge between Baitadi and Pithoragarh. Daura and other Uttarakhand bridge arrangements are distinct, not extra geometry for this phase.",
+  "source_checks": [
+    {
+      "url": "https://english.khabarhub.com/2019/05/47967/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "October 5 report identifies Jhulaghat and Daura bridge closures 48 hours before polls; confirms physical bridge identity, not exact reopening.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-52.json",
+      "sha256": "467967369ce7f535966ebb8a13c6e0eaca234a8346ce50ce2451c35e04e29477"
+    },
+    {
+      "url": "https://pwduk.in/im/bridgReport/2136/print",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Official PWD inventory names Jhulaghat pedestrian suspension bridge on Kali River and supplies explicit coordinates; its provisional status retained.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-54.json",
+      "sha256": "35c23b83e9a7c13c039d934fbc15ce3ccda4bbf88635084a48e75ee7844ebdda"
+    },
+    {
+      "url": "https://english.ratopati.com/story/10760",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://english.ratopati.com/story/11084/closed",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.livehindustan.com/uttarakhand/pithoragarh/story-indo-nepal-border-sealed-for-48-hours-in-jhulaghat-2780262.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.sharesansar.com/newsdetail/nepal-india-border-in-baitadi-darchula-to-be-sealed-off-for-three-days",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://sports.nagariknews.com/news/transit-point-to-be-closed",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://enewspolar.com/border-transit-points-with-india-to-be-closed-for-48-hours/?cat=25",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://timesofindia.indiatimes.com/city/dehradun/indo-nepal-border-to-be-closed-for-panchayat-polls/amp_articleshow/71399045.cms",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.myrepublica.nagariknetwork.com/index.php/news/transit-point-to-be-closed",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-SC-005-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-jhulaghat",
+          "name": "Jhulaghat suspension bridge",
+          "coordinates": [
+            80.3826994,
+            29.5713596
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/345105709",
+          "precision": "Bridge-area reference, approximately 100 m; official inventory is labelled data not yet finalized.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/345105709",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=80.36,29.56,80.39,29.59",
+            "https://pwduk.in/im/bridgReport/2136/print"
+          ],
+          "evidence_note": "OSM pedestrian-only bridge on old F50 at Kali River; independently matched to Uttarakhand PWD inventory 2136 named Jhulaghat suspension/pedestrian bridge with coordinate 80.38277778,29.57111110, about 30 m from mapped span.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-jhulaghat.xml",
+          "sha256": "98a167d8374ddf49c9a2e6bc78b0db5d70891d1628f481c6c596c556f60e890f",
+          "osm_feature": "way/345105709",
+          "osm_version": "3",
+          "osm_timestamp": "2024-09-01T13:48:39Z",
+          "identity_tags": {
+            "bicycle": "no",
+            "bridge": "yes",
+            "highway": "primary",
+            "horse": "no",
+            "layer": "1",
+            "motor_vehicle": "no",
+            "ref:old": "F50",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Jhulaghat suspension bridge / Baitadi frontier election restriction with discretionary emergency passage",
+      "date_scope_check": {
+        "scope": "Jhulaghat suspension bridge / Baitadi frontier election restriction with discretionary emergency passage",
+        "start_earliest": "2019-10-03",
+        "start_latest": "2019-10-03",
+        "end_earliest": "2019-10-05",
+        "end_latest": "2019-10-06",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "assessment": "October 3–6 scheduled bounds retain conflicting reported clock conventions and emergency discretion; no actual reopening established."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

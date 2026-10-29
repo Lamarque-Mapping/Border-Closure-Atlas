@@ -1,0 +1,63 @@
+{
+  "record_id": "R11-AM-002",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Initial Guatemala-to-El Salvador freight blockage at El Jobo bridge linking Valle Nuevo and Las Chinamas, May 8–9 2019.",
+  "source_checks": [
+    {
+      "url": "https://www.laprensagrafica.com/amp/elsalvador/Se-normaliza-el-paso-de-camiones-en-la-frontera-20190509-0558.html",
+      "access_status": "extract_only",
+      "finding": "Direct URL returned 404; indexed original article text inspected: Wednesday truckers blocked El Jobo seeking Valle Nuevo exit documents; Thursday first truck access resumed."
+    },
+    {
+      "url": "https://bridgemeister.com/bridge.php?bid=4606",
+      "access_status": "full_retrieved",
+      "finding": "Full inventory identifies El Jobo, Rio Paz, Las Chinamas/Las Pilas, two-lane vehicle bridge and coordinates; last status check 2019."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R11-AM-002-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "geo-el-jobo-road-bridge",
+          "name": "El Jobo road bridge, Las Chinamas–Valle Nuevo",
+          "coordinates": [
+            -89.906447,
+            14.017589
+          ],
+          "coordinate_method": "Published decimal coordinates in Bridgemeister inventory 4606; longitude signed west",
+          "precision": "Bridge representative approximately 100 m; not lane-specific",
+          "source_urls": [
+            "https://bridgemeister.com/bridge.php?bid=4606"
+          ],
+          "evidence_note": "Inventory explicitly identifies vehicular two-lane Rio Paz bridge between Las Chinamas and Las Pilas, in use as of 2019; excludes Nicaragua footbridge homonym."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Initial Guatemala-to-El Salvador freight blockage at El Jobo/Las Chinamas–Valle Nuevo, to first demonstrated renewed truck access; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "bounded_interval",
+        "start_earliest": "2019-05-08",
+        "start_latest": "2019-05-08",
+        "end_earliest": "2019-05-08",
+        "end_latest": "2019-05-09",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Event article currently extract-only; coordinate inventory added in 2020 with 2019 in-use observation. Exact lane/bridgehead not established, so representative bridge point only."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Event article currently extract-only; coordinate inventory added in 2020 with 2019 in-use observation. Exact lane/bridgehead not established, so representative bridge point only."
+  ]
+}

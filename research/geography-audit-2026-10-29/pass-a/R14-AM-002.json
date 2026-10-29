@@ -1,0 +1,84 @@
+{
+  "record_id": "R14-AM-002",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Deliberate obstruction is on ElAmatal bridge at km165.5 of Interamericana approach to SanCristóbal, roughly1.5km beyond international line. Customs remained affected through access obstruction, not necessarily closed internally.",
+  "source_checks": [
+    {
+      "url": "https://www.prensalibre.com/ciudades/jutiapa/por-cuarto-dia-consecutivo-pobladores-bloquean-el-paso-hacia-la-frontera-con-el-salvador/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "November7 original photo caption and text locate ElAmatal bridge km165.5, fourdays blockade on AsunciónMita–SanCristóbal road.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-085.json"
+    },
+    {
+      "url": "https://diario.elmundo.sv/Nacionales/habilitan-paso-vehicular-en-carretera-a-frontera-san-cristobal",
+      "access_status": "fresh_full_text_extract",
+      "finding": "November8 PNC-sourced report says road reopened10:40, blockade1.5km after frontier sinceMonday4; isolates road obstruction.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-077.json"
+    },
+    {
+      "url": "https://en.portal.sat.gob.gt/portal/ubicacion-y-horario-de-aduanas/",
+      "access_status": "fresh_search_extract",
+      "finding": "OfficialSAT directory identifies SanCristóbal customs onCA1Or atkm175,Atescatempa. Kilometer numbers differ from journalistic approach description; not resolved by coordinate inference.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-082.json"
+    },
+    {
+      "url": "https://mapcarta.com/W473491872",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named land-customs building operatorGuatemala near paired border; geographic page callsregionElSalvador, so only crossing-complex reference. Not inland Amatal bridge.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-083.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R14-AM-002-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-san-cristobal-road-reference",
+          "name": "San Cristóbal road customs reference",
+          "coordinates": [
+            -89.66758,
+            14.18451
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 473491872; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W473491872",
+            "https://www.openstreetmap.org/way/473491872"
+          ],
+          "evidence_note": "Named land-customs building operatorGuatemala near paired border; geographic page callsregionElSalvador, so only crossing-complex reference. Not inland Amatal bridge.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-083.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Vehicle access on the deliberately obstructed Amatal approach to San Cristobal customs",
+      "date_scope_check": {
+        "start_earliest": "2019-11-04",
+        "start_latest": "2019-11-04",
+        "end_earliest": "2019-11-08",
+        "end_latest": "2019-11-08",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact ElAmatal bridge geometry and kilometre-reference discrepancy unresolved. Customs reference only, not obstruction coordinate."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "096dcca92bfe831a6999ba14605d4d459f33bdf6c2d0872400fb1b9f90954e10"
+}

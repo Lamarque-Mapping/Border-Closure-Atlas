@@ -1,0 +1,201 @@
+{
+  "record_id": "R5-SC-001",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Two separate observations restrict Nepal-to-Rupaidiha shopping at Jamunaha while essential movement and screened returnees remained possible. New western ICP operations are not the 2021 shopping crossing.",
+  "source_checks": [
+    {
+      "url": "https://english.nepalnews.com/s/nation/banke-administration-halts-mobility-at-nepalindia-border/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "March 25 report describes BanKe shopping restriction and returnee screening.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-50.json",
+      "sha256": "179f5eb7676d73ab39a113a69865403fadbe875437b54a56c85edfe5caff9b08"
+    },
+    {
+      "url": "https://english.nepalnews.com/s/nation/movement-to-rupaidiha-across-indian-border-banned/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "April 16 report explicitly pairs Rupaidiha shopping restriction with Jamunaha screening and essential-work exceptions.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-52.json",
+      "sha256": "467967369ce7f535966ebb8a13c6e0eaca234a8346ce50ce2451c35e04e29477"
+    },
+    {
+      "url": "https://jamunaha.immigration.gov.np/",
+      "access_status": "search_indexed_official_page",
+      "finding": "Official immigration office confirms Jamunaha Banke identity.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-55.json",
+      "sha256": "277aa3ac89e047b188e0ce509eb401c9927dcbac25a023914c37ef5b4b62eef7"
+    },
+    {
+      "url": "https://risingnepaldaily.com/news/42576",
+      "access_status": "search_indexed_article",
+      "finding": "State newspaper describes new ICP operationalization after 2023 inauguration; helps distinguish the later western freight facility.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-55.json",
+      "sha256": "277aa3ac89e047b188e0ce509eb401c9927dcbac25a023914c37ef5b4b62eef7"
+    },
+    {
+      "url": "https://thehimalayantimes.com/nepal/district-risk-management-centre-in-banke-prohibits-movement-to-rupaidiha-india",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://kathmandupost.com/9/2021/08/21/people-returning-to-india-despite-covid-19-risks",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://kathmandupost.com/province-no-5/2021/08/21/people-returning-to-india-despite-covid-19-risks",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://thehimalayantimes.com/ampArticle/1006488",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://risingnepaldaily.com/news/76469",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://risingnepaldaily.com/news/68373",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://english.khabarhub.com/2021/29/199828/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://english.ratopati.com/story/18749",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-SC-001-FU1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-jamunaha-rupaidiha",
+          "name": "Jamunaha–Rupaidiha main road crossing",
+          "coordinates": [
+            81.6004603,
+            28.0189568
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/3888116312",
+          "precision": "Main road crossing-area reference, approximately 300 m; historical exact police position not asserted.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/3888116312",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=81.58,28.0,81.62,28.04"
+          ],
+          "evidence_note": "Border-control node is shared by India–Nepal boundary, Ratna Rajmarg NH58 and Indian NH927, adjacent named Rupaidiha immigration and Jamunaha police. Distinct from new ICP to west and unrelated Hirmaniya controls.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-jamunaha-main.xml",
+          "sha256": "29a58a095710cb9ff1918b3d45fdd54e3695129ab2e48c3484531364c81893de",
+          "osm_feature": "node/3888116312",
+          "osm_version": "4",
+          "osm_timestamp": "2022-07-23T20:08:55Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "bicycle": "yes",
+            "foot": "yes",
+            "horse": "no",
+            "motorcar": "yes",
+            "motorcycle": "yes"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Jamunaha–Rupaidiha outbound local shopping movement",
+      "date_scope_check": {
+        "scope": "Jamunaha–Rupaidiha outbound local shopping movement",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2021-03-25",
+        "end_latest": "2021-03-25",
+        "last_confirmed": "2021-03-25",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "March 25 and April 16 2021 remain separate dated observations, not an inferred continuous interval; July shopping report is not a first reopening date."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "R5-SC-001-FU2",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-jamunaha-rupaidiha",
+          "name": "Jamunaha–Rupaidiha main road crossing",
+          "coordinates": [
+            81.6004603,
+            28.0189568
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/3888116312",
+          "precision": "Main road crossing-area reference, approximately 300 m; historical exact police position not asserted.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/3888116312",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=81.58,28.0,81.62,28.04"
+          ],
+          "evidence_note": "Border-control node is shared by India–Nepal boundary, Ratna Rajmarg NH58 and Indian NH927, adjacent named Rupaidiha immigration and Jamunaha police. Distinct from new ICP to west and unrelated Hirmaniya controls.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-jamunaha-main.xml",
+          "sha256": "29a58a095710cb9ff1918b3d45fdd54e3695129ab2e48c3484531364c81893de",
+          "osm_feature": "node/3888116312",
+          "osm_version": "4",
+          "osm_timestamp": "2022-07-23T20:08:55Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "bicycle": "yes",
+            "foot": "yes",
+            "horse": "no",
+            "motorcar": "yes",
+            "motorcycle": "yes"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Jamunaha–Rupaidiha outbound local shopping movement",
+      "date_scope_check": {
+        "scope": "Jamunaha–Rupaidiha outbound local shopping movement",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2021-04-16",
+        "end_latest": "2021-04-16",
+        "last_confirmed": "2021-04-16",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "March 25 and April 16 2021 remain separate dated observations, not an inferred continuous interval; July shopping report is not a first reopening date."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

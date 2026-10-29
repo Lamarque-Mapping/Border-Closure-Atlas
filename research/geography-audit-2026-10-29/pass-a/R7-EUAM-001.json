@@ -1,0 +1,78 @@
+{
+  "record_id": "R7-EUAM-001",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "January31 episode affects road Kulata–Promachonas crossing for about one hour; separate January28 incident and railway crossing are not joined.",
+  "source_checks": [
+    {
+      "url": "https://presscenters.com/News/97925/vuzstanoveno-e-normalnoto-preminavane-prez-gkpp-kulata--promahon",
+      "access_status": "fresh_republished_primary_text",
+      "finding": "Ministry-of-Interior press-release reproduction names paired checkpoint, passage restored14:15 after interruption onehour before; alternative posts operated normally. OriginalMVR is linked but not directly retrieved.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-078.json"
+    },
+    {
+      "url": "https://old-news.bnr.bg/en/post/100790504/traffic-of-motor-vehicles-via-kulata-promachon-resumes-update",
+      "access_status": "inaccessible",
+      "finding": "BNR source returned502; not claimed accessed.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-077.json"
+    },
+    {
+      "url": "https://mapcarta.com/W1127985647",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Explicit paired road border facilityE79, distinct from Kulata railway station1.5kmfromboundary. Greek protest location not exactly surveyed.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-081.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R7-EUAM-001-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-kulata-promachonas-road-reference",
+          "name": "Kulata–Promachonas road checkpoint reference",
+          "coordinates": [
+            23.36263,
+            41.38179
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 1127985647; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W1127985647",
+            "https://www.openstreetmap.org/way/1127985647"
+          ],
+          "evidence_note": "Explicit paired road border facilityE79, distinct from Kulata railway station1.5kmfromboundary. Greek protest location not exactly surveyed.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-081.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Kulata episode on 31 January 2017.",
+      "date_scope_check": {
+        "start_earliest": "2017-01-31",
+        "start_latest": "2017-01-31",
+        "end_earliest": "2017-01-31",
+        "end_latest": "2017-01-31",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Named Bulgarian road facility references pair; exact Greek-side farmers barrier unlocated. Short phase remains inAllview."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "1f41cd220061439894042d71e3b33cac8dd278f18a70ee4fda285a90ef3e2a5c"
+}

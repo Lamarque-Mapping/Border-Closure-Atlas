@@ -1,0 +1,86 @@
+{
+  "record_id": "REC50-R11-001",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Passenger access from Kazakhstan into the Chinese section of the enclosed Khorgos International Centre for Border Cooperation. This is the joint shopping/trade zone, distinct from Khorgos road freight, railway and domestic visitor access; January22 holiday closure is not treated as COVID onset.",
+  "source_checks": [
+    {
+      "url": "https://www.xinjiang.gov.cn/xinjiang/dzdt/202304/a8ef818460fb4d2aaf1d525b9c1545fb.shtml",
+      "access_status": "full_text_web",
+      "finding": "Xinjiang government original records more than100 Kazakh visitors entering the Chinese section on April17,2023.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r11-4.json",
+      "sha256": "f90f0225ebc8c58cbbc285d65cbf5e4c8b94522c5119d69bdd26b5b9967aa6a1"
+    },
+    {
+      "url": "https://tengrinews.kz/kazakhstan_news/xorgos-budet-zakryt-do-15-fevralia-389805/",
+      "access_status": "full_text_web",
+      "finding": "Tengrinews original distinguishes January27 COVID-related ICBC closure from the pre-existing holiday suspension.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r11-4.json",
+      "sha256": "f90f0225ebc8c58cbbc285d65cbf5e4c8b94522c5119d69bdd26b5b9967aa6a1"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/186629617/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named ICBC retail-zone outline inspected; it does not identify the controlled international visitor passage.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/84e233a00a16701ae32f.xml",
+      "sha256": "05c25403ead3379da341549f73ffe87184999303bf2cdd0cb965b048baa54aac",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/84e233a00a16701ae32f.txt",
+      "text_sha256": "05c25403ead3379da341549f73ffe87184999303bf2cdd0cb965b048baa54aac",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/558482276/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Chinese tourism-area entrance is a domestic perimeter facility, not demonstrated to be the Kazakh-to-Chinese internal connection.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d381dfbe4cc8e03ab629.xml",
+      "sha256": "274f4ca4e3eb0d84791218f01b57f9f9bd3dee3fa3079053b32eae80d105465a",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d381dfbe4cc8e03ab629.txt",
+      "text_sha256": "274f4ca4e3eb0d84791218f01b57f9f9bd3dee3fa3079053b32eae80d105465a",
+      "status": 200
+    },
+    {
+      "url": "https://www.xjhegs.gov.cn/xjhegs/c114441/202505/6d189c24836b4e7ba279d7f9c9c659c3.shtml",
+      "access_status": "indexed_extract_only",
+      "finding": "Official city description distinguishes tourism area and its ICBC Chinese component.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-43.json",
+      "sha256": "5861f01dedd19a7f6dd331ceee7440775c701683da4433043a899ec486a6abf8"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R11-001-P1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Passenger access from Kazakhstan into the Chinese section of the enclosed Khorgos International Centre for Border Cooperation. This is the joint shopping/trade zone, distinct from Khorgos road freight, railway and domestic visitor access; January22 holiday closure is not treated as COVID onset.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": "2020-01-27",
+        "end_earliest": "2023-04-17",
+        "end_latest": "2023-04-17",
+        "last_confirmed": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "The centre was already reported closed for coronavirus prevention by 27 January 2020; this is a latest-onset bound, not an exact observed start. The report distinguishes an earlier holiday closure from 22 January, whose onset is not imported into this COVID phase. The earliest COVID-related onset and uninterrupted continuity are not established, so numeric duration remains withheld. Kazakh visitors were observed entering the Chinese section on 17 April 2023. The abandoned 8 January plan and the separate 24 April normal-operations announcement are not substituted for that scoped observed return. Ordinary road freight, rail traffic and commercial import permissions are outside this phase."
+      },
+      "unresolved": [
+        "Exact internal cross-border visitor passage has not been georeferenced. Neither the domestic Chinese tourist entrance nor a whole-zone centroid is substituted for that passage."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact internal cross-border visitor passage has not been georeferenced. Neither the domestic Chinese tourist entrance nor a whole-zone centroid is substituted for that passage."
+  ],
+  "input_sha256": "038488cf5db7620288bc4c8bc5cca1da6b21c3e53025021f0c45d5d86f104c2e",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

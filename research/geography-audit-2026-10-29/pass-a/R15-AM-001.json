@@ -1,0 +1,84 @@
+{
+  "record_id": "R15-AM-001",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Selected customs-strike evidence concerns PinoHachado/Liucura crossing, where travellers were turned back, separately from roadweather closures and Samoré delays. Uncertain temporal span stays uncertain while geography is located.",
+  "source_checks": [
+    {
+      "url": "https://www.lmneuquen.com/paro-la-aduana-chile-complica-cruzar-la-cordillera-n552063",
+      "access_status": "fresh_full_text_extract",
+      "finding": "May25 original reports total previous-day stoppage atPinoHachado/Icalma, travellers told toreturn byGendarmerie; Samoré stillpassing withdelays andMamuilMalalnormal.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-078.json"
+    },
+    {
+      "url": "https://www.lmneuquen.com/abren-el-paso-pino-hachado-despejar-la-ruta-n553613",
+      "access_status": "fresh_full_text_extract",
+      "finding": "June8 original concerns same-morning snow closure and noon reopening after roadclearing, not proof strike continued toJune8.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-085.json"
+    },
+    {
+      "url": "https://www.sernatur.cl/wp-content/uploads/2018/09/IX-REGION-DE-LA-ARAUCANIA.pdf",
+      "access_status": "fresh_search_extract",
+      "finding": "Official tourism inventory describes Liucura aroundcustoms, withPinoHachadopass22kmeast, distinguishing facilities frompass.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-084.json"
+    },
+    {
+      "url": "https://mapcarta.com/N5074199535",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named Chilean frontier complex byLiucura, distinct from Argentine control7kmbeforeboundary and mountainpass. Chilean tourism authority identifiesLiucuracustoms22kmwestofpass.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-085.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R15-AM-001-FU1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-pino-hachado-chile",
+          "name": "Pino Hachado Chilean frontier control",
+          "coordinates": [
+            -71.08784,
+            -38.64565
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 5074199535; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N5074199535",
+            "https://www.openstreetmap.org/node/5074199535"
+          ],
+          "evidence_note": "Named Chilean frontier complex byLiucura, distinct from Argentine control7kmbeforeboundary and mountainpass. Chilean tourism authority identifiesLiucuracustoms22kmwestofpass.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-085.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Pino Hachado customs passage; not regional roads or Samoré",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2017-05-24",
+        "end_latest": "2017-06-08",
+        "last_confirmed": "2017-05-24",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Current named complex coordinate is facility reference, not exact2017 barrier. Geography does not validate disputed closure span or change flags."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "9121864df731a156308b7070dc0c44f277326ddc6ddfe29c36456059c185639e"
+}

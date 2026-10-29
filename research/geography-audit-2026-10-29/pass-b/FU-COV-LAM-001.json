@@ -1,0 +1,111 @@
+{
+  "record_id": "FU-COV-LAM-001",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Las Manos Honduras–Nicaragua road customs freight protests in initial October11–12 episode and renewed intermittent October18–24 episode. Visa dispute with Costa Rica is cause, not the international boundary at the obstruction.",
+  "source_checks": [
+    {
+      "url": "https://proceso.hn/continua-bloqueada-la-aduana-las-manos-zona-fronteriza-entre-honduras-y-nicaragua/",
+      "access_status": "full_retrieved",
+      "finding": "Full report explicitly names Las Manos and allows light vehicles with difficulty; truckers began Wednesday night."
+    },
+    {
+      "url": "https://hch.tv/normalizada-circulacion-del-transporte-de-carga-en-fronteras-tras-eliminacion-de-visas/",
+      "access_status": "full_retrieved",
+      "finding": "Full October25 report names Las Manos, El Paraiso, and freight resumption Tuesday night after visa agreement; Guasaule not substituted for this endpoint."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-86.58,13.787,-86.56,13.807",
+      "access_status": "full_retrieved",
+      "finding": "Inspected road/control context: Honduran immigration and adjacent Aduana north of Nicaragua immigration; XML sha256 50d56e88d92f88834c07d7f874ae016de0a4cd4459251c058161a50a3de883c9."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/6515656585",
+      "access_status": "full_retrieved",
+      "finding": "Inspected customs node; source hash retained with coordinates."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-LAM-001-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "geo-las-manos-honduras-customs",
+          "name": "Las Manos Honduran road customs",
+          "coordinates": [
+            -86.5707153,
+            13.793814
+          ],
+          "coordinate_method": "Directly inspected OSM node/6515656585 node; XML sha256 66b828fd7f979fc95ab3d512e2ea0b057277960f689d75cf6b4afa78b62f41d4",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/6515656585"
+          ],
+          "evidence_note": "Customs node next to Migracion Honduras, north of Nicaraguan immigration node and road border-control point in independently inspected local OSM XML. Honduras–Nicaragua crossing despite Costa Rica visa dispute."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Las Manos cargo protest obstruction; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "bounded_interval",
+        "start_earliest": "2023-10-11",
+        "start_latest": "2023-10-12",
+        "end_earliest": null,
+        "end_latest": "2023-10-12",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Customs-area point represents affected Honduran gate; exact parked-truck barrier and lane coverage not surveyed. Intermittent second phase must not be rendered continuously closed."
+      ]
+    },
+    {
+      "phase_id": "FU-COV-LAM-001-FU2",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "geo-las-manos-honduras-customs",
+          "name": "Las Manos Honduran road customs",
+          "coordinates": [
+            -86.5707153,
+            13.793814
+          ],
+          "coordinate_method": "Directly inspected OSM node/6515656585 node; XML sha256 66b828fd7f979fc95ab3d512e2ea0b057277960f689d75cf6b4afa78b62f41d4",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/6515656585"
+          ],
+          "evidence_note": "Customs node next to Migracion Honduras, north of Nicaraguan immigration node and road border-control point in independently inspected local OSM XML. Honduras–Nicaragua crossing despite Costa Rica visa dispute."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Las Manos cargo protest obstruction; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "intermittent_regime",
+        "start_earliest": "2023-10-18",
+        "start_latest": "2023-10-19",
+        "end_earliest": "2023-10-24",
+        "end_latest": "2023-10-24",
+        "last_confirmed": "2023-10-21",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Customs-area point represents affected Honduran gate; exact parked-truck barrier and lane coverage not surveyed. Intermittent second phase must not be rendered continuously closed."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Customs-area point represents affected Honduran gate; exact parked-truck barrier and lane coverage not surveyed. Intermittent second phase must not be rendered continuously closed."
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "record_id": "R6-AM-001",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Selected phase concerns Haitian market participants entering Dajabón, rather than the Haitian government June30 land reopening. The affected market gate is along Dajabón–Ouanaminthe crossing.",
+  "source_checks": [
+    {
+      "url": "https://www.diariolibre.com/actualidad/reanudan-mercado-binacional-de-dajabon-LE22513796",
+      "access_status": "fresh_full_text_extract",
+      "finding": "November6 original reports market restarted after eightmonths, with50people/hour and supervised health protocol; other border markets not automatically included.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-076.json"
+    },
+    {
+      "url": "https://mapcarta.com/W48766019",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named Dajabón customs building reference previously independently located; exact market pedestrian gate unlocated.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-032.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-AM-001-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-dajabon-customs",
+          "name": "Dajabón customs crossing reference",
+          "coordinates": [
+            -71.71188,
+            19.5509
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 48766019; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W48766019",
+            "https://www.openstreetmap.org/way/48766019"
+          ],
+          "evidence_note": "Named customs centre immediately beside binational road bridge and market; separate nearby pedestrian bridge exists, so exact food-commerce gate not asserted.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-032.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ordinary Haitian market-participant entry at Dajabon–Ouanaminthe",
+      "date_scope_check": {
+        "start_earliest": "2020-03-19",
+        "start_latest": "2020-03-19",
+        "end_earliest": "2020-11-06",
+        "end_latest": "2020-11-06",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Customs complex reference only; exact pedestrian market-access gate not independently located. Original March19 legal start retained."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "c49b3c51e13bf8af9bbf1dff46f8005bfb8fc1cf042284d623eb3ce9aa915b20"
+}

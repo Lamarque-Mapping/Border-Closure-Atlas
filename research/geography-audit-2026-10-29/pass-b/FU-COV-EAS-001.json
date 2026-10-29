@@ -1,0 +1,130 @@
+{
+  "record_id": "FU-COV-EAS-001",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Second Friendship Bridge at Mae Sai–Tachileik, Chiang Rai, with two distinct February2021 phases: broader cargo interruption and a brief Myanmar gate closure during protests. The first Mae Sai bridge and both Mae Sot bridges are different facilities.",
+  "source_checks": [
+    {
+      "url": "https://www.thansettakij.com/general-news/469492",
+      "access_status": "full_text_web",
+      "finding": "Original Thansettakij names bridgeII opposite Ban San Phak Hi, Mae Sai, cargo suspension and later reopening context.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r11-2.json",
+      "sha256": "6ef6f40dd2830bf2663cb3e015d862148e21ccb7193bad1ffdaba9b238bb6a35"
+    },
+    {
+      "url": "https://www.matichon.co.th/region/news_2589470",
+      "access_status": "full_text_web",
+      "finding": "Original Matichon describes protesters moving from bridgeI to bridgeII and a five-to-ten-minute Myanmar gate shutdown on February21.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r11-3.json",
+      "sha256": "722698daf53cbf1ca4c62b0c93c1bad81019cadfe0e8f6bf7cf7f41a2574a7d5"
+    },
+    {
+      "url": "https://www.ide.go.jp/library/English/Publish/Reports/Brc/pdf/11_06.pdf",
+      "access_status": "indexed_extract_only",
+      "finding": "Field-study inventory distinguishes Mae SaiI and II, with customs at bridgeII operational from2008.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-39.json",
+      "sha256": "92d82aaf6118e2c0307390656caba0e56b32ca7201d0a10e92278e391e13934d"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1414015772/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named bridge outline over Sai River inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/441a1965dcff0fc425e3.xml",
+      "sha256": "e0d98cbaa6cfb10d35ebcb803a4047bc35fd0c70987b3affffaa6149a4b275f1",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/441a1965dcff0fc425e3.txt",
+      "text_sha256": "e0d98cbaa6cfb10d35ebcb803a4047bc35fd0c70987b3affffaa6149a4b275f1",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-EAS-001-FU1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-maesai-tachileik-bridge-2",
+          "name": "Mae Sai–Tachileik Second Friendship Bridge",
+          "coordinates": [
+            99.9046332,
+            20.4485166
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/1414015772/full"
+          ],
+          "evidence_note": "Named Second Friendship Bridge over the Sai River. Thai Customs and IDE field-study sources distinguish the second Mae Sai bridge at San Phak Hi from the first bridge; Mae Sot bridges are a different border town.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/441a1965dcff0fc425e3.xml",
+          "sha256": "e0d98cbaa6cfb10d35ebcb803a4047bc35fd0c70987b3affffaa6149a4b275f1"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Second Friendship Bridge at Mae Sai–Tachileik, Chiang Rai, with two distinct February2021 phases: broader cargo interruption and a brief Myanmar gate closure during protests. The first Mae Sai bridge and both Mae Sot bridges are different facilities.",
+      "date_scope_check": {
+        "start_earliest": "2021-02-20",
+        "start_latest": "2021-02-20",
+        "end_earliest": "2021-02-20",
+        "end_latest": "2021-02-23",
+        "last_confirmed": "2021-02-20",
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "FU-COV-EAS-001-FU1: February 20 is a closed-state observation; exact reopening and overnight continuity remain unknown. Cargo passage at the same second bridge is directly reported from 06:30 on February 23, bounding the earlier interruption by then.\n\nFU-COV-EAS-001-FU2: The February 21 closure lasted five to ten minutes around 11:00; no whole-day duration is inferred.\n\nA separate February 22 strike-related cessation affected cargo operators and warehouses. Keep it separate from the earlier protest blockades and from the COVID passenger restrictions."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "FU-COV-EAS-001-FU2",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-maesai-tachileik-bridge-2",
+          "name": "Mae Sai–Tachileik Second Friendship Bridge",
+          "coordinates": [
+            99.9046332,
+            20.4485166
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/1414015772/full"
+          ],
+          "evidence_note": "Named Second Friendship Bridge over the Sai River. Thai Customs and IDE field-study sources distinguish the second Mae Sai bridge at San Phak Hi from the first bridge; Mae Sot bridges are a different border town.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/441a1965dcff0fc425e3.xml",
+          "sha256": "e0d98cbaa6cfb10d35ebcb803a4047bc35fd0c70987b3affffaa6149a4b275f1"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Second Friendship Bridge at Mae Sai–Tachileik, Chiang Rai, with two distinct February2021 phases: broader cargo interruption and a brief Myanmar gate closure during protests. The first Mae Sai bridge and both Mae Sot bridges are different facilities.",
+      "date_scope_check": {
+        "start_earliest": "2021-02-21",
+        "start_latest": "2021-02-21",
+        "end_earliest": "2021-02-21",
+        "end_latest": "2021-02-21",
+        "last_confirmed": null,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "FU-COV-EAS-001-FU1: February 20 is a closed-state observation; exact reopening and overnight continuity remain unknown. Cargo passage at the same second bridge is directly reported from 06:30 on February 23, bounding the earlier interruption by then.\n\nFU-COV-EAS-001-FU2: The February 21 closure lasted five to ten minutes around 11:00; no whole-day duration is inferred.\n\nA separate February 22 strike-related cessation affected cargo operators and warehouses. Keep it separate from the earlier protest blockades and from the COVID passenger restrictions."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "a0fcfb74b630040b9c47fb2b076a642372ab3944a6a422501ec523bd294f61ea",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

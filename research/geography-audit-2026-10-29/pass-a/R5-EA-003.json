@@ -1,0 +1,138 @@
+{
+  "record_id": "R5-EA-003",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Chinshwehaw international commercial post availability ended with March 11 reopening. Export flow remained blocked on the inland Lashio route; this does not prolong closure of the border gate.",
+  "source_checks": [
+    {
+      "url": "https://english.shannews.org/archives/26983",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Residents and MNDAA confirm Chinshwehaw post reoperation March 11 with Kokang/Bamar office staff.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-51.json",
+      "sha256": "8dffd7357129f3aae401dd238d245594a2cdf64323b298b32a76d52dbcf4d99d"
+    },
+    {
+      "url": "https://www.irrawaddy.com/business/myanmar-junta-blocks-flow-of-exports-to-checkpoint-on-china-border.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "March 15 report distinguishes reopened Chinshwehaw crossing from military roadblock near Lashio preventing exports.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-53.json",
+      "sha256": "681bcbff068fc8a2005d3d4fc12960706f46fbc639810d1de746b9b98ef23eee"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/world/archives/2023/11/12/2003809065",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.rfa.org/english/news/myanmar/trade-12152023123932.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/kokang-armed-group-mndaa-orders-closure-lashio-chinshwehaw-muse-block-junta-troop-movements",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://eng.mizzima.com/2023/11/12/4649",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://eng.mizzima.com/2023/10/31/4333",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://english.shannews.org/archives/27912",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.irrawaddy.com/business/cross-border-trade-plunges-48-in-myanmar-as-ethnic-armies-seize-control.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://mmpeacemonitor.org/en/en-news/mndaa-reopens-chin-shwe-haw-border-gate-after-deal-with-junta/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.dmediag.com/news/nt-al-etn.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-EA-003-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-chinshwehaw-qingshuihe",
+          "name": "Chinshwehaw–Qingshuihe border crossing",
+          "coordinates": [
+            98.8358153,
+            23.4806285
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/11405117497",
+          "precision": "Named crossing-area marker, approximately 1 km; precise commercial desk footprint is not asserted.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/11405117497",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=98.79,23.45,98.84,23.49"
+          ],
+          "evidence_note": "OSM border-control node description explicitly identifies Myanmar Shan Qingshuihe checkpoint, opposite China Mengding Qingshuihe gate. Marker locates old crossing area, not the nearby newer Chinese inspection building or internal Wa–Kokang posts.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-chinshwehaw.xml",
+          "sha256": "a2518c1edcecbf0f7322e1d7bf91b8517f0d360b7e0726adf130f27d2f0f0308",
+          "osm_feature": "node/11405117497",
+          "osm_version": "1",
+          "osm_timestamp": "2023-12-09T09:48:17Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "description": "缅甸掸邦清水河检查站"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Availability of Chinshwehaw commercial border-post services; endpoint is restored permission and post operation, not observed goods flow",
+      "date_scope_check": {
+        "scope": "Availability of Chinshwehaw commercial border-post services; endpoint is restored permission and post operation, not observed goods flow",
+        "start_earliest": "2023-10-01",
+        "start_latest": "2023-10-27",
+        "end_earliest": "2024-03-11",
+        "end_latest": "2024-03-11",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "October 2023 onset bounds and March 11 2024 post reopening retained. Actual cargo movement not established by reopening permission."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

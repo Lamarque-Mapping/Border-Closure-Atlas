@@ -1,0 +1,114 @@
+{
+  "record_id": "R4-EA-004",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Canonical phase is the Thai outbound traveller restriction at Three Pagodas Pass. Broader record mentions Soi Kaset 1 vehicle passage and paths opposite Mon villages, but no separate geometry is inferred for those routes or refugee/worker traffic.",
+  "source_checks": [
+    {
+      "url": "https://thethaiger.com/news/world/mon-refugees-continue-to-flee-myanmar-to-thailand",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "November 29 account identifies pass closure since Wednesday and selective Thai outbound prohibition; refugees entered Thailand.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-50.json",
+      "sha256": "179f5eb7676d73ab39a113a69865403fadbe875437b54a56c85edfe5caff9b08"
+    },
+    {
+      "url": "https://www.burmalibrary.org/en/three-pagodas-border-closed-clash-in-myanmar-eases",
+      "access_status": "publisher_excerpt_in_archive",
+      "finding": "Library preserves Bangkok Post excerpt distinguishing pass traveller ban, Soi Kaset 1 vehicles and village routes; Myanmar workers admitted through one channel.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-52.json",
+      "sha256": "467967369ce7f535966ebb8a13c6e0eaca234a8346ce50ce2451c35e04e29477"
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/burma-army-mon-forces-clash-near-thai-border",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://monnews.org/2020/02/28/two-illegal-border-gates-in-three-pagodas-pass-closed/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/hundreds-refugees-remain-thailand-following-clashes-mon-border",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://myanmar-now.org/en/news/myanmar-military-violated-ceasefire-agreement-say-mon-rebels/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.irrawaddy.com/news/burma/karen-mon-forces-discuss-fighting-thai-myanmar-border.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-EA-004-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-three-pagodas",
+          "name": "Three Pagodas Pass main crossing",
+          "coordinates": [
+            98.3867661,
+            15.3021754
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/960997867",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/960997867",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=98.37,15.29,98.4,15.32"
+          ],
+          "evidence_note": "Border-control node immediately north of named Three Pagodas Pass. Contemporary report explicitly locates Thai outbound traveller ban at this pass. Soi Kaset 1 and village-side routes are separate and not claimed by this marker.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-three-pagodas.xml",
+          "sha256": "b519715a9e1f0eb2a0fddf07dbd850a6571160f9d119b98769b77a0f88d5e47c",
+          "osm_feature": "node/960997867",
+          "osm_version": "6",
+          "osm_timestamp": "2026-04-30T16:29:11Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "bicycle": "yes",
+            "foot": "yes",
+            "motorcar": "yes",
+            "motorcycle": "yes",
+            "note": "Open only for Thai and Myanmar citizens"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Three Pagodas Thai travellers prevented from entering Myanmar",
+      "date_scope_check": {
+        "scope": "Three Pagodas Thai travellers prevented from entering Myanmar",
+        "start_earliest": "2019-11-27",
+        "start_latest": "2019-11-27",
+        "end_earliest": "2019-11-29",
+        "end_latest": "2019-11-29",
+        "last_confirmed": "2019-11-29",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "",
+        "assessment": "November 27–29 observed restriction retained, unknown reopening. October fighting and March 2020 reopening are different episodes."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

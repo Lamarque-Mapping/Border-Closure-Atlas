@@ -1,0 +1,66 @@
+{
+  "record_id": "R4-EA-003",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Restriction concerns multiple barricaded intersections on National Road 5 before Poipet crossing, with casino employees and international tourists admitted by 08:30. It is not evidence that the international gate itself was physically closed.",
+  "source_checks": [
+    {
+      "url": "https://khmer.voanews.com/a/poipet-sees-heightened-security-cover-residents-prevented-from-accessing-the-border/5159099.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Reporter account locates barricades at several NR5 intersections before the gate and describes selective passage.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-51.json",
+      "sha256": "8dffd7357129f3aae401dd238d245594a2cdf64323b298b32a76d52dbcf4d99d"
+    },
+    {
+      "url": "https://www.euronews.com/2019/11/09/cambodian-opposition-figure-sam-rainsy-boards-plane-in-paris",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://cc-times.com/posts/6982",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://vodenglish.news/poipet-military-police-detain-vod-reporters-for-three-hours/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-EA-003-FU1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "National Road 5 barricades controlling Poipet crossing access",
+      "date_scope_check": {
+        "scope": "National Road 5 barricades controlling Poipet crossing access",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2019-11-09",
+        "end_latest": "2019-11-09",
+        "last_confirmed": "2019-11-09",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "November 9 observation only, onset and full-day duration unknown. Short duration is not the reason for geography hold."
+      },
+      "unresolved": [
+        "No individually named or geolocated roadblock intersections recovered; a Poipet gate point would misrepresent the approach-road measure."
+      ]
+    }
+  ],
+  "unresolved": []
+}

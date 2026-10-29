@@ -1,0 +1,38 @@
+{
+  "record_id": "FU-COV-MEA-002",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Shahn/Shahan Yemeni road land port in AlMahrah obstructed by customs-fee protesters. One-day closed-state evidence; exact physical barrier and opposite Oman terminal not identified by original report.",
+  "source_checks": [
+    {
+      "url": "https://almawqeapost.net/news/70275",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full March6 2022 original report inspected:traders closedShahn land crossing Sunday and threatened continued sit-in. Threat is not proof of later closure.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-26.json"
+    },
+    {
+      "url": "https://bordercrossinghub.com/al-mazyunah-shahan-border-crossing/",
+      "access_status": "fresh_search_extract_inspected",
+      "finding": "Search result provides general Shahan–AlMazyunah corridor and coordinate but no underlying survey provenance or proof of2022 protest gate. Not accepted as precise geography.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-29.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-MEA-002-FU1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: single_site. Road crossing onMarch6 only, confirmed-through status remains no reopening/no duration.",
+      "unresolved": [
+        "Exact Yemeni gate/protest position remains unverified; no arbitrary town point or national frontier replacement."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"confirmed_through\", \"start_earliest\": \"2022-03-06\", \"start_latest\": \"2022-03-06\", \"end_earliest\": \"2022-03-06\", \"end_latest\": \"2022-03-06\", \"last_confirmed\": \"2022-03-06\", \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: Single-day closed-state evidence; the threatened open-ended sit-in does not prove subsequent uninterrupted closure. No numeric duration. Oman-side counterpart name and exact physical gate are not established by these reports."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

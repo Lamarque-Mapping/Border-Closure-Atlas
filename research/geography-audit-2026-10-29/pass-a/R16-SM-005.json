@@ -1,0 +1,44 @@
+{
+  "record_id": "R16-SM-005",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Yemeni-authority suspension of Sarfait/Surfeet road crossing in Hawf district, AlMahrah, facing Oman. Service disruption after armed confrontation, with categories and exceptions unitemised.",
+  "source_checks": [
+    {
+      "url": "https://ainalmahrah.com/news36278.html",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full original July8 report inspected: Yemeni authorities close Sarfait completely until security restored; reports local authority rationale. No itemized categories or actual reopening.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-31.json"
+    },
+    {
+      "url": "https://barran.press/news/10175",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full official-statement report inspected: detentionMondayevening, surrounding armed presence and separate ambush atDamqut. These locations are not the road gate closure footprint.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-32.json"
+    },
+    {
+      "url": "https://mapcarta.com/W1386930601",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Named Omani border post with coordinates inspected; it is the opposite authority terminal. No exact Yemeni control or blockade coordinates verified; do not silently move Yemeni closure to Omani facility.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-29.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R16-SM-005-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: single_site. Retain July7–8 onset andJuly8–9 endpoint bounds; no closure extension from until-further-notice wording.",
+      "unresolved": [
+        "Exact Yemeni service-gate coordinates remain unverified; Omani post or Sarfait settlement must not silently substitute."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"bounded_interval\", \"start_earliest\": \"2025-07-07\", \"start_latest\": \"2025-07-08\", \"end_earliest\": \"2025-07-08\", \"end_latest\": \"2025-07-09\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: Reported operational bounds, not exact reopening on publication day. Detailed direction/category exceptions remain unitemised and all-category implementation is not independently verified. July 7 detention is not itself the closure date; no extension to cutoff or exact hours is claimed."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

@@ -1,0 +1,111 @@
+{
+  "record_id": "R6-EU-005",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ordinary passenger availability at paired Kastanies–Pazarkule road gates ended during February2020 migration emergency and resumed under restrictions July3 2021. Rail stop and wider Evros boundary are outside phase.",
+  "source_checks": [
+    {
+      "url": "https://www.newsbomb.gr/en/story/1058466/kastanies-customs-post-closed-after-large-numbers-of-people-seek-to-enter-greece-from-turkey",
+      "access_status": "fresh_full_text_extract",
+      "finding": "February28 ANA-sourced report explicitly suspends Kastanies customs post after crowds gathered Turkish side.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-078.json"
+    },
+    {
+      "url": "https://www.trthaber.com/haber/turkiye/pazarkule-sinir-kapisi-yeniden-acildi-593089.html",
+      "access_status": "fresh_full_text_extract",
+      "finding": "TRT/AA July3 observes travellers through reopened Pazarkule after16months; governor says eligibility same asIpsala, not unrestricted movement.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-076.json"
+    },
+    {
+      "url": "https://mapcarta.com/W1183497389",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named Greek border-station building, separately mapped from Kastanies railway stop490m southeast and Turkish Pazarkule1km northeast.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-079.json"
+    },
+    {
+      "url": "https://mapcarta.com/32871226",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named Turkish commercial customs compound opposite Kastanies. Current footprint modernized2023; facility reference only, not assumed2020 exact area.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-085.json"
+    },
+    {
+      "url": "https://www.gtias.com.tr/en/projeler/detay/pazarkule-border-gate",
+      "access_status": "fresh_search_extract",
+      "finding": "Operator states modernization completed2023; current compound must not be read as precise2020 footprint.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-085.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-EU-005-R1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-kastanies-road-reference",
+          "name": "Kastanies road border-station reference",
+          "coordinates": [
+            26.48157,
+            41.64979
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 1183497389; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W1183497389",
+            "https://www.openstreetmap.org/way/1183497389"
+          ],
+          "evidence_note": "Named Greek border-station building, separately mapped from Kastanies railway stop490m southeast and Turkish Pazarkule1km northeast.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-079.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-pazarkule-road-reference",
+          "name": "Pazarkule road border-gate reference",
+          "coordinates": [
+            26.49134,
+            41.65432
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 1183487385; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W1183487385",
+            "https://www.openstreetmap.org/way/1183487385"
+          ],
+          "evidence_note": "Named Turkish commercial customs compound opposite Kastanies. Current footprint modernized2023; facility reference only, not assumed2020 exact area.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-085.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Kastanies–Pazarkule gate unavailable for ordinary authorized civilian passenger crossings, ending with restricted passenger operation",
+      "date_scope_check": {
+        "start_earliest": "2020-02-28",
+        "start_latest": "2020-02-28",
+        "end_earliest": "2021-07-03",
+        "end_latest": "2021-07-03",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Two named road-facility references locate pair, but exact2020 gate/barrier and historical footprint not recovered."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "f0484daf43fc463a082995d5988fdbd098566ebec9ec2e2df6c6edfefb35258c"
+}

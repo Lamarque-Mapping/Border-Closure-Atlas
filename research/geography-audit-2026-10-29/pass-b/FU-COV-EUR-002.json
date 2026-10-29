@@ -1,0 +1,86 @@
+{
+  "record_id": "FU-COV-EUR-002",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Portuguese farmers obstructed two distinct Huelva frontier roads February1–3 2024: Portuguese side of Chanza international bridge on Paymogo HU-7400 route and Rosal–Vila Verde de Ficalho N433 road. Emergency traffic exempt.",
+  "source_checks": [
+    {
+      "url": "https://www.europapress.es/andalucia/huelva-00354/noticia-agricultores-portugueses-cortan-carreteras-acceso-frontera-rosal-paymogo-huelva-20240201133915.html",
+      "access_status": "full_retrieved",
+      "finding": "Full EuropaPress report names Portuguese-side international bridge at Paymogo/HU7400 and separate Rosal/Ficalho road affecting N433; emergency vehicles excepted."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1165573088/full",
+      "access_status": "full_retrieved",
+      "finding": "Direct OSM XML names international Chanza bridge, Spanish and Portuguese names, opening2012; matches Paymogo road crossing."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-EUR-002-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "geo-paymogo-chanza-road-bridge",
+          "name": "Paymogo international Chanza road bridge",
+          "coordinates": [
+            -7.410817242857143,
+            37.761645900000005
+          ],
+          "coordinate_method": "Directly inspected OSM way/1165573088 mean of geometry vertices; XML sha256 391b2b0d58334c2d71fe9389a20cd7ce6855602f8c9b3a5f462e3b94defdddd3",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/1165573088/full"
+          ],
+          "evidence_note": "Named 2012 international road bridge connects HU-7400 with Portuguese approach; representative bridge geometry, not town of Paymogo or Mina de Sao Domingos."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Paymogo–Minas de Santo Domingo bridge / HU-7400 approach; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "confirmed_through",
+        "start_earliest": "2024-02-01",
+        "start_latest": "2024-02-01",
+        "end_earliest": "2024-02-02",
+        "end_latest": "2024-02-02",
+        "last_confirmed": "2024-02-02",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Bridge geometry identified; blockade specifically on Portuguese side, exact bridgehead obstruction not surveyed."
+      ]
+    },
+    {
+      "phase_id": "FU-COV-EUR-002-FU2",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Rosal de la Frontera–Vila Verde de Ficalho road / N-433 approach; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "bounded_interval",
+        "start_earliest": "2024-02-01",
+        "start_latest": "2024-02-01",
+        "end_earliest": "2024-02-02",
+        "end_latest": "2024-02-03",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Specific N433/Portuguese road barrier near Ficalho not geolocated. No town centroid substituted."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Road approach footprints are not whole national frontier."
+  ]
+}

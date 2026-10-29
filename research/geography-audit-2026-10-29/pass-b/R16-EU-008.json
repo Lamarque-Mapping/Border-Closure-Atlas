@@ -1,0 +1,68 @@
+{
+  "record_id": "R16-EU-008",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Romanian farmers blocked cargo movement before Halmeu–Dyakove road checkpoint. Ukraine temporarily suspended outward trucks to avoid blocking passenger access; not a railway closure.",
+  "source_checks": [
+    {
+      "url": "https://en.interfax.com.ua/news/general/961325.html",
+      "access_status": "full_retrieved",
+      "finding": "January18 report quotes customs: large agricultural machinery before gate and temporary suspension of trucks leaving Ukraine to preserve cars."
+    },
+    {
+      "url": "https://www.pravda.com.ua/eng/news/2024/01/20/7438152/",
+      "access_status": "full_retrieved",
+      "finding": "January20 reporting explicitly attributes 13:20 resumption at Halmeu and distinguishes earlier Vicovu restoration."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/2984248935",
+      "access_status": "full_retrieved",
+      "finding": "Directly inspected named Halmeu motor-vehicle border-control node; matched road mode."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R16-EU-008-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "geo-halmeu-road-control",
+          "name": "Halmeu Romanian road control",
+          "coordinates": [
+            23.0033615,
+            47.9922307
+          ],
+          "coordinate_method": "Directly inspected OSM node/2984248935 node; XML sha256 bb72d37832330cac6b408f6192c229657bb935af1532d03cbf791337f28665a2",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/2984248935"
+          ],
+          "evidence_note": "OSM road checkpoint motor_vehicle=yes, foot/bicycle=no; distinct from Dyakove railway station."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ukraine-to-Romania freight admission at Dyakove–Halmeu during the truck blockade and protective Ukrainian suspension.; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2024-01-18",
+        "start_latest": "2024-01-18",
+        "end_earliest": "2024-01-20",
+        "end_latest": "2024-01-20",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Marker represents Romanian road control only. Exact Romanian blockade position and separate Ukrainian protective hold point not geolocated; paired operational scope therefore partially located."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Marker represents Romanian road control only. Exact Romanian blockade position and separate Ukrainian protective hold point not geolocated; paired operational scope therefore partially located."
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "record_id": "R15-SM-003",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Renewed July3–5,2018 blockade of cargo trucks entering Bangladesh from India on the Hili zero-line road. July2 lifting is a separate earlier episode and does not terminate this phase; passenger clearance was separate.",
+  "source_checks": [
+    {
+      "url": "https://www.banglatribune.com/amp/country/339063/%E0%A6%AD%E0%A6%BE%E0%A6%B0%E0%A6%A4%E0%A7%80%E0%A7%9F-%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%95-%E0%A6%9A%E0%A6%BE%E0%A6%B2%E0%A6%95-%E0%A6%93-%E0%A6%B9%E0%A7%87%E0%A6%B2%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AC%E0%A6%BE%E0%A6%A7%E0%A6%BE%E0%A7%9F-%E0%A6%B9%E0%A6%BF%E0%A6%B2%E0%A6%BF%E0%A6%A4%E0%A7%87",
+      "access_status": "full_text_web",
+      "finding": "Original BanglaTribune July3 report identifies renewed driver/helper obstruction after trucks had begun passing, at the Hili zero line.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r11-2.json",
+      "sha256": "6ef6f40dd2830bf2663cb3e015d862148e21ccb7193bad1ffdaba9b238bb6a35"
+    },
+    {
+      "url": "https://www.banglatribune.com/amp/country/339875/%E0%A6%B9%E0%A6%BF%E0%A6%B2%E0%A6%BF%E0%A6%A4%E0%A7%87-%E0%A6%86%E0%A6%AE%E0%A6%A6%E0%A6%BE%E0%A6%A8%E0%A6%BF-%E0%A6%B0%E0%A6%AB%E0%A6%A4%E0%A6%BE%E0%A6%A8%E0%A6%BF-%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%AE-%E0%A6%AB%E0%A7%87%E0%A6%B0-%E0%A6%B6%E0%A7%81%E0%A6%B0%E0%A7%81",
+      "access_status": "full_text_web",
+      "finding": "Original July5 report records truck movement resuming after talks.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r11-2.json",
+      "sha256": "6ef6f40dd2830bf2663cb3e015d862148e21ccb7193bad1ffdaba9b238bb6a35"
+    },
+    {
+      "url": "https://nacin.gov.in/Documents/e-Books/Vadodara/LCS_latest%20version.pdf",
+      "access_status": "indexed_extract_only",
+      "finding": "Indian Customs handbook identifies Hili LCS on road through the level crossing north of Bangladesh Hili railway station; full PDF open exceeded size limit.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-39.json",
+      "sha256": "92d82aaf6118e2c0307390656caba0e56b32ca7201d0a10e92278e391e13934d"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=88.998,25.276,89.015,25.290",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Road and railway topology inspected, but no named border-control marker or exact 2018 zero-line blockade location was found.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/a1de18370228f18e2799.xml",
+      "sha256": "946f5dfb5e96dd661c825ce01c48745185146b9b1e29ab6c95c877ebf3bdb076",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/a1de18370228f18e2799.txt",
+      "text_sha256": "946f5dfb5e96dd661c825ce01c48745185146b9b1e29ab6c95c877ebf3bdb076",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R15-SM-003-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Renewed July3–5,2018 blockade of cargo trucks entering Bangladesh from India on the Hili zero-line road. July2 lifting is a separate earlier episode and does not terminate this phase; passenger clearance was separate.",
+      "date_scope_check": {
+        "start_earliest": "2018-07-03",
+        "start_latest": "2018-07-03",
+        "end_earliest": "2018-07-05",
+        "end_latest": "2018-07-05",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Excludes the July 2 initial action, which was lifted. Not an uninterrupted July 2–5 period or a passenger closure; calendar boundaries do not claim two full 24-hour days. Informant independence across reports is not assumed."
+      },
+      "unresolved": [
+        "Hili facility identity is supported, but the zero-line control/blockade point remains unverified. Town, railway-station and planned future ICP coordinates are not substituted."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Hili facility identity is supported, but the zero-line control/blockade point remains unverified. Town, railway-station and planned future ICP coordinates are not substituted."
+  ],
+  "input_sha256": "b9df8ed2f88cd1c70ecaaf403f8c2f1fef3139a42a270cd7c2835a64ccb5f89a",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

@@ -1,0 +1,89 @@
+{
+  "record_id": "C7-SC-002",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Afghan passenger access to Iran through Abresham/Silk Bridge–Milak crossing. July18,2022 reported restoration remains a qualified endpoint; July6 temporary opening does not establish uninterrupted passage or precise onset.",
+  "source_checks": [
+    {
+      "url": "https://www.khaama.com/abresham-crossing-between-afghanistan-amp-iran-reopens-after-nearly-two-weeks-57459/",
+      "access_status": "full_text_web",
+      "finding": "Khaama original identifies Abresham as Silk Bridge and July18 renewed legal Afghan travel to Iran.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r11-3.json",
+      "sha256": "722698daf53cbf1ca4c62b0c93c1bad81019cadfe0e8f6bf7cf7f41a2574a7d5"
+    },
+    {
+      "url": "https://swn.af/en/2022/07/the-silk-bridge-border-crossing-with-iran-temporarily-opened/",
+      "access_status": "full_text_web",
+      "finding": "SalamWatandar original describes temporary July6 permission until21:00; no continuity is inferred.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r11-3.json",
+      "sha256": "722698daf53cbf1ca4c62b0c93c1bad81019cadfe0e8f6bf7cf7f41a2574a7d5"
+    },
+    {
+      "url": "https://www.ecoi.net/en/file/local/2085208/2023_01_EUAA_COI_Report_Iran_Situation_of_Afghan_refugees.pdf",
+      "access_status": "indexed_extract_only",
+      "finding": "EUAA independently lists Zaranj/Milak/Silk Bridge/Abresham aliases and the2022 passenger route.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-43.json",
+      "sha256": "5861f01dedd19a7f6dd331ceee7440775c701683da4433043a899ec486a6abf8"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/342628657/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "2019 named Milak border-terminal outline and entry control inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/27198d23501b34fa2137.xml",
+      "sha256": "8034f63eb3e63ad0cebaddcf33aefada7742ea6e2cd4f732b97e1bc422698077",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/27198d23501b34fa2137.txt",
+      "text_sha256": "8034f63eb3e63ad0cebaddcf33aefada7742ea6e2cd4f732b97e1bc422698077",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "C7-SC-002-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-milak-abresham",
+          "name": "Milak–Abresham passenger crossing area",
+          "coordinates": [
+            61.8200269,
+            30.9692611
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate Iranian terminal/crossing area, about350m; not an exact bridge barrier",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/342628657/full"
+          ],
+          "evidence_note": "Named Milak Terminal Border outline, version2019, adjoining the old AH71 bridge and Zaranj customs. EUAA 2023 identifies Zaranj, Milak, Silk Bridge and Abresham as names for this paired crossing. Iranian-side terminal reference only, not a new bridge footprint.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/27198d23501b34fa2137.xml",
+          "sha256": "8034f63eb3e63ad0cebaddcf33aefada7742ea6e2cd4f732b97e1bc422698077"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Afghan passenger access to Iran through Abresham/Silk Bridge–Milak crossing. July18,2022 reported restoration remains a qualified endpoint; July6 temporary opening does not establish uninterrupted passage or precise onset.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2022-07-18",
+        "end_latest": "2022-07-18",
+        "last_confirmed": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "C7-SC-002-P1: Exact onset is unknown; an approximate two-week description is not converted into a date. Khaama Press reports a Nimroz official's statement that legal passenger travel into Iran resumed on 18 July 2022; independently witnessed first passage and Iranian counterpart corroboration remain unavailable.\n\nEarlier temporary access: Salam Watandar reported on 6 July 2022 that Nimroz authorities had temporarily opened Abresham that morning for passengers with legal documents and transit vehicles on both sides until 21:00. This is an authority-reported temporary opening, not evidence of permanent restoration. A subsequent reclosure date is not established.\n\nContinuity: Do not treat the period before 18 July as one uninterrupted closure. The earlier temporary opening, unknown onset and approximate retrospective duration require separate observations; numeric duration remains withheld. Freight and reverse-direction scope for the 18 July report remain unestablished."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "fa7fde93b79505673a5f37e5bc72f6ae267920a26f8ccc22876efa091d7d87f8",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

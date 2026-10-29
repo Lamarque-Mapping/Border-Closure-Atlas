@@ -1,0 +1,43 @@
+{
+  "record_id": "R14-AM-002",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Guatemalan domestic Amatal bridge approach at km 165.5, roughly five km from San Cristobal customs, deliberately blocked for vehicles while pedestrians passed in November 2019.",
+  "source_checks": [
+    {
+      "url": "https://diario.elmundo.sv/Nacionales/bloqueo-en-carretera-a-frontera-san-cristobal-llega-a-su-cuarto-dia",
+      "access_status": "full_retrieved",
+      "finding": "Full report names Amatal bridge, Jutiapa residents, road-repair demand, fourth day since Monday and location five km from customs. It describes three-km queue and empty Salvadoran customs."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R14-AM-002-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Vehicle access on the deliberately obstructed Amatal approach to San Cristobal customs; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2019-11-04",
+        "start_latest": "2019-11-04",
+        "end_earliest": "2019-11-08",
+        "end_latest": "2019-11-08",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Exact Amatal bridge/road geometry not independently located. San Cristobal customs booth is five km away and is not a valid substitute for this obstruction."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact Amatal bridge/road geometry not independently located. San Cristobal customs booth is five km away and is not a valid substitute for this obstruction."
+  ]
+}

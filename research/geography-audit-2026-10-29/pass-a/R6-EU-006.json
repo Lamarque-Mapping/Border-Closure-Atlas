@@ -1,0 +1,78 @@
+{
+  "record_id": "R6-EU-006",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "France-bound freight obstruction is at Biriatou AP8/A63 toll plaza during June3–4 farmer action, not every nearby crossing. Queue clearance continues after toll reopening.",
+  "source_checks": [
+    {
+      "url": "https://www.irekia.euskadi.eus/amp/es/news/93937-afecciones-trafico-este-lunes-biriatou-por-una-nueva-concentracion-tractores",
+      "access_status": "fresh_full_text_extract",
+      "finding": "May31 advance notice forecast freight closure in Euskadi direction; prospective direction is not taken over actualJune4 report.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-076.json"
+    },
+    {
+      "url": "https://www.euskadi.eus/gobierno-vasco/-/noticia/2024/el-gobierno-vasco-recomienda-paciencia-y-conductores-que-se-dirigen-francia/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "June4 official retrospective locates tractors around Biriatou toll, freight closure10:00June3–10:00June4, and all France-bound booths then open.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-078.json"
+    },
+    {
+      "url": "https://mapcarta.com/N280351090",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named Péage deBiriatou node operated by AutoroutesduSuddeFrance; not Behobia roadbridge or villagecentre. Page regional attributionIrun inconsistent; explicit toll identity and original Basque notice used.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-080.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-EU-006-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-biriatou-toll",
+          "name": "Biriatou motorway toll plaza",
+          "coordinates": [
+            -1.74964,
+            43.34125
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 280351090; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N280351090",
+            "https://www.openstreetmap.org/node/280351090"
+          ],
+          "evidence_note": "Named Péage deBiriatou node operated by AutoroutesduSuddeFrance; not Behobia roadbridge or villagecentre. Page regional attributionIrun inconsistent; explicit toll identity and original Basque notice used.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-080.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "France-bound freight obstruction at Biriatou during the coordinated farmer action",
+      "date_scope_check": {
+        "start_earliest": "2024-06-03",
+        "start_latest": "2024-06-03",
+        "end_earliest": "2024-06-04",
+        "end_latest": "2024-06-04",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Toll reference is approximate; exact protest footprint/lane array not surveyed. Exact24-hour classification remains unchanged."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "c661e7dd6ae6f6fad71eaca396653ffd906d05a537d4185d825e572f0bee1302"
+}

@@ -1,0 +1,44 @@
+{
+  "record_id": "R10-WA-001",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Gbalamuya formal road crossing in Kambia district, Sierra Leone, paired with Pamelap in Guinea. Police-notice account describes a temporary deportation-handover standoff; categories and directions beyond this account remain unspecified.",
+  "source_checks": [
+    {
+      "url": "https://sierraloaded.sl/news/police-deportation-sierra-leoneans-guinea/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full notice reproduction inspected: explicitly WednesdayDecember11 temporary closure, since reopened by December13. Intro ties incident toDecember10, not a basis to change explicit closure date. Printed Zambia district appears an error; official NRA identifies Kambia.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-25.json"
+    },
+    {
+      "url": "https://www.nra.gov.sl/sites/default/files/Land-Border-Permeability-Study.pdf",
+      "access_status": "fresh_search_extract_inspected",
+      "finding": "Original NRA indexed extract identifies Gbalamuya as motorable international ClassA crossing with customs, immigration and police in Kambia.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-27.json"
+    },
+    {
+      "url": "https://www.theigc.org/sites/default/files/2018/06/Centre-for-Economic-Research-2017-Final-report.pdf",
+      "access_status": "fresh_pdf_text_inspected_coordinate_figure_unread",
+      "finding": "Original research PDF text identifies Gbalamuya new customs post and Figure12 on PDFpage95 showing GPS. Screenshot call returned text marker without inspectable image pixels here; no numeric coordinate transcribed or invented.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-28.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R10-WA-001-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: single_site. Road crossing, canonical December11 to December11–13 boundary range only; no exact hours or full-direction/category assertion.",
+      "unresolved": [
+        "Historical official gate coordinates remain unresolved; settlement coordinates conflict and are not used."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"bounded_interval\", \"start_earliest\": \"2024-12-11\", \"start_latest\": \"2024-12-11\", \"end_earliest\": \"2024-12-11\", \"end_latest\": \"2024-12-13\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: Zero-to-two calendar-day boundary range, not precise hours. Tuesday references describe tensions/arrival rather than overriding the explicit Wednesday closure notice. One police-notice lineage; full direction/category coverage is unknown and Guinea disputes the notification account."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}
