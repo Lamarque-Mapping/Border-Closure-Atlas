@@ -1,0 +1,101 @@
+{
+  "record_id": "R3-AM-011",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "April 29 RPP identifies more-than-six-hour obstruction of road joining Santa Rosa and Chacalluta, then early-afternoon clearance; later intermittent observation is separate.",
+  "source_checks": [
+    {
+      "url": "https://rpp.pe/peru/tacna/tacna-migrantes-liberan-la-panamericana-sur-tras-bloquear-la-via-por-mas-de-seis-horas-noticia-1481598",
+      "access_status": "fresh_source_extract",
+      "finding": "April 29 RPP identifies more-than-six-hour obstruction of road joining Santa Rosa and Chacalluta, then early-afternoon clearance; later intermittent observation is separate.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-016.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-AM-011-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-chacalluta-road",
+          "name": "Chacalluta–Santa Rosa road crossing reference (Chilean complex)",
+          "coordinates": [
+            -70.3137357,
+            -18.3150469
+          ],
+          "coordinate_method": "OSM named node coordinates",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/5010599194"
+          ],
+          "evidence_note": "Named Chacalluta border_control node; mapped on motorcar route within the Chilean complex. Used only to identify the named road crossing, not freight lanes or the obstruction on the inter-terminal road. Santa Rosa complex and the historical blockade location remain unbound.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b315f85c04ed17bb453d.xml",
+              "sha256": "c20d990c7f5a0d47a0a57a87020f31c026a052b14157c1bad010f8e5923166b5",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "5",
+              "osm_timestamp": "2023-05-01T06:12:57Z",
+              "tags": {
+                "barrier": "border_control",
+                "bus": "no",
+                "coach": "no",
+                "hgv": "no",
+                "motorcar": "designated",
+                "motorcycle": "designated",
+                "name": "Complejo Fronterizo Chacalluta"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Initial April 29 two-way road obstruction between Santa Rosa and Chacalluta, ending at the early-afternoon clearance",
+      "date_scope_check": {
+        "start_earliest": "2023-04-29",
+        "start_latest": "2023-04-29",
+        "end_earliest": "2023-04-29",
+        "end_latest": "2023-04-29",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Inter-terminal road obstruction is not precisely located; marker is a qualified named-crossing reference only."
+      ]
+    },
+    {
+      "phase_id": "R3-AM-011-R2OBS1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Road connection between Santa Rosa and Chacalluta",
+      "date_scope_check": {
+        "start_earliest": "2023-04-29",
+        "start_latest": "2023-04-29",
+        "end_earliest": "2023-04-29",
+        "end_latest": "2023-04-29",
+        "last_confirmed": "2023-04-29",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Later intermittent observation is not separately reconstructed by the April 29 initial-clearance source; retain canonical observation, no continuous interval inferred."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "9cb00bc05c8f8659f52f30273c3fa452d48f5be39116b8a6cd8f3401b1d3c765"
+}

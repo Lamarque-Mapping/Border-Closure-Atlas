@@ -1,0 +1,66 @@
+{
+  "record_id": "R13-ME-001",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "First precautionary King Fahd Causeway vehicle suspension on April 7 2026; later renewed suspension remains separate.",
+  "source_checks": [
+    {
+      "url": "https://www.aa.com.tr/en/middle-east/saudi-arabia-suspends-traffic-on-king-fahd-causeway-to-bahrain/3895647",
+      "access_status": "full_text_web",
+      "finding": "Updated AA story reports authority resumed vehicle movement Tuesday after several hours; shared authority announcement lineage retained.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-09.json",
+      "evidence_sha256": "b17973adc9a6401dd558136684759d78ec1a61cdd0dbd1df9292bb4ec32d2b58"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R13-ME-001-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-king-fahd-causeway",
+          "name": "King Fahd Causeway passport island",
+          "coordinates": [
+            50.3231049,
+            26.1846306
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/30931448",
+            "https://www.openstreetmap.org/api/0.6/node/30931448",
+            "https://www.openstreetmap.org/api/0.6/map?bbox=50.31,26.17,50.34,26.195",
+            "https://kfca.sa/en/aboutus"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\", \"note\": \"Saudi\"}. This is geographic evidence only, not historical closure evidence. Node is a Saudi border_control on the causeway passport island. Fresh original OSM map bbox=50.31,26.17,50.34,26.195 confirms grouped Saudi/Bahraini passport and customs controls; official KFCA describes this unique road link connecting the kingdoms. Marker represents the crossing complex, not a specific closure barrier.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/bc420df28632bc7c57e9.html",
+          "evidence_sha256": "9af619f50c1ec61a165b37f3c1f1dc4f57a73b3bf91de41dc7fa915f6cbe35da",
+          "osm_version": "5",
+          "osm_timestamp": "2023-07-30T11:05:28Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "First precautionary King Fahd Causeway vehicle suspension on April 7 2026; later renewed suspension remains separate. Current phase only: King Fahd Causeway first phase on 7 April 2026; reports share an authority announcement lineage.",
+      "date_scope_check": {
+        "start_earliest": "2026-04-07",
+        "start_latest": "2026-04-07",
+        "end_earliest": "2026-04-07",
+        "end_latest": "2026-04-07",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Shown as an episode occurring on this date, not a whole-day closure. Reported morning closure and same-day reopening. Morning versus afternoon reopening language differs between reports. All decisive operation claims ultimately rely on the causeway authority; no primary X post successfully opened. Later renewed suspension is a separate linked phase.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

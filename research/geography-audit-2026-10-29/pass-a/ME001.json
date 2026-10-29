@@ -1,0 +1,48 @@
+{
+  "record_id": "ME001",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ordinary road passenger passage at paired Salwa–Abu Samra terminals; pilgrimage exceptions and cargo restoration are separate.",
+  "source_checks": [
+    {
+      "url": "https://www.malaymail.com/news/world/2021/01/09/qatar-saudi-border-reopens-after-thaw/1938906",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "AFP body locates restoration at Abu Samra, describes vehicle passage on 9 January and earlier June 2017 suspension. Political agreement is not the same event as vehicles returning.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-13.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME001-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "abu",
+          "name": "Salwa–Abu Samra road crossing (Qatari post)",
+          "coordinates": [
+            50.8423954,
+            24.7415083
+          ],
+          "coordinate_method": "Centre of the bounding box of the freshly retrieved named OSM way; approximate facility marker",
+          "precision": "Approximately 1 km; named terminal area, not every roadblock or Saudi terminal building.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/way/1456475677/full"
+          ],
+          "evidence_note": "OSM way 1456475677, version 1, timestamp 2025-12-06T12:37:32Z. Identity tags: {\"area\": \"yes\", \"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"منفذ أبو سمرة الحدودي\", \"name:ar\": \"منفذ أبو سمرة الحدودي\", \"name:en\": \"Abu Samra Border Post\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/f64fe0c9be104736.raw",
+          "evidence_sha256": "02e306133e7ce4f89db50751b4d41a78fc8825426a80349b19176d3649c25ab4"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Crossing-area geography supported despite disputed chronology; retain contested flag, broad start bound, and dated-only display. Qatari terminal marker is not the whole Saudi–Qatar border.",
+      "date_scope_check": "Canonical bounded_interval: start 2017-06-01–2017-06-30; endpoint 2021-01-09–2021-01-09; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,48 @@
+{
+  "record_id": "H07",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "The initial Ethiopian order covers people on all land frontiers, but this canonical interval has a Djibouti-specific resumption bound. No individual road post or railway is singled out.",
+  "source_checks": [
+    {
+      "url": "https://ethiopianembassy.org/ethiopia-closes-borders-to-prevent-spread-of-covid19-march-23-2020/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Official 23 March announcement halts people along all borders, except essential incoming goods.",
+      "retrieval_http_status": "200",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-09.txt",
+      "evidence_sha256": "f5127e99a5047aff7d1ab4a21220f1e46fa2e20e7a1dd3c1f877940db3e7c17c"
+    },
+    {
+      "url": "https://wiki.unece.org/plugins/viewsource/viewpagesrc.action?pageId=172851507",
+      "access_status": "inaccessible_http403",
+      "finding": "Access blocked; this pass did not independently recover the bilateral resumption passage.",
+      "retrieval_http_status": "403",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/d8c66f57eeef9072.raw",
+      "evidence_sha256": "43b245a42307fb332dd11905e88f5aa457bf5c51b9e405e1709bdbc0760d8932"
+    },
+    {
+      "url": "https://dtm.iom.int/reports/djibouti-flow-monitoring-report-february-2021",
+      "access_status": "inaccessible_http403",
+      "finding": "Access blocked; no ordinary gate opening inferred from migration counts."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "H07-V1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Only Ethiopia–Djibouti could carry this entire bounded interval; other Ethiopian frontiers cannot inherit the bilateral endpoint.",
+      "date_scope_check": "Canonical policy_period: start 2020-03-23–2020-03-23; endpoint 2020-07-01–2020-08-07; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": [
+        "Existing inventory lacks Ethiopia–Djibouti line geometry. Need sourced frontier geometry; do not substitute Galafi road or Dewele road for all land services.",
+        "Bilateral endpoint evidence not independently accessible in this pass."
+      ]
+    }
+  ],
+  "unresolved": []
+}

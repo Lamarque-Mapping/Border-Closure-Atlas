@@ -1,0 +1,75 @@
+{
+  "record_id": "EA007",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Passenger/private-car access on Mae Sot–Myawaddy Friendship Bridge I over the Moei. Cargo operated through Bridge II and must not be attached to this phase.",
+  "source_checks": [
+    {
+      "url": "https://www.moi.gov.mm/moi:eng/news/9198",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Myanmar ministry explicitly names Bridge I reopening January 12 and its private-car/passenger terms; it says border trade had used Bridge II during closure. Its March 23 wording does not override accepted onset qualification.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/5258be2abaaf77d85f0a.html",
+      "sha256": "2927f74d3ae4314b85548c9ce805f8d4a9357811bb7a07d7992dba20b41c904f",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/5258be2abaaf77d85f0a.txt",
+      "text_sha256": "92bdab69e4dc615a2b50692571b0d574be033222d1ee74ca2f7cc32fe6c6c70b",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-2.json"
+    },
+    {
+      "url": "https://thailand.go.th/public/issue-focus-detail/001_08_032",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Thai government locates Bridge I on Highway 105 and gives 1997 opening and January 12 2023 restoration.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/6c60d4ad9d39e47e31a6.html",
+      "sha256": "2927f74d3ae4314b85548c9ce805f8d4a9357811bb7a07d7992dba20b41c904f",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/6c60d4ad9d39e47e31a6.txt",
+      "text_sha256": "9c8d0d8dc8633ab1a8324bcd19679616729360171fde33812b12c335938f45dc",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-2.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA007-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-maesot-myawaddy-bridge-1",
+          "name": "Mae Sot–Myawaddy Friendship Bridge I",
+          "coordinates": [
+            98.5165555,
+            16.6907206
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/1560879036/full"
+          ],
+          "evidence_note": "Named OSM bridge footprint on Moei River; Thai government description fixes Bridge I to Highway 105 and 1997 opening, separately from cargo Bridge II.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/9957dc99f9645e7b0ebf.xml",
+          "sha256": "64b49b144bc15522f21ddaa7cc02adae212a6a811796f33ef4c43b1ed13dfdf9"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Passenger/private-car access on Mae Sot–Myawaddy Friendship Bridge I over the Moei. Cargo operated through Bridge II and must not be attached to this phase.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-21",
+        "start_latest": "2020-03-23",
+        "end_earliest": "2023-01-12",
+        "end_latest": "2023-01-12",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "The two-day onset range preserves contradictory reports. Ordinary passenger/private-car scope excludes Bridge II freight and early diversions; border-pass conditions remained after reopening."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "63e5516d48f321f57921f02fca0962fba3570c1ff67b508bbde02afd9f7e4ea9",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

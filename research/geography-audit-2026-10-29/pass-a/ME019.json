@@ -1,0 +1,82 @@
+{
+  "record_id": "ME019",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The Taftan–Mirjaveh road passage has separate Pakistani-returnee and cargo-truck suspensions; later June trade rules do not define these initial phases.",
+  "source_checks": [
+    {
+      "url": "https://www.radio.gov.pk/23-02-2020/pak-iran-border-at-taftan-closed-to-avoid-spread-of-coronavirus-reportedly-found-in-iran",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Official broadcast identifies Taftan transit gate and joint markets, with trade and travel suspended on 23 February.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-11.txt"
+    },
+    {
+      "url": "https://www.dawn.com/news/1539170",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Taftan trucks resumed 7 March; pilgrim immigration had resumed earlier.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-11.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME019-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "taftan",
+          "name": "Taftan–Mirjaveh road border post (Iranian side)",
+          "coordinates": [
+            61.5452695,
+            28.9821444
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 500 m; checkpoint marker for named land-road corridor; not railway terminal.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/287770561"
+          ],
+          "evidence_note": "OSM node 287770561, version 7, timestamp 2017-11-27T15:47:29Z. Identity tags: {\"barrier\": \"border_control\", \"name\": \"مرزبانی\", \"name:en\": \"Iranian border post\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/95260335aa1cf4ec.raw",
+          "evidence_sha256": "6a21d3d53d9874876f06ca85dae2c0d26522a1010ad74f7ea79a28d586980a3f"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Returning Pakistani citizens/pilgrims only; land-road crossing reference, not general Iran–Pakistan closure or rail terminal.",
+      "date_scope_check": "Canonical bounded_interval: start 2020-02-23–2020-02-24; endpoint 2020-02-28–2020-02-28; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    },
+    {
+      "phase_id": "ME019-R2",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "taftan",
+          "name": "Taftan–Mirjaveh road border post (Iranian side)",
+          "coordinates": [
+            61.5452695,
+            28.9821444
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 500 m; checkpoint marker for named land-road corridor; not railway terminal.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/287770561"
+          ],
+          "evidence_note": "OSM node 287770561, version 7, timestamp 2017-11-27T15:47:29Z. Identity tags: {\"barrier\": \"border_control\", \"name\": \"مرزبانی\", \"name:en\": \"Iranian border post\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/95260335aa1cf4ec.raw",
+          "evidence_sha256": "6a21d3d53d9874876f06ca85dae2c0d26522a1010ad74f7ea79a28d586980a3f"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Screened cargo-truck restoration is distinct from the earlier returnee exception and later June schedule.",
+      "date_scope_check": "Canonical bounded_interval: start 2020-02-23–2020-02-24; endpoint 2020-03-07–2020-03-07; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

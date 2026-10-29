@@ -1,0 +1,2014 @@
+{
+  "audit_id": "geography-2026-10-29",
+  "source_sha256": "d33692ed2f2a4ef3ea32be7171987d8840a5ad07e8ed9e9c0c6511d85ccbc033",
+  "status": "partial_reconciliation_in_progress",
+  "decisions": [
+    {
+      "record_id": "R14-AM-001",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R14-AM-001.json",
+          "sha256": "0d34c11d01cd435219b976f3e2ee792cce6b33b4f0ff2baafb9374ff4c823ba3"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R14-AM-001.json",
+          "sha256": "ab17cbc1f381451b9fa5364b1f7f030f0c63c2a72ea988360f40f9fa023dc396"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R14-AM-001-FU1",
+          "category": "single_site",
+          "decision": "partial",
+          "complete": false,
+          "sites": [
+            {
+              "existing_site_id": "crossing-pacaraima",
+              "name": "Pacaraima–Santa Elena de Uairén",
+              "coordinates": [
+                -61.14889,
+                4.48806
+              ],
+              "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+              "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/node/321609940"
+              ],
+              "evidence_note": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/6878da03b2ff39c1825a.xml",
+                  "sha256": "f6182d0a1fc43c452d9ac9e1c1e3a2c514ca8e1059d3296f7d2c586ff147721b",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_b_evidence": "Preserved OSM node 321609940 v5 is a border_control with motorcar and foot access, rather than the town centroid. Reuters identifies the only international crossing at Pacaraima. The 18 August road protest is not the earlier judicial closure."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Exact historical approach blockade footprint remains unlocated.",
+          "rationale": "Independent reconstructions agree on named facility, source-supported phase scope and coordinate. Preserve recorded direction, cohort, dates and evidence limits. Crossing-area reference only; the historical approach obstruction is not located."
+        }
+      ]
+    },
+    {
+      "record_id": "R16-AM-001",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R16-AM-001.json",
+          "sha256": "fb9651daa1e9bf860b35a61ec9f023ffc6fe914ada20089e9f420e1a92727149"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R16-AM-001.json",
+          "sha256": "e1fa5cd24fe5d078423439103ff729a330962303e9e931a185b1abf76dfbcb24"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R16-AM-001-RREV1",
+          "category": "single_site",
+          "decision": "partial",
+          "complete": false,
+          "sites": [
+            {
+              "existing_site_id": "crossing-melchor-benque",
+              "name": "Melchor de Mencos–Benque Viejo",
+              "coordinates": [
+                -89.15052,
+                17.05783
+              ],
+              "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+              "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/node/3268860583",
+                "https://mapcarta.com/N3268860583"
+              ],
+              "evidence_note": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fd89a7bedd2dec5aaf47.xml",
+                  "sha256": "d9a54ab6b743cab018b9797d04e19e334e7f62664d8c19044bb76310a6a4e94e",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_b_evidence": "OSM node 3268860583 v6 is explicitly Aduanas e Inmigración de Guatemala, barrier=border_control. Independently reopened Mapcarta mirror reproduces the same node and coordinates; Belize customs is 140 m east. News identifies Guatemalan-side approach cargo obstruction."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Exact historical approach blockade footprint remains unlocated.",
+          "rationale": "Independent reconstructions agree on named facility, source-supported phase scope and coordinate. Preserve recorded direction, cohort, dates and evidence limits. Crossing-area reference only; the historical approach obstruction is not located."
+        }
+      ]
+    },
+    {
+      "record_id": "R16-EU-002",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R16-EU-002.json",
+          "sha256": "68a2af95a173c2214e9993643cfd6f242d3b5eb72c77936e0b21cbe94c1a23c1"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R16-EU-002.json",
+          "sha256": "ede0b87a66a61a028ed9be04435ff6ebd80c05ccf827cd087b0d5aa25401742f"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R16-EU-002-D1",
+          "category": "single_site",
+          "decision": "partial",
+          "complete": false,
+          "sites": [
+            {
+              "existing_site_id": "crossing-siret-porubne",
+              "name": "Siret–Porubne",
+              "coordinates": [
+                26.0622666,
+                47.986343
+              ],
+              "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+              "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/node/3019220234",
+                "https://data.consilium.europa.eu/doc/document/ST-10116-2010-REV-1/en/pdf",
+                "https://umanmap.eu/en/crossing/siret.html"
+              ],
+              "evidence_note": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/9eec6ec81ce76c4ccdfb.xml",
+                  "sha256": "6fc446a1327135c811858a799b807c53e5244139b5e47220285b7034d0e40de8",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_b_evidence": "Preserved OSM node 3019220234 v3 anchors the Romanian road-control end; the Council land-border evaluation identifies Siret opposite Porubne on E85. The independent published crossing coordinates at umanmap.eu are within about 70 m. Actual protest machinery stretched along the approach, not necessarily at this pin."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Exact historical approach blockade footprint remains unlocated.",
+          "rationale": "Independent reconstructions agree on named facility, source-supported phase scope and coordinate. Preserve recorded direction, cohort, dates and evidence limits. Crossing-area reference only; the historical approach obstruction is not located."
+        }
+      ]
+    },
+    {
+      "record_id": "R16-EU-003",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R16-EU-003.json",
+          "sha256": "fee2dd490662ccff8ae6c823135c7b6e81caa7874f3ace9577d04d292b743496"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R16-EU-003.json",
+          "sha256": "acfedf2b29bf3394db9ddb4d59ee6c47df373343405cf70d02e53f2e17bfdef2"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R16-EU-003-D1",
+          "category": "single_site",
+          "decision": "partial",
+          "complete": false,
+          "sites": [
+            {
+              "existing_site_id": "crossing-siret-porubne",
+              "name": "Siret–Porubne",
+              "coordinates": [
+                26.0622666,
+                47.986343
+              ],
+              "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+              "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/node/3019220234",
+                "https://data.consilium.europa.eu/doc/document/ST-10116-2010-REV-1/en/pdf",
+                "https://umanmap.eu/en/crossing/siret.html"
+              ],
+              "evidence_note": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/9eec6ec81ce76c4ccdfb.xml",
+                  "sha256": "6fc446a1327135c811858a799b807c53e5244139b5e47220285b7034d0e40de8",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_b_evidence": "Preserved OSM node 3019220234 v3 anchors the Romanian road-control end; the Council land-border evaluation identifies Siret opposite Porubne on E85. The independent published crossing coordinates at umanmap.eu are within about 70 m. Actual protest machinery stretched along the approach, not necessarily at this pin."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Exact historical approach blockade footprint remains unlocated.",
+          "rationale": "Independent reconstructions agree on named facility, source-supported phase scope and coordinate. Preserve recorded direction, cohort, dates and evidence limits. Crossing-area reference only; the historical approach obstruction is not located."
+        }
+      ]
+    },
+    {
+      "record_id": "R16-EU-004",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R16-EU-004.json",
+          "sha256": "bff313758578ab210b9175232573f4f2be25d1eadb3e7d558bc3f5caebe28b1c"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R16-EU-004.json",
+          "sha256": "6c45090486fdcca085bbd498b74e9bf4d194ca09345d075bee0994a4ee2465c6"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R16-EU-004-D1",
+          "category": "single_site",
+          "decision": "partial",
+          "complete": false,
+          "sites": [
+            {
+              "existing_site_id": "crossing-siret-porubne",
+              "name": "Siret–Porubne",
+              "coordinates": [
+                26.0622666,
+                47.986343
+              ],
+              "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+              "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/node/3019220234",
+                "https://data.consilium.europa.eu/doc/document/ST-10116-2010-REV-1/en/pdf",
+                "https://umanmap.eu/en/crossing/siret.html"
+              ],
+              "evidence_note": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/9eec6ec81ce76c4ccdfb.xml",
+                  "sha256": "6fc446a1327135c811858a799b807c53e5244139b5e47220285b7034d0e40de8",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_b_evidence": "Preserved OSM node 3019220234 v3 anchors the Romanian road-control end; the Council land-border evaluation identifies Siret opposite Porubne on E85. The independent published crossing coordinates at umanmap.eu are within about 70 m. Actual protest machinery stretched along the approach, not necessarily at this pin."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Exact historical approach blockade footprint remains unlocated.",
+          "rationale": "Independent reconstructions agree on named facility, source-supported phase scope and coordinate. Preserve recorded direction, cohort, dates and evidence limits. Crossing-area reference only; the historical approach obstruction is not located."
+        }
+      ]
+    },
+    {
+      "record_id": "R16-EU-005",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R16-EU-005.json",
+          "sha256": "0586bc5cda416e1f652b79b4409be2ff12a10fe1cc3fe685d26d687f5fb8b4a2"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R16-EU-005.json",
+          "sha256": "55e3889b340b0f760dc37c2cdf4ef1f19f9b9c34d720ae96ef7278eeefcf1789"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R16-EU-005-D1",
+          "category": "single_site",
+          "decision": "partial",
+          "complete": false,
+          "sites": [
+            {
+              "existing_site_id": "crossing-siret-porubne",
+              "name": "Siret–Porubne",
+              "coordinates": [
+                26.0622666,
+                47.986343
+              ],
+              "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+              "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/node/3019220234",
+                "https://data.consilium.europa.eu/doc/document/ST-10116-2010-REV-1/en/pdf",
+                "https://umanmap.eu/en/crossing/siret.html"
+              ],
+              "evidence_note": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/9eec6ec81ce76c4ccdfb.xml",
+                  "sha256": "6fc446a1327135c811858a799b807c53e5244139b5e47220285b7034d0e40de8",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_b_evidence": "Preserved OSM node 3019220234 v3 anchors the Romanian road-control end; the Council land-border evaluation identifies Siret opposite Porubne on E85. The independent published crossing coordinates at umanmap.eu are within about 70 m. Actual protest machinery stretched along the approach, not necessarily at this pin."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Exact historical approach blockade footprint remains unlocated.",
+          "rationale": "Independent reconstructions agree on named facility, source-supported phase scope and coordinate. Preserve recorded direction, cohort, dates and evidence limits. Crossing-area reference only; the historical approach obstruction is not located."
+        }
+      ]
+    },
+    {
+      "record_id": "R16-EU-006",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R16-EU-006.json",
+          "sha256": "b042aef64c6705e00373dfb6a8e9a50d65c567689df5ff1f6cc41acbffe2b58a"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R16-EU-006.json",
+          "sha256": "bcb65205449982077cabae18d304f6c7cd2ee364b000ca276835b30121b1264a"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R16-EU-006-D1",
+          "category": "single_site",
+          "decision": "partial",
+          "complete": false,
+          "sites": [
+            {
+              "existing_site_id": "crossing-siret-porubne",
+              "name": "Siret–Porubne",
+              "coordinates": [
+                26.0622666,
+                47.986343
+              ],
+              "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+              "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/node/3019220234",
+                "https://data.consilium.europa.eu/doc/document/ST-10116-2010-REV-1/en/pdf",
+                "https://umanmap.eu/en/crossing/siret.html"
+              ],
+              "evidence_note": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/9eec6ec81ce76c4ccdfb.xml",
+                  "sha256": "6fc446a1327135c811858a799b807c53e5244139b5e47220285b7034d0e40de8",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_b_evidence": "Preserved OSM node 3019220234 v3 anchors the Romanian road-control end; the Council land-border evaluation identifies Siret opposite Porubne on E85. The independent published crossing coordinates at umanmap.eu are within about 70 m. Actual protest machinery stretched along the approach, not necessarily at this pin."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Exact historical approach blockade footprint remains unlocated.",
+          "rationale": "Independent reconstructions agree on named facility, source-supported phase scope and coordinate. Preserve recorded direction, cohort, dates and evidence limits. Crossing-area reference only; the historical approach obstruction is not located."
+        }
+      ]
+    },
+    {
+      "record_id": "NP-COV-AM-001",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/NP-COV-AM-001.json",
+          "sha256": "06808bd6b171d09e442df7cfaa138d6a6597d8876abcf150f192a70f2f75b1a2"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/NP-COV-AM-001.json",
+          "sha256": "d08b50d61d165b7905537852ee48242187e7cc5ef915f8b28a83b491c2d97744"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "NP-COV-AM-001-P01",
+          "category": "single_site",
+          "decision": "partial",
+          "complete": false,
+          "sites": [
+            {
+              "existing_site_id": "crossing-melchor-benque",
+              "name": "Melchor de Mencos–Benque Viejo",
+              "coordinates": [
+                -89.15052,
+                17.05783
+              ],
+              "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+              "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/node/3268860583",
+                "https://mapcarta.com/N3268860583"
+              ],
+              "evidence_note": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fd89a7bedd2dec5aaf47.xml",
+                  "sha256": "d9a54ab6b743cab018b9797d04e19e334e7f62664d8c19044bb76310a6a4e94e",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_b_evidence": "OSM node 3268860583 v6 is explicitly Aduanas e Inmigración de Guatemala, barrier=border_control. Independently reopened Mapcarta mirror reproduces the same node and coordinates; Belize customs is 140 m east. News identifies Guatemalan-side approach cargo obstruction."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Exact historical approach blockade footprint remains unlocated.",
+          "rationale": "Independent reconstructions agree on named facility, source-supported phase scope and coordinate. Preserve recorded direction, cohort, dates and evidence limits. Crossing-area reference only; the historical approach obstruction is not located."
+        }
+      ]
+    },
+    {
+      "record_id": "C7-AM-002",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/C7-AM-002.json",
+          "sha256": "44dc3af4976ef9541f281e4f55d3de9179609811cfc469b18fc990f9403b2fbe"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/C7-AM-002.json",
+          "sha256": "ab11244e44f045da6662df34aa737126dd3a77f85fc474d89cd2f33677db0213"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "C7-AM-002-P1",
+          "category": "single_site",
+          "decision": "map",
+          "complete": true,
+          "sites": [
+            {
+              "existing_site_id": "post-penas-blancas",
+              "name": "Peñas Blancas",
+              "coordinates": [
+                -85.61215,
+                11.21915
+              ],
+              "coordinate_method": "Bounding-box centre of named OSM customs building Aduana de Peñas Blancas, Nicaragua side.",
+              "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/way/301995884",
+                "https://mapcarta.com/W301995884"
+              ],
+              "evidence_note": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/e34ccd9219ed154302f4.xml",
+                  "sha256": "9ef51290ca2b936a5d306131095a6cedb93aaf2b707e81be3e475018ae2e9a59",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_b_evidence": "Cached OSM way 301995884 v3 is the named customs building Aduana de Peñas Blancas. Fresh Mapcarta OSM mirror independently confirms building identity and same coordinates; this is a facility reference, not the bus queue location."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "",
+          "rationale": "Independent reconstructions agree on named facility, source-supported phase scope and coordinate. Preserve recorded direction, cohort, dates and evidence limits. All named facilities in this scoped phase have source-backed references."
+        }
+      ]
+    },
+    {
+      "record_id": "GL17",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/GL17.json",
+          "sha256": "ab0ac8c97ba7293a3606b22c3ad70577650577a9ba920db2b923a59180bec5b7"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/GL17.json",
+          "sha256": "4dcadd287d9985fd5b2e913cd730bd2e06375d9c9e018e22a6c830f7df1b3cb3"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "GL17-R1",
+          "category": "multiple_named_sites",
+          "decision": "map",
+          "complete": true,
+          "sites": [
+            {
+              "proposed_site_id": "post-rusizi-1",
+              "name": "Cyangugu–Rusizi I",
+              "coordinates": [
+                28.89297,
+                -2.49112
+              ],
+              "coordinate_method": "Coordinate pair transcribed from AU-PIDA OSBP Status Report Appendix A, reference E23; independently read published table.",
+              "precision": "Approximate named crossing area; 1 km interpretive precision, not the exact gate.",
+              "source_urls": [
+                "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+                "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+              ],
+              "evidence_note": "Appendix A explicitly pairs Cyangugu–Rusizi I with this latitude/longitude. Modern infrastructure reference only; not closure evidence.",
+              "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/27ad209394e33af2.raw",
+              "independent_b_evidence": "PDF page 81, E23; longitude/latitude transcribed in lon,lat order. Report identifies crossing name but does not establish historic operation or exact obstruction."
+            },
+            {
+              "proposed_site_id": "post-rusizi-2",
+              "name": "Bukavu–Rusizi II",
+              "coordinates": [
+                28.86814,
+                -2.5155
+              ],
+              "coordinate_method": "Coordinate pair transcribed from AU-PIDA OSBP Status Report Appendix A, reference E22; independently read published table.",
+              "precision": "Approximate named crossing area; 1 km interpretive precision, not the exact gate.",
+              "source_urls": [
+                "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+                "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+              ],
+              "evidence_note": "Appendix A explicitly pairs Bukavu–Rusizi II with this latitude/longitude. Modern infrastructure reference only; not closure evidence.",
+              "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/27ad209394e33af2.raw",
+              "independent_b_evidence": "PDF page 81, E22; longitude/latitude transcribed in lon,lat order. Report identifies crossing name but does not establish historic operation or exact obstruction."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "",
+          "rationale": "Independent reconstructions agree on named facility, source-supported phase scope and coordinate. Preserve recorded direction, cohort, dates and evidence limits. All named facilities in this scoped phase have source-backed references."
+        }
+      ]
+    },
+    {
+      "record_id": "ME028",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/ME028.json",
+          "sha256": "6774ab8fede73a91d0aaa9293e049eaa4e070d76c649bf7417ee7b8104589664"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/ME028.json",
+          "sha256": "820c4d36037f2776314f96fa41aa86cb4003ceea26ed8111634bfa9d06e3ca51"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "ME028-REV1",
+          "category": "single_site",
+          "decision": "partial",
+          "complete": false,
+          "sites": [
+            {
+              "existing_site_id": "post-masnaa-jdeidet-yabous",
+              "name": "Masnaa–Jdeidet Yabous",
+              "coordinates": [
+                35.9238439,
+                33.7020263
+              ],
+              "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+              "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/api/0.6/node/1066108779",
+                "https://www.openstreetmap.org/node/1066108779"
+              ],
+              "evidence_note": "OSM node 1066108779, version 6, timestamp 2018-03-07T21:49:53Z. Identity tags: {\"barrier\": \"border_control\", \"country\": \"LB\", \"name\": \"المصنع\", \"name:ar\": \"المصنع\"}. This is location evidence only; event applicability is assessed separately.",
+              "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/20ae20e7ff8c6d34.raw",
+              "evidence_sha256": "b5b73b39facf9f24bf9b3e4fa2e6f57d4f34db217203cce2c4216a3354972c4f",
+              "independent_b_evidence": " OSM tags inspected: {\"barrier\": \"border_control\", \"country\": \"LB\", \"name\": \"المصنع\", \"name:ar\": \"المصنع\"}. This is geographic evidence only, not historical closure evidence."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Exact road-severance footprint between the two separately geolocated terminals has not been established.; Exact crater/road-severance coordinate is not supplied; existing terminal mark is partial corridor reference only. November restoration bound does not prove continuous shutdown.",
+          "rationale": "Independent reconstructions agree on named facility, source-supported phase scope and coordinate. Preserve recorded direction, cohort, dates and evidence limits. Crossing-area reference only; the historical approach obstruction is not located."
+        }
+      ]
+    },
+    {
+      "record_id": "R2-ME-008",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R2-ME-008.json",
+          "sha256": "60ac6aaaae938303f2f0148d26f9dfc1c14e5ccdd8620dbe53e495f7551ecd7b"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R2-ME-008.json",
+          "sha256": "4c233b520e33fb680ad294d5777aaa53222cb1d0e5230745dcf2eec2f27a3847"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R2-ME-008-D1",
+          "category": "multiple_named_sites",
+          "decision": "map",
+          "complete": true,
+          "sites": [
+            {
+              "existing_site_id": "post-erez-beit-hanoun",
+              "name": "Erez–Beit Hanoun",
+              "coordinates": [
+                34.54328,
+                31.5582864
+              ],
+              "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+              "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/api/0.6/node/334719553",
+                "https://www.openstreetmap.org/node/334719553"
+              ],
+              "evidence_note": "OSM node 334719553, version 29, timestamp 2024-04-14T13:58:53Z. Identity tags: {\"barrier\": \"border_control\", \"bicycle\": \"no\", \"foot\": \"yes\", \"horse\": \"no\", \"motor_vehicle\": \"private\", \"name\": \"מעבר ארז\", \"name:ar\": \"معبر إيريز\", \"name:en\": \"Erez Crossing\", \"name:fr\": \"Poste-frontière d'Erez\", \"name:he\": \"מעבר ארז\", \"name:ja\": \"エレツ検問所\", \"wikidata\": \"Q2319323\", \"wikipedia\": \"en:Erez Crossing\", \"wikipedia:en\": \"Erez Crossing\"}. This is location evidence only; event applicability is assessed separately.",
+              "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/2c1002ac8c3c2877.raw",
+              "evidence_sha256": "942966040a7765dee83af703418ed7679084204e2244a16e3c6f3b4b409ee5cf",
+              "independent_b_evidence": " OSM tags inspected: {\"barrier\": \"border_control\", \"bicycle\": \"no\", \"foot\": \"yes\", \"horse\": \"no\", \"motor_vehicle\": \"private\", \"name\": \"מעבר ארז\", \"name:ar\": \"معبر إيريز\", \"name:en\": \"Erez Crossing\", \"name:fr\": \"Poste-frontière d'Erez\", \"name:he\": \"מעבר ארז\", \"name:ja\": \"エレツ検問所\", \"wikidata\": \"Q2319323\", \"wikipedia\": \"en:Erez Crossing\", \"wikipedia:en\": \"Erez Crossing\"}. This is geographic evidence only, not historical closure evidence."
+            },
+            {
+              "existing_site_id": "post-kerem-shalom",
+              "name": "Kerem Shalom–Karm Abu Salem",
+              "coordinates": [
+                34.2695531,
+                31.2212547
+              ],
+              "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+              "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/api/0.6/node/328444065",
+                "https://www.openstreetmap.org/node/328444065"
+              ],
+              "evidence_note": "OSM node 328444065, version 25, timestamp 2026-05-27T15:50:13Z. Identity tags: {\"alt_name:en\": \"Kerem Abu Salem Crossing\", \"barrier\": \"border_control\", \"motor_vehicle\": \"no\", \"name\": \"מעבר כרם שלום معبر كرم أبو سالم\", \"name:ar\": \"معبر كرم أبو سالم\", \"name:en\": \"Kerem Shalom Crossing\", \"name:fr\": \"Poste-frontière de Kerem Shalom\", \"name:he\": \"מעבר כרם שלום\", \"name:ja\": \"カレム・シャローム検問所\", \"wikidata\": \"Q6393780\", \"wikipedia\": \"en:Kerem Shalom border crossing\", \"wikipedia:en\": \"Kerem Shalom border crossing\"}. This is location evidence only; event applicability is assessed separately.",
+              "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/2e33c643af3d09cc.raw",
+              "evidence_sha256": "b3c3b973a1d5513ec0735a3e2c6b5cb8e63f62a21f69f6b0060b5e8482bd19e0",
+              "independent_b_evidence": " OSM tags inspected: {\"alt_name:en\": \"Kerem Abu Salem Crossing\", \"barrier\": \"border_control\", \"motor_vehicle\": \"no\", \"name\": \"מעבר כרם שלום معبر كرم أبو سالم\", \"name:ar\": \"معبر كرم أبو سالم\", \"name:en\": \"Kerem Shalom Crossing\", \"name:fr\": \"Poste-frontière de Kerem Shalom\", \"name:he\": \"מעבר כרם שלום\", \"name:ja\": \"カレム・シャローム検問所\", \"wikidata\": \"Q6393780\", \"wikipedia\": \"en:Kerem Shalom border crossing\", \"wikipedia:en\": \"Kerem Shalom border crossing\"}. This is geographic evidence only, not historical closure evidence."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "",
+          "rationale": "Independent reconstructions agree on named facility, source-supported phase scope and coordinate. Preserve recorded direction, cohort, dates and evidence limits. All named facilities in this scoped phase have source-backed references."
+        }
+      ]
+    },
+    {
+      "record_id": "R2-ME-009",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R2-ME-009.json",
+          "sha256": "57775319a916b60760a73a072f17a43f2ad31f54d25dd801d883a5bbbe02a6ae"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R2-ME-009.json",
+          "sha256": "5c413aaf21213a8661de18dfe65dc83fb7800d5cdada6010b4127e8344ddf482"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R2-ME-009-D1",
+          "category": "multiple_named_sites",
+          "decision": "map",
+          "complete": true,
+          "sites": [
+            {
+              "existing_site_id": "post-erez-beit-hanoun",
+              "name": "Erez–Beit Hanoun",
+              "coordinates": [
+                34.54328,
+                31.5582864
+              ],
+              "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+              "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/api/0.6/node/334719553",
+                "https://www.openstreetmap.org/node/334719553"
+              ],
+              "evidence_note": "OSM node 334719553, version 29, timestamp 2024-04-14T13:58:53Z. Identity tags: {\"barrier\": \"border_control\", \"bicycle\": \"no\", \"foot\": \"yes\", \"horse\": \"no\", \"motor_vehicle\": \"private\", \"name\": \"מעבר ארז\", \"name:ar\": \"معبر إيريز\", \"name:en\": \"Erez Crossing\", \"name:fr\": \"Poste-frontière d'Erez\", \"name:he\": \"מעבר ארז\", \"name:ja\": \"エレツ検問所\", \"wikidata\": \"Q2319323\", \"wikipedia\": \"en:Erez Crossing\", \"wikipedia:en\": \"Erez Crossing\"}. This is location evidence only; event applicability is assessed separately.",
+              "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/2c1002ac8c3c2877.raw",
+              "evidence_sha256": "942966040a7765dee83af703418ed7679084204e2244a16e3c6f3b4b409ee5cf",
+              "independent_b_evidence": " OSM tags inspected: {\"barrier\": \"border_control\", \"bicycle\": \"no\", \"foot\": \"yes\", \"horse\": \"no\", \"motor_vehicle\": \"private\", \"name\": \"מעבר ארז\", \"name:ar\": \"معبر إيريز\", \"name:en\": \"Erez Crossing\", \"name:fr\": \"Poste-frontière d'Erez\", \"name:he\": \"מעבר ארז\", \"name:ja\": \"エレツ検問所\", \"wikidata\": \"Q2319323\", \"wikipedia\": \"en:Erez Crossing\", \"wikipedia:en\": \"Erez Crossing\"}. This is geographic evidence only, not historical closure evidence."
+            },
+            {
+              "existing_site_id": "post-kerem-shalom",
+              "name": "Kerem Shalom–Karm Abu Salem",
+              "coordinates": [
+                34.2695531,
+                31.2212547
+              ],
+              "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+              "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/api/0.6/node/328444065",
+                "https://www.openstreetmap.org/node/328444065"
+              ],
+              "evidence_note": "OSM node 328444065, version 25, timestamp 2026-05-27T15:50:13Z. Identity tags: {\"alt_name:en\": \"Kerem Abu Salem Crossing\", \"barrier\": \"border_control\", \"motor_vehicle\": \"no\", \"name\": \"מעבר כרם שלום معبر كرم أبو سالم\", \"name:ar\": \"معبر كرم أبو سالم\", \"name:en\": \"Kerem Shalom Crossing\", \"name:fr\": \"Poste-frontière de Kerem Shalom\", \"name:he\": \"מעבר כרם שלום\", \"name:ja\": \"カレム・シャローム検問所\", \"wikidata\": \"Q6393780\", \"wikipedia\": \"en:Kerem Shalom border crossing\", \"wikipedia:en\": \"Kerem Shalom border crossing\"}. This is location evidence only; event applicability is assessed separately.",
+              "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/2e33c643af3d09cc.raw",
+              "evidence_sha256": "b3c3b973a1d5513ec0735a3e2c6b5cb8e63f62a21f69f6b0060b5e8482bd19e0",
+              "independent_b_evidence": " OSM tags inspected: {\"alt_name:en\": \"Kerem Abu Salem Crossing\", \"barrier\": \"border_control\", \"motor_vehicle\": \"no\", \"name\": \"מעבר כרם שלום معبر كرم أبو سالم\", \"name:ar\": \"معبر كرم أبو سالم\", \"name:en\": \"Kerem Shalom Crossing\", \"name:fr\": \"Poste-frontière de Kerem Shalom\", \"name:he\": \"מעבר כרם שלום\", \"name:ja\": \"カレム・シャローム検問所\", \"wikidata\": \"Q6393780\", \"wikipedia\": \"en:Kerem Shalom border crossing\", \"wikipedia:en\": \"Kerem Shalom border crossing\"}. This is geographic evidence only, not historical closure evidence."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "",
+          "rationale": "Independent reconstructions agree on named facility, source-supported phase scope and coordinate. Preserve recorded direction, cohort, dates and evidence limits. All named facilities in this scoped phase have source-backed references."
+        }
+      ]
+    },
+    {
+      "record_id": "AM043",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/AM043.json",
+          "sha256": "32d331bc4014fa2728ed9b64f2326c0286f64785be3ddc62fcd8a20316d4f73b"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/AM043.json",
+          "sha256": "443513c7012bc68d20b85c52064dec1745916f9a5ca84ec03cbdbe10d3193ec0"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "AM043-D1",
+          "category": "single_site",
+          "decision": "partial",
+          "complete": false,
+          "sites": [
+            {
+              "proposed_site_id": "post-emerson-pembina",
+              "name": "Emerson–Pembina road crossing",
+              "coordinates": [
+                -97.2376654,
+                49.0015152
+              ],
+              "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+              "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+              "source_urls": [
+                "https://www.openstreetmap.org/way/104744861",
+                "https://mapcarta.com/W104744861",
+                "https://asfc-cbsa.gc.ca/prog/cdrp-picsc/do-bd-eng.html"
+              ],
+              "evidence_note": "Inspected named customs/border-control geometry; official CBSA source identifies this road port and commercial/passenger service suspension. Emerson Manitoba service/access suspension, rather than the separate railway route or former Noyes road post.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/12e21a9949c1dcd99105.xml",
+                  "sha256": "9c7ebee79f87596851b65f4676e3231d4563565df20727bc0b5dabe2f2580da8",
+                  "retrieved_date": "2026-10-29",
+                  "osm_version": "13",
+                  "osm_timestamp": "2025-08-05T00:00:31Z",
+                  "tags": {
+                    "addr:city": "Emerson",
+                    "addr:postcode": "R0A 0L0",
+                    "addr:province": "MB",
+                    "addr:street": "MB-75",
+                    "building": "yes",
+                    "government": "customs",
+                    "layer": "1",
+                    "name": "Canada Border Services Agency-Emerson",
+                    "name:en": "Canada Border Services Agency",
+                    "name:fr": "Agence des services frontaliers du Canada",
+                    "office": "government",
+                    "old_name": "Canada Border Services Agency-West Lynne",
+                    "opening_hours": "24/7",
+                    "operator": "Canada Border Services Agency",
+                    "operator:short": "CBSA",
+                    "operator:wikidata": "Q532090",
+                    "phone": "+1 800 461 9999",
+                    "source": "Bing",
+                    "website": "https://www.cbsa-asfc.gc.ca/menu-eng.html"
+                  }
+                }
+              ],
+              "independent_b_evidence": "Mapcarta identifies OSM way 104744861 as CBSA Emerson/West Lynne on MB-75, 280 m from Pembina checkpoint. CBSA directory independently identifies Emerson commercial operations on Highway 75. Opposite rail/Noyes crossing excluded.",
+              "coordinate_reconciliation": "Independent coordinates agree to rounded metre precision; retain original XML-derived value."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Named port is located; complete historical road-access blockade footprint is not reconstructed.",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "AM007",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/AM007.json",
+          "sha256": "4764e2e908d69b4c6e2e493e7c5c63694aff54de0984ee9452322ae327fe7744"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/AM007.json",
+          "sha256": "fb0fd8199cc1300907434c294cd0e8220aeb82268b70206c6dc9c3c3585ccf92"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "AM007-D1",
+          "category": "single_site",
+          "decision": "partial",
+          "complete": false,
+          "sites": [
+            {
+              "proposed_site_id": "post-coutts-sweetgrass",
+              "name": "Coutts–Sweetgrass road crossing",
+              "coordinates": [
+                -111.9604833,
+                48.9985896
+              ],
+              "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+              "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+              "source_urls": [
+                "https://www.openstreetmap.org/way/888313980",
+                "https://mapcarta.com/W888313980",
+                "https://tc.canada.ca/en/binder/15-situation-coutts-alberta"
+              ],
+              "evidence_note": "Inspected named customs/border-control geometry; official CBSA source identifies this road port and commercial/passenger service suspension. Coutts Alberta road service/access suspension; initial intermittent protests are not merged with the phase starting February 12.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/208ee5ba2c69c9ed758c.xml",
+                  "sha256": "f6632051aff6a919cac4f72b6a3ff3e9495e85d18a1710c72f0e37681e73ddb5",
+                  "retrieved_date": "2026-10-29",
+                  "osm_version": "3",
+                  "osm_timestamp": "2023-03-04T12:47:13Z",
+                  "tags": {
+                    "building": "yes",
+                    "government": "customs",
+                    "layer": "1",
+                    "name": "Coutts Port of Entry",
+                    "office": "government",
+                    "operator": "Canada Border Services Agency",
+                    "website": "https://www.cbsa-asfc.gc.ca/do-rb/offices-bureaux/646-eng.html"
+                  }
+                }
+              ],
+              "independent_b_evidence": "Mapcarta explicitly identifies OSM building way 888313980 as Coutts Port of Entry operated by CBSA, adjacent to US Sweetgrass. Transport Canada identifies the crossing and Highway 4 approach. Town and railway are excluded.",
+              "coordinate_reconciliation": "Independent coordinates agree to rounded metre precision; retain original XML-derived value."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Named port is located; complete historical road-access blockade footprint is not reconstructed.",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "AM044",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/AM044.json",
+          "sha256": "45931ecb4a65da54c02b286eb92f37dc99375bf169c585562406d08a6e60e64a"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/AM044.json",
+          "sha256": "297eaabefc8755af469739627e19a57c10cf92a23e1e75a892daa636b54a6b59"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "AM044-D1",
+          "category": "single_site",
+          "decision": "partial",
+          "complete": false,
+          "sites": [
+            {
+              "proposed_site_id": "post-pacific-highway-road",
+              "name": "Pacific Highway–Blaine road crossing",
+              "coordinates": [
+                -122.7346948,
+                49.002567
+              ],
+              "coordinate_method": "OSM named node coordinates",
+              "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+              "source_urls": [
+                "https://www.openstreetmap.org/node/8455836850",
+                "https://mapcarta.com/N4426775229",
+                "https://www.openstreetmap.org/node/4426775229",
+                "https://asfc-cbsa.gc.ca/prog/cdrp-picsc/do-bd-eng.html"
+              ],
+              "evidence_note": "Inspected named customs/border-control geometry; official CBSA source identifies this road port and commercial/passenger service suspension. First Pacific Highway road-access/service suspension; Peace Arch/Douglas is a different crossing.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/221ea36bf12633a06409.xml",
+                  "sha256": "8f6d2d86e9bf6800ba0d5448b26aab1d683b869631cf214d2ebd6ace2188d094",
+                  "retrieved_date": "2026-10-29",
+                  "osm_version": "4",
+                  "osm_timestamp": "2023-02-25T20:55:54Z",
+                  "tags": {
+                    "barrier": "border_control",
+                    "name": "Port of Entry - Pacific Highway",
+                    "opening_hours": "24/7"
+                  }
+                }
+              ],
+              "independent_b_evidence": "OSM-mirror node 4426775229 explicitly names Pacific Highway port of entry. Peace Arch is separately mapped 1.5 km west; source CBSA names Pacific Highway, so Peace Arch must not be substituted.",
+              "coordinate_reconciliation": "Both reconstructions independently identify Pacific Highway road port, distinct from Peace Arch. They select two named OSM border-control nodes about 49 m apart in the same facility. Use the inspected original XML node 8455836850; preserve approximate/partial approach qualification."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Named port is located; complete historical road-access blockade footprint is not reconstructed.",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "AM045",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/AM045.json",
+          "sha256": "6a5384edb4b03282acca802e5eed4a2f64b5164d05434f484494a78946cae476"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/AM045.json",
+          "sha256": "7da0b9fd8625c897ecf03d0457797811928c340c139eee250a7d92784af7c96e"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "AM045-D1",
+          "category": "single_site",
+          "decision": "partial",
+          "complete": false,
+          "sites": [
+            {
+              "proposed_site_id": "post-pacific-highway-road",
+              "name": "Pacific Highway–Blaine road crossing",
+              "coordinates": [
+                -122.7346948,
+                49.002567
+              ],
+              "coordinate_method": "OSM named node coordinates",
+              "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+              "source_urls": [
+                "https://www.openstreetmap.org/node/8455836850",
+                "https://mapcarta.com/N4426775229",
+                "https://www.openstreetmap.org/node/4426775229",
+                "https://asfc-cbsa.gc.ca/prog/cdrp-picsc/do-bd-eng.html"
+              ],
+              "evidence_note": "Inspected named customs/border-control geometry; official CBSA source identifies this road port and commercial/passenger service suspension. Separate February 19 Pacific Highway recurrence; no continuous interval across the earlier reopening.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/221ea36bf12633a06409.xml",
+                  "sha256": "8f6d2d86e9bf6800ba0d5448b26aab1d683b869631cf214d2ebd6ace2188d094",
+                  "retrieved_date": "2026-10-29",
+                  "osm_version": "4",
+                  "osm_timestamp": "2023-02-25T20:55:54Z",
+                  "tags": {
+                    "barrier": "border_control",
+                    "name": "Port of Entry - Pacific Highway",
+                    "opening_hours": "24/7"
+                  }
+                }
+              ],
+              "independent_b_evidence": "OSM-mirror node 4426775229 explicitly names Pacific Highway port of entry. Peace Arch is separately mapped 1.5 km west; source CBSA names Pacific Highway, so Peace Arch must not be substituted.",
+              "coordinate_reconciliation": "Both reconstructions independently identify Pacific Highway road port, distinct from Peace Arch. They select two named OSM border-control nodes about 49 m apart in the same facility. Use the inspected original XML node 8455836850; preserve approximate/partial approach qualification."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Named port is located; complete historical road-access blockade footprint is not reconstructed.",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "AM050",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/AM050.json",
+          "sha256": "29dc5f2a6147422a73bdd5f4f974b1c2f7a6585eb5f153bd30109d33dde658e7"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/AM050.json",
+          "sha256": "da179fa717fcd47eb0a2330cf7f38f3802775f1bcc25abdfafda4fd350d7923f"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "AM050-R1",
+          "category": "single_site",
+          "decision": "map",
+          "complete": true,
+          "sites": [
+            {
+              "proposed_site_id": "post-simon-bolivar-road",
+              "name": "Simón Bolívar international road bridge",
+              "coordinates": [
+                -72.450854,
+                7.8179153
+              ],
+              "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+              "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+              "source_urls": [
+                "https://www.openstreetmap.org/way/871456442",
+                "https://mapcarta.com/19864652"
+              ],
+              "evidence_note": "Named OSM bridge across Táchira River between San Antonio del Táchira and La Parada; no substitution of the Francisco de Paula Santander or Atanasio Girardot bridges.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fc7c61ad8e72edc57152.xml",
+                  "sha256": "b8a9fa4f8f15575fd029e2ab1515a443b0ccad9b09fcb001d5f3b987d5abd9a0",
+                  "retrieved_date": "2026-10-29",
+                  "osm_version": "6",
+                  "osm_timestamp": "2025-11-21T13:12:51Z",
+                  "tags": {
+                    "layer": "1",
+                    "man_made": "bridge",
+                    "name": "Puente Internacional Simón Bolívar",
+                    "wikidata": "Q3396757",
+                    "wikimedia_commons": "Category:Puente Internacional Simón Bolívar",
+                    "wikipedia": "es:Puente Internacional Simón Bolívar"
+                  }
+                }
+              ],
+              "independent_b_evidence": "Inspected geographical page names OSM way 871456442 as the road bridge over the Táchira linking San Antonio and La Parada; excludes same-name Barranquilla bridge. Original event accounts name the same international bridge.",
+              "coordinate_reconciliation": "Independent coordinates agree to rounded metre precision; retain original XML-derived value."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "R2-EU-001",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R2-EU-001.json",
+          "sha256": "2e31db397bef93ec4e13b2e607386444ec6a89ba2722292a5cd4f140325c8ffb"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R2-EU-001.json",
+          "sha256": "777139aef60760cad07f9561638a6d3e748768072c07a40290eab139d3c9aa53"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R2-EU-001-D1",
+          "category": "multiple_named_sites",
+          "decision": "partial",
+          "complete": false,
+          "sites": [
+            {
+              "existing_site_id": "post-jarinje",
+              "name": "Jarinje",
+              "coordinates": [
+                20.69965,
+                43.226642
+              ],
+              "coordinate_method": "Bounding-box centre of named OSM checkpoint compound",
+              "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/way/1090470176"
+              ],
+              "evidence_note": "Fresh named OSM checkpoint geometry inspected; road crossing on disputed Kosovo–Serbia boundary. Political status is not adjudicated.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/e550548276a6624ff36e.xml",
+                  "sha256": "0b9ff98eb566020b284719d8a5d7dfc54461797599d76e3159d251849aa26edd",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_b_evidence": "Primary cached way 1090470176 v1 is explicitly Jarinjë Border Crossing commercial compound, distinct from village and railway station."
+            },
+            {
+              "existing_site_id": "post-brnjak",
+              "name": "Brnjak",
+              "coordinates": [
+                20.548653,
+                42.961697
+              ],
+              "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+              "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/node/4760799314"
+              ],
+              "evidence_note": "Fresh named OSM checkpoint geometry inspected; road crossing on disputed Kosovo–Serbia boundary. Political status is not adjudicated.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fdda20fe4f37634dba3e.xml",
+                  "sha256": "930cfec5f78e06d3bdd62084033b226c435a57d807aa506e0cf39d51639ed6b0",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_b_evidence": "Primary cached node 4760799314 v5 has barrier=border_control and names Administrativni prelaz Brnjak / Bërnjakë border crossing; motor_vehicle and pedestrian access tags identify a road post."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Access-road barricade extents are not individually located.",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "R2-EU-002",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R2-EU-002.json",
+          "sha256": "ae92a7c38dfc174e9106382f3cbb8d4671d7ad4dfdaa073cc2c3ebfe0a2031bd"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R2-EU-002.json",
+          "sha256": "382afd92db9942f5b9af6bc80ba659e71d75e0a3ba16e7e05cb5e199c412913c"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R2-EU-002-D1",
+          "category": "multiple_named_sites",
+          "decision": "map",
+          "complete": true,
+          "sites": [
+            {
+              "existing_site_id": "post-jarinje",
+              "name": "Jarinje",
+              "coordinates": [
+                20.69965,
+                43.226642
+              ],
+              "coordinate_method": "Bounding-box centre of named OSM checkpoint compound",
+              "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/way/1090470176"
+              ],
+              "evidence_note": "Fresh named OSM checkpoint geometry inspected; road crossing on disputed Kosovo–Serbia boundary. Political status is not adjudicated.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/e550548276a6624ff36e.xml",
+                  "sha256": "0b9ff98eb566020b284719d8a5d7dfc54461797599d76e3159d251849aa26edd",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_b_evidence": "Primary cached way 1090470176 v1 is explicitly Jarinjë Border Crossing commercial compound, distinct from village and railway station."
+            },
+            {
+              "existing_site_id": "post-brnjak",
+              "name": "Brnjak",
+              "coordinates": [
+                20.548653,
+                42.961697
+              ],
+              "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+              "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/node/4760799314"
+              ],
+              "evidence_note": "Fresh named OSM checkpoint geometry inspected; road crossing on disputed Kosovo–Serbia boundary. Political status is not adjudicated.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fdda20fe4f37634dba3e.xml",
+                  "sha256": "930cfec5f78e06d3bdd62084033b226c435a57d807aa506e0cf39d51639ed6b0",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_b_evidence": "Primary cached node 4760799314 v5 has barrier=border_control and names Administrativni prelaz Brnjak / Bërnjakë border crossing; motor_vehicle and pedestrian access tags identify a road post."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "R2-EU-003",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R2-EU-003.json",
+          "sha256": "7402829cb69d758a308670877a4b60d75bc51849868b3e2b97858f94d7736372"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R2-EU-003.json",
+          "sha256": "f861087ba515fa42412dbb8a64e2012f16fb4ca739ea8b503debd8bff1fceb1a"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R2-EU-003-D1",
+          "category": "multiple_named_sites",
+          "decision": "map",
+          "complete": true,
+          "sites": [
+            {
+              "existing_site_id": "post-jarinje",
+              "name": "Jarinje",
+              "coordinates": [
+                20.69965,
+                43.226642
+              ],
+              "coordinate_method": "Bounding-box centre of named OSM checkpoint compound",
+              "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/way/1090470176"
+              ],
+              "evidence_note": "Fresh named OSM checkpoint geometry inspected; road crossing on disputed Kosovo–Serbia boundary. Political status is not adjudicated.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/e550548276a6624ff36e.xml",
+                  "sha256": "0b9ff98eb566020b284719d8a5d7dfc54461797599d76e3159d251849aa26edd",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_b_evidence": "Primary cached way 1090470176 v1 is explicitly Jarinjë Border Crossing commercial compound, distinct from village and railway station."
+            },
+            {
+              "existing_site_id": "post-brnjak",
+              "name": "Brnjak",
+              "coordinates": [
+                20.548653,
+                42.961697
+              ],
+              "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+              "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/node/4760799314"
+              ],
+              "evidence_note": "Fresh named OSM checkpoint geometry inspected; road crossing on disputed Kosovo–Serbia boundary. Political status is not adjudicated.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fdda20fe4f37634dba3e.xml",
+                  "sha256": "930cfec5f78e06d3bdd62084033b226c435a57d807aa506e0cf39d51639ed6b0",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_b_evidence": "Primary cached node 4760799314 v5 has barrier=border_control and names Administrativni prelaz Brnjak / Bërnjakë border crossing; motor_vehicle and pedestrian access tags identify a road post."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "R2-EU-007",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R2-EU-007.json",
+          "sha256": "bad9bb7c39ec68f1ee3e080ad13614607c4f4a658655442dc40535d3ac8cf64c"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R2-EU-007.json",
+          "sha256": "597ce07a28b42481f629aeaa7b38496d3e7eb308197b0961ffbcd0edb0a39e7a"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R2-EU-007-D1",
+          "category": "multiple_named_sites",
+          "decision": "map",
+          "complete": true,
+          "sites": [
+            {
+              "existing_site_id": "post-merdare",
+              "name": "Merdare",
+              "coordinates": [
+                21.243304,
+                42.936672
+              ],
+              "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+              "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/node/13959887212"
+              ],
+              "evidence_note": "Fresh named OSM checkpoint geometry inspected; road crossing on disputed Kosovo–Serbia boundary. Political status is not adjudicated.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/df62ae678cf5b7dbebda.xml",
+                  "sha256": "a5ce2017cf7192e6294f83cb1a8606189d95c46f123aced36e4e7d2f1dad670c",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_b_evidence": "Primary cached node 13959887212 v1 names Merdare Border Crossing with vehicle=yes and border_control. Current node position is a reference, not a historical survey."
+            },
+            {
+              "existing_site_id": "post-brnjak",
+              "name": "Brnjak",
+              "coordinates": [
+                20.548653,
+                42.961697
+              ],
+              "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+              "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/node/4760799314"
+              ],
+              "evidence_note": "Fresh named OSM checkpoint geometry inspected; road crossing on disputed Kosovo–Serbia boundary. Political status is not adjudicated.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fdda20fe4f37634dba3e.xml",
+                  "sha256": "930cfec5f78e06d3bdd62084033b226c435a57d807aa506e0cf39d51639ed6b0",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_b_evidence": "Primary cached node 4760799314 v5 has barrier=border_control and names Administrativni prelaz Brnjak / Bërnjakë border crossing; motor_vehicle and pedestrian access tags identify a road post."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "R5-AM-006",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R5-AM-006.json",
+          "sha256": "2d9673ac98f1866895b0e48ed92cfd84556ce74e5b26585a789054814ea4c287"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R5-AM-006.json",
+          "sha256": "298ad94fad8c805e36b78e8d993891690af3654a3b4942ad0713a3f3952b0707"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R5-AM-006-R1",
+          "category": "single_site",
+          "decision": "partial",
+          "complete": false,
+          "sites": [
+            {
+              "existing_site_id": "post-rumichaca",
+              "name": "Rumichaca road bridge",
+              "coordinates": [
+                -77.664073,
+                0.814031
+              ],
+              "coordinate_method": "Bounding-box centre of named OSM international road bridge footprint.",
+              "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/way/1316055071",
+                "https://mintransporte.gov.co/publicaciones/1390/colombia-y-ecuador-firman-convenio-de-cooperacion-para-construccion-del-nuevo-puente-rumichaca/"
+              ],
+              "evidence_note": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/792c56b993d6369cfbc7.xml",
+                  "sha256": "ce8270e22ad76c4b8439b2def9659b1e740cdee90ac75a3746ab33c1c23e4d9c",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_b_evidence": "Cached OSM way 1316055071 v2 is Puente Internacional Rumichaca, man_made=bridge; this identifies the road bridge separately from the natural arch. Ecuavisa directly names the same international bridge."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Exact historical approach blockade footprint remains unlocated.",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "CC025",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/CC025.json",
+          "sha256": "d5f0af8a82e3c8867c05b28d723a47017d4534c615063a8090cd41ce7e62a85f"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/CC025.json",
+          "sha256": "c13632e12ebbb68b07305a8b889b3bdbff27331f8067a63b3be60c2d06c89a38"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "CC025-D1",
+          "category": "single_site",
+          "decision": "map",
+          "complete": true,
+          "sites": [
+            {
+              "proposed_site_id": "post-termez-hairatan-friendship-bridge",
+              "name": "Termez/Ayritom–Hairatan Friendship Bridge",
+              "coordinates": [
+                67.4276363,
+                37.2289594
+              ],
+              "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/22825394",
+              "precision": "Bridge-area reference, 500 m; mixed-mode structure, with phase explicitly restricted to passengers.",
+              "source_urls": [
+                "https://www.openstreetmap.org/way/22825394",
+                "https://api.openstreetmap.org/api/0.6/map?bbox=67.4,37.2,67.45,37.25",
+                "https://api.openstreetmap.org/api/0.6/way/1371795537/full"
+              ],
+              "evidence_note": "Mapped named Afghanistan–Uzbekistan Friendship Bridge has both trunk-road and railway tags. The source-selected civilian passenger category uses this crossing; rail/cargo operation is not asserted closed.",
+              "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-termez.xml",
+              "sha256": "f9ab3441fcaa2e9152632d109a1d7c0a7a685f8f0da34db5d38e742660554396",
+              "osm_feature": "way/22825394",
+              "osm_version": "24",
+              "osm_timestamp": "2025-05-15T10:08:05Z",
+              "identity_tags": {
+                "alt_name:en": "Hayraton bridge",
+                "alt_name:ru": "Пул Дустий Афганистан ва Узбекистан",
+                "branch": "Termiz mintaqaviy temir yo'l uzeli",
+                "bridge": "yes",
+                "electrified": "no",
+                "gauge": "1520",
+                "highway": "trunk",
+                "int_ref": "AH62",
+                "layer": "1",
+                "maxspeed": "20",
+                "name": "پل دوستی افغانستان و ازبکستان",
+                "name:en": "Afghanistan–Uzbekistan Friendship Bridge",
+                "name:ru": "Мост Дружбы",
+                "operator": "O‘zbekiston temir yo‘llari",
+                "passenger_lines": "1",
+                "railway": "rail",
+                "usage": "main",
+                "wikidata": "Q509824",
+                "wikipedia": "ru:Мост Дружбы (Афганистан — Узбекистан)"
+              },
+              "independent_b_evidence": "Named bridge footprint in fresh OSM XML. Original passenger-restoration source explicitly names the Termez-Hayraton Bridge; the UN Termez report confirms pedestrian, road and rail share this bridge. Only accepted road/passenger phase is bound."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "GL09",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/GL09.json",
+          "sha256": "038d68abd985c735d8d8f71ce3da35725c840a505799b4f57e6c3e728d2ab5b4"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/GL09.json",
+          "sha256": "07645e385924978c4b273224c15e5fafb6e364b8e2b03019c2eb825151d41c69"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "GL09-R1",
+          "category": "wider_border",
+          "decision": "partial",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [
+            "context-frontier-cod-rwa",
+            "context-frontier-cod-uga",
+            "context-frontier-bdi-cod",
+            "context-frontier-ago-cod",
+            "context-frontier-cod-cog",
+            "context-frontier-cod-zmb"
+          ],
+          "qualification": "Existing inventory lacks DRC–Central African Republic, DRC–South Sudan and DRC–Tanzania frontier geometry; national scope cannot be marked complete.; Existing frontier geometry is incomplete for the DRC national perimeter; named Kavimvira exception is not itself a closure point. Same-day scheduled order only.",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. Only listed existing reference segments are mapped; other national frontiers remain missing."
+        }
+      ]
+    },
+    {
+      "record_id": "GL06",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/GL06.json",
+          "sha256": "f08ebfc6b5775c2f4de6b49e85d1f3008847f7c0890bbb13bc1e512dfde9bbe6"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/GL06.json",
+          "sha256": "ba3c5b831273c39817de8ef3ce40f9d965df993019cfd8708c83c44efdcdf47d"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "GL06-D1",
+          "category": "wider_border",
+          "decision": "partial",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [
+            "context-frontier-cod-rwa",
+            "context-frontier-cod-uga",
+            "context-frontier-bdi-cod",
+            "context-frontier-ago-cod",
+            "context-frontier-cod-cog",
+            "context-frontier-cod-zmb"
+          ],
+          "qualification": "Existing inventory lacks DRC–Central African Republic, DRC–South Sudan and DRC–Tanzania frontier geometry; national scope cannot be marked complete.; Existing frontier inventory omits DRC boundaries with Central African Republic, South Sudan and Tanzania; no country polygon used as a closure footprint. Administrative reopening does not establish every post.",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. Only listed existing reference segments are mapped; other national frontiers remain missing."
+        }
+      ]
+    },
+    {
+      "record_id": "R2-ME-012",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R2-ME-012.json",
+          "sha256": "24c5a8571852f99cfe7535ef0db7a0ab83691391acebbb8e67d12fcb4bc9878e"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R2-ME-012.json",
+          "sha256": "3c6d68089a141a154c2991197abdd96c865b0b438f80f7573574155eab9eb12f"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R2-ME-012-D1",
+          "category": "single_site",
+          "decision": "map",
+          "complete": true,
+          "sites": [
+            {
+              "proposed_site_id": "post-semalka-faysh-khabur",
+              "name": "Semalka–Faysh Khabur customs crossing area",
+              "coordinates": [
+                42.3484273,
+                37.0892488
+              ],
+              "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+              "precision": "Approximately 500 m; named Syrian customs facility, not an exact pontoon bridge or opposite bank terminal.",
+              "source_urls": [
+                "https://www.openstreetmap.org/api/0.6/node/6019972486",
+                "https://www.openstreetmap.org/node/6019972486"
+              ],
+              "evidence_note": "OSM node 6019972486, version 2, timestamp 2024-03-19T01:33:56Z. Identity tags: {\"government\": \"customs\", \"name\": \"معبر سيمالكا\", \"name:en\": \"Semalka Borders\", \"office\": \"government\"}. This is location evidence only; event applicability is assessed separately.",
+              "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/f362e988de5d494f.raw",
+              "evidence_sha256": "e7d1d28a269632956dfb7a9bb9df54ad674db5f3c81bd2bdc278b6b60bcd5f6a",
+              "independent_b_evidence": "Named Syrian customs facility at the Tigris crossing; distinct from Semalka village.  OSM tags inspected: {\"government\": \"customs\", \"name\": \"معبر سيمالكا\", \"name:en\": \"Semalka Borders\", \"office\": \"government\"}. This is geographic evidence only, not historical closure evidence."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "R2-ME-006",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R2-ME-006.json",
+          "sha256": "c9f465ba7e094ce19015b92f9598b382c4837cf6f48fa83f5fefa7d30805bb9f"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R2-ME-006.json",
+          "sha256": "a41df03f868246e4f514cddaf0c5ecb133a225106cb2b830fbff67d1ba80beb7"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R2-ME-006-D1",
+          "category": "single_site",
+          "decision": "map",
+          "complete": true,
+          "sites": [
+            {
+              "proposed_site_id": "post-semalka-faysh-khabur",
+              "name": "Semalka–Faysh Khabur customs crossing area",
+              "coordinates": [
+                42.3484273,
+                37.0892488
+              ],
+              "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+              "precision": "Approximately 500 m; named Syrian customs facility, not an exact pontoon bridge or opposite bank terminal.",
+              "source_urls": [
+                "https://www.openstreetmap.org/api/0.6/node/6019972486",
+                "https://www.openstreetmap.org/node/6019972486"
+              ],
+              "evidence_note": "OSM node 6019972486, version 2, timestamp 2024-03-19T01:33:56Z. Identity tags: {\"government\": \"customs\", \"name\": \"معبر سيمالكا\", \"name:en\": \"Semalka Borders\", \"office\": \"government\"}. This is location evidence only; event applicability is assessed separately.",
+              "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/f362e988de5d494f.raw",
+              "evidence_sha256": "e7d1d28a269632956dfb7a9bb9df54ad674db5f3c81bd2bdc278b6b60bcd5f6a",
+              "independent_b_evidence": "Named Syrian customs facility at the Tigris crossing; distinct from Semalka village.  OSM tags inspected: {\"government\": \"customs\", \"name\": \"معبر سيمالكا\", \"name:en\": \"Semalka Borders\", \"office\": \"government\"}. This is geographic evidence only, not historical closure evidence."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R13-001",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R13-001.json",
+          "sha256": "d36708ba5c652fb7246f65f3f9eb3229cea20717c158d1161fa5707760cc1931"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R13-001.json",
+          "sha256": "63ff248cf75a6850e6223d4bf26d88cc8abbf16f6b94c506f4d6864cfb477c59"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R13-001-P1",
+          "category": "single_site",
+          "decision": "map",
+          "complete": true,
+          "sites": [
+            {
+              "proposed_site_id": "post-dehiba-wazen",
+              "name": "Dehiba–Wazen crossing area (Dhehiba border facility)",
+              "coordinates": [
+                10.6846255,
+                31.9790258
+              ],
+              "coordinate_method": "Centre of the bounding box of the freshly retrieved named OSM way; approximate facility marker",
+              "precision": "Approximately 1 km; named crossing facility reference, not exact Libyan or Tunisian historic barrier.",
+              "source_urls": [
+                "https://www.openstreetmap.org/api/0.6/way/520064040/full",
+                "https://www.openstreetmap.org/way/520064040"
+              ],
+              "evidence_note": "OSM way 520064040, version 5, timestamp 2023-03-17T19:58:35Z. Identity tags: {\"addr:city\": \"الذهيبة\", \"addr:city:ar\": \"الذهيبة\", \"amenity\": \"police\", \"barrier\": \"wall\", \"name\": \"معبر الحدود الذهيبة\", \"name:ar\": \"معبر الحدود الذهيبة\", \"name:fr\": \"Poste frontalier de Dhehiba\"}. This is location evidence only; event applicability is assessed separately.",
+              "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/adf93716af07ba84.raw",
+              "evidence_sha256": "698d6601bf8af62f6d186a4d31fa208019891ffb61e77d266fe669820bb10e38",
+              "independent_b_evidence": " OSM tags inspected: {\"addr:city\": \"الذهيبة\", \"addr:city:ar\": \"الذهيبة\", \"amenity\": \"police\", \"barrier\": \"wall\", \"name\": \"معبر الحدود الذهيبة\", \"name:ar\": \"معبر الحدود الذهيبة\", \"name:fr\": \"Poste frontalier de Dhehiba\"}. This is geographic evidence only, not historical closure evidence."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R13-002",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R13-002.json",
+          "sha256": "a62c05cab157b37efd8b2278597857d3f43eb7ae250253b02873dc5eb4054db1"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R13-002.json",
+          "sha256": "83ea1a77f7735106fbcaf02dc1d8b24a5a74208863773be9a86c968236a80a46"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R13-002-P1",
+          "category": "single_site",
+          "decision": "partial",
+          "complete": false,
+          "sites": [
+            {
+              "proposed_site_id": "post-dehiba-wazen",
+              "name": "Dehiba–Wazen crossing area (Dhehiba border facility)",
+              "coordinates": [
+                10.6846255,
+                31.9790258
+              ],
+              "coordinate_method": "Centre of the bounding box of the freshly retrieved named OSM way; approximate facility marker",
+              "precision": "Approximately 1 km; named crossing facility reference, not exact Libyan or Tunisian historic barrier.",
+              "source_urls": [
+                "https://www.openstreetmap.org/api/0.6/way/520064040/full",
+                "https://www.openstreetmap.org/way/520064040"
+              ],
+              "evidence_note": "OSM way 520064040, version 5, timestamp 2023-03-17T19:58:35Z. Identity tags: {\"addr:city\": \"الذهيبة\", \"addr:city:ar\": \"الذهيبة\", \"amenity\": \"police\", \"barrier\": \"wall\", \"name\": \"معبر الحدود الذهيبة\", \"name:ar\": \"معبر الحدود الذهيبة\", \"name:fr\": \"Poste frontalier de Dhehiba\"}. This is location evidence only; event applicability is assessed separately.",
+              "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/adf93716af07ba84.raw",
+              "evidence_sha256": "698d6601bf8af62f6d186a4d31fa208019891ffb61e77d266fe669820bb10e38",
+              "independent_b_evidence": " OSM tags inspected: {\"addr:city\": \"الذهيبة\", \"addr:city:ar\": \"الذهيبة\", \"amenity\": \"police\", \"barrier\": \"wall\", \"name\": \"معبر الحدود الذهيبة\", \"name:ar\": \"معبر الحدود الذهيبة\", \"name:fr\": \"Poste frontalier de Dhehiba\"}. This is geographic evidence only, not historical closure evidence."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "The reported Tunisian approach obstruction is not geolocated; point locates the named crossing facility only.; Approach obstruction footprint not independently positioned; crossing-area reference is partial.",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R13-003",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R13-003.json",
+          "sha256": "2aa304bd936ac01e80715633193f878362c2fc4989fe644f668222e5c5ce7c27"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R13-003.json",
+          "sha256": "3b41d6b6a8a7870ec13da2288956f2129dc846bcaf8a5f25e0f215a7ea992176"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R13-003-P1",
+          "category": "single_site",
+          "decision": "map",
+          "complete": true,
+          "sites": [
+            {
+              "proposed_site_id": "post-dehiba-wazen",
+              "name": "Dehiba–Wazen crossing area (Dhehiba border facility)",
+              "coordinates": [
+                10.6846255,
+                31.9790258
+              ],
+              "coordinate_method": "Centre of the bounding box of the freshly retrieved named OSM way; approximate facility marker",
+              "precision": "Approximately 1 km; named crossing facility reference, not exact Libyan or Tunisian historic barrier.",
+              "source_urls": [
+                "https://www.openstreetmap.org/api/0.6/way/520064040/full",
+                "https://www.openstreetmap.org/way/520064040"
+              ],
+              "evidence_note": "OSM way 520064040, version 5, timestamp 2023-03-17T19:58:35Z. Identity tags: {\"addr:city\": \"الذهيبة\", \"addr:city:ar\": \"الذهيبة\", \"amenity\": \"police\", \"barrier\": \"wall\", \"name\": \"معبر الحدود الذهيبة\", \"name:ar\": \"معبر الحدود الذهيبة\", \"name:fr\": \"Poste frontalier de Dhehiba\"}. This is location evidence only; event applicability is assessed separately.",
+              "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/adf93716af07ba84.raw",
+              "evidence_sha256": "698d6601bf8af62f6d186a4d31fa208019891ffb61e77d266fe669820bb10e38",
+              "independent_b_evidence": " OSM tags inspected: {\"addr:city\": \"الذهيبة\", \"addr:city:ar\": \"الذهيبة\", \"amenity\": \"police\", \"barrier\": \"wall\", \"name\": \"معبر الحدود الذهيبة\", \"name:ar\": \"معبر الحدود الذهيبة\", \"name:fr\": \"Poste frontalier de Dhehiba\"}. This is geographic evidence only, not historical closure evidence."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R13-004",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R13-004.json",
+          "sha256": "8d51ce199a3e8e03dfde767f1c4077242a345cb5ebd522775235a2198b3c56c2"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R13-004.json",
+          "sha256": "8921bfeedb63db8f2f6e394ab421b5b6aa47c4d875d1ed0eba787fdbc408d3f2"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R13-004-P1",
+          "category": "single_site",
+          "decision": "map",
+          "complete": true,
+          "sites": [
+            {
+              "proposed_site_id": "post-dehiba-wazen",
+              "name": "Dehiba–Wazen crossing area (Dhehiba border facility)",
+              "coordinates": [
+                10.6846255,
+                31.9790258
+              ],
+              "coordinate_method": "Centre of the bounding box of the freshly retrieved named OSM way; approximate facility marker",
+              "precision": "Approximately 1 km; named crossing facility reference, not exact Libyan or Tunisian historic barrier.",
+              "source_urls": [
+                "https://www.openstreetmap.org/api/0.6/way/520064040/full",
+                "https://www.openstreetmap.org/way/520064040"
+              ],
+              "evidence_note": "OSM way 520064040, version 5, timestamp 2023-03-17T19:58:35Z. Identity tags: {\"addr:city\": \"الذهيبة\", \"addr:city:ar\": \"الذهيبة\", \"amenity\": \"police\", \"barrier\": \"wall\", \"name\": \"معبر الحدود الذهيبة\", \"name:ar\": \"معبر الحدود الذهيبة\", \"name:fr\": \"Poste frontalier de Dhehiba\"}. This is location evidence only; event applicability is assessed separately.",
+              "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/adf93716af07ba84.raw",
+              "evidence_sha256": "698d6601bf8af62f6d186a4d31fa208019891ffb61e77d266fe669820bb10e38",
+              "independent_b_evidence": " OSM tags inspected: {\"addr:city\": \"الذهيبة\", \"addr:city:ar\": \"الذهيبة\", \"amenity\": \"police\", \"barrier\": \"wall\", \"name\": \"معبر الحدود الذهيبة\", \"name:ar\": \"معبر الحدود الذهيبة\", \"name:fr\": \"Poste frontalier de Dhehiba\"}. This is geographic evidence only, not historical closure evidence."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R21-001",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R21-001.json",
+          "sha256": "b6ed59a04c4b378a31d2eea5626b76bbd1737da30cfdaf169bd21d118742f81a"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R21-001.json",
+          "sha256": "058f4dc7b16a6efc8546c77b13131e780962b0fec59a16373c430b483c5e0420"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R21-001-P1",
+          "category": "single_site",
+          "decision": "partial",
+          "complete": false,
+          "sites": [
+            {
+              "proposed_site_id": "post-dehiba-wazen",
+              "name": "Dehiba–Wazen crossing area (Dhehiba border facility)",
+              "coordinates": [
+                10.6846255,
+                31.9790258
+              ],
+              "coordinate_method": "Centre of the bounding box of the freshly retrieved named OSM way; approximate facility marker",
+              "precision": "Approximately 1 km; named crossing facility reference, not exact Libyan or Tunisian historic barrier.",
+              "source_urls": [
+                "https://www.openstreetmap.org/api/0.6/way/520064040/full",
+                "https://www.openstreetmap.org/way/520064040"
+              ],
+              "evidence_note": "OSM way 520064040, version 5, timestamp 2023-03-17T19:58:35Z. Identity tags: {\"addr:city\": \"الذهيبة\", \"addr:city:ar\": \"الذهيبة\", \"amenity\": \"police\", \"barrier\": \"wall\", \"name\": \"معبر الحدود الذهيبة\", \"name:ar\": \"معبر الحدود الذهيبة\", \"name:fr\": \"Poste frontalier de Dhehiba\"}. This is location evidence only; event applicability is assessed separately.",
+              "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/adf93716af07ba84.raw",
+              "evidence_sha256": "698d6601bf8af62f6d186a4d31fa208019891ffb61e77d266fe669820bb10e38",
+              "independent_b_evidence": " OSM tags inspected: {\"addr:city\": \"الذهيبة\", \"addr:city:ar\": \"الذهيبة\", \"amenity\": \"police\", \"barrier\": \"wall\", \"name\": \"معبر الحدود الذهيبة\", \"name:ar\": \"معبر الحدود الذهيبة\", \"name:fr\": \"Poste frontalier de Dhehiba\"}. This is geographic evidence only, not historical closure evidence."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "The reported Tunisian approach obstruction is not geolocated; point locates the named crossing facility only.; Approach obstruction footprint not independently positioned; crossing-area reference is partial.",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R21-003",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R21-003.json",
+          "sha256": "9cea2484988a61860dfaf12dc76c29b386d055515bdba65b862c679d471623d2"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R21-003.json",
+          "sha256": "edcc1c64441f346943b83c9c2c2b6ae821929bcee8d7c00b9a434ed5272432bb"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R21-003-P1",
+          "category": "single_site",
+          "decision": "partial",
+          "complete": false,
+          "sites": [
+            {
+              "proposed_site_id": "post-dehiba-wazen",
+              "name": "Dehiba–Wazen crossing area (Dhehiba border facility)",
+              "coordinates": [
+                10.6846255,
+                31.9790258
+              ],
+              "coordinate_method": "Centre of the bounding box of the freshly retrieved named OSM way; approximate facility marker",
+              "precision": "Approximately 1 km; named crossing facility reference, not exact Libyan or Tunisian historic barrier.",
+              "source_urls": [
+                "https://www.openstreetmap.org/api/0.6/way/520064040/full",
+                "https://www.openstreetmap.org/way/520064040"
+              ],
+              "evidence_note": "OSM way 520064040, version 5, timestamp 2023-03-17T19:58:35Z. Identity tags: {\"addr:city\": \"الذهيبة\", \"addr:city:ar\": \"الذهيبة\", \"amenity\": \"police\", \"barrier\": \"wall\", \"name\": \"معبر الحدود الذهيبة\", \"name:ar\": \"معبر الحدود الذهيبة\", \"name:fr\": \"Poste frontalier de Dhehiba\"}. This is location evidence only; event applicability is assessed separately.",
+              "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/adf93716af07ba84.raw",
+              "evidence_sha256": "698d6601bf8af62f6d186a4d31fa208019891ffb61e77d266fe669820bb10e38",
+              "independent_b_evidence": " OSM tags inspected: {\"addr:city\": \"الذهيبة\", \"addr:city:ar\": \"الذهيبة\", \"amenity\": \"police\", \"barrier\": \"wall\", \"name\": \"معبر الحدود الذهيبة\", \"name:ar\": \"معبر الحدود الذهيبة\", \"name:fr\": \"Poste frontalier de Dhehiba\"}. This is geographic evidence only, not historical closure evidence."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "The reported Tunisian approach obstruction is not geolocated; point locates the named crossing facility only.; Approach obstruction footprint not independently positioned; crossing-area reference is partial.",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R38-003",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R38-003.json",
+          "sha256": "50fbb7c18d37fcac87bb98e246a231a4ca2339ea355d37704b85121aecf16490"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R38-003.json",
+          "sha256": "3079868f79855671c80295cd71feb03f426fbaa43b58cc1196f266132f1503c5"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R38-003-P1",
+          "category": "single_site",
+          "decision": "map",
+          "complete": true,
+          "sites": [
+            {
+              "proposed_site_id": "post-semalka-faysh-khabur",
+              "name": "Semalka–Faysh Khabur customs crossing area",
+              "coordinates": [
+                42.3484273,
+                37.0892488
+              ],
+              "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+              "precision": "Approximately 500 m; named Syrian customs facility, not the exact pontoon bridge or opposite-bank terminal.",
+              "source_urls": [
+                "https://www.openstreetmap.org/api/0.6/node/6019972486",
+                "https://www.openstreetmap.org/node/6019972486"
+              ],
+              "evidence_note": "OSM node 6019972486, version 2, timestamp 2024-03-19T01:33:56Z. Identity tags: {\"government\": \"customs\", \"name\": \"معبر سيمالكا\", \"name:en\": \"Semalka Borders\", \"office\": \"government\"}. This is location evidence only; event applicability is assessed separately.",
+              "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/f362e988de5d494f.raw",
+              "evidence_sha256": "e7d1d28a269632956dfb7a9bb9df54ad674db5f3c81bd2bdc278b6b60bcd5f6a",
+              "independent_b_evidence": "Named Syrian customs facility at the Tigris crossing; distinct from Semalka village.  OSM tags inspected: {\"government\": \"customs\", \"name\": \"معبر سيمالكا\", \"name:en\": \"Semalka Borders\", \"office\": \"government\"}. This is geographic evidence only, not historical closure evidence."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R38-004",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R38-004.json",
+          "sha256": "89797723c3756b0a071ef494b407f2be4fb9196d25d3cbea4964b7ba90d62eea"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R38-004.json",
+          "sha256": "273fee46137f81a62bfac718d39e21546c2793b3e6a5a68b143dd59feb15229e"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R38-004-P1",
+          "category": "single_site",
+          "decision": "map",
+          "complete": true,
+          "sites": [
+            {
+              "proposed_site_id": "post-semalka-faysh-khabur",
+              "name": "Semalka–Faysh Khabur customs crossing area",
+              "coordinates": [
+                42.3484273,
+                37.0892488
+              ],
+              "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+              "precision": "Approximately 500 m; named Syrian customs facility, not the exact pontoon bridge or opposite-bank terminal.",
+              "source_urls": [
+                "https://www.openstreetmap.org/api/0.6/node/6019972486",
+                "https://www.openstreetmap.org/node/6019972486"
+              ],
+              "evidence_note": "OSM node 6019972486, version 2, timestamp 2024-03-19T01:33:56Z. Identity tags: {\"government\": \"customs\", \"name\": \"معبر سيمالكا\", \"name:en\": \"Semalka Borders\", \"office\": \"government\"}. This is location evidence only; event applicability is assessed separately.",
+              "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/f362e988de5d494f.raw",
+              "evidence_sha256": "e7d1d28a269632956dfb7a9bb9df54ad674db5f3c81bd2bdc278b6b60bcd5f6a",
+              "independent_b_evidence": "Named Syrian customs facility at the Tigris crossing; distinct from Semalka village.  OSM tags inspected: {\"government\": \"customs\", \"name\": \"معبر سيمالكا\", \"name:en\": \"Semalka Borders\", \"office\": \"government\"}. This is geographic evidence only, not historical closure evidence."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "This pass inspected the onset announcement; November endpoint remains retained canonical uncertainty rather than independently verified here.",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R48-005",
+      "reviewer": "root",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R48-005.json",
+          "sha256": "afaf0c6543efbbc5e8b125bae89ccdb5db6f143316eef6aadfeec01495fe64c0"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R48-005.json",
+          "sha256": "8ecaff8147129d4c9898b5d26e28b88734b267577af1165f2835a7d342d6cd18"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R48-005-P1",
+          "category": "single_site",
+          "decision": "map",
+          "complete": true,
+          "sites": [
+            {
+              "proposed_site_id": "post-dehiba-wazen",
+              "name": "Dehiba–Wazen crossing area (Dhehiba border facility)",
+              "coordinates": [
+                10.6846255,
+                31.9790258
+              ],
+              "coordinate_method": "Centre of the bounding box of the freshly retrieved named OSM way; approximate facility marker",
+              "precision": "Approximately 1 km; named crossing facility reference, not exact Libyan or Tunisian historic barrier.",
+              "source_urls": [
+                "https://www.openstreetmap.org/api/0.6/way/520064040/full",
+                "https://www.openstreetmap.org/way/520064040"
+              ],
+              "evidence_note": "OSM way 520064040, version 5, timestamp 2023-03-17T19:58:35Z. Identity tags: {\"addr:city\": \"الذهيبة\", \"addr:city:ar\": \"الذهيبة\", \"amenity\": \"police\", \"barrier\": \"wall\", \"name\": \"معبر الحدود الذهيبة\", \"name:ar\": \"معبر الحدود الذهيبة\", \"name:fr\": \"Poste frontalier de Dhehiba\"}. This is location evidence only; event applicability is assessed separately.",
+              "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/adf93716af07ba84.raw",
+              "evidence_sha256": "698d6601bf8af62f6d186a4d31fa208019891ffb61e77d266fe669820bb10e38",
+              "independent_b_evidence": " OSM tags inspected: {\"addr:city\": \"الذهيبة\", \"addr:city:ar\": \"الذهيبة\", \"amenity\": \"police\", \"barrier\": \"wall\", \"name\": \"معبر الحدود الذهيبة\", \"name:ar\": \"معبر الحدود الذهيبة\", \"name:fr\": \"Poste frontalier de Dhehiba\"}. This is geographic evidence only, not historical closure evidence."
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "",
+          "rationale": "Independent original-source reconstructions agree on the named facility/frontier scope and phase applicability. Preserve recorded direction, cohorts, dates, contested evidence and duration eligibility. The mapped point is an approximate crossing-area reference, not the historical obstruction footprint."
+        }
+      ]
+    }
+  ]
+}

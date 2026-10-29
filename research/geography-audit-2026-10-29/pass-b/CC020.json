@@ -1,0 +1,56 @@
+{
+  "record_id": "CC020",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Restrictions changed along the Lachin corridor: protest obstruction, subsequent checkpoint controls and humanitarian access constraints. The single accepted phase spans mechanisms and affected movement classes rather than one fixed gate.",
+  "source_checks": [
+    {
+      "url": "https://www.icj-cij.org/node/202558",
+      "access_status": "inaccessible_403",
+      "finding": "Original Court URL failed with 403; no independent full-text claim.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-central-1.json",
+      "sha256": "865b9f40264021137f81c686a32bd2af79e2116df407a80b6a36d59c3fe9110b"
+    },
+    {
+      "url": "https://www.icrc.org/en/document/azerbaijan-armenia-sides-must-reach-humanitarian-consensus-to-ease-suffering",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "ICRC 25 July 2023 statement confirms inability to deliver aid through Lachin or other routes. It does not locate the December protest barrier or establish one constant obstruction site.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-central-1.json",
+      "sha256": "865b9f40264021137f81c686a32bd2af79e2116df407a80b6a36d59c3fe9110b"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC020-D1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Restrictions changed along the Lachin corridor: protest obstruction, subsequent checkpoint controls and humanitarian access constraints. The single accepted phase spans mechanisms and affected movement classes rather than one fixed gate.",
+      "date_scope_check": {
+        "start_earliest": "2022-12-12",
+        "start_latest": "2022-12-12",
+        "end_earliest": "2023-08-18",
+        "end_latest": "2023-08-18",
+        "last_confirmed": "2023-08-18",
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "CC020-D1: An envelope of protest obstruction, checkpoint control and tightening aid restrictions. Medical and family passage occurred, and ordinary passage in May/June was contested. August 18 is a last confirmation, not a reopening. Envelope length is not days fully closed.\n\nICRC directly records aid delivery through Lachin on 18 September 2023. On 24 September, EFE reported the first group of refugees arriving in Armenia through the corridor with Russian peacekeeper accompaniment. These are different scoped access observations: aid entry and outward refugee passage. They do not establish a first ordinary two-way reopening, uninterrupted access thereafter, or continued closure to the present."
+      },
+      "unresolved": [
+        "A corridor reference and dated obstruction/checkpoint identities must be separately verified; no single current post or whole Armenia–Azerbaijan frontier is equivalent."
+      ]
+    }
+  ],
+  "unresolved": [
+    "A corridor reference and dated obstruction/checkpoint identities must be separately verified; no single current post or whole Armenia–Azerbaijan frontier is equivalent."
+  ],
+  "input_sha256": "83dd8dbe0242f704aa34a2a9b257da7c31eeaf6f839fa8a0a5de3ff5fb4403d9",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

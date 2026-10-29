@@ -1,0 +1,72 @@
+{
+  "record_id": "R16-AM-001",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "September 2 report explicitly locates Guatemalan truck obstruction on the Melchor side of the Western/Benque border road from Tuesday, and trucks returning at about 11:30 that day.",
+  "source_checks": [
+    {
+      "url": "https://www.breakingbelizenews.com/2021/09/02/breaking-belize-customs-makes-concession-guatemalan-truck-drivers-give-up-protest-things-getting-back-to-normal-at-the-western-border/",
+      "access_status": "fresh_source_extract",
+      "finding": "September 2 report explicitly locates Guatemalan truck obstruction on the Melchor side of the Western/Benque border road from Tuesday, and trucks returning at about 11:30 that day."
+    },
+    {
+      "url": "https://www.openstreetmap.org/node/3268860583",
+      "access_status": "fresh_full_xml",
+      "finding": "Underlying mapped feature XML inspected; named customs/bridge or border_control identity, coordinates and mode checked.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fd89a7bedd2dec5aaf47.xml",
+      "source_sha256": "d9a54ab6b743cab018b9797d04e19e334e7f62664d8c19044bb76310a6a4e94e"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R16-AM-001-RREV1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "crossing-melchor-benque",
+          "name": "Melchor de Mencos–Benque Viejo",
+          "coordinates": [
+            -89.15052,
+            17.05783
+          ],
+          "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/3268860583"
+          ],
+          "evidence_note": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fd89a7bedd2dec5aaf47.xml",
+              "sha256": "d9a54ab6b743cab018b9797d04e19e334e7f62664d8c19044bb76310a6a4e94e",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Guatemalan trucker protest obstructing cargo road entry to Belize at Melchor de Mencos / Western Border",
+      "date_scope_check": {
+        "start_earliest": "2021-08-31",
+        "start_latest": "2021-08-31",
+        "end_earliest": "2021-09-02",
+        "end_latest": "2021-09-02",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact historical approach blockade footprint remains unlocated."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "dca9220a4aa6addc77ca5f47390daa3ace247fa82ed757d1f4163433ec0e1e6f"
+}

@@ -1,0 +1,48 @@
+{
+  "record_id": "ME032",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "The retained July 2024 restoration is specifically Bab al-Hawa passenger/lorry service; other crossings mentioned in regional unrest reporting have separate unknown endpoints.",
+  "source_checks": [
+    {
+      "url": "https://www.thenationalnews.com/news/mena/2024/07/03/turkey-syria/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "July 3 report quotes Bab al-Hawa administration that passengers and lorries returned to normal that day, and distinguishes the four crossings shut that week.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-05.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME032-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-bab-al-hawa",
+          "name": "Bab al-Hawa–Cilvegözü road crossing area",
+          "coordinates": [
+            36.6921911,
+            36.2314664
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/2358493626"
+          ],
+          "evidence_note": "OSM node 2358493626, version 2, timestamp 2017-02-16T03:50:13Z. Identity tags: {\"barrier\": \"border_control\", \"bicycle\": \"yes\", \"motor_vehicle\": \"yes\", \"name\": \"الحدود باب الهوى\", \"name:en\": \"Bab al-Hawa Border Crossing\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/a4fe81f25e9eae9e.raw",
+          "evidence_sha256": "8d08cffbe6be4387702a1dfdff4bd01e6975f31e76b75ec0cdcfd8bfbd0b67cd"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Apply July 1–3 only to named Bab al-Hawa movement; do not inherit the endpoint for all northwest Syrian crossings.",
+      "date_scope_check": "Canonical closed_interval: start 2024-07-01–2024-07-01; endpoint 2024-07-03–2024-07-03; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,68 @@
+{
+  "record_id": "REC50-R21-004",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Dehiba–Wazen crossing and approach with goods-seizure protest and restrictions on Libyan vehicles. Contested temporal observation is preserved; geographic identity can be partially represented.",
+  "source_checks": [
+    {
+      "url": "https://tunisien.tn/تونس/تواصل-اغلاق-معبر-ذهيبة-وازن-الحدودي",
+      "access_status": "full_text_web",
+      "finding": "Original Arabic report names crossing, road earth barrier and restrictions on Libyan cars.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-04.json",
+      "evidence_sha256": "8b1b6396710b899da86a145a6dee45a2733b2639896b1f08bab4867216e992ec"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R21-004-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-dehiba-wazen",
+          "name": "Dehiba–Wazen road border facility",
+          "coordinates": [
+            10.6846255,
+            31.9790258
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/520064040",
+            "https://www.openstreetmap.org/api/0.6/way/520064040/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"addr:city\": \"الذهيبة\", \"addr:city:ar\": \"الذهيبة\", \"amenity\": \"police\", \"barrier\": \"wall\", \"name\": \"معبر الحدود الذهيبة\", \"name:ar\": \"معبر الحدود الذهيبة\", \"name:fr\": \"Poste frontalier de Dhehiba\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/adf93716af07ba84f39a.html",
+          "evidence_sha256": "698d6601bf8af62f6d186a4d31fa208019891ffb61e77d266fe669820bb10e38",
+          "osm_version": "5",
+          "osm_timestamp": "2023-03-17T19:58:35Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Dehiba–Wazen crossing and approach with goods-seizure protest and restrictions on Libyan vehicles. Contested temporal observation is preserved; geographic identity can be partially represented. Current phase only: Non-exempt vehicle and ordinary commercial/social passage, with source-specific exceptions at Dehiba–Wazen crossing and approach road",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2017-12-06",
+        "end_latest": "2017-12-07",
+        "last_confirmed": "2017-12-06",
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": true,
+        "temporal_display_rule": "held_evidence_do_not_animate_as_confirmed",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "REC50-R21-004-P1: The road barrier removed on November 23, 2017, checkpoint restrictions and subsequent road threats are not assumed to form one uninterrupted closure affecting every cohort. Restrictions are documented on November 24 and by the mayor on December 5; restricted passage and a next-day reopening plan were reported on December 6. Returning nationals were permitted, and some women passed without their goods.\n\nThe original Tunisien report on December 7 is prospective. A newly recovered Zoom Tunisia report, also dated December 7, uses completed-action language and cites TAP and a crossing official: activity resumed that Thursday. This supplies a qualified restoration bound of December 7. The exact first restoration for each cohort and consistent onset remain unknown. Conflicting third-, tenth- and fifteen-day descriptions should not be converted into an invented onset. The held status and withheld numeric duration remain appropriate.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Approach obstruction footprint not independently positioned; crossing-area reference is partial."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Approach obstruction footprint not independently positioned; crossing-area reference is partial."
+  ]
+}

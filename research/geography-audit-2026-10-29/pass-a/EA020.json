@@ -1,0 +1,126 @@
+{
+  "record_id": "EA020",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Dandong–Sinuiju freight railway, independently located on the rail component of the Friendship Bridge. The historical continuity dispute is substantive: RFA reports November 2021 trains before the later January 2022 formal return.",
+  "source_checks": [
+    {
+      "url": "https://www.rfa.org/english/news/korea/freight-11022021193033.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Substantive contemporary report says cross-border freight trains resumed November 1; supports retained continuity conflict.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-04.json",
+      "sha256": "ba381143dfc17275df3650c505d10165a57a7bffb8c82aa0fe6d15a734eb465d"
+    },
+    {
+      "url": "https://en.yna.co.kr/view/AEN20220618001900315",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-38378d37a858c0a576.bin",
+      "sha256": "fc81f1d64e31a04094909a4cf5cdfff0f7ff27f41385149dd518fe412f096181"
+    },
+    {
+      "url": "https://en.yna.co.kr/view/AEN20220116001352325",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-376fecfbea92a04022.bin",
+      "sha256": "b397057cedc6672489f0db785048d076a48f1376b34dfe80a0116012b9df8744"
+    },
+    {
+      "url": "https://en.yna.co.kr/view/AEN20220117003200325",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-dbfbeeecfee9e28f02.bin",
+      "sha256": "ae75f9726df5f2dc3e1b855aad438b436fbcda663ad0d4dbda0f818d2f20ede2"
+    },
+    {
+      "url": "https://www.fmprc.gov.cn/eng./xw/fyrbt/lxjzh/202405/t20240530_11347208.html",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-dd5e17e0e2d3dc5310.bin",
+      "sha256": "7f4d0552149ff2a6c2d02c99d50d81af2eb628423903ff663d614064ead2f714"
+    },
+    {
+      "url": "https://www.rfa.org/english/news/korea/virus-11082021185243.html",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-0a55ab96d3cc50ff23.bin",
+      "sha256": "0c7d3c9c6e67e565113fd3712185fa61b18b9832069d8b1b50859e814fb0d177"
+    },
+    {
+      "url": "https://www.euronews.com/2022/01/16/us-northkorea-china-train",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-fc5ab868252163249c.bin",
+      "sha256": "2056a9b7de9b81c832a294d86c6406f0bb9bf04bd9ee61489fa70181b83476dc"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA020-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-dandong-sinuiju-rail",
+          "name": "Dandong–Sinuiju rail bridge",
+          "coordinates": [
+            124.3905613,
+            40.1164127
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/45763861",
+          "precision": "Approximate rail-bridge segment reference, 500 m; not a precise customs inspection position.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/45763861",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=124.37,40.1,124.42,40.14"
+          ],
+          "evidence_note": "Explicitly named Sino-Korean Friendship Bridge with railway=rail, not its road way, nearby broken bridge, or the new road bridge.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-dandong.xml",
+          "sha256": "617d50cd29378afbf6ebae08bef8a47145a69cd321f780445e4cd0b26c5f7232",
+          "osm_feature": "way/45763861",
+          "osm_version": "19",
+          "osm_timestamp": "2026-06-09T21:35:35Z",
+          "identity_tags": {
+            "alt_name:ko": "조중우의교",
+            "bridge": "yes",
+            "electrified": "no",
+            "gauge": "1435",
+            "layer": "1",
+            "maxspeed": "45",
+            "name": "中朝友谊桥",
+            "name:en": "Sino-Korean Friendship Bridge",
+            "name:fr": "Pont de l'amitié sino-coréenne",
+            "name:ja": "中朝友誼橋",
+            "name:ko": "조중친선다리",
+            "name:ko-Hani": "朝中親善다리",
+            "name:zh": "沈丹线",
+            "name:zh-Hant": "中朝友誼橋",
+            "old_name:en": "Yalu River Bridge",
+            "railway": "rail",
+            "ref": "0238",
+            "usage": "main"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Cross-border freight-train movements on Sinuiju–Dandong, to the first reported resumed train.",
+      "date_scope_check": {
+        "scope": "Cross-border freight-train movements on Sinuiju–Dandong, to the first reported resumed train.",
+        "start_earliest": "2020-08-01",
+        "start_latest": "2020-08-31",
+        "end_earliest": "2022-01-16",
+        "end_latest": "2022-01-16",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "held_evidence_do_not_animate_as_confirmed",
+        "assessment": "Original November 2 2021 RFA report specifically describes trains Dandong to Sinuiju. Preserve contested operational spell and its evidence-date display; the rail location is supported independently but does not cure continuity uncertainty."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

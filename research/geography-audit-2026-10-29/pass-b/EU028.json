@@ -1,0 +1,73 @@
+{
+  "record_id": "EU028",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "UK→France ChannelTunnel passenger/accompaniedvehicle shuttle suspension; unaccompaniedgoods andFrance→UK excluded.",
+  "source_checks": [
+    {
+      "url": "https://press.getlinkgroup.com/news/eurotunnel-travel-to-france-re-opens-for-cars-and-trucks-a5d4-0791e.html",
+      "access_status": "full_text_cached_this_pass",
+      "finding": "Operator23Dec firstpassengers arrivedFrance02:32, carsandtrucksprogressivelyresumingwithnegativetests; Folkestoneterminalexplicit.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/b30501c54765a2c110f9.raw",
+      "sha256": "4b38df1b0d28933fb6fd98d39750cd1dffbf26bb6f19d44f177dda6c1c417166"
+    },
+    {
+      "url": "https://nos.nl/liveblog/2361346-eurotunnel-dicht-turkije-weert-ook-vluchten-uit-nederland-vanwege-coronamutatie",
+      "access_status": "full_text_cached_this_pass",
+      "finding": "NOS20Decliveblog reproducesLeShuttle terminalaccess22:00GMTandlastshuttle21:34; legalmidnightFranceboundary differs.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/3e375efe52649a2a2f60.raw",
+      "sha256": "8c31e79dbdde62d1b18e28a96fff482e3e7c96444b753dd8901f2ae24511e914"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU028-R1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "terminal-eurotunnel-folkestone",
+          "name": "Folkestone Eurotunnel passenger terminal",
+          "coordinates": [
+            1.119278,
+            51.093389
+          ],
+          "coordinate_method": "Operator-published GPS coordinates",
+          "precision": "passenger entrance reference; freight entry unresolved",
+          "source_urls": [
+            "https://www.leshuttle.com/uk-en/our-terminals/folkestone-terminal/getting-here"
+          ],
+          "evidence_note": "Operator publishes these GPS coordinates specifically for passenger check-in, reached from M20J11A. Rail shuttle terminal; not Dover ferry or Channel mid-point. Truck terminal entrance differs and is not silently included."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Passengerterminalreferenceonly. Truckaccessandactualunderseatunnelalignment notlocalized.",
+      "date_scope_check": "20–21Deconsetbound and23Decselectivereopeningretained; notqueueclearance.",
+      "canonical_dates": {
+        "kind": "closed_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2020-12-20",
+        "start_latest": "2020-12-21",
+        "end_earliest": "2020-12-23",
+        "end_latest": "2020-12-23",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [
+    "Passengerentrance only; separatefreightterminalentrance notverified."
+  ],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/EU028.json",
+  "canonical_input_sha256": "ac9070a38406d89f57fe943c66ad4c6707a5196874c88f93a58bd586d0ba5e81",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

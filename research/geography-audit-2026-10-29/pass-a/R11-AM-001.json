@@ -1,0 +1,44 @@
+{
+  "record_id": "R11-AM-001",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "La Hachadura–Pedro de Alvarado road freight crossing; separate from El Jobo/Las Chinamas. Refreshed La Prensa extract primarily demonstrates restored customs flow, and explicitly locates blockade at El Jobo.",
+  "source_checks": [
+    {
+      "url": "https://www.laprensagrafica.com/amp/elsalvador/Se-normaliza-el-paso-de-camiones-en-la-frontera-20190509-0558.html",
+      "access_status": "fresh_search_extract",
+      "finding": "Original indexed extract names normalization at La Hachadura and Las Chinamas, but the directly described bridge blockade is El Jobo. Do not transfer it automatically to La Hachadura.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-020.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R11-AM-001-FU1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "La Hachadura–Pedro de Alvarado freight crossing",
+      "date_scope_check": {
+        "start_earliest": "2019-05-07",
+        "start_latest": "2019-05-07",
+        "end_earliest": "2019-05-07",
+        "end_latest": "2019-05-19",
+        "last_confirmed": "2019-05-07",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Separate explicit La Hachadura deliberate-blockade evidence must be confirmed; no geometry proposed on customs-delay evidence alone."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "95291e506435d43867f8c1d583697aecf6891171168a130510ac750d1b478a94"
+}

@@ -1,0 +1,78 @@
+{
+  "record_id": "H21",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Djibouti October decree restricts natural persons crossing land borders for fifteen days; goods are explicitly outside scope.",
+  "source_checks": [
+    {
+      "url": "https://www.journalofficiel.dj/texte-juridique/decret-n2020-271-pr-pm-procedant-a-la-fermeture-exceptionnelle-des-frontieres-terrestres-pour-lutter-la-propagation-du-covid-19/",
+      "access_status": "full_text_web",
+      "finding": "Articles 2–3 specify passenger-only land closure, goods exemption and October 20 effect.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-08.json",
+      "evidence_sha256": "181a0d0a4ed65800cbb39dea81eef7b77971f215fa7c35d218df7e8a6cbc85aa"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "H21-R1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-dji-sol"
+      ],
+      "complete": false,
+      "phase_applicability": "Djibouti October decree restricts natural persons crossing land borders for fifteen days; goods are explicitly outside scope. Current phase only: Djibouti land passenger restriction in the October decree",
+      "date_scope_check": {
+        "start_earliest": "2020-10-20",
+        "start_latest": "2020-10-20",
+        "end_earliest": "2020-11-03",
+        "end_latest": "2020-11-04",
+        "last_confirmed": null,
+        "endpoint_status": "scheduled",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "announced_window_layer_only",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "H21-R1: The original decree is legally effective October 20, 2020 for fifteen days. November 3–4 are alternative counting interpretations of the stated duration, not independently observed gate reopening dates. The decree exempts goods but does not expressly exempt returning nationals.\n\nH21-C7P1: La Nation’s October 22 account dates implementation to the previous Wednesday, October 21. The full IOM October monthly report retrospectively describes an imposed fifteen-day land restriction from October 20 that had little effect on monitored migrant flows. WHO’s January 3 review also describes the fifteen-day measure. This supports a sustained restriction longer than 24 hours, while the legal/implementation date difference and exact operational endpoint remain unresolved. It does not establish that every gate stopped all traffic.\n\nThe earlier returning-national exception remains attributed to the indexed regional IOM account, not to the decree. Irregular migration during the restriction does not establish ordinary passenger reopening.\n\nLater status: newly recovered indexed Newland Chase guidance dated December 4, 2020 already describes air, land and sea borders as open under testing conditions; the December 10 bulletin repeats this. These are qualified later advisory-status observations, not an exact first gate reopening, legal repeal or operation at every post. A December 3 secondary tracker also reports reopening but its cited original advisory remains unrecovered. November advisory repetition of the original fifteen-day wording cannot independently establish continuing enforcement after the scheduled expiry.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Only Djibouti–Somaliland frontier reference exists; Ethiopia and Eritrea extents absent. Decree schedule and October 21 observed implementation remain separate."
+      ]
+    },
+    {
+      "phase_id": "H21-C7P1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-dji-sol"
+      ],
+      "complete": false,
+      "phase_applicability": "Djibouti October decree restricts natural persons crossing land borders for fifteen days; goods are explicitly outside scope. Current phase only: Djibouti land-passenger restriction reported implemented October 21",
+      "date_scope_check": {
+        "start_earliest": "2020-10-21",
+        "start_latest": "2020-10-21",
+        "end_earliest": "2020-10-21",
+        "end_latest": "2020-10-21",
+        "last_confirmed": "2020-10-21",
+        "endpoint_status": "last_confirmed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "H21-R1: The original decree is legally effective October 20, 2020 for fifteen days. November 3–4 are alternative counting interpretations of the stated duration, not independently observed gate reopening dates. The decree exempts goods but does not expressly exempt returning nationals.\n\nH21-C7P1: La Nation’s October 22 account dates implementation to the previous Wednesday, October 21. The full IOM October monthly report retrospectively describes an imposed fifteen-day land restriction from October 20 that had little effect on monitored migrant flows. WHO’s January 3 review also describes the fifteen-day measure. This supports a sustained restriction longer than 24 hours, while the legal/implementation date difference and exact operational endpoint remain unresolved. It does not establish that every gate stopped all traffic.\n\nThe earlier returning-national exception remains attributed to the indexed regional IOM account, not to the decree. Irregular migration during the restriction does not establish ordinary passenger reopening.\n\nLater status: newly recovered indexed Newland Chase guidance dated December 4, 2020 already describes air, land and sea borders as open under testing conditions; the December 10 bulletin repeats this. These are qualified later advisory-status observations, not an exact first gate reopening, legal repeal or operation at every post. A December 3 secondary tracker also reports reopening but its cited original advisory remains unrecovered. November advisory repetition of the original fifteen-day wording cannot independently establish continuing enforcement after the scheduled expiry.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Only Djibouti–Somaliland frontier reference exists; Ethiopia and Eritrea extents absent. Decree schedule and October 21 observed implementation remain separate."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Only Djibouti–Somaliland frontier reference exists; Ethiopia and Eritrea extents absent. Decree schedule and October 21 observed implementation remain separate."
+  ]
+}

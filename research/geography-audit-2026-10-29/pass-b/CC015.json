@@ -1,0 +1,66 @@
+{
+  "record_id": "CC015",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Two separate abolished local ABL points: Khurcha–Nabakevi and Orsantia–Otobaia. Enguri and Saberio are alternative routes, not members of the closed set.",
+  "source_checks": [
+    {
+      "url": "https://ombudsman.ge/eng/spetsialuri-angarishebi/special-report-of-the-public-defender-of-georgia-on-the-impacts-of-the-closure-of-crossing-points-on-the-rights-of-the-population-living-along-abkhazias-administrative-boundary-line",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Official report explicitly identifies both abolished points; it dates cessation to 4 March 2017. Other reports differing by a day do not justify changing the accepted temporal qualification.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3c6470a66d1e15bb0479.html",
+      "sha256": "d7ca5471836e042d440b4d3e5c4ea51d829a27107b3b41e211ba90970be263e2",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3c6470a66d1e15bb0479.txt",
+      "text_sha256": "6a008a33a29c6d8fa7a68944c698339ebb829e05fe735aba0ae1aa91e5143af7",
+      "status": 200
+    },
+    {
+      "url": "https://ombudsman.ge/res/docs/2019041112191576480.pdf",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Full bilingual report confirms both names and local school/health access, with photographs rather than reliable numeric checkpoint positions.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/ab92a73da5a723bddad8.pdf",
+      "sha256": "513cf2cd9da98142a5d9015b153e3627b946f418e357fefe7580b8c2e311f787",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/ab92a73da5a723bddad8.txt",
+      "text_sha256": "baf333389c43c76442efa4964e53202efb18d9ad52cbca2513801653aacc3fc0",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC015-D1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Two separate abolished local ABL points: Khurcha–Nabakevi and Orsantia–Otobaia. Enguri and Saberio are alternative routes, not members of the closed set.",
+      "date_scope_check": {
+        "start_earliest": "2017-03-04",
+        "start_latest": "2017-03-06",
+        "end_earliest": "2017-11-16",
+        "end_latest": "2017-11-16",
+        "last_confirmed": "2017-11-16",
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "CC015-D1: The three candidate onset dates remain a bound, not a resolved finding. The Council of Europe text's inconsistent decision year is not silently corrected. Alternative crossings remained; nothing is projected to 2026.\n\nLater evidence: The GFSIS inventory explicitly dates its status information to 20 November 2022 and lists both posts as closed. Its direct page was inaccessible, so this is retained as an indexed secondary account. EUMM’s 16 November 2023 visit directly corroborates continued regular-traffic closure at Nabakevi–Khurcha only. Neither source establishes an exact reopening, all intervening daily operations, or status in 2026."
+      },
+      "unresolved": [
+        "Neither abolished checkpoint has a reverified coordinate. Khurcha village or stream coordinates would be false substitutes."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Neither abolished checkpoint has a reverified coordinate. Khurcha village or stream coordinates would be false substitutes."
+  ],
+  "input_sha256": "f72453f602277b4bbf5bb5aa814d55ddcb13a18ab332096d1e25b00e7349b612",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted.",
+  "additional_evidence": [
+    {
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-crossings-2.json",
+      "sha256": "30f9fe06689128f941146c01ae34b0f35fb1e181c560ef0ae507902be468103e"
+    }
+  ]
+}

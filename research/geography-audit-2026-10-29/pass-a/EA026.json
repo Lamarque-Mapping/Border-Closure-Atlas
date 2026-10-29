@@ -1,0 +1,97 @@
+{
+  "record_id": "EA026",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "No. 1 Mae Sai–Tachileik bridge served people, motorcycles and small vehicles; BNI explicitly distinguishes No. 2 for trucks. The phase ends at the 20 February 2023 passenger reopening, not all Myanmar access.",
+  "source_checks": [
+    {
+      "url": "https://www.bnionline.net/en/news/tachileik-mae-sai-bridge-reopens-after-3-years-closure",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "Identifies Bridge I as town-centre people/small-vehicle connection and Bridge II as trucks; reopening 20 February 2023.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-de2f85a576fde58793.bin",
+      "sha256": "48a6a806b154513fd17b3cf2eefc53b47f13058afec1fd7ba0a20428b8e38fc0"
+    },
+    {
+      "url": "https://www.nationthailand.com/thailand/general/40025038",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "Trial reopening hours 06:30–18:30 and border-pass requirements; not unrestricted national reopening.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-9fc63b558faed6e022.bin",
+      "sha256": "f6cff32919c551979fef2f140a29be7202bae002e053d78d6df604c32d81d24b"
+    },
+    {
+      "url": "https://coconuts.co/bangkok/news/thai-myanmar-crossing-reopens-at-mae-sai-after-3-years/",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-def59fedd5d8bc3343.bin",
+      "sha256": "af719d4fb6f08f2121d625ff0504442eaffb2574f273cb93c704c900324fdcc5"
+    },
+    {
+      "url": "https://english.shannews.org/archives/20537",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-9057ffdb5783c84b6b.bin",
+      "sha256": "bee93b1f15742511cd8a6ec9b8616d8581cdc79b6aeffe6898e51eaf4a708290"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA026-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-mae-sai-tachileik-bridge-i",
+          "name": "Mae Sai–Tachileik Friendship Bridge I",
+          "coordinates": [
+            99.8807897,
+            20.4436803
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/9494584045",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/9494584045",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=99.87,20.43,99.9,20.45"
+          ],
+          "evidence_note": "Named Mae Sai Border Checkpoint at the town-centre passenger bridge. BNI distinguishes this people/small-vehicle bridge from the truck-only second bridge.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-mae-sai-i.xml",
+          "sha256": "a455cacd33f52063ae60c4505a165d7a6369eae0abdeab45370adbd70021557e",
+          "osm_feature": "node/9494584045",
+          "osm_version": "4",
+          "osm_timestamp": "2026-08-28T14:05:23Z",
+          "identity_tags": {
+            "access": "permissive",
+            "barrier": "border_control",
+            "bicycle": "unknown",
+            "foot": "yes",
+            "horse": "unknown",
+            "motor_vehicle": "yes",
+            "name": "จุดผ่านแดนถาวรแม่สาย",
+            "name:en": "Mae Sai Border Checkpoint",
+            "name:th": "จุดผ่านแดนถาวรแม่สาย",
+            "wikidata": "Q13014256"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary people/small-vehicle passage on Mae Sai–Tachileik Bridge I.",
+      "date_scope_check": {
+        "scope": "Ordinary people/small-vehicle passage on Mae Sai–Tachileik Bridge I.",
+        "start_earliest": "2020-03-23",
+        "start_latest": "2020-03-24",
+        "end_earliest": "2023-02-20",
+        "end_latest": "2023-02-20",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Original BNI/Nation reports confirm 20 February 2023 reopening after late-March 2020 closure; later restricted hours and border-pass eligibility remain qualifications."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

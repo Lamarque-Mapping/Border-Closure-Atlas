@@ -1,0 +1,131 @@
+{
+  "record_id": "CC009",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Only Odzisi–Mosabruni/Razdakhan belongs to the accepted phases. The wider 2019 announcement also named Sinaguri, but the accepted cessation-to-monthly-opening phase and the 2026 weekly-hours phase are specifically Odzisi.",
+  "source_checks": [
+    {
+      "url": "https://eumm.eu/en/press_and_public_information/press_releases/36637/",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "EUMM states Odzisi and Sinaguri remained closed from 20:00 on 4 September 2019; no reopening date was then known.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/12a3300b545bfec16170.html",
+      "sha256": "6a8a5a92a277f214bf01daae177b20c8d49e7558b0249ce4d64e7212baa79276",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/12a3300b545bfec16170.txt",
+      "text_sha256": "ed48e0409bcf648eb7cf82459d52c1f5c2197f207f0a0aba7b70edd775a3129b",
+      "status": 200
+    },
+    {
+      "url": "https://eumm.eu/en/press_and_public_information/press_releases/37280/?print=yes",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "EUMM October 2022 account identifies monthly Odzisi and Karzmani openings since August 2022, leaving regular access restricted.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/704f9d77c151407969b0.xml",
+      "sha256": "591074f14057f2c822b9b775b8e19c664400af8a6fe3b94853baed9688faf31c",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/704f9d77c151407969b0.txt",
+      "text_sha256": "591074f14057f2c822b9b775b8e19c664400af8a6fe3b94853baed9688faf31c",
+      "status": 200
+    },
+    {
+      "url": "https://www.eumm.eu/en/press_and_public_information/press_releases/37772/",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "16 October 2026 EUMM inspection says Odzisi is now open Thursday through Sunday and still advocates full reopening.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/79ef14a55c204f2a1921.html",
+      "sha256": "cb1457ec5d2fb634158e074ee04853ba51994005d51a9aff550ef840023069df",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/79ef14a55c204f2a1921.txt",
+      "text_sha256": "5f1e2973082e46e39cedb090bcab654019e364a95d669a7f7d5c75661df5feca",
+      "status": 200
+    },
+    {
+      "url": "https://democracyresearch.org/files/344web%20eng%201072024.pdf",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Explicit Odzisi-Mosabruni/Razdakhani equivalence supplies the identity bridge to the OSM border_control node.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/83a6631a9a16f3f0caca.pdf",
+      "sha256": "017bfa7289d61ac64549ea3df463ca5f7af0c85d0f0a5054895e0d6661e1cebb",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/83a6631a9a16f3f0caca.txt",
+      "text_sha256": "2709c01c4330bc80711efea8aafdccc749abe470f72687b8638d8bcf1455b6c2",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC009-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-odzisi-mosabruni",
+          "name": "Odzisi–Mosabruni / Razdakhan crossing",
+          "coordinates": [
+            44.4871514,
+            42.0682341
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/1203169771"
+          ],
+          "evidence_note": "OSM named Razdakhan-Mosabruni border_control; DRI 2024 report explicitly equates Odzisi-Mosabruni with Razdakhani. EUMM names Odzisi in the 2019, 2022 and 2026 phase evidence.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3136f4dca29f516fb338.xml",
+          "sha256": "f19d07825a2d92dbb28f11dfb4ce7cf2db0db05bc6fdecd3d49ca5c7b9dbcbdc"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Only Odzisi–Mosabruni/Razdakhan belongs to the accepted phases. The wider 2019 announcement also named Sinaguri, but the accepted cessation-to-monthly-opening phase and the 2026 weekly-hours phase are specifically Odzisi.",
+      "date_scope_check": {
+        "start_earliest": "2019-09-04",
+        "start_latest": "2019-09-04",
+        "end_earliest": "2022-08-01",
+        "end_latest": "2022-08-31",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Odzisi is common to both endpoint accounts; Sinaguri and Karzmani are not silently equated. The whole August 2022 endpoint range is retained. Medical permissions and special-pass holiday openings, including June 13–17, 2022 and an earlier Easter window, are exceptions to the ordinary-passage restriction. This is not a continuously sealed all-person frontier. Later monthly 20th–30th windows remain limited access."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "CC009-C7P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-odzisi-mosabruni",
+          "name": "Odzisi–Mosabruni / Razdakhan crossing",
+          "coordinates": [
+            44.4871514,
+            42.0682341
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/1203169771"
+          ],
+          "evidence_note": "OSM named Razdakhan-Mosabruni border_control; DRI 2024 report explicitly equates Odzisi-Mosabruni with Razdakhani. EUMM names Odzisi in the 2019, 2022 and 2026 phase evidence.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3136f4dca29f516fb338.xml",
+          "sha256": "f19d07825a2d92dbb28f11dfb4ce7cf2db0db05bc6fdecd3d49ca5c7b9dbcbdc"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Only Odzisi–Mosabruni/Razdakhan belongs to the accepted phases. The wider 2019 announcement also named Sinaguri, but the accepted cessation-to-monthly-opening phase and the 2026 weekly-hours phase are specifically Odzisi.",
+      "date_scope_check": {
+        "start_earliest": "2026-09-01",
+        "start_latest": "2026-09-08",
+        "end_earliest": "2026-10-16",
+        "end_latest": "2026-10-16",
+        "last_confirmed": "2026-10-16",
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Exact implementation day unknown. September1–8 is a source-constrained envelope, not a verified daily sequence. October22 publication is retrospective evidence only; no full reopening or continuous closed-day count is inferred."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "8142c21c079e356c94a86ee2eb9b0cc7a6eaaad5e01209740dd93679ba5ecad7",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

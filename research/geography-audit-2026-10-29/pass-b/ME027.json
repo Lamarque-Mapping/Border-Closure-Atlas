@@ -1,0 +1,68 @@
+{
+  "record_id": "ME027",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "March 2025 aid/goods-entry ban concerns Israeli-controlled Gaza cargo access. Kerem Shalom is directly confirmed; northern Erez/Zikim cargo gates must not be conflated with the established Erez passenger control.",
+  "source_checks": [
+    {
+      "url": "https://www.ochaopt.org/content/humanitarian-situation-update-290-gaza-strip",
+      "access_status": "full_text_web",
+      "finding": "OCHA confirms full supply-entry ban and limited goods entering/collected at Kerem Shalom; this does not restore unrestricted imports.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-02.json",
+      "evidence_sha256": "3567a079bbf515b03e8582faf153e753400dadf0111efb55d2829977a13cde27"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME027-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-kerem-shalom",
+          "name": "Kerem Shalom–Karm Abu Salem cargo crossing",
+          "coordinates": [
+            34.2695531,
+            31.2212547
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/328444065",
+            "https://www.openstreetmap.org/api/0.6/node/328444065"
+          ],
+          "evidence_note": " OSM tags inspected: {\"alt_name:en\": \"Kerem Abu Salem Crossing\", \"barrier\": \"border_control\", \"motor_vehicle\": \"no\", \"name\": \"מעבר כרם שלום معبر كرم أبو سالم\", \"name:ar\": \"معبر كرم أبو سالم\", \"name:en\": \"Kerem Shalom Crossing\", \"name:fr\": \"Poste-frontière de Kerem Shalom\", \"name:he\": \"מעבר כרם שלום\", \"name:ja\": \"カレム・シャローム検問所\", \"wikidata\": \"Q6393780\", \"wikipedia\": \"en:Kerem Shalom border crossing\", \"wikipedia:en\": \"Kerem Shalom border crossing\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/2e33c643af3d09cc9ce9.html",
+          "evidence_sha256": "25a12ea1415f674ccccd48fe61735538f4d5ba2be8806f0eaab56c1bbf702953",
+          "osm_version": "25",
+          "osm_timestamp": "2026-05-27T15:50:13Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "March 2025 aid/goods-entry ban concerns Israeli-controlled Gaza cargo access. Kerem Shalom is directly confirmed; northern Erez/Zikim cargo gates must not be conflated with the established Erez passenger control. Current phase only: Gaza aid-entry ban to first limited entry on 19 May; permission and distribution are different milestones.",
+      "date_scope_check": {
+        "start_earliest": "2025-03-02",
+        "start_latest": "2025-03-02",
+        "end_earliest": "2025-05-19",
+        "end_latest": "2025-05-19",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "May 19 is limited crossing-entry endpoint, not unrestricted imports or delivery to households. Egyptian Rafah component excluded to avoid duplicate Africa row; rationale attribution not causal adjudication. Not established",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Exact named northern cargo-facility set and coordinates are unresolved; passenger Erez node not approved for Zikim/northern cargo alternatives."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact named northern cargo-facility set and coordinates are unresolved; passenger Erez node not approved for Zikim/northern cargo alternatives."
+  ]
+}

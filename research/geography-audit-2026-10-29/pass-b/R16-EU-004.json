@@ -1,0 +1,99 @@
+{
+  "record_id": "R16-EU-004",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Siret truck access was obstructed again from about 14:00 on 14 January. The January 15 article treats the new noon obstruction as a resumed episode. Ordinary passenger processing remained available.",
+  "source_checks": [
+    {
+      "url": "https://www.pravda.com.ua/eng/news/2024/01/14/7437186/",
+      "access_status": "full_text_web",
+      "finding": "14 January body names Siret opposite Porubne and approximately 14:00 renewed truck blockade.",
+      "direct_fetch_status": "inaccessible"
+    },
+    {
+      "url": "https://www.pravda.com.ua/eng/news/2024/01/15/7437314/",
+      "access_status": "full_text_web",
+      "finding": "15 January body calls the noon Siret obstruction a resumption and distinguishes other transport and pedestrians.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R16-EU-004-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "crossing-siret-porubne",
+          "name": "Siret–Porubne",
+          "coordinates": [
+            26.0622666,
+            47.986343
+          ],
+          "coordinate_method": "Independent inspection of preserved versioned OSM source metadata; no fresh OSM API retrieval claimed",
+          "precision": "approximate named crossing area; historical obstruction footprint not surveyed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/3019220234",
+            "https://data.consilium.europa.eu/doc/document/ST-10116-2010-REV-1/en/pdf",
+            "https://umanmap.eu/en/crossing/siret.html"
+          ],
+          "evidence_note": "Preserved OSM node 3019220234 v3 anchors the Romanian road-control end; the Council land-border evaluation identifies Siret opposite Porubne on E85. The independent published crossing coordinates at umanmap.eu are within about 70 m. Actual protest machinery stretched along the approach, not necessarily at this pin.",
+          "cached_source_metadata": [
+            {
+              "url": "https://www.openstreetmap.org/node/3019220234",
+              "title": "OSM Siret-side border control",
+              "retrieved": "2026-10-22",
+              "evidence": "Mapped border_control node at the southern/Romanian part of the Siret–Porubne crossing complex.",
+              "osm_type": "node",
+              "osm_id": 3019220234,
+              "osm_version": 3,
+              "osm_timestamp": "2025-04-01T19:10:41Z"
+            },
+            {
+              "url": "https://www.openstreetmap.org/way/1124633015",
+              "title": "OSM Porubne border-control office",
+              "retrieved": "2026-10-22",
+              "evidence": "Named Porubne office confirms the northern/Ukrainian end of the crossing complex; not used as the protest anchor.",
+              "osm_type": "way",
+              "osm_id": 1124633015,
+              "osm_version": 4,
+              "osm_timestamp": "2023-05-25T18:41:59Z"
+            },
+            {
+              "url": "https://data.consilium.europa.eu/doc/document/ST-10116-2010-REV-1/en/pdf",
+              "title": "Council of the European Union: Schengen evaluation of Romania, land borders",
+              "retrieved": "2026-10-22",
+              "evidence": "Official report identifies Siret road BCP opposite Porubne on corridor E85."
+            }
+          ],
+          "cached_evidence_path": "source/geography-reference.json",
+          "cached_evidence_sha256": "a7ad4c4223195811491048191efd6e1626eda968146dc2485d9e65a5b4799e78"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Siret freight approach; separate 14 January episode.",
+      "date_scope_check": "Same-day date retained; no exact clearance clock inferred.",
+      "canonical_dates": {
+        "kind": "same_day",
+        "measure_type": "operational_spell",
+        "start_earliest": "2024-01-14",
+        "start_latest": "2024-01-14",
+        "end_earliest": "2024-01-14",
+        "end_latest": "2024-01-14",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R16-EU-004.json",
+  "canonical_input_sha256": "6f6d7136e5b54721a3b70a04794e125dbc9af3566aac7a11e08c3e46bcd7723b",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

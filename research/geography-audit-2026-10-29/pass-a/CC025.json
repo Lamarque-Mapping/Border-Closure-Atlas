@@ -1,0 +1,148 @@
+{
+  "record_id": "CC025",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Only ordinary Afghan civilian admission to Uzbekistan via the named Friendship Bridge. The bridge carries road and rail, but freight, exceptional authorised travel and Airitom free-zone visits are outside the selected passenger phase.",
+  "source_checks": [
+    {
+      "url": "https://apa.az/en/xeber/cis-countries-news/afghan-border-closed-no-traffic-through-termez-checkpoint-uzbek-foreign-ministry-356807",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "MFA statement names Termez checkpoint and restriction; does not distinguish every later traffic exception.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-08.json",
+      "sha256": "77c15724abd029c7c27f0fa1a148f646365243ec002addf72902bd1bbee3f1f0"
+    },
+    {
+      "url": "https://kuwaittimes.com/article/36628/world/asia/uzbekistan-reopens-afghan-border-closed-since-2021/amp/",
+      "access_status": "search_extract",
+      "finding": "AFP identifies Friendship Bridge, passenger reopening November 23, and continuing freight/free-zone exceptions.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-08.json",
+      "sha256": "77c15724abd029c7c27f0fa1a148f646365243ec002addf72902bd1bbee3f1f0"
+    },
+    {
+      "url": "https://kun.uz/en/news/2021/08/30/mfa-comments-on-reports-about-opening-of-borders-with-afghanistan",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-67e9ec90304dc4ec59.bin",
+      "sha256": "892b65173747f8f28e8e748856630fc4f3154e1bb38e9a5de85de8e1d2d72f06"
+    },
+    {
+      "url": "https://kun.uz/en/news/2025/12/02/uzbekistan-and-afghanistan-reopen-termez-hairaton-border-for-citizens",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-02c3a63a4b4b56a79e.bin",
+      "sha256": "d9be7f2b83ad24595fbdebb1fd69763d185b5c59f2b59419886988f7b1e17754"
+    },
+    {
+      "url": "https://agerpres.ro/politic-extern/2025/12/03/uzbekistanul-si-a-redeschis-in-totalitate-granita-cu-afganistanul-inchisa-dupa-revenirea-la-putere-a--1508347",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-e621771d6317e726e0.bin",
+      "sha256": "904f2be7626a138dae2e708ec1ed40246b28589838a5b3f5cb4fc52bde52867e"
+    },
+    {
+      "url": "https://tashkenttimes.uz/business/16542-termez-hayraton-bridge-opens-for-pedestrians-after-4-year-hiatus",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-f7678b9f68d98e794a.bin",
+      "sha256": "86c29b618f3c5f4213313d4aa892b44804eabbdabf8a6cdc0550361d9e9a2fea"
+    },
+    {
+      "url": "https://kun.uz/en/news/2021/06/23/coronavirus-movement-of-citizens-across-the-uzbek-afghan-border-will-be-suspended",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-c8cadc88525ec46248.bin",
+      "sha256": "fac05201567626a6196b955533f7b455a722b05c77223925560d73d6e96ec5ec"
+    },
+    {
+      "url": "https://s3.eu-west-1.amazonaws.com/logcluster-web-prod-files/public/2021-12/afg_lwg_meeting_minutes_211215.pdf",
+      "access_status": "fresh_pdf_full_text",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-b14f948911bb8be2ca.bin",
+      "sha256": "a93b93433167660ea06e13347e1b6fb92df7e750e703a83564397db50cd1ae2f"
+    },
+    {
+      "url": "https://uz.kursiv.media/en/2025-12-03/uzbekistan-and-afghanistan-reopen-termez-hayraton-border-crossing/",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-5573bb3cecf3844cfa.bin",
+      "sha256": "78aaee74a86c316e00e7bd51fd37a044ac12aee1830926cdb510fa696d027ce5"
+    },
+    {
+      "url": "https://www.uzdaily.uz/en/foreign-ministry-in-the-near-future-the-opening-of-the-termez-checkpoint-on-the-uzbek-afghan-border-is-not-planned/",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-1280c5bba700267f2a.bin",
+      "sha256": "baa3011234fde966ce290d02a02dd39725aee31c12685b8a774c70ed1cf12b42"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC025-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-termez-hairatan-friendship-bridge",
+          "name": "Termez/Ayritom–Hairatan Friendship Bridge",
+          "coordinates": [
+            67.4276363,
+            37.2289594
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/22825394",
+          "precision": "Bridge-area reference, 500 m; mixed-mode structure, with phase explicitly restricted to passengers.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/22825394",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=67.4,37.2,67.45,37.25"
+          ],
+          "evidence_note": "Mapped named Afghanistan–Uzbekistan Friendship Bridge has both trunk-road and railway tags. The source-selected civilian passenger category uses this crossing; rail/cargo operation is not asserted closed.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-termez.xml",
+          "sha256": "f9ab3441fcaa2e9152632d109a1d7c0a7a685f8f0da34db5d38e742660554396",
+          "osm_feature": "way/22825394",
+          "osm_version": "24",
+          "osm_timestamp": "2025-05-15T10:08:05Z",
+          "identity_tags": {
+            "alt_name:en": "Hayraton bridge",
+            "alt_name:ru": "Пул Дустий Афганистан ва Узбекистан",
+            "branch": "Termiz mintaqaviy temir yo'l uzeli",
+            "bridge": "yes",
+            "electrified": "no",
+            "gauge": "1520",
+            "highway": "trunk",
+            "int_ref": "AH62",
+            "layer": "1",
+            "maxspeed": "20",
+            "name": "پل دوستی افغانستان و ازبکستان",
+            "name:en": "Afghanistan–Uzbekistan Friendship Bridge",
+            "name:ru": "Мост Дружбы",
+            "operator": "O‘zbekiston temir yo‘llari",
+            "passenger_lines": "1",
+            "railway": "rail",
+            "usage": "main",
+            "wikidata": "Q509824",
+            "wikipedia": "ru:Мост Дружбы (Афганистан — Узбекистан)"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary Afghan civilian passenger entry into Uzbekistan through Termez/Ayritom–Hairatan, excluding freight, authorized cases and free-trade-zone visits.",
+      "date_scope_check": {
+        "scope": "Ordinary Afghan civilian passenger entry into Uzbekistan through Termez/Ayritom–Hairatan, excluding freight, authorized cases and free-trade-zone visits.",
+        "start_earliest": "2021-06-01",
+        "start_latest": "2021-08-31",
+        "end_earliest": "2025-11-23",
+        "end_latest": "2025-11-23",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "APA August 30 2021 reproduces MFA restriction. AFP December 3 2025 quotes Chamber confirmation of reopening since November 23; do not equate publication date with reopening or remove earlier June/August/October onset qualification."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

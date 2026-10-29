@@ -1,0 +1,130 @@
+{
+  "record_id": "EA017",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Three distinct scopes: March 2020 refusal at Motaain–Batugade; the four named land posts Motain, Suai Salele, Sakato and Oesilo under Article 18 weekly hours; and later reported daily eligible-Indonesian entry. The broader legal phase must not inherit only one point.",
+  "source_checks": [
+    {
+      "url": "https://www.antaranews.com/berita/1367290/timor-leste-lakukan-lockdown-wni-tertahan-di-perbatasan",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "ANTARA quotes Atambua immigration and identifies Indonesian travellers refused by Timorese Batugade officials while Motaain continued Indonesian services.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/03801756441300e0b263.html",
+      "sha256": "1307eb09ab2179094ace53b0605d206835bdc7aa36be18b4b35f236b29bf7bdb",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/03801756441300e0b263.txt",
+      "text_sha256": "441f19088389c4d4c708080d9952d9c74d44006eb27407d9b55a8341904be3c6",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-2.json"
+    },
+    {
+      "url": "https://www.laohamutuk.org/Justice/2022/PresElec/DL26-2021%20on%20exceptional%20and%20temporary%20health%20surveillance%20measuresEn.pdf",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Article 18 lists Motain, Suai Salele, Sakato and Oesilo; Monday exit and Wednesday entry windows with ministerial exceptions.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d5eaaf6b1a08e3ef8909.pdf",
+      "sha256": "e40d2657a45e4166eb3e58308bec1b0e507ddcde311e1ec759420dc98f98fef4",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d5eaaf6b1a08e3ef8909.txt",
+      "text_sha256": "05e05d28a09b814410502a585b8503ef44f00359213bce95bad4a2d3ba4ef5d2",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-1.json"
+    },
+    {
+      "url": "https://mj.gov.tl/jornal/public/docs/2022/serie_1/SERIE_I_NO_12_A.pdf",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Official Gazette repeals Article 18 and returns posts to pre-pandemic schedules, effective day after publication.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/202918f1d30409d33eb4.pdf",
+      "sha256": "e40d2657a45e4166eb3e58308bec1b0e507ddcde311e1ec759420dc98f98fef4",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/202918f1d30409d33eb4.txt",
+      "text_sha256": "6dd428eb3d88b21f2323996e9086544e6417fc0f5ecfaa8e0250d9469fc32156",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-1.json"
+    },
+    {
+      "url": "https://en.tatoli.tl/2022/03/28/indonesian-citizens-are-free-to-enter-timor-leste-in-every-day/18/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Migration director reports daily admission from March 21 with documentation/vaccine criteria, specifically mentions Batugade and Bobonaro movement.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/04f28a7ca92b8972d57d.html",
+      "sha256": "1307eb09ab2179094ace53b0605d206835bdc7aa36be18b4b35f236b29bf7bdb",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/04f28a7ca92b8972d57d.txt",
+      "text_sha256": "f5cd404b1999692fcc9ec728006b90c1aa0f6ad948c34a0b21e2d3a22b66a8e8",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-2.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA017-AUDIT20261025-1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Three distinct scopes: March 2020 refusal at Motaain–Batugade; the four named land posts Motain, Suai Salele, Sakato and Oesilo under Article 18 weekly hours; and later reported daily eligible-Indonesian entry. The broader legal phase must not inherit only one point.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-19",
+        "start_latest": "2020-03-19",
+        "end_earliest": "2020-03-19",
+        "end_latest": "2020-03-19",
+        "last_confirmed": "2020-03-19",
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "EA017-R1: This is the legal envelope of recurring Monday-exit/Wednesday-entry access, not continuous closure or summed closed days. Original March 19 expiry was superseded on March 18. Tatoli separately reports daily operations from March 21; no March 18 physical reopening is inferred.\n\nEA017-C7P1: Endpoint-only operational transition. Initial implementation of the preceding weekly-hours regime is not separately observed. No continuous closed interval, unrestricted admission or blanket bilateral reopening inferred.\n\nThe March 2020 Motaain observation is separate from the November 2021 legal schedule. No uninterrupted 2020–2022 closure is inferred."
+      },
+      "unresolved": [
+        "Motaain–Batugade checkpoint coordinate not independently verified."
+      ]
+    },
+    {
+      "phase_id": "EA017-R1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Three distinct scopes: March 2020 refusal at Motaain–Batugade; the four named land posts Motain, Suai Salele, Sakato and Oesilo under Article 18 weekly hours; and later reported daily eligible-Indonesian entry. The broader legal phase must not inherit only one point.",
+      "date_scope_check": {
+        "start_earliest": "2021-11-29",
+        "start_latest": "2021-11-29",
+        "end_earliest": "2022-03-18",
+        "end_latest": "2022-03-18",
+        "last_confirmed": null,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "EA017-R1: This is the legal envelope of recurring Monday-exit/Wednesday-entry access, not continuous closure or summed closed days. Original March 19 expiry was superseded on March 18. Tatoli separately reports daily operations from March 21; no March 18 physical reopening is inferred.\n\nEA017-C7P1: Endpoint-only operational transition. Initial implementation of the preceding weekly-hours regime is not separately observed. No continuous closed interval, unrestricted admission or blanket bilateral reopening inferred.\n\nThe March 2020 Motaain observation is separate from the November 2021 legal schedule. No uninterrupted 2020–2022 closure is inferred."
+      },
+      "unresolved": [
+        "The four land-control facility coordinates have not been independently checked; no whole Indonesia–Timor-Leste boundary is substituted."
+      ]
+    },
+    {
+      "phase_id": "EA017-C7P1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Three distinct scopes: March 2020 refusal at Motaain–Batugade; the four named land posts Motain, Suai Salele, Sakato and Oesilo under Article 18 weekly hours; and later reported daily eligible-Indonesian entry. The broader legal phase must not inherit only one point.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2022-03-21",
+        "end_latest": "2022-03-21",
+        "last_confirmed": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "EA017-R1: This is the legal envelope of recurring Monday-exit/Wednesday-entry access, not continuous closure or summed closed days. Original March 19 expiry was superseded on March 18. Tatoli separately reports daily operations from March 21; no March 18 physical reopening is inferred.\n\nEA017-C7P1: Endpoint-only operational transition. Initial implementation of the preceding weekly-hours regime is not separately observed. No continuous closed interval, unrestricted admission or blanket bilateral reopening inferred.\n\nThe March 2020 Motaain observation is separate from the November 2021 legal schedule. No uninterrupted 2020–2022 closure is inferred."
+      },
+      "unresolved": [
+        "The four land-control facility coordinates have not been independently checked; no whole Indonesia–Timor-Leste boundary is substituted."
+      ]
+    }
+  ],
+  "unresolved": [
+    "The four land-control facility coordinates have not been independently checked; no whole Indonesia–Timor-Leste boundary is substituted."
+  ],
+  "input_sha256": "3d37b8de18f8acbd5c81a46f931a0efd8cc7e9aa1c96ffdd51da1745b8666f5d",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

@@ -1,0 +1,101 @@
+{
+  "record_id": "REC50-R41-003",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Only Tsagaannuur–Tashanta freight component, not Handagayty/Borshoo separately mentioned in the same notice. Mapped Tsagaannuur customs complex matches the official paired crossing.",
+  "source_checks": [
+    {
+      "url": "https://www.rosgranstroy.ru/press-center/news/Priostanovlen-propusk-lic-i-transportnyh-sredstv-cherez-avtomobilnye-punkty-propuska-Tashanta-i-Handagayty-na-granice-s-Mongoliey-",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Official notice names Tsagaannuur opposite Tashanta and the November 2–23 agreed closure window; Handagayty is separate.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-07.json",
+      "sha256": "5cbb6ef8e1dc6a4a8b3507ee58a73a33ffb57ebef5e0089be117fc0d8ff1d2ff"
+    },
+    {
+      "url": "https://www.pkf-ifs.mn/1102/nitem",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://wiki.unece.org/plugins/viewsource/viewpagesrc.action?pageId=101548480",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://wiki.unece.org/spaces/CTRBSBC/pages/101548480/Mongolia",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://trans.ru/news/s-23-noyabrya-mongoliya-ogranichivaet-rabotu-esche-dvuh-punktov-propuska-na-granitse-s-rossiei",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R41-003-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-tsagaannuur-tashanta-road",
+          "name": "Tsagaannuur–Tashanta road checkpoint area",
+          "coordinates": [
+            89.467809,
+            49.6079281
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/323460412",
+          "precision": "Mongolian customs-complex reference, about 1 km; not Russian inspection-yard position.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/323460412",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=89.44,49.6,89.49,49.64"
+          ],
+          "evidence_note": "Mapped named Tsagaannuur customs complex; Russian border agency notice explicitly pairs Tsagaannuur with Tashanta.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-tsagaannuur.xml",
+          "sha256": "0c621ee64b15c0bef56dac047031fd165b3ace224a76101df5dd4f3fa3b019aa",
+          "osm_feature": "way/323460412",
+          "osm_version": "5",
+          "osm_timestamp": "2026-01-10T18:28:02Z",
+          "identity_tags": {
+            "amenity": "border_control",
+            "barrier": "border_control",
+            "landuse": "military",
+            "motor_vehicle": "yes",
+            "name": "Цагааннуур Цогцолбор",
+            "name:pl": "Kompleks celny Tsagaannuur, Bayan-Ulgii Aimag",
+            "official_name": "Баян-Өлгий аймгын Гаалийн Цагааннуур Цогцолбор"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Freight component of the Tsagaannuur–Tashanta November 2020 closure agreement",
+      "date_scope_check": {
+        "scope": "Freight component of the Tsagaannuur–Tashanta November 2020 closure agreement",
+        "start_earliest": "2020-11-02",
+        "start_latest": "2020-11-02",
+        "end_earliest": "2020-11-23",
+        "end_latest": "2020-11-23",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "announced_window_layer_only",
+        "assessment": "Rosgranstroy November 3 notice announces November 2–23 closure window. That final date and later petroleum exceptions do not establish ordinary general freight reopening; existing qualifications preserved."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

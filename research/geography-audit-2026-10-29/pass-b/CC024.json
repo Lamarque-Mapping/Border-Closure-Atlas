@@ -1,0 +1,50 @@
+{
+  "record_id": "CC024",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "An access-road obstruction prevents cargo reaching Aqina; the source describes fighting near petroleum facilities and an Afghan defensive line roughly 10 km from the port. The obstruction is not established to be at the international gate.",
+  "source_checks": [
+    {
+      "url": "https://da.azadiradio.com/a/31340108.html",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Dari full article describes Aqina inactive for over a week and Taliban blocking the road to cargo vehicles; it does not identify one exact roadblock position.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/b6fc7ef1c46755879f67.html",
+      "sha256": "d8bcb3aa7f459d31cfccc8afb17acd048a548ea9f11140be05ce2039ea91f718",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/b6fc7ef1c46755879f67.txt",
+      "text_sha256": "d5474f35a21929b4d784c8760f082dd202f7f77e3b4f06e25603157273835da6",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC024-FU1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "An access-road obstruction prevents cargo reaching Aqina; the source describes fighting near petroleum facilities and an Afghan defensive line roughly 10 km from the port. The obstruction is not established to be at the international gate.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2021-07-04",
+        "end_latest": "2021-07-04",
+        "last_confirmed": "2021-07-04",
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Attributed road-obstruction observation only. Exact roadblock geometry, onset, clearance and continuity unknown; not independently verified and not a demonstrated border-gate closure."
+      },
+      "unresolved": [
+        "The obstruction position is unresolved. Aqina port, railway or a whole Afghanistan–Turkmenistan frontier cannot replace the unknown roadblock."
+      ]
+    }
+  ],
+  "unresolved": [
+    "The obstruction position is unresolved. Aqina port, railway or a whole Afghanistan–Turkmenistan frontier cannot replace the unknown roadblock."
+  ],
+  "input_sha256": "e3d9085655fecb5b6b2baa087ac29d82be42377f5b1f2fee11ecc86a82d6e26b",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

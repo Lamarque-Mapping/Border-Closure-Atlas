@@ -35,6 +35,22 @@ for(const binding of locations.bindings){
   if(binding.complete===false)row.explicitly_partial=true;
   if(binding.complete===true)row.explicitly_complete=true;
 }
+// Wider phases may have independently reconstructed geography that differs
+// from their parent's old reference links. Never infer it from country pairs.
+const referenceFeatures=new Map([...(data.locations?.features||[]),...(data.context_locations?.features||[])].map(f=>[f.properties.location_id,f]));
+for(const binding of locations.border_bindings||[]){
+  const row=phases[binding.phase_id];
+  assert(row&&row.record_id===binding.record_id,'border binding belongs to its phase');
+  assert.equal(row.category,'wider_border','only wider phases receive line bindings');
+  assert.equal(binding.current_phase_scope,expected.get(binding.phase_id).scope,'border binding matches current phase scope');
+  const feature=referenceFeatures.get(binding.location_id),geometry=typeof feature?.geometry==='number'?data.geometry_pool?.[feature.geometry]:feature?.geometry;
+  assert(/^(Multi)?LineString$/.test(geometry?.type||''),'explicit border binding needs an existing line reference');
+  assert(binding.phase_source_urls?.length&&binding.phase_source_urls.every(url=>/^https?:\/\//.test(url)),'border binding needs phase evidence');
+  row.border_ids??=[];
+  if(!row.border_ids.includes(binding.location_id))row.border_ids.push(binding.location_id);
+  if(binding.complete===false)row.explicitly_partial=true;
+  if(binding.complete===true)row.explicitly_complete=true;
+}
 for(const row of [...Object.values(phases),...Object.values(undated)]){
   if(row.explicitly_partial)row.partial=true;
   else if(row.explicitly_complete)row.partial=false;

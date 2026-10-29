@@ -1,0 +1,92 @@
+{
+  "record_id": "AM035",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Suriname admission policy applied across French Guiana river frontier, while enforcement concentrated Saint-Laurent/Albina. Not merely the scheduledferry.",
+  "source_checks": [
+    {
+      "url": "https://www.senat.fr/compte-rendu-commissions/20200720/ce_covid.html",
+      "access_status": "full_text_cached_this_pass",
+      "finding": "Senate21Jul2020 sworn hearing distinguishes effective controls at Saint-Laurent/Albina from unmonitored upriver communes; official ferry operated for repatriations.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/20a7b9b1894af57a79de.raw",
+      "sha256": "e69c7688b19d8d65b499afde0a60f6ebd9c1cf027ec770b251ddc761af209ca0"
+    },
+    {
+      "url": "https://www.flyslm.com/images/pdfs/SUR-COVID-19-Measures-13-April-2022.pdf",
+      "access_status": "full_text_cached_this_pass",
+      "finding": "Suriname Ministry13Apr2022 travel rules expressly permit landarrivals fromFrenchGuiana subject vaccination/recovery/testing; qualifiedaccess, not dateofuniversalreopening.",
+      "direct_fetch_status": "full_text_pdf",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/ad7f7745c935256a3bc2.raw",
+      "sha256": "50959af3d04dc12d845d5a73aea021fb1c932365f589d60b6c42fe062fa57b39"
+    },
+    {
+      "url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+      "access_status": "cached_versioned_geography",
+      "finding": "Independently inspected source/geography-reference.json named bilateral geometry metadata. Natural Earth5.1.0 generalized land boundaries; disputed classifications retained, water-indicator segments omitted. These are scope references, not individual gates.",
+      "evidence_path": "source/geography-reference.json",
+      "sha256": "a7ad4c4223195811491048191efd6e1626eda968146dc2485d9e65a5b4799e78",
+      "geometry_metadata": [
+        {
+          "location_id": "context-frontier-fra-sur",
+          "label": "France–Suriname — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "FRA",
+            "SUR"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_36",
+            "ne_10m_admin_0_boundary_lines_land_195"
+          ],
+          "source_feature_classes": [
+            "Disputed (please verify)",
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_36"
+          ],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        }
+      ]
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM035-D1",
+      "category": "wider_border",
+      "decision": "map",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-fra-sur"
+      ],
+      "complete": true,
+      "phase_applicability": "Wider Suriname restriction at France–Suriname frontier; customary/informal and exceptional movement continued.",
+      "date_scope_check": "Canonical policy/observation bounds preserved. Generalized boundary references locate national legal scope, not uniform physical closure or uninterrupted operations.",
+      "canonical_dates": {
+        "kind": "bounded_interval",
+        "measure_type": "formal_policy_period",
+        "start_earliest": "2020-03-14",
+        "start_latest": "2020-03-14",
+        "end_earliest": "2020-07-21",
+        "end_latest": "2022-04-13",
+        "last_confirmed": "2020-07-21",
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "withheld_unknown_first_endpoint",
+        "policy_only": true
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/AM035.json",
+  "canonical_input_sha256": "70d1a0b14621e788d6ad37d663c5439fd5a7a4d5e3c49d306ddbd1ec0ee43b35",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

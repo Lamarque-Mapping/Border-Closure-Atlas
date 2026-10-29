@@ -1,0 +1,64 @@
+{
+  "record_id": "REC50-R38-004",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Semalka–Faysh Khabur Tigris road/pontoon crossing, represented by the named Syrian customs facility; no national Iraq–Syria closure inferred.",
+  "source_checks": [
+    {
+      "url": "https://npasyria.com/en/46193/",
+      "access_status": "full_text_web",
+      "finding": "September 2 announcement says September 6 last passage day for Iraqi residency holders, directed toward Iraqi Kurdistan.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-05.json",
+      "evidence_sha256": "1fa1548ae51e5b6716620a20a89c5262e0598f0d40df9976b8f671df8bb6cdfe"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R38-004-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-semalka-faysh-khabur",
+          "name": "Semalka–Faysh Khabur customs/crossing area",
+          "coordinates": [
+            42.3484273,
+            37.0892488
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/6019972486",
+            "https://www.openstreetmap.org/api/0.6/node/6019972486"
+          ],
+          "evidence_note": "Named Syrian customs facility at the Tigris crossing; distinct from Semalka village.  OSM tags inspected: {\"government\": \"customs\", \"name\": \"معبر سيمالكا\", \"name:en\": \"Semalka Borders\", \"office\": \"government\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/f362e988de5d494f16da.html",
+          "evidence_sha256": "894e521a60dc255537f12182295fc7a675cd39bf307b8911bfe3d929696e559e",
+          "osm_version": "2",
+          "osm_timestamp": "2024-03-19T01:33:56Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Semalka–Faysh Khabur Tigris road/pontoon crossing, represented by the named Syrian customs facility; no national Iraq–Syria closure inferred. Current phase only: Announced Semalka restriction on passage of Iraqi/KRG residency holders toward Iraqi Kurdistan",
+      "date_scope_check": {
+        "start_earliest": "2020-09-07",
+        "start_latest": "2020-09-07",
+        "end_earliest": null,
+        "end_latest": "2020-11-29",
+        "last_confirmed": null,
+        "endpoint_status": "legal_effective",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "announced_window_layer_only",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "This is an announced restriction for Iraqi-residency holders departing northeast Syria toward Iraqi Kurdistan after the last permitted day, September 6, 2020. Its intended start is September 7, not the September 2 publication date. Actual initial enforcement remains unverified. The September 15 schedule for European-residency, medical and marriage cases does not restore this specific cohort. A November 29 report quotes a crossing-administration official describing permission for Iraqi-residency holders to depart on Sundays, Tuesdays and Thursdays. This establishes that the announced blanket exclusion no longer applied by November 29; the first day of restored permission, individual passage and uninterrupted earlier enforcement remain unknown. Restrictions on merchants and other cohorts are separate.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,215 @@
+{
+  "record_id": "ME034",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "September 2026 staged reopening applies to three named Iraq–Iran ports and distinct passenger/cargo schedules; still-operating Zurbatiya and Mundhiriya excluded.",
+  "source_checks": [
+    {
+      "url": "https://shafaq.com/en/society/Iraq-begins-phased-reopening-of-Iran-border-crossings",
+      "access_status": "full_text_web",
+      "finding": "Report explicitly assigns passengers Sept13 at Sheeb/Shalamcheh; Shalamcheh cargo Sept14, Mandali Sept15, Sheeb Sept17; other gates stayed open.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-13.json",
+      "evidence_sha256": "24be039dcfc5d544f7c565c300a172e14ffebc29f1bc9561b47d14d9e84092a0"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME034-R1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-sheeb-chazabeh",
+          "name": "Sheeb / Chazabeh",
+          "coordinates": [
+            47.789851,
+            31.8526883
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/534919135",
+            "https://www.openstreetmap.org/api/0.6/way/534919135/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"area\": \"yes\", \"barrier\": \"border_control\", \"building\": \"yes\", \"government\": \"border_control\", \"layer\": \"1\", \"name\": \"منفذ الشیب الحدودی\", \"name:ar\": \"منفذ الشیب الحدودی\", \"name:en\": \"Al-Shib Border Crossing\", \"name:fa\": \"پایانه مرزی شیب\", \"opening_hours\": \"closed\", \"police\": \"checkpoint\", \"wikidata\": \"Q29514074\", \"wikipedia\": \"ar:منفذ الشيب الحدودي\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/1538898844739a23c76c.html",
+          "evidence_sha256": "2bc5057654fa47e08e51c9027a28c2dbc390494599faa02055e05a22f8200f0f",
+          "osm_version": "5",
+          "osm_timestamp": "2026-09-12T04:43:21Z"
+        },
+        {
+          "proposed_site_id": "post-shalamcheh",
+          "name": "Shalamcheh",
+          "coordinates": [
+            48.0293192,
+            30.5024401
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1451074497",
+            "https://www.openstreetmap.org/api/0.6/way/1451074497/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"area\": \"yes\", \"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"پایانه مرزی شلمچه\", \"name:ar\": \"منفذ الشلامجه الحدودي\", \"name:en\": \"Shalamcheh Border Post\", \"name:fa\": \"پایانه مرزی شلمچه\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/cfa51d091b3aa812cc6c.html",
+          "evidence_sha256": "b903a6e78bf5bd487c69f2da3b488f14c6e86b83377428fb70d6defbc72509b3",
+          "osm_version": "4",
+          "osm_timestamp": "2026-10-18T12:17:28Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "September 2026 staged reopening applies to three named Iraq–Iran ports and distinct passenger/cargo schedules; still-operating Zurbatiya and Mundhiriya excluded. Current phase only: Ordinary passenger entry into Iraq at Sheeb/Chazabeh and Shalamcheh, excluding exceptional repatriation windows",
+      "date_scope_check": {
+        "start_earliest": "2026-09-12",
+        "start_latest": "2026-09-12",
+        "end_earliest": "2026-09-13",
+        "end_latest": "2026-09-13",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": false,
+        "qualification_retained": "ME034-R1: Official completed-action account of September 13 06:00 reopening, no independent throughput measurement. September 12 report describes planned three-hour Iraqi return permission; such exceptional repatriation is excluded. Other directions and cargo excluded.\n\nME034-R2: Reported commercial reopening, not passenger or all-border restoration.\n\nME034-R3: Observation endpoint only; announced September 17 reopening is not verified here.\n\nME034-R1 duration qualification: The border authority chief said on 16 September that the passenger interruption had not exceeded 24 hours. The one-calendar-day span is therefore not evidence of strict greater-than-24-hour eligibility.\n\nME034-R2P1: Independent Iranian trade reporting and the Iraqi border authority chief both describe Shalamcheh commercial traffic operating by 16 September. This adds the missing commercial restoration bound without treating the previously announced 14 September schedule as a measured first passage. The scope is commercial traffic into Iraq, not all directions or categories.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "ME034-R2",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-mandali-sumar",
+          "name": "Mandali / Sumar",
+          "coordinates": [
+            45.6078683,
+            33.8021969
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/713018014",
+            "https://www.openstreetmap.org/api/0.6/way/713018014/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"مرز مندلی - مرز سومار\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/a7a64cb6e850a327e29d.html",
+          "evidence_sha256": "7b0ce2d2fb75fba99a0d258eb45bdf0eeb66b2fd3a15dea3098505539b210255",
+          "osm_version": "2",
+          "osm_timestamp": "2026-01-14T10:16:35Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "September 2026 staged reopening applies to three named Iraq–Iran ports and distinct passenger/cargo schedules; still-operating Zurbatiya and Mundhiriya excluded. Current phase only: Mandali/Sumar commercial truck movement",
+      "date_scope_check": {
+        "start_earliest": "2026-09-12",
+        "start_latest": "2026-09-12",
+        "end_earliest": "2026-09-15",
+        "end_latest": "2026-09-15",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "ME034-R1: Official completed-action account of September 13 06:00 reopening, no independent throughput measurement. September 12 report describes planned three-hour Iraqi return permission; such exceptional repatriation is excluded. Other directions and cargo excluded.\n\nME034-R2: Reported commercial reopening, not passenger or all-border restoration.\n\nME034-R3: Observation endpoint only; announced September 17 reopening is not verified here.\n\nME034-R1 duration qualification: The border authority chief said on 16 September that the passenger interruption had not exceeded 24 hours. The one-calendar-day span is therefore not evidence of strict greater-than-24-hour eligibility.\n\nME034-R2P1: Independent Iranian trade reporting and the Iraqi border authority chief both describe Shalamcheh commercial traffic operating by 16 September. This adds the missing commercial restoration bound without treating the previously announced 14 September schedule as a measured first passage. The scope is commercial traffic into Iraq, not all directions or categories.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "ME034-R3",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-sheeb-chazabeh",
+          "name": "Sheeb / Chazabeh",
+          "coordinates": [
+            47.789851,
+            31.8526883
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/534919135",
+            "https://www.openstreetmap.org/api/0.6/way/534919135/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"area\": \"yes\", \"barrier\": \"border_control\", \"building\": \"yes\", \"government\": \"border_control\", \"layer\": \"1\", \"name\": \"منفذ الشیب الحدودی\", \"name:ar\": \"منفذ الشیب الحدودی\", \"name:en\": \"Al-Shib Border Crossing\", \"name:fa\": \"پایانه مرزی شیب\", \"opening_hours\": \"closed\", \"police\": \"checkpoint\", \"wikidata\": \"Q29514074\", \"wikipedia\": \"ar:منفذ الشيب الحدودي\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/1538898844739a23c76c.html",
+          "evidence_sha256": "2bc5057654fa47e08e51c9027a28c2dbc390494599faa02055e05a22f8200f0f",
+          "osm_version": "5",
+          "osm_timestamp": "2026-09-12T04:43:21Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "September 2026 staged reopening applies to three named Iraq–Iran ports and distinct passenger/cargo schedules; still-operating Zurbatiya and Mundhiriya excluded. Current phase only: Sheeb/Chazabeh cargo entering Iraq",
+      "date_scope_check": {
+        "start_earliest": "2026-09-12",
+        "start_latest": "2026-09-12",
+        "end_earliest": "2026-09-16",
+        "end_latest": "2026-09-16",
+        "last_confirmed": "2026-09-16",
+        "endpoint_status": "last_confirmed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "ME034-R1: Official completed-action account of September 13 06:00 reopening, no independent throughput measurement. September 12 report describes planned three-hour Iraqi return permission; such exceptional repatriation is excluded. Other directions and cargo excluded.\n\nME034-R2: Reported commercial reopening, not passenger or all-border restoration.\n\nME034-R3: Observation endpoint only; announced September 17 reopening is not verified here.\n\nME034-R1 duration qualification: The border authority chief said on 16 September that the passenger interruption had not exceeded 24 hours. The one-calendar-day span is therefore not evidence of strict greater-than-24-hour eligibility.\n\nME034-R2P1: Independent Iranian trade reporting and the Iraqi border authority chief both describe Shalamcheh commercial traffic operating by 16 September. This adds the missing commercial restoration bound without treating the previously announced 14 September schedule as a measured first passage. The scope is commercial traffic into Iraq, not all directions or categories.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "ME034-R2P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-shalamcheh",
+          "name": "Shalamcheh",
+          "coordinates": [
+            48.0293192,
+            30.5024401
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1451074497",
+            "https://www.openstreetmap.org/api/0.6/way/1451074497/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"area\": \"yes\", \"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"پایانه مرزی شلمچه\", \"name:ar\": \"منفذ الشلامجه الحدودي\", \"name:en\": \"Shalamcheh Border Post\", \"name:fa\": \"پایانه مرزی شلمچه\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/cfa51d091b3aa812cc6c.html",
+          "evidence_sha256": "b903a6e78bf5bd487c69f2da3b488f14c6e86b83377428fb70d6defbc72509b3",
+          "osm_version": "4",
+          "osm_timestamp": "2026-10-18T12:17:28Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "September 2026 staged reopening applies to three named Iraq–Iran ports and distinct passenger/cargo schedules; still-operating Zurbatiya and Mundhiriya excluded. Current phase only: Shalamcheh commercial truck movement into Iraq.",
+      "date_scope_check": {
+        "start_earliest": "2026-09-12",
+        "start_latest": "2026-09-12",
+        "end_earliest": null,
+        "end_latest": "2026-09-16",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "ME034-R1: Official completed-action account of September 13 06:00 reopening, no independent throughput measurement. September 12 report describes planned three-hour Iraqi return permission; such exceptional repatriation is excluded. Other directions and cargo excluded.\n\nME034-R2: Reported commercial reopening, not passenger or all-border restoration.\n\nME034-R3: Observation endpoint only; announced September 17 reopening is not verified here.\n\nME034-R1 duration qualification: The border authority chief said on 16 September that the passenger interruption had not exceeded 24 hours. The one-calendar-day span is therefore not evidence of strict greater-than-24-hour eligibility.\n\nME034-R2P1: Independent Iranian trade reporting and the Iraqi border authority chief both describe Shalamcheh commercial traffic operating by 16 September. This adds the missing commercial restoration bound without treating the previously announced 14 September schedule as a measured first passage. The scope is commercial traffic into Iraq, not all directions or categories.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

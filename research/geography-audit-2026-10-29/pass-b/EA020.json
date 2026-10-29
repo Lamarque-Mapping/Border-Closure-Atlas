@@ -1,0 +1,85 @@
+{
+  "record_id": "EA020",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Sinuiju–Dandong freight railway on the existing combined Sino-Korean Friendship Bridge. Competing November2021 and January2022 reopening claims remain disputed; geography approval does not confirm uninterrupted duration.",
+  "source_checks": [
+    {
+      "url": "https://en.yna.co.kr/view/AEN20220618001900315",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Retrospective rail account dates suspension August2020 and reopening January2022.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/38378d37a858c0a576c7.html",
+      "sha256": "66182050de5416eca0fba8d86641b2093981f5fcd4b9180d2c0b31624a2dc370",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/38378d37a858c0a576c7.txt",
+      "text_sha256": "0ce9d41a35ff0977479cefa8864226938051d86ac4ac8c65daf58ad96c09f6e5",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-3.json"
+    },
+    {
+      "url": "https://en.yna.co.kr/view/AEN20220116001352325",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Train from Sinuiju arrived Dandong January16; cargo state unclear.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/376fecfbea92a0402262.html",
+      "sha256": "66182050de5416eca0fba8d86641b2093981f5fcd4b9180d2c0b31624a2dc370",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/376fecfbea92a0402262.txt",
+      "text_sha256": "5e3fe1e2fcc2a3f4067b0f988ee1c61ae75ad27c20b8535d91d5ac73f26a4b7e",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-3.json"
+    },
+    {
+      "url": "https://mapcarta.com/W1119773889",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Named bridge connects pair by rail and road, numerical coordinate and OSM identity; distinct BrokenBridge and station locations.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-4.json",
+      "sha256": "590e351898f10b728e0dcdcf6b8601bcd53ed1caa1495848556c1dc45bb735f6"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA020-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-dandong-sinuiju-rail-bridge",
+          "name": "Dandong–Sinuiju Sino-Korean Friendship Bridge railway",
+          "coordinates": [
+            124.39288,
+            40.11477
+          ],
+          "coordinate_method": "OSM-derived representative bridge coordinate displayed by Mapcarta, way1119773889; direct OSM endpoint timed out",
+          "precision": "Approximate bridge centre, about100m; not a customs terminal or station",
+          "source_urls": [
+            "https://mapcarta.com/W1119773889"
+          ],
+          "evidence_note": "Page identifies railway and roadway bridge between Dandong and Sinuiju, distinguishes BrokenBridge290m away and both stations1.25km away. Yonhap observed train crossing Amnok railway bridge, supports rail binding only.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-4.json",
+          "sha256": "590e351898f10b728e0dcdcf6b8601bcd53ed1caa1495848556c1dc45bb735f6"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Sinuiju–Dandong freight railway on the existing combined Sino-Korean Friendship Bridge. Competing November2021 and January2022 reopening claims remain disputed; geography approval does not confirm uninterrupted duration.",
+      "date_scope_check": {
+        "start_earliest": "2020-08-01",
+        "start_latest": "2020-08-31",
+        "end_earliest": "2022-01-16",
+        "end_latest": "2022-01-16",
+        "last_confirmed": null,
+        "temporal_display_rule": "held_evidence_do_not_animate_as_confirmed",
+        "held_status_preserved": false,
+        "contested": true,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "January 16, 2022 movement is documented, but two contemporary RFA reports describe a November 2021 reopening and interruption; an earlier aid exception is also reported. These conflict with the later first-formal-opening account. Continuous operational duration is withheld pending reconciliation."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "047bda5303b8b7756114c666242efadcf2e1c0e65be721dd1737dce4540d9110",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

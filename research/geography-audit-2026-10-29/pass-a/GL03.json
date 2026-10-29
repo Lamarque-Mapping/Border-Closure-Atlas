@@ -1,0 +1,51 @@
+{
+  "record_id": "GL03",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Reporting concerns the Goma–Gisenyi/Rubavu crossing system; the named city pair does not distinguish Grande and Petite Barrière.",
+  "source_checks": [
+    {
+      "url": "https://www.moh.gov.rw/news-detail/rwandas-border-with-drc-remains-open",
+      "access_status": "fresh_source_text_extract_inspected",
+      "finding": "Rwandan health ministry says border was open after a morning traffic slowdown from reinforced screening.",
+      "retrieval_http_status": "200",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/f10486972373efd8.raw",
+      "evidence_sha256": "3537a6d80b0dcc96861f595aa0d7524ab7c9b05b55680cae2dd57c4115969ae3"
+    },
+    {
+      "url": "https://www.euronews.com/2019/08/01/congo-says-rwanda-has-closed-border-near-goma",
+      "access_status": "fresh_source_text_extract_inspected",
+      "finding": "Reuters account reports closure between Goma and Gisenyi with Congolese exit exception; conflicts with the health-ministry characterisation.",
+      "retrieval_http_status": "200",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/82084718c18ed2d1.raw",
+      "evidence_sha256": "e6bcb5961a52212ef5a14c7033fc607e9a1b9d12c455fe63964700dc84b41423"
+    },
+    {
+      "url": "https://www.lepoint.fr/afrique/ebola-en-rdc-face-a-l-epidemie-a-goma-le-rwanda-ferme-sa-frontiere-01-08-2019-2327956_3826.php",
+      "access_status": "fresh_source_text_extract_inspected",
+      "finding": "Reports eight-hour interruption then resumed two-way traffic the same day.",
+      "retrieval_http_status": "200",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/13435ac6fb0a3065.raw",
+      "evidence_sha256": "60fa365347714e719bc969e544e655d764e5411cf95cd297693b251e1de41784"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "GL03-D1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Retain disputed same-day observation only; neither a greater-than-24-hour duration nor a unique Grande Barrière match is established.",
+      "date_scope_check": "Canonical same_day: start 2019-08-01–2019-08-01; endpoint 2019-08-01–2019-08-01; last confirmed None. No end date is inferred from the current geography or extended to the review date. Same-day/order timing does not establish a strictly over-24-hour closure; retain the existing temporal layer and eligibility.",
+      "unresolved": [
+        "Original evidence does not isolate the precise post; canonical contested flag remains held.",
+        "Canonical contested/excluded phase remains held; geography review does not resolve chronology or inclusion."
+      ]
+    }
+  ],
+  "unresolved": []
+}

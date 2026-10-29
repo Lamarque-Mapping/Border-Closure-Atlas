@@ -1,0 +1,154 @@
+{
+  "record_id": "FU-COV-EAS-001",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Both observations name the Second Mae Sai–Tachileik Friendship Bridge and its Myanmar gate. Thai reporting identifies the cargo crossing opposite Ban San Phak Hi. The two recorded episodes are not merged into uninterrupted closure.",
+  "source_checks": [
+    {
+      "url": "https://www.thansettakij.com/general-news/469492",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Feb 20 protest blocked access to second bridge opposite Ban San Phak Hi; stranded Thai cargo trucks and workers.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-02.json",
+      "sha256": "fdfe0b3f2a7c09d984577c5ea2d78c5a395e60f71145624954377eb23a074e2f"
+    },
+    {
+      "url": "https://www.thansettakij.com/general-news/469621",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Feb 22 reporting again names the second bridge; separate protest observation does not prove intervening continuity.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-02.json",
+      "sha256": "fdfe0b3f2a7c09d984577c5ea2d78c5a395e60f71145624954377eb23a074e2f"
+    },
+    {
+      "url": "https://www.matichon.co.th/region/news_2589470",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.nationthailand.com/in-focus/30402887",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.naewna.com/local/0000554796",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-EAS-001-FU1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-mae-sai-tachileik-bridge-ii",
+          "name": "Mae Sai–Tachileik Friendship Bridge II",
+          "coordinates": [
+            99.9046527,
+            20.448342
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/406008983",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/406008983",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=99.9,20.43,99.94,20.47"
+          ],
+          "evidence_note": "Mapped way explicitly named The 2nd Friendship Bridge; paired with the Thai reporting identifying the second bridge opposite Ban San Phak Hi. Point locates bridge area, not the exact protesters barricade.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-mae-sai-ii.xml",
+          "sha256": "f811a845600bc2618b22affc12ed7f9cdce59a2acc1de1e9e1ae57dc89295b15",
+          "osm_feature": "way/406008983",
+          "osm_version": "9",
+          "osm_timestamp": "2025-12-07T20:12:13Z",
+          "identity_tags": {
+            "bridge": "yes",
+            "highway": "trunk",
+            "layer": "1",
+            "name": "The 2nd Friendship Bridge",
+            "name:en": "The 2nd Friendship Bridge",
+            "name:th": "สะพานมิตรภาพแม่น้ำสายแห่งที่ 2",
+            "surface": "paved"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Second Friendship Bridge",
+      "date_scope_check": {
+        "scope": "Second Friendship Bridge",
+        "start_earliest": "2021-02-20",
+        "start_latest": "2021-02-20",
+        "end_earliest": "2021-02-20",
+        "end_latest": "2021-02-23",
+        "last_confirmed": "2021-02-20",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Thai Feb 20 report locates a blockade on the second bridge approach. Feb 22 report documents another protest closure. The canonical Feb 21 scoped observation and its under-24-hour flag remain unchanged; no continuity inferred."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "FU-COV-EAS-001-FU2",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-mae-sai-tachileik-bridge-ii",
+          "name": "Mae Sai–Tachileik Friendship Bridge II",
+          "coordinates": [
+            99.9046527,
+            20.448342
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/406008983",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/406008983",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=99.9,20.43,99.94,20.47"
+          ],
+          "evidence_note": "Mapped way explicitly named The 2nd Friendship Bridge; paired with the Thai reporting identifying the second bridge opposite Ban San Phak Hi. Point locates bridge area, not the exact protesters barricade.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-mae-sai-ii.xml",
+          "sha256": "f811a845600bc2618b22affc12ed7f9cdce59a2acc1de1e9e1ae57dc89295b15",
+          "osm_feature": "way/406008983",
+          "osm_version": "9",
+          "osm_timestamp": "2025-12-07T20:12:13Z",
+          "identity_tags": {
+            "bridge": "yes",
+            "highway": "trunk",
+            "layer": "1",
+            "name": "The 2nd Friendship Bridge",
+            "name:en": "The 2nd Friendship Bridge",
+            "name:th": "สะพานมิตรภาพแม่น้ำสายแห่งที่ 2",
+            "surface": "paved"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Myanmar gate of Second Friendship Bridge",
+      "date_scope_check": {
+        "scope": "Myanmar gate of Second Friendship Bridge",
+        "start_earliest": "2021-02-21",
+        "start_latest": "2021-02-21",
+        "end_earliest": "2021-02-21",
+        "end_latest": "2021-02-21",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Thai Feb 20 report locates a blockade on the second bridge approach. Feb 22 report documents another protest closure. The canonical Feb 21 scoped observation and its under-24-hour flag remain unchanged; no continuity inferred."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

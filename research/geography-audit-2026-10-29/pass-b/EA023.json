@@ -1,0 +1,61 @@
+{
+  "record_id": "EA023",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "General foreign tourist land access to Rason specifically via Quanhe–Wonjong, distinct from exceptional air tours or Pyongyang marathon travel.",
+  "source_checks": [
+    {
+      "url": "https://www.uritours.com/blog/coronavirus-north-korea-temporarily-closes-borders/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Operator chronology explicitly identifies Quanhe–Wonjong for February 20 2025 Rason restoration and separates earlier Russian air-tour exceptions.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/0739d95931bb7f122cad.html",
+      "sha256": "1307eb09ab2179094ace53b0605d206835bdc7aa36be18b4b35f236b29bf7bdb",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/0739d95931bb7f122cad.txt",
+      "text_sha256": "6c76886c3a98d9facfc27f8bab5e2bd7ba30fb2af64e4c62f3d941fe1fff57e7",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-2.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA023-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "General foreign tourist land access to Rason specifically via Quanhe–Wonjong, distinct from exceptional air tours or Pyongyang marathon travel.",
+      "date_scope_check": {
+        "start_earliest": "2020-01-22",
+        "start_latest": "2020-01-22",
+        "end_earliest": "2025-02-20",
+        "end_latest": "2025-02-20",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "The staff inspection on February 13 is an exception, not ordinary tourist reopening. Russian air tours, diplomatic travel and repatriations are excluded. The March 2025 reclosure is a separate phase; other North Korean tourist regions are not assigned this endpoint."
+      },
+      "unresolved": [
+        "Quanhe–Wonjong crossing is identified but no independently checked road gate/bridge coordinate is available; old/new bridge distinction not resolved."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Quanhe–Wonjong crossing is identified but no independently checked road gate/bridge coordinate is available; old/new bridge distinction not resolved."
+  ],
+  "input_sha256": "17582765bfcabb478995ddd8d8cfdd32467286e08889eebbf3a8d425d0ec8499",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted.",
+  "additional_evidence": [
+    {
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-8.json",
+      "sha256": "aa98b771c2107878fb3ddd2e7ee84274e83b66cdbf3bac0c06c424317e851eb8"
+    },
+    {
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-9.json",
+      "sha256": "8a6a71c8e02f9fb0cd3d01b2099ec4f3dad7456af50c4a53fa49f65ba347379f"
+    }
+  ]
+}

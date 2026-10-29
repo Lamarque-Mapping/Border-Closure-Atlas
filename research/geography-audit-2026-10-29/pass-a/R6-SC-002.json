@@ -1,0 +1,97 @@
+{
+  "record_id": "R6-SC-002",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Kulma–Karasu freight transshipment/handling restriction. Asia-Plus describes reopening via loading/unloading and empty-container changes, which does not imply Tajik trucks or all passengers could enter China.",
+  "source_checks": [
+    {
+      "url": "https://asiaplus.news/en/2021/04/21/traffic-via-kulma-bcp-along-tajikistan-china-border-restored/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Transport minister reports Kulma traffic restored, handling-charge changes and container-return arrangements.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-07.json",
+      "sha256": "5cbb6ef8e1dc6a4a8b3507ee58a73a33ffb57ebef5e0089be117fc0d8ff1d2ff"
+    },
+    {
+      "url": "https://asiaplus.news/en/2021/01/25/kulma-bcp-along-tajikistan-china-border-closed-for-traffic-entrepreneurs-suffer-losses/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://asiaplus.news/en/2021/03/11/tajikistan-and-china-to-take-joint-measures-to-reopen-kulma-bcp-on-the-tajik-chinese-border-in-gbao/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://asiaplus.news/en/2023/01/31/tajik-trucks-cross-the-chinese-border-for-the-first-time-after-a-three-year-ban/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://asiaplus.news/en/2021/10/22/tajikistan-china-discuss-problems-of-transporting-goods-across-the-common-border/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-SC-002-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kulma-karasu-road",
+          "name": "Kulma–Karasu freight gateway",
+          "coordinates": [
+            74.8008895,
+            38.1495899
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/2248936130",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/2248936130",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=74.78,38.13,74.83,38.18"
+          ],
+          "evidence_note": "Named Кульма/Kulma border-control node. This is Tajikistan–China Kulma, not Kyrgyzstan–Uzbekistan Kara-Suu.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-kulma.xml",
+          "sha256": "9f9d74d6e4b5e337dc4b6adf872bfca6f17289342baafaa2e634e24249e64ef3",
+          "osm_feature": "node/2248936130",
+          "osm_version": "5",
+          "osm_timestamp": "2020-02-01T20:12:27Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "int_name": "Kulma",
+            "name": "Кульма"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Freight handling through Kulma–Karasu during the renewed suspension",
+      "date_scope_check": {
+        "scope": "Freight handling through Kulma–Karasu during the renewed suspension",
+        "start_earliest": "2020-10-01",
+        "start_latest": "2020-10-31",
+        "end_earliest": "2021-04-01",
+        "end_latest": "2021-04-21",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "April 21 report confirms restoration by that date and references negotiations in March. Preserve month-level bounds and later distinction between transshipment and Tajik truck entry."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

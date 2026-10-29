@@ -1,0 +1,64 @@
+{
+  "record_id": "R3-ME-008",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Safwan–Abdali ordinary people/goods movement in the retained gate-closure phase.",
+  "source_checks": [
+    {
+      "url": "https://shafaq.com/en/Iraq/safwan-sit-in-continue-for-its-sixth-day",
+      "access_status": "full_text_web",
+      "finding": "Full report says protesters withdrew Thursday and gate movement resumed after Wednesday-night closure. Six days of sit-in is not six days of continuous gate closure.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-09.json",
+      "evidence_sha256": "b17973adc9a6401dd558136684759d78ec1a61cdd0dbd1df9292bb4ec32d2b58"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-ME-008-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-safwan-abdali",
+          "name": "Safwan / Abdali",
+          "coordinates": [
+            47.7142429,
+            30.1032484
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/409262253",
+            "https://www.openstreetmap.org/api/0.6/way/409262253/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"area\": \"yes\", \"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"منفذ سفوان الحدودي\", \"name:ar\": \"منفذ سفوان الحدودي\", \"name:en\": \"Safwan Border Post\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/9d386d652781a93a7e64.html",
+          "evidence_sha256": "4c85e298bbc00f303cea2b3999d3dcc379bd83e2d7751ba6de01f85b7541e74e",
+          "osm_version": "8",
+          "osm_timestamp": "2025-12-06T12:37:32Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Safwan–Abdali ordinary people/goods movement in the retained gate-closure phase. Current phase only: Safwan / Abdali; People and commercial goods; People and goods both entry and exit in official reopening account.",
+      "date_scope_check": {
+        "start_earliest": "2019-11-20",
+        "start_latest": "2019-11-20",
+        "end_earliest": "2019-11-21",
+        "end_latest": "2019-11-21",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": false,
+        "qualification_retained": "R3-ME-008-D1: Shafaq’s November 23 account dates the blockade to Wednesday night and reopening to Thursday, corresponding to November 20–21, 2019. Baghdad Today independently published a reopening account early on November 21, after protesters withdrew from the gate. The border-authority interview relayed by Arab Times confirms a short interruption and resumed passenger and commercial movement in both directions, but does not independently supply its event date. The Wednesday-night to early-Thursday-morning chronology, reinforced by the official description of only a few hours, establishes a spell below 24 hours. Exact clocks remain unknown; crossing a calendar date does not make this a greater-than-24-hour closure. The linked Safwan sit-in’s own November 19 statements express solidarity with Baghdad protesters and opposition to political-party control and delay; these are attributed local demands, not proof that every nationwide protest demand motivated the gate blockade.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

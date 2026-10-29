@@ -1,0 +1,72 @@
+{
+  "record_id": "R14-AM-001",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Reuters text reports August 18 demonstrators blocked the international crossing at Pacaraima while people fled on foot. This is a protest approach restriction, not a government whole-border closure.",
+  "source_checks": [
+    {
+      "url": "https://www.terra.com.br/noticias/brasil/moradores-de-pacaraima-expulsam-imigrantes-venezuelanos,b21d8438498a77f41f1f0dc96553115fxmdg8n2f.html",
+      "access_status": "fresh_source_extract",
+      "finding": "Reuters text reports August 18 demonstrators blocked the international crossing at Pacaraima while people fled on foot. This is a protest approach restriction, not a government whole-border closure."
+    },
+    {
+      "url": "https://www.openstreetmap.org/node/321609940",
+      "access_status": "fresh_full_xml",
+      "finding": "Underlying mapped feature XML inspected; named customs/bridge or border_control identity, coordinates and mode checked.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/6878da03b2ff39c1825a.xml",
+      "source_sha256": "f6182d0a1fc43c452d9ac9e1c1e3a2c514ca8e1059d3296f7d2c586ff147721b"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R14-AM-001-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "crossing-pacaraima",
+          "name": "Pacaraima–Santa Elena de Uairén",
+          "coordinates": [
+            -61.14889,
+            4.48806
+          ],
+          "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/321609940"
+          ],
+          "evidence_note": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/6878da03b2ff39c1825a.xml",
+              "sha256": "f6182d0a1fc43c452d9ac9e1c1e3a2c514ca8e1059d3296f7d2c586ff147721b",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "BR-174 international crossing approach at Pacaraima–Santa Elena",
+      "date_scope_check": {
+        "start_earliest": "2018-08-18",
+        "start_latest": "2018-08-18",
+        "end_earliest": "2018-08-18",
+        "end_latest": "2018-08-19",
+        "last_confirmed": "2018-08-18",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact historical approach blockade footprint remains unlocated."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "3d0b2f2171c408569f2dbb665fa869d2d69892c97819b4c8910244ea314c02ec"
+}

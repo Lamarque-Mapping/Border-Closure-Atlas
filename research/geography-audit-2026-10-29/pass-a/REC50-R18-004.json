@@ -1,0 +1,83 @@
+{
+  "record_id": "REC50-R18-004",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "July 28 report names police clearance at Yacuiba–Salvador Mazza bridge and resumed buses/vehicles in both directions; temporary passages in the canonical phase remain qualified.",
+  "source_checks": [
+    {
+      "url": "https://elpais.bo/tarija/20240728_policias-desbloquean-el-puente-internacional-yacuiba-salvador-mazza.html",
+      "access_status": "fresh_source_extract",
+      "finding": "July 28 report names police clearance at Yacuiba–Salvador Mazza bridge and resumed buses/vehicles in both directions; temporary passages in the canonical phase remain qualified.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-014.json"
+    },
+    {
+      "url": "https://www.argentina.gob.ar/seguridad/pasosinternacionales/detalle/ruta/22/Salvador-Mazza-Yacuiba",
+      "access_status": "fresh_search_extract",
+      "finding": "Official Argentine directory independently identifies road international crossing pair; current opening status is not used as historical closure evidence.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-013.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R18-004-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-yacuiba-salvador-mazza-road",
+          "name": "Yacuiba–Salvador Mazza international road crossing",
+          "coordinates": [
+            -63.6844957,
+            -22.0536907
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1320069205",
+            "https://www.argentina.gob.ar/seguridad/pasosinternacionales/detalle/ruta/22/Salvador-Mazza-Yacuiba"
+          ],
+          "evidence_note": "Named road crossing building on Accseso Puente Internacional. Official Argentine crossing directory identifies the Salvador Mazza–Yacuiba pair. Reference marks Argentine crossing complex, not the separate Yacuiba railway station or exact protest line.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/df7f86b13d1d7bc7deea.xml",
+              "sha256": "5aab5b12bbe1b42b2f84395bbff8608227b094b89d3ed8f450fc9c5fcceceb63",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "2",
+              "osm_timestamp": "2024-10-04T15:18:43Z",
+              "tags": {
+                "addr:city": "Profesor Salvador Mazza",
+                "addr:street": "Accseso Puente Internacional",
+                "building": "yes",
+                "building:levels": "0",
+                "name": "Paso Internacional Profesor Salvador Mazza - Yacuiba",
+                "wheelchair": "yes"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Vehicles including international buses and freight, with documented temporary authorised passage at Yacuiba–Salvador Mazza international bridge",
+      "date_scope_check": {
+        "start_earliest": "2024-07-22",
+        "start_latest": "2024-07-22",
+        "end_earliest": "2024-07-28",
+        "end_latest": "2024-07-28",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact historical bridge/barrier footprint is not reconstructed; marker is the named road crossing complex."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "aba5d26cd99d7fb0fc2f0de604a67839134067f7b61da7f8b869ebf076685017"
+}

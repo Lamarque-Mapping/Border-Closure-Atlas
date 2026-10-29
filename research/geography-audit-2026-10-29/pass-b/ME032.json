@@ -1,0 +1,64 @@
+{
+  "record_id": "ME032",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Bab al-Hawa passenger and lorry traffic during July 2024 unrest; other Turkish-Syrian gates mentioned in Reuters do not attach to this phase.",
+  "source_checks": [
+    {
+      "url": "https://www.reuters.com/world/middle-east/turkey-closes-syria-border-after-violence-flares-both-countries-2024-07-02/",
+      "access_status": "full_text_web",
+      "finding": "Article identifies Bab al-Hawa as main trade/passenger crossing and separately describes Bab al-Salam and smaller gates. Scope is restricted to current Bab al-Hawa phase.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-09.json",
+      "evidence_sha256": "b17973adc9a6401dd558136684759d78ec1a61cdd0dbd1df9292bb4ec32d2b58"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME032-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-bab-al-hawa",
+          "name": "Bab al-Hawa / Cilvegözü",
+          "coordinates": [
+            36.6921911,
+            36.2314664
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/2358493626",
+            "https://www.openstreetmap.org/api/0.6/node/2358493626"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\", \"bicycle\": \"yes\", \"motor_vehicle\": \"yes\", \"name\": \"الحدود باب الهوى\", \"name:en\": \"Bab al-Hawa Border Crossing\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/a4fe81f25e9eae9eac28.html",
+          "evidence_sha256": "4657a82a0fdd3d2c9809517c4cd9dd0981c999b78fe3995fe6abb1bf3f344386",
+          "osm_version": "2",
+          "osm_timestamp": "2017-02-16T03:50:13Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Bab al-Hawa passenger and lorry traffic during July 2024 unrest; other Turkish-Syrian gates mentioned in Reuters do not attach to this phase. Current phase only: Bab al Hawa passenger and lorry restriction during the July unrest, to reported normal operation on July 3.",
+      "date_scope_check": {
+        "start_earliest": "2024-07-01",
+        "start_latest": "2024-07-01",
+        "end_earliest": "2024-07-03",
+        "end_latest": "2024-07-03",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "ME032-D1: Reuters quotes a border official dating closure to late July 1; the July 2 crossing-administration announcement reported by Enab Baladi dates its suspension announcement to July 2. These may describe the Turkish closure and the subsequent Syrian-side notice, so July 1 is retained as the attributed onset, not an independently timed first barrier. The July 3 passenger and lorry restoration is administration-reported. The two-day calendar difference is not measured 48 hours.\n\nOther gates: A July 8 report quotes or summarizes gate administrations announcing restored commercial-truck movement at Bab al Salam and al Rai. SOHR still reported both closed on July 7. Bab al Salam passenger permits were not included in that restoration. No general passenger endpoint or continuous numeric duration is inferred for these gates.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

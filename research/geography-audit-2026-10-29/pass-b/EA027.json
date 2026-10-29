@@ -1,0 +1,89 @@
+{
+  "record_id": "EA027",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Three separate MongCai–Dongxing customs routes: BacLuanI, BacLuanII and Km3+4 pontoon. January10 restoration was cargo customs clearance, not passengers. One verified bridge can represent only part of the phase.",
+  "source_checks": [
+    {
+      "url": "https://en.vietnamplus.vn/customs-clearance-resumed-at-border-gates-crossings-with-china-post220472.vnp",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Ministry report names all three routes and December21 suspension to January10 customs restart.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d4ecce6ab4f52be1e1ee.html",
+      "sha256": "47439c00f594a0cc6e1c48de6feca04cb3cda979ace49840849229e1c68b4652",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d4ecce6ab4f52be1e1ee.txt",
+      "text_sha256": "5800de07eee6c0b34984f42321f958fc355f8b01f4a444a8ec4acc54b53fcb1d",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-4.json"
+    },
+    {
+      "url": "https://www.quangninh.gov.vn/Sites/en-us/Trang/ChiTietTinTuc.aspx?nid=5655",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "QuangNinh provincial account reports trucks cleared through same three routes January10.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-5.json",
+      "sha256": "05c56fbdadac969e9b31a5ee04cf0b53ff113fbf1fdc04bfabf40d684b3f17b8"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/917426003/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named SecondBeilun/BacLuanII bridge outline and2017 opening tag inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3726bf67883b579a6e01.xml",
+      "sha256": "96b7e9012978b32f9b45f25570f56ca9764691f8132f510bce0d71e3ee81ce3e",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3726bf67883b579a6e01.txt",
+      "text_sha256": "96b7e9012978b32f9b45f25570f56ca9764691f8132f510bce0d71e3ee81ce3e",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA027-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-bac-luan-bridge-2",
+          "name": "Bac Luan II / Second Beilun Bridge",
+          "coordinates": [
+            107.9927346,
+            21.5476446
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/917426003/full"
+          ],
+          "evidence_note": "Named bilingual Bac Luan II / Second Beilun road bridge, start_date2017; provincial and ministry reports explicitly include this cargo crossing among three January2022 resumptions.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3726bf67883b579a6e01.xml",
+          "sha256": "96b7e9012978b32f9b45f25570f56ca9764691f8132f510bce0d71e3ee81ce3e"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Three separate MongCai–Dongxing customs routes: BacLuanI, BacLuanII and Km3+4 pontoon. January10 restoration was cargo customs clearance, not passengers. One verified bridge can represent only part of the phase.",
+      "date_scope_check": {
+        "start_earliest": "2021-12-21",
+        "start_latest": "2021-12-21",
+        "end_earliest": "2022-01-10",
+        "end_latest": "2022-01-10",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "One state news origin relaying Vietnamese ministry and Chinese provincial information. Reopening is customs processing, not unrestricted passenger movement."
+      },
+      "unresolved": [
+        "BacLuanI and Km3+4 pontoon coordinates remain unverified; do not label this one bridge complete."
+      ]
+    }
+  ],
+  "unresolved": [
+    "BacLuanI and Km3+4 pontoon coordinates remain unverified; do not label this one bridge complete."
+  ],
+  "input_sha256": "978c55a8ae9413d0dfa81b7c01f4d149d0e369141adbd54c446e3513b7c46593",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

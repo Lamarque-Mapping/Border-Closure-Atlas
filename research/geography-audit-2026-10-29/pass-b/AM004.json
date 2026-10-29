@@ -1,0 +1,71 @@
+{
+  "record_id": "AM004",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Federal suspension of international railway bridge processing at EaglePass andElPaso; separate roadBridge1 suspension not thisphase.",
+  "source_checks": [
+    {
+      "url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/3809945",
+      "access_status": "full_text_web",
+      "finding": "OfficialCBP18Dec2023 bulletin suspends railwaybridges08:00local; roadBridge1 separatelylisted.",
+      "direct_fetch_status": "inaccessible"
+    },
+    {
+      "url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/3816791?reqfrom=share",
+      "access_status": "full_text_web",
+      "finding": "CBP22Dec bulletin resumesrail14:00ET while roadandpedestrianrestrictions remain.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM004-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-eagle-pass-rail",
+          "name": "Eagle Pass–Piedras Negras railway bridge",
+          "coordinates": [
+            -100.50879,
+            28.69653
+          ],
+          "coordinate_method": "OSM-derived Mapcarta bridge geometry representative point",
+          "precision": "approximate rail span, around100m",
+          "source_urls": [
+            "https://mapcarta.com/W1374920650",
+            "https://www.openstreetmap.org/way/1374920650",
+            "https://www.eaglepasstx.gov/DocumentCenter/View/4019"
+          ],
+          "evidence_note": "Named Union Pacific International Railroad Bridge. Municipal permit identifies sole single-track railway bridge used by UPRR and BNSF to Ferromex; distinct from adjacent Camino Real road bridge."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "EaglePass railbridge supported. ElPaso has BNSF/SantaFe andUP spans; exactfullset remains unlocated.",
+      "date_scope_check": "18–22Dec federalprocessing intervalretained; carrierembargoes nottreatedasreopening.",
+      "canonical_dates": {
+        "kind": "closed_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2023-12-18",
+        "start_latest": "2023-12-18",
+        "end_earliest": "2023-12-22",
+        "end_latest": "2023-12-22",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [
+    "ElPaso exact operating railway span(s) unresolved; no roadbridge substituted."
+  ],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/AM004.json",
+  "canonical_input_sha256": "d894613454027b1fb369ab2406b5e820cdf16e580226356fcb622b0084ed2df7",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

@@ -1,0 +1,64 @@
+{
+  "record_id": "AM042",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Andina’s February 11 report explicitly observes reopened Aguas Verdes–Huaquillas urban bridge after February 8–10 election restriction, then describes a separate municipal barrier restricting handcarts. CEBAF handles larger formal freight separately.",
+  "source_checks": [
+    {
+      "url": "https://andina.pe/ingles/noticia-tumbes-reabren-transito-frontera-ecuador-pero-comerciantes-lamentan-restricciones-1018355.aspx",
+      "access_status": "full_text_html",
+      "finding": "Full body states midnight February 11 reopening and distinguishes urban bridge/local commerce from CEBAF.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/627e79656ab5213bb9ee.raw",
+      "sha256": "11f01214ff7bf5cee72420106cc3adb8524094517bec871e2ab9fd1688a81b43"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM042-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-aguas-verdes-huaquillas-old-bridge",
+          "name": "Aguas Verdes–Huaquillas urban international bridge",
+          "coordinates": [
+            -80.243111,
+            -3.481333
+          ],
+          "coordinate_method": "Published DMS coordinate converted to decimal; municipal identity and original reporting independently matched",
+          "precision": "approximate urban bridge area, about 100 m; lower confidence than surveyed official coordinates",
+          "source_urls": [
+            "https://es.wikipedia.org/wiki/Puente_Internacional_Aguas_Verdes-Huaquillas",
+            "https://huaquillas.gob.ec/site/art-turismo/"
+          ],
+          "evidence_note": "Municipal source identifies the city bridge across Zarumilla; named geographical article supplies its coordinate. Andina distinguishes this pedestrian/local-commerce bridge from CEBAF and the new La Paz freight corridor."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Urban international bridge foreign passenger entry only; separate CEBAF/new La Paz corridor excluded.",
+      "date_scope_check": "8–11 February preserved; new municipal handcart obstacle is not an extension of election restriction.",
+      "canonical_dates": {
+        "kind": "closed_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2025-02-08",
+        "start_latest": "2025-02-08",
+        "end_earliest": "2025-02-11",
+        "end_latest": "2025-02-11",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/AM042.json",
+  "canonical_input_sha256": "db194a48884c5a133d5ee65c13743e67f8b47b98e60f109a43ca9c8ed28fb490",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

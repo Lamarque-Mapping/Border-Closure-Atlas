@@ -1,0 +1,73 @@
+{
+  "record_id": "EA022",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Cross-border rail freight on the Khasan–Tumangang Friendship Bridge. The road link proposed later, Khasan station and Tumangang yard are not alternative sites for this phase.",
+  "source_checks": [
+    {
+      "url": "https://interfax.com/newsroom/top-stories/84561/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Far East Railways statement describes first resumed freight train through Khasan–Tumangang, with horses and planned medicine containers.",
+      "error": "HTTP Error 403: Forbidden",
+      "status": 403,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-1.json",
+      "sha256": "713d43ff1e1eb45d508bde26cd06cd37ea58a3e5d9a242dc6a40690ff84c092c"
+    },
+    {
+      "url": "https://www.38north.org/2022/11/first-traffic-observed-on-north-korea-russia-railway-link-in-several-years/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Satellite evidence independently identifies the 800-m railway bridge and distinguishes Khasan station two kilometres away; it does not reveal shipment purpose.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/843a3498805f785edbb6.html",
+      "sha256": "2927f74d3ae4314b85548c9ce805f8d4a9357811bb7a07d7992dba20b41c904f",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/843a3498805f785edbb6.txt",
+      "text_sha256": "88b3834378937006652f99dd16f32609cbc213e7ca745d16223fa40b63316b84",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-2.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA022-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-khasan-tumangang-rail-bridge",
+          "name": "Khasan–Tumangang Korea–Russia rail Friendship Bridge",
+          "coordinates": [
+            130.6401138,
+            42.4146574
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/839066457/full"
+          ],
+          "evidence_note": "OSM named Friendship Bridge outline; satellite-observation article identifies this 800 m bridge as the railway link between Tumangang and Khasan, not the stations two kilometres away.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/bd2eb2c57dcc3d3488aa.xml",
+          "sha256": "9da43213a93a81c7f2398a986d29bb8f290aa813a08a62b7372b9b838b3aa75e"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Cross-border rail freight on the Khasan–Tumangang Friendship Bridge. The road link proposed later, Khasan station and Tumangang yard are not alternative sites for this phase.",
+      "date_scope_check": {
+        "start_earliest": "2020-02-01",
+        "start_latest": "2020-02-29",
+        "end_earliest": "2022-11-01",
+        "end_latest": "2022-11-01",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Freight onset remains month precision; February 3 is the passenger suspension date. November 1 is authority-reported first freight passage, not independently observed imagery; November 4 imagery is later corroboration. Passenger service excluded."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "037ad52f5063bc3497601cc34ac26702232aef7618c1d90334e59002b60eeb35",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

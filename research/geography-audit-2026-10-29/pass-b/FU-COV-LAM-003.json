@@ -1,0 +1,374 @@
+{
+  "record_id": "FU-COV-LAM-003",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "EFE’s October 20 report names the Honduran Agua Caliente checkpoint and temporary closure after the caravan breach. October 23 INM reporting reopens admission only to pre-authorized, pre-checked transporters from Guatemala; Corinto and El Florido remained normal.",
+  "source_checks": [
+    {
+      "url": "https://www.laprensa.hn/honduras/honduras-cierra-frontera-de-agua-caliente-migrantes-caravana-guatemala-IWLP1226482",
+      "access_status": "full_text_web",
+      "finding": "Body reports Honduran temporary closure October 20 following trucks breaching police cordon.",
+      "direct_fetch_status": "inaccessible"
+    },
+    {
+      "url": "https://proceso.hn/reabren-la-aduana-de-agua-caliente-para-entrada-de-transportistas/",
+      "access_status": "full_text_web",
+      "finding": "October 23 article identifies limited transporter admission from Guatemala and explicitly separates Corinto and El Florido.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-LAM-003-FU1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "existing_site_id": "post-agua-caliente-road",
+          "name": "Agua Caliente–Nueva Ocotepeque crossing area",
+          "coordinates": [
+            -89.2830763,
+            14.5313057
+          ],
+          "coordinate_method": "Independent inspection of preserved versioned OSM source metadata; no fresh OSM API retrieval claimed",
+          "precision": "approximate named crossing area; historical obstruction footprint not surveyed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/13099237846",
+            "https://www.openstreetmap.org/way/742745126",
+            "https://www.openstreetmap.org/way/882312803",
+            "https://www.openstreetmap.org/way/1425110754",
+            "https://www.openstreetmap.org/node/3784049876",
+            "https://www.openstreetmap.org/node/3804076609",
+            "https://agn.gt/migracion-anuncia-cierre-temporal-en-puesto-fronterizo-integrado-de-agua-caliente-nueva-ocotepeque/"
+          ],
+          "evidence_note": "Cached OSM CA-10/boundary vertex and separately named Aduana nodes identify the Guatemala–Honduras road complex; historical Honduran checkpoint position is approximate.",
+          "cached_source_metadata": [
+            {
+              "coordinates": [
+                -89.2830763,
+                14.5313057
+              ],
+              "feature_id": "node/13099237846",
+              "licence": "Open Database License (ODbL); OpenStreetMap contributors",
+              "local_evidence": "raw/osm-agua-caliente-area.xml",
+              "response_sha256": "5c2bc75bdcac8ca2f9371a2aad9c97fec071ba5a37633f1bd28704d7ccfb1077",
+              "retrieved": "2026-10-25T09:34:56.091500+00:00",
+              "source_api": "https://api.openstreetmap.org/api/0.6/map?bbox=-89.289,14.527,-89.275,14.540",
+              "source_timestamp": "2025-08-27T00:34:24Z",
+              "tags": {},
+              "url": "https://www.openstreetmap.org/node/13099237846",
+              "version": 1
+            },
+            {
+              "coordinates": null,
+              "feature_id": "way/742745126",
+              "licence": "Open Database License (ODbL); OpenStreetMap contributors",
+              "local_evidence": "raw/osm-agua-caliente-area.xml",
+              "response_sha256": "5c2bc75bdcac8ca2f9371a2aad9c97fec071ba5a37633f1bd28704d7ccfb1077",
+              "retrieved": "2026-10-25T09:34:56.091500+00:00",
+              "source_api": "https://api.openstreetmap.org/api/0.6/map?bbox=-89.289,14.527,-89.275,14.540",
+              "source_timestamp": "2025-08-27T16:16:56Z",
+              "tags": {
+                "highway": "trunk",
+                "lanes": "2",
+                "maxspeed": "80",
+                "name": "Carretera Ocotepeque - Agua Caliente",
+                "ref": "CA-10",
+                "surface": "asphalt"
+              },
+              "url": "https://www.openstreetmap.org/way/742745126",
+              "version": 11
+            },
+            {
+              "coordinates": null,
+              "feature_id": "way/882312803",
+              "licence": "Open Database License (ODbL); OpenStreetMap contributors",
+              "local_evidence": "raw/osm-agua-caliente-area.xml",
+              "response_sha256": "5c2bc75bdcac8ca2f9371a2aad9c97fec071ba5a37633f1bd28704d7ccfb1077",
+              "retrieved": "2026-10-25T09:34:56.091500+00:00",
+              "source_api": "https://api.openstreetmap.org/api/0.6/map?bbox=-89.289,14.527,-89.275,14.540",
+              "source_timestamp": "2025-08-27T00:34:24Z",
+              "tags": {
+                "admin_level": "2",
+                "border_type": "nation",
+                "boundary": "administrative",
+                "layer": "-1",
+                "name": "Quebrada Tecomapa o Agua Caliente",
+                "tunnel": "culvert",
+                "waterway": "river"
+              },
+              "url": "https://www.openstreetmap.org/way/882312803",
+              "version": 3
+            },
+            {
+              "coordinates": null,
+              "feature_id": "way/1425110754",
+              "licence": "Open Database License (ODbL); OpenStreetMap contributors",
+              "local_evidence": "raw/osm-agua-caliente-area.xml",
+              "response_sha256": "5c2bc75bdcac8ca2f9371a2aad9c97fec071ba5a37633f1bd28704d7ccfb1077",
+              "retrieved": "2026-10-25T09:34:56.091500+00:00",
+              "source_api": "https://api.openstreetmap.org/api/0.6/map?bbox=-89.289,14.527,-89.275,14.540",
+              "source_timestamp": "2025-08-27T16:16:58Z",
+              "tags": {
+                "highway": "trunk",
+                "lanes": "2",
+                "maxspeed": "80",
+                "name": "Carretera Ocotepeque - Agua Caliente",
+                "ref": "CA-10",
+                "surface": "asphalt"
+              },
+              "url": "https://www.openstreetmap.org/way/1425110754",
+              "version": 2
+            },
+            {
+              "coordinates": [
+                -89.2790155,
+                14.5351256
+              ],
+              "feature_id": "node/3784049876",
+              "licence": "Open Database License (ODbL); OpenStreetMap contributors",
+              "local_evidence": "raw/osm-agua-caliente-area.xml",
+              "response_sha256": "5c2bc75bdcac8ca2f9371a2aad9c97fec071ba5a37633f1bd28704d7ccfb1077",
+              "retrieved": "2026-10-25T09:34:56.091500+00:00",
+              "source_api": "https://api.openstreetmap.org/api/0.6/map?bbox=-89.289,14.527,-89.275,14.540",
+              "source_timestamp": "2015-10-26T20:08:47Z",
+              "tags": {
+                "barrier": "border_control",
+                "name": "Aduana"
+              },
+              "url": "https://www.openstreetmap.org/node/3784049876",
+              "version": 2
+            },
+            {
+              "coordinates": [
+                -89.2837367,
+                14.5395457
+              ],
+              "feature_id": "node/3804076609",
+              "licence": "Open Database License (ODbL); OpenStreetMap contributors",
+              "local_evidence": "raw/osm-agua-caliente-area.xml",
+              "response_sha256": "5c2bc75bdcac8ca2f9371a2aad9c97fec071ba5a37633f1bd28704d7ccfb1077",
+              "retrieved": "2026-10-25T09:34:56.091500+00:00",
+              "source_api": "https://api.openstreetmap.org/api/0.6/map?bbox=-89.289,14.527,-89.275,14.540",
+              "source_timestamp": "2021-05-11T06:01:32Z",
+              "tags": {
+                "barrier": "border_control",
+                "name": "Aduana"
+              },
+              "url": "https://www.openstreetmap.org/node/3804076609",
+              "version": 2
+            },
+            {
+              "local_evidence": "raw/008-post-and-traffic-identity.json",
+              "note": "Government report identifies the integrated Guatemala–Honduras post; no new timing conclusion.",
+              "response_sha256": "17b91c21dcc420f7e7cdd7b366364a65b74292ca041ba0516eb29ed12eb180bc",
+              "retrieved": "2026-10-25",
+              "source_locator": "lines 127–154",
+              "url": "https://agn.gt/migracion-anuncia-cierre-temporal-en-puesto-fronterizo-integrado-de-agua-caliente-nueva-ocotepeque/",
+              "web_reference": "turn1298view1"
+            }
+          ],
+          "cached_evidence_path": "source/crossings/locations.json",
+          "cached_evidence_sha256": "e4b81d220480cfe8eebe6b5eea093b4ee40789bda62db567470ef81cc8605601"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Honduran Agua Caliente checkpoint only.",
+      "date_scope_check": "October 20 observation retained without invented reopening.",
+      "canonical_dates": {
+        "kind": "bounded_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2018-10-20",
+        "start_latest": "2018-10-20",
+        "end_earliest": "2018-10-20",
+        "end_latest": "2018-10-24",
+        "last_confirmed": "2018-10-20",
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "withheld_unknown_first_endpoint",
+        "policy_only": false
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "FU-COV-LAM-003-C7P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "existing_site_id": "post-agua-caliente-road",
+          "name": "Agua Caliente–Nueva Ocotepeque crossing area",
+          "coordinates": [
+            -89.2830763,
+            14.5313057
+          ],
+          "coordinate_method": "Independent inspection of preserved versioned OSM source metadata; no fresh OSM API retrieval claimed",
+          "precision": "approximate named crossing area; historical obstruction footprint not surveyed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/13099237846",
+            "https://www.openstreetmap.org/way/742745126",
+            "https://www.openstreetmap.org/way/882312803",
+            "https://www.openstreetmap.org/way/1425110754",
+            "https://www.openstreetmap.org/node/3784049876",
+            "https://www.openstreetmap.org/node/3804076609",
+            "https://agn.gt/migracion-anuncia-cierre-temporal-en-puesto-fronterizo-integrado-de-agua-caliente-nueva-ocotepeque/"
+          ],
+          "evidence_note": "Cached OSM CA-10/boundary vertex and separately named Aduana nodes identify the Guatemala–Honduras road complex; historical Honduran checkpoint position is approximate.",
+          "cached_source_metadata": [
+            {
+              "coordinates": [
+                -89.2830763,
+                14.5313057
+              ],
+              "feature_id": "node/13099237846",
+              "licence": "Open Database License (ODbL); OpenStreetMap contributors",
+              "local_evidence": "raw/osm-agua-caliente-area.xml",
+              "response_sha256": "5c2bc75bdcac8ca2f9371a2aad9c97fec071ba5a37633f1bd28704d7ccfb1077",
+              "retrieved": "2026-10-25T09:34:56.091500+00:00",
+              "source_api": "https://api.openstreetmap.org/api/0.6/map?bbox=-89.289,14.527,-89.275,14.540",
+              "source_timestamp": "2025-08-27T00:34:24Z",
+              "tags": {},
+              "url": "https://www.openstreetmap.org/node/13099237846",
+              "version": 1
+            },
+            {
+              "coordinates": null,
+              "feature_id": "way/742745126",
+              "licence": "Open Database License (ODbL); OpenStreetMap contributors",
+              "local_evidence": "raw/osm-agua-caliente-area.xml",
+              "response_sha256": "5c2bc75bdcac8ca2f9371a2aad9c97fec071ba5a37633f1bd28704d7ccfb1077",
+              "retrieved": "2026-10-25T09:34:56.091500+00:00",
+              "source_api": "https://api.openstreetmap.org/api/0.6/map?bbox=-89.289,14.527,-89.275,14.540",
+              "source_timestamp": "2025-08-27T16:16:56Z",
+              "tags": {
+                "highway": "trunk",
+                "lanes": "2",
+                "maxspeed": "80",
+                "name": "Carretera Ocotepeque - Agua Caliente",
+                "ref": "CA-10",
+                "surface": "asphalt"
+              },
+              "url": "https://www.openstreetmap.org/way/742745126",
+              "version": 11
+            },
+            {
+              "coordinates": null,
+              "feature_id": "way/882312803",
+              "licence": "Open Database License (ODbL); OpenStreetMap contributors",
+              "local_evidence": "raw/osm-agua-caliente-area.xml",
+              "response_sha256": "5c2bc75bdcac8ca2f9371a2aad9c97fec071ba5a37633f1bd28704d7ccfb1077",
+              "retrieved": "2026-10-25T09:34:56.091500+00:00",
+              "source_api": "https://api.openstreetmap.org/api/0.6/map?bbox=-89.289,14.527,-89.275,14.540",
+              "source_timestamp": "2025-08-27T00:34:24Z",
+              "tags": {
+                "admin_level": "2",
+                "border_type": "nation",
+                "boundary": "administrative",
+                "layer": "-1",
+                "name": "Quebrada Tecomapa o Agua Caliente",
+                "tunnel": "culvert",
+                "waterway": "river"
+              },
+              "url": "https://www.openstreetmap.org/way/882312803",
+              "version": 3
+            },
+            {
+              "coordinates": null,
+              "feature_id": "way/1425110754",
+              "licence": "Open Database License (ODbL); OpenStreetMap contributors",
+              "local_evidence": "raw/osm-agua-caliente-area.xml",
+              "response_sha256": "5c2bc75bdcac8ca2f9371a2aad9c97fec071ba5a37633f1bd28704d7ccfb1077",
+              "retrieved": "2026-10-25T09:34:56.091500+00:00",
+              "source_api": "https://api.openstreetmap.org/api/0.6/map?bbox=-89.289,14.527,-89.275,14.540",
+              "source_timestamp": "2025-08-27T16:16:58Z",
+              "tags": {
+                "highway": "trunk",
+                "lanes": "2",
+                "maxspeed": "80",
+                "name": "Carretera Ocotepeque - Agua Caliente",
+                "ref": "CA-10",
+                "surface": "asphalt"
+              },
+              "url": "https://www.openstreetmap.org/way/1425110754",
+              "version": 2
+            },
+            {
+              "coordinates": [
+                -89.2790155,
+                14.5351256
+              ],
+              "feature_id": "node/3784049876",
+              "licence": "Open Database License (ODbL); OpenStreetMap contributors",
+              "local_evidence": "raw/osm-agua-caliente-area.xml",
+              "response_sha256": "5c2bc75bdcac8ca2f9371a2aad9c97fec071ba5a37633f1bd28704d7ccfb1077",
+              "retrieved": "2026-10-25T09:34:56.091500+00:00",
+              "source_api": "https://api.openstreetmap.org/api/0.6/map?bbox=-89.289,14.527,-89.275,14.540",
+              "source_timestamp": "2015-10-26T20:08:47Z",
+              "tags": {
+                "barrier": "border_control",
+                "name": "Aduana"
+              },
+              "url": "https://www.openstreetmap.org/node/3784049876",
+              "version": 2
+            },
+            {
+              "coordinates": [
+                -89.2837367,
+                14.5395457
+              ],
+              "feature_id": "node/3804076609",
+              "licence": "Open Database License (ODbL); OpenStreetMap contributors",
+              "local_evidence": "raw/osm-agua-caliente-area.xml",
+              "response_sha256": "5c2bc75bdcac8ca2f9371a2aad9c97fec071ba5a37633f1bd28704d7ccfb1077",
+              "retrieved": "2026-10-25T09:34:56.091500+00:00",
+              "source_api": "https://api.openstreetmap.org/api/0.6/map?bbox=-89.289,14.527,-89.275,14.540",
+              "source_timestamp": "2021-05-11T06:01:32Z",
+              "tags": {
+                "barrier": "border_control",
+                "name": "Aduana"
+              },
+              "url": "https://www.openstreetmap.org/node/3804076609",
+              "version": 2
+            },
+            {
+              "local_evidence": "raw/008-post-and-traffic-identity.json",
+              "note": "Government report identifies the integrated Guatemala–Honduras post; no new timing conclusion.",
+              "response_sha256": "17b91c21dcc420f7e7cdd7b366364a65b74292ca041ba0516eb29ed12eb180bc",
+              "retrieved": "2026-10-25",
+              "source_locator": "lines 127–154",
+              "url": "https://agn.gt/migracion-anuncia-cierre-temporal-en-puesto-fronterizo-integrado-de-agua-caliente-nueva-ocotepeque/",
+              "web_reference": "turn1298view1"
+            }
+          ],
+          "cached_evidence_path": "source/crossings/locations.json",
+          "cached_evidence_sha256": "e4b81d220480cfe8eebe6b5eea093b4ee40789bda62db567470ef81cc8605601"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Pre-authorized freight-driver admission only.",
+      "date_scope_check": "October 23 limited restoration observation; missing onset remains missing.",
+      "canonical_dates": {
+        "kind": "bounded_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2018-10-23",
+        "end_latest": "2018-10-23",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "withheld_unknown_onset",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/FU-COV-LAM-003.json",
+  "canonical_input_sha256": "063647c25d1d6fee499f9fee710d2422f8a72e8bfa9edd356e009183ae09547d",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

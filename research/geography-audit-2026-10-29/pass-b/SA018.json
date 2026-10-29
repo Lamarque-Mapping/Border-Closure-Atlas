@@ -1,0 +1,179 @@
+{
+  "record_id": "SA018",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Attari–Wagah road ICP, with three overlapping scopes: ordinary goods policy, Afghan-cargo first exception, and ordinarytourist transit. Returns,pilgrims,cargoexceptions and ceremony attendance do not end tourist restriction; railway excluded.",
+  "source_checks": [
+    {
+      "url": "https://taxguru.in/custom-duty/attari-check-post-closed-india-pakistan-border-custom-notification.html",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Reproduces April24 MHA memorandum andApril26 customs instruction for passengers/goods atICP, authorisedreturns beforeMay1.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-sa-followup-2.json",
+      "sha256": "00fbde5a11988f2a7c1b1bc12129c8f242ff35ebd52335bab97c4ab2bfc9f8d9"
+    },
+    {
+      "url": "https://www.tribuneindia.com/news/punjab/attari-wagah-check-post-reopens-stranded-afghan-trucks-allowed-entry-after-22-day-closure/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Reports first5Afghan trucks admittedMay16, explicitly says ICP not normally reopened.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-sa-followup-2.json",
+      "sha256": "00fbde5a11988f2a7c1b1bc12129c8f242ff35ebd52335bab97c4ab2bfc9f8d9"
+    },
+    {
+      "url": "https://www.gov.uk/foreign-travel-advice/india/regional-risks",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Official advice explicitly says WagahAttari closed to tourist transit except retreatceremony. No date interval change.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-sa-followup-3.json",
+      "sha256": "816960531e6a17670caaa9708b3bb259e68d18480be25d9c5597e543144251eb"
+    },
+    {
+      "url": "https://www.lpai.gov.in/en/icp-attari",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "OfficialLPAI identifies roadICP and cargo/passenger facilities, distinct fromrailway.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-16.json",
+      "sha256": "c153bac589a9af62818797819484c84a9d2e4208fff6c100bd863359ede686c9"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/11397384982",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Explicitly named AttariWagah border_control node inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/6e0548601f508f6bedbb.xml",
+      "sha256": "249b3bea0803db8fa8efcbac84757eeb4fabdb683e84999dfb234c292fc6e0da",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/6e0548601f508f6bedbb.txt",
+      "text_sha256": "249b3bea0803db8fa8efcbac84757eeb4fabdb683e84999dfb234c292fc6e0da",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SA018-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-attari-wagah-road",
+          "name": "Attari–Wagah road checkpoint",
+          "coordinates": [
+            74.5731088,
+            31.6046353
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/11397384982"
+          ],
+          "evidence_note": "Explicit Attari/Wagah border_control node; LPAI identifies road ICP with cargo and passenger terminal facilities. Road crossing reference only, neither ceremonial attendance nor railway station.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/6e0548601f508f6bedbb.xml",
+          "sha256": "249b3bea0803db8fa8efcbac84757eeb4fabdb683e84999dfb234c292fc6e0da"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Attari–Wagah road ICP, with three overlapping scopes: ordinary goods policy, Afghan-cargo first exception, and ordinarytourist transit. Returns,pilgrims,cargoexceptions and ceremony attendance do not end tourist restriction; railway excluded.",
+      "date_scope_check": {
+        "start_earliest": "2025-04-24",
+        "start_latest": "2025-04-24",
+        "end_earliest": "2025-05-07",
+        "end_latest": "2025-05-07",
+        "last_confirmed": "2025-05-07",
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "SA018-D1: This is an Indian legal-policy segment, not a demonstrated physical-gate interval or bilateral operating status. Announcement, implementing memo and customs-circulation dates differ. Nationality-specific passenger returns are separate; no later goods-policy confirmation is inferred from passenger advice.\n\nSA018-C1: Endpoint is first restricted cargo exception. This operational segment overlaps the existing legal-policy segment and must not be summed with it. No ordinary reopening inferred.\n\nSA018-AUDIT20261026-1: The April 24 implementing order supplies the policy onset. May 2026 reporting explicitly links the still-closed crossing to the post-Pahalgam closure; the fresh FCDO observation confirms ordinary tourist transit remains closed on the review date. The latter is a confirmation date, not a new onset. Nationality-specific returns, exceptional pilgrims, cargo and ceremony attendance are not ordinary tourist reopening. The August 2026 e-Visa-port designation is not evidence that the physical crossing reopened. The three overlapping scopes must not be summed."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "SA018-C1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-attari-wagah-road",
+          "name": "Attari–Wagah road checkpoint",
+          "coordinates": [
+            74.5731088,
+            31.6046353
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/11397384982"
+          ],
+          "evidence_note": "Explicit Attari/Wagah border_control node; LPAI identifies road ICP with cargo and passenger terminal facilities. Road crossing reference only, neither ceremonial attendance nor railway station.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/6e0548601f508f6bedbb.xml",
+          "sha256": "249b3bea0803db8fa8efcbac84757eeb4fabdb683e84999dfb234c292fc6e0da"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Attari–Wagah road ICP, with three overlapping scopes: ordinary goods policy, Afghan-cargo first exception, and ordinarytourist transit. Returns,pilgrims,cargoexceptions and ceremony attendance do not end tourist restriction; railway excluded.",
+      "date_scope_check": {
+        "start_earliest": "2025-04-24",
+        "start_latest": "2025-04-24",
+        "end_earliest": "2025-05-16",
+        "end_latest": "2025-05-16",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "SA018-D1: This is an Indian legal-policy segment, not a demonstrated physical-gate interval or bilateral operating status. Announcement, implementing memo and customs-circulation dates differ. Nationality-specific passenger returns are separate; no later goods-policy confirmation is inferred from passenger advice.\n\nSA018-C1: Endpoint is first restricted cargo exception. This operational segment overlaps the existing legal-policy segment and must not be summed with it. No ordinary reopening inferred.\n\nSA018-AUDIT20261026-1: The April 24 implementing order supplies the policy onset. May 2026 reporting explicitly links the still-closed crossing to the post-Pahalgam closure; the fresh FCDO observation confirms ordinary tourist transit remains closed on the review date. The latter is a confirmation date, not a new onset. Nationality-specific returns, exceptional pilgrims, cargo and ceremony attendance are not ordinary tourist reopening. The August 2026 e-Visa-port designation is not evidence that the physical crossing reopened. The three overlapping scopes must not be summed."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "SA018-AUDIT20261026-1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-attari-wagah-road",
+          "name": "Attari–Wagah road checkpoint",
+          "coordinates": [
+            74.5731088,
+            31.6046353
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/11397384982"
+          ],
+          "evidence_note": "Explicit Attari/Wagah border_control node; LPAI identifies road ICP with cargo and passenger terminal facilities. Road crossing reference only, neither ceremonial attendance nor railway station.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/6e0548601f508f6bedbb.xml",
+          "sha256": "249b3bea0803db8fa8efcbac84757eeb4fabdb683e84999dfb234c292fc6e0da"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Attari–Wagah road ICP, with three overlapping scopes: ordinary goods policy, Afghan-cargo first exception, and ordinarytourist transit. Returns,pilgrims,cargoexceptions and ceremony attendance do not end tourist restriction; railway excluded.",
+      "date_scope_check": {
+        "start_earliest": "2025-04-24",
+        "start_latest": "2025-04-24",
+        "end_earliest": "2026-10-26",
+        "end_latest": "2026-10-26",
+        "last_confirmed": "2026-10-26",
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "SA018-D1: This is an Indian legal-policy segment, not a demonstrated physical-gate interval or bilateral operating status. Announcement, implementing memo and customs-circulation dates differ. Nationality-specific passenger returns are separate; no later goods-policy confirmation is inferred from passenger advice.\n\nSA018-C1: Endpoint is first restricted cargo exception. This operational segment overlaps the existing legal-policy segment and must not be summed with it. No ordinary reopening inferred.\n\nSA018-AUDIT20261026-1: The April 24 implementing order supplies the policy onset. May 2026 reporting explicitly links the still-closed crossing to the post-Pahalgam closure; the fresh FCDO observation confirms ordinary tourist transit remains closed on the review date. The latter is a confirmation date, not a new onset. Nationality-specific returns, exceptional pilgrims, cargo and ceremony attendance are not ordinary tourist reopening. The August 2026 e-Visa-port designation is not evidence that the physical crossing reopened. The three overlapping scopes must not be summed."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "5ff15c49f3f319d4020ba197a2cb4ed6a5c54c38b50f5b2bd2098cfe01016919",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

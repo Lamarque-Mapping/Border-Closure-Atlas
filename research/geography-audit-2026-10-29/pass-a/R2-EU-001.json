@@ -1,0 +1,87 @@
+{
+  "record_id": "R2-EU-001",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Two named road posts on the disputed Kosovo–Serbia boundary. RFE/RL explicitly names Jarinje and Brnjak, road barricades after September 20 plate dispute and October 2 traffic reopening.",
+  "source_checks": [
+    {
+      "url": "https://www.rferl.org/a/kosovo-serbia-border-cleared/31488983.html",
+      "access_status": "fresh_source_extract",
+      "finding": "RFE/RL explicitly names Jarinje and Brnjak, road barricades after September 20 plate dispute and October 2 traffic reopening.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-010.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EU-001-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-jarinje",
+          "name": "Jarinje",
+          "coordinates": [
+            20.69965,
+            43.226642
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM checkpoint compound",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1090470176"
+          ],
+          "evidence_note": "Fresh named OSM checkpoint geometry inspected; road crossing on disputed Kosovo–Serbia boundary. Political status is not adjudicated.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/e550548276a6624ff36e.xml",
+              "sha256": "0b9ff98eb566020b284719d8a5d7dfc54461797599d76e3159d251849aa26edd",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        },
+        {
+          "existing_site_id": "post-brnjak",
+          "name": "Brnjak",
+          "coordinates": [
+            20.548653,
+            42.961697
+          ],
+          "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/4760799314"
+          ],
+          "evidence_note": "Fresh named OSM checkpoint geometry inspected; road crossing on disputed Kosovo–Serbia boundary. Political status is not adjudicated.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fdda20fe4f37634dba3e.xml",
+              "sha256": "930cfec5f78e06d3bdd62084033b226c435a57d807aa506e0cf39d51639ed6b0",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Disputed Kosovo–Serbia boundary; road access to two posts; Road vehicles; pedestrians are documented passing during blockade; Road access in both directions obstructed",
+      "date_scope_check": {
+        "start_earliest": "2021-09-20",
+        "start_latest": "2021-09-20",
+        "end_earliest": "2021-10-02",
+        "end_latest": "2021-10-02",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Access-road barricade extents are not individually located."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "ee750f92bec50a69da9e8ae1ad06385f54e74bb740ef2dceff71b8c2d6e6188b"
+}

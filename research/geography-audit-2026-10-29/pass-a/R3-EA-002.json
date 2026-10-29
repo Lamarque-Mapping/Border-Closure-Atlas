@@ -1,0 +1,90 @@
+{
+  "record_id": "R3-EA-002",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Skouw–Wutung formal road gate; military/immigration security closure of public passage. It is not the whole Indonesia–PNG land boundary.",
+  "source_checks": [
+    {
+      "url": "https://en.antaranews.com/news/134212/ri-png-border-remains-closed-for-security-reason",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Military statement explicitly identifies Skouw–Wutung public closure and normal daily cross-border movement.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-01.json",
+      "sha256": "39920761a4ac61cc29715179e919dbb6d9e6e6b125305439c48de7a852d321e5"
+    },
+    {
+      "url": "https://en.antaranews.com/news/133912/indonesias-skouw-wutung-border-post-temporarily-closed-mily",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://daerah.sindonews.com/berita/1445055/174/pascapenembakan-opm-perbatasan-ri-png-di-skouw-dibuka-besok",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.medcom.id/nasional/daerah/PNgW45PN-ekonomi-di-lintas-batas-ri-png-mati-suri",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EA-002-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-skouw-wutung",
+          "name": "Skouw–Wutung crossing area",
+          "coordinates": [
+            141.0014145,
+            -2.6080862
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/5558126545",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/5558126545",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=140.98,-2.64,141.02,-2.6"
+          ],
+          "evidence_note": "Mapped Papua Niugini customs/border-control node paired with Indonesian customs node on the same road. Antara locates the international crossing in Skouw District, Jayapura; The National names counterpart Wutung, West Sepik.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-skouw.xml",
+          "sha256": "1d9dd3e6d6df28d84425bb15816fa27d74e2501470857c8a563da317096e6fd0",
+          "osm_feature": "node/5558126545",
+          "osm_version": "1",
+          "osm_timestamp": "2018-04-17T01:44:03Z",
+          "identity_tags": {
+            "amenity": "customs",
+            "barrier": "border_control",
+            "name": "Papua Niugini"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Skouw–Wutung public passage in the October gunfire-related closure segment",
+      "date_scope_check": {
+        "scope": "Skouw–Wutung public passage in the October gunfire-related closure segment",
+        "start_earliest": "2019-10-01",
+        "start_latest": "2019-10-01",
+        "end_earliest": "2019-10-06",
+        "end_latest": "2019-10-06",
+        "last_confirmed": "2019-10-06",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "",
+        "assessment": "Antara October 6 confirms this gate remained closed and recounts September 24 start. Retain the canonical separately scoped October gunfire closure segment, rather than merging all unrest chronology."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

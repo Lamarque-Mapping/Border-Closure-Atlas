@@ -1,0 +1,90 @@
+{
+  "record_id": "R4-EA-001",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "PLBN Skouw cross-border services were suspended on the inauguration day; the ordinary gate service is the geographic object, not the presidential route or every PNG boundary post.",
+  "source_checks": [
+    {
+      "url": "https://www.antaranews.com/berita/628203/beranda-pelayanan-di-plbn-skouw-papua-ditutup-sementara",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Provincial official identifies PLBN Skouw and May 9 day of suspension for presidential inauguration.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-01.json",
+      "sha256": "39920761a4ac61cc29715179e919dbb6d9e6e6b125305439c48de7a852d321e5"
+    },
+    {
+      "url": "https://mediaindonesia.com/politik-dan-hukum/103975/jokowi-resmikan-plbn-skouw-di-papua",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://setkab.go.id/sambutan-presiden-joko-widodo-pada-peresmian-pos-lintas-batas-negara-skouw-di-skouw-distrik-muara-tami-jayapura-papua-9-mei-2017/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://mandalika.antaranews.com/berita/629968/pasca-diresmikan-presiden-jokowi-pengunjung-plbn-skouw-meningkat",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-EA-001-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-skouw-wutung",
+          "name": "Skouw–Wutung crossing area",
+          "coordinates": [
+            141.0014145,
+            -2.6080862
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/5558126545",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/5558126545",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=140.98,-2.64,141.02,-2.6"
+          ],
+          "evidence_note": "Mapped Papua Niugini customs/border-control node paired with Indonesian customs node on the same road. Antara locates the international crossing in Skouw District, Jayapura; The National names counterpart Wutung, West Sepik.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-skouw.xml",
+          "sha256": "1d9dd3e6d6df28d84425bb15816fa27d74e2501470857c8a563da317096e6fd0",
+          "osm_feature": "node/5558126545",
+          "osm_version": "1",
+          "osm_timestamp": "2018-04-17T01:44:03Z",
+          "identity_tags": {
+            "amenity": "customs",
+            "barrier": "border_control",
+            "name": "Papua Niugini"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary PLBN Skouw border services during presidential inauguration day",
+      "date_scope_check": {
+        "scope": "Ordinary PLBN Skouw border services during presidential inauguration day",
+        "start_earliest": "2017-05-09",
+        "start_latest": "2017-05-09",
+        "end_earliest": "2017-05-09",
+        "end_latest": "2017-05-09",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "assessment": "Antara May 9 2017 quotes provincial official on no services that day and notice to PNG. This is the existing announced-day window; no >24-hour upgrade or observed reopening is inferred."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,136 @@
+{
+  "record_id": "EA008",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Second Mae Sot–Myawaddy Friendship Bridge cargo route; Thai MFA independently identifies the named bridge and Myanmar-announced closure. Khaosod locates its Thai permanent checkpoint at Ban Wang Takhian Tai and records the May 28 trial truck return.",
+  "source_checks": [
+    {
+      "url": "https://mfa.go.th/en/content/temporary-closure-2nd-thai-myanmar-bridge-en?cate=5d5bcb4e15e39c306000683e",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Thai MFA confirms named Bridge II closure since 18 August 2025 following Myanmar announcement.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-02.json",
+      "sha256": "fdfe0b3f2a7c09d984577c5ea2d78c5a395e60f71145624954377eb23a074e2f"
+    },
+    {
+      "url": "https://www.khaosodenglish.com/news/2026/05/28/mae-sot-myawaddy-border-crossing-shut-by-myanmar-conflict-reopens-after-10-months/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Ban Wang Takhian Tai permanent checkpoint and first Thai cargo-truck crossing on May 28; opening was a trial.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-03.json",
+      "sha256": "4590307200e5168423a081f6a5ce13841c80f788d52665e6784ccd10288609a5"
+    },
+    {
+      "url": "https://elevenmyanmar.com/news/myawady-mae-sot-no-2-cargo-bridge-reopens-for-trade",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/myawaddy-mae-sot-friendship-bridge-no-2-reopens-limited-truck-traffic-resumes-myanmar",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://english.dvb.no/myanmar-thailand-friendship-bridge-no-2-reopens-after-9-month-long-closure/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://elevenmyanmar.com/news/myanmar-temporarily-closes-myawaddy-mae-sot-friendship-bridge-no-2-stranding-over-500-trucks",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.khaosodenglish.com/news/2026/05/28/mae-sot-myawaddy-border-crossing-shut-by-myanmar-conflict-reopens-after-10-months/amp/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://english.dvb.no/thai-myanmar-bridge-remains-closed-as-smuggling-continues-along-asia-highway/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://tna.mcot.net/tna/news/news/list/158802",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.nationthailand.com/business/trade/40066980",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA008-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-mae-sot-myawaddy-bridge-ii",
+          "name": "Mae Sot–Myawaddy Friendship Bridge II crossing area",
+          "coordinates": [
+            98.4949374,
+            16.7254183
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/10543474679",
+          "precision": "Checkpoint-complex reference, approximately 1 km; side-specific barrier position not established.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/10543474679",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=98.49,16.72,98.54,16.76"
+          ],
+          "evidence_note": "OSM Thai name identifies Mae Sot 2 at the distinct northern road port. This marks the Thai checkpoint complex associated with Bridge II, not the exact Myanmar barricade.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-mae-sot-ii.xml",
+          "sha256": "5a58bfb970eea665ee04ed5b54cf28bc767a928ad7030ae6a1503626292d498b",
+          "osm_feature": "node/10543474679",
+          "osm_version": "3",
+          "osm_timestamp": "2026-09-01T13:17:05Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "country": "ไทย",
+            "name": "แม่สอด 2",
+            "name:en": "Mae Sot",
+            "name:ru": "Мэ Сот",
+            "name:th": "แม่สอด 2",
+            "province": "ตาก"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Second Mae Sot Myawaddy Friendship Bridge; Cargo trucks; Cargo across the Myanmar side of the bilateral bridge; closure affected trade in both directions. Initial May 28 reopening observation specifically confirms Myanmar-side truck traffic.",
+      "date_scope_check": {
+        "scope": "Second Mae Sot Myawaddy Friendship Bridge; Cargo trucks; Cargo across the Myanmar side of the bilateral bridge; closure affected trade in both directions. Initial May 28 reopening observation specifically confirms Myanmar-side truck traffic.",
+        "start_earliest": "2025-08-18",
+        "start_latest": "2025-08-18",
+        "end_earliest": "2026-05-28",
+        "end_latest": "2026-05-28",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "MFA confirms effect since 18 August 2025. May 28 2026 reporting describes a first cargo truck and trial operations, not complete restoration of all traffic. Preserve directional and operational qualifications."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

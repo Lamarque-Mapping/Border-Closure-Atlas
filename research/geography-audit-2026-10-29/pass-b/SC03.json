@@ -1,0 +1,91 @@
+{
+  "record_id": "SC03",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Three named road border posts are Kasumbalesa, Mokambo and Sakania. The joint decision is a policy reopening, not proof of synchronized first passage.",
+  "source_checks": [
+    {
+      "url": "https://www.aa.com.tr/en/africa/zambia-democratic-republic-of-congo-agree-to-reopen-borders-tuesday/3302211",
+      "access_status": "full_text_web",
+      "finding": "Anadolu identifies all three gates and ministerial reopening decision.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-02.json",
+      "evidence_sha256": "3567a079bbf515b03e8582faf153e753400dadf0111efb55d2829977a13cde27"
+    },
+    {
+      "url": "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+      "access_status": "full_text_fresh_fetch",
+      "finding": "Kasumbalesa S17 inspected in original Appendix A.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/25782abcef016f49e77a.pdf",
+      "evidence_sha256": "35e1b5d512bfc882baf263b1abe002d0c99331d0b2b8e08fcb0f354ab504cbed"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SC03-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-kasumbalesa",
+          "name": "Kasumbalesa",
+          "coordinates": [
+            27.79587,
+            -12.26492
+          ],
+          "coordinate_method": "Published AU-PIDA illustrative border-post coordinate, independently read in original report Appendix A",
+          "precision": "approximate crossing area; illustrative published marker, not surveyed gate",
+          "source_urls": [
+            "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "PDF page 81, S17; longitude/latitude transcribed in lon,lat order. Report identifies crossing name but does not establish historic operation or exact obstruction.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/25782abcef016f49e77a.pdf",
+          "evidence_sha256": "35e1b5d512bfc882baf263b1abe002d0c99331d0b2b8e08fcb0f354ab504cbed"
+        },
+        {
+          "proposed_site_id": "post-sakania-road",
+          "name": "Sakania / Lukangaba road border office",
+          "coordinates": [
+            28.5408808,
+            -12.8546611
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/11071097105",
+            "https://www.openstreetmap.org/api/0.6/node/11071097105"
+          ],
+          "evidence_note": " OSM tags inspected: {\"alt_name\": \"Poste Frontière de Lukangaba\", \"government\": \"customs\", \"name\": \"Poste Frontière de Sakania\", \"name:en\": \"Sakania Border Office\", \"office\": \"government\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/9ad1a66c5914d70c2135.html",
+          "evidence_sha256": "73fa20886b3e2c726caf9542e667861659cce02c710cdc3031a1667502814f3d",
+          "osm_version": "2",
+          "osm_timestamp": "2025-03-25T10:19:20Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Three named road border posts are Kasumbalesa, Mokambo and Sakania. The joint decision is a policy reopening, not proof of synchronized first passage. Current phase only: Zambia's precautionary closure order for the three named DRC crossings, to the joint reopening decision.",
+      "date_scope_check": {
+        "start_earliest": "2024-08-10",
+        "start_latest": "2024-08-10",
+        "end_earliest": "2024-08-13",
+        "end_latest": "2024-08-13",
+        "last_confirmed": null,
+        "endpoint_status": "legal_effective",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Formal policy dates only. DW's morning Kasumbalesa report does not verify first passage at every post, and 06:00 was an expected time. Actual all-three-post restoration remains unestablished.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Mokambo exact road control not independently located; Sakania road office explicitly distinguished from the town and rail station."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Mokambo exact road control not independently located; Sakania road office explicitly distinguished from the town and rail station."
+  ]
+}

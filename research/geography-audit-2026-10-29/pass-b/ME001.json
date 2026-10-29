@@ -1,0 +1,64 @@
+{
+  "record_id": "ME001",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ordinary non-pilgrimage passage on the sole Salwa–Abu Samra road link; Qatar terminal marker used for crossing area. Temporal disagreement and pilgrimage exceptions remain.",
+  "source_checks": [
+    {
+      "url": "https://www.malaymail.com/news/world/2021/01/09/qatar-saudi-border-reopens-after-thaw/1938906",
+      "access_status": "full_text_web",
+      "finding": "AFP article identifies resumed traffic at Abu Samrah 120 km south of Doha and observed vehicle crossing January 9; not evidence for all-category freight reopening.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-14.json",
+      "evidence_sha256": "8d14c35707c30a7fa3bcfe5b585d8baf73cccb5fbc817942cdfa92ab475d8725"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME001-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-salwa-abu-samra",
+          "name": "Salwa / Abu Samra road crossing",
+          "coordinates": [
+            50.8423954,
+            24.7415083
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1456475677",
+            "https://www.openstreetmap.org/api/0.6/way/1456475677/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"area\": \"yes\", \"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"منفذ أبو سمرة الحدودي\", \"name:ar\": \"منفذ أبو سمرة الحدودي\", \"name:en\": \"Abu Samra Border Post\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/f64fe0c9be104736be74.html",
+          "evidence_sha256": "28966e59160c2e735e13e5817b7008eec5ea9bf6798fbac878752b90dfbacf59",
+          "osm_version": "1",
+          "osm_timestamp": "2025-12-06T12:37:32Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary non-pilgrimage passage on the sole Salwa–Abu Samra road link; Qatar terminal marker used for crossing area. Temporal disagreement and pilgrimage exceptions remain. Current phase only: Ordinary non-pilgrimage passenger passage at Salwa–Abu Samra, to observed vehicle restoration.",
+      "date_scope_check": {
+        "start_earliest": "2017-06-01",
+        "start_latest": "2017-06-30",
+        "end_earliest": "2021-01-09",
+        "end_latest": "2021-01-09",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": true,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "June 2017 onset bounds and January 9, 2021 observed passenger return remain as evidence dates. June 5 freight evidence does not fix the passenger onset. August pilgrimage access was followed by mainly humanitarian passage before renewed December gate closure; the admitted non-pilgrimage cohorts are not sufficiently reconstructed. The previous 1289–1318-day operational calculation is therefore withheld. Diplomatic permission and later cargo return remain separate.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

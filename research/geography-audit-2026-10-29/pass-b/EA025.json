@@ -1,0 +1,63 @@
+{
+  "record_id": "EA025",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Closure of cross-DMZ industrial access to the Kaesong factory zone, chiefly the western inter-Korean road corridor. Dorasan railway station, the factory zone centroid and individual gates are separate physical features.",
+  "source_checks": [
+    {
+      "url": "https://en.yna.co.kr/view/AEN20160211009352315",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Yonhap records South Koreans being ordered out of the industrial zone after Seoul suspended it.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-central-2.json",
+      "sha256": "197a12fc19977c3c7dcdbc387dd23549144fca00f5595b73213ed28fc598a78b"
+    },
+    {
+      "url": "https://www.koreatimes.co.kr/amp/foreignaffairs/northkorea/20260210/s-korea-hopes-for-prompt-reopening-of-inter-korean-factory-zone-in-kaesong-ministry",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Tenth-anniversary ministry account describes the complex still shuttered; no operational reopening is claimed.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-central-2.json",
+      "sha256": "197a12fc19977c3c7dcdbc387dd23549144fca00f5595b73213ed28fc598a78b"
+    },
+    {
+      "url": "https://www.38north.org/2024/10/north-korea-construction-at-the-east-and-west-border-crossings/",
+      "access_status": "substantive_indexed_location_extract",
+      "finding": "Satellite analysis distinguishes the 4.7-km DMZ road section, southern post and northern checkpoint one kilometer beyond its gate; this warns against conflating road and Dorasan rail station.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-5.json",
+      "sha256": "8c62ad1e2c1dca3486683ef133e4bcab39f73c3af8c57c3e48cc9c679df5aa05"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA025-D1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Closure of cross-DMZ industrial access to the Kaesong factory zone, chiefly the western inter-Korean road corridor. Dorasan railway station, the factory zone centroid and individual gates are separate physical features.",
+      "date_scope_check": {
+        "start_earliest": "2016-02-11",
+        "start_latest": "2016-02-11",
+        "end_earliest": "2026-02-10",
+        "end_latest": "2026-02-10",
+        "last_confirmed": "2026-02-10",
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Ordinary cross-border industrial production access only. Diplomatic liaison-office work, facility inspection and invited businessmen's ceremonial visits at Kaesong in 2018 are excluded; they do not establish industrial reopening. The 11 February onset is the reported North Korean closure/expulsion, not a precisely observed final-exit time. No status after 10 February 2026 is inferred."
+      },
+      "unresolved": [
+        "The exact cross-border road-control location tied to industrial access is not yet numerically verified; do not map Dorasan railway station or the factory-zone centroid."
+      ]
+    }
+  ],
+  "unresolved": [
+    "The exact cross-border road-control location tied to industrial access is not yet numerically verified; do not map Dorasan railway station or the factory-zone centroid."
+  ],
+  "input_sha256": "f7305d6a33cf272aee0dc134679c649d19f5f88e60a1a5b1b56150493d1e5869",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

@@ -1,0 +1,72 @@
+{
+  "record_id": "AM050",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Caracol dates Táchira bridge closure from July 25 at 22:00 and names Simón Bolívar among several posts. EFE’s July 29 return account independently observes people crossing Simón Bolívar. Current phase is deliberately limited to that bridge.",
+  "source_checks": [
+    {
+      "url": "https://caracol.com.co/2024/07/26/venezuela-cerro-la-frontera-con-colombia/",
+      "access_status": "full_text_html",
+      "finding": "Full body names bridge and July 25 evening implementation; also names other posts outside this selected phase.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/f9287efb1be834c63fe6.raw",
+      "sha256": "2e5fa12a9ad235675ee46de5d6b8305634e194c460be57956fe283567a11d849"
+    },
+    {
+      "url": "https://www.kienyke.com/mundo/la-frontera-con-colombia-vuelve-la-normalidad-tras-las-elecciones-en-venezuela",
+      "access_status": "full_text_html",
+      "finding": "EFE republication observes July 29 pedestrian return at Simón Bolívar.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/f8e25952c609b6b6cc4a.raw",
+      "sha256": "3b7f09518e1b55a2cb055a9fc9b179a70ea24619090276e619b9cdddf142abc7"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM050-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-simon-bolivar-bridge",
+          "name": "Simón Bolívar international road bridge",
+          "coordinates": [
+            -72.45085,
+            7.81792
+          ],
+          "coordinate_method": "OSM bridge reference coordinates reproduced by Mapcarta",
+          "precision": "approximate bridge area, about 100 m; not customs gate footprint",
+          "source_urls": [
+            "https://mapcarta.com/19864652",
+            "https://www.openstreetmap.org/way/871456442"
+          ],
+          "evidence_note": "Inspected geographical page names OSM way 871456442 as the road bridge over the Táchira linking San Antonio and La Parada; excludes same-name Barranquilla bridge. Original event accounts name the same international bridge."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Only non-exempt vehicle/pedestrian passage at Simón Bolívar; voter/returnee exceptions remain.",
+      "date_scope_check": "25–29 July preserved; do not attach full frontier or other bridges.",
+      "canonical_dates": {
+        "kind": "closed_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2024-07-25",
+        "start_latest": "2024-07-25",
+        "end_earliest": "2024-07-29",
+        "end_latest": "2024-07-29",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/AM050.json",
+  "canonical_input_sha256": "1fc28a16288e2f53d3a536f14a01ae43da5a674e0dc20a0e9828ddfefb5023eb",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

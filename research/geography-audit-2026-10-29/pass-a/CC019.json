@@ -1,0 +1,119 @@
+{
+  "record_id": "CC019",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ordinary Russian-citizen entry through Psou land crossing under Abkhaz pandemic restrictions. The original ministry pages now redirect, but their indexed text distinguishes freight/business/military exceptions and August restoration for Abkhaz and Russian citizens. The later railway station is not used.",
+  "source_checks": [
+    {
+      "url": "https://mfaapsny.org/en/allnews/news/othernews/i-o-prezidenta-podpisal-rasporyazhenie-o-zakrytii-gosudarstvennoy-granitsy-po-reke-psou-dlya-inostra/",
+      "access_status": "redirect_no_article",
+      "finding": "Original ministry article redirected to current homepage; no historical article body recovered in direct open.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-09.json",
+      "sha256": "63dbf845fdafec420a2436be333129dfe6a0445078347c67af1c669a11c1c42c"
+    },
+    {
+      "url": "https://mfaapsny.org/en/allnews/news/othernews/i-o-prezidenta-podpisal-rasporyazhenie-o-zakrytii-gosudarstvennoy-granitsy-po-reke-psou-dlya-inostra/",
+      "access_status": "search_extract",
+      "finding": "Indexed March 28 order restricts foreign entry at Psou, with explicitly listed exceptions.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-12.json",
+      "sha256": "65f5a05db9464ac733e8947947e07f41ac8d18faf449fec76fe546016832eeee"
+    },
+    {
+      "url": "https://mfaapsny.org/en/allnews/news/othernews/kommentariy-konsulskogo-departamenta-mid-abkhazii-/",
+      "access_status": "search_extract",
+      "finding": "Indexed August 3 consular statement identifies Psou admission for Abkhaz/Russian citizens after August 1 order, with third-country limits continuing.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-12.json",
+      "sha256": "65f5a05db9464ac733e8947947e07f41ac8d18faf449fec76fe546016832eeee"
+    },
+    {
+      "url": "https://civil.ge/archives/361234",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 503: Service Unavailable",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://jam-news.net/abkhazia-closes-border-with-russia-to-prevent-spread-of-coronavirus/",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-cc0775c9526721914d.bin",
+      "sha256": "8865cae7fa1dcc9b7eeae65a6849f1e331e7117839acfd94b2636dec55f0aefd"
+    },
+    {
+      "url": "https://civil.ge/archives/361234/amp",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 503: Service Unavailable",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.interfax-russia.ru/military/news_eng/344320",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-d90f88b7ef5bc301b5.bin",
+      "sha256": "90184df45dafda57ba29d060062f4ccfafa6c5b302f325d2cb13ebcca793b6c8"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC019-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-psou-road",
+          "name": "Psou–Adler road and pedestrian crossing complex",
+          "coordinates": [
+            40.0101262,
+            43.3955341
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/941289524",
+          "precision": "Crossing-complex reference, 500 m; road node anchors nearby pedestrian facilities, not every historical lane.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/941289524",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=40.002,43.391,40.013,43.399"
+          ],
+          "evidence_note": "Named Psou road node anchors crossing complex; adjacent separately tagged pedestrian control is about 220 m away. Marker represents this land crossing complex only, not railway Psou stop or all Georgia–Russia border.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-psou-gate.xml",
+          "sha256": "a208d1fc241de7a4025268b66df1fb04479d57a7559dd552e36b370233c58fcb",
+          "osm_feature": "node/941289524",
+          "osm_version": "13",
+          "osm_timestamp": "2025-08-23T20:36:22Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "bicycle": "no",
+            "foot": "no",
+            "horse": "no",
+            "motorcar": "yes",
+            "motorcycle": "yes",
+            "name": "Ԥсоу",
+            "name:ab": "Ԥсоу",
+            "name:en": "Psou",
+            "name:ka": "ფსოუ",
+            "name:ru": "Псоу"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary Russian-citizen entry through Psou under the Abkhaz pandemic restriction.",
+      "date_scope_check": {
+        "scope": "Ordinary Russian-citizen entry through Psou under the Abkhaz pandemic restriction.",
+        "start_earliest": "2020-03-28",
+        "start_latest": "2020-03-28",
+        "end_earliest": "2020-08-01",
+        "end_latest": "2020-08-01",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Preserve canonical March onset and August 1 endpoint for Russian-citizen admission. August 3 ministry statement still excludes third-country travellers under Russian restrictions; this is not all-nationality reopening."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

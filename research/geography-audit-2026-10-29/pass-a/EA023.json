@@ -1,0 +1,100 @@
+{
+  "record_id": "EA023",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Only Rason tourist land entry through Quanhe–Wonjong is selected. Uri explicitly identifies that road gateway; February 13 Koryo entry was staff-only, so it is not the ordinary-tour endpoint.",
+  "source_checks": [
+    {
+      "url": "https://www.uritours.com/blog/coronavirus-north-korea-temporarily-closes-borders/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Operator identifies Quanhe–Wonjong Rason road access and February tourist reopening.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-06.json",
+      "sha256": "681f3829c14d419c1a98c54f0ea371e3deddcd23ce43fe2c99266eabcd4a8408"
+    },
+    {
+      "url": "https://koryogroup.com/blog/north-korea-borders-open-rason",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "February 13 was explicitly a staff-only inspection; tourism not yet open.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-04.json",
+      "sha256": "ba381143dfc17275df3650c505d10165a57a7bffb8c82aa0fe6d15a734eb465d"
+    },
+    {
+      "url": "https://www.youngpioneertours.com/quanhe-wonjong-rason-border/",
+      "access_status": "search_extract",
+      "finding": "Operator guide describes the Quanhe/Wonjong ports and historical bridge used for Rason access.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-06.json",
+      "sha256": "681f3829c14d419c1a98c54f0ea371e3deddcd23ce43fe2c99266eabcd4a8408"
+    },
+    {
+      "url": "https://koryogroup.com/blog/north-korea-borders-to-reopen/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.channelnewsasia.com/east-asia/north-korea-reopens-foreign-tourists-special-economic-zone-pyongyang-closed-4966381",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-8c15336402f990927e.bin",
+      "sha256": "0e6e5b6849c3098edd1d78b121a59078304db948c40beef1b5bdc787b91ccb27"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA023-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-quanhe-wonjong-road",
+          "name": "Quanhe–Wonjong tourist road crossing area",
+          "coordinates": [
+            130.5224671,
+            42.567894
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/931730588",
+          "precision": "Crossing-area reference, 500 m; old/new parallel bridges share this gateway but precise lane used on every date is not established.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/931730588",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=130.5,42.55,130.55,42.59"
+          ],
+          "evidence_note": "OSM name Old Tumen River Bridge/Alte Quanhe-Wonjong-Brücke identifies the historical road crossing. Tour operator explicitly names Quanhe–Wonjong access, and its guide depicts tourists using the old bridge.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-quanhe.xml",
+          "sha256": "a50a834bc3df7e1240b121abe91619b7e99a1350b423daf36f90f84a638ed4de",
+          "osm_feature": "way/931730588",
+          "osm_version": "2",
+          "osm_timestamp": "2025-03-01T12:43:56Z",
+          "identity_tags": {
+            "bridge": "yes",
+            "construction_date": "1938",
+            "highway": "unclassified",
+            "layer": "1",
+            "name:de": "Alte Quanhe-Wonjong-Brücke",
+            "name:en": "Old Tumen River Bridge"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary international land tours to Rason via Quanhe–Wonjong, to the first documented resumed tour group.",
+      "date_scope_check": {
+        "scope": "Ordinary international land tours to Rason via Quanhe–Wonjong, to the first documented resumed tour group.",
+        "start_earliest": "2020-01-22",
+        "start_latest": "2020-01-22",
+        "end_earliest": "2025-02-20",
+        "end_latest": "2025-02-20",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Uri February 20 2025 reports Rason tourism and explicitly names Quanhe–Wonjong; Koryo February 13 staff inspection excluded. Do not apply this endpoint to Pyongyang, air tourists or all DPRK borders."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

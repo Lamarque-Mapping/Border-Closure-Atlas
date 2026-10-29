@@ -1,0 +1,85 @@
+{
+  "record_id": "R2-EU-007",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Two named road posts on the disputed Kosovo–Serbia boundary. September 7 RFE/RL identifies Merdare and Brnjak closed late September 6 and reopened September 7; Jarinje had separate status.",
+  "source_checks": [
+    {
+      "url": "https://www.rferl.org/amp/kosovo-serbia-border-blockade/33110717.html",
+      "access_status": "fresh_source_extract",
+      "finding": "September 7 RFE/RL identifies Merdare and Brnjak closed late September 6 and reopened September 7; Jarinje had separate status.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-010.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EU-007-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "existing_site_id": "post-merdare",
+          "name": "Merdare",
+          "coordinates": [
+            21.243304,
+            42.936672
+          ],
+          "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/13959887212"
+          ],
+          "evidence_note": "Fresh named OSM checkpoint geometry inspected; road crossing on disputed Kosovo–Serbia boundary. Political status is not adjudicated.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/df62ae678cf5b7dbebda.xml",
+              "sha256": "a5ce2017cf7192e6294f83cb1a8606189d95c46f123aced36e4e7d2f1dad670c",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        },
+        {
+          "existing_site_id": "post-brnjak",
+          "name": "Brnjak",
+          "coordinates": [
+            20.548653,
+            42.961697
+          ],
+          "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/4760799314"
+          ],
+          "evidence_note": "Fresh named OSM checkpoint geometry inspected; road crossing on disputed Kosovo–Serbia boundary. Political status is not adjudicated.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fdda20fe4f37634dba3e.xml",
+              "sha256": "930cfec5f78e06d3bdd62084033b226c435a57d807aa506e0cf39d51639ed6b0",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Disputed Kosovo–Serbia boundary; two posts; Traffic through named posts; activists targeted Kosovo-issued documents; Crossing circulation closed; prior activist obstruction selectively affected Kosovo document holders",
+      "date_scope_check": {
+        "start_earliest": "2024-09-06",
+        "start_latest": "2024-09-06",
+        "end_earliest": "2024-09-07",
+        "end_latest": "2024-09-07",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "a72c12ae330ec9c669dad490bd0594d2a1a7c0e532c053dbb8a2ba2a8a31454b"
+}

@@ -1,0 +1,83 @@
+{
+  "record_id": "R2-ME-009",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Additional May 2019 restrictions concern Erez passengers and Kerem Shalom goods; international travellers and power-plant fuel retained as exceptions.",
+  "source_checks": [
+    {
+      "url": "https://www.ochaopt.org/content/protection-civilians-report-23-april-6-may-2019",
+      "access_status": "full_text_web",
+      "finding": "OCHA explicitly distinguishes passenger/goods facilities and international/fuel exceptions.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-01.json",
+      "evidence_sha256": "719b8776d18f867abe3a71e14d2da6c93c54c30a026d42c28f8aa9657f82bc1f"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-ME-009-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "existing_site_id": "post-erez-beit-hanoun",
+          "name": "Erez–Beit Hanoun passenger crossing",
+          "coordinates": [
+            34.54328,
+            31.5582864
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/334719553",
+            "https://www.openstreetmap.org/api/0.6/node/334719553"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\", \"bicycle\": \"no\", \"foot\": \"yes\", \"horse\": \"no\", \"motor_vehicle\": \"private\", \"name\": \"מעבר ארז\", \"name:ar\": \"معبر إيريز\", \"name:en\": \"Erez Crossing\", \"name:fr\": \"Poste-frontière d'Erez\", \"name:he\": \"מעבר ארז\", \"name:ja\": \"エレツ検問所\", \"wikidata\": \"Q2319323\", \"wikipedia\": \"en:Erez Crossing\", \"wikipedia:en\": \"Erez Crossing\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/2c1002ac8c3c2877f1d9.html",
+          "evidence_sha256": "b9217a07895b2c63c5be9e6403df4081a96e5dfef8de385f0bdc853bbf874e28",
+          "osm_version": "29",
+          "osm_timestamp": "2024-04-14T13:58:53Z"
+        },
+        {
+          "existing_site_id": "post-kerem-shalom",
+          "name": "Kerem Shalom–Karm Abu Salem cargo crossing",
+          "coordinates": [
+            34.2695531,
+            31.2212547
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/328444065",
+            "https://www.openstreetmap.org/api/0.6/node/328444065"
+          ],
+          "evidence_note": " OSM tags inspected: {\"alt_name:en\": \"Kerem Abu Salem Crossing\", \"barrier\": \"border_control\", \"motor_vehicle\": \"no\", \"name\": \"מעבר כרם שלום معبر كرم أبو سالم\", \"name:ar\": \"معبر كرم أبو سالم\", \"name:en\": \"Kerem Shalom Crossing\", \"name:fr\": \"Poste-frontière de Kerem Shalom\", \"name:he\": \"מעבר כרם שלום\", \"name:ja\": \"カレム・シャローム検問所\", \"wikidata\": \"Q6393780\", \"wikipedia\": \"en:Kerem Shalom border crossing\", \"wikipedia:en\": \"Kerem Shalom border crossing\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/2e33c643af3d09cc9ce9.html",
+          "evidence_sha256": "25a12ea1415f674ccccd48fe61735538f4d5ba2be8806f0eaab56c1bbf702953",
+          "osm_version": "25",
+          "osm_timestamp": "2026-05-27T15:50:13Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Additional May 2019 restrictions concern Erez passengers and Kerem Shalom goods; international travellers and power-plant fuel retained as exceptions. Current phase only: Additional closure to ordinary permitted passengers at Erez and ordinary goods at Kerem Shalom, excluding documented international-traveller and power-plant-fuel exceptions.",
+      "date_scope_check": {
+        "start_earliest": "2019-05-04",
+        "start_latest": "2019-05-04",
+        "end_earliest": "2019-05-12",
+        "end_latest": "2019-05-12",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "May 12 operation is supported by AFP reporting a COGAT statement and Xinhua reporting Palestinian coordinator Raed Fatouh. OCHA documents exceptions for specific international travellers and power-plant fuel; these must not be represented as a total halt. Exact exception dates and quantities remain unquantified. The interval includes the May 7–9 Memorial/Independence holiday overlap, so it is not eight days of active fighting. Underlying access restrictions continued.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

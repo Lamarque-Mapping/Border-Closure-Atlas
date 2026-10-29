@@ -1,0 +1,85 @@
+{
+  "record_id": "R2-SC-003",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Two road Friendship Gates, Torkham and Chaman, were ordered shut for Afghan parliamentary elections, with emergency exceptions.",
+  "source_checks": [
+    {
+      "url": "https://mofa.gov.pk/afghan-request-for-closure-of-friendship-gates-at-chaman-torkham",
+      "access_status": "substantive_indexed_original_source_extract",
+      "finding": "Foreign Ministry indexed original statement names both gates and all traffic except emergencies on 19–20 October 2018; direct full-page retrieval timed out.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-shared-sites-followup.json",
+      "sha256": "43606795ed26f144d939b5d6f256e2e6d01cc0d6ceeb98491c730f1c7abc2916"
+    },
+    {
+      "url": "https://tribune.com.pk/story/1830756/two-days-hiatus-pak-afghan-border-crossing-torkham-reopened?amp=1",
+      "access_status": "inaccessible_403",
+      "finding": "Reopening article could not be freshly retrieved; accepted endpoint is preserved without claiming a new endpoint verification.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-shared-sites.json",
+      "sha256": "595baaafe4af6e34d545d8e5bebe426b59fe7757452f04862bf5caed42822f16"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-SC-003-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "existing_site_id": "post-torkham",
+          "name": "Torkham",
+          "coordinates": [
+            71.0943599,
+            34.1217551
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/3309508316"
+          ],
+          "evidence_note": "Named Torkham Border node with barrier=border_control; the Foreign Ministry identifies the Friendship Gate at this named crossing.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/158b5edcd2f5edaf6e26.xml",
+          "sha256": "e1c83333ab3bcfd2c9eba0141e06aebe81be29d7c177830adf6cbfdda4d515cd"
+        },
+        {
+          "existing_site_id": "post-chaman-friendship-gate",
+          "name": "Chaman–Spin Boldak Friendship Gate",
+          "coordinates": [
+            66.4383829,
+            30.9548165
+          ],
+          "coordinate_method": "Fresh OSM way geometry checked against preserved crossing-area representative point",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/1018387592/full"
+          ],
+          "evidence_note": "Road-accessible border-control building polygon; independently paired with Chaman–Spin Boldak/Friendship Gate reporting. Crossing-area reference only.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/b657c25e0e661889bbb5.xml",
+          "sha256": "e5eb5f6c774af1362b9e70488cf4e1212e0c948ac8b2d2a2737c173d78eb6c8f"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Two road Friendship Gates, Torkham and Chaman, were ordered shut for Afghan parliamentary elections, with emergency exceptions.",
+      "date_scope_check": {
+        "start_earliest": "2018-10-19",
+        "start_latest": "2018-10-19",
+        "end_earliest": "2018-10-21",
+        "end_latest": "2018-10-21",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Calendar-day boundaries only: exact onset hour is unknown and reported two-and-a-half days is not converted to precise hours. Emergency access was excepted; foot traffic and freight resumed at slightly different times on the same day."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "76fc8ba35942957240b10ab54b6a80a49fddfe423197267ec45ad208876f5cf7",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

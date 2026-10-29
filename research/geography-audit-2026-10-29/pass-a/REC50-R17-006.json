@@ -1,0 +1,111 @@
+{
+  "record_id": "REC50-R17-006",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Ken-Sai–Uch-Kurgan road post must be distinguished from rail stations around Uch-Kurgan and similarly named Uzbekistan–Tajikistan posts. Chronology is contested for earlier intermediate operation; geography is held because the road-gate identity is unresolved.",
+  "source_checks": [
+    {
+      "url": "https://24.kg/english/304889_Ken-Sai_-_Avtodorozhny_checkpoint_resumes_work/",
+      "access_status": "inaccessible",
+      "finding": "Original reopening page returned 403.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-07.json",
+      "sha256": "5cbb6ef8e1dc6a4a8b3507ee58a73a33ffb57ebef5e0089be117fc0d8ff1d2ff"
+    },
+    {
+      "url": "https://www.gov.kg/index.php/ru/post/s/24531-kyrgyzstan-menen-ozbekstandyn-mamlekettik-cek-arasyndagy-kairadan-zanydan-kurulgan-ken-sai-unaazol-zana-uc-kurgan-unaazol-kozomoldoo-otkoruu-punktary-acylyp-isi-zandandy",
+      "access_status": "inaccessible",
+      "finding": "Official reopening page timed out; no new full-text support claimed.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-08.json",
+      "sha256": "77c15724abd029c7c27f0fa1a148f646365243ec002addf72902bd1bbee3f1f0"
+    },
+    {
+      "url": "https://www.azattyqasia.org/a/33117179.html",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-a26d4c617bd70f2e44.bin",
+      "sha256": "d40a6e4092d9247286b1bda03c6c26ecf2796e46ddbbfe89eaf4674c5410e8b5"
+    },
+    {
+      "url": "https://caravanistan.com/border-crossings/kyrgyzstan/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://ucentralasia.edu.kg/media/efknojxr/uca-msri-briefuzbek-kr-border-areasrus.pdf",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://24.kg/obschestvo/304872_kontrolno-propusknoy_punkt_ken-say_avtodorojnyiy_vozobnovil_rabotu/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://caravanistan.com/forum/viewtopic.php?f=9&p=68756&sid=53828b1fe834bada00d847ac5719a187&t=25112",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://ru.archive.kabar.kg/news/na-granitce-kyrgyzstana-i-uzbekistana-otkroetsia-novyi-punkt-propuska-kensai-uchkurgan/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://gov.uz/ru/namangan/news/view/21316",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://caravanistan.com/forum/viewtopic.php?f=9&sid=486fc933535d72f8ab5990fca5487ecc&t=2011",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R17-006-P1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ken-Sai–Uch-Kurgan multilateral road-post traffic restored in September 2024",
+      "date_scope_check": {
+        "scope": "Ken-Sai–Uch-Kurgan multilateral road-post traffic restored in September 2024",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2024-09-12",
+        "end_latest": "2024-09-12",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": [
+        "Fresh vicinity XML did not locate a named Ken-Sai road control; rail stations are rejected substitutes.",
+        "Original official and 24.kg reopening pages inaccessible in this pass; historical continuity remains contested."
+      ]
+    }
+  ],
+  "unresolved": [
+    "No approved point; included phase remains eligible for All view once location is substantiated."
+  ]
+}

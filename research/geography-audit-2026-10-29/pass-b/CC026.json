@@ -1,0 +1,60 @@
+{
+  "record_id": "CC026",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "The through-road connecting Uzbekistan proper at Rishtan to the Sokh enclave traverses Kyrgyzstan and uses two separate road posts, Kaytpas and Otukchu. Passenger restoration excludes freight permission.",
+  "source_checks": [
+    {
+      "url": "https://www.azattyqasia.org/amp/31182172.html",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Russian full text names both Kaytpas and Otukchu, opened on 1 April 2021 for people and passenger vehicles; freight was not yet permitted. It explicitly notes disputed 2019 reopening reporting.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/e07d10bfba50a47aa782.html",
+      "sha256": "5f18253777ece0ebcbe273f150b3dc65a423c0afcbc9094e4e4b0b92ed837032",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/e07d10bfba50a47aa782.txt",
+      "text_sha256": "d00a1781c531a267b5c84431a33cfbee6ccaaeda95230312582a4be95f3d4eb4",
+      "status": 200
+    },
+    {
+      "url": "https://kun.uz/en/news/2021/04/02/road-connecting-rishtan-and-sokh-opened",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Names the Rishtan customs checkpoint and 19-km route, but does not locate both gates numerically.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/137470f0929c00c935ea.html",
+      "sha256": "5525043399a7a78c89ad2cf68ca3f3f7c2e7afcf17839391689cbf649c0239ef",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/137470f0929c00c935ea.txt",
+      "text_sha256": "57251410746e01b7a1dcf6c2bfa345b168844fa1d1d8165c2e8553d808c4a2a7",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC026-FU1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "The through-road connecting Uzbekistan proper at Rishtan to the Sokh enclave traverses Kyrgyzstan and uses two separate road posts, Kaytpas and Otukchu. Passenger restoration excludes freight permission.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2021-04-01",
+        "end_latest": "2021-04-01",
+        "last_confirmed": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Endpoint-only formal reopening; null onset preserves the unresolved 2019 operational sequence and overlapping pandemic restrictions. No assertion of uninterrupted closure or observed first traveller."
+      },
+      "unresolved": [
+        "Both checkpoint identities require independent coordinates; the 19-km road and Rishtan/Sokh town centers are not substitutes."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Both checkpoint identities require independent coordinates; the 19-km road and Rishtan/Sokh town centers are not substitutes."
+  ],
+  "input_sha256": "87c1d0bf1e4b7c6e347424da021e54491866b789da9e4d77f3ba734da00a0c29",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

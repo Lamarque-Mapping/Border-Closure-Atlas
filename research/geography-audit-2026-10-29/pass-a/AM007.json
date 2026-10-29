@@ -1,0 +1,85 @@
+{
+  "record_id": "AM007",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Coutts Alberta road service/access suspension; initial intermittent protests are not merged with the phase starting February 12.",
+  "source_checks": [
+    {
+      "url": "https://www.cbsa-asfc.gc.ca/transparency-transparence/pd-dp/bbp-rpp/dedc/2022-04-26/overview-apercu-eng.html",
+      "access_status": "fresh_source_extract",
+      "finding": "CBSA identifies Emerson, Coutts and Pacific Highway as individually suspended ports; preserved current phase distinguishes dates and exceptions.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/ecd11d196e3b2630b8b9.html",
+      "source_sha256": "0f7aa82bb7d969e1bb3e39497a94bcb42d2a6446ee9bd691a67b20fb3dbd4685",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-005.json"
+    },
+    {
+      "url": "https://www.cbsa-asfc.gc.ca/bwt-taf/?wbdisable=true",
+      "access_status": "fresh_search_extract",
+      "finding": "Official agency lists Emerson/Pembina, Coutts/Sweetgrass and Pacific Highway/Surrey–Blaine, separately from Douglas.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-007.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM007-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-coutts-sweetgrass",
+          "name": "Coutts–Sweetgrass road crossing",
+          "coordinates": [
+            -111.9604833,
+            48.9985896
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/888313980"
+          ],
+          "evidence_note": "Inspected named customs/border-control geometry; official CBSA source identifies this road port and commercial/passenger service suspension. Coutts Alberta road service/access suspension; initial intermittent protests are not merged with the phase starting February 12.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/208ee5ba2c69c9ed758c.xml",
+              "sha256": "f6632051aff6a919cac4f72b6a3ff3e9495e85d18a1710c72f0e37681e73ddb5",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "3",
+              "osm_timestamp": "2023-03-04T12:47:13Z",
+              "tags": {
+                "building": "yes",
+                "government": "customs",
+                "layer": "1",
+                "name": "Coutts Port of Entry",
+                "office": "government",
+                "operator": "Canada Border Services Agency",
+                "website": "https://www.cbsa-asfc.gc.ca/do-rb/offices-bureaux/646-eng.html"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Coutts access/service suspension beginning 12 February, excluding earlier intermittent blockages.",
+      "date_scope_check": {
+        "start_earliest": "2022-02-12",
+        "start_latest": "2022-02-12",
+        "end_earliest": "2022-02-14",
+        "end_latest": "2022-02-15",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Named port is located; complete historical road-access blockade footprint is not reconstructed."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "f0235c06e5f3ea0862e3bbca8536cfa60b488f1dfcb2289533fb492e178cddd4"
+}

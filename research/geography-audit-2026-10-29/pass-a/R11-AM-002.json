@@ -1,0 +1,73 @@
+{
+  "record_id": "R11-AM-002",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Indexed original May 10 La Prensa Gráfica text explicitly places Wednesday truck blockage on El Jobo bridge and Thursday renewed access at Las Chinamas–Valle Nuevo.",
+  "source_checks": [
+    {
+      "url": "https://www.laprensagrafica.com/amp/elsalvador/Se-normaliza-el-paso-de-camiones-en-la-frontera-20190509-0558.html",
+      "access_status": "fresh_search_extract",
+      "finding": "Indexed original May 10 La Prensa Gráfica text explicitly places Wednesday truck blockage on El Jobo bridge and Thursday renewed access at Las Chinamas–Valle Nuevo.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-020.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R11-AM-002-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-el-jobo-road",
+          "name": "El Jobo / Las Chinamas–Valle Nuevo road bridge",
+          "coordinates": [
+            -89.9063621,
+            14.0175268
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1273209369"
+          ],
+          "evidence_note": "Fresh named OSM structure/facility XML inspected; distinct road reference, not nearby town centroid or rail/ferry geometry. Indexed original May 10 La Prensa Gráfica text explicitly places Wednesday truck blockage on El Jobo bridge and Thursday renewed access at Las Chinamas–Valle Nuevo.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/bcb9fe8b80ace284d630.xml",
+              "sha256": "7ed133ff74676c29f6b9448f4b93ac6b592695a719cd6e4938ee710be9dabc92",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "1",
+              "osm_timestamp": "2024-04-16T23:27:46Z",
+              "tags": {
+                "layer": "1",
+                "man_made": "bridge",
+                "name": "Puente El Jobo"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Initial Guatemala-to-El Salvador freight blockage at El Jobo/Las Chinamas–Valle Nuevo, to first demonstrated renewed truck access",
+      "date_scope_check": {
+        "start_earliest": "2019-05-08",
+        "start_latest": "2019-05-08",
+        "end_earliest": "2019-05-08",
+        "end_latest": "2019-05-09",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Named crossing reference located; precise historical obstruction/approach footprint is not reconstructed."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "c1446693d1e996da9c1f1d1de93b1969edf5b39c6a5aa8ce10cf7f12a2604057"
+}

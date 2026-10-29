@@ -1,0 +1,121 @@
+{
+  "record_id": "R2-SC-010",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Kara-Suu/Qorasuv pedestrian crossing in Osh–Andijan frontier. Border Service statement explicitly restricts the September 2024 reopening to Kyrgyz/Uzbek citizens and forbids vehicles/cargo/animals except personal goods.",
+  "source_checks": [
+    {
+      "url": "https://economist.kg/society/2024/09/12/obnovliennyi-punkt-propuska-kara-suu-budiet-rabotat-tolko-dniem-poghranichnaia-sluzhba/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Border Service explains bilateral citizenship, daytime pedestrian-only operation on September 12.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-07.json",
+      "sha256": "5cbb6ef8e1dc6a4a8b3507ee58a73a33ffb57ebef5e0089be117fc0d8ff1d2ff"
+    },
+    {
+      "url": "https://www.iica.uz/en/news/2024/09/12/qorasu-chegara-posti-15-yildan-keyin-qayta-ochildi",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://kun.uz/en/news/2024/09/12/kara-suu-border-crossing-between-uzbekistan-and-kyrgyzstan-reopens-after-14-years-closure",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://24.kg/english/304865_Kara-Suu_checkpoint_opened_on_Kyrgyzstan_-_Uzbekistan_border/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.azattyqasia.org/a/na-kyrgyzsko-uzbekskoy-granitse-otkrylsya-ne-rabotavshiy-s-2010-goda-punkt-propuska-kara-suu-/33117033.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.gov.kg/ru/post/s/24530-kyrgyzstan-menen-ozbekstandyn-mamlekettik-cek-arasyndagy-kara-suu-unaazol-kozomoldoo-otkoruu-punktu-kairadan-iske-kirgizildi",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.rferl.org/a/Checkpoint_On_KyrgyzUzbek_Border_Closed_/1973876.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://russian.eurasianet.org/node/58083",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-SC-010-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kara-suu-qorasuv-foot",
+          "name": "Kara-Suu–Qorasuv pedestrian crossing",
+          "coordinates": [
+            72.8931531,
+            40.7176133
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/1864595511",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1864595511",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=72.86,40.68,72.91,40.73"
+          ],
+          "evidence_note": "OSM explicitly names Kara-Suu Border Crossing, with Qorasuv control opposite; rail station nearby is excluded.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-karasuu.xml",
+          "sha256": "8b6030049d58ca7a4c33f862bc819f68cc64d908ba159ab8b843e4f7d168fe12",
+          "osm_feature": "node/1864595511",
+          "osm_version": "5",
+          "osm_timestamp": "2026-03-24T08:34:18Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "\"Кара-Суу\" өткөрүү пункту",
+            "name:en": "Kara-Suu Border Crossing",
+            "name:ky": "\"Кара-Суу\" өткөрүү пункту",
+            "name:ru": "Пункт пропуска Кара-Суу",
+            "source": "https://kun.uz/en/news/2024/09/07/kyrgyzstan-and-uzbekistan-to-reopen-kara-suu-border-crossing-after-14-year-closure"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kara-Suu/Korasuv checkpoint, limited to ordinary pedestrian passage by citizens of Kyrgyzstan and Uzbekistan that was restored on 12 September 2024",
+      "date_scope_check": {
+        "scope": "Kara-Suu/Korasuv checkpoint, limited to ordinary pedestrian passage by citizens of Kyrgyzstan and Uzbekistan that was restored on 12 September 2024",
+        "start_earliest": "2010-02-06",
+        "start_latest": "2010-03-01",
+        "end_earliest": "2024-09-12",
+        "end_latest": "2024-09-12",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "September 12 2024 daytime pedestrian restoration supported by original report. Preserve bounded evolving February/March 2010 onset and returnee exception; not all traffic restoration."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

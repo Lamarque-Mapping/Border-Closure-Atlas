@@ -1,0 +1,71 @@
+{
+  "record_id": "R2-SC-001",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The July 2018 election order names exactly Chaman and Kharlachi; Torkham is explicitly left open.",
+  "source_checks": [
+    {
+      "url": "https://www.app.com.pk/national/pak-afghan-border-at-chaman-kharlachi-to-be-closed-on-july-24-25-fo/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "APP quotes the Foreign Office naming Chaman and Kharlachi for July 24–25, while exempting Torkham.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-shared-sites-followup.json",
+      "sha256": "43606795ed26f144d939b5d6f256e2e6d01cc0d6ceeb98491c730f1c7abc2916"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-SC-001-R1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-chaman-friendship-gate",
+          "name": "Chaman–Spin Boldak Friendship Gate",
+          "coordinates": [
+            66.4383829,
+            30.9548165
+          ],
+          "coordinate_method": "Fresh OSM way geometry checked against preserved crossing-area representative point",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/1018387592/full"
+          ],
+          "evidence_note": "Road-accessible border-control building polygon; independently paired with Chaman–Spin Boldak/Friendship Gate reporting. Crossing-area reference only.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/b657c25e0e661889bbb5.xml",
+          "sha256": "e5eb5f6c774af1362b9e70488cf4e1212e0c948ac8b2d2a2737c173d78eb6c8f"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "The July 2018 election order names exactly Chaman and Kharlachi; Torkham is explicitly left open.",
+      "date_scope_check": {
+        "start_earliest": "2018-07-24",
+        "start_latest": "2018-07-24",
+        "end_earliest": "2018-07-25",
+        "end_latest": "2018-07-25",
+        "last_confirmed": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Foreign Office schedule covers July 24 and July 25 inclusively; clock times unspecified. Tribune and The News separately give conflicting July 26 security-official wording. No actual reopening established; Torkham excluded."
+      },
+      "unresolved": [
+        "Kharlachi checkpoint coordinate not verified; village and fort hits are rejected. Complete two-site coverage is not achieved."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Kharlachi checkpoint coordinate not verified; village and fort hits are rejected. Complete two-site coverage is not achieved."
+  ],
+  "input_sha256": "4044e5178d0ac76605d0168bdae920d5c516673a4a5c5107c184e453b7c62d6f",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted.",
+  "additional_evidence": [
+    {
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-crossings-2.json",
+      "sha256": "30f9fe06689128f941146c01ae34b0f35fb1e181c560ef0ae507902be468103e"
+    }
+  ]
+}

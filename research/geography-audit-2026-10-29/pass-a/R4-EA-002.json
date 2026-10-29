@@ -1,0 +1,69 @@
+{
+  "record_id": "R4-EA-002",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The announced April 17 election suspension applies only to PLBN Skouw gate until 14:00 WIT. Urgent and sick travellers could cross; no full-day, total or frontier-wide interpretation.",
+  "source_checks": [
+    {
+      "url": "https://cenderawasihpos.jawapos.com/metropolis/10/04/2019/pemilu-plbn-skouw-ditutup/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Jayapura border official announces PLBN Skouw gate closure until 14:00 WIT with urgent/medical exceptions.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-02.json",
+      "sha256": "fdfe0b3f2a7c09d984577c5ea2d78c5a395e60f71145624954377eb23a074e2f"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-EA-002-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-skouw-wutung",
+          "name": "Skouw–Wutung crossing area",
+          "coordinates": [
+            141.0014145,
+            -2.6080862
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/5558126545",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/5558126545",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=140.98,-2.64,141.02,-2.6"
+          ],
+          "evidence_note": "Mapped Papua Niugini customs/border-control node paired with Indonesian customs node on the same road. Antara locates the international crossing in Skouw District, Jayapura; The National names counterpart Wutung, West Sepik.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-skouw.xml",
+          "sha256": "1d9dd3e6d6df28d84425bb15816fa27d74e2501470857c8a563da317096e6fd0",
+          "osm_feature": "node/5558126545",
+          "osm_version": "1",
+          "osm_timestamp": "2018-04-17T01:44:03Z",
+          "identity_tags": {
+            "amenity": "customs",
+            "barrier": "border_control",
+            "name": "Papua Niugini"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "PLBN Skouw election-day ordinary gate passage",
+      "date_scope_check": {
+        "scope": "PLBN Skouw election-day ordinary gate passage",
+        "start_earliest": "2019-04-17",
+        "start_latest": "2019-04-17",
+        "end_earliest": "2019-04-17",
+        "end_latest": "2019-04-17",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "assessment": "Original local report specifies April 17 2019 until 14:00 WIT and emergency exceptions; keep announced_window_layer_only and do not infer observed execution or more than 24 hours."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

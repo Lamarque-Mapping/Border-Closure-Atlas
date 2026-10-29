@@ -1,0 +1,76 @@
+{
+  "record_id": "R14-AM-001",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Reuters identifies the Pacaraima international road crossing blocked by residents on 18 August 2018. People also fled on foot; the point cannot imply all foot passage stopped.",
+  "source_checks": [
+    {
+      "url": "https://www.terra.com.br/noticias/brasil/moradores-de-pacaraima-expulsam-imigrantes-venezuelanos,b21d8438498a77f41f1f0dc96553115fxmdg8n2f.html",
+      "access_status": "full_text_web",
+      "finding": "Reuters body names Pacaraima, describes video evidence of the sole crossing blocked and dates the incident 18 August 2018.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R14-AM-001-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-pacaraima",
+          "name": "Pacaraima–Santa Elena de Uairén",
+          "coordinates": [
+            -61.14889,
+            4.48806
+          ],
+          "coordinate_method": "Independent inspection of preserved versioned OSM source metadata; no fresh OSM API retrieval claimed",
+          "precision": "approximate named crossing area; historical obstruction footprint not surveyed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/321609940"
+          ],
+          "evidence_note": "Preserved OSM node 321609940 v5 is a border_control with motorcar and foot access, rather than the town centroid. Reuters identifies the only international crossing at Pacaraima. The 18 August road protest is not the earlier judicial closure.",
+          "cached_source_metadata": [
+            {
+              "evidence": "Direct OSM API response inspected: {\"barrier\": \"border_control\", \"bicycle\": \"yes\", \"foot\": \"yes\", \"motorcar\": \"yes\", \"motorcycle\": \"yes\", \"opening_hours\": \"06:00-22:00\"}",
+              "feature_id": "node/321609940",
+              "licence": "Open Database License (ODbL); © OpenStreetMap contributors",
+              "local_evidence": "pacaraima_osm_map.xml",
+              "retrieved": "2026-10-22",
+              "source_timestamp": "2018-03-15T16:26:33Z",
+              "title": "OSM node 321609940",
+              "url": "https://www.openstreetmap.org/node/321609940",
+              "version": "5"
+            }
+          ],
+          "cached_evidence_path": "source/crossings/locations.json",
+          "cached_evidence_sha256": "e4b81d220480cfe8eebe6b5eea093b4ee40789bda62db567470ef81cc8605601"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "BR-174 crossing approach only; not a national legal ban or exact barricade position.",
+      "date_scope_check": "18 August observation retained; no reopening date inferred.",
+      "canonical_dates": {
+        "kind": "bounded_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2018-08-18",
+        "start_latest": "2018-08-18",
+        "end_earliest": "2018-08-18",
+        "end_latest": "2018-08-19",
+        "last_confirmed": "2018-08-18",
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "withheld_exact_duration",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R14-AM-001.json",
+  "canonical_input_sha256": "3d0b2f2171c408569f2dbb665fa869d2d69892c97819b4c8910244ea314c02ec",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

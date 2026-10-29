@@ -1,0 +1,76 @@
+{
+  "record_id": "R4-AM-003",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Guyana March 27 official release confirms cross-border travel suspension; separate original Lethem report and named Takutu bridge geography delimit this record to Bonfim–Lethem.",
+  "source_checks": [
+    {
+      "url": "https://dpi.gov.gy/ministry-of-foreign-affairs-press-release/",
+      "access_status": "fresh_source_extract",
+      "finding": "Guyana March 27 official release confirms cross-border travel suspension; separate original Lethem report and named Takutu bridge geography delimit this record to Bonfim–Lethem.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/829fc4919ebfa5cb106a.html",
+      "source_sha256": "42f4fd8394b0aaacd22ab018c81e3d4459456ad2b1c812a10de85e514f1ac027",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-019.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-AM-003-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-takutu-road",
+          "name": "Takutu / Bonfim–Lethem international road bridge",
+          "coordinates": [
+            -59.8112218,
+            3.3806923
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/795402728"
+          ],
+          "evidence_note": "Fresh named OSM structure/facility XML inspected; distinct road reference, not nearby town centroid or rail/ferry geometry. Guyana March 27 official release confirms cross-border travel suspension; separate original Lethem report and named Takutu bridge geography delimit this record to Bonfim–Lethem.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/331ae29a98f4fc72fc93.xml",
+              "sha256": "bc8e83ac7293ade5f4612a71854e003047188f287fdf606c110f8a0313533485",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "2",
+              "osm_timestamp": "2022-01-03T18:38:43Z",
+              "tags": {
+                "layer": "1",
+                "man_made": "bridge",
+                "name": "Brazil / Guyana International Bridge",
+                "name:pt": "Ponte Internacional Brasil / Guiana"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Guyana's restricted ordinary-travel regime at Lethem–Bonfim, ending here at added Friday personal-travel access",
+      "date_scope_check": {
+        "start_earliest": "2020-03-01",
+        "start_latest": "2020-03-27",
+        "end_earliest": "2021-10-01",
+        "end_latest": "2021-10-01",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Named crossing reference located; precise historical obstruction/approach footprint is not reconstructed."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "22cc2dc7dde099cbda577da3f008ad15755a4b2a724f33e1ba146824ddde63b1"
+}

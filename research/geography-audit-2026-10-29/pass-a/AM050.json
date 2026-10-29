@@ -1,0 +1,76 @@
+{
+  "record_id": "AM050",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Single named Simón Bolívar bridge phase. The national election order does not expand this operational observation to all Venezuela–Colombia posts.",
+  "source_checks": [
+    {
+      "url": "https://www.kienyke.com/mundo/la-frontera-con-colombia-vuelve-la-normalidad-tras-las-elecciones-en-venezuela",
+      "access_status": "fresh_source_extract",
+      "finding": "July 30 EFE account explicitly describes Simón Bolívar bridge traffic returning Monday July 29. Vehicles and pedestrians are distinguished from exempt voters/returnees.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/f8e25952c609b6b6cc4a.html",
+      "source_sha256": "3b7f09518e1b55a2cb055a9fc9b179a70ea24619090276e619b9cdddf142abc7",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-008.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM050-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-simon-bolivar-road",
+          "name": "Simón Bolívar international road bridge",
+          "coordinates": [
+            -72.450854,
+            7.8179153
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/871456442"
+          ],
+          "evidence_note": "Named OSM bridge across Táchira River between San Antonio del Táchira and La Parada; no substitution of the Francisco de Paula Santander or Atanasio Girardot bridges.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fc7c61ad8e72edc57152.xml",
+              "sha256": "b8a9fa4f8f15575fd029e2ab1515a443b0ccad9b09fcb001d5f3b987d5abd9a0",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "6",
+              "osm_timestamp": "2025-11-21T13:12:51Z",
+              "tags": {
+                "layer": "1",
+                "man_made": "bridge",
+                "name": "Puente Internacional Simón Bolívar",
+                "wikidata": "Q3396757",
+                "wikimedia_commons": "Category:Puente Internacional Simón Bolívar",
+                "wikipedia": "es:Puente Internacional Simón Bolívar"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary non-exempt vehicle and pedestrian circulation at Simón Bolívar bridge; authorised voter/returnee movements excluded",
+      "date_scope_check": {
+        "start_earliest": "2024-07-25",
+        "start_latest": "2024-07-25",
+        "end_earliest": "2024-07-29",
+        "end_latest": "2024-07-29",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "1fc28a16288e2f53d3a536f14a01ae43da5a674e0dc20a0e9828ddfefb5023eb"
+}

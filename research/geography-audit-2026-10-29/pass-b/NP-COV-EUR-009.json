@@ -1,0 +1,241 @@
+{
+  "record_id": "NP-COV-EUR-009",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The July 27 2026 reports independently distinguish Kapshticë reopening after the early strike, Kakavijë’s later interval, and four-hour suspensions at Qafë Botë and Tre Urat. Clock disagreement at Kapshticë remains visible.",
+  "source_checks": [
+    {
+      "url": "https://abcnews.al/perfundon-greva-e-doganiereve-greke-rinis-levizja-e-mjeteve-ne-kapshtice-radhe-te-gjata-ne-kakavije/",
+      "access_status": "full_text_web",
+      "finding": "ABC full text reports 04:00–09:00 Albanian time at Kapshticë and renewed bidirectional vehicle movement.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/c601068f9b31f172a499.raw",
+      "sha256": "66266b89caa3802b08af7d502996780094a75eb0492d92401c75a00c65f15af2"
+    },
+    {
+      "url": "https://shqiptarja.com/lajm/greva-ne-greqi-pezullohet-puna-per-4-ore-ne-4-dogana-shqiptare?r=pop5h",
+      "access_status": "full_text_web",
+      "finding": "Shqiptarja reports 05:00–09:00 Kapshticë, 07:00–11:00 Kakavijë, and four-hour stoppages at Qafë Botë and Tre Urat.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-EUR-009-P01",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "existing_site_id": "post-kapshtica-krystallopigi",
+          "name": "Kapshticë–Krystallopigi road crossing area",
+          "coordinates": [
+            21.0588186,
+            40.6233574
+          ],
+          "coordinate_method": "Independent inspection of preserved versioned OSM source metadata; no fresh OSM API retrieval claimed",
+          "precision": "approximate named crossing area; historical obstruction footprint not surveyed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1953023038",
+            "https://www.openstreetmap.org/node/295966541"
+          ],
+          "evidence_note": "Cached source node 1953023038 is border_control; adjacent node 295966541 explicitly names Border Station Krystallopigi and fixes identity.",
+          "cached_source_metadata": [
+            {
+              "coordinates": [
+                21.0588186,
+                40.6233574
+              ],
+              "feature_id": "node/1953023038",
+              "licence": "Open Database License (ODbL); OpenStreetMap contributors",
+              "local_evidence": "raw/osm-kapshtica-area.xml",
+              "response_sha256": "55581eb2454fd073686f8c4b5046a706332f8cac1aff105c66e5246476eda522",
+              "retrieved": "2026-10-25",
+              "source_api": "https://api.openstreetmap.org/api/0.6/map?bbox=21.048,40.617,21.063,40.629",
+              "source_timestamp": "2013-09-01T23:36:43Z",
+              "tags": {
+                "barrier": "border_control"
+              },
+              "url": "https://www.openstreetmap.org/node/1953023038",
+              "version": 2
+            },
+            {
+              "coordinates": [
+                21.0582818,
+                40.6232987
+              ],
+              "feature_id": "node/295966541",
+              "licence": "Open Database License (ODbL); OpenStreetMap contributors",
+              "local_evidence": "raw/osm-kapshtica-area.xml",
+              "response_sha256": "55581eb2454fd073686f8c4b5046a706332f8cac1aff105c66e5246476eda522",
+              "retrieved": "2026-10-25",
+              "source_api": "https://api.openstreetmap.org/api/0.6/map?bbox=21.048,40.617,21.063,40.629",
+              "source_timestamp": "2023-11-01T16:42:24Z",
+              "tags": {
+                "amenity": "police",
+                "name": "Συνοριακός Σταθμός Κρυσταλλοπηγή",
+                "name:bg": "ГКПП Смърдеш",
+                "name:de": "Grenzübergang Krystallopigi",
+                "name:el": "Συνοριακός Σταθμός Κρυσταλλοπηγή",
+                "name:en": "Border Station Krystallopigi"
+              },
+              "url": "https://www.openstreetmap.org/node/295966541",
+              "version": 9
+            }
+          ],
+          "cached_evidence_path": "source/crossings/locations.json",
+          "cached_evidence_sha256": "e4b81d220480cfe8eebe6b5eea093b4ee40789bda62db567470ef81cc8605601"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kapshticë road post only.",
+      "date_scope_check": "27 July same-day; differing source clocks not harmonized.",
+      "canonical_dates": {
+        "kind": "same_day",
+        "measure_type": "operational_spell",
+        "start_earliest": "2026-07-27",
+        "start_latest": "2026-07-27",
+        "end_earliest": "2026-07-27",
+        "end_latest": "2026-07-27",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "same_day_no_elapsed_duration",
+        "policy_only": false
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "NP-COV-EUR-009-P02",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "existing_site_id": "post-kakavija-kakavia",
+          "name": "Kakavija–Kakavia road crossing area",
+          "coordinates": [
+            20.3569412,
+            39.9125264
+          ],
+          "coordinate_method": "Independent inspection of preserved versioned OSM source metadata; no fresh OSM API retrieval claimed",
+          "precision": "approximate named crossing area; historical obstruction footprint not surveyed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1441315814",
+            "https://www.openstreetmap.org/way/399555468"
+          ],
+          "evidence_note": "Cached source node 1441315814 v6 explicitly names Kakavia with hgv/vehicle access; associated named Dogana e Kakavijës building confirms road customs identity.",
+          "cached_source_metadata": [
+            {
+              "coordinates": [
+                20.3569412,
+                39.9125264
+              ],
+              "feature_id": "node/1441315814",
+              "licence": "Open Database License (ODbL); OpenStreetMap contributors",
+              "local_evidence": "raw/osm-kakavija-area.xml",
+              "response_sha256": "4b386b7685b8017f7f7a01eef8838500ec624e34533d259e70bee6c9d9849d29",
+              "retrieved": "2026-10-25",
+              "source_api": "https://api.openstreetmap.org/api/0.6/map?bbox=20.35,39.904,20.362,39.916",
+              "source_timestamp": "2026-05-08T00:09:11Z",
+              "tags": {
+                "access": "yes",
+                "agricultural": "yes",
+                "barrier": "border_control",
+                "bicycle": "yes",
+                "contact:website": "http://www.dogana.gov.al/sq/node/619",
+                "email": "zvdrejtoradministrativ@dogana.gov.al;burime.njerezore@dogana.gov.al;procedura@dogana.gov.al;s_tarifa@dogana.gov.al;juridiku@dogana.gov.al;zvdrejtorakcize@dogana.gov.al",
+                "emergency": "yes",
+                "foot": "yes",
+                "goods": "yes",
+                "hgv": "yes",
+                "horse": "yes",
+                "motor_vehicle": "yes",
+                "motorcar": "yes",
+                "motorcycle": "yes",
+                "name": "Kakavia",
+                "phone": "+355 42 259 044;+355 42 259 042;+355 42 256 546;+355 42 25 3820;+355 42 243 919",
+                "source": "bing;survey;gps",
+                "source_ref:url": "https://www.flickr.com/photos/134902422@N04/map?&fLat=41.9559&fLon=19.4337&zl=11&order_by=recent",
+                "tourist_bus": "yes",
+                "vehicle": "yes",
+                "website": "https://www.dogana.gov.al/"
+              },
+              "url": "https://www.openstreetmap.org/node/1441315814",
+              "version": 6
+            },
+            {
+              "coordinates": null,
+              "feature_id": "way/399555468",
+              "licence": "Open Database License (ODbL); OpenStreetMap contributors",
+              "local_evidence": "raw/osm-kakavija-area.xml",
+              "response_sha256": "4b386b7685b8017f7f7a01eef8838500ec624e34533d259e70bee6c9d9849d29",
+              "retrieved": "2026-10-25",
+              "source_api": "https://api.openstreetmap.org/api/0.6/map?bbox=20.35,39.904,20.362,39.916",
+              "source_timestamp": "2023-08-28T13:23:02Z",
+              "tags": {
+                "area": "yes",
+                "barrier": "border_control",
+                "building": "yes",
+                "name": "Dogana e Kakavijës"
+              },
+              "url": "https://www.openstreetmap.org/way/399555468",
+              "version": 2
+            }
+          ],
+          "cached_evidence_path": "source/crossings/locations.json",
+          "cached_evidence_sha256": "e4b81d220480cfe8eebe6b5eea093b4ee40789bda62db567470ef81cc8605601"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kakavijë road post only.",
+      "date_scope_check": "27 July same-day preserved.",
+      "canonical_dates": {
+        "kind": "same_day",
+        "measure_type": "operational_spell",
+        "start_earliest": "2026-07-27",
+        "start_latest": "2026-07-27",
+        "end_earliest": "2026-07-27",
+        "end_latest": "2026-07-27",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "same_day_no_elapsed_duration",
+        "policy_only": false
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "NP-COV-EUR-009-P03",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Qafë Botë and Tre Urat",
+      "date_scope_check": "Existing dates, uncertainty and duration eligibility retained. Geography remains held pending the identified evidence gap.",
+      "canonical_dates": {
+        "kind": "same_day",
+        "measure_type": "operational_spell",
+        "start_earliest": "2026-07-27",
+        "start_latest": "2026-07-27",
+        "end_earliest": "2026-07-27",
+        "end_latest": "2026-07-27",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "same_day_no_elapsed_duration",
+        "policy_only": false
+      },
+      "unresolved": [
+        "Two named posts confirmed historically, but Qafë Botë and Tre Urat coordinates require independent geographic evidence."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/NP-COV-EUR-009.json",
+  "canonical_input_sha256": "1740be4a8a70399f6cd5178835d0a0630fc13907bcb6ff6151778b2541bfc049",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

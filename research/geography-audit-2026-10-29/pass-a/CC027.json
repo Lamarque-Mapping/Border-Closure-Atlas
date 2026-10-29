@@ -1,0 +1,224 @@
+{
+  "record_id": "CC027",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The March 1 2018 announcement distinguishes eight road posts from the separately reopened Amuzang railway. Five named road complexes are independently identified in fresh OSM and paired by the official Uzbek trade directory. Candidate controls near Kushkent, Uchturgan and Ravat are unnamed; their precise identity is not yet corroborated sufficiently.",
+  "source_checks": [
+    {
+      "url": "https://www.uzdaily.uz/en/nine-checkpoints-at-uzbek-tajik-border-opened/",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "MFA announcement enumerates eight road posts and Amuzang rail separately.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-d7fc17d488b8954b60.bin",
+      "sha256": "d0a0ec3204fb580298b099d3fb8b5664dbb984a12bdadaf42a43e50821171126"
+    },
+    {
+      "url": "https://en.archive.kabar.kg/news/nine-checkpoints-resume-operation-on-uzbek-tajik-border/",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "Reprints same MFA list; common endpoint but no post-specific original closure dates.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-94275aa68135f55bf5.bin",
+      "sha256": "099ae02a6e851a1eb413a7b02a730b85eb2f803c21f0608ad6c02282d90baa13"
+    },
+    {
+      "url": "https://uztradeinfo.uz/menu/27?l=ru",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Official Ministry-administered directory supplies counterpart names and explicitly separates Tajik Uchturgan from Kyrgyz Uchkurgan.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-12.json",
+      "sha256": "65f5a05db9464ac733e8947947e07f41ac8d18faf449fec76fe546016832eeee"
+    },
+    {
+      "url": "https://asiaplus.news/en/2018/03/01/ten-border-crossing-points-reopen-along-tajik-uzbek-border/",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-94be8fb339e7f35ad3.bin",
+      "sha256": "b8d24bfa5edd35117f954ddb69b4386801740f341763b51fdbb401317e9b24b0"
+    },
+    {
+      "url": "https://www.aa.com.tr/tr/dunya/ozbekistan-tacikistan-sinir-kapilari-10-yil-sonra-yeniden-acildi/1077528",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-f457752063b5e8e17a.bin",
+      "sha256": "3423e5f7c6d0bc9f54d798f31fc33f621a917e29c3c2172961884e517cec2b47"
+    },
+    {
+      "url": "https://mfa.tj/ru/main/view/2993/informatsionnoe-soobshchenie-ob-otkrytii-punktov-propuska-cherez-tadzhiksko-uzbekskuyu-gosudarstvennuyu-granitsu",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 503: Service Unavailable",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC027-FU1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-jartepa-sarazm",
+          "name": "Jartepa–Sarazm road crossing",
+          "coordinates": [
+            67.4023257,
+            39.5175254
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/565397835",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/565397835",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=67.39,39.51,67.41,39.53",
+            "https://uztradeinfo.uz/menu/27?l=ru"
+          ],
+          "evidence_note": "Named Sarazm checkpoint polygon; official Uzbek trade directory pairs Sarazm with Jartepa.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-jartepa.xml",
+          "sha256": "a6c69173c276ffd5380abbee14ce88e720aa7863eccfe0479053df78d21df72c",
+          "osm_feature": "way/565397835",
+          "osm_version": "5",
+          "osm_timestamp": "2025-04-14T07:00:04Z",
+          "identity_tags": {
+            "barrier": "fence",
+            "landuse": "military",
+            "military": "checkpoint",
+            "name": "Гузаргоҳи «Саразм»",
+            "name:en": "«Sarazm» border checkpoint",
+            "name:ru": "КПП «Саразм»",
+            "name:uz": "«Sarazm» o‘tkazish punkti",
+            "opening_hours": "24/7"
+          }
+        },
+        {
+          "proposed_site_id": "post-khavastabad-zafarabad",
+          "name": "Khavastabad–Zafarabad road crossing",
+          "coordinates": [
+            68.8469065,
+            40.1954479
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/1823897808",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1823897808",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=68.84,40.185,68.86,40.205",
+            "https://uztradeinfo.uz/menu/27?l=ru"
+          ],
+          "evidence_note": "Explicit named Khavastabad node, with named Zafarabad opposite; official directory confirms pair.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-khavastabad.xml",
+          "sha256": "9a1ae75448de8848d95e4e320611bac67410c2084395598c5a1d6ddbc6a5951f",
+          "osm_feature": "node/1823897808",
+          "osm_version": "5",
+          "osm_timestamp": "2025-10-15T12:57:46Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "«Xovostobod» o‘tkazish punkti",
+            "name:ru": "КПП «Хавастабад»",
+            "name:tg": "Гузаргоҳи «Ховостобод»"
+          }
+        },
+        {
+          "proposed_site_id": "post-bekabad-khashtiyak",
+          "name": "Bekabad–Khashtiyak road crossing",
+          "coordinates": [
+            69.2048464,
+            40.2121923
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/728943920",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/728943920",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=69.2,40.205,69.22,40.225",
+            "https://uztradeinfo.uz/menu/27?l=ru"
+          ],
+          "evidence_note": "Explicit named Bekabad checkpoint polygon and named Khashtiyak opposite, distinct from rail Bekabad/Naу.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-bekabad.xml",
+          "sha256": "5eb1ffb6b943e27629b2b313fc693ca46e09446ed0197ff30b242a67cb603faf",
+          "osm_feature": "way/728943920",
+          "osm_version": "1",
+          "osm_timestamp": "2019-09-27T05:22:12Z",
+          "identity_tags": {
+            "government": "customs",
+            "landuse": "military",
+            "name": "Bekobod chegara posti",
+            "name:ru": "КПП «Бекабад»",
+            "name:tg": "Гузаргоҳи «Бекобод»",
+            "name:uz": "Bekobod"
+          }
+        },
+        {
+          "proposed_site_id": "post-pap-navbunyod",
+          "name": "Pap–Navbunyod road crossing",
+          "coordinates": [
+            70.7374789,
+            40.765752
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/565430402",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/565430402",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=70.73,40.755,70.75,40.775",
+            "https://uztradeinfo.uz/menu/27?l=ru"
+          ],
+          "evidence_note": "Explicit Navbunyod checkpoint polygon; official directory pairs Pop/Pap with Navbunyod.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-pap.xml",
+          "sha256": "5a6c610860b9c33bae75b6c0f59f080aff628b8927fbea10661da84f3818451b",
+          "osm_feature": "way/565430402",
+          "osm_version": "3",
+          "osm_timestamp": "2020-05-01T12:46:09Z",
+          "identity_tags": {
+            "landuse": "military",
+            "name": "КПП Навбуньёд"
+          }
+        },
+        {
+          "proposed_site_id": "post-gulbahor-aivadj",
+          "name": "Gulbahor–Aivadj road crossing",
+          "coordinates": [
+            67.7883857,
+            37.215555
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/5445521603",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/5445521603",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=67.78,37.18,67.81,37.21",
+            "https://uztradeinfo.uz/menu/27?l=ru"
+          ],
+          "evidence_note": "Named Gulbahor road border control; named Aivadj opposite. Amu-Zang rail station is a different mode and excluded.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-gulbahor.xml",
+          "sha256": "c545c0b2730cac2fa30e47b73d53d204dcca92a95c7baade5c82a37ebc0ca2de",
+          "osm_feature": "node/5445521603",
+          "osm_version": "2",
+          "osm_timestamp": "2019-11-30T18:52:41Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "bicycle": "yes",
+            "foot": "yes",
+            "motorcar": "yes",
+            "name": "Gulbahor Oʻzbekiston - Tojikiston chegara o'tkazish punkti",
+            "name:en": "Gulbakhor",
+            "name:ru": "Гулбахар КПП",
+            "name:uz": "Gulbahor O'zbekiston - Tojikiston chegara o'tkazish punkti"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Jartepa, Kushkent, Uchkurgan, Khavastabad, Bekabad, Pap, Ravat and Gulbahor road checkpoints only",
+      "date_scope_check": {
+        "scope": "Jartepa, Kushkent, Uchkurgan, Khavastabad, Bekabad, Pap, Ravat and Gulbahor road checkpoints only",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2018-03-01",
+        "end_latest": "2018-03-01",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Only reopening endpoint March 1 2018 is shared. No common closure start is established. Kabar and UzDaily reproduce one MFA announcement, not independent source corroboration. Amuzang rail is excluded."
+      },
+      "unresolved": [
+        "Kushkent–Ura-tepa, Uchturgan–Khavatag and Ravat road gate coordinates need independent named identity; do not conflate Uchturgan (Tajik frontier) with Uchkurgan–Kensai (Kyrgyz frontier)."
+      ]
+    }
+  ],
+  "unresolved": []
+}

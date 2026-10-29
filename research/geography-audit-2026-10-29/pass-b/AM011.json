@@ -1,0 +1,87 @@
+{
+  "record_id": "AM011",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Two Táchira pedestrian bridges, Simón Bolívar and Francisco de Paula Santander, not all Colombia–Venezuela border. Humanitarian exceptions fromMarch remain.",
+  "source_checks": [
+    {
+      "url": "https://www.euronews.com/2019/02/23/showdown-looms-as-venezuela-opposition-to-confront-border-troops-over-aid",
+      "access_status": "full_text_cached_this_pass",
+      "finding": "Reuters23Feb reports temporaryTáchira shutdown lateFriday and distinguishes pre-existing vehicle bans from aid confrontation.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/604deca631d344c08833.raw",
+      "sha256": "31bf6392e6f0cf45be92c654d4cd01e715e35ab16d897e1aa254854efa620a08"
+    },
+    {
+      "url": "https://www.ksl.com/article/news/world/thousands-pour-into-colombia-as-venezuela-reopens-border/46569376",
+      "access_status": "full_text_cached_this_pass",
+      "finding": "AP8Jun actual thousandscrossing two bridges, explicitly naming Simón Bolívar and Francisco de Paula Santander. APcopies not independent.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/cf6533e48a8f033474ad.raw",
+      "sha256": "e5247f0161fd8e0536f010a3a0c6b34421057a837d50d8a646f9f94efe9bb338"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM011-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-simon-bolivar-bridge",
+          "name": "Simón Bolívar international road bridge",
+          "coordinates": [
+            -72.45085,
+            7.81792
+          ],
+          "coordinate_method": "OSM bridge reference coordinates reproduced by Mapcarta",
+          "precision": "approximate bridge area, about 100 m; not customs gate footprint",
+          "source_urls": [
+            "https://mapcarta.com/19864652",
+            "https://www.openstreetmap.org/way/871456442"
+          ],
+          "evidence_note": "Inspected geographical page names OSM way 871456442 as the road bridge over the Táchira linking San Antonio and La Parada; excludes same-name Barranquilla bridge. Original event accounts name the same international bridge."
+        },
+        {
+          "proposed_site_id": "post-francisco-paula-santander-bridge",
+          "name": "Francisco de Paula Santander international bridge",
+          "coordinates": [
+            -72.462778,
+            7.916389
+          ],
+          "coordinate_method": "DMS conversion from inspected Wikidata coordinate",
+          "precision": "approximate bridge; 210m span; secondary coordinate evidence",
+          "source_urls": [
+            "https://www.wikidata.org/wiki/Q6091179",
+            "https://en.wikipedia.org/wiki/Francisco_de_Paula_Santander_International_Bridge"
+          ],
+          "evidence_note": "Inspected Q6091179 revision2134981114: 7°54′59″N 72°27′46.001″W; named road bridge across Táchira linking Cúcuta and Ureña. Different from same-name Magdalena bridge. Wikidata coordinate statement has no cited reference: qualified geographic reference, not a surveyed checkpoint."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary pedestrian phase at both bridges; prior vehicle bans and informalpaths excluded.",
+      "date_scope_check": "22–23Feb onset uncertainty and8Jun observed pedestrian reopening retained; later humanitarian passages do not erase ordinary restriction.",
+      "canonical_dates": {
+        "kind": "bounded_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2019-02-22",
+        "start_latest": "2019-02-23",
+        "end_earliest": "2019-06-08",
+        "end_latest": "2019-06-08",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/AM011.json",
+  "canonical_input_sha256": "dbce4dae2a4ed3447144b7b92275b987846f8558b5f6c9e4fc2053980dde52b6",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

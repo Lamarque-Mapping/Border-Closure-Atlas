@@ -1,0 +1,88 @@
+{
+  "record_id": "CC001",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Accepted phase covers only the two road posts restored in March 2025: Kairagach and Kyzyl-Bel. The May 2021 measure named five posts, so the other three cannot inherit the two-post restoration endpoint.",
+  "source_checks": [
+    {
+      "url": "https://24.kg/english/195054_Cabinet_of_Ministers_imposes_restrictions_on_border_with_Tajikistan/",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Original Border Service report identifies five road posts and return exceptions under the May 2021 measure.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/59521711fc54231d8deb.html",
+      "sha256": "d8016931094c3ce146f6689b7d5d9cd416d112cdd259fef0742d0c83a55b59ba",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/59521711fc54231d8deb.txt",
+      "text_sha256": "b225832a1ac5395c4cc018ee0eb5b49c00478683bf4c63b52a206c4cfa78165e",
+      "status": 200
+    },
+    {
+      "url": "https://en.kabar.kg/news/two-checkpoints-opened-on-kyrgyz-tajik-border/",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Kabar identifies Kairagach and Kyzyl-Bel as the only two opened on 13 March 2025 and says others will open in stages.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/4db62c7f959ed775ddf7.html",
+      "sha256": "6d540795a681cff335df26d9b40bfa92f05a90f7c64412ce71fea63314b42b5e",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/4db62c7f959ed775ddf7.txt",
+      "text_sha256": "18e6a41cbb0c78a1d3d49b0646d874f58b1ad8819966690a24fb2505ca79034b",
+      "status": 200
+    },
+    {
+      "url": "https://digitalborder.gps.gov.kg/ru/home/checkpoints",
+      "access_status": "substantive_indexed_official_extract",
+      "finding": "Official indexed entry publishes Kairagach coordinates and traffic type. Its very coarse Kyzyl-Bel coordinates are not accepted without corroboration.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/ffb1bf1e1a4d93bf9649.html",
+      "sha256": "6a58fd2e7f67374a4676263ffb5bce29aa746e1ec904e9e11f8fdccc511f62ad",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/ffb1bf1e1a4d93bf9649.txt",
+      "text_sha256": "f34c899b1b922a89ae3c7e3c0d98ee29360c81271a29c79b9a9af6b9242b954d",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-6.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC001-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-kairagach-road",
+          "name": "Kairagach road checkpoint",
+          "coordinates": [
+            69.543617,
+            40.083549
+          ],
+          "coordinate_method": "Published latitude/longitude transcribed from Kyrgyz State Border Service Digital Border indexed checkpoint entry",
+          "precision": "Published six decimal places; operational crossing-area precision only, approximately 100 m; no surveyed accuracy claim",
+          "source_urls": [
+            "https://digitalborder.gps.gov.kg/ru/home/checkpoints"
+          ],
+          "evidence_note": "Named bilateral Kairagach checkpoint lists cars, trucks and pedestrians. Original reopening statement independently names Kairagach in Leilek district.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-6.json",
+          "sha256": "6a58fd2e7f67374a4676263ffb5bce29aa746e1ec904e9e11f8fdccc511f62ad"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Accepted phase covers only the two road posts restored in March 2025: Kairagach and Kyzyl-Bel. The May 2021 measure named five posts, so the other three cannot inherit the two-post restoration endpoint.",
+      "date_scope_check": {
+        "start_earliest": "2021-05-21",
+        "start_latest": "2021-05-21",
+        "end_earliest": "2025-03-13",
+        "end_latest": "2025-03-13",
+        "last_confirmed": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Formal scope only: diplomats, approved officials and return-home travel were excepted. Earlier pandemic measures overlapped. The other three checkpoints and first actual ordinary traffic are not assigned this endpoint. A March 18 report attributes 4,414 land passages at these posts during March 13–17 to the Kyrgyz Border Service; 477 air travelers are excluded. Those counts establish reported use by the window, but not first passage of the previously barred Tajik cohort, all goods, or a continuous operational interval. Kazinform and Khovar cross-cite the same report."
+      },
+      "unresolved": [
+        "Kyzyl-Bel checkpoint position not independently corroborated; the official coarse 39.85,70.6 position cannot safely be used as the exact crossing."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Kyzyl-Bel checkpoint position not independently corroborated; the official coarse 39.85,70.6 position cannot safely be used as the exact crossing."
+  ],
+  "input_sha256": "43f592374ffdbded69184dd98ed8dd72cb18dc2b232fb847a41b8da0d96545f3",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

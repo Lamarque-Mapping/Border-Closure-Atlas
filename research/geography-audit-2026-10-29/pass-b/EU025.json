@@ -1,0 +1,60 @@
+{
+  "record_id": "EU025",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Bilateralnonessential landmovementrestriction alongPortugal–Spain, withnineauthorizedroadpoints andfreightrail/river exceptions.",
+  "source_checks": [
+    {
+      "url": "https://portugal.gov.pt/gc22/comunicacao/noticias/fronteiras-com-espanha-fechadas-a-partir-de-16-de-marco",
+      "access_status": "full_text_cached_this_pass",
+      "finding": "PortugueseMinistry states23:00Mar16controls, nineauthorizedpoints, suspendedpassengerair/rail/river butfreightretained.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/dc7c3184f5ea650ad917.raw",
+      "sha256": "7a7dd458e2fab244db119bc5307d4a53fa33f6eec499d726a9830f6a8473e396"
+    },
+    {
+      "url": "https://www.lamoncloa.gob.es/presidente/actividades/paginas/2020/010720-previoportugal.aspx",
+      "access_status": "full_text_cached_this_pass",
+      "finding": "SpanishPM1Jul officialborderreopening event atBadajozElvas confirmsliftingbilateralcontrols.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/c1e7e24a5431bbd6cadf.raw",
+      "sha256": "787e832a3382c023f2f8a8f6da2deab84329e525148cdfcb861047d5412cba62"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU025-D1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Portugal–Spain bilateral non-essential land-movement restriction, using Portuguese local calendar dates.",
+      "date_scope_check": "Existing dates, uncertainty and duration eligibility retained. Geography remains held pending the identified evidence gap.",
+      "canonical_dates": {
+        "kind": "policy_period",
+        "measure_type": "formal_policy_period",
+        "start_earliest": "2020-03-16",
+        "start_latest": "2020-03-16",
+        "end_earliest": "2020-07-01",
+        "end_latest": "2020-07-01",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": true
+      },
+      "unresolved": [
+        "No existing Portugal–Spain bilateralreference identified ininventory; nineauthorizedpoints arenot aclosedgate enumeration. Needattributablewholefrontiergeometry."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Verifiedbroadscope; existingexactgeometryID absent."
+  ],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/EU025.json",
+  "canonical_input_sha256": "65bbaa03eddf8526aa1071d8000c72a1bfa8db92e9264579171af58dc4a9492f",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

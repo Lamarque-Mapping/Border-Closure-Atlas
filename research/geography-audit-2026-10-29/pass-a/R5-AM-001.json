@@ -1,0 +1,134 @@
+{
+  "record_id": "R5-AM-001",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Roraima1 locates protest closure at Sefaz fiscal-post gate near Tacutu bridge; Kaieteur independently describes supply trucks blocked on Brazilian highway approaching the bridge. Neither identifies exact gate coordinates.",
+  "source_checks": [
+    {
+      "url": "https://roraima1.com.br/fechamento-entre-brasil-e-guiana-causa-prejuizo-aos-moradores-da-fronteira/",
+      "access_status": "fresh_source_extract",
+      "finding": "Roraima1 locates protest closure at Sefaz fiscal-post gate near Tacutu bridge; Kaieteur independently describes supply trucks blocked on Brazilian highway approaching the bridge. Neither identifies exact gate coordinates.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-020.json"
+    },
+    {
+      "url": "https://kaieteurnewsonline.com/2021/09/17/brazilians-protest-unfair-practice-at-lethem-crossing/",
+      "access_status": "fresh_source_extract",
+      "finding": "September 17 report names Brazilian approach to Takatu bridge and trucks bound for Lethem, not alternate supply routes.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-017.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-AM-001-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-takutu-road",
+          "name": "Takutu / Bonfim–Lethem international road bridge",
+          "coordinates": [
+            -59.8112218,
+            3.3806923
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/795402728"
+          ],
+          "evidence_note": "Fresh named OSM structure/facility XML inspected; distinct road reference, not nearby town centroid or rail/ferry geometry. Roraima1 locates protest closure at Sefaz fiscal-post gate near Tacutu bridge; Kaieteur independently describes supply trucks blocked on Brazilian highway approaching the bridge. Neither identifies exact gate coordinates.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/331ae29a98f4fc72fc93.xml",
+              "sha256": "bc8e83ac7293ade5f4612a71854e003047188f287fdf606c110f8a0313533485",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "2",
+              "osm_timestamp": "2022-01-03T18:38:43Z",
+              "tags": {
+                "layer": "1",
+                "man_made": "bridge",
+                "name": "Brazil / Guyana International Bridge",
+                "name:pt": "Ponte Internacional Brasil / Guiana"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Initial six-hour Brazil-to-Guyana supply-truck blockade near the Takutu bridge on September 9",
+      "date_scope_check": {
+        "start_earliest": "2021-09-09",
+        "start_latest": "2021-09-09",
+        "end_earliest": "2021-09-09",
+        "end_latest": "2021-09-09",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Named crossing reference located; precise historical obstruction/approach footprint is not reconstructed."
+      ]
+    },
+    {
+      "phase_id": "R5-AM-001-AUDIT20261025-1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-takutu-road",
+          "name": "Takutu / Bonfim–Lethem international road bridge",
+          "coordinates": [
+            -59.8112218,
+            3.3806923
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/795402728"
+          ],
+          "evidence_note": "Fresh named OSM structure/facility XML inspected; distinct road reference, not nearby town centroid or rail/ferry geometry. Roraima1 locates protest closure at Sefaz fiscal-post gate near Tacutu bridge; Kaieteur independently describes supply trucks blocked on Brazilian highway approaching the bridge. Neither identifies exact gate coordinates.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/331ae29a98f4fc72fc93.xml",
+              "sha256": "bc8e83ac7293ade5f4612a71854e003047188f287fdf606c110f8a0313533485",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "2",
+              "osm_timestamp": "2022-01-03T18:38:43Z",
+              "tags": {
+                "layer": "1",
+                "man_made": "bridge",
+                "name": "Brazil / Guyana International Bridge",
+                "name:pt": "Ponte Internacional Brasil / Guiana"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Resumed Brazil-to-Lethem supply-truck blockade near Takutu bridge; alternative supply routes excluded",
+      "date_scope_check": {
+        "start_earliest": "2021-09-15",
+        "start_latest": "2021-09-15",
+        "end_earliest": "2021-09-26",
+        "end_latest": "2021-10-02",
+        "last_confirmed": "2021-09-26",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Named crossing reference located; precise historical obstruction/approach footprint is not reconstructed."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "f0be298e89bb646ed9178822f642e4a67885d490a9adb1e172f1616b71808d81"
+}

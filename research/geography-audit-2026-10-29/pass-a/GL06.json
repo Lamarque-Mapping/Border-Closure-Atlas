@@ -1,0 +1,51 @@
+{
+  "record_id": "GL06",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "National passenger-border COVID policy; its administrative lifting does not establish reopening at every individual post.",
+  "source_checks": [
+    {
+      "url": "https://actualite.cd/2020/03/24/rdc-tshisekedi-decide-disoler-kinshasa-et-interdit-les-voyages-capitale-vers-provinces",
+      "access_status": "fresh_source_text_extract_inspected",
+      "finding": "24 March address reports all national borders closed; travel and cargo distinctions are stated.",
+      "retrieval_http_status": "200",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/017f50200fcfb6ca.raw",
+      "evidence_sha256": "f190565bcfae4f6eeb7280b33b2c11860224221e6f11f405da72a0fc7bcba22f"
+    },
+    {
+      "url": "https://kt.cd/2020/08/15/rdc-des-frontieres-reouvertes-ce-samedi-15-aout-cinq-mois-apres-leur-fermeture/",
+      "access_status": "fresh_source_text_extract_inspected",
+      "finding": "Quotes migration circular authorising all borders to reopen effective 15 August.",
+      "retrieval_http_status": "200",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/a25d43f5fb2d8481.raw",
+      "evidence_sha256": "6c1dd57e1fdd9b31458bb80d5a2f90bb7620d96661a6b9e33c6ee652958470a6"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "GL06-D1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-cod-rwa",
+        "context-frontier-cod-uga",
+        "context-frontier-bdi-cod",
+        "context-frontier-ago-cod",
+        "context-frontier-cod-cog",
+        "context-frontier-cod-zmb"
+      ],
+      "complete": false,
+      "phase_applicability": "Use only the national policy phase and administrative endpoint; do not inherit independent South Kivu November restoration or infer operational continuity at all posts.",
+      "date_scope_check": "Canonical policy_period: start 2020-03-24–2020-03-24; endpoint 2020-08-15–2020-08-15; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": [
+        "Existing inventory lacks DRC–Central African Republic, DRC–South Sudan and DRC–Tanzania frontier geometry; national scope cannot be marked complete."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Existing inventory lacks DRC–Central African Republic, DRC–South Sudan and DRC–Tanzania frontier geometry; national scope cannot be marked complete."
+  ]
+}

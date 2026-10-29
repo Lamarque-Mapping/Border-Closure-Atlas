@@ -1,0 +1,56 @@
+{
+  "record_id": "H10",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "The current phase is Diffra flow-monitoring point in the Abyei PCA Area, distinct from the Sudan national border-closure announcement.",
+  "source_checks": [
+    {
+      "url": "https://www.xinhuanet.com/english/2020-03/17/c_138884711.htm",
+      "access_status": "fresh_source_text_extract_inspected",
+      "finding": "16 March national closure announcement does not locate Diffra.",
+      "retrieval_http_status": "200",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/d910580c67dc084d.raw",
+      "evidence_sha256": "087de3ea492e8f3d99108e8a5098880e26b8ad9be776e5973de007f270ff290d"
+    },
+    {
+      "url": "https://www.ecoi.net/en/file/local/2031690/Situation%2BReport%2B-%2BSudan%2B-%2B18%2BJun%2B2020%2B%281%29.pdf",
+      "access_status": "fresh_source_text_extract_inspected",
+      "finding": "OCHA June report confirms national land restrictions but does not provide an attributable Diffra FMP coordinate.",
+      "retrieval_http_status": "200",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/f9bc3f7a5e159f36.raw",
+      "evidence_sha256": "a8c17b4805ef1f5d7963be1f96de10c42790febdf5148274acbc481b526a6cac"
+    },
+    {
+      "url": "https://dtm.iom.int/reports/sudan-%E2%80%94-registration-and-flow-monitoring-quarterly-overview-july-september-2020",
+      "access_status": "inaccessible",
+      "finding": "Direct retrieval returned 403; scope-specific July operational endpoint was not independently re-read in this pass.",
+      "retrieval_http_status": "403",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/03328ce1c677f46a.raw",
+      "evidence_sha256": "cd7a66f5e03721b8159d43fecb475f81f533b644fdc7affd105d9f2a4be37a40"
+    },
+    {
+      "url": "https://dtm.iom.int/report-product-series/flow-monitoring-report-2",
+      "access_status": "fresh_search_extract_inspected",
+      "finding": "Targeted Diffra geography search returned a general product catalogue, not a point identity.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/geosearch-02.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "H10-R1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Do not substitute the whole Sudan–South Sudan frontier or a Diffra town coordinate for the identified FMP.",
+      "date_scope_check": "Canonical bounded_interval: start 2020-03-01–2020-03-31; endpoint 2020-07-01–2020-07-31; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": [
+        "Exact Diffra flow-monitoring location not attributable; scope-specific endpoint source inaccessible in this pass."
+      ]
+    }
+  ],
+  "unresolved": []
+}

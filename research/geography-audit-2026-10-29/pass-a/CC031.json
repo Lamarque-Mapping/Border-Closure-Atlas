@@ -1,0 +1,123 @@
+{
+  "record_id": "CC031",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Election-specific suspension names Razdakhan/Akhalgori and Pereu simplified crossings. Razdakhan matches independently located Odzisi–Mosabruni. Pereu has not been independently matched to a coordinate here; the record must not imply its identity equals Karzmani/Sinaguri without evidence.",
+  "source_checks": [
+    {
+      "url": "https://cominf.org/en/node/1166559168",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "Original presidential/security-council announcement names Razdakhan and Pereu and says throughout October 2024.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-46c618293142732026.bin",
+      "sha256": "78b000c6e8cb8ced804025389c210cae52b04be67112d8f75df5bd10fd875456"
+    },
+    {
+      "url": "https://kremlin-roadmap.gfsis.org.ge/news/display/1890",
+      "access_status": "search_extract",
+      "finding": "Razdakhan–Mosabruni–Odzisi alias identification.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-10.json",
+      "sha256": "c196f2487243328e8bb7767fae769976f59d3060323c654d9841366044d8472e"
+    },
+    {
+      "url": "https://civil.ge/archives/628008",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 503: Service Unavailable",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.ombudsman.ge/res/docs/2025091211433999093.pdf",
+      "access_status": "fresh_pdf_full_text",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-eff0963e65bb12e672.bin",
+      "sha256": "d85cde1960e5ddb57347386d602c7c4374c8bfe74d5405702d8bdd6028187f4f"
+    },
+    {
+      "url": "https://www.theioi.org/downloads/a78qh/Georgia%20-%20Annual%20report%20-%202024.pdf",
+      "access_status": "fresh_pdf_full_text",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-952d31d7383e84dcff.bin",
+      "sha256": "a585de591abdab6e70a53cb4ede732b0a97c1cb566a0e1080e59218583313a17"
+    },
+    {
+      "url": "https://interfax.com/newsroom/top-stories/106488/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 403: Forbidden",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://cominf.org/en/node/1166559205",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-5af680ef73f779da39.bin",
+      "sha256": "8f51ea459f25a5efbbaf932369d3443b47f269d6d1df38bceb95748eb4bdd402"
+    },
+    {
+      "url": "https://cominf.org/node/1166559172",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-21a95a344b1833243b.bin",
+      "sha256": "4f7e82fc956e02435c3403b8f7f7edd76910de453c4e3a7492b49cd9268a4da8"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC031-R1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-odzisi-mosabruni",
+          "name": "Odzisi–Mosabruni / Razdakhan crossing",
+          "coordinates": [
+            44.4871514,
+            42.0682341
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/1203169771",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1203169771",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=44.46,42.06,44.51,42.11"
+          ],
+          "evidence_note": "OSM explicitly names Razdakhan-Mosabruni border crossing. Independent EUMM uses Odzisi, and indexed geographic inventory links Odzisi–Mosabruni–Razdakhani as aliases, rather than Karzmani/Sinaguri.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-odzisi.xml",
+          "sha256": "2cd4f92f03a5fbd209ac81a4b5e7ad1a7e489eb1155aec431b468abf0945da71",
+          "osm_feature": "node/1203169771",
+          "osm_version": "4",
+          "osm_timestamp": "2025-10-24T20:38:43Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "Уадзæн пункт \"Раздæхæн\" - საბაჟო გამშვები პუნქტი \"მოსაბრუნი\"",
+            "name:en": "Border Crossing Point \"Razdakhan-Mosabruni\"",
+            "name:ka": "საბაჟო გამშვები პუნქტი \"მოსაბრუნი\"",
+            "name:os": "Уадзæн пункт \"Раздæхæн\"",
+            "name:ru": "КПП «Раздахан-Мосабруни»"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Election-specific suspension of Razdakhan/Akhalgori and Pereu simplified crossings",
+      "date_scope_check": {
+        "scope": "Election-specific suspension of Razdakhan/Akhalgori and Pereu simplified crossings",
+        "start_earliest": "2024-10-25",
+        "start_latest": "2024-10-25",
+        "end_earliest": "2024-10-28",
+        "end_latest": "2024-10-28",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "held_evidence_do_not_animate_as_confirmed",
+        "assessment": "Cominf states suspension for all October 2024; competing October 25–28 security dates do not prove gate-closure bounds. Contested temporal flags remain intact while independently supported Razdakhan geography is recommended."
+      },
+      "unresolved": [
+        "Pereu crossing identity and coordinate unresolved; only Razdakhan subset located."
+      ]
+    }
+  ],
+  "unresolved": []
+}

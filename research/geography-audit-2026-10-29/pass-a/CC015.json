@@ -1,0 +1,150 @@
+{
+  "record_id": "CC015",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Two separate abolished pedestrian crossings, Khurcha–Nabakevi and Orsantia–Otobaia, must both be reconstructed. Public Defender distinguishes them from Shamgona and the surviving Enguri and Saberio crossings. The DRI field description locates Orsantia at a ruined bridge, but no verifiable coordinate was established here.",
+  "source_checks": [
+    {
+      "url": "https://ombudsman.ge/eng/spetsialuri-angarishebi/special-report-of-the-public-defender-of-georgia-on-the-impacts-of-the-closure-of-crossing-points-on-the-rights-of-the-population-living-along-abkhazias-administrative-boundary-line",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "Explicitly names both posts and distinguishes remaining Enguri and Saberio crossings.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-3c6470a66d1e15bb04.bin",
+      "sha256": "65c9376f5133690ddb5415f4668734b4e37f1a221a2d6ab26063f734f9a7f7e5"
+    },
+    {
+      "url": "https://ombudsman.ge/res/docs/2019041112191576480.pdf",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "Full report identifies these former pedestrian crossings and the movement impacts of closure.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-ab92a73da5a723bdda.bin",
+      "sha256": "513cf2cd9da98142a5d9015b153e3627b946f418e357fefe7580b8c2e311f787"
+    },
+    {
+      "url": "https://kremlin-roadmap.gfsis.org.ge/news/display/1782",
+      "access_status": "search_extract",
+      "finding": "Paired village names and Abkhaz toponym variants are individually distinguished.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-13.json",
+      "sha256": "b5c82f9652aa440baadf5b48d3244d752803d5faabc03f6fd7fec150dbaf08ec"
+    },
+    {
+      "url": "https://www.democracyresearch.org/files/62DRI%20report%20ENG%202020%20%281%29.pdf",
+      "access_status": "search_extract",
+      "finding": "Field description places Orsantia–Otobaia at a ruined bridge near Georgian police post; no numeric coordinate.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-13.json",
+      "sha256": "b5c82f9652aa440baadf5b48d3244d752803d5faabc03f6fd7fec150dbaf08ec"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=41.69,42.51,41.73,42.54",
+      "access_status": "inaccessible",
+      "finding": "Targeted geographic retrieval did not establish the former crossing footprint: <urlopen error timed out>",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-khurcha.meta.json",
+      "sha256": "3c3456841b19322169e1585fafff1d6a73bbf57b0bded301750063aae35efbf5"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=41.63,42.45,41.67,42.49",
+      "access_status": "inaccessible",
+      "finding": "Targeted geographic retrieval did not establish the former crossing footprint: <urlopen error timed out>",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-orsantia.meta.json",
+      "sha256": "c80a390aa316256aa788cd99554763e02380c54a95bad59c699f8434e59f6a36"
+    },
+    {
+      "url": "https://civil.ge/archives/126214",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 503: Service Unavailable",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://civil.ge/archives/126231",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 503: Service Unavailable",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://sovanews.tv/2017/03/05/16007/",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-ba5c945a4487d1e37a.bin",
+      "sha256": "c5e2d7e4836c212f70baccf6ac761733cb0cffa688b047a085d5f5701c6696ee"
+    },
+    {
+      "url": "https://mfaapsny.org/en/allnews/news/statements_speeches/zayavlenie-mid-abkhazii2/",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-bfed054052e58fb95e.bin",
+      "sha256": "411a513f6023d3e4dca104498c74a334bcfa46968470d29dc41cdc6e6449bb11"
+    },
+    {
+      "url": "https://rm.coe.int/1680709155",
+      "access_status": "fresh_pdf_full_text",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-3b1e8671910f314ac9.bin",
+      "sha256": "345ef400d421b457b203135d2aa0da77a1a9208f2b55d0c4f04b2fd6441db829"
+    },
+    {
+      "url": "https://www.refworld.org/sites/default/files/legacy-pdf/en/2017-8/59ba97924.pdf",
+      "access_status": "fresh_pdf_full_text",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-be189feaf000c0d375.bin",
+      "sha256": "4b0ab4a57042ea594a9566148df3625fd73b4a83d7db38432a1d9f87c3762484"
+    },
+    {
+      "url": "https://www.ombudsman.ge/eng/akhali-ambebi/public-discussion-on-human-rights-in-conflict-affected-regions-existing-challenges-and-state-strategy",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://occupied.eastwatch.eu/abkhazia/checkpoint-regime-abkhazia/",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-f5ad8c6193f886f132.bin",
+      "sha256": "90b469be02afeb958e55f2c8e18384989f460e3ae69b64bd56c32773afa686d2"
+    },
+    {
+      "url": "https://eumm.eu/en/new_media_gallery/oqfm3cuh9gv-yxfn/?print=yes",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-16b8b51acf0561edcf.bin",
+      "sha256": "f825baa1eaac0bfd6d10b357ee14e87f462e8b0cc7cc491979a2b6636e499fdd"
+    },
+    {
+      "url": "https://www.eumm.eu/en/press_and_public_information/press_releases/37478/?month=9&year=2023",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-aeeea2ce859d8c2c37.bin",
+      "sha256": "371ffb41051d077b604c4969516901da0145849ffae234537820e7a71cd00cee"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC015-D1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ordinary operation of Khurcha–Nabakevi and Orsantia–Otobaia, through the dated Public Defender account.",
+      "date_scope_check": {
+        "scope": "Ordinary operation of Khurcha–Nabakevi and Orsantia–Otobaia, through the dated Public Defender account.",
+        "start_earliest": "2017-03-04",
+        "start_latest": "2017-03-06",
+        "end_earliest": "2017-11-16",
+        "end_latest": "2017-11-16",
+        "last_confirmed": "2017-11-16",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "assessment": "Public Defender states cessation March 4 2017. Preserve canonical competing date bounds and later dated confirmations without asserting continuation to today."
+      },
+      "unresolved": [
+        "Exact former gate/bridge footprints for both named crossings remain unverified; no entire-Abkhaz-ABL substitution."
+      ]
+    }
+  ],
+  "unresolved": []
+}

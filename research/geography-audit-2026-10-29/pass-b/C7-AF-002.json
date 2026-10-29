@@ -1,0 +1,81 @@
+{
+  "record_id": "C7-AF-002",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "National international-departure restrictions attach to traveller exposure and risk categories; they do not identify particular affected frontier posts.",
+  "source_checks": [
+    {
+      "url": "https://www.reporter.cd/rdc-le-gouvernement-remplace-la-quarantaine-systematique-par-une-evaluation-du-risque-pour-les-voyageurs-lies-a-ebola/",
+      "access_status": "full_text_web",
+      "finding": "July amendment changes uniform quarantine to individual risk-based measures and controls at entry points.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-08.json",
+      "evidence_sha256": "181a0d0a4ed65800cbb39dea81eef7b77971f215fa7c35d218df7e8a6cbc85aa"
+    },
+    {
+      "url": "https://actualite.cd/2026/07/25/ebola-en-rdc-une-evaluation-individuelle-de-risque-imposee-toute-personne-ayant-sejourne",
+      "access_status": "full_text_web",
+      "finding": "July17 order and July25 reporting concern people with prior presence in affected health zones before international travel.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-08.json",
+      "evidence_sha256": "181a0d0a4ed65800cbb39dea81eef7b77971f215fa7c35d218df7e8a6cbc85aa"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "C7-AF-002-P1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "National international-departure restrictions attach to traveller exposure and risk categories; they do not identify particular affected frontier posts. Current phase only: DRC initial Ebola restrictions on international departure after presence in an affected province; distinct contact/responder provisions",
+      "date_scope_check": {
+        "start_earliest": "2026-06-24",
+        "start_latest": "2026-06-24",
+        "end_earliest": "2026-07-17",
+        "end_latest": "2026-07-17",
+        "last_confirmed": null,
+        "endpoint_status": "legal_effective",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "C7-AF-002-P1: The June 24 decree is available as a third-party-hosted copy. Articles 2–4 distinguish contacts, responders and others with recent presence in affected provinces; contacts and responders had express authorisation exceptions. Article 11 makes the decree effective on signature. Its July 17 replacement is supported by contemporary reporting, not the original amendment.\n\nC7-AF-002-P2: Contemporary reports describe the July 17 risk-based successor and its effect on signature, with confirmation on July 25. The original amendment and a later endpoint remain unrecovered. October ECDC reporting repeats the earlier June decree and does not independently confirm continuation of the amended regime. Neither phase establishes enforcement at named land posts or a uniform all-passenger closure.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "No full land-post implementation set established; a risk-cohort national travel policy is not a surveyed perimeter closure. Original initial June order remains inaccessible in this pass."
+      ]
+    },
+    {
+      "phase_id": "C7-AF-002-P2",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "National international-departure restrictions attach to traveller exposure and risk categories; they do not identify particular affected frontier posts. Current phase only: DRC Ebola risk-based departure restrictions following the July17 amendment",
+      "date_scope_check": {
+        "start_earliest": "2026-07-17",
+        "start_latest": "2026-07-17",
+        "end_earliest": "2026-07-25",
+        "end_latest": "2026-07-25",
+        "last_confirmed": "2026-07-25",
+        "endpoint_status": "last_confirmed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "C7-AF-002-P1: The June 24 decree is available as a third-party-hosted copy. Articles 2–4 distinguish contacts, responders and others with recent presence in affected provinces; contacts and responders had express authorisation exceptions. Article 11 makes the decree effective on signature. Its July 17 replacement is supported by contemporary reporting, not the original amendment.\n\nC7-AF-002-P2: Contemporary reports describe the July 17 risk-based successor and its effect on signature, with confirmation on July 25. The original amendment and a later endpoint remain unrecovered. October ECDC reporting repeats the earlier June decree and does not independently confirm continuation of the amended regime. Neither phase establishes enforcement at named land posts or a uniform all-passenger closure.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "No full land-post implementation set established; a risk-cohort national travel policy is not a surveyed perimeter closure. Original initial June order remains inaccessible in this pass."
+      ]
+    }
+  ],
+  "unresolved": [
+    "No full land-post implementation set established; a risk-cohort national travel policy is not a surveyed perimeter closure. Original initial June order remains inaccessible in this pass."
+  ]
+}

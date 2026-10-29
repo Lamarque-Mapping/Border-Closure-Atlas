@@ -1,0 +1,65 @@
+{
+  "record_id": "NA018",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Protesters blocked the Tunisian approach at Al-Qitoun/El Kaitoun near Ras Jedir, affecting travellers and ambulances overnight. The barrier was not the official border gate.",
+  "source_checks": [
+    {
+      "url": "https://www.tunisienumerique.com/ras-jedir-reprise-de-la-circulation-apres-une-nuit-de-protestations-liees-a-larrestation-de-commercants-tunisiens/",
+      "access_status": "full_text_web",
+      "finding": "Original full article locates protest at Al-Qitoun near the crossing and describes approach road blockage in both directions.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-02.json",
+      "evidence_sha256": "3567a079bbf515b03e8582faf153e753400dadf0111efb55d2829977a13cde27"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NA018-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-ras-jedir",
+          "name": "Ras Jedir",
+          "coordinates": [
+            11.55929,
+            33.14795
+          ],
+          "coordinate_method": "Published AU-PIDA illustrative border-post coordinate, independently read in original report Appendix A",
+          "precision": "approximate crossing area; illustrative published marker, not surveyed gate",
+          "source_urls": [
+            "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "PDF page 82, N4; longitude/latitude transcribed in lon,lat order. Report identifies crossing name but does not establish historic operation or exact obstruction.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/25782abcef016f49e77a.pdf",
+          "evidence_sha256": "35e1b5d512bfc882baf263b1abe002d0c99331d0b2b8e08fcb0f354ab504cbed"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Protesters blocked the Tunisian approach at Al-Qitoun/El Kaitoun near Ras Jedir, affecting travellers and ambulances overnight. The barrier was not the official border gate. Current phase only: De facto blockade of road to official crossing; Travellers, traders and ambulances; Both directions",
+      "date_scope_check": {
+        "start_earliest": "2026-03-14",
+        "start_latest": "2026-03-14",
+        "end_earliest": "2026-03-15",
+        "end_latest": "2026-03-15",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "One TAP origin relayed by Mosaique; date interval spans overnight, not two full days. Actor allegations remain attributed. Not established",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Crossing-area marker is only a partial reference; exact Al-Qitoun blockade position unresolved. No two-whole-day duration inferred."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Crossing-area marker is only a partial reference; exact Al-Qitoun blockade position unresolved. No two-whole-day duration inferred."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "record_id": "ME014",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Reuters identifies Shushme commercial freight on the Halabja–Kermanshah corridor, separate from the three main official Iranian–Kurdistan posts.",
+  "source_checks": [
+    {
+      "url": "https://www.reutersconnect.com/item/iraqi-kurdistan-and-iran-border-partially-reopens-for-trade/dGFnOnJldXRlcnMuY29tLDIwMjA6bmV3c21sX1ZBQ0NETTlUWg",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Original shotlist/interviews identify Shushme, 28 February closure and resumed screened commercial trucks. Exact chronology remains contested.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-12.txt"
+    },
+    {
+      "url": "https://www.rudaw.net/english/categories/kurdistan/740092",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Later report distinguishes the pre-existing freight crossing from later tourist expansion and names Halabja/Kermanshah. Useful identity evidence, not 2020 reopening proof.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-16.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME014-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Disputed dates alone do not prevent geography; the unresolved point location does.",
+      "date_scope_check": "Canonical closed_interval: start 2020-02-28–2020-02-28; endpoint 2020-05-03–2020-05-03; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": [
+        "No attributable checkpoint coordinate recovered; do not substitute Tawella town or Bashmakh."
+      ]
+    }
+  ],
+  "unresolved": []
+}

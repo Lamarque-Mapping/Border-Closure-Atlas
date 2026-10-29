@@ -1,0 +1,122 @@
+{
+  "record_id": "EA028",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Boten–Mohan road checkpoint; ordinary non-exempt passengers. The 2023 railway opening and cargo/business fast-track categories are not this phase.",
+  "source_checks": [
+    {
+      "url": "https://www.rfa.org/english/news/laos/laos-china-border-01092023033743.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Boten official reports actual January 8 two-way travellers; not an all-category tourism statement.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-04.json",
+      "sha256": "ba381143dfc17275df3650c505d10165a57a7bffb8c82aa0fe6d15a734eb465d"
+    },
+    {
+      "url": "https://www.rfa.org/english/news/laos/reopen-05102022163318.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Boten officer separately reports continuing Chinese controls despite Laos reopening.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-05.json",
+      "sha256": "82e7a68102b879289ac2be405d78b9d006df49775c2cbb83952129324cd27ac2"
+    },
+    {
+      "url": "https://kpl.gov.la/en/detail.aspx?id=70945",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.vientianetimes.org.la/sub-new/Previous_07_y23/freeContent/FreeConten07_More_y23.php",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://jclao.com/idle-factories-empty-trade-zone-highlight-coronavirus-impact-on-southeast-asia/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.rfa.org/english/news/laos/border-11052020184350.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://kpl.gov.la/en/detail.aspx?id=55410",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.rfa.org/english/news/laos/coronavirus-southeastasia-03062020161747.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA028-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-boten-mohan-road",
+          "name": "Boten–Mohan road checkpoint",
+          "coordinates": [
+            101.6823385,
+            21.1851147
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/3826599868",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/3826599868",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=101.66,21.17,101.71,21.21"
+          ],
+          "evidence_note": "Named Mohan Border Control node, with named Boten International Checkpoint opposite. This is road border control, not the later railway service.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-mohan.xml",
+          "sha256": "cc3c0a5c447b527363a2fccb871a0584a2a442c1815787d72467ad4d6123d9b2",
+          "osm_feature": "node/3826599868",
+          "osm_version": "3",
+          "osm_timestamp": "2025-09-07T04:24:08Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "磨憨口岸",
+            "name:en": "Mohan Border Control",
+            "name:zh": "磨憨口岸",
+            "name:zh-Hans": "磨憨口岸",
+            "name:zh-Hant": "磨憨口岸",
+            "source": "survey"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Restriction on ordinary non-exempt road passengers at Boten–Mohan, to broader eligible non-tourist restoration on January 8, 2023; approved business, official and project travellers excluded.",
+      "date_scope_check": {
+        "scope": "Restriction on ordinary non-exempt road passengers at Boten–Mohan, to broader eligible non-tourist restoration on January 8, 2023; approved business, official and project travellers excluded.",
+        "start_earliest": "2020-01-01",
+        "start_latest": "2020-03-06",
+        "end_earliest": "2023-01-08",
+        "end_latest": "2023-01-08",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "RFA observes Boten travellers January 8 2023. Retain exceptions and observation-bound onset; Laos May 2022 reopening did not itself remove Chinese restrictions."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

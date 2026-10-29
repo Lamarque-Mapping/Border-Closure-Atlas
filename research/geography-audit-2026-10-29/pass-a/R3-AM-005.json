@@ -1,0 +1,156 @@
+{
+  "record_id": "R3-AM-005",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Semanario Universidad expressly places vehicles and freight obstruction before Panamanian customs at Paso Canoas while border offices continued working; barriers, sand and tyres described.",
+  "source_checks": [
+    {
+      "url": "https://semanariouniversidad.com/pais/manifestantes-mantienen-bloqueado-el-paso-en-la-frontera-costarricense-en-paso-canoas/",
+      "access_status": "fresh_source_extract",
+      "finding": "Semanario Universidad expressly places vehicles and freight obstruction before Panamanian customs at Paso Canoas while border offices continued working; barriers, sand and tyres described.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-017.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-AM-005-R2P1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Paso Canoas road and freight crossing",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2020-10-04",
+        "end_latest": "2020-10-04",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Broader earlier chronology requires separate phase evidence; inspected October report supports local obstruction but not whole interval."
+      ]
+    },
+    {
+      "phase_id": "R3-AM-005-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-paso-canoas-road",
+          "name": "Paso Canoas road crossing (Panamanian customs)",
+          "coordinates": [
+            -82.8384534,
+            8.5339823
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/234963318"
+          ],
+          "evidence_note": "Fresh named OSM structure/facility XML inspected; distinct road reference, not nearby town centroid or rail/ferry geometry. Semanario Universidad expressly places vehicles and freight obstruction before Panamanian customs at Paso Canoas while border offices continued working; barriers, sand and tyres described.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/af80ed815b79c5e30a11.xml",
+              "sha256": "1ac0119ca3c3819211d5971be05aac39434b2d858dbfb496ac895fae85c8d583",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "6",
+              "osm_timestamp": "2025-05-09T21:27:45Z",
+              "tags": {
+                "addr:city": "Paso Canoas",
+                "addr:street": "Carretera Interamericana",
+                "barrier": "border_control",
+                "building": "yes",
+                "building:levels": "2",
+                "name": "Aduanas - Migración Panameña"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Paso Canoas road before Panamanian customs",
+      "date_scope_check": {
+        "start_earliest": "2020-10-04",
+        "start_latest": "2020-10-04",
+        "end_earliest": "2020-10-08",
+        "end_latest": "2020-10-08",
+        "last_confirmed": "2020-10-08",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Named crossing reference located; precise historical obstruction/approach footprint is not reconstructed."
+      ]
+    },
+    {
+      "phase_id": "R3-AM-005-C7P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-paso-canoas-road",
+          "name": "Paso Canoas road crossing (Panamanian customs)",
+          "coordinates": [
+            -82.8384534,
+            8.5339823
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/234963318"
+          ],
+          "evidence_note": "Fresh named OSM structure/facility XML inspected; distinct road reference, not nearby town centroid or rail/ferry geometry. Semanario Universidad expressly places vehicles and freight obstruction before Panamanian customs at Paso Canoas while border offices continued working; barriers, sand and tyres described.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/af80ed815b79c5e30a11.xml",
+              "sha256": "1ac0119ca3c3819211d5971be05aac39434b2d858dbfb496ac895fae85c8d583",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "6",
+              "osm_timestamp": "2025-05-09T21:27:45Z",
+              "tags": {
+                "addr:city": "Paso Canoas",
+                "addr:street": "Carretera Interamericana",
+                "barrier": "border_control",
+                "building": "yes",
+                "building:levels": "2",
+                "name": "Aduanas - Migración Panameña"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Physical barriers at Paso Canoas crossing approach",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2020-10-15",
+        "end_latest": "2020-10-15",
+        "last_confirmed": "2020-10-13",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Named crossing reference located; precise historical obstruction/approach footprint is not reconstructed."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "b300160d8531df8b5d81bb7dff125f466a52ca8108d174af1612f12f0c22b2b6"
+}

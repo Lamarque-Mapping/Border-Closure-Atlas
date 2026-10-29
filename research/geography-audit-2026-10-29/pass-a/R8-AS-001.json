@@ -1,0 +1,110 @@
+{
+  "record_id": "R8-AS-001",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Rishton–Kaytpas crossing, not complete Rishton–Sokh route. Ozodlik directly separates this gate from Apkan, which still blocked entry to Sokh; named Rishton road-control feature matches only the selected gate.",
+  "source_checks": [
+    {
+      "url": "https://www.ozodlik.org/a/rishton-sox-sux-sokh-cegara-vodil/28760623.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Rishton–Kaytpas reopened from September 25; Apkan remained closed, so entire Sokh route was not reopened.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-07.json",
+      "sha256": "5cbb6ef8e1dc6a4a8b3507ee58a73a33ffb57ebef5e0089be117fc0d8ff1d2ff"
+    },
+    {
+      "url": "https://www.azattyqasia.org/a/24819372.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.ozodlik.org/a/sokh-rishton-chegara-fargona-botken/28744649.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.azattyk.org/a/kyrgyz-uzbek-border-stations-are-opened/31181768.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://for.kg/news-695129-en.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://kun.uz/en/news/2021/04/02/road-connecting-rishtan-and-sokh-opened",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-137470f0929c00c935.bin",
+      "sha256": "ea89707413bcca055e05ed013b23ba929376c5500bd9f7d467094b0a74dc7d43"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R8-AS-001-FU1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-rishton-kaytpas-road",
+          "name": "Rishton–Kaytpas road crossing",
+          "coordinates": [
+            71.2733799,
+            40.3432613
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/1827188518",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1827188518",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=71.27,40.32,71.32,40.37"
+          ],
+          "evidence_note": "Named Rishton control node opposite Kyrgyz-Kyshtak control in Kaytpas locality. Ozodlik explicitly names Rishton–Kaytpas and distinguishes still-closed Apkan; no whole Sokh corridor substitute.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-kaytpas.xml",
+          "sha256": "e6e98cb8f1da3719ddd6b64738eeb1693d18c2e92ec908d95689a833a3f7f50a",
+          "osm_feature": "node/1827188518",
+          "osm_version": "4",
+          "osm_timestamp": "2026-03-24T12:54:34Z",
+          "identity_tags": {
+            "access:citizenship": "KG;UZ",
+            "barrier": "border_control",
+            "bicycle": "yes",
+            "foot": "yes",
+            "horse": "yes",
+            "motorcar": "yes",
+            "motorcycle": "yes",
+            "name": "Rishton",
+            "opening_hours": "11-18"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Rishtan–Kaytpas crossing after intermediate opening and reclosure; excludes Apkan as a separate gate",
+      "date_scope_check": {
+        "scope": "Rishtan–Kaytpas crossing after intermediate opening and reclosure; excludes Apkan as a separate gate",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2017-09-19",
+        "end_latest": "2017-09-19",
+        "last_confirmed": "2017-09-19",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "September 27 report says restoration from September 25, 07:00–19:00, for Kyrgyz and Uzbek citizens. Null/uncertain reclosure onset and intermediate opening remain unchanged."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

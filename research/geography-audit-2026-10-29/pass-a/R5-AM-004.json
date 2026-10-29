@@ -1,0 +1,77 @@
+{
+  "record_id": "R5-AM-004",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Andina identifies November 29 vehicle-road protest for continuous opening of Santa Rosa and Chacalluta, and meeting at Santa Rosa; opening-hours demands are not a continuous road closure.",
+  "source_checks": [
+    {
+      "url": "https://andina.pe/agencia/noticia-tacna-transportistas-piden-restablecer-atencion-sin-interrupciones-frontera-chile-964794.aspx",
+      "access_status": "fresh_source_extract",
+      "finding": "Andina identifies November 29 vehicle-road protest for continuous opening of Santa Rosa and Chacalluta, and meeting at Santa Rosa; opening-hours demands are not a continuous road closure.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-016.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-AM-004-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-chacalluta-road",
+          "name": "Chacalluta–Santa Rosa road crossing reference (Chilean complex)",
+          "coordinates": [
+            -70.3137357,
+            -18.3150469
+          ],
+          "coordinate_method": "OSM named node coordinates",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/5010599194"
+          ],
+          "evidence_note": "Named Chacalluta border_control node; mapped on motorcar route within the Chilean complex. Used only to identify the named road crossing, not freight lanes or the obstruction on the inter-terminal road. Santa Rosa complex and the historical blockade location remain unbound.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b315f85c04ed17bb453d.xml",
+              "sha256": "c20d990c7f5a0d47a0a57a87020f31c026a052b14157c1bad010f8e5923166b5",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "5",
+              "osm_timestamp": "2023-05-01T06:12:57Z",
+              "tags": {
+                "barrier": "border_control",
+                "bus": "no",
+                "coach": "no",
+                "hgv": "no",
+                "motorcar": "designated",
+                "motorcycle": "designated",
+                "name": "Complejo Fronterizo Chacalluta"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Reported morning vehicle-access obstruction at Santa Rosa, ending at Andina's midday clearance milestone",
+      "date_scope_check": {
+        "start_earliest": "2023-11-29",
+        "start_latest": "2023-11-29",
+        "end_earliest": "2023-11-29",
+        "end_latest": "2023-11-29",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Inter-terminal road obstruction is not precisely located; marker is a qualified named-crossing reference only."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "eb7d6a89529cd1c88e5c1c97d59a3c77587f0756a1816e61f29975af69bf8e2c"
+}

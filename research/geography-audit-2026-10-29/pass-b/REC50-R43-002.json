@@ -1,0 +1,52 @@
+{
+  "record_id": "REC50-R43-002",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "National outward Mali commodity rule; listed cereals/cotton inputs, not a general passenger or freight closure. All existing Mali frontier lines represent policy scope only.",
+  "source_checks": [
+    {
+      "url": "https://www.fao.org/giews/food-prices/food-policies/detail/fr/c/1461003/",
+      "access_status": "full_text_web",
+      "finding": "FAO expressly reports national cereal exports banned from December6 until further order.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-06.json",
+      "evidence_sha256": "65ef452fe70c5a93cb053faf575852295c9917004a6b78ec66ca974bb26f3de1"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R43-002-P1",
+      "category": "wider_border",
+      "decision": "map",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-mli-sen",
+        "context-frontier-civ-mli",
+        "context-frontier-bfa-mli",
+        "context-frontier-dza-mli",
+        "context-frontier-gin-mli",
+        "context-frontier-mli-mrt",
+        "context-frontier-mli-ner"
+      ],
+      "complete": true,
+      "phase_applicability": "National outward Mali commodity rule; listed cereals/cotton inputs, not a general passenger or freight closure. All existing Mali frontier lines represent policy scope only. Current phase only: Mali exports of the listed cereals and cotton inputs under order 2021-5126/MIC-MEF-SG",
+      "date_scope_check": {
+        "start_earliest": "2021-12-06",
+        "start_latest": "2021-12-06",
+        "end_earliest": "2023-05-16",
+        "end_latest": "2023-05-16",
+        "last_confirmed": "2023-05-16",
+        "endpoint_status": "last_confirmed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "REC50-R43-002-P1: The December 6, 2021 order is formal policy evidence. The exact later presentation is linked from WTO's official May 16, 2023 meeting agenda and states the restriction remains in force; this date is supported by meeting provenance, not its filename. Goods are cottonseed, cottonseed cake, millet, sorghum, maize and local rice. No continuous all-post enforcement is inferred.\n\nThe World Bank's 2024 Niger update reports cereal-export relaxation by Mali in solidarity with Niger. The precise Malian instrument, effective date, commodities and other destinations remain unestablished, so this is not coded as a blanket repeal or an endpoint for cotton inputs.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

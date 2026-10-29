@@ -133,6 +133,20 @@ for(const site of source.sites){
  assert(site.precision&&site.source_note,site.id+' declares positional limits');
 }
 for(const b of source.bindings){assert(siteIDs.has(b.site_id),'binding site exists');assert.equal(phaseOwners.get(b.phase_id),b.record_id,'binding belongs to the named phase and parent');}
+for(const b of source.border_bindings||[]){
+ assert.equal(phaseOwners.get(b.phase_id),b.record_id,'wider binding belongs to its phase');
+ assert(/^(Multi)?LineString$/.test(features.get(b.location_id)?.geometry?.type||''),'wider binding is a line');
+ assert(X.review.phases[b.phase_id].border_ids.includes(b.location_id),'explicit wider geometry survives compilation');
+}
+// A reviewed phase-level line replaces unrelated legacy parent links; it does
+// not broaden another phase, convert a point to a line, or alter chronology.
+const wideFixture={...data,crossing_map:{...data.crossing_map,phases:{...data.crossing_map.phases}}};
+const portugal=byID.get('EU025'),portugalPhase=portugal.duration_periods.find(p=>p.analysis_included!==false);
+wideFixture.crossing_map.phases[portugalPhase.period_id]={...X.review.phases[portugalPhase.period_id],border_ids:['frontier-portugal-spain']};
+assert.deepEqual(C.mapLocationsFor(phaseRecord(portugal,portugalPhase),wideFixture,state),['frontier-portugal-spain'],'reviewed explicit phase geography works without parent links');
+assert.deepEqual(C.mapLocationsFor(phaseRecord(portugal,portugalPhase),wideFixture,at('2019-01')),[],'new geometry does not create earlier evidence');
+wideFixture.crossing_map.phases[portugalPhase.period_id].border_ids=[source.sites[0].id];
+assert.deepEqual(C.mapLocationsFor(phaseRecord(portugal,portugalPhase),wideFixture,state),[],'wider geometry cannot borrow a crossing point');
 const twice=X.attach(data);
 assert.equal(C.locationFeatures(twice).length,C.locationFeatures(data).length,'attachment is idempotent');
 assert.throws(()=>X.attach({...unpack(original),meta:{...original.meta,source_sha256:'wrong-release'}}),/release|version|match/i,'another workbook must not inherit this geography');

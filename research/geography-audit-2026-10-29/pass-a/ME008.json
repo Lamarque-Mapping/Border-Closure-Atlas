@@ -1,0 +1,89 @@
+{
+  "record_id": "ME008",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Habur–Ibrahim Khalil is one paired road crossing. Turkish freight policy and Iraqi-side admission of Turkish drivers in their own trucks are separate phases.",
+  "source_checks": [
+    {
+      "url": "https://ticaret.gov.tr/haberler/bakan-pekcan-habur-ve-gurbulak-kapilarinin-acildigini-duyurdu",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Turkish ministry June4 announcement refers to international freight and commercial vehicles, not proof of ordinary passenger restoration.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-12.txt"
+    },
+    {
+      "url": "https://www.trthaber.com/haber/turkiye/habur-sinir-kapisindan-tir-ve-kamyonlarin-suruculu-gecisi-basladi-510164.html",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "19 August report explains March1 contact-free swaps, Turkish June4 permission, later Iraqi-side permission and actual driver-accompanied crossings.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-16.txt"
+    },
+    {
+      "url": "https://www.und.org.tr/medya-detay/duyurular/habur-ibrahim-halil-sinir-kapisi-tir-gecisine-aciliyor",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Hauliers association specifies August19 19:00 Turkish-driver entry to Iraq, continued freight exchanges before then, and testing.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-15.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME008-NP1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "habur",
+          "name": "Habur–Ibrahim Khalil road customs corridor",
+          "coordinates": [
+            42.5685244,
+            37.1501969
+          ],
+          "coordinate_method": "Centre of the bounding box of the freshly retrieved named OSM way; approximate facility marker",
+          "precision": "Approximately 1 km; Turkish named port of entry represents paired road corridor, not a railway.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/way/94999260/full"
+          ],
+          "evidence_note": "OSM way 94999260, version 9, timestamp 2024-12-11T20:11:14Z. Identity tags: {\"addr:city\": \"Şırnak\", \"addr:district\": \"Silopi\", \"area\": \"yes\", \"barrier\": \"border_control\", \"landuse\": \"commercial\", \"name\": \"Habur Sınır Kapısı\", \"name:en\": \"Habur Port of Entry\", \"source\": \"bing\", \"wikidata\": \"Q3125423\", \"wikimedia_commons\": \"Category:Habur Border Crossing\", \"wikipedia\": \"tr:Habur Sınır Kapısı\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/bf122f4419be93bf.raw",
+          "evidence_sha256": "b321b7b138621dc153e5a144723384f0a5346f0401696f57a95092873e788b9b"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Turkish-side declared freight policy ends June4; no general passenger inference.",
+      "date_scope_check": "Canonical policy_period: start 2020-03-01–2020-03-01; endpoint 2020-06-04–2020-06-04; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    },
+    {
+      "phase_id": "ME008-FA1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "habur",
+          "name": "Habur–Ibrahim Khalil road customs corridor",
+          "coordinates": [
+            42.5685244,
+            37.1501969
+          ],
+          "coordinate_method": "Centre of the bounding box of the freshly retrieved named OSM way; approximate facility marker",
+          "precision": "Approximately 1 km; Turkish named port of entry represents paired road corridor, not a railway.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/way/94999260/full"
+          ],
+          "evidence_note": "OSM way 94999260, version 9, timestamp 2024-12-11T20:11:14Z. Identity tags: {\"addr:city\": \"Şırnak\", \"addr:district\": \"Silopi\", \"area\": \"yes\", \"barrier\": \"border_control\", \"landuse\": \"commercial\", \"name\": \"Habur Sınır Kapısı\", \"name:en\": \"Habur Port of Entry\", \"source\": \"bing\", \"wikidata\": \"Q3125423\", \"wikimedia_commons\": \"Category:Habur Border Crossing\", \"wikipedia\": \"tr:Habur Sınır Kapısı\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/bf122f4419be93bf.raw",
+          "evidence_sha256": "b321b7b138621dc153e5a144723384f0a5346f0401696f57a95092873e788b9b"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Paired road-corridor marker for Turkish drivers entering Iraq. Cargo swaps continued, so this is not a complete freight shutdown.",
+      "date_scope_check": "Canonical closed_interval: start 2020-03-01–2020-03-01; endpoint 2020-08-19–2020-08-19; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,250 @@
+{
+  "record_id": "EU018",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Serbian national inwardpassenger restriction acrossland,rail,waterborderposts, retaining freight exception and laterconditionalentry.",
+  "source_checks": [
+    {
+      "url": "https://www.srbija.gov.rs/vest/en/151884/all-border-crossings-for-passenger-trafficclosed.php",
+      "access_status": "full_text_cached_this_pass",
+      "finding": "Government20Mar says allpassengerroad,rail,air,watercrossings closed08:00, transporttrucks aloneenter.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/2e77d299f666ca5db595.raw",
+      "sha256": "94ce151784e3eb399f3f6509703be796fe0da0382af346a7ccecab7ab1392e2b"
+    },
+    {
+      "url": "https://www.srbija.gov.rs/vest/en/156384/entry-into-serbia-without-coronavirus-test-and-commission-permission.php",
+      "access_status": "full_text_cached_this_pass",
+      "finding": "Government21May adoptedfreeentry withoutPCR/commissionpermission; earlierconditionalentry means no precise fullrestrictionendpoint inferred.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/e320296452f1ae44d168.raw",
+      "sha256": "1b1bff83b8c907ebe67f1849f6d347b54b854e7cc59f9368e09bde0e1cf8c0c3"
+    },
+    {
+      "url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+      "access_status": "cached_versioned_geography",
+      "finding": "Independently inspected source/geography-reference.json named bilateral geometry metadata. Natural Earth5.1.0 generalized land boundaries; disputed classifications retained, water-indicator segments omitted. These are scope references, not individual gates.",
+      "evidence_path": "source/geography-reference.json",
+      "sha256": "a7ad4c4223195811491048191efd6e1626eda968146dc2485d9e65a5b4799e78",
+      "geometry_metadata": [
+        {
+          "location_id": "context-frontier-bgr-srb",
+          "label": "Bulgaria–Republic of Serbia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "BGR",
+            "SRB"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_178"
+          ],
+          "source_feature_classes": [
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        },
+        {
+          "location_id": "context-frontier-bih-srb",
+          "label": "Bosnia and Herzegovina–Republic of Serbia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "BIH",
+            "SRB"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_216"
+          ],
+          "source_feature_classes": [
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        },
+        {
+          "location_id": "context-frontier-hrv-srb",
+          "label": "Croatia–Republic of Serbia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "HRV",
+            "SRB"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_217",
+            "ne_10m_admin_0_boundary_lines_land_501",
+            "ne_10m_admin_0_boundary_lines_land_502",
+            "ne_10m_admin_0_boundary_lines_land_503",
+            "ne_10m_admin_0_boundary_lines_land_504"
+          ],
+          "source_feature_classes": [
+            "Disputed (please verify)",
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_503",
+            "ne_10m_admin_0_boundary_lines_land_504"
+          ],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        },
+        {
+          "location_id": "context-frontier-hun-srb",
+          "label": "Hungary–Republic of Serbia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "HUN",
+            "SRB"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_129"
+          ],
+          "source_feature_classes": [
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        },
+        {
+          "location_id": "context-frontier-kos-srb",
+          "label": "Kosovo–Republic of Serbia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "KOS",
+            "SRB"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_187"
+          ],
+          "source_feature_classes": [
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        },
+        {
+          "location_id": "context-frontier-mkd-srb",
+          "label": "North Macedonia–Republic of Serbia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "MKD",
+            "SRB"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_177"
+          ],
+          "source_feature_classes": [
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        },
+        {
+          "location_id": "context-frontier-mne-srb",
+          "label": "Montenegro–Republic of Serbia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "MNE",
+            "SRB"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_189"
+          ],
+          "source_feature_classes": [
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        },
+        {
+          "location_id": "context-frontier-rou-srb",
+          "label": "Romania–Republic of Serbia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "ROU",
+            "SRB"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_224"
+          ],
+          "source_feature_classes": [
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        }
+      ]
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU018-D1",
+      "category": "wider_border",
+      "decision": "map",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-bgr-srb",
+        "context-frontier-bih-srb",
+        "context-frontier-hrv-srb",
+        "context-frontier-hun-srb",
+        "context-frontier-kos-srb",
+        "context-frontier-mkd-srb",
+        "context-frontier-mne-srb",
+        "context-frontier-rou-srb"
+      ],
+      "complete": true,
+      "phase_applicability": "Nationallandfrontier scope including Kosovo administrative crossingcontext; cartographic naming doesnotdetermine sovereignty. Freightnotclosed.",
+      "date_scope_check": "Canonical policy/observation bounds preserved. Generalized boundary references locate national legal scope, not uniform physical closure or uninterrupted operations.",
+      "canonical_dates": {
+        "kind": "policy_period",
+        "measure_type": "formal_policy_period",
+        "start_earliest": "2020-03-20",
+        "start_latest": "2020-03-20",
+        "end_earliest": null,
+        "end_latest": "2020-05-22",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "no_numeric_duration",
+        "policy_only": true
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/EU018.json",
+  "canonical_input_sha256": "1821844526d99d98733c7e9233bc5cd71a46ddef6f1ac2ce75693d06635bf7cb",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

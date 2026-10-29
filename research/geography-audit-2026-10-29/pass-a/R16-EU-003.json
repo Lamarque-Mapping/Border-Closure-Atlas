@@ -1,0 +1,73 @@
+{
+  "record_id": "R16-EU-003",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Siret–Porubne international road crossing and Romanian approach. Distinct episode and traffic direction retained; no rail facility or entire Romania–Ukraine frontier substituted.",
+  "source_checks": [
+    {
+      "url": "https://www.pravda.com.ua/news/2024/01/13/7437123/",
+      "access_status": "fresh_source_extract",
+      "finding": "January 13 report identifies Porubne–Siret, Romanian-side truck obstruction and same-evening restoration; cars, buses and pedestrians were handled separately.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-002.json"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/3019220234",
+      "access_status": "fresh_full_xml",
+      "finding": "Inspected XML: border_control node, latitude 47.9863430 longitude 26.0622666.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/9eec6ec81ce76c4ccdfb.xml",
+      "source_sha256": "6fc446a1327135c811858a799b807c53e5244139b5e47220285b7034d0e40de8"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R16-EU-003-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "crossing-siret-porubne",
+          "name": "Siret–Porubne",
+          "coordinates": [
+            26.0622666,
+            47.986343
+          ],
+          "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/3019220234"
+          ],
+          "evidence_note": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/9eec6ec81ce76c4ccdfb.xml",
+              "sha256": "6fc446a1327135c811858a799b807c53e5244139b5e47220285b7034d0e40de8",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Siret same-day episode on 13 January 2024; not joined across the gap to later protests.",
+      "date_scope_check": {
+        "start_earliest": "2024-01-13",
+        "start_latest": "2024-01-13",
+        "end_earliest": "2024-01-13",
+        "end_latest": "2024-01-13",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact historical approach blockade footprint remains unlocated."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "47a992912915536312e7763c8ad368d35478de5fa0ea934d1d78ce901d1745f6"
+}

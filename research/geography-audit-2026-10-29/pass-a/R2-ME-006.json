@@ -1,0 +1,48 @@
+{
+  "record_id": "R2-ME-006",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Commercial restriction at Semalka–Faysh Khabur from the May closure to the June commercial restoration.",
+  "source_checks": [
+    {
+      "url": "https://npasyria.com/en/99073/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Names Semalka–Faysh Khabur, May 11 commercial prohibition, reopening announced Monday after 26 days, and resumed three-day weekly service plus humanitarian cases.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-04.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-ME-006-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-semalka-faysh-khabur",
+          "name": "Semalka–Faysh Khabur customs crossing area",
+          "coordinates": [
+            42.3484273,
+            37.0892488
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 500 m; named Syrian customs facility, not an exact pontoon bridge or opposite bank terminal.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/6019972486"
+          ],
+          "evidence_note": "OSM node 6019972486, version 2, timestamp 2024-03-19T01:33:56Z. Identity tags: {\"government\": \"customs\", \"name\": \"معبر سيمالكا\", \"name:en\": \"Semalka Borders\", \"office\": \"government\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/f362e988de5d494f.raw",
+          "evidence_sha256": "e7d1d28a269632956dfb7a9bb9df54ad674db5f3c81bd2bdc278b6b60bcd5f6a"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Point applies only to the recorded commercial phase; phased weekly services and humanitarian exceptions remain explicit.",
+      "date_scope_check": "Canonical closed_interval: start 2023-05-11–2023-05-11; endpoint 2023-06-05–2023-06-05; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

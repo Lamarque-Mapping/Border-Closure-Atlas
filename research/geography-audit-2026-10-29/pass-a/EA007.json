@@ -1,0 +1,121 @@
+{
+  "record_id": "EA007",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The record is the First Mae Sot–Myawaddy road bridge, specifically ordinary passengers/private cars. Myanmar MoI confirms resumed operations 12 January 2023 and explicitly separates freight on Bridge II; no rail or informal river crossing is included.",
+  "source_checks": [
+    {
+      "url": "https://www.moi.gov.mm/moi:eng/news/9198",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "Bridge I reopened 12 January 2023; licensed private cars and border-pass/passport travellers admitted; Bridge II carried trade during the closure.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-5258be2abaaf77d85f.bin",
+      "sha256": "3c294ea0327b5039d1b60a8af59563b542f838a27abf6087e1ead0ab83bc5647"
+    },
+    {
+      "url": "https://elevenmyanmar.com/news/myanmar-migrant-workers-return-before-border-gates-are-closed",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "Contemporary report specifically says Bridge I closed 21 March and describes Bridge II separately.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-33618900b96c63a79b.bin",
+      "sha256": "0b92f54d21d1750c4acc1bc80e049e9408acb375be01826b4efb95bda4fb8457"
+    },
+    {
+      "url": "https://thailand.go.th/public/issue-focus-detail/001_08_032",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-6c60d4ad9d39e47e31.bin",
+      "sha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d"
+    },
+    {
+      "url": "https://www.mdn.gov.mm/en/myawady-thai-border-gates-closed",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-aa16a4e83ec670f04a.bin",
+      "sha256": "469e68d3c151c6f90c7659d8e475b42070083526d34cb3391a247e443b386b57"
+    },
+    {
+      "url": "https://www.moi.gov.mm/moi%3Aeng/news/9198",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-c4e637f9fdfcfeb5f4.bin",
+      "sha256": "19d0d5ed11cd63690f34b1399cebf0c76b29436dfe4fba2c32eaa9215f71c30e"
+    },
+    {
+      "url": "https://www.mdn.gov.mm/en/thai-myanmar-friendship-bridge-1-closed-14-days",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-0d5fd8e74b82a8c434.bin",
+      "sha256": "2e8296995ced965485bf59114463af1c5a3272ffcfb7193e2a30a69b2f3144b2"
+    },
+    {
+      "url": "https://thailand.go.th/issue-focus-detail/001_08_032?hl=en",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-c568e288c0150953d1.bin",
+      "sha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d"
+    },
+    {
+      "url": "https://dmediag.com/news/tmfb.html",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-daeb652895e0c930cd.bin",
+      "sha256": "4d07c2eba7f291748c57dfc90fad4c0bce4f7c28d145a2c673b9b45c679a6f44"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA007-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-mae-sot-myawaddy-bridge-i",
+          "name": "Mae Sot–Myawaddy Friendship Bridge I crossing area",
+          "coordinates": [
+            98.5136423,
+            16.6894073
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/484241867",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/484241867",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=98.5,16.68,98.53,16.7"
+          ],
+          "evidence_note": "Named Myawaddy border-control node on the first road-bridge approach. Thai government describes Bridge I on Highway 105 at Tha Sai Luat; this is separate from the northern cargo Bridge II.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-mae-sot-i.xml",
+          "sha256": "0224c6f8c209404ab7e60f3bd388cf5e503e815c33d967ad77c6856a2ce2da82",
+          "osm_feature": "node/484241867",
+          "osm_version": "10",
+          "osm_timestamp": "2025-01-22T07:08:14Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "Myawaddy",
+            "name:en": "Myawaddy",
+            "name:ja": "ミャワディ",
+            "name:ru": "Мьявадди",
+            "source": "GPS;photograph"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary passenger/private-car passage on Myawaddy–Mae Sot Friendship Bridge I.",
+      "date_scope_check": {
+        "scope": "Ordinary passenger/private-car passage on Myawaddy–Mae Sot Friendship Bridge I.",
+        "start_earliest": "2020-03-21",
+        "start_latest": "2020-03-23",
+        "end_earliest": "2023-01-12",
+        "end_latest": "2023-01-12",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Fresh original reports support 12 January 2023 reopening. Contemporary Eleven Myanmar states Bridge I closed 21 March 2020, whereas the retrospective MoI account says 23 March: retain the canonical date and its original uncertainty; no bridge-II phase inheritance."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

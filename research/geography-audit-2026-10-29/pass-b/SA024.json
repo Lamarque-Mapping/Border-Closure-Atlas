@@ -1,0 +1,86 @@
+{
+  "record_id": "SA024",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Bangladesh special-authorisation passenger-admission regime at six operating land ports: Benapole, Akhaura, Sonamasjid, Hili, Darshana and Burimari. Five ports scheduledSeptember19 excluded; no total physical seal or cargo ban.",
+  "source_checks": [
+    {
+      "url": "https://www.thedailystar.net/frontpage/news/border-india-shut-14-days-2083717",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "OriginalApril source accessed but first webopen returned mostly navigation; no new finding inferred.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-sa-3.json",
+      "sha256": "32690c65865ae407bde526c18d58387f8aaa57f570ccc76f7e1fdb244eceab7f"
+    },
+    {
+      "url": "https://www.thedailystar.net/nrb/departure-arrival/travel-advisory/news/bangladesh-lifts-restrictions-cross-border-travel-and-india-2177566",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Ministry-statement report explicitly names six operating ports and removal ofNOC requirementSeptember16, distinguishes later five.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-sa-followup-1.json",
+      "sha256": "754f5256e6d48284b482464107a16a5c0a7b6ce47e6e467c7ed73d0dee6d5a82"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/7557117257",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named road ZeroPoint border-control node inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/042876784d0c28d2150f.xml",
+      "sha256": "a63c0b01f5099a73e1aec93b81455f3e07061c877839b766c2e79d0e49af16c7",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/042876784d0c28d2150f.txt",
+      "text_sha256": "a63c0b01f5099a73e1aec93b81455f3e07061c877839b766c2e79d0e49af16c7",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SA024-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-petrapole-benapole",
+          "name": "Petrapole–Benapole road zero point",
+          "coordinates": [
+            88.8839323,
+            23.0379104
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/7557117257"
+          ],
+          "evidence_note": "Explicit bilingual Petrapole–Benapole ZeroPoint border_control node; named land-port passenger admission regime.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/042876784d0c28d2150f.xml",
+          "sha256": "a63c0b01f5099a73e1aec93b81455f3e07061c877839b766c2e79d0e49af16c7"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Bangladesh special-authorisation passenger-admission regime at six operating land ports: Benapole, Akhaura, Sonamasjid, Hili, Darshana and Burimari. Five ports scheduledSeptember19 excluded; no total physical seal or cargo ban.",
+      "date_scope_check": {
+        "start_earliest": "2021-04-26",
+        "start_latest": "2021-04-26",
+        "end_earliest": "2021-09-16",
+        "end_latest": "2021-09-16",
+        "last_confirmed": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "This measures an admission-permission regime, not physically sealed gates: authorised returnees and cargo already crossed. Five other ports had a later scheduled phase and are excluded; first ordinary traffic is not independently observed."
+      },
+      "unresolved": [
+        "Other five named passenger land-port coordinates not yet corroborated; Darshana road/rail distinction needs care."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Other five named passenger land-port coordinates not yet corroborated; Darshana road/rail distinction needs care."
+  ],
+  "input_sha256": "81f5c34a411b4677884f99017ac91b48ecf55246281347b308c224bfaf190adc",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

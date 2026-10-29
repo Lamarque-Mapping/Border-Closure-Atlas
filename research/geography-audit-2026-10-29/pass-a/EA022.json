@@ -1,0 +1,103 @@
+{
+  "record_id": "EA022",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Khasan–Tumangang freight railway crosses the named Korea–Russia Friendship Bridge. The later road bridge and passenger trains are different modes and are excluded.",
+  "source_checks": [
+    {
+      "url": "https://interfax.com/newsroom/top-stories/84561/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Railway authority identifies Khasan–Tumangang and first resumed freight shipment.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-04.json",
+      "sha256": "ba381143dfc17275df3650c505d10165a57a7bffb8c82aa0fe6d15a734eb465d"
+    },
+    {
+      "url": "https://www.kommersant.ru/doc/5646308",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Railway source separates month-precision freight suspension from February 3 passenger date and dates first freight train November 1.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-06.json",
+      "sha256": "681f3829c14d419c1a98c54f0ea371e3deddcd23ce43fe2c99266eabcd4a8408"
+    },
+    {
+      "url": "https://www.38north.org/2022/11/first-traffic-observed-on-north-korea-russia-railway-link-in-several-years/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://mintrans.gov.ru/press-center/branch-news/5782",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA022-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-khasan-tumangang-rail",
+          "name": "Khasan–Tumangang rail bridge",
+          "coordinates": [
+            130.6421853,
+            42.4156587
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/42510186",
+          "precision": "Approximate rail-bridge segment reference, 500 m; not station/customs yard centroid.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/42510186",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=130.61,42.4,130.66,42.44"
+          ],
+          "evidence_note": "Explicitly named North Korea–Russia Friendship Bridge railway feature; 1435/1520 gauge, railway=rail. New nearby 2026 road bridge is excluded.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-tumangang.xml",
+          "sha256": "11fc02ff5c69607f33e329a27cd333d93f90fbf4cf53a88bdea4c6671f1d7973",
+          "osm_feature": "way/42510186",
+          "osm_version": "18",
+          "osm_timestamp": "2025-05-01T11:41:29Z",
+          "identity_tags": {
+            "branch": "ДВОСТ",
+            "bridge": "yes",
+            "designated_direction": "both",
+            "electrified": "no",
+            "gauge": "1435;1520",
+            "layer": "1",
+            "name": "Мост Российско-Корейской дружбы",
+            "name:en": "North Korea-Russia Friendship Bridge",
+            "name:ko": "조로친선교",
+            "name:ko-Hani": "朝露親善橋",
+            "name:ru": "Мост Российско-Корейской дружбы",
+            "name:zh": "朝俄友谊大桥",
+            "operator": "ОАО \"РЖД\"",
+            "passenger_lines": "1",
+            "railway": "rail",
+            "usage": "main"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Khasan–Tumangang rail freight suspension, to the railway-reported first resumed shipment.",
+      "date_scope_check": {
+        "scope": "Khasan–Tumangang rail freight suspension, to the railway-reported first resumed shipment.",
+        "start_earliest": "2020-02-01",
+        "start_latest": "2020-02-29",
+        "end_earliest": "2022-11-01",
+        "end_latest": "2022-11-01",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Kommersant quotes Far East Railway: first freight train November 1, 2022, with freight suspension in February 2020. February 3 specifically dates passenger suspension and is not imported into freight onset."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

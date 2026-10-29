@@ -1,0 +1,64 @@
+{
+  "record_id": "REC50-R13-001",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ordinary Dehiba–Wazen road crossing service interrupted for mourning; urgent/exceptional passage is retained.",
+  "source_checks": [
+    {
+      "url": "https://www.mosaiquefm.net/mobile/fr/actualite-regional-tunisie/326244/reouverture-du-passage-de-dehiba-wazen",
+      "access_status": "indexed_full_article",
+      "finding": "Original-publisher indexed article names Dehiba–Wazen and ordinary restoration after Libyan-side mourning closure.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-dehiba-01.json",
+      "evidence_sha256": "d253233c56cba3dc0aba21e32858b5e4ad4b90d84b339cf8580ceeece0c2b215"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R13-001-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-dehiba-wazen",
+          "name": "Dehiba–Wazen road border facility",
+          "coordinates": [
+            10.6846255,
+            31.9790258
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/520064040",
+            "https://www.openstreetmap.org/api/0.6/way/520064040/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"addr:city\": \"الذهيبة\", \"addr:city:ar\": \"الذهيبة\", \"amenity\": \"police\", \"barrier\": \"wall\", \"name\": \"معبر الحدود الذهيبة\", \"name:ar\": \"معبر الحدود الذهيبة\", \"name:fr\": \"Poste frontalier de Dhehiba\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/adf93716af07ba84f39a.html",
+          "evidence_sha256": "698d6601bf8af62f6d186a4d31fa208019891ffb61e77d266fe669820bb10e38",
+          "osm_version": "5",
+          "osm_timestamp": "2023-03-17T19:58:35Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary Dehiba–Wazen road crossing service interrupted for mourning; urgent/exceptional passage is retained. Current phase only: Ordinary crossing service at Dehiba/Wazen during mourning for the crossing commander, excluding exceptional and urgent passage",
+      "date_scope_check": {
+        "start_earliest": "2018-04-13",
+        "start_latest": "2018-04-13",
+        "end_earliest": "2018-04-16",
+        "end_latest": "2018-04-16",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Ordinary crossing service was reportedly suspended from Friday 13 April until restoration on Monday 16 April 2018, while exceptional and urgent passage remained possible. The date difference is three calendar days, not measured 72 hours. Detailed passenger/freight categories and exact first-passage clocks remain unspecified.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

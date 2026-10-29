@@ -1,0 +1,66 @@
+{
+  "record_id": "SA016",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Salamabad Trade Facilitation Centre on Uri–Muzaffarabad LoC road is the selected barter-trade phase. Order also names Chakkan-da-Bagh, but later2026 confirmation concerns Salamabad alone. Centre is not necessarily KamanAmanSetu bridge.",
+  "source_checks": [
+    {
+      "url": "https://www.pib.gov.in/newsite/PrintRelease.aspx?lang=2&reg=48&relid=189799",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "MHA order names SalamabadUri and Chakkan-da-Bagh centres, suspends barter tradeApril19.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-sa-1.json",
+      "sha256": "ec6e442b33b926bfff9bf273d275f95914fbbd76fbec44c556c83c966c732b8f"
+    },
+    {
+      "url": "https://kashmirlife.net/cross-loc-trade-chapter-closes-as-salamabad-centre-turns-to-border-tourism-452309/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "September2026 report concerns deserted Salamabad centre transferred to tourism; not reopening.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-sa-1.json",
+      "sha256": "ec6e442b33b926bfff9bf273d275f95914fbbd76fbec44c556c83c966c732b8f"
+    },
+    {
+      "url": "https://lpai.gov.in/sites/default/files/2022-05/Journal_E-Issue_1.pdf",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "LPAI journal describes cargo clearance at Salamabad centre before crossingLoC, proving centre and crossing distinct.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-17.json",
+      "sha256": "165e3cc51b49a7e54aee807be5398c81860daea7e423dd0ea448f6d19c3a4685"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SA016-R1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Salamabad Trade Facilitation Centre on Uri–Muzaffarabad LoC road is the selected barter-trade phase. Order also names Chakkan-da-Bagh, but later2026 confirmation concerns Salamabad alone. Centre is not necessarily KamanAmanSetu bridge.",
+      "date_scope_check": {
+        "start_earliest": "2019-04-19",
+        "start_latest": "2019-04-19",
+        "end_earliest": "2026-09-18",
+        "end_latest": "2026-09-18",
+        "last_confirmed": "2026-09-18",
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "LoC is a disputed/de facto boundary. September 18 is the report date, not reopening; later status and Chakkan-da-Bagh need separate confirmation."
+      },
+      "unresolved": [
+        "Exact Salamabad facility coordinate not verified. Do not substitute village, wholeLoC or Kaman bridge."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact Salamabad facility coordinate not verified. Do not substitute village, wholeLoC or Kaman bridge."
+  ],
+  "input_sha256": "6f1b49ae19c0f5f3d024fdf09c1a73ddbb83c292004d4bf94ea4af284b714279",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

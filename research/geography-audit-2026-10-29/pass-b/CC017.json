@@ -1,0 +1,60 @@
+{
+  "record_id": "CC017",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "All South Ossetian-controlled civilian crossing points toward Georgian-administered territory were suspended for the H1N1 restriction; the source does not enumerate the full operative set. This is distinct from Abkhaz restrictions or the Russia-facing Roki route.",
+  "source_checks": [
+    {
+      "url": "https://www.interfax-russia.ru/military/news_eng/325733",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Retrieved web text gives 11 January shutdown and 15 March reopening of South Ossetia checkpoints; direct response was script-only.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/8d7403bbc63656a1a74e.html",
+      "sha256": "865b9f40264021137f81c686a32bd2af79e2116df407a80b6a36d59c3fe9110b",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/8d7403bbc63656a1a74e.txt",
+      "text_sha256": "d9cd89f5017bf0ce260e63d13d128639cb10c284a5ba19aad250cad713766772",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-central-1.json"
+    },
+    {
+      "url": "https://civil.ge/archives/273471",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Original article describes all South Ossetia crossing points and distinguishes the separate Abkhaz entry/exit restrictions.",
+      "error": "HTTP Error 503: Service Unavailable",
+      "status": 503,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-central-1.json",
+      "sha256": "865b9f40264021137f81c686a32bd2af79e2116df407a80b6a36d59c3fe9110b"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC017-D1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "All South Ossetian-controlled civilian crossing points toward Georgian-administered territory were suspended for the H1N1 restriction; the source does not enumerate the full operative set. This is distinct from Abkhaz restrictions or the Russia-facing Roki route.",
+      "date_scope_check": {
+        "start_earliest": "2019-01-11",
+        "start_latest": "2019-01-12",
+        "end_earliest": "2019-03-15",
+        "end_latest": "2019-03-15",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "The special-list, one-direction humanitarian window on 20–22 February is an exception, not ordinary reopening. This period does not claim total denial of every traveller."
+      },
+      "unresolved": [
+        "No South Ossetia ABL reference geometry exists in the provided inventory; Georgia country polygon or Georgia–Russia international frontier would misrepresent the scope. Complete named checkpoint set is unestablished."
+      ]
+    }
+  ],
+  "unresolved": [
+    "No South Ossetia ABL reference geometry exists in the provided inventory; Georgia country polygon or Georgia–Russia international frontier would misrepresent the scope. Complete named checkpoint set is unestablished."
+  ],
+  "input_sha256": "c45c8e39d39a471fbf33bc3492069079ae51a752bfb3e571251c8f2a88246b67",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

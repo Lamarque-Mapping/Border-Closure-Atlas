@@ -1,0 +1,73 @@
+{
+  "record_id": "CC027",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Eight named automobile checkpoints reopened: Jartepa/Sarazm, Kushkent/Ura-Tube, Uchkurgan/Khavatag, Khavastabad/Zafarabad, Bekabad/Khashtyak, Pap/Navbunyod, Ravat/Ravot and Gulbahor/Ayvaj. Amuzang/Khoshadi is the ninth reported reopening but is a railway and is excluded from this road-only phase.",
+  "source_checks": [
+    {
+      "url": "https://www.uzdaily.uz/en/nine-checkpoints-at-uzbek-tajik-border-opened/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Original Foreign Ministry-based report identifies road pairings separately from the Amuzang railway; a malformed stray word in its list is not treated as another checkpoint.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-central-2.json",
+      "sha256": "197a12fc19977c3c7dcdbc387dd23549144fca00f5595b73213ed28fc598a78b"
+    },
+    {
+      "url": "https://en.archive.kabar.kg/news/nine-checkpoints-resume-operation-on-uzbek-tajik-border/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Kabar independently reproduces the eight road names and one railway, resolving the road set.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-central-2.json",
+      "sha256": "197a12fc19977c3c7dcdbc387dd23549144fca00f5595b73213ed28fc598a78b"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC027-FU1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-jartepa-sarazm",
+          "name": "Jartepa–Sarazm road checkpoint area",
+          "coordinates": [
+            67.4022699,
+            39.5175393
+          ],
+          "coordinate_method": "Mean of unique OSM checkpoint-outline vertices from fresh way/full XML",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/565397835/full"
+          ],
+          "evidence_note": "Named Sarazm military=checkpoint polygon; original Uzbek Foreign Ministry reporting pairs Jartepa with Sarazm. UN TIR office Jartepa independently identifies Tajikistan as adjoining border.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/7e0dde153feba564ec8e.xml",
+          "sha256": "066e960d28c91feb73fe41a2778cd0a7292d090d010d5fa070d3026daa8082f4"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Eight named automobile checkpoints reopened: Jartepa/Sarazm, Kushkent/Ura-Tube, Uchkurgan/Khavatag, Khavastabad/Zafarabad, Bekabad/Khashtyak, Pap/Navbunyod, Ravat/Ravot and Gulbahor/Ayvaj. Amuzang/Khoshadi is the ninth reported reopening but is a railway and is excluded from this road-only phase.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2018-03-01",
+        "end_latest": "2018-03-01",
+        "last_confirmed": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Endpoint-only formal reopening; individual onsets and prior exceptions are unknown. Excludes Amuzang rail and avoids treating mixed ten-post reporting or rounded years as a common interval."
+      },
+      "unresolved": [
+        "Seven of the eight named road posts lack reverified coordinates in this pass; railway Amuzang cannot fill that coverage gap."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Seven of the eight named road posts lack reverified coordinates in this pass; railway Amuzang cannot fill that coverage gap."
+  ],
+  "input_sha256": "37a118676886afa7f8255e8f2f617ac456c1f91d60d59286ac4534cc743e102a",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

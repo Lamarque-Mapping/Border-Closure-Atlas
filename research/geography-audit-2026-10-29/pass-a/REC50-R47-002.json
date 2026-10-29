@@ -1,0 +1,54 @@
+{
+  "record_id": "REC50-R47-002",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "UN humanitarian convoy service through Bab al-Hawa, rather than all traffic or all Syria–Türkiye frontier passages.",
+  "source_checks": [
+    {
+      "url": "https://www.kurdistan24.net/en/story/32624-Strategic-border-crossing-reopens-allowing-UN-aid-to-reach-rebel-held-northwest-Syria",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "AP on-site account identifies the 17-truck convoy through Bab al-Hawa after the mandate interruption, with other UN routes used meanwhile.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-06.txt"
+    },
+    {
+      "url": "https://www.un.org/sg/en/content/highlight/2023-09-19.html",
+      "access_status": "inaccessible",
+      "finding": "Fresh open returned a JavaScript/robot verification page; not treated as substantive UN text.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-05.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R47-002-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-bab-al-hawa",
+          "name": "Bab al-Hawa–Cilvegözü road crossing area",
+          "coordinates": [
+            36.6921911,
+            36.2314664
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/2358493626"
+          ],
+          "evidence_note": "OSM node 2358493626, version 2, timestamp 2017-02-16T03:50:13Z. Identity tags: {\"barrier\": \"border_control\", \"bicycle\": \"yes\", \"motor_vehicle\": \"yes\", \"name\": \"الحدود باب الهوى\", \"name:en\": \"Bab al-Hawa Border Crossing\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/a4fe81f25e9eae9e.raw",
+          "evidence_sha256": "8d08cffbe6be4387702a1dfdff4bd01e6975f31e76b75ec0cdcfd8bfbd0b67cd"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Endpoint-only September 19 UN-convoy restoration; no exact onset created and no restriction applied to ordinary commercial or non-UN movements.",
+      "date_scope_check": "Canonical bounded_interval: start None–None; endpoint 2023-09-19–2023-09-19; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

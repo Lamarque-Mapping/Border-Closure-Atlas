@@ -1,0 +1,70 @@
+{
+  "record_id": "AM045",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "CBSA timeline explicitly gives a separate February 19 Pacific Highway suspension and same-day resumption.",
+  "source_checks": [
+    {
+      "url": "https://www.cbsa-asfc.gc.ca/transparency-transparence/pd-dp/bbp-rpp/dedc/2022-04-26/overview-apercu-eng.html",
+      "access_status": "full_text_html",
+      "finding": "CBSA timeline explicitly gives a separate February 19 Pacific Highway suspension and same-day resumption.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/ecd11d196e3b2630b8b9.raw",
+      "sha256": "0f7aa82bb7d969e1bb3e39497a94bcb42d2a6446ee9bd691a67b20fb3dbd4685"
+    },
+    {
+      "url": "https://mapcarta.com/N4426775229",
+      "access_status": "full_text_web",
+      "finding": "Independently inspected named OSM geographic mirror; facility and transport type matched to original CBSA scope."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM045-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-pacific-highway",
+          "name": "Pacific Highway road crossing",
+          "coordinates": [
+            -122.73466,
+            49.00301
+          ],
+          "coordinate_method": "Inspected OSM mirror named checkpoint coordinate; CBSA directory fixes road identity",
+          "precision": "approximate crossing area, not exact 2022 protest footprint",
+          "source_urls": [
+            "https://mapcarta.com/N4426775229",
+            "https://www.openstreetmap.org/node/4426775229",
+            "https://asfc-cbsa.gc.ca/prog/cdrp-picsc/do-bd-eng.html"
+          ],
+          "evidence_note": "OSM-mirror node 4426775229 explicitly names Pacific Highway port of entry. Peace Arch is separately mapped 1.5 km west; source CBSA names Pacific Highway, so Peace Arch must not be substituted."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Named road crossing/service area; highway obstruction footprint remains partial.",
+      "date_scope_check": "19 February same-day only; minute-level disagreements do not alter scope.",
+      "canonical_dates": {
+        "kind": "same_day",
+        "measure_type": "operational_spell",
+        "start_earliest": "2022-02-19",
+        "start_latest": "2022-02-19",
+        "end_earliest": "2022-02-19",
+        "end_latest": "2022-02-19",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "same_day_no_elapsed_duration",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/AM045.json",
+  "canonical_input_sha256": "5523381b297a98210f144893a5b22d0d300689be493caac245146b3bb35bc783",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

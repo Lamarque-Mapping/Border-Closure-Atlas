@@ -1,0 +1,128 @@
+{
+  "record_id": "H11",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Four national land-passenger policy phases are distinct from the bilateral passenger railway suspension. Dewele road coordinates cannot stand for the new electrified railway.",
+  "source_checks": [
+    {
+      "url": "https://faolex.fao.org/docs/pdf/dji194537.pdf",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Decree065 closes land, air and sea for two weeks with goods exception.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-10.txt"
+    },
+    {
+      "url": "https://faolex.fao.org/docs/pdf/dji194537EXT1.pdf",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Decree074 continues national closure excluding goods.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-10.txt"
+    },
+    {
+      "url": "https://natlex.ilo.org/dyn/natlex2/natlex2/files/download/110313/DJI-110313.pdf",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Decree078 extends prior exceptional measures.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-10.txt"
+    },
+    {
+      "url": "https://www.journalofficiel.dj/texte-juridique/decret-n2020-080-pr-pm-portant-levee-partielle-des-mesures-exceptionnelles-de-prevention-contre-la-propagation-du-covid-19/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Article18 expressly maintains land and sea closure for people, exempting goods; later amendment must control endpoint.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-16.txt"
+    },
+    {
+      "url": "https://www.journalofficiel.dj/texte-juridique/decret-n2020-145-pr-pm-portant-modification-du-decret-n-2020-080-pr-pm-portant-levee-partielle-des-mesures-exceptionnelles-de-prevention-contre-la-propagation-du-covid-19/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Amendment introduces entry screening at land posts and railway; do not equate an airport date with measured passage at every land gate.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-09.txt"
+    },
+    {
+      "url": "https://www.lanation.dj/communique/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Transport ministry explicitly suspends Djibouti–Ethiopia passenger trains while cargo continues.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-10.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "H11-R1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-dji-sol"
+      ],
+      "complete": false,
+      "phase_applicability": "National policy layer only, scoped to people; dates retained as decrees and amendments, not measured gate operation.",
+      "date_scope_check": "Canonical ordered_window: start 2020-03-24–2020-03-24; endpoint 2020-04-06–2020-04-08; last confirmed None. No end date is inferred from the current geography or extended to the review date. Same-day/order timing does not establish a strictly over-24-hour closure; retain the existing temporal layer and eligibility.",
+      "unresolved": [
+        "Existing inventory lacks Djibouti–Ethiopia and Djibouti–Eritrea frontier geometries; national scope is incomplete."
+      ]
+    },
+    {
+      "phase_id": "H11-R2",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-dji-sol"
+      ],
+      "complete": false,
+      "phase_applicability": "National policy layer only, scoped to people; dates retained as decrees and amendments, not measured gate operation.",
+      "date_scope_check": "Canonical policy_period: start 2020-05-10–2020-05-10; endpoint 2020-07-17–2020-07-17; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": [
+        "Existing inventory lacks Djibouti–Ethiopia and Djibouti–Eritrea frontier geometries; national scope is incomplete."
+      ]
+    },
+    {
+      "phase_id": "H11-C7P1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-dji-sol"
+      ],
+      "complete": false,
+      "phase_applicability": "National policy layer only, scoped to people; dates retained as decrees and amendments, not measured gate operation.",
+      "date_scope_check": "Canonical ordered_window: start 2020-04-09–2020-04-09; endpoint 2020-04-23–2020-04-24; last confirmed None. No end date is inferred from the current geography or extended to the review date. Same-day/order timing does not establish a strictly over-24-hour closure; retain the existing temporal layer and eligibility.",
+      "unresolved": [
+        "Existing inventory lacks Djibouti–Ethiopia and Djibouti–Eritrea frontier geometries; national scope is incomplete."
+      ]
+    },
+    {
+      "phase_id": "H11-C7P2",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-dji-sol"
+      ],
+      "complete": false,
+      "phase_applicability": "National policy layer only, scoped to people; dates retained as decrees and amendments, not measured gate operation.",
+      "date_scope_check": "Canonical ordered_window: start 2020-04-30–2020-04-30; endpoint 2020-05-08–2020-05-08; last confirmed None. No end date is inferred from the current geography or extended to the review date. Same-day/order timing does not establish a strictly over-24-hour closure; retain the existing temporal layer and eligibility.",
+      "unresolved": [
+        "Existing inventory lacks Djibouti–Ethiopia and Djibouti–Eritrea frontier geometries; national scope is incomplete."
+      ]
+    },
+    {
+      "phase_id": "REC50-R37-H11-P1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Passenger rail suspension only; cargo exemption retained.",
+      "date_scope_check": "Canonical ordered_window: start 2020-03-20–2020-03-20; endpoint 2021-01-27–2021-01-27; last confirmed None. No end date is inferred from the current geography or extended to the review date. Same-day/order timing does not establish a strictly over-24-hour closure; retain the existing temporal layer and eligibility.",
+      "unresolved": [
+        "No independently verified rail-border location recovered. Road-post coordinate would be a modal mismatch."
+      ]
+    }
+  ],
+  "unresolved": []
+}

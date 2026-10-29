@@ -1,0 +1,75 @@
+{
+  "record_id": "EA034",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Temporary local commuter and visitor road passage at Three Pagodas/Payathonzu, in the drainage and territorial dispute. Large-item trade restrictions continued separately after commuters resumed.",
+  "source_checks": [
+    {
+      "url": "https://karennews.org/2017/09/thailand-requests-upgrading-three-pagodas-pass-to-an-official-permanent-border-crossing/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Article says commuters resumed after July 26 talks while some large items remained restricted; checkpoint is local/unofficial rather than a fully authorized international commercial port.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-central-2.json",
+      "sha256": "197a12fc19977c3c7dcdbc387dd23549144fca00f5595b73213ed28fc598a78b"
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/karen-state/item/3303-thailand-halts-drainage-construction-at-three-pagodas-pass-after-flood-problems.html",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "July 28 report locates the drain dispute at Payathonzu checkpoint and reports migrant workers crossing again.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-central-2.json",
+      "sha256": "197a12fc19977c3c7dcdbc387dd23549144fca00f5595b73213ed28fc598a78b"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA034-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-three-pagodas-road",
+          "name": "Three Pagodas Pass local road checkpoint",
+          "coordinates": [
+            98.3867661,
+            15.3021754
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/960997867"
+          ],
+          "evidence_note": "Road border_control node immediately north of the three pagodas; small-area OSM extract separates the node from the pagoda monuments. Thai tourism authority identifies Highway 323 ending at this pass; original July 2017 reporting identifies the local commuter checkpoint.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/24cb3f6f7637e28b7492.xml",
+          "sha256": "3278c59c6fe9de52b6e188b5460b09bd74fa5fce79fc21040331777f3629c2d2"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Temporary local commuter and visitor road passage at Three Pagodas/Payathonzu, in the drainage and territorial dispute. Large-item trade restrictions continued separately after commuters resumed.",
+      "date_scope_check": {
+        "start_earliest": "2017-07-26",
+        "start_latest": "2017-07-26",
+        "end_earliest": "2017-07-26",
+        "end_latest": "2017-07-27",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Contemporary MGR reporting dates the closure to 26 July 2017, around 09:00. Thai PBS on 27 July reports agreement to reopen that day after a day of prohibited passage; Channel 8 links restored normal opening to the previous afternoon’s negotiations. KIC’s later account also links commuter reopening to the 26 July talks. The 26–27 July endpoint range preserves this disagreement without selecting an exact reopening clock. The earlier July-wide onset bound is replaced by the contemporary dated report. Large goods remained restricted in the September KIC account; commuter reopening is not complete goods restoration. The Karen News and BNI versions share KIC provenance."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "8dda91537f2a72836767bafe463d9fff1d62e08b5badbcb6ed10ac9e17be6d41",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted.",
+  "additional_evidence": [
+    {
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-4.json",
+      "sha256": "a48614d9a27d34bf3f5a89c5188eda838a5491d8b1f548144d7276f319aba756"
+    }
+  ]
+}

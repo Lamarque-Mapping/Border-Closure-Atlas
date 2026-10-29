@@ -1,0 +1,68 @@
+{
+  "record_id": "REC50-R13-002",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Passenger and goods access through Dehiba–Wazen affected by Tunisian approach protests.",
+  "source_checks": [
+    {
+      "url": "https://lana.gov.ly/post.php?id=135759&lang=en",
+      "access_status": "full_text_web",
+      "finding": "LANA interviews Wazen mayor and identifies passengers/goods, Tunisian protests and secured approach road.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-05.json",
+      "evidence_sha256": "1fa1548ae51e5b6716620a20a89c5262e0598f0d40df9976b8f671df8bb6cdfe"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R13-002-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-dehiba-wazen",
+          "name": "Dehiba–Wazen road border facility",
+          "coordinates": [
+            10.6846255,
+            31.9790258
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/520064040",
+            "https://www.openstreetmap.org/api/0.6/way/520064040/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"addr:city\": \"الذهيبة\", \"addr:city:ar\": \"الذهيبة\", \"amenity\": \"police\", \"barrier\": \"wall\", \"name\": \"معبر الحدود الذهيبة\", \"name:ar\": \"معبر الحدود الذهيبة\", \"name:fr\": \"Poste frontalier de Dhehiba\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/adf93716af07ba84f39a.html",
+          "evidence_sha256": "698d6601bf8af62f6d186a4d31fa208019891ffb61e77d266fe669820bb10e38",
+          "osm_version": "5",
+          "osm_timestamp": "2023-03-17T19:58:35Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Passenger and goods access through Dehiba–Wazen affected by Tunisian approach protests. Current phase only: Passenger and goods passage through Wazen/Dehiba interrupted during Tunisian-side protests",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": null,
+        "end_latest": "2018-08-12",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "REC50-R13-002-P1: Normal passenger and goods movement is confirmed by the mayor by August 12, 2018 after a reported three-day closure. Separate contemporary accounts now locate a Libyan-side gate interruption on August 8, with returning-national and urgent exceptions reported on the Tunisian side. Gate altercation and approach-road protest accounts may describe related stages, but identical cohorts, uninterrupted continuity and the exact first reopening are not established. Numeric duration remains withheld. The additional August 8 accounts are available as substantive indexed extracts, and the August 9 Libya Observer and August 12 LANA accounts were read in full. Phase geography remains unlocated in the existing phase table.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Approach obstruction footprint not independently positioned; crossing-area reference is partial."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Approach obstruction footprint not independently positioned; crossing-area reference is partial."
+  ]
+}

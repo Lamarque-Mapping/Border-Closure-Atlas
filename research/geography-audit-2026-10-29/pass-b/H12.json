@@ -1,0 +1,55 @@
+{
+  "record_id": "H12",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Dollow–Dolo Addo border bridge over Dawa connecting Somalia and Ethiopia; informal river dinghies were distinct.",
+  "source_checks": [
+    {
+      "url": "https://radioergo.org/en/2020/04/somali-border-closures-affect-jobs-and-food-supplies-in-gedo/",
+      "access_status": "full_text_web",
+      "finding": "Article interviews Dollow residents and worker unable to reach Dolo Addo, explicitly says border bridge closed; river dinghies continued informal supplies.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-14.json",
+      "evidence_sha256": "8d14c35707c30a7fa3bcfe5b585d8baf73cccb5fbc817942cdfa92ab475d8725"
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/map?bbox=42.045,4.17,42.06,4.18",
+      "access_status": "fresh_original_osm_xml",
+      "finding": "Fresh local-area XML inspected but no verified bridge/control identity found; town-coordinate substitute rejected.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/2f3cfc5d9a310f73d449.html",
+      "evidence_sha256": "f82452903b570787001327ae80f5269b83e3d6874916819ed49d0cc78fb38572"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "H12-FU1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Dollow–Dolo Addo border bridge over Dawa connecting Somalia and Ethiopia; informal river dinghies were distinct. Current phase only: Dollow bridge between Somalia and Dolo Addo, Ethiopia",
+      "date_scope_check": {
+        "start_earliest": "2020-03-01",
+        "start_latest": "2020-03-31",
+        "end_earliest": "2020-04-14",
+        "end_latest": "2020-04-14",
+        "last_confirmed": "2020-04-14",
+        "endpoint_status": "last_confirmed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "H12-FU1: The Dollow bridge restriction is reported as beginning during March 2020 and continuing on April 14, with testimony referring to the previous two weeks. Month bounds do not mean the whole of March was closed. Ordinary work trips, local visits and small-scale goods traffic were affected in both directions; informal river supplies continued.\n\nThe Gedo governor’s April 9 statement names Balad Hawo, Elwak and Doolow, but supplies no exact first day at each post. The earlier bridge interviews do not identify the imposing authority or prove that the March restriction was the same measure announced by that governor. No matched ordinary reopening has been established, and later cargo or unspecified route access is not substituted for it.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Named bridge identity established; exact bridge reference and representative point not verified. Do not replace this bridge by Kenya or Ethiopia whole-frontier geometry."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Named bridge identity established; exact bridge reference and representative point not verified. Do not replace this bridge by Kenya or Ethiopia whole-frontier geometry."
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "record_id": "EA006",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Only Kraskino–Hunchun road-passenger bus service is selected. Four Chinese-national buses in both directions are separate from broader Primorye crossings and tourist-group restrictions.",
+  "source_checks": [
+    {
+      "url": "https://interfax.com/newsroom/top-stories/86739/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Customs press service identifies four buses at Kraskino, Chinese nationals, tourism still closed.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-04.json",
+      "sha256": "ba381143dfc17275df3650c505d10165a57a7bffb8c82aa0fe6d15a734eb465d"
+    },
+    {
+      "url": "https://rosgranstroy.ru/checkpoints/143",
+      "access_status": "search_extract",
+      "finding": "Official checkpoint directory identifies Kraskino as a road cargo/passenger post opposite Hunchun.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-05.json",
+      "sha256": "82e7a68102b879289ac2be405d78b9d006df49775c2cbb83952129324cd27ac2"
+    },
+    {
+      "url": "https://www.akm.ru/eng/press/in-primorye-after-a-three-year-break-passenger-traffic-with-china-resumed-at-the-turiy-rog-checkpoin/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://primamedia.ru/news/1430815/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.vedomosti.ru/society/news/2023/01/10/958444-passazhirskie-avtobusi-peresekli-granitsu-rossii-i-kitaya",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://dvtu.customs.gov.ru/news/document/375161",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.interfax.ru/amp/693361",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.interfax-russia.ru/tourism/news/rossiyan-nachnut-evakuirovat-iz-kitaya-cherez-punkty-propuska-v-primore-1-fevralya",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.interfax.ru/russia/695323",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA006-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kraskino-hunchun-road",
+          "name": "Kraskino–Hunchun road port",
+          "coordinates": [
+            130.4708412,
+            42.7686278
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/784227647",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/784227647",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=130.44,42.75,130.48,42.79"
+          ],
+          "evidence_note": "Fresh OSM named MAPP Kraskino node, paired with named Hunchun checkpoint in same map. Official Rosgranstroy listing identifies Hunchun as counterpart and road/passenger-cargo mode.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-kraskino-road.xml",
+          "sha256": "0507f46fc8e0b985b5a11ba5fe6d7ebcfae301ebcf3f1cb6772fddc031f30b51",
+          "osm_feature": "node/784227647",
+          "osm_version": "10",
+          "osm_timestamp": "2024-04-14T11:09:42Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "bicycle": "no",
+            "foot": "no",
+            "horse": "no",
+            "motor_vehicle": "permissive",
+            "name": "МАПП Краскино",
+            "name:ru": "МАПП Краскино"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kraskino road-passenger bus service, to observed Chinese-national buses in both directions.",
+      "date_scope_check": {
+        "scope": "Kraskino road-passenger bus service, to observed Chinese-national buses in both directions.",
+        "start_earliest": "2020-01-01",
+        "start_latest": "2020-12-31",
+        "end_earliest": "2023-01-09",
+        "end_latest": "2023-01-09",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "",
+        "assessment": "January 10 article reports buses after authorised January 8 reopening; canonical January 9 observed bus endpoint retained. First ordinary-service interruption remains qualified."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

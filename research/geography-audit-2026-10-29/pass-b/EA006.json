@@ -1,0 +1,63 @@
+{
+  "record_id": "EA006",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Only the Kraskino road-passenger bus route, not all four Primorye road ports and not Hunchun–Makhalino railway.",
+  "source_checks": [
+    {
+      "url": "https://interfax.com/newsroom/top-stories/86739/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Ussuriysk customs report specifies four Kraskino buses in both directions carrying Chinese citizens, with tourist groups still excluded.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-1.json",
+      "sha256": "713d43ff1e1eb45d508bde26cd06cd37ea58a3e5d9a242dc6a40690ff84c092c"
+    },
+    {
+      "url": "https://www.akm.ru/eng/press/in-primorye-after-a-three-year-break-passenger-traffic-with-china-resumed-at-the-turiy-rog-checkpoin/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "AKM report concerns April service at Turiy Rog/Mishan and is not proof for the Kraskino phase.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-1.json",
+      "sha256": "713d43ff1e1eb45d508bde26cd06cd37ea58a3e5d9a242dc6a40690ff84c092c"
+    },
+    {
+      "url": "https://rostec.ru/en/media/news/rostec-completed-construction-of-a-new-border-checkpoint-at-the-russia-china-border/",
+      "access_status": "substantive_indexed_official_location_extract",
+      "finding": "Official later construction account describes new passenger facilities and 2026 completion, so a current facility footprint cannot be assumed to be the exact 2020–2023 control.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-9.json",
+      "sha256": "8a6a71c8e02f9fb0cd3d01b2099ec4f3dad7456af50c4a53fa49f65ba347379f"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA006-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Only the Kraskino road-passenger bus route, not all four Primorye road ports and not Hunchun–Makhalino railway.",
+      "date_scope_check": {
+        "start_earliest": "2020-01-01",
+        "start_latest": "2020-12-31",
+        "end_earliest": "2023-01-09",
+        "end_latest": "2023-01-09",
+        "last_confirmed": null,
+        "temporal_display_rule": "",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Kraskino passenger channel was authorised to resume January 8; the specifically reported four buses crossed January 9, not the January 10 publication date. Other Primorye posts and tourist groups had different arrangements.\n\nEA006-D1: Endpoint is the documented Chinese-national bus passage, distinct from January 8 authorised restoration and January 10 publication. Other Primorye posts, tourist groups and freight remain outside this phase. Earlier formal restrictions took effect January 31, 2020, with planned evacuation exceptions in early February. The exact ordinary-service interruption still requires reconciliation with the retrospective February account; no all-year uniform closure is inferred."
+      },
+      "unresolved": [
+        "No independently verified Kraskino historical road crossing coordinate. Newly rebuilt terminal and adjacent railway must remain separate."
+      ]
+    }
+  ],
+  "unresolved": [
+    "No independently verified Kraskino historical road crossing coordinate. Newly rebuilt terminal and adjacent railway must remain separate."
+  ],
+  "input_sha256": "87fb0c23de20ae6724812716436fbdce084da81f201fde24d8cb8e2010d1f753",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

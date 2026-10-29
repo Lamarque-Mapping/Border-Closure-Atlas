@@ -1,0 +1,48 @@
+{
+  "record_id": "R3-ME-002",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Specific ordinary commercial-goods restriction at Bab al-Hawa/Cilvegözü; Bab al-Salama is an alternative route, not an additional closed site.",
+  "source_checks": [
+    {
+      "url": "https://syriadirect.org/ankara-reopens-idlib-border-crossing-as-turkish-soldiers-build-presence-in-northern-syria/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "October report names Bab al-Hawa, observed commercial trucks and customs spokesman; civilians were not yet permitted. It discusses August restriction and alternative Bab al-Salama routing.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-05.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-ME-002-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-bab-al-hawa",
+          "name": "Bab al-Hawa–Cilvegözü road crossing area",
+          "coordinates": [
+            36.6921911,
+            36.2314664
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/2358493626"
+          ],
+          "evidence_note": "OSM node 2358493626, version 2, timestamp 2017-02-16T03:50:13Z. Identity tags: {\"barrier\": \"border_control\", \"bicycle\": \"yes\", \"motor_vehicle\": \"yes\", \"name\": \"الحدود باب الهوى\", \"name:en\": \"Bab al-Hawa Border Crossing\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/a4fe81f25e9eae9e.raw",
+          "evidence_sha256": "8d08cffbe6be4387702a1dfdff4bd01e6975f31e76b75ec0cdcfd8bfbd0b67cd"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Bind only the retained nonessential-goods cohort; preserve exclusions for humanitarian, food, medicine, hygiene and cement; no blanket passenger reopening is inferred.",
+      "date_scope_check": "Canonical bounded_interval: start 2017-08-01–2017-08-03; endpoint 2017-10-18–2017-10-18; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,64 @@
+{
+  "record_id": "ME006",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Endpoint-only permission for civilian travellers and trade at Al-Qaim–Al-Bukamal road crossing.",
+  "source_checks": [
+    {
+      "url": "https://www.euronews.com/2019/09/30/iraq-reopens-syria-crossing-in-win-for-mutual-ally-iran",
+      "access_status": "full_text_web",
+      "finding": "Reuters report describes official reopening ceremony for travellers/trade at Qaim paired with Albukamal; earlier government/military use is distinguished. No exact start inferred from endpoint.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-09.json",
+      "evidence_sha256": "b17973adc9a6401dd558136684759d78ec1a61cdd0dbd1df9292bb4ec32d2b58"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME006-C7P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-al-qaim-al-bukamal",
+          "name": "Al-Qaim / Al-Bukamal",
+          "coordinates": [
+            40.9763645,
+            34.3947597
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1040981865",
+            "https://www.openstreetmap.org/api/0.6/way/1040981865/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"landuse\": \"commercial\", \"name\": \"معبر القائم الحدودي\", \"name:ar\": \"معبر القائم الحدودي\", \"name:en\": \"Al-Qa'im Border Crossing\", \"name:fa\": \"پایانه مرزی قائم\", \"name:fr\": \"Passage de la frontière d'Al-Qaïm\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/db13ee2f91da3aed9b33.html",
+          "evidence_sha256": "8be536a9adb1a545af976596cfe554d15095c4be837ea3bc8391bcd19c20c4a0",
+          "osm_version": "4",
+          "osm_timestamp": "2025-12-12T10:08:51Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Endpoint-only permission for civilian travellers and trade at Al-Qaim–Al-Bukamal road crossing. Current phase only: Endpoint-only official permission for civilian travellers and trade at Qaim–Albukamal",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2019-09-30",
+        "end_latest": "2019-09-30",
+        "last_confirmed": null,
+        "endpoint_status": "legal_effective",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "No exact onset or operational duration. Government/military traffic was previously excepted. Ceremony and permission are not a census of completed crossings; no 2011–2019 continuous closed span inferred.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

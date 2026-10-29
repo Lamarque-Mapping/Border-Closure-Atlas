@@ -1,0 +1,74 @@
+{
+  "record_id": "R5-AM-006",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "March 27 report explicitly names the Rumichaca international bridge, road vehicles obstructed from March 9 and lifting at 07:00 March 27. Existing qualification about initial intermittent/side-specific operation remains.",
+  "source_checks": [
+    {
+      "url": "https://www.primicias.ec/economia/gremios-levantan-paro-protesta-rumichaca-carchi-frontera-ecuador-colombia-guerra-comercial-aranceles-119106/",
+      "access_status": "fresh_source_extract",
+      "finding": "March 27 report explicitly names the Rumichaca international bridge, road vehicles obstructed from March 9 and lifting at 07:00 March 27. Existing qualification about initial intermittent/side-specific operation remains.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-004.json"
+    },
+    {
+      "url": "https://www.openstreetmap.org/way/1316055071",
+      "access_status": "fresh_full_xml",
+      "finding": "Underlying mapped feature XML inspected; named customs/bridge or border_control identity, coordinates and mode checked.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/792c56b993d6369cfbc7.xml",
+      "source_sha256": "ce8270e22ad76c4b8439b2def9659b1e740cdee90ac75a3746ab33c1c23e4d9c"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-AM-006-R1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-rumichaca",
+          "name": "Rumichaca road bridge",
+          "coordinates": [
+            -77.664073,
+            0.814031
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM international road bridge footprint.",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1316055071",
+            "https://mintransporte.gov.co/publicaciones/1390/colombia-y-ecuador-firman-convenio-de-cooperacion-para-construccion-del-nuevo-puente-rumichaca/"
+          ],
+          "evidence_note": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/792c56b993d6369cfbc7.xml",
+              "sha256": "ce8270e22ad76c4b8439b2def9659b1e740cdee90ac75a3746ab33c1c23e4d9c",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Rumichaca border corridor commercial protest vehicle restrictions, initially Colombian side",
+      "date_scope_check": {
+        "start_earliest": "2026-03-09",
+        "start_latest": "2026-03-09",
+        "end_earliest": "2026-03-27",
+        "end_latest": "2026-03-27",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact historical approach blockade footprint remains unlocated."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "76ac17109f60925a6912b007e84101ed7cc26b77f7e64bd9b205677feb7c5eb8"
+}

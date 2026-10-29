@@ -1,0 +1,72 @@
+{
+  "record_id": "EA024",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Ordinary foreign land tours into Rason via Quanhe–Wonjong; tourism suspensionMarch5 distinct from cargo and Russian/delegation exceptions. June observation and separate later observation retained without inventing closure continuity.",
+  "source_checks": [
+    {
+      "url": "https://www.uritours.com/blog/coronavirus-north-korea-temporarily-closes-borders/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Operator reports March5 immediate suspension of Rason tours; earlier updates identify land route.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/0739d95931bb7f122cad.html",
+      "sha256": "f6a5dad0b53ff7cdc1606e7b91f575c855448d17e9553cc8d227cbc2060eabec",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/0739d95931bb7f122cad.txt",
+      "text_sha256": "6c76886c3a98d9facfc27f8bab5e2bd7ba30fb2af64e4c62f3d941fe1fff57e7",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-6.json"
+    },
+    {
+      "url": "https://koryogroup.com/blog/north-korea-borders-to-reopen/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Current operator page found, preciseJune16 text not returned by find; cannot freshly confirm that historical update from this retrieval.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/87638f533db0cc77d467.html",
+      "sha256": "816960531e6a17670caaa9708b3bb259e68d18480be25d9c5597e543144251eb",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/87638f533db0cc77d467.txt",
+      "text_sha256": "df03464b70beb6c59a99e2220f7a8657d4a8f56aaaf713ac1f6ec12564a8886a",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-sa-followup-3.json"
+    },
+    {
+      "url": "https://www.nknews.org/2016/10/opening-ceremony-for-new-tumen-river-bridge-held-sbs/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Reported new freight bridge parallel to older tourist bridge; warrants facility distinction.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-17.json",
+      "sha256": "165e3cc51b49a7e54aee807be5398c81860daea7e423dd0ea448f6d19c3a4685"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA024-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ordinary foreign land tours into Rason via Quanhe–Wonjong; tourism suspensionMarch5 distinct from cargo and Russian/delegation exceptions. June observation and separate later observation retained without inventing closure continuity.",
+      "date_scope_check": {
+        "start_earliest": "2025-03-05",
+        "start_latest": "2025-03-05",
+        "end_earliest": "2025-06-16",
+        "end_latest": "2025-06-16",
+        "last_confirmed": "2025-06-16",
+        "temporal_display_rule": "",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "EA024-D1: Both operators may relay the same instruction. Industry/staff visits and tourism elsewhere are not ordinary Rason land tours. The earlier evidence segment ends on June 16, 2025; a separate operator observation dated October 1, 2026 supplies the later status below. Other traveller classes are not covered.\n\nrationale: The direct tour operator’s dated notices still provide no reason. Do not inherit the 2020 COVID rationale or infer motives from later business exceptions.\n\nLater observation: Young Pioneer Tours, updated October 1, 2026, reports that ordinary non-Russian tourism remains suspended, linking this to the March 5, 2025 reversal. Limited Russian access and invited delegations are exceptions. This supplements rather than changes the scope of the earlier June observation."
+      },
+      "unresolved": [
+        "Historical tourist versus new cargo bridge identity and coordinate not fully established for2025; no arbitrary Rason centroid or entire China–DPRK border."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Historical tourist versus new cargo bridge identity and coordinate not fully established for2025; no arbitrary Rason centroid or entire China–DPRK border."
+  ],
+  "input_sha256": "435591574a808865ae04aa451f0a299a163ec94e74d49690b6d350c914474bfd",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

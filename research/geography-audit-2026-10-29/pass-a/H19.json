@@ -1,0 +1,63 @@
+{
+  "record_id": "H19",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "The retained operation is Egyptian passengers returning via Arqin road post on the Egypt–Sudan border; the wider military announcement is background.",
+  "source_checks": [
+    {
+      "url": "https://almalnews.com/486422/%D8%A7%D9%84%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A%D8%A9-%D8%A7%D9%84%D8%B3%D9%81%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%AE%D8%B1%D8%B7%D9%88%D9%85-%D8%B3%D9%87%D9%84%D8%AA-%D8%B9%D8%A8%D9%88%D8%B1-%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%B7%D9%86%D9%8A%D9%86/",
+      "access_status": "fresh_source_text_extract_inspected",
+      "finding": "Egyptian foreign-ministry account explicitly names Arqin and 13 April instructions to facilitate stranded Egyptian travellers entering Egypt.",
+      "retrieval_http_status": "200",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/b642dbbc398c688e.raw",
+      "evidence_sha256": "a1176ccce656136ee1f0a710edb437a8872d5c7added0b813f09ecbffc1571db"
+    },
+    {
+      "url": "https://www.euronews.com/2019/04/11/sudan-s-president-ousted-military-after-months-protests-n993336",
+      "access_status": "fresh_source_text_extract_inspected",
+      "finding": "11 April report says border crossings were shut until further notice following the takeover.",
+      "retrieval_http_status": "200",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/5d311fa50a0ec1de.raw",
+      "evidence_sha256": "09da2405c388a032569f05332eac11887219e31ef8116b51304e9012f0a7e74b"
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/node/6564793077",
+      "access_status": "fresh_osm_xml_inspected",
+      "finding": "Fresh XML identifies border_control named Arqeen crossing at 31.1512363,21.9996944.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/arqin-osm.xml"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "H19-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "arqin",
+          "name": "Arqin / Arqeen road crossing",
+          "coordinates": [
+            31.1512363,
+            21.9996944
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/6564793077"
+          ],
+          "evidence_note": "OSM node 6564793077, version 1, timestamp 2019-06-22T16:55:24Z. Identity tags: {\"barrier\": \"border_control\", \"name\": \"Arqeen crossing\", \"name:it\": \"Valico di frontiera di Arqeen\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/arqin-osm.xml",
+          "evidence_sha256": "64abad3ec328bbd7d0c8e98ee35a55fcc7ed8706d8975e33a42bd2c417eef870"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Single road crossing applies to Egyptian return movements only, April 11–13; not all Sudanese national ports.",
+      "date_scope_check": "Canonical closed_interval: start 2019-04-11–2019-04-11; endpoint 2019-04-13–2019-04-13; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,82 @@
+{
+  "record_id": "EA008",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "MaeSot–Myawaddy SecondFriendshipBridge cargo crossing, Myanmar-side closureAugust18 2025 to limitedMay28 2026 truck movements. Passenger BridgeI is separate.",
+  "source_checks": [
+    {
+      "url": "https://mfa.go.th/en/content/temporary-closure-2nd-thai-myanmar-bridge-en?cate=5d5bcb4e15e39c306000683e",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "ThaiMFA explicitly names SecondBridge and August18 closure following Myanmar announcement.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-sa-followup-3.json",
+      "sha256": "816960531e6a17670caaa9708b3bb259e68d18480be25d9c5597e543144251eb"
+    },
+    {
+      "url": "https://elevenmyanmar.com/news/myawady-mae-sot-no-2-cargo-bridge-reopens-for-trade",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Eleven reports May28 first Myanmar-side truck traffic and limited cargo resumption.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-7.json",
+      "sha256": "2b7dcb366c142a41bd85ab2992a34b1e80f74a2c8a59f7c6a78dca4945b791b0"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1414223873/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named SecondFriendshipBridge outline inspected independently.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/c57bda0eaeae93ec0c79.xml",
+      "sha256": "ab8aa072b0e940323bede13ae0f57288bb5ebc21b850a3d1e12790efc6965c5f",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/c57bda0eaeae93ec0c79.txt",
+      "text_sha256": "ab8aa072b0e940323bede13ae0f57288bb5ebc21b850a3d1e12790efc6965c5f",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA008-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-maesot-myawaddy-bridge-2",
+          "name": "Mae Sot–Myawaddy Friendship Bridge II",
+          "coordinates": [
+            98.4882618,
+            16.7155252
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/1414223873/full"
+          ],
+          "evidence_note": "OSM footprint explicitly named Second Friendship Bridge; separate structure northwest of Bridge I; later binding requires original source explicitly name Bridge II.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/c57bda0eaeae93ec0c79.xml",
+          "sha256": "ab8aa072b0e940323bede13ae0f57288bb5ebc21b850a3d1e12790efc6965c5f"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "MaeSot–Myawaddy SecondFriendshipBridge cargo crossing, Myanmar-side closureAugust18 2025 to limitedMay28 2026 truck movements. Passenger BridgeI is separate.",
+      "date_scope_check": {
+        "start_earliest": "2025-08-18",
+        "start_latest": "2025-08-18",
+        "end_earliest": "2026-05-28",
+        "end_latest": "2026-05-28",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "May 28 is initial partial cargo resumption, with observed Thai cargo entry into Myanmar as well as Eleven's Myanmar-side traffic account. Trial twice-daily operation and low volumes continued; neither full normalization nor every goods category is established. NationThailand's Eleven copy is not an independent origin."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "d9d70617d2854b74155eb79ab01b3bda5e6944fb6774edc0c56f05a7983a975d",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

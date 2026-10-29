@@ -1,0 +1,69 @@
+{
+  "record_id": "SA027",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Trade across Nathu La, with the Sherathang market serving the route. The accepted phase is this specific pass, not every India–China trading pass or pilgrim movement.",
+  "source_checks": [
+    {
+      "url": "https://sansad.in/getFile/annex/268/AU2124_IPerlE.pdf?source=pqars",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Parliament identifies Nathu La as one of three border-trade passes and says trade disrupted in 2020 remained suspended in August 2025.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-shared-sites.json",
+      "sha256": "595baaafe4af6e34d545d8e5bebe426b59fe7757452f04862bf5caed42822f16"
+    },
+    {
+      "url": "https://www.sikkim.gov.in/media/news-announcement/news-info?name=Indo-China+Border+Trade+via+Nathula+Reopens+After+Six+Years",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Official 1 August 2026 account locates the formal ceremony between the gates at Nathu La and the following function at Sherathang.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-shared-sites-followup.json",
+      "sha256": "43606795ed26f144d939b5d6f256e2e6d01cc0d6ceeb98491c730f1c7abc2916"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SA027-REV1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "existing_site_id": "post-nathu-la",
+          "name": "Nathu La border pass",
+          "coordinates": [
+            88.8308961,
+            27.3868289
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/3179568394"
+          ],
+          "evidence_note": "Named Nathu La mountain-pass node is explicitly tagged border_control; Parliament and Sikkim official sources designate this pass for the trade route.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/742b0947189eee9243ab.xml",
+          "sha256": "131e82e2c6f0ba1087838e18d205737ef5352b6f08829f8f1f8cb844c833a43f"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Trade across Nathu La, with the Sherathang market serving the route. The accepted phase is this specific pass, not every India–China trading pass or pilgrim movement.",
+      "date_scope_check": {
+        "start_earliest": "2020-05-01",
+        "start_latest": "2020-05-31",
+        "end_earliest": "2026-08-01",
+        "end_latest": "2026-08-01",
+        "last_confirmed": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "SA027-REV1: The May 2020 bounds represent the affected Nathu La/Sherethang trading season, not the March policy announcement or an exact first lost trading day. August 1, 2026 is the formal reopening; the August 1 EastMojo report scheduled first trade for August 3. A September 11 PIB report quotes the customs commissioner confirming resumed trade and describes the regulated Monday–Thursday, registered-trader regime. This strengthens confirmation that reopening proceeded, but does not independently establish the exact first commercial crossing. The policy span includes routine winter and weekly closures and cannot be read as operational closure-days. It applies only to Nathu La/Sherethang. Separately, the August 2 Times of India report records 16 traders and four staff crossing Lipulekh on August 1 without goods. Shipki La traders were flagged off on August 1; independently observed arrival or first transaction is not established by that report. These distinct movements do not establish general passenger access at all three passes."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "ba4c734193197275c99cf40257cf0a237429241f5cad3d1890e2366478a868e7",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

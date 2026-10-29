@@ -1,0 +1,77 @@
+{
+  "record_id": "NP-COV-AM-001",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "News Five’s 13 May 2020 transcript identifies a cargo-truck blockade at the Melchor–Benque bridge, lasting two and a half days until a new driver/customs escort protocol allowed freight through.",
+  "source_checks": [
+    {
+      "url": "https://archive.channel5belize.com/archives/202690",
+      "access_status": "full_text_web",
+      "finding": "Full broadcast transcript describes the Guatemalan side of the bridge, no freight movement since Monday and resumed deliveries/purchases on Wednesday 13 May.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-AM-001-P01",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "crossing-melchor-benque",
+          "name": "Melchor de Mencos–Benque Viejo",
+          "coordinates": [
+            -89.15052,
+            17.05783
+          ],
+          "coordinate_method": "Independent inspection of preserved versioned OSM source metadata; no fresh OSM API retrieval claimed",
+          "precision": "approximate named crossing area; historical obstruction footprint not surveyed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/3268860583",
+            "https://mapcarta.com/N3268860583"
+          ],
+          "evidence_note": "OSM node 3268860583 v6 is explicitly Aduanas e Inmigración de Guatemala, barrier=border_control. Independently reopened Mapcarta mirror reproduces the same node and coordinates; Belize customs is 140 m east. News identifies Guatemalan-side approach cargo obstruction.",
+          "cached_source_metadata": [
+            {
+              "url": "https://www.openstreetmap.org/node/3268860583",
+              "title": "Aduanas e Inmigración de Guatemala",
+              "retrieved": "2026-10-22",
+              "evidence": "Direct OSM API response inspected: {\"barrier\": \"border_control\", \"name\": \"Aduanas e Inmigración de Guatemala\", \"name:es\": \"Aduanas e Inmigración de Guatemala\"}",
+              "feature_id": "node/3268860583",
+              "version": "6",
+              "source_timestamp": "2026-05-25T16:01:56Z",
+              "licence": "Open Database License (ODbL); © OpenStreetMap contributors",
+              "local_evidence": "melchor_crossing_osm_map.xml"
+            }
+          ],
+          "cached_evidence_path": "source/geography-reference.json",
+          "cached_evidence_sha256": "a7ad4c4223195811491048191efd6e1626eda968146dc2485d9e65a5b4799e78"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Cargo bridge and immediate Guatemalan access only.",
+      "date_scope_check": "11–13 May 2020 retained; subsequent protocol not converted into continued closure.",
+      "canonical_dates": {
+        "kind": "closed_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2020-05-11",
+        "start_latest": "2020-05-11",
+        "end_earliest": "2020-05-13",
+        "end_latest": "2020-05-13",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/NP-COV-AM-001.json",
+  "canonical_input_sha256": "04c99485876a0e956af4a2b0ea531ab91ac5878eb34209b6b38ce8c566531752",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

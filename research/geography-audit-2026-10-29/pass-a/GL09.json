@@ -1,0 +1,51 @@
+{
+  "record_id": "GL09",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "An election-day national order covers land, lake and river frontiers with nine neighbours; voter entry through Kavimvira is an explicit exception, not a separate closed-post event.",
+  "source_checks": [
+    {
+      "url": "https://jambordc.info/election-les-frontieres-seront-ferme-ce-30-decembre-en-rdc-officiel/",
+      "access_status": "fresh_source_text_extract_inspected",
+      "finding": "Quotes order for 30 December 2018 land/lake/river frontier closure, with international airports excepted.",
+      "retrieval_http_status": "200",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/865321fbac925277.raw",
+      "evidence_sha256": "3f4f9c193700e888fa56b880b79dca13224a1f7451d1c196cf2e0ec1e376f4e5"
+    },
+    {
+      "url": "https://www.radiookapi.net/2018/12/30/actualite/politique/des-milliers-de-congolais-vivant-au-burundi-sont-rentres-voter-uvira",
+      "access_status": "fresh_source_text_extract_inspected",
+      "finding": "Reports actual returning voters through Kavimvira and the embassy announcement that the Burundi frontier would remain open to them.",
+      "retrieval_http_status": "200",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/847531f0440003ad.raw",
+      "evidence_sha256": "d239c5f30a7af36641a4fec51f884da92e5b77b25aaf0273cbe976c554bfb7d1"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "GL09-R1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-cod-rwa",
+        "context-frontier-cod-uga",
+        "context-frontier-bdi-cod",
+        "context-frontier-ago-cod",
+        "context-frontier-cod-cog",
+        "context-frontier-cod-zmb"
+      ],
+      "complete": false,
+      "phase_applicability": "Available border references locate only the national announced policy; not uniform physical shutdown. Keep in announced-window layer and preserve returning-voter exception.",
+      "date_scope_check": "Canonical same_day: start 2018-12-30–2018-12-30; endpoint 2018-12-30–2018-12-30; last confirmed None. No end date is inferred from the current geography or extended to the review date. Same-day/order timing does not establish a strictly over-24-hour closure; retain the existing temporal layer and eligibility.",
+      "unresolved": [
+        "Existing inventory lacks DRC–Central African Republic, DRC–South Sudan and DRC–Tanzania frontier geometry; national scope cannot be marked complete."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Existing inventory lacks DRC–Central African Republic, DRC–South Sudan and DRC–Tanzania frontier geometry; national scope cannot be marked complete."
+  ]
+}

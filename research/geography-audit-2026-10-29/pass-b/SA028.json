@@ -1,0 +1,82 @@
+{
+  "record_id": "SA028",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ordinary passenger clearance over Khunjerab road pass. Cargo-only operations, emergency admissions and routine winter suspension remain distinct. Selected passenger endpointApril3 2023 does not prove continuous2020–23 closure.",
+  "source_checks": [
+    {
+      "url": "https://www.fmprc.gov.cn/nanhai/eng/fyrbt_1/202304/t20230403_11053729.htm",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "ChinaMFA explicitly distinguishes cargoApril1 2022 and passengerApril3 2023 plus emergency passage.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-sa-followup-1.json",
+      "sha256": "754f5256e6d48284b482464107a16a5c0a7b6ce47e6e467c7ed73d0dee6d5a82"
+    },
+    {
+      "url": "https://www.app.com.pk/global/khunjerab-pass-opened-for-pak-china-trade-after-three-years/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "APP describes named Karakoram pass, seasonal schedule and emergency cargo openings.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-sa-1.json",
+      "sha256": "ec6e442b33b926bfff9bf273d275f95914fbbd76fbec44c556c83c966c732b8f"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/260745620/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Khunjerab road-gate building and access tags inspected; correct coordinates independent of erroneous Mapcarta administrative label.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/8451a53af897f425d2e5.xml",
+      "sha256": "b12a5eb182d11385b94defd1fe9d93d0bba1b46fb72d4f5ae808c9f4fa0ab0d9",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/8451a53af897f425d2e5.txt",
+      "text_sha256": "b12a5eb182d11385b94defd1fe9d93d0bba1b46fb72d4f5ae808c9f4fa0ab0d9",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SA028-FU1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-khunjerab-road",
+          "name": "Khunjerab road border gate",
+          "coordinates": [
+            75.428384,
+            36.8503716
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/260745620/full"
+          ],
+          "evidence_note": "OSM explicit bilingual Khunjerab Border Checkpoint on KarakoramHighway, motor_vehicle=yes,foot=no; represents pass road gate, not remote Sost dryport/customs or park gate. MFA identifies the named seasonal port.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/8451a53af897f425d2e5.xml",
+          "sha256": "b12a5eb182d11385b94defd1fe9d93d0bba1b46fb72d4f5ae808c9f4fa0ab0d9"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary passenger clearance over Khunjerab road pass. Cargo-only operations, emergency admissions and routine winter suspension remain distinct. Selected passenger endpointApril3 2023 does not prove continuous2020–23 closure.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2023-04-03",
+        "end_latest": "2023-04-03",
+        "last_confirmed": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "SA028-FU1: China MFA distinguishes cargo resumption on April 1, 2022 from ordinary passenger permission on April 3, 2023 and records temporary emergency passage. APP on April 5 confirms restored passenger clearance; its November 8 report counts over 40,000 passenger movements since April 3. Thus reopening is supported beyond a future announcement, although an independently observed first traveller is not identified. Profit's March and May 2021 reports describe the missed April 1, 2020 seasonal reopening and a May 31, 2021 opening for trade and travel based on ministry correspondence. The latter lacks a first ordinary passenger observation and prevents treating all 2020–2023 travel as unquestionably prohibited. The contemporary 2020 accounts and prolonged pandemic restriction support >24-hour eligibility, while onset, intervening permissions and the full continuous duration remain unresolved. Routine winter shutdowns, restricted cargo openings and emergency personnel passage must remain distinct. The April 3 passenger endpoint is retained without creating an uninterrupted whole-border interval."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "e782d60bdd27128b5c1e4f3725d9f89d750b01ad7bc60e525da9a9be27d70934",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

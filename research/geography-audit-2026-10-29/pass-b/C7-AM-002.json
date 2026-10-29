@@ -1,0 +1,77 @@
+{
+  "record_id": "C7-AM-002",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Teletica dates the denied return of a bus group from Panama to the night of 26 June and their admission on 27 June at Peñas Blancas. General merchandise was affected by resulting congestion but the phase is the returning group.",
+  "source_checks": [
+    {
+      "url": "https://www.teletica.com/internacional/nicaragua-finalmente-permite-ingreso-a-su-pais-de-nicaraguenses_260451",
+      "access_status": "full_text_web",
+      "finding": "Body explicitly names Peñas Blancas, overnight arrival Friday and admission after over twelve hours; reports humanitarian concerns for the returning group.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "C7-AM-002-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "existing_site_id": "post-penas-blancas",
+          "name": "Peñas Blancas",
+          "coordinates": [
+            -85.61215,
+            11.21915
+          ],
+          "coordinate_method": "Independent inspection of preserved versioned OSM source metadata; no fresh OSM API retrieval claimed",
+          "precision": "approximate named crossing area; historical obstruction footprint not surveyed",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/301995884",
+            "https://mapcarta.com/W301995884"
+          ],
+          "evidence_note": "Cached OSM way 301995884 v3 is the named customs building Aduana de Peñas Blancas. Fresh Mapcarta OSM mirror independently confirms building identity and same coordinates; this is a facility reference, not the bus queue location.",
+          "cached_source_metadata": [
+            {
+              "evidence": "Direct OSM API response inspected: {\"building\": \"yes\", \"name\": \"Aduana de Peñas Blancas\"}",
+              "feature_id": "way/301995884",
+              "licence": "Open Database License (ODbL); © OpenStreetMap contributors",
+              "local_evidence": "penas_osm_map.xml",
+              "retrieved": "2026-10-22",
+              "source_timestamp": "2022-08-17T15:54:36Z",
+              "title": "Aduana de Peñas Blancas",
+              "url": "https://www.openstreetmap.org/way/301995884",
+              "version": "3"
+            }
+          ],
+          "cached_evidence_path": "source/crossings/locations.json",
+          "cached_evidence_sha256": "e4b81d220480cfe8eebe6b5eea093b4ee40789bda62db567470ef81cc8605601"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Returning Nicaraguan group only.",
+      "date_scope_check": "26–27 June 2020 retained; no wider tourist-entry restriction inferred.",
+      "canonical_dates": {
+        "kind": "bounded_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2020-06-26",
+        "start_latest": "2020-06-26",
+        "end_earliest": "2020-06-27",
+        "end_latest": "2020-06-27",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "withheld_clock_precision",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/C7-AM-002.json",
+  "canonical_input_sha256": "4e42d7ed5e2ebbb5271d28d8cce55f2396157eba3de5619fde12b2e8f662e237",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

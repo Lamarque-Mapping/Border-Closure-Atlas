@@ -1,0 +1,50 @@
+{
+  "record_id": "NP-COV-AF-001",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "National land-border component of election order; all existing bilateral frontier references for Republic of the Congo. Geometry denotes ordered territorial scope, not synchronized physical gate enforcement.",
+  "source_checks": [
+    {
+      "url": "https://lejournalducongo.com/22/02/2026/presidentielle-du-15-mars-le-congo-ferme-ses-frontieres-terrestres-aeriennes-et-fluviales-de-6h-a-18h/",
+      "access_status": "full_text_web",
+      "finding": "Report quotes national land/air/river order for March 15 06:00–18:00.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-06.json",
+      "evidence_sha256": "65ef452fe70c5a93cb053faf575852295c9917004a6b78ec66ca974bb26f3de1"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-AF-001-P01",
+      "category": "wider_border",
+      "decision": "map",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-cmr-cog",
+        "context-frontier-ago-cog",
+        "context-frontier-caf-cog",
+        "context-frontier-cod-cog",
+        "context-frontier-cog-gab"
+      ],
+      "complete": true,
+      "phase_applicability": "National land-border component of election order; all existing bilateral frontier references for Republic of the Congo. Geometry denotes ordered territorial scope, not synchronized physical gate enforcement. Current phase only: Land-border component of the national election order",
+      "date_scope_check": {
+        "start_earliest": "2026-03-15",
+        "start_latest": "2026-03-15",
+        "end_earliest": "2026-03-15",
+        "end_latest": "2026-03-15",
+        "last_confirmed": null,
+        "endpoint_status": "scheduled",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "announced_window_layer_only",
+        "strictly_over_24_hours": false,
+        "qualification_retained": "NP-COV-AF-001-P01: Original instrument now verified in Journal Officiel no. 9 of February 26, 2026, page 194: Arrêté 221 of February 20 orders closure on March 15 from 06:00 to 18:00. This is a scheduled 12-hour order, not a whole-day or observed implementation claim. Gate-level enforcement, exceptions and actual resumption remain unresolved.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

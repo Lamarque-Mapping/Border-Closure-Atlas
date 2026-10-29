@@ -1,0 +1,75 @@
+{
+  "record_id": "EA026",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "People, motorcycles and small vehicles on Mae Sai–Tachileik Friendship Bridge I; freight-truck Bridge II is separate.",
+  "source_checks": [
+    {
+      "url": "https://www.nationthailand.com/thailand/general/40025038",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Nation reports Mae Sai checkpoint reopening after March 23 2020 closure.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/9fc63b558faed6e0227b.html",
+      "sha256": "2927f74d3ae4314b85548c9ce805f8d4a9357811bb7a07d7992dba20b41c904f",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/9fc63b558faed6e0227b.txt",
+      "text_sha256": "fbb6955ab4fee2e58ec27691dbd4bc5109a20110180ba9ced88a050db52ec889",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-2.json"
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/tachileik-mae-sai-bridge-reopens-after-3-years-closure",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "BNI explicitly identifies Bridge I versus truck-only Bridge II and February 20 2023 reopening.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/de2f85a576fde5879348.html",
+      "sha256": "95e5c7cba46cbffa3b364f90dd4aa898edb2284e4e55e4c0fd8490645c1a0dac",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/de2f85a576fde5879348.txt",
+      "text_sha256": "19aaa661ead75eddcccba2b464e333c09a5f787a3e63b11135a3f80c4478d9e4",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-3.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA026-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-maesai-tachileik-bridge-1",
+          "name": "Mae Sai–Tachileik Friendship Bridge I",
+          "coordinates": [
+            99.8803866,
+            20.4446562
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/1456754171/full"
+          ],
+          "evidence_note": "OSM name explicitly First Friendship Bridge on Mae Sai River; original BNI report distinguishes people/small vehicles at Bridge I from cargo at Bridge II.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/f6fef06200c69730682a.xml",
+          "sha256": "e1866288b7019cd62b37310b37cfcb5dcf7b23ac446053018dc8210f26091cfd"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "People, motorcycles and small vehicles on Mae Sai–Tachileik Friendship Bridge I; freight-truck Bridge II is separate.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-23",
+        "start_latest": "2020-03-24",
+        "end_earliest": "2023-02-20",
+        "end_latest": "2023-02-20",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "March 23–24 onset range preserved. SHAN reports special reopening on March 23 to admit more than 200 returning migrant workers after health checks; this is excluded from ordinary travel. February 20 restoration retained trial hours, border passes and health conditions. Bridge II freight is separate."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "7dc2ca77df8db25ba5f31f836484b5f2226c3c441cd3ac94c6ce8487e1d633a9",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

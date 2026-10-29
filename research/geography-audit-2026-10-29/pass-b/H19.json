@@ -1,0 +1,64 @@
+{
+  "record_id": "H19",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Egyptian passengers and students returning through Arqin road crossing after Sudan military-takeover closure; this narrow phase does not cover every Sudan frontier.",
+  "source_checks": [
+    {
+      "url": "https://almalnews.com/486422/%D8%A7%D9%84%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A%D8%A9-%D8%A7%D9%84%D8%B3%D9%81%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%AE%D8%B1%D8%B7%D9%88%D9%85-%D8%B3%D9%87%D9%84%D8%AA-%D8%B9%D8%A8%D9%88%D8%B1-%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%B7%D9%86%D9%8A%D9%86/",
+      "access_status": "full_text_web",
+      "finding": "Foreign Ministry/embassy account says Arqin road crossing reopened morning April 13; buses of Egyptian citizens/students began arriving and passport/customs expedited Egyptian-bound movement.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-13.json",
+      "evidence_sha256": "24be039dcfc5d544f7c565c300a172e14ffebc29f1bc9561b47d14d9e84092a0"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "H19-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-arqin",
+          "name": "Arqin / Arqeen",
+          "coordinates": [
+            31.1512363,
+            21.9996944
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/6564793077",
+            "https://www.openstreetmap.org/api/0.6/node/6564793077"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\", \"name\": \"Arqeen crossing\", \"name:it\": \"Valico di frontiera di Arqeen\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/3d2c6b827dcbbb2c235d.html",
+          "evidence_sha256": "1bc0f05bb19c421aef11382fd09d04ffbc3b3bb6cc297bc9fad3309771d7a299",
+          "osm_version": "1",
+          "osm_timestamp": "2019-06-22T16:55:24Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Egyptian passengers and students returning through Arqin road crossing after Sudan military-takeover closure; this narrow phase does not cover every Sudan frontier. Current phase only: Egyptian passenger return through Arqin during Sudan's military-takeover closure.",
+      "date_scope_check": {
+        "start_earliest": "2019-04-11",
+        "start_latest": "2019-04-11",
+        "end_earliest": "2019-04-13",
+        "end_latest": "2019-04-13",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "H19-D1: The April 13 endpoint is limited Egyptian return facilitation at Arqin, with instructions effective that morning and reported arrivals of buses carrying citizens and students. It does not establish reopening for all passenger classes or Sudan’s whole frontier. Exact onset and first-passage hours remain unknown. The separate 24-hour airspace restriction is not used for land duration.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

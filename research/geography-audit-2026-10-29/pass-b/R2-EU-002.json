@@ -1,0 +1,118 @@
+{
+  "record_id": "R2-EU-002",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Kosovo Police’s July 31 and August 1 bulletins explicitly close Jarinje and Brnjak to passengers and vehicles because roads were barricaded. KoSSev reports reopening to people and goods August 1 after removal.",
+  "source_checks": [
+    {
+      "url": "https://www.kosovopolice.com/informacion-zyrtar-nr-4/",
+      "access_status": "full_text_html",
+      "finding": "Official multilingual bulletins name only Jarinje and Brnjak and direct travellers to other crossings.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/68fb94bb07f9b57f8d91.raw",
+      "sha256": "aa71d01e7efa96bea62ad274215c3f2708e3fddf2b1ee867023b37b9b57893c9"
+    },
+    {
+      "url": "https://kossev.info/en/kp-jarinje-i-brnjak-otvoreni-za-kretanje-gradjana-i-robe/",
+      "access_status": "full_text_web",
+      "finding": "August 1 20:11 report confirms both posts reopened; barricades were removed at different times.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EU-002-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "existing_site_id": "post-jarinje",
+          "name": "Jarinje",
+          "coordinates": [
+            20.69965,
+            43.226642
+          ],
+          "coordinate_method": "Independent inspection of preserved versioned OSM source metadata; no fresh OSM API retrieval claimed",
+          "precision": "approximate named crossing area; historical obstruction footprint not surveyed",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1090470176"
+          ],
+          "evidence_note": "Primary cached way 1090470176 v1 is explicitly Jarinjë Border Crossing commercial compound, distinct from village and railway station.",
+          "cached_source_metadata": {
+            "evidence_file": "west-osm-evidence/jarinje.xml",
+            "licence": "Open Database License (ODbL); © OpenStreetMap contributors",
+            "osm_id": 1090470176,
+            "osm_type": "way",
+            "tags": {
+              "landuse": "commercial",
+              "name": "Гранични прелаз Јариње / Vendkalimi kufitar Jarinjë",
+              "name:en": "Jarinjë Border Crossing",
+              "name:sq": "Vend kalimi kufitarë Jarinjë"
+            },
+            "timestamp": "2022-08-30T11:45:28Z",
+            "version": 1
+          },
+          "cached_evidence_path": "source/crossings/locations.json",
+          "cached_evidence_sha256": "e4b81d220480cfe8eebe6b5eea093b4ee40789bda62db567470ef81cc8605601"
+        },
+        {
+          "existing_site_id": "post-brnjak",
+          "name": "Brnjak",
+          "coordinates": [
+            20.548653,
+            42.961697
+          ],
+          "coordinate_method": "Independent inspection of preserved versioned OSM source metadata; no fresh OSM API retrieval claimed",
+          "precision": "approximate named crossing area; historical obstruction footprint not surveyed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/4760799314"
+          ],
+          "evidence_note": "Primary cached node 4760799314 v5 has barrier=border_control and names Administrativni prelaz Brnjak / Bërnjakë border crossing; motor_vehicle and pedestrian access tags identify a road post.",
+          "cached_source_metadata": {
+            "evidence_file": "west-osm-evidence/brnjak.xml",
+            "licence": "Open Database License (ODbL); © OpenStreetMap contributors",
+            "osm_id": 4760799314,
+            "osm_type": "node",
+            "tags": {
+              "barrier": "border_control",
+              "bicycle": "yes",
+              "foot": "yes",
+              "horse": "yes",
+              "motor_vehicle": "yes",
+              "name": "Administrativni prelaz Brnjak",
+              "name:en": "Bërnjakë border crossing"
+            },
+            "timestamp": "2024-09-27T13:01:32Z",
+            "version": 5
+          },
+          "cached_evidence_path": "source/crossings/locations.json",
+          "cached_evidence_sha256": "e4b81d220480cfe8eebe6b5eea093b4ee40789bda62db567470ef81cc8605601"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "The two closed road posts only.",
+      "date_scope_check": "31 July–1 August retained; nine approach barricades do not become nine crossing sites.",
+      "canonical_dates": {
+        "kind": "closed_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2022-07-31",
+        "start_latest": "2022-07-31",
+        "end_earliest": "2022-08-01",
+        "end_latest": "2022-08-01",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R2-EU-002.json",
+  "canonical_input_sha256": "1fec0c89c51dbf6c6f2dbb5c6731ddedd94f824f924e1a71bea4ee254ac24f70",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

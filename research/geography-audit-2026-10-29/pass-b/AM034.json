@@ -1,0 +1,73 @@
+{
+  "record_id": "AM034",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Canawaima operator notice suspends Guyana–Suriname ferry service from March 14 2020. Guyana government reports February 21 first resumption with sixteen passengers, only Guyanese/Surinamese nationals, and use of Sandaka while Canawaima was maintained.",
+  "source_checks": [
+    {
+      "url": "https://newsroom.gy/2020/03/13/guyana-suriname-ferry-service-shuts-down-over-coronavirus/",
+      "access_status": "full_text_html",
+      "finding": "Operator statement reproduced in full establishes March 14 service suspension.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/27b326ad323f136036a2.raw",
+      "sha256": "d7effc32b6a8d83e85db31075ac9a9a6586e078a1ea54a845efc5b67a83b4d65"
+    },
+    {
+      "url": "https://dpi.gov.gy/stranded-guyanese-return-home-as-guyana-suriname-ferry-service-resumes/",
+      "access_status": "full_text_html",
+      "finding": "Government body reports actual Sunday passage, Moleson Creek facilities, restricted national eligibility and substitute vessel.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/03b66233882cfdfc60e0.raw",
+      "sha256": "1f25997ece7baa728c9d6bb497c96c726a26dccc913347847fbb6ad4c6a0364d"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM034-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-moleson-creek-ferry",
+          "name": "Moleson Creek–South Drain ferry (Moleson control)",
+          "coordinates": [
+            -57.171,
+            5.78068
+          ],
+          "coordinate_method": "Named OSM border-control coordinate transcribed from inspected mirror; government ferry identity independently matched",
+          "precision": "approximate Moleson terminal area, about 200 m; not a river route midpoint",
+          "source_urls": [
+            "https://mapcarta.com/N4504072573",
+            "https://www.openstreetmap.org/node/4504072573",
+            "https://portal.gov.gy/services/canawaima-international-ferry-service-guyana-suriname"
+          ],
+          "evidence_note": "Government portal identifies Canawaima link between Moleson Creek and South Drain; Mapcarta reproduces the explicitly named Moleson Creek border checkpoint, next to a ferry terminal, distinct from the village. Its country label is unreliable, so it is used as a terminal-area reference only."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "International ferry service at Moleson Creek–South Drain, not an arbitrary Corentyne river point.",
+      "date_scope_check": "March 14–February 21 retained; limited nationals endpoint not universal reopening.",
+      "canonical_dates": {
+        "kind": "closed_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2020-03-14",
+        "start_latest": "2020-03-14",
+        "end_earliest": "2021-02-21",
+        "end_latest": "2021-02-21",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/AM034.json",
+  "canonical_input_sha256": "94335db2e9f604e86765958db6634d596c61e66f5d9d34f84330d9bb817ad13b",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

@@ -1,0 +1,138 @@
+{
+  "record_id": "EA016",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The selected national-order phase is geographically narrowed to Second Friendship Bridge, Mukdahan–Savannakhet, on the source-observed reopening. The competing national onset dates do not establish a continuous gate-level interval.",
+  "source_checks": [
+    {
+      "url": "https://www.rfa.org/english/news/laos/reopen-05102022163318.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Immigration officer directly describes reopened Savannakhet–Mukdahan bridge and actual Thai/Lao crossings May 9.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-05.json",
+      "sha256": "82e7a68102b879289ac2be405d78b9d006df49775c2cbb83952129324cd27ac2"
+    },
+    {
+      "url": "https://en.vietnamplus.vn/vietnam-suspends-residents-border-crossing-fromto-laos-cambodia-over-covid-19-post170993.vnp",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-41b864c1e3d249338a.bin",
+      "sha256": "9e07e2495866f0bb2b2509dd7c96ce75f5c7ac45aaf53fa54e6fce72a5ed5974"
+    },
+    {
+      "url": "https://laoairlines.com/en/entry-requirements-to-the-lao/?paged=4",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-a03dd58acc16f97520.bin",
+      "sha256": "516014d55dcb1eb8f1cf100ec99db098f15b5ba4cdb37b28a40edf4e1f78674a"
+    },
+    {
+      "url": "https://www.tourismlaos.org/2021/12/24/2869/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 509: Unknown",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://baochinhphu.vn/thay-doi-trong-quy-dinh-xuat-nhap-canh-giua-viet-nam-lao-de-phong-chong-covid-19-102270684.htm",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-e178e42fdb3eebc9fb.bin",
+      "sha256": "75b38fcddb76081837d3f83eb3b68df67b4d2fe701589e38025082328f8a1716"
+    },
+    {
+      "url": "https://kpl.gov.la/En/detail.aspx?id=51331",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-72001950dce8263799.bin",
+      "sha256": "a3e2c26e12adf25cc82edbabb08763d3b505e0c59d59b636f5acef798f7189ee"
+    },
+    {
+      "url": "https://kpl.gov.la/en/detail.aspx?id=54568",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-2fa0a31bf215c37d20.bin",
+      "sha256": "0578e2d979686a868287a1254fb0f3177bf78795d7c7b15f3f00ac507b515981"
+    },
+    {
+      "url": "https://laotiantimes.com/2022/05/10/quiet-at-laos-border-checkpoints-on-first-day-of-full-reopening/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://jclao.com/lockdown-govt-toughens-virus-prevention-measures/",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-d8d9fdaddcc261b7ff.bin",
+      "sha256": "7d7225c201d6273e6264a6c8d56353710311886879e5a9092c1623b789b3c571"
+    },
+    {
+      "url": "https://m.en.freshnewsasia.com/index.php/en/internationalnews/17575-2020-03-30-08-11-01.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://wiki.unece.org/pages/viewpage.action?navigatingVersions=true&pageId=113345527",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 403: Forbidden",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA016-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-mukdahan-savannakhet-bridge-ii",
+          "name": "Mukdahan–Savannakhet Second Friendship Bridge",
+          "coordinates": [
+            104.7565479,
+            16.5995978
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/1180858732",
+          "precision": "Crossing-complex reference, approximately 1 km including bridge and approaches.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1180858732",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=104.72,16.58,104.77,16.62"
+          ],
+          "evidence_note": "Lao border-control node at the eastern landing of the Mukdahan–Savannakhet road bridge; source describes that pair, distinct from Vientiane First Friendship Bridge.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-mukdahan-bridge.xml",
+          "sha256": "bf6f3d226d2f9c6ffbb0619d0b4b7b26a4aaaafa576cdd20a3e807cc332db844",
+          "osm_feature": "node/1180858732",
+          "osm_version": "5",
+          "osm_timestamp": "2020-05-03T01:20:58Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "Lao Border Control"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Selected Laos national-order phase restricting ordinary passengers on Mukdahan–Savannakhet's Second Friendship Bridge, to observed reopening.",
+      "date_scope_check": {
+        "scope": "Selected Laos national-order phase restricting ordinary passengers on Mukdahan–Savannakhet's Second Friendship Bridge, to observed reopening.",
+        "start_earliest": "2020-03-30",
+        "start_latest": "2020-03-30",
+        "end_earliest": "2022-05-09",
+        "end_latest": "2022-05-09",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "held_evidence_do_not_animate_as_confirmed",
+        "assessment": "RFA May 10 reports actual bridge traffic on May 9 and names Savannakhet/Mukdahan. Canonical contested timing remains disputed; this supported location does not validate the 770-day apparent duration."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

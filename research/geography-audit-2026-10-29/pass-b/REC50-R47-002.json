@@ -1,0 +1,71 @@
+{
+  "record_id": "REC50-R47-002",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "UN humanitarian convoy service through Bab al-Hawa. This service/authorization phase is not a claim that all commercial or civilian movements stopped.",
+  "source_checks": [
+    {
+      "url": "https://logcluster.org/sites/default/files/public/2023-10/logistics-clustercoordination-gaziantepmeeting-minutes_20231004.pdf",
+      "access_status": "full_text_web",
+      "finding": "Original October 4 meeting minutes PDF records August 8 consent-based agreement and resumption of Bab al-Hawa operations on September 19; UN transshipment/cargo scope.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-10.json",
+      "evidence_sha256": "7b0334d9f1861be53c7f30c85cf2bf5ce7534689e469664def6602d645860aa3"
+    },
+    {
+      "url": "https://www.un.org/sg/en/content/highlight/2023-09-19.html",
+      "access_status": "inaccessible_or_empty",
+      "finding": "Original UN URL returned only minimal empty page; not used as full text.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-10.json",
+      "evidence_sha256": "7b0334d9f1861be53c7f30c85cf2bf5ce7534689e469664def6602d645860aa3"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R47-002-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-bab-al-hawa",
+          "name": "Bab al-Hawa / Cilvegözü",
+          "coordinates": [
+            36.6921911,
+            36.2314664
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/2358493626",
+            "https://www.openstreetmap.org/api/0.6/node/2358493626"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\", \"bicycle\": \"yes\", \"motor_vehicle\": \"yes\", \"name\": \"الحدود باب الهوى\", \"name:en\": \"Bab al-Hawa Border Crossing\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/a4fe81f25e9eae9eac28.html",
+          "evidence_sha256": "4657a82a0fdd3d2c9809517c4cd9dd0981c999b78fe3995fe6abb1bf3f344386",
+          "osm_version": "2",
+          "osm_timestamp": "2017-02-16T03:50:13Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "UN humanitarian convoy service through Bab al-Hawa. This service/authorization phase is not a claim that all commercial or civilian movements stopped. Current phase only: UN humanitarian convoy service from Türkiye into northwest Syria through Bab al-Hawa",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2023-09-19",
+        "end_latest": "2023-09-19",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "REC50-R47-002-P1: The first returning UN convoy is confirmed on September 19, 2023 by the UN briefing, full Logistics Cluster meeting minutes and AP field reporting. The Security Council mandate expired July 10, but the precise first cancelled operational service is not independently timed. August and September consent steps are not actual convoy returns. AP’s reference to alternative-route use since July 9 is not used to replace the UN authorization chronology. Other aid providers, commerce and passengers remain outside this phase. The original UN briefing is available as a substantive indexed extract and its direct body remains blocked; the Logistics Cluster PDF and AP republication were read in full. The UN’s explicit first-convoy-since-July-10 statement establishes a prolonged absence of this particular convoy service and supports greater-than-24-hour eligibility; uncertainty over the first missed scheduled convoy does not reduce it to an unknown-duration same-day event.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

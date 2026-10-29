@@ -1,0 +1,65 @@
+{
+  "record_id": "EA033",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Kyinsankyawt cargo gate is a specific Muse-area export gate. Pangsai/Wanding import gate and earlier-closed Nandaw/Hsinphyu/MangWein gates are separate; November26 partial container restoration applies only Kyinsankyawt.",
+  "source_checks": [
+    {
+      "url": "https://www.moi.gov.mm/moi%3Aeng/news/4027",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Ministry explicitly dates Kyinsankyawt and Pangsai closing July8, identifies export versus import functions and other gates closed earlier.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/2bbba18b7e8d4a964d3b.html",
+      "sha256": "47439c00f594a0cc6e1c48de6feca04cb3cda979ace49840849229e1c68b4652",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/2bbba18b7e8d4a964d3b.txt",
+      "text_sha256": "c2e62ea7323fbae36179a0adb97dcc5350b70a12fe35857d7bd8dadbef2d3008",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-4.json"
+    },
+    {
+      "url": "https://myanmar-now.org/en/news/limited-trade-to-restart-on-china-myanmar-border/?tztc=1",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Planned November26 restoration limited to5containers each direction and designated drivers; other crossings remain closed.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/14b52ed6b2b2a1134db7.html",
+      "sha256": "47439c00f594a0cc6e1c48de6feca04cb3cda979ace49840849229e1c68b4652",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/14b52ed6b2b2a1134db7.txt",
+      "text_sha256": "bc07a0f198a1735fd89ccdac9fcd3cf1bd846829a80d369f4480384749d51199",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-4.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA033-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Kyinsankyawt cargo gate is a specific Muse-area export gate. Pangsai/Wanding import gate and earlier-closed Nandaw/Hsinphyu/MangWein gates are separate; November26 partial container restoration applies only Kyinsankyawt.",
+      "date_scope_check": {
+        "start_earliest": "2021-07-08",
+        "start_latest": "2021-07-08",
+        "end_earliest": "2021-11-26",
+        "end_latest": "2021-11-26",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "The November 26, 2021 reopening is supported by contemporary November 25 planning, November 27 actual cargo and later operational reporting. One state article prints 2022 and another prints September 26; these appear to be year/month errors and are preserved as conflicts. Pangsai is excluded from this endpoint. State-media repetitions are one lineage."
+      },
+      "unresolved": [
+        "Exact Kyinsankyawt gate coordinates not corroborated. Nearby Pangsai or Muse town cannot substitute."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact Kyinsankyawt gate coordinates not corroborated. Nearby Pangsai or Muse town cannot substitute."
+  ],
+  "input_sha256": "0f56b644bbdba78530456a7776f614531546d8bcb18d670d253f731ae99c5278",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

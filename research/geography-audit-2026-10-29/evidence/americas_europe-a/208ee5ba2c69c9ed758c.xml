@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2146041 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <node id="8258869810" visible="true" version="2" changeset="133288498" timestamp="2023-03-04T12:47:13Z" user="HaPe-CZ" uid="11276832" lat="48.9984204" lon="-111.9606686"/>
+ <node id="8258869811" visible="true" version="3" changeset="133306618" timestamp="2023-03-04T21:18:37Z" user="HaPe-CZ" uid="11276832" lat="48.9984166" lon="-111.9601664"/>
+ <node id="8258869812" visible="true" version="2" changeset="133288498" timestamp="2023-03-04T12:47:13Z" user="HaPe-CZ" uid="11276832" lat="48.9987256" lon="-111.9603037"/>
+ <node id="8258872418" visible="true" version="2" changeset="133288498" timestamp="2023-03-04T12:47:13Z" user="HaPe-CZ" uid="11276832" lat="48.9987321" lon="-111.9606075"/>
+ <node id="8258872419" visible="true" version="2" changeset="133288498" timestamp="2023-03-04T12:47:13Z" user="HaPe-CZ" uid="11276832" lat="48.9987618" lon="-111.9606217"/>
+ <node id="8258872420" visible="true" version="2" changeset="133288498" timestamp="2023-03-04T12:47:13Z" user="HaPe-CZ" uid="11276832" lat="48.9987627" lon="-111.9606940"/>
+ <node id="8258872421" visible="true" version="2" changeset="133288498" timestamp="2023-03-04T12:47:13Z" user="HaPe-CZ" uid="11276832" lat="48.9987076" lon="-111.9606695"/>
+ <node id="8258872422" visible="true" version="2" changeset="133288498" timestamp="2023-03-04T12:47:13Z" user="HaPe-CZ" uid="11276832" lat="48.9987061" lon="-111.9608001"/>
+ <node id="10709274133" visible="true" version="2" changeset="133288498" timestamp="2023-03-04T12:47:13Z" user="HaPe-CZ" uid="11276832" lat="48.9987283" lon="-111.9604160"/>
+ <node id="10709279657" visible="true" version="1" changeset="133288498" timestamp="2023-03-04T12:47:13Z" user="HaPe-CZ" uid="11276832" lat="48.9986416" lon="-111.9602662"/>
+ <way id="888313980" visible="true" version="3" changeset="133288498" timestamp="2023-03-04T12:47:13Z" user="HaPe-CZ" uid="11276832">
+  <nd ref="8258869810"/>
+  <nd ref="8258869811"/>
+  <nd ref="10709279657"/>
+  <nd ref="8258869812"/>
+  <nd ref="10709274133"/>
+  <nd ref="8258872418"/>
+  <nd ref="8258872419"/>
+  <nd ref="8258872420"/>
+  <nd ref="8258872421"/>
+  <nd ref="8258872422"/>
+  <nd ref="8258869810"/>
+  <tag k="building" v="yes"/>
+  <tag k="government" v="customs"/>
+  <tag k="layer" v="1"/>
+  <tag k="name" v="Coutts Port of Entry"/>
+  <tag k="office" v="government"/>
+  <tag k="operator" v="Canada Border Services Agency"/>
+  <tag k="website" v="https://www.cbsa-asfc.gc.ca/do-rb/offices-bureaux/646-eng.html"/>
+ </way>
+</osm>

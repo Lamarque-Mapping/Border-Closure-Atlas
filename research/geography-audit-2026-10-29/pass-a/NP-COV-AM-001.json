@@ -1,0 +1,73 @@
+{
+  "record_id": "NP-COV-AM-001",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "On-site May 13 report names Melchor de Mencos, Guatemalan side of the bridge, and freight blocked for two and a half days before that afternoon agreement.",
+  "source_checks": [
+    {
+      "url": "https://archive.channel5belize.com/archives/202690",
+      "access_status": "fresh_source_extract",
+      "finding": "On-site May 13 report names Melchor de Mencos, Guatemalan side of the bridge, and freight blocked for two and a half days before that afternoon agreement.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-003.json"
+    },
+    {
+      "url": "https://www.openstreetmap.org/node/3268860583",
+      "access_status": "fresh_full_xml",
+      "finding": "Underlying mapped feature XML inspected; named customs/bridge or border_control identity, coordinates and mode checked.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fd89a7bedd2dec5aaf47.xml",
+      "source_sha256": "d9a54ab6b743cab018b9797d04e19e334e7f62664d8c19044bb76310a6a4e94e"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-AM-001-P01",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "crossing-melchor-benque",
+          "name": "Melchor de Mencos–Benque Viejo",
+          "coordinates": [
+            -89.15052,
+            17.05783
+          ],
+          "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/3268860583"
+          ],
+          "evidence_note": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fd89a7bedd2dec5aaf47.xml",
+              "sha256": "d9a54ab6b743cab018b9797d04e19e334e7f62664d8c19044bb76310a6a4e94e",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Freight crossing at the Melchor–Benque bridge",
+      "date_scope_check": {
+        "start_earliest": "2020-05-11",
+        "start_latest": "2020-05-11",
+        "end_earliest": "2020-05-13",
+        "end_latest": "2020-05-13",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact historical approach blockade footprint remains unlocated."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "04c99485876a0e956af4a2b0ea531ab91ac5878eb34209b6b38ce8c566531752"
+}

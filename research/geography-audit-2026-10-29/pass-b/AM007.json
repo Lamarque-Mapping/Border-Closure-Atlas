@@ -1,0 +1,70 @@
+{
+  "record_id": "AM007",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "CBSA body names Coutts total traveler/commercial service suspension February 12 and February 15 service message; the canonical 14–15 February reopening bounds must remain distinct from earlier intermittent road blocks.",
+  "source_checks": [
+    {
+      "url": "https://www.cbsa-asfc.gc.ca/transparency-transparence/pd-dp/bbp-rpp/dedc/2022-04-26/overview-apercu-eng.html",
+      "access_status": "full_text_html",
+      "finding": "CBSA body names Coutts total traveler/commercial service suspension February 12 and February 15 service message; the canonical 14–15 February reopening bounds must remain distinct from earlier intermittent road blocks.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/ecd11d196e3b2630b8b9.raw",
+      "sha256": "0f7aa82bb7d969e1bb3e39497a94bcb42d2a6446ee9bd691a67b20fb3dbd4685"
+    },
+    {
+      "url": "https://mapcarta.com/W888313980",
+      "access_status": "full_text_web",
+      "finding": "Independently inspected named OSM geographic mirror; facility and transport type matched to original CBSA scope."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM007-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-coutts-sweetgrass",
+          "name": "Coutts–Sweetgrass road crossing (CBSA building)",
+          "coordinates": [
+            -111.96048,
+            48.99859
+          ],
+          "coordinate_method": "Representative OSM government-building coordinate from inspected mirror, cross-checked with Transport Canada road identity",
+          "precision": "approximate border facility; surrounding highway blockades unlocated",
+          "source_urls": [
+            "https://mapcarta.com/W888313980",
+            "https://www.openstreetmap.org/way/888313980",
+            "https://tc.canada.ca/en/binder/15-situation-coutts-alberta"
+          ],
+          "evidence_note": "Mapcarta explicitly identifies OSM building way 888313980 as Coutts Port of Entry operated by CBSA, adjacent to US Sweetgrass. Transport Canada identifies the crossing and Highway 4 approach. Town and railway are excluded."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Named road crossing/service area; highway obstruction footprint remains partial.",
+      "date_scope_check": "Canonical endpoint uncertainty retained; source distinguishes service message February 15 from prior clearance.",
+      "canonical_dates": {
+        "kind": "bounded_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2022-02-12",
+        "start_latest": "2022-02-12",
+        "end_earliest": "2022-02-14",
+        "end_latest": "2022-02-15",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/AM007.json",
+  "canonical_input_sha256": "f0235c06e5f3ea0862e3bbca8536cfa60b488f1dfcb2289533fb492e178cddd4",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

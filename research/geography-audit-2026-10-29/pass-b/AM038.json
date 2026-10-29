@@ -1,0 +1,80 @@
+{
+  "record_id": "AM038",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "July31 restrictions: Bellevue roundabout and BellePlaine controls; Cupecoy/OysterBay blocks. Canonical selected two-postphase is narrower than initial article; Septemberendpoint article names Bellevue andOysterPond, causing second-postidentity uncertainty.",
+  "source_checks": [
+    {
+      "url": "https://www.faxinfo.fr/covid-19-restriction-de-passage-aux-frontieres-a-partir-de-vendredi/",
+      "access_status": "full_text_cached_this_pass",
+      "finding": "30Jul reports31Jul12:00start, Bellevue roundabout/BellePlaine checks, Cupecoy/OysterBay blocked, professional/medicalexceptions.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/af69aec793fd4e65eb2e.raw",
+      "sha256": "08e97b0e275cfb6d6c76ca572aed7eb58dd1e740147feca773104d95d824c5e6"
+    },
+    {
+      "url": "https://www.sxmbreakingnews.com/16/09/2020/586/levee-des-controles-aux-frontieres-la-prefecture-et-lars-ont-repondu-favorablement-aux-organisateurs-de-la-manifestation/",
+      "access_status": "full_text_cached_this_pass",
+      "finding": "16Sep reports actualafternoon lifting atBellevue andOysterPond; doesnotexplicitlyconfirmQuartier d’Orléans.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/95cfbcf181bb1e28583c.raw",
+      "sha256": "30a005449c572de72b392c46dfd65b7a031b3ffa755f517acb5c3cac50122b9f"
+    },
+    {
+      "url": "https://www.le97150.fr/vie-locale/une-marche-en-guise-de-message",
+      "access_status": "search_extract",
+      "finding": "11Aug account marchfromBellevue roundabout tofilterbarrier beforeborder; exactbarrier differs frommonument."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM038-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-bellevue-cole-bay",
+          "name": "Bellevue–Cole Bay road crossing area",
+          "coordinates": [
+            -63.08639,
+            18.04714
+          ],
+          "coordinate_method": "OSM-derived Mapcarta named monument coordinates corroborated by governor identity",
+          "precision": "approximate crossing area within several hundred metres; barrier exact location unresolved",
+          "source_urls": [
+            "https://mapcarta.com/N542386486",
+            "https://www.openstreetmap.org/node/542386486",
+            "https://www.kabgsxm.com/governors-journal.aspx?id_journal=144&language=EN"
+          ],
+          "evidence_note": "OSM named Border Monument beside border road; governor explicitly identifies Cole Bay/Bellevue monument. Used as crossing-area reference only; August2020 account places actual filtering barrier before frontier, and roundabout is separate."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Bellevue crossingarea only; do not substitute OysterPond for canonicalQuartier d’Orléans.",
+      "date_scope_check": "31Jul–16Sep retained; endpoint verifiedBellevue only.",
+      "canonical_dates": {
+        "kind": "closed_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2020-07-31",
+        "start_latest": "2020-07-31",
+        "end_earliest": "2020-09-16",
+        "end_latest": "2020-09-16",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [
+    "BellePlaine/Quartier d’Orléans versusOysterPond second-site applicability requires resolution."
+  ],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/AM038.json",
+  "canonical_input_sha256": "c52dd52955c281c85279512b7bb9b5ea44d36916b1d894d45813e10b4f57bd5a",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

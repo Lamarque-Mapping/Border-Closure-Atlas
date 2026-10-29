@@ -1,0 +1,51 @@
+{
+  "record_id": "H20",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "National Eritrean land-border COVID overlay. This does not date the onset or reopening of separate pre-existing bilateral security restrictions.",
+  "source_checks": [
+    {
+      "url": "https://www.comesa.int/wp-content/uploads/2020/09/Measures-in-COMESA-MS-in-Response-to-Covid-Vol-20-_-4-sept.pdf",
+      "access_status": "full_text_web",
+      "finding": "COMESA Eritrea page explicitly states land borders closed while distinguishing flights and entry visas.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-07.json",
+      "evidence_sha256": "dd1872966cf32e1daff72155675d22d5840c04ead925d677cb7b070844187232"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "H20-NP1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-eri-eth",
+        "context-frontier-eri-sdn"
+      ],
+      "complete": false,
+      "phase_applicability": "National Eritrean land-border COVID overlay. This does not date the onset or reopening of separate pre-existing bilateral security restrictions. Current phase only: Eritrean land-border COVID policy overlay",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2020-11-13",
+        "end_latest": "2020-11-13",
+        "last_confirmed": "2020-11-13",
+        "endpoint_status": "last_confirmed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "H20-NP1: The June 11, 2020 Eritrean foreign-ministry statement, published June 12, places border restrictions broadly after the first COVID case on March 21, without an exact land commencement. Neither the March 26 aviation date nor the April 2 domestic lockdown date is transferred to land crossings. Continuing land arrivals and quarantine are expressly acknowledged; this was not an impermeable physical seal.\n\nCOMESA’s November 13, 2020 compilation is a policy assessment reference, not an independently observed gate timestamp. The 2020 US human-rights report describes continuing closure to legal overland travel, without isolating COVID from inherited bilateral restrictions.\n\nA WCO regional report describes the position as of August 2021: land and sea borders remained closed except screened cargo, with several COVID restrictions unchanged since June. Its Eritrea passage cites a GardaWorld August 12 bulletin. This supports a later reported passenger-policy restriction and a sustained restriction longer than 24 hours. It does not establish exact complete duration or an uninterrupted operational bridge from 2020. The WCO report’s October 26 publication is not the status date.\n\nNo terminal COVID-specific land reopening is established. Later Sudan humanitarian access or continuing Ethiopia/Djibouti bilateral closure cannot by themselves identify repeal of this overlay.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Eritrea–Djibouti boundary reference absent; current two mapped frontier lines cover only part of national land scope. No exact onset inferred."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Eritrea–Djibouti boundary reference absent; current two mapped frontier lines cover only part of national land scope. No exact onset inferred."
+  ]
+}

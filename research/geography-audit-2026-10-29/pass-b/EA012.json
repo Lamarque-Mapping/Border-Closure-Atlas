@@ -1,0 +1,76 @@
+{
+  "record_id": "EA012",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Manhkar–Namtit single road gate, with August24–28 complete-closure reporting and later January20 partial fuel/goods reopening. Nearby Chinshwehaw/Qingshuihe and Pangkham/Shawba are distinct; no continuous interval extended toJanuary.",
+  "source_checks": [
+    {
+      "url": "https://www.bnionline.net/en/news/china-shuts-border-gate-uwsa-controlled-namtit-town",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "BNI explicitly names Manhkar–Namtit and says Pangkham/Shawba only tightened checks, not same closure.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-5.json",
+      "sha256": "05c56fbdadac969e9b31a5ee04cf0b53ff113fbf1fdc04bfabf40d684b3f17b8"
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/china-reopens-border-crossings-mndaa-controlled-areas",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "January22 report explicitly dates Manhkar–Namtit reopening and fuel admission January20.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-4.json",
+      "sha256": "590e351898f10b728e0dcdcf6b8601bcd53ed1caa1495848556c1dc45bb735f6"
+    },
+    {
+      "url": "https://www.wenlvnews.com/p/741842.html",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Regional tourism account places Mangka gate at boundary marker146; no numeric gate coordinates.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-12.json",
+      "sha256": "7edb2174efe03ffbe1ca2df9c525908654572ff8539d3e64dab3227781aabedc"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA012-R1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Manhkar–Namtit single road gate, with August24–28 complete-closure reporting and later January20 partial fuel/goods reopening. Nearby Chinshwehaw/Qingshuihe and Pangkham/Shawba are distinct; no continuous interval extended toJanuary.",
+      "date_scope_check": {
+        "start_earliest": "2024-08-24",
+        "start_latest": "2024-08-24",
+        "end_earliest": "2024-08-28",
+        "end_latest": "2024-08-28",
+        "last_confirmed": "2024-08-28",
+        "temporal_display_rule": "",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "EA012-R1: The August 24–28, 2024 segment remains reporting-supported. A January 20, 2025 partial reopening is explicitly reported for Manhkar–Namtit, including fuel imports; Myanmar Now and ISP supply corroborating later-access evidence. No continuous August–January duration is inferred. All-person passage, other commodities and present-day status remain unresolved."
+      },
+      "unresolved": [
+        "Exact gate at Mangka/Namtit marker146 not geocoded. Town coordinates and Qingshuihe checkpoint are rejected as substitutes."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact gate at Mangka/Namtit marker146 not geocoded. Town coordinates and Qingshuihe checkpoint are rejected as substitutes."
+  ],
+  "input_sha256": "94e24b1ab87c9ed95ef5ba4bed9b54052b5a338917d081d755b91cf7879eb9df",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted.",
+  "additional_evidence": [
+    {
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-11.json",
+      "sha256": "94ebea490180590717ec22181fea8c5fb3161bafa270895dd0ef7681d88ec931"
+    },
+    {
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-12.json",
+      "sha256": "7edb2174efe03ffbe1ca2df9c525908654572ff8539d3e64dab3227781aabedc"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "record_id": "ME020",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Syrian armed roadblocks blocked access to Bab al-Hawa–Cilvegözü for aid and commercial trucks; planned Turkish maintenance is separate.",
+  "source_checks": [
+    {
+      "url": "https://www.developmentaid.org/news-stream/post/5051/developments-in-north-western-syria",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "OCHA-derived account explicitly reports 19–25 July inaccessibility from Syrian roadblocks and sand barriers; trucks could not collect aid despite a planned humanitarian lane.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-06.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME020-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-bab-al-hawa",
+          "name": "Bab al-Hawa–Cilvegözü road crossing area",
+          "coordinates": [
+            36.6921911,
+            36.2314664
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/2358493626"
+          ],
+          "evidence_note": "OSM node 2358493626, version 2, timestamp 2017-02-16T03:50:13Z. Identity tags: {\"barrier\": \"border_control\", \"bicycle\": \"yes\", \"motor_vehicle\": \"yes\", \"name\": \"الحدود باب الهوى\", \"name:en\": \"Bab al-Hawa Border Crossing\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/a4fe81f25e9eae9e.raw",
+          "evidence_sha256": "8d08cffbe6be4387702a1dfdff4bd01e6975f31e76b75ec0cdcfd8bfbd0b67cd"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Crossing-area marker applies only to trucks blocked by Syrian approach controls, July 19–26. It does not indicate a uniformly closed Turkish terminal.",
+      "date_scope_check": "Canonical closed_interval: start 2017-07-19–2017-07-19; endpoint 2017-07-26–2017-07-26; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": [
+        "Individual roadblocks and the affected approach segment remain unlocated."
+      ]
+    }
+  ],
+  "unresolved": []
+}

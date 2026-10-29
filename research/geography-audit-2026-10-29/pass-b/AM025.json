@@ -1,0 +1,96 @@
+{
+  "record_id": "AM025",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The Costa Rican presidency dates foreign nonresident admission restrictions from March 18 at 23:59, preserving freight and exempt residents. April 5 easing is for visa-exempt tourists. Actual April 5–6 entries are specifically reported at Peñas Blancas and Paso Canoas.",
+  "source_checks": [
+    {
+      "url": "https://presidencia.gobiernocarlosalvarado.cr/comunicados/2020/03/cinco-cuerpos-policiales-aumentan-vigilancia-en-puestos-y-puntos-ciegos-en-frontera-con-nicaragua/",
+      "access_status": "full_text_html",
+      "finding": "Full official body names Peñas Blancas, foreign-entry prohibition and ordinary freight exception.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/20b15eed9f8c39913ac1.raw",
+      "sha256": "2e64948f80b3f2dff840fcc101649261ebae59f8eb51f533f11688f62958ede1"
+    },
+    {
+      "url": "https://presidencia.gobiernocarlosalvarado.cr/comunicados/2021/04/este-5-de-abril-empieza-la-primera-fase-de-la-apertura-de-las-fronteras-terrestres/",
+      "access_status": "full_text_web",
+      "finding": "Official April 4 statement announces April 5 admission only for visa-exempt tourist groups.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/807d74e31e2c8d7aae77.raw",
+      "sha256": "4ec1a0aba9af74b35422e0057eaa216e5ec9cf8cf09df3315fba21897929dad4"
+    },
+    {
+      "url": "https://observador.cr/en-primeros-2-dias-de-reapertura-de-fronteras-terrestres-el-pais-recibio-1-536-personas/",
+      "access_status": "full_text_html",
+      "finding": "Observed first two days of arrivals explicitly name Peñas Blancas and Paso Canoas.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/e0949cccba79d06ce6c6.raw",
+      "sha256": "0c51315dba6bd8ef594a0be74c3214ca3398e3c1a2694e3df16a3d605c5ce585"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM025-R1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-penas-blancas",
+          "name": "Peñas Blancas",
+          "coordinates": [
+            -85.61215,
+            11.21915
+          ],
+          "coordinate_method": "Independent inspection of preserved versioned OSM source metadata; no fresh OSM API retrieval claimed",
+          "precision": "approximate named crossing area; historical obstruction footprint not surveyed",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/301995884"
+          ],
+          "evidence_note": "Named Aduana de Peñas Blancas building in versioned OSM metadata; fresh OSM mirror independently confirms the same coordinates.",
+          "cached_source_metadata": [
+            {
+              "evidence": "Direct OSM API response inspected: {\"building\": \"yes\", \"name\": \"Aduana de Peñas Blancas\"}",
+              "feature_id": "way/301995884",
+              "licence": "Open Database License (ODbL); © OpenStreetMap contributors",
+              "local_evidence": "penas_osm_map.xml",
+              "retrieved": "2026-10-22",
+              "source_timestamp": "2022-08-17T15:54:36Z",
+              "title": "Aduana de Peñas Blancas",
+              "url": "https://www.openstreetmap.org/way/301995884",
+              "version": "3"
+            }
+          ],
+          "cached_evidence_path": "source/crossings/locations.json",
+          "cached_evidence_sha256": "e4b81d220480cfe8eebe6b5eea093b4ee40789bda62db567470ef81cc8605601"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Two named land posts; Peñas Blancas located, Paso Canoas pending independent coordinates.",
+      "date_scope_check": "18 March–5 April retained; resident easing and freight exemptions kept separate.",
+      "canonical_dates": {
+        "kind": "closed_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2020-03-18",
+        "start_latest": "2020-03-18",
+        "end_earliest": "2021-04-05",
+        "end_latest": "2021-04-05",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": [
+        "Paso Canoas coordinate and control-facility identity not yet independently established."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/AM025.json",
+  "canonical_input_sha256": "b20ebae71a3a203407d68a4ac731400da8020b0c6aee2d8c9e39790696f6b0ff",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

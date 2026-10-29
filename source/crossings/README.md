@@ -6,6 +6,7 @@ This map layer is separate from the historical dataset. It changes which geometr
 
 - `scope-review.json`: one geographical-scope decision for each included dated phase, plus the two undated records. The initial classification is a conservative reading of the recorded phase scope, not a new adjudication of historical evidence.
 - `locations.json`: sourced crossing-area positions and individually reviewed phase bindings. Source versions, coordinate methods, qualifications and unresolved or rejected matches are retained.
+- Optional `border_bindings` in that file link a reviewed wider phase to specific existing line references. They replace the parent's inherited geography for that phase only and require the exact current scope and phase-source URLs. They never infer every possible country pair or give a named crossing a whole-border substitute.
 - `release-reconciliation.json`: explicit decisions for the added phases, preserved-review provenance, and any new applicability bindings to previously sourced crossing positions. No new coordinates are introduced by the REC50 release reconciliation.
 - `scripts/reconcile-release-geography.py`: the reviewed, explicit reconciliation of the preserved geography with the final native source; run before binding a new release manifest.
 - `scripts/build-crossing-geography.cjs`: validates these files and produces `dist/crossing-geography.js` plus the downloadable location review.

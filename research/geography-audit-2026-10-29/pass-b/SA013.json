@@ -1,0 +1,73 @@
+{
+  "record_id": "SA013",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Truck access at Chaman–Spin Boldak was interrupted by protests affecting the border crossing and the main highway from Chaman. A gate marker can identify the affected crossing but cannot locate every highway blockade.",
+  "source_checks": [
+    {
+      "url": "https://logcluster.org/en/node/45647",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "24 January 2024 Logistics Cluster update confirms continued closure to trucks and obstruction of the main national highway from Chaman.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-shared-sites-followup.json",
+      "sha256": "43606795ed26f144d939b5d6f256e2e6d01cc0d6ceeb98491c730f1c7abc2916"
+    },
+    {
+      "url": "https://www.arabnews.pk/pakistan/respite-for-residents-as-trade-activities-resume-at-pakistan-afghanistan-border-in-chaman-2470386",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "March 2024 account names Chaman–Spin Boldak goods-trade restoration; photograph identifies Friendship Gate.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-shared-sites.json",
+      "sha256": "595baaafe4af6e34d545d8e5bebe426b59fe7757452f04862bf5caed42822f16"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SA013-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-chaman-friendship-gate",
+          "name": "Chaman–Spin Boldak Friendship Gate",
+          "coordinates": [
+            66.4383829,
+            30.9548165
+          ],
+          "coordinate_method": "Fresh OSM way geometry checked against preserved crossing-area representative point",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/1018387592/full"
+          ],
+          "evidence_note": "Road-accessible border-control building polygon; independently paired with Chaman–Spin Boldak/Friendship Gate reporting. Crossing-area reference only.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/b657c25e0e661889bbb5.xml",
+          "sha256": "e5eb5f6c774af1362b9e70488cf4e1212e0c948ac8b2d2a2737c173d78eb6c8f"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Truck access at Chaman–Spin Boldak was interrupted by protests affecting the border crossing and the main highway from Chaman. A gate marker can identify the affected crossing but cannot locate every highway blockade.",
+      "date_scope_check": {
+        "start_earliest": "2023-11-19",
+        "start_latest": "2023-11-20",
+        "end_earliest": "2024-01-24",
+        "end_latest": "2024-01-24",
+        "last_confirmed": "2024-01-24",
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "SA013-D1: The January 24 logistics update reports restricted trucks and blocked highway access. Radio Pakistan and Arab News report resumed goods trade by March 3; this is a later-access bound, not an exact first reopening or proof that every truck category had resumed. The interval between the two observations is unresolved. July 22–23 photo captions document passengers and continued document checks, so they do not date the freight restoration. The broader protest continued; its duration is not a continuous nine-month commercial closure."
+      },
+      "unresolved": [
+        "The highway protest positions remain unlocated; marker is an incomplete affected-crossing reference."
+      ]
+    }
+  ],
+  "unresolved": [
+    "The highway protest positions remain unlocated; marker is an incomplete affected-crossing reference."
+  ],
+  "input_sha256": "1346033d4bc898770ab8cd1ddbdb2eb1c6a7a9f8d47d6ffddc0cc974cf5cf6ba",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

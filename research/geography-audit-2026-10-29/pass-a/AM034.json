@@ -1,0 +1,82 @@
+{
+  "record_id": "AM034",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "March 13 service statement suspends Guyana–Suriname ferry from March 14; official February 21 report confirms Moleson Creek restricted resumption.",
+  "source_checks": [
+    {
+      "url": "https://newsroom.gy/2020/03/13/guyana-suriname-ferry-service-shuts-down-over-coronavirus/",
+      "access_status": "fresh_source_extract",
+      "finding": "March 13 service statement suspends Guyana–Suriname ferry from March 14; official February 21 report confirms Moleson Creek restricted resumption.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/27b326ad323f136036a2.html",
+      "source_sha256": "d7effc32b6a8d83e85db31075ac9a9a6586e078a1ea54a845efc5b67a83b4d65",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-020.json"
+    },
+    {
+      "url": "https://dpi.gov.gy/stranded-guyanese-return-home-as-guyana-suriname-ferry-service-resumes/",
+      "access_status": "fresh_source_extract",
+      "finding": "Official February 21 account identifies Moleson Creek crossing and limited service schedule.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/03b66233882cfdfc60e0.html",
+      "source_sha256": "1402a229ff540e8c5598a4ac86b4f1b1be9f183a866147e6db5f3e987b520453",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-021.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM034-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-canawaima-south-drain",
+          "name": "Canawaima ferry (South Drain terminal reference)",
+          "coordinates": [
+            -57.1361017,
+            5.7496831
+          ],
+          "coordinate_method": "OSM named node coordinates",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/29711119"
+          ],
+          "evidence_note": "OSM named ferry_terminal at South Drain. One terminal reference for the Moleson Creek–South Drain service, not a road bridge, river-wide border ban, or precise ferry track.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/2c5ec366f3cda088a035.xml",
+              "sha256": "2efe30b1dbb4f9a05fb3f2ec0ac777e47d1b768dea12dd040161b5b2c987ee0e",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "9",
+              "osm_timestamp": "2020-09-15T06:23:36Z",
+              "tags": {
+                "amenity": "ferry_terminal",
+                "name": "Canawaima Ferry Service"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Suriname–Guyana ferry; endpoint is the restricted reopening for nationals, not unrestricted passenger travel.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-14",
+        "start_latest": "2020-03-14",
+        "end_earliest": "2021-02-21",
+        "end_latest": "2021-02-21",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "South Drain terminal is located; opposite terminal and route geometry are not newly reconstructed."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "94335db2e9f604e86765958db6634d596c61e66f5d9d34f84330d9bb817ad13b"
+}

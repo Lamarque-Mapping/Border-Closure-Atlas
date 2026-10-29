@@ -1,0 +1,134 @@
+{
+  "record_id": "ME018",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Official Iran–Iraqi Kurdistan posts with separate endpoint phases: Parwezkhan and Haji Omaran versus Bashmakh. Sayran Ban mentioned elsewhere is not silently added to current retained pair.",
+  "source_checks": [
+    {
+      "url": "https://www.thenationalnews.com/world/mena/iran-reopens-all-border-posts-with-iraqi-kurdistan-1.692253",
+      "access_status": "full_text_web",
+      "finding": "AFP names last two reopened posts Parwezkhan and Haji Omran; Bashmaq had restarted in October.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-16.json",
+      "evidence_sha256": "45b510d02ec1f470da36e4950ebe9cbaf34d2cb728a1c93b9be2bd5409d6a900"
+    },
+    {
+      "url": "https://www.aa.com.tr/en/middle-east/iran-reopens-border-crossings-with-iraqi-kurdish-region/1020605",
+      "access_status": "full_text_web",
+      "finding": "AA names Parwezkhan, Haji Omaran and Sayran Ban in January announcement; retained scope follows narrower paired AFP evidence.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-14.json",
+      "evidence_sha256": "8d14c35707c30a7fa3bcfe5b585d8baf73cccb5fbc817942cdfa92ab475d8725"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME018-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-parviz-khan",
+          "name": "Parwezkhan / Parviz Khan",
+          "coordinates": [
+            45.585184,
+            34.5520766
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1356981409",
+            "https://www.openstreetmap.org/api/0.6/way/1356981409/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"area\": \"yes\", \"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"پایانه مرزی پرویزخان\", \"name:ar\": \"معبر برويز خان الحدودي\", \"name:en\": \"Parviz Khan Border Post\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/06aa85dd0dfa98676c5c.html",
+          "evidence_sha256": "a58495512f306b62fc9636faeb022691c052deb285c0c3a4c2dddfb9f7bc8ce2",
+          "osm_version": "3",
+          "osm_timestamp": "2026-01-14T10:16:35Z"
+        },
+        {
+          "proposed_site_id": "post-haji-omran",
+          "name": "Haji Omaran / Tamarchin",
+          "coordinates": [
+            45.0630296,
+            36.6672207
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/535137799",
+            "https://www.openstreetmap.org/api/0.6/way/535137799/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"area\": \"yes\", \"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"کۆمەڵگەی دەروازەی سنووریی حاجی ئۆمەران\", \"name:ar\": \"منفذ حاجي عمران الحدودي\", \"name:en\": \"Haji Omran Border Post\", \"name:fa\": \"پایانه مرزی حاجی عمران\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/38bf37c02b503f07bda4.html",
+          "evidence_sha256": "c6d749ffbffb8dc402a7b0b1354047e0f4969b3aeb52170d4dd58b952215a7c3",
+          "osm_version": "7",
+          "osm_timestamp": "2026-01-14T10:16:35Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Official Iran–Iraqi Kurdistan posts with separate endpoint phases: Parwezkhan and Haji Omaran versus Bashmakh. Sayran Ban mentioned elsewhere is not silently added to current retained pair. Current phase only: The remaining Parwezkhan and Haji Omaran crossings in the Iran–Iraqi Kurdistan restriction.",
+      "date_scope_check": {
+        "start_earliest": "2017-10-15",
+        "start_latest": "2017-10-15",
+        "end_earliest": "2018-01-02",
+        "end_latest": "2018-01-02",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Waiting travellers were initially excepted and semi-official Tawqela remained open. Iran initially denied new measures despite Kurdish customs reports of cessation. Bashmakh reopened separately on October 25. The earlier October 2 drill closure and September air restriction are excluded.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "ME018-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-bashmakh",
+          "name": "Bashmakh / Bashmaq",
+          "coordinates": [
+            46.0127893,
+            35.6144125
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/215808199",
+            "https://www.openstreetmap.org/api/0.6/way/215808199/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"دەروازەی سنووریی باشماخ\", \"name:ar\": \"معبر باشماخ الحدودي\", \"name:ckb\": \"دەروازەی سنووریی باشماخ\", \"name:en\": \"Bashmakh Border Crossing\", \"name:fa\": \"پایانه مرزی باشماخ\", \"name:ku\": \"Deriyê Sinorî yê Başmax\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/7f1ee971ca708671efda.html",
+          "evidence_sha256": "22164f96240306f67a818153204e7f6ca92056d7c19ce5af57c4201caf585d55",
+          "osm_version": "7",
+          "osm_timestamp": "2026-01-14T10:16:35Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Official Iran–Iraqi Kurdistan posts with separate endpoint phases: Parwezkhan and Haji Omaran versus Bashmakh. Sayran Ban mentioned elsewhere is not silently added to current retained pair. Current phase only: Bashmakh official land crossing during the post-referendum restriction.",
+      "date_scope_check": {
+        "start_earliest": "2017-10-15",
+        "start_latest": "2017-10-15",
+        "end_earliest": "2017-10-25",
+        "end_latest": "2017-10-25",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "The endpoint is retrospective reporting rather than a fresh contemporary October 25 observation. Travellers already waiting and semi-official crossings were excepted at the initial closure. Reporting shares Rudaw institutional origin. Earlier brief drill and air restrictions are separate.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

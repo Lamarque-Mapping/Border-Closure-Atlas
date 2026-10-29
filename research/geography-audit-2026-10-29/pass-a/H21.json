@@ -1,0 +1,50 @@
+{
+  "record_id": "H21",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "A national Djibouti restriction on persons crossing terrestrial frontiers, not goods; the decree window and implementation observation are separate.",
+  "source_checks": [
+    {
+      "url": "https://www.lanation.dj/djibouti-procede-a-la-fermeture-de-ses-frontieres-terrestres/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "22 October account distinguishes Tuesday decree, Wednesday implementation, 15-day restriction and cargo exemption.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-09.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "H21-R1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-dji-sol"
+      ],
+      "complete": false,
+      "phase_applicability": "Partial national policy reference only; retain 20 October decree and 4 November order expiry, not an observed reopening.",
+      "date_scope_check": "Canonical ordered_window: start 2020-10-20–2020-10-20; endpoint 2020-11-03–2020-11-04; last confirmed None. No end date is inferred from the current geography or extended to the review date. Same-day/order timing does not establish a strictly over-24-hour closure; retain the existing temporal layer and eligibility.",
+      "unresolved": [
+        "Existing inventory lacks Djibouti–Ethiopia and Djibouti–Eritrea frontier geometries; national scope is incomplete."
+      ]
+    },
+    {
+      "phase_id": "H21-C7P1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-dji-sol"
+      ],
+      "complete": false,
+      "phase_applicability": "21 October implementation observation; no assumed continuous extension from this point observation.",
+      "date_scope_check": "Canonical confirmed_through: start 2020-10-21–2020-10-21; endpoint 2020-10-21–2020-10-21; last confirmed 2020-10-21. No end date is inferred from the current geography or extended to the review date. Same-day/order timing does not establish a strictly over-24-hour closure; retain the existing temporal layer and eligibility.",
+      "unresolved": [
+        "Existing inventory lacks Djibouti–Ethiopia and Djibouti–Eritrea frontier geometries; national scope is incomplete."
+      ]
+    }
+  ],
+  "unresolved": []
+}

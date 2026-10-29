@@ -1,0 +1,88 @@
+{
+  "record_id": "EA035",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Selected Sadao ordinary passenger gate, including limited April1 2022 pilot; national nine-checkpoint report is context, not an assertion of identical Sadao onset or full freight closure.",
+  "source_checks": [
+    {
+      "url": "https://www.malaymail.com/news/malaysia/2020/03/23/covid-19-thailand-closes-nine-border-checkpoints-to-malaysia/1849411",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "March23 report establishes national nine-checkpoint measure; no exact Sadao first-denial time in inspected text.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/43ce13075f6492bbe37a.html",
+      "sha256": "590e351898f10b728e0dcdcf6b8601bcd53ed1caa1495848556c1dc45bb735f6",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/43ce13075f6492bbe37a.txt",
+      "text_sha256": "80c6e1d8edca282d5c0f1236dbae96fdf563291021f68e4bd662325aa0d04105",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-4.json"
+    },
+    {
+      "url": "https://www.nationthailand.com/in-focus/40014082",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Reports Sadao passenger pilot reopening April1 after two years,107 crossings; Thai-return and freight exceptions prevent universal closure interpretation.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/078488af41294880a7ca.html",
+      "sha256": "95e5c7cba46cbffa3b364f90dd4aa898edb2284e4e55e4c0fd8490645c1a0dac",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/078488af41294880a7ca.txt",
+      "text_sha256": "e1a81b7a8745cce9d81f6079cca891c90ad3ece162a2fbec20f4c4e6c9b6a810",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-3.json"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/7096487381",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Explicit Sadao bus border-control node inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/028f5a242341c92d5199.xml",
+      "sha256": "a412491ba4311ca100ceae1584a2da765e2136ea750d0c4bdd8339f451ea35d4",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/028f5a242341c92d5199.txt",
+      "text_sha256": "a412491ba4311ca100ceae1584a2da765e2136ea750d0c4bdd8339f451ea35d4",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA035-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-sadao-passenger",
+          "name": "Sadao passenger border checkpoint",
+          "coordinates": [
+            100.4183638,
+            6.519546
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/7096487381"
+          ],
+          "evidence_note": "OSM explicitly names Sadao (bus), barrier=border_control; passenger point separated from truck control node7097868253. April2022 source describes passenger pilot at Sadao.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/028f5a242341c92d5199.xml",
+          "sha256": "a412491ba4311ca100ceae1584a2da765e2136ea750d0c4bdd8339f451ea35d4"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Selected Sadao ordinary passenger gate, including limited April1 2022 pilot; national nine-checkpoint report is context, not an assertion of identical Sadao onset or full freight closure.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": "2020-03-23",
+        "end_earliest": "2022-04-01",
+        "end_latest": "2022-04-01",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "The 23 March date is a latest-confirmed national marker, not an exact first Sadao closure. An indexed Songkhla policy report points to 21 March, but original access and first gate-level denial remain unresolved. The 739-day difference from the selected marker is not a complete observed closure length. Limited Thai returns and freight continued; 1 April 2022 is the Sadao passenger pilot endpoint, not unrestricted entry or every Thai post."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "65e8bd36a368c661bc5984c5fbc638c6e724c676bc0ea7ea8db8d91952e2ac4f",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

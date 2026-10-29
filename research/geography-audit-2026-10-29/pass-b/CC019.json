@@ -1,0 +1,94 @@
+{
+  "record_id": "CC019",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Abkhaz restrictions on ordinary Russian-citizen entry across Psou, the Russia-facing connection. The road and pedestrian control facilities are separately identifiable and distinct from rail infrastructure and the Enguri ABL crossing.",
+  "source_checks": [
+    {
+      "url": "https://mfaapsny.org/en/allnews/news/othernews/i-o-prezidenta-podpisal-rasporyazhenie-o-zakrytii-gosudarstvennoy-granitsy-po-reke-psou-dlya-inostra/",
+      "access_status": "redirect_no_original_content",
+      "finding": "Original decree URL redirects to an unrelated homepage; no decree full-text verification claimed.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-central-1.json",
+      "sha256": "865b9f40264021137f81c686a32bd2af79e2116df407a80b6a36d59c3fe9110b"
+    },
+    {
+      "url": "https://civil.ge/archives/361234/amp",
+      "access_status": "substantive_indexed_original_source_extract",
+      "finding": "Original indexed reopening account identifies Psou, late-March entry restrictions and 1 August lifting; does not separately identify every transport facility.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-psou-fallback.json",
+      "sha256": "fe5cd83708b046cd77c374180415141d28aae63c00767e630e646ba5da3c9fc9"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC019-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-psou-road",
+          "name": "Psou road control",
+          "coordinates": [
+            40.0101262,
+            43.3955341
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/941289524"
+          ],
+          "evidence_note": "Named Psou border_control node permits motorcar and excludes foot; separate from pedestrian and rail facilities.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/ea8bdf6ff89b0eea2964.xml",
+          "sha256": "18095253c8460ac82c9242b91162ff1288f2106b0d2263bf026aa24e22edb788"
+        },
+        {
+          "proposed_site_id": "post-psou-pedestrian",
+          "name": "Psou pedestrian control",
+          "coordinates": [
+            40.0112118,
+            43.3936739
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/7129351574"
+          ],
+          "evidence_note": "Named MAPP Psou border_control node with foot=yes, approximately 220 m from separate road control.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/081244e67be0266dc025.xml",
+          "sha256": "bc6a28d65ea7bc9869a38d5e64ba02270c4b4de786edfc40a3c8f134ff6efdaf"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Abkhaz restrictions on ordinary Russian-citizen entry across Psou, the Russia-facing connection. The road and pedestrian control facilities are separately identifiable and distinct from rail infrastructure and the Enguri ABL crossing.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-28",
+        "start_latest": "2020-03-28",
+        "end_earliest": "2020-08-01",
+        "end_latest": "2020-08-01",
+        "last_confirmed": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Diplomatic, military, business and freight exceptions are excluded. Third-country nationals remained restricted. This is a scoped legal-permission phase, not all-nationality reopening or observed first passage."
+      },
+      "unresolved": [
+        "Road and pedestrian positions are supported, but the broad passenger wording does not independently resolve rail service applicability; no rail point added."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Road and pedestrian positions are supported, but the broad passenger wording does not independently resolve rail service applicability; no rail point added."
+  ],
+  "input_sha256": "6666b6e2bc1cc4531ac7665199da76339711ca37231252bc4020d20df0fd22dc",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted.",
+  "additional_evidence": [
+    {
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-6.json",
+      "sha256": "6a58fd2e7f67374a4676263ffb5bce29aa746e1ec904e9e11f8fdccc511f62ad"
+    }
+  ]
+}

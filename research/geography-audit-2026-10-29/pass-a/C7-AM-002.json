@@ -1,0 +1,71 @@
+{
+  "record_id": "C7-AM-002",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "June 27 account names Peñas Blancas, returning Nicaraguans from Panama via Costa Rica, and passage after a little over 12 hours. Do not reinterpret its one-day calendar bound as >24 hours.",
+  "source_checks": [
+    {
+      "url": "https://www.teletica.com/internacional/nicaragua-finalmente-permite-ingreso-a-su-pais-de-nicaraguenses_260451",
+      "access_status": "fresh_source_extract",
+      "finding": "June 27 account names Peñas Blancas, returning Nicaraguans from Panama via Costa Rica, and passage after a little over 12 hours. Do not reinterpret its one-day calendar bound as >24 hours.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-003.json"
+    },
+    {
+      "url": "https://www.openstreetmap.org/way/301995884",
+      "access_status": "fresh_full_xml",
+      "finding": "Underlying mapped feature XML inspected; named customs/bridge or border_control identity, coordinates and mode checked.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/e34ccd9219ed154302f4.xml",
+      "source_sha256": "9ef51290ca2b936a5d306131095a6cedb93aaf2b707e81be3e475018ae2e9a59"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "C7-AM-002-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "existing_site_id": "post-penas-blancas",
+          "name": "Peñas Blancas",
+          "coordinates": [
+            -85.61215,
+            11.21915
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM customs building Aduana de Peñas Blancas, Nicaragua side.",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/301995884"
+          ],
+          "evidence_note": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/e34ccd9219ed154302f4.xml",
+              "sha256": "9ef51290ca2b936a5d306131095a6cedb93aaf2b707e81be3e475018ae2e9a59",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Returning Nicaraguan group arriving from Panama via Costa Rica at Peñas Blancas",
+      "date_scope_check": {
+        "start_earliest": "2020-06-26",
+        "start_latest": "2020-06-26",
+        "end_earliest": "2020-06-27",
+        "end_latest": "2020-06-27",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "4e42d7ed5e2ebbb5271d28d8cce55f2396157eba3de5619fde12b2e8f662e237"
+}

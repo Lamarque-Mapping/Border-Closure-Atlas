@@ -1,0 +1,100 @@
+{
+  "record_id": "R5-EA-002",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The reopened Ban Rim Moei immigration checkpoint is Friendship Bridge I. The March 25 restriction targeted Thai/foreign trips from Thailand into Myanmar; return travel by Myanmar nationals was treated separately. Cargo queued by Bridge II in the same article does not widen the selected phase.",
+  "source_checks": [
+    {
+      "url": "https://www.nationthailand.com/thailand/general/40026031",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Thai/foreign visitors blocked toward Myawaddy; Myanmar nationals could return; cargo queue near Bridge II is a separate observation.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-01.json",
+      "sha256": "39920761a4ac61cc29715179e919dbb6d9e6e6b125305439c48de7a852d321e5"
+    },
+    {
+      "url": "https://www.nationthailand.com/thailand/general/40026050",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Ban Rim Moei Friendship Bridge checkpoint reopened March 26 after March 25 restriction.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-01.json",
+      "sha256": "39920761a4ac61cc29715179e919dbb6d9e6e6b125305439c48de7a852d321e5"
+    },
+    {
+      "url": "https://www.pptvhd36.com/news/สังคม/193221",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: 'ascii' codec can't encode characters in position 10-14: ordinal not in range(128)",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.thansettakij.com/business/trade-agriculture/560283",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://elevenmyanmar.com/news/no-1-friendship-bridge-reopens-after-fighting-ceased-in-myawady-trade-zone-and-thingannyinaung",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-EA-002-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-mae-sot-myawaddy-bridge-i",
+          "name": "Mae Sot–Myawaddy Friendship Bridge I crossing area",
+          "coordinates": [
+            98.5136423,
+            16.6894073
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/484241867",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/484241867",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=98.5,16.68,98.53,16.7"
+          ],
+          "evidence_note": "Named Myawaddy border-control node on the first road-bridge approach. Thai government describes Bridge I on Highway 105 at Tha Sai Luat; this is separate from the northern cargo Bridge II.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-mae-sot-i.xml",
+          "sha256": "0224c6f8c209404ab7e60f3bd388cf5e503e815c33d967ad77c6856a2ce2da82",
+          "osm_feature": "node/484241867",
+          "osm_version": "10",
+          "osm_timestamp": "2025-01-22T07:08:14Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "Myawaddy",
+            "name:en": "Myawaddy",
+            "name:ja": "ミャワディ",
+            "name:ru": "Мьявадди",
+            "source": "GPS;photograph"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Bridge I restriction on Thai/foreign visitor trips from Thailand into Myanmar",
+      "date_scope_check": {
+        "scope": "Bridge I restriction on Thai/foreign visitor trips from Thailand into Myanmar",
+        "start_earliest": "2023-03-25",
+        "start_latest": "2023-03-25",
+        "end_earliest": "2023-03-26",
+        "end_latest": "2023-03-26",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Nation March 25 and March 26 reports substantively reopened: announcement of restriction then next-day resumption. Preserve existing >24-hour qualification; consecutive calendar dates alone are not proof of more than 24 elapsed hours."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

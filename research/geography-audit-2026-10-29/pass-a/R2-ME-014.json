@@ -1,0 +1,55 @@
+{
+  "record_id": "R2-ME-014",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Al-Wadiah commercial trucking during the four-day complete shutdown, followed by cargo-only restoration while passengers remained restricted.",
+  "source_checks": [
+    {
+      "url": "https://aa.com.tr/en/middle-east/yemen-seals-border-with-saudi-arabia-over-virus-fears/1797604",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "April 8 report locates the sole remaining Saudi–Yemen crossing as al-Wadia.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-06.txt"
+    },
+    {
+      "url": "https://www.aa.com.tr/ar/الدول-العربية/اليمن-فتح-المنفذ-البري-الوحيد-مع-السعودية-أمام-حركة-التجارة/1802272",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Yemeni customs director says commercial trucks resumed April 12 after four days; citizens remain barred. Identifies Hadramawt/Sharurah crossing.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-07.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-ME-014-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-al-wadiah",
+          "name": "Al-Wadiah land crossing (Yemeni immigration facility)",
+          "coordinates": [
+            47.0113562,
+            16.9403092
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 1 km; named land-port immigration office locates crossing area, not a historical gate.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/10138647617",
+            "https://www.openstreetmap.org/api/0.6/map?bbox=47.00,16.93,47.03,16.96"
+          ],
+          "evidence_note": "OSM node 10138647617, version 1, timestamp 2022-10-29T22:27:59Z. Identity tags: {\"name\": \"مكتب الهجرة والجوازات اليمني منفذ الوديعه البري\", \"name:en\": \"The Yemeni Immigration and Passports Office, Al-Wadiah Land Port\", \"office\": \"government\", \"opening_hours\": \"24/7\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/bb205cbbe365db64.raw",
+          "evidence_sha256": "83900a3f5e48f743af57eeb76922b542579022295f2abe44c96bf024c0adedaa"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Bind April 8–12 commercial phase only, not the longer passenger restriction or earlier national announcement.",
+      "date_scope_check": "Canonical closed_interval: start 2020-04-08–2020-04-08; endpoint 2020-04-12–2020-04-12; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

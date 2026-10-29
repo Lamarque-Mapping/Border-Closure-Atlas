@@ -1,0 +1,62 @@
+{
+  "record_id": "GL09",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "National land/lake/river election-day order; returning voters at Kavimvira permitted. Airport exemptions and finite scheduled date retained.",
+  "source_checks": [
+    {
+      "url": "https://jambordc.info/election-les-frontieres-seront-ferme-ce-30-decembre-en-rdc-officiel/",
+      "access_status": "full_text_web",
+      "finding": "Article quotes Interior Ministry national terrestrial/lacustrine/fluvial closure on December 30.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-06.json",
+      "evidence_sha256": "65ef452fe70c5a93cb053faf575852295c9917004a6b78ec66ca974bb26f3de1"
+    },
+    {
+      "url": "https://www.radiookapi.net/node/187991",
+      "access_status": "full_text_fresh_fetch",
+      "finding": "Radio Okapi actual returnees and Kavimvira exception inspected.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/2b0b38d8a56dbb21770b.html",
+      "evidence_sha256": "dbee148ea892d6da5561c034be3c570a405062de8512542fb0ca2e2c1281f0b6"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "GL09-R1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-cod-rwa",
+        "context-frontier-cod-uga",
+        "context-frontier-bdi-cod",
+        "context-frontier-ago-cod",
+        "context-frontier-cod-cog",
+        "context-frontier-cod-zmb"
+      ],
+      "complete": false,
+      "phase_applicability": "National land/lake/river election-day order; returning voters at Kavimvira permitted. Airport exemptions and finite scheduled date retained. Current phase only: DRC land, lake and river borders under national election-day order",
+      "date_scope_check": {
+        "start_earliest": "2018-12-30",
+        "start_latest": "2018-12-30",
+        "end_earliest": "2018-12-30",
+        "end_latest": "2018-12-30",
+        "last_confirmed": null,
+        "endpoint_status": "scheduled",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "announced_window_layer_only",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Order applies to December 30; clock hours unspecified. Same calendar day is a scheduled window, not measured elapsed time. Airport exemptions and returning-voter passage at Kavimvira retained; physical end unknown.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Existing frontier geometry is incomplete for the DRC national perimeter; named Kavimvira exception is not itself a closure point. Same-day scheduled order only."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Existing frontier geometry is incomplete for the DRC national perimeter; named Kavimvira exception is not itself a closure point. Same-day scheduled order only."
+  ]
+}

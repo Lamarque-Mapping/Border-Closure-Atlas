@@ -1,0 +1,50 @@
+{
+  "record_id": "REC50-R36-003",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "National land-border component of election order; all existing bilateral frontier references for Republic of the Congo. Geometry denotes ordered territorial scope, not synchronized physical gate enforcement.",
+  "source_checks": [
+    {
+      "url": "https://www.journaldebrazza.com/legislatives-et-locales-2022-les-frontieres-de-la-republique-du-congo-seront-fermees-ce-10-juillet-2022/",
+      "access_status": "full_text_web",
+      "finding": "Article reproduces order5608 Article1 national frontier closure July10 06:00–18:00.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-07.json",
+      "evidence_sha256": "dd1872966cf32e1daff72155675d22d5840c04ead925d677cb7b070844187232"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R36-003-P1",
+      "category": "wider_border",
+      "decision": "map",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-cmr-cog",
+        "context-frontier-ago-cog",
+        "context-frontier-caf-cog",
+        "context-frontier-cod-cog",
+        "context-frontier-cog-gab"
+      ],
+      "complete": true,
+      "phase_applicability": "National land-border component of election order; all existing bilateral frontier references for Republic of the Congo. Geometry denotes ordered territorial scope, not synchronized physical gate enforcement. Current phase only: National land-border closure order; crossing-level operation not established",
+      "date_scope_check": {
+        "start_earliest": "2022-07-10",
+        "start_latest": "2022-07-10",
+        "end_earliest": "2022-07-10",
+        "end_latest": "2022-07-10",
+        "last_confirmed": null,
+        "endpoint_status": "scheduled",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "announced_window_layer_only",
+        "strictly_over_24_hours": false,
+        "qualification_retained": "REC50-R36-003-P1: Twelve-hour ordered window; excluded from multi-day operational duration statistics. No extension to a different election round.\n\noperational chronology; traffic scope; geography; source provenance: The July 2022 report establishes a twelve-hour ordered window only. Actual enforcement, affected traffic cohorts and return at particular crossing points are unverified; no extension to a different election round is established.\n\nPrimary instrument verified: Arrêté 5608 of 7 July 2022, published in Journal Officiel no. 29, page 1160, Article 1, orders national borders closed on 10 July 2022 from 06:00 to 18:00 for local elections and the first legislative round. It does not name exceptions or posts. This confirms a scheduled 12-hour window, not observed enforcement or a later election-round extension.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

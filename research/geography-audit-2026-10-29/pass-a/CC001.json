@@ -1,0 +1,143 @@
+{
+  "record_id": "CC001",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The selected phase is the additional Kyrgyz conflict-related restriction on Tajik people/goods specifically at Kairagach and Kyzyl-Bel. The original May order listed five posts; the March 2025 endpoint is a formal reopening at these two only.",
+  "source_checks": [
+    {
+      "url": "https://24.kg/english/195054_Cabinet_of_Ministers_imposes_restrictions_on_border_with_Tajikistan/",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "May 21 order lists five posts and scope of Tajik-national/goods restriction.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-59521711fc54231d8d.bin",
+      "sha256": "d8016931094c3ce146f6689b7d5d9cd416d112cdd259fef0742d0c83a55b59ba"
+    },
+    {
+      "url": "https://en.kabar.kg/news/two-checkpoints-opened-on-kyrgyz-tajik-border/",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "Kabar directly identifies Kairagach in Leilek and Kyzyl-Bel in Batken as the two formally reopened posts.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-4db62c7f959ed775dd.bin",
+      "sha256": "6d540795a681cff335df26d9b40bfa92f05a90f7c64412ce71fea63314b42b5e"
+    },
+    {
+      "url": "https://eurasianet.org/kyrgyzstan-turns-back-tajik-nationals-as-tensions-persist",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "Contemporary reporting observes Tajik nationals turned back; distinct from pre-existing pandemic rules.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-729b8eaed7d778d880.bin",
+      "sha256": "a73817e1501d4430a444b7e16ee2457a3a82f552bff497b0db0d0cf9fc030648"
+    },
+    {
+      "url": "https://digitalborder.gps.gov.kg/ru/home/checkpoints",
+      "access_status": "search_extract",
+      "finding": "Official indexed Kairagach coordinate corroborates the border-control node; Kyzyl-Bel directory coordinate is too coarse/inconsistent and rejected.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-09.json",
+      "sha256": "63dbf845fdafec420a2436be333129dfe6a0445078347c67af1c669a11c1c42c"
+    },
+    {
+      "url": "https://qazinform.com/news/some-5000-people-cross-kyrgyz-tajik-border-since-its-reopening-3ba202",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-d673efbfc77f4caedf.bin",
+      "sha256": "c83438bcd4a1a4e38e478732a7c9e02273d43d8dc208e79cffc66e06d379d5f2"
+    },
+    {
+      "url": "https://khovar.tj/rus/2025/03/okolo-5-tysyach-chelovek-peresekli-kyrgyzsko-tadzhikskuyu-granitsu-s-momenta-otkrytiya/",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-683e14778ac992da10.bin",
+      "sha256": "867aa9dee54ef3b90b1a045b6883a976a313a8c04c47cccef21473e97f6b7b59"
+    },
+    {
+      "url": "https://www.rferl.org/a/kyrgyzstan-tajik-passengers-ban/31274399.html",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-7d028eb81845c46cef.bin",
+      "sha256": "f3a4057aeda9afae4a873224b9ccb3d9549e681b4378387b1619daece523fa8f"
+    },
+    {
+      "url": "https://invest.gov.kg/en/news/vozobnovlena-rabota-kpp-todzhvaron-k",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-42cca41695df953177.bin",
+      "sha256": "96df360cd7841f9f1c296e7edcebcbd5ba6695e88881ec56b1e1b88861d2326c"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC001-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kairagach-madaniyat",
+          "name": "Kairagach–Madaniyat road crossing",
+          "coordinates": [
+            69.5435915,
+            40.0835813
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/5924193022",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/5924193022",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=69.53,40.07,69.56,40.1",
+            "https://digitalborder.gps.gov.kg/ru/home/checkpoints"
+          ],
+          "evidence_note": "OSM border-control node matches official Kyrgyz border-service directory coordinate 69.543617,40.083549 within metres; this validates unnamed map feature identity.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-kairagach.xml",
+          "sha256": "3bd90af64ac0f85af70fc5f007cd2633777698488bd4128c8b20fe043464ae53",
+          "osm_feature": "node/5924193022",
+          "osm_version": "2",
+          "osm_timestamp": "2025-01-21T17:16:19Z",
+          "identity_tags": {
+            "access:citizenship": "interstate",
+            "barrier": "border_control"
+          }
+        },
+        {
+          "proposed_site_id": "post-kyzyl-bel-guliston",
+          "name": "Kyzyl-Bel–Guliston road crossing",
+          "coordinates": [
+            70.731634,
+            40.1126425
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/7474711414",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/7474711414",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=70.72,40.105,70.74,40.125"
+          ],
+          "evidence_note": "Explicit OSM English Kyzyl Bel Border node on Kyrgyz–Tajik road. Do not use official-directory coarse 39.85,70.6 entry, which disagrees with this named road gate.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-kyzylbel-north.xml",
+          "sha256": "16eef6c695f21d47fe700eeccc0cb042948fb2c11d8fd7985e3cbdb60d43ac59",
+          "osm_feature": "node/7474711414",
+          "osm_version": "1",
+          "osm_timestamp": "2020-05-02T23:19:08Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "Kyrgyzstan to Tajikistan",
+            "name:en": "Kyzyl Bel Border"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Additional Kyrgyz conflict-related restriction on Tajik nationals and goods at Kairagach and Kyzyl-Bel, to formal restoration at those posts.",
+      "date_scope_check": {
+        "scope": "Additional Kyrgyz conflict-related restriction on Tajik nationals and goods at Kairagach and Kyzyl-Bel, to formal restoration at those posts.",
+        "start_earliest": "2021-05-21",
+        "start_latest": "2021-05-21",
+        "end_earliest": "2025-03-13",
+        "end_latest": "2025-03-13",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "May 21 2021 order and March 13 2025 two-post opening retained. Home-return exceptions and earlier pandemic controls are distinct; do not extend the endpoint to Kulundu, Bordobo or Karamyk."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

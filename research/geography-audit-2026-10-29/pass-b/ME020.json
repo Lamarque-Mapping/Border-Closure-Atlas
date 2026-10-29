@@ -1,0 +1,82 @@
+{
+  "record_id": "ME020",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The 2017 obstruction was on Syrian approaches to Bab al-Hawa/Cilvegözü. Turkish planned maintenance and Syrian armed roadblocks are distinct; only the retained aid/commercial approach phase is mapped.",
+  "source_checks": [
+    {
+      "url": "https://www.developmentaid.org/news-stream/post/5051/developments-in-north-western-syria",
+      "access_status": "full_text_web",
+      "finding": "Full republished OCHA/ReliefWeb narrative states roadblocks and sand barriers on main routes made Bab al-Hawa inaccessible from the Syrian side, stopping aid and commercial cargo; 19–25 July, calmer by 26 July.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-12.json",
+      "evidence_sha256": "d2773273841c7d26e3519719124e5c9ff4cb4e3004fffd70d71017bcced56e99"
+    },
+    {
+      "url": "https://reliefweb.int/report/syrian-arab-republic/turkey-syria-developments-north-western-syria-30-july-2017-enar",
+      "access_status": "inaccessible",
+      "finding": "Original ReliefWeb URL denied 403; reproduced narrative was inspected separately.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-11.json",
+      "evidence_sha256": "9fc850d024fd40f68abbe98a74f28d948644411ba5efab2e418c5162da335b17"
+    },
+    {
+      "url": "https://www.jpost.com/breaking-news/syrian-rebels-reopen-main-border-crossing-with-turkey-500955/",
+      "access_status": "title_only",
+      "finding": "Title/date only; body missing, not counted as full verification.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-09.json",
+      "evidence_sha256": "b17973adc9a6401dd558136684759d78ec1a61cdd0dbd1df9292bb4ec32d2b58"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME020-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-bab-al-hawa",
+          "name": "Bab al-Hawa / Cilvegözü",
+          "coordinates": [
+            36.6921911,
+            36.2314664
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/2358493626",
+            "https://www.openstreetmap.org/api/0.6/node/2358493626"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\", \"bicycle\": \"yes\", \"motor_vehicle\": \"yes\", \"name\": \"الحدود باب الهوى\", \"name:en\": \"Bab al-Hawa Border Crossing\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/a4fe81f25e9eae9eac28.html",
+          "evidence_sha256": "4657a82a0fdd3d2c9809517c4cd9dd0981c999b78fe3995fe6abb1bf3f344386",
+          "osm_version": "2",
+          "osm_timestamp": "2017-02-16T03:50:13Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "The 2017 obstruction was on Syrian approaches to Bab al-Hawa/Cilvegözü. Turkish planned maintenance and Syrian armed roadblocks are distinct; only the retained aid/commercial approach phase is mapped. Current phase only: Aid and commercial trucks from Turkey into Syria blocked by armed roadblocks on the Syrian approach to Bab al Hawa–Cilvegözü.",
+      "date_scope_check": {
+        "start_earliest": "2017-07-19",
+        "start_latest": "2017-07-19",
+        "end_earliest": "2017-07-26",
+        "end_latest": "2017-07-26",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "The July 26 observed-passage claim remains supported by substantial indexed Reuters text rather than a successfully retrieved full article. Planned July 19–21 maintenance on the Turkish side would have left an aid lane and is not the qualifying closure. Later restrictions and passenger access are outside this phase.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Named crossing located; exact armed roadblocks and extent of Syrian approach disruption remain unlocated."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Named crossing located; exact armed roadblocks and extent of Syrian approach disruption remain unlocated."
+  ]
+}

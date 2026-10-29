@@ -1,0 +1,62 @@
+{
+  "record_id": "EA032",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Myanmar-to-China fruit and seafood exports at Kyin San Kyawt north of Muse. Kyukok–Pansai/Wanding was an alternate route, not the closed gate.",
+  "source_checks": [
+    {
+      "url": "https://www.xinhuanet.com/english/2019-01/10/c_137734535.htm",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Xinhua explicitly names Kyin San Kyawt temporary reopening on 10 January 2019; it reports December 27 closure.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-1.json",
+      "sha256": "713d43ff1e1eb45d508bde26cd06cd37ea58a3e5d9a242dc6a40690ff84c092c"
+    },
+    {
+      "url": "https://www.rfa.org/english/news/myanmar/myanmar-holds-talks-with-china-to-reopen-border-crossing-01082019165648.html",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "RFA distinguishes the closed export gate from alternate Kyukok–Pansai and says the Myanmar side imposed the security closure.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-1.json",
+      "sha256": "713d43ff1e1eb45d508bde26cd06cd37ea58a3e5d9a242dc6a40690ff84c092c"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA032-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Myanmar-to-China fruit and seafood exports at Kyin San Kyawt north of Muse. Kyukok–Pansai/Wanding was an alternate route, not the closed gate.",
+      "date_scope_check": {
+        "start_earliest": "2018-12-01",
+        "start_latest": "2018-12-27",
+        "end_earliest": "2019-01-10",
+        "end_latest": "2019-01-10",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "No exact onset is selected from conflicting accounts. Diversions through Kyukok-Pansai and other Muse gates continued; Chinese inspection delays are separate. Temporary reopening ends this selected phase only."
+      },
+      "unresolved": [
+        "No exact Kyin San Kyawt/Mangman coordinate verified. Nearby Muse town, 105-mile trade zone and Wanding/Pansai gate are rejected substitutes."
+      ]
+    }
+  ],
+  "unresolved": [
+    "No exact Kyin San Kyawt/Mangman coordinate verified. Nearby Muse town, 105-mile trade zone and Wanding/Pansai gate are rejected substitutes."
+  ],
+  "input_sha256": "d7735993d3d999133882a69b4f0c0ea2b3d377e279e3e5b8ef84cf156a6848a6",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted.",
+  "additional_evidence": [
+    {
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-9.json",
+      "sha256": "8a6a71c8e02f9fb0cd3d01b2099ec4f3dad7456af50c4a53fa49f65ba347379f"
+    }
+  ]
+}

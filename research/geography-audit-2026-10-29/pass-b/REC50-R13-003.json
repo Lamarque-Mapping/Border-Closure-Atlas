@@ -1,0 +1,64 @@
+{
+  "record_id": "REC50-R13-003",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Dehiba–Wazen travel restriction except nationals returning to their own countries.",
+  "source_checks": [
+    {
+      "url": "https://www.mosaiquefm.net/mobile/fr/national-tunisie/1183304/dhehiba-ouazen-reprise-du-trafic",
+      "access_status": "indexed_full_article",
+      "finding": "Original-publisher indexed article gives 14:00 restriction and 22:00 restoration on August 10, preserving directional returning-national exceptions.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-dehiba-01.json",
+      "evidence_sha256": "d253233c56cba3dc0aba21e32858b5e4ad4b90d84b339cf8580ceeece0c2b215"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R13-003-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-dehiba-wazen",
+          "name": "Dehiba–Wazen road border facility",
+          "coordinates": [
+            10.6846255,
+            31.9790258
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/520064040",
+            "https://www.openstreetmap.org/api/0.6/way/520064040/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"addr:city\": \"الذهيبة\", \"addr:city:ar\": \"الذهيبة\", \"amenity\": \"police\", \"barrier\": \"wall\", \"name\": \"معبر الحدود الذهيبة\", \"name:ar\": \"معبر الحدود الذهيبة\", \"name:fr\": \"Poste frontalier de Dhehiba\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/adf93716af07ba84f39a.html",
+          "evidence_sha256": "698d6601bf8af62f6d186a4d31fa208019891ffb61e77d266fe669820bb10e38",
+          "osm_version": "5",
+          "osm_timestamp": "2023-03-17T19:58:35Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Dehiba–Wazen travel restriction except nationals returning to their own countries. Current phase only: Dehiba/Wazen travel other than Tunisians returning to Tunisia and Libyans returning to Libya",
+      "date_scope_check": {
+        "start_earliest": "2023-08-10",
+        "start_latest": "2023-08-10",
+        "end_earliest": "2023-08-10",
+        "end_latest": "2023-08-10",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "strictly_over_24_hours": false,
+        "qualification_retained": "REC50-R13-003-P1: The full Mosaïque report was recovered and confirms a 14:00–22:00 interruption on August 10, 2023, with Tunisians returning to Tunisia and Libyans returning to Libya allowed to pass. Le Temps independently relays a TAP crossing-official account of restored traffic late Thursday and normal operation Friday morning. The reason remains unstated, and the reports do not enumerate all freight or third-country categories. The eight-hour difference is based on reported clocks, not gate logs; no whole-day duration is inferred. Phase geography remains unlocated in the existing phase table.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

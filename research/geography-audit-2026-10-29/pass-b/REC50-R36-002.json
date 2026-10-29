@@ -1,0 +1,51 @@
+{
+  "record_id": "REC50-R36-002",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "National land-border component of election order; all existing bilateral frontier references for Cameroon. Geometry denotes ordered territorial scope, not synchronized physical gate enforcement.",
+  "source_checks": [
+    {
+      "url": "https://actucameroun.com/2025/10/10/presidentielle-2025-le-cameroun-ferme-ses-frontieres-48h-avant-le-scrutin/",
+      "access_status": "full_text_web",
+      "finding": "Report explicitly says all land frontiers with neighbours through October 13; body has 28H typo while headline says 48H, retained dates not recalculated.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-06.json",
+      "evidence_sha256": "65ef452fe70c5a93cb053faf575852295c9917004a6b78ec66ca974bb26f3de1"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R36-002-P1",
+      "category": "wider_border",
+      "decision": "map",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-cmr-gnq",
+        "context-frontier-caf-cmr",
+        "context-frontier-cmr-cog",
+        "context-frontier-cmr-gab",
+        "context-frontier-cmr-nga",
+        "context-frontier-cmr-tcd"
+      ],
+      "complete": true,
+      "phase_applicability": "National land-border component of election order; all existing bilateral frontier references for Cameroon. Geometry denotes ordered territorial scope, not synchronized physical gate enforcement. Current phase only: National land-border closure order; crossing-level operation not established",
+      "date_scope_check": {
+        "start_earliest": "2025-10-10",
+        "start_latest": "2025-10-10",
+        "end_earliest": "2025-10-13",
+        "end_latest": "2025-10-13",
+        "last_confirmed": null,
+        "endpoint_status": "scheduled",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "The 48/28-hour reporting discrepancy is retained; order text and another indexed report support the 48-hour schedule. No observed reopening; domestic transport exceptions do not automatically apply to the separate border article. The inspected order text is a user-uploaded Scribd reproduction; no official-host copy or signed-page image was independently verified.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

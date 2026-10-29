@@ -1,0 +1,55 @@
+{
+  "record_id": "H10",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Diffra IOM flow-monitoring point in Abyei PCA Area, recording South Sudanese movements north into Sudan; not the entire disputed boundary.",
+  "source_checks": [
+    {
+      "url": "https://dtm.iom.int/reports/sudan-%E2%80%94-registration-and-flow-monitoring-quarterly-overview-july-september-2020",
+      "access_status": "indexed_full_report_summary",
+      "finding": "Direct page open was denied 403. Search cache reproduces substantive IOM narrative: Diffra FMP reopened July after closure since March.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-14.json",
+      "evidence_sha256": "7628f51ab4062aeb7b8ffca5fb300688885ffecdea424a29e3b011cbf64f5fa9"
+    },
+    {
+      "url": "https://www.iom.int/sites/g/files/tmzbdl486/files/dtm/20170829-Abyei-Cross-Border.pdf",
+      "access_status": "indexed_document_text",
+      "finding": "IOM methodology describes monitoring main Abyei–Diffra road, excluding traditional informal routes; no surveyed coordinate identified in inspected indexed text.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-14.json",
+      "evidence_sha256": "7628f51ab4062aeb7b8ffca5fb300688885ffecdea424a29e3b011cbf64f5fa9"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "H10-R1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Diffra IOM flow-monitoring point in Abyei PCA Area, recording South Sudanese movements north into Sudan; not the entire disputed boundary. Current phase only: Diffra border flow-monitoring point, Abyei PCA Area",
+      "date_scope_check": {
+        "start_earliest": "2020-03-01",
+        "start_latest": "2020-03-31",
+        "end_earliest": "2020-07-01",
+        "end_latest": "2020-07-31",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "H10-R1: Month-precision retrospective IOM account at Diffra only. July bounds locate reopening within July 2020 and do not mean the whole month was closed. IOM reports renewed registration of incoming South Sudanese entering Sudan. The April–June overview links suspension of the Abyei monitoring point to the March 16 national emergency, but this is not a separately observed exact first gate denial. The March–July operational bounds remain unchanged.\n\nBoth IOM summaries were freshly recovered as substantive indexed text; direct retrieval returned 403 and the original full report remains unavailable. National-order reporting supports COVID rationale and broad legal scope, not simultaneous reopening of all Sudan crossings.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Exact Diffra FMP/control coordinate unresolved. UN camp and town/road centroids are not accepted substitutes. March/July month bounds preserved."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact Diffra FMP/control coordinate unresolved. UN camp and town/road centroids are not accepted substitutes. March/July month bounds preserved."
+  ]
+}

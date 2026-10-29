@@ -1,0 +1,64 @@
+{
+  "record_id": "ME031",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Nuwaiseeb Saudi-to-Kuwait return movement for Kuwaiti citizens in current phase, not every Kuwaiti frontier.",
+  "source_checks": [
+    {
+      "url": "https://www.alraimedia.com/article/1515019/%D9%85%D8%AD%D9%84%D9%8A%D8%A7%D8%AA/%D8%A7%D9%81%D8%AA%D8%AA%D8%A7%D8%AD-%D9%85%D8%AD%D8%AF%D9%88%D8%AF-%D9%84%D9%84%D9%85%D9%86%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%A8%D8%B1%D9%8A%D8%A9-%D8%A8%D9%8A%D9%86-%D8%A7%D9%84%D9%83%D9%88%D9%8A%D8%AA-%D9%88%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9",
+      "access_status": "full_text_web",
+      "finding": "Al-Rai Jan 2 describes limited 09:00–15:00 opening at Nuwaiseeb with landports officials. Current returning-citizen scope retained.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-13.json",
+      "evidence_sha256": "24be039dcfc5d544f7c565c300a172e14ffebc29f1bc9561b47d14d9e84092a0"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME031-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-nuwaiseeb",
+          "name": "Nuwaiseeb / Khafji",
+          "coordinates": [
+            48.3910162,
+            28.541359
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1456475679",
+            "https://www.openstreetmap.org/api/0.6/way/1456475679/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"area\": \"yes\", \"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"منفذ النويصيب الحدودي\", \"name:ar\": \"مركز منفذ النويصيب الحدودي\", \"name:en\": \"Nuwaiseeb Border Post\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/f67bc98e77f057fe3c22.html",
+          "evidence_sha256": "75e84aade790911d61258356d034054bb44c1bd1ca4c976a8929ab9bc62384fd",
+          "osm_version": "1",
+          "osm_timestamp": "2025-12-06T12:37:32Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Nuwaiseeb Saudi-to-Kuwait return movement for Kuwaiti citizens in current phase, not every Kuwaiti frontier. Current phase only: Ordinary returning Kuwaiti citizens through Nuwaiseeb from Saudi Arabia",
+      "date_scope_check": {
+        "start_earliest": "2020-12-21",
+        "start_latest": "2020-12-21",
+        "end_earliest": "2021-01-02",
+        "end_latest": "2021-01-02",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "ME031-R1: 21 December 23:00 onset, 2 January 09:00 limited opening; hours then 09:00–15:00. Does not establish all-nationality or all-post reopening; extraordinary permissions not inventoried.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

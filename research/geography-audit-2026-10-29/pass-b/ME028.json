@@ -1,0 +1,68 @@
+{
+  "record_id": "ME028",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The October 4 strike cut the Beirut–Damascus highway about 500 m east of Lebanese Masnaa control, approximately 5 km before Syrian frontier; pedestrians continued. Crossing point locates affected corridor only.",
+  "source_checks": [
+    {
+      "url": "https://www.hrw.org/news/2024/10/07/lebanon-israeli-strikes-impede-fleeing-civilians-aid",
+      "access_status": "full_text_web",
+      "finding": "HRW independently geolocated three craters 500 m east of Masnaa and distinguishes vehicle road severance from foot passage.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-02.json",
+      "evidence_sha256": "3567a079bbf515b03e8582faf153e753400dadf0111efb55d2829977a13cde27"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME028-REV1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-masnaa-jdeidet-yabous",
+          "name": "Masnaa–Jdeidet Yabous",
+          "coordinates": [
+            35.9238439,
+            33.7020263
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1066108779",
+            "https://www.openstreetmap.org/api/0.6/node/1066108779"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\", \"country\": \"LB\", \"name\": \"المصنع\", \"name:ar\": \"المصنع\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/20ae20e7ff8c6d3450a9.html",
+          "evidence_sha256": "57b7fd7e22fad30ab7450a4f8d2c3d816fa1b457737c179df222c59fb0a287b7",
+          "osm_version": "6",
+          "osm_timestamp": "2018-03-07T21:49:53Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "The October 4 strike cut the Beirut–Damascus highway about 500 m east of Lebanese Masnaa control, approximately 5 km before Syrian frontier; pedestrians continued. Crossing point locates affected corridor only. Current phase only: Severed through-vehicle road between Masnaa and Jdeidat Yabous following the October 4 strike",
+      "date_scope_check": {
+        "start_earliest": "2024-10-04",
+        "start_latest": "2024-10-04",
+        "end_earliest": "2024-10-04",
+        "end_latest": "2024-11-30",
+        "last_confirmed": "2024-10-04",
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "The October 4, 2024 strike severed through-vehicle access at the Masnaa road; pedestrians continued crossing. The former October 10 last-confirmation and six-day minimum are withdrawn because reproduced evidence did not support them. A November 30 ministerial statement reported the road repaired and operational, providing a later restoration bound. Exact first restoration and intervening continuity remain unresolved; later strikes are separate events. No continuous October–November closure or exact duration is inferred.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Exact crater/road-severance coordinate is not supplied; existing terminal mark is partial corridor reference only. November restoration bound does not prove continuous shutdown."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact crater/road-severance coordinate is not supplied; existing terminal mark is partial corridor reference only. November restoration bound does not prove continuous shutdown."
+  ]
+}

@@ -111,6 +111,7 @@
     // crossing with no approved position must never fall back to that line.
     if(row.category!=='wider_border')return array(row.site_ids);
     const features=geographyIndex(data).features;
+    if(Array.isArray(row.border_ids))return row.border_ids.filter(id=>/^(?:Multi)?LineString$/.test(features.get(id)?.geometry?.type||''));
     return displayLocationsFor(e,data).filter(id=>/^(?:Multi)?(?:LineString|Polygon)$/.test(features.get(id)?.geometry?.type||''));
   }
   function mapLocationsFor(e,data,state={}){

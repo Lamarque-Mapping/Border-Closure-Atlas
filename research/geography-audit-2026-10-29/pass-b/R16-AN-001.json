@@ -1,0 +1,75 @@
+{
+  "record_id": "R16-AN-001",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Freight-vehicle through-carriage restrictions are evidenced at Rosso with compulsory transfer of loads; cargo itself was not banned. Use the ferry-era terminal, not a new bridge.",
+  "source_checks": [
+    {
+      "url": "https://cridem.org/C_Info.php?article=726313",
+      "access_status": "full_text_web",
+      "finding": "2019 attributed report explicitly describes rupture de charge at Rosso.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-03.json",
+      "evidence_sha256": "d954c645414c09078f26957e461c7a3e2416a8b5d5e2877ef9ed58f68137d402"
+    },
+    {
+      "url": "https://www.wto.org/english/tratop_e/tpr_e/s371_e.pdf",
+      "access_status": "full_text_web",
+      "finding": "WTO report accessed; contextual nationwide transport constraints require post-level qualification.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-03.json",
+      "evidence_sha256": "d954c645414c09078f26957e461c7a3e2416a8b5d5e2877ef9ed58f68137d402"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R16-AN-001-R1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-rosso-ferry",
+          "name": "Rosso international ferry, Mauritanian terminal",
+          "coordinates": [
+            -15.8117554,
+            16.5087328
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/22260206",
+            "https://www.openstreetmap.org/api/0.6/node/22260206"
+          ],
+          "evidence_note": " OSM tags inspected: {\"addr:city:ar\": \"روصو\", \"amenity\": \"ferry_terminal\", \"ferry\": \"yes\", \"name\": \"روصو\", \"name:ar\": \"روصو\", \"name:fr\": \"Rosso\", \"name:it\": \"Rosso\", \"public_transport\": \"stop_position\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/05f12efecd26afefa90e.html",
+          "evidence_sha256": "3e0af65c723a9a91e8de6892024033d403c321728608d7b4e67f9f9b95aa7af1",
+          "osm_version": "8",
+          "osm_timestamp": "2025-11-27T13:42:24Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Freight-vehicle through-carriage restrictions are evidenced at Rosso with compulsory transfer of loads; cargo itself was not banned. Use the ferry-era terminal, not a new bridge. Current phase only: Documented segment of Mauritanian restriction on Senegalese through-carriage; Rosso cargo transfer",
+      "date_scope_check": {
+        "start_earliest": "2018-03-01",
+        "start_latest": "2018-03-31",
+        "end_earliest": "2025-07-11",
+        "end_latest": "2025-07-11",
+        "last_confirmed": null,
+        "endpoint_status": "legal_effective",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "R16-AN-001-R1: March 2018 is a documentary boundary, not the original onset. The WTO describes Senegalese trucks transferring loads to Mauritanian vehicles while Moroccan trucks continued operating; cargo itself was not prohibited. The reported July 11, 2025 agreement ended compulsory transshipment formally. A January 2026 bilateral communiqué instead dates lifting of the practice to November 2025. These accounts do not establish the first operational through-passage or explain the intervening implementation. The retrospective 2010 claim is not adopted as an exact original onset. Original policy rationale and uninterrupted operational enforcement remain unestablished.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Other posts implicated by bilateral vehicle policy remain unidentified; July 2025 agreement and later November implementation account do not establish first through-passage."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Other posts implicated by bilateral vehicle policy remain unidentified; July 2025 agreement and later November implementation account do not establish first through-passage."
+  ]
+}

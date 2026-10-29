@@ -1,0 +1,48 @@
+{
+  "record_id": "R2-ME-007",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Arba-Arba was an inland checkpoint controlling access to Erez. It is not the mapped Erez border-control node; later relocated Hamas checkpoint also cannot substitute.",
+  "source_checks": [
+    {
+      "url": "https://www.ochaopt.org/content/continuing-access-restrictions-de-facto-authorities-gaza-add-humanitarian-concerns",
+      "access_status": "full_text_web",
+      "finding": "OCHA distinguishes Arba-Arba from Erez and says Kerem Shalom continued operating.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-01.json",
+      "evidence_sha256": "719b8776d18f867abe3a71e14d2da6c93c54c30a026d42c28f8aa9657f82bc1f"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-ME-007-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Arba-Arba was an inland checkpoint controlling access to Erez. It is not the mapped Erez border-control node; later relocated Hamas checkpoint also cannot substitute. Current phase only: Additional Gaza outward-passenger restrictions at Arba-Arba controlling Erez access",
+      "date_scope_check": {
+        "start_earliest": "2017-03-26",
+        "start_latest": "2017-03-26",
+        "end_earliest": "2017-04-06",
+        "end_latest": "2017-04-06",
+        "last_confirmed": null,
+        "endpoint_status": "legal_effective",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "R2-ME-007-D1: The March 26–April 6 interval describes a formal exit-restriction regime with changing exemptions, not a total two-way closure. Direct OCHA full text verifies the onset and March 26–27 entry restoration. OCHA records the April 6 removal announcement, which does not prove first actual passage by every category that day. Kerem Shalom goods were unaffected; exact clocks and category-level operational continuity remain unknown.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "No source-supported coordinate for the historical 2017 Arba-Arba checkpoint recovered; search produced identity evidence only. Erez node rejected as substitute."
+      ]
+    }
+  ],
+  "unresolved": [
+    "No source-supported coordinate for the historical 2017 Arba-Arba checkpoint recovered; search produced identity evidence only. Erez node rejected as substitute."
+  ]
+}

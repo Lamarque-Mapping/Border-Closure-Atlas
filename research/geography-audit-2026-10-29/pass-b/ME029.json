@@ -1,0 +1,68 @@
+{
+  "record_id": "ME029",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Qaa–Jousiyeh formal road crossing and Syrian-side approach struck in October 2024. Gate point is located, strike crater/bridge footprint is not.",
+  "source_checks": [
+    {
+      "url": "https://today.lorientlejour.com/article/1437699/qaa-border-crossing-reopens-4000-people-expected-to-cross-on-sunday.html",
+      "access_status": "full_text_web",
+      "finding": "Correspondent reports crater filled, crossing reopening and returnees, and October 25 strike on Syrian-side bridge in Jousseh. Article says nearly a year despite October-to-December dates; this textual inconsistency does not alter contested flags.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-13.json",
+      "evidence_sha256": "24be039dcfc5d544f7c565c300a172e14ffebc29f1bc9561b47d14d9e84092a0"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME029-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-qaa-jousiyeh",
+          "name": "Qaa / Jousiyeh",
+          "coordinates": [
+            36.544381,
+            34.4231347
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1551036786",
+            "https://www.openstreetmap.org/api/0.6/node/1551036786"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\", \"bicycle\": \"yes\", \"foot\": \"yes\", \"horse\": \"yes\", \"motorcar\": \"yes\", \"motorcycle\": \"yes\", \"name\": \"Al Qa\", \"name:en\": \"Al Qa\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/d50c2df1b211978999c0.html",
+          "evidence_sha256": "f99d7045f7263941d258ecf3b1d4cc74aa8b0536090e8a45e1763ebc405d76a1",
+          "osm_version": "4",
+          "osm_timestamp": "2018-03-07T15:27:57Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Qaa–Jousiyeh formal road crossing and Syrian-side approach struck in October 2024. Gate point is located, strike crater/bridge footprint is not. Current phase only: Qaa / Jousiyeh; Vehicles and formal road access; Not established",
+      "date_scope_check": {
+        "start_earliest": "2024-10-25",
+        "start_latest": "2024-10-25",
+        "end_earliest": "2024-12-01",
+        "end_latest": "2024-12-01",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": true,
+        "temporal_display_rule": "held_evidence_do_not_animate_as_confirmed",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "UNHCR’s December 2 update reports that pedestrians continued despite the November 30 strike and that vehicle movement resumed on December 1, with cars and buses carrying Lebanese returnees from Syria to Lebanon observed. This is direct evidence for that direction and category; equivalent first restoration for reverse-direction movements is not established. It does not prove uninterrupted October 25–December 1 vehicle closure through repeated strikes and emergency access. Numeric duration remains withheld; pedestrian access is excluded.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Approximate road control location verified; exact Syrian-side struck bridge/crater and wider access footprint remain unlocated. Contested temporal status retained."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Approximate road control location verified; exact Syrian-side struck bridge/crater and wider access footprint remain unlocated. Contested temporal status retained."
+  ]
+}

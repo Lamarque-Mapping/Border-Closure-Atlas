@@ -1,0 +1,75 @@
+{
+  "record_id": "EA028",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ordinary road passengers at Boten–Mohan. The January 2023 relaxation remained limited for tourists; railway service terminating at Boten is expressly distinct.",
+  "source_checks": [
+    {
+      "url": "https://kpl.gov.la/en/detail.aspx?id=70945",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Lao national news quotes checkpoint immigration chief on Jan 8–11 two-way movement, while tourist visas were still not accepted for China.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/4a183b25a6a30298d235.html",
+      "sha256": "2927f74d3ae4314b85548c9ce805f8d4a9357811bb7a07d7992dba20b41c904f",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/4a183b25a6a30298d235.txt",
+      "text_sha256": "558d7c788421abfbdd81ff5224a56bdfd24a5cdfb6b1d22014b807ae18bf7b79",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-2.json"
+    },
+    {
+      "url": "https://www.rfa.org/english/news/laos/laos-china-border-01092023033743.html",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "RFA identifies Boten road gate movements and states international through-rail service was still under discussion.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/e9ed08a4d5ca3f35c33d.html",
+      "sha256": "2927f74d3ae4314b85548c9ce805f8d4a9357811bb7a07d7992dba20b41c904f",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/e9ed08a4d5ca3f35c33d.txt",
+      "text_sha256": "5bd9b998e75d7d74b1ae7ff301a93b38a3de2639c14da66fc188c1a4378c5149",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-2.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA028-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-boten-mohan-road",
+          "name": "Boten–Mohan road checkpoint",
+          "coordinates": [
+            101.6782566,
+            21.1874228
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/3858332676"
+          ],
+          "evidence_note": "OSM names Lao PDR Boten International Checkpoint and barrier=border_control; Jan 2023 source distinguishes road passage from railway service then terminating at Boten.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/44c75f976bb43a773855.xml",
+          "sha256": "a1650d3223c152ec2bcc6a5b93f8c5521fd6d9ae06fcfd8113e0d26e30ff4442"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary road passengers at Boten–Mohan. The January 2023 relaxation remained limited for tourists; railway service terminating at Boten is expressly distinct.",
+      "date_scope_check": {
+        "start_earliest": "2020-01-01",
+        "start_latest": "2020-03-06",
+        "end_earliest": "2023-01-08",
+        "end_latest": "2023-01-08",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "EA028-D1: RFA documented restriction to essential cargo and business travellers at Boten by 6 March 2020; that is an observation bound, not the exact first day. Approved business and essential movement existed before 2023, including fast-track arrangements from November 2020. Laos reopened May 9, 2022; Chinese tourist-visa entry remained excluded after January 8, 2023. This phase does not assert an uninterrupted ban on all business travellers or all two-way movement. Freight and the new April 2023 railway service are excluded."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "cfa3240e46416a18f14f72aa61851db904f706dc4e97e23587d2086eafedc20e",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

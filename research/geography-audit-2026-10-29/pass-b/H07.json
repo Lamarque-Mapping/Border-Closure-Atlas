@@ -1,0 +1,48 @@
+{
+  "record_id": "H07",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "March national passenger policy is distinct from August restoration of Ethiopia–Djibouti services. The phase endpoint cannot approve other Ethiopian frontiers.",
+  "source_checks": [
+    {
+      "url": "https://ethiopianembassy.org/ethiopia-closes-borders-to-prevent-spread-of-covid19-march-23-2020/",
+      "access_status": "full_text_web",
+      "finding": "Embassy says people halted along all borders, except incoming essential goods.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-06.json",
+      "evidence_sha256": "65ef452fe70c5a93cb053faf575852295c9917004a6b78ec66ca974bb26f3de1"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "H07-V1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "March national passenger policy is distinct from August restoration of Ethiopia–Djibouti services. The phase endpoint cannot approve other Ethiopian frontiers. Current phase only: Ethiopia’s declared ordinary land-passenger restriction, with the endpoint limited to bilateral services with Djibouti.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-23",
+        "start_latest": "2020-03-23",
+        "end_earliest": "2020-07-01",
+        "end_latest": "2020-08-07",
+        "last_confirmed": null,
+        "endpoint_status": "reported_resumption_bound",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "H07-V1: The March 23 order and April 7 government review establish a sustained declared land-passenger restriction, with goods exempt. IOM’s retrospective Djibouti monitoring reports place bilateral land-service resumption in July 2020; the August 7 Ethiopian foreign-ministry briefing independently confirms that those services had resumed. A conservative July 1–August 7 bound is retained for reported bilateral resumption, rather than treating any specific July day as an exact legal or operational endpoint.\n\nThe July 31 IOM passage previously treated as a direct contradiction discusses suspended assisted returns from Bosasso and Hargeisa in Somalia. It does not by itself disprove the differently scoped Djibouti reopening. The August briefing also says negotiations with other neighbours were continuing. Country-level summaries differ in their categories, and the original reopening instrument, individual gate operation and passenger subcategories remain incomplete. Neither Djibouti’s July 17 airport reopening nor reported migrant counts establishes the first ordinary land traveller.\n\nThe dated declared-policy period is suitable for display and greater-than-24-hour analysis with these limits. Its 100–137 calendar-day difference to reported bilateral resumption is not an exact duration of physically closed crossings. No common endpoint is assigned to Ethiopia’s other land frontiers.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "No Ethiopia–Djibouti frontier reference in inventory; operational endpoint is bilateral, so other Ethiopian boundary lines are not used as a substitute. Individual Galafi/Balho/Dewele road controls cannot stand for the full services phase without post-level evidence."
+      ]
+    }
+  ],
+  "unresolved": [
+    "No Ethiopia–Djibouti frontier reference in inventory; operational endpoint is bilateral, so other Ethiopian boundary lines are not used as a substitute. Individual Galafi/Balho/Dewele road controls cannot stand for the full services phase without post-level evidence."
+  ]
+}

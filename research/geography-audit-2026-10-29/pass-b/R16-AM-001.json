@@ -1,0 +1,77 @@
+{
+  "record_id": "R16-AM-001",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Guatemalan truck drivers blocked road access on the Melchor side to cargo entering Belize from Tuesday 31 August until trucks resumed around 11:30 on 2 September 2021. This is a freight access protest, not a closure of the entire Guatemala–Belize frontier.",
+  "source_checks": [
+    {
+      "url": "https://www.breakingbelizenews.com/2021/09/02/breaking-belize-customs-makes-concession-guatemalan-truck-drivers-give-up-protest-things-getting-back-to-normal-at-the-western-border/",
+      "access_status": "full_text_web",
+      "finding": "Body describes Guatemala-side road blockage, 70–80 waiting trucks, Customs concession and renewed crossing at about 11:30 on 2 September.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R16-AM-001-RREV1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "crossing-melchor-benque",
+          "name": "Melchor de Mencos–Benque Viejo",
+          "coordinates": [
+            -89.15052,
+            17.05783
+          ],
+          "coordinate_method": "Independent inspection of preserved versioned OSM source metadata; no fresh OSM API retrieval claimed",
+          "precision": "approximate named crossing area; historical obstruction footprint not surveyed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/3268860583",
+            "https://mapcarta.com/N3268860583"
+          ],
+          "evidence_note": "OSM node 3268860583 v6 is explicitly Aduanas e Inmigración de Guatemala, barrier=border_control. Independently reopened Mapcarta mirror reproduces the same node and coordinates; Belize customs is 140 m east. News identifies Guatemalan-side approach cargo obstruction.",
+          "cached_source_metadata": [
+            {
+              "url": "https://www.openstreetmap.org/node/3268860583",
+              "title": "Aduanas e Inmigración de Guatemala",
+              "retrieved": "2026-10-22",
+              "evidence": "Direct OSM API response inspected: {\"barrier\": \"border_control\", \"name\": \"Aduanas e Inmigración de Guatemala\", \"name:es\": \"Aduanas e Inmigración de Guatemala\"}",
+              "feature_id": "node/3268860583",
+              "version": "6",
+              "source_timestamp": "2026-05-25T16:01:56Z",
+              "licence": "Open Database License (ODbL); © OpenStreetMap contributors",
+              "local_evidence": "melchor_crossing_osm_map.xml"
+            }
+          ],
+          "cached_evidence_path": "source/geography-reference.json",
+          "cached_evidence_sha256": "a7ad4c4223195811491048191efd6e1626eda968146dc2485d9e65a5b4799e78"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Only the Guatemalan cargo approach to the Western Border; no exact blockade footprint.",
+      "date_scope_check": "31 August–2 September scope retained; no passenger restriction inferred.",
+      "canonical_dates": {
+        "kind": "intermittent_regime",
+        "measure_type": "intermittent_regime",
+        "start_earliest": "2021-08-31",
+        "start_latest": "2021-08-31",
+        "end_earliest": "2021-09-02",
+        "end_latest": "2021-09-02",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "withheld_intermittent_regime",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R16-AM-001.json",
+  "canonical_input_sha256": "dca9220a4aa6addc77ca5f47390daa3ace247fa82ed757d1f4163433ec0e1e6f",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

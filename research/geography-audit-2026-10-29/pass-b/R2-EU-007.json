@@ -1,0 +1,120 @@
+{
+  "record_id": "R2-EU-007",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "KoSSev distinguishes selective Serbian-side activist obstructions from Kosovo’s subsequent closure of Brnjak and Merdare. Both closed posts reopened September 7; Jarinje was separately obstructed but not an additional closed post in this phase.",
+  "source_checks": [
+    {
+      "url": "https://kossev.info/kosovo-online-najnovije-vesti-prelazi-merdare-i-brnjak-otvoreni-za-saobracaj/",
+      "access_status": "full_text_web",
+      "finding": "September 7 body reconstructs the sequence after September 6 evening and reports updated ministry traffic status at 17:23 reopening both named posts.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/8b90178302b0d268769b.raw",
+      "sha256": "e99410312c2e26487fa9e75453edf9a111017a048e071e824a7c56859d21f36d"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EU-007-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "existing_site_id": "post-merdare",
+          "name": "Merdare",
+          "coordinates": [
+            21.243304,
+            42.936672
+          ],
+          "coordinate_method": "Independent inspection of preserved versioned OSM source metadata; no fresh OSM API retrieval claimed",
+          "precision": "approximate named crossing area; historical obstruction footprint not surveyed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/13959887212"
+          ],
+          "evidence_note": "Primary cached node 13959887212 v1 names Merdare Border Crossing with vehicle=yes and border_control. Current node position is a reference, not a historical survey.",
+          "cached_source_metadata": {
+            "evidence_file": "west-osm-evidence/merdare.xml",
+            "licence": "Open Database License (ODbL); © OpenStreetMap contributors",
+            "osm_id": 13959887212,
+            "osm_type": "node",
+            "tags": {
+              "barrier": "border_control",
+              "bicycle": "yes",
+              "foot": "yes",
+              "name": "Vendkalimi kufitar Merdarë",
+              "name:de": "Grenzübergang Merdare",
+              "name:en": "Merdare Border Crossing",
+              "name:sq": "Vendkalimi kufitar Merdarë",
+              "name:sr": "Административни прелаз Мердаре",
+              "name:sr-Latn": "Administrativni prelaz Merdare",
+              "vehicle": "yes",
+              "wikidata": "Q31838847",
+              "wikipedia": "sq:Vendkalimi kufitar Merdare"
+            },
+            "timestamp": "2026-06-23T12:23:11Z",
+            "version": 1
+          },
+          "cached_evidence_path": "source/crossings/locations.json",
+          "cached_evidence_sha256": "e4b81d220480cfe8eebe6b5eea093b4ee40789bda62db567470ef81cc8605601"
+        },
+        {
+          "existing_site_id": "post-brnjak",
+          "name": "Brnjak",
+          "coordinates": [
+            20.548653,
+            42.961697
+          ],
+          "coordinate_method": "Independent inspection of preserved versioned OSM source metadata; no fresh OSM API retrieval claimed",
+          "precision": "approximate named crossing area; historical obstruction footprint not surveyed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/4760799314"
+          ],
+          "evidence_note": "Primary cached node 4760799314 v5 has barrier=border_control and names Administrativni prelaz Brnjak / Bërnjakë border crossing; motor_vehicle and pedestrian access tags identify a road post.",
+          "cached_source_metadata": {
+            "evidence_file": "west-osm-evidence/brnjak.xml",
+            "licence": "Open Database License (ODbL); © OpenStreetMap contributors",
+            "osm_id": 4760799314,
+            "osm_type": "node",
+            "tags": {
+              "barrier": "border_control",
+              "bicycle": "yes",
+              "foot": "yes",
+              "horse": "yes",
+              "motor_vehicle": "yes",
+              "name": "Administrativni prelaz Brnjak",
+              "name:en": "Bërnjakë border crossing"
+            },
+            "timestamp": "2024-09-27T13:01:32Z",
+            "version": 5
+          },
+          "cached_evidence_path": "source/crossings/locations.json",
+          "cached_evidence_sha256": "e4b81d220480cfe8eebe6b5eea093b4ee40789bda62db567470ef81cc8605601"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Merdare and Brnjak closure; not Jarinje or Kula by association.",
+      "date_scope_check": "6–7 September 2024 retained; activist selectivity and later formal closure distinguished.",
+      "canonical_dates": {
+        "kind": "closed_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2024-09-06",
+        "start_latest": "2024-09-06",
+        "end_earliest": "2024-09-07",
+        "end_latest": "2024-09-07",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R2-EU-007.json",
+  "canonical_input_sha256": "a72c12ae330ec9c669dad490bd0594d2a1a7c0e532c053dbb8a2ba2a8a31454b",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

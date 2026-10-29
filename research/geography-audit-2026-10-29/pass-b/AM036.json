@@ -1,0 +1,107 @@
+{
+  "record_id": "AM036",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "AFP reports June 25 2020 full closure of the Saint-Georges road bridge in the Brazil-to-France direction. INSEE dates the Brazil frontier reopening December 18 2021, and France-Guyane specifically confirms reopened Oyapock road bridge. Earlier March rule has broader/exceptional admission scope and is not automatically attached to this bridge.",
+  "source_checks": [
+    {
+      "url": "https://www.tahiti-infos.com/Confinement-cible-fermeture-des-bars-et-restaurants-couvre-feu-durci-la-Guyane-renforce-les-restrictions_a192145.html",
+      "access_status": "full_text_html",
+      "finding": "AFP full body quotes prefecture on Saint-Georges bridge closed Brazil-to-France after Thursday evening measures.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/20eae9f00da4587cde39.raw",
+      "sha256": "0fa1a20f590de5ef72f9bc95df4f5bfb94a69da2bf7fc23dc3ad7bfa70a636c5"
+    },
+    {
+      "url": "https://www.insee.fr/fr/statistiques/6458365?sommaire=6324691",
+      "access_status": "full_text_html",
+      "finding": "INSEE chronology dates reopening December 18 2021, with no assumption all river movements had stopped.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/987459a28e635c62cc0a.raw",
+      "sha256": "2dedeadda2d43a061a12dfbf16a3552db808b1c5df7b9b3fd7678234e4b43d88"
+    },
+    {
+      "url": "https://www.franceguyane.fr/actualite/societe-social-emploi/en-images-pont-de-loyapock-un-retour-a-la-normale-ou-presque-594149.php",
+      "access_status": "article_extract",
+      "finding": "Retrieved article body/visible extract specifically states bridge open since December 18 and local river passage was never wholly stopped.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/14bb863eb1a89f9825fe.raw",
+      "sha256": "b0916517280b6c59d514769c8fafd77e683be0362bd725049c8871f095464316"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM036-R2P1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Earlier French-side restriction on ordinary nonexempt passenger admission from Brazil, with French citizens, Guyane residents, EU transit and qualifying cross-border worker exceptions; freight preserved",
+      "date_scope_check": "Existing dates, uncertainty and duration eligibility retained. Geography remains held pending the identified evidence gap.",
+      "canonical_dates": {
+        "kind": "confirmed_through",
+        "measure_type": "formal_policy_period",
+        "start_earliest": "2020-03-19",
+        "start_latest": "2020-03-19",
+        "end_earliest": "2020-03-19",
+        "end_latest": "2020-03-19",
+        "last_confirmed": "2020-03-19",
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "withheld_exact_duration",
+        "policy_only": true
+      },
+      "unresolved": [
+        "Earlier March phase is not proven to be bridge-only; prefectural original inaccessible."
+      ]
+    },
+    {
+      "phase_id": "AM036-REV1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-oyapock-road-bridge",
+          "name": "Oyapock binational road bridge",
+          "coordinates": [
+            -51.82556,
+            3.8569
+          ],
+          "coordinate_method": "Published bridge coordinate transcribed and rounded; geographical reference sources agree within bridge scale",
+          "precision": "approximate 378 m road bridge; historical gate not surveyed",
+          "source_urls": [
+            "https://www.wikidata.org/wiki/Q996255",
+            "https://en.wikipedia.org/wiki/Franco-Brazilian_Binational_Bridge",
+            "https://mapcarta.com/34652400"
+          ],
+          "evidence_note": "Wikidata/Wikipedia bridge coordinate identifies the RN2–BR156 span between Saint-Georges and Oiapoque; independent Mapcarta/GeoNames bridge point is approximately 100 m away. River boats and entire river border are not represented."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Only French-side ordinary passenger authorization at binational road bridge; river craft excluded.",
+      "date_scope_check": "June 25–December 18 retained; no merging with March measure.",
+      "canonical_dates": {
+        "kind": "policy_period",
+        "measure_type": "formal_policy_period",
+        "start_earliest": "2020-06-25",
+        "start_latest": "2020-06-30",
+        "end_earliest": "2021-12-18",
+        "end_latest": "2021-12-18",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": true
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/AM036.json",
+  "canonical_input_sha256": "1d1e7a9d5e5e4715ac4f2e75558ccad1c8d0742be7b0458359bbcab56431bfc8",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

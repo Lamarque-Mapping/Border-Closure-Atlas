@@ -1,0 +1,95 @@
+{
+  "record_id": "EA016",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Selected ordinary passenger route is Mukdahan–Savannakhet Second Friendship Bridge. Geographic identity is supported despite disputed onset and uninterrupted duration; display only with canonical disputed evidence dates.",
+  "source_checks": [
+    {
+      "url": "https://en.vietnamplus.vn/vietnam-suspends-residents-border-crossing-fromto-laos-cambodia-over-covid-19-post170993.vnp",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "National Laos international-gate passenger prohibition March30, not precise route-level first closure.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/41b864c1e3d249338af6.html",
+      "sha256": "95e5c7cba46cbffa3b364f90dd4aa898edb2284e4e55e4c0fd8490645c1a0dac",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/41b864c1e3d249338af6.txt",
+      "text_sha256": "7aab4a8f07b7bdf4fa781b07891292bf15329c80632f81066a6579771a5685ea",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-3.json"
+    },
+    {
+      "url": "https://www.rfa.org/english/news/laos/reopen-05102022163318.html",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Thai immigration officer reports actual passenger crossings at Mukdahan–Savannakhet May9; Boten remained differently restricted.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/4595302ab10dcd3b15b2.html",
+      "sha256": "99743adcb8c049a3c92f1d0acf21fe4f6aab0e87341ac659644118e2306bbad9",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/4595302ab10dcd3b15b2.txt",
+      "text_sha256": "0bf462a799559e972c9496fdcf13d4930fcff0bd942b64a875e0dd6e6afaffea",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-5.json"
+    },
+    {
+      "url": "https://www.thailand.go.th/public/issue-focus-detail/001_08_036",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Department of Highways identifies SecondBridge pair and public opening January2007.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-13.json",
+      "sha256": "36abc70515288fa1af947014f35149a3f6b79bf30ddde83f50b1d4b193199fe7"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1560876870/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Explicit Second Thai–Lao bridge outline inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/19a5233a6a053aeaa7a5.xml",
+      "sha256": "c21aae230f17ad20724abd967dd3dc0ac536bd9f3dc8cfd85defb3a06e75dc15",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/19a5233a6a053aeaa7a5.txt",
+      "text_sha256": "c21aae230f17ad20724abd967dd3dc0ac536bd9f3dc8cfd85defb3a06e75dc15",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA016-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-mukdahan-savannakhet-bridge-2",
+          "name": "Mukdahan–Savannakhet Friendship Bridge II",
+          "coordinates": [
+            104.7423028,
+            16.6003836
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/1560876870/full"
+          ],
+          "evidence_note": "OSM explicit bilingual Second Thai–Lao Friendship Bridge. Thai Department of Highways identifies pair and2007 opening. RFA reports actual May9 2022 passenger crossings at Mukdahan–Savannakhet; continuity dispute retained.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/19a5233a6a053aeaa7a5.xml",
+          "sha256": "c21aae230f17ad20724abd967dd3dc0ac536bd9f3dc8cfd85defb3a06e75dc15"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Selected ordinary passenger route is Mukdahan–Savannakhet Second Friendship Bridge. Geographic identity is supported despite disputed onset and uninterrupted duration; display only with canonical disputed evidence dates.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-30",
+        "start_latest": "2020-03-30",
+        "end_earliest": "2022-05-09",
+        "end_latest": "2022-05-09",
+        "last_confirmed": null,
+        "temporal_display_rule": "held_evidence_do_not_animate_as_confirmed",
+        "held_status_preserved": false,
+        "contested": true,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Earlier local measures are not assigned the national date. The earlier First Friendship Bridge tourism pilot was a different route. Authorised exceptions remain excluded, and Chinese-side Boten restrictions did not end on this date. The saved full audit recovered competing March19, March30 and April3 passenger-rule dates. Their application to the Second Friendship Bridge and uninterrupted ordinary-passenger restriction until May9,2022 are not established. Retain the claimed date as disputed evidence; withhold the apparent 770-day operational duration."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "42b7052696256160e557c6e0676ba2353533ab96e1c49c024d08d50269d05157",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

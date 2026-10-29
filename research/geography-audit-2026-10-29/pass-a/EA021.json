@@ -1,0 +1,140 @@
+{
+  "record_id": "EA021",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ordinary Dandong–Sinuiju freight-train service, not passenger traffic or absence of every train. The named rail bridge matches the observed September resumption.",
+  "source_checks": [
+    {
+      "url": "https://en.yna.co.kr/view/AEN20220926004200325",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Reporter observed freight crossing Amnok railway bridge Dandong to Sinuiju September 26; regular continuation remained unknown.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-05.json",
+      "sha256": "82e7a68102b879289ac2be405d78b9d006df49775c2cbb83952129324cd27ac2"
+    },
+    {
+      "url": "https://en.yna.co.kr/view/AEN20220618001900315",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-38378d37a858c0a576.bin",
+      "sha256": "fc81f1d64e31a04094909a4cf5cdfff0f7ff27f41385149dd518fe412f096181"
+    },
+    {
+      "url": "https://www.rfa.org/english/news/korea/freight-railway-08052022170439.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.fmprc.gov.cn/mfa_eng./xw/fyrbt/lxjzh/202405/t20240530_11347274.html",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-311fa22377dfdad5d4.bin",
+      "sha256": "9d5f7626a35cecffd0761155c155a504bd3b700ec5b9fa9af059df46f4ef70a7"
+    },
+    {
+      "url": "https://www.mfa.gov.cn/eng/xw/fyrbt/lxjzh/202405/t20240530_11347371.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.fmprc.gov.cn/web/fyrbt_673021/jzhsl_673025/202204/t20220429_10680663.shtml",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-ba1d25dd2d8036e6ef.bin",
+      "sha256": "fc6ed41f0809134b1d517c2aa09b75741376326e8d27395e1fc0b49f09d18deb"
+    },
+    {
+      "url": "https://www.fmprc.gov.cn/eng./xw/fyrbt/lxjzh/202405/t20240530_11347371.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.rfa.org/english/news/korea/train-05022022184520.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://world.kbs.co.kr/service/news_view.htm?lang=e&Seq_Code=169950",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA021-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-dandong-sinuiju-rail",
+          "name": "Dandong–Sinuiju rail bridge",
+          "coordinates": [
+            124.3905613,
+            40.1164127
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/45763861",
+          "precision": "Approximate rail-bridge segment reference, 500 m; not a precise customs inspection position.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/45763861",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=124.37,40.1,124.42,40.14"
+          ],
+          "evidence_note": "Explicitly named Sino-Korean Friendship Bridge with railway=rail, not its road way, nearby broken bridge, or the new road bridge.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-dandong.xml",
+          "sha256": "617d50cd29378afbf6ebae08bef8a47145a69cd321f780445e4cd0b26c5f7232",
+          "osm_feature": "way/45763861",
+          "osm_version": "19",
+          "osm_timestamp": "2026-06-09T21:35:35Z",
+          "identity_tags": {
+            "alt_name:ko": "조중우의교",
+            "bridge": "yes",
+            "electrified": "no",
+            "gauge": "1435",
+            "layer": "1",
+            "maxspeed": "45",
+            "name": "中朝友谊桥",
+            "name:en": "Sino-Korean Friendship Bridge",
+            "name:fr": "Pont de l'amitié sino-coréenne",
+            "name:ja": "中朝友誼橋",
+            "name:ko": "조중친선다리",
+            "name:ko-Hani": "朝中親善다리",
+            "name:zh": "沈丹线",
+            "name:zh-Hant": "中朝友誼橋",
+            "old_name:en": "Yalu River Bridge",
+            "railway": "rail",
+            "ref": "0238",
+            "usage": "main"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Suspension of ordinary Dandong–Sinuiju freight-train service, excluding reported exceptional medical-aid trains, to observed September 26 resumption.",
+      "date_scope_check": {
+        "scope": "Suspension of ordinary Dandong–Sinuiju freight-train service, excluding reported exceptional medical-aid trains, to observed September 26 resumption.",
+        "start_earliest": "2022-04-25",
+        "start_latest": "2022-04-29",
+        "end_earliest": "2022-09-26",
+        "end_latest": "2022-09-26",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Yonhap observed train at 07:43 September 26 2022. Preserve April 25–29 onset bounds, exceptional May medical trains and uncertainty about subsequent regularity."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

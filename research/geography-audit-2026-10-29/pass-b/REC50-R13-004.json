@@ -1,0 +1,64 @@
+{
+  "record_id": "REC50-R13-004",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Commercial passage through Dehiba–Wazen; no passenger shutdown inferred.",
+  "source_checks": [
+    {
+      "url": "https://www.tunisienumerique.com/reprise-de-lactivite-commerciale-au-poste-frontalier-de-dhehiba/",
+      "access_status": "partial_text_paywall",
+      "finding": "Accessible original article lead identifies commercial interruption and December 30 restoration; remainder is subscription-gated.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-05.json",
+      "evidence_sha256": "1fa1548ae51e5b6716620a20a89c5262e0598f0d40df9976b8f671df8bb6cdfe"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R13-004-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-dehiba-wazen",
+          "name": "Dehiba–Wazen road border facility",
+          "coordinates": [
+            10.6846255,
+            31.9790258
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/520064040",
+            "https://www.openstreetmap.org/api/0.6/way/520064040/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"addr:city\": \"الذهيبة\", \"addr:city:ar\": \"الذهيبة\", \"amenity\": \"police\", \"barrier\": \"wall\", \"name\": \"معبر الحدود الذهيبة\", \"name:ar\": \"معبر الحدود الذهيبة\", \"name:fr\": \"Poste frontalier de Dhehiba\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/adf93716af07ba84f39a.html",
+          "evidence_sha256": "698d6601bf8af62f6d186a4d31fa208019891ffb61e77d266fe669820bb10e38",
+          "osm_version": "5",
+          "osm_timestamp": "2023-03-17T19:58:35Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Commercial passage through Dehiba–Wazen; no passenger shutdown inferred. Current phase only: Commercial traffic through Dehiba/Wazen interrupted by the Libyan side; ordinary passenger traffic unaffected",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2023-12-30",
+        "end_latest": "2023-12-30",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "REC50-R13-004-P1: Commercial traffic was reported restored on December 30, 2023, with Tunisie Numérique specifying Saturday morning. Both reports describe a two-day interruption; this supports reported >24-hour eligibility, while exact onset and numeric elapsed duration remain unresolved. Business News explicitly says ordinary passenger traffic was unaffected. Commodity, direction, underlying informants and official reason remain unspecified; repeated coverage may share one lineage. No continuous interval is animated from an invented onset. Existing phase-table geography remains unlocated.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

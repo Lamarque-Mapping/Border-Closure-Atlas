@@ -1,0 +1,55 @@
+{
+  "record_id": "GL06",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "National DRC passenger-border policy, with freight exception. Existing lines can represent only the subset of frontiers present in the inventory, not uniformly shut posts.",
+  "source_checks": [
+    {
+      "url": "https://www.leganet.be/Legislation/JO/2020/Ordonnance%2024.03.2020.html",
+      "access_status": "full_text_web",
+      "finding": "Article 2 expressly closes every national frontier to passengers/persons except freight; Article 5 names maritime, fluvial, lacustrine and land posts.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-08.json",
+      "evidence_sha256": "181a0d0a4ed65800cbb39dea81eef7b77971f215fa7c35d218df7e8a6cbc85aa"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "GL06-D1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-cod-rwa",
+        "context-frontier-cod-uga",
+        "context-frontier-bdi-cod",
+        "context-frontier-ago-cod",
+        "context-frontier-cod-cog",
+        "context-frontier-cod-zmb"
+      ],
+      "complete": false,
+      "phase_applicability": "National DRC passenger-border policy, with freight exception. Existing lines can represent only the subset of frontiers present in the inventory, not uniformly shut posts. Current phase only: DRC's national passenger-border closure policy, to the administrative reopening permission.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-24",
+        "start_latest": "2020-03-24",
+        "end_earliest": "2020-08-15",
+        "end_latest": "2020-08-15",
+        "last_confirmed": null,
+        "endpoint_status": "legal_effective",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Freight and cargo personnel were exempt. Earlier provincial actions and flight restrictions have different onsets. This is a national policy phase, not proof every post or neighbouring side resumed actual passage. The July21 presidential speech ends emergency measures while scheduling August15 border reopening; the intervening legal continuation instrument has not been recovered. Numeric duration is withheld pending reconciliation.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Existing frontier inventory omits DRC boundaries with Central African Republic, South Sudan and Tanzania; no country polygon used as a closure footprint. Administrative reopening does not establish every post."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Existing frontier inventory omits DRC boundaries with Central African Republic, South Sudan and Tanzania; no country polygon used as a closure footprint. Administrative reopening does not establish every post."
+  ]
+}

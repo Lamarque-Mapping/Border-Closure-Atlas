@@ -1,0 +1,201 @@
+{
+  "record_id": "CC009",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Both phases select Odzisi–Mosabruni/Razdakhan only. EUMM reports monthly openings from August 2022 and later Thursday–Sunday openings; Karzmani was also mentioned in broader announcements but is not this record’s selected site.",
+  "source_checks": [
+    {
+      "url": "https://eumm.eu/en/press_and_public_information/press_releases/37280/?print=yes",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "EUMM names Odzisi/Karzmani and limited twentieth-to-thirtieth monthly openings since August 2022.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-704f9d77c151407969.bin",
+      "sha256": "84ee79d19dced61d3e181f97e0407919c81c7ecc158b4487149080b5598f2ffb"
+    },
+    {
+      "url": "https://www.eumm.eu/en/press_and_public_information/press_releases/37772/",
+      "access_status": "search_extract",
+      "finding": "EUMM October 16 2026 Odzisi patrol reports Thursday–Sunday openings and residual restrictions.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-10.json",
+      "sha256": "c196f2487243328e8bb7767fae769976f59d3060323c654d9841366044d8472e"
+    },
+    {
+      "url": "https://www.osce.org/chairpersonship/667386",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "OSCE September 2026 welcomes more frequent crossings but seeks full reopening.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-d33b46cfcf91d6d4aa.bin",
+      "sha256": "b0ec2448a09c429fee9d27106e748138defa35a29a8e204465dc581dbf9a6ac2"
+    },
+    {
+      "url": "https://www.osce.org/chairpersonship/669090",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "OSCE October 2026 discusses changed September regime and continuing restrictions.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-108faf9467611c837c.bin",
+      "sha256": "85746884cce4df5c1c1a774ff4f70b24ba1991b10477943166429a880c0d7a21"
+    },
+    {
+      "url": "https://kremlin-roadmap.gfsis.org.ge/news/display/1890",
+      "access_status": "search_extract",
+      "finding": "Explicit Odzisi–Mosabruni (Razdakhani) name equivalence.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-10.json",
+      "sha256": "c196f2487243328e8bb7767fae769976f59d3060323c654d9841366044d8472e"
+    },
+    {
+      "url": "https://eumm.eu/en/press_and_public_information/press_releases/36637/",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-12a3300b545bfec161.bin",
+      "sha256": "6a8a5a92a277f214bf01daae177b20c8d49e7558b0249ce4d64e7212baa79276"
+    },
+    {
+      "url": "https://eumm.eu/en/press_and_public_information/press_releases/37280/",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-0c51a375800658eef6.bin",
+      "sha256": "60b8923467635e5b694911a185d84eb8756d3d69a6da31dc9fc4202bd7ff502d"
+    },
+    {
+      "url": "https://civil.ge/archives/496229",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 503: Service Unavailable",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://civil.ge/archives/504980/amp",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 503: Service Unavailable",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://1tv.ge/lang/en/news/eumm-releases-statement-regarding-situation-at-administrative-boundary-line/",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-f57ea29716afd39294.bin",
+      "sha256": "c7851b42171ad91fa6d66697d63b0e8052d8e3deb3fe6647915841e233e1c4af"
+    },
+    {
+      "url": "https://eumm.eu/en/press_and_public_information/press_releases/36637/?print=yes",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-7eefb2fb94d37f9e3c.bin",
+      "sha256": "e5b434e5aced2da848deff27b500a2e342d181db76a8d10a6f49c1802243e027"
+    },
+    {
+      "url": "https://www.eumm.eu/en/press_and_public_information/press_releases/37010/?month=9&print=yes&year=2021",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-e8a6dfd459e676ed1d.bin",
+      "sha256": "745c5fe8c694ae295fbddfaabac93ebe37813e45ca3e4767c05b8d185cb3446e"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC009-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-odzisi-mosabruni",
+          "name": "Odzisi–Mosabruni / Razdakhan crossing",
+          "coordinates": [
+            44.4871514,
+            42.0682341
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/1203169771",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1203169771",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=44.46,42.06,44.51,42.11"
+          ],
+          "evidence_note": "OSM explicitly names Razdakhan-Mosabruni border crossing. Independent EUMM uses Odzisi, and indexed geographic inventory links Odzisi–Mosabruni–Razdakhani as aliases, rather than Karzmani/Sinaguri.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-odzisi.xml",
+          "sha256": "2cd4f92f03a5fbd209ac81a4b5e7ad1a7e489eb1155aec431b468abf0945da71",
+          "osm_feature": "node/1203169771",
+          "osm_version": "4",
+          "osm_timestamp": "2025-10-24T20:38:43Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "Уадзæн пункт \"Раздæхæн\" - საბაჟო გამშვები პუნქტი \"მოსაბრუნი\"",
+            "name:en": "Border Crossing Point \"Razdakhan-Mosabruni\"",
+            "name:ka": "საბაჟო გამშვები პუნქტი \"მოსაბრუნი\"",
+            "name:os": "Уадзæн пункт \"Раздæхæн\"",
+            "name:ru": "КПП «Раздахан-Мосабруни»"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary passage at Odzisi, to the start of limited monthly opening in August 2022.",
+      "date_scope_check": {
+        "scope": "Ordinary passage at Odzisi, to the start of limited monthly opening in August 2022.",
+        "start_earliest": "2019-09-04",
+        "start_latest": "2019-09-04",
+        "end_earliest": "2022-08-01",
+        "end_latest": "2022-08-31",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Monthly August 2022 and weekly Thursday–Sunday 2026 opening regimes remain distinct phases. Limited openings are not unrestricted reopening or proof of daily closure between observations."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "CC009-C7P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-odzisi-mosabruni",
+          "name": "Odzisi–Mosabruni / Razdakhan crossing",
+          "coordinates": [
+            44.4871514,
+            42.0682341
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/1203169771",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1203169771",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=44.46,42.06,44.51,42.11"
+          ],
+          "evidence_note": "OSM explicitly names Razdakhan-Mosabruni border crossing. Independent EUMM uses Odzisi, and indexed geographic inventory links Odzisi–Mosabruni–Razdakhani as aliases, rather than Karzmani/Sinaguri.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-odzisi.xml",
+          "sha256": "2cd4f92f03a5fbd209ac81a4b5e7ad1a7e489eb1155aec431b468abf0945da71",
+          "osm_feature": "node/1203169771",
+          "osm_version": "4",
+          "osm_timestamp": "2025-10-24T20:38:43Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "Уадзæн пункт \"Раздæхæн\" - საბაჟო გამშვები პუნქტი \"მოსაბრუნი\"",
+            "name:en": "Border Crossing Point \"Razdakhan-Mosabruni\"",
+            "name:ka": "საბაჟო გამშვები პუნქტი \"მოსაბრუნი\"",
+            "name:os": "Уадзæн пункт \"Раздæхæн\"",
+            "name:ru": "КПП «Раздахан-Мосабруни»"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Odzisi Thursday–Sunday weekly opening with residual access restrictions",
+      "date_scope_check": {
+        "scope": "Odzisi Thursday–Sunday weekly opening with residual access restrictions",
+        "start_earliest": "2026-09-01",
+        "start_latest": "2026-09-08",
+        "end_earliest": "2026-10-16",
+        "end_latest": "2026-10-16",
+        "last_confirmed": "2026-10-16",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "Monthly August 2022 and weekly Thursday–Sunday 2026 opening regimes remain distinct phases. Limited openings are not unrestricted reopening or proof of daily closure between observations."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

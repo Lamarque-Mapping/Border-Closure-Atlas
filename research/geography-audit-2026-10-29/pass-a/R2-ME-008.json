@@ -1,0 +1,69 @@
+{
+  "record_id": "R2-ME-008",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Two distinct named facilities: Erez for passengers and Kerem Shalom for cargo; not a continuous Gaza perimeter closure.",
+  "source_checks": [
+    {
+      "url": "https://www.ochaopt.org/content/overview-march-2019",
+      "access_status": "fresh_web_full_text_inspected",
+      "finding": "OCHA describes both crossings closed after 25 March rocket incident with urgent humanitarian exceptions, and reopening 31 March.",
+      "retrieval_http_status": "000"
+    },
+    {
+      "url": "https://www.timesofisrael.com/israel-reopens-gaza-border-crossings-despite-overnight-rocket-fire/amp/",
+      "access_status": "fresh_web_full_text_inspected",
+      "finding": "31 March report independently names the Erez pedestrian and Kerem Shalom commercial terminals and their preceding Monday closure.",
+      "retrieval_http_status": "000"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-ME-008-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "existing_site_id": "post-erez-beit-hanoun",
+          "name": "Erez–Beit Hanoun",
+          "coordinates": [
+            34.54328,
+            31.5582864
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/334719553"
+          ],
+          "evidence_note": "OSM node 334719553, version 29, timestamp 2024-04-14T13:58:53Z. Identity tags: {\"barrier\": \"border_control\", \"bicycle\": \"no\", \"foot\": \"yes\", \"horse\": \"no\", \"motor_vehicle\": \"private\", \"name\": \"מעבר ארז\", \"name:ar\": \"معبر إيريز\", \"name:en\": \"Erez Crossing\", \"name:fr\": \"Poste-frontière d'Erez\", \"name:he\": \"מעבר ארז\", \"name:ja\": \"エレツ検問所\", \"wikidata\": \"Q2319323\", \"wikipedia\": \"en:Erez Crossing\", \"wikipedia:en\": \"Erez Crossing\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/2c1002ac8c3c2877.raw",
+          "evidence_sha256": "942966040a7765dee83af703418ed7679084204e2244a16e3c6f3b4b409ee5cf"
+        },
+        {
+          "existing_site_id": "post-kerem-shalom",
+          "name": "Kerem Shalom–Karm Abu Salem",
+          "coordinates": [
+            34.2695531,
+            31.2212547
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/328444065"
+          ],
+          "evidence_note": "OSM node 328444065, version 25, timestamp 2026-05-27T15:50:13Z. Identity tags: {\"alt_name:en\": \"Kerem Abu Salem Crossing\", \"barrier\": \"border_control\", \"motor_vehicle\": \"no\", \"name\": \"מעבר כרם שלום معبر كرم أبو سالم\", \"name:ar\": \"معبر كرم أبو سالم\", \"name:en\": \"Kerem Shalom Crossing\", \"name:fr\": \"Poste-frontière de Kerem Shalom\", \"name:he\": \"מעבר כרם שלום\", \"name:ja\": \"カレム・シャローム検問所\", \"wikidata\": \"Q6393780\", \"wikipedia\": \"en:Kerem Shalom border crossing\", \"wikipedia:en\": \"Kerem Shalom border crossing\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/2e33c643af3d09cc.raw",
+          "evidence_sha256": "b3c3b973a1d5513ec0735a3e2c6b5cb8e63f62a21f69f6b0060b5e8482bd19e0"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Both named sites apply only to the 25–31 March 2019 phase and each retains its traffic class; emergency exceptions are not erased.",
+      "date_scope_check": "Canonical closed_interval: start 2019-03-25–2019-03-25; endpoint 2019-03-31–2019-03-31; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

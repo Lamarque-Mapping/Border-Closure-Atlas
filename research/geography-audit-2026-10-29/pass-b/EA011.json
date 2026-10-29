@@ -1,0 +1,77 @@
+{
+  "record_id": "EA011",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Selected Laiza–Nabang goods/local-visit phase; other Kachin gates closed on different dates, and fuel/electronics not covered by October2025 endpoint. Current unnamed OSM border node provides a candidate but cannot resolve which gate or bridge handled each cohort.",
+  "source_checks": [
+    {
+      "url": "https://www.rfa.org/english/myanmar/2024/12/02/myanmar-border-controls/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "RFA describes multiple Kachin-gate restrictions; not enough to infer every route same date.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-5.json",
+      "sha256": "05c56fbdadac969e9b31a5ee04cf0b53ff113fbf1fdc04bfabf40d684b3f17b8"
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/china-reopens-border-trading-gates-kachin-state-maintains-fuel-export-ban",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "BNI reports seven-gate limited commodity/visit restoration; fuel not included.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-6.json",
+      "sha256": "f6a5dad0b53ff7cdc1606e7b91f575c855448d17e9553cc8d227cbc2060eabec"
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/chinese-border-closures-cause-price-rises-myitkyina-city",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "KNG distinguishes Laiza/Lwegel/Pangwar October18, KanpaiktiOctober22 andPhimawOctober26.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-4.json",
+      "sha256": "590e351898f10b728e0dcdcf6b8601bcd53ed1caa1495848556c1dc45bb735f6"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=97.55,24.745,97.565,24.76",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Inspected border_control node667353874 on S333 beside primary bridge; unnamed, and multiple local river bridges prevent firm phase-level identity.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/08dc4f69ad7083c72903.xml",
+      "sha256": "e4fe1742a40d81263ceb7867a03d7b7dce7b35d5f35d579d20de761f653ff288",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/08dc4f69ad7083c72903.txt",
+      "text_sha256": "e4fe1742a40d81263ceb7867a03d7b7dce7b35d5f35d579d20de761f653ff288",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA011-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Selected Laiza–Nabang goods/local-visit phase; other Kachin gates closed on different dates, and fuel/electronics not covered by October2025 endpoint. Current unnamed OSM border node provides a candidate but cannot resolve which gate or bridge handled each cohort.",
+      "date_scope_check": {
+        "start_earliest": "2024-10-18",
+        "start_latest": "2024-10-19",
+        "end_earliest": "2025-10-24",
+        "end_latest": "2025-10-26",
+        "last_confirmed": null,
+        "temporal_display_rule": "",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "EA011-D1: Crossing-specific reporting dates Laiza closure October 18, 2024; RFA broadly says October 19. Reopening reports disagree: KIO spokesperson quoted by Myitkyina Journal gives October 24 at 23:59, Irrawaddy reports Saturday October 25, and Mizzima gives October 26. Preserve October 24–26 as a reported endpoint range rather than choosing one exact day. December 13, 2024 removal of Laiza barriers did not establish passage: contemporary KNG reporting explicitly says people, vehicles and goods were still not allowed. Kan Paik Ti had separate earlier partial reopening. These reports do not independently establish uninterrupted closure for all categories or every Kachin crossing. The October fuel restriction is not a current-status assertion: Network Media Group reported limited fuel tankers entering Laiza–Nabang by November 26, 2025, but first passage, retail availability and full policy repeal remain unknown."
+      },
+      "unresolved": [
+        "Candidate Nabang border node [97.5593246,24.7526937] lacks named-gate linkage to the scoped2024–25 phase; retain as lead, not approved coordinate."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Candidate Nabang border node [97.5593246,24.7526937] lacks named-gate linkage to the scoped2024–25 phase; retain as lead, not approved coordinate."
+  ],
+  "input_sha256": "09f44ff8ea4a0ac258d95319b6343874ebf982f5549eb183d9a3c3996a0c96c4",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

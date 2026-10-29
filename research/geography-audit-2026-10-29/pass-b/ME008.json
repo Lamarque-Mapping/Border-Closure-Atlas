@@ -1,0 +1,115 @@
+{
+  "record_id": "ME008",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Habur–Ibrahim Khalil road crossing complex. Passenger closure and Turkish drivers entering Iraq in their own trucks are separate phases; freight swaps continued in the buffer zone.",
+  "source_checks": [
+    {
+      "url": "https://ticaret.gov.tr/haberler/irak-ile-ticaret-temassiz-surduruluyor",
+      "access_status": "full_text_web",
+      "finding": "Turkish Trade Ministry March 25 account names Habur passenger closure from March 1 and continued freight with container/trailer/driver exchange in the Habur–Ibrahim Halil buffer zone.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-10.json",
+      "evidence_sha256": "7b0334d9f1861be53c7f30c85cf2bf5ce7534689e469664def6602d645860aa3"
+    },
+    {
+      "url": "https://www.trthaber.com/haber/turkiye/habur-sinir-kapisindan-tir-ve-kamyonlarin-suruculu-gecisi-basladi-510164.html",
+      "access_status": "full_text_web",
+      "finding": "TRT account describes Iraqi-side resumption of Turkish driver vehicle entry August 19; Turkish June permission was distinct.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-10.json",
+      "evidence_sha256": "7b0334d9f1861be53c7f30c85cf2bf5ce7534689e469664def6602d645860aa3"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME008-NP1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-habur-ibrahim-khalil",
+          "name": "Habur / Ibrahim Khalil",
+          "coordinates": [
+            42.5685244,
+            37.1501969
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/94999260",
+            "https://www.openstreetmap.org/api/0.6/way/94999260/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"addr:city\": \"Şırnak\", \"addr:district\": \"Silopi\", \"area\": \"yes\", \"barrier\": \"border_control\", \"landuse\": \"commercial\", \"name\": \"Habur Sınır Kapısı\", \"name:en\": \"Habur Port of Entry\", \"source\": \"bing\", \"wikidata\": \"Q3125423\", \"wikimedia_commons\": \"Category:Habur Border Crossing\", \"wikipedia\": \"tr:Habur Sınır Kapısı\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/bf122f4419be93bf4d29.html",
+          "evidence_sha256": "8464bda119d111e981bc00a97c59c31d9b5260ce475dbe2139065ad033799591",
+          "osm_version": "9",
+          "osm_timestamp": "2024-12-11T20:11:14Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Habur–Ibrahim Khalil road crossing complex. Passenger closure and Turkish drivers entering Iraq in their own trucks are separate phases; freight swaps continued in the buffer zone. Current phase only: Habur on the Iraq frontier",
+      "date_scope_check": {
+        "start_earliest": "2020-03-01",
+        "start_latest": "2020-03-01",
+        "end_earliest": "2020-06-04",
+        "end_latest": "2020-06-04",
+        "last_confirmed": null,
+        "endpoint_status": "legal_effective",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "June 4, 2020 was Turkish-side permission for freight drivers. The contemporaneous August 19 report says Iraq had continued to refuse those drivers and describes their actual return in their own trucks that day. The new phase concerns Turkish drivers crossing into Iraq, not a halt to freight, which continued through trailer and driver exchanges. The truck-driver evidence does not establish passenger restoration. Separately, IOM monitoring on 15 September 2020 reported incoming and outgoing passenger operation under restrictions: incoming foreigners needed Interior Ministry permission; outgoing Iraqis needed such permission or Turkish residence, with educational, medical and business exceptions. This is a later partial-access observation, not an exact first reopening or proof of continuity between passenger observations.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "ME008-FA1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-habur-ibrahim-khalil",
+          "name": "Habur / Ibrahim Khalil",
+          "coordinates": [
+            42.5685244,
+            37.1501969
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/94999260",
+            "https://www.openstreetmap.org/api/0.6/way/94999260/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"addr:city\": \"Şırnak\", \"addr:district\": \"Silopi\", \"area\": \"yes\", \"barrier\": \"border_control\", \"landuse\": \"commercial\", \"name\": \"Habur Sınır Kapısı\", \"name:en\": \"Habur Port of Entry\", \"source\": \"bing\", \"wikidata\": \"Q3125423\", \"wikimedia_commons\": \"Category:Habur Border Crossing\", \"wikipedia\": \"tr:Habur Sınır Kapısı\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/bf122f4419be93bf4d29.html",
+          "evidence_sha256": "8464bda119d111e981bc00a97c59c31d9b5260ce475dbe2139065ad033799591",
+          "osm_version": "9",
+          "osm_timestamp": "2024-12-11T20:11:14Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Habur–Ibrahim Khalil road crossing complex. Passenger closure and Turkish drivers entering Iraq in their own trucks are separate phases; freight swaps continued in the buffer zone. Current phase only: Turkish truck drivers crossing into Iraq in their own vehicles at Habur/Ibrahim Khalil; freight exchanges continued.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-01",
+        "start_latest": "2020-03-01",
+        "end_earliest": "2020-08-19",
+        "end_latest": "2020-08-19",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "June 4, 2020 was Turkish-side permission for freight drivers. The contemporaneous August 19 report says Iraq had continued to refuse those drivers and describes their actual return in their own trucks that day. The new phase concerns Turkish drivers crossing into Iraq, not a halt to freight, which continued through trailer and driver exchanges. The truck-driver evidence does not establish passenger restoration. Separately, IOM monitoring on 15 September 2020 reported incoming and outgoing passenger operation under restrictions: incoming foreigners needed Interior Ministry permission; outgoing Iraqis needed such permission or Turkish residence, with educational, medical and business exceptions. This is a later partial-access observation, not an exact first reopening or proof of continuity between passenger observations.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

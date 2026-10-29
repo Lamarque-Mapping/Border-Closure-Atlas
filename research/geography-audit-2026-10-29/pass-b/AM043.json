@@ -1,0 +1,70 @@
+{
+  "record_id": "AM043",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "CBSA chronology names Emerson service suspension on February 10 at 19:17 and resumption February 16 at 13:49; essential/local exceptions and road approach scope remain.",
+  "source_checks": [
+    {
+      "url": "https://www.cbsa-asfc.gc.ca/transparency-transparence/pd-dp/bbp-rpp/dedc/2022-04-26/overview-apercu-eng.html",
+      "access_status": "full_text_html",
+      "finding": "CBSA chronology names Emerson service suspension on February 10 at 19:17 and resumption February 16 at 13:49; essential/local exceptions and road approach scope remain.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/ecd11d196e3b2630b8b9.raw",
+      "sha256": "0f7aa82bb7d969e1bb3e39497a94bcb42d2a6446ee9bd691a67b20fb3dbd4685"
+    },
+    {
+      "url": "https://mapcarta.com/W104744861",
+      "access_status": "full_text_web",
+      "finding": "Independently inspected named OSM geographic mirror; facility and transport type matched to original CBSA scope."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM043-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-emerson-pembina",
+          "name": "Emerson–Pembina road crossing (CBSA area)",
+          "coordinates": [
+            -97.23767,
+            49.00152
+          ],
+          "coordinate_method": "Representative OSM building coordinate reproduced by Mapcarta; primary CBSA road/address identity corroborated",
+          "precision": "approximate road-control complex, about 300 m; protest approach footprint not located",
+          "source_urls": [
+            "https://mapcarta.com/W104744861",
+            "https://www.openstreetmap.org/way/104744861",
+            "https://asfc-cbsa.gc.ca/prog/cdrp-picsc/do-bd-eng.html"
+          ],
+          "evidence_note": "Mapcarta identifies OSM way 104744861 as CBSA Emerson/West Lynne on MB-75, 280 m from Pembina checkpoint. CBSA directory independently identifies Emerson commercial operations on Highway 75. Opposite rail/Noyes crossing excluded."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Named road crossing/service area; highway obstruction footprint remains partial.",
+      "date_scope_check": "10–16 February retained.",
+      "canonical_dates": {
+        "kind": "closed_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2022-02-10",
+        "start_latest": "2022-02-10",
+        "end_earliest": "2022-02-16",
+        "end_latest": "2022-02-16",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/AM043.json",
+  "canonical_input_sha256": "7910415474d11a04f420ea0124b2688a4bd96cef143441c285f1274314bf5a5a",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

@@ -1,0 +1,42 @@
+{
+  "record_id": "H20",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "National Eritrean land-admission policy overlay, distinct from longstanding exit permits and previously closed bilateral routes.",
+  "source_checks": [
+    {
+      "url": "https://www.tralac.org/documents/resources/covid-19/regional/4212-covid-19-measures-in-place-in-comesa-member-states-30th-edition-13-november-2020/file.html",
+      "access_status": "inaccessible_http403",
+      "finding": "Exact dated COMESA bulletin inaccessible in this pass.",
+      "retrieval_http_status": "000"
+    },
+    {
+      "url": "https://www.ecoi.net/en/document/2048098.html",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Hosted US State Department 2020 report explicitly says all land borders remained closed; annual statement corroborates wider scope but does not independently establish exact November observation date or COVID onset.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-14.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "H20-NP1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-eri-eth",
+        "context-frontier-eri-sdn"
+      ],
+      "complete": false,
+      "phase_applicability": "National frontier reference for dated policy observation, without invented onset; annual corroboration does not establish a continuous operational interval.",
+      "date_scope_check": "Canonical confirmed_through: start None–None; endpoint 2020-11-13–2020-11-13; last confirmed 2020-11-13. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": [
+        "Missing Eritrea–Djibouti line.",
+        "Exact 13 November COVID observation source inaccessible; retain canonical date with this access qualification."
+      ]
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,78 @@
+{
+  "record_id": "GL17",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Provincial operational restriction specifically at Ruzizi/Rusizi I and II, Bukavu–Cyangugu. The later story also names Kamanyola, which is not inherited by this narrower retained phase.",
+  "source_checks": [
+    {
+      "url": "https://www.radiookapi.net/node/200594",
+      "access_status": "fresh_source_text_extract_inspected",
+      "finding": "22 March report states Ruzizi I was fully closed and the vice-governor visited both Ruzizi I and II to verify application.",
+      "retrieval_http_status": "200",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/460c6afbc202819a.raw",
+      "evidence_sha256": "5b98960bd9523c52f7ab3cb5367c43f1dfecf1eb31b856c03cec330e2b24a4c9"
+    },
+    {
+      "url": "https://actualite.cd/2020/11/11/covid-19-la-rdc-et-le-rwanda-reouvrent-partiellement-les-frontieres-ruzizi-1-2-et",
+      "access_status": "fresh_web_full_text_inspected",
+      "finding": "11 November bilateral decision permits specified resident/student/medical cohorts, not unrestricted passenger restoration.",
+      "retrieval_http_status": "200",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-01.txt",
+      "evidence_sha256": "582e9516f52755ad65c50452353e81996c260bc416dc3da52b3ba10afda3ba65"
+    },
+    {
+      "url": "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+      "access_status": "fresh_pdf_table_inspected",
+      "finding": "Appendix A separately identifies E22 Bukavu–Rusizi II and E23 Cyangugu–Rusizi I, with explicit coordinate columns.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/27ad209394e33af2.raw"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "GL17-R1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-rusizi-1",
+          "name": "Cyangugu–Rusizi I",
+          "coordinates": [
+            28.89297,
+            -2.49112
+          ],
+          "coordinate_method": "Coordinate pair transcribed from AU-PIDA OSBP Status Report Appendix A, reference E23; independently read published table.",
+          "precision": "Approximate named crossing area; 1 km interpretive precision, not the exact gate.",
+          "source_urls": [
+            "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "Appendix A explicitly pairs Cyangugu–Rusizi I with this latitude/longitude. Modern infrastructure reference only; not closure evidence.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/27ad209394e33af2.raw"
+        },
+        {
+          "proposed_site_id": "post-rusizi-2",
+          "name": "Bukavu–Rusizi II",
+          "coordinates": [
+            28.86814,
+            -2.5155
+          ],
+          "coordinate_method": "Coordinate pair transcribed from AU-PIDA OSBP Status Report Appendix A, reference E22; independently read published table.",
+          "precision": "Approximate named crossing area; 1 km interpretive precision, not the exact gate.",
+          "source_urls": [
+            "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "Appendix A explicitly pairs Bukavu–Rusizi II with this latitude/longitude. Modern infrastructure reference only; not closure evidence.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/27ad209394e33af2.raw"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Only the two named crossings and the classes admitted on 11 November apply. No Kamanyola or Kavimvira date inheritance.",
+      "date_scope_check": "Canonical policy_period: start 2020-03-22–2020-03-22; endpoint 2020-11-11–2020-11-11; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,104 @@
+{
+  "record_id": "CC014",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Foreign-carrier through-road access on the Farap–Sarakhs transit corridor, not all Turkmen frontier activity. CAREC explicitly says rail continued; transfer arrangements prevent treating freight as wholly stopped. Canonical chronology remains contested; geography is held because the complete road-port pair is unresolved.",
+  "source_checks": [
+    {
+      "url": "https://cpmm.carecprogram.org/2020-report/turkmenistan/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "CAREC distinguishes foreign road trucks restriction from continuing rail freight.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-07.json",
+      "sha256": "5cbb6ef8e1dc6a4a8b3507ee58a73a33ffb57ebef5e0089be117fc0d8ff1d2ff"
+    },
+    {
+      "url": "https://customs.gov.tm/en/news/328",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-8d29f07ada0d641d62.bin",
+      "sha256": "f1fc14ed91cf1337f7be2f333917704df1797ed58ba4b629003aec848a7a6f91"
+    },
+    {
+      "url": "https://ticaret.gov.tr/blog/ulkelerden-ticari-haberler/turkmenistan/turkmenistan-gecici-kargo-tasimaciligi-duzenlemelerini-uygulamaya-basladi",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-40ebd91b22016fbe3d.bin",
+      "sha256": "3ad4a455bdb36afdc76e28c4d0108c19c0eea00c532f8c3550a7e691fb9c1491"
+    },
+    {
+      "url": "https://www.und.org.tr/medya-detay/duyurular/turkmenistan-iran-sinir-gecisleri-hakkinda",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-2fdc721224705d145d.bin",
+      "sha256": "60ecfc50a4a72bf8f837e89b52099df6963b60f4023eaa014e6a5a54c4ae0195"
+    },
+    {
+      "url": "https://www.customs.gov.tm/en/news/328",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-2a96f336225510462b.bin",
+      "sha256": "0b110586d39ea11de0f62f5c917fcf39b3283ed994537da0a0b2876c76a6083c"
+    },
+    {
+      "url": "https://www.turkmenportal.com/en/news/53797-dashary-yurt-awtoulaglaryna-surujileri-bilen-bilelikde-turkmenistana-girmage-rugsat-berildi",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-efee4b0e25a1cf9130.bin",
+      "sha256": "ada3f88078ec2701230690ac1f2d7ff1f72a16fda15c7fd4e4906e783fd30cc0"
+    },
+    {
+      "url": "https://wiki.unece.org/plugins/viewsource/viewpagesrc.action?pageId=179700417",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 403: Forbidden",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://wiki.unece.org/spaces/CTRBSBC/pages/101548532/Turkmenistan",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 403: Forbidden",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.atd.lv/sites/default/files/jaunumi/Transit%20rules_en.pdf",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 503: Service Unavailable",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC014-D1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Foreign-carrier through-road operation on the Uzbekistan–Farap–Sarakhs–Iran corridor, to officially reported resumed transit.",
+      "date_scope_check": {
+        "scope": "Foreign-carrier through-road operation on the Uzbekistan–Farap–Sarakhs–Iran corridor, to officially reported resumed transit.",
+        "start_earliest": "2020-03-23",
+        "start_latest": "2020-03-24",
+        "end_earliest": "2022-06-01",
+        "end_latest": "2022-06-01",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "held_evidence_do_not_animate_as_confirmed",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": [
+        "Farap/Alat road control not positively matched in fresh local map; Sarakhs road control is not a substitute for rail.",
+        "Contested corridor onset/continuity retained."
+      ]
+    }
+  ],
+  "unresolved": [
+    "No approved complete pair of road-port points; no whole-border substitute."
+  ]
+}

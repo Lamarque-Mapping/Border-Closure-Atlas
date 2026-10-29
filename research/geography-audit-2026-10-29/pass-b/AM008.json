@@ -1,0 +1,58 @@
+{
+  "record_id": "AM008",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Diario Libre’s October 11 report specifically identifies organized pedestrian entry at El Carrizal for biometric enrollment in controlled commercial corridors. The national September measure and food/medicine exceptions cannot establish one gate coordinate.",
+  "source_checks": [
+    {
+      "url": "https://www.diariolibre.com/actualidad/nacional/2023/10/11/comerciantes-haitianos-cumplen-registro-biometrico/2488805",
+      "access_status": "full_text_html",
+      "finding": "Retrieved body explicitly names El Carrizal and pedestrian gate reopening October 11.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/3f56662abca538666a94.raw",
+      "sha256": "889fa19bc6cffcd0421a37d6719690affa4ff340bd7bd4e37c8036cf4f5dc188"
+    },
+    {
+      "url": "https://www.presidencia.gob.do/noticias/consejo-nacional-de-seguridad-anuncia-nuevas-medidas-para-fortalecer-el-cierre-fronterizo",
+      "access_status": "full_text_html",
+      "finding": "Official text contains revised corridor policy and inconsistent displayed implementation references; no chronology change made.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/283bc3944c7bd8e81029.raw",
+      "sha256": "c13ddd2e53572ef2fc3e26338a99c9d11bba8580cea1e65698f9b8d8da3c9424"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM008-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Dominican-side food and medicine trade restriction at El Carrizal, ending at permission for a controlled commercial corridor.",
+      "date_scope_check": "Existing dates, uncertainty and duration eligibility retained. Geography remains held pending the identified evidence gap.",
+      "canonical_dates": {
+        "kind": "policy_period",
+        "measure_type": "formal_policy_period",
+        "start_earliest": "2023-09-15",
+        "start_latest": "2023-09-15",
+        "end_earliest": "2023-10-11",
+        "end_latest": "2023-10-11",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": true
+      },
+      "unresolved": [
+        "Search returned only an El Carrizal locality point, not the customs gate. Do not substitute the village or whole Haiti frontier."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/AM008.json",
+  "canonical_input_sha256": "f54b712085ee5fd4bc75cf94dd0e5cfa3b442e46fc20be67400464ee1b9152ef",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

@@ -1,0 +1,66 @@
+{
+  "record_id": "CC029",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "One abolished local ABL passage between Shamgona and Tagiloni. This is separate from the surviving Enguri Bridge route, not a closure of the whole Abkhazia boundary.",
+  "source_checks": [
+    {
+      "url": "https://ombudsman.ge/eng/spetsialuri-angarishebi/special-report-of-the-public-defender-of-georgia-on-the-impacts-of-the-closure-of-crossing-points-on-the-rights-of-the-population-living-along-abkhazias-administrative-boundary-line",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Official 16 November 2017 account identifies Shamgona–Tagiloni as the point closed in April 2016.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3c6470a66d1e15bb0479.html",
+      "sha256": "d7ca5471836e042d440b4d3e5c4ea51d829a27107b3b41e211ba90970be263e2",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3c6470a66d1e15bb0479.txt",
+      "text_sha256": "6a008a33a29c6d8fa7a68944c698339ebb829e05fe735aba0ae1aa91e5143af7",
+      "status": 200
+    },
+    {
+      "url": "https://democracyresearch.org/files/344web%20eng%201072024.pdf",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Full report independently names the former Shamgona/Tagiloni crossing; its reporting-period status does not establish an exact observation day or extend the phase to the present.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/83a6631a9a16f3f0caca.pdf",
+      "sha256": "017bfa7289d61ac64549ea3df463ca5f7af0c85d0f0a5054895e0d6661e1cebb",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/83a6631a9a16f3f0caca.txt",
+      "text_sha256": "2709c01c4330bc80711efea8aafdccc749abe470f72687b8638d8bcf1455b6c2",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC029-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "One abolished local ABL passage between Shamgona and Tagiloni. This is separate from the surviving Enguri Bridge route, not a closure of the whole Abkhazia boundary.",
+      "date_scope_check": {
+        "start_earliest": "2016-04-15",
+        "start_latest": "2016-04-15",
+        "end_earliest": "2017-11-16",
+        "end_latest": "2017-11-16",
+        "last_confirmed": "2017-11-16",
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "CC029-D1: Radio Atinati reports effective abolition on 15 April 2016, with consolidation at Enguri given as the official reason. The Public Defender confirmed the named closure in November 2017.\n\nA DRI report covering September 2023–September 2024 again describes the named crossing as abolished and identifies Enguri and Pakhulani–Saberio as the remaining routes. Its reporting-period evidence supports a later closure status, but not an exact day of inspection, every intervening day of operation, or automatic extension to October 2026. Other routes remained available; exemptions at the abolished post are not established."
+      },
+      "unresolved": [
+        "No defensible coordinate for the abolished checkpoint was recovered. Search results for Tagiloni/Shamgona are populated-place positions and are rejected as crossing coordinates."
+      ]
+    }
+  ],
+  "unresolved": [
+    "No defensible coordinate for the abolished checkpoint was recovered. Search results for Tagiloni/Shamgona are populated-place positions and are rejected as crossing coordinates."
+  ],
+  "input_sha256": "e673f68dac3e22ed16c1335a0851ff48f8f692813b736faa1a48308f96024ac8",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted.",
+  "additional_evidence": [
+    {
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-caucasus-1.json",
+      "sha256": "124aeb38089ef7b43f450bb8f2e6679b9bb2aebca767aa52ae7300b2a0928911"
+    }
+  ]
+}

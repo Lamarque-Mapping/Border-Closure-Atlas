@@ -1,0 +1,59 @@
+{
+  "record_id": "EA031",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Selected phase concerns returnee admission from Thailand through Banteay Meanchey province. Original provincial accounts do not identify a complete set of gate names; O Smach in another province has a different reopening endpoint.",
+  "source_checks": [
+    {
+      "url": "https://cambojanews.com/govt-locks-down-border-provinces-and-announces-new-nationwide-restrictions-amid-fears-of-spreading-delta-variant/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Eight-province health measure and BanteayMeanchey–SaKaeo provincial closing July29–August12, exempt goods.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-4.json",
+      "sha256": "47439c00f594a0cc6e1c48de6feca04cb3cda979ace49840849229e1c68b4652"
+    },
+    {
+      "url": "https://cambojanews.com/cambodian-migrant-workers-start-coming-home-as-border-reopens/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Reports BanteayMeanchey returns fromAugust12 but does not identify all gates in retrieved text.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-4.json",
+      "sha256": "47439c00f594a0cc6e1c48de6feca04cb3cda979ace49840849229e1c68b4652"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA031-D1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Selected phase concerns returnee admission from Thailand through Banteay Meanchey province. Original provincial accounts do not identify a complete set of gate names; O Smach in another province has a different reopening endpoint.",
+      "date_scope_check": {
+        "start_earliest": "2021-07-29",
+        "start_latest": "2021-07-30",
+        "end_earliest": "2021-08-12",
+        "end_latest": "2021-08-12",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Goods and authorised emergencies were exempt. O'Smach resumed on August 13 and is not assigned this endpoint. Day bounds do not imply full 24-hour days of closure."
+      },
+      "unresolved": [
+        "No supported full crossing set or matching provincial border segment; Poipet alone would improperly replace unnamed provincial scope."
+      ]
+    }
+  ],
+  "unresolved": [
+    "No supported full crossing set or matching provincial border segment; Poipet alone would improperly replace unnamed provincial scope."
+  ],
+  "input_sha256": "0f6e660609378998d1c577d63312c3da492a3c7147f474e9dca65642a2f7c5ea",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

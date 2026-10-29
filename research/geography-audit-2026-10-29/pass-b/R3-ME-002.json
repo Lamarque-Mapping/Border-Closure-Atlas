@@ -1,0 +1,71 @@
+{
+  "record_id": "R3-ME-002",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Commercial restriction at Bab al-Hawa/Cilvegözü; nonessential goods excluding cement, with humanitarian and listed essential goods exceptions preserved.",
+  "source_checks": [
+    {
+      "url": "https://syriadirect.org/ankara-reopens-idlib-border-crossing-as-turkish-soldiers-build-presence-in-northern-syria/",
+      "access_status": "full_text_web",
+      "finding": "Article describes normal goods traffic resuming, food/construction supplies and separate civilian passenger restrictions.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-10.json",
+      "evidence_sha256": "7b0334d9f1861be53c7f30c85cf2bf5ce7534689e469664def6602d645860aa3"
+    },
+    {
+      "url": "https://logcluster.org/fr/alerts/warning-183",
+      "access_status": "full_text_web",
+      "finding": "18 October 2017 warning explicitly lifts commercial-channel restrictions except cement.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-11.json",
+      "evidence_sha256": "9fc850d024fd40f68abbe98a74f28d948644411ba5efab2e418c5162da335b17"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-ME-002-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-bab-al-hawa",
+          "name": "Bab al-Hawa / Cilvegözü",
+          "coordinates": [
+            36.6921911,
+            36.2314664
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/2358493626",
+            "https://www.openstreetmap.org/api/0.6/node/2358493626"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\", \"bicycle\": \"yes\", \"motor_vehicle\": \"yes\", \"name\": \"الحدود باب الهوى\", \"name:en\": \"Bab al-Hawa Border Crossing\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/a4fe81f25e9eae9eac28.html",
+          "evidence_sha256": "4657a82a0fdd3d2c9809517c4cd9dd0981c999b78fe3995fe6abb1bf3f344386",
+          "osm_version": "2",
+          "osm_timestamp": "2017-02-16T03:50:13Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Commercial restriction at Bab al-Hawa/Cilvegözü; nonessential goods excluding cement, with humanitarian and listed essential goods exceptions preserved. Current phase only: Nonessential commercial goods other than cement at Cilvegozu–Bab al-Hawa; humanitarian, food, medicine and hygiene loads excluded",
+      "date_scope_check": {
+        "start_earliest": "2017-08-01",
+        "start_latest": "2017-08-03",
+        "end_earliest": "2017-10-18",
+        "end_latest": "2017-10-18",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "R3-ME-002-D1: Onset bounded August 1–3; no exact start hour is inferred. Humanitarian, food, medicine and hygiene loads were permitted. Cement remained barred after October 18 and civilian passage remained restricted.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

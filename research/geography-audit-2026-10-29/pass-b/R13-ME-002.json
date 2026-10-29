@@ -1,0 +1,66 @@
+{
+  "record_id": "R13-ME-002",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Renewed precautionary King Fahd Causeway vehicle suspension April 7–8 2026, separate from first April 7 episode.",
+  "source_checks": [
+    {
+      "url": "https://english.news.cn/20260408/9539b992fafb4ad48f9f7c60c62f704d/c.html",
+      "access_status": "full_text_web",
+      "finding": "Xinhua explicitly describes traffic suspended again Tuesday, following an earlier suspension and resumption. No threshold or endpoint changed.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-09.json",
+      "evidence_sha256": "b17973adc9a6401dd558136684759d78ec1a61cdd0dbd1df9292bb4ec32d2b58"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R13-ME-002-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-king-fahd-causeway",
+          "name": "King Fahd Causeway passport island",
+          "coordinates": [
+            50.3231049,
+            26.1846306
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/30931448",
+            "https://www.openstreetmap.org/api/0.6/node/30931448",
+            "https://www.openstreetmap.org/api/0.6/map?bbox=50.31,26.17,50.34,26.195",
+            "https://kfca.sa/en/aboutus"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\", \"note\": \"Saudi\"}. This is geographic evidence only, not historical closure evidence. Node is a Saudi border_control on the causeway passport island. Fresh original OSM map bbox=50.31,26.17,50.34,26.195 confirms grouped Saudi/Bahraini passport and customs controls; official KFCA describes this unique road link connecting the kingdoms. Marker represents the crossing complex, not a specific closure barrier.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/bc420df28632bc7c57e9.html",
+          "evidence_sha256": "9af619f50c1ec61a165b37f3c1f1dc4f57a73b3bf91de41dc7fa915f6cbe35da",
+          "osm_version": "5",
+          "osm_timestamp": "2023-07-30T11:05:28Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Renewed precautionary King Fahd Causeway vehicle suspension April 7–8 2026, separate from first April 7 episode. Current phase only: Renewed precautionary vehicle suspension on King Fahd Causeway in the April 7–8 phase",
+      "date_scope_check": {
+        "start_earliest": "2026-04-07",
+        "start_latest": "2026-04-07",
+        "end_earliest": "2026-04-08",
+        "end_latest": "2026-04-08",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Attributed authority/operational reporting, not independent observation of every direction. Exact hours and exemptions are unknown; April 8 wire publication is not onset. Direct authority post returned 403, and the liveblog entry has no established AP credit. Earlier phase is not merged. Overlap with the first phase on the calendar date April 7 does not mean continuous closure: the intervening reported resumption and explicit renewed suspension distinguish the two spells.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

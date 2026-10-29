@@ -1,0 +1,90 @@
+{
+  "record_id": "R5-AM-006",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ecuavisa describes intermittent vehicle blocks beginning March 9 at Rumichaca, initially on the Colombian side, with subsequent closures. Primicias reports the March 27 lifting and pedestrians using the bridge during the vehicle restriction.",
+  "source_checks": [
+    {
+      "url": "https://www.ecuavisa.com/economia/ecuador-colombia-frontera-rumichaca-cierre-transportistas--20260309-0077.html",
+      "access_status": "full_text_web",
+      "finding": "Body describes first March 9 blocks, different reported hours and further stoppage at 17:00; all at Rumichaca.",
+      "direct_fetch_status": "inaccessible"
+    },
+    {
+      "url": "https://www.primicias.ec/economia/gremios-levantan-paro-protesta-rumichaca-carchi-frontera-ecuador-colombia-guerra-comercial-aranceles-119106/",
+      "access_status": "full_text_web",
+      "finding": "Body reports March 27 lifting at 07:00 and dates campaign from March 9; pedestrian photo distinguishes foot traffic.",
+      "direct_fetch_status": "inaccessible"
+    },
+    {
+      "url": "https://efe.com/mundo/2026-03-27/frontera-ecuador-colombia-abierta/",
+      "access_status": "inaccessible",
+      "finding": "Web retrieval returned HTTP 429; not used as independently inspected evidence.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-AM-006-R1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-rumichaca",
+          "name": "Rumichaca road bridge",
+          "coordinates": [
+            -77.664073,
+            0.814031
+          ],
+          "coordinate_method": "Independent inspection of preserved versioned OSM source metadata; no fresh OSM API retrieval claimed",
+          "precision": "approximate named crossing area; historical obstruction footprint not surveyed",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1316055071",
+            "https://mintransporte.gov.co/publicaciones/1390/colombia-y-ecuador-firman-convenio-de-cooperacion-para-construccion-del-nuevo-puente-rumichaca/"
+          ],
+          "evidence_note": "Cached OSM way 1316055071 v2 is Puente Internacional Rumichaca, man_made=bridge; this identifies the road bridge separately from the natural arch. Ecuavisa directly names the same international bridge.",
+          "cached_source_metadata": {
+            "evidence_file": "west-osm-evidence/rumichaca.xml",
+            "licence": "Open Database License (ODbL); © OpenStreetMap contributors",
+            "osm_id": 1316055071,
+            "osm_type": "way",
+            "tags": {
+              "layer": "1",
+              "man_made": "bridge",
+              "name": "Puente Internacional Rumichaca",
+              "wikipedia": "es:Puente internacional de Rumichaca"
+            },
+            "timestamp": "2026-06-08T12:42:34Z",
+            "version": 2
+          },
+          "cached_evidence_path": "source/crossings/locations.json",
+          "cached_evidence_sha256": "e4b81d220480cfe8eebe6b5eea093b4ee40789bda62db567470ef81cc8605601"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Rumichaca road corridor vehicle restrictions only; intermittent and changing approaches retained.",
+      "date_scope_check": "9–27 March regime retained; not recast as uninterrupted closure or preceding election ban.",
+      "canonical_dates": {
+        "kind": "intermittent_regime",
+        "measure_type": "intermittent_regime",
+        "start_earliest": "2026-03-09",
+        "start_latest": "2026-03-09",
+        "end_earliest": "2026-03-27",
+        "end_latest": "2026-03-27",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R5-AM-006.json",
+  "canonical_input_sha256": "76ac17109f60925a6912b007e84101ed7cc26b77f7e64bd9b205677feb7c5eb8",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

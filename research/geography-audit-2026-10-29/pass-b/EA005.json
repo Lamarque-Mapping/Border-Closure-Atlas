@@ -1,0 +1,54 @@
+{
+  "record_id": "EA005",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Road-passenger buses at Zabaikalsk–Manzhouli; cross-border railway and cargo facilities are separate.",
+  "source_checks": [
+    {
+      "url": "https://interfax.com/newsroom/top-stories/86739/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Interfax specifically reports Zabaikalsk–Manzhouli resumed passenger traffic on January 8 after February 2020 cessation, chiefly Chinese citizens; Kraskino observations are separate.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-1.json",
+      "sha256": "713d43ff1e1eb45d508bde26cd06cd37ea58a3e5d9a242dc6a40690ff84c092c"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA005-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Road-passenger buses at Zabaikalsk–Manzhouli; cross-border railway and cargo facilities are separate.",
+      "date_scope_check": {
+        "start_earliest": "2020-02-01",
+        "start_latest": "2020-04-30",
+        "end_earliest": "2023-01-08",
+        "end_latest": "2023-01-08",
+        "last_confirmed": null,
+        "temporal_display_rule": "",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "EA005-D1: The onset disagreement may concern different sides/phases and is not resolved. Freight continued under special arrangements. The endpoint is initial passenger-service restoration, not unrestricted tourism or all-nationality entry. The April 9 Chinese-side passenger suspension is a specific contemporaneous policy date; it must not be substituted for the uncertain first interruption of every ordinary passenger service. The January 31 Russian restriction likewise does not establish an observed all-category closure."
+      },
+      "unresolved": [
+        "Road passenger facility coordinate remains unresolved. Search finds a visa office beside multiple controls, not a verified historical passenger gate; rail station rejected."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Road passenger facility coordinate remains unresolved. Search finds a visa office beside multiple controls, not a verified historical passenger gate; rail station rejected."
+  ],
+  "input_sha256": "d8470b14ef5fa5b458da161a8d93fddebde50034ce3250311bdd45773bb30cad",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted.",
+  "additional_evidence": [
+    {
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-9.json",
+      "sha256": "8a6a71c8e02f9fb0cd3d01b2099ec4f3dad7456af50c4a53fa49f65ba347379f"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "record_id": "EA009",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "MangWein freight gate serving Muse/Kyalgaung, not the town or all Muse checkpoints. First January14 2023 six-wheel trucks is limited goods restoration; passengers and other trucks excluded.",
+  "source_checks": [
+    {
+      "url": "https://uzo.sakura.ne.jp/burma/nlm/nlm_data/gnlm_2021/gnlm_05_2021/gnlm_07_05_2021.pdf",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "GNLMMay7PDF p5 describes MangWein closureMarch30 and distinguishes alternate Kyinsankyawt cargo routing.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-sa-followup-2.json",
+      "sha256": "00fbde5a11988f2a7c1b1bc12129c8f242ff35ebd52335bab97c4ab2bfc9f8d9"
+    },
+    {
+      "url": "https://www.mdn.gov.mm/en/monthly-market-summary-january-2023",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "January2023 market summary explicitly reports MangWein reopeningJanuary14 at07:00 for sixwheeltrucks, no passengers.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-15.json",
+      "sha256": "b2f361bdd06f119a528d2644df6e3bd21645f2a6e72f4f7b5d8c2ca53bb00c7c"
+    },
+    {
+      "url": "https://www.mdn.gov.mm/en/man-wein-border-still-closed-amid-covid-19",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Original GNLM lineage corroborates named gate and alternatives.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-16.json",
+      "sha256": "c153bac589a9af62818797819484c84a9d2e4208fff6c100bd863359ede686c9"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA009-REV1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "MangWein freight gate serving Muse/Kyalgaung, not the town or all Muse checkpoints. First January14 2023 six-wheel trucks is limited goods restoration; passengers and other trucks excluded.",
+      "date_scope_check": {
+        "start_earliest": "2021-03-30",
+        "start_latest": "2021-03-30",
+        "end_earliest": "2023-01-14",
+        "end_latest": "2023-01-14",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Endpoint is January 14 at 07:00 Myanmar Standard Time and represents limited freight resumption, not full normalization. Other trucks, passengers and excluded commodities remained restricted. GNLM reporting lineage shared; conflicting 2020 onset preserved in audit."
+      },
+      "unresolved": [
+        "Numerical gate coordinate not verified; search returned unrelated ManWein villages, rejected."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Numerical gate coordinate not verified; search returned unrelated ManWein villages, rejected."
+  ],
+  "input_sha256": "e261957a91f5f3c969e37e949f2b9c992d6d1ae46de9b02ffd797e23ce47aeae",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

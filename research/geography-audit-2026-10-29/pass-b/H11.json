@@ -1,0 +1,181 @@
+{
+  "record_id": "H11",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Distinct Djibouti national land-passenger decree phases and a separate Ethiopia–Djibouti passenger railway suspension. Road controls must not locate the railway phase.",
+  "source_checks": [
+    {
+      "url": "https://www.journalofficiel.dj/texte-juridique/decret-n2020-145-pr-pm-portant-modification-du-decret-n-2020-080-pr-pm-portant-levee-partielle-des-mesures-exceptionnelles-de-prevention-contre-la-propagation-du-covid-19/",
+      "access_status": "full_text_web",
+      "finding": "Amendment Article 2 fixes July 17 for land/maritime reopening; not a train-service reopening.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-08.json",
+      "evidence_sha256": "181a0d0a4ed65800cbb39dea81eef7b77971f215fa7c35d218df7e8a6cbc85aa"
+    },
+    {
+      "url": "https://www.journalofficiel.dj/texte-juridique/decret-n2020-145-pr-pm-portant-modification-du-decret-n-2020-080-pr-pm-portant-levee-partielle-des-mesures-exceptionnelles-de-prevention-contre-la-propagation-du-covid-19/",
+      "access_status": "full_text_web",
+      "finding": "Article 18 maintains passenger land/maritime closure.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-08.json",
+      "evidence_sha256": "181a0d0a4ed65800cbb39dea81eef7b77971f215fa7c35d218df7e8a6cbc85aa"
+    },
+    {
+      "url": "https://faolex.fao.org/docs/pdf/dji194537.pdf",
+      "access_status": "full_text_web",
+      "finding": "Decree065 Article 7 national land closure for finite ordered interval.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-08.json",
+      "evidence_sha256": "181a0d0a4ed65800cbb39dea81eef7b77971f215fa7c35d218df7e8a6cbc85aa"
+    },
+    {
+      "url": "https://faolex.fao.org/docs/pdf/dji194537EXT1.pdf",
+      "access_status": "full_text_web",
+      "finding": "Decree074 expressly excludes goods transport.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-08.json",
+      "evidence_sha256": "181a0d0a4ed65800cbb39dea81eef7b77971f215fa7c35d218df7e8a6cbc85aa"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "H11-R1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-dji-sol"
+      ],
+      "complete": false,
+      "phase_applicability": "Distinct Djibouti national land-passenger decree phases and a separate Ethiopia–Djibouti passenger railway suspension. Road controls must not locate the railway phase. Current phase only: National land-border closure ordered in decree 2020-065 of March 24",
+      "date_scope_check": {
+        "start_earliest": "2020-03-24",
+        "start_latest": "2020-03-24",
+        "end_earliest": "2020-04-06",
+        "end_latest": "2020-04-08",
+        "last_confirmed": null,
+        "endpoint_status": "scheduled",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "announced_window_layer_only",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "H11-R1: Decree 2020-065 took immediate effect on March 24. Article 7 states two weeks and Article 9 fifteen days, so the existing April 6–8 counting bounds remain scheduled interpretations, not observed reopening. The ambassador’s March 18 retrospective is earlier reported closure, not the date of this instrument.\n\nH11-C7P1: Decree 2020-074, signed April 15, expressly applies for fifteen days from April 9. This supports a scheduled April 23–24 expiry bound depending on day counting; it does not supply an actual reopening. Decree 2020-078, dated April 30, extends the measures until May 8. The intervening documentary gap is neither proof of reopening nor a fully recovered legal chronology.\n\nH11-C7P2: The April 30–May 8 extension remains an ordered window. H11-R2: Decree 2020-080 maintains the land-passenger closure from May 10; decree 2020-145 substitutes July 17 for the previously scheduled September 1 reopening. Goods are exempt and admitted passengers face testing. These legal dates do not establish identical operation or counterpart permission at every crossing.\n\nREC50-R37-H11-P1: The transport ministry’s March 18 notice announces passenger-train suspension from March 20, with cargo unaffected. The operator reports actual passenger-service resumption on January 27, 2021 after ten months of suspension. This establishes a sustained rail restriction exceeding 24 hours without an exact independently timed first non-operating day. July 2020 land-policy reopening is not the rail endpoint. The operator article is dated February 20, 2021, despite the migrated URL containing 2025.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Only one national frontier segment is available in current inventory; no uniform crossing implementation asserted."
+      ]
+    },
+    {
+      "phase_id": "H11-R2",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-dji-sol"
+      ],
+      "complete": false,
+      "phase_applicability": "Distinct Djibouti national land-passenger decree phases and a separate Ethiopia–Djibouti passenger railway suspension. Road controls must not locate the railway phase. Current phase only: Maintained Djibouti land-passenger closure under decree 2020-080, amended by 2020-145",
+      "date_scope_check": {
+        "start_earliest": "2020-05-10",
+        "start_latest": "2020-05-10",
+        "end_earliest": "2020-07-17",
+        "end_latest": "2020-07-17",
+        "last_confirmed": null,
+        "endpoint_status": "legal_effective",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "H11-R1: Decree 2020-065 took immediate effect on March 24. Article 7 states two weeks and Article 9 fifteen days, so the existing April 6–8 counting bounds remain scheduled interpretations, not observed reopening. The ambassador’s March 18 retrospective is earlier reported closure, not the date of this instrument.\n\nH11-C7P1: Decree 2020-074, signed April 15, expressly applies for fifteen days from April 9. This supports a scheduled April 23–24 expiry bound depending on day counting; it does not supply an actual reopening. Decree 2020-078, dated April 30, extends the measures until May 8. The intervening documentary gap is neither proof of reopening nor a fully recovered legal chronology.\n\nH11-C7P2: The April 30–May 8 extension remains an ordered window. H11-R2: Decree 2020-080 maintains the land-passenger closure from May 10; decree 2020-145 substitutes July 17 for the previously scheduled September 1 reopening. Goods are exempt and admitted passengers face testing. These legal dates do not establish identical operation or counterpart permission at every crossing.\n\nREC50-R37-H11-P1: The transport ministry’s March 18 notice announces passenger-train suspension from March 20, with cargo unaffected. The operator reports actual passenger-service resumption on January 27, 2021 after ten months of suspension. This establishes a sustained rail restriction exceeding 24 hours without an exact independently timed first non-operating day. July 2020 land-policy reopening is not the rail endpoint. The operator article is dated February 20, 2021, despite the migrated URL containing 2025.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Only one national frontier segment is available in current inventory; no uniform crossing implementation asserted."
+      ]
+    },
+    {
+      "phase_id": "H11-C7P1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-dji-sol"
+      ],
+      "complete": false,
+      "phase_applicability": "Distinct Djibouti national land-passenger decree phases and a separate Ethiopia–Djibouti passenger railway suspension. Road controls must not locate the railway phase. Current phase only: Decree074 continuation of land-passenger closure, excluding goods transport",
+      "date_scope_check": {
+        "start_earliest": "2020-04-09",
+        "start_latest": "2020-04-09",
+        "end_earliest": "2020-04-23",
+        "end_latest": "2020-04-24",
+        "last_confirmed": null,
+        "endpoint_status": "scheduled",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "announced_window_layer_only",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "H11-R1: Decree 2020-065 took immediate effect on March 24. Article 7 states two weeks and Article 9 fifteen days, so the existing April 6–8 counting bounds remain scheduled interpretations, not observed reopening. The ambassador’s March 18 retrospective is earlier reported closure, not the date of this instrument.\n\nH11-C7P1: Decree 2020-074, signed April 15, expressly applies for fifteen days from April 9. This supports a scheduled April 23–24 expiry bound depending on day counting; it does not supply an actual reopening. Decree 2020-078, dated April 30, extends the measures until May 8. The intervening documentary gap is neither proof of reopening nor a fully recovered legal chronology.\n\nH11-C7P2: The April 30–May 8 extension remains an ordered window. H11-R2: Decree 2020-080 maintains the land-passenger closure from May 10; decree 2020-145 substitutes July 17 for the previously scheduled September 1 reopening. Goods are exempt and admitted passengers face testing. These legal dates do not establish identical operation or counterpart permission at every crossing.\n\nREC50-R37-H11-P1: The transport ministry’s March 18 notice announces passenger-train suspension from March 20, with cargo unaffected. The operator reports actual passenger-service resumption on January 27, 2021 after ten months of suspension. This establishes a sustained rail restriction exceeding 24 hours without an exact independently timed first non-operating day. July 2020 land-policy reopening is not the rail endpoint. The operator article is dated February 20, 2021, despite the migrated URL containing 2025.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Only one national frontier segment is available in current inventory; no uniform crossing implementation asserted."
+      ]
+    },
+    {
+      "phase_id": "H11-C7P2",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-dji-sol"
+      ],
+      "complete": false,
+      "phase_applicability": "Distinct Djibouti national land-passenger decree phases and a separate Ethiopia–Djibouti passenger railway suspension. Road controls must not locate the railway phase. Current phase only: Decree078 extension of Decree074 land-passenger restriction",
+      "date_scope_check": {
+        "start_earliest": "2020-04-30",
+        "start_latest": "2020-04-30",
+        "end_earliest": "2020-05-08",
+        "end_latest": "2020-05-08",
+        "last_confirmed": null,
+        "endpoint_status": "scheduled",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "announced_window_layer_only",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "H11-R1: Decree 2020-065 took immediate effect on March 24. Article 7 states two weeks and Article 9 fifteen days, so the existing April 6–8 counting bounds remain scheduled interpretations, not observed reopening. The ambassador’s March 18 retrospective is earlier reported closure, not the date of this instrument.\n\nH11-C7P1: Decree 2020-074, signed April 15, expressly applies for fifteen days from April 9. This supports a scheduled April 23–24 expiry bound depending on day counting; it does not supply an actual reopening. Decree 2020-078, dated April 30, extends the measures until May 8. The intervening documentary gap is neither proof of reopening nor a fully recovered legal chronology.\n\nH11-C7P2: The April 30–May 8 extension remains an ordered window. H11-R2: Decree 2020-080 maintains the land-passenger closure from May 10; decree 2020-145 substitutes July 17 for the previously scheduled September 1 reopening. Goods are exempt and admitted passengers face testing. These legal dates do not establish identical operation or counterpart permission at every crossing.\n\nREC50-R37-H11-P1: The transport ministry’s March 18 notice announces passenger-train suspension from March 20, with cargo unaffected. The operator reports actual passenger-service resumption on January 27, 2021 after ten months of suspension. This establishes a sustained rail restriction exceeding 24 hours without an exact independently timed first non-operating day. July 2020 land-policy reopening is not the rail endpoint. The operator article is dated February 20, 2021, despite the migrated URL containing 2025.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Only one national frontier segment is available in current inventory; no uniform crossing implementation asserted."
+      ]
+    },
+    {
+      "phase_id": "REC50-R37-H11-P1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Distinct Djibouti national land-passenger decree phases and a separate Ethiopia–Djibouti passenger railway suspension. Road controls must not locate the railway phase. Current phase only: Djibouti–Ethiopia passenger train suspension announced by Djibouti transport ministry",
+      "date_scope_check": {
+        "start_earliest": "2020-03-20",
+        "start_latest": "2020-03-20",
+        "end_earliest": "2021-01-27",
+        "end_latest": "2021-01-27",
+        "last_confirmed": null,
+        "endpoint_status": "operator_reported_resumption",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "H11-R1: Decree 2020-065 took immediate effect on March 24. Article 7 states two weeks and Article 9 fifteen days, so the existing April 6–8 counting bounds remain scheduled interpretations, not observed reopening. The ambassador’s March 18 retrospective is earlier reported closure, not the date of this instrument.\n\nH11-C7P1: Decree 2020-074, signed April 15, expressly applies for fifteen days from April 9. This supports a scheduled April 23–24 expiry bound depending on day counting; it does not supply an actual reopening. Decree 2020-078, dated April 30, extends the measures until May 8. The intervening documentary gap is neither proof of reopening nor a fully recovered legal chronology.\n\nH11-C7P2: The April 30–May 8 extension remains an ordered window. H11-R2: Decree 2020-080 maintains the land-passenger closure from May 10; decree 2020-145 substitutes July 17 for the previously scheduled September 1 reopening. Goods are exempt and admitted passengers face testing. These legal dates do not establish identical operation or counterpart permission at every crossing.\n\nREC50-R37-H11-P1: The transport ministry’s March 18 notice announces passenger-train suspension from March 20, with cargo unaffected. The operator reports actual passenger-service resumption on January 27, 2021 after ten months of suspension. This establishes a sustained rail restriction exceeding 24 hours without an exact independently timed first non-operating day. July 2020 land-policy reopening is not the rail endpoint. The operator article is dated February 20, 2021, despite the migrated URL containing 2025.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Railway border alignment/control facility not independently located; road Galile–Dewele marker rejected for railway phase. Train-source direct retrieval unavailable."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Only one national frontier segment is available in current inventory; no uniform crossing implementation asserted."
+  ]
+}

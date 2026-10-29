@@ -1,0 +1,378 @@
+{
+  "record_id": "EU029",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "National legal Order763-r coversroad,rail,pedestrian,river,mixedcheckpoints andexplicitBelaruslandboundary. Widelegalregime notuniformoperationalclosure.",
+  "source_checks": [
+    {
+      "url": "https://www.garant.ru/products/ipo/prime/doc/73711716/",
+      "access_status": "full_text_cached_this_pass",
+      "finding": "Original27Mar2020Order paragraph1effective30Mar00:00Moscow, namedalllandcheckpointmodesandBelarus; paragraph2diplomat,freightcrew,bereavement,Kaliningradrail exceptions.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/5d4c9400d8155391f8fb.raw",
+      "sha256": "73d7269601296811367482067314152976d3cb9664e88ac5651ba3b0979eaae7"
+    },
+    {
+      "url": "https://interfax.com/newsroom/top-stories/80897/",
+      "access_status": "full_text_web",
+      "finding": "Interfax4Jul quotesheadquartersliftingCOVIDborderrestrictions15Jul2022; testrequirementsforothersremain.",
+      "direct_fetch_status": "inaccessible"
+    },
+    {
+      "url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+      "access_status": "cached_versioned_geography",
+      "finding": "Independently inspected source/geography-reference.json named bilateral geometry metadata. Natural Earth5.1.0 generalized land boundaries; disputed classifications retained, water-indicator segments omitted. These are scope references, not individual gates.",
+      "evidence_path": "source/geography-reference.json",
+      "sha256": "a7ad4c4223195811491048191efd6e1626eda968146dc2485d9e65a5b4799e78",
+      "geometry_metadata": [
+        {
+          "location_id": "context-frontier-aze-rus",
+          "label": "Azerbaijan–Russia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "AZE",
+            "RUS"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_124"
+          ],
+          "source_feature_classes": [
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        },
+        {
+          "location_id": "context-frontier-blr-rus",
+          "label": "Belarus–Russia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "BLR",
+            "RUS"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_235"
+          ],
+          "source_feature_classes": [
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        },
+        {
+          "location_id": "context-frontier-chn-rus",
+          "label": "China–Russia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "CHN",
+            "RUS"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_58",
+            "ne_10m_admin_0_boundary_lines_land_242"
+          ],
+          "source_feature_classes": [
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        },
+        {
+          "location_id": "context-frontier-est-rus",
+          "label": "Estonia–Russia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "EST",
+            "RUS"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_397"
+          ],
+          "source_feature_classes": [
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        },
+        {
+          "location_id": "context-frontier-fin-rus",
+          "label": "Finland–Russia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "FIN",
+            "RUS"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_121"
+          ],
+          "source_feature_classes": [
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        },
+        {
+          "location_id": "context-frontier-geo-rus",
+          "label": "Georgia–Russia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "GEO",
+            "RUS"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_71"
+          ],
+          "source_feature_classes": [
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        },
+        {
+          "location_id": "context-frontier-kaz-rus",
+          "label": "Kazakhstan–Russia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "KAZ",
+            "RUS"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_328"
+          ],
+          "source_feature_classes": [
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        },
+        {
+          "location_id": "context-frontier-ltu-rus",
+          "label": "Lithuania–Russia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "LTU",
+            "RUS"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_234",
+            "ne_10m_admin_0_boundary_lines_land_430"
+          ],
+          "source_feature_classes": [
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        },
+        {
+          "location_id": "context-frontier-lva-rus",
+          "label": "Latvia–Russia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "LVA",
+            "RUS"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_61"
+          ],
+          "source_feature_classes": [
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        },
+        {
+          "location_id": "context-frontier-mng-rus",
+          "label": "Mongolia–Russia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "MNG",
+            "RUS"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_241"
+          ],
+          "source_feature_classes": [
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        },
+        {
+          "location_id": "context-frontier-nor-rus",
+          "label": "Norway–Russia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "NOR",
+            "RUS"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_122"
+          ],
+          "source_feature_classes": [
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        },
+        {
+          "location_id": "context-frontier-pol-rus",
+          "label": "Poland–Russia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "POL",
+            "RUS"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_319"
+          ],
+          "source_feature_classes": [
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        },
+        {
+          "location_id": "context-frontier-prk-rus",
+          "label": "North Korea–Russia — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "PRK",
+            "RUS"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_244"
+          ],
+          "source_feature_classes": [
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        },
+        {
+          "location_id": "context-frontier-rus-ukr",
+          "label": "Russia–Ukraine — frontier context",
+          "display_role": "frontier_context",
+          "precision": "generalized bilateral frontier reference, not a crossing or full closure footprint",
+          "country_codes": [
+            "RUS",
+            "UKR"
+          ],
+          "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+          "source_version": "5.1.0",
+          "license": "Public domain",
+          "source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_236",
+            "ne_10m_admin_0_boundary_lines_land_458"
+          ],
+          "source_feature_classes": [
+            "Disputed (please verify)",
+            "International boundary (verify)"
+          ],
+          "disputed_source_feature_ids": [
+            "ne_10m_admin_0_boundary_lines_land_458"
+          ],
+          "review_note": "Context identifies the frontier relevant to the record. It does not locate the historical obstruction or show the full affected length. Natural Earth present-day convention; water-indicator segments omitted."
+        }
+      ]
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU029-D1",
+      "category": "wider_border",
+      "decision": "map",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-aze-rus",
+        "context-frontier-blr-rus",
+        "context-frontier-chn-rus",
+        "context-frontier-est-rus",
+        "context-frontier-fin-rus",
+        "context-frontier-geo-rus",
+        "context-frontier-kaz-rus",
+        "context-frontier-ltu-rus",
+        "context-frontier-lva-rus",
+        "context-frontier-mng-rus",
+        "context-frontier-nor-rus",
+        "context-frontier-pol-rus",
+        "context-frontier-prk-rus",
+        "context-frontier-rus-ukr"
+      ],
+      "complete": true,
+      "phase_applicability": "Russianinternationallandfrontiers andKaliningradfrontiers underlegalregime; evolvingexceptionsretained,notmaritimecoast.",
+      "date_scope_check": "Canonical policy/observation bounds preserved. Generalized boundary references locate national legal scope, not uniform physical closure or uninterrupted operations.",
+      "canonical_dates": {
+        "kind": "policy_period",
+        "measure_type": "formal_policy_period",
+        "start_earliest": "2020-03-30",
+        "start_latest": "2020-03-30",
+        "end_earliest": "2022-07-15",
+        "end_latest": "2022-07-15",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": true
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/EU029.json",
+  "canonical_input_sha256": "e0dba0dba0136fdb35dd781da6bdcf25ac861d1a7ae42476d517ceb7f8133d6d",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

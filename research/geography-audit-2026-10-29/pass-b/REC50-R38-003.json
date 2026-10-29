@@ -1,0 +1,64 @@
+{
+  "record_id": "REC50-R38-003",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Semalka–Faysh Khabur Tigris road/pontoon crossing, represented by the named Syrian customs facility; no national Iraq–Syria closure inferred.",
+  "source_checks": [
+    {
+      "url": "https://npasyria.com/en/61303/",
+      "access_status": "full_text_web",
+      "finding": "June 23 report explicitly limits closure to travellers, with humanitarian and foreign-residency exceptions; trading unaffected.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-05.json",
+      "evidence_sha256": "1fa1548ae51e5b6716620a20a89c5262e0598f0d40df9976b8f671df8bb6cdfe"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R38-003-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-semalka-faysh-khabur",
+          "name": "Semalka–Faysh Khabur customs/crossing area",
+          "coordinates": [
+            42.3484273,
+            37.0892488
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/6019972486",
+            "https://www.openstreetmap.org/api/0.6/node/6019972486"
+          ],
+          "evidence_note": "Named Syrian customs facility at the Tigris crossing; distinct from Semalka village.  OSM tags inspected: {\"government\": \"customs\", \"name\": \"معبر سيمالكا\", \"name:en\": \"Semalka Borders\", \"office\": \"government\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/f362e988de5d494f16da.html",
+          "evidence_sha256": "894e521a60dc255537f12182295fc7a675cd39bf307b8911bfe3d929696e559e",
+          "osm_version": "2",
+          "osm_timestamp": "2024-03-19T01:33:56Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Semalka–Faysh Khabur Tigris road/pontoon crossing, represented by the named Syrian customs facility; no national Iraq–Syria closure inferred. Current phase only: Semalka passenger-service interruption with exceptions and selected-category restoration.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2021-06-28",
+        "end_latest": "2021-06-28",
+        "last_confirmed": "2021-06-23",
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "North Press describes a June 23 traveller suspension with trade, UN/humanitarian organizations and some foreign-residency departures excepted; its June 28 report confirms restored service for brides, humanitarian cases and foreign/Iraqi residence holders. The June 26 notice is a plan, not observed return. Additional contemporary accounts complicate continuity: Anadolu reports a civilian closure from June 21, and ANHA reports service resumed June 23 morning without identifying cohorts. These may concern different measures or categories. No exact universal onset, uninterrupted passenger interval or all-category reopening is established; numeric duration remains withheld.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

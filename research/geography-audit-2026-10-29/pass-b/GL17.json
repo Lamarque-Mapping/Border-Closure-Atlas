@@ -1,0 +1,91 @@
+{
+  "record_id": "GL17",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Two distinct Bukavu–Rwanda road crossings, Ruzizi I and II; phase applies to the passenger categories admitted in November, not all DRC–Rwanda traffic.",
+  "source_checks": [
+    {
+      "url": "https://www.radiookapi.net/node/200594",
+      "access_status": "full_text_fresh_fetch",
+      "finding": "Radio Okapi reports South Kivu governor closure of Ruzizi I and II, 22 March; food transport and medical cases excepted.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/460c6afbc202819accef.html",
+      "evidence_sha256": "c664ac18b6c4f58f4e949b3fed49b0f51813b3ec2ff1855ff6b2d018cf3caadd"
+    },
+    {
+      "url": "https://www.mediacongo.net/article-actualite-79006_rdc_rwanda_les_frontieres_ruzizi_1_et_2_ouvertes_pour_certaines_categories_de_personnes.html",
+      "access_status": "full_text_fresh_fetch",
+      "finding": "11 November text names the two posts and permitted passenger categories; Kamanyola announcement is separate.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/46f877b5ba38cad1bbe4.html",
+      "evidence_sha256": "cda5888b040cc5f0e0e043ae3d95e140af5dba4612768be9af6d005eafef67d0"
+    },
+    {
+      "url": "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+      "access_status": "full_text_fresh_fetch",
+      "finding": "Appendix A E22/E23 explicitly lists distinct named posts and coordinates.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/25782abcef016f49e77a.pdf",
+      "evidence_sha256": "35e1b5d512bfc882baf263b1abe002d0c99331d0b2b8e08fcb0f354ab504cbed"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "GL17-R1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-ruzizi-1",
+          "name": "Rusizi I / Cyangugu",
+          "coordinates": [
+            28.89297,
+            -2.49112
+          ],
+          "coordinate_method": "Published AU-PIDA illustrative border-post coordinate, independently read in original report Appendix A",
+          "precision": "approximate crossing area; illustrative published marker, not surveyed gate",
+          "source_urls": [
+            "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "PDF page 81, E23; longitude/latitude transcribed in lon,lat order. Report identifies crossing name but does not establish historic operation or exact obstruction.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/25782abcef016f49e77a.pdf",
+          "evidence_sha256": "35e1b5d512bfc882baf263b1abe002d0c99331d0b2b8e08fcb0f354ab504cbed"
+        },
+        {
+          "proposed_site_id": "post-ruzizi-2",
+          "name": "Rusizi II / Bukavu",
+          "coordinates": [
+            28.86814,
+            -2.5155
+          ],
+          "coordinate_method": "Published AU-PIDA illustrative border-post coordinate, independently read in original report Appendix A",
+          "precision": "approximate crossing area; illustrative published marker, not surveyed gate",
+          "source_urls": [
+            "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "PDF page 81, E22; longitude/latitude transcribed in lon,lat order. Report identifies crossing name but does not establish historic operation or exact obstruction.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/25782abcef016f49e77a.pdf",
+          "evidence_sha256": "35e1b5d512bfc882baf263b1abe002d0c99331d0b2b8e08fcb0f354ab504cbed"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Two distinct Bukavu–Rwanda road crossings, Ruzizi I and II; phase applies to the passenger categories admitted in November, not all DRC–Rwanda traffic. Current phase only: Provincial restriction at Ruzizi I/II for passenger classes expressly admitted by the 11 November bilateral relaxation",
+      "date_scope_check": {
+        "start_earliest": "2020-03-22",
+        "start_latest": "2020-03-22",
+        "end_earliest": "2020-11-11",
+        "end_latest": "2020-11-11",
+        "last_confirmed": null,
+        "endpoint_status": "legal_effective",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "GL17-R1: November 11 is agreement/permission date; effective clock time and first Ruzizi passage unknown. Before-November exceptional passage not exhaustively ruled out; first-easing description supports policy rather than universal physical closure. Kamanyola's later implementation must not be transferred to Ruzizi.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

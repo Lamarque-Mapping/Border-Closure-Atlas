@@ -1,0 +1,65 @@
+{
+  "record_id": "R4-EA-003",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Security barricades at multiple National Road 5 intersections selectively prevented access to Poipet road crossing. Tourist and casino-worker exceptions do not mean every local or vehicle category had access.",
+  "source_checks": [
+    {
+      "url": "https://khmer.voanews.com/a/poipet-sees-heightened-security-cover-residents-prevented-from-accessing-the-border/5159099.html",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "On-site VOA report names multiple NR5 intersections, selective admission and continuing vehicle restrictions on 9 November 2019.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-shared-sites.json",
+      "sha256": "595baaafe4af6e34d545d8e5bebe426b59fe7757452f04862bf5caed42822f16"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-EA-003-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-poipet-khlong-luek",
+          "name": "Poipet–Khlong Luek road crossing",
+          "coordinates": [
+            102.549649,
+            13.661557
+          ],
+          "coordinate_method": "Fresh OSM way geometry checked against preserved crossing-area representative point",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/144563400/full"
+          ],
+          "evidence_note": "AH1 trunk-road bridge contains named Poipet border_control node 4795953248. It locates the affected formal crossing, not the several NR5 protest/security barriers.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/2f31b37f24ab6562d592.xml",
+          "sha256": "413e884a33d33d8b090398bd522935b7818a733013d4fe9342700c539f2593dc"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Security barricades at multiple National Road 5 intersections selectively prevented access to Poipet road crossing. Tourist and casino-worker exceptions do not mean every local or vehicle category had access.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2019-11-09",
+        "end_latest": "2019-11-09",
+        "last_confirmed": "2019-11-09",
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Within-day status only; no full-day or ongoing closure inferred. Exact onset and final lifting time unknown."
+      },
+      "unresolved": [
+        "Formal crossing reference only; the separate NR5 barricade locations remain unverified and the map must not imply that the barrier stood on the bridge."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Formal crossing reference only; the separate NR5 barricade locations remain unverified and the map must not imply that the barrier stood on the bridge."
+  ],
+  "input_sha256": "203df280ae643e28afb25ac5a9cd00404efbb96c93af74bbc706c23614f75dc9",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

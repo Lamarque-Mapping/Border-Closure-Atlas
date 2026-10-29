@@ -1,0 +1,89 @@
+{
+  "record_id": "SA031",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "China-to-Nepal cargo interruption at Rasuwagadhi road crossing, to September15 initial seven inbound cargo trucks. Tatopani closure/reopening dates andNepalexports are separate.",
+  "source_checks": [
+    {
+      "url": "https://english.onlinekhabar.com/tatopani-rasuwagadhi-border-closed.html",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "August12 report already says Rasuwagadhi shut since previous weekend, whileTatopani sinceWednesday.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-sa-2.json",
+      "sha256": "9724505999eda222f00cb44eaddf9e8a3ac4c486a005ccdc3fbb86de75d99fb8"
+    },
+    {
+      "url": "https://kathmandupost.com/money/2022/09/15/china-to-release-all-stranded-cargo-trucks-by-sept-27",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "September15 customs officer describes7trucks intoNepal; retrospectiveAugust14 conflicts with earlierreport, retained.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-sa-2.json",
+      "sha256": "9724505999eda222f00cb44eaddf9e8a3ac4c486a005ccdc3fbb86de75d99fb8"
+    },
+    {
+      "url": "https://kathmandupost.com/province-no-3/2019/06/07/friendship-bridge-in-rasuwagadhi-comes-into-operation",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "2019bridge cargooperation supports historicalfacility applicability.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-17.json",
+      "sha256": "165e3cc51b49a7e54aee807be5398c81860daea7e423dd0ea448f6d19c3a4685"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1552746559/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named historical roadbridge geometry inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/bf6774edf33704a4cf29.xml",
+      "sha256": "9565a58380c57357534006edc73f83372fc4815a4ab63784f542764424ea35f6",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/bf6774edf33704a4cf29.txt",
+      "text_sha256": "9565a58380c57357534006edc73f83372fc4815a4ab63784f542764424ea35f6",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SA031-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-rasuwagadhi-2019-bridge",
+          "name": "Rasuwagadhi–Gyirong road bridge (2019–2025 structure)",
+          "coordinates": [
+            85.3780675,
+            28.278665
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/1552746559/full"
+          ],
+          "evidence_note": "Named historic Resuo/RasuwagadhiFriendshipBridge outline, start2019/end2025 OSM tags. ContemporaryJune2019 report independently describes110m bridge operating for cargo. Do not use later2026 temporary bridge or assume present operation.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/bf6774edf33704a4cf29.xml",
+          "sha256": "9565a58380c57357534006edc73f83372fc4815a4ab63784f542764424ea35f6"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "China-to-Nepal cargo interruption at Rasuwagadhi road crossing, to September15 initial seven inbound cargo trucks. Tatopani closure/reopening dates andNepalexports are separate.",
+      "date_scope_check": {
+        "start_earliest": "2022-08-06",
+        "start_latest": "2022-08-07",
+        "end_earliest": "2022-09-15",
+        "end_latest": "2022-09-15",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "SA031-D1: Source priority is given to the August 12 OnlineKhabar report describing an existing closure since the previous weekend, bounded as August 6–7. The Kathmandu Post September 15 retrospective date of August 14 is retained as a conflicting account, but cannot describe the first onset of a closure already reported on August 12. Nepal News also describes an early-August shutdown. This does not prove an exact hour or exclude an unreported intervening change. The September 15 endpoint is initial inbound festival cargo restoration, not unrestricted two-way trade or passenger normalisation. Nepal-to-China exports remain a separate directional phase in SA029."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "4dc42461521e872b2233e02ca06803a72b38bfc77bb51c9abf1a3406b39f86f7",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

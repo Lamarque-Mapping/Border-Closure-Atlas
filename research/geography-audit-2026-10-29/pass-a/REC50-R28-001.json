@@ -1,0 +1,209 @@
+{
+  "record_id": "REC50-R28-001",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Two distinct facilities and movement categories: Bridge II cargo during April fighting; Bridge I refusal of temporary border-pass/booklet travellers into Thailand. Eleven states Bridge I remained physically open for passport holders and Bridge II was closed.",
+  "source_checks": [
+    {
+      "url": "https://www.rfa.org/english/news/myanmar/myanmar-thai-border-reopens-04302024074334.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "April 30 cargo trucks returned across the main trade bridge after a reported ten-day shutdown.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-01.json",
+      "sha256": "39920761a4ac61cc29715179e919dbb6d9e6e6b125305439c48de7a852d321e5"
+    },
+    {
+      "url": "https://elevenmyanmar.com/news/myawady-mae-sot-border-crossing-tightened-temporary-passes-suspended",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "April 21 Bridge I temporary-pass/booklet suspension toward Thailand; passport holders allowed; Bridge II then closed.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-02.json",
+      "sha256": "fdfe0b3f2a7c09d984577c5ea2d78c5a395e60f71145624954377eb23a074e2f"
+    },
+    {
+      "url": "https://eng.mizzima.com/2024/04/23/9252",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://english.dvb.no/thai-burma-bridge-reopens-after-fighting-in-myawaddy-subsides-regime-counterattack-kills-two/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.gnlm.com.mm/border-trade-resumes-after-friendship-bridges-reopened/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://cnimyanmar.com/index.php/english-edition/21637-myawaddy-no-1-bridge-closed-indefinitely",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://english.dvb.no/myanmar-thailand-friendship-bridge-no-2-reopens-after-9-month-long-closure/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/only-guaranteed-travelers-permitted-access-myawaddy-mae-sot-bridge",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://elevenmyanmar.com/news/myanmar-thailand-no-2-friendship-bridge-reopens-for-commercial-vehicle-traffic",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://infosheet.org/sites/default/files/Volume%20V%2C%20Issue%2012%20%281-5-2024%29.pdf",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://elevenmyanmar.com/news/myawady-to-mae-sot-travel-restricted-to-uid-certificate-holders",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://monnews.org/2024/05/06/permit-required-for-myawady-mae-sot-border-crossing-uid-card-mandatory/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.moi.gov.mm/moi%3Aeng/index.php/news/13757",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R28-001-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-mae-sot-myawaddy-bridge-ii",
+          "name": "Mae Sot–Myawaddy Friendship Bridge II crossing area",
+          "coordinates": [
+            98.4949374,
+            16.7254183
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/10543474679",
+          "precision": "Checkpoint-complex reference, approximately 1 km; side-specific barrier position not established.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/10543474679",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=98.49,16.72,98.54,16.76"
+          ],
+          "evidence_note": "OSM Thai name identifies Mae Sot 2 at the distinct northern road port. This marks the Thai checkpoint complex associated with Bridge II, not the exact Myanmar barricade.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-mae-sot-ii.xml",
+          "sha256": "5a58bfb970eea665ee04ed5b54cf28bc767a928ad7030ae6a1503626292d498b",
+          "osm_feature": "node/10543474679",
+          "osm_version": "3",
+          "osm_timestamp": "2026-09-01T13:17:05Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "country": "ไทย",
+            "name": "แม่สอด 2",
+            "name:en": "Mae Sot",
+            "name:ru": "Мэ Сот",
+            "name:th": "แม่สอด 2",
+            "province": "ตาก"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Cargo at Myawaddy–Mae Sot Friendship Bridge II during April 2024 fighting.",
+      "date_scope_check": {
+        "scope": "Cargo at Myawaddy–Mae Sot Friendship Bridge II during April 2024 fighting.",
+        "start_earliest": "2024-04-11",
+        "start_latest": "2024-04-20",
+        "end_earliest": "2024-04-30",
+        "end_latest": "2024-04-30",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "",
+        "assessment": "RFA confirms trucks returned April 30 after a reported ten-day shutdown; that wording does not independently confirm the canonical April 11 start. Preserve the existing qualified chronology."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "REC50-R28-001-P2",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-mae-sot-myawaddy-bridge-i",
+          "name": "Mae Sot–Myawaddy Friendship Bridge I crossing area",
+          "coordinates": [
+            98.5136423,
+            16.6894073
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/484241867",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/484241867",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=98.5,16.68,98.53,16.7"
+          ],
+          "evidence_note": "Named Myawaddy border-control node on the first road-bridge approach. Thai government describes Bridge I on Highway 105 at Tha Sai Luat; this is separate from the northern cargo Bridge II.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-mae-sot-i.xml",
+          "sha256": "0224c6f8c209404ab7e60f3bd388cf5e503e815c33d967ad77c6856a2ce2da82",
+          "osm_feature": "node/484241867",
+          "osm_version": "10",
+          "osm_timestamp": "2025-01-22T07:08:14Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "Myawaddy",
+            "name:en": "Myawaddy",
+            "name:ja": "ミャワディ",
+            "name:ru": "Мьявадди",
+            "source": "GPS;photograph"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Refusal of temporary-border-pass and pass-booklet travel from Myanmar into Thailand at Friendship Bridge I on 21 April 2024.",
+      "date_scope_check": {
+        "scope": "Refusal of temporary-border-pass and pass-booklet travel from Myanmar into Thailand at Friendship Bridge I on 21 April 2024.",
+        "start_earliest": "2024-04-21",
+        "start_latest": "2024-04-21",
+        "end_earliest": "2024-04-21",
+        "end_latest": "2024-04-21",
+        "last_confirmed": "2024-04-21",
+        "analysis_included": true,
+        "contested": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "held_evidence_do_not_animate_as_confirmed",
+        "assessment": "Eleven April 21 is a same-day observation of a document-class refusal, with passport travel still allowed. Do not convert to a whole-bridge closure or extend beyond recorded confirmation."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

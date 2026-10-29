@@ -1,0 +1,76 @@
+{
+  "record_id": "R3-AM-006",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "TVN describes freight trucks stranded at Paso Canoas and agreed reopening procedures involving customs, migration and Senafront; passenger interruption is not established.",
+  "source_checks": [
+    {
+      "url": "https://www.tvn-2.com/nacionales/camioneros-panama-costa-rica-transporte_1_1140718.html",
+      "access_status": "fresh_source_extract",
+      "finding": "TVN describes freight trucks stranded at Paso Canoas and agreed reopening procedures involving customs, migration and Senafront; passenger interruption is not established.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-017.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-AM-006-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-paso-canoas-road",
+          "name": "Paso Canoas road crossing (Panamanian customs)",
+          "coordinates": [
+            -82.8384534,
+            8.5339823
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/234963318"
+          ],
+          "evidence_note": "Fresh named OSM structure/facility XML inspected; distinct road reference, not nearby town centroid or rail/ferry geometry. TVN describes freight trucks stranded at Paso Canoas and agreed reopening procedures involving customs, migration and Senafront; passenger interruption is not established.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/af80ed815b79c5e30a11.xml",
+              "sha256": "1ac0119ca3c3819211d5971be05aac39434b2d858dbfb496ac895fae85c8d583",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "6",
+              "osm_timestamp": "2025-05-09T21:27:45Z",
+              "tags": {
+                "addr:city": "Paso Canoas",
+                "addr:street": "Carretera Interamericana",
+                "barrier": "border_control",
+                "building": "yes",
+                "building:levels": "2",
+                "name": "Aduanas - Migración Panameña"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "International freight passage at Paso Canoas; direction-specific obstruction and return are not separately measured. The triggering rule affected Costa Rican trucks entering Panama; passenger impact is not established.",
+      "date_scope_check": {
+        "start_earliest": "2020-10-21",
+        "start_latest": "2020-10-21",
+        "end_earliest": "2020-10-24",
+        "end_latest": "2020-10-24",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Named crossing reference located; precise historical obstruction/approach footprint is not reconstructed."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "a8ac08a637148c9435f147190f2e8c1affcf4eb962206283b395458e1bb838e1"
+}

@@ -1,0 +1,97 @@
+{
+  "record_id": "AM043",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Emerson Manitoba service/access suspension, rather than the separate railway route or former Noyes road post.",
+  "source_checks": [
+    {
+      "url": "https://www.cbsa-asfc.gc.ca/transparency-transparence/pd-dp/bbp-rpp/dedc/2022-04-26/overview-apercu-eng.html",
+      "access_status": "fresh_source_extract",
+      "finding": "CBSA identifies Emerson, Coutts and Pacific Highway as individually suspended ports; preserved current phase distinguishes dates and exceptions.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/ecd11d196e3b2630b8b9.html",
+      "source_sha256": "0f7aa82bb7d969e1bb3e39497a94bcb42d2a6446ee9bd691a67b20fb3dbd4685",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-005.json"
+    },
+    {
+      "url": "https://www.cbsa-asfc.gc.ca/bwt-taf/?wbdisable=true",
+      "access_status": "fresh_search_extract",
+      "finding": "Official agency lists Emerson/Pembina, Coutts/Sweetgrass and Pacific Highway/Surrey–Blaine, separately from Douglas.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-007.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM043-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-emerson-pembina",
+          "name": "Emerson–Pembina road crossing",
+          "coordinates": [
+            -97.2376654,
+            49.0015152
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/104744861"
+          ],
+          "evidence_note": "Inspected named customs/border-control geometry; official CBSA source identifies this road port and commercial/passenger service suspension. Emerson Manitoba service/access suspension, rather than the separate railway route or former Noyes road post.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/12e21a9949c1dcd99105.xml",
+              "sha256": "9c7ebee79f87596851b65f4676e3231d4563565df20727bc0b5dabe2f2580da8",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "13",
+              "osm_timestamp": "2025-08-05T00:00:31Z",
+              "tags": {
+                "addr:city": "Emerson",
+                "addr:postcode": "R0A 0L0",
+                "addr:province": "MB",
+                "addr:street": "MB-75",
+                "building": "yes",
+                "government": "customs",
+                "layer": "1",
+                "name": "Canada Border Services Agency-Emerson",
+                "name:en": "Canada Border Services Agency",
+                "name:fr": "Agence des services frontaliers du Canada",
+                "office": "government",
+                "old_name": "Canada Border Services Agency-West Lynne",
+                "opening_hours": "24/7",
+                "operator": "Canada Border Services Agency",
+                "operator:short": "CBSA",
+                "operator:wikidata": "Q532090",
+                "phone": "+1 800 461 9999",
+                "source": "Bing",
+                "website": "https://www.cbsa-asfc.gc.ca/menu-eng.html"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Emerson Manitoba–Pembina North Dakota; Ordinary passenger and commercial traffic affected by the Emerson access blockade; specified essential/local movements continued. Both northbound and southbound access was obstructed.",
+      "date_scope_check": {
+        "start_earliest": "2022-02-10",
+        "start_latest": "2022-02-10",
+        "end_earliest": "2022-02-16",
+        "end_latest": "2022-02-16",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Named port is located; complete historical road-access blockade footprint is not reconstructed."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "7910415474d11a04f420ea0124b2688a4bd96cef143441c285f1274314bf5a5a"
+}

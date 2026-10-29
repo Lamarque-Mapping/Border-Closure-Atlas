@@ -1,0 +1,79 @@
+{
+  "record_id": "R4-AM-004",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "SAT-attributed March 19 report explicitly identifies La Hachadura customs installations blocked by unionists; Pedro de Alvarado is the Guatemalan connection.",
+  "source_checks": [
+    {
+      "url": "https://emisorasunidas.com/2019/03/19/sindicalistas-salvadorenos-cierran-aduana-de-la-achadura-fronteriza-con-jutiapa/",
+      "access_status": "fresh_source_extract",
+      "finding": "SAT-attributed March 19 report explicitly identifies La Hachadura customs installations blocked by unionists; Pedro de Alvarado is the Guatemalan connection.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-017.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-AM-004-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-la-hachadura-customs",
+          "name": "La Hachadura customs road crossing",
+          "coordinates": [
+            -90.0870961,
+            13.859896
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/388313799"
+          ],
+          "evidence_note": "Fresh named OSM structure/facility XML inspected; distinct road reference, not nearby town centroid or rail/ferry geometry. SAT-attributed March 19 report explicitly identifies La Hachadura customs installations blocked by unionists; Pedro de Alvarado is the Guatemalan connection.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/ca7a13f542c4e3cc07c3.xml",
+              "sha256": "702c0173dbc7e40a87fe548d681b6f21f68cf829a1c9af5c8017d108f49f5394",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "6",
+              "osm_timestamp": "2026-02-16T18:35:19Z",
+              "tags": {
+                "addr:city": "La Hachadura",
+                "addr:street": "Carretera del Litoral",
+                "building": "yes",
+                "check_date": "2026-02-16",
+                "country": "SV",
+                "government": "customs",
+                "name": "Aduana Terrestre La Hachadura",
+                "office": "government",
+                "opening_hours": "24/7"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "La Hachadura customs facilities / Pedro de Alvarado connection",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2019-03-19",
+        "end_latest": "2019-05-08",
+        "last_confirmed": "2019-03-19",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Named crossing reference located; precise historical obstruction/approach footprint is not reconstructed."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "7c64c6eb6e3e803f15daab58c698effbb22d0c3af6bf7ca064d54816c7b6d3de"
+}

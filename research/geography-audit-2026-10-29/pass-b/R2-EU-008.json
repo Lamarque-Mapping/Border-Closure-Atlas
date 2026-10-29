@@ -1,0 +1,86 @@
+{
+  "record_id": "R2-EU-008",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The original measure was an import-origin rule for Serbian goods, not a uniquely Merdare closure. October 8 2024 restored imports only via Merdare; January 2026 reporting still identifies that single allowed route. The residual prohibition therefore cannot use a Merdare point or an unqualified entire-frontier line.",
+  "source_checks": [
+    {
+      "url": "https://www.slobodnaevropa.org/a/kosovo-srbija-promet-robe/33151208.html",
+      "access_status": "full_text_html",
+      "finding": "Full text documents first truck at Merdare on October 8, other crossings awaiting scanners, and explicitly limited easing.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/6239320c809b074b780b.raw",
+      "sha256": "befdd2d6ab8d52e3747c1ac76abb780ea46d985d71f93d74124e3aac5931ecab"
+    },
+    {
+      "url": "https://www.kosovo-online.com/en/news/analysis/one-crossing-many-barriers-does-scanner-merdare-solve-problem-serbian-goods-entering",
+      "access_status": "full_text_html",
+      "finding": "January 2026 body says Serbian imports remain allowed at Merdare only despite installation of a scanner; does not enumerate a complete residual gate set.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/028772b4a11afdd6d4bf.raw",
+      "sha256": "7709b7a2b45270aadffce276cb057a1ea9bd56a34ffd3f8e9de26a152c49b34f"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EU-008-D1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Kosovo prohibition of non-exempt Serbian-origin imports, ending here only for Merdare",
+      "date_scope_check": "Existing dates, uncertainty and duration eligibility retained. Geography remains held pending the identified evidence gap.",
+      "canonical_dates": {
+        "kind": "closed_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2023-06-14",
+        "start_latest": "2023-06-14",
+        "end_earliest": "2024-10-08",
+        "end_latest": "2024-10-08",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "no_numeric_duration",
+        "policy_only": false
+      },
+      "unresolved": [
+        "Initial rule wider than Merdare; mapping only the reopening post would misrepresent scope. Need a precise complete operational crossing set or qualified frontier geometry."
+      ]
+    },
+    {
+      "phase_id": "R2-EU-008-C7P1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Serbian-origin finished-goods import routing prohibition at Kosovo crossings other than Merdare",
+      "date_scope_check": "Existing dates, uncertainty and duration eligibility retained. Geography remains held pending the identified evidence gap.",
+      "canonical_dates": {
+        "kind": "confirmed_through",
+        "measure_type": "formal_policy_period",
+        "start_earliest": "2024-10-08",
+        "start_latest": "2024-10-08",
+        "end_earliest": "2026-01-28",
+        "end_latest": "2026-01-28",
+        "last_confirmed": "2026-01-28",
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "no_numeric_duration",
+        "policy_only": true
+      },
+      "unresolved": [
+        "Residual route prohibition expressly excludes Merdare. No whole-boundary feature can encode that exclusion and full prohibited site set not reconstructed."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Do not bind the national-origin import ban solely to its scoped reopening point."
+  ],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R2-EU-008.json",
+  "canonical_input_sha256": "ef28c08fa6529de16ba4960ba6ec9082818db1c6ab1b3e82b1a31ecbe3923b1a",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

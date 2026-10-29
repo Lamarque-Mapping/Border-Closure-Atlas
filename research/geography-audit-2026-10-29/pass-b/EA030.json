@@ -1,0 +1,75 @@
+{
+  "record_id": "EA030",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Election-related restrictions affected the Tiau River road bridge/gate between Zokhawthar and Khawmawi/Rikhawdar. Partial medical, student and essential-goods access April20 is distinct from full opening; cancelled proposed May closure is not mapped.",
+  "source_checks": [
+    {
+      "url": "https://timesofindia.indiatimes.com/city/guwahati/assam-rifles-keeps-mizoram-myanmar-border-gate-closed-even-after-election-locals-unhappy/articleshow/109473777.cms",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Contemporary account specifically locates gate across Tiau at Zokhawthar/Khawmawi and limited Saturday reopening.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-3.json",
+      "sha256": "66182050de5416eca0fba8d86641b2093981f5fcd4b9180d2c0b31624a2dc370"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=93.38,23.355,93.395,23.37",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "OSM border_control node and connected NH6 bridge topology inspected; town coordinate was only search lead.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/8b5567ff83393e89a052.xml",
+      "sha256": "d31e81923c0f6268641a41236b24fc4f784f17c01bf6749a7acfce92561fed45",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/8b5567ff83393e89a052.txt",
+      "text_sha256": "d31e81923c0f6268641a41236b24fc4f784f17c01bf6749a7acfce92561fed45",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA030-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-zokhawthar-rikhawdar-road",
+          "name": "Zokhawthar–Rikhawdar Tiau road gate",
+          "coordinates": [
+            93.388307,
+            23.3631199
+          ],
+          "coordinate_method": "Fresh OSM bbox XML node9917419013 on NH6 road1082133261 immediately at international Tiau bridge908603037",
+          "precision": "Approximate border-control gate reference within100m, not surveyed closure barrier",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/map?bbox=93.38,23.355,93.395,23.37",
+            "https://www.openstreetmap.org/node/9917419013"
+          ],
+          "evidence_note": "OSM border_control is on NH6 approach linking Zokhawthar to Khawmawi across Tiau. Contemporary TOI identifies this same bridge/gate, not a whole India–Myanmar frontier.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/8b5567ff83393e89a052.xml",
+          "sha256": "d31e81923c0f6268641a41236b24fc4f784f17c01bf6749a7acfce92561fed45"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Election-related restrictions affected the Tiau River road bridge/gate between Zokhawthar and Khawmawi/Rikhawdar. Partial medical, student and essential-goods access April20 is distinct from full opening; cancelled proposed May closure is not mapped.",
+      "date_scope_check": {
+        "start_earliest": "2024-04-16",
+        "start_latest": "2024-04-17",
+        "end_earliest": "2024-04-20",
+        "end_latest": "2024-04-20",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "EA030-D1: The named district official’s account places election sealing 72 hours before 19 April polling, while the Assam Rifles account gives 17 April. These support 16–17 April bounds for the broader restriction; no inspected source supports 1 April onset. Mizzima distinguishes 17 April restrictions from complete closure around 17:00 on 19 April. This later tightening must not replace the broader restriction’s onset or imply a three-day complete shutdown.\n\nTimes of India and India Today NE explicitly date limited restoration to 20 April; the former reports around 13:00. This explicit event dating takes precedence over Northeast Live’s ambiguous publication-day word “today” on 21 April. Medical, student, emergency and selected essential-goods access was permitted, not unrestricted travel.\n\nThe proposed 1 May resealing was explicitly cancelled on 30 April, when Assam Rifles said the gate would remain open under the Free Movement Regime. No implemented May closure is inferred. A separate migration motive for this April election/security spell is not established."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "83db1f997f447c6fa912e179bd3334c1ce88cd54e1f567ff1f48baf3c0f25d1a",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

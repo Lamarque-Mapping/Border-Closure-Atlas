@@ -1,0 +1,101 @@
+{
+  "record_id": "CC029",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "The abolished Shamgona–Tagiloni pedestrian crossing is a specific former Enguri/Abkhaz ABL crossing, not the principal Enguri bridge or all crossings. Public Defender establishes April 2016 abolition; the 2024 DRI account repeats that crossing identity. Village locations alone do not establish the former gate footprint.",
+  "source_checks": [
+    {
+      "url": "https://ombudsman.ge/eng/spetsialuri-angarishebi/special-report-of-the-public-defender-of-georgia-on-the-impacts-of-the-closure-of-crossing-points-on-the-rights-of-the-population-living-along-abkhazias-administrative-boundary-line",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "Names Shamgona–Tagiloni and April 2016 closure, distinguishes the other abolished posts.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-3c6470a66d1e15bb04.bin",
+      "sha256": "65c9376f5133690ddb5415f4668734b4e37f1a221a2d6ab26063f734f9a7f7e5"
+    },
+    {
+      "url": "https://democracyresearch.org/files/344web%20eng%201072024.pdf",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "Page 9 explicitly describes Shamgona near Tagiloni and reduction to Enguri/Pakhulani-Saberio.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-83a6631a9a16f3f0ca.bin",
+      "sha256": "017bfa7289d61ac64549ea3df463ca5f7af0c85d0f0a5054895e0d6661e1cebb"
+    },
+    {
+      "url": "https://kremlin-roadmap.gfsis.org.ge/news/display/1782",
+      "access_status": "search_extract",
+      "finding": "Indexed inventory identifies paired village aliases and distinguishes Tagilon/Taglan from Enguri.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-13.json",
+      "sha256": "b5c82f9652aa440baadf5b48d3244d752803d5faabc03f6fd7fec150dbaf08ec"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=41.77,42.52,41.81,42.56",
+      "access_status": "inaccessible",
+      "finding": "Targeted geographic retrieval did not establish the former crossing footprint: <urlopen error timed out>",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-shamgona-tagiloni.meta.json",
+      "sha256": "cb45bd8df797b0d81e1cf08fc4321fc06dbae4785887cdfbb2d5f9f8e1b7ccbe"
+    },
+    {
+      "url": "https://www.radioatinati.ge/regioni/article/57051-de-faqto-afkhazethis-mthavrobam-thagilonis-gamshvebi-punqti-gaauqma.html",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-ea0a5088b1849a72c4.bin",
+      "sha256": "a35895592a8b85076a8a15c1559dad7a9f920f1bff7882cdc4e771dd3802cb0a"
+    },
+    {
+      "url": "https://civil.ge/archives/126211",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 503: Service Unavailable",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.ekhokavkaza.com/a/27682188.html",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-a706998414e28832ad.bin",
+      "sha256": "68591a7fa69b75bc02cf03f03b0e37b6a2fbb3e0e627b51a355c9ebf29e9b91c"
+    },
+    {
+      "url": "https://digitallibrary.un.org/nanna/record/839440/files/A_70_1021--S_2016_725-RU.pdf?registerDownload=1&version=1&withMetadata=0&withWatermark=0",
+      "access_status": "fresh_pdf_full_text",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-148c8da515c0ba40d0.bin",
+      "sha256": "2be633b8c21b4b11be4916d0d787fe0a434c80af25a2502166f712ddf512326f"
+    },
+    {
+      "url": "https://occupied.eastwatch.eu/abkhazia/checkpoint-regime-abkhazia/",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-f5ad8c6193f886f132.bin",
+      "sha256": "90b469be02afeb958e55f2c8e18384989f460e3ae69b64bd56c32773afa686d2"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC029-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ordinary passage at Shamgona–Tagiloni, as documented in the 2017 Public Defender report.",
+      "date_scope_check": {
+        "scope": "Ordinary passage at Shamgona–Tagiloni, as documented in the 2017 Public Defender report.",
+        "start_earliest": "2016-04-15",
+        "start_latest": "2016-04-15",
+        "end_earliest": "2017-11-16",
+        "end_latest": "2017-11-16",
+        "last_confirmed": "2017-11-16",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "assessment": "Public Defender says April 2016, while canonical April 15 marker is retained at its existing precision. The 2023–24 DRI account is later confirmation of abolition, not an exact daily observation or new endpoint."
+      },
+      "unresolved": [
+        "Former Shamgona–Tagiloni crossing coordinate not independently established; no village-centroid or whole-ABL substitute."
+      ]
+    }
+  ],
+  "unresolved": []
+}

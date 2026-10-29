@@ -1,0 +1,74 @@
+{
+  "record_id": "EA021",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ordinary freight trains between Dandong and Sinuiju use railway on existing Sino-Korean Friendship Bridge. Medical-aid movements are exceptions. April25–29 onset disagreement and September26 observed train remain unchanged.",
+  "source_checks": [
+    {
+      "url": "https://en.yna.co.kr/view/AEN20220618001900315",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Yonhap observed freight train crossing Amnok railway bridge September26; reports prior April29 suspension.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/38378d37a858c0a576c7.html",
+      "sha256": "66182050de5416eca0fba8d86641b2093981f5fcd4b9180d2c0b31624a2dc370",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/38378d37a858c0a576c7.txt",
+      "text_sha256": "0ce9d41a35ff0977479cefa8864226938051d86ac4ac8c65daf58ad96c09f6e5",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-3.json"
+    },
+    {
+      "url": "https://mapcarta.com/W1119773889",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Named road–rail bridge coordinates and distinction from BrokenBridge and stations inspected.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-4.json",
+      "sha256": "590e351898f10b728e0dcdcf6b8601bcd53ed1caa1495848556c1dc45bb735f6"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA021-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-dandong-sinuiju-rail-bridge",
+          "name": "Dandong–Sinuiju Sino-Korean Friendship Bridge railway",
+          "coordinates": [
+            124.39288,
+            40.11477
+          ],
+          "coordinate_method": "OSM-derived representative bridge coordinate displayed by Mapcarta, way1119773889; direct OSM endpoint timed out",
+          "precision": "Approximate bridge centre, about100m; not a customs terminal or station",
+          "source_urls": [
+            "https://mapcarta.com/W1119773889"
+          ],
+          "evidence_note": "Page identifies railway and roadway bridge between Dandong and Sinuiju, distinguishes BrokenBridge290m away and both stations1.25km away. Yonhap observed train crossing Amnok railway bridge, supports rail binding only.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-4.json",
+          "sha256": "590e351898f10b728e0dcdcf6b8601bcd53ed1caa1495848556c1dc45bb735f6"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary freight trains between Dandong and Sinuiju use railway on existing Sino-Korean Friendship Bridge. Medical-aid movements are exceptions. April25–29 onset disagreement and September26 observed train remain unchanged.",
+      "date_scope_check": {
+        "start_earliest": "2022-04-25",
+        "start_latest": "2022-04-29",
+        "end_earliest": "2022-09-26",
+        "end_latest": "2022-09-26",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "April 25–29 onset disagreement is retained. KBS reports two medical-supply trains crossed May 26, 2022; this is an exception to the ordinary-service restriction, so the phase cannot mean no train movements. August reopening forecasts do not establish ordinary resumption. Passenger service and subsequent regularity are not inferred."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "0a6d371dd28833ac059d714218460028734972667762c7c539558b62f7015e76",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

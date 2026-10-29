@@ -1,0 +1,71 @@
+{
+  "record_id": "ME015",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Short passenger interruption at al-Wadiah on November 8, distinct from broad coalition embargo announcement and November 7 continued operation.",
+  "source_checks": [
+    {
+      "url": "https://ye-voice.com/news109027.html",
+      "access_status": "full_text_web",
+      "finding": "November 8 report says Yemeni and Saudi sides closed at noon and deputy governor announced reopening after hours.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-14.json",
+      "evidence_sha256": "8d14c35707c30a7fa3bcfe5b585d8baf73cccb5fbc817942cdfa92ab475d8725"
+    },
+    {
+      "url": "https://www.almashhad.news/news/97027",
+      "access_status": "full_text_web",
+      "finding": "November 7 local official explicitly says port remained open for citizens and goods despite coalition announcement.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-16.json",
+      "evidence_sha256": "45b510d02ec1f470da36e4950ebe9cbaf34d2cb728a1c93b9be2bd5409d6a900"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME015-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-al-wadiah",
+          "name": "Al-Wadiah / al-Wadea land port",
+          "coordinates": [
+            47.0113562,
+            16.9403092
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/10138647617",
+            "https://www.openstreetmap.org/api/0.6/node/10138647617"
+          ],
+          "evidence_note": " OSM tags inspected: {\"name\": \"مكتب الهجرة والجوازات اليمني منفذ الوديعه البري\", \"name:en\": \"The Yemeni Immigration and Passports Office, Al-Wadiah Land Port\", \"office\": \"government\", \"opening_hours\": \"24/7\"}. This is geographic evidence only, not historical closure evidence. Named Yemeni Immigration and Passports Office inside Al-Wadiah land port; marker is Yemeni passenger facility area, not Saudi terminal or entire frontier.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/e7975c7b02e088dc70ab.html",
+          "evidence_sha256": "e90f65464ccb744e9db46e9903309c35e6857d6f32d3fdd35992d23f02d5dd66",
+          "osm_version": "1",
+          "osm_timestamp": "2022-10-29T22:27:59Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Short passenger interruption at al-Wadiah on November 8, distinct from broad coalition embargo announcement and November 7 continued operation. Current phase only: Brief interruption of passenger movement at al-Wadea described by local crossing employee",
+      "date_scope_check": {
+        "start_earliest": "2017-11-08",
+        "start_latest": "2017-11-08",
+        "end_earliest": "2017-11-08",
+        "end_latest": "2017-11-08",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "strictly_over_24_hours": false,
+        "qualification_retained": "ME015-R1: Single locally attributed account; relation to coalition blockade order is uncertain because source cites legal procedures. Do not report a multi-day blockade or zero hours from same-day dates. Contemporary Yemeni accounts dated 8 November corroborate same-day closure and reopening but do not establish its motive.\n\nrelationship of local phase to the coalition order: The two-hour local closure is attributed to legal procedures; available reporting does not establish whether it implemented the coalition blockade or a separate administrative action.\nCurrent rationale finding: The specific interruption has no established official reason. Security codes and blockade title removed; broader coalition context retained as context only.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

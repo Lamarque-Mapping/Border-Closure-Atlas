@@ -1,0 +1,108 @@
+{
+  "record_id": "EA005",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The selected phase concerns ordinary road passengers at Zabaikalsk–Manzhouli. Interfax identifies passenger restoration while freight arrangements were distinct; the mapped road port is separate from the Manzhouli railway station.",
+  "source_checks": [
+    {
+      "url": "https://interfax.com/newsroom/top-stories/86739/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Reports January 8 Manzhouli passenger restoration and about fifty Chinese citizens on the first day; road-passenger restoration, not all modes.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-04.json",
+      "sha256": "ba381143dfc17275df3650c505d10165a57a7bffb8c82aa0fe6d15a734eb465d"
+    },
+    {
+      "url": "https://english.scio.gov.cn/in-depth/2023-01/13/content_85057935.htm",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.nia.gov.cn/n741435/n741532/c1554902/content.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://interfax.com/newsroom/top-stories/86703/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://en.apa.az/asia/China-to-close-last-passenger-checkpoint-on-Russian-border-317449",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.interfax.ru/amp/693361",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA005-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-zabaikalsk-manzhouli-road",
+          "name": "Zabaikalsk–Manzhouli road port",
+          "coordinates": [
+            117.3734181,
+            49.628084
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/10548298270",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/10548298270",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=117.35,49.61,117.39,49.65"
+          ],
+          "evidence_note": "Named Manzhouli Border Control node in the road-port complex; adjacent OSM names include Manzhouli road port and MAPP Zabaikalsk. Distinct from the urban Manzhouli rail station.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-manzhouli-road.xml",
+          "sha256": "1e7eb6225461b5f8265bc25584d4dfc177e07508f369edc6f8162a411da42cb0",
+          "osm_feature": "node/10548298270",
+          "osm_version": "2",
+          "osm_timestamp": "2025-11-11T16:10:55Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "中国边防口岸控制区",
+            "name:en": "Manzhouli Border Control",
+            "name:ru": "Погранпереход Маньчжурия",
+            "name:zh": "中国边防口岸控制区",
+            "name:zh-Hans": "中国边防口岸控制区",
+            "name:zh-Hant": "中國邊防口岸控制區"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary road-passenger service at Zabaikalsk–Manzhouli, to the first restored passenger buses, chiefly for Chinese nationals.",
+      "date_scope_check": {
+        "scope": "Ordinary road-passenger service at Zabaikalsk–Manzhouli, to the first restored passenger buses, chiefly for Chinese nationals.",
+        "start_earliest": "2020-02-01",
+        "start_latest": "2020-04-30",
+        "end_earliest": "2023-01-08",
+        "end_latest": "2023-01-08",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "",
+        "assessment": "January 8 initial Chinese-national passenger restoration supported; first interruption remains disputed between retrospective February account and January/April side-specific policy dates. Geography does not resolve onset."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

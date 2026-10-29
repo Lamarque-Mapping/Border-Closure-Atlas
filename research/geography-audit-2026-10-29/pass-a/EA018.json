@@ -1,0 +1,181 @@
+{
+  "record_id": "EA018",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The formal Skouw–Wutung road crossing is identified on both sides. Initial January/February 2020 PNG restriction must remain separate from the later pandemic closure; later 2022 reopening cannot erase the intervening lifting reported in the canonical chronology.",
+  "source_checks": [
+    {
+      "url": "https://www.thenational.com.pg/border-crossing-between-png-indonesia-closed/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "January 30 report names Wutung road post and stops trade/people movement.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-02.json",
+      "sha256": "fdfe0b3f2a7c09d984577c5ea2d78c5a395e60f71145624954377eb23a074e2f"
+    },
+    {
+      "url": "https://www.thenational.com.pg/border-post-at-wutung-re-opens/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "October 27 2022 report says the Wutung post reopened Monday for PNG citizens travelling to Jayapura.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-03.json",
+      "sha256": "4590307200e5168423a081f6a5ce13841c80f788d52665e6784ccd10288609a5"
+    },
+    {
+      "url": "https://www.medcom.id/english/world/Rkje99Gb-papua-new-guinea-reopens-wutung-border-post",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Distinguishes PNG Wutung reopening October 24 from Indonesian Skow reopening in May 2022.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-03.json",
+      "sha256": "4590307200e5168423a081f6a5ce13841c80f788d52665e6784ccd10288609a5"
+    },
+    {
+      "url": "https://bnpp.go.id/berita/menanti-2-tahun-border-post-wutung-png-dibuka-kini-jalur-perlintasan-plbn-skouw-papua-resmi-beroperasi",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.thenational.com.pg/stranded-at-border/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.papuatimes.co.id/2022/10/27/png-buka-kembali-pos-perbatasan-wutung/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.thenational.com.pg/my-blog-page/page/9821/?PageSpeed=noscript",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.thenational.com.pg/png-citizens-given-until-feb-9-to-return/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://papuatengah.antaranews.com/berita/21365/pintu-perbatasan-indonesia-png-di-wutung-kembali-dibuka",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.papua.go.id/view-detail-berita-7754/perbatasan-wutung-dibuka-akhir-bulan-jika-kasus-covid-19-turun.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA018-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-skouw-wutung",
+          "name": "Skouw–Wutung crossing area",
+          "coordinates": [
+            141.0014145,
+            -2.6080862
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/5558126545",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/5558126545",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=140.98,-2.64,141.02,-2.6"
+          ],
+          "evidence_note": "Mapped Papua Niugini customs/border-control node paired with Indonesian customs node on the same road. Antara locates the international crossing in Skouw District, Jayapura; The National names counterpart Wutung, West Sepik.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-skouw.xml",
+          "sha256": "1d9dd3e6d6df28d84425bb15816fa27d74e2501470857c8a563da317096e6fd0",
+          "osm_feature": "node/5558126545",
+          "osm_version": "1",
+          "osm_timestamp": "2018-04-17T01:44:03Z",
+          "identity_tags": {
+            "amenity": "customs",
+            "barrier": "border_control",
+            "name": "Papua Niugini"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Initial PNG Wutung gate closure, ending at the minister-reported lifting by 11 February 2020.",
+      "date_scope_check": {
+        "scope": "Initial PNG Wutung gate closure, ending at the minister-reported lifting by 11 February 2020.",
+        "start_earliest": "2020-01-29",
+        "start_latest": "2020-01-29",
+        "end_earliest": "2020-02-02",
+        "end_latest": "2020-02-11",
+        "last_confirmed": "2020-02-02",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "",
+        "assessment": "National January 30 report identifies Wutung closure. October 2022 National/Medcom reports identify a later reopening but generalise closure since January 2020; they do not disprove the separately retained February 2020 lifting. No continuous January 2020–October 2022 interval inferred."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "EA018-AUDIT20261025-1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-skouw-wutung",
+          "name": "Skouw–Wutung crossing area",
+          "coordinates": [
+            141.0014145,
+            -2.6080862
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/5558126545",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/5558126545",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=140.98,-2.64,141.02,-2.6"
+          ],
+          "evidence_note": "Mapped Papua Niugini customs/border-control node paired with Indonesian customs node on the same road. Antara locates the international crossing in Skouw District, Jayapura; The National names counterpart Wutung, West Sepik.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-skouw.xml",
+          "sha256": "1d9dd3e6d6df28d84425bb15816fa27d74e2501470857c8a563da317096e6fd0",
+          "osm_feature": "node/5558126545",
+          "osm_version": "1",
+          "osm_timestamp": "2018-04-17T01:44:03Z",
+          "identity_tags": {
+            "amenity": "customs",
+            "barrier": "border_control",
+            "name": "Papua Niugini"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Later Wutung–Skouw border restriction, separately documented after the February 2020 lifting.",
+      "date_scope_check": {
+        "scope": "Later Wutung–Skouw border restriction, separately documented after the February 2020 lifting.",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2021-07-07",
+        "end_latest": "2022-10-24",
+        "last_confirmed": "2021-07-07",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "National January 30 report identifies Wutung closure. October 2022 National/Medcom reports identify a later reopening but generalise closure since January 2020; they do not disprove the separately retained February 2020 lifting. No continuous January 2020–October 2022 interval inferred."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

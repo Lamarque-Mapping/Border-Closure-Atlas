@@ -1,0 +1,72 @@
+{
+  "record_id": "REC50-R46-004",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "August 25 Guyana statement describes Canawaima ferry suspension while small-boat immigration remains possible at Moleson Creek; not an all-river frontier closure.",
+  "source_checks": [
+    {
+      "url": "https://dpi.gov.gy/statement-on-the-guyana-suriname-ferry-service-disruption/",
+      "access_status": "fresh_source_extract",
+      "finding": "August 25 Guyana statement describes Canawaima ferry suspension while small-boat immigration remains possible at Moleson Creek; not an all-river frontier closure.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-020.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R46-004-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-canawaima-south-drain",
+          "name": "Canawaima ferry (South Drain terminal reference)",
+          "coordinates": [
+            -57.1361017,
+            5.7496831
+          ],
+          "coordinate_method": "OSM named node coordinates",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/29711119"
+          ],
+          "evidence_note": "OSM named ferry_terminal at South Drain. One terminal reference for the Moleson Creek–South Drain service, not a road bridge, river-wide border ban, or precise ferry track.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/2c5ec366f3cda088a035.xml",
+              "sha256": "2efe30b1dbb4f9a05fb3f2ec0ac777e47d1b768dea12dd040161b5b2c987ee0e",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "9",
+              "osm_timestamp": "2020-09-15T06:23:36Z",
+              "tags": {
+                "amenity": "ferry_terminal",
+                "name": "Canawaima Ferry Service"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "MAS sailing prohibition affecting the Canawaima ferry between Moleson Creek and South Drain",
+      "date_scope_check": {
+        "start_earliest": "2026-08-22",
+        "start_latest": "2026-08-22",
+        "end_earliest": "2026-08-28",
+        "end_latest": "2026-08-28",
+        "last_confirmed": "2026-08-25",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "South Drain terminal is located; opposite terminal and route geometry are not newly reconstructed."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "25296b575a83c69f0b05c0d5dfdbd6075b8090b2e602d5a8e0cc05a2d17c253f"
+}

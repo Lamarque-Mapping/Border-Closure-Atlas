@@ -1,0 +1,48 @@
+{
+  "record_id": "REC50-R38-003",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Traveller suspension at Semalka–Faysh Khabur with UN/humanitarian-organisation exception and selected-cohort return.",
+  "source_checks": [
+    {
+      "url": "https://npasyria.com/en/61555/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Spokesman describes June 23 closure, UN/organisation exception, and Monday resumption for brides, humanitarian cases and foreign/Iraqi residency holders.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-08.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R38-003-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-semalka-faysh-khabur",
+          "name": "Semalka–Faysh Khabur customs crossing area",
+          "coordinates": [
+            42.3484273,
+            37.0892488
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 500 m; named Syrian customs facility, not the exact pontoon bridge or opposite-bank terminal.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/6019972486"
+          ],
+          "evidence_note": "OSM node 6019972486, version 2, timestamp 2024-03-19T01:33:56Z. Identity tags: {\"government\": \"customs\", \"name\": \"معبر سيمالكا\", \"name:en\": \"Semalka Borders\", \"office\": \"government\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/f362e988de5d494f.raw",
+          "evidence_sha256": "e7d1d28a269632956dfb7a9bb9df54ad674db5f3c81bd2bdc278b6b60bcd5f6a"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Preserve the observation and cohort-qualified June 28 endpoint; do not turn the account into an unrestricted closure or exact inferred start.",
+      "date_scope_check": "Canonical bounded_interval: start None–None; endpoint 2021-06-28–2021-06-28; last confirmed 2021-06-23. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

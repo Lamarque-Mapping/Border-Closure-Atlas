@@ -1,0 +1,72 @@
+{
+  "record_id": "EU032",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Spain emergency essentialpurpose checks at LaLínea–Gibraltar landcrossing, notanall-personsealedfrontier.",
+  "source_checks": [
+    {
+      "url": "https://www.gibraltar.gov.gi/press-releases/picardo-frontier-restrictions-are-proportional-not-political-and-will-not-likely-affect-workers-or-goods-coming-into-gibraltar-1952020-5699",
+      "access_status": "full_text_cached_this_pass",
+      "finding": "Gibraltar16Mar reports priorstateofemergencyadmission limitedreturningSpanishresidents,workers,force majeure; goodssupplies unaffected.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/acecd717adba88382f3f.raw",
+      "sha256": "2163eed098867d88bcdbad44d68c92189d1a2fa3a3444f8645a15e7cd95907c6"
+    },
+    {
+      "url": "https://www.gibraltar.gov.gi/press-releases/no-frontier-restrictions-in-place-in-either-direction-7852020-6369",
+      "access_status": "full_text_cached_this_pass",
+      "finding": "10Nov official statement saysfrontierflow normalandno restrictionsineitherdirection; inlandSpanishmovement limitsdistinct.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/a877f59cec74c53c42c3.raw",
+      "sha256": "9fb88d03776aaca41a54b55c9e238e7d717f73d9328672c1b540e01b4353de25"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU032-FU1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-gibraltar-la-linea",
+          "name": "Gibraltar–La Línea land frontier control area",
+          "coordinates": [
+            -5.34857,
+            36.15474
+          ],
+          "coordinate_method": "OSM-derived Mapcarta border-agency building centre",
+          "precision": "approximate frontier control area,200m",
+          "source_urls": [
+            "https://mapcarta.com/W167144803",
+            "https://www.openstreetmap.org/way/167144803"
+          ],
+          "evidence_note": "OSM government border agency building adjoining Customs Controls Unit and Spanish Guardia Civil; La Línea north and runway south distinguish border from airport crossing checkpoint. Point represents combined crossing area, not Spanish stopping booth."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Spanishsideadmission rules locatedatsharedlandfrontiercontrolarea.",
+      "date_scope_check": "Missingonset and16Mar–10Nov endpointwindow remainunchanged; twoobservationsdonotprovecontinuousclosure.",
+      "canonical_dates": {
+        "kind": "bounded_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2020-03-16",
+        "end_latest": "2020-11-10",
+        "last_confirmed": "2020-03-16",
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "no_numeric_duration",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/EU032.json",
+  "canonical_input_sha256": "140176a4d28fc079b24a0875f96574d437839bf1db32023905d0acf223266d4f",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

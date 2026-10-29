@@ -1,0 +1,123 @@
+{
+  "record_id": "R5-EU-003",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "March 14 report identifies non-citizen inbound land closure with citizens still admitted. Government May 31 decision lists exactly six reopened road posts: Merdarë, Vërmicë, Kullë, Hani i Elezit, Jarinjë and Dheu i Bardhë. Brnjak is not in that six-site reopening set.",
+  "source_checks": [
+    {
+      "url": "https://www.koha.net/en/arberi/edhe-zyrtarisht-nga-ora-6-e-mengjesit-jane-mbyllur-kufijte-tokesore-ne-kosove",
+      "access_status": "full_text_web",
+      "finding": "Body states implementation March 14 06:00, exemption for Kosovar citizens and health checks.",
+      "direct_fetch_status": "inaccessible"
+    },
+    {
+      "url": "https://kryeministri.rks-gov.net/news/qeveria-mbajti-mbledhjen-e-38-te/",
+      "access_status": "full_text_web",
+      "finding": "Official decision lines 120–129 revoke prior land closure and enumerate six posts with testing/isolation conditions.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-EU-003-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-merdare",
+          "name": "Merdare",
+          "coordinates": [
+            21.243304,
+            42.936672
+          ],
+          "coordinate_method": "Independent inspection of preserved versioned OSM source metadata; no fresh OSM API retrieval claimed",
+          "precision": "approximate named crossing area; historical obstruction footprint not surveyed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/13959887212"
+          ],
+          "evidence_note": "Primary cached node 13959887212 v1 names Merdare Border Crossing with vehicle=yes and border_control. Current node position is a reference, not a historical survey.",
+          "cached_source_metadata": {
+            "evidence_file": "west-osm-evidence/merdare.xml",
+            "licence": "Open Database License (ODbL); © OpenStreetMap contributors",
+            "osm_id": 13959887212,
+            "osm_type": "node",
+            "tags": {
+              "barrier": "border_control",
+              "bicycle": "yes",
+              "foot": "yes",
+              "name": "Vendkalimi kufitar Merdarë",
+              "name:de": "Grenzübergang Merdare",
+              "name:en": "Merdare Border Crossing",
+              "name:sq": "Vendkalimi kufitar Merdarë",
+              "name:sr": "Административни прелаз Мердаре",
+              "name:sr-Latn": "Administrativni prelaz Merdare",
+              "vehicle": "yes",
+              "wikidata": "Q31838847",
+              "wikipedia": "sq:Vendkalimi kufitar Merdare"
+            },
+            "timestamp": "2026-06-23T12:23:11Z",
+            "version": 1
+          },
+          "cached_evidence_path": "source/crossings/locations.json",
+          "cached_evidence_sha256": "e4b81d220480cfe8eebe6b5eea093b4ee40789bda62db567470ef81cc8605601"
+        },
+        {
+          "existing_site_id": "post-jarinje",
+          "name": "Jarinje",
+          "coordinates": [
+            20.69965,
+            43.226642
+          ],
+          "coordinate_method": "Independent inspection of preserved versioned OSM source metadata; no fresh OSM API retrieval claimed",
+          "precision": "approximate named crossing area; historical obstruction footprint not surveyed",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1090470176"
+          ],
+          "evidence_note": "Primary cached way 1090470176 v1 is explicitly Jarinjë Border Crossing commercial compound, distinct from village and railway station.",
+          "cached_source_metadata": {
+            "evidence_file": "west-osm-evidence/jarinje.xml",
+            "licence": "Open Database License (ODbL); © OpenStreetMap contributors",
+            "osm_id": 1090470176,
+            "osm_type": "way",
+            "tags": {
+              "landuse": "commercial",
+              "name": "Гранични прелаз Јариње / Vendkalimi kufitar Jarinjë",
+              "name:en": "Jarinjë Border Crossing",
+              "name:sq": "Vend kalimi kufitarë Jarinjë"
+            },
+            "timestamp": "2022-08-30T11:45:28Z",
+            "version": 1
+          },
+          "cached_evidence_path": "source/crossings/locations.json",
+          "cached_evidence_sha256": "e4b81d220480cfe8eebe6b5eea093b4ee40789bda62db567470ef81cc8605601"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Only Merdare and Jarinje located within the explicit six-post phase.",
+      "date_scope_check": "14 March–1 June endpoint preserved; May 31 decision is not automatically an observed May 31 reopening.",
+      "canonical_dates": {
+        "kind": "policy_period",
+        "measure_type": "formal_policy_period",
+        "start_earliest": "2020-03-14",
+        "start_latest": "2020-03-14",
+        "end_earliest": "2020-06-01",
+        "end_latest": "2020-06-01",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": true
+      },
+      "unresolved": [
+        "Vërmicë, Kullë, Hani i Elezit and Dheu i Bardhë require attributable crossing coordinates."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R5-EU-003.json",
+  "canonical_input_sha256": "1c2182867bce3b9e874f7a4f270034690d3d0a46f442126be3c516002dd499e5",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

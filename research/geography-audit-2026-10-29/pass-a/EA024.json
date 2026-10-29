@@ -1,0 +1,86 @@
+{
+  "record_id": "EA024",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Rason ordinary tourist access through the same Quanhe–Wonjong gateway was suspended again. No COVID rationale is inferred for the March 2025 reversal and exceptional business/delegation travel remains separate.",
+  "source_checks": [
+    {
+      "url": "https://www.uritours.com/blog/coronavirus-north-korea-temporarily-closes-borders/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "March 5 dated operator instruction suspends Rason tourism immediately; reason and duration unknown.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-06.json",
+      "sha256": "681f3829c14d419c1a98c54f0ea371e3deddcd23ce43fe2c99266eabcd4a8408"
+    },
+    {
+      "url": "https://koryogroup.com/blog/north-korea-borders-to-reopen/",
+      "access_status": "search_extract",
+      "finding": "June 16 selected Chinese tourism-industry visitors were not tourists; general tourism still shut.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-06.json",
+      "sha256": "681f3829c14d419c1a98c54f0ea371e3deddcd23ce43fe2c99266eabcd4a8408"
+    },
+    {
+      "url": "https://www.youngpioneertours.com/north-korea-open-for-tourism/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "October 1 2026 operator update distinguishes limited Russian arrangements from other ordinary international tourists.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-04.json",
+      "sha256": "ba381143dfc17275df3650c505d10165a57a7bffb8c82aa0fe6d15a734eb465d"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA024-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-quanhe-wonjong-road",
+          "name": "Quanhe–Wonjong tourist road crossing area",
+          "coordinates": [
+            130.5224671,
+            42.567894
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/931730588",
+          "precision": "Crossing-area reference, 500 m; old/new parallel bridges share this gateway but precise lane used on every date is not established.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/931730588",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=130.5,42.55,130.55,42.59"
+          ],
+          "evidence_note": "OSM name Old Tumen River Bridge/Alte Quanhe-Wonjong-Brücke identifies the historical road crossing. Tour operator explicitly names Quanhe–Wonjong access, and its guide depicts tourists using the old bridge.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-quanhe.xml",
+          "sha256": "a50a834bc3df7e1240b121abe91619b7e99a1350b423daf36f90f84a638ed4de",
+          "osm_feature": "way/931730588",
+          "osm_version": "2",
+          "osm_timestamp": "2025-03-01T12:43:56Z",
+          "identity_tags": {
+            "bridge": "yes",
+            "construction_date": "1938",
+            "highway": "unclassified",
+            "layer": "1",
+            "name:de": "Alte Quanhe-Wonjong-Brücke",
+            "name:en": "Old Tumen River Bridge"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary foreign land tours to Rason via Quanhe–Wonjong, through the operator's June update.",
+      "date_scope_check": {
+        "scope": "Ordinary foreign land tours to Rason via Quanhe–Wonjong, through the operator's June update.",
+        "start_earliest": "2025-03-05",
+        "start_latest": "2025-03-05",
+        "end_earliest": "2025-06-16",
+        "end_latest": "2025-06-16",
+        "last_confirmed": "2025-06-16",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "",
+        "assessment": "Uri dated March 5 suspension; Koryo June 16 says selected business visitors were not ordinary tourists. Keep earlier segment ending June 16 and later October 2026 operator observation separate, with no inferred daily continuity."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

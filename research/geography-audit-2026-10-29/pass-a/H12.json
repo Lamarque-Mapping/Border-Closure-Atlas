@@ -1,0 +1,48 @@
+{
+  "record_id": "H12",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "The retained evidence concerns the Dollow–Dolo Addo road bridge over the border river; other Gedo crossings and informal dinghy routes are distinct.",
+  "source_checks": [
+    {
+      "url": "https://www.garoweonline.com/en/news/somalia/somalia-closes-land-border-with-kenya-to-rein-in-coronavirus-cases",
+      "access_status": "fresh_source_text_extract_inspected",
+      "finding": "Regional announcement names Balad Hawo, Elwak and Doolow; it does not distinguish exact bridge coordinates.",
+      "retrieval_http_status": "200",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/34bcb262eb20f687.raw",
+      "evidence_sha256": "3122028a76e8caadc5822b9b3c8d10fcccb628990a5b1172ef23c381bb5ecc06"
+    },
+    {
+      "url": "https://radioergo.org/en/2020/04/somali-border-closures-affect-jobs-and-food-supplies-in-gedo/",
+      "access_status": "fresh_source_text_extract_inspected",
+      "finding": "14 April on-site reporting explicitly describes Dollow border bridge closed, traders affected, and informal river dinghies as alternatives.",
+      "retrieval_http_status": "200",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/dd8accea12a93354.raw",
+      "evidence_sha256": "e57e4313ceaeb73fd8df87f68917cb156cfd476d54c843c1da930e684fcece38"
+    },
+    {
+      "url": "https://mapcarta.com/13023010",
+      "access_status": "fresh_search_extract_inspected",
+      "finding": "Geography search found Dollo Addo town point only; rejected because it is not the named border bridge.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/geosearch-02.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "H12-FU1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Retain March-onset uncertainty and the 14 April last observation. Do not bind Mandera/Belet Hawo, Elwak, the town centroid or a wider Ethiopia–Somalia line.",
+      "date_scope_check": "Canonical confirmed_through: start 2020-03-01–2020-03-31; endpoint 2020-04-14–2020-04-14; last confirmed 2020-04-14. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": [
+        "A source-attributable point on the named historical bridge remains missing."
+      ]
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,77 @@
+{
+  "record_id": "R6-AM-007",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Panamericana report identifies road clearance and quotes police that the blockage was on the Chilean side of the frontier; does not locate the precise barrier.",
+  "source_checks": [
+    {
+      "url": "https://panamericana.pe/24horas/nacionales/459857-tacna-liberan-via-internacional-peru-chile-bloqueo-migrantes",
+      "access_status": "fresh_source_extract",
+      "finding": "Panamericana report identifies road clearance and quotes police that the blockage was on the Chilean side of the frontier; does not locate the precise barrier.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-015.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-AM-007-RREV1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-chacalluta-road",
+          "name": "Chacalluta–Santa Rosa road crossing reference (Chilean complex)",
+          "coordinates": [
+            -70.3137357,
+            -18.3150469
+          ],
+          "coordinate_method": "OSM named node coordinates",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/5010599194"
+          ],
+          "evidence_note": "Named Chacalluta border_control node; mapped on motorcar route within the Chilean complex. Used only to identify the named road crossing, not freight lanes or the obstruction on the inter-terminal road. Santa Rosa complex and the historical blockade location remain unbound.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b315f85c04ed17bb453d.xml",
+              "sha256": "c20d990c7f5a0d47a0a57a87020f31c026a052b14157c1bad010f8e5923166b5",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "5",
+              "osm_timestamp": "2023-05-01T06:12:57Z",
+              "tags": {
+                "barrier": "border_control",
+                "bus": "no",
+                "coach": "no",
+                "hgv": "no",
+                "motorcar": "designated",
+                "motorcycle": "designated",
+                "name": "Complejo Fronterizo Chacalluta"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Observed November 28 recurrent migrant obstruction of vehicle road access on Chilean side of Concordia between Chacalluta and Santa Rosa",
+      "date_scope_check": {
+        "start_earliest": "2025-11-28",
+        "start_latest": "2025-11-28",
+        "end_earliest": "2025-11-28",
+        "end_latest": "2025-11-28",
+        "last_confirmed": "2025-11-28",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Inter-terminal road obstruction is not precisely located; marker is a qualified named-crossing reference only."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "ca351c81a2680e17dc49e980a17423206e0dee5eb16fb304a7e30c75966dc162"
+}

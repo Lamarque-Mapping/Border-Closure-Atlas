@@ -1,0 +1,48 @@
+{
+  "record_id": "REC50-R43-005",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Burkina Faso import policy for poultry/products from three origins. Origin countries cannot be converted into the entry routes used for all such consignments.",
+  "source_checks": [
+    {
+      "url": "https://h.aa.com.tr/fr/afrique/grippe-aviaire-le-burkina-interdit-limportation-de-la-volaille-en-provenance-du-b%C3%A9nin-du-togo-et-de-la-c%C3%B4te-d-ivoire/2341994",
+      "access_status": "full_text_web",
+      "finding": "Anadolu quotes ministry reinforcement of frontier controls for avian-disease risk; does not enumerate ports.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-08.json",
+      "evidence_sha256": "181a0d0a4ed65800cbb39dea81eef7b77971f215fa7c35d218df7e8a6cbc85aa"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R43-005-P1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Burkina Faso import policy for poultry/products from three origins. Origin countries cannot be converted into the entry routes used for all such consignments. Current phase only: Burkina Faso import prohibition on poultry and avian products from the three named origins",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2021-08-20",
+        "end_latest": "2021-08-20",
+        "last_confirmed": "2021-08-20",
+        "endpoint_status": "last_confirmed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "REC50-R43-005-P1: Friday derives to the 20 August 2021 ministry announcement, not a known first physical border denial. The measure covers only poultry and avian products from Benin, Togo and Côte d’Ivoire in this reconstruction. Frontier-control reinforcement supplies the land-policy nexus; lifting and all-post implementation remain unknown.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "No individually identified post or geographically exhaustive import-route set; no Benin/Togo/Côte d’Ivoire-only frontier substitution."
+      ]
+    }
+  ],
+  "unresolved": [
+    "No individually identified post or geographically exhaustive import-route set; no Benin/Togo/Côte d’Ivoire-only frontier substitution."
+  ]
+}

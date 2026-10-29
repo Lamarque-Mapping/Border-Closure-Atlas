@@ -1,0 +1,48 @@
+{
+  "record_id": "R2-ME-012",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Semalka–Faysh Khabur is the specified commercial crossing linking northeast Syria and Iraqi Kurdistan; named customs facility is distinct from the similarly named Semalka village elsewhere.",
+  "source_checks": [
+    {
+      "url": "https://npasyria.com/en/71303/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Report confirms commercial restoration after over a month and gives 16 December suspension; canonical onset range preserves discrepant 15/16 December reporting.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-04.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-ME-012-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-semalka-faysh-khabur",
+          "name": "Semalka–Faysh Khabur customs crossing area",
+          "coordinates": [
+            42.3484273,
+            37.0892488
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 500 m; named Syrian customs facility, not an exact pontoon bridge or opposite bank terminal.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/6019972486"
+          ],
+          "evidence_note": "OSM node 6019972486, version 2, timestamp 2024-03-19T01:33:56Z. Identity tags: {\"government\": \"customs\", \"name\": \"معبر سيمالكا\", \"name:en\": \"Semalka Borders\", \"office\": \"government\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/f362e988de5d494f.raw",
+          "evidence_sha256": "e7d1d28a269632956dfb7a9bb9df54ad674db5f3c81bd2bdc278b6b60bcd5f6a"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Applies only to ordinary commercial trade. Restored passenger cohorts are not evidence that all travellers or all Iraq–Syria crossings reopened.",
+      "date_scope_check": "Canonical bounded_interval: start 2021-12-15–2021-12-16; endpoint 2022-01-24–2022-01-25; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

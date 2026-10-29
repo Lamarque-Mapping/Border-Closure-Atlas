@@ -1,0 +1,64 @@
+{
+  "record_id": "R3-ME-007",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Safwan–Abdali road border crossing first protest obstruction. Point represents the named Iraqi facility; no separate protest camp footprint claimed.",
+  "source_checks": [
+    {
+      "url": "https://www.aa.com.tr/en/middle-east/iraqi-protesters-close-border-crossing-with-kuwait/1203876",
+      "access_status": "full_text_web",
+      "finding": "Police captain account says demonstrators forced closure of Safwan border crossing; other unrest not assigned to this site.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-09.json",
+      "evidence_sha256": "b17973adc9a6401dd558136684759d78ec1a61cdd0dbd1df9292bb4ec32d2b58"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-ME-007-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-safwan-abdali",
+          "name": "Safwan / Abdali",
+          "coordinates": [
+            47.7142429,
+            30.1032484
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/409262253",
+            "https://www.openstreetmap.org/api/0.6/way/409262253/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"area\": \"yes\", \"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"منفذ سفوان الحدودي\", \"name:ar\": \"منفذ سفوان الحدودي\", \"name:en\": \"Safwan Border Post\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/9d386d652781a93a7e64.html",
+          "evidence_sha256": "4c85e298bbc00f303cea2b3999d3dcc379bd83e2d7751ba6de01f85b7541e74e",
+          "osm_version": "8",
+          "osm_timestamp": "2025-12-06T12:37:32Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Safwan–Abdali road border crossing first protest obstruction. Point represents the named Iraqi facility; no separate protest camp footprint claimed. Current phase only: Safwan first reported protest obstruction and commercial reopening",
+      "date_scope_check": {
+        "start_earliest": "2018-07-14",
+        "start_latest": "2018-07-14",
+        "end_earliest": "2018-07-14",
+        "end_latest": "2018-07-14",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "No precise hours or full passenger restoration established. Later closed-status report remains unreconciled; this is only the first same-day spell.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

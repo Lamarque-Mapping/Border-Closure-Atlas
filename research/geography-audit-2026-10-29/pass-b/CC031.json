@@ -1,0 +1,49 @@
+{
+  "record_id": "CC031",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Election suspension of simplified crossing services in Leningori/Akhalgori and Dzau, including Razdakhan and Pereu, superimposed on monthly limited openings.",
+  "source_checks": [
+    {
+      "url": "https://interfax.com/newsroom/top-stories/106488/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Interfax reports security-council order closing simplified points from 08:00 October 25 to 08:00 October 28 and describes their pre-existing 20th–30th monthly availability.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-central-1.json",
+      "sha256": "865b9f40264021137f81c686a32bd2af79e2116df407a80b6a36d59c3fe9110b"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC031-R1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Election suspension of simplified crossing services in Leningori/Akhalgori and Dzau, including Razdakhan and Pereu, superimposed on monthly limited openings.",
+      "date_scope_check": {
+        "start_earliest": "2024-10-25",
+        "start_latest": "2024-10-25",
+        "end_earliest": "2024-10-28",
+        "end_latest": "2024-10-28",
+        "last_confirmed": null,
+        "temporal_display_rule": "held_evidence_do_not_animate_as_confirmed",
+        "held_status_preserved": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Interfax assigns October 25–28 at 08:00 to crossing closure; the original October 10 KGB notice and its English translation assign those times to enhanced service and state that the crossings will not operate in October. Exact special-closure bounds remain unresolved."
+      },
+      "unresolved": [
+        "Canonical phase is contested and remains held. Pereu/Sinaguri/Karzmani aliases require exact phase-specific disambiguation; a verified Odzisi point does not authorize this held phase.",
+        "Existing contested, excluded or not-strictly-over-24-hours status is preserved; no geography approval."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Canonical phase is contested and remains held. Pereu/Sinaguri/Karzmani aliases require exact phase-specific disambiguation; a verified Odzisi point does not authorize this held phase."
+  ],
+  "input_sha256": "c3f083c35a21cec01b9122bf8f124d02a1b03b08601e467a3c61e7d0b5cf22d0",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

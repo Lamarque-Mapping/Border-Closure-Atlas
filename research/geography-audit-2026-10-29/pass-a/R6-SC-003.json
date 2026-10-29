@@ -1,0 +1,90 @@
+{
+  "record_id": "R6-SC-003",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Named Sarakhs–Serakhs railway cargo crossing, separate from the Sarahs road checkpoint. Fresh area map located the road facility but did not establish the railway frontier gate; it must not be reused for this rail phase.",
+  "source_checks": [
+    {
+      "url": "https://iranpress.com/content/20273/sarakhs-railway-border-temporarily-closed",
+      "access_status": "inaccessible",
+      "finding": "Original railway closure page returned 502; no new substantive verification.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-08.json",
+      "sha256": "77c15724abd029c7c27f0fa1a148f646365243ec002addf72902bd1bbee3f1f0"
+    },
+    {
+      "url": "https://iranpress.com/content/23142/iran-railway-border-with-turkmenistan-reopens",
+      "access_status": "inaccessible",
+      "finding": "Original reopening page returned 502.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-07.json",
+      "sha256": "5cbb6ef8e1dc6a4a8b3507ee58a73a33ffb57ebef5e0089be117fc0d8ff1d2ff"
+    },
+    {
+      "url": "https://irannewsdaily.com/2020/06/incheh-borun-border-with-turkmenistan-reopens/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://iranpress.com/content/21492/sarakhs-turkmenistan-railway-border-ready-reopen",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://ticaret.gov.tr/blog/ulkelerden-ticari-haberler/turkmenistan/turkmenistan-iran-kargosunun-sinirdan-girmesine-izin-veriyor",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.trend.az/business/economy/3226013.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.tehrantimes.com/news/449181/Incheboroun-railway-crossing-with-Turkmenistan-reopens",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-SC-003-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Sarakhs railway cargo crossing between Iran and Turkmenistan.",
+      "date_scope_check": {
+        "scope": "Sarakhs railway cargo crossing between Iran and Turkmenistan.",
+        "start_earliest": "2020-04-01",
+        "start_latest": "2020-04-02",
+        "end_earliest": "2020-06-18",
+        "end_latest": "2020-06-18",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": [
+        "Exact rail crossing/yard coordinate with positive identity match not established.",
+        "IranPress original onset and reopening pages returned 502 via web."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Sarakhs station map search is a lead only; no station or road point substituted for unknown rail frontier location."
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "record_id": "GL03",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Reports concern both Grande and Petite Barrière between Goma and Gisenyi/Rubavu. Rwandan ministry calls this a screening slowdown while Congolese reporting describes entry/exit prohibition; contested date/occurrence status remains.",
+  "source_checks": [
+    {
+      "url": "https://www.moh.gov.rw/news-detail/rwandas-border-with-drc-remains-open",
+      "access_status": "full_text_web",
+      "finding": "Original Ministry of Health statement August 1 says border open after morning traffic slowdown during reinforced screening.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-13.json",
+      "evidence_sha256": "24be039dcfc5d544f7c565c300a172e14ffebc29f1bc9561b47d14d9e84092a0"
+    },
+    {
+      "url": "https://actualite.cd/2019/08/01/goma-ebola-le-rwanda-rouvert-sa-frontiere-avec-la-rdc",
+      "access_status": "full_text_web",
+      "finding": "Actualite explicitly names grande and petite barriers as two posts with entry and exit forbidden from Rwandan side that morning.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-13.json",
+      "evidence_sha256": "24be039dcfc5d544f7c565c300a172e14ffebc29f1bc9561b47d14d9e84092a0"
+    },
+    {
+      "url": "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+      "access_status": "full_text_original_pdf",
+      "finding": "Original Appendix A E18 names Rubavu(Gisenyi)–Goma (La Corniche) and gives coordinate.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/25782abcef016f49e77a.pdf",
+      "evidence_sha256": "35e1b5d512bfc882baf263b1abe002d0c99331d0b2b8e08fcb0f354ab504cbed"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "GL03-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-goma-grande-barriere",
+          "name": "Grande Barrière / La Corniche",
+          "coordinates": [
+            29.24483,
+            -1.69719
+          ],
+          "coordinate_method": "Published AU-PIDA illustrative border-post coordinate, independently read in original report Appendix A",
+          "precision": "approximate crossing area; illustrative published marker, not surveyed gate",
+          "source_urls": [
+            "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "Appendix A E18, printed p79 / PDF p81; longitude/latitude transcribed in lon,lat order. Report identifies crossing name but does not establish historic operation or exact obstruction.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/25782abcef016f49e77a.pdf",
+          "evidence_sha256": "35e1b5d512bfc882baf263b1abe002d0c99331d0b2b8e08fcb0f354ab504cbed"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Reports concern both Grande and Petite Barrière between Goma and Gisenyi/Rubavu. Rwandan ministry calls this a screening slowdown while Congolese reporting describes entry/exit prohibition; contested date/occurrence status remains. Current phase only: Reported temporary Goma–Gisenyi movement restriction on August 1; closure versus screening slowdown remains disputed.",
+      "date_scope_check": {
+        "start_earliest": "2019-08-01",
+        "start_latest": "2019-08-01",
+        "end_earliest": "2019-08-01",
+        "end_latest": "2019-08-01",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": true,
+        "temporal_display_rule": "held_evidence_do_not_animate_as_confirmed",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "This is a disputed same-day episode, not an adjudicated eight-hour physical shutdown. Congolese departures were reportedly exempt. No zero-hour or whole-day duration is calculated.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Petite Barrière identity is clear, but its exact facility reference was not independently located. Do not use Grande point to represent both posts."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Petite Barrière identity is clear, but its exact facility reference was not independently located. Do not use Grande point to represent both posts."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "record_id": "ME028",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "A through-vehicle road between Lebanese Masnaa and Syrian Jdeidat Yabous was severed; this is an approach-road interruption, not proof that both terminal buildings were closed.",
+  "source_checks": [
+    {
+      "url": "https://today.lorientlejour.com/article/1437645/hamieh-announces-completion-of-road-restoration-at-masnaa-border-crossing.html",
+      "access_status": "fresh_web_full_text_inspected",
+      "finding": "30 November report says the ministry completed restoration of the Masnaa crossing road, previously hit in early October.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-01.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME028-REV1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-masnaa-jdeidet-yabous",
+          "name": "Masnaa–Jdeidet Yabous",
+          "coordinates": [
+            35.9238439,
+            33.7020263
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/1066108779"
+          ],
+          "evidence_note": "OSM node 1066108779, version 6, timestamp 2018-03-07T21:49:53Z. Identity tags: {\"barrier\": \"border_control\", \"country\": \"LB\", \"name\": \"المصنع\", \"name:ar\": \"المصنع\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/20ae20e7ff8c6d34.raw",
+          "evidence_sha256": "b5b73b39facf9f24bf9b3e4fa2e6f57d4f34db217203cce2c4216a3354972c4f"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Masnaa is a verified crossing-area reference only. The retained Oct 4–Nov 30 road-vehicle phase does not apply to every passenger route or to an exact crater location.",
+      "date_scope_check": "Canonical bounded_interval: start 2024-10-04–2024-10-04; endpoint 2024-10-04–2024-11-30; last confirmed 2024-10-04. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": [
+        "Exact road-severance footprint between the two separately geolocated terminals has not been established."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Crossing reference is locatable but damaged approach segment remains unlocated."
+  ]
+}

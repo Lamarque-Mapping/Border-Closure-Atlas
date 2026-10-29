@@ -1,0 +1,106 @@
+{
+  "record_id": "ME018",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Iranian suspension concerns three named official crossings, with Bashmakh reopening first and Parwezkhan/Haji Omaran later.",
+  "source_checks": [
+    {
+      "url": "https://www.rudaw.net/english/categories/kurdistan/1012096",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Original report names all three crossings and 15 October closure while recording Iranian spokesperson disagreement.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-16.txt"
+    },
+    {
+      "url": "https://www.thenationalnews.com/world/mena/iran-reopens-all-border-posts-with-iraqi-kurdistan-1.692253",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "2 January story identifies the remaining two as Parwezkhan and Haji Omaran; Bashmaq had already reopened.",
+      "retrieval_http_status": "200",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-11.txt",
+      "evidence_sha256": "caf70993c549166b23a420e57137880d60e2ed3b93c43f9e4956a617aa33bba8"
+    },
+    {
+      "url": "https://www.aa.com.tr/en/middle-east/iran-reopens-border-crossing-with-iraq-s-kurdish-region/947192",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "25 October report attributes Bashmaq restoration for people and trade to Iranian consulate.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-16.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME018-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "par",
+          "name": "Parwezkhan / Parviz Khan road crossing",
+          "coordinates": [
+            45.585184,
+            34.5520766
+          ],
+          "coordinate_method": "Centre of the bounding box of the freshly retrieved named OSM way; approximate facility marker",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/way/1356981409/full"
+          ],
+          "evidence_note": "OSM way 1356981409, version 3, timestamp 2026-01-14T10:16:35Z. Identity tags: {\"area\": \"yes\", \"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"پایانه مرزی پرویزخان\", \"name:ar\": \"معبر برويز خان الحدودي\", \"name:en\": \"Parviz Khan Border Post\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/06aa85dd0dfa9867.raw",
+          "evidence_sha256": "98e6e495368001a4d44c7858619a434ee2d648f2fa24693da8c2bd0af310ce09"
+        },
+        {
+          "proposed_site_id": "haji",
+          "name": "Haji Omaran customs crossing area",
+          "coordinates": [
+            45.0659592,
+            36.6659899
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 1 km; named customs facility, not exact international boundary line.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/5135898039"
+          ],
+          "evidence_note": "OSM node 5135898039, version 3, timestamp 2018-06-24T18:32:14Z. Identity tags: {\"name\": \"گومرگی حاجی ئۆمەران\", \"office\": \"government\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/f090a0e0d0c4d5df.raw",
+          "evidence_sha256": "52eecc199d51f1b7478f78e4f31f7d9cc07d4145d4d698b9e119647b168667ea"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Remaining two official sites only; neither Bashmakh nor AA mention of Sayran Ban inherits this January endpoint.",
+      "date_scope_check": "Canonical closed_interval: start 2017-10-15–2017-10-15; endpoint 2018-01-02–2018-01-02; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    },
+    {
+      "phase_id": "ME018-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "bash",
+          "name": "Bashmakh official road crossing",
+          "coordinates": [
+            46.0127893,
+            35.6144125
+          ],
+          "coordinate_method": "Centre of the bounding box of the freshly retrieved named OSM way; approximate facility marker",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/way/215808199/full"
+          ],
+          "evidence_note": "OSM way 215808199, version 7, timestamp 2026-01-14T10:16:35Z. Identity tags: {\"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"دەروازەی سنووریی باشماخ\", \"name:ar\": \"معبر باشماخ الحدودي\", \"name:ckb\": \"دەروازەی سنووریی باشماخ\", \"name:en\": \"Bashmakh Border Crossing\", \"name:fa\": \"پایانه مرزی باشماخ\", \"name:ku\": \"Deriyê Sinorî yê Başmax\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/7f1ee971ca708671.raw",
+          "evidence_sha256": "4b4bc48a0b9fbea99e31cac6b20006936a3dbc5f52f3c28fb3f528582bf9e8f0"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Bashmakh passenger/commercial phase ends at its own October restoration.",
+      "date_scope_check": "Canonical closed_interval: start 2017-10-15–2017-10-15; endpoint 2017-10-25–2017-10-25; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

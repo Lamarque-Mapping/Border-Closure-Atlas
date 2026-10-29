@@ -1,0 +1,73 @@
+{
+  "record_id": "R16-EU-005",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Siret–Porubne international road crossing and Romanian approach. Distinct episode and traffic direction retained; no rail facility or entire Romania–Ukraine frontier substituted.",
+  "source_checks": [
+    {
+      "url": "https://tvrinfo.ro/peste-150-de-camioane-au-iesit-miercuri-din-romania-prin-punctul-de-trecere-a-frontierei-siret/",
+      "access_status": "fresh_source_extract",
+      "finding": "January 18 account describes two-day heavy-truck closure and outward-from-Romania passage of 155 trucks on January 17; inward freight remained blocked.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-003.json"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/3019220234",
+      "access_status": "fresh_full_xml",
+      "finding": "Inspected XML: border_control node, latitude 47.9863430 longitude 26.0622666.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/9eec6ec81ce76c4ccdfb.xml",
+      "source_sha256": "6fc446a1327135c811858a799b807c53e5244139b5e47220285b7034d0e40de8"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R16-EU-005-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "crossing-siret-porubne",
+          "name": "Siret–Porubne",
+          "coordinates": [
+            26.0622666,
+            47.986343
+          ],
+          "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/3019220234"
+          ],
+          "evidence_note": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/9eec6ec81ce76c4ccdfb.xml",
+              "sha256": "6fc446a1327135c811858a799b807c53e5244139b5e47220285b7034d0e40de8",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Siret truck blockage in both directions, ending when outward-from-Romania truck movement partially resumed.",
+      "date_scope_check": {
+        "start_earliest": "2024-01-15",
+        "start_latest": "2024-01-15",
+        "end_earliest": "2024-01-17",
+        "end_latest": "2024-01-17",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact historical approach blockade footprint remains unlocated."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "c6271a6d8ac8a49cb362c9209ffc0dc21195c50fb5804e4de2c9a3340e9e5c0c"
+}

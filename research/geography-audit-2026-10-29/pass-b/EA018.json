@@ -1,0 +1,105 @@
+{
+  "record_id": "EA018",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "The PNG Wutung immigration gate opposite Indonesian Skouw. Initial early-2020 interruption and a later renewed restriction are separate spells, not one uninterrupted pandemic closure.",
+  "source_checks": [
+    {
+      "url": "https://www.thenational.com.pg/stranded-at-border/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "On-site report identifies PNG immigration officers denying entry at Wutung after the Wednesday closure; diplomatic/local-resident cases are discussed.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d903d9097553d91e1cbe.html",
+      "sha256": "e40d2657a45e4166eb3e58308bec1b0e507ddcde311e1ec759420dc98f98fef4",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d903d9097553d91e1cbe.txt",
+      "text_sha256": "e4116082734909c38de8c483ee6687490458b8fb3f184e65013054243f483a5b",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-1.json"
+    },
+    {
+      "url": "https://www.thenational.com.pg/border-crossing-between-png-indonesia-closed/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Governor names Wutung post and travel/business suspension.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/0c12526ec8156e815b6e.html",
+      "sha256": "e40d2657a45e4166eb3e58308bec1b0e507ddcde311e1ec759420dc98f98fef4",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/0c12526ec8156e815b6e.txt",
+      "text_sha256": "4f5898b12c3626426b44477a0fc210cf4ce9de83986453c14b8955d09a69fca7",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-1.json"
+    },
+    {
+      "url": "https://www.thenational.com.pg/border-post-at-wutung-re-opens/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "October 2022 report identifies PNG Wutung customs reopening for travel to Jayapura; this is later evidence and does not erase the separately accepted February 2020 lifting.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/11a0f69351996476c6e9.html",
+      "sha256": "6d352705ec8be8a6f59a8c81ebbb89c11b26dcdf6522bf2459da08e36cd1e306",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/11a0f69351996476c6e9.txt",
+      "text_sha256": "6dab37c759e13cb62580304e1a30c051bc632e35e24708435ca0e3c42bb2597e",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-wutung-followup.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA018-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "The PNG Wutung immigration gate opposite Indonesian Skouw. Initial early-2020 interruption and a later renewed restriction are separate spells, not one uninterrupted pandemic closure.",
+      "date_scope_check": {
+        "start_earliest": "2020-01-29",
+        "start_latest": "2020-01-29",
+        "end_earliest": "2020-02-02",
+        "end_latest": "2020-02-11",
+        "last_confirmed": "2020-02-02",
+        "temporal_display_rule": "",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "EA018-D1: The initial January 29 closure was still preventing ordinary entry in the consul’s February 2 account, reported February 3. The minister said the ban had been lifted by February 11. This supports conservative 4–13 calendar-day difference bounds and a restriction longer than 24 hours, without identifying the exact first restored passage. A February 6 report also allowed approved returning citizens until a deadline inconsistently written February 8/9; this is not general business reopening.\n\nEA018-AUDIT20261025-1: Later reclosure is independently documented in July 2021, but its start and intervening continuity are unknown. The June 21 goods-only opening was postponed and July 21 remained conditional. BNPP reports Wutung–Skouw operation restored October 24, 2022; PNG Customs separately confirms PNG citizens could travel to Jayapura. This does not turn the initial January 2020 spell into a continuous multi-year closure or establish unrestricted entry for all nationalities."
+      },
+      "unresolved": [
+        "Indonesian PLBN Skouw building has been located, but the PNG Wutung gate position was not recovered; opposite-direction terminals cannot be silently merged.",
+        "Later phase exact July 2021 last-confirmation content not retrieved in this batch; canonical date remains unchanged."
+      ]
+    },
+    {
+      "phase_id": "EA018-AUDIT20261025-1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "The PNG Wutung immigration gate opposite Indonesian Skouw. Initial early-2020 interruption and a later renewed restriction are separate spells, not one uninterrupted pandemic closure.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2021-07-07",
+        "end_latest": "2022-10-24",
+        "last_confirmed": "2021-07-07",
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "EA018-D1: The initial January 29 closure was still preventing ordinary entry in the consul’s February 2 account, reported February 3. The minister said the ban had been lifted by February 11. This supports conservative 4–13 calendar-day difference bounds and a restriction longer than 24 hours, without identifying the exact first restored passage. A February 6 report also allowed approved returning citizens until a deadline inconsistently written February 8/9; this is not general business reopening.\n\nEA018-AUDIT20261025-1: Later reclosure is independently documented in July 2021, but its start and intervening continuity are unknown. The June 21 goods-only opening was postponed and July 21 remained conditional. BNPP reports Wutung–Skouw operation restored October 24, 2022; PNG Customs separately confirms PNG citizens could travel to Jayapura. This does not turn the initial January 2020 spell into a continuous multi-year closure or establish unrestricted entry for all nationalities."
+      },
+      "unresolved": [
+        "Indonesian PLBN Skouw building has been located, but the PNG Wutung gate position was not recovered; opposite-direction terminals cannot be silently merged.",
+        "Later phase exact July 2021 last-confirmation content not retrieved in this batch; canonical date remains unchanged."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Indonesian PLBN Skouw building has been located, but the PNG Wutung gate position was not recovered; opposite-direction terminals cannot be silently merged.",
+    "Later phase exact July 2021 last-confirmation content not retrieved in this batch; canonical date remains unchanged."
+  ],
+  "input_sha256": "8594adf50f8ebe0bc5c5fd2e47d374dc4fee103eab596c30c41bc7f3e08636a5",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted.",
+  "additional_evidence": [
+    {
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-8.json",
+      "sha256": "aa98b771c2107878fb3ddd2e7ee84274e83b66cdbf3bac0c06c424317e851eb8"
+    }
+  ]
+}

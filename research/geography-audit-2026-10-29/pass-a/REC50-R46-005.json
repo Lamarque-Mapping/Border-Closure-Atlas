@@ -1,0 +1,50 @@
+{
+  "record_id": "REC50-R46-005",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "La Gabrielle is the international Saint-Laurent-du-Maroni–Albina ferry service. A named ferry suspension must not become a highlight of the entire Maroni frontier.",
+  "source_checks": [
+    {
+      "url": "https://www.guyane.developpement-durable.gouv.fr/communique-de-presse-bac-international-la-a1936.html",
+      "access_status": "inaccessible",
+      "finding": "Original maintenance notice returned HTTP 403; body not inspected.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-020.json"
+    },
+    {
+      "url": "https://www.guyane.developpement-durable.gouv.fr/IMG/pdf/com.presse_bac_la_gabrielle_-_arret_technique_-.pdf",
+      "access_status": "inaccessible",
+      "finding": "Original maintenance PDF returned HTTP 403; no fresh full text.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-021.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R46-005-P1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Planned La Gabrielle ferry maintenance stop between Saint-Laurent-du-Maroni and Albina",
+      "date_scope_check": {
+        "start_earliest": "2017-09-25",
+        "start_latest": "2017-09-25",
+        "end_earliest": "2017-10-30",
+        "end_latest": "2017-10-30",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "announced_window_layer_only",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Original maintenance notice inaccessible and terminal/route source geography unverified."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "bc70fb7bf37282bb5439b8a231a7ba4ebf5db82cfd220f58d81235ecbc189a51"
+}

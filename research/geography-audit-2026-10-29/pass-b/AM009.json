@@ -1,0 +1,58 @@
+{
+  "record_id": "AM009",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Dominican presidency ordered broad closure July 7; the later evidence narrows this operational phase to Dajabón food commerce, where limited trade resumed. Dajabón has distinct pedestrian-market and vehicle bridge facilities, not resolved by these articles.",
+  "source_checks": [
+    {
+      "url": "https://www.presidencia.gob.do/noticias/decisiones-del-consejo-de-seguridad-y-defensa-nacional-para-reforzar-la-zona-fronteriza",
+      "access_status": "full_text_html",
+      "finding": "Official full text orders frontier closure and binational-market suspension after the July 7 assassination.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/b0d5449995fa428173e5.raw",
+      "sha256": "3cbe15064016febd5bd645ca47eb09fe0c2eb707b213a0188b532c43be1d6f08"
+    },
+    {
+      "url": "https://www.diariolibre.com/actualidad/ciudad/se-reactiva-el-mercado-binacional-en-la-frontera-dominico-haitiana-DA27503374",
+      "access_status": "full_text_html",
+      "finding": "Diario Libre body identifies Dajabón food-product passage and limited market reactivation; does not fix a particular bridge gate.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/131022313c016f63adf2.raw",
+      "sha256": "deaa1cf1f3aeff384658b3ba5f095fcf733bb563185fccc4735cdb65b1b8fc83"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM009-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Dajabón food-commerce restriction following the Haitian assassination, to initial limited commercial restoration.",
+      "date_scope_check": "Existing dates, uncertainty and duration eligibility retained. Geography remains held pending the identified evidence gap.",
+      "canonical_dates": {
+        "kind": "bounded_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2021-07-07",
+        "start_latest": "2021-07-07",
+        "end_earliest": "2021-07-13",
+        "end_latest": "2021-07-14",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": [
+        "Named locality and market confirmed, but pedestrian versus road-bridge identity and gate coordinate need original geographic corroboration."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/AM009.json",
+  "canonical_input_sha256": "88e74851425f814d617825ea35f569f6501ebc83a4f917a6b5dd20f47c023f4c",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

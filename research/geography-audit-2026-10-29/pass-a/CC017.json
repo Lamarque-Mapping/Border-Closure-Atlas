@@ -1,0 +1,87 @@
+{
+  "record_id": "CC017",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "The H1N1 measure applied across South Ossetian-controlled ABL crossings to ordinary non-exempt passage. It was wider than Odzisi alone and is not the Georgia–Russia international boundary. The accessible evidence does not enumerate a complete geographically resolved set of gates or an approved ABL geometry.",
+  "source_checks": [
+    {
+      "url": "https://www.interfax-russia.ru/military/news_eng/325733",
+      "access_status": "search_extract",
+      "finding": "Indexed article reports checkpoints reopened March 15 and H1N1 suspension since January 11. HTTP response itself was empty.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-11.json",
+      "sha256": "ace16ab478ddc44001aa128035be3b519389e44c139eaaf79dc42e424a9fe569"
+    },
+    {
+      "url": "https://www.democracyresearch.org/files/62DRI%20report%20ENG%202020%20%281%29.pdf",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "Full PDF documents H1N1 suspension and February 20 limited one-way exception.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-a1747d72201ba66bdf.bin",
+      "sha256": "396c824d9fa32fc5269ae6782158954d3feeb7e4c9967252aa1f97a2b088fa0e"
+    },
+    {
+      "url": "https://civil.ge/wp-content/uploads/2019/04/19th-consolidated-report-on-the-conflict-in-Georgia-October-2018-March-2019.pdf",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Council of Europe report treats January 2019 closures as ABL-wide restrictions; no coordinate evidence.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-13.json",
+      "sha256": "b5c82f9652aa440baadf5b48d3244d752803d5faabc03f6fd7fec150dbaf08ec"
+    },
+    {
+      "url": "https://civil.ge/archives/273471",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 503: Service Unavailable",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.unmissions.org/en/dppa/press-releases/statement-of-the-co-chairs-of-the-geneva-international-discussions-2",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 403: Forbidden",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://civil.ge/archives/279479",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 503: Service Unavailable",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.interfax-russia.ru/military/news_eng/324454",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-e62e2d2c27028c3ccf.bin",
+      "sha256": "7a97b39f03dcc7332ba6b36e7bc24db7abaa47f3a11e87dc6bddcbdc257f382d"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC017-D1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ordinary non-exempt passage across South Ossetian-controlled crossings during the H1N1 restriction.",
+      "date_scope_check": {
+        "scope": "Ordinary non-exempt passage across South Ossetian-controlled crossings during the H1N1 restriction.",
+        "start_earliest": "2019-01-11",
+        "start_latest": "2019-01-12",
+        "end_earliest": "2019-03-15",
+        "end_latest": "2019-03-15",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Interfax indexed reopening report gives March 15 2019 06:00, with January 11 onset; CoE/other reports differ by one day. DRI documents a February 20 three-day one-way exception. Retain canonical bounds and exceptions, not total prohibition of every movement."
+      },
+      "unresolved": [
+        "No independently sourced complete crossing set or South Ossetian ABL geometry available in current inventory."
+      ]
+    }
+  ],
+  "unresolved": []
+}

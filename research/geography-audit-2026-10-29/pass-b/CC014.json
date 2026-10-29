@@ -1,0 +1,61 @@
+{
+  "record_id": "CC014",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Foreign-carrier road transit through Turkmenistan on the Uzbekistan/Farap to Iran/Sarakhs corridor, while cargo transfers and rail remained distinct operating channels.",
+  "source_checks": [
+    {
+      "url": "https://cpmm.carecprogram.org/2020-report/turkmenistan/",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "CAREC distinguishes closed foreign-truck through traffic, transshipment limitations and continuing railway operations; Farap serves both modes.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/a643c1e44c1105faf68b.html",
+      "sha256": "27e212dfb46cf2643db865278db46d0b3314330160cb7880b2ef4e14ad9c3135",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/a643c1e44c1105faf68b.txt",
+      "text_sha256": "8fb839bf3e92a40c6701651dfa58fb548a7ef5040faf7df16d22c165a779264b",
+      "status": 200
+    },
+    {
+      "url": "https://customs.gov.tm/en/news/328",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Turkmen customs specifies restored transit via Alat and Serakhs from 1 June with health conditions.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/8d29f07ada0d641d629f.html",
+      "sha256": "f1fc14ed91cf1337f7be2f333917704df1797ed58ba4b629003aec848a7a6f91",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/8d29f07ada0d641d629f.txt",
+      "text_sha256": "0647a77747831a0937ea1b593e7cf3e9d04af846d94259b881a3b4d170c3e1d6",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "CC014-D1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Foreign-carrier road transit through Turkmenistan on the Uzbekistan/Farap to Iran/Sarakhs corridor, while cargo transfers and rail remained distinct operating channels.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-23",
+        "start_latest": "2020-03-24",
+        "end_earliest": "2022-06-01",
+        "end_latest": "2022-06-01",
+        "last_confirmed": null,
+        "temporal_display_rule": "held_evidence_do_not_animate_as_confirmed",
+        "held_status_preserved": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "This is an authority-reported operational endpoint, not an independently observed first truck. Cargo transfer, rail and non-contact handovers continued; other Turkmen frontiers are not assigned this duration. CAREC dates March23; the contemporary Mission/IRU foreign-truck rule is effective March24. Retain this unresolved difference and withhold numeric duration."
+      },
+      "unresolved": [
+        "Canonical phase remains contested. Farap road and Sarakhs road facilities are not independently located; rail points must not be substituted.",
+        "Existing contested, excluded or not-strictly-over-24-hours status is preserved; no geography approval."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Canonical phase remains contested. Farap road and Sarakhs road facilities are not independently located; rail points must not be substituted."
+  ],
+  "input_sha256": "67980307d3ef1f04c1406a026467b2af25ca1c913b8e126648fa9aa0892ddbbc",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

@@ -1,0 +1,75 @@
+{
+  "record_id": "AM037",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "French restrictions at Bellevue and Quartier d’Orléans roadcontrols. Exact second post not independentlygeolocated.",
+  "source_checks": [
+    {
+      "url": "https://www.soualigapost.com/fr/actualite/35424/transports/restriction-du-franchissement-de-la-fronti%C3%A8re-et-aussi-des-d%C3%A9placements",
+      "access_status": "full_text_cached_this_pass",
+      "finding": "29Mar account ordereffective nextday; professional andmedical exceptions.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/a18929fe5ae50a22d33a.raw",
+      "sha256": "6b2196c07bb6aafdf24249e90ca253d301c1f192e6eba0de48202b051ee9478e"
+    },
+    {
+      "url": "https://www.faxinfo.fr/libre-circulation-entre-saint-martin-et-sint-maarten-depuis-le-1er-juin-a-minuit/",
+      "access_status": "full_text_cached_this_pass",
+      "finding": "Prefecture communiqué reproduced2Jun reports freecirculation Monday1Jun midnight and controlsremoved; physicalcontainers separatelybeingremoved.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/1cc3d40c6a8346987ab6.raw",
+      "sha256": "11caff50666a90992dc7a65d9c32c481f9282e9da706235844d5da9ebcb50a84"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM037-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-bellevue-cole-bay",
+          "name": "Bellevue–Cole Bay road crossing area",
+          "coordinates": [
+            -63.08639,
+            18.04714
+          ],
+          "coordinate_method": "OSM-derived Mapcarta named monument coordinates corroborated by governor identity",
+          "precision": "approximate crossing area within several hundred metres; barrier exact location unresolved",
+          "source_urls": [
+            "https://mapcarta.com/N542386486",
+            "https://www.openstreetmap.org/node/542386486",
+            "https://www.kabgsxm.com/governors-journal.aspx?id_journal=144&language=EN"
+          ],
+          "evidence_note": "OSM named Border Monument beside border road; governor explicitly identifies Cole Bay/Bellevue monument. Used as crossing-area reference only; August2020 account places actual filtering barrier before frontier, and roundabout is separate."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Bellevue crossingarea only; Quartier d’Orléans exact roadcontrol remains unlocated.",
+      "date_scope_check": "30Mar onset and1–2Jun midnight interpretation retained; crossingreference not claim exactfilterbarrier.",
+      "canonical_dates": {
+        "kind": "bounded_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2020-03-30",
+        "start_latest": "2020-03-30",
+        "end_earliest": "2020-06-01",
+        "end_latest": "2020-06-02",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [
+    "Second named crossing needs exact roadcontrol identity; no localitycentroid substituted."
+  ],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/AM037.json",
+  "canonical_input_sha256": "7580cc138eb7b7fdea25408ba17c2a1cfc3971182c356a57c5ce9e05b2e2025e",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}
