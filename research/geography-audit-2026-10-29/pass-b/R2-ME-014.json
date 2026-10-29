@@ -1,0 +1,68 @@
+{
+  "record_id": "R2-ME-014",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Al-Wadiah / Al Wadea is the Hadramout–Sharurah road port. This phase covers commercial trucks during the additional complete shutdown, not the longer passenger restriction.",
+  "source_checks": [
+    {
+      "url": "https://www.aa.com.tr/ar/%D8%A7%D9%84%D8%AF%D9%88%D9%84-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9/%D8%A7%D9%84%D9%8A%D9%85%D9%86-%D9%81%D8%AA%D8%AD-%D8%A7%D9%84%D9%85%D9%86%D9%81%D8%B0-%D8%A7%D9%84%D8%A8%D8%B1%D9%8A-%D8%A7%D9%84%D9%88%D8%AD%D9%8A%D8%AF-%D9%85%D8%B9-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9-%D8%A3%D9%85%D8%A7%D9%85-%D8%AD%D8%B1%D9%83%D8%A9-%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9/1802272",
+      "access_status": "full_text_web",
+      "finding": "Customs chief Saleh Banser reports commercial reopening after four days of complete closure, while passenger restrictions continued. The article distinguishes the March national passenger measure from the additional April shutdown.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-23.json",
+      "evidence_sha256": "370af37ad7f6c12c1c10fca2929541975151fc75e2b27bc52cfd319f5cdb8782"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-ME-014-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-al-wadiah",
+          "name": "Al-Wadiah / al-Wadea land port",
+          "coordinates": [
+            47.0113562,
+            16.9403092
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/10138647617",
+            "https://www.openstreetmap.org/api/0.6/node/10138647617"
+          ],
+          "evidence_note": " OSM tags inspected: {\"name\": \"مكتب الهجرة والجوازات اليمني منفذ الوديعه البري\", \"name:en\": \"The Yemeni Immigration and Passports Office, Al-Wadiah Land Port\", \"office\": \"government\", \"opening_hours\": \"24/7\"}. This is geographic evidence only, not historical closure evidence. Named Yemeni Immigration and Passports Office inside Al-Wadiah land port; marker is Yemeni passenger facility area, not Saudi terminal or entire frontier.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/e7975c7b02e088dc70ab.html",
+          "evidence_sha256": "e90f65464ccb744e9db46e9903309c35e6857d6f32d3fdd35992d23f02d5dd66",
+          "osm_version": "1",
+          "osm_timestamp": "2022-10-29T22:27:59Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Al-Wadiah / Al Wadea is the Hadramout–Sharurah road port. This phase covers commercial trucks during the additional complete shutdown, not the longer passenger restriction. Current phase only: Al Wadea / Al Wadia; Commercial trucking during the additional complete shutdown; passenger restrictions began earlier and continued later.; Crossing traffic; precise directional order not established.",
+      "date_scope_check": {
+        "start_earliest": "2020-04-08",
+        "start_latest": "2020-04-08",
+        "end_earliest": "2020-04-12",
+        "end_latest": "2020-04-12",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "The four-day interval applies to the additional commercial-trucking shutdown of 8–12 April, not the longer passenger ban. Broader March passenger policy and May returnee exceptions remain separate phases. From 12 April commercial traffic resumed; passenger ban remained.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "The coordinate identifies the named Yemeni port complex through its immigration office; the particular cargo inspection lane is not separately located."
+      ]
+    }
+  ],
+  "unresolved": [
+    "The coordinate identifies the named Yemeni port complex through its immigration office; the particular cargo inspection lane is not separately located."
+  ]
+}

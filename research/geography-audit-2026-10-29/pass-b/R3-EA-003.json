@@ -1,0 +1,61 @@
+{
+  "record_id": "R3-EA-003",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Timorese inbound entry at Salele and Sakato under the September 1–14, 2024 scheduled circular; outbound passage continued and Batugade was the entry exception. Oesilo appears in statements but is not consistently included in the initial circular roster.",
+  "source_checks": [
+    {
+      "url": "https://id.tatoli.tl/2024/08/26/timor-leste-akan-tutup-perbatasan-darat-pada-01-14-september/",
+      "access_status": "full_text_web",
+      "finding": "Tatoli distinguishes the initial two-post circular from the ministerial statement also naming Oesilo.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r4-2.json",
+      "sha256": "65e22a07c9964bb96f87f5518e3f973f2d61373ec846b4e1068d8b574759ba07"
+    },
+    {
+      "url": "https://id.tatoli.tl/2024/09/02/jelang-kunjungan-paus-sejumlah-ruas-jalan-di-dili-akan-ditutup-mulai-07-11-september/",
+      "access_status": "full_text_web",
+      "finding": "Later Tatoli report names Salele, Sakato and Oesilo, with entry through Batugade.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r4-2.json",
+      "sha256": "65e22a07c9964bb96f87f5518e3f973f2d61373ec846b4e1068d8b574759ba07"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EA-003-R1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Timorese inbound entry at Salele and Sakato under the September 1–14, 2024 scheduled circular; outbound passage continued and Batugade was the entry exception. Oesilo appears in statements but is not consistently included in the initial circular roster.",
+      "date_scope_check": {
+        "start_earliest": "2024-09-01",
+        "start_latest": "2024-09-01",
+        "end_earliest": "2024-09-14",
+        "end_latest": "2024-09-14",
+        "last_confirmed": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Original Timorese schedule; BNPP reports shorter September 1–11 period. Outbound passage allowed; Oesilo named in statements but circular summary initially differs. No actual restoration proven."
+      },
+      "unresolved": [
+        "Timorese inward-control coordinates at Salele and Sakato remain unverified. Indonesian Motamasin/Wini buildings are not substitutes; a search result for a Salele hamlet in Viqueque is the wrong place.",
+        "Oesilo applicability remains qualified exactly as in the canonical phase."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Timorese inward-control coordinates at Salele and Sakato remain unverified. Indonesian Motamasin/Wini buildings are not substitutes; a search result for a Salele hamlet in Viqueque is the wrong place.",
+    "Oesilo applicability remains qualified exactly as in the canonical phase."
+  ],
+  "input_sha256": "f10c19791904dbdd2f4387394e62b29526c48a17359904de429cca961c66385c",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

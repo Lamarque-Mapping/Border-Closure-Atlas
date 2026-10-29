@@ -1,0 +1,51 @@
+{
+  "record_id": "R3-EA-008",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Ten unnamed local or traditional crossing points in Houaphanh province on the Vietnam frontier. Four international posts remained open; the province-specific ten cannot be equated with a later national list.",
+  "source_checks": [
+    {
+      "url": "https://www.rfa.org/english/news/laos/checkpoints-03162020164126.html",
+      "access_status": "full_text_web",
+      "finding": "RFA identifies the March 13 provincial notice and ten of fourteen posts, but supplies no names.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r4-1.json",
+      "sha256": "d4af95a60534a337060c787f24a5d5f6d978435ef2a0dafde607ece14b0c16c9"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EA-008-FU1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ten unnamed local or traditional crossing points in Houaphanh province on the Vietnam frontier. Four international posts remained open; the province-specific ten cannot be equated with a later national list.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-13",
+        "start_latest": "2020-03-13",
+        "end_earliest": "2020-03-13",
+        "end_latest": "2020-03-13",
+        "last_confirmed": "2020-03-13",
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "R3-EA-008-FU1: Province-level reference only; exact gates and reopening unknown. Excludes separate national named-gate measures.\n\nend/scope: No matching ten-post roster or reopening found.\n\nduration: March 13 closure confirmation permits an onset observation only.\n\ncontinuity: RFA's March 16 report quotes a March 13 Houaphanh notice and official confirmation that ten traditional/local posts closed while four international posts stayed open. Exact gate identities and later reopening remain unestablished.\n\nBy 2022-09-01, Laos had authorized provinces to reopen local and traditional border checkpoints under controls. This is later national permission, not proof of the reopening date or actual operation of all ten unnamed Houaphanh posts. No continuous closure through 2022 or beyond is established. Notification 1342/PMO dated 2020-12-10 also permits temporary necessary agricultural exports at Ban Dan–Xiengmouang, with dates still to be set. This is limited formal permission; the unnamed March roster does not establish that Ban Dan was one of the ten posts."
+      },
+      "unresolved": [
+        "Names and exact locations of the ten affected local posts are unresolved. A whole Laos–Vietnam border line would overstate this provincial subset."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Names and exact locations of the ten affected local posts are unresolved. A whole Laos–Vietnam border line would overstate this provincial subset."
+  ],
+  "input_sha256": "3e658d1a6f16736fef3509be43151c7bac68fac270f1f0f831016ab80d15dd4a",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

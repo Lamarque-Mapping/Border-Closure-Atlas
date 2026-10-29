@@ -1,0 +1,82 @@
+{
+  "record_id": "R3-ME-005",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Arida formal coastal road crossing and its damaged road/bridge approach. June 3 restoration is passenger-specific; it does not establish restoration of cargo movement or every lane.",
+  "source_checks": [
+    {
+      "url": "https://sana.sy/en/syria/358148/",
+      "access_status": "full_text_web",
+      "finding": "Official Ports Authority statement records June 3 passenger movements and vehicles through Arida, linking Tartous and Tripoli.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-24.json",
+      "evidence_sha256": "82989895bb619358d1512ffd5e66bc43eb3678981a95461b1c2bc411cb582e01"
+    },
+    {
+      "url": "https://today.lorientlejour.com/article/1463091/reopening-of-the-arida-border-crossing-you-can-smell-syria-from-here.html",
+      "access_status": "partial_full_text_registration_wall",
+      "finding": "Visible original report describes damaged roadway embankment, traffic using a repaired exit lane and an officer saying freight trucks cannot pass. Remainder is behind registration.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-26.json",
+      "evidence_sha256": "0cc6efec69cf787a8f73efc76cc9c738eadd9c56fb4b93930c0d97e7b4a9142d"
+    },
+    {
+      "url": "https://www.lorientlejour.com/article/1462964/apres-la-reouverture-mardi-matin-du-poste-frontiere-de-arida-le-trafic-sintensifie-deja-entre-le-liban-et-la-syrie.html",
+      "access_status": "full_text_web",
+      "finding": "Original French report identifies passenger cars/buses, visible bridge damage and restoration works, plus both-direction passenger flows. It leaves freight restoration uncertain.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-26.json",
+      "evidence_sha256": "0cc6efec69cf787a8f73efc76cc9c738eadd9c56fb4b93930c0d97e7b4a9142d"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-ME-005-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-arida",
+          "name": "Arida / Al-Arida coastal road crossing",
+          "coordinates": [
+            35.9760532,
+            34.6332213
+          ],
+          "coordinate_method": "Original OSM node coordinates read in independently fetched API bounding-box XML",
+          "precision": "approximate crossing facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/map?bbox=35.969,34.630,35.989,34.648",
+            "https://www.openstreetmap.org/node/11056661685"
+          ],
+          "evidence_note": "Named Lebanese crossing checkpoint south of the Nahr El Kabir road bridges. The same XML separately identifies Syrian Arida immigration/checkpoint nodes, Lebanese General Security, Sea Road/A2, and the international river boundary. This is the coastal Tartous–Tripoli crossing, not Abboudieh or Qaa. Current node geometry is not a reconstruction of the destroyed bridge lane. Inspected node tags: {\"name\": \"عبور حدود العريضة\", \"name:ar\": \"عبور حدود العريضة\", \"name:fr\": \"Passage de la frontière d'El Aarîda\", \"police\": \"checkpoint\"}. Geographic evidence only; no historical restriction inferred.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/796939475b5e60db60e2.html",
+          "evidence_sha256": "2345097f7f1ce5fd2389debc5b83052d93141f44bfceb06627c58d2d246b87a2",
+          "osm_version": "2",
+          "osm_timestamp": "2026-02-25T01:34:53Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Arida formal coastal road crossing and its damaged road/bridge approach. June 3 restoration is passenger-specific; it does not establish restoration of cargo movement or every lane. Current phase only: Arida/Al-Arida restriction, with June 3, 2025 restoration limited to Syrian and Lebanese passengers in private vehicles; cargo excluded from endpoint.",
+      "date_scope_check": {
+        "start_earliest": "2024-12-06",
+        "start_latest": "2024-12-06",
+        "end_earliest": "2025-06-03",
+        "end_latest": "2025-06-03",
+        "last_confirmed": "2024-12-06",
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "The December 6, 2024 formal restriction and contemporaneous road interruption followed renewed strikes. December 2 vehicle passage predates this episode and cannot end it. Reports of a December 13 opening lack sufficient vehicle/category detail to establish a matching endpoint; one-way pedestrian movement into Syria was documented by January 2. UNHCR regional flash update 30, dated June 6, 2025, reports that Arida resumed traffic on June 3 for Syrian and Lebanese nationals in private vehicles. On-scene June 3 reporting documents passenger and taxi activity, while a General Security officer says goods trucks still could not use the temporary route. June 3 is therefore a scoped passenger-vehicle restoration; cargo remains separate. Earlier exceptions and the insufficiently specified December opening prevent an uninterrupted all-traffic December–June closure or numeric duration.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Named crossing is located. Exact destroyed embankment, temporary lane and repaired bridge footprint are not separately reconstructed."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Named crossing is located. Exact destroyed embankment, temporary lane and repaired bridge footprint are not separately reconstructed."
+  ]
+}

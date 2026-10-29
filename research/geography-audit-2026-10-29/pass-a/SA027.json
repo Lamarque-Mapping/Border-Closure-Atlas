@@ -1,0 +1,168 @@
+{
+  "record_id": "SA027",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Only Nathu La crossing serving Sherathang regulated trade mart is selected. Shipki La and Lipulekh reopening stories do not broaden this phase or establish general passenger access.",
+  "source_checks": [
+    {
+      "url": "https://www.pib.gov.in/PressReleasepage.aspx?PRID=2309225&lang=2&reg=48",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Customs commissioner confirms resumed 2026 Nathu La/Sherathang trade and tightly regulated days, hours and categories.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-23.json",
+      "sha256": "329b1486041103d32821580ca626754776695178fcb837fd2515398957817fc7"
+    },
+    {
+      "url": "https://sansad.in/getFile/annex/268/AU2124_IPerlE.pdf?source=pqars",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://newsonair.gov.in/india-china-border-trade-through-nathu-la-resumes-after-six-years/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.business-standard.com/economy/news/india-china-border-trade-via-shipki-la-resumes-after-six-year-hiatus-126080100990_1.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.sikkim.gov.in/media/news-announcement/news-info?name=Indo-China+Border+Trade+via+Nathula+Reopens+After+Six+Years",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.sikkim.gov.in/uploads/SikkimHerald/March_13_0_20200313.pdf",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://snu.edu.in/centres/centre-of-excellence-for-himalayan-studies/research/beyond-confidence-building-measures-cbms-nathula-cross-border-trade-from-the-perspective-of-the-border-traders/en/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.indiatodayne.in/amp/breaking-news/story/coronavirus-foreign-nationals-banned-attending-bhumchu-festival-sikkim-406937-2020-03-07",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://eastmojo.com/sikkim/2026/08/01/indo-china-border-trade-from-nathula-reopens-traders-demand-more-items/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.sikkim.gov.in/media/news-announcement/news-info?name=DG-cum-Secretary%2C+Health+Deptt+convened+a+press+conference+to+share+the+measures+taken+by+the+State+Government+to+prevent+the+outbreak+of+COVID-19+in+the+State",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.isas.nus.edu.sg/papers/reopening-china-india-border-trade-new-delhis-conundrum-on-the-border/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://timesofindia.indiatimes.com/india/india-china-border-trade-resumes-after-6-years/articleshow/132796671.cms",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.ndtv.com/india-news/brics-summit-2026-delhi-xi-jinping-returns-india-and-china-build-on-ties-momentum-brics-by-brics-12032274?pfrom=home-ndtv_topscroll_Imagetopscroll",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SA027-REV1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "name": "Nathu La border pass",
+          "coordinates": [
+            88.8308961,
+            27.3868289
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/3179568394",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/3179568394",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=88.825,27.38,88.838,27.394"
+          ],
+          "evidence_note": "Named Nathu La pass point in fresh OSM, matching regulated cross-border trade route described by customs commissioner. Sherathang trade mart is inland and distinct; Shipki La/Lipulekh not included.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-nathula.xml",
+          "sha256": "56d0957a4a75a3a440ce09fb63aa1b5783f56ee766d32be40d4a741c0ad06a66",
+          "osm_feature": "node/3179568394",
+          "osm_version": "13",
+          "osm_timestamp": "2025-06-24T16:44:44Z",
+          "identity_tags": {
+            "access": "permissive",
+            "alt_name": "Nathula pass",
+            "barrier": "border_control",
+            "ele": "4310",
+            "mountain_pass": "yes",
+            "name": "Nathu La 乃堆拉山口",
+            "name:bn": "নাথু গিরিবর্ত্ম",
+            "name:bo": "རྣ་ཐོས་ལ་",
+            "name:bo-Latn-wylie": "rna thos la",
+            "name:en": "Nathu La",
+            "name:hi": "नाथूला दर्रा",
+            "name:ml": "നാഥുലാ ചുരം",
+            "name:uk": "Нату-Ла",
+            "name:zh": "乃堆拉山口",
+            "name:zh-Latn-pinyin": "Nǎi duī lā",
+            "natural": "saddle",
+            "wikidata": "Q499714",
+            "wikipedia": "en:Nathu La"
+          },
+          "existing_site_id": "post-nathu-la"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Nathu La/Sherethang trade-suspension phase from the affected May 2020 trading season to the formal opening of the 2026 season",
+      "date_scope_check": {
+        "scope": "Nathu La/Sherethang trade-suspension phase from the affected May 2020 trading season to the formal opening of the 2026 season",
+        "start_earliest": "2020-05-01",
+        "start_latest": "2020-05-31",
+        "end_earliest": "2026-08-01",
+        "end_latest": "2026-08-01",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "May 2020 affected season is month-bounded, including routine winter/weekly closures. August 1 2026 is formal opening, not independently observed first truck. September 11 customs confirmation says trade has resumed under Monday–Thursday registered-trader rules."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

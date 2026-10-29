@@ -1,0 +1,64 @@
+{
+  "record_id": "R5-ME-003",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Al-Shib / Sheeb road crossing between Maysan and Iran for passengers departing Iraq toward Iran. Trade is excluded.",
+  "source_checks": [
+    {
+      "url": "https://www.aa.com.tr/en/middle-east/iraq-reopens-border-crossing-with-iran/1654746",
+      "access_status": "full_text_web",
+      "finding": "Original Anadolu report quotes the Border Ports Commission on reopening Al-Shib for Iraq-to-Iran travellers after nine days, identifying the same terminal and direction.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-25.json",
+      "evidence_sha256": "dd34687c08f1aa9f7158577200755129043e687f3842399bd6663ced994c82b1"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-ME-003-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-sheeb-chazabeh",
+          "name": "Sheeb / Chazabeh",
+          "coordinates": [
+            47.789851,
+            31.8526883
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/534919135",
+            "https://www.openstreetmap.org/api/0.6/way/534919135/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"area\": \"yes\", \"barrier\": \"border_control\", \"building\": \"yes\", \"government\": \"border_control\", \"layer\": \"1\", \"name\": \"منفذ الشیب الحدودی\", \"name:ar\": \"منفذ الشیب الحدودی\", \"name:en\": \"Al-Shib Border Crossing\", \"name:fa\": \"پایانه مرزی شیب\", \"opening_hours\": \"closed\", \"police\": \"checkpoint\", \"wikidata\": \"Q29514074\", \"wikipedia\": \"ar:منفذ الشيب الحدودي\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/1538898844739a23c76c.html",
+          "evidence_sha256": "2bc5057654fa47e08e51c9027a28c2dbc390494599faa02055e05a22f8200f0f",
+          "osm_version": "5",
+          "osm_timestamp": "2026-09-12T04:43:21Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Al-Shib / Sheeb road crossing between Maysan and Iran for passengers departing Iraq toward Iran. Trade is excluded. Current phase only: Passenger departures toward Iran at one crossing; trade exempt; Ordinary passengers leaving Iraq for Iran.; Iraq to Iran passengers",
+      "date_scope_check": {
+        "start_earliest": "2019-11-16",
+        "start_latest": "2019-11-16",
+        "end_earliest": "2019-11-25",
+        "end_latest": "2019-11-25",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Endpoints and November 16 onset rely on the Border Ports Commission account, reproduced by INA and Anadolu. No independent daily gate record recovered. Two historical NINA URLs now serve unrelated 2026 content and are withdrawn from active phase support; their prior access history remains archived.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

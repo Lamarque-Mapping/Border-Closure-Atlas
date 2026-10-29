@@ -1,0 +1,65 @@
+{
+  "record_id": "R3-AF-002",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Official Kye-Ossi–Ebebiyin road crossing between Cameroon and Equatorial Guinea, for ordinary persons and goods. The nearby Cameroon–Gabon crossing is distinct.",
+  "source_checks": [
+    {
+      "url": "https://www.camer.be/amp/77356/11%3A1/cameroon-la-frontiere-entre-le-cameroun-et-la-guinee-equatoriale-fermee-depuis-plus-de-dix-jours.html",
+      "access_status": "full_text_web",
+      "finding": "AFP report carried by Camer identifies Kye-Ossi as the official crossing remaining closed beyond the independence holiday and reports interruption to people and goods.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-23.json",
+      "evidence_sha256": "370af37ad7f6c12c1c10fca2929541975151fc75e2b27bc52cfd319f5cdb8782"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-AF-002-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kye-ossi-ebebiyin",
+          "name": "Kye-Ossi / Ebebiyin",
+          "coordinates": [
+            11.336976,
+            2.1728622
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/6133635878",
+            "https://www.openstreetmap.org/api/0.6/node/6133635878",
+            "https://www.openstreetmap.org/api/0.6/map?bbox=11.33,2.17,11.345,2.185"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\"}. This is geographic evidence only, not historical closure evidence. Main-road border_control beside immigration police and customs on Cameroon–Equatorial Guinea boundary south of Kye-Ossi market, not eastward Gabon crossing.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/712a1212dabf0cd2dfa2.html",
+          "evidence_sha256": "219bf52bbdfb38e9ebece6e95bf4b427ffea56937ce639ab9681ee39e91ce33c",
+          "osm_version": "2",
+          "osm_timestamp": "2023-08-30T09:23:57Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Official Kye-Ossi–Ebebiyin road crossing between Cameroon and Equatorial Guinea, for ordinary persons and goods. The nearby Cameroon–Gabon crossing is distinct. Current phase only: Official suspension of ordinary persons and goods at Kye-Ossi–Ebebiyin",
+      "date_scope_check": {
+        "start_earliest": "2019-10-11",
+        "start_latest": "2019-10-11",
+        "end_earliest": "2020-04-03",
+        "end_latest": "2020-04-03",
+        "last_confirmed": "2020-04-03",
+        "endpoint_status": "last_confirmed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "R3-AF-002-D1: Contemporary AFP and April 2020 reporting support an October 11, 2019 closure and formal suspension through April 3, 2020, without proving universal uninterrupted enforcement. The reason for extending the independence-holiday closure remains unassigned.\n\nA Cameroon Human Rights Commission report, page 20, quotes the Kye-Ossi immigration chief describing occasional openings for organised shopping groups in both directions from August 2022. Use the end of that month only as a conservative partial later-access bound, not an exact reopening date. The official describes the closure notification as October 12, 2019; this may be a notification/implementation distinction and does not displace the contemporary October 11 report.\n\nThe commission says formal reopening had not occurred at the time of its inquiry. GECAM’s March 2026 report describes continuing transit barriers, but does not establish every traveller or goods category. No uninterrupted 2019–2026 closure or full reopening is inferred.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

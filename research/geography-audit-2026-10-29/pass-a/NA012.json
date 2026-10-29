@@ -1,0 +1,46 @@
+{
+  "record_id": "NA012",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Ghadames–Debdeb is a specific Libya–Algeria road port, with ordinary passenger access still restricted in the August2024 observation despite earlier formal reopening announcements.",
+  "source_checks": [
+    {
+      "url": "https://lana.gov.ly/post.php?id=296534&lang=en",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "December2023 ministry announcement claims official citizen and commercial reopening; it is not proof that ordinary travel actually resumed.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-25.txt"
+    },
+    {
+      "url": "https://alwasat.ly/news/libya/447295",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "August5 rehabilitation report explicitly says ordinary citizen travel remained closed despite November2023 protocol.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-26.txt"
+    },
+    {
+      "url": "https://www.ecoi.net/en/file/local/2136437/Libya_toponymic_factfile.pdf",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "PCGN approximate crossing table inspected, but coordinates are coarse and disagree with other road-crossing leads; not accepted as exact terminal location.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-30.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NA012-C7P1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Keep point observation without fabricated onset or whole Algeria–Libya line substitute.",
+      "date_scope_check": "Canonical confirmed_through: start None–None; endpoint 2024-08-05–2024-08-05; last confirmed 2024-08-05. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": [
+        "Exact named port coordinate unresolved: town/approximate gazetteer and unverified road leads differ materially. A searched OSM border-area extract did not establish the named terminal."
+      ]
+    }
+  ],
+  "unresolved": []
+}

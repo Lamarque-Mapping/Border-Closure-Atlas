@@ -1,0 +1,144 @@
+{
+  "record_id": "SA028",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ordinary passenger entry/exit at Khunjerab Pass, not Sost customs depot or all Pakistan–China freight. The MFA explicitly separates seasonal opening, cargo-only regime and emergency passage.",
+  "source_checks": [
+    {
+      "url": "https://tt.china-embassy.gov.cn/eng/zt/fyrth/202304/t20230403_11053729.htm",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "MFA primary statement distinguishes seasonal April–November port, 2022 cargo restoration, April 3 2023 passenger restoration and emergency openings.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-24.json",
+      "sha256": "e7501ce4840e4f6da925b02cb08e22df0740ef10898a6a02add0cda397012f3e"
+    },
+    {
+      "url": "https://www.radio.gov.pk/01-04-2023/khunjerab-pass-corridor-opens-today",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.app.com.pk/global/china-pakistan-border-post-in-xinjiang-resumes-passenger-clearance/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.app.com.pk/global/khunjerab-pass-opened-for-pak-china-trade-after-three-years/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.dawn.com/news/1571583",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://profit.pakistantoday.com.pk/2020/09/18/pak-china-khunjerab-border-reopened-till-30th/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.fmprc.gov.cn/nanhai/eng/fyrbt_1/202304/t20230403_11053729.htm",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.app.com.pk/global/khunjerab-pass-to-reopen-for-commercial-activities-from-april-01/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.app.com.pk/global/khunjerab-pass-officially-resumes-passenger-crossing-by-monday-mao-ning/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://profit.pakistantoday.com.pk/2021/03/30/khunjerab-pass-to-reopen-for-trade-on-april-1/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://profit.pakistantoday.com.pk/2021/05/31/khunjerab-pass-opened-for-trade-travel",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.app.com.pk/global/40000-inbound-outbound-passengers-recorded-at-khunjrab-pass/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SA028-FU1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-khunjerab-pass",
+          "name": "Khunjerab Pass road crossing",
+          "coordinates": [
+            75.42871,
+            36.8513386
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/746983863",
+          "precision": "Pass/crossing-area reference, 300 m; no first-traveller or historical lane inference.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/746983863",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=75.41,36.83,75.45,36.87"
+          ],
+          "evidence_note": "Border-control node on Karakoram road at the frontier pass, near named Khunjerab Security Force facility. Separate from Sost inland dry port.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-khunjerab.xml",
+          "sha256": "eea0ca964886ea8739cf1200ee2ec9165b07fb451e6b6729eafce1e33bb7a6cb",
+          "osm_feature": "node/746983863",
+          "osm_version": "6",
+          "osm_timestamp": "2023-04-17T11:51:26Z",
+          "identity_tags": {
+            "barrier": "border_control"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary passenger entry/exit at Khunjerab Pass",
+      "date_scope_check": {
+        "scope": "Ordinary passenger entry/exit at Khunjerab Pass",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2023-04-03",
+        "end_latest": "2023-04-03",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Endpoint-only ordinary passenger restoration April 3 2023. Cargo resumed April 1 2022, emergency permissions occurred, and 2021 permissions are unresolved; no continuous 2020–2023 total closure duration is created."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

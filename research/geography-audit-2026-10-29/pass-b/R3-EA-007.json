@@ -1,0 +1,86 @@
+{
+  "record_id": "R3-EA-007",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Thakhek–Nakhon Phanom municipal passenger ferry service, suspended from March 17, 2020 and ordinarily restored October 3, 2022. Emergency repatriation voyages remain exceptions. Friendship Bridge III is a separate road crossing.",
+  "source_checks": [
+    {
+      "url": "https://www.nationthailand.com/in-focus/30384315",
+      "access_status": "full_text_web",
+      "finding": "Original report identifies Thakhek port closing at 14:00 March 17 while Friendship Bridge III remains open.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r4-1.json",
+      "sha256": "d4af95a60534a337060c787f24a5d5f6d978435ef2a0dafde607ece14b0c16c9"
+    },
+    {
+      "url": "https://nbtworld.prd.go.th/th/news/detail/tcatg221003151413484",
+      "access_status": "indexed_extract_only",
+      "finding": "Indexed government reopening article reports October 3 passenger sailings at the municipal tourism jetty after the March 2020 suspension. Direct open failed.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-24.json",
+      "sha256": "ae91c0b589577dc4e8dae91f74680dc1f0bc5d2ac3a48fd104d58474ff3272df"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/920031173",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named ferry terminal node and coordinates inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3841d297245c08c48b7e.xml",
+      "sha256": "6039a4d72ebc4e84de9eb1c9c49c60cf6dcc1f31c3cb7d1e5c770f6814bce71a",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3841d297245c08c48b7e.txt",
+      "text_sha256": "6039a4d72ebc4e84de9eb1c9c49c60cf6dcc1f31c3cb7d1e5c770f6814bce71a",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EA-007-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-thakhek-ferry",
+          "name": "Thakhek passenger ferry terminal",
+          "coordinates": [
+            104.8019448,
+            17.3970662
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate Lao ferry-terminal location, about 150 m; Thai pier is not included",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/920031173"
+          ],
+          "evidence_note": "Explicit Thakhek ferry_terminal node. Original closure report identifies Thakhek port and separately keeps Friendship Bridge III open. Government reopening account identifies the municipal passenger ferry route, not the road bridge.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3841d297245c08c48b7e.xml",
+          "sha256": "6039a4d72ebc4e84de9eb1c9c49c60cf6dcc1f31c3cb7d1e5c770f6814bce71a"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Thakhek–Nakhon Phanom municipal passenger ferry service, suspended from March 17, 2020 and ordinarily restored October 3, 2022. Emergency repatriation voyages remain exceptions. Friendship Bridge III is a separate road crossing.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-17",
+        "start_latest": "2020-03-17",
+        "end_earliest": "2022-10-03",
+        "end_latest": "2022-10-03",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "October 3 2022 is observed ordinary-service restoration at this ferry only. March 18 2020 immigration clarification allowed stranded Thai/Lao nationals to return through Thakhek despite closure; exception duration and volume unknown. Third Friendship Bridge remained alternative. No total cessation of all passenger crossings asserted."
+      },
+      "unresolved": [
+        "Exact Thai municipal passenger pier remains unverified; nearby Saeng Sing Kaeo pier is not assumed equivalent. Only the Lao terminal is approved."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact Thai municipal passenger pier remains unverified; nearby Saeng Sing Kaeo pier is not assumed equivalent. Only the Lao terminal is approved."
+  ],
+  "input_sha256": "ba152fa4b0fb88d1ae4d45867006e6f11ea4e2aa00ffae45bdd966ac2c1cda9a",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

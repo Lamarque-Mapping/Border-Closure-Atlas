@@ -1,0 +1,82 @@
+{
+  "record_id": "AM004",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "CBP suspended and resumed international railway bridge operations at EaglePass and ElPaso. Only EaglePass rail reference proposed; road BridgeI remains separately suspended in the same notices and is not used here.",
+  "source_checks": [
+    {
+      "url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/3809945",
+      "access_status": "fresh_full_text_extract",
+      "finding": "CBP December18 bulletin starts railway bridge suspension08:00 local, names both cities, separately notes roadBridge1 suspension.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b10321f2953d84aec96d.html",
+      "source_sha256": "534728c866323649d63900dfe3dce315b54bcf0aa06d378a9b20cb885ddb2feb",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-030.json"
+    },
+    {
+      "url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/3816791?reqfrom=share",
+      "access_status": "fresh_full_text_extract",
+      "finding": "December22 bulletin resumes rail operations14:00ET; separately retains EaglePassBridge1 vehicular suspension. Carrier embargo distinction preserved.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/6810e6e77234374f87ce.html",
+      "source_sha256": "d93e7941adfa938081ed9566f7977a11d52ea04869c8bdfbb89b8499f3e668b9",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-030.json"
+    },
+    {
+      "url": "https://mapcarta.com/W1374920650",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Published coordinate explicitly identifies sole EaglePass–PiedrasNegras railway international bridge.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-033.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM004-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-eagle-pass-rail",
+          "name": "Eagle Pass–Piedras Negras international railway bridge",
+          "coordinates": [
+            -100.50879,
+            28.69653
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 1374920650; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W1374920650",
+            "https://www.openstreetmap.org/way/1374920650"
+          ],
+          "evidence_note": "Explicit international rail bridge identity, separate from International BridgeI vehicular crossing and CaminoReal road bridge.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-033.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Federal resumption of the affected rail crossings; carrier embargoes may have persisted.",
+      "date_scope_check": {
+        "start_earliest": "2023-12-18",
+        "start_latest": "2023-12-18",
+        "end_earliest": "2023-12-22",
+        "end_latest": "2023-12-22",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "ElPaso rail structure(s) not independently geolocated; no road bridge substitution."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "d894613454027b1fb369ab2406b5e820cdf16e580226356fcb622b0084ed2df7"
+}

@@ -30,6 +30,12 @@ and unchanged geometry for every previously mapped record. `reconciled-decisions
 is the coordinator's explicit decision log; `apply-geography-audit.cjs` applies
 only supported decisions from that log.
 
+After changing reviewed geography, run
+`python scripts/prepare-release-workbook.py --bind-manifest` locally, then the
+normal site build and validation sequence. Geography is included in the data
+companion, so that package and its manifest fingerprint must be regenerated
+together. CI still verifies the bound bytes and never silently rebinds them.
+
 Referenced publisher pages are working evidence, not republished articles.
 Some local evidence paths therefore are not public downloads; the original
 source links, access status and findings remain in each audit file. Retained

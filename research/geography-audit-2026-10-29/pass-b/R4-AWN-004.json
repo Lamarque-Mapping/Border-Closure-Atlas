@@ -1,0 +1,72 @@
+{
+  "record_id": "R4-AWN-004",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ordinary Guerguerat passenger travel during Omicron restrictions; Mauritanian nationals returning to Mauritania are excluded from this retained phase.",
+  "source_checks": [
+    {
+      "url": "https://afrique.le360.ma/maroc-mauritanie/politique/2021/12/08/36306-le-poste-frontiere-del-guerguerat-rouvre-pour-le-rapatriement-des-ressortissants/",
+      "access_status": "full_text_web",
+      "finding": "Reporter at the crossing records the December 8 Mauritanian repatriation exception, with other nationalities still barred and goods unaffected.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-26.json",
+      "evidence_sha256": "0cc6efec69cf787a8f73efc76cc9c738eadd9c56fb4b93930c0d97e7b4a9142d"
+    },
+    {
+      "url": "https://afrique.le360.ma/maroc-mauritanie/politique/2022/04/06/37591-maroc-mauritanie-ouverture-integrale-du-passage-de-guerguerat-mais-lobligation-du-test/",
+      "access_status": "full_text_web",
+      "finding": "Original reopening report states all-nationality, both-direction passenger passage resumed April 4 subject to the health requirement.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-23.json",
+      "evidence_sha256": "370af37ad7f6c12c1c10fca2929541975151fc75e2b27bc52cfd319f5cdb8782"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-AWN-004-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-guerguerat-road",
+          "name": "Guerguerat road crossing complex",
+          "coordinates": [
+            -16.9604374,
+            21.3627343
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/2577090295",
+            "https://www.openstreetmap.org/api/0.6/node/2577090295",
+            "https://www.openstreetmap.org/api/0.6/map?bbox=-16.965,21.357,-16.95,21.371"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\", \"motorcar\": \"yes\", \"motorcycle\": \"yes\"}. This is geographic evidence only, not historical closure evidence. Node is within named Poste Frontiere El Guerguarat complex with customs and borderpolice; represented without sovereignty determination. Exact buffer-strip blockade is separate.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/336e0554be17be3e7ab4.html",
+          "evidence_sha256": "ec389cf6854f1c1deafd5d795f6f4958c2adc5f180a63a82bc3857c76004c096",
+          "osm_version": "4",
+          "osm_timestamp": "2023-11-23T20:39:33Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary Guerguerat passenger travel during Omicron restrictions; Mauritanian nationals returning to Mauritania are excluded from this retained phase. Current phase only: Ordinary Guerguerat passenger travel excluding Mauritanian nationals returning to Mauritania",
+      "date_scope_check": {
+        "start_earliest": "2021-11-30",
+        "start_latest": "2021-11-30",
+        "end_earliest": "2022-04-04",
+        "end_latest": "2022-04-04",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "December 8 Mauritanian repatriation exception and freight are excluded from this stable scope. Health conditions continued after reopening; intended two-week expiry is not used. Retrospective two-year shorthand is not accepted as continuous closure across earlier openings.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

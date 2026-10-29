@@ -1,0 +1,112 @@
+{
+  "record_id": "AM011",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The June8 AP report explicitly identifies Simón Bolívar and Francisco de Paula Santander bridges near Cúcuta, used by pedestrians. Two crossing references reconstruct the named set; humanitarian exceptions and chronology retained.",
+  "source_checks": [
+    {
+      "url": "https://mynews13.com/fl/orlando/ap-top-news/2019/06/08/venezuela-reopens-border-crossing-with-colombia",
+      "access_status": "fresh_full_text_extract",
+      "finding": "AP report describes June8 observed pedestrian crossings, and names both bridges remaining shut until then; February closure context supplied.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/0cc94ed9ec45bab44b05.html",
+      "source_sha256": "50a04f5bf8fd2ffc825b13c0d289216d609a083906b4b053def2be1460ded946",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-030.json"
+    },
+    {
+      "url": "https://mapcarta.com/W871456454",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Coordinates and OSM bridge identity published; geographical regional label unreliable, while Cúcuta adjacency and bridge identity agree with report.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-031.json"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/871456442/full",
+      "access_status": "fresh_raw_geographic_evidence",
+      "finding": "Previously retrieved and independently inspected named Simón Bolívar bridge XML reused for unchanged bridge identity.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fc7c61ad8e72edc57152.xml",
+      "source_sha256": "b8a9fa4f8f15575fd029e2ab1515a443b0ccad9b09fcb001d5f3b987d5abd9a0"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM011-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-simon-bolivar-road",
+          "name": "Simón Bolívar international road bridge",
+          "coordinates": [
+            -72.450854,
+            7.8179153
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/871456442"
+          ],
+          "evidence_note": "Named OSM bridge across Táchira River between San Antonio del Táchira and La Parada; no substitution of the Francisco de Paula Santander or Atanasio Girardot bridges.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fc7c61ad8e72edc57152.xml",
+              "sha256": "b8a9fa4f8f15575fd029e2ab1515a443b0ccad9b09fcb001d5f3b987d5abd9a0",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "6",
+              "osm_timestamp": "2025-11-21T13:12:51Z",
+              "tags": {
+                "layer": "1",
+                "man_made": "bridge",
+                "name": "Puente Internacional Simón Bolívar",
+                "wikidata": "Q3396757",
+                "wikimedia_commons": "Category:Puente Internacional Simón Bolívar",
+                "wikipedia": "es:Puente Internacional Simón Bolívar"
+              }
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-santander-road",
+          "name": "Francisco de Paula Santander International Bridge",
+          "coordinates": [
+            -72.46283,
+            7.91628
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 871456454; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W871456454",
+            "https://www.openstreetmap.org/way/871456454"
+          ],
+          "evidence_note": "Named international bridge near Cúcuta; page regional label Nariño is erroneous relative to its own Cúcuta spatial context, so reference is qualified; no other similarly named town or monument used.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-031.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary nonexempt pedestrian passage on the Simón Bolívar and Francisco de Paula Santander bridges, with humanitarian exceptions from 11 March, to observed 8 June reopening.",
+      "date_scope_check": {
+        "start_earliest": "2019-02-22",
+        "start_latest": "2019-02-23",
+        "end_earliest": "2019-06-08",
+        "end_latest": "2019-06-08",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Santander reference uses secondary OSM representation; original XML unavailable in this pass. Neither point identifies a particular pedestrian lane."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "dbce4dae2a4ed3447144b7b92275b987846f8558b5f6c9e4fc2053980dde52b6"
+}

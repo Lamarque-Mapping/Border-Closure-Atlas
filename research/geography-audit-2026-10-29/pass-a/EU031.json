@@ -1,0 +1,86 @@
+{
+  "record_id": "EU031",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Order188-r is an enumerated mixed road/rail checkpoint suspension, not blanket replacement by entire Russia/Belarus/Moldova frontiers. Annex512100 Kuchurhan railway is a separate phase removed by Order920-r; road Kuchurhan512000 must not be substituted.",
+  "source_checks": [
+    {
+      "url": "https://zakon.cc/law/document/read/188-2022-%D1%80",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Inspected annex includes road and rail entries and internal rail control stations; Kuchurhan road512000 distinct from removed railway512100.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-047.json"
+    },
+    {
+      "url": "https://zakon.cc/law/document/read/920-2023-%D1%80",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Order920-r October10 2023 explicitly removes annex512100 international passenger/freight Kuchurhan railway checkpoint; deletion alone is not exact operating reopening.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-043.json"
+    },
+    {
+      "url": "https://customs.gov.ua/news/zagalne-20/post/derzhmitsluzhba-razom-z-moldovskimi-kolegami-zapustila-spilnii-kontrol-u-p-p-kuchurgan-novosavitske-dlia-zaliznichnogo-spoluchennia-1446",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Customs account identifies resumed Kuchurhan–Novosavytske railway joint control after closure at invasion; does not provide coordinates of control facilities.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-047.json"
+    },
+    {
+      "url": "https://mapcarta.com/32340700",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Kuchurhan railway station candidate lies2.5km northeast of road post. Published station coordinate is not independently tied to annex checkpoint512100; rejected as sufficient checkpoint identity.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-046.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU031-R1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ukrainian suspension of the road and railway checkpoints listed in Order 188-r on the Russia, Belarus and Transnistrian frontiers, excluding Kuchurhan railway entry 512100; air entries excluded.",
+      "date_scope_check": {
+        "start_earliest": "2022-02-28",
+        "start_latest": "2022-02-28",
+        "end_earliest": "2026-10-26",
+        "end_latest": "2026-10-26",
+        "last_confirmed": "2026-10-26",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Full annex checkpoint roster has not been individually geolocated; whole-frontier geometry would falsely include unlisted sections and routes."
+      ]
+    },
+    {
+      "phase_id": "EU031-R2",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Kuchurhan international railway checkpoint, annex entry 512100: suspension under Order 188-r only.",
+      "date_scope_check": {
+        "start_earliest": "2022-02-28",
+        "start_latest": "2022-02-28",
+        "end_earliest": "2023-10-10",
+        "end_latest": "2023-10-10",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Railway checkpoint identity is clear but exact facility location relative to Kuchurhan station remains unresolved; road checkpoint is expressly different."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "ed0cd930a1266da4f10fd0b30d6fcfa2946cd7097a598aa8cc1e6cb5ca087145"
+}

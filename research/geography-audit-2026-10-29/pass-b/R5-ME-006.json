@@ -1,0 +1,64 @@
+{
+  "record_id": "R5-ME-006",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Shalamcheh passenger traffic at the Iraq–Iran road port during the April 4, 2026 same-day security interruption.",
+  "source_checks": [
+    {
+      "url": "https://qna.org.qa/en/news/news-details?date=4%2F04%2F2026&id=iraq-passenger-traffic-returns-to-shalamcheh-border-crossing-with-iran",
+      "access_status": "full_text_web",
+      "finding": "QNA reports the Iraqi Border Ports Authority chief’s announcement that passenger traffic returned to normal on Saturday at Shalamcheh.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-23.json",
+      "evidence_sha256": "370af37ad7f6c12c1c10fca2929541975151fc75e2b27bc52cfd319f5cdb8782"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-ME-006-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-shalamcheh",
+          "name": "Shalamcheh",
+          "coordinates": [
+            48.0293192,
+            30.5024401
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1451074497",
+            "https://www.openstreetmap.org/api/0.6/way/1451074497/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"area\": \"yes\", \"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"پایانه مرزی شلمچه\", \"name:ar\": \"منفذ الشلامجه الحدودي\", \"name:en\": \"Shalamcheh Border Post\", \"name:fa\": \"پایانه مرزی شلمچه\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/cfa51d091b3aa812cc6c.html",
+          "evidence_sha256": "b903a6e78bf5bd487c69f2da3b488f14c6e86b83377428fb70d6defbc72509b3",
+          "osm_version": "4",
+          "osm_timestamp": "2026-10-18T12:17:28Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Shalamcheh passenger traffic at the Iraq–Iran road port during the April 4, 2026 same-day security interruption. Current phase only: Shalamcheh passenger suspension on April 4, 2026.",
+      "date_scope_check": {
+        "start_earliest": "2026-04-04",
+        "start_latest": "2026-04-04",
+        "end_earliest": "2026-04-04",
+        "end_latest": "2026-04-04",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "strictly_over_24_hours": false,
+        "qualification_retained": "R5-ME-006-D1: The passenger episode occurred within April 4, not over a whole day. QNA relays the Iraqi Border Ports Authority through INA; Reuters also cites security sources. The Wall Street Journal separately reports that Khuzestan official Lofteh Derokvandi told IRNA that pilgrim and trader crossings had resumed and commercial activity was continuing. This is evidence of commercial operation by April 4 evening, but does not identify the first truck, precise interruption hours or identical conditions in both directions. The underlying IRNA report has not been recovered independently.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

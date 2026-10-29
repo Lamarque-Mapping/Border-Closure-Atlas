@@ -1,0 +1,41 @@
+{
+  "record_id": "SC10",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Equatorial Guinea announced national land closure for election security, while the endpoint evidence concerns only selected merchants entering from Cameroon.",
+  "source_checks": [
+    {
+      "url": "https://www.guineaecuatorialpress.com/noticias/guinea_ecuatorial_cerrara_sus_fronteras_el_31_de_octubre_hasta_la_celebracion_de_las_elecciones",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Official announcement specifies October31 national land closure and planned post-vote reopening.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-33.txt"
+    },
+    {
+      "url": "https://www.voanews.com/a/cameroon-merchants-say-equatorial-guinea-partially-reopens-border-/6846960.html",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Merchant report supports selected Cameroon entries after result announcement; it does not establish all posts, all people or Gabon reopening.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-28.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SC10-D1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-cmr-gnq"
+      ],
+      "complete": false,
+      "phase_applicability": "Cameroon-frontier policy reference only; selected merchant restoration cannot imply normal all-frontier traffic.",
+      "date_scope_check": "Canonical closed_interval: start 2022-10-31–2022-10-31; endpoint 2022-11-23–2022-11-23; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": [
+        "Specific restored gates not named in inspected endpoint account; no automatic Kye Ossi point assignment or Gabon endpoint."
+      ]
+    }
+  ],
+  "unresolved": []
+}

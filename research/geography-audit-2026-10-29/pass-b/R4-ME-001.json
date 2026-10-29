@@ -1,0 +1,71 @@
+{
+  "record_id": "R4-ME-001",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Only Khosravi is retained: departing Iranian Arbaeen pilgrims using the Baghdad route. Chazzabeh in the record title is outside this phase.",
+  "source_checks": [
+    {
+      "url": "https://www.tasnimnews.ir/en/news/2019/10/07/2113276/iran-s-khosravi-border-crossing-reopens-to-pilgrims-visiting-iraq/amp",
+      "access_status": "full_text_web",
+      "finding": "Tasnim reports Monday reopening of Khosravi after the Thursday suspension at Iraq’s request during the Baghdad curfew. The article identifies Iranian pilgrims and the Kermanshah route.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-23.json",
+      "evidence_sha256": "370af37ad7f6c12c1c10fca2929541975151fc75e2b27bc52cfd319f5cdb8782"
+    },
+    {
+      "url": "https://logcluster.org/pt/documents/mundhiriya",
+      "access_status": "indexed_source_excerpt",
+      "finding": "Logistics Cluster identifies Khosravi as Mundhiriya on the Iraqi side and the road via Khanaqin/Baquba to Baghdad, supporting the terminal identity.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-23.json",
+      "evidence_sha256": "b741414ba16e606e47bb4703a9cdd1fd17f5e629542422a68e97e88d26e15a35"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-ME-001-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-khosravi",
+          "name": "Khosravi / Al-Mundhiriya road crossing",
+          "coordinates": [
+            45.4702717,
+            34.3836905
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1092589506",
+            "https://www.openstreetmap.org/api/0.6/way/1092589506/full"
+          ],
+          "evidence_note": "Named Khosravi border terminal polygon, with Persian, Arabic and English names and border_control tag. This is distinct from Parvizkhan. OSM tags inspected: {\"addr:city\": \"خسروی\", \"addr:city:ar\": \"خسروي\", \"alt_name\": \"مرز خسروی;گذرگاه مرزی خسروی\", \"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"پایانه مرزی خسروی\", \"name:ar\": \"معبر خسروي الحدودي\", \"name:en\": \"Khosravi Border Post\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/02e3dbca3b190273094a.html",
+          "evidence_sha256": "8c46089189792b2de5e810a0bde1c4cb31d7227e6529beb9286925c700fac575",
+          "osm_version": "3",
+          "osm_timestamp": "2026-01-14T10:16:35Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Only Khosravi is retained: departing Iranian Arbaeen pilgrims using the Baghdad route. Chazzabeh in the record title is outside this phase. Current phase only: Khosravi suspension of departing Iranian Arbaeen pilgrims using Baghdad route",
+      "date_scope_check": {
+        "start_earliest": "2019-10-02",
+        "start_latest": "2019-10-03",
+        "end_earliest": "2019-10-06",
+        "end_latest": "2019-10-07",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "R4-ME-001-R1: Restriction on departing pilgrims using the Baghdad route, not proof of a physically sealed gate. Anadolu’s October 6 Persian report is a same-day reopening announcement; its English report and Iran Press describe Sunday reopening. Tasnim and AFP/ISNA reporting describe Monday morning reopening, with the latter reporting that a group of pilgrims departed. Thus passage is documented by October 7, while the exact first resumption within October 6–7 and clock times remain uncertain. Chazzabeh reopened earlier according to Reuters and is excluded from this Khosravi interval, as are freight and reverse-direction movement.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

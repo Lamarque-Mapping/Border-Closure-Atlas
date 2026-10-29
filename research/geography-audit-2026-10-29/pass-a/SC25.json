@@ -1,0 +1,57 @@
+{
+  "record_id": "SC25",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Kye Ossi–Ebebiyin road checkpoint, reopened for permitted passage twice weekly before broader daily access.",
+  "source_checks": [
+    {
+      "url": "https://www.voanews.com/a/cameroon-equatorial-guinea-reopen-border-business-thrives/4426750.html",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "On-location account identifies Kiossi/Ebebiyin, December24 closure and preceding twice-weekly opening before later daily access.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-26.txt"
+    },
+    {
+      "url": "https://actucameroun.com/2018/04/25/la-frontiere-cameroun-guinee-equatoriale-partiellement-rouverte/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Explicitly locates Tuesday April17 reopening at Kye Ossi with Tuesdays/Fridays only; its December28 retrospective onset differs from VOA.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-31.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SC25-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "kye",
+          "name": "Kye Ossi–Ebebiyin road immigration checkpoint",
+          "coordinates": [
+            11.336976,
+            2.1728622
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/6133635878",
+            "https://www.openstreetmap.org/api/0.6/map?bbox=11.33,2.16,11.35,2.18"
+          ],
+          "evidence_note": "OSM node 6133635878, version 2, timestamp 2023-08-30T09:23:57Z. Identity tags: {\"barrier\": \"border_control\"}. This is location evidence only; event applicability is assessed separately. Checkpoint on N2A adjacent to explicitly named Immigration Police node6064709085 and Cameroon–Equatorial Guinea boundary ways; matched to source-specified paired towns, not town-centre coordinate.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/0aa507d2e55ad9b6.raw",
+          "evidence_sha256": "6c568bbafc018b561913487467dd1b956e3126f20e812d4b65701baeeb618687"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Endpoint is restricted twice-weekly reopening, not June daily access. Onset reporting discrepancy retained without changing canonical date.",
+      "date_scope_check": "Canonical policy_period: start 2017-12-24–2017-12-28; endpoint 2018-04-17–2018-04-17; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": [
+        "December24/28 source discrepancy remains a chronology qualification."
+      ]
+    }
+  ],
+  "unresolved": []
+}

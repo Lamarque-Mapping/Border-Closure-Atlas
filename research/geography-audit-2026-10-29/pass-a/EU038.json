@@ -1,0 +1,58 @@
+{
+  "record_id": "EU038",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Estonian crisis authority identifies original Värska–Ulitina road passage through Russian Saatse Boot closed October10 2025, with a separate smaller Lutepää boot and new bypass. Neither an entire international frontier nor village coordinate matches that alignment.",
+  "source_checks": [
+    {
+      "url": "https://www.kriis.ee/en/travelling-crossing-state-border/road-passing-through-saatse-boot",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Official page describes original road entering Russian territory twice, restricted no-stopping transit and alternative route via Treski/Matsuri/Sesniki; identifies closure date.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/675987ad5a598988a4ee.html",
+      "source_sha256": "3d6259e0704a62b68bd744672bfb33d99d422f7882afab673f2eac09eadc1e49",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-044.json"
+    },
+    {
+      "url": "https://www.politsei.ee/en/the-vaerska-saatse-road",
+      "access_status": "inaccessible",
+      "finding": "Police route page inaccessible to web open.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-045.json"
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Road_Saatse_Boot.jpg",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Photographer GPS belongs to camera position for named road photo; image not independently inspected and location is not an official blocked-road alignment. Not used as closure geometry.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-044.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU038-R1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Original Värska–Ulitina road transit through the Saatse Boot in Russian territory, blocked by Estonian authorities",
+      "date_scope_check": {
+        "start_earliest": "2025-10-10",
+        "start_latest": "2025-10-10",
+        "end_earliest": "2026-09-22",
+        "end_latest": "2026-09-22",
+        "last_confirmed": "2026-09-22",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact original road alignment and closure access points have not been reconstructed from attributable geometry; generic boot/town/camera point would misrepresent scope."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "878563e589d727eed18b6f94075b10bc0d33375aed18393ffa482d62abe479a4"
+}

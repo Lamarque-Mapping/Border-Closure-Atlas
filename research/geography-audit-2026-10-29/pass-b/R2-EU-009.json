@@ -1,0 +1,79 @@
+{
+  "record_id": "R2-EU-009",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Latvian government suspended Vientuli and Pededze road border crossing operations from 16 October 2023; other Russian-border gates are not included.",
+  "source_checks": [
+    {
+      "url": "https://www.mk.gov.lv/en/article/operation-vientuli-and-pededze-border-crossing-points-latvia-russia-border-be-suspended-16-october",
+      "access_status": "full_text_web",
+      "finding": "Cabinet 12 October original body explicitly names Vientuli and Pededze, effective 16 October, responding to Russian Ukrainian-passport route limitation.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/120902a791b431c26844.raw",
+      "sha256": "7375f35ce49b19f6d01fa8d583491c24dfa7c081a30463f2ebe96a1242dd3f30"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EU-009-R1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-vientuli-ludonka",
+          "name": "Vientuļi–Ludonka",
+          "coordinates": [
+            27.77284,
+            57.13581
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/N4873908347",
+            "https://www.openstreetmap.org/node/4873908347"
+          ],
+          "evidence_note": "Named border checkpoint corroborated by Vientuli building W503518753 at 27.77236,57.13586, not Vilaka town 8 km northwest."
+        },
+        {
+          "proposed_site_id": "post-pededze-brunishevo",
+          "name": "Pededze–Brunishevo",
+          "coordinates": [
+            27.47374,
+            57.53276
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/W508488119",
+            "https://www.openstreetmap.org/way/508488119"
+          ],
+          "evidence_note": "Named checkpoint building; counterpart Brunishevo 440 m north, Pededze village 6 km south."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Two named road checkpoints only; 2025 last-confirmation retained as observation, not reopening.",
+      "date_scope_check": "Canonical scope and date bounds independently compared with the cited account; no expansion beyond that phase.",
+      "canonical_dates": {
+        "kind": "confirmed_through",
+        "measure_type": "formal_policy_period",
+        "start_earliest": "2023-10-16",
+        "start_latest": "2023-10-16",
+        "end_earliest": "2025-03-18",
+        "end_latest": "2025-03-18",
+        "last_confirmed": "2025-03-18",
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": true
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R2-EU-009.json",
+  "canonical_input_sha256": "540b24247a8d9748951b351b364bd691ce6895b300802bc412a42121dd8410f3",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

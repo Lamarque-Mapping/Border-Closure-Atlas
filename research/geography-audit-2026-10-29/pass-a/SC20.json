@@ -1,0 +1,50 @@
+{
+  "record_id": "SC20",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Mozambique closure of the Goba road port caused closure of paired Mhlumeni; essential traffic diverted to Lomahasha, which remained operational.",
+  "source_checks": [
+    {
+      "url": "https://gov.sz/index.php?catid=127&id=2434%3Aministerial-guidelines-following-ministry-of-public-service&view=article",
+      "access_status": "fresh_original_publisher_search_extract_inspected; direct_page_timeout",
+      "finding": "Official April6 statement explicitly says consequential closure as of Friday April3; Lomahasha stays open.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-32.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SC20-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "goba",
+          "name": "Mhlumeni–Goba road border crossing",
+          "coordinates": [
+            32.0839764,
+            -26.2575586
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/849970194",
+            "https://www.openstreetmap.org/api/0.6/map?bbox=32.075,-26.265,32.09,-26.25",
+            "https://www.accommodationmozambique.co.za/mozambique-border-gates-and-times/goba-mhlumeni-border-post-crossing/"
+          ],
+          "evidence_note": "OSM node 849970194, version 5, timestamp 2026-04-02T15:41:56Z. Identity tags: {\"barrier\": \"border_control\"}. This is location evidence only; event applicability is assessed separately. The OSM node is on MR7 at its transition to Mozambique N3, matching separately published Goba/Mhlumeni terminal coordinates. The rail route at Goba town is not used.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/24876fdc6a5c69d8.raw",
+          "evidence_sha256": "e2dfff86ec0574eb45966651bd477a282ae1a85fe1633609143202cd85e680a0"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "April6 is the observed statement date, not reopening. Road MR7/N3 pair; separate Goba railway not substituted.",
+      "date_scope_check": "Canonical confirmed_through: start 2020-04-03–2020-04-03; endpoint 2020-04-06–2020-04-06; last confirmed 2020-04-06. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,46 @@
+{
+  "record_id": "AM038",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Selected French-controlled crossings need Bellevue roundabout and BellePlaine/FrenchQuarter route identification. July notice cannot be expanded to every island border road.",
+  "source_checks": [
+    {
+      "url": "https://www.faxinfo.fr/covid-19-restriction-de-passage-aux-frontieres-a-partir-de-vendredi/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "July30 notice identifies Bellevue roundabout and BellePlaine control posts from July31 noon, with Cupecoy/OysterBay physically blocked separately. Work/medical and permitted airport travellers excepted.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/af69aec793fd4e65eb2e.html",
+      "source_sha256": "e6d3cdea4e921d824b3ebcb934ae0b924dc171276b5730c7add97d3b81f4c367",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-029.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM038-D1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "French-enforced non-essential passage restriction at Bellevue and Quartier d'Orléans, to lifting of the main checks.",
+      "date_scope_check": {
+        "start_earliest": "2020-07-31",
+        "start_latest": "2020-07-31",
+        "end_earliest": "2020-09-16",
+        "end_latest": "2020-09-16",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact named road-control features not geolocated from inspected geographic sources; district or town coordinates would be inappropriate. Bellevue hiking-border search results rejected as wrong route."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "c52dd52955c281c85279512b7bb9b5ea44d36916b1d894d45813e10b4f57bd5a"
+}

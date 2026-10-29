@@ -1,0 +1,59 @@
+{
+  "record_id": "SC02",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Onverwacht/Nsalitje secondary road port formally closed by South Africa; not a claim that every Eswatini crossing stayed shut.",
+  "source_checks": [
+    {
+      "url": "https://www.sars.gov.za/media/corona-virus-covid-19/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Official SARS archived March17 notice explicitly includes Onverwacht among35 land ports closed from March16.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-32.txt"
+    },
+    {
+      "url": "https://www.acts.co.za/immigration-act-/n2380_notice_no__2380_of_2022",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Gazette notice text determines August1 reopening of all remaining closed ports.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-28.txt"
+    },
+    {
+      "url": "https://mapcarta.com/N1733637372",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Geographic cross-check pairs Salitje with adjacent Onverwacht control.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-34.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SC02-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "onver",
+          "name": "Onverwacht–Nsalitje paired road crossing",
+          "coordinates": [
+            31.6438136,
+            -27.3158226
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately300m; named Eswatini-side Salitje checkpoint directly adjacent to Onverwacht, not a separate distant place.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/1733637372"
+          ],
+          "evidence_note": "OSM node 1733637372, version 3, timestamp 2023-05-27T21:28:33Z. Identity tags: {\"alt_name\": \"Nsalitshe Border Control\", \"barrier\": \"border_control\", \"name\": \"Salitje Border Control\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/2816f2724cccfd71.raw",
+          "evidence_sha256": "7d232eff7a518c7bcfda5a4bb66ce7764555393cbf7b17a5875a6cf86072f3d6"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Formal South African port policy, with paired crossing-area reference; legal endpoint is not measured traveller throughput.",
+      "date_scope_check": "Canonical policy_period: start 2020-03-16–2020-03-16; endpoint 2022-08-01–2022-08-01; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,62 @@
+{
+  "record_id": "R3-AM-010",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "25 April 2023 migrant blockade on Panamericana Sur road access between Santa Rosa and Chacalluta was cleared the same day.",
+  "source_checks": [
+    {
+      "url": "https://rpp.pe/peru/tacna/tacna-policia-libero-carretera-bloqueada-por-migrantes-en-la-frontera-con-chile-noticia-1480706",
+      "access_status": "full_text_web",
+      "finding": "RPP 25 April body describes seated migrants blocking road, police human line and clearance. Ten days stranded is not ten days of road closure.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-AM-010-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-santa-rosa-tacna",
+          "name": "Santa Rosa–Chacalluta road crossing, Santa Rosa control",
+          "coordinates": [
+            -70.31427,
+            -18.3072
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/W286761666",
+            "https://www.openstreetmap.org/way/286761666"
+          ],
+          "evidence_note": "Named Santa Rosa control building corroborated by checkpoint N3049681796 at -70.31399,-18.30714. Chacalluta road checkpoint is 0.9 km south; airport, railway stop and obsolete customs farther south rejected. Road blockade location between complexes remains approximate."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Santa Rosa control reference locates road corridor; precise road obstruction between complexes is not surveyed.",
+      "date_scope_check": "Same-day 25 April phase and unknown elapsed duration retained.",
+      "canonical_dates": {
+        "kind": "same_day",
+        "measure_type": "operational_spell",
+        "start_earliest": "2023-04-25",
+        "start_latest": "2023-04-25",
+        "end_earliest": "2023-04-25",
+        "end_latest": "2023-04-25",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "same_day_no_elapsed_duration",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R3-AM-010.json",
+  "canonical_input_sha256": "f27d1515102bd1688856c280792a3d70a4904f90d60fd405777735232767bbcf",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

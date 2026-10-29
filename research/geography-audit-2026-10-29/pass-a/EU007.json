@@ -1,0 +1,280 @@
+{
+  "record_id": "EU007",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The February22 ministry decision names three distinct pairs: Lavoriškės/Raigardas road operation, Medininkai/Šalčininkai pedestrian-cycle passage, and Kena/Kybartai rail boarding/alighting. Railway Kybartai on Russia frontier is not its road counterpart.",
+  "source_checks": [
+    {
+      "url": "https://vrm.lrv.lt/en/news/the-operation-of-the-lavoriskes-and-raigardas-border-crossing-points-will-be-terminated-from-1-march/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Official text makes all three restrictions effective March1 2024 and permits exceptional VSAT rail boarding/alighting cases.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/c96182fb9ce62187da93.html",
+      "source_sha256": "c0961e8585e7ceda388b1233ae66793a9eff60cd74148dba165938f1cf5c4559",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-037.json"
+    },
+    {
+      "url": "https://lrv.lt/en/news/government-reopens-the-salcininkai-and-medininkai-border-crossing-points-with-belarus-BJy6/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "November19 2025 government notice restores Medininkai/Šalčininkai road passage from November20 but says only cars, so does not independently establish pedestrian/cycle reopening. Canonical chronology is left unchanged.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/82be418598893cc5f4df.html",
+      "source_sha256": "2edd546598e9660aa10f0381600d1da2891030079271fccec51f2f65a6bcdb67",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-044.json"
+    },
+    {
+      "url": "https://pkpd.lrv.lt/lt/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Official directorate homepage links the independently downloaded interactive checkpoint map.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-045.json"
+    },
+    {
+      "url": "https://pkpd.dedikuotas.lt/",
+      "access_status": "fresh_raw_primary_geographic_evidence",
+      "finding": "Inspected raw map markers pair named road/rail checkpoints with explicit LatLng values. Road Kybartai and railway Kybartai have different coordinates; mode identity retained.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b0efb7f3919479de6a25.html",
+      "source_sha256": "106a1091b719ba20cd447ed681fe74ce9fb02a2ea26411866b3c7bf4640c32de"
+    },
+    {
+      "url": "https://pkpd.lrv.lt/lt/veiklos-sritys/administruojami-pasienio-kontroles-punktai/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Official administered-post roster confirms names and road-post addresses; coordinates come from linked map, not inferred address centroids.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/c3814e9b8c10173d955d.html",
+      "source_sha256": "2758b9421801a742b43368d4c09991c0496a98283c1f75f8036f1509f7d7617c",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-038.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU007-R1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-lavoriskes-road",
+          "name": "Lavoriškės road border checkpoint",
+          "coordinates": [
+            25.743363,
+            54.7164271
+          ],
+          "coordinate_method": "Literal Google Maps LatLng in responsible border-checkpoint directorate interactive map, reordered longitude/latitude",
+          "precision": "Facility reference only; published decimal precision is not historical lane or obstruction survey accuracy.",
+          "source_urls": [
+            "https://pkpd.dedikuotas.lt/",
+            "https://pkpd.lrv.lt/lt/"
+          ],
+          "evidence_note": "Named marker Lavoriškių automobilių kelių PKP (laikinai nutrauktas vykimas per PKP) is explicitly road or railway-station border control. Official directorate homepage links this interactive map. Marker is a facility reference, not exact historical lane.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/lithuania-official-map-coordinate-extract.json",
+              "access_status": "fresh_primary_geographic_evidence"
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b0efb7f3919479de6a25.html",
+              "sha256": "106a1091b719ba20cd447ed681fe74ce9fb02a2ea26411866b3c7bf4640c32de",
+              "access_status": "fresh_raw_primary_geographic_evidence"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-raigardas-road",
+          "name": "Raigardas road border checkpoint",
+          "coordinates": [
+            23.974513,
+            53.9430649
+          ],
+          "coordinate_method": "Literal Google Maps LatLng in responsible border-checkpoint directorate interactive map, reordered longitude/latitude",
+          "precision": "Facility reference only; published decimal precision is not historical lane or obstruction survey accuracy.",
+          "source_urls": [
+            "https://pkpd.dedikuotas.lt/",
+            "https://pkpd.lrv.lt/lt/"
+          ],
+          "evidence_note": "Named marker Raigardo automobilių kelių PKP (laikinai nutrauktas vykimas per PKP) is explicitly road or railway-station border control. Official directorate homepage links this interactive map. Marker is a facility reference, not exact historical lane.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/lithuania-official-map-coordinate-extract.json",
+              "access_status": "fresh_primary_geographic_evidence"
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b0efb7f3919479de6a25.html",
+              "sha256": "106a1091b719ba20cd447ed681fe74ce9fb02a2ea26411866b3c7bf4640c32de",
+              "access_status": "fresh_raw_primary_geographic_evidence"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Lavoriškės and Raigardas road crossing operations on Lithuania–Belarus frontier",
+      "date_scope_check": {
+        "start_earliest": "2024-03-01",
+        "start_latest": "2024-03-01",
+        "end_earliest": "2025-10-30",
+        "end_latest": "2025-10-30",
+        "last_confirmed": "2025-10-30",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "EU007-C7P1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-medininkai-road",
+          "name": "Medininkai road border checkpoint",
+          "coordinates": [
+            25.6995475,
+            54.5443273
+          ],
+          "coordinate_method": "Literal Google Maps LatLng in responsible border-checkpoint directorate interactive map, reordered longitude/latitude",
+          "precision": "Facility reference only; published decimal precision is not historical lane or obstruction survey accuracy.",
+          "source_urls": [
+            "https://pkpd.dedikuotas.lt/",
+            "https://pkpd.lrv.lt/lt/"
+          ],
+          "evidence_note": "Named marker Medininkų automobilių kelių PKP is explicitly road or railway-station border control. Official directorate homepage links this interactive map. Marker is a facility reference, not exact historical lane.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/lithuania-official-map-coordinate-extract.json",
+              "access_status": "fresh_primary_geographic_evidence"
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b0efb7f3919479de6a25.html",
+              "sha256": "106a1091b719ba20cd447ed681fe74ce9fb02a2ea26411866b3c7bf4640c32de",
+              "access_status": "fresh_raw_primary_geographic_evidence"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-salcininkai-road",
+          "name": "Šalčininkai road border checkpoint",
+          "coordinates": [
+            25.3763233,
+            54.2730887
+          ],
+          "coordinate_method": "Literal Google Maps LatLng in responsible border-checkpoint directorate interactive map, reordered longitude/latitude",
+          "precision": "Facility reference only; published decimal precision is not historical lane or obstruction survey accuracy.",
+          "source_urls": [
+            "https://pkpd.dedikuotas.lt/",
+            "https://pkpd.lrv.lt/lt/"
+          ],
+          "evidence_note": "Named marker Šalčininkų automobilių kelių PKP is explicitly road or railway-station border control. Official directorate homepage links this interactive map. Marker is a facility reference, not exact historical lane.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/lithuania-official-map-coordinate-extract.json",
+              "access_status": "fresh_primary_geographic_evidence"
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b0efb7f3919479de6a25.html",
+              "sha256": "106a1091b719ba20cd447ed681fe74ce9fb02a2ea26411866b3c7bf4640c32de",
+              "access_status": "fresh_raw_primary_geographic_evidence"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Pedestrian and cycle passage at Medininkai and Šalčininkai road posts",
+      "date_scope_check": {
+        "start_earliest": "2024-03-01",
+        "start_latest": "2024-03-01",
+        "end_earliest": "2025-11-20",
+        "end_latest": "2025-11-20",
+        "last_confirmed": "2025-11-20",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Canonical November20 endpoint is not independently established for pedestrians/cycles by car-only reopening notice; geography remains supported."
+      ]
+    },
+    {
+      "phase_id": "EU007-C7P2",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kena-rail",
+          "name": "Kena railway border checkpoint",
+          "coordinates": [
+            25.6856037,
+            54.640397
+          ],
+          "coordinate_method": "Literal Google Maps LatLng in responsible border-checkpoint directorate interactive map, reordered longitude/latitude",
+          "precision": "Facility reference only; published decimal precision is not historical lane or obstruction survey accuracy.",
+          "source_urls": [
+            "https://pkpd.dedikuotas.lt/",
+            "https://pkpd.lrv.lt/lt/"
+          ],
+          "evidence_note": "Named marker Kenos geležinkelio stoties PKP is explicitly road or railway-station border control. Official directorate homepage links this interactive map. Marker is a facility reference, not exact historical lane.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/lithuania-official-map-coordinate-extract.json",
+              "access_status": "fresh_primary_geographic_evidence"
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b0efb7f3919479de6a25.html",
+              "sha256": "106a1091b719ba20cd447ed681fe74ce9fb02a2ea26411866b3c7bf4640c32de",
+              "access_status": "fresh_raw_primary_geographic_evidence"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-kybartai-rail",
+          "name": "Kybartai railway border checkpoint",
+          "coordinates": [
+            22.7615658,
+            54.6402752
+          ],
+          "coordinate_method": "Literal Google Maps LatLng in responsible border-checkpoint directorate interactive map, reordered longitude/latitude",
+          "precision": "Facility reference only; published decimal precision is not historical lane or obstruction survey accuracy.",
+          "source_urls": [
+            "https://pkpd.dedikuotas.lt/",
+            "https://pkpd.lrv.lt/lt/"
+          ],
+          "evidence_note": "Named marker Kybartų geležinkelio stoties PKP is explicitly road or railway-station border control. Official directorate homepage links this interactive map. Marker is a facility reference, not exact historical lane.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/lithuania-official-map-coordinate-extract.json",
+              "access_status": "fresh_primary_geographic_evidence"
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b0efb7f3919479de6a25.html",
+              "sha256": "106a1091b719ba20cd447ed681fe74ce9fb02a2ea26411866b3c7bf4640c32de",
+              "access_status": "fresh_raw_primary_geographic_evidence"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Passenger boarding/alighting at Kena and Kybartai railway border posts",
+      "date_scope_check": {
+        "start_earliest": "2024-03-01",
+        "start_latest": "2024-03-01",
+        "end_earliest": "2024-03-01",
+        "end_latest": "2024-03-01",
+        "last_confirmed": "2024-03-01",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Station border-post references locate boarding restriction; no entire rail corridor or train-service cessation implied."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "e4aceb668dc2b15d67cdf90a4b004a4960d389a408ec37cba6a48c179ebc2b87"
+}

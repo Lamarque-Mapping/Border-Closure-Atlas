@@ -1,0 +1,59 @@
+{
+  "record_id": "R4-SC-001",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Ak-Tash–Birlishken ordinary passage for residents of Barak enclave, with emergency, funeral and supply exceptions. Dostuk is a distant permitted alternative and cannot locate the closed gate.",
+  "source_checks": [
+    {
+      "url": "https://www.gov.kg/ru/post/s/barak-eksklavyinyin-zhashoochularyinyin-toskoolduksuz-t-s-ch-n-ak-tash-tk-rm-punktunun-ishi-kalyibyina-keltirildi",
+      "access_status": "indexed_extract_only",
+      "finding": "Government December 25, 2018 reopening notice identifies Ak-Tash–Birlishken; direct web access timed out, indexed text checked.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-24.json",
+      "sha256": "ae91c0b589577dc4e8dae91f74680dc1f0bc5d2ac3a48fd104d58474ff3272df"
+    },
+    {
+      "url": "https://www.azattyqasia.org/a/24901903.html",
+      "access_status": "full_text_web",
+      "finding": "Contemporary Azattyq account distinguishes closed Ak-Tash from the long alternative via Dostuk and describes exceptional admission.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r4-4.json",
+      "sha256": "14e34cf6ed7185b1d844fa2ed00c01ff4bbe7834b03a6480c2cad8903f314474"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-SC-001-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ak-Tash–Birlishken ordinary passage for residents of Barak enclave, with emergency, funeral and supply exceptions. Dostuk is a distant permitted alternative and cannot locate the closed gate.",
+      "date_scope_check": {
+        "start_earliest": "2013-01-16",
+        "start_latest": "2013-01-16",
+        "end_earliest": "2018-12-25",
+        "end_latest": "2018-12-25",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "R4-SC-001-D1: The February 15, 2013 Azattyk report explicitly says Ak-Tash remained closed since January 16, 2013. This contemporary, gate-specific account takes priority over the December 2018 government summary’s conflicting spring-2013 wording; that disagreement remains recorded. December 25, 2018 is a government assertion of resumed resident passage, not independent observation of unrestricted commercial or all-nationality opening. Funerals, celebrations, sickness and emergencies were authorised exceptions in February 2013; agreed supplies continued during 2013–2015. This concerns ordinary direct resident passage, not an absolute seal or unchanging exemptions."
+      },
+      "unresolved": [
+        "Exact historical Ak-Tash–Birlishken checkpoint coordinates remain unverified; neither Barak village nor Dostuk is an acceptable substitute."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact historical Ak-Tash–Birlishken checkpoint coordinates remain unverified; neither Barak village nor Dostuk is an acceptable substitute."
+  ],
+  "input_sha256": "e93263adcf46be5752aa8f6f67b4cc49f3f643b0e1753c89ca2956186cdc4ef8",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

@@ -1,0 +1,82 @@
+{
+  "record_id": "R2-EA-007",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "New ordinary agricultural exports from Vietnam into China through Kim Thanh II road checkpoint. Earlier partial restoration for other cargo does not end this fresh-fruit phase; June27 is a limited pilot.",
+  "source_checks": [
+    {
+      "url": "https://baochinhphu.vn/trung-quoc-tam-ngung-nhap-khau-hang-hoa-qua-cua-khau-ha-khau-lao-cai-102220217170434898.htm",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Government report identifies Kim Thanh II, February17 suspension and waiting export trucks.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r3-1.json",
+      "sha256": "75015dcf6744b6f39b39654ee5e3fa032beedea3840cdb6327ce77e0790f4c9f"
+    },
+    {
+      "url": "https://baochinhphu.vn/trung-quoc-thi-diem-nhap-khau-tro-lai-hoa-qua-tuoi-viet-nam-102220628081108434.htm",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Government June28 report identifies June27 trial of9 produce trucks,2 cleared by14:00; not normal capacity.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r3-1.json",
+      "sha256": "75015dcf6744b6f39b39654ee5e3fa032beedea3840cdb6327ce77e0790f4c9f"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/665997590/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Kim Thanh road border-control building inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3865b4fe267fdd2fd1f3.xml",
+      "sha256": "43448a4f00317784559083d5d8cb8afec07df15befa339e300810226ba2ad5ef",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3865b4fe267fdd2fd1f3.txt",
+      "text_sha256": "43448a4f00317784559083d5d8cb8afec07df15befa339e300810226ba2ad5ef",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EA-007-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kim-thanh-2-road",
+          "name": "Kim Thanh II–Hekou road checkpoint",
+          "coordinates": [
+            103.9404498,
+            22.523659
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/665997590/full"
+          ],
+          "evidence_note": "Named KimThanh border_control building, separate from old LaoCai/Hekou passengerbridge andrailway. Ministry explicitly pairs KimThanhII with Hekou freshfruitgate;2012 opening predatesphase.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3865b4fe267fdd2fd1f3.xml",
+          "sha256": "43448a4f00317784559083d5d8cb8afec07df15befa339e300810226ba2ad5ef"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "New ordinary agricultural exports from Vietnam into China through Kim Thanh II road checkpoint. Earlier partial restoration for other cargo does not end this fresh-fruit phase; June27 is a limited pilot.",
+      "date_scope_check": {
+        "start_earliest": "2022-02-17",
+        "start_latest": "2022-02-18",
+        "end_earliest": "2022-06-27",
+        "end_latest": "2022-06-27",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Excludes pre-cleared February 17 consignments and other cargo that resumed earlier. June 27 is limited pilot access, not normal all-goods restoration; the date range reflects documented category/day ambiguity, not blanket ±3-day precision."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "5f0a8eb8a6e8b477f005dfc019cc0e528063d195c931104878d37ddb14a2e302",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

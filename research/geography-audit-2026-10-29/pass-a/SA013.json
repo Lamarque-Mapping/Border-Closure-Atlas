@@ -1,0 +1,128 @@
+{
+  "record_id": "SA013",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Truck access through Chaman–Spin Boldak Friendship Gate during protest; direct RFE reporting identifies the gate itself as blocked, while later logistics reporting also concerns highway access. Passenger/document-rule observations remain separate.",
+  "source_checks": [
+    {
+      "url": "https://www.rferl.org/a/pakistan-border-afghanistan-protest-restrictions/32692454.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Report explicitly says late November 19 protesters blocked Chaman gate connecting to Spin Boldak.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-28.json",
+      "sha256": "4cff612d35f99bb91087c941e47314daf1e70aebec2180cab66b53706ed16934"
+    },
+    {
+      "url": "https://www.radio.gov.pk/03-03-2024/people-express-satisfaction-over-resumption-of-trade-activities-bw-pakistan-afghanistan",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "March 3 report confirms trade resumed through named Chaman–Spin Boldak gateway; no exact first resumption date.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-26.json",
+      "sha256": "b700b42c51c659129a4dc8278cfac2a8b0d3516d6f91e0c0f6b9ac21fa38c578"
+    },
+    {
+      "url": "https://logcluster.org/en/node/45647",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.arabnews.pk/pakistan/respite-for-residents-as-trade-activities-resume-at-pakistan-afghanistan-border-in-chaman-2470386",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.rferl.org/a/pakistan-reopens-chaman-border-afghanistan/33048871.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://efe.com/latest-news/2024-07-21/protesters-end-sit-in-over-pakistans-afghan-border-visa-policy/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.arabnews.pk/pakistan/residents-of-southwestern-pakistani-border-town-end-months-long-protest-against-strict-visa-policy-2553941",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.dawn.com/news/1838740",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://dunyanews.tv/en/Pakistan/794867-Pak-Afghan-trade-resumes-at-Chaman-border%3A-Jan-Achakzai",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SA013-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-chaman-spin-boldak",
+          "name": "Chaman–Spin Boldak Friendship Gate",
+          "coordinates": [
+            66.4384054,
+            30.9548251
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/1018387592",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1018387592",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=66.433,30.95,66.444,30.96"
+          ],
+          "evidence_note": "Mapped border-control building at Chaman–Spin Boldak international road. RFE directly says protesters blocked the connecting gate; this marker identifies affected gateway, not every highway protest position.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-chaman.xml",
+          "sha256": "c880649ab528c0e599dd9681fcd1a6c99d8cb7e998d734daf83a05d79bcc7126",
+          "osm_feature": "way/1018387592",
+          "osm_version": "1",
+          "osm_timestamp": "2022-01-04T22:16:19Z",
+          "identity_tags": {
+            "area": "yes",
+            "barrier": "border_control",
+            "bicycle": "yes",
+            "building": "yes",
+            "foot": "yes",
+            "motor_vehicle": "yes"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Chaman truck movement blocked by the protest, with later goods-trade restoration reported by 3 March 2024.",
+      "date_scope_check": {
+        "scope": "Chaman truck movement blocked by the protest, with later goods-trade restoration reported by 3 March 2024.",
+        "start_earliest": "2023-11-19",
+        "start_latest": "2023-11-20",
+        "end_earliest": "2024-01-24",
+        "end_latest": "2024-01-24",
+        "last_confirmed": "2024-01-24",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "assessment": "Late November 19 versus November 20 onset retained. January 24 remains last confirmed restriction; March 3 goods restoration is a later-access bound, not exact first reopening. July passenger captions do not date freight resumption."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

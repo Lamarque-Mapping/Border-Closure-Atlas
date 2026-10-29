@@ -1,0 +1,89 @@
+{
+  "record_id": "R3-SC-006",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Dostuk–Dustlik road admission-document condition for Kyrgyz citizens entering Uzbekistan. September6 observed easing and September7 formal account remain distinct; long-term onset and continuity unresolved.",
+  "source_checks": [
+    {
+      "url": "https://www.gov.kg/ru/post/s/russkiy-vitse-premer-ministr-duyshenbek-zilaliev-s-segodnyashnego-dnya-kpp-dostuk-avtodorozhnyiy-vozobnovlyaet-rabotu-v-kruglosutochnom-rezhime-i-v-uproshhennom-poryadke",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Cabinet indexed original describes September6 road checkpoint24hour simplified regime; directopen502.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-21.json",
+      "sha256": "b3d607cae8033947ef0a2f87eba02b58e93260b29a20423e917a6da2db26e5fe"
+    },
+    {
+      "url": "https://en.archive.kabar.kg/news/ambassador-kyrgyz-citizens-are-able-to-enter-uzbekistan-without-restrictions-through-dostuk-checkpoint/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Ambassador September7 account distinguishes invitation/telephone-message condition from general passport crossing.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r3-5.json",
+      "sha256": "f0bf7cb6ce154414cc003be948b4980ed3887d9984c4dceee3a41ae1e739fbd5"
+    },
+    {
+      "url": "https://uztradeinfo.uz/menu/27?l=en",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Official trade portal pairs Dustlik Andijan with Dostuk Osh.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-21.json",
+      "sha256": "b3d607cae8033947ef0a2f87eba02b58e93260b29a20423e917a6da2db26e5fe"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/289321013/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Dustlik canopy and border_control tag inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/dae8186fb27419168562.xml",
+      "sha256": "972ccac50d28792219b99dfd637dd5f0efa77a104d797093e62bc366894bf78b",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/dae8186fb27419168562.txt",
+      "text_sha256": "972ccac50d28792219b99dfd637dd5f0efa77a104d797093e62bc366894bf78b",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-SC-006-FU1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-dostuk-dustlik-road",
+          "name": "Dostuk–Dustlik road checkpoint",
+          "coordinates": [
+            72.7595414,
+            40.5729602
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/289321013/full"
+          ],
+          "evidence_note": "Explicit Dustlik Port of Entry canopy with border_control tag and IOM provenance. Uzbekistan trade portal officially pairs Dustlik in Andijan with Dostuk in Osh. Road admission, not railway.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/dae8186fb27419168562.xml",
+          "sha256": "972ccac50d28792219b99dfd637dd5f0efa77a104d797093e62bc366894bf78b"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Dostuk–Dustlik road admission-document condition for Kyrgyz citizens entering Uzbekistan. September6 observed easing and September7 formal account remain distinct; long-term onset and continuity unresolved.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2017-09-06",
+        "end_latest": "2017-09-07",
+        "last_confirmed": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "The September 6 Kabar correspondent explicitly observed small numbers crossing in both directions with passports and no telegram. This supplies an operational easing date, while the ambassador’s September 7 statement retains a different formal effective-day account. Retrospective onset claims of 2000 and 2010 remain unresolved. Contemporary July 2012 reporting already described a special-invitation regime before a separate temporary tightening. An August 12, 2013 Border Service account documents a conditional-admission spell from August 9 at 08:00, with family-event invitations and air-transit exceptions and unrestricted third-country nationals. These earlier observations establish that conditional admission predates 2017 and that qualifying spells exceeded 24 hours; they do not prove uninterrupted identical conditions throughout 2012–2017. The cause of the longstanding regime remains unassigned; the 2013 independence-day explanation is specific to that announced spell."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "4cb17e969d6769c83151a34c428fb06e90082ed681c91d054da5571c3ccd2cf3",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

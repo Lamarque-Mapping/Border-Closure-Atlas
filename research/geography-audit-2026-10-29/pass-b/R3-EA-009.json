@@ -1,0 +1,85 @@
+{
+  "record_id": "R3-EA-009",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Two distinct provincial observations: eight unnamed Attapeu local posts towards Vietnam and Cambodia, and four unnamed Sekong posts towards Vietnam. Phoukeua international crossing is reported open in this provincial account.",
+  "source_checks": [
+    {
+      "url": "https://www.rfa.org/english/news/laos/checkpoints-03162020164126.html",
+      "access_status": "full_text_web",
+      "finding": "RFA explicitly separates the eight Attapeu and four Sekong closures, without naming facilities.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r4-1.json",
+      "sha256": "d4af95a60534a337060c787f24a5d5f6d978435ef2a0dafde607ece14b0c16c9"
+    },
+    {
+      "url": "https://en.vietnamplus.vn/covid-19-laos-closes-border-gates-post170160.vnp",
+      "access_status": "full_text_web",
+      "finding": "VNA describes a separate national gate measure; its named list is not evidence identifying the smaller provincial posts.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r4-4.json",
+      "sha256": "14e34cf6ed7185b1d844fa2ed00c01ff4bbe7834b03a6480c2cad8903f314474"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EA-009-FU1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Two distinct provincial observations: eight unnamed Attapeu local posts towards Vietnam and Cambodia, and four unnamed Sekong posts towards Vietnam. Phoukeua international crossing is reported open in this provincial account.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2020-03-16",
+        "end_latest": "2020-03-16",
+        "last_confirmed": "2020-03-16",
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "R3-EA-009-FU1: Unknown onset/end and unnamed gates; excludes Phoukeua.\n\nR3-EA-009-FU2: Separate provincial observation; no shared onset inferred.\n\nscope: Phoukeua order versus operational-status conflict remains.\n\nduration: Separate provincial dated observations are available; shared onset, gate roster and reopening are not.\n\nonset: RFA's March 16 provincial accounts support eight smaller Attapeu posts and four Sekong posts closed, with Phoukeua open. Two distinct provincial observations are appropriate; exact onset, gate identities and repeal are unknown.\n\nBy 2022-09-01, Laos had authorized provinces to reopen local and traditional border checkpoints under controls. This is later national permission, not proof of the reopening date or actual operation of all eight unnamed Attapeu and four unnamed Sekong posts. No continuous closure through 2022 or beyond is established."
+      },
+      "unresolved": [
+        "The affected local-post roster and coordinates are unverified. Neither the entire national frontier nor the international gate can replace the unnamed subsets."
+      ]
+    },
+    {
+      "phase_id": "R3-EA-009-FU2",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Two distinct provincial observations: eight unnamed Attapeu local posts towards Vietnam and Cambodia, and four unnamed Sekong posts towards Vietnam. Phoukeua international crossing is reported open in this provincial account.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2020-03-16",
+        "end_latest": "2020-03-16",
+        "last_confirmed": "2020-03-16",
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "R3-EA-009-FU1: Unknown onset/end and unnamed gates; excludes Phoukeua.\n\nR3-EA-009-FU2: Separate provincial observation; no shared onset inferred.\n\nscope: Phoukeua order versus operational-status conflict remains.\n\nduration: Separate provincial dated observations are available; shared onset, gate roster and reopening are not.\n\nonset: RFA's March 16 provincial accounts support eight smaller Attapeu posts and four Sekong posts closed, with Phoukeua open. Two distinct provincial observations are appropriate; exact onset, gate identities and repeal are unknown.\n\nBy 2022-09-01, Laos had authorized provinces to reopen local and traditional border checkpoints under controls. This is later national permission, not proof of the reopening date or actual operation of all eight unnamed Attapeu and four unnamed Sekong posts. No continuous closure through 2022 or beyond is established."
+      },
+      "unresolved": [
+        "The affected local-post roster and coordinates are unverified. Neither the entire national frontier nor the international gate can replace the unnamed subsets."
+      ]
+    }
+  ],
+  "unresolved": [
+    "The affected local-post roster and coordinates are unverified. Neither the entire national frontier nor the international gate can replace the unnamed subsets."
+  ],
+  "input_sha256": "2bd5612ac49de6b69f754feae23701fa016defeaa1ebdc504a33038313074ef9",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

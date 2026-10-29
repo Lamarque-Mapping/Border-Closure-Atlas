@@ -1,0 +1,68 @@
+{
+  "record_id": "R3-AM-006",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Renewed international freight obstruction at Paso Canoas 21–24 October 2020 triggered by Panamanian truck protocols; separate earlier October protest not merged.",
+  "source_checks": [
+    {
+      "url": "https://www.tvn-2.com/nacionales/camioneros-panama-costa-rica-transporte_1_1140718.html",
+      "access_status": "full_text_web",
+      "finding": "TVN 24 October reports freight flowing again Saturday morning after over three days, agreement on loaded entry and empty return, and SENAFRONT reopening processing.",
+      "direct_fetch_status": "inaccessible"
+    },
+    {
+      "url": "https://presidencia.gobiernocarlosalvarado.cr/comunicados/2020/10/gracias-al-trabajo-de-dialogo-se-levantan-pacificamente-los-bloqueos-en-la-zona-sur-del-pais/",
+      "access_status": "full_text_web",
+      "finding": "Presidency 14 October records an earlier reopening; not sufficient to close or date the later 21 October phase.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-AM-006-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-paso-canoas-panama",
+          "name": "Paso Canoas, Panamanian customs",
+          "coordinates": [
+            -82.83845,
+            8.53398
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/W234963318",
+            "https://www.openstreetmap.org/way/234963318"
+          ],
+          "evidence_note": "Named Aduanas–Migracion Panameña building at Carretera Interamericana, Paso Canoas, beside SENAFRONT and Costa Rican post office. The new Costa Rican integrated facility at 8.57373,-82.87031 is 5 km away and rejected for 2020 event."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Panamanian customs reference on old crossing route; exact truck blockade line is not surveyed. Passenger scope not inferred.",
+      "date_scope_check": "Canonical scope and date bounds independently compared with the cited account; no expansion beyond that phase.",
+      "canonical_dates": {
+        "kind": "closed_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2020-10-21",
+        "start_latest": "2020-10-21",
+        "end_earliest": "2020-10-24",
+        "end_latest": "2020-10-24",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R3-AM-006.json",
+  "canonical_input_sha256": "a8ac08a637148c9435f147190f2e8c1affcf4eb962206283b395458e1bb838e1",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

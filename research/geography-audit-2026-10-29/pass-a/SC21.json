@@ -1,0 +1,125 @@
+{
+  "record_id": "SC21",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Namibia announcement individually lists six land ports for passenger restriction; Luderitz and Walvis Bay are maritime and not part of these land sites.",
+  "source_checks": [
+    {
+      "url": "https://namibia.un.org/en/38975-namibias-national-response-measures-covid19",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "UN-hosted national measures explicitly name Oshikango, Katwitwi, Wenela, Buitepos, Ariamsvlei and Noordoewer; authorised admissions and essential commerce exceptions appear separately.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-28.txt"
+    },
+    {
+      "url": "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+      "access_status": "fresh_official_pdf_table_inspected",
+      "finding": "AppendixA S8/S9 establish Katima Mulilo/Wenela corridor and Oshikango–Santa Clara coordinates.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/27ad209394e33af2.raw"
+    },
+    {
+      "url": "https://media.afreximbank.com/afrexim/Studying-on-Trade-Carrying-Infrastructure-Gap-in-Southern-African-Development-Community-SADC.pdf",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Figure65 independently pairs Wenela on Namibia side with Katima Mulilo on Zambia side.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-29.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SC21-FU1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "osh",
+          "name": "Oshikango–Santa Clara",
+          "coordinates": [
+            15.8911,
+            -17.39076
+          ],
+          "coordinate_method": "Coordinate pair transcribed from AU-PIDA OSBP Status Report Appendix A, reference S9; independently read published table.",
+          "precision": "Approximate named crossing area; 1 km interpretive precision, not the exact gate.",
+          "source_urls": [
+            "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "Appendix A explicitly pairs Oshikango–Santa Clara with this latitude/longitude. Modern infrastructure reference only; not closure evidence.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/27ad209394e33af2.raw"
+        },
+        {
+          "proposed_site_id": "wenela",
+          "name": "Katima Mulilo–Wenela crossing corridor",
+          "coordinates": [
+            24.24588,
+            -17.47362
+          ],
+          "coordinate_method": "Coordinate pair transcribed from AU-PIDA OSBP Status Report Appendix A, reference S8; independently read published table.",
+          "precision": "Approximate named crossing area; 1 km interpretive precision, not the exact gate.",
+          "source_urls": [
+            "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "Appendix A explicitly pairs Katima Mulilo–Wenela crossing corridor with this latitude/longitude. Modern infrastructure reference only; not closure evidence.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/27ad209394e33af2.raw"
+        },
+        {
+          "proposed_site_id": "buite",
+          "name": "Buitepos border control",
+          "coordinates": [
+            19.9976103,
+            -22.2815342
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/309221710"
+          ],
+          "evidence_note": "OSM node 309221710, version 11, timestamp 2025-03-28T13:22:41Z. Identity tags: {\"barrier\": \"border_control\", \"description\": \"One-Stop Checkpoint for Namibia and Botswana.\", \"motorcar\": \"yes\", \"name\": \"Buitepos Border Control\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/3102e9b177ab235a.raw",
+          "evidence_sha256": "1c645a413b15b6d52bfbc1487184c0703e305568a73e2b05ba036d96e8042b0b"
+        },
+        {
+          "proposed_site_id": "ari",
+          "name": "Ariamsvlei border control",
+          "coordinates": [
+            19.8503262,
+            -28.1176248
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/995503634"
+          ],
+          "evidence_note": "OSM node 995503634, version 4, timestamp 2019-04-17T12:25:20Z. Identity tags: {\"barrier\": \"border_control\", \"country\": \"NA\", \"name\": \"Ariamsvlei Border Control\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/cf510259df642e62.raw",
+          "evidence_sha256": "b807373aae4cb161c81afc32b649383e2ac72b8dc3a4539156cf61c56cedea2d"
+        },
+        {
+          "proposed_site_id": "noord",
+          "name": "Noordoewer border control",
+          "coordinates": [
+            17.6220133,
+            -28.7569633
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/459439978"
+          ],
+          "evidence_note": "OSM node 459439978, version 10, timestamp 2024-09-12T05:46:33Z. Identity tags: {\"access\": \"yes\", \"barrier\": \"border_control\", \"country\": \"NA\", \"foot\": \"yes\", \"name\": \"Noordoewer\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/c30361cdcd6d93d3.raw",
+          "evidence_sha256": "731e1146ebc30d6db6835b322cf7dd00e476646444c3483659a38e6dcef1b79d"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "March24 dated announcement only; no endpoint assigned from later selective reopenings.",
+      "date_scope_check": "Canonical confirmed_through: start 2020-03-24–2020-03-24; endpoint 2020-03-24–2020-03-24; last confirmed 2020-03-24. No end date is inferred from the current geography or extended to the review date. Same-day/order timing does not establish a strictly over-24-hour closure; retain the existing temporal layer and eligibility.",
+      "unresolved": [
+        "Katwitwi exact border-post coordinate unresolved; township point rejected."
+      ]
+    }
+  ],
+  "unresolved": []
+}

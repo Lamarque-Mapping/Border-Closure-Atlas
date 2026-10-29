@@ -1,0 +1,78 @@
+{
+  "record_id": "R3-ME-004",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Arida is the coastal road crossing over Nahr El Kabir between northern Akkar and Tartous. The retained endpoint is restricted return to Lebanon by Lebanese people displaced in Syria, not full normal reopening.",
+  "source_checks": [
+    {
+      "url": "https://today.lorientlejour.com/article/1437893/arida-border-post-in-north-lebanon-reopens.html",
+      "access_status": "full_text_web",
+      "finding": "Original reporting locates Arida in far northern coastal Lebanon and describes repair after the November strikes.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-23.json",
+      "evidence_sha256": "370af37ad7f6c12c1c10fca2929541975151fc75e2b27bc52cfd319f5cdb8782"
+    },
+    {
+      "url": "https://english.enabbaladi.net/archives/2024/12/al-arida-crossing-between-syria-and-lebanon-resumes-operations/",
+      "access_status": "full_text_web",
+      "finding": "Report quotes both the Lebanese minister and Syrian crossing director: passage reopened for displaced people returning to Lebanon, while the Lebanese side was not ready for full movement.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-26.json",
+      "evidence_sha256": "0cc6efec69cf787a8f73efc76cc9c738eadd9c56fb4b93930c0d97e7b4a9142d"
+    },
+    {
+      "url": "https://www.unhcr.org/sy/sites/sy/files/legacy-pdf/UNHCR-Emergency-Response-Brief_5-December-2024.pdf",
+      "access_status": "inaccessible",
+      "finding": "Original UNHCR PDF returned HTTP 429 in web retrieval.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-24.json",
+      "evidence_sha256": "82989895bb619358d1512ffd5e66bc43eb3678981a95461b1c2bc411cb582e01"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-ME-004-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-arida",
+          "name": "Arida / Al-Arida coastal road crossing",
+          "coordinates": [
+            35.9760532,
+            34.6332213
+          ],
+          "coordinate_method": "Original OSM node coordinates read in independently fetched API bounding-box XML",
+          "precision": "approximate crossing facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/map?bbox=35.969,34.630,35.989,34.648",
+            "https://www.openstreetmap.org/node/11056661685"
+          ],
+          "evidence_note": "Named Lebanese crossing checkpoint south of the Nahr El Kabir road bridges. The same XML separately identifies Syrian Arida immigration/checkpoint nodes, Lebanese General Security, Sea Road/A2, and the international river boundary. This is the coastal Tartous–Tripoli crossing, not Abboudieh or Qaa. Current node geometry is not a reconstruction of the destroyed bridge lane. Inspected node tags: {\"name\": \"عبور حدود العريضة\", \"name:ar\": \"عبور حدود العريضة\", \"name:fr\": \"Passage de la frontière d'El Aarîda\", \"police\": \"checkpoint\"}. Geographic evidence only; no historical restriction inferred.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/796939475b5e60db60e2.html",
+          "evidence_sha256": "2345097f7f1ce5fd2389debc5b83052d93141f44bfceb06627c58d2d246b87a2",
+          "osm_version": "2",
+          "osm_timestamp": "2026-02-25T01:34:53Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Arida is the coastal road crossing over Nahr El Kabir between northern Akkar and Tartous. The retained endpoint is restricted return to Lebanon by Lebanese people displaced in Syria, not full normal reopening. Current phase only: Lebanese returnees travelling Syria to Lebanon through Arida",
+      "date_scope_check": {
+        "start_earliest": "2024-11-26",
+        "start_latest": "2024-11-27",
+        "end_earliest": "2024-12-01",
+        "end_latest": "2024-12-02",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "First limited returnee access is bounded December 1–2. This covers Lebanese returnees travelling Syria to Lebanon only; no full vehicle or system restoration is inferred.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

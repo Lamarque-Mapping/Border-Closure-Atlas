@@ -1,0 +1,54 @@
+{
+  "record_id": "AM037",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Two selected staffed road crossings are Bellevue and Quartier d’Orléans; source distinguishes them from other container-blocked routes.",
+  "source_checks": [
+    {
+      "url": "https://stmaartennews.com/french-side-news/french-authorities-confirmed-closing-border-control-posts/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "June2 report explicitly identifies Bellevue and French Quarter/Quartier d’Orléans control posts removed; containers at OysterPond/TerresBasses remained separate.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/6e82564584a72d458992.html",
+      "source_sha256": "450c76670735278a25c36de17ccb9dccaf0935d0be08b6919ef2b15391d69ffd",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-033.json"
+    },
+    {
+      "url": "https://www.soualigapost.com/fr/actualite/35424/transports/restriction-du-franchissement-de-la-fronti%C3%A8re-et-aussi-des-d%C3%A9placements",
+      "access_status": "fresh_full_text_extract",
+      "finding": "March29 account establishes March30 restriction, work and urgent medical exceptions.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/a18929fe5ae50a22d33a.html",
+      "source_sha256": "6b2196c07bb6aafdf24249e90ca253d301c1f192e6eba0de48202b051ee9478e",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-036.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM037-D1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "French-side ordinary non-essential road passage at Bellevue and Quartier d'Orléans, to removal of controls at those two posts.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-30",
+        "start_latest": "2020-03-30",
+        "end_earliest": "2020-06-01",
+        "end_latest": "2020-06-02",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact named road-control features not geolocated from inspected geographic sources; district or town coordinates would be inappropriate. Bellevue hiking-border search results rejected as wrong route."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "7580cc138eb7b7fdea25408ba17c2a1cfc3971182c356a57c5ce9e05b2e2025e"
+}

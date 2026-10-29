@@ -1,0 +1,51 @@
+{
+  "record_id": "R2-EA-004",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Naung Taung/Nawngtawng cargo gate west of Shweli River at Namhkam. Ore/charcoal exports and building-material imports are scoped. Earlier quay blockages and April gate tariff dispute may be different mechanisms.",
+  "source_checks": [
+    {
+      "url": "https://www.irrawaddy.com/news/burma/myanmar-china-border-gate-reopens-as-tnla-ssa-tensions-defused-in-namhkam.html",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Trader reports trucks again passing Naung Taung; source locates it west of Shweli and reports April5 toApril29 restriction.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r3-2.json",
+      "sha256": "049c602b33a76ddafa9ccc7cef8fd3a75c938e817c883d746c7dbd9baffa8268"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EA-004-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Naung Taung/Nawngtawng cargo gate west of Shweli River at Namhkam. Ore/charcoal exports and building-material imports are scoped. Earlier quay blockages and April gate tariff dispute may be different mechanisms.",
+      "date_scope_check": {
+        "start_earliest": "2024-03-11",
+        "start_latest": "2024-04-05",
+        "end_earliest": "2024-04-29",
+        "end_latest": "2024-04-29",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Sources disagree on onset/mechanism: March 11 quay closures cutting gate access versus April 5 gate restriction during tariff confrontation. April 29 cargo resumption is independently reported by trader and TNLA spokesperson accounts. Exact start/phase relation remains unresolved; passenger passage excluded."
+      },
+      "unresolved": [
+        "Exact gate and quay coordinates unverified; Namhkam town or another Muse gate cannot substitute."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact gate and quay coordinates unverified; Namhkam town or another Muse gate cannot substitute."
+  ],
+  "input_sha256": "42332995fa40ebaefc9d0b1268b53927a27570250d592d629a0147d3cd89fe0d",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

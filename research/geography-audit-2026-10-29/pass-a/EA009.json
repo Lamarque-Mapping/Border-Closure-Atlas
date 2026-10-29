@@ -1,0 +1,122 @@
+{
+  "record_id": "EA009",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Mang Wein is the freight gate in Muse opposite Jiegao/Kyalgaung and must be distinguished from Nantaw and Sin Phyu pedestrian gates and Kyinsankyawt outside Muse. Targeted fresh Muse maps do not identify which unnamed road alignment is Mang Wein; generic Muse/Ruili centroid would be misleading.",
+  "source_checks": [
+    {
+      "url": "https://www.voanews.com/a/major-myanmar-china-border-crossing-partially-reopens/6919080.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "AFP quotes rice-exchange official: six trucks at Mang Wein, with other goods routed via Kyinsankyawt.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-23.json",
+      "sha256": "329b1486041103d32821580ca626754776695178fcb837fd2515398957817fc7"
+    },
+    {
+      "url": "https://ispmyanmar.com/ex-04/",
+      "access_status": "search_extract",
+      "finding": "Contemporary itinerary distinguishes Mang Wein–Jiegao, Kyin San Kyawt–Mantman, Kyu Koke–Wangding, Nantaw and Sin Phyu.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-22.json",
+      "sha256": "31278728a06769cb21650972887dc8818f2c32b7bc0ed6e750ad8aff10dc2e95"
+    },
+    {
+      "url": "https://www.moi.gov.mm/moi:eng/news/9216",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-c2c9d6b3b396a1d410.bin",
+      "sha256": "5f4b51ec1d9b85d87c9ad0f9753e2dcbb05da477dca2bd6af8ef3ef3aa825ad7"
+    },
+    {
+      "url": "https://myanmartradeportal.gov.mm/en/legal/384",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 404: Not Found",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://mdn.gov.mm/en/mang-wein-border-point-expected-be-reopened-after-chinese-new-year",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://uzo.sakura.ne.jp/burma/nlm/nlm_data/gnlm_2021/gnlm_05_2021/gnlm_07_05_2021.pdf",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.gnlm.com.mm/mang-wein-border-checkpoint-remains-closed-even-after-one-year/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.mdn.gov.mm/en/monthly-market-summary-january-2023",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.moi.gov.mm/moi%3Aeng/index.php/news/9216",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.moi.gov.mm/moi:eng/index.php/news/9216",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://eng.mizzima.com/2024/11/13/16202",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.gnlm.com.mm/sino-myanmar-major-border-crossing-kyalgaung-yet-to-resume-even-after-over-18-months/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA009-REV1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Mang Wein freight stoppage until first limited six-wheel-truck reopening; not all Muse gates or passenger access",
+      "date_scope_check": {
+        "scope": "Mang Wein freight stoppage until first limited six-wheel-truck reopening; not all Muse gates or passenger access",
+        "start_earliest": "2021-03-30",
+        "start_latest": "2021-03-30",
+        "end_earliest": "2023-01-14",
+        "end_latest": "2023-01-14",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "January 14 2023 07:00 limited six-wheel-truck resumption retained; AFP confirms six trucks and commodity limits. Competing broad April 2020 versus gate-specific March 2021 onset stays qualified."
+      },
+      "unresolved": [
+        "No independently named Mang Wein freight-gate coordinate established; no substitution of Nantaw/central Muse or Wanding Mangman."
+      ]
+    }
+  ],
+  "unresolved": []
+}

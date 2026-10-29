@@ -1,0 +1,60 @@
+{
+  "record_id": "R3-AM-002",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Original resolution concerns the joint Desaguadero/Puerto Acosta customs administration inability to process operations, not independently established physical closure of two named bridges.",
+  "source_checks": [
+    {
+      "url": "https://www.aduana.gob.bo/sites/default/files/archivos/circular2742019.pdf",
+      "access_status": "inaccessible",
+      "finding": "Official PDF web retrieval timed out; its indexed catalogue confirms circular identity but not full contents.",
+      "direct_fetch_status": "inaccessible"
+    },
+    {
+      "url": "https://es.scribd.com/document/729945288/circular2742019",
+      "access_status": "full_text_original_document_mirror",
+      "finding": "Scribd OCR of original resolution AN-GRLGR-DESLF-RESADM-657-2019 dated 26 November explicitly records inability 12–23 November and suspension of administrative deadlines.",
+      "direct_fetch_status": "inaccessible"
+    },
+    {
+      "url": "https://larepublica.pe/sociedad/2019/11/13/frontera-puno-bolivia-permanece-cerrada-por-conflictos-en-el-vecino-pais-lrsd",
+      "access_status": "full_text_web",
+      "finding": "13 November report describes blocked roads and some people continuing on foot, not complete sealing of all bridges.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-AM-002-D1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Desaguadero/Puerto Acosta customs administration's documented inability to operate",
+      "date_scope_check": "Existing dates, uncertainty and duration eligibility retained. Geography remains held pending the identified evidence gap.",
+      "canonical_dates": {
+        "kind": "confirmed_through",
+        "measure_type": "operational_spell",
+        "start_earliest": "2019-11-12",
+        "start_latest": "2019-11-12",
+        "end_earliest": "2019-11-23",
+        "end_latest": "2019-11-23",
+        "last_confirmed": "2019-11-23",
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": [
+        "Administrative service area and actual operating office location are not resolved from original circular; mapping both Desaguadero bridges or a Puerto Acosta town point would overstate physical scope."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R3-AM-002.json",
+  "canonical_input_sha256": "02c080a19c1be00e109f72dd22cc123d3a52d87336a7ec9711d6869c2b688ae3",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

@@ -1,0 +1,141 @@
+{
+  "record_id": "SA029",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Nepal-to-China exports at Rasuwagadhi–Resuo road gateway. Reverse imports and later ordinary passengers have different reopening dates. Historical bridge geometry is explicitly preserved even though currently tagged destroyed.",
+  "source_checks": [
+    {
+      "url": "https://kathmandupost.com/money/2022/12/27/nepal-exports-through-rasuwagadhi-border-about-after-35-months",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Customs chief confirms eight Nepal-to-China export containers December 27 while imports had continued; dates January 29 restriction.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-26.json",
+      "sha256": "b700b42c51c659129a4dc8278cfac2a8b0d3516d6f91e0c0f6b9ac21fa38c578"
+    },
+    {
+      "url": "https://kathmandupost.com/national/2022/12/28/trade-through-the-kerung-rasuwagadhi-border-port-formally-resumes",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://kathmandupost.com/money/2022/09/15/china-to-release-all-stranded-cargo-trucks-by-sept-27",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://kathmandupost.com/money/2022/09/11/eight-containers-roll-into-nepal-as-china-opens-the-border-a-crack",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://kathmandupost.com/2/2020/07/06/rasuwagadhi-kerung-border-opens-for-cargo-trucks",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://radionepalonline.com/en/2023/03/30/350306.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://radionepalonline.com/en/2023/04/01/350548.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://english.ratopati.com/story/13718",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SA029-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-rasuwagadhi-resuo-road-bridge",
+          "name": "Rasuwagadhi–Resuo/Kerung Friendship road bridge",
+          "coordinates": [
+            85.3780675,
+            28.278665
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/1443180803",
+          "precision": "Approximate historical road-bridge centre, 100 m; current destruction tags do not alter historical phase dates.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1443180803",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=85.36,28.26,85.4,28.3"
+          ],
+          "evidence_note": "Fresh OSM preserves named Resuo/Rasuwagadhi Friendship Bridge geometry with start_date 2019 and destroyed/end_date 2025 tags. This is the historical road bridge for 2020–22 phases, not derelict pedestrian suspension bridge or 2026 replacement.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-rasuwagadhi.xml",
+          "sha256": "385a8f7e86fd314b5e20980a8ccaa003b4dcdab43480c9ac8b6775762f7d50e7",
+          "osm_feature": "way/1443180803",
+          "osm_version": "13",
+          "osm_timestamp": "2026-09-02T18:24:39Z",
+          "identity_tags": {
+            "alt_name:en": "Rasuwagadhi Friendship Bridge",
+            "damage:event": "7·8吉隆口岸泥石流",
+            "damage:type": "landslide",
+            "destroyed:bridge": "yes",
+            "destroyed:highway": "primary",
+            "end_date": "2025-07-08",
+            "lanes": "2",
+            "layer": "1",
+            "name": "热索桥 रसुवागढी मितेरी पुल",
+            "name:en": "Resuo Bridge",
+            "name:ko": "레수오 다리",
+            "name:ne": "रसुवागढी मितेरी पुल",
+            "name:zh": "热索桥",
+            "name:zh-Hans": "热索桥",
+            "name:zh-Hant": "熱索橋",
+            "start_date": "2019-06-05",
+            "was:divider": "double_solid_line",
+            "was:driving_side": "left",
+            "was:foot": "designated",
+            "was:lane_markings": "yes",
+            "was:maxspeed:designed": "60",
+            "was:motor_vehicle": "designated",
+            "was:sidewalk:both": "yes",
+            "was:smoothness": "good",
+            "was:surface": "concrete",
+            "was:width": "12"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Nepal-to-China export goods through Rasuwagadhi, to the documented December 27 export trucks.",
+      "date_scope_check": {
+        "scope": "Nepal-to-China export goods through Rasuwagadhi, to the documented December 27 export trucks.",
+        "start_earliest": "2020-01-29",
+        "start_latest": "2020-01-29",
+        "end_earliest": "2022-12-27",
+        "end_latest": "2022-12-27",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "January 29 2020 intentional restriction to December 27 2022 eight exported containers; earlier snow disruption excluded and continuing inbound imports do not end export prohibition."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

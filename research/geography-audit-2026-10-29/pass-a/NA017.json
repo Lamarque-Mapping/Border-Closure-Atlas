@@ -1,0 +1,70 @@
+{
+  "record_id": "NA017",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "The May fighting caused a brief closure of both named Libyan-side Tunisia road posts, Ras Jedir and Dhehiba/Wazen.",
+  "source_checks": [
+    {
+      "url": "https://www.webdo.tn/fr/actualite/national/fermeture-des-postes-frontaliers-entre-la-tunisie-et-la-libye/221933/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Names both posts, entry and exit, since May12 night.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-25.txt"
+    },
+    {
+      "url": "https://news-tunisia.tunisienumerique.com/tunisian-libyan-border-ras-jedir-crossing-reopens/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "National radio correspondent account names both restored at11:00 May13, with traffic in both directions.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-33.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NA017-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "ras",
+          "name": "Ras Jedir / Ras Ajdir",
+          "coordinates": [
+            11.55929,
+            33.14795
+          ],
+          "coordinate_method": "Coordinate pair transcribed from AU-PIDA OSBP Status Report Appendix A, reference N4; independently read published table.",
+          "precision": "Approximate named crossing area; 1 km interpretive precision, not the exact gate.",
+          "source_urls": [
+            "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "Appendix A explicitly pairs Ras Jedir / Ras Ajdir with this latitude/longitude. Modern infrastructure reference only; not closure evidence.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/27ad209394e33af2.raw"
+        },
+        {
+          "existing_site_id": "post-dehiba-wazen",
+          "name": "Dhehiba–Wazen road crossing area",
+          "coordinates": [
+            10.6846255,
+            31.9790258
+          ],
+          "coordinate_method": "Centre of the bounding box of the freshly retrieved named OSM way; approximate facility marker",
+          "precision": "Approximately 1km; named Tunisian border police facility represents crossing area.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/way/520064040/full"
+          ],
+          "evidence_note": "OSM way 520064040, version 5, timestamp 2023-03-17T19:58:35Z. Identity tags: {\"addr:city\": \"الذهيبة\", \"addr:city:ar\": \"الذهيبة\", \"amenity\": \"police\", \"barrier\": \"wall\", \"name\": \"معبر الحدود الذهيبة\", \"name:ar\": \"معبر الحدود الذهيبة\", \"name:fr\": \"Poste frontalier de Dhehiba\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/adf93716af07ba84.raw",
+          "evidence_sha256": "698d6601bf8af62f6d186a4d31fa208019891ffb61e77d266fe669820bb10e38"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Paired crossing-area references for both main posts; preserve short duration and Libyan-side action.",
+      "date_scope_check": "Canonical closed_interval: start 2025-05-12–2025-05-12; endpoint 2025-05-13–2025-05-13; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

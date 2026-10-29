@@ -1,0 +1,113 @@
+{
+  "record_id": "AM025",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Costa Rican ordinary visa-exempt foreign tourist land admission reopened April5 2021; named Peñas Blancas and Paso Canoas references locate the selected land phase, with residents/return/transit exceptions retained.",
+  "source_checks": [
+    {
+      "url": "https://presidencia.gobiernocarlosalvarado.cr/comunicados/2021/04/este-5-de-abril-empieza-la-primera-fase-de-la-apertura-de-las-fronteras-terrestres/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Official April4 announcement allows visa-exempt groups1/2 from April5, health-pass/insurance requirements, excludes controlled mixed migration, and states borders closed March18 2020.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/807d74e31e2c8d7aae77.html",
+      "source_sha256": "50dc60d4550c75f077ace413f354a85f44bdaab077ac8136fd6e26b11750581e",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-029.json"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/301995884/full",
+      "access_status": "fresh_raw_geographic_evidence",
+      "finding": "Named Peñas Blancas customs building XML inspected; retained crossing area reference.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/e34ccd9219ed154302f4.xml",
+      "source_sha256": "9ef51290ca2b936a5d306131095a6cedb93aaf2b707e81be3e475018ae2e9a59"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/234963318/full",
+      "access_status": "fresh_raw_geographic_evidence",
+      "finding": "Named Panamanian customs/migration building at Paso Canoas; identifies southern road crossing complex but not Costa Rican admission booth.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/af80ed815b79c5e30a11.xml",
+      "source_sha256": "1ac0119ca3c3819211d5971be05aac39434b2d858dbfb496ac895fae85c8d583"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM025-R1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-penas-blancas",
+          "name": "Peñas Blancas",
+          "coordinates": [
+            -85.61215,
+            11.21915
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM customs building Aduana de Peñas Blancas, Nicaragua side.",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/301995884"
+          ],
+          "evidence_note": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/e34ccd9219ed154302f4.xml",
+              "sha256": "9ef51290ca2b936a5d306131095a6cedb93aaf2b707e81be3e475018ae2e9a59",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-paso-canoas-road",
+          "name": "Paso Canoas road crossing (Panamanian customs)",
+          "coordinates": [
+            -82.8384534,
+            8.5339823
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/234963318"
+          ],
+          "evidence_note": "Fresh named OSM structure/facility XML inspected; distinct road reference, not nearby town centroid or rail/ferry geometry. Semanario Universidad expressly places vehicles and freight obstruction before Panamanian customs at Paso Canoas while border offices continued working; barriers, sand and tyres described.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/af80ed815b79c5e30a11.xml",
+              "sha256": "1ac0119ca3c3819211d5971be05aac39434b2d858dbfb496ac895fae85c8d583",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "6",
+              "osm_timestamp": "2025-05-09T21:27:45Z",
+              "tags": {
+                "addr:city": "Paso Canoas",
+                "addr:street": "Carretera Interamericana",
+                "barrier": "border_control",
+                "building": "yes",
+                "building:levels": "2",
+                "name": "Aduanas - Migración Panameña"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ordinary visa-exempt foreign tourist land entry into Costa Rica at Peñas Blancas and Paso Canoas",
+      "date_scope_check": {
+        "start_earliest": "2020-03-18",
+        "start_latest": "2020-03-18",
+        "end_earliest": "2021-04-05",
+        "end_latest": "2021-04-05",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Official opening notice establishes national land cohort; exact Costa Rican admission booth at Paso Canoas and complete historical post operation roster not independently reconstructed."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "b20ebae71a3a203407d68a4ac731400da8020b0c6aee2d8c9e39790696f6b0ff"
+}

@@ -1,0 +1,82 @@
+{
+  "record_id": "R3-ME-003",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The retained geography is Al-Wadiah for the initial interruption affecting pilgrims/residents returning from Saudi Arabia to Yemen. The national order in the title does not make this retained cohort a whole-frontier phase.",
+  "source_checks": [
+    {
+      "url": "https://www.mofa-ye.org/Pages/9710/",
+      "access_status": "full_text_web",
+      "finding": "Official government report orders land entrances closed from March 17 except commercial, relief and humanitarian shipping.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-25.json",
+      "evidence_sha256": "dd34687c08f1aa9f7158577200755129043e687f3842399bd6663ced994c82b1"
+    },
+    {
+      "url": "https://www.aden-tm.net/news/120966",
+      "access_status": "full_text_web",
+      "finding": "March 18 on-site report locates stranded travellers at Al-Wadiah, reports entry/exit suspension and differentiated treatment of Umrah travellers, visitors and final-exit travellers. This confirms the crossing but does not settle every cohort/date conflict.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-26.json",
+      "evidence_sha256": "0cc6efec69cf787a8f73efc76cc9c738eadd9c56fb4b93930c0d97e7b4a9142d"
+    },
+    {
+      "url": "https://www.adngad.net/news/451240",
+      "access_status": "inaccessible",
+      "finding": "Original URL could not be accessed in the web tool; not treated as freshly verified.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-25.json",
+      "evidence_sha256": "dd34687c08f1aa9f7158577200755129043e687f3842399bd6663ced994c82b1"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-ME-003-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-al-wadiah",
+          "name": "Al-Wadiah / al-Wadea land port",
+          "coordinates": [
+            47.0113562,
+            16.9403092
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/10138647617",
+            "https://www.openstreetmap.org/api/0.6/node/10138647617"
+          ],
+          "evidence_note": " OSM tags inspected: {\"name\": \"مكتب الهجرة والجوازات اليمني منفذ الوديعه البري\", \"name:en\": \"The Yemeni Immigration and Passports Office, Al-Wadiah Land Port\", \"office\": \"government\", \"opening_hours\": \"24/7\"}. This is geographic evidence only, not historical closure evidence. Named Yemeni Immigration and Passports Office inside Al-Wadiah land port; marker is Yemeni passenger facility area, not Saudi terminal or entire frontier.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/e7975c7b02e088dc70ab.html",
+          "evidence_sha256": "e90f65464ccb744e9db46e9903309c35e6857d6f32d3fdd35992d23f02d5dd66",
+          "osm_version": "1",
+          "osm_timestamp": "2022-10-29T22:27:59Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "The retained geography is Al-Wadiah for the initial interruption affecting pilgrims/residents returning from Saudi Arabia to Yemen. The national order in the title does not make this retained cohort a whole-frontier phase. Current phase only: Wadea initial interruption for pilgrims/residents returning from Saudi Arabia to Yemen",
+      "date_scope_check": {
+        "start_earliest": "2020-03-16",
+        "start_latest": "2020-03-16",
+        "end_earliest": "2020-03-17",
+        "end_latest": "2020-03-17",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": false,
+        "qualification_retained": "The March 16–17 phase concerns the initial interruption for pilgrims and residents returning to Yemen. Contemporary reporting specifies closure on March 16 at night and reopening by March 17 afternoon, supporting exclusion of this initial phase from strict greater-than-24-hours records; exact hours remain unknown. Midnight reclosure was prospective and a March 18 report describes continuing pilgrim exceptions. May 7 is a formal special-returnee permission; subsequent official reporting confirms admissions but not their exact first time. SABA dates the renewed temporary passenger-closure announcement to Thursday May 14, resolving the consular notice’s later May 17 posting date. Freight and coordinated special cases remained excepted. June IOM reporting establishes further limited returnee access while ordinary civilian restrictions remained. These observations do not form a continuous all-passenger closure; national policy repeal and unrestricted restoration remain unknown.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Exact chronology and the returning cohort remain as recorded; the location review does not resolve conflicting passenger exemptions."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact chronology and the returning cohort remain as recorded; the location review does not resolve conflicting passenger exemptions."
+  ]
+}

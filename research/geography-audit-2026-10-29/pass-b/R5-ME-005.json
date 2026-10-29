@@ -1,0 +1,68 @@
+{
+  "record_id": "R5-ME-005",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Personal SUVs travelling Saudi Arabia to Yemen at Al-Wadiah in the owner-present category retained by the canonical phase.",
+  "source_checks": [
+    {
+      "url": "https://www.sabanew.net/story/ar/74905",
+      "access_status": "full_text_web",
+      "finding": "Official SABA reports the port director’s April 25 permission for Yemeni expatriates to bring their SUVs from Saudi Arabia and reports more than 100 vehicles passing that morning.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-24.json",
+      "evidence_sha256": "82989895bb619358d1512ffd5e66bc43eb3678981a95461b1c2bc411cb582e01"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-ME-005-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-al-wadiah",
+          "name": "Al-Wadiah / al-Wadea land port",
+          "coordinates": [
+            47.0113562,
+            16.9403092
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/10138647617",
+            "https://www.openstreetmap.org/api/0.6/node/10138647617"
+          ],
+          "evidence_note": " OSM tags inspected: {\"name\": \"مكتب الهجرة والجوازات اليمني منفذ الوديعه البري\", \"name:en\": \"The Yemeni Immigration and Passports Office, Al-Wadiah Land Port\", \"office\": \"government\", \"opening_hours\": \"24/7\"}. This is geographic evidence only, not historical closure evidence. Named Yemeni Immigration and Passports Office inside Al-Wadiah land port; marker is Yemeni passenger facility area, not Saudi terminal or entire frontier.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/e7975c7b02e088dc70ab.html",
+          "evidence_sha256": "e90f65464ccb744e9db46e9903309c35e6857d6f32d3fdd35992d23f02d5dd66",
+          "osm_version": "1",
+          "osm_timestamp": "2022-10-29T22:27:59Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Personal SUVs travelling Saudi Arabia to Yemen at Al-Wadiah in the owner-present category retained by the canonical phase. Current phase only: Personal SUVs travelling Saudi Arabia to Yemen in the owner-present category admitted on April 25",
+      "date_scope_check": {
+        "start_earliest": "2021-03-01",
+        "start_latest": "2021-03-31",
+        "end_earliest": "2021-04-25",
+        "end_latest": "2021-04-25",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Onset remains month precision; mid-March, two-week and 35-day retrospective accounts are not forced into an exact day. Endpoint is conditional owner-present passage, not all models/commercial vehicles; residual exclusions are incompletely reconstructed and reports share the director's lineage.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Current named Yemeni port facility is located, but the specific Saudi exit enforcement position is not independently isolated. Cohort and timing qualifications remain unchanged."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Current named Yemeni port facility is located, but the specific Saudi exit enforcement position is not independently isolated. Cohort and timing qualifications remain unchanged."
+  ]
+}

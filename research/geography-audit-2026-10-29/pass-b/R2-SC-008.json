@@ -1,0 +1,136 @@
+{
+  "record_id": "R2-SC-008",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Two named election-order posts, Rasuwagadhi and Kimathanka; separate observed freight phase covers Rasuwagadhi only. Scheduled72hours and actual November27 truck movements remain separate.",
+  "source_checks": [
+    {
+      "url": "https://kathmandupost.com/national/2017/11/24/border-with-china-sealed-for-72-hrs",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Named district order covers both posts, people/vehicles from Thursday midnight toSunday midnight.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r3-3.json",
+      "sha256": "032321d4ab2b16a803082b65f25e98ddde778037bf7b353104bb42e453f4d1b0"
+    },
+    {
+      "url": "https://myrepublica.nagariknetwork.com/news/rasuwa-border-reopens",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Republica reports19 containers towardKerung and27 trucks intoNepal November27 after72hour restriction.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r3-3.json",
+      "sha256": "032321d4ab2b16a803082b65f25e98ddde778037bf7b353104bb42e453f4d1b0"
+    },
+    {
+      "url": "https://kathmandupost.com/national/2018/11/17/friendship-bridge-construction-starts-in-rasuwagadhi",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Historical bridge account places replacement5m northeast of predecessor, permitting only approximate crossing-area reference for2017.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-17.json",
+      "sha256": "165e3cc51b49a7e54aee807be5398c81860daea7e423dd0ea448f6d19c3a4685"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1552746559/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "2019 structure coordinates used only as crossing-area reference; not claimed contemporaneous2017 bridge.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/bf6774edf33704a4cf29.xml",
+      "sha256": "9565a58380c57357534006edc73f83372fc4815a4ab63784f542764424ea35f6",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/bf6774edf33704a4cf29.txt",
+      "text_sha256": "9565a58380c57357534006edc73f83372fc4815a4ab63784f542764424ea35f6",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-SC-008-R1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "name": "Rasuwagadhi–Gyirong road crossing area",
+          "coordinates": [
+            85.3780675,
+            28.278665
+          ],
+          "coordinate_method": "Reference point from georeferenced2019 bridge outline; contemporary2018 construction report places its predecessor only5m southwest",
+          "precision": "Crossing-area reference about100m; not exact2017 bridge footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/1552746559/full",
+            "https://kathmandupost.com/national/2018/11/17/friendship-bridge-construction-starts-in-rasuwagadhi"
+          ],
+          "evidence_note": "The2017 phase used the damaged older bridge with a Bailey overlay. The2018 report explicitly places the replacement5m northeast, within stated crossing-area precision. This marker does not claim the2019structure existed in2017.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/bf6774edf33704a4cf29.xml",
+          "sha256": "9565a58380c57357534006edc73f83372fc4815a4ab63784f542764424ea35f6",
+          "proposed_site_id": "post-rasuwagadhi-road-area"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Two named election-order posts, Rasuwagadhi and Kimathanka; separate observed freight phase covers Rasuwagadhi only. Scheduled72hours and actual November27 truck movements remain separate.",
+      "date_scope_check": {
+        "start_earliest": "2017-11-24",
+        "start_latest": "2017-11-24",
+        "end_earliest": "2017-11-27",
+        "end_latest": "2017-11-27",
+        "last_confirmed": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "R2-SC-008-R1: The wider Rasuwagadhi and Kimathanka order remains scheduled, from Thursday midnight to Sunday midnight. The official 72-hour wording is preferred for this schedule; a local resident’s four-day description is retained as a differing account.\n\nREC50-R33-R2SC008-P1: Republica retrospectively says Rasuwa had been closed for 72 hours for the previous day’s election, then reports reopening from Sunday midnight and actual trucks crossing in both directions on 27 November 2017. Together with the contemporaneous 24 November order, this supports an approximate 24 November operational onset and duration greater than 24 hours for Rasuwa freight. The onset is derived from reported duration, not an independently observed first enforcement clock. It is not a new phase beginning on the reopening date. No Kimathanka or all-passenger operational endpoint is inferred."
+      },
+      "unresolved": [
+        "Kimathanka checkpoint coordinates remain unresolved for two-post scheduled order."
+      ]
+    },
+    {
+      "phase_id": "REC50-R33-R2SC008-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "name": "Rasuwagadhi–Gyirong road crossing area",
+          "coordinates": [
+            85.3780675,
+            28.278665
+          ],
+          "coordinate_method": "Reference point from georeferenced2019 bridge outline; contemporary2018 construction report places its predecessor only5m southwest",
+          "precision": "Crossing-area reference about100m; not exact2017 bridge footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/1552746559/full",
+            "https://kathmandupost.com/national/2018/11/17/friendship-bridge-construction-starts-in-rasuwagadhi"
+          ],
+          "evidence_note": "The2017 phase used the damaged older bridge with a Bailey overlay. The2018 report explicitly places the replacement5m northeast, within stated crossing-area precision. This marker does not claim the2019structure existed in2017.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/bf6774edf33704a4cf29.xml",
+          "sha256": "9565a58380c57357534006edc73f83372fc4815a4ab63784f542764424ea35f6",
+          "proposed_site_id": "post-rasuwagadhi-road-area"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Observed November27 Rasuwa freight resumption only. Approximate historical crossing-area point; Kimathanka excluded.",
+      "date_scope_check": {
+        "start_earliest": "2017-11-24",
+        "start_latest": "2017-11-24",
+        "end_earliest": "2017-11-27",
+        "end_latest": "2017-11-27",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "R2-SC-008-R1: The wider Rasuwagadhi and Kimathanka order remains scheduled, from Thursday midnight to Sunday midnight. The official 72-hour wording is preferred for this schedule; a local resident’s four-day description is retained as a differing account.\n\nREC50-R33-R2SC008-P1: Republica retrospectively says Rasuwa had been closed for 72 hours for the previous day’s election, then reports reopening from Sunday midnight and actual trucks crossing in both directions on 27 November 2017. Together with the contemporaneous 24 November order, this supports an approximate 24 November operational onset and duration greater than 24 hours for Rasuwa freight. The onset is derived from reported duration, not an independently observed first enforcement clock. It is not a new phase beginning on the reopening date. No Kimathanka or all-passenger operational endpoint is inferred."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [
+    "Kimathanka checkpoint coordinates remain unresolved for two-post scheduled order."
+  ],
+  "input_sha256": "ce4c3c19c19f252e99bb96ede50a6bd7d998f794a3ddb3ae6353e751beb035e6",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

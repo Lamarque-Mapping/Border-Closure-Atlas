@@ -1,0 +1,62 @@
+{
+  "record_id": "R3-AM-008",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Teachers shifted from junction obstruction on Monday to Suchiate II freight bridge on Tuesday; truck passage resumed Thursday afternoon.",
+  "source_checks": [
+    {
+      "url": "https://www.prensalibre.com/ciudades/san-marcos/culmina-protesta-en-la-frontera-entre-guatemala-y-mexico-se-reportan-perdidas-millonarias/",
+      "access_status": "full_text_web",
+      "finding": "Prensa Libre body says Tuesday bridge-II blockade ended Thursday 21 March at 16:00. Page header 20 March conflicts with body; Monday general junction action and customs holiday not identical phase.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-AM-008-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-suchiate-ii",
+          "name": "Suchiate II freight bridge",
+          "coordinates": [
+            -92.14959,
+            14.70185
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/W834302229",
+            "https://www.openstreetmap.org/way/834302229"
+          ],
+          "evidence_note": "Named bridge adjoining Puerto Fronterizo Suchiate II and Tecun Uman II freight customs, north of the urban Ciudad Hidalgo–Tecun Uman crossing. Mirror nearby Suchiate I label is not taken as proof of first-bridge identity."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Suchiate II freight bridge, not urban pedestrian crossing or entire Mexico–Guatemala border.",
+      "date_scope_check": "19–21 March canonical phase retained, noting publication/body date inconsistency and distinct Monday action.",
+      "canonical_dates": {
+        "kind": "closed_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2019-03-19",
+        "start_latest": "2019-03-19",
+        "end_earliest": "2019-03-21",
+        "end_latest": "2019-03-21",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R3-AM-008.json",
+  "canonical_input_sha256": "4447c95b83aa589572b3faa64e1ddba1cc2b41a8b3ba75517d06de52863e9097",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

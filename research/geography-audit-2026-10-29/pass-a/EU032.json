@@ -1,0 +1,74 @@
+{
+  "record_id": "EU032",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "GBC March15 describes Spanish emergency movement enforcement at Gibraltar land frontier, with residence/employment and justified movement; not a sealed boundary. Customs control-area reference fits passenger frontier route.",
+  "source_checks": [
+    {
+      "url": "https://www.gbc.gi/news/latest-spains-emergency-measures-frontier",
+      "access_status": "fresh_full_text_extract",
+      "finding": "GBC reports proof of acceptable justification for enteringSpain and Gibraltar; unsupported persons refused. This March15 observation does not prove continuous later enforcement.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b5ef13c447bc4764c85b.html",
+      "source_sha256": "d0a0a9e987a59ba63a83f8886af9917a77016a4b40971857055c663e3a3987a8",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-030.json"
+    },
+    {
+      "url": "https://mapcarta.com/N9042086918",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named customs control office next to passenger border and passport control; commercial-gate office is separate.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-036.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU032-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-gibraltar-land-customs",
+          "name": "La Línea–Gibraltar land frontier control area",
+          "coordinates": [
+            -5.34828,
+            36.15492
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 9042086918; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N9042086918",
+            "https://www.openstreetmap.org/node/9042086918"
+          ],
+          "evidence_note": "CustomsControlsUnit adjacent to named Gibraltar and LaLínea border checkpoints and passport control; not commercial gate east or airport.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-036.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "La Línea–Gibraltar frontier under Spanish emergency movement enforcement",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2020-03-16",
+        "end_latest": "2020-11-10",
+        "last_confirmed": "2020-03-16",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact historical Spanish checkpoint footprint unlocated; November observation not independently reconstructed in this geography pass. Canonical evidence dates remain unchanged."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "140176a4d28fc079b24a0875f96574d437839bf1db32023905d0acf223266d4f"
+}

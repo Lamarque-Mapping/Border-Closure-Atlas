@@ -1,0 +1,104 @@
+{
+  "record_id": "R2-RT-001",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "RoC suspension at Deryneia, Astromeritis–Zodhia and Lefka–Apliki; distinct from Ledra Street and Turkish Cypriot controls.",
+  "source_checks": [
+    {
+      "url": "https://archive.cyprus-mail.com/2020/02/29/anastasiades-no-choice-but-to-temporarily-lose-crossings-update-3/",
+      "access_status": "full_text_web",
+      "finding": "29 February report names four gates closed at 06:00, including the three phase sites; other gates remained open.",
+      "direct_fetch_status": "inaccessible"
+    },
+    {
+      "url": "https://commission.europa.eu/document/download/abdabdeb-9886-4766-88ed-e564510f74db_en?filename=Annual+report+2020%3A+Implementation+of+the+green+line+regulation",
+      "access_status": "indexed_original_extract",
+      "finding": "Commission report indexed original extract confirms three reopened 21 June; Ledra Street excluded and testing/eligibility restrictions persisted.",
+      "direct_fetch_status": "inaccessible"
+    },
+    {
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52021DC0273",
+      "access_status": "inaccessible_botwall",
+      "finding": "Direct web access served JavaScript anti-bot wall; not treated as full document.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-RT-001-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-deryneia-roc",
+          "name": "Deryneia Green Line crossing, RoC gate",
+          "coordinates": [
+            33.96037,
+            35.07207
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/N11533577126",
+            "https://www.openstreetmap.org/node/11533577126"
+          ],
+          "evidence_note": "Named Deryneia checkpoint; north-side Derinya building W630560723 is 310 m north and distinct. This marker is the RoC checkpoint, not the town."
+        },
+        {
+          "proposed_site_id": "post-astromeritis-zodhia",
+          "name": "Astromeritis–Zodhia Green Line crossing",
+          "coordinates": [
+            33.03522,
+            35.14594
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/N11533599199",
+            "https://www.openstreetmap.org/node/11533599199"
+          ],
+          "evidence_note": "Named checkpoint corroborated by adjacent checkpoint office W970742130 at 33.03514,35.14592. Not Astromeritis village."
+        },
+        {
+          "proposed_site_id": "post-lefka-apliki",
+          "name": "Lefka–Apliki Green Line crossing",
+          "coordinates": [
+            32.83994,
+            35.08276
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate crossing corridor; opposite-side control point, hundreds of metres uncertainty for RoC barrier",
+          "source_urls": [
+            "https://mapcarta.com/W779189106",
+            "https://www.openstreetmap.org/way/779189106"
+          ],
+          "evidence_note": "Named Aplıç/Lefka border-gate building 3.5 km south of Lefka town. North-side reference locates the crossing corridor, not the precise RoC control booth."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "All three crossing identities supported, but Lefka point is opposite-side corridor reference. Not an internationally recognised interstate boundary.",
+      "date_scope_check": "29 February to 21 June preserved; endpoint is conditional eligible-person access, not complete bilateral reopening.",
+      "canonical_dates": {
+        "kind": "closed_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2020-02-29",
+        "start_latest": "2020-02-29",
+        "end_earliest": "2020-06-21",
+        "end_latest": "2020-06-21",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R2-RT-001.json",
+  "canonical_input_sha256": "24f9c603a66eaed8ba17bb408de52c4087d6a919803d4524fbbbadde147cc21a",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

@@ -1,0 +1,79 @@
+{
+  "record_id": "R4-ME-002",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Mehran / Zurbatiyah road port. The restriction concerns direct Iranian and transit truck entry into Iraq, while unloading to Iraqi trucks at the terminal remained permitted.",
+  "source_checks": [
+    {
+      "url": "https://www.tasnimnews.ir/fa/news/1398/08/08/2129852/مرز-مهران-تا-اطلاع-ثانوی-بسته-شد",
+      "access_status": "full_text_web",
+      "finding": "Original Persian article expressly distinguishes prohibited outward entry of Iranian/transit trucks into Iraq from permitted delivery to Iraqi trucks at the Mehran terminal.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-24.json",
+      "evidence_sha256": "82989895bb619358d1512ffd5e66bc43eb3678981a95461b1c2bc411cb582e01"
+    },
+    {
+      "url": "https://asrkhabar.com/fa/news/165403/فعالیت-تجاری-هیچ-مرزی-با-عراق-متوقف-نیس/",
+      "access_status": "inaccessible",
+      "finding": "Original article was inaccessible in web retrieval; not used as fresh evidence.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-23.json",
+      "evidence_sha256": "370af37ad7f6c12c1c10fca2929541975151fc75e2b27bc52cfd319f5cdb8782"
+    },
+    {
+      "url": "https://www.occrp.org/documents/big-trouble-big-tobacco/OCCRP-Follow-16.pdf",
+      "access_status": "full_text_pdf_web",
+      "finding": "Original archived field report page 9 provides a labelled crossing coordinate; page 10 describes document-check access. Published in 2010, so it supplies approximate crossing identity rather than a 2019 cargo-lane reconstruction.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-27.json",
+      "evidence_sha256": "21c6d85fd376da7e1ca7a6ac5b503911f34fe82f59287e83008604f142a7aea3"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-ME-002-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-mehran-zurbatiyah",
+          "name": "Mehran / Zurbatiyah crossing area",
+          "coordinates": [
+            46.051842,
+            33.123581
+          ],
+          "coordinate_method": "DMS conversion from published 2010 field-report coordinate on printed page 9: 33 degrees 7 minutes 24.89 seconds N, 46 degrees 3 minutes 6.63 seconds E",
+          "precision": "approximate historic crossing area; several hundred metres, not a surveyed 2019 cargo lane",
+          "source_urls": [
+            "https://www.occrp.org/documents/big-trouble-big-tobacco/OCCRP-Follow-16.pdf"
+          ],
+          "evidence_note": "Original 2010 Al Thuraya field report preserved by OCCRP labels the location Mehran Border crossing and the following page describes covered document-check access. This is geographically distinct from Mehran town. Historic geometry does not establish the 2019 restriction or exact truck entry lane.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-27.json",
+          "evidence_sha256": "21c6d85fd376da7e1ca7a6ac5b503911f34fe82f59287e83008604f142a7aea3"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Mehran / Zurbatiyah road port. The restriction concerns direct Iranian and transit truck entry into Iraq, while unloading to Iraqi trucks at the terminal remained permitted. Current phase only: Direct Iranian/transit truck entry into Iraq at Mehran, excluding transshipment",
+      "date_scope_check": {
+        "start_earliest": "2019-10-30",
+        "start_latest": "2019-10-30",
+        "end_earliest": "2019-11-03",
+        "end_latest": "2019-11-03",
+        "last_confirmed": "2019-11-03",
+        "endpoint_status": "last_confirmed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "R4-ME-002-D1: Confirmed through November 3 only, not a reopening or later persistence claim. The Persian customs interview was recovered in this audit as a substantive indexed extract: ordinary cargo transshipment continued, while direct truck delivery at Mehran remained suspended. This is official-interview evidence, not direct gate observation. Passenger accounts conflict and remain excluded. The November 25 general reopening account also says loaded trucks had continued to pass, without distinguishing truck nationality or transshipment; it cannot securely date the end of this direct-entry restriction. English and Persian relays of the same officials are not independent confirmations.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Historic crossing-area coordinate is available, but the particular 2019 Iranian truck entry facility/lane has not been independently isolated."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Historic crossing-area coordinate is available, but the particular 2019 Iranian truck entry facility/lane has not been independently isolated."
+  ]
+}

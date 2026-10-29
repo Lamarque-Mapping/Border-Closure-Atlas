@@ -1,0 +1,146 @@
+{
+  "record_id": "R3-AM-001",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Desaguadero renewed January bridge blockade and March negotiated weekly-access regime remain separate observations. The old urban bridge and new Carancas freight bridge must not be conflated.",
+  "source_checks": [
+    {
+      "url": "https://www.noticiasfides.com/nacional/sociedad/reactivan-bloqueo-en-desaguadero-y-cierran-la-frontera-con-calaminas-palos-y-fierros",
+      "access_status": "full_text_web",
+      "finding": "Fides 4 January describes renewed dawn blockade affecting vehicles and people after December truce.",
+      "direct_fetch_status": "inaccessible"
+    },
+    {
+      "url": "https://rpp.pe/peru/puno/puno-desde-esta-medianoche-hasta-el-lunes-se-reabriran-los-puentes-internacionales-de-desaguadero-noticia-1474383",
+      "access_status": "full_text_web",
+      "finding": "RPP 23 March names Carancas international and pedestrian bridges, with access to Monday then Tuesday/Wednesday strike; inland approaches still affected.",
+      "direct_fetch_status": "inaccessible"
+    },
+    {
+      "url": "https://diariosinfronteras.com.pe/2023/03/23/determinan-flexibilidad-en-la-zona-de-frontera/",
+      "access_status": "full_text_web",
+      "finding": "23 March local account corroborates five-day flexibility and Tuesday/Wednesday stoppage; teacher access to Juli road separately restricted.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/7236c31f0828e68c86b9.raw",
+      "sha256": "82d13dd1803838c21201f5badd8f3b9812685b9356ed010b1bcc3443233b8af9"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-AM-001-R2OBS1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-desaguadero-old-bridge",
+          "name": "Desaguadero old international bridge",
+          "coordinates": [
+            -69.03653,
+            -16.56371
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/W480096903",
+            "https://www.openstreetmap.org/way/480096903"
+          ],
+          "evidence_note": "Named urban international bridge next to PVF PNP Desaguadero, Aduana and Peru migration control. Distinct from new heavy-vehicle bridge 1.8 km south."
+        },
+        {
+          "proposed_site_id": "post-desaguadero-new-bridge",
+          "name": "Desaguadero new international bridge",
+          "coordinates": [
+            -69.03518,
+            -16.5804
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/W480096907",
+            "https://www.openstreetmap.org/way/480096907"
+          ],
+          "evidence_note": "Named international bridge adjacent Bolivian customs, south of the urban old bridge; Carancas heavy-vehicle route. Separate inland Bolivia Desaguadero river bridges rejected."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Two established crossing references; January report does not resolve exact barricade on each span.",
+      "date_scope_check": "4 January only; no inferred January–March continuity.",
+      "canonical_dates": {
+        "kind": "confirmed_through",
+        "measure_type": "operational_spell",
+        "start_earliest": "2023-01-04",
+        "start_latest": "2023-01-04",
+        "end_earliest": "2023-01-04",
+        "end_latest": "2023-01-04",
+        "last_confirmed": "2023-01-04",
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "withheld_exact_duration",
+        "policy_only": false
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "R3-AM-001-REV1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-desaguadero-old-bridge",
+          "name": "Desaguadero old international bridge",
+          "coordinates": [
+            -69.03653,
+            -16.56371
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/W480096903",
+            "https://www.openstreetmap.org/way/480096903"
+          ],
+          "evidence_note": "Named urban international bridge next to PVF PNP Desaguadero, Aduana and Peru migration control. Distinct from new heavy-vehicle bridge 1.8 km south."
+        },
+        {
+          "proposed_site_id": "post-desaguadero-new-bridge",
+          "name": "Desaguadero new international bridge",
+          "coordinates": [
+            -69.03518,
+            -16.5804
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/W480096907",
+            "https://www.openstreetmap.org/way/480096907"
+          ],
+          "evidence_note": "Named international bridge adjacent Bolivian customs, south of the urban old bridge; Carancas heavy-vehicle route. Separate inland Bolivia Desaguadero river bridges rejected."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Weekly passenger-access regime; bridge and traveller eligibility vary, so not uniform reopening.",
+      "date_scope_check": "23–30 March observation window preserved; weekly schedule not converted to continuous full closure.",
+      "canonical_dates": {
+        "kind": "intermittent_regime",
+        "measure_type": "intermittent_regime",
+        "start_earliest": "2023-03-23",
+        "start_latest": "2023-03-23",
+        "end_earliest": "2023-03-30",
+        "end_latest": "2023-03-30",
+        "last_confirmed": "2023-03-30",
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "withheld_intermittent_regime",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R3-AM-001.json",
+  "canonical_input_sha256": "bc3462b3b3cfd26613e9fbc619144c6d6bd55dd5f6323bfbe38eedc3d6ca3800",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

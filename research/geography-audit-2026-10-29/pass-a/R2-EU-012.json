@@ -1,0 +1,126 @@
+{
+  "record_id": "R2-EU-012",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "March21 2017 activist obstructions affected inbound passenger-road approaches at KapitanAndreevo, MalkoTarnovo and Lesovo. Reports distinguish short intermittent blockades, permitted outbound buses and police holding buses before checkpoint; points locate posts only.",
+  "source_checks": [
+    {
+      "url": "https://btvnovinite.bg/bulgaria/blokada-na-patja-za-gkpp-malko-tarnovo.html",
+      "access_status": "fresh_full_text_extract",
+      "finding": "bTV names all three: KapitanAndreevo10:00fourhours, MalkoTarnovobefore11onehour, Lesovotwentyminuteblocks; diplomatic/outbound exceptions.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-038.json"
+    },
+    {
+      "url": "https://mapcarta.com/N1064597888",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named road checkpoint reference distinct from nearby railway border facility.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-039.json"
+    },
+    {
+      "url": "https://mapcarta.com/W1137857770",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Published coordinate for MalkoTarnovo checkpoint government/service feature.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-043.json"
+    },
+    {
+      "url": "https://mapcarta.com/W1137859375",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Published coordinate for Lesovo–Hamzabeyli checkpoint feature.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-044.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EU-012-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-kapitan-andreevo-road",
+          "name": "Kapitan Andreevo road border checkpoint",
+          "coordinates": [
+            26.34907,
+            41.71856
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 1064597888; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N1064597888",
+            "https://www.openstreetmap.org/node/1064597888"
+          ],
+          "evidence_note": "Named border checkpoint; nearby rail facility is separate. Reference does not locate protest barrier on approach.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-039.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-malko-tarnovo-road",
+          "name": "Malko Tarnovo road border checkpoint",
+          "coordinates": [
+            27.46189,
+            41.96951
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 1137857770; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W1137857770",
+            "https://www.openstreetmap.org/way/1137857770"
+          ],
+          "evidence_note": "Named border checkpoint government/service feature on E87, distinct from MalkoTarnovo town5km away.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-043.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-lesovo-road",
+          "name": "Lesovo–Hamzabeyli road border checkpoint",
+          "coordinates": [
+            26.6048,
+            41.96175
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 1137859375; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W1137859375",
+            "https://www.openstreetmap.org/way/1137859375"
+          ],
+          "evidence_note": "Named border checkpoint government/service feature, not Lesovo village.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-044.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Brief activist obstructions of inbound passenger-road approaches at Kapitan Andreevo, Malko Tarnovo and Lesovo",
+      "date_scope_check": {
+        "start_earliest": "2017-03-21",
+        "start_latest": "2017-03-21",
+        "end_earliest": "2017-03-21",
+        "end_latest": "2017-03-21",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "All three posts identified; actual upstream protest/police barriers and their movements unlocated. Duration ineligibility does not block geography."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "00c62e577e83184bcbab12ee3e729b062af9106c5c9ef496384d9e6423e4f263"
+}

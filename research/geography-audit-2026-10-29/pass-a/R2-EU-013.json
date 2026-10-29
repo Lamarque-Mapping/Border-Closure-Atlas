@@ -1,0 +1,72 @@
+{
+  "record_id": "R2-EU-013",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "March24 episode is the KapitanAndreevo inbound road protest. Passengers walked around protesters before police removed them and normal traffic resumed; railway and other checkpoints are not this phase.",
+  "source_checks": [
+    {
+      "url": "https://www.aa.com.tr/en/europe/border-demo-greets-expat-bulgarians-travelling-to-vote/778999",
+      "access_status": "fresh_full_text_extract",
+      "finding": "AA dateline and report identify KapitanAndreevo, roughly50nationalists obstructing inbound bus travellers, police clearance same day. Separate reporters entry refusal is not closure footprint.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-038.json"
+    },
+    {
+      "url": "https://mapcarta.com/N1064597888",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named road post coordinate supports crossing area only.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-039.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EU-013-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-kapitan-andreevo-road",
+          "name": "Kapitan Andreevo road border checkpoint",
+          "coordinates": [
+            26.34907,
+            41.71856
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 1064597888; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N1064597888",
+            "https://www.openstreetmap.org/node/1064597888"
+          ],
+          "evidence_note": "Named border checkpoint; nearby rail facility is separate. Reference does not locate protest barrier on approach.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-039.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Kapitan Andreevo protest episode on 24 March 2017.",
+      "date_scope_check": {
+        "start_earliest": "2017-03-24",
+        "start_latest": "2017-03-24",
+        "end_earliest": "2017-03-24",
+        "end_latest": "2017-03-24",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact approach barrier not located; short episode retained for All view without modifying duration flag."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "2c7a6913fb1c38783921a6ab5e043a8fcf116b3aec411e01557841a6f96443b5"
+}

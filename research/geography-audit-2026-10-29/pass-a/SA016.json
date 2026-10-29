@@ -1,0 +1,80 @@
+{
+  "record_id": "SA016",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Only Salamabad/Uri Trade Facilitation Centre is selected for the later confirmation; Chakkan-da-Bagh was in the 2019 national order but not the September 2026 endpoint. The TFC is an inland trade facility distinct from the LoC bridge, Srinagar city or the entire disputed LoC.",
+  "source_checks": [
+    {
+      "url": "https://www.pib.gov.in/newsite/PrintRelease.aspx?lang=2&reg=48&relid=189799",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "MHA explicitly names Salamabad Uri and Chakkan-da-Bagh and sets April 19 suspension of four-day barter trade.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-23.json",
+      "sha256": "329b1486041103d32821580ca626754776695178fcb837fd2515398957817fc7"
+    },
+    {
+      "url": "https://www.ndtv.com/india-news/cross-loc-trade-uri-jammu-and-kashmir-trade-out-tourism-in-old-chapter-ends-at-cross-loc-facility-new-one-set-to-begin-12063189/amp/1",
+      "access_status": "search_extract",
+      "finding": "September 18 reporter identifies specific Salamabad centre repurposed to tourism, not cross-LoC reopening.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-22.json",
+      "sha256": "31278728a06769cb21650972887dc8818f2c32b7bc0ed6e750ad8aff10dc2e95"
+    },
+    {
+      "url": "https://kashmirlife.net/cross-loc-trade-chapter-closes-as-salamabad-centre-turns-to-border-tourism-452309/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://kashmirlife.net/cross-loc-trade-suspension-mha-issues-a-statement-207807/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://timesofindia.indiatimes.com/india/cross-loc-trade-indefinitely-suspended-via-salamabad-chakan-da-bagh-in-jk/articleshow/68945778.cms",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1570898&lang=2&reg=48",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SA016-R1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Salamabad/Uri cross-LoC barter trade facility only",
+      "date_scope_check": {
+        "scope": "Salamabad/Uri cross-LoC barter trade facility only",
+        "start_earliest": "2019-04-19",
+        "start_latest": "2019-04-19",
+        "end_earliest": "2026-09-18",
+        "end_latest": "2026-09-18",
+        "last_confirmed": "2026-09-18",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "assessment": "April 19 2019 policy onset is explicit. September 18 2026 repurposing report is confirmation of continued trade suspension, not reopening and not evidence for Chakkan-da-Bagh continuity."
+      },
+      "unresolved": [
+        "Salamabad TFC exact footprint not independently located in source-backed coordinates; LoC bridge or village marker is not accepted as a replacement."
+      ]
+    }
+  ],
+  "unresolved": []
+}

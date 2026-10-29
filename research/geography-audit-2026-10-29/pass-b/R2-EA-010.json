@@ -1,0 +1,74 @@
+{
+  "record_id": "R2-EA-010",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Kim Thanh II–Hekou road customs cargo halt July4–5. Reopening clock conflict remains unchanged; passenger and railway services excluded.",
+  "source_checks": [
+    {
+      "url": "https://tuoitre.vn/cua-khau-kim-thanh-thong-quan-tro-lai-20220705170853178.htm",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "TuoiTre explicitly names road gateII and more than one day closure; body19:00 conflicts with caption16:00.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r3-2.json",
+      "sha256": "049c602b33a76ddafa9ccc7cef8fd3a75c938e817c883d746c7dbd9baffa8268"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/665997590/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named road-control building inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3865b4fe267fdd2fd1f3.xml",
+      "sha256": "43448a4f00317784559083d5d8cb8afec07df15befa339e300810226ba2ad5ef",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3865b4fe267fdd2fd1f3.txt",
+      "text_sha256": "43448a4f00317784559083d5d8cb8afec07df15befa339e300810226ba2ad5ef",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EA-010-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kim-thanh-2-road",
+          "name": "Kim Thanh II–Hekou road checkpoint",
+          "coordinates": [
+            103.9404498,
+            22.523659
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/665997590/full"
+          ],
+          "evidence_note": "Named KimThanh border_control building, separate from old LaoCai/Hekou passengerbridge andrailway. Ministry explicitly pairs KimThanhII with Hekou freshfruitgate;2012 opening predatesphase.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3865b4fe267fdd2fd1f3.xml",
+          "sha256": "43448a4f00317784559083d5d8cb8afec07df15befa339e300810226ba2ad5ef"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kim Thanh II–Hekou road customs cargo halt July4–5. Reopening clock conflict remains unchanged; passenger and railway services excluded.",
+      "date_scope_check": {
+        "start_earliest": "2022-07-04",
+        "start_latest": "2022-07-04",
+        "end_earliest": "2022-07-05",
+        "end_latest": "2022-07-05",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "R2-EA-010-D1: Sources agree on July 4–5 cargo closure and explicitly describe more than one day. Nhan Dan specifies July 4 morning onset. The reopening clock conflicts: 16:00 in the Tuoi Tre caption, 19:00 in its body and 19:30 in Nhan Dan. These clocks prevent an exact elapsed-hour estimate but do not defeat greater-than-24-hour eligibility. Key dates share Ha Duc Thuan’s official reporting lineage."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "9f8a33e983026087bb44e27bcf43b1a2f6ae1993794bd5da22dd7cc3388e17e9",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

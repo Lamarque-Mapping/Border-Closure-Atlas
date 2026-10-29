@@ -1,0 +1,74 @@
+{
+  "record_id": "R2-EA-008",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Bac Luan II cargo bridge at Mong Cai–Dongxing, distinct from Bac Luan I passenger gate and Km3+4 pontoon. April26 first cargo restoration excluded cold-chain goods; counts and later cold-chain resumption remain qualified.",
+  "source_checks": [
+    {
+      "url": "https://mongcai.gov.vn/vi-vn/tin/chinh-thuc-thong-quan-tro-lai-cua-khau-cau-bac-luan-ii/402494-58053-284265",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "City notice explicitly names BridgeII, February25 suspension and staged April26 cargo clearance with cold-chain exception.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r3-2.json",
+      "sha256": "049c602b33a76ddafa9ccc7cef8fd3a75c938e817c883d746c7dbd9baffa8268"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/917426003/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Bilingual Second Beilun/Bac Luan II bridge outline inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3726bf67883b579a6e01.xml",
+      "sha256": "96b7e9012978b32f9b45f25570f56ca9764691f8132f510bce0d71e3ee81ce3e",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3726bf67883b579a6e01.txt",
+      "text_sha256": "96b7e9012978b32f9b45f25570f56ca9764691f8132f510bce0d71e3ee81ce3e",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EA-008-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-bac-luan-bridge-2",
+          "name": "Bac Luan II / Second Beilun Bridge",
+          "coordinates": [
+            107.9927346,
+            21.5476446
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/917426003/full"
+          ],
+          "evidence_note": "Named bilingual Bac Luan II / Second Beilun road bridge, start_date2017; provincial and ministry reports explicitly include this cargo crossing among three January2022 resumptions.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3726bf67883b579a6e01.xml",
+          "sha256": "96b7e9012978b32f9b45f25570f56ca9764691f8132f510bce0d71e3ee81ce3e"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Bac Luan II cargo bridge at Mong Cai–Dongxing, distinct from Bac Luan I passenger gate and Km3+4 pontoon. April26 first cargo restoration excluded cold-chain goods; counts and later cold-chain resumption remain qualified.",
+      "date_scope_check": {
+        "start_earliest": "2022-02-25",
+        "start_latest": "2022-02-25",
+        "end_earliest": "2022-04-26",
+        "end_latest": "2022-04-26",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "R2-EA-008-D1: Contemporary throughput accounts conflict: a shared official/press passage says hundreds, the named border-guard interview says just over 20 by early afternoon and first traffic near noon, and the evening city report records 46 vehicles. These counts are not harmonized or treated as independent confirmation. April 26 establishes first partial cargo restoration, excluding cold-chain goods at that stage. A June 17 city report explicitly records a Dongxing agreement restoring cold-chain clearance at Bac Luan II and Km3+4 from June 17 and reports citywide cargo restoration. The later national-government tonnage figure concerns Km3+4, not Bac Luan II; no exact first refrigerated truck at Bac Luan II is established. Passenger admission remains outside this phase."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "edafb85b1e50b007bbf3e391e344fdb0a3ac5401afcec778b5758bc5b2641cf9",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

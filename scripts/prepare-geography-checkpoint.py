@@ -8,8 +8,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 AUDIT = Path('research/geography-audit-2026-10-29')
 SOURCE_FILES = [
-    '.github/workflows/pages.yml', 'dist/core.js', 'source/crossings/README.md',
+    '.github/workflows/pages.yml', 'dist/core.js', 'dist/index.html', 'source/crossings/README.md',
     'source/crossings/locations.json', 'source/crossings/scope-review.json',
+    'source/current-release-manifest.json',
     'scripts/geography-audit-progress.cjs', 'scripts/apply-geography-audit.cjs',
     'scripts/verify-geography-audit.cjs', 'scripts/prepare-geography-checkpoint.py',
     'scripts/build-crossing-geography.cjs', 'scripts/verify-crossing-map.cjs',

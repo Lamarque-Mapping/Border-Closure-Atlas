@@ -1,0 +1,173 @@
+{
+  "record_id": "SA024",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The September 16 statement applies to six existing passenger land ports: Benapole, Akhaura, Sonamasjid, Hili, Darshana and Burimari. Four road passenger complexes are independently located; Hili and Darshana candidate railway/town points do not establish their passenger-control footprints. Five posts scheduled for September 19 are excluded.",
+  "source_checks": [
+    {
+      "url": "https://www.thedailystar.net/nrb/departure-arrival/travel-advisory/news/bangladesh-lifts-restrictions-cross-border-travel-and-india-2177566",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Foreign-ministry statement expressly lists six current ports, removal of NOC condition and five different ports for later reopening.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-24.json",
+      "sha256": "e7501ce4840e4f6da925b02cb08e22df0740ef10898a6a02add0cda397012f3e"
+    },
+    {
+      "url": "https://lpai.gov.in/en/icp-hili",
+      "access_status": "search_extract",
+      "finding": "LPAI distinguishes Hili LCS road port and proposed development from railway infrastructure; no numeric existing passenger gate point.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-25.json",
+      "sha256": "1a3c2e5afc340d18da3bd6635be92e3c91fa9b78a518210daf1023eb10c76e19"
+    },
+    {
+      "url": "https://www.thedailystar.net/frontpage/news/border-india-shut-14-days-2083717",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.aa.com.tr/en/asia-pacific/bangladesh-extends-border-lockdown-with-india/2251062",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.unb.com.bd/category/Bangladesh/border-with-india-to-remain-shut-for-14-days-fm/68086",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SA024-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "name": "Petrapole–Benapole passenger crossing",
+          "coordinates": [
+            88.8839323,
+            23.0379104
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/7557117257",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/7557117257",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=88.89,23.02,88.91,23.05"
+          ],
+          "evidence_note": "Explicit named Petrapole–Benapole Zero Point node; rail station separately excluded.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-benapole.xml",
+          "sha256": "b784e93c8c4d34f2396f82c0fd12d6f541c6c2b7b91ff93554943ae3b40c60df",
+          "osm_feature": "node/7557117257",
+          "osm_version": "3",
+          "osm_timestamp": "2023-11-03T15:58:59Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "পেট্রাপোল - বেনাপোল জিরো পয়েন্ট",
+            "name:en": "Petrapole - Benapole Zero Point"
+          },
+          "existing_site_id": "post-petrapole-benapole"
+        },
+        {
+          "proposed_site_id": "post-agartala-akhaura-road",
+          "name": "Agartala–Akhaura road passenger checkpost",
+          "coordinates": [
+            91.2524258,
+            23.8404065
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/1232103543",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1232103543",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=91.245,23.83,91.26,23.85"
+          ],
+          "evidence_note": "Explicit Akhaura Check Post building in raw XML next to road border controls, distinct from Akhaura rail junction and town.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-akhaura-west.xml",
+          "sha256": "ffe2484937bce86a5136ae875da931ddcb2469903d2a7c23981a79089813620e",
+          "osm_feature": "way/1232103543",
+          "osm_version": "2",
+          "osm_timestamp": "2023-12-19T05:43:48Z",
+          "identity_tags": {
+            "building": "yes",
+            "name": "Akhaura Check Post"
+          }
+        },
+        {
+          "proposed_site_id": "post-sonamasjid-mahadipur",
+          "name": "Sonamasjid–Mahadipur road crossing",
+          "coordinates": [
+            88.1411487,
+            24.8427106
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/5142350050",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/5142350050",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=88.13,24.82,88.17,24.86"
+          ],
+          "evidence_note": "Explicit Mohodipur Border crossing node, paired with Sonamasjid road customs, not railway.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-sonamasjid.xml",
+          "sha256": "e616e4db17af35abd7e5b07e8aad2600dccacadcb0c571d1e55b1b9a73313b3c",
+          "osm_feature": "node/5142350050",
+          "osm_version": "3",
+          "osm_timestamp": "2020-07-18T05:04:07Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "Mohodipur Border crossiong"
+          }
+        },
+        {
+          "proposed_site_id": "post-burimari-changrabandha",
+          "name": "Burimari–Changrabandha road crossing",
+          "coordinates": [
+            88.9237493,
+            26.407075
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/6406980327",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/6406980327",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=88.91,26.38,88.95,26.42"
+          ],
+          "evidence_note": "Explicit Burimari Zero Point beside customs node; railway station at Burimari is distinct and not used.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-burimari.xml",
+          "sha256": "916fa07f7cd0125b895cb1348326bd69a1d45a5c5ef9c5862f51efc6f9d1b2d8",
+          "osm_feature": "node/6406980327",
+          "osm_version": "7",
+          "osm_timestamp": "2026-08-09T20:18:49Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "Burimari Zero Point",
+            "name:bn": "বুড়িমারী জিরো পয়েন্ট",
+            "name:en": "Burimari Zero Point"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Bangladesh's special-authorisation restriction on land-passenger admission at the six already-operating ports covered by the September 16 statement.",
+      "date_scope_check": {
+        "scope": "Bangladesh's special-authorisation restriction on land-passenger admission at the six already-operating ports covered by the September 16 statement.",
+        "start_earliest": "2021-04-26",
+        "start_latest": "2021-04-26",
+        "end_earliest": "2021-09-16",
+        "end_latest": "2021-09-16",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "April 26–September 16 measures special NOC permission and operating hours, not fully sealed gates. Authorised returnees and goods crossed; no first ordinary traveller is independently observed."
+      },
+      "unresolved": [
+        "Hili and Darshana passenger-control coordinates unresolved; rail stations are not adopted without scope-specific proof."
+      ]
+    }
+  ],
+  "unresolved": []
+}

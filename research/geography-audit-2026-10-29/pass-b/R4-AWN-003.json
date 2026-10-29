@@ -1,0 +1,65 @@
+{
+  "record_id": "R4-AWN-003",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ordinary passengers at Guerguerat between Moroccan-administered Western Sahara and Mauritania. Goods were exempt; no assertion of sovereignty is made by the location.",
+  "source_checks": [
+    {
+      "url": "https://fr.le360.ma/societe/le-poste-frontiere-del-guerguerat-rouvert-aux-voyageurs-des-ce-mercredi-10-novembre-249090/",
+      "access_status": "full_text_web",
+      "finding": "Original report quotes local sources on November 10 passenger reopening in both directions and recalls March 18 passenger closure while freight continued.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-23.json",
+      "evidence_sha256": "370af37ad7f6c12c1c10fca2929541975151fc75e2b27bc52cfd319f5cdb8782"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-AWN-003-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-guerguerat-road",
+          "name": "Guerguerat road crossing complex",
+          "coordinates": [
+            -16.9604374,
+            21.3627343
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/2577090295",
+            "https://www.openstreetmap.org/api/0.6/node/2577090295",
+            "https://www.openstreetmap.org/api/0.6/map?bbox=-16.965,21.357,-16.95,21.371"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\", \"motorcar\": \"yes\", \"motorcycle\": \"yes\"}. This is geographic evidence only, not historical closure evidence. Node is within named Poste Frontiere El Guerguarat complex with customs and borderpolice; represented without sovereignty determination. Exact buffer-strip blockade is separate.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/336e0554be17be3e7ab4.html",
+          "evidence_sha256": "ec389cf6854f1c1deafd5d795f6f4958c2adc5f180a63a82bc3857c76004c096",
+          "osm_version": "4",
+          "osm_timestamp": "2023-11-23T20:39:33Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary passengers at Guerguerat between Moroccan-administered Western Sahara and Mauritania. Goods were exempt; no assertion of sovereignty is made by the location. Current phase only: Ordinary passenger restriction at Guerguerat between Moroccan-administered Western Sahara and Mauritania",
+      "date_scope_check": {
+        "start_earliest": "2020-03-18",
+        "start_latest": "2020-03-18",
+        "end_earliest": "2021-11-09",
+        "end_latest": "2021-11-10",
+        "last_confirmed": null,
+        "endpoint_status": "legal_effective",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Formal passenger permission period, not observed first traffic or all-traffic closure. Freight remained permitted; separate protest blockade overlaps geographically but is not added to this duration. Disputed-territory description is retained.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

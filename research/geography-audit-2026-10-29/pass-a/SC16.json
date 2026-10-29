@@ -1,0 +1,63 @@
+{
+  "record_id": "SC16",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The canonical Cameroon-side restriction ends only at Ngueli/Kousseri bridge; Chad-side June17 ceremony alone is not sufficient to date Cameroon reopening.",
+  "source_checks": [
+    {
+      "url": "https://www.minpmeesa.cm/site/en/government-response-strategy-to-the-coronavirus-pandemic-covid-19/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Official Cameroon strategy closes borders with authorised return/essential goods exceptions.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-34.txt"
+    },
+    {
+      "url": "https://h.aa.com.tr/fr/afrique/covid-19-r%C3%A9ouverture-des-fronti%C3%A8res-terrestres-entre-le-cameroun-et-le-tchad/2277706",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Report explicitly locates the ceremony at Ngueli bridge and identifies Chad-side June17 action.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-28.txt"
+    },
+    {
+      "url": "https://www.businessincameroon.com/public-management/2206-11702-towards-the-normalization-of-chad-cameroon-s-commercial-exchange-with-the-reopening-of-cameroon-s-side-of-the-ngueli-border",
+      "access_status": "inaccessible_http403",
+      "finding": "Cameroon-side restoration source blocked; exact June20 endpoint not independently recovered here."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SC16-C1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "ngueli",
+          "name": "Ngueli international road bridge, Kousseri",
+          "coordinates": [
+            15.0536919,
+            12.068539
+          ],
+          "coordinate_method": "Centre of the bounding box of the freshly retrieved named OSM way; approximate facility marker",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/way/23192897/full",
+            "https://www.openstreetmap.org/api/0.6/map?bbox=15.049,12.064,15.059,12.072"
+          ],
+          "evidence_note": "OSM way 23192897, version 14, timestamp 2023-07-11T17:32:21Z. Identity tags: {\"bridge\": \"yes\", \"highway\": \"trunk\", \"layer\": \"1\", \"name\": \"Pont Ngueli جسر انكلي\", \"name:ar\": \"جسر انكلي\", \"name:en\": \"Ngueli Bridge\", \"name:fr\": \"Pont de N'Gueli\", \"surface\": \"asphalt\", \"wikidata\": \"Q3397073\", \"wikipedia\": \"fr:Pont de N'Gueli\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/fd631406e5ad701f.raw",
+          "evidence_sha256": "341e527d3de112983bfcb50530c831e13abb2cc9f58910e5e871a12d4a660650"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Named international road bridge only; retain canonical June20 endpoint and do not replace it with June17 ceremony.",
+      "date_scope_check": "Canonical policy_period: start 2020-03-18–2020-03-18; endpoint 2021-06-20–2021-06-20; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": [
+        "Exact Cameroon-side endpoint remains source-access qualified in this pass."
+      ]
+    }
+  ],
+  "unresolved": []
+}

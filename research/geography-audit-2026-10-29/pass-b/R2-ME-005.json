@@ -1,0 +1,71 @@
+{
+  "record_id": "R2-ME-005",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The retained restriction concerns passengers leaving Iraq for Iran at Shalamcheh, near Basra. Goods and trade are outside this phase.",
+  "source_checks": [
+    {
+      "url": "https://www.euronews.com/2019/11/16/iraq-closes-southern-border-with-iran-to-travellers-security-source-diplomat",
+      "access_status": "full_text_web",
+      "finding": "Reuters opening report identifies Shalamcheh as the southern crossing closed to travellers.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-23.json",
+      "evidence_sha256": "370af37ad7f6c12c1c10fca2929541975151fc75e2b27bc52cfd319f5cdb8782"
+    },
+    {
+      "url": "https://www.euronews.com/2019/11/23/iraq-iran-border-crossing-reopens-after-week-long-closure-statement",
+      "access_status": "full_text_web",
+      "finding": "Reuters quotes the Border Ports Commission on reopening and explicitly says goods and trade were unaffected.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-24.json",
+      "evidence_sha256": "82989895bb619358d1512ffd5e66bc43eb3678981a95461b1c2bc411cb582e01"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-ME-005-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-shalamcheh",
+          "name": "Shalamcheh",
+          "coordinates": [
+            48.0293192,
+            30.5024401
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1451074497",
+            "https://www.openstreetmap.org/api/0.6/way/1451074497/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"area\": \"yes\", \"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"پایانه مرزی شلمچه\", \"name:ar\": \"منفذ الشلامجه الحدودي\", \"name:en\": \"Shalamcheh Border Post\", \"name:fa\": \"پایانه مرزی شلمچه\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/cfa51d091b3aa812cc6c.html",
+          "evidence_sha256": "b903a6e78bf5bd487c69f2da3b488f14c6e86b83377428fb70d6defbc72509b3",
+          "osm_version": "4",
+          "osm_timestamp": "2026-10-18T12:17:28Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "The retained restriction concerns passengers leaving Iraq for Iran at Shalamcheh, near Basra. Goods and trade are outside this phase. Current phase only: Shalamcheh passenger travel from Iraq into Iran; goods and trade excluded",
+      "date_scope_check": {
+        "start_earliest": "2019-11-16",
+        "start_latest": "2019-11-16",
+        "end_earliest": "2019-11-23",
+        "end_latest": "2019-11-23",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Seven-day interval applies to Iraq→Iran passenger movement. Reuters describes travellers from both countries but does not separately establish reverse-direction restoration; goods and trade unaffected. Shafaq and Reuters share the Iraqi authority source.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,74 @@
+{
+  "record_id": "AM009",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Dajabón food trade resumed July14 under restricted hours, military and health supervision. A customs-centre reference locates this crossing area; the market footprint and pedestrian gate are not conflated with one bridge.",
+  "source_checks": [
+    {
+      "url": "https://www.diariolibre.com/actualidad/ciudad/se-reactiva-el-mercado-binacional-en-la-frontera-dominico-haitiana-DA27503374",
+      "access_status": "fresh_full_text_extract",
+      "finding": "July14 on-site report says Dajabón reopened for food after week since assassination; goods08:00–15:00 and50 entrants/hour.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/131022313c016f63adf2.html",
+      "source_sha256": "deaa1cf1f3aeff384658b3ba5f095fcf733bb563185fccc4735cdb65b1b8fc83",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-034.json"
+    },
+    {
+      "url": "https://mapcarta.com/W48766019",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Named government customs building next to binational road bridge and market; nearby separate pedestrian bridge listed.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-032.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM009-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-dajabon-customs",
+          "name": "Dajabón customs crossing reference",
+          "coordinates": [
+            -71.71188,
+            19.5509
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 48766019; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W48766019",
+            "https://www.openstreetmap.org/way/48766019"
+          ],
+          "evidence_note": "Named customs centre immediately beside binational road bridge and market; separate nearby pedestrian bridge exists, so exact food-commerce gate not asserted.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-032.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Dajabón food-commerce restriction following the Haitian assassination, to initial limited commercial restoration.",
+      "date_scope_check": {
+        "start_earliest": "2021-07-07",
+        "start_latest": "2021-07-07",
+        "end_earliest": "2021-07-13",
+        "end_latest": "2021-07-14",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact trade gate and market bounds unlocated; named customs centre represents crossing area only."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "88e74851425f814d617825ea35f569f6501ebc83a4f917a6b5dd20f47c023f4c"
+}

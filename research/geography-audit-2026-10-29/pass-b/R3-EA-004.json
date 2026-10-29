@@ -1,0 +1,74 @@
+{
+  "record_id": "R3-EA-004",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Motaain–Batugade goods processing scheduled suspension September 8–11, 2024 with normal cargo service planned September 12. Pilgrim passenger access and personal baggage exceptions remain distinct.",
+  "source_checks": [
+    {
+      "url": "https://www.askara.co/read/2024/09/05/49003/plbn-motaain-pastikan-siap-layani-peziarah-saat-kunjungan-paus-fransiskus-ke-timor-leste",
+      "access_status": "full_text_web",
+      "finding": "BNPP staff account explicitly locates the goods-processing suspension at PLBN Motaain and says Motaain–Batugade stayed open for pilgrims.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r4-2.json",
+      "sha256": "65e22a07c9964bb96f87f5518e3f973f2d61373ec846b4e1068d8b574759ba07"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/545957507/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Motaain customs outline with geometry predating the 2024 phase inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/54d915ca284d1fb4cd62.xml",
+      "sha256": "538c1e0498991d5de3dc3c852627934f499d7b6994e14b6d3625050457fe021d",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/54d915ca284d1fb4cd62.txt",
+      "text_sha256": "538c1e0498991d5de3dc3c852627934f499d7b6994e14b6d3625050457fe021d",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EA-004-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-motaain-plbn",
+          "name": "Motaain Indonesian land border post",
+          "coordinates": [
+            124.9509797,
+            -8.9598527
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/545957507/full"
+          ],
+          "evidence_note": "Named PLBN Motaain customs outline, with vertices surveyed in 2017 and outline version from 2020. Original 2024 BNPP account explicitly places suspended goods clearance at PLBN Motaain opposite Batugade.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/54d915ca284d1fb4cd62.xml",
+          "sha256": "538c1e0498991d5de3dc3c852627934f499d7b6994e14b6d3625050457fe021d"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Motaain–Batugade goods processing scheduled suspension September 8–11, 2024 with normal cargo service planned September 12. Pilgrim passenger access and personal baggage exceptions remain distinct.",
+      "date_scope_check": {
+        "start_earliest": "2024-09-08",
+        "start_latest": "2024-09-08",
+        "end_earliest": "2024-09-12",
+        "end_latest": "2024-09-12",
+        "last_confirmed": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "September 12 is scheduled resumption only. Personal pilgrim baggage allowances differ from ordinary freight; direction not disaggregated."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "92146fbf07ac7085a03a2c87fea3638ac057023610c39e97ff2774ecd9967849",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

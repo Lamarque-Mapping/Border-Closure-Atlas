@@ -1,0 +1,82 @@
+{
+  "record_id": "R3-EA-002",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Indonesian Skouw–Wutung public road passage in October2019 gunfire/security closure segment. Skouw service building provides Indonesian checkpoint reference; January2020 later passenger totals do not supply exact2019 reopening.",
+  "source_checks": [
+    {
+      "url": "https://en.antaranews.com/news/134212/ri-png-border-remains-closed-for-security-reason",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Antara October6 says public crossing remained closed and identifies Skouw district market300m from neutralzone.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r3-4.json",
+      "sha256": "72efa1d4041f8b0dcda33ab1cc705c5729c7d6b51b02a17dccd9025cd460f2d0"
+    },
+    {
+      "url": "https://en.antaranews.com/news/133912/indonesias-skouw-wutung-border-post-temporarily-closed-mily",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Indonesian taskforce commander confirms Tuesdaymorning closure of SkouwWutung post after gunshots.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r3-5.json",
+      "sha256": "f0bf7cb6ce154414cc003be948b4980ed3887d9984c4dceee3a41ae1e739fbd5"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/312090467/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Indonesian PLBN Skouw building inspected; appropriate to Indonesian public-passage closure, not PNG-only gate.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/83b58852ce6205871dc2.xml",
+      "sha256": "b5065050463b0eb8261b27852310fd0a4b27070c5e0db31c2abae89bfdd42591",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/83b58852ce6205871dc2.txt",
+      "text_sha256": "b5065050463b0eb8261b27852310fd0a4b27070c5e0db31c2abae89bfdd42591",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EA-002-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-skouw-plbn",
+          "name": "PLBN Skouw border-post building",
+          "coordinates": [
+            140.9987767,
+            -2.6085816
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/312090467/full"
+          ],
+          "evidence_note": "OSM explicitly names Indonesian PLBN Skouw. Position is service building, not PNG Wutung gate; use only for Indonesian service phases.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/83b58852ce6205871dc2.xml",
+          "sha256": "b5065050463b0eb8261b27852310fd0a4b27070c5e0db31c2abae89bfdd42591"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Indonesian Skouw–Wutung public road passage in October2019 gunfire/security closure segment. Skouw service building provides Indonesian checkpoint reference; January2020 later passenger totals do not supply exact2019 reopening.",
+      "date_scope_check": {
+        "start_earliest": "2019-10-01",
+        "start_latest": "2019-10-01",
+        "end_earliest": "2019-10-06",
+        "end_latest": "2019-10-06",
+        "last_confirmed": "2019-10-06",
+        "temporal_display_rule": "",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "R3-EA-002-D1: Retain the conservative October 1–6, 2019 security-closure segment. September closure references and the announced October 3 reopening conflict with the October 6 continued-closure report; none should be treated as a complete operational chronology.\n\nA March 18, 2020 Medcom report quotes Skouw official Mathilda Pusung giving January 2020 passenger totals: passport and border-pass arrivals and departures. Those counts establish later public crossing during January 2020, so use January 31 only as a conservative month-precision upper bound. This does not assert that the crossing remained open on January 31: a separate COVID closure began late that month. Exact 2019 reopening and intervening continuity remain unknown."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "a5429a0bbbeb94fb49ad5acc9e1f7b8c18c8e9cfafddf323dd4a6a443eeb6dc5",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

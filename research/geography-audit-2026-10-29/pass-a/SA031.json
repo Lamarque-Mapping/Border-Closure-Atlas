@@ -1,0 +1,113 @@
+{
+  "record_id": "SA031",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "China-to-Nepal cargo interruption at the same historical Rasuwagadhi road bridge. The contemporaneous report also covers Tatopani, but the selected phase and September 15 endpoint concern Rasuwagadhi only.",
+  "source_checks": [
+    {
+      "url": "https://english.onlinekhabar.com/tatopani-rasuwagadhi-border-closed.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "August 12 customs reporting already describes Rasuwagadhi closure since prior weekend.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-24.json",
+      "sha256": "e7501ce4840e4f6da925b02cb08e22df0740ef10898a6a02add0cda397012f3e"
+    },
+    {
+      "url": "https://kathmandupost.com/money/2022/09/15/china-to-release-all-stranded-cargo-trucks-by-sept-27",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Seven trucks crossed into Nepal Thursday September 15; export restriction remained.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-26.json",
+      "sha256": "b700b42c51c659129a4dc8278cfac2a8b0d3516d6f91e0c0f6b9ac21fa38c578"
+    },
+    {
+      "url": "https://english.onlinekhabar.com/tatopani-rasuwagadi-border-point-open.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://english.nepalnews.com/s/nation/rasuwagadhi-transit-sees-the-arrival-of-imports-from-china/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SA031-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-rasuwagadhi-resuo-road-bridge",
+          "name": "Rasuwagadhi–Resuo/Kerung Friendship road bridge",
+          "coordinates": [
+            85.3780675,
+            28.278665
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/1443180803",
+          "precision": "Approximate historical road-bridge centre, 100 m; current destruction tags do not alter historical phase dates.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1443180803",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=85.36,28.26,85.4,28.3"
+          ],
+          "evidence_note": "Fresh OSM preserves named Resuo/Rasuwagadhi Friendship Bridge geometry with start_date 2019 and destroyed/end_date 2025 tags. This is the historical road bridge for 2020–22 phases, not derelict pedestrian suspension bridge or 2026 replacement.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-rasuwagadhi.xml",
+          "sha256": "385a8f7e86fd314b5e20980a8ccaa003b4dcdab43480c9ac8b6775762f7d50e7",
+          "osm_feature": "way/1443180803",
+          "osm_version": "13",
+          "osm_timestamp": "2026-09-02T18:24:39Z",
+          "identity_tags": {
+            "alt_name:en": "Rasuwagadhi Friendship Bridge",
+            "damage:event": "7·8吉隆口岸泥石流",
+            "damage:type": "landslide",
+            "destroyed:bridge": "yes",
+            "destroyed:highway": "primary",
+            "end_date": "2025-07-08",
+            "lanes": "2",
+            "layer": "1",
+            "name": "热索桥 रसुवागढी मितेरी पुल",
+            "name:en": "Resuo Bridge",
+            "name:ko": "레수오 다리",
+            "name:ne": "रसुवागढी मितेरी पुल",
+            "name:zh": "热索桥",
+            "name:zh-Hans": "热索桥",
+            "name:zh-Hant": "熱索橋",
+            "start_date": "2019-06-05",
+            "was:divider": "double_solid_line",
+            "was:driving_side": "left",
+            "was:foot": "designated",
+            "was:lane_markings": "yes",
+            "was:maxspeed:designed": "60",
+            "was:motor_vehicle": "designated",
+            "was:sidewalk:both": "yes",
+            "was:smoothness": "good",
+            "was:surface": "concrete",
+            "was:width": "12"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "China-to-Nepal cargo at Rasuwagadhi during the renewed August COVID interruption, to first limited backlog release.",
+      "date_scope_check": {
+        "scope": "China-to-Nepal cargo at Rasuwagadhi during the renewed August COVID interruption, to first limited backlog release.",
+        "start_earliest": "2022-08-06",
+        "start_latest": "2022-08-07",
+        "end_earliest": "2022-09-15",
+        "end_latest": "2022-09-15",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "August 12 report says closure since preceding weekend, supporting August 6–7 bounds. Later August 14 retrospective remains conflict. September 15 first seven inbound cargo trucks is limited backlog release; exports and passengers differ."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

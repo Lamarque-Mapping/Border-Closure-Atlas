@@ -1,0 +1,59 @@
+{
+  "record_id": "R3-EA-001",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Intermittent Laos–Cambodia local crossing closure in April2017. PhnomPenhPost calls it Voen Kham beside Mekong; CambodiaDaily official says Trapaing Kriel while commander denies closure. Exact identity and intermittent scope cannot be collapsed into one port.",
+  "source_checks": [
+    {
+      "url": "https://www.phnompenhpost.com/national/laos-cambodia-border-closed-over-tensions",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "OriginalPost directwebopen403; ODM preserves attributed extract naming VoenKham and intermittentApril2–3 closure.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-21.json",
+      "sha256": "b3d607cae8033947ef0a2f87eba02b58e93260b29a20423e917a6da2db26e5fe"
+    },
+    {
+      "url": "https://english.cambodiadaily.com/2017/04/06/military-tension-on-laos-border-de-escalated-for-khmer-new-year/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Daily full article names TrapaingKriel, includes commander denial and provincial-spokesman confirmation.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r3-4.json",
+      "sha256": "72efa1d4041f8b0dcda33ab1cc705c5729c7d6b51b02a17dccd9025cd460f2d0"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EA-001-R1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Intermittent Laos–Cambodia local crossing closure in April2017. PhnomPenhPost calls it Voen Kham beside Mekong; CambodiaDaily official says Trapaing Kriel while commander denies closure. Exact identity and intermittent scope cannot be collapsed into one port.",
+      "date_scope_check": {
+        "start_earliest": "2017-04-02",
+        "start_latest": "2017-04-02",
+        "end_earliest": "2017-04-03",
+        "end_latest": "2017-04-03",
+        "last_confirmed": null,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Attributed local-official intermittent regime April 2–3; open by April 3 interview, exact closure lengths and first/last times unknown. Commander denies closure and Voen Kham/Trapaing Kriel naming unresolved. Not two complete closed days. Post inspected through index after direct 403; Cambodia Daily read fully."
+      },
+      "unresolved": [
+        "Voen Kham river crossing versus Trapaing Kriel road checkpoint unresolved; no coordinate or continuous two-day closure inferred."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Voen Kham river crossing versus Trapaing Kriel road checkpoint unresolved; no coordinate or continuous two-day closure inferred."
+  ],
+  "input_sha256": "58dba94853693c0b5777fa794a5c0ad0b59d341e829dba3f7b6014cff14cc1c5",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

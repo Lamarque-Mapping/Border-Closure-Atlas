@@ -1,0 +1,120 @@
+{
+  "record_id": "EU006",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Two named Lithuanian road posts Šumskas and Tverečius ceased operation from August18 2023. Official closure decision and separately published authority map establish both facility identities.",
+  "source_checks": [
+    {
+      "url": "https://vrm.lrv.lt/lt/naujienos/uzdaromi-sumsko-ir-tvereciaus-pasienio-kontroles-punktai/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Interior ministry specifies two of six road posts closed August18; Šumskas had light vehicles, Tverečius light and empty freight vehicles. Other four initially remained.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/1a91ce5880bd8c68599c.html",
+      "source_sha256": "69e5ca58c8fc45017ae76bc54deecd1b65f759f55f6a89d88f03092707ea7afb",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-047.json"
+    },
+    {
+      "url": "https://pkpd.lrv.lt/lt/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Official directorate homepage links the independently downloaded interactive checkpoint map.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-045.json"
+    },
+    {
+      "url": "https://pkpd.dedikuotas.lt/",
+      "access_status": "fresh_raw_primary_geographic_evidence",
+      "finding": "Inspected raw map markers pair named road/rail checkpoints with explicit LatLng values. Road Kybartai and railway Kybartai have different coordinates; mode identity retained.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b0efb7f3919479de6a25.html",
+      "source_sha256": "106a1091b719ba20cd447ed681fe74ce9fb02a2ea26411866b3c7bf4640c32de"
+    },
+    {
+      "url": "https://pkpd.lrv.lt/lt/veiklos-sritys/administruojami-pasienio-kontroles-punktai/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Official administered-post roster confirms names and road-post addresses; coordinates come from linked map, not inferred address centroids.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/c3814e9b8c10173d955d.html",
+      "source_sha256": "2758b9421801a742b43368d4c09991c0496a98283c1f75f8036f1509f7d7617c",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-038.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU006-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-sumskas-road",
+          "name": "Šumskas road border checkpoint",
+          "coordinates": [
+            25.7573204,
+            54.5917517
+          ],
+          "coordinate_method": "Literal Google Maps LatLng in responsible border-checkpoint directorate interactive map, reordered longitude/latitude",
+          "precision": "Facility reference only; published decimal precision is not historical lane or obstruction survey accuracy.",
+          "source_urls": [
+            "https://pkpd.dedikuotas.lt/",
+            "https://pkpd.lrv.lt/lt/"
+          ],
+          "evidence_note": "Named marker Šumsko automobilių kelių PKP (laikinai nutrauktas vykimas per PKP) is explicitly road or railway-station border control. Official directorate homepage links this interactive map. Marker is a facility reference, not exact historical lane.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/lithuania-official-map-coordinate-extract.json",
+              "access_status": "fresh_primary_geographic_evidence"
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b0efb7f3919479de6a25.html",
+              "sha256": "106a1091b719ba20cd447ed681fe74ce9fb02a2ea26411866b3c7bf4640c32de",
+              "access_status": "fresh_raw_primary_geographic_evidence"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-tverecius-road",
+          "name": "Tverečius road border checkpoint",
+          "coordinates": [
+            26.6349553,
+            55.322233
+          ],
+          "coordinate_method": "Literal Google Maps LatLng in responsible border-checkpoint directorate interactive map, reordered longitude/latitude",
+          "precision": "Facility reference only; published decimal precision is not historical lane or obstruction survey accuracy.",
+          "source_urls": [
+            "https://pkpd.dedikuotas.lt/",
+            "https://pkpd.lrv.lt/lt/"
+          ],
+          "evidence_note": "Named marker Tverečiaus automobilių kelių PKP (laikinai nutrauktas vykimas per PKP) is explicitly road or railway-station border control. Official directorate homepage links this interactive map. Marker is a facility reference, not exact historical lane.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/lithuania-official-map-coordinate-extract.json",
+              "access_status": "fresh_primary_geographic_evidence"
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b0efb7f3919479de6a25.html",
+              "sha256": "106a1091b719ba20cd447ed681fe74ce9fb02a2ea26411866b3c7bf4640c32de",
+              "access_status": "fresh_raw_primary_geographic_evidence"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Operation of Lithuania's Sumskas and Tverecius road crossings, through October 30 2025 retrospective confirmation.",
+      "date_scope_check": {
+        "start_earliest": "2023-08-18",
+        "start_latest": "2023-08-18",
+        "end_earliest": "2025-10-30",
+        "end_latest": "2025-10-30",
+        "last_confirmed": "2025-10-30",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Current authority facility markers identify historical posts; retrospective last-confirmed endpoint remains canonical, not inferred from current map status."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "735d3ccb3034e41aa75c15044b9b795c7647d822f614fb12f30d77ab35ea08ee"
+}

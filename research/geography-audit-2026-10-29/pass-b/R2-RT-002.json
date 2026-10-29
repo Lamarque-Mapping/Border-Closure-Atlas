@@ -1,0 +1,82 @@
+{
+  "record_id": "R2-RT-002",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Limnitis–Kato Pyrgos corridor has distinct March–June suspension and July commuter return refusal. No frontier-wide geometry appropriate.",
+  "source_checks": [
+    {
+      "url": "https://archive.cyprus-mail.com/2020/06/26/coronavirus-limnitis-crossing-point-reopens/",
+      "access_status": "full_text_web",
+      "finding": "26 June actual opening about 09:30; earlier leaders agreement had not reopened this post.",
+      "direct_fetch_status": "inaccessible"
+    },
+    {
+      "url": "https://archive.cyprus-mail.com/2020/07/09/coronavirus-turkish-cypriots-change-crossing-point-entry-requirements-yet-again/",
+      "access_status": "full_text_web",
+      "finding": "9 July changed one-off test arrangement resolved affected Kato Pyrgos commuters problem after Monday 6 July rule change.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-RT-002-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Limnitis–Kato Pyrgos Green Line crossing; de facto divide, not an internationally recognised interstate border; Ordinary passenger and commuter crossing; Both directions through the specified crossing",
+      "date_scope_check": "Existing dates, uncertainty and duration eligibility retained. Geography remains held pending the identified evidence gap.",
+      "canonical_dates": {
+        "kind": "closed_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2020-03-12",
+        "start_latest": "2020-03-12",
+        "end_earliest": "2020-06-26",
+        "end_latest": "2020-06-26",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": [
+        "Crossing identity is secure but no attributable OSM/official checkpoint coordinates recovered. Google place and directory candidates differ; village/stream points rejected."
+      ]
+    },
+    {
+      "phase_id": "R2-RT-002-C7P1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Return passage for affected Kato Pyrgos commuters through the Limnitis route under changed testing requirements",
+      "date_scope_check": "Existing dates, uncertainty and duration eligibility retained. Geography remains held pending the identified evidence gap.",
+      "canonical_dates": {
+        "kind": "bounded_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2020-07-06",
+        "start_latest": "2020-07-06",
+        "end_earliest": null,
+        "end_latest": "2020-07-09",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "no_numeric_duration",
+        "policy_only": false
+      },
+      "unresolved": [
+        "Same Limnitis crossing coordinate gap; July phase concerns affected commuter return, not whole Green Line."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Obtain authoritative/checkpoint-specific coordinates for Limnitis; do not substitute village centroid."
+  ],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R2-RT-002.json",
+  "canonical_input_sha256": "bb9f9befd9045d74fe1889624021ec8290a7770bd6b3f655ce639bf7876d9acb",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

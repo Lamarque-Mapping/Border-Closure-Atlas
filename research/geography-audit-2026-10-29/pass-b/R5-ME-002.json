@@ -1,0 +1,68 @@
+{
+  "record_id": "R5-ME-002",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Al-Wadiah passenger road port for qualifying owner-driven personal SUVs travelling from Saudi Arabia to Yemen. The limited permission does not establish an endpoint for excluded vehicle models or heavy equipment.",
+  "source_checks": [
+    {
+      "url": "https://www.sabanew.net/story/ar/35519",
+      "access_status": "full_text_web",
+      "finding": "Official SABA quotes the port director on vehicles reaching the Yemeni side July 9 with documents in the resident driver’s own name; the embassy exception excludes shas and Hilux.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-24.json",
+      "evidence_sha256": "82989895bb619358d1512ffd5e66bc43eb3678981a95461b1c2bc411cb582e01"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-ME-002-NP1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-al-wadiah",
+          "name": "Al-Wadiah / al-Wadea land port",
+          "coordinates": [
+            47.0113562,
+            16.9403092
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/10138647617",
+            "https://www.openstreetmap.org/api/0.6/node/10138647617"
+          ],
+          "evidence_note": " OSM tags inspected: {\"name\": \"مكتب الهجرة والجوازات اليمني منفذ الوديعه البري\", \"name:en\": \"The Yemeni Immigration and Passports Office, Al-Wadiah Land Port\", \"office\": \"government\", \"opening_hours\": \"24/7\"}. This is geographic evidence only, not historical closure evidence. Named Yemeni Immigration and Passports Office inside Al-Wadiah land port; marker is Yemeni passenger facility area, not Saudi terminal or entire frontier.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/e7975c7b02e088dc70ab.html",
+          "evidence_sha256": "e90f65464ccb744e9db46e9903309c35e6857d6f32d3fdd35992d23f02d5dd66",
+          "osm_version": "1",
+          "osm_timestamp": "2022-10-29T22:27:59Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Al-Wadiah passenger road port for qualifying owner-driven personal SUVs travelling from Saudi Arabia to Yemen. The limited permission does not establish an endpoint for excluded vehicle models or heavy equipment. Current phase only: Al-Wadiah entry to Yemen for qualifying owner-driven SUVs",
+      "date_scope_check": {
+        "start_earliest": "2018-07-05",
+        "start_latest": "2018-07-05",
+        "end_earliest": null,
+        "end_latest": "2018-07-09",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": true,
+        "temporal_display_rule": "held_evidence_do_not_animate_as_confirmed",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "R5-ME-002-NP1: The embassy dates the restriction to the evening of July 5, 2018. Al Wattan reports travellers describing passage restored on July 6 afternoon, whereas SABA records continuing diplomatic efforts on July 7 and more than fifty qualifying owner-driven SUVs entering Yemen on July 9. The early report does not identify the same ownership or vehicle subclasses precisely enough to reconcile continuity. July 9 is a supported passage bound, not necessarily the first reopening. Shas/Hilux and heavy-equipment endpoints remain unknown. The official purpose is unestablished; no motive is inferred. Numeric duration and animation remain held because same-cohort continuity is unresolved.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "The point identifies the Yemeni port complex; the Saudi enforcement barrier is not separately located. Existing contested-date and cohort limits are preserved."
+      ]
+    }
+  ],
+  "unresolved": [
+    "The point identifies the Yemeni port complex; the Saudi enforcement barrier is not separately located. Existing contested-date and cohort limits are preserved."
+  ]
+}

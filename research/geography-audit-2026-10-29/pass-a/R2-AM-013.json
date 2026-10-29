@@ -1,0 +1,78 @@
+{
+  "record_id": "R2-AM-013",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "EaglePass–PiedrasNegras international railway bridge is the suspended freight interchange. CBP notice separately names road Bridge1; rail operator confirms trains held both directions and resumption September23.",
+  "source_checks": [
+    {
+      "url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/37187cd",
+      "access_status": "fresh_full_text_extract",
+      "finding": "CBP September20 afternoon notice separately suspends vehicular Bridge1 and railway bridge; no road geometry carried into rail phase.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-038.json"
+    },
+    {
+      "url": "https://www.up.com/news/people/southern-border-humanitarian-it-230922",
+      "access_status": "fresh_full_text_extract",
+      "finding": "UnionPacific September22 update identifies EaglePass railway bridge,24trainsheld both directions and September23 midnight resumption, other five gateways open.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-045.json"
+    },
+    {
+      "url": "https://mapcarta.com/W1374920650",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named international railway bridge reference explicitly distinguished from road bridges.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-033.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-AM-013-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-eagle-pass-rail",
+          "name": "Eagle Pass–Piedras Negras international railway bridge",
+          "coordinates": [
+            -100.50879,
+            28.69653
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 1374920650; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W1374920650",
+            "https://www.openstreetmap.org/way/1374920650"
+          ],
+          "evidence_note": "Explicit international rail bridge identity, separate from International BridgeI vehicular crossing and CaminoReal road bridge.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-033.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Eagle Pass international railway interchange; northbound and southbound international rail freight.",
+      "date_scope_check": {
+        "start_earliest": "2023-09-20",
+        "start_latest": "2023-09-20",
+        "end_earliest": "2023-09-23",
+        "end_latest": "2023-09-23",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Secondary published bridge coordinate; exact track control limits not surveyed."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "6ef198c671ddab167292a2d6655788c7c26215c130ec298f86883dd405571e2f"
+}

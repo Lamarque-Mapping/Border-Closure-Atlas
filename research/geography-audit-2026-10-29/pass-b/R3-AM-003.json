@@ -1,0 +1,62 @@
+{
+  "record_id": "R3-AM-003",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "La Amistad bridge at El Amatillo was obstructed by Honduran protesters in the dated 22 December 2017 report. Separate El Poy warning is not merged.",
+  "source_checks": [
+    {
+      "url": "https://www.elsalvadortimes.com/articulo/servicios/c/20171222073926033595.html",
+      "access_status": "full_text_web",
+      "finding": "El Salvador Times 22 December cites migration warning that protesters blocked entry to Honduras at La Amistad; police intervention did not establish exact first normal passage.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-AM-003-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-el-amatillo-amistad-approach",
+          "name": "El Amatillo, La Amistad bridge customs approach",
+          "coordinates": [
+            -87.765583,
+            13.592583
+          ],
+          "coordinate_method": "DMS conversion of official Honduran customs site coordinates, corroborated with OSM-derived customs point",
+          "precision": "approximate bridge approach; exact 2017 protest footprint unlocated",
+          "source_urls": [
+            "https://datosabiertos.oncae.gob.hn/cpc/upload2/B012%20REVISION%20FINAL%20DE%20PDC%20AMATILLO.pdf",
+            "https://mapcarta.com/N5560746139"
+          ],
+          "evidence_note": "Honduran customs procurement specifies Amatillo Puente La Amistad TIM Salida coordinates 13°35′33.3″N 87°45′56.1″W. OSM named El Amatillo customs office N5560746139 is within 25 m. This is the bridge approach customs reference, not a surveyed barrier or bridge centre."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Officially georeferenced La Amistad customs approach; actual bridge obstruction footprint unresolved.",
+      "date_scope_check": "Missing onset stays missing; 22 December evidence/endpoint interpretation retained without inventing start.",
+      "canonical_dates": {
+        "kind": "confirmed_through",
+        "measure_type": "operational_spell",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2017-12-22",
+        "end_latest": "2017-12-22",
+        "last_confirmed": "2017-12-22",
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "withheld_unknown_onset",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R3-AM-003.json",
+  "canonical_input_sha256": "094bc3cf86d82b98f63d4a0ec286bb72eaf3781daac2673ab5d4982129496fab",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

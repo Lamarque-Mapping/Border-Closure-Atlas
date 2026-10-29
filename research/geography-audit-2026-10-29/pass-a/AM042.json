@@ -1,0 +1,72 @@
+{
+  "record_id": "AM042",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "February8 Andina field account identifies both downtown AguasVerdes–Huaquillas international bridge and CEBAF gates, with Ecuadorian voters excepted. CEBAF reference only is proposed, so downtown bridge remains missing.",
+  "source_checks": [
+    {
+      "url": "https://andina.pe/agencia/noticia-tumbes-gobierno-ecuatoriano-dispone-cierre-temporal-frontera-peru-comicios-1018004.aspx",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Andina reports foreign entrants barred from AguasVerdes to Huaquillas with metal barriers, and separately gates at Ecuadorian CEBAF side. Original notice planned throughFebruary10; canonical later reopening retained.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-030.json"
+    },
+    {
+      "url": "https://mapcarta.com/N4387215811",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Ecuador customs node near both countries immigration/customs offices, east of bypass bridge; partial terminal-complex reference.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-035.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM042-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-huaquillas-cebaf-reference",
+          "name": "Aguas Verdes–Huaquillas CEBAF customs reference",
+          "coordinates": [
+            -80.21784,
+            -3.49769
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 4387215811; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N4387215811",
+            "https://www.openstreetmap.org/node/4387215811"
+          ],
+          "evidence_note": "Named Ecuador customs office co-located with Peruvian customs/immigration near international bridge bypass; not the old downtown pedestrian bridge.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-035.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Foreign passenger entry at Aguas Verdes–Huaquillas under Ecuador's February election measure.",
+      "date_scope_check": {
+        "start_earliest": "2025-02-08",
+        "start_latest": "2025-02-08",
+        "end_earliest": "2025-02-11",
+        "end_latest": "2025-02-11",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Old central international bridge not yet located; proposed office is complex reference rather than blocked Ecuadorian gate."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "db194a48884c5a133d5ee65c13743e67f8b47b98e60f109a43ca9c8ed28fb490"
+}

@@ -1,0 +1,106 @@
+{
+  "record_id": "AM036",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The revised phase explicitly concerns the binational Oyapock road bridge; December20 report ties passenger reopening December18 to the June2020 restriction. Earlier March19 admission observation is distinct and its original prefecture text was inaccessible.",
+  "source_checks": [
+    {
+      "url": "https://www.guyane.gouv.fr/Actualites/Salle-de-presse/2020/Mars-2020/Fermeture-frontiere-France-Bresil-Conditions-de-circulation-des-personnes-et-des-marchandises",
+      "access_status": "inaccessible",
+      "finding": "Original March prefecture page returned502; detailed original passenger exceptions and bridge applicability not freshly inspected.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/f2f98d34bfa4a16fc2c8.html",
+      "source_sha256": "206dbbc22258a29b28281ef70ecadcc1a79381ba70ac707b81eaa1fad36dbf40",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-029.json"
+    },
+    {
+      "url": "https://www.franceguyane.fr/actualite/economie-consommation/3-choses-a-savoir-sur-la-reouverture-de-la-frontiere-avec-le-bresil-1488.php",
+      "access_status": "fresh_visible_article_extract",
+      "finding": "Visible article extract explicitly names Oyapock bridge, June25 restriction and December18 passenger reopening; remaining article truncated.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/dd5b9c17e5954d7770a3.html",
+      "source_sha256": "a24da0f4d2e681c64252dac88342f51999ed634b1c3b489438aa4247d6159cd5",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-033.json"
+    },
+    {
+      "url": "https://mapcarta.com/pt/34652400",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named international bridge with published3.856,-51.82527 coordinate and GeoNames identity.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-031.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM036-R2P1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Earlier French-side restriction on ordinary nonexempt passenger admission from Brazil, with French citizens, Guyane residents, EU transit and qualifying cross-border worker exceptions; freight preserved",
+      "date_scope_check": {
+        "start_earliest": "2020-03-19",
+        "start_latest": "2020-03-19",
+        "end_earliest": "2020-03-19",
+        "end_latest": "2020-03-19",
+        "last_confirmed": "2020-03-19",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Earlier March observation may cover additional river passage; inaccessible original prevents specific bridge binding for that phase."
+      ]
+    },
+    {
+      "phase_id": "AM036-REV1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-oyapock-road-bridge",
+          "name": "Oyapock binational road bridge",
+          "coordinates": [
+            -51.82527,
+            3.856
+          ],
+          "coordinate_method": "Published Mapcarta coordinate attributed to GeoNames11153361/WikidataQ996255",
+          "precision": "Approximate named bridge reference; not control booth, river pirogue routes or international frontier length.",
+          "source_urls": [
+            "https://mapcarta.com/pt/34652400",
+            "https://www.geonames.org/11153361"
+          ],
+          "evidence_note": "Explicitly identifies bridge joining Saint-Georges and Oiapoque across Oyapock. Reference coordinate is source-published, not calculated from town centroids.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-031.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "French-side ordinary passenger passage authorization at Oyapock binational road bridge",
+      "date_scope_check": {
+        "start_earliest": "2020-06-25",
+        "start_latest": "2020-06-30",
+        "end_earliest": "2021-12-18",
+        "end_latest": "2021-12-18",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Bridge reference only; exact lane/booth and exceptions are not newly surveyed."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "1d1e7a9d5e5e4715ac4f2e75558ccad1c8d0742be7b0458359bbcab56431bfc8"
+}

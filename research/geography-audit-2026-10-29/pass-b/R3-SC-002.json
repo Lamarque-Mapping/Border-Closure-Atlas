@@ -1,0 +1,81 @@
+{
+  "record_id": "R3-SC-002",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Samdrup Jongkhar main road entrance closure for Bhutan election visitors, observed September 14–16, 2018. The expected Sunday evening reopening is retained as scheduled, not newly verified.",
+  "source_checks": [
+    {
+      "url": "https://nenow.in/north-east-news/bhutan-election-border-gate-close-for-visitors.html",
+      "access_status": "full_text_web",
+      "finding": "NENow describes the main entrance gate shutting Friday evening and visitors turned away; a later update timestamp does not change the 2018 event.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r4-3.json",
+      "sha256": "1ad9b1e3023e3cd21d930fc0ece47c68a73ac98a9ca18b96d8c96095b8a1888f"
+    },
+    {
+      "url": "https://www.ecms.gov.bt/frontend/images/publication/1839589096322500.pdf",
+      "access_status": "indexed_extract_only",
+      "finding": "Bhutan Customs annex pairs Samdrup Jongkhar Main Gate with Darranga.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-25.json",
+      "sha256": "9fa99cab08eaf361087678c7faf71288a925a10b88103e94ef69f202aad50812"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/4513452253",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named gate node has a 2017 version, preceding the 2018 restriction.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/b2702676ece085c8e56c.xml",
+      "sha256": "6bc5aad458fe8e9be73e2c91923bf61f24904a7667c4bba383d8392f185cab1a",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/b2702676ece085c8e56c.txt",
+      "text_sha256": "6bc5aad458fe8e9be73e2c91923bf61f24904a7667c4bba383d8392f185cab1a",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-SC-002-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-samdrup-jongkhar-main",
+          "name": "Samdrup Jongkhar main gate",
+          "coordinates": [
+            91.5022946,
+            26.7926375
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/4513452253"
+          ],
+          "evidence_note": "Bhutan Gate border_control node with road and foot access, version dated April 2017. Bhutan Customs identifies Samdrup Jongkhar Main Gate opposite Darranga; the 2018 closure story identifies the main town entrance.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/b2702676ece085c8e56c.xml",
+          "sha256": "6bc5aad458fe8e9be73e2c91923bf61f24904a7667c4bba383d8392f185cab1a"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Samdrup Jongkhar main road entrance closure for Bhutan election visitors, observed September 14–16, 2018. The expected Sunday evening reopening is retained as scheduled, not newly verified.",
+      "date_scope_check": {
+        "start_earliest": "2018-09-14",
+        "start_latest": "2018-09-14",
+        "end_earliest": "2018-09-16",
+        "end_latest": "2018-09-16",
+        "last_confirmed": "2018-09-16",
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "September 16 is last observation date, not Sunday-evening planned opening. Publication originally 2018; 2021 update not event date."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "72143e1e6f2659763784bebb248508e585d7a7b71658acbac856d023d6c3ad11",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

@@ -1,0 +1,56 @@
+{
+  "record_id": "AM008",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "ElCarrizal in ElíasPiña/Comendador is the selected controlled food/medicine corridor. Official October11 account describes traders entering through pedestrian gate for biometric registration; this is not general reopening of Haiti border.",
+  "source_checks": [
+    {
+      "url": "https://www.presidencia.gob.do/noticias/homero-figueroa-asegura-registro-biometrico-en-corredores-comerciales-provisionales-de-la",
+      "access_status": "fresh_search_extract",
+      "finding": "Official October11 text names ElCarrizal, ElíasPiña, organized pedestrian gate entry and biometric registration.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-032.json"
+    },
+    {
+      "url": "https://www.aduanas.gob.do/media/ihvfeqsi/memoria-de-gestion-2016-2020-v2.pdf",
+      "access_status": "fresh_search_extract",
+      "finding": "Customs official memoir identifies Carrizal facilities in Comendador; includes passengers/goods but does not supply inspected GPS coordinates.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-035.json"
+    },
+    {
+      "url": "https://mapcarta.com/N1908880592",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Candidate DuaneEliaspine government building lies470m from HaitiBorderControl, but spelling/name does not independently establish the exact Carrizal pedestrian corridor; rejected as sufficient coordinate evidence.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-036.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM008-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Dominican-side food and medicine trade restriction at El Carrizal, ending at permission for a controlled commercial corridor.",
+      "date_scope_check": {
+        "start_earliest": "2023-09-15",
+        "start_latest": "2023-09-15",
+        "end_earliest": "2023-10-11",
+        "end_latest": "2023-10-11",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact Carrizal pedestrian-gate identity/coordinate link remains unresolved; generic ElCarrizal town/admin homonyms rejected."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "f54b712085ee5fd4bc75cf94dd0e5cfa3b442e46fc20be67400464ee1b9152ef"
+}

@@ -1,0 +1,149 @@
+{
+  "record_id": "R2-AM-005",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "ElPaís enumerates twelve migration posts: seven Venezuela (Paraguachón, SimónBolívar, Santander, PuertoSantander, JoséAntonioPáez, river PuertoCarreño and PuertoInírida), river Leticia/Brazil, river PuertoLeguízamo/Peru, and Ecuador Rumichaca, Chiles–Tufiño, SanMiguel. Three existing named road-bridge references are supportable; entire country borders would overstate this list.",
+  "source_checks": [
+    {
+      "url": "https://www.elpais.com.co/amp/colombia/ordenan-cierre-de-fronteras-de-por-paro-nacional-del-21-de-noviembre.html",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Full November19 account enumerates twelve posts and planned00:00November20–05:00November22 suspension, with force-majeure exceptions. River posts are explicitly fluvial.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/106c3af4c17ad7d91e97.html",
+      "source_sha256": "738696a23d50bb2009806c4eb62ea425d4f19dd32bcb36efe50e0df408f7ad6d",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-043.json"
+    },
+    {
+      "url": "https://www.aa.com.tr/es/mundo/colombia-cierra-todas-sus-fronteras-por-movilizaciones-del-21-de-noviembre/1650331",
+      "access_status": "fresh_full_text_extract",
+      "finding": "AA confirms twelve migration posts on four frontiers for nationwide strike preparation.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/e9000c876208a54b726c.html",
+      "source_sha256": "5e434edb2af9410a798ec8580bbd14c6abf8965a6401a39fe61b7ebeeb0bd5f7",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-038.json"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/871456442/full",
+      "access_status": "fresh_raw_geographic_evidence",
+      "finding": "Named SimónBolívar bridge raw XML previously inspected.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fc7c61ad8e72edc57152.xml",
+      "source_sha256": "b8a9fa4f8f15575fd029e2ab1515a443b0ccad9b09fcb001d5f3b987d5abd9a0"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1316055071/full",
+      "access_status": "fresh_raw_geographic_evidence",
+      "finding": "Named Rumichaca road bridge raw XML previously inspected.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/792c56b993d6369cfbc7.xml",
+      "source_sha256": "ce8270e22ad76c4b8439b2def9659b1e740cdee90ac75a3746ab33c1c23e4d9c"
+    },
+    {
+      "url": "https://mapcarta.com/W871456454",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Published Santander named bridge coordinate; original XML not retrieved.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-031.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-AM-005-R1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-simon-bolivar-road",
+          "name": "Simón Bolívar international road bridge",
+          "coordinates": [
+            -72.450854,
+            7.8179153
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/871456442"
+          ],
+          "evidence_note": "Named OSM bridge across Táchira River between San Antonio del Táchira and La Parada; no substitution of the Francisco de Paula Santander or Atanasio Girardot bridges.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fc7c61ad8e72edc57152.xml",
+              "sha256": "b8a9fa4f8f15575fd029e2ab1515a443b0ccad9b09fcb001d5f3b987d5abd9a0",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "6",
+              "osm_timestamp": "2025-11-21T13:12:51Z",
+              "tags": {
+                "layer": "1",
+                "man_made": "bridge",
+                "name": "Puente Internacional Simón Bolívar",
+                "wikidata": "Q3396757",
+                "wikimedia_commons": "Category:Puente Internacional Simón Bolívar",
+                "wikipedia": "es:Puente Internacional Simón Bolívar"
+              }
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-santander-road",
+          "name": "Francisco de Paula Santander International Bridge",
+          "coordinates": [
+            -72.46283,
+            7.91628
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 871456454; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W871456454",
+            "https://www.openstreetmap.org/way/871456454"
+          ],
+          "evidence_note": "Named international bridge near Cúcuta; page regional label Nariño is erroneous relative to its own Cúcuta spatial context, so reference is qualified; no other similarly named town or monument used.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-031.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "existing_site_id": "post-rumichaca",
+          "name": "Rumichaca road bridge",
+          "coordinates": [
+            -77.664073,
+            0.814031
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM international road bridge footprint.",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1316055071",
+            "https://mintransporte.gov.co/publicaciones/1390/colombia-y-ecuador-firman-convenio-de-cooperacion-para-construccion-del-nuevo-puente-rumichaca/"
+          ],
+          "evidence_note": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/792c56b993d6369cfbc7.xml",
+              "sha256": "ce8270e22ad76c4b8439b2def9659b1e740cdee90ac75a3746ab33c1c23e4d9c",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Twelve listed Colombian migration posts with Venezuela, Brazil, Peru and Ecuador",
+      "date_scope_check": {
+        "start_earliest": "2019-11-20",
+        "start_latest": "2019-11-20",
+        "end_earliest": "2019-11-22",
+        "end_latest": "2019-11-22",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "announced_window_layer_only",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Remaining nine named posts unlocated. In particular fluvial post office, landing and river route are not interchangeable; no guessed town centroids."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "198de41b3e8806189195113d92079c0eda6c3f534658f2d116364840cbc275c9"
+}

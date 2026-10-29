@@ -1,0 +1,93 @@
+{
+  "record_id": "R2-EA-003",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Payathonzu/Three Pagodas informal trade post: June large-truck restriction followed by separate August vehicle observation after pedestrian reopening. Multiple informal routes and payments mean main pass location alone is not an exact trade-gate reconstruction.",
+  "source_checks": [
+    {
+      "url": "https://www.bnionline.net/en/news/both-thai-authorities-and-armed-groups-temporarily-block-three-pagodas-pass",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "BNI reports cargo containers barred, individuals allowed with small goods; informal trade post not officially recognised.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r3-2.json",
+      "sha256": "049c602b33a76ddafa9ccc7cef8fd3a75c938e817c883d746c7dbd9baffa8268"
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/traders-continue-operations-compromising-dkba-despite-payathonzu-border-trade-post-closure",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "July report says12-wheelers still halted, small vehicles continue through negotiated payments.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r3-3.json",
+      "sha256": "032321d4ab2b16a803082b65f25e98ddde778037bf7b353104bb42e453f4d1b0"
+    },
+    {
+      "url": "https://karennews.org/2024/08/three-pagodas-pass-border-gate-reopened-after-two-month-closure/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "August report says pedestrians reopened18August but all vehicles still excluded. It does not establish continuity fromJuly2.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r3-3.json",
+      "sha256": "032321d4ab2b16a803082b65f25e98ddde778037bf7b353104bb42e453f4d1b0"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EA-003-R1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Payathonzu/Three Pagodas informal trade post: June large-truck restriction followed by separate August vehicle observation after pedestrian reopening. Multiple informal routes and payments mean main pass location alone is not an exact trade-gate reconstruction.",
+      "date_scope_check": {
+        "start_earliest": "2024-06-17",
+        "start_latest": "2024-06-17",
+        "end_earliest": "2024-07-02",
+        "end_latest": "2024-07-02",
+        "last_confirmed": "2024-07-02",
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "IMNA origin for both accounts; state-media broad denial remains baseline contrary evidence. Small trucks/pedestrians excluded."
+      },
+      "unresolved": [
+        "Exact informal trade-post location versus main border gate remains unresolved; generic pass node is insufficient for the cargo-route phase."
+      ]
+    },
+    {
+      "phase_id": "R2-EA-003-NP1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Payathonzu/Three Pagodas informal trade post: June large-truck restriction followed by separate August vehicle observation after pedestrian reopening. Multiple informal routes and payments mean main pass location alone is not an exact trade-gate reconstruction.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2024-08-20",
+        "end_latest": "2024-08-20",
+        "last_confirmed": "2024-08-20",
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "This later vehicle observation does not resolve gaps or conflicting earlier reports. Do not join it to July 2 into an uninterrupted truck interval."
+      },
+      "unresolved": [
+        "Exact informal trade-post location versus main border gate remains unresolved; generic pass node is insufficient for the cargo-route phase."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact informal trade-post location versus main border gate remains unresolved; generic pass node is insufficient for the cargo-route phase."
+  ],
+  "input_sha256": "7e8ee9b003fc1d1010ebc90336bfd910cb2ad0aa2b34d792c580813068dec8d1",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

@@ -1,0 +1,49 @@
+{
+  "record_id": "NA018",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "An approach-road blockade at El Kaitoun checkpoint near Ras Jedir, not necessarily closure of customs facilities themselves.",
+  "source_checks": [
+    {
+      "url": "https://www.mosaiquefm.net/mobile/fr/actualite-regional-tunisie/1509041/retour-a-la-normale-de-la-circulation-a-ras-jedir",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Original report identifies El Kaitoun, both-direction obstruction overnight, ambulances affected, and Sunday dawn restoration.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-25.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NA018-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "ras",
+          "name": "Ras Jedir / Ras Ajdir",
+          "coordinates": [
+            11.55929,
+            33.14795
+          ],
+          "coordinate_method": "Coordinate pair transcribed from AU-PIDA OSBP Status Report Appendix A, reference N4; independently read published table.",
+          "precision": "Approximate named crossing area; 1 km interpretive precision, not the exact gate.",
+          "source_urls": [
+            "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "Appendix A explicitly pairs Ras Jedir / Ras Ajdir with this latitude/longitude. Modern infrastructure reference only; not closure evidence.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/27ad209394e33af2.raw"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Named Ras Jedir reference only for March14–15 overnight blockade; no invented >24-hour duration.",
+      "date_scope_check": "Canonical closed_interval: start 2026-03-14–2026-03-14; endpoint 2026-03-15–2026-03-15; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": [
+        "El Kaitoun approach checkpoint/roadblock coordinate not independently recovered."
+      ]
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,62 @@
+{
+  "record_id": "R3-AF-001",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Tchissanda–Kamako regular crossing and associated border-market restriction between Lunda Norte and Kasai. This is not the entire Angola–DRC frontier.",
+  "source_checks": [
+    {
+      "url": "https://www.voaportugues.com/a/angola-encerra-posto-fronteirio-com-rdc/3789546.html",
+      "access_status": "full_text_web",
+      "finding": "Original closure reporting identifies the Tchissanda post and surrounding commerce restrictions.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-23.json",
+      "evidence_sha256": "370af37ad7f6c12c1c10fca2929541975151fc75e2b27bc52cfd319f5cdb8782"
+    },
+    {
+      "url": "https://deskeco.com/rdc-angola-reouverture-du-poste-frontalier-de-kamako-150-km-de-tshikapa",
+      "access_status": "full_text_web",
+      "finding": "April 3 report says the Kamako border post reopened March 31, with governors of Kasai and Lunda Norte participating.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-26.json",
+      "evidence_sha256": "0cc6efec69cf787a8f73efc76cc9c738eadd9c56fb4b93930c0d97e7b4a9142d"
+    },
+    {
+      "url": "https://www.geonames.org/7891070/posto-de-fronteira-tchissanda.html",
+      "access_status": "inaccessible",
+      "finding": "Underlying GeoNames entry for a secondary gazetteer lead could not be opened. Secondary point alone is not accepted as independent verification.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-25.json",
+      "evidence_sha256": "82c3d7f63bfe35d75fe7875d898bfa648930bfa7d9d6e5a9ba89cf5c88abb984"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-AF-001-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Tchissanda–Kamako regular crossing and associated border-market restriction between Lunda Norte and Kasai. This is not the entire Angola–DRC frontier. Current phase only: Formal regular-crossing/market restriction at Tchissanda–Kamako",
+      "date_scope_check": {
+        "start_earliest": "2017-03-01",
+        "start_latest": "2017-03-30",
+        "end_earliest": "2018-03-31",
+        "end_latest": "2018-03-31",
+        "last_confirmed": null,
+        "endpoint_status": "legal_effective",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Policy permission period only; the governor calls opening symbolic and ordinary traffic is not independently observed. Refugee passage continued. Onset is bounded within March through first dated confirmation; other posts/markets are not assumed identical.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Exact regular crossing/control point and market footprint remain unverified. Nearby Tchissanda locality and Kamako town centres are not substitutes."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact regular crossing/control point and market footprint remain unverified. Nearby Tchissanda locality and Kamako town centres are not substitutes."
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "record_id": "EA010",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Kan Paik Ti is paired with Houqiao, but the identifiable Chinese inspection terminal is 5.1 km from the boundary, according to Baoshan government. The exact boundary gate used in the December 2024 restricted reopening was not independently matched. The Kan Paik Ti town centroid and inland terminal are not silently substituted.",
+  "source_checks": [
+    {
+      "url": "https://www.bnionline.net/en/news/china-reopens-border-crossing-kan-paik-ti-kachin-state",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Original report identifies Kan Paik Ti in Waingmaw and limited December 13 reopening after October 22 closure.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-24.json",
+      "sha256": "e7501ce4840e4f6da925b02cb08e22df0740ef10898a6a02add0cda397012f3e"
+    },
+    {
+      "url": "https://www.baoshan.gov.cn/info/4787/10213694.htm",
+      "access_status": "search_extract",
+      "finding": "Government identifies Houqiao counterpart Ganbaidi, new terminal opened 2013, and 5.1 km distance from boundary marker South 4.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-25.json",
+      "sha256": "1a3c2e5afc340d18da3bd6635be92e3c91fa9b78a518210daf1023eb10c76e19"
+    },
+    {
+      "url": "https://www.rfa.org/english/myanmar/2024/12/02/myanmar-border-controls/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/chinese-border-closures-cause-price-rises-myitkyina-city",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://mmpeacemonitor.org/en/en-news/some-china-myanmar-border-gates-reopen-in-kachin-state/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA010-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "KanPaikTi Kachin State crossing; Trade and local movement; Cross-border local vehicles and goods; full directional scope not established",
+      "date_scope_check": {
+        "scope": "KanPaikTi Kachin State crossing; Trade and local movement; Cross-border local vehicles and goods; full directional scope not established",
+        "start_earliest": "2024-10-22",
+        "start_latest": "2024-10-22",
+        "end_earliest": "2024-12-13",
+        "end_latest": "2024-12-13",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Voice of Shan Ni dates October 22 closure and December 13 limited goods/small-vehicle reopening. The October 2025 all-Kachin announcement is not a continuous extension of this earlier spell."
+      },
+      "unresolved": [
+        "Exact Kan Paik Ti–Houqiao frontier gate coordinate remains unresolved; a sourced inland terminal is not enough to claim the gate location."
+      ]
+    }
+  ],
+  "unresolved": []
+}

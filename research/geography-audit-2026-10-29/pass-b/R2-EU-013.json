@@ -1,0 +1,62 @@
+{
+  "record_id": "R2-EU-013",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Separate 24 March 2017 nationalist obstruction of inbound expatriate-voter buses at Kapitan Andreevo road crossing; walking passengers and police clearance prevent all-mode closure inference.",
+  "source_checks": [
+    {
+      "url": "https://www.aa.com.tr/en/europe/border-demo-greets-expat-bulgarians-travelling-to-vote/778999",
+      "access_status": "full_text_web",
+      "finding": "AA 24 March body names Kapitan Andreevo; buses prevented from proceeding, travellers walked, police later cleared demonstration and traffic returned.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EU-013-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-kapitan-andreevo-road",
+          "name": "Kapitan Andreevo–Kapıkule road crossing",
+          "coordinates": [
+            26.34864,
+            41.71903
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/N1064597616",
+            "https://www.openstreetmap.org/node/1064597616"
+          ],
+          "evidence_note": "Named road checkpoint adjoining passenger/truck control buildings; Kapıkule railway station separatelylisted. Approximate approach reference; exact protest line unmeasured."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Named road checkpoint reference; barrier on approach not precisely located. Same-day movement restrictions only.",
+      "date_scope_check": "Canonical scope and date bounds independently compared with the cited account; no expansion beyond that phase.",
+      "canonical_dates": {
+        "kind": "same_day",
+        "measure_type": "operational_spell",
+        "start_earliest": "2017-03-24",
+        "start_latest": "2017-03-24",
+        "end_earliest": "2017-03-24",
+        "end_latest": "2017-03-24",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "same_day_no_elapsed_duration",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R2-EU-013.json",
+  "canonical_input_sha256": "2c7a6913fb1c38783921a6ab5e043a8fcf116b3aec411e01557841a6f96443b5",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

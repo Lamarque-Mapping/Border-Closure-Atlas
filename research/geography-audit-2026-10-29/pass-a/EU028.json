@@ -1,0 +1,103 @@
+{
+  "record_id": "EU028",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The affected service is UK-to-France Eurotunnel accompanied vehicle Shuttle movement. UK origin passenger and freight terminal references locate the service; they do not describe Dover ferries, Eurostar city terminals, or an international land boundary.",
+  "source_checks": [
+    {
+      "url": "https://www.gov.uk/government/news/protocol-agreed-to-reopen-french-border-to-uk-arrivals",
+      "access_status": "fresh_full_text_extract",
+      "finding": "DfT December22 protocol resumes accompanied freight and specified passengers from December23 subject to negative testing; rail, air and sea broader announcement distinguished.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-037.json"
+    },
+    {
+      "url": "https://press.getlinkgroup.com/news/eurotunnel-travel-to-france-re-opens-for-cars-and-trucks-a5d4-0791e.html",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Getlink December23 specifically reports first passengers from Folkestone arriving02:32 and trucks returning to Folkestone freight terminal that day.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-048.json"
+    },
+    {
+      "url": "https://www.leshuttlefreight.com/uk/find-us/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Operator publishes distinct Folkestone freight GPS51.09559,1.12207 and Coquelles freight GPS; only UK origin proposed.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-048.json"
+    },
+    {
+      "url": "https://www.leshuttle.com/uk-en/support/articles/how-do-i-get-to-the-terminal-208586225",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Operator publishes separate passenger terminal coordinates and explicitly distinguishes passenger/freight access.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-048.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU028-R1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-channel-tunnel-folkestone-passenger",
+          "name": "Channel Tunnel — Folkestone passenger terminal",
+          "coordinates": [
+            1.119278,
+            51.093389
+          ],
+          "coordinate_method": "Published GPS position from the passenger shuttle operator, longitude/latitude order",
+          "precision": "Operator navigation point for passenger terminal approach; not historical inspection booth or tunnel alignment.",
+          "source_urls": [
+            "https://www.leshuttle.com/uk-en/support/articles/how-do-i-get-to-the-terminal-208586225"
+          ],
+          "evidence_note": "Operator identifies M20 junction 11A passenger check-in access and distinguishes freight/service roads. Vehicle shuttle rail terminal; not Dover ferry or Eurostar station.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-027.json",
+              "access_status": "fresh_full_text_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-channel-tunnel-folkestone-freight",
+          "name": "Channel Tunnel Folkestone freight terminal",
+          "coordinates": [
+            1.12207,
+            51.09559
+          ],
+          "coordinate_method": "Published operator or responsible authority GPS coordinates, reordered longitude/latitude",
+          "precision": "Facility reference only; published decimal precision is not historical lane or obstruction survey accuracy.",
+          "source_urls": [
+            "https://www.leshuttlefreight.com/support/where-to-find-us"
+          ],
+          "evidence_note": "Operator explicitly locates freight terminal off M20 junction11A. Passenger check-in has separate published coordinates.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-048.json",
+              "access_status": "fresh_primary_geographic_evidence"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "UK-to-France Channel Tunnel accompanied vehicles/passengers under initial blanket suspension, ending for permitted tested categories",
+      "date_scope_check": {
+        "start_earliest": "2020-12-20",
+        "start_latest": "2020-12-21",
+        "end_earliest": "2020-12-23",
+        "end_latest": "2020-12-23",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Coordinates represent UK origin facilities for the selected direction, not the tunnel alignment or individual historical testing barriers. Initial closure date retained from canonical phase."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "ac9070a38406d89f57fe943c66ad4c6707a5196874c88f93a58bd586d0ba5e81"
+}
