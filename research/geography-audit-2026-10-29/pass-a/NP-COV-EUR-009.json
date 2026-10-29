@@ -1,0 +1,221 @@
+{
+  "record_id": "NP-COV-EUR-009",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "July27Greekcustomsstrike temporarily preventsroadpassageatKapshticë/Krystallopigi,Kakavijë/Kakavia,QafëBotë/MavromatiandTreUrat/Mertziani. Fourpostsareassignedtothreecanonicalphases.",
+  "source_checks": [
+    {
+      "url": "https://abcnews.al/perfundon-greva-e-doganiereve-greke-rinis-levizja-e-mjeteve-ne-kapshtice-radhe-te-gjata-ne-kakavije/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "ABCobservesKapshticëmovementrestored09:00andqueuesatKakavijë; its04:00onsetdiffersfromotherreport, preserveconflict.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-100.json"
+    },
+    {
+      "url": "https://shqiptarja.com/lajm/greva-ne-greqi-pezullohet-puna-per-4-ore-ne-4-dogana-shqiptare?r=pop5h",
+      "access_status": "fresh_full_text_extract",
+      "finding": "UpdatedoriginalreportsKapshticë05–09,Kakavijë07–11, andfour-hourclosuresatQafëBotë/TreUrat withsame-dayresumption.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-103.json"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/1441315814",
+      "access_status": "fresh_raw_osm_inspected",
+      "finding": "FreshOSMnamedKakavia node1441315814 hasborder_control,goods,hgv andofficialAlbanianCustomswebsite; pairreferenceforGreekstrike, notclaimAlbanianstaffstrike.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/d2380f11d8e21c756921.xml",
+      "source_sha256": "fec0983bb80f2bf0edbeec0d88c0210b5b0f028a0c1c0b27a9009da84ef778e9"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/1953023038",
+      "access_status": "fresh_raw_osm_inspected",
+      "finding": "FreshOSM1953023038 isborder_controlunnamed; adjacentnamedBorderStationKrystallopiginode295966541 lies45mwest andidentifiesGreekroadpost. No villagecentroidsubstitution.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/3e66cf39852026bca114.xml",
+      "source_sha256": "e58295d81f418eacc5b228a104184857d543694630b33943cffa38ffbd8fc4cf"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/295966541",
+      "access_status": "fresh_raw_osm_inspected",
+      "finding": "NamedGreekKrystallopigiborderstationversion9timestamp2023-11-01 providesidentityforadjacentexistingcontrolnode.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b2e1487da7f81b5ea77a.xml",
+      "source_sha256": "de825f473075f2980c3fed36fe1ade48aae3da2543d1c722bd52cb8721677f76"
+    },
+    {
+      "url": "https://mapcarta.com/N3744071544",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Named customsborderbuilding linkedtoAlbanianCustoms; mountainpassnode1349119452northwestexcluded. OppositeMavromatiGreekstrike.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-110.json"
+    },
+    {
+      "url": "https://mapcarta.com/N5245412379",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Named DoganaTreUrat withAlbanianCustomsidentity nexttoMertzianiGreekcounterpart; notinlandtown.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-110.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-EUR-009-P01",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "existing_site_id": "post-kapshtica-krystallopigi",
+          "name": "Kapshticë–Krystallopigi road crossing area",
+          "coordinates": [
+            21.0588186,
+            40.6233574
+          ],
+          "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1953023038",
+            "https://www.openstreetmap.org/node/295966541"
+          ],
+          "evidence_note": "FreshOSM1953023038 isborder_controlunnamed; adjacentnamedBorderStationKrystallopiginode295966541 lies45mwest andidentifiesGreekroadpost. No villagecentroidsubstitution.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/3e66cf39852026bca114.xml",
+              "sha256": "e58295d81f418eacc5b228a104184857d543694630b33943cffa38ffbd8fc4cf",
+              "retrieved_date": "2026-10-29"
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b2e1487da7f81b5ea77a.xml",
+              "sha256": "de825f473075f2980c3fed36fe1ade48aae3da2543d1c722bd52cb8721677f76",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kapshticë",
+      "date_scope_check": {
+        "start_earliest": "2026-07-27",
+        "start_latest": "2026-07-27",
+        "end_earliest": "2026-07-27",
+        "end_latest": "2026-07-27",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "NP-COV-EUR-009-P02",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "existing_site_id": "post-kakavija-kakavia",
+          "name": "Kakavija–Kakavia road crossing area",
+          "coordinates": [
+            20.3569412,
+            39.9125264
+          ],
+          "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1441315814",
+            "https://www.openstreetmap.org/way/399555468"
+          ],
+          "evidence_note": "FreshOSMnamedKakavia node1441315814 hasborder_control,goods,hgv andofficialAlbanianCustomswebsite; pairreferenceforGreekstrike, notclaimAlbanianstaffstrike.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/d2380f11d8e21c756921.xml",
+              "sha256": "fec0983bb80f2bf0edbeec0d88c0210b5b0f028a0c1c0b27a9009da84ef778e9",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kakavijë",
+      "date_scope_check": {
+        "start_earliest": "2026-07-27",
+        "start_latest": "2026-07-27",
+        "end_earliest": "2026-07-27",
+        "end_latest": "2026-07-27",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "NP-COV-EUR-009-P03",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-qafe-bote-road",
+          "name": "Qafë Botë road customs reference",
+          "coordinates": [
+            20.15986,
+            39.65217
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 3744071544; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N3744071544",
+            "https://www.openstreetmap.org/node/3744071544"
+          ],
+          "evidence_note": "Named customsborderbuilding linkedtoAlbanianCustoms; mountainpassnode1349119452northwestexcluded. OppositeMavromatiGreekstrike.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-110.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-tre-urat-road",
+          "name": "Tre Urat road customs reference",
+          "coordinates": [
+            20.60152,
+            40.07474
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 5245412379; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N5245412379",
+            "https://www.openstreetmap.org/node/5245412379"
+          ],
+          "evidence_note": "Named DoganaTreUrat withAlbanianCustomsidentity nexttoMertzianiGreekcounterpart; notinlandtown.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-110.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Qafë Botë and Tre Urat",
+      "date_scope_check": {
+        "start_earliest": "2026-07-27",
+        "start_latest": "2026-07-27",
+        "end_earliest": "2026-07-27",
+        "end_latest": "2026-07-27",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Albanianfacilityreferenceslocatepairedroutes; Greekstrikebarrierpositionsnotseparatelysurveyed."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "1740be4a8a70399f6cd5178835d0a0630fc13907bcb6ff6151778b2541bfc049"
+}

@@ -1,0 +1,95 @@
+{
+  "record_id": "REC50-R31-003",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "May 29 2024 interruption of northbound traffic at the Pharr–Reynosa road bridge. Reporter accounts disagree on duration and whether protesters or federal officials physically closed passage.",
+  "source_checks": [
+    {
+      "url": "https://www.krgv.com/news/agricultores-bloquean-carretera-cerca-al-puente-internacional-pharr-reynosa",
+      "access_status": "fresh_full_text_extract",
+      "finding": "KRGV May 30 original identifies previous Wednesday, northbound circulation and resumption about17:30, while describing a closure of minutes.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-121.json"
+    },
+    {
+      "url": "https://www.excelsior.com.mx/nacional/cierran-puente-internacional-de-tamaulipas-por-protesta-de-productores-de-granos/1654696",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Excélsior May29 original attributes closure to federal/SAT officials before14:00 and reopening nearly three hours later; retain conflict.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-121.json"
+    },
+    {
+      "url": "https://oem.com.mx/elsoldetampico/local/agricultores-realizan-caravana-al-puente-reynosa-pharr-el-flujo-del-cruce-se-suspendio-unos-minutos-13326867",
+      "access_status": "inaccessible",
+      "finding": "Original OEM page returned403; no fresh full-text verification claimed.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-129.json"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/709859228/full",
+      "access_status": "fresh_raw_osm_inspected",
+      "finding": "Original named international bridge geometry version 2 dated 2022-09-14 predates the 2024 episode; provides a bridge structure reference, not exact northbound customs gate or later second-span expansion.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/3099a3ad5af79b3b9085.xml",
+      "source_sha256": "3e61d6ca7420354f64a99f07856635b20514d0520cb79e856807d2ee7c5e959d"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R31-003-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-pharr-reynosa-bridge-reference",
+          "name": "Pharr–Reynosa International Bridge reference",
+          "coordinates": [
+            -98.2054454,
+            26.0648835
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/709859228"
+          ],
+          "evidence_note": "Original named international bridge geometry version 2 dated 2022-09-14 predates the 2024 episode; provides a bridge structure reference, not exact northbound customs gate or later second-span expansion.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/3099a3ad5af79b3b9085.xml",
+              "sha256": "3e61d6ca7420354f64a99f07856635b20514d0520cb79e856807d2ee7c5e959d",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "2",
+              "osm_timestamp": "2022-09-14T00:41:55Z",
+              "tags": {
+                "layer": "1",
+                "man_made": "bridge",
+                "name": "Puente Internacional Reynosa-Pharr",
+                "name:en": "Reynosa-Pharr International Bridge",
+                "name:es": "Puente Internacional Reynosa-Pharr",
+                "wikidata": "Q7180865"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Reported northbound bridge circulation at Pharr–Reynosa International Bridge",
+      "date_scope_check": {
+        "start_earliest": "2024-05-29",
+        "start_latest": "2024-05-29",
+        "end_earliest": "2024-05-29",
+        "end_latest": "2024-05-29",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Bridge is identified despite temporal/mechanism controversy. Exact Mexican northbound closure barrier remains unlocated; no later expanded span substituted."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "041b5e10e5cb4fe978af7b0e83d42d6a54584afdb6a12eb812029cdf10d21bd5"
+}

@@ -1,0 +1,57 @@
+{
+  "record_id": "REC50-R48-002",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Latvia’s September12,2023 vehicle-import rule covers Russia-registered vehicles entering Latvia/EU through Latvian–Russian and Latvian–Belarusian border crossing posts. Diplomatically exempt vehicles and outward return to Russia are separately allowed. It is neither a nationality-wide passenger ban nor an all-traffic frontier closure. The canonical confirmed-through period is preserved.",
+  "source_checks": [
+    {
+      "url": "https://www.vid.gov.lv/en/article/persons-vehicles-registered-russian-federation-are-banned-entering-latvia",
+      "access_status": "full_retrieved",
+      "finding": "Full primary State Revenue Service September13 release inspected: effective18:00 September12 at both Russian and Belarusian posts; return to origin if refused, diplomatic exception and permitted outward travel to Russia."
+    },
+    {
+      "url": "https://www.vid.gov.lv/lv/jaunums/persona-ar-krievijas-federacija-registretu-transportlidzekli-turpmak-nevares-iebraukt-latvija",
+      "access_status": "inaccessible",
+      "finding": "Latvian-language original URL timed out."
+    },
+    {
+      "url": "https://www.mfa.gov.lv/lv/biezak-uzdotie-jautajumi",
+      "access_status": "full_retrieved",
+      "finding": "Full current MFA FAQ retrieved and relevant questions inspected: discusses Russian citizens entry and humanitarian/family exceptions; no vehicle-registration restriction located. It does not independently verify the vehicle rule’s exact final confirmation date."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R48-002-P1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Russian-registered vehicle entry through Latvian–Russian and Latvian–Belarusian border posts; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "confirmed_through",
+        "start_earliest": "2023-09-12",
+        "start_latest": "2023-09-12",
+        "end_earliest": "2026-10-25",
+        "end_latest": "2026-10-25",
+        "last_confirmed": "2026-10-25",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Complete set of affected road posts and time-varying operational applicability across the canonical2023–2026 interval not independently reconstructed; current three-post geography cannot silently stand for the entire historical phase.",
+        "Original frontier-context inventory supplies labels but no inspected line geometry; whole frontiers would also overstate a rule enforced at authorised crossing posts. No border line or national centroid substituted.",
+        "Canonical2026-10-25 last-confirmed date retained from input; this pass independently verifies onset/geographic legal scope, not every later enforcement day."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Complete set of affected road posts and time-varying operational applicability across the canonical2023–2026 interval not independently reconstructed; current three-post geography cannot silently stand for the entire historical phase.",
+    "Original frontier-context inventory supplies labels but no inspected line geometry; whole frontiers would also overstate a rule enforced at authorised crossing posts. No border line or national centroid substituted.",
+    "Canonical2026-10-25 last-confirmed date retained from input; this pass independently verifies onset/geographic legal scope, not every later enforcement day."
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "record_id": "REC50-R42-004",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "A tractor blockade at the named Evzoni/Bogorodica international road crossing, with police placing the road obstruction at Athens–Evzonoi kilometre548. This is a single road-route incident; Idomeni is geographic context, not evidence of a railway closure.",
+  "source_checks": [
+    {
+      "url": "https://duma.mk/21651-2017-01-31-09-56-02/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "January31 AMSM-derived report says Evzoni on Greek side blocked since January30 at16:30 for passenger/cargo vehicles. This independently names the Greek road post but does not supply coordinates.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-153.json"
+    },
+    {
+      "url": "https://meta.mk/shesti-den-blokada-na-evzoni-bogoroditsa/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "February4 original reports sixth day of Evzoni–Bogorodica blockage in both directions; Doirani and Medzitlija remain alternatives. Not evidence of a whole-frontier closure.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-145.json"
+    },
+    {
+      "url": "https://duma.mk/21853-2017-02-17-08-56-38/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "February17 early-morning AMSM-derived bulletin still reports the named crossing shut to all vehicles. Its publication precedes the reopening report and is not a precise final closure timestamp.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-147.json"
+    },
+    {
+      "url": "https://www.ofae.gr/en/nea/driving-restrictions/sta/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "OFAE February17 original reports free movement of goods and passengers through Evzoni restored that morning and farmer withdrawal. Exact clearance minute is unstated.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-145.json"
+    },
+    {
+      "url": "https://www.carina.mk/index.php/en/2016-08-15-20-09-54/2016-08-15-15-05-05/1153-2017-02-20-14-19-31",
+      "access_status": "inaccessible",
+      "finding": "Original customs URL returned502; no freshly inspected customs body or11:00 reopening clock is claimed here.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-145.json"
+    },
+    {
+      "url": "https://www.lorientlejour.com/article/1032501/la-frontiere-greco-macedonienne-fermee-par-une-manifestation-dagriculteurs-grecs.html",
+      "access_status": "fresh_full_text_extract",
+      "finding": "AFP original reproduced by L’Orient-Le Jour January31 places about200 farmers and tractors at Evzoni checkpoint, obstructing trucks. Its tax/social-contribution explanation is crossing-specific; no precise barrier coordinate or closed duration supplied. Full article body lines322–328 inspected.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-155.json"
+    },
+    {
+      "url": "https://www.aa.com.tr/tr/dunya/yunanistanda-ciftciler-evzonon-sinir-kapisini-kapatti/738457",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Anadolu January31 original identifies roads to Evzoni blocked since the preceding evening and places the protest near Idomeni. The Idomeni reference is not evidence of a rail stoppage.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-145.json"
+    },
+    {
+      "url": "https://www.ofae.gr/media/documents/2017/02/02/Greek_Farmers_strikes_1-2-17.pdf",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Primary Greek Police restrictions table lists Kilkis jurisdiction, Athens–Evzonoi road548 km, start15:00 January30, continuing until further notice, with Doirani diversion. It identifies the road route but gives no coordinate for the kilometre marker.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-147.json"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/783378352/full",
+      "access_status": "fresh_raw_osm_inspected",
+      "finding": "Original OSM way783378352 version6 February2025, named Evzoni checkpoint. Polygon bbox centre22.5515844,41.1276783 matches the proposed crossing reference after rounding. Current feature geometry is not proof of the historical barrier footprint.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/de8ca9863c3157296dcc.xml",
+      "source_sha256": "d3d8889400a8e0dbb82d771d6e7b0771a9b08e36cde94efc5e60b1b3de22bc65"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R42-004-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-evzoni-road",
+          "name": "Evzoni road border checkpoint",
+          "coordinates": [
+            22.55158,
+            41.12768
+          ],
+          "coordinate_method": "Published Mapcarta coordinate independently checked against fresh original named OSM checkpoint-polygon geometry; bounding-box centre agrees at five decimal places.",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W783378352",
+            "https://www.openstreetmap.org/way/783378352"
+          ],
+          "evidence_note": "Road checkpoint shared with Bogorodica. Original named OSM compound independently confirms the existing proposed coordinate. Police specify the blockade at kilometre 548 of the Athens–Evzonoi road; no exact georeferenced kilometre/barrier location is recovered. The checkpoint is an approximate route reference, not a surveyed protest footprint; nearby Idomeni railway is excluded.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-069.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/de8ca9863c3157296dcc.xml",
+              "sha256": "d3d8889400a8e0dbb82d771d6e7b0771a9b08e36cde94efc5e60b1b3de22bc65",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "6",
+              "osm_timestamp": "2025-02-13T23:02:17Z",
+              "tags": {
+                "addr:city": "Εύζωνοι",
+                "amenity": "police",
+                "name": "Συνοριακός Σταθμός Ευζώνων",
+                "name:de": "Grenzkontrollstelle Evzoni",
+                "name:el": "Συνοριακός Σταθμός Ευζώνων",
+                "name:en": "Border Checkpoint Evzoni",
+                "name:fr": "Poste-Frontière Evzoni",
+                "name:mk": "Граничен премин Мачуково/Евзони",
+                "wikidata": "Q67403740"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Passenger and cargo motor-vehicle route through Evzoni–Bogorodica in both directions. No rail closure, pedestrian closure or entire Greece–North Macedonia frontier closure is approved.",
+      "date_scope_check": {
+        "start_earliest": "2017-01-30",
+        "start_latest": "2017-01-30",
+        "end_earliest": "2017-02-17",
+        "end_latest": "2017-02-17",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Originals agree on January30 onset but differ between police15:00 and AMSM16:30 clocks. February17 morning-still-closed and later reopening reports are compatible with an intraday reopening, whose exact minute is unresolved. Keep native January30–February17 dates,18 calendar-day qualification and pedestrian/perishable exceptions; no new duration conclusion."
+      },
+      "unresolved": [
+        "Exact historical barrier at the police-reported 548 km point remains unlocated. A current checkpoint-compound reference does not establish the precise 2017 obstruction footprint or uninterrupted access exceptions."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "733cb0ff2f81da297f038f3648c496a924c5c48b75ba33a895fca32afa179359"
+}

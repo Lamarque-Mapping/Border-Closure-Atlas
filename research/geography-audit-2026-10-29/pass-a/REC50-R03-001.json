@@ -1,0 +1,104 @@
+{
+  "record_id": "REC50-R03-001",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Nationwide Ukrainian outward-travel policy for a defined male-citizen cohort, with exemptions and a later age-cohort change. Wider legal scope cannot be rendered as every checkpoint physically closed. Six bilateral reference geometries are source-verified; Russia-facing geometry remains qualified separately.",
+  "source_checks": [
+    {
+      "url": "https://mvs.gov.ua/en/news/shhodo-obmezen-v-peretini-kordonu-na-viyizd-z-ukrayini-okremoyu-kategorijeyu-gromadyan",
+      "access_status": "fresh_full_text_extract",
+      "finding": "February 24 2022 primary notice states a national male 18–60 outward restriction during martial law; no finite gate roster or control-line geometry.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-128.json"
+    },
+    {
+      "url": "https://www.kmu.gov.ua/en/news/roziasnennia-mvs-shchodo-vyizdu-za-kordon-cholovikiv-vikom-18-22-rokiv-vkliuchno",
+      "access_status": "fresh_full_text_extract",
+      "finding": "August 27 2025 primary explanation permits men 18–22 subject to documents and office-holder exceptions; not a full reopening.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-128.json"
+    },
+    {
+      "url": "https://zakon.rada.gov.ua/laws/show/57-95-%D0%BF",
+      "access_status": "fresh_search_primary_extract",
+      "finding": "Indexed current primary rules retain category-specific 23–60 exceptions and amendment provenance; current text does not reconstruct every earlier exemption version.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-130.json"
+    },
+    {
+      "url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+      "access_status": "fresh_raw_primary_geographic_inspected",
+      "finding": "Fresh original Natural Earth 5.1.0 shapefile inspected by bilateral country attributes and all coordinates compared at 5 decimal places to existing geometries. Finland–Norway/Russia and six non-Russian Ukrainian frontiers match. Russia–Ukraine context also contains a disputed convention segment and is not approved as national-policy extent.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/c776a4f3cc92e6abb998.zip",
+      "source_sha256": "16ead035f539c8b6c23650c5845d86ad3556553e7456bdf9b4730210f26aacbe",
+      "derived_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/natural-earth-finland-ukraine-source-features.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R03-001-P1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-pol-ukr",
+        "context-frontier-svk-ukr",
+        "context-frontier-hun-ukr",
+        "context-frontier-rou-ukr",
+        "context-frontier-mda-ukr",
+        "context-frontier-blr-ukr"
+      ],
+      "complete": false,
+      "phase_applicability": "National cohort policy at the six source-verified bilateral frontier references only. Lines represent legal-policy geography, never uniform operational closure or effective wartime control.",
+      "date_scope_check": {
+        "start_earliest": "2022-02-24",
+        "start_latest": "2022-02-24",
+        "end_earliest": "2025-08-28",
+        "end_latest": "2025-08-28",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Russia–Ukraine existing context includes a disputed Natural Earth segment; not approved without separating internationally recognised frontier from de facto conventions.",
+        "No dated reconstruction of wartime controlled checkpoints or every exemption; sea and air movements are outside these land references."
+      ]
+    },
+    {
+      "phase_id": "REC50-R03-001-P2",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-pol-ukr",
+        "context-frontier-svk-ukr",
+        "context-frontier-hun-ukr",
+        "context-frontier-rou-ukr",
+        "context-frontier-mda-ukr",
+        "context-frontier-blr-ukr"
+      ],
+      "complete": false,
+      "phase_applicability": "National cohort policy at the six source-verified bilateral frontier references only. Lines represent legal-policy geography, never uniform operational closure or effective wartime control.",
+      "date_scope_check": {
+        "start_earliest": "2025-08-28",
+        "start_latest": "2025-08-28",
+        "end_earliest": "2025-09-11",
+        "end_latest": "2025-09-11",
+        "last_confirmed": "2025-09-11",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Russia–Ukraine existing context includes a disputed Natural Earth segment; not approved without separating internationally recognised frontier from de facto conventions.",
+        "No dated reconstruction of wartime controlled checkpoints or every exemption; sea and air movements are outside these land references."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "749dbe1d338108047247f98124509f38f3b2d5d03f54a9357fbfa1c2b50e855e"
+}

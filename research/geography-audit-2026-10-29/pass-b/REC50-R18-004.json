@@ -1,0 +1,63 @@
+{
+  "record_id": "REC50-R18-004",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Bolivian health-worker protest at the Yacuiba–Salvador Mazza road bridge, July 22–28, 2024. Vehicles queued on both sides; negotiated temporary passage included buses and light vehicles toward Argentina. Police cleared the crossing on July 28. Intermittent permissions do not create a separate geographic site.",
+  "source_checks": [
+    {
+      "url": "https://www.defensoria.gob.bo/oficinas/prensa/defensoria-del-pueblo-viabiliza-cuarto-intermedio-para-el-paso-de-vehiculos-en-el-puente-internacional",
+      "access_status": "full_retrieved",
+      "finding": "Primary Bolivian ombudsman report inspected: July 22 temporary pause enabled three international buses and fifteen light vehicles toward Argentina; not a final reopening."
+    },
+    {
+      "url": "https://elpais.bo/tarija/20240728_policias-desbloquean-el-puente-internacional-yacuiba-salvador-mazza.html",
+      "access_status": "full_retrieved",
+      "finding": "July 28 report inspected: police cleared the international bridge after seven days; cargo and buses had been stranded on both sides, traffic resumed in both directions."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R18-004-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "proposed-pocitos-salvador-mazza-road-bridge",
+          "name": "Pocitos–Salvador Mazza international road bridge",
+          "coordinates": [
+            -63.6838634,
+            -22.053081
+          ],
+          "coordinate_method": "Directly inspected OSM way/128949421 mean of geometry vertices; XML sha256 adf916259dffafae3f1908263b42ba553bbe717277a62c07e5e5761443e38c84",
+          "precision": "Road bridge representative, approximately 50 m; exact barricade or approach footprint not surveyed",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/128949421/full"
+          ],
+          "evidence_note": "Identified road bridge affected by Bolivian-side protest; intermittent permissions retained."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Vehicles including international buses and freight, with documented temporary authorised passage at Yacuiba–Salvador Mazza international bridge; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "intermittent_regime",
+        "start_earliest": "2024-07-22",
+        "start_latest": "2024-07-22",
+        "end_earliest": "2024-07-28",
+        "end_latest": "2024-07-28",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Bridge identity is established, but exact positions of protesters and police relative to the Bolivian bridgehead are not surveyed."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Bridge identity is established, but exact positions of protesters and police relative to the Bolivian bridgehead are not surveyed."
+  ]
+}

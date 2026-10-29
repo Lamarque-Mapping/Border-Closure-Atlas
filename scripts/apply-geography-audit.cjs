@@ -35,12 +35,19 @@ for(const decision of audit.decisions){
      assert(['single_site','multiple_named_sites'].includes(p.category));
      const lead=candidate.existing_site_id||candidate.proposed_site_id;
      let site=source.sites.find(s=>s.id===lead||s.original_reference_id===lead);
-     if(site){assert.deepEqual(site.coordinates,candidate.coordinates,'changed existing coordinates need a separate review');}
+     if(site){
+       assert.deepEqual(site.coordinates,candidate.coordinates,'changed existing coordinates need a separate review');
+       if(site.geography_audit?.audit_id===audit.audit_id){
+         // Reused audit sites must cite the currently reconciled, pinned evidence.
+         site.geography_audit=provenance;
+         if(candidate.countries)site.countries=candidate.countries;
+       }
+     }
      else{
        const id=lead.startsWith('crossing-')?'post-'+lead.slice(9):lead;
        assert(id&&!baseFeatures.has(id)&&!source.sites.some(s=>s.id===id),'new site ID unique');
        const base=baseFeatures.get(lead)?.properties||{};
-       site={id,name:candidate.name,coordinates:candidate.coordinates,countries:e.countries,
+       site={id,name:candidate.name,coordinates:candidate.coordinates,countries:candidate.countries||e.countries,
          original_reference_id:candidate.existing_site_id||null,coordinate_method:candidate.coordinate_method,
          precision:candidate.precision,source_urls:candidate.source_urls,
          sources:base.sources||[],source_note:candidate.evidence_note,

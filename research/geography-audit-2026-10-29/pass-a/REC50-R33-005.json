@@ -1,0 +1,86 @@
+{
+  "record_id": "REC50-R33-005",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Jamunaha Nepalgunj main-road election closure order, retaining emergency-service exception. Not all Nepal–India gates or later new ICP.",
+  "source_checks": [
+    {
+      "url": "https://english.khabarhub.com/2022/25/238818/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Banke police announcement explicitly names Jamunaha Nepalgunj and 60-hour clock window.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-75.json",
+      "sha256": "8ccd05deacbb56fb8e82af7aff6924591ac81d56e5ba3fa54797bf064d0d82bf"
+    },
+    {
+      "url": "https://beta.gorkhapatraonline.com/arts/2022-02-24-58528",
+      "access_status": "inaccessible",
+      "finding": "Original emergency-exception report could not be reopened; canonical exception retained without claiming fresh confirmation.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-76.json",
+      "sha256": "34d1f19ab45d724787aaee146ac942fa6578882fcba27338c3cdaf17aecc61e9"
+    },
+    {
+      "url": "https://english.nepalnews.com/s/nation/jamunaha-border-point-to-remain-closed-for-60-hrs/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R33-005-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-jamunaha-nepalgunj",
+          "name": "Jamunaha–Rupaidiha main road crossing",
+          "coordinates": [
+            81.6004603,
+            28.0189568
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/3888116312",
+          "precision": "Main road crossing-area reference, approximately 300 m; exact temporary election barrier not surveyed.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/3888116312",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=81.58,28.0,81.62,28.04"
+          ],
+          "evidence_note": "Shared OSM India–Nepal boundary and Nepal Ratna Rajmarg/NH58–Indian NH927 transition node. Contemporary report specifically names Jamunaha Nepalgunj; new ICP west of this road is not substituted.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-jamunaha-main.xml",
+          "sha256": "29a58a095710cb9ff1918b3d45fdd54e3695129ab2e48c3484531364c81893de",
+          "osm_feature": "node/3888116312",
+          "osm_version": "4",
+          "osm_timestamp": "2022-07-23T20:08:55Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "bicycle": "yes",
+            "foot": "yes",
+            "horse": "no",
+            "motorcar": "yes",
+            "motorcycle": "yes"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Jamunaha border point in Nepalgunj during the Uttar Pradesh assembly election window",
+      "date_scope_check": {
+        "scope": "Jamunaha border point in Nepalgunj during the Uttar Pradesh assembly election window",
+        "start_earliest": "2022-02-25",
+        "start_latest": "2022-02-25",
+        "end_earliest": "2022-02-28",
+        "end_latest": "2022-02-28",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "announced_window_layer_only",
+        "assessment": "February 25 2022 18:00–February 28 06:00 announced 60-hour window retained, not three full days. Actual implementation/reopening unobserved; emergency exception retained from canonical source scope."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,123 @@
+{
+  "record_id": "REC50-R33-003",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Banglabandha–Phulbari road-port freight holiday in 2022. Both canonical phases concern the same India–Bangladesh facility and retain their chronology. Nepal and Bhutan are onward trade destinations, not additional adjoining frontiers. Traveller passage is not mapped as closed.",
+  "source_checks": [
+    {
+      "url": "https://www.dhakatribune.com/bangladesh/295032/trade-via-banglabandha-land-port-to-remain",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Advance September 30–October 9 freight schedule, with October 10 return planned.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-6.json",
+      "sha256": "c8115def260f142bf92136571e15eef313ee869fa9a5501dec51f713488054e1"
+    },
+    {
+      "url": "https://www.ajkerpatrika.com/bangladesh/panchagarh/ajpeld1usxcrl",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Bengali return account reports actual October 10 morning resumption after September 30–October 9 shutdown.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-6.json",
+      "sha256": "c8115def260f142bf92136571e15eef313ee869fa9a5501dec51f713488054e1"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/539400757/full",
+      "access_status": "fresh_OSM_XML_inspected",
+      "finding": "Named Banglabandha land-port grounds, May 2022 geometry; a facility-area reference, distinct from the border monument.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/2a683009a179077f4412.xml",
+      "sha256": "1161215a27e478ff408b085dbb08be96b4bbf7d853e7b699adb0d1f0861cac4d",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/2a683009a179077f4412.txt",
+      "text_sha256": "1161215a27e478ff408b085dbb08be96b4bbf7d853e7b699adb0d1f0861cac4d",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R33-003-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-banglabandha-road-port",
+          "name": "Banglabandha road freight port",
+          "coordinates": [
+            88.412678,
+            26.6296276
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate port grounds, about 300 m; not the historical gate or every loading bay",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/539400757/full"
+          ],
+          "evidence_note": "Named Banglabandha Land Port commercial grounds, OSM version dated May 2022 before the Puja interruption. The representative point is on the Bangladesh port complex, not the zero-point monument or an onward Nepal/Bhutan border.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/2a683009a179077f4412.xml",
+          "sha256": "1161215a27e478ff408b085dbb08be96b4bbf7d853e7b699adb0d1f0861cac4d"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Banglabandha–Phulbari road-port freight holiday in 2022. Both canonical phases concern the same India–Bangladesh facility and retain their chronology. Nepal and Bhutan are onward trade destinations, not additional adjoining frontiers. Traveller passage is not mapped as closed.",
+      "date_scope_check": {
+        "start_earliest": "2022-09-30",
+        "start_latest": "2022-09-30",
+        "end_earliest": "2022-10-10",
+        "end_latest": "2022-10-10",
+        "last_confirmed": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "The original September 30–October 10 schedule is retained. A local October 10 report now confirms completed morning freight restart after September 30–October 9 interruption, supporting a linked ten-calendar-day operational phase. The advance eleven-day shorthand remains conflicting; passengers continued and Nepal/Bhutan remain onward trading partners."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "REC50-R44-BANGLABANDHA-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-banglabandha-road-port",
+          "name": "Banglabandha road freight port",
+          "coordinates": [
+            88.412678,
+            26.6296276
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate port grounds, about 300 m; not the historical gate or every loading bay",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/539400757/full"
+          ],
+          "evidence_note": "Named Banglabandha Land Port commercial grounds, OSM version dated May 2022 before the Puja interruption. The representative point is on the Bangladesh port complex, not the zero-point monument or an onward Nepal/Bhutan border.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/2a683009a179077f4412.xml",
+          "sha256": "1161215a27e478ff408b085dbb08be96b4bbf7d853e7b699adb0d1f0861cac4d"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Banglabandha–Phulbari road-port freight holiday in 2022. Both canonical phases concern the same India–Bangladesh facility and retain their chronology. Nepal and Bhutan are onward trade destinations, not additional adjoining frontiers. Traveller passage is not mapped as closed.",
+      "date_scope_check": {
+        "start_earliest": "2022-09-30",
+        "start_latest": "2022-09-30",
+        "end_earliest": "2022-10-10",
+        "end_latest": "2022-10-10",
+        "last_confirmed": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Ten calendar-date differences, not measured hours. The actual-return account dates the holiday September 30–October 9 and restart October 10; advance eleven-day wording is not adopted. Travellers continued. Onward Nepal/Bhutan trade does not create additional adjoining boundaries."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "a81ce591767eaa3dc6e61a7bbd57658bb3d910e8f05ff53544f884d80abca23d",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

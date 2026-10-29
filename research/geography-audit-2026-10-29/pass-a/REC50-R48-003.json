@@ -1,0 +1,106 @@
+{
+  "record_id": "REC50-R48-003",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "A national customs import/entry restriction on Russian-registered cars applied at the two external land frontiers, with qualified Kaliningrad transit remaining possible. Original contemporaneous reporting identifies actual refusals at Kybartai on the Russian frontier and Medininkai/Lavoriškės on the Belarusian frontier. Both frontier identities are independently confirmed by the responsible government infrastructure authority. The frontier-pair scope is reconstructed from that enforcement evidence and the general customs rule; no individual checkpoint is substituted for the national land-entry policy.",
+  "source_checks": [
+    {
+      "url": "https://www.lrt.lt/en/news-in-english/19/2079643/lithuania-denies-entry-to-58-russian-cars-in-past-week",
+      "access_status": "fresh_full_text_extract",
+      "finding": "September18 BNS/LRT original reports58 drivers turned back during the preceding week, dates the rule to September11 and preserves Kaliningrad transit. General entry/import restriction is stated, not a complete gate closure.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-148.json"
+    },
+    {
+      "url": "https://www.lrt.lt/en/news-in-english/19/2088440/lithuania-gives-6-months-for-russian-cars-to-leave",
+      "access_status": "fresh_full_text_extract",
+      "finding": "September29 English LRT original reports customs’ six-month departure requirement for cars admitted before September11, plus owner-accompanied transit within24hours. The departure rule is later enforcement context, not reopening.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-146.json"
+    },
+    {
+      "url": "https://lrmuitine.lt/web/guest/naujienos/aktualijos/aktualija?_EXT_WPLISTALLNEWS_obj_id=090004d2801c0361&p_p_id=EXT_WPLISTALLNEWS&p_p_lifecycle=0",
+      "access_status": "inaccessible",
+      "finding": "Linked historical customs original returned404 on retrieval. No direct fresh ministry-hosted full text is claimed; dated customs-attributed reproductions inspected separately.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-148.json"
+    },
+    {
+      "url": "https://www.lrt.lt/naujienos/verslas/4/2088421/lietuva-pareikalavo-kad-automobiliu-su-rusiskais-valstybiniais-numeriais-savininkai-per-6-menesius-issiveztu-juos-is-es",
+      "access_status": "fresh_full_text_extract",
+      "finding": "September29 Lithuanian LRT original explicitly attributes its text to the customs notice. It states September11 entry prohibition regardless of citizenship, and separately records Russian-citizen Kaliningrad transit with simplified transit document, owner in vehicle and24-hour limit.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-156.json"
+    },
+    {
+      "url": "https://www.lrytas.lt/auto/rinka/2023/09/29/news/informuoja-rusijoje-registruotu-automobiliu-savininkus-stai-per-kiek-laiko-turite-palikti-lietuva-28548202",
+      "access_status": "fresh_full_text_primary_statement_reproduction",
+      "finding": "September29 dated full reproduction is credited to Lietuvos Respublikos muitinė. The same vehicle-entry and detailed Kaliningrad exception text is present. This is a primary-author statement on a publisher’s host, not an independent second operational observation.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-156.json"
+    },
+    {
+      "url": "https://www.lrt.lt/en/news-in-english/19/2076042/lithuania-stops-19-russian-cars-overnight-under-new-ec-sanctions-guidelines",
+      "access_status": "fresh_full_text_extract",
+      "finding": "September13 BNS/LRT original quotes customs spokeswoman reporting19 refusals overnight:17 at Kybartai,1 Medininkai and1 Lavoriškės. This supplies actual enforcement on both relevant frontiers, not merely policy announcement.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-151.json"
+    },
+    {
+      "url": "https://pkpd.lrv.lt/en/borders-queues-info/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Official border-infrastructure directorate page, last updated September11 2023, explicitly assigns Kybartai to the Lithuania–Russia frontier and Medininkai/Lavoriškės to Lithuania–Belarus. Used for geographic identity; not as a closure notice or current exhaustive operating-post roster.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-156.json"
+    },
+    {
+      "url": "https://www.delfi.lt/en/politics/first-car-with-russian-number-plates-detained-in-lithuania-96100697",
+      "access_status": "fresh_search_extract",
+      "finding": "Indexed original concerns the March11 2024 Medininkai seizure of a Russian-plated car leaving towards Belarus. It is later enforcement and not used to create a2023 refusal date or reopening.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-150.json"
+    },
+    {
+      "url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+      "access_status": "fresh_raw_geographic_dataset_inspected",
+      "finding": "Fresh Natural Earth5.1.0 source features55,234 and430 inspected: LTU/BLR and LTU/RUS bilateral attributes. Existing context-frontier-blr-ltu and context-frontier-ltu-rus geometries match full original source coordinates at5 decimals. These generalized references do not locate individual road gates.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/c776a4f3cc92e6abb998.zip",
+      "source_sha256": "16ead035f539c8b6c23650c5845d86ad3556553e7456bdf9b4730210f26aacbe"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R48-003-P1",
+      "category": "wider_border",
+      "decision": "map",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-ltu-rus",
+        "context-frontier-blr-ltu"
+      ],
+      "complete": true,
+      "phase_applicability": "Russian-registered vehicle entry through Lithuania’s external EU land frontiers with Russia/Kaliningrad and Belarus. These are legal-policy frontier references, not all-person closures, rail/ferry shutdowns or an exhaustive closed-post roster. The two-frontier reconstruction follows the general customs entry rule plus observed refusals at Kybartai, Medininkai and Lavoriškės; their country pairs are independently confirmed by Lithuania’s border-infrastructure authority. No internal EU frontier closure is approved.",
+      "date_scope_check": {
+        "start_earliest": "2023-09-11",
+        "start_latest": "2023-09-11",
+        "end_earliest": "2023-09-29",
+        "end_latest": "2023-09-29",
+        "last_confirmed": "2023-09-29",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "September11 onset is stated by contemporaneous customs-attributed reports. September13 observed refusals independently establish application at posts on both frontiers. September29 Lithuanian text expressly records Russian citizenship, simplified transit document, owner presence and maximum24-hour Kaliningrad transit conditions; their exact first adoption remains unknown. Preserve native evidence dates, duration withholding and endpoint qualifications; neither the later six-month departure grace period nor March2024 confiscation is a reopening or new phase here."
+      },
+      "unresolved": [
+        "The linked historical customs-hosted notice returns404. Its text is available in contemporaneous LRT and explicitly customs-credited Lrytas reproductions, not freshly read on the original ministry host.",
+        "Full amendment history, exact first adoption of each transit exception and complete day-by-day enforcement are not reconstructed. Frontier lines are generalized policy references, not physical obstruction footprints."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "bf2397066e1efc4c2704b1fd31dbccfa9c80e08a889d01aa144948223a104b05",
+  "geographic_reference_evidence": [
+    {
+      "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/natural-earth-baltic-vehicle-policy-source-features.json",
+      "sha256": "8ad377ab7e17bd49f95033648505b05e4981c549789edf3426d8f34aec0bf51f",
+      "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+      "coordinate_method": "Existing generalized frontier geometries independently matched to original Natural Earth source feature attributes and coordinates.",
+      "precision": "1:10m-scale generalized legal-frontier reference, not a physical barrier footprint."
+    }
+  ]
+}

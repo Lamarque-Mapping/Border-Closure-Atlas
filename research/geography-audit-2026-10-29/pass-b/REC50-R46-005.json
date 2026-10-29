@@ -1,0 +1,91 @@
+{
+  "record_id": "REC50-R46-005",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Planned technical maintenance suspension of the La Gabrielle international vehicle/passenger ferry between Saint-Laurent-du-Maroni, French Guiana, and Albina, Suriname, September25–October30,2017 inclusive. Ordered window is retained without inferring actual restart. Only this ferry link, represented by its two historical landing points, is mapped; other river craft are outside scope.",
+  "source_checks": [
+    {
+      "url": "https://www.guyane.developpement-durable.gouv.fr/communique-de-presse-bac-international-la-a1936.html",
+      "access_status": "extract_only",
+      "finding": "Direct government page403; indexed original communiqué inspected: September7 announcement names Saint-Laurent–Albina link and September25–October30 inclusive planned maintenance."
+    },
+    {
+      "url": "https://www.guyane.developpement-durable.gouv.fr/IMG/pdf/com.presse_bac_la_gabrielle_-_arret_technique_-.pdf",
+      "access_status": "extract_only",
+      "finding": "Direct government PDF403; indexed original document extract inspected: prefectural communiqué Com/77-17, same named ferry link/window."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/358403286/history",
+      "access_status": "full_retrieved",
+      "finding": "Direct OSM history inspected: July17,2017 version2 Saint-Laurent–Albina route=ferry/motorcar=yes has endpoints318132770 and114451727. XML sha256f59bbb4d6f394fc5d558f81b87cb6131549ff7d1d09354dd4f24292b2b7f52d5."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/318132770/history",
+      "access_status": "full_retrieved",
+      "finding": "Direct history inspected:2015 Albina landing version used for2017 rather than post2018 moved node."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/114451727/history",
+      "access_status": "full_retrieved",
+      "finding": "Direct history inspected: Saint-Laurent endpoint coordinates stable from2011 through2017; ferry tag added2018 but route membership documented before event."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R46-005-P1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "proposed-saint-laurent-la-gabrielle-ferry",
+          "name": "Saint-Laurent-du-Maroni La Gabrielle ferry landing",
+          "coordinates": [
+            -54.0368301,
+            5.4930222
+          ],
+          "coordinate_method": "Directly inspected OSM node/114451727 node; XML sha256 ac16ee935c5b897e9a697fb97859f64f2cee03252d3f9c4198b164e548e59e54; history sha256cbd7b8dc27fc6e8b5f99187fc5b8e290fd1662fc4b64958500b5ff01220a34f9",
+          "precision": "Historical landing representative, approximately50m",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/114451727",
+            "https://api.openstreetmap.org/api/0.6/node/114451727/history",
+            "https://api.openstreetmap.org/api/0.6/way/358403286/history"
+          ],
+          "evidence_note": "Coordinates unchanged since2011 in directly inspected history; July2017 vehicle-ferry way358403286 version2 joins this endpoint to Albina. Distinct from newer Taxi fluvial terminal north of marina."
+        },
+        {
+          "proposed_site_id": "proposed-albina-la-gabrielle-2017",
+          "name": "Albina La Gabrielle vehicle-ferry landing, 2017",
+          "coordinates": [
+            -54.056629,
+            5.495306
+          ],
+          "coordinate_method": "OSM node318132770 version4 dated2015-07-03, in force during2017; history XML sha2562249d121b445c5375d238bf05ea2610b028493981b3e24dda382e61dca74dd15; July2017 ferry way version2 explicitly links node",
+          "precision": "Historical landing representative, approximately50m",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/318132770/history",
+            "https://api.openstreetmap.org/api/0.6/way/358403286/history"
+          ],
+          "evidence_note": "Vehicle-ferry endpoint, not another Albina passenger-water-taxi station or town centroid."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Planned La Gabrielle ferry maintenance stop between Saint-Laurent-du-Maroni and Albina; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "ordered_window",
+        "start_earliest": "2017-09-25",
+        "start_latest": "2017-09-25",
+        "end_earliest": "2017-10-30",
+        "end_latest": "2017-10-30",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

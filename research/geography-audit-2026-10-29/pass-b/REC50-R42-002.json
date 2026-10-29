@@ -1,0 +1,121 @@
+{
+  "record_id": "REC50-R42-002",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "September18,2023 has two canonical road phases: Ruse/Giurgiu cars and trucks both directions, and entry to Bulgaria at Kardam/Negru Vodă. Official notice also mentions nearby protests at Vidin and Durankulak, but does not add those sites to the two recorded closure phases. Ruse slow-machine protest was on the approach roundabout; Kardam restriction evolved from certain trucks to all inbound vehicles.",
+  "source_checks": [
+    {
+      "url": "https://www.politiadefrontiera.ro/ro/main/i-informare-trafic-restrictionat-la-puncte-de-trecere-a-frontierei-din-sudul-tarii-cauzate-de-protestele-fermierilor-bulgari-34780.html",
+      "access_status": "full_retrieved",
+      "finding": "Full primary Romanian Border Police notice inspected: Ruse traffic both ways restricted, Kardam denies all vehicle entry; other protests merely listed as adjacent activity."
+    },
+    {
+      "url": "https://bnrnews.bg/shumen/post/34525/dunav-most-pod-obsada",
+      "access_status": "full_retrieved",
+      "finding": "Full BNR report inspected: machinery at Ruse checkpoint area, two-hour interruption, further afternoon action planned not assumed as new phase."
+    },
+    {
+      "url": "https://utroruse.com/article/972800/",
+      "access_status": "full_retrieved",
+      "finding": "Full same-day local report inspected: intended slow-machine circulation on roundabout before Ruse checkpoint; identity evidence distinguished from actual restriction confirmed by primary police."
+    },
+    {
+      "url": "https://bgtourism.bg/novini-zemedelskite-stopani-zatvorikha-granitsata-pri-selo-kardam-gkpp/",
+      "access_status": "full_retrieved",
+      "finding": "Full Bgtourism report inspected: Kardam heavy machinery and denied Romanian tourist entry; not rail."
+    },
+    {
+      "url": "https://www.radioconstanta.ro/2023/09/18/update-incepand-cu-ora13-20-traficul-prin-ptf-negru-voda-se-desfasoara-in-conditii-normale-atat-pentru-autocamioane-cat-si-pentru-autoturisme-a-transmis-garda-de-coasta/",
+      "access_status": "full_retrieved",
+      "finding": "Full Radio Constanța/Coast Guard report inspected: initial Ukrainian/Moldovan truck restriction, all vehicles from noon, normal road traffic by13:20."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=26.012,43.873,26.037,43.892",
+      "access_status": "full_retrieved",
+      "finding": "Direct OSM topology inspected: Bulgarian approach roundabout road2 connects to Danube road bridge, separately from rail. XML sha256 7537628fab210c6f06e160b1f98bef3b7136a99c5fb8e71179980d23c1733eb3."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R42-002-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "proposed-ruse-danube-bridge-approach-roundabout",
+          "name": "Ruse Danube Bridge Bulgarian approach roundabout",
+          "coordinates": [
+            26.016432183333333,
+            43.87575550416667
+          ],
+          "coordinate_method": "Directly inspected OSM way/657016359 mean of geometry vertices; XML sha256 2c1423dfa918642c9ecab43015374d904fc486368b96d8ad3761546a74a649f2",
+          "precision": "Roundabout representative, approximately 100 m; branches and any additional road obstructions unresolved",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/657016359/full"
+          ],
+          "evidence_note": "Direct OSM roundabout on road 2/E70/E85 immediately before Bulgarian customs approach; road topology leads northwest to road bridge way120166252, separately from railway way24317443. Not Romanian customs or bridge midpoint."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "September18 Ruse/Giurgiu vehicle traffic both directions; Bulgarian approach roundabout representative.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2023-09-18",
+        "start_latest": "2023-09-18",
+        "end_earliest": "2023-09-18",
+        "end_latest": "2023-09-18",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Point identifies the affected road approach or gate complex; exact obstruction extent and all lanes are not surveyed."
+      ]
+    },
+    {
+      "phase_id": "REC50-R42-002-P2",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "proposed-kardam-bulgarian-road-control",
+          "name": "Kardam Bulgarian road customs control",
+          "coordinates": [
+            28.147249033333335,
+            43.7848831
+          ],
+          "coordinate_method": "Directly inspected OSM way/958442692 mean of geometry vertices; XML sha256 c19bcf1e8378ee0f817d63415de9b8346751035457005eaa9a81fd091242b55d",
+          "precision": "Gate complex representative, approximately 100 m; approach blockade position unresolved",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/958442692/full"
+          ],
+          "evidence_note": "Named Bulgarian customs roof, paired with Romanian Negru Vodă by official border-police report. Road gate representative; not adjacent railway or Kardam village centre."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "September18 entry from Romania to Bulgaria at Kardam road gate; do not assert symmetric exit closure.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2023-09-18",
+        "start_latest": "2023-09-18",
+        "end_earliest": "2023-09-18",
+        "end_latest": "2023-09-18",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Point identifies the affected road approach or gate complex; exact obstruction extent and all lanes are not surveyed."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact obstruction footprint at each site unresolved; no entire Bulgaria–Romania frontier inferred."
+  ]
+}

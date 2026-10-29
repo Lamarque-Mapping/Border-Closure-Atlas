@@ -1,0 +1,58 @@
+{
+  "record_id": "REC50-R18-006",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "July 2017 bagallero road blockade at the Pocitos–Salvador Mazza bridge and immediate access, with negotiated perishable-cargo movements in both directions. Tax treatment of rail cargo was a grievance, not evidence that a railway crossing was obstructed.",
+  "source_checks": [
+    {
+      "url": "https://anteriorportal.erbol.com.bo/noticia/regional/21072017/bagalleros_cumplen_quinto_dia_de_bloqueo_en_yacuiba",
+      "access_status": "full_retrieved",
+      "finding": "Full Erbol July 21 report inspected: fifth day at Pocitos Bolivia–Salvador Mazza bridge; Bolivian association protests customs taxes; thirty banana trucks allowed toward Argentina and thirty perishable-cargo trucks toward Bolivia. Rail is mentioned only as a customs-tax comparison."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R18-006-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "proposed-pocitos-salvador-mazza-road-bridge",
+          "name": "Pocitos–Salvador Mazza international road bridge",
+          "coordinates": [
+            -63.6838634,
+            -22.053081
+          ],
+          "coordinate_method": "Directly inspected OSM way/128949421 mean of geometry vertices; XML sha256 adf916259dffafae3f1908263b42ba553bbe717277a62c07e5e5761443e38c84",
+          "precision": "Road bridge representative, approximately 50 m; exact barricade or approach footprint not surveyed",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/128949421/full"
+          ],
+          "evidence_note": "International road bridge, not railway; restrictions intermittent because specified perishable cargo was allowed."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Freight access under a protest blockade with negotiated perishable-cargo passage at Yacuiba–Salvador Mazza international bridge and immediate access; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "intermittent_regime",
+        "start_earliest": "2017-07-17",
+        "start_latest": "2017-07-17",
+        "end_earliest": "2017-07-25",
+        "end_latest": "2017-07-26",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Exact barricade position and full immediate access footprint are not established; canonical July 17–26 interval retained without a new endpoint inference."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact barricade position and full immediate access footprint are not established; canonical July 17–26 interval retained without a new endpoint inference."
+  ]
+}

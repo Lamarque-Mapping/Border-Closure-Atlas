@@ -4,18 +4,26 @@
   "agent": "/root/geography_asia_b",
   "review_date": "2026-10-29",
   "verification_status": "qualified",
-  "record_scope_reconstruction": "Ordinary freight trains between Dandong and Sinuiju use railway on existing Sino-Korean Friendship Bridge. Medical-aid movements are exceptions. April25–29 onset disagreement and September26 observed train remain unchanged.",
+  "record_scope_reconstruction": "Ordinary freight trains between Dandong and Sinuiju use railway on existing Sino-Korean Friendship Bridge. Medical-aid movements are exceptions. April 25–29 onset disagreement and September 26 observed train remain unchanged.",
   "source_checks": [
     {
       "url": "https://en.yna.co.kr/view/AEN20220618001900315",
-      "access_status": "retrieved_web_text_or_indexed_extract",
-      "finding": "Yonhap observed freight train crossing Amnok railway bridge September26; reports prior April29 suspension.",
+      "access_status": "retrieved_web_article_extract",
+      "finding": "June 18 report describes suspended Dandong–Sinuiju rail freight after the April COVID outbreak; this is not the September return report.",
       "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/38378d37a858c0a576c7.html",
       "sha256": "66182050de5416eca0fba8d86641b2093981f5fcd4b9180d2c0b31624a2dc370",
       "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/38378d37a858c0a576c7.txt",
       "text_sha256": "0ce9d41a35ff0977479cefa8864226938051d86ac4ac8c65daf58ad96c09f6e5",
       "status": 200,
       "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-3.json"
+    },
+    {
+      "url": "https://en.yna.co.kr/view/AEN20220926004200325",
+      "access_status": "retrieved_web_article_extract",
+      "finding": "September 26 report observes a freight train crossing the Amnok railway bridge toward Sinuiju and attributes the suspension to April 29; future regularity remains uncertain.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-3.json",
+      "sha256": "66182050de5416eca0fba8d86641b2093981f5fcd4b9180d2c0b31624a2dc370"
     },
     {
       "url": "https://mapcarta.com/W1119773889",
@@ -50,7 +58,7 @@
       ],
       "border_reference_ids": [],
       "complete": true,
-      "phase_applicability": "Ordinary freight trains between Dandong and Sinuiju use railway on existing Sino-Korean Friendship Bridge. Medical-aid movements are exceptions. April25–29 onset disagreement and September26 observed train remain unchanged.",
+      "phase_applicability": "Ordinary freight trains between Dandong and Sinuiju use railway on existing Sino-Korean Friendship Bridge. Medical-aid movements are exceptions. April 25–29 onset disagreement and September 26 observed train remain unchanged.",
       "date_scope_check": {
         "start_earliest": "2022-04-25",
         "start_latest": "2022-04-29",

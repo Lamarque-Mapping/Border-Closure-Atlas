@@ -1,0 +1,152 @@
+{
+  "record_id": "REC50-R42-005",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The named location is the inland Kalpaki road junction where EO22 towards Kakavia branches from EO20 towards Konitsa/Mertzani. Reports concern intermittent approach obstructions; neither Kakavia nor Mertzani customs installations are demonstrated shut.",
+  "source_checks": [
+    {
+      "url": "https://www.ertnews.gr/perifereiakoi-stathmoi/ioanina/ipeiros-agrotes-ekleisan-ton-dromo-pou-odigei-sta-teloneia-kakkavias-kai-mertzanis/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "ERT February20 original names the Kalpaki obstruction on the road leading to Kakavia and Mertzani customs. It reports10:00 start, an actual one-hour opening until14:00 and bus/vulnerable exceptions; later end/bypass times are plans.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-144.json"
+    },
+    {
+      "url": "https://www.cnn.gr/ellada/story/406833/ioannina-entasi-me-agrotes-pou-thelisan-na-blokaroun-ton-komvo-sto-kalpaki",
+      "access_status": "fresh_full_text_extract",
+      "finding": "CNN February21 original places confrontation at Kalpaki junction, where police moved tractors aside but an actual sit-in then blocked the road towards Kakavia/Konitsa.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-144.json"
+    },
+    {
+      "url": "https://www.epiruspost.gr/ston-komvo-kalpakioy-i-orgi-ton-agroto/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "EpirusPost February20 original places vehicles and agricultural machinery at Kalpaki junction, with police-directed alternatives towards Kakavia and Konitsa. The named junction, not a border booth, is the spatial anchor.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-147.json"
+    },
+    {
+      "url": "https://www.epiruspost.gr/kathimerina-sto-kalpaki-tin-deytera-st/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "EpirusPost February23 original confirms continued daily symbolic actions at Kalpaki and difficult Kakavia access. Weekend continuation remains prospective.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-144.json"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/295227450/history",
+      "access_status": "fresh_raw_osm_inspected",
+      "finding": "Original OSM history: node295227450 version5 September12 2023 at20.6236301,39.8895736, the last mapped node position before the February2024 event. Current version6 is a nearby2025 edit and is not silently substituted.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/205823784dc923c899d1.xml",
+      "source_sha256": "e0f05206201751a4a109cb5595638df8eba05af5d5c86c0480292f21afbecb3b"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/970431631/history",
+      "access_status": "fresh_raw_osm_inspected",
+      "finding": "Original OSM way970431631 version2 February9 2023 names Kalpaki–Kakavia road, refEO22/E853, and begins at node295227450.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/319af2e2e781770fcc89.xml",
+      "source_sha256": "2245895f3730fa97731a958b4bfe833a334b046583e16be90f0e75dec2a9d8c4"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/970431632/history",
+      "access_status": "fresh_raw_osm_inspected",
+      "finding": "Original OSM way970431632 version2 September12 2023 names Kozani–Ioannina EO20 and ends at node295227450. Shared pre-event topology identifies the road branch at Kalpaki.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/90abf3dd21162a06a978.xml",
+      "source_sha256": "075df2ba1ce7624b15e9aa1c5e0674501a00007199c8b0915a59625f5908acd1"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R42-005-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "approach-kalpaki-eo20-eo22-junction",
+          "name": "Kalpaki EO20–EO22 inland road junction",
+          "coordinates": [
+            20.6236301,
+            39.8895736
+          ],
+          "coordinate_method": "Original OSM node295227450 version5 September12 2023 coordinates, shared by pre-event2023 versions of EO20 road970431632 and named Kalpaki–Kakavia EO22 road970431631.",
+          "precision": "Named junction-area reference; tens of metres of practical positional uncertainty for the protest. Decimal coordinates identify the historical mapped junction, not surveyed protester or bypass locations.",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/295227450/history",
+            "https://api.openstreetmap.org/api/0.6/way/970431631/history",
+            "https://api.openstreetmap.org/api/0.6/way/970431632/history",
+            "https://www.ertnews.gr/perifereiakoi-stathmoi/ioanina/ipeiros-agrotes-ekleisan-ton-dromo-pou-odigei-sta-teloneia-kakkavias-kai-mertzanis/",
+            "https://www.epiruspost.gr/ston-komvo-kalpakioy-i-orgi-ton-agroto/"
+          ],
+          "evidence_note": "Contemporaneous originals name Kalpaki junction and roads serving Kakavia/Mertzani. Pre-event OSM histories identify the actual EO20/EO22 junction, distinct from Kalpaki village centroid and later proposed A5 interchange. This is an inland approach obstruction, not either customs facility.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/205823784dc923c899d1.xml",
+              "sha256": "e0f05206201751a4a109cb5595638df8eba05af5d5c86c0480292f21afbecb3b",
+              "osm_version": "5",
+              "osm_timestamp": "2023-09-12T06:02:17Z"
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/319af2e2e781770fcc89.xml",
+              "sha256": "2245895f3730fa97731a958b4bfe833a334b046583e16be90f0e75dec2a9d8c4",
+              "osm_version": "2",
+              "osm_timestamp": "2023-02-09T10:04:14Z",
+              "tags": {
+                "check_date:smoothness": "2020-02",
+                "check_date:surface": "2020-02",
+                "highway": "trunk",
+                "int_ref": "E 853",
+                "lanes": "2",
+                "maxspeed": "50",
+                "name": "Καλπακίου - Κακαβιάς",
+                "ref": "ΕΟ22",
+                "smoothness": "intermediate",
+                "surface": "asphalt"
+              }
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/90abf3dd21162a06a978.xml",
+              "sha256": "075df2ba1ce7624b15e9aa1c5e0674501a00007199c8b0915a59625f5908acd1",
+              "osm_version": "2",
+              "osm_timestamp": "2023-09-12T06:02:17Z",
+              "tags": {
+                "date": "20110902",
+                "highway": "primary",
+                "lanes": "2",
+                "lit": "yes",
+                "maxspeed": "80",
+                "name": "Κοζάνης - Ιωαννίνων",
+                "name:el": "Κοζάνης - Ιωαννίνων",
+                "name:en": "Kozani - Ioannina Highway",
+                "ref": "ΕΟ20",
+                "source": "GPS / BIng Zoom Level 19",
+                "surface": "asphalt"
+              }
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/kalpaki-pre2024-road-junction-extract.json",
+              "sha256": "3e33f6b5db544db511bc488ccfabf6c89276d38de8d9fe571d36e0c4d08459e0",
+              "access_status": "derived_from_inspected_original_osm_histories"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Kalpaki inland road junction affecting road access toward Kakavia and Mertzani, with reported bus/vulnerable-traveller exceptions. No symmetric border-admission prohibition or separate customs-post closure is inferred.",
+      "date_scope_check": {
+        "start_earliest": "2024-02-20",
+        "start_latest": "2024-02-20",
+        "end_earliest": "2024-02-23",
+        "end_latest": "2024-02-23",
+        "last_confirmed": "2024-02-23",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "February20 actual obstruction and a one-hour reopening until14:00, February21 sit-in and February23 daily symbolic continuation remain separate intermittent observations. Planned23:00 finish,17:30 bypass blockade and future weekend continuation are not established completions. Do not extend onset to an earlier Saturday mentioned retrospectively or infer four continuous closed days."
+      },
+      "unresolved": [
+        "Exact protesters’ positions and each secondary bypass obstruction are not georeferenced. The named inland junction is located; the customs facilities themselves are not shown closed."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "29b53e9382b0b434e316d3a34a87a2677cadb3f1e084c6578301c25467d5c7e5"
+}

@@ -1,0 +1,78 @@
+{
+  "record_id": "NP-COV-EUR-001",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Albanian authorities temporarily stopped vehicle admission at Morinë–Vërmicë due to inland Kalimash motorway toll protest. The border restriction is distinct from the inland protest and from QafaMorinës pass.",
+  "source_checks": [
+    {
+      "url": "https://www.koha.net/arberi/ndalohet-perkohesisht-qarkullimi-i-automjeteve-ne-kufi-me-shqiperine",
+      "access_status": "fresh_full_text_extract",
+      "finding": "KosovoPolice-attributed original explicitly names Vërmicë–Morinë, Albanian entry restriction and inlandKalimash safety reason.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-099.json"
+    },
+    {
+      "url": "https://periskopi.com/sq/2018/3/pas-perfundimit-te-protestes-se-dhunshme-hapet-kufiri-kosove-shqiperi",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Police-spokesman report describes same-day admission restoration around15:00. Publication ordering does not prove sequence against selectiveplate report.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-111.json"
+    },
+    {
+      "url": "https://mapcarta.com/N1490740499",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Named Kalimi Kufitar Morinë atVërmicë pair; nearbyMorinëpolice andVërmicëcontrol confirm identity. QafaMorinës pass at42.41N is a different crossing. Page labelsKosovo, so paired route reference without sovereignty inference.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-101.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-EUR-001-P01",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-morine-vermica-road",
+          "name": "Morinë–Vërmicë road border reference",
+          "coordinates": [
+            20.54569,
+            42.15549
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 1490740499; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N1490740499",
+            "https://www.openstreetmap.org/node/1490740499"
+          ],
+          "evidence_note": "Named Kalimi Kufitar Morinë atVërmicë pair; nearbyMorinëpolice andVërmicëcontrol confirm identity. QafaMorinës pass at42.41N is a different crossing. Page labelsKosovo, so paired route reference without sovereignty inference.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-101.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Vehicle entry into Albania at Morinë",
+      "date_scope_check": {
+        "start_earliest": "2018-03-31",
+        "start_latest": "2018-03-31",
+        "end_earliest": "2018-03-31",
+        "end_latest": "2018-03-31",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Named crossing-area point; exact historic admission barrier not surveyed. Selective-admission chronological uncertainty preserved."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "ad2965f871bcf417930eafc245c271a6a6438eb808ecfc0a177af528c4f5d4a7"
+}

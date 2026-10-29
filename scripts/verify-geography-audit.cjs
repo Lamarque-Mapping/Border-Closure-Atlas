@@ -1,6 +1,7 @@
 /* Verify independent reconstruction provenance and protect prior map coverage. */
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+const {execFileSync}=require('node:child_process');
 const root=path.resolve(__dirname,'..'),folder=path.join(root,'research/geography-audit-2026-10-29');
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const plan=read(path.join(folder,'audit-plan.json')),baseline=read(path.join(folder,'baseline-map-bindings.json'));
@@ -11,6 +12,8 @@ assert.equal(data.meta.source_sha256,plan.source_sha256);assert.equal(audit.sour
 const events=new Map(data.events.map(e=>[e.id,e])),scopeIDs=new Set(Object.values(plan.groups).flat());
 assert.equal(scopeIDs.size,plan.baseline.unmapped_records);
 const decisions=new Map(audit.decisions.map(d=>[d.record_id,d]));assert.equal(decisions.size,audit.decisions.length,'unique reconciled records');
+const progress=JSON.parse(execFileSync(process.execPath,[path.join(root,'scripts/geography-audit-progress.cjs')],{encoding:'utf8'}));
+assert.deepEqual(progress.problems,[],'every saved reconstruction has valid identity, phase coverage and evidence fields');
 if(audit.status==='complete')assert.equal(decisions.size,scopeIDs.size,'complete audit covers every assigned record');
 const applied=new Set();
 for(const decision of decisions.values()){
@@ -36,6 +39,20 @@ for(const decision of decisions.values()){
  }
 }
 let mapped=0,over24=0;
+for(const site of source.sites.filter(s=>s.geography_audit?.audit_id===audit.audit_id)){
+ const refs=site.geography_audit.audit_passes;
+ const passRows=refs.map(ref=>{
+  const bytes=fs.readFileSync(path.join(root,ref.path));
+  assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),ref.sha256,'site evidence is current: '+site.id);
+  return JSON.parse(bytes);
+ });
+ assert.notEqual(passRows[0].agent,passRows[1].agent);
+ const d=decisions.get(passRows[0].record_id);assert(d,'site points to a reconciled record');
+ assert(d.phases.some(p=>p.decision!=='hold'&&(p.sites||[]).some(s=>{
+  const id=s.existing_site_id||s.proposed_site_id;
+  return id===site.id||id===site.original_reference_id||id.replace(/^crossing-/,'post-')===site.id;
+ })),'site provenance supports this approved facility: '+site.id);
+}
 for(const [id,old] of Object.entries(baseline.records)){
  const e=events.get(id);assert(e&&!C.excluded(e));
  const now=C.mapLocationsFor(e,data,{mode:'all',duration:'all'}).sort(),long=C.mapLocationsFor(e,data,{mode:'all',duration:'over1'}).sort();

@@ -1,0 +1,84 @@
+{
+  "record_id": "REC50-R27-001",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Brief trucker obstruction of access at Bagratashen–Sadakhlo road crossing. Authority permitted protest and distinguished it from obstruction of customs processing; vehicle categories and direction are incomplete.",
+  "source_checks": [
+    {
+      "url": "https://news.am/en/news/471209",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Customs spokesperson names pair, reports two-to-three hours from midnight and current opening; protests not intended to obstruct customs-house operations.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-74.json",
+      "sha256": "a1580c8595779bcdf90d84b8bdb52902673e3a6353377d44784d0923a74b1802"
+    },
+    {
+      "url": "https://news.am/eng/news/471178.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Earlier newspaper-based report includes planned Georgian-truck targeting; later official scoped report controls interpretation.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-74.json",
+      "sha256": "a1580c8595779bcdf90d84b8bdb52902673e3a6353377d44784d0923a74b1802"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R27-001-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-bagratashen-sadakhlo",
+          "name": "Bagratashen–Sadakhlo road crossing",
+          "coordinates": [
+            44.8342719,
+            41.229097
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/1091297664",
+          "precision": "Crossing/access-area reference, approximately 700 m; exact 2018 truck-blockade footprint not established.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1091297664",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=44.8,41.21,44.84,41.26"
+          ],
+          "evidence_note": "Explicitly named international highway bridge between Armenian control area and named Sadakhlo controls; identifies crossing pair, not Sadakhlo railway station. Current bridge representation is not evidence that this structure existed or carried the 2018 protest.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-bagratashen.xml",
+          "sha256": "4df31c70ca80aff78e7ebdba4bbb90b5d84d7b5aa0030ef9c3d0ee30c4ec41a0",
+          "osm_feature": "way/1091297664",
+          "osm_version": "4",
+          "osm_timestamp": "2023-08-30T08:28:53Z",
+          "identity_tags": {
+            "bridge": "yes",
+            "highway": "trunk",
+            "int_ref": "E 001",
+            "lanes": "2",
+            "layer": "1",
+            "level": "1",
+            "maxspeed": "20",
+            "name": "Bagratashen Border Georgia - Armenia",
+            "oneway": "yes",
+            "ref": "ს 7",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Reported trucker obstruction of checkpoint access; affected vehicle categories are not exhaustively identified at Bagratashen–Sadakhlo",
+      "date_scope_check": {
+        "scope": "Reported trucker obstruction of checkpoint access; affected vehicle categories are not exhaustively identified at Bagratashen–Sadakhlo",
+        "start_earliest": "2018-09-15",
+        "start_latest": "2018-09-15",
+        "end_earliest": "2018-09-15",
+        "end_latest": "2018-09-15",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "September 15 2018 two-to-three-hour event from midnight, open by afternoon report; under 24 hours remains in All view. No all-lane passenger ban or Georgian-truck-only restriction inferred."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

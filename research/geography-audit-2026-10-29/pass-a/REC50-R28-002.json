@@ -1,0 +1,126 @@
+{
+  "record_id": "REC50-R28-002",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Maungdaw-origin Naf River cargo corridor terminating at Teknaf land-port jetty. Teknaf complex is independently located; Myanmar departure is described as Hainkhali canal/Kanyinchaung jetty, with exact matching pier unresolved. Yangon/Sittwe coastal shipping is excluded.",
+  "source_checks": [
+    {
+      "url": "https://www.jagonews24.com/en/biz-econ/news/83051",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "May 28 port manager attributes halt since April 12; goods-specific disruption exceeds 24 hours but exact transition unresolved.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-76.json",
+      "sha256": "34d1f19ab45d724787aaee146ac942fa6578882fcba27338c3cdaf17aecc61e9"
+    },
+    {
+      "url": "https://bdnews24.com/bangladesh/b4933a72a017",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Article dates April 12 to last earlier Maungdaw wooden boat; distinguishes cargo jetty and stored export goods.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-80.json",
+      "sha256": "dce7046594fa5a27481b0128e2d0b3ac1f640592d1a6c9e7c5b5b2eac74bcef2"
+    },
+    {
+      "url": "https://www.tbsnews.net/bangladesh/wood-laden-boat-myanmar-docks-teknaf-ending-year-long-halt-1426816",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Actual May 1 arrival from Maungdaw/Hainkhali canal at Teknaf jetty, approximately 13:30; announcement April 14 distinct.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-86.json",
+      "sha256": "b321f5f979a5b29b7e3e3dd546fe5cf803cea9b5bc5ddaf79339e4efcb3ff4eb"
+    },
+    {
+      "url": "https://www.bssnews.net/others/383315",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "May 1 actual timber arrival at 13:10; minor clock discrepancy does not change date.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-74.json",
+      "sha256": "a1580c8595779bcdf90d84b8bdb52902673e3a6353377d44784d0923a74b1802"
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/resumed-bangladesh-arakan-border-trade-still-fails-attract-private-entrepreneurs",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "June 1 DMG account names Kanyinchaung jetty and limited timber/reverse vegetables through ULA-linked merchants.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-86.json",
+      "sha256": "b321f5f979a5b29b7e3e3dd546fe5cf803cea9b5bc5ddaf79339e4efcb3ff4eb"
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Entrance_of_Teknaf_land_port.jpg",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Own-work image metadata gives explicit entrance coordinate and identifies port, not general Teknaf town.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-82.json",
+      "sha256": "4acbf8b81eebcd313fee1eb73678642e1c03d3ecf8910c04f5c2f770ee3ee6ae"
+    },
+    {
+      "url": "https://www.united.com.bd/our-concerns/united-landport-teknaf/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Port operator describes Naf River facility, separately identifying cargo and passenger jetties.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-82.json",
+      "sha256": "4acbf8b81eebcd313fee1eb73678642e1c03d3ecf8910c04f5c2f770ee3ee6ae"
+    },
+    {
+      "url": "https://dica.gov.mm/sites/dica.gov.mm/files/news-files/report_on_rsios_for_printing_20190215_english.pdf",
+      "access_status": "search_indexed_official_report",
+      "finding": "Indexed official investment report locates Kanyinchaung trading zone two miles from Maungdaw with Naf River port; coordinates not established from indexed location plan.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-87.json",
+      "sha256": "a1f4754658edc7776b7306f8611954c899de3e166782c47bdac5e620f83b2e73"
+    },
+    {
+      "url": "https://www.dhakatribune.com/amp/bangladesh/foreign-affairs/371904/myanmar-suspends-trade-from-yangon-to-teknaf",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.dmediag.com/news/btrmb.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R28-002-P1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "port-teknaf-river",
+          "name": "Teknaf land port / Naf River cargo facility",
+          "coordinates": [
+            92.279013,
+            20.903624
+          ],
+          "coordinate_method": "Direct published camera geotag of a personally photographed and explicitly identified Teknaf land-port entrance; used as a port-area reference, not a cargo-berth coordinate.",
+          "precision": "Approximate river-port complex reference, 600 m; exact May 2026 berth unlocated.",
+          "source_urls": [
+            "https://commons.wikimedia.org/wiki/File:Entrance_of_Teknaf_land_port.jpg",
+            "https://www.united.com.bd/our-concerns/united-landport-teknaf/"
+          ],
+          "evidence_note": "Own-work August 2021 photo identifies Teknaf land-port entrance and Maungdaw counterpart. Operator confirms Naf River cargo and passenger jetties within this port. OSM area XML shows piers immediately east/north. This is distinct from BGB jetty, Teknaf town ferry, and St Martin sea ferry terminal.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-82.json",
+          "sha256": "4acbf8b81eebcd313fee1eb73678642e1c03d3ecf8910c04f5c2f770ee3ee6ae"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Maungdaw-origin river cargo arriving at Teknaf land port, ending at the first reported wood-laden boat return on May 1, 2026.",
+      "date_scope_check": {
+        "scope": "Maungdaw-origin river cargo arriving at Teknaf land port, ending at the first reported wood-laden boat return on May 1, 2026.",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2026-05-01",
+        "end_latest": "2026-05-01",
+        "last_confirmed": "2025-05-28",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "April 12 2025 last earlier arrival versus attributed closure-since wording retained without exact onset or 384-day continuity. May 1 2026 timber arrival is actual scoped return; 13:10/13:30 discrepancy retained. April 14 announcement not endpoint; June limited reverse vegetables not first date or general service."
+      },
+      "unresolved": [
+        "Maungdaw departure pier not securely coordinate-matched. Kanyinchaung village centroid rejected; three unnamed OSM piers and official economic-zone map are leads only. Exact Teknaf arrival berth also not specified."
+      ]
+    }
+  ],
+  "unresolved": []
+}

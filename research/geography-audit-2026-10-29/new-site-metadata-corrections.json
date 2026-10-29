@@ -1,0 +1,1406 @@
+{
+  "audit_id": "geography-2026-10-29",
+  "reviewer": "cross_region_africa_a2",
+  "review_date": "2026-10-29",
+  "status": "complete_frozen",
+  "scope": "New site IDs only, relative to the audit baseline commit. No production, baseline sites, frozen passes, coordinates, dates or decisions changed.",
+  "snapshot": {
+    "locations_path": "source/crossings/locations.json",
+    "locations_sha256": "9242fc39b1dd12d15abcab50c6e4e73f7e737d4aa2098dae4cb7167fdab2c49c",
+    "baseline_commit": "4b5321917fbc8330addfd11a6f089a93227fb8b4",
+    "baseline_site_count": 100,
+    "current_site_count": 262,
+    "coverage_method": [
+      "Enumerated every site ID absent from the exact baseline commit; baseline sites excluded from corrections.",
+      "Screened every new facility name, country/entity list, exact-coordinate duplicate, shared OSM feature reference and all new-versus-any pairs within 2.5 km.",
+      "Inspected accepted A/B scope and site evidence for all proposed metadata corrections and duplicate/nearby-feature concerns.",
+      "Preserved one-entity Cyprus Green Line and Georgia ABL labels; no unsupported second country introduced."
+    ],
+    "new_site_count": 162,
+    "new_site_ids": [
+      "post-melchor-benque",
+      "post-siret-porubne",
+      "post-rusizi-1",
+      "post-rusizi-2",
+      "post-emerson-pembina",
+      "post-coutts-sweetgrass",
+      "post-pacific-highway-road",
+      "post-simon-bolivar-road",
+      "post-termez-hairatan-friendship-bridge",
+      "post-semalka-faysh-khabur",
+      "post-dehiba-wazen",
+      "post-odzisi-mosabruni",
+      "post-three-pagodas-local",
+      "post-sadao-bukit-kayu-hitam-road",
+      "post-zokhawthar-rikhawdar",
+      "post-kara-suu-qorasuv-foot",
+      "post-arqin",
+      "post-salwa-abu-samra",
+      "post-bab-al-hawa",
+      "post-al-wadiah",
+      "post-habur-ibrahim-khalil",
+      "post-nuwaiseeb",
+      "post-qaa-jousiyeh",
+      "post-al-qaim-al-bukamal",
+      "post-sheeb-chazabeh",
+      "post-shalamcheh",
+      "post-mandali-sumar",
+      "post-beni-enzar",
+      "post-el-tarajal",
+      "post-kye-ossi-ebebiyin",
+      "post-ngueli-kousseri",
+      "post-mhlumeni-goba",
+      "post-eagle-pass-rail",
+      "post-bac-phong-sinh-lihuo",
+      "post-deryneia-green-line",
+      "post-astromeritis-green-line",
+      "post-apliki-green-line-reference",
+      "post-rasuwagadhi-road-area",
+      "post-safwan-abdali",
+      "post-samdrup-jongkhar",
+      "post-sonauli-belahiya",
+      "post-kulma-karasu-road",
+      "post-attari-wagah-passenger",
+      "post-santander-road",
+      "post-canawaima-south-drain",
+      "post-oyapock-road-bridge",
+      "post-gibraltar-land-customs",
+      "post-channel-tunnel-folkestone-passenger",
+      "post-sumskas-road",
+      "post-tverecius-road",
+      "post-lavoriskes-road",
+      "post-raigardas-road",
+      "post-medininkai-road",
+      "post-kena-rail",
+      "post-kybartai-rail",
+      "post-kapitan-andreevo-road",
+      "post-malko-tarnovo-road",
+      "post-vientuli-road",
+      "post-pededze-road",
+      "post-el-amatillo-amistad-approach",
+      "post-suchiate-ii",
+      "post-paso-canoas-road",
+      "post-desaguadero-new-road-bridge",
+      "post-oancea-road",
+      "post-radauti-prut-road",
+      "post-takutu-road",
+      "post-la-hachadura-customs",
+      "post-vysne-nemecke-road",
+      "post-evzoni-road",
+      "post-rainbow-canadian-approach",
+      "post-thousand-islands-canadian-span",
+      "post-kastanies-road",
+      "post-biriatou-toll",
+      "post-san-roque-paraguay-approach",
+      "post-promachonas-road",
+      "post-el-jobo-road",
+      "geo-vicovu-de-sus-road-control",
+      "post-halmeu-road",
+      "geo-le-boulou-perthus-toll",
+      "geo-paymogo-chanza-road-bridge",
+      "geo-las-manos-honduras-customs",
+      "post-agua-caliente-honduras-customs",
+      "geo-yacuiba-salvador-mazza-road-bridge",
+      "post-psou-road",
+      "post-kairagach-madaniyat",
+      "post-jartepa-sarazm",
+      "post-khasan-tumangang-rail-bridge",
+      "post-maesot-myawaddy-bridge-1",
+      "post-maesai-tachileik-bridge-1",
+      "post-dandong-sinuiju-rail",
+      "post-bac-luan-bridge-2",
+      "post-khunjerab-road",
+      "post-rishton-kaytpas-road",
+      "post-parviz-khan",
+      "post-haji-omran",
+      "post-bashmakh",
+      "post-taftan-mirjaveh-road",
+      "post-king-fahd-causeway",
+      "post-wenela-katima-mulilo",
+      "post-buitepos-mamuno",
+      "post-ariamsvlei",
+      "post-noordoewer",
+      "post-onverwacht-nsalitje",
+      "post-sakania-road",
+      "post-arida",
+      "post-bac-luan-bridge-1",
+      "post-woodlands-road",
+      "post-kim-thanh-2-road",
+      "post-kharlachi-road",
+      "post-motaain-plbn",
+      "post-jhulaghat-bridge",
+      "post-khosravi",
+      "post-aflao",
+      "post-hilacondji-sanveecondji",
+      "post-vioolsdrift",
+      "post-victoria-falls",
+      "post-kazungula-botswana-zimbabwe",
+      "post-kazungula-zambia-ferry",
+      "post-ramatlabama",
+      "post-mananga",
+      "geo-maljevac-road-checkpoint",
+      "geo-bijaca-road-checkpoint",
+      "geo-bogorodica-road-control",
+      "geo-dracenovac-road-control",
+      "post-paternieki-road",
+      "post-terehova-road",
+      "post-grebneva-road",
+      "geo-urziceni-road-control",
+      "post-uspallata-cargo-complex",
+      "proposed-reynosa-pharr-mexican-approach",
+      "post-seaway-north-channel-reference",
+      "post-san-miguel-road-bridge",
+      "post-goli-anzida",
+      "post-skouw-plbn",
+      "post-sota-plbn",
+      "post-yetetkun-plbn",
+      "post-phuentsholing-bhutan-gate",
+      "post-jamunaha-rupaidiha-road",
+      "post-torugart-road-boundary",
+      "post-kenglat-laos-bridge",
+      "post-tan-thanh-road",
+      "post-dera-baba-nanak-ptb",
+      "post-khao-din-sampov-loun",
+      "post-maesai-tachileik-bridge-2",
+      "bridge-abresham-milak",
+      "post-manzhouli-zabaykalsk-rail",
+      "post-manzhouli-road-cargo",
+      "rail-erenhot",
+      "post-kaplanbek-navoi-road",
+      "post-zhibek-zholy-gishtkuprik-road",
+      "post-tazhen-daut-ata-road",
+      "post-atameken-gulistan-road",
+      "post-kazygurt-nazhimov-road",
+      "post-ghulam-khan",
+      "post-kardam-negru-voda-road-reference",
+      "post-agarak-meghri-road",
+      "post-maesot-myawaddy-bridge-2",
+      "port-teknaf-river",
+      "post-singkhon-road",
+      "post-sonamasjid-mahadipur",
+      "post-banglabandha-road-port",
+      "approach-kalpaki-eo20-eo22-junction"
+    ],
+    "root_reconciled_records": 387,
+    "hash_errors": [],
+    "unclassified_multi_country_new_sites": []
+  },
+  "country_corrections": [
+    {
+      "site_id": "post-simon-bolivar-road",
+      "field": "countries",
+      "before": [
+        "Venezuela",
+        "Colombia",
+        "Brazil"
+      ],
+      "after": [
+        "Venezuela",
+        "Colombia"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "The accepted single-site reconstruction is the Táchira river bridge between San Antonio del Táchira and La Parada; Brazil belongs only to the broader parent election record.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/AM050.json",
+          "sha256": "29dc5f2a6147422a73bdd5f4f974b1c2f7a6585eb5f153bd30109d33dde658e7"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/AM050.json",
+          "sha256": "da179fa717fcd47eb0a2330cf7f38f3802775f1bcc25abdfafda4fd350d7923f"
+        }
+      ],
+      "source_urls": [
+        "https://www.openstreetmap.org/way/871456442",
+        "https://mapcarta.com/19864652",
+        "https://www.kienyke.com/mundo/la-frontera-con-colombia-vuelve-la-normalidad-tras-las-elecciones-en-venezuela",
+        "https://caracol.com.co/2024/07/26/venezuela-cerro-la-frontera-con-colombia/"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Venezuela",
+        "Colombia"
+      ]
+    },
+    {
+      "site_id": "post-sadao-bukit-kayu-hitam-road",
+      "field": "countries",
+      "before": [
+        "Thailand",
+        "Myanmar",
+        "Laos",
+        "Cambodia",
+        "Malaysia"
+      ],
+      "after": [
+        "Thailand",
+        "Malaysia"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both passes identify Sadao passenger admission from Bukit Kayu Hitam/Malaysia; other Thai neighbours belong to the parent policy scope.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/EA035.json",
+          "sha256": "76fe09c8cbd20985453a3b54a2a44e10da128a0d54cea6e5e9211305dc95b9a7"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/EA035.json",
+          "sha256": "13d5196aff70eb4f9c55f121a2d7276b90173ff184aa42df55488dfaea383f0c"
+        }
+      ],
+      "source_urls": [
+        "https://www.openstreetmap.org/node/7096487381",
+        "https://api.openstreetmap.org/api/0.6/map?bbox=100.4,6.5,100.44,6.54",
+        "https://api.openstreetmap.org/api/0.6/node/7096487381",
+        "https://www.nationthailand.com/in-focus/40014082",
+        "https://www.malaymail.com/news/malaysia/2020/03/23/covid-19-thailand-closes-nine-border-checkpoints-to-malaysia/1849411"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Thailand",
+        "Malaysia"
+      ]
+    },
+    {
+      "site_id": "post-arqin",
+      "field": "countries",
+      "before": [
+        "Sudan",
+        "Egypt",
+        "Libya",
+        "Chad",
+        "Central African Republic",
+        "South Sudan",
+        "Ethiopia",
+        "Eritrea"
+      ],
+      "after": [
+        "Sudan",
+        "Egypt"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both passes explicitly locate Arqin on Egypt–Sudan and scope the phase to Egyptian returnees; other Sudan neighbours are parent-policy context.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/H19.json",
+          "sha256": "1e74f7af355ae6046d51aa71e1ea366b0f42b67ba760be8c29cf3c988aa941c4"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/H19.json",
+          "sha256": "e20565763a3eee914b2969a7c9b5235e3754580e8aa34c12d289340f000cc453"
+        }
+      ],
+      "source_urls": [
+        "https://www.openstreetmap.org/node/6564793077",
+        "https://www.openstreetmap.org/api/0.6/node/6564793077",
+        "https://almalnews.com/486422/%D8%A7%D9%84%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A%D8%A9-%D8%A7%D9%84%D8%B3%D9%81%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%AE%D8%B1%D8%B7%D9%88%D9%85-%D8%B3%D9%87%D9%84%D8%AA-%D8%B9%D8%A8%D9%88%D8%B1-%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%B7%D9%86%D9%8A%D9%86/",
+        "https://www.euronews.com/2019/04/11/sudan-s-president-ousted-military-after-months-protests-n993336"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Sudan",
+        "Egypt"
+      ]
+    },
+    {
+      "site_id": "post-nuwaiseeb",
+      "field": "countries",
+      "before": [
+        "Kuwait",
+        "Iraq",
+        "Saudi Arabia"
+      ],
+      "after": [
+        "Kuwait",
+        "Saudi Arabia"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both passes identify Saudi-to-Kuwait return movement at Nuwaiseeb/Khafji; Iraq is a different Kuwaiti frontier.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/ME031.json",
+          "sha256": "00d4f740cdf08d8264f0749d561c5c4892bcebe0e953a08cb30c3449b7c3ebaf"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/ME031.json",
+          "sha256": "d807b5baba91542988c1e92dcaa708b78f9347043b4efffdda4083f1a76c5b8f"
+        }
+      ],
+      "source_urls": [
+        "https://www.openstreetmap.org/way/1456475679",
+        "https://www.openstreetmap.org/api/0.6/way/1456475679/full",
+        "https://www.alraimedia.com/article/1513387/محليات/أخبار-محلية/إغلاق-مطار-الكويت-والمنافذ-الحدودية-البرية-والبحرية-حتى-1-يناير",
+        "https://www.alraimedia.com/article/1514983/محليات/وزير-الداخلية-يتفقد-منفذ-النويصيب-الحدودي",
+        "https://www.alraimedia.com/article/1515019/محليات/افتتاح-محدود-للمنافذ-البرية-بين-الكويت-والسعودية",
+        "https://www.alraimedia.com/article/1515019/%D9%85%D8%AD%D9%84%D9%8A%D8%A7%D8%AA/%D8%A7%D9%81%D8%AA%D8%AA%D8%A7%D8%AD-%D9%85%D8%AD%D8%AF%D9%88%D8%AF-%D9%84%D9%84%D9%85%D9%86%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%A8%D8%B1%D9%8A%D8%A9-%D8%A8%D9%8A%D9%86-%D8%A7%D9%84%D9%83%D9%88%D9%8A%D8%AA-%D9%88%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Kuwait",
+        "Saudi Arabia"
+      ]
+    },
+    {
+      "site_id": "post-ngueli-kousseri",
+      "field": "countries",
+      "before": [
+        "Cameroon",
+        "Nigeria",
+        "Chad",
+        "Central African Republic",
+        "Republic of the Congo",
+        "Gabon",
+        "Equatorial Guinea"
+      ],
+      "after": [
+        "Cameroon",
+        "Chad"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both passes identify the Ngueli/Kousseri bridge and separate Cameroonian and Chadian service; the remaining Cameroon neighbours are outside this facility.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/SC16.json",
+          "sha256": "3ef9337598ef0efbe27f7db757d7ec2e08bbdd2c2548c4e10780fd05ee54c361"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/SC16.json",
+          "sha256": "b2b635ff3436dc13b2e1ddb13145b5370ea9c6633784b8007a8e8ba188de11c5"
+        }
+      ],
+      "source_urls": [
+        "https://www.openstreetmap.org/way/23192897",
+        "https://www.openstreetmap.org/api/0.6/way/23192897/full",
+        "https://www.openstreetmap.org/api/0.6/map?bbox=15.049,12.064,15.059,12.072",
+        "https://www.minpmeesa.cm/site/en/government-response-strategy-to-the-coronavirus-pandemic-covid-19/",
+        "https://h.aa.com.tr/fr/afrique/covid-19-r%C3%A9ouverture-des-fronti%C3%A8res-terrestres-entre-le-cameroun-et-le-tchad/2277706",
+        "https://www.lepaystchad.com/le-pont-ngueli-officiellement-reouvert/"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Cameroon",
+        "Chad"
+      ]
+    },
+    {
+      "site_id": "post-lavoriskes-road",
+      "field": "countries",
+      "before": [
+        "Lithuania",
+        "Belarus",
+        "Russia"
+      ],
+      "after": [
+        "Lithuania",
+        "Belarus"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both accepted identities pair Lavoriškės with Kotlovka. The original Lithuanian ministry and EU border-post list explicitly place it on the Belarus frontier.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/EU007.json",
+          "sha256": "3096bd20f632fbf929aa3708a5d4560265cecc48026bb2d1564745cc6e822875"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/EU007.json",
+          "sha256": "360eeeaebf2b30a32d020d2b54405c4215410e7073be695125e71df4463d1978"
+        }
+      ],
+      "source_urls": [
+        "https://pkpd.dedikuotas.lt/",
+        "https://pkpd.lrv.lt/lt/",
+        "https://vrm.lrv.lt/en/news/the-operation-of-the-lavoriskes-and-raigardas-border-crossing-points-will-be-terminated-from-1-march/",
+        "https://lrv.lt/en/news/government-reopens-the-salcininkai-and-medininkai-border-crossing-points-with-belarus-BJy6/",
+        "https://pkpd.lrv.lt/lt/veiklos-sritys/administruojami-pasienio-kontroles-punktai/"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Lithuania",
+        "Belarus"
+      ]
+    },
+    {
+      "site_id": "post-raigardas-road",
+      "field": "countries",
+      "before": [
+        "Lithuania",
+        "Belarus",
+        "Russia"
+      ],
+      "after": [
+        "Lithuania",
+        "Belarus"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both accepted identities pair Raigardas with Privalka. The original ministry and EU border-post list explicitly place it on the Belarus frontier.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/EU007.json",
+          "sha256": "3096bd20f632fbf929aa3708a5d4560265cecc48026bb2d1564745cc6e822875"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/EU007.json",
+          "sha256": "360eeeaebf2b30a32d020d2b54405c4215410e7073be695125e71df4463d1978"
+        }
+      ],
+      "source_urls": [
+        "https://pkpd.dedikuotas.lt/",
+        "https://pkpd.lrv.lt/lt/",
+        "https://vrm.lrv.lt/en/news/the-operation-of-the-lavoriskes-and-raigardas-border-crossing-points-will-be-terminated-from-1-march/",
+        "https://lrv.lt/en/news/government-reopens-the-salcininkai-and-medininkai-border-crossing-points-with-belarus-BJy6/",
+        "https://pkpd.lrv.lt/lt/veiklos-sritys/administruojami-pasienio-kontroles-punktai/"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Lithuania",
+        "Belarus"
+      ]
+    },
+    {
+      "site_id": "post-medininkai-road",
+      "field": "countries",
+      "before": [
+        "Lithuania",
+        "Belarus",
+        "Russia"
+      ],
+      "after": [
+        "Lithuania",
+        "Belarus"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "The accepted road facility is Medininkai–Kamenny Log, explicitly on the Belarus frontier in the ministry and EU border-post list.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/EU007.json",
+          "sha256": "3096bd20f632fbf929aa3708a5d4560265cecc48026bb2d1564745cc6e822875"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/EU007.json",
+          "sha256": "360eeeaebf2b30a32d020d2b54405c4215410e7073be695125e71df4463d1978"
+        }
+      ],
+      "source_urls": [
+        "https://pkpd.dedikuotas.lt/",
+        "https://pkpd.lrv.lt/lt/",
+        "https://vrm.lrv.lt/en/news/the-operation-of-the-lavoriskes-and-raigardas-border-crossing-points-will-be-terminated-from-1-march/",
+        "https://lrv.lt/en/news/government-reopens-the-salcininkai-and-medininkai-border-crossing-points-with-belarus-BJy6/",
+        "https://pkpd.lrv.lt/lt/veiklos-sritys/administruojami-pasienio-kontroles-punktai/"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Lithuania",
+        "Belarus"
+      ]
+    },
+    {
+      "site_id": "post-kena-rail",
+      "field": "countries",
+      "before": [
+        "Lithuania",
+        "Belarus",
+        "Russia"
+      ],
+      "after": [
+        "Lithuania",
+        "Belarus"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "The accepted rail facility is Kena–Gudagojis. EU original border-post list classifies that railway under Lithuania–Belarus, distinct from the Kybartai rail leg to Russia.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/EU007.json",
+          "sha256": "3096bd20f632fbf929aa3708a5d4560265cecc48026bb2d1564745cc6e822875"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/EU007.json",
+          "sha256": "360eeeaebf2b30a32d020d2b54405c4215410e7073be695125e71df4463d1978"
+        }
+      ],
+      "source_urls": [
+        "https://pkpd.dedikuotas.lt/",
+        "https://pkpd.lrv.lt/lt/",
+        "https://vrm.lrv.lt/en/news/the-operation-of-the-lavoriskes-and-raigardas-border-crossing-points-will-be-terminated-from-1-march/",
+        "https://lrv.lt/en/news/government-reopens-the-salcininkai-and-medininkai-border-crossing-points-with-belarus-BJy6/",
+        "https://pkpd.lrv.lt/lt/veiklos-sritys/administruojami-pasienio-kontroles-punktai/"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Lithuania",
+        "Belarus"
+      ]
+    },
+    {
+      "site_id": "post-kybartai-rail",
+      "field": "countries",
+      "before": [
+        "Lithuania",
+        "Belarus",
+        "Russia"
+      ],
+      "after": [
+        "Lithuania",
+        "Russia"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "The accepted Kybartai railway facility is on the Russian frontier; EU original listing pairs Kybartai–Nesterov under Lithuania–Russian Federation. Do not add Belarus because transit trains subsequently cross it.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/EU007.json",
+          "sha256": "3096bd20f632fbf929aa3708a5d4560265cecc48026bb2d1564745cc6e822875"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/EU007.json",
+          "sha256": "360eeeaebf2b30a32d020d2b54405c4215410e7073be695125e71df4463d1978"
+        }
+      ],
+      "source_urls": [
+        "https://pkpd.dedikuotas.lt/",
+        "https://pkpd.lrv.lt/lt/",
+        "https://vrm.lrv.lt/en/news/the-operation-of-the-lavoriskes-and-raigardas-border-crossing-points-will-be-terminated-from-1-march/",
+        "https://lrv.lt/en/news/government-reopens-the-salcininkai-and-medininkai-border-crossing-points-with-belarus-BJy6/",
+        "https://pkpd.lrv.lt/lt/veiklos-sritys/administruojami-pasienio-kontroles-punktai/"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Lithuania",
+        "Russia"
+      ]
+    },
+    {
+      "site_id": "post-evzoni-road",
+      "field": "countries",
+      "before": [
+        "Greece",
+        "Albania",
+        "North Macedonia"
+      ],
+      "after": [
+        "Greece",
+        "North Macedonia"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both passes identify ordinary admission at Evzoni–Bogorodica from North Macedonia; Albania belongs to the wider initial legal instrument, not this road post.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R5-EU-004.json",
+          "sha256": "bb21588442f822a6477833f6c94617dbab03fb481fd610752a925b4437a60bea"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R5-EU-004.json",
+          "sha256": "13ff48736dd10e3957e51d86cf9ec3f5d8b179bc9abe583cd705dfe185ad3d54"
+        }
+      ],
+      "source_urls": [
+        "https://api.openstreetmap.org/api/0.6/node/2294293336",
+        "https://services.naftemporiki.gr/story/1726286/boreia-makedonia-anoiksan-ta-sunora-me-ellada",
+        "https://mapcarta.com/W783378352",
+        "https://www.ynanp.gr/media/documents/%CE%A6%CE%B5%CE%BA_860%CE%92.pdf"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Greece",
+        "North Macedonia"
+      ]
+    },
+    {
+      "site_id": "post-biriatou-toll",
+      "field": "countries",
+      "before": [
+        "Spain",
+        "France",
+        "Andorra"
+      ],
+      "after": [
+        "Spain",
+        "France"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both passes identify the Biriatou A63/AP8 France-bound freight approach/toll. Andorra is a separate frontier action in the parent record.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R6-EU-006.json",
+          "sha256": "ff1f49a977afb2633d5611f843c997bd601b5eea3da244f9b57df74bd48624e7"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R6-EU-006.json",
+          "sha256": "7241ec35aee8704e99c3f8de3e8652a1f115f84627f652632722ba7f76c6811e"
+        }
+      ],
+      "source_urls": [
+        "https://api.openstreetmap.org/api/0.6/way/36331924/full",
+        "https://www.irekia.euskadi.eus/amp/es/news/93937-afecciones-trafico-este-lunes-biriatou-por-una-nueva-concentracion-tractores",
+        "https://www.euskadi.eus/gobierno-vasco/-/noticia/2024/el-gobierno-vasco-recomienda-paciencia-y-conductores-que-se-dirigen-francia/",
+        "https://mapcarta.com/N280351090",
+        "https://www.rtve.es/noticias/20240604/agricultores-levantan-bloqueos-fronterizos-tras-protesta-24-horas/16132364.shtml"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Spain",
+        "France"
+      ]
+    },
+    {
+      "site_id": "geo-le-boulou-perthus-toll",
+      "field": "countries",
+      "before": [
+        "France",
+        "Germany",
+        "Italy",
+        "Spain"
+      ],
+      "after": [
+        "France",
+        "Spain"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both passes identify the A9 mainline toll before Spain; Germany and Italy belong to other separately scoped parent-record locations.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/FU-COV-EUR-001.json",
+          "sha256": "300e015b1f342d7370abddcab5ec30cf457b0c00be00bd063981ee8dd936f4f9"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/FU-COV-EUR-001.json",
+          "sha256": "6e634d5b4b5b48e4264507c7735620fb4484e77945d74915044efea4c81cccd1"
+        }
+      ],
+      "source_urls": [
+        "https://api.openstreetmap.org/api/0.6/node/36967326",
+        "https://www.publicsenat.fr/actualites/politique/des-centaines-de-gilets-jaunes-deloges-d-un-peage-a-la-frontiere-franco-espagnole",
+        "https://www.primocanale.it/archivio-news/203721-manifestazione-dei-gilet-gialli-alla-frontiera-di-ventimiglia-traffico-tornato-regolare.html",
+        "https://www.dna.fr/actualite/2018/12/22/gilets-jaunes-deux-interpellations-a-strasbourg-apres-un-blocage-avant-le-pont-de-l-europe",
+        "https://mapcarta.com/N36967365",
+        "https://mapcarta.com/W415636880",
+        "https://mapy.com/en/?id=1072185692&source=osm"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "France",
+        "Spain"
+      ]
+    },
+    {
+      "site_id": "post-wenela-katima-mulilo",
+      "field": "countries",
+      "before": [
+        "Namibia",
+        "Angola",
+        "Zambia",
+        "Botswana",
+        "South Africa"
+      ],
+      "after": [
+        "Namibia",
+        "Zambia"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both passes and inspected PIDA/JICA identity pair Namibian Wenela with Zambian Katima Mulilo; the remaining neighbours belong to the national six-port order.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/SC21.json",
+          "sha256": "bc8cb86012ff04b242e28e5f8dfd0dbd1bf01eb8578dab602c31b708eec0f3f2"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/SC21.json",
+          "sha256": "47643b58a5399792428c1f9f9067bde2b42963aa47af35822619aba727610ff0"
+        }
+      ],
+      "source_urls": [
+        "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+        "https://openjicareport.jica.go.jp/pdf/11991007_02.pdf",
+        "https://namibia.un.org/en/38975-namibias-national-response-measures-covid19",
+        "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+        "https://media.afreximbank.com/afrexim/Studying-on-Trade-Carrying-Infrastructure-Gap-in-Southern-African-Development-Community-SADC.pdf",
+        "https://mha.gov.na/katwitwi"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Namibia",
+        "Zambia"
+      ]
+    },
+    {
+      "site_id": "post-buitepos-mamuno",
+      "field": "countries",
+      "before": [
+        "Namibia",
+        "Angola",
+        "Zambia",
+        "Botswana",
+        "South Africa"
+      ],
+      "after": [
+        "Namibia",
+        "Botswana"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both passes identify Buitepos/Mamuno on the Trans-Kalahari route to Botswana; A original node explicitly describes a Namibia–Botswana checkpoint.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/SC21.json",
+          "sha256": "bc8cb86012ff04b242e28e5f8dfd0dbd1bf01eb8578dab602c31b708eec0f3f2"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/SC21.json",
+          "sha256": "47643b58a5399792428c1f9f9067bde2b42963aa47af35822619aba727610ff0"
+        }
+      ],
+      "source_urls": [
+        "https://www.openstreetmap.org/api/0.6/node/309221710",
+        "https://namibia.un.org/en/38975-namibias-national-response-measures-covid19",
+        "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+        "https://media.afreximbank.com/afrexim/Studying-on-Trade-Carrying-Infrastructure-Gap-in-Southern-African-Development-Community-SADC.pdf",
+        "https://openjicareport.jica.go.jp/pdf/11991007_02.pdf",
+        "https://mha.gov.na/katwitwi"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Namibia",
+        "Botswana"
+      ]
+    },
+    {
+      "site_id": "post-ariamsvlei",
+      "field": "countries",
+      "before": [
+        "Namibia",
+        "Angola",
+        "Zambia",
+        "Botswana",
+        "South Africa"
+      ],
+      "after": [
+        "Namibia",
+        "South Africa"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "The accepted road facility is Namibian Ariamsvlei opposite Nakop, South Africa; other Namibian neighbours are outside this facility.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/SC21.json",
+          "sha256": "bc8cb86012ff04b242e28e5f8dfd0dbd1bf01eb8578dab602c31b708eec0f3f2"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/SC21.json",
+          "sha256": "47643b58a5399792428c1f9f9067bde2b42963aa47af35822619aba727610ff0"
+        }
+      ],
+      "source_urls": [
+        "https://www.openstreetmap.org/node/995503634",
+        "https://www.openstreetmap.org/api/0.6/node/995503634",
+        "https://namibia.un.org/en/38975-namibias-national-response-measures-covid19",
+        "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+        "https://media.afreximbank.com/afrexim/Studying-on-Trade-Carrying-Infrastructure-Gap-in-Southern-African-Development-Community-SADC.pdf",
+        "https://openjicareport.jica.go.jp/pdf/11991007_02.pdf",
+        "https://mha.gov.na/katwitwi"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Namibia",
+        "South Africa"
+      ]
+    },
+    {
+      "site_id": "post-noordoewer",
+      "field": "countries",
+      "before": [
+        "Namibia",
+        "Angola",
+        "Zambia",
+        "Botswana",
+        "South Africa"
+      ],
+      "after": [
+        "Namibia",
+        "South Africa"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "The accepted facility is Namibian Noordoewer opposite South African Vioolsdrif; the separately accepted Vioolsdrif source reconstruction confirms the opposite controls.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/SC21.json",
+          "sha256": "bc8cb86012ff04b242e28e5f8dfd0dbd1bf01eb8578dab602c31b708eec0f3f2"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/SC21.json",
+          "sha256": "47643b58a5399792428c1f9f9067bde2b42963aa47af35822619aba727610ff0"
+        }
+      ],
+      "source_urls": [
+        "https://www.openstreetmap.org/node/459439978",
+        "https://www.openstreetmap.org/api/0.6/node/459439978",
+        "https://namibia.un.org/en/38975-namibias-national-response-measures-covid19",
+        "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+        "https://media.afreximbank.com/afrexim/Studying-on-Trade-Carrying-Infrastructure-Gap-in-Southern-African-Development-Community-SADC.pdf",
+        "https://openjicareport.jica.go.jp/pdf/11991007_02.pdf",
+        "https://mha.gov.na/katwitwi"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Namibia",
+        "South Africa"
+      ]
+    },
+    {
+      "site_id": "post-aflao",
+      "field": "countries",
+      "before": [
+        "Togo",
+        "Ghana",
+        "Benin",
+        "Burkina Faso"
+      ],
+      "after": [
+        "Togo",
+        "Ghana"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both passes expressly place Aflao/Kodjoviakope on the Ghana–Togo frontier; Benin and Burkina Faso are other Togolese frontiers.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R5-AWN-003.json",
+          "sha256": "f50b2eea7aee751996f8ce30690cb438f295de07e30ff2bf0dc7190f80cd09de"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R5-AWN-003.json",
+          "sha256": "2857ba875036fb590216bc5195a560086b569a7f2f1a9c007a30071da157a022"
+        }
+      ],
+      "source_urls": [
+        "https://www.openstreetmap.org/api/0.6/map.json?bbox=1.195,6.109,1.203,6.12",
+        "https://www.openstreetmap.org/node/14140322711",
+        "https://loeildusahara.com/togo-les-frontieres-terrestres-rouvertes-ce-30-avril/",
+        "https://mapcarta.com/N14140322711",
+        "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Togo",
+        "Ghana"
+      ]
+    },
+    {
+      "site_id": "post-hilacondji-sanveecondji",
+      "field": "countries",
+      "before": [
+        "Togo",
+        "Ghana",
+        "Benin",
+        "Burkina Faso"
+      ],
+      "after": [
+        "Togo",
+        "Benin"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both passes expressly identify Hilacondji/Sanveecondji on the Benin–Togo frontier; Ghana and Burkina Faso are outside this facility.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R5-AWN-003.json",
+          "sha256": "f50b2eea7aee751996f8ce30690cb438f295de07e30ff2bf0dc7190f80cd09de"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R5-AWN-003.json",
+          "sha256": "2857ba875036fb590216bc5195a560086b569a7f2f1a9c007a30071da157a022"
+        }
+      ],
+      "source_urls": [
+        "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+        "https://loeildusahara.com/togo-les-frontieres-terrestres-rouvertes-ce-30-avril/",
+        "https://mapcarta.com/N14140322711",
+        "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Togo",
+        "Benin"
+      ]
+    },
+    {
+      "site_id": "post-victoria-falls",
+      "field": "countries",
+      "before": [
+        "Zimbabwe",
+        "South Africa",
+        "Botswana",
+        "Zambia",
+        "Mozambique"
+      ],
+      "after": [
+        "Zimbabwe",
+        "Zambia"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both passes identify Victoria Falls–Livingstone road entry on the Zimbabwe–Zambia frontier, not every Zimbabwean neighbour.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R6-AES-003.json",
+          "sha256": "69171d1f6d55d153a641b4991934462ff42c91704f41e35e47af39335ce1b1ef"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R6-AES-003.json",
+          "sha256": "c123b68eef97e8ccb3873f1b7fa9157826a8428e46f513c2db3a3f20f0fcbf14"
+        }
+      ],
+      "source_urls": [
+        "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+        "https://www.zimlive.com/zimbabwe-re-opens-victoria-falls-land-borders-to-fully-vaccinated-tourists/",
+        "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+        "https://mapcarta.com/N3345684009",
+        "https://www.botswanatourism.co.bw/index.php/travel-info/ports-entry"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Zimbabwe",
+        "Zambia"
+      ]
+    },
+    {
+      "site_id": "post-kazungula-botswana-zimbabwe",
+      "field": "countries",
+      "before": [
+        "Zimbabwe",
+        "South Africa",
+        "Botswana",
+        "Zambia",
+        "Mozambique"
+      ],
+      "after": [
+        "Zimbabwe",
+        "Botswana"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both passes identify the Botswana–Zimbabwe road port and explicitly distinguish the Botswana–Zambia ferry/bridge; South Africa, Zambia and Mozambique are not countries of this facility.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R6-AES-003.json",
+          "sha256": "69171d1f6d55d153a641b4991934462ff42c91704f41e35e47af39335ce1b1ef"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R6-AES-003.json",
+          "sha256": "c123b68eef97e8ccb3873f1b7fa9157826a8428e46f513c2db3a3f20f0fcbf14"
+        }
+      ],
+      "source_urls": [
+        "https://www.openstreetmap.org/api/0.6/node/3345684009.json",
+        "https://www.openstreetmap.org/node/3345684009",
+        "https://www.zimlive.com/zimbabwe-re-opens-victoria-falls-land-borders-to-fully-vaccinated-tourists/",
+        "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+        "https://mapcarta.com/N3345684009",
+        "https://www.botswanatourism.co.bw/index.php/travel-info/ports-entry"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Zimbabwe",
+        "Botswana"
+      ]
+    },
+    {
+      "site_id": "geo-bogorodica-road-control",
+      "field": "countries",
+      "before": [
+        "North Macedonia",
+        "Greece",
+        "Bulgaria",
+        "Albania",
+        "Kosovo"
+      ],
+      "after": [
+        "North Macedonia",
+        "Greece"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both reconstructions identify the Bogorodica road terminal/control opposite Greek Evzoni; Bulgaria, Albania and Kosovo are other participating frontiers in the ten-post campaign.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/NP-COV-EUR-007.json",
+          "sha256": "ee1ee18ea869eb3d29af0337557a5d2ab917fa35d4d429ed578f32f2a9932a27"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/NP-COV-EUR-007.json",
+          "sha256": "162854625ea4e58abc24c9b5b71c51ed8c2a0fedd0c581cd7154836e9eaeba17"
+        }
+      ],
+      "source_urls": [
+        "https://api.openstreetmap.org/api/0.6/way/334629692/full",
+        "https://miamail.mia.mk/en/story/macedonian-transporters-lift-blockades-at-border-crossings",
+        "https://www.ofae.gr/en/nea/international-news/termatismos-kinhtopoihsewn-metaforewn-boreias-make-1/",
+        "https://customs.gov.mk/content/04%2012%202025%20Meeting%20minutes%20Site%20Visit%20and%20Information%20Meeting%20GP%20Delcevo.pdf",
+        "https://mapcarta.com/W1455591003",
+        "https://mapcarta.com/W235277568",
+        "https://mapcarta.com/W987506493",
+        "https://mapcarta.com/W183755210"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "North Macedonia",
+        "Greece"
+      ]
+    },
+    {
+      "site_id": "geo-dracenovac-road-control",
+      "field": "countries",
+      "before": [
+        "Montenegro",
+        "Serbia",
+        "Bosnia and Herzegovina"
+      ],
+      "after": [
+        "Montenegro",
+        "Serbia"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both passes identify Dracenovac–Spiljani on the Montenegro–Serbia frontier; Bosnia and Herzegovina belongs to the wider freight campaign, not this passenger-inclusive extension site.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/NP-COV-EUR-008.json",
+          "sha256": "cc34d5744cae8f7bb1edb66043f0aa38bbc488c166613f33ca01e406d6d3ba90"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/NP-COV-EUR-008.json",
+          "sha256": "a47615bcdc600e502937509ef12c8f270e2d21c9020bb774712bb35f31d58202"
+        }
+      ],
+      "source_urls": [
+        "https://api.openstreetmap.org/api/0.6/node/295259120",
+        "https://www.rts.rs/lat/vesti/region/5925736/blokada-granicni-prelaz-teretni-saobracaj.html",
+        "https://www.rts.rs/lat/vesti/region/5928573/blokada-granicnog-prelaza-u-crnoj-gori-dracevac.html",
+        "https://www.gov.me/clanak/saopstenje-415",
+        "https://mzv.gov.cz/podgorica/cz/ekonomika_a_obchod/blokada_silnicni_nakladni_dopravy_na.mobi",
+        "https://mapcarta.com/N295259120"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Montenegro",
+        "Serbia"
+      ]
+    },
+    {
+      "site_id": "post-paternieki-road",
+      "field": "countries",
+      "before": [
+        "Latvia",
+        "Belarus",
+        "Russia"
+      ],
+      "after": [
+        "Latvia",
+        "Belarus"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both passes and the primary Latvian queue-service directory explicitly identify Paternieki as the Belarus post; Russia applies to the other two posts in the record.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/C7-EU-002.json",
+          "sha256": "e4a35363d17a3ff2882d8d089b65bceaf8712283a5aa5a2e436778e1ef4ad14a"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/C7-EU-002.json",
+          "sha256": "4bf8162ea5432a75bdb63a53dd46759b095649f29362334e36cc16357bf89ffa"
+        }
+      ],
+      "source_urls": [
+        "https://lvborder.lv/border-chekpoints/",
+        "https://www.vestnesis.lv/op/2025/55B.1",
+        "https://www.iem.gov.lv/en/article/19-march-traffic-border-crossing-points-paternieki-terehova-and-grebneva-will-be-restricted",
+        "https://lvrobeza.lv/en/border-chekpoints/"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Latvia",
+        "Belarus"
+      ]
+    },
+    {
+      "site_id": "post-terehova-road",
+      "field": "countries",
+      "before": [
+        "Latvia",
+        "Belarus",
+        "Russia"
+      ],
+      "after": [
+        "Latvia",
+        "Russia"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both passes and the primary Latvian queue-service directory explicitly identify Terehova as a Russia-frontier post; Belarus applies to Paternieki.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/C7-EU-002.json",
+          "sha256": "e4a35363d17a3ff2882d8d089b65bceaf8712283a5aa5a2e436778e1ef4ad14a"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/C7-EU-002.json",
+          "sha256": "4bf8162ea5432a75bdb63a53dd46759b095649f29362334e36cc16357bf89ffa"
+        }
+      ],
+      "source_urls": [
+        "https://lvborder.lv/border-chekpoints/",
+        "https://www.vestnesis.lv/op/2025/55B.1",
+        "https://www.iem.gov.lv/en/article/19-march-traffic-border-crossing-points-paternieki-terehova-and-grebneva-will-be-restricted",
+        "https://lvrobeza.lv/en/border-chekpoints/"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Latvia",
+        "Russia"
+      ]
+    },
+    {
+      "site_id": "post-grebneva-road",
+      "field": "countries",
+      "before": [
+        "Latvia",
+        "Belarus",
+        "Russia"
+      ],
+      "after": [
+        "Latvia",
+        "Russia"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both passes and the primary Latvian queue-service directory explicitly identify Grebneva as a Russia-frontier post; Belarus applies to Paternieki.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/C7-EU-002.json",
+          "sha256": "e4a35363d17a3ff2882d8d089b65bceaf8712283a5aa5a2e436778e1ef4ad14a"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/C7-EU-002.json",
+          "sha256": "4bf8162ea5432a75bdb63a53dd46759b095649f29362334e36cc16357bf89ffa"
+        }
+      ],
+      "source_urls": [
+        "https://lvborder.lv/border-chekpoints/",
+        "https://www.vestnesis.lv/op/2025/55B.1",
+        "https://www.iem.gov.lv/en/article/19-march-traffic-border-crossing-points-paternieki-terehova-and-grebneva-will-be-restricted",
+        "https://lvrobeza.lv/en/border-chekpoints/"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Latvia",
+        "Russia"
+      ]
+    },
+    {
+      "site_id": "post-san-miguel-road-bridge",
+      "field": "countries",
+      "before": [
+        "Colombia"
+      ],
+      "after": [
+        "Colombia",
+        "Ecuador"
+      ],
+      "action": "replace_site_metadata_only",
+      "identity_rationale": "Both independent reconstructions explicitly identify the San Miguel international road bridge between Colombia and Ecuador. The single-country national-order parent label omits its counterpart and cannot describe this facility.",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R32-001.json",
+          "sha256": "d269967bb2b7f81118e9d7375bab2522d23358b53366e47ccdee02cc9b88bb0b"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R32-001.json",
+          "sha256": "53537158b29a62cc6285e6cba1f41567ceea83fd5920156d7aaa676cefac924d"
+        }
+      ],
+      "source_urls": [
+        "https://www.openstreetmap.org/way/93534528",
+        "https://www.registraduria.gov.co/IMG/pdf/20231024_decreto-1702_2023.pdf",
+        "https://www.eluniverso.com/noticias/ecuador/colombia-suspendera-la-movilidad-por-el-puente-internacional-de-rumichaca-el-fin-de-semana-por-elecciones-nota/?outputType=amp",
+        "https://www.radioipiales.co/2023/10/cierre-de-la-frontera-desde-el-sabado-2/",
+        "https://plc.mintransporte.gov.co/Portals/0/Estudios%20BID/Libro%20Blanco.pdf?ver=2018-12-14-113134-343",
+        "https://mintransporte.gov.co/publicaciones/10138/en-la-zona-futuro-del-pacifico-narinense-gobierno-del-presidente-ivan-duque-marquez-entrega-el-nuevo-corredor-binacional-espriella-rio-mataje/",
+        "https://www.openstreetmap.org/way/1316055071",
+        "https://api.openstreetmap.org/api/0.6/way/700891308/full"
+      ],
+      "current_status": "already_matches_proposal",
+      "current_value": [
+        "Colombia",
+        "Ecuador"
+      ]
+    }
+  ],
+  "duplicate_review": {
+    "exact_coordinate_duplicates": [],
+    "exact_duplicate_corrections": [
+      {
+        "remove_new_site_id": "post-rishtan-kaytpas-road",
+        "retain_site_id": "post-rishton-kaytpas-road",
+        "coordinates": [
+          71.2733799,
+          40.3432613
+        ],
+        "identity": "Rishton/Rishtan–Kaytpas road control; identical OSM node 1827188518 in all four frozen reconstructions.",
+        "record_ids": [
+          "CC026",
+          "R8-AS-001"
+        ],
+        "audit_passes": [
+          {
+            "path": "research/geography-audit-2026-10-29/pass-a/CC026.json",
+            "sha256": "c934f7668aab987ef33823d78085e5f57a2a3ac2166129fac859ed5b10339eba"
+          },
+          {
+            "path": "research/geography-audit-2026-10-29/pass-b/CC026.json",
+            "sha256": "f88ba112ee3f603b3501c30fc09413f79827ebdfc8410e41cbfefa2af56aa0d9"
+          },
+          {
+            "path": "research/geography-audit-2026-10-29/pass-a/R8-AS-001.json",
+            "sha256": "14982fe3dd15b773e6c45ae32d6da026ce6e409e3b8cd5346c567198d5a4dc93"
+          },
+          {
+            "path": "research/geography-audit-2026-10-29/pass-b/R8-AS-001.json",
+            "sha256": "2be26846b1ad5203aa7582c75d57552668279d827c2681268ae1488a95015078"
+          }
+        ],
+        "action": "Coordinator may relink the newer binding to the earlier accepted site ID and remove redundant site; no geometry/date/scope alteration.",
+        "currently_both_present": false,
+        "current_status": "resolved_by_root"
+      }
+    ],
+    "same_facility_followup": [
+      {
+        "site_ids": [
+          "post-santa-rosa-tacna",
+          "post-santa-rosa-road"
+        ],
+        "coordinates": [
+          [
+            -70.31427,
+            -18.3072
+          ],
+          [
+            -70.3145184,
+            -18.3072394
+          ]
+        ],
+        "distance_m": 26.6,
+        "finding": "Same Peru-side Santa Rosa facility represented by a building and vehicle-control node. Both A reconstructions instead approve Chilean Chacalluta and explicitly leave Santa Rosa unbound; this is an independent-control-side disagreement, not an automatic merge.",
+        "record_ids": [
+          "R3-AM-010",
+          "R5-AM-004"
+        ],
+        "status": "removed_by_root_after_review",
+        "action": "No coordinate averaging, baseline change or automatic merge; root handles the underlying decisions."
+      }
+    ],
+    "known_root_handled_duplicate": {
+      "new_site_id": "post-oshikango-santa-clara",
+      "baseline_site_id": "post-santa-clara-oshikango",
+      "new_site_present": false,
+      "action": "Root already owns correction; preserve baseline site."
+    },
+    "nearby_distinct_or_reviewed_sites": [
+      {
+        "site_ids": [
+          "post-eagle-pass-i",
+          "post-eagle-pass-rail"
+        ],
+        "distance_m": 1048.9,
+        "assessment": "Distinct modes and structures: road International Bridge I versus international railway bridge."
+      },
+      {
+        "site_ids": [
+          "post-milak-zaranj",
+          "bridge-abresham-milak"
+        ],
+        "distance_m": 438.1,
+        "assessment": "Distinct selected features: baseline Milak road-control terminal versus Abresham road bridge. Same paired route does not make a terminal and bridge identical."
+      },
+      {
+        "site_ids": [
+          "post-agua-caliente-road",
+          "post-agua-caliente-honduras-customs"
+        ],
+        "distance_m": 609.5,
+        "assessment": "Distinct selected features: baseline boundary-road junction versus Honduran customs node about 610 m inland. Shared nearby-source references are not duplicate selected coordinates."
+      },
+      {
+        "site_ids": [
+          "post-evzoni-road",
+          "geo-bogorodica-road-control"
+        ],
+        "distance_m": 764.5,
+        "assessment": "Opposite-side road controls: Greek Evzoni and North Macedonian Bogorodica. No merger proposed."
+      },
+      {
+        "site_ids": [
+          "post-noordoewer",
+          "post-vioolsdrift"
+        ],
+        "distance_m": 1321.7,
+        "assessment": "Distinct sovereign-side controls: Namibian Noordoewer and South African Vioolsdrif across Orange River. Both accepted reconstructions explicitly preserve the side difference."
+      }
+    ]
+  },
+  "country_correction_counts": {
+    "already_matches_proposal": 27
+  },
+  "consumer_impact": [
+    {
+      "path": "scripts/apply-geography-audit.cjs",
+      "line": 50,
+      "finding": "Original cause was countries:e.countries. Root now supports candidate.countries for creation and metadata refresh of audited additions; the fallback remains event countries. All reviewed facility-specific corrections have explicit pairs. Do not mechanically force every site to two countries: Cyprus Green Line and Georgia ABL sites legitimately retain one entity."
+    },
+    {
+      "path": "scripts/build-evidence-pages.cjs",
+      "line": 60,
+      "finding": "Site countries are displayed in crossing-source card subtitles and included in the text searched by the crossing-country search."
+    },
+    {
+      "path": "scripts/build-crossing-geography.cjs",
+      "line": 26,
+      "finding": "Site countries are copied into each generated GeoJSON point; full source geography is also published in crossing-map-review.json."
+    },
+    {
+      "path": "scripts/export-gis.cjs",
+      "line": 70,
+      "finding": "Top-level GIS countries come from event countries and should remain unchanged. geometry_provenance serializes the location object, so erroneous site countries also appear inside that metadata."
+    },
+    {
+      "path": "dist/core.js",
+      "line": 158,
+      "finding": "Map record search/filtering uses event countries and explicit phase/site IDs, not the site countries property."
+    },
+    {
+      "path": "dist/app.js",
+      "line": 461,
+      "finding": "Map symbols and record groups are keyed by location ID. Duplicate facility IDs can split records and produce overlapping location choices; country metadata does not set geometry or symbol styling."
+    },
+    {
+      "path": "scripts/build-analysis-data.cjs",
+      "line": 5,
+      "finding": "Analysis projection retains events only, without crossing geometry; country/region filtering and duration arithmetic use event fields. Correcting site countries alone does not change analysis counts or dates."
+    }
+  ],
+  "additional_primary_identity_sources": [
+    {
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52025XC05913",
+      "access": "substantive_indexed_original_text",
+      "finding": "Official EU post list groups Kena/Gudagojis and the named eastern road posts under Lithuania–Belarus; Kybartai/Nesterov railway is under Lithuania–Russian Federation. Used for geographic identity only.",
+      "evidence": "research/geography-audit-2026-10-29/evidence/new-sites-qa/web-2.json"
+    },
+    {
+      "url": "https://vrm.lrv.lt/en/news/the-operation-of-the-lavoriskes-and-raigardas-border-crossing-points-will-be-terminated-from-1-march/",
+      "access": "full_original_web_text",
+      "finding": "Ministry independently identifies Lavoriskes, Raigardas and remaining Medininkai/Salcininkai as Belarus border road posts.",
+      "evidence": "research/geography-audit-2026-10-29/evidence/new-sites-qa/web-1.json"
+    }
+  ],
+  "final_validation": {
+    "reviewed_new_sites": 162,
+    "baseline_sites_excluded_from_corrections": 100,
+    "country_corrections_applied": 27,
+    "pending_country_corrections": 0,
+    "remaining_exact_coordinate_duplicates": 0,
+    "stale_new_site_audit_hashes": 0,
+    "unreviewed_new_sites": 0,
+    "final_addition_checked": "approach-kalpaki-eo20-eo22-junction",
+    "final_addition_result": "Both A/B locate the Greek inland EO20/EO22 junction serving Albania frontier approaches; Greece/Albania metadata is consistent. No country, ID or geometry correction proposed.",
+    "production_changes_by_this_reviewer": false,
+    "frozen_pass_changes_by_this_reviewer": false
+  }
+}

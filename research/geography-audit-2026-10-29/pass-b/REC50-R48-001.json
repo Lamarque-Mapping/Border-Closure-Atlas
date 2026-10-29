@@ -1,0 +1,128 @@
+{
+  "record_id": "REC50-R48-001",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Alashankou–Dostyk road trucking suspension observed in August 2021, distinct from continuing congested rail. The historical Dostyk road border gate identifies the paired international crossing; the new Alakol customs facility built at another location after 2023 is excluded. Later Xinjiang road-freight access is a bound, not an exact restart.",
+  "source_checks": [
+    {
+      "url": "https://geodis.com/customer-advisory-2022-2021-archives",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Inspected August 20, 2021 section: cross-border trucking at Alashankou, Khorgos and Buktu suspended, while rail faced congestion. This record covers Alashankou only.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-body.json",
+      "sha256": "d7027d4c0da33baee1866b980b99735e136573c05451c78a012bd26792238ac1"
+    },
+    {
+      "url": "https://jtyst.xinjiang.gov.cn/xjjtysj/jttj/202112/be1520c8b367493b99fdc47451481517.shtml",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Xinjiang transport report expressly lists Alashankou among road ports retaining freight clearance; it provides no exact August restart day.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-8.json",
+      "sha256": "59a366df218273b498b84b8daf14a4bd4ff643e2e049891f9b3d0aeb3261b89b"
+    },
+    {
+      "url": "https://www.nia.gov.cn/n741435/n741532/c1435466/content.html",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Rail operations on August 16–17 are mode-specific and do not prove road reopening.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-8.json",
+      "sha256": "59a366df218273b498b84b8daf14a4bd4ff643e2e049891f9b3d0aeb3261b89b"
+    },
+    {
+      "url": "https://www.asmap.ru/spravochnik-map/1204/",
+      "access_status": "retrieved_indexed_roster_extract",
+      "finding": "Road-haulage association roster pairs Dostyk with Alashankou and explicitly classifies it as a motor-road cargo/passenger crossing.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-locations.json",
+      "sha256": "50a748c943b400352b0989a3face00f565f7209bad7c71ecc68b59cecb5f3d62"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/2711001756/4",
+      "access_status": "fresh_versioned_OSM_XML_inspected",
+      "finding": "2019 named MAPP Dostyk motor-road border-control point; coordinates selected from the pre-episode version.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/53a4afebb0f8d9a26107.xml",
+      "sha256": "55d66c4361a5eb16ccd14fa73db69121811ae28c8f9b4a4d2f3a4069ccdb6b51",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/53a4afebb0f8d9a26107.txt",
+      "text_sha256": "55d66c4361a5eb16ccd14fa73db69121811ae28c8f9b4a4d2f3a4069ccdb6b51",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/2711001756/history",
+      "access_status": "fresh_OSM_history_XML_inspected",
+      "finding": "Full node history confirms the historical road identity and only a few metres of later adjustment.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/1a4379617f609579caec.xml",
+      "sha256": "15aa5bca3ee0be963db9bcf266afc0168549bba6b94035393097b2c97abb5f07",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/1a4379617f609579caec.txt",
+      "text_sha256": "15aa5bca3ee0be963db9bcf266afc0168549bba6b94035393097b2c97abb5f07",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=82.515,45.228,82.531,45.240",
+      "access_status": "fresh_OSM_XML_inspected",
+      "finding": "Road border-control route is spatially distinct from railway crossings.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3de3a94ac9bc7401deee.xml",
+      "sha256": "1ea5a6c1c4edadcc2a80e6f4e14284b93c3761499dfa8daf04e64e99e7f02370",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3de3a94ac9bc7401deee.txt",
+      "text_sha256": "1ea5a6c1c4edadcc2a80e6f4e14284b93c3761499dfa8daf04e64e99e7f02370",
+      "status": 200
+    },
+    {
+      "url": "https://nursultan.kgd.gov.kz/en/news/press-release-1-140726",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Official January 2024 notice explicitly says the new Alakol automobile checkpoint is being built at a new place, separately from Dostyk rail modernization; current new-terminal coordinates are not used.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-extra.json",
+      "sha256": "2661ce5085402dc3f0793d05e0a87529e0fc403510c213a0fd3666f53143fb88"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R48-001-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-dostyk-alashankou-road",
+          "name": "Dostyk–Alashankou road border gate",
+          "coordinates": [
+            82.5207614,
+            45.2334573
+          ],
+          "coordinate_method": "Coordinates from explicitly versioned OSM node XML, independently compared with full node history",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/2711001756/4",
+            "https://api.openstreetmap.org/api/0.6/node/2711001756/history",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=82.515,45.228,82.531,45.240",
+            "https://www.asmap.ru/spravochnik-map/1204/",
+            "https://nursultan.kgd.gov.kz/en/news/press-release-1-140726"
+          ],
+          "evidence_note": "October 2019 OSM node explicitly names MAPP Dostyk with motor_vehicle=yes; current road topology places it on the vehicular border-control road, separate from rail tracks. The node moved only a few metres in 2023. This historical road gate is used rather than the new Alakol customs terminal, which Kazakhstan’s January 2024 notice says was being built at a different location.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/53a4afebb0f8d9a26107.xml",
+          "sha256": "55d66c4361a5eb16ccd14fa73db69121811ae28c8f9b4a4d2f3a4069ccdb6b51"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Alashankou–Dostyk road trucking suspension observed in August 2021, distinct from continuing congested rail. The historical Dostyk road border gate identifies the paired international crossing; the new Alakol customs facility built at another location after 2023 is excluded. Later Xinjiang road-freight access is a bound, not an exact restart.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2021-08-20",
+        "end_latest": "2021-10-29",
+        "last_confirmed": "2021-08-20",
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "REC50-R48-001-P1: GEODIS’s 20 August 2021 advisory explicitly separates suspended cross-border trucking from congested rail. Exact road onset, authority and cargo exceptions are unknown. NIA observes trains moving on August 16–17; these are not road reopening evidence. Later battery-only and rail-planning entries do not extend the entire road cohort.\n\nEarlier later-access bound: the Xinjiang Transport Department report published 29 October 2021 expressly lists Alashankou among road ports retaining freight clearance, in its first-three-quarter operational review. Use 2021-10-29 as a conservative later road-freight access bound, replacing the much later September 2026 bound. The report does not give the original August restart day, detailed commodity exceptions, or uninterrupted access during the quarter. Its general continuity wording does not erase GEODIS’s August 20 trucking suspension observation."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "b22f023d135e600bc9e69ab4b20cf3de106eca0bd2c7d83e114ef35ae8a36fa9",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

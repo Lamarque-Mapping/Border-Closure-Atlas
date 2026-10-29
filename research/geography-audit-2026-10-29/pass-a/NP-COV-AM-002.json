@@ -1,0 +1,128 @@
+{
+  "record_id": "NP-COV-AM-002",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Mexico-side interruption of road cargo destined for Belize through the Santa Elena northern border. Free Zone shopping and passenger movement are not a whole-border closure. Mexican customs office and bridge used by the affected consignments remain unlocated.",
+  "source_checks": [
+    {
+      "url": "https://www.7newsbelize.com/sstory.php?nid=77695",
+      "access_status": "fresh_full_text_extract",
+      "finding": "March 23 original reports no inbound goods at the northern border, with produce held on the Mexican side; cartel attribution remains the report’s claim.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-115.json"
+    },
+    {
+      "url": "https://www.sanpedrosun.com/business-and-economy/2026/03/26/belize-mexico-border-disruption-eased-for-cargo-transportation/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "March 26 original reports restoration March 24 and CFZ management clarification that its own operations were uninterrupted; Santa Elena and CFZ are not interchangeable closure footprints.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-115.json"
+    },
+    {
+      "url": "https://amandala.com.bz/news/bze-mex-border-reopens/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Amandala reports suspension March 18–24 and ambassador uncertainty about attribution. This supports the cargo corridor, not a particular customs lane.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-113.json"
+    },
+    {
+      "url": "https://www.breakingbelizenews.com/2026/03/25/trade-resumes-for-cargo-shipments-following-reported-cartel-blockade-at-mexico-border/",
+      "access_status": "fresh_search_extract",
+      "finding": "Indexed original explicitly identifies Santa Elena cargo resumption and quotes the ambassador describing road consignments held at the border.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-124.json"
+    },
+    {
+      "url": "https://www.customs.gov.bz/asycuda.html",
+      "access_status": "fresh_search_primary_extract",
+      "finding": "Primary customs description identifies the Northern Border Station as Santa Elena, Corozal, and its cargo-clearance role.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-124.json"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/1873781044",
+      "access_status": "fresh_raw_osm_inspected",
+      "finding": "Fresh original OSM node is explicitly named Belize Immigration, version 10 dated 2020-07-15. It locates the Belize end of the Santa Elena/Subteniente López route, not the Mexican cargo processing office or old/new bridge choice.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/170434100d9e104b2c41.xml",
+      "source_sha256": "e56944b1b099080acdf2820be2137441f538a650e63820d2419b996a3711d6ae"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-AM-002-P01",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-santa-elena-belize-reference",
+          "name": "Santa Elena northern border route reference",
+          "coordinates": [
+            -88.3997542,
+            18.4856152
+          ],
+          "coordinate_method": "OSM named node coordinates",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1873781044"
+          ],
+          "evidence_note": "Fresh original OSM node is explicitly named Belize Immigration, version 10 dated 2020-07-15. It locates the Belize end of the Santa Elena/Subteniente López route, not the Mexican cargo processing office or old/new bridge choice.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/170434100d9e104b2c41.xml",
+              "sha256": "e56944b1b099080acdf2820be2137441f538a650e63820d2419b996a3711d6ae",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "10",
+              "osm_timestamp": "2020-07-15T17:44:45Z",
+              "tags": {
+                "barrier": "border_control",
+                "name": "Belize Immigration"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Mexican-side cargo processing at the Santa Elena northern border crossing, affecting imports into Belize",
+      "date_scope_check": {
+        "start_earliest": "2026-03-18",
+        "start_latest": "2026-03-18",
+        "end_earliest": "2026-03-24",
+        "end_latest": "2026-03-24",
+        "last_confirmed": "2026-03-23",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Belize-side route reference only. Exact Mexican cargo office/bridge and intervention footprint unresolved; do not imply Belize immigration stopped."
+      ]
+    },
+    {
+      "phase_id": "NP-COV-AM-002-P02",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Reported restoration of inbound cargo",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2026-03-24",
+        "end_latest": "2026-03-24",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Restoration observation remains excluded by its canonical analysis flag.",
+        "Current phase has analysis_included=false; no geometry approved regardless of location identifiability."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "3b19cbc8f5584a9b879df8d9ef931ab85dc2db98736361cbb6b7cb98b856a4b4"
+}

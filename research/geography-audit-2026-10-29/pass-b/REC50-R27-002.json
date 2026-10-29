@@ -1,0 +1,113 @@
+{
+  "record_id": "REC50-R27-002",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Truckers blocked movement at the Agarak/Meghri road crossing with Iran on 17 November 2024 over fuel and administrative conditions. The Armenian approach is the affected facility reference. Later driver interviews and diplomatic responses do not establish a continuous multi-day closure or a general reopening.",
+  "source_checks": [
+    {
+      "url": "https://www.amnews.am/language/en/economy-eng-35/",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Original report identifies Agarak truckers’ blockade and fuel/payment grievances.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-1.json",
+      "sha256": "bc49235b1b8fe608c2eff67de394017db13c8acb8f5b74e18dfb9c11dd6d440f"
+    },
+    {
+      "url": "https://am.sputniknews.ru/20241117/armyanskie-voditeli-perekryli-dvizhenie-s-iranom-na-kpp-agarak-chto-proizoshlo--83092048.html",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Full Russian article directly reports blocked movement at Agarak and says Armenia’s customs committee had not commented; no whole-frontier shutdown is asserted.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-locations.json",
+      "sha256": "50a748c943b400352b0989a3face00f565f7209bad7c71ecc68b59cecb5f3d62"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/3143306729/history",
+      "access_status": "fresh_OSM_XML_inspected",
+      "finding": "Border-control node position is unchanged since 2015, supporting a historical approach reference during 2024 reconstruction.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d0de978e5386b99db1ba.xml",
+      "sha256": "ec0aafb41673e801002318bc724f5e1a57ce67220d6388986144708cb6959afd",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d0de978e5386b99db1ba.txt",
+      "text_sha256": "ec0aafb41673e801002318bc724f5e1a57ce67220d6388986144708cb6959afd",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=46.200,38.850,46.222,38.860",
+      "access_status": "fresh_OSM_XML_inspected",
+      "finding": "Armenian road border-control lanes distinguished from Iranian Nurduz and from Agarak town.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/938b5676762c8dcf2d68.xml",
+      "sha256": "bcc8132df78881401e5e0630e60decedc364c32088f1f815ee5f43e2c5464acc",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/938b5676762c8dcf2d68.txt",
+      "text_sha256": "bcc8132df78881401e5e0630e60decedc364c32088f1f815ee5f43e2c5464acc",
+      "status": 200
+    },
+    {
+      "url": "https://areg.am/en/meghricustomsdep",
+      "access_status": "retrieved_indexed_directory_text",
+      "finding": "Directory identifies Meghri customs at Karchevan highway; supportive identity, not an exact location or closure source.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-armenia.json",
+      "sha256": "57a0c1640d044a25ecd0c73b9805d0e90e3ca0525a2da4ad1d218ac37dc756fa"
+    },
+    {
+      "url": "https://ecepp.ebrd.com/delta/viewNotice.html?displayNoticeId=17856923",
+      "access_status": "retrieved_indexed_primary_source_text",
+      "finding": "EBRD tender describes demolition and replacement of existing Meghri buildings; new terminal footprint cannot be projected backwards.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-armenia-history.json",
+      "sha256": "8334068ffdf4eb46dbd2553ff204a85681fbe5664c7a5c5b8a400992e2177978"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R27-002-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-agarak-meghri-road",
+          "name": "Agarak–Meghri road checkpoint, Armenian side",
+          "coordinates": [
+            46.206445,
+            38.8537671
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/3143306729",
+            "https://api.openstreetmap.org/api/0.6/node/3143306729/history",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=46.200,38.850,46.222,38.860",
+            "https://areg.am/en/meghricustomsdep"
+          ],
+          "evidence_note": "Armenian road border-control node unchanged since April 2015; area topology places it on the international road approaching the Aras bridge from the Armenian side, separate from the named Iranian Nurduz facilities. Original November 2024 reporting names Agarak as the blocked crossing. Reference is to the checkpoint approach, not a newly built 2026 terminal or a precisely identified protest barricade.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/b36ae40b4f2d5eddd394.xml",
+          "sha256": "e4eb9f309d0033adb824082395e427991111a1702bb34966a3b0c0487439ecb5"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Truckers blocked movement at the Agarak/Meghri road crossing with Iran on 17 November 2024 over fuel and administrative conditions. The Armenian approach is the affected facility reference. Later driver interviews and diplomatic responses do not establish a continuous multi-day closure or a general reopening.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2024-11-17",
+        "end_latest": "2024-11-17",
+        "last_confirmed": "2024-11-17",
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Do not join the 17 November blockage, 20 November driver interviews and 26 November diplomatic response into one continuous closure. A driver’s reported return after paying for fuel and another’s return without his truck do not establish general clearance."
+      },
+      "unresolved": [
+        "Exact protest obstruction, affected lane extent and terminal construction arrangement on the observation date are not geolocated; only the longstanding Armenian road approach is supported."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact protest obstruction, affected lane extent and terminal construction arrangement on the observation date are not geolocated; only the longstanding Armenian road approach is supported."
+  ],
+  "input_sha256": "74f6e4771a1bd83fefa24b742f21f4eba53a8a5de53fc27e82ccba225a0d776a",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

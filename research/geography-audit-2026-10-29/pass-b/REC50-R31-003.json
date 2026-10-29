@@ -1,0 +1,63 @@
+{
+  "record_id": "REC50-R31-003",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "On May 29, 2024 farmers moved from the Reynosa–Río Bravo road at Ejido Palo Blanco toward the Pharr crossing. Northbound circulation from Reynosa into the US stopped briefly and resumed about 17:30. The original gathering road and the interrupted border crossing must not be conflated.",
+  "source_checks": [
+    {
+      "url": "https://www.krgv.com/news/agricultores-bloquean-carretera-cerca-al-puente-internacional-pharr-reynosa",
+      "access_status": "full_retrieved",
+      "finding": "Full KRGV article inspected: May 30 report refers to Wednesday protest; northbound bridge circulation closed for minutes, initial gathering at Ejido Palo Blanco, resumption about 17:30."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-98.22,26.029,-98.20,26.046",
+      "access_status": "full_retrieved",
+      "finding": "Direct OSM XML inspected: separate Mexican toll plaza, customs buildings and international road alignment. Map sha256 c28e38c8e72fa9d37676252aa89e81d9dd529e4b7c563aabb0c11ecb42ce4385."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R31-003-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "proposed-reynosa-pharr-mexican-approach",
+          "name": "Reynosa–Pharr Mexican toll and bridge approach",
+          "coordinates": [
+            -98.20885317777778,
+            26.04181001111111
+          ],
+          "coordinate_method": "Directly inspected OSM way/365033760 mean of geometry vertices; XML sha256 62539810d37ce391bd0c8da0df354bc420ebfcf82f5c34dc66fdee67b7cd3b9b",
+          "precision": "Mexican approach representative, approximately 500 m; exact blockade or gate position unresolved",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/365033760/full"
+          ],
+          "evidence_note": "OSM named Mexican toll plaza immediately south of bridge, distinct from US inspection facility and the multi-kilometre bridge centroid. Representative of affected northbound approach, not proven exact entry gate."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Reported northbound bridge circulation at Pharr–Reynosa International Bridge; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2024-05-29",
+        "start_latest": "2024-05-29",
+        "end_earliest": "2024-05-29",
+        "end_latest": "2024-05-29",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Precise position where authorities stopped northbound circulation is not specified; point represents Mexican bridge access, not the earlier Ejido Palo Blanco rally."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Precise position where authorities stopped northbound circulation is not specified; point represents Mexican bridge access, not the earlier Ejido Palo Blanco rally."
+  ]
+}

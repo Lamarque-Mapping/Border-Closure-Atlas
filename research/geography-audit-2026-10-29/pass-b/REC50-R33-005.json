@@ -1,0 +1,76 @@
+{
+  "record_id": "REC50-R33-005",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Jamunaha–Rupaidiha road crossing at Nepalgunj: police-announced election restriction from February 25 evening to February 28 morning 2022, with an emergency-service exception. The longstanding road crossing is identified; actual enforcement and first reopening remain unobserved.",
+  "source_checks": [
+    {
+      "url": "https://english.khabarhub.com/2022/25/238818/",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Full report quotes the Jamunaha police announcement of the 60-hour closure window.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-6.json",
+      "sha256": "c8115def260f142bf92136571e15eef313ee869fa9a5501dec51f713488054e1"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/3888116312",
+      "access_status": "fresh_OSM_XML_inspected",
+      "finding": "Historic cross-border road node and surrounding Nepalgunj/Jamunaha/Rupaidiha facilities independently inspected in earlier location work.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/fa64ac3604a35761c3b3.xml",
+      "sha256": "4307d6225cee060af9605b8cc16be8375e8e1595adb27b538f113e143e232be6",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/fa64ac3604a35761c3b3.txt",
+      "text_sha256": "4307d6225cee060af9605b8cc16be8375e8e1595adb27b538f113e143e232be6",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R33-005-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-jamunaha-rupaidiha-road",
+          "name": "Jamunaha–Rupaidiha historic road crossing",
+          "coordinates": [
+            81.6004603,
+            28.0189568
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/3888116312",
+            "https://api.openstreetmap.org/api/0.6/node/3888116312/ways",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=81.596,28.015,81.603,28.024"
+          ],
+          "evidence_note": "Border-control node shared by Ratna Rajmarg NH58 and Indian NH927 at the international boundary. Bounding XML contains named Rupaidiha immigration building, Nepalgunj customs office and Jamunaha police. This is the historic public road crossing, not the newer integrated cargo port.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/fa64ac3604a35761c3b3.xml",
+          "sha256": "4307d6225cee060af9605b8cc16be8375e8e1595adb27b538f113e143e232be6"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Jamunaha–Rupaidiha road crossing at Nepalgunj: police-announced election restriction from February 25 evening to February 28 morning 2022, with an emergency-service exception. The longstanding road crossing is identified; actual enforcement and first reopening remain unobserved.",
+      "date_scope_check": {
+        "start_earliest": "2022-02-25",
+        "start_latest": "2022-02-25",
+        "end_earliest": "2022-02-28",
+        "end_latest": "2022-02-28",
+        "last_confirmed": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "REC50-R33-005-P1: The police announcement sets a 60-hour window from 25 February 2022 at 18:00 to 28 February at 06:00. Gorkhapatra’s Nepali report quotes the Jamunaha police chief identifying an emergency-service exception. Three calendar-date differences are not three 24-hour blocks. Actual implementation and first reopening were not independently observed."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "c9e9356a93651567edb1f63116c06bfdf311b4ec324b6e86730f5fa369e27f70",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

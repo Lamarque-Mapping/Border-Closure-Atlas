@@ -1,0 +1,65 @@
+{
+  "record_id": "REC50-R33-002",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Hili road freight holiday interruption, September–October 2022, with immigration continuing. This is the Bangladesh–India Hili land-port crossing; railway or village centre coordinates cannot represent the road interchange without a verifiable gate match.",
+  "source_checks": [
+    {
+      "url": "https://www.unb.com.bd/category/Bangladesh/durga-puja-hili-land-port-closes-for-trade-till-oct-8/101718",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Contemporary report identifies Hili trade closure for Puja, not passenger immigration.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-5.json",
+      "sha256": "c2f1bc6f202d53d225bbf5dd05d4f9fdd55b1b104206351dc99731eacbe52adf"
+    },
+    {
+      "url": "https://www.bssnews.net/news/86846",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Return report dates freight stoppage September 30–October 7 and October 8 restart, with passport movement normal.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-5.json",
+      "sha256": "c2f1bc6f202d53d225bbf5dd05d4f9fdd55b1b104206351dc99731eacbe52adf"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R33-002-P1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Hili road freight holiday interruption, September–October 2022, with immigration continuing. This is the Bangladesh–India Hili land-port crossing; railway or village centre coordinates cannot represent the road interchange without a verifiable gate match.",
+      "date_scope_check": {
+        "start_earliest": "2022-09-30",
+        "start_latest": "2022-09-30",
+        "end_earliest": "2022-10-08",
+        "end_latest": "2022-10-08",
+        "last_confirmed": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Eight calendar-date differences for freight only; immigration continued normally. RisingBD advance wording gives 29 September, contrary to both the 30 September contemporaneous report and explicit retrospective BSS 30 September–7 October dates; the latter pair supports the adopted onset. Shared officials are not independent confirmations."
+      },
+      "unresolved": [
+        "The named Hili road gate has not been reliably matched to a sourced coordinate; railway, customs-office and town-centre alternatives remain unsuitable."
+      ]
+    }
+  ],
+  "unresolved": [
+    "The named Hili road gate has not been reliably matched to a sourced coordinate; railway, customs-office and town-centre alternatives remain unsuitable."
+  ],
+  "input_sha256": "81374577c5d0282eaa4c7b716d3ad737f4636723954c16cb3bbc0efec5b2731e",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted.",
+  "additional_evidence": [
+    {
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-58.json",
+      "sha256": "132b1d96b72353ce2b4a80648b765ade738dc93dcc4fccdfb0ebce60179f0d4f"
+    }
+  ]
+}

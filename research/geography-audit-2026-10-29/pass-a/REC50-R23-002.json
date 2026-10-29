@@ -1,0 +1,84 @@
+{
+  "record_id": "REC50-R23-002",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Kharlachi bilateral goods restriction during COVID, not a passenger ban or closure imported from another Pakistan–Afghanistan gate.",
+  "source_checks": [
+    {
+      "url": "https://www.dawn.com/news/1565641/kurram-traders-want-kharlachi-border-crossing-reopened",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Named traders report Kharlachi goods restriction since March 15.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-74.json",
+      "sha256": "a1580c8595779bcdf90d84b8bdb52902673e3a6353377d44784d0923a74b1802"
+    },
+    {
+      "url": "https://www.dawn.com/news/1568453",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "July 12 report dates goods reopening to preceding Saturday.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-74.json",
+      "sha256": "a1580c8595779bcdf90d84b8bdb52902673e3a6353377d44784d0923a74b1802"
+    },
+    {
+      "url": "https://www.arabnews.pk/pakistan/pakistans-move-to-reopen-border-will-strengthen-business-ties-says-afghan-special-envoy-1703731",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-338fd9ffebe7a67dcf.bin",
+      "sha256": "34d6653196725b7ec7ac29191d08a29b75b20b4e7dba9102bde23d0628f90785"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R23-002-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kharlachi",
+          "name": "Kharlachi international road crossing",
+          "coordinates": [
+            69.9553811,
+            33.8301185
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/1466971322",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1466971322",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=69.943,33.815,69.973,33.845"
+          ],
+          "evidence_note": "Explicit named Kharlachi Border Crossing area in Kurram; not the village or internal Parachinar road.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-kharlachi-gate.xml",
+          "sha256": "fe7433bec523e683889934198e7f09c4210eb8f10c454d66098293871633611a",
+          "osm_feature": "way/1466971322",
+          "osm_version": "2",
+          "osm_timestamp": "2026-04-25T20:55:10Z",
+          "identity_tags": {
+            "area": "yes",
+            "barrier": "border_control",
+            "name": "خرلاچی بارڈر کراسنگ",
+            "name:en": "Kharlachi Border Crossing"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kharlachi bilateral goods trade during the 2020 COVID restriction",
+      "date_scope_check": {
+        "scope": "Kharlachi bilateral goods trade during the 2020 COVID restriction",
+        "start_earliest": "2020-03-15",
+        "start_latest": "2020-03-15",
+        "end_earliest": "2020-07-11",
+        "end_latest": "2020-07-11",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "March 15–July 11 2020 retained. Retrospective trader onset and reported goods return are scoped to this gate; no measured-hour precision or passenger endpoint."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

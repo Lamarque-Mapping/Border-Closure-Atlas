@@ -9,6 +9,8 @@ import csv
 import io
 import json
 import shutil
+import subprocess
+import sys
 import zipfile
 from release_common import (ROOT,DATA_PATH,MANIFEST_PATH,MODEL_PATH,READER_PATH,
     load_json,read_manifest,sha256,validate_native,validate_reader)
@@ -88,7 +90,9 @@ def bind_manifest(release,reader_report):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--bind-manifest',action='store_true',help='Explicit local binding after the reader and geography are final')
-    args=parser.parse_args();release=load_json(DATA_PATH)
+    args=parser.parse_args()
+    subprocess.run([sys.executable,str(ROOT/'scripts/materialize-geography-audit.py')],check=True)
+    release=load_json(DATA_PATH)
     validate_native(release);report=validate_reader(release=release)
     # The companion is deterministic generated output. Fresh checkouts rebuild
     # it from the pinned inputs, then verify its bytes against the manifest.

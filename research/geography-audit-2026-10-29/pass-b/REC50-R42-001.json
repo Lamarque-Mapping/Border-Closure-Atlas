@@ -1,0 +1,363 @@
+{
+  "record_id": "REC50-R42-001",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Nine separately scoped phases concern Bulgarian road approaches to Ruse/Giurgiu, Kardam/Negru Vodă, Vidin/Calafat and Durankulak/Vama Veche in March–April2023. Ruse roundabout is distinct from the Danube road/rail spans; Vidin action includes E79 at city entrance; Kardam is road, not parallel railway; Durankulak appears only for the diverted-truck phase. No all-border closure or multi-day continuous geometry is assumed.",
+  "source_checks": [
+    {
+      "url": "https://bnt.bg/news/bulgarian-farmers-block-roads-to-protest-duty-free-grain-imports-from-ukraine-316521news.html",
+      "access_status": "inaccessible",
+      "finding": "Original BNT URL timed out."
+    },
+    {
+      "url": "https://bntnews.bg/news/bulgarian-farmers-block-roads-to-protest-duty-free-grain-imports-from-ukraine-1305496news.html",
+      "access_status": "full_retrieved",
+      "finding": "Full migrated BNT article inspected: March29 short road blocks at Vidin international road to Bridge2 and Ruse/Kardam."
+    },
+    {
+      "url": "https://darik.bg/zemedelci-zatvoriha-dunav-most",
+      "access_status": "full_retrieved",
+      "finding": "Full March29 report inspected: Ruse roundabout before bridge blocked."
+    },
+    {
+      "url": "https://agerpres.ro/social/2023/03/30/trafic-blocat-in-vama-giurgiu-din-cauza-protestelor-fermierilor-bulgari--1084448",
+      "access_status": "full_retrieved",
+      "finding": "Full March30 AGERPRES article quoting ITPF: both cars and trucks interrupted both directions in adjacent Ruse–Giurgiu area."
+    },
+    {
+      "url": "https://dariknews.bg/novini/bylgariia/blokadi-na-kliuchovi-pytishta-protestyt-na-zemedelcite-prodylzhava-snimkivideo-2343136",
+      "access_status": "full_retrieved",
+      "finding": "Full March30 Darik report inspected: E79 at Vidin entrance, queues both sides; short Ruse block also reported."
+    },
+    {
+      "url": "https://bntnews.bg/news/in-protest-against-imports-from-ukraine-bulgarian-farmers-dump-a-trailer-of-sunflower-seeds-on-the-road-to-kardam-border-1305486news.html",
+      "access_status": "full_retrieved",
+      "finding": "Full March31 BNT article inspected: sunflower dumped on road to Kardam, trucks stranded."
+    },
+    {
+      "url": "https://utroruse.com/article/944496/",
+      "access_status": "full_retrieved",
+      "finding": "Full March31 Utro/BTA report inspected: Kardam outgoing trucks; Durankulak blocked previous day after diversions but no protesters there on publication day."
+    },
+    {
+      "url": "https://old-news.bnr.bg/en/post/101806551/bulgarian-farmers-continue-protests-against-cheaper-imports-from-ukraine",
+      "access_status": "extract_only",
+      "finding": "Direct 502, indexed April7 extract inspected: three-hour Kardam and Ruse road blocks; truck queue at Kardam."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=26.012,43.873,26.037,43.892",
+      "access_status": "full_retrieved",
+      "finding": "Direct OSM topology inspected: Bulgarian approach roundabout road2 connects to Danube road bridge, separately from rail. XML sha256 7537628fab210c6f06e160b1f98bef3b7136a99c5fb8e71179980d23c1733eb3."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=28.55,43.73,28.565,43.743",
+      "access_status": "full_retrieved",
+      "finding": "Direct OSM inspected; named Vama Veche customs is on Romanian side. No verified Bulgarian protest footprint extracted. XML sha256 3022d493dd44729f064577906bd1171f9724bc6151fdfe8a143154104b8d1900."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R42-001-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "proposed-ruse-danube-bridge-approach-roundabout",
+          "name": "Ruse Danube Bridge Bulgarian approach roundabout",
+          "coordinates": [
+            26.016432183333333,
+            43.87575550416667
+          ],
+          "coordinate_method": "Directly inspected OSM way/657016359 mean of geometry vertices; XML sha256 2c1423dfa918642c9ecab43015374d904fc486368b96d8ad3761546a74a649f2",
+          "precision": "Roundabout representative, approximately 100 m; branches and any additional road obstructions unresolved",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/657016359/full"
+          ],
+          "evidence_note": "Direct OSM roundabout on road 2/E70/E85 immediately before Bulgarian customs approach; road topology leads northwest to road bridge way120166252, separately from railway way24317443. Not Romanian customs or bridge midpoint."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "March 29 Ruse roundabout road block; Darik explicitly locates it at the roundabout before the Danube bridge.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2023-03-29",
+        "start_latest": "2023-03-29",
+        "end_earliest": "2023-03-29",
+        "end_latest": "2023-03-29",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Point identifies the affected road approach or gate complex; exact obstruction extent and all lanes are not surveyed."
+      ]
+    },
+    {
+      "phase_id": "REC50-R42-001-P2",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "proposed-kardam-bulgarian-road-control",
+          "name": "Kardam Bulgarian road customs control",
+          "coordinates": [
+            28.147249033333335,
+            43.7848831
+          ],
+          "coordinate_method": "Directly inspected OSM way/958442692 mean of geometry vertices; XML sha256 c19bcf1e8378ee0f817d63415de9b8346751035457005eaa9a81fd091242b55d",
+          "precision": "Gate complex representative, approximately 100 m; approach blockade position unresolved",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/958442692/full"
+          ],
+          "evidence_note": "Named Bulgarian customs roof, paired with Romanian Negru Vodă by official border-police report. Road gate representative; not adjacent railway or Kardam village centre."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "March 29 road access toward Kardam/Negru Vodă affected; gate representative, exact approach blockage not identified.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2023-03-29",
+        "start_latest": "2023-03-29",
+        "end_earliest": "2023-03-29",
+        "end_latest": "2023-03-29",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Point identifies the affected road approach or gate complex; exact obstruction extent and all lanes are not surveyed."
+      ]
+    },
+    {
+      "phase_id": "REC50-R42-001-P3",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Vidin–Calafat phase: tractors on international E79 at Vidin entrance/approach to Danube Bridge2; precise inland roadblock unresolved. International bridge centroid would not identify it.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2023-03-29",
+        "start_latest": "2023-03-29",
+        "end_earliest": "2023-03-29",
+        "end_latest": "2023-03-29",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Vidin–Calafat phase: tractors on international E79 at Vidin entrance/approach to Danube Bridge2; precise inland roadblock unresolved. International bridge centroid would not identify it."
+      ]
+    },
+    {
+      "phase_id": "REC50-R42-001-P4",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "proposed-ruse-danube-bridge-approach-roundabout",
+          "name": "Ruse Danube Bridge Bulgarian approach roundabout",
+          "coordinates": [
+            26.016432183333333,
+            43.87575550416667
+          ],
+          "coordinate_method": "Directly inspected OSM way/657016359 mean of geometry vertices; XML sha256 2c1423dfa918642c9ecab43015374d904fc486368b96d8ad3761546a74a649f2",
+          "precision": "Roundabout representative, approximately 100 m; branches and any additional road obstructions unresolved",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/657016359/full"
+          ],
+          "evidence_note": "Direct OSM roundabout on road 2/E70/E85 immediately before Bulgarian customs approach; road topology leads northwest to road bridge way120166252, separately from railway way24317443. Not Romanian customs or bridge midpoint."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "March 30 Ruse/Giurgiu vehicle interruption both directions, at the Bulgarian approach; no railway closure inferred.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2023-03-30",
+        "start_latest": "2023-03-30",
+        "end_earliest": "2023-03-30",
+        "end_latest": "2023-03-30",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Point identifies the affected road approach or gate complex; exact obstruction extent and all lanes are not surveyed."
+      ]
+    },
+    {
+      "phase_id": "REC50-R42-001-P5",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Vidin–Calafat phase: tractors on international E79 at Vidin entrance/approach to Danube Bridge2; precise inland roadblock unresolved. International bridge centroid would not identify it.",
+      "date_scope_check": {
+        "canonical_kind": "confirmed_through",
+        "start_earliest": "2023-03-30",
+        "start_latest": "2023-03-30",
+        "end_earliest": "2023-03-30",
+        "end_latest": "2023-03-30",
+        "last_confirmed": "2023-03-30",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Vidin–Calafat phase: tractors on international E79 at Vidin entrance/approach to Danube Bridge2; precise inland roadblock unresolved. International bridge centroid would not identify it."
+      ]
+    },
+    {
+      "phase_id": "REC50-R42-001-P6",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "proposed-kardam-bulgarian-road-control",
+          "name": "Kardam Bulgarian road customs control",
+          "coordinates": [
+            28.147249033333335,
+            43.7848831
+          ],
+          "coordinate_method": "Directly inspected OSM way/958442692 mean of geometry vertices; XML sha256 c19bcf1e8378ee0f817d63415de9b8346751035457005eaa9a81fd091242b55d",
+          "precision": "Gate complex representative, approximately 100 m; approach blockade position unresolved",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/958442692/full"
+          ],
+          "evidence_note": "Named Bulgarian customs roof, paired with Romanian Negru Vodă by official border-police report. Road gate representative; not adjacent railway or Kardam village centre."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "March 31 road to Kardam blocked with sunflower material and trucks seeking to exit Bulgaria; no rail restriction inferred.",
+      "date_scope_check": {
+        "canonical_kind": "confirmed_through",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2023-03-31",
+        "end_latest": "2023-03-31",
+        "last_confirmed": "2023-03-31",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Point identifies the affected road approach or gate complex; exact obstruction extent and all lanes are not surveyed."
+      ]
+    },
+    {
+      "phase_id": "REC50-R42-001-P7",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Durankulak–Vama Veche road approach blocked as trucks diverted from Kardam; March31 report says previous-day action ended. Bulgarian blockade location unverified; inspected Romanian customs building cannot substitute.",
+      "date_scope_check": {
+        "canonical_kind": "bounded_interval",
+        "start_earliest": null,
+        "start_latest": "2023-03-30",
+        "end_earliest": "2023-03-30",
+        "end_latest": "2023-03-31",
+        "last_confirmed": "2023-03-30",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Durankulak–Vama Veche road approach blocked as trucks diverted from Kardam; March31 report says previous-day action ended. Bulgarian blockade location unverified; inspected Romanian customs building cannot substitute."
+      ]
+    },
+    {
+      "phase_id": "REC50-R42-001-P8",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "proposed-ruse-danube-bridge-approach-roundabout",
+          "name": "Ruse Danube Bridge Bulgarian approach roundabout",
+          "coordinates": [
+            26.016432183333333,
+            43.87575550416667
+          ],
+          "coordinate_method": "Directly inspected OSM way/657016359 mean of geometry vertices; XML sha256 2c1423dfa918642c9ecab43015374d904fc486368b96d8ad3761546a74a649f2",
+          "precision": "Roundabout representative, approximately 100 m; branches and any additional road obstructions unresolved",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/657016359/full"
+          ],
+          "evidence_note": "Direct OSM roundabout on road 2/E70/E85 immediately before Bulgarian customs approach; road topology leads northwest to road bridge way120166252, separately from railway way24317443. Not Romanian customs or bridge midpoint."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "April 7 Ruse approach affected. Roundabout is a qualified approach representative; April 7 source does not independently pinpoint every machine.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2023-04-07",
+        "start_latest": "2023-04-07",
+        "end_earliest": "2023-04-07",
+        "end_latest": "2023-04-07",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Point identifies the affected road approach or gate complex; exact obstruction extent and all lanes are not surveyed."
+      ]
+    },
+    {
+      "phase_id": "REC50-R42-001-P9",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "proposed-kardam-bulgarian-road-control",
+          "name": "Kardam Bulgarian road customs control",
+          "coordinates": [
+            28.147249033333335,
+            43.7848831
+          ],
+          "coordinate_method": "Directly inspected OSM way/958442692 mean of geometry vertices; XML sha256 c19bcf1e8378ee0f817d63415de9b8346751035457005eaa9a81fd091242b55d",
+          "precision": "Gate complex representative, approximately 100 m; approach blockade position unresolved",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/958442692/full"
+          ],
+          "evidence_note": "Named Bulgarian customs roof, paired with Romanian Negru Vodă by official border-police report. Road gate representative; not adjacent railway or Kardam village centre."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "April 7 Kardam road approach affected, including trucks; exact tractor line unresolved.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2023-04-07",
+        "start_latest": "2023-04-07",
+        "end_earliest": "2023-04-07",
+        "end_latest": "2023-04-07",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Point identifies the affected road approach or gate complex; exact obstruction extent and all lanes are not surveyed."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Vidin inland E79 roadblock and Durankulak Bulgarian roadblock positions unresolved.",
+    "Mapped gate/roundabout representatives do not assert complete obstruction footprints."
+  ]
+}

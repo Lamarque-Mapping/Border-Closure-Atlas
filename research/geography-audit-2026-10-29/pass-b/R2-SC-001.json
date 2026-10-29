@@ -13,13 +13,55 @@
       "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
       "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-shared-sites-followup.json",
       "sha256": "43606795ed26f144d939b5d6f256e2e6d01cc0d6ceeb98491c730f1c7abc2916"
+    },
+    {
+      "url": "https://www.app.com.pk/national/pak-afghan-border-at-chaman-kharlachi-to-be-closed-on-july-24-25-fo/",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Full original APP article re-opened: Foreign Office explicitly names Chaman and Kharlachi, excludes Torkham, and gives the July 24–25 schedule.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-final-repeated-sites.json",
+      "sha256": "b981656e770a74652a70d60b9417a70151e49c7e6281623e7a3cad4678e623b7"
+    },
+    {
+      "url": "https://mofa.gov.pk/important-announcement",
+      "access_status": "indexed_primary_source_text; full_open_timeout",
+      "finding": "Foreign Ministry June 17, 2017 notice identifies Kharlachi as a Kurram trade/transit vehicle crossing rather than a pedestrian crossing; index inspected, full open timed out.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-final-repeated-sites.json",
+      "sha256": "b981656e770a74652a70d60b9417a70151e49c7e6281623e7a3cad4678e623b7"
+    },
+    {
+      "url": "https://www.pc.gov.pk/uploads/yearbook/Year_Book_2017-18.pdf",
+      "access_status": "retrieved_PDF_relevant_page_text",
+      "finding": "Government yearbook records NLC establishing the Kharlachi terminal during 2017–18, supporting historical applicability before the July 2018 order.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-final-kharlachi-yearbook.json",
+      "sha256": "b9a61a60009533fe8d4d6c06e34c338ec4eebd47c96c31c7cf6c50c4757edf23"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/7329110727/history",
+      "access_status": "fresh_OSM_history_XML_inspected",
+      "finding": "March 2020 road-control node is unchanged; current named crossing area includes it. Geometry does not establish closure dates.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/51d5ae36ad133e58a8c0.xml",
+      "sha256": "2d5978f2184203a4949b6190ca9645e09deddf8a2358e8e90a4279120a810c1b",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/51d5ae36ad133e58a8c0.txt",
+      "text_sha256": "2d5978f2184203a4949b6190ca9645e09deddf8a2358e8e90a4279120a810c1b",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1466971322/full",
+      "access_status": "fresh_OSM_XML_inspected",
+      "finding": "Named Kharlachi crossing area contains the inspected border-control node, distinct from Borki.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/6b7e344feada8c1972be.xml",
+      "sha256": "7a978da75217a9b0227d09ebfa544b4470c6c066516220d407c3f3d735c4a5eb",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/6b7e344feada8c1972be.txt",
+      "text_sha256": "7a978da75217a9b0227d09ebfa544b4470c6c066516220d407c3f3d735c4a5eb",
+      "status": 200
     }
   ],
   "phase_decisions": [
     {
       "phase_id": "R2-SC-001-R1",
       "category": "multiple_named_sites",
-      "decision": "partial",
+      "decision": "map",
       "sites": [
         {
           "existing_site_id": "post-chaman-friendship-gate",
@@ -36,10 +78,29 @@
           "evidence_note": "Road-accessible border-control building polygon; independently paired with Chaman–Spin Boldak/Friendship Gate reporting. Crossing-area reference only.",
           "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/b657c25e0e661889bbb5.xml",
           "sha256": "e5eb5f6c774af1362b9e70488cf4e1212e0c948ac8b2d2a2737c173d78eb6c8f"
+        },
+        {
+          "proposed_site_id": "post-kharlachi-road",
+          "name": "Kharlachi road border crossing",
+          "coordinates": [
+            69.9539961,
+            33.8290732
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/7329110727",
+            "https://api.openstreetmap.org/api/0.6/way/1466971322/full",
+            "https://mofa.gov.pk/important-announcement",
+            "https://www.pc.gov.pk/uploads/yearbook/Year_Book_2017-18.pdf"
+          ],
+          "evidence_note": "Border-control node mapped in March 2020 is a vertex of the named Kharlachi Border Crossing area, way 1466971322. It locates the road crossing, not Kharlachi village or the nearby Borki route. The Foreign Ministry’s 17 June 2017 notice identifies the Kharlachi Kurram crossing for trade/transit vehicles, and the 2017–18 Planning Commission yearbook records NLC establishing its terminal in that period. Together with the original July 2018 notice naming this crossing and the road-gate location, this supports a crossing-area reference; no exact 2018 terminal-building footprint is claimed.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d5af77710dfbd9b9ae0a.xml",
+          "sha256": "2d5978f2184203a4949b6190ca9645e09deddf8a2358e8e90a4279120a810c1b"
         }
       ],
       "border_reference_ids": [],
-      "complete": false,
+      "complete": true,
       "phase_applicability": "The July 2018 election order names exactly Chaman and Kharlachi; Torkham is explicitly left open.",
       "date_scope_check": {
         "start_earliest": "2018-07-24",
@@ -52,14 +113,10 @@
         "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
         "qualification": "Foreign Office schedule covers July 24 and July 25 inclusively; clock times unspecified. Tribune and The News separately give conflicting July 26 security-official wording. No actual reopening established; Torkham excluded."
       },
-      "unresolved": [
-        "Kharlachi checkpoint coordinate not verified; village and fort hits are rejected. Complete two-site coverage is not achieved."
-      ]
+      "unresolved": []
     }
   ],
-  "unresolved": [
-    "Kharlachi checkpoint coordinate not verified; village and fort hits are rejected. Complete two-site coverage is not achieved."
-  ],
+  "unresolved": [],
   "input_sha256": "4044e5178d0ac76605d0168bdae920d5c516673a4a5c5107c184e453b7c62d6f",
   "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted.",
   "additional_evidence": [
@@ -67,5 +124,6 @@
       "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-crossings-2.json",
       "sha256": "30f9fe06689128f941146c01ae34b0f35fb1e181c560ef0ae507902be468103e"
     }
-  ]
+  ],
+  "procedural_correction": "Later independent Kharlachi location discovery and historical government sources resolve the previously missing second named crossing. No date, duration or cohort change."
 }

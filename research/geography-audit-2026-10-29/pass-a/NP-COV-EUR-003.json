@@ -1,0 +1,72 @@
+{
+  "record_id": "NP-COV-EUR-003",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "July2 veterans protest obstructed road access to Bijača. Previous recurrent protests are not joined to this reported noon-to-before19:00 episode.",
+  "source_checks": [
+    {
+      "url": "https://www.slobodnaevropa.org/a/29333690.html",
+      "access_status": "fresh_full_text_extract",
+      "finding": "OriginalJuly2 report says crossingblockednoon andrestored shortlybefore19:00 after protesters movedoffroad. Prior recurrentactions describedseparately.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-099.json"
+    },
+    {
+      "url": "https://mapcarta.com/N2424868071",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Named Bijača border checkpoint; NovaSela opposingroadpost about1kmwest, distinct fromBijačavillage andČarapinetoll.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-101.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-EUR-003-P01",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-bijaca-road-reference",
+          "name": "Bijača road customs reference",
+          "coordinates": [
+            17.57489,
+            43.12338
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 2424868071; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N2424868071",
+            "https://www.openstreetmap.org/node/2424868071"
+          ],
+          "evidence_note": "Named Bijača border checkpoint; NovaSela opposingroadpost about1kmwest, distinct fromBijačavillage andČarapinetoll.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-101.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Road access at Bijača",
+      "date_scope_check": {
+        "start_earliest": "2018-07-02",
+        "start_latest": "2018-07-02",
+        "end_earliest": "2018-07-02",
+        "end_latest": "2018-07-02",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Crossing reference located; exact2018 access-road barrier not located."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "35c90deeec515d98aa63171714938d7bc9b5f7cdcf969fb9621fee2c73c6f0b5"
+}

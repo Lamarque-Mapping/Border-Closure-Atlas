@@ -1,0 +1,327 @@
+{
+  "record_id": "NP-COV-EUR-007",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ten roadcargo terminals named byMakamTrans:DeveBair,Delchevo,NovoSelo,Dojran,Bogorodica,Medzhitlija,Kjafasan,Blace,Blato,Stenje. CountrycampaignandGreek-frontierending do not proveidenticalgate-specific passage times.",
+  "source_checks": [
+    {
+      "url": "https://miamail.mia.mk/en/story/macedonian-transporters-lift-blockades-at-border-crossings",
+      "access_status": "fresh_search_extract",
+      "finding": "DirectMIA502; indexedoriginalquotesassociationten-postroster andJan29at20:00termination. NarrativeWednesdayisweekdayerror; quoteddatepreserved.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-106.json"
+    },
+    {
+      "url": "https://www.ofae.gr/en/nea/international-news/termatismos-kinhtopoihsewn-metaforewn-boreias-make-1/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "OFAErelaysGreekEmbassyconfirmationfreightrestoredallGreek-frontiercrossingsJan29at21:00Greektime,20:00NorthMacedonia.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-101.json"
+    },
+    {
+      "url": "https://customs.gov.mk/content/04%2012%202025%20Meeting%20minutes%20Site%20Visit%20and%20Information%20Meeting%20GP%20Delcevo.pdf",
+      "access_status": "fresh_search_primary_extract",
+      "finding": "PrimarycustomssitevisitDecember4 2025identifiesexistingDelchevoborderbuilding andgoodsclearanceterminaltobereconstructed; currentmapfootprintnotassumedhistoricalexact.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-110.json"
+    },
+    {
+      "url": "https://mapcarta.com/W1455591003",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Named cargoCustomsTerminalBogorodica,380mNWofroadborderpolice; notnearbyGevgelijarailstation. Currentterminalfootprintnotassumedexactprotestbarrier.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-107.json"
+    },
+    {
+      "url": "https://mapcarta.com/W235277568",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Named customsterminal inKrivaPalanka, roadpolice140meast; Gyueshevorailway2.5kmNEexcluded.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-110.json"
+    },
+    {
+      "url": "https://mapcarta.com/W987506493",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Named Delchevo borderpolicebuilding, nottown10kmwest. SecondaryregionalBulgarialabelnotusedasjurisdictionproof; primarycustoms2025projectidentifiesNorthMacedonianpost.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-110.json"
+    },
+    {
+      "url": "https://mapcarta.com/W183755210",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "FeatureexplicitlynamedBorderCrossingNovoSelo thoughclassifiedrestarea; Zlatarevocounterpart490meast. Approximatefacilityreferenceonly.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-108.json"
+    },
+    {
+      "url": "https://mapcarta.com/N1773681106",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Named GreekDoiranicontrol oppositeStarDojran; Doiranirailway1.25kmSEexcluded. Oppositesideroutepointonly.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-107.json"
+    },
+    {
+      "url": "https://mapcarta.com/W1081889425",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Named NorthMacedonianborderpolicebuilding,Niki480msouth; railwaystation3kmnorthnotincluded.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-108.json"
+    },
+    {
+      "url": "https://mapcarta.com/W233901250",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "ExplicitlynamedMacedonianKjafasanborderpolice; AlbanianQafëThanëcustoms650mSW. SecondarycountryAlbanialabelqualified, currentpairedroutereference.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-109.json"
+    },
+    {
+      "url": "https://mapcarta.com/W1456130284",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Named Blaceroadborderpolice oppositeHaniiElezit; Blacerailway1kmsouthexcluded.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-109.json"
+    },
+    {
+      "url": "https://mapcarta.com/W179263628",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Named Blatoborder-controlcanopyadjacentborderpolice; AlbanianBllatëcontrol650mNW. DistinctfromBlace.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-109.json"
+    },
+    {
+      "url": "https://mapcarta.com/N2063357044",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Named Stenjeroadcontrol nearGoricëopposingpost, notPrespalakeshorevillagecentroid.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-109.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-EUR-007-P01",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-bogorodica-customs",
+          "name": "Bogorodica customs terminal",
+          "coordinates": [
+            22.54714,
+            41.13734
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 1455591003; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W1455591003",
+            "https://www.openstreetmap.org/way/1455591003"
+          ],
+          "evidence_note": "Named cargoCustomsTerminalBogorodica,380mNWofroadborderpolice; notnearbyGevgelijarailstation. Currentterminalfootprintnotassumedexactprotestbarrier.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-107.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-deve-bair-customs",
+          "name": "Deve Bair customs terminal",
+          "coordinates": [
+            22.45726,
+            42.22025
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 235277568; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W235277568",
+            "https://www.openstreetmap.org/way/235277568"
+          ],
+          "evidence_note": "Named customsterminal inKrivaPalanka, roadpolice140meast; Gyueshevorailway2.5kmNEexcluded.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-110.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-delchevo-road",
+          "name": "Delchevo road border reference",
+          "coordinates": [
+            22.87394,
+            41.9872
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 987506493; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W987506493",
+            "https://www.openstreetmap.org/way/987506493"
+          ],
+          "evidence_note": "Named Delchevo borderpolicebuilding, nottown10kmwest. SecondaryregionalBulgarialabelnotusedasjurisdictionproof; primarycustoms2025projectidentifiesNorthMacedonianpost.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-110.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-novo-selo-road",
+          "name": "Novo Selo road border reference",
+          "coordinates": [
+            22.96309,
+            41.39694
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 183755210; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W183755210",
+            "https://www.openstreetmap.org/way/183755210"
+          ],
+          "evidence_note": "FeatureexplicitlynamedBorderCrossingNovoSelo thoughclassifiedrestarea; Zlatarevocounterpart490meast. Approximatefacilityreferenceonly.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-108.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-doirani-road-reference",
+          "name": "Dojran–Doirani road crossing reference",
+          "coordinates": [
+            22.75857,
+            41.17729
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 1773681106; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N1773681106",
+            "https://www.openstreetmap.org/node/1773681106"
+          ],
+          "evidence_note": "Named GreekDoiranicontrol oppositeStarDojran; Doiranirailway1.25kmSEexcluded. Oppositesideroutepointonly.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-107.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-medzhitlija-road",
+          "name": "Medzhitlija road crossing reference",
+          "coordinates": [
+            21.41647,
+            40.92014
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 1081889425; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W1081889425",
+            "https://www.openstreetmap.org/way/1081889425"
+          ],
+          "evidence_note": "Named NorthMacedonianborderpolicebuilding,Niki480msouth; railwaystation3kmnorthnotincluded.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-108.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-kjafasan-road",
+          "name": "Kjafasan road crossing reference",
+          "coordinates": [
+            20.60865,
+            41.09184
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 233901250; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W233901250",
+            "https://www.openstreetmap.org/way/233901250"
+          ],
+          "evidence_note": "ExplicitlynamedMacedonianKjafasanborderpolice; AlbanianQafëThanëcustoms650mSW. SecondarycountryAlbanialabelqualified, currentpairedroutereference.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-109.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-blace-road",
+          "name": "Blace road crossing reference",
+          "coordinates": [
+            21.30495,
+            42.13866
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 1456130284; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W1456130284",
+            "https://www.openstreetmap.org/way/1456130284"
+          ],
+          "evidence_note": "Named Blaceroadborderpolice oppositeHaniiElezit; Blacerailway1kmsouthexcluded.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-109.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-blato-road",
+          "name": "Blato road crossing reference",
+          "coordinates": [
+            20.49635,
+            41.55812
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 179263628; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W179263628",
+            "https://www.openstreetmap.org/way/179263628"
+          ],
+          "evidence_note": "Named Blatoborder-controlcanopyadjacentborderpolice; AlbanianBllatëcontrol650mNW. DistinctfromBlace.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-109.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-stenje-road",
+          "name": "Stenje road crossing reference",
+          "coordinates": [
+            20.89941,
+            40.91983
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 2063357044; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N2063357044",
+            "https://www.openstreetmap.org/node/2063357044"
+          ],
+          "evidence_note": "Named Stenjeroadcontrol nearGoricëopposingpost, notPrespalakeshorevillagecentroid.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-109.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Participating North Macedonia land cargo terminals. Reuters directly documents Gevgelija/Bogorodica. The association’s January 29 account names Deve Bair, Delchevo, Novo Selo, Dojran, Bogorodica, Medzhitlija, Kjafasan, Blace, Blato and Stenje. Greek-frontier pairs are Bogorodica–Evzoni, Medzhitlija–Niki and Star Dojran–Doirani.",
+      "date_scope_check": {
+        "start_earliest": "2026-01-26",
+        "start_latest": "2026-01-26",
+        "end_earliest": "2026-01-29",
+        "end_latest": "2026-01-29",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Alltennamedroutes located, but exactcargoapproachbarriersandper-gatefirst/lastpassage unresolved; somepointsoppositeside/currentfacilityreferences."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "e27338f176728ddb2e3084811dd64678243325d4ba6f5c5c6e4e4b11cce63ae8"
+}

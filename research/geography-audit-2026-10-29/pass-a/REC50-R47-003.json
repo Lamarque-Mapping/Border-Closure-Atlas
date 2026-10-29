@@ -1,0 +1,73 @@
+{
+  "record_id": "REC50-R47-003",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Bangladesh land-admission denials affecting Rohingya in Ukhia/Ghumdhum sectors. Reports distinguish these land observations from Naf River boat interceptions; no exact formal gate or exhaustive sector extent is identified.",
+  "source_checks": [
+    {
+      "url": "https://www.observerbd.com/news/44822",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "November 22 report separates prior-day Ghumdhum land pushbacks at various points from Naf River returns; no gate identified.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-88.json",
+      "sha256": "e64ec2c2273841f1f190074646331d7cbb59535dbb2636dc72b9962dbcfcc5c5"
+    },
+    {
+      "url": "https://www.dhakatribune.com/amp/bangladesh/11012/bgb-sends-back-119-rohingyas",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "December 1 account separately describes Ukhia/Ghumdhum land-border denials and boats; precise crossing points unavailable.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-76.json",
+      "sha256": "34d1f19ab45d724787aaee146ac942fa6578882fcba27338c3cdaf17aecc61e9"
+    },
+    {
+      "url": "https://www.amnesty.org/en/wp-content/uploads/2021/05/ASA1653622016ENGLISH.pdf",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Amnesty report p42 describes selective admission of vulnerable refugees from late November alongside continuing pushback regime; no local gate-level endpoint.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-83.json",
+      "sha256": "c64baa02414046fdb6fa6b7717b6d5fcfee2e5c378386d1da1fe2d521ef2137e"
+    },
+    {
+      "url": "https://www.unhcr.org/uk/news/briefing-notes/unhcr-urges-open-borders-people-fleeing-violence-myanmars-rakhine-state",
+      "access_status": "inaccessible",
+      "finding": "Original URL rate-limited; no fresh reopening support claimed.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-80.json",
+      "sha256": "dce7046594fa5a27481b0128e2d0b3ac1f640592d1a6c9e7c5b5b2eac74bcef2"
+    },
+    {
+      "url": "https://data.unhcr.org/fr/documents/download/122439",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R47-003-P1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Rohingya entry denial reported in Ukhia/Ghumdhum land-border sectors; exact gate unresolved",
+      "date_scope_check": {
+        "scope": "Rohingya entry denial reported in Ukhia/Ghumdhum land-border sectors; exact gate unresolved",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2016-12-01",
+        "end_latest": "2016-12-01",
+        "last_confirmed": "2016-12-01",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "November 21 and December 1 2016 observations only; onset, intervening continuity and end unknown. Selective humanitarian admissions and actual refugee entry coexist with denials. Later 2017 UNHCR appeal is not a 2016 reopening."
+      },
+      "unresolved": [
+        "Neither formal gate identity nor bounded affected land-border segment is established. Sector/place centroids, Teknaf river port and the entire Bangladesh–Myanmar frontier are rejected substitutes."
+      ]
+    }
+  ],
+  "unresolved": []
+}

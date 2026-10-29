@@ -1,0 +1,184 @@
+{
+  "record_id": "REC50-R42-002",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "September18 2023 two distinct road restrictions: first reported two-hour Ruse–Giurgiu protest and Kardam–Negru Vodă entry restriction broadened to all vehicles at noon. Forecast repeat actions are not extra observed phases.",
+  "source_checks": [
+    {
+      "url": "https://www.politiadefrontiera.ro/ro/main/i-informare-trafic-restrictionat-la-puncte-de-trecere-a-frontierei-din-sudul-tarii-cauzate-de-protestele-fermierilor-bulgari-34780.html",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Primary police notice observes cars/trucks restricted in both directions at Ruse and no vehicle entries permitted at Kardam; protest proximity at other routes alone is not proof of equivalent closure.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-137.json"
+    },
+    {
+      "url": "https://bnrnews.bg/shumen/post/34525/dunav-most-pod-obsada",
+      "access_status": "fresh_full_text_extract",
+      "finding": "BNR full original reports completed two-hour traffic block to/from Ruse Danube Bridge. Afternoon repeat and daily continuation are announced, not independently observed here.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-143.json"
+    },
+    {
+      "url": "https://www.radioconstanta.ro/2023/09/18/update-incepand-cu-ora13-20-traficul-prin-ptf-negru-voda-se-desfasoara-in-conditii-normale-atat-pentru-autocamioane-cat-si-pentru-autoturisme-a-transmis-garda-de-coasta/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Radio Constanța update citing Coast Guard proves13:20 normal traffic restoration at Negru Vodă; initial text distinguishes earlier Ukrainian/Moldovan truck-only rule from all vehicles at12:00.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-139.json"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1319838585/full",
+      "access_status": "fresh_raw_osm_inspected",
+      "finding": "Original OSM named Danube/Friendship Bridge structure links Ruse and Giurgiu; start_date1954. This combined road/rail structure locates only the affected road route. It is not the inland customs roundabout protest position, and no railway stoppage is inferred.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/2e7ea0824d6c5098dc7c.xml",
+      "source_sha256": "7c882b3e7ab6ad30563a474003c39f178888f5cb1c4c4e4eb25738c048cd322b"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/462141321/full",
+      "access_status": "fresh_raw_osm_inspected",
+      "finding": "Original OSM named New Europe/Vidin-Calafat bridge structure matches Danube Bridge2 identity. This road/rail structure is a road-route reference only; E79 and Vidin ring-road blockade positions are not surveyed. The old Vidin ferry customs canopy3km west is explicitly rejected.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b9c56a00f9b267278090.xml",
+      "source_sha256": "54582b3b12aa0e43ccd9577adf6131829a1ecdc72c9f35856bcfd24757d7f80f"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/958442692/full",
+      "access_status": "fresh_raw_osm_inspected",
+      "finding": "Original OSM customs canopy explicitly named ГКПП Кардам (БГ), version2 March2022. Named road checkpoint northeast of Kardam village, distinct from Kardam railway station and railway post buildings. Romanian police independently pairs Kardam with Negru Vodă.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/55d68d196fd03ec8ff33.xml",
+      "source_sha256": "0a9d4179910097cad5bd863097d6483393e1b036de42c2a8400d0298677acf54"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1075684410/full",
+      "access_status": "fresh_raw_osm_inspected",
+      "finding": "Original OSM highway facility polygon explicitly names both Durankulak and Vama Veche, version1 July2022. Independently matches the Romanian police bilateral road-post pair. This is the checkpoint complex, not Durankulak village or the precise diverted-truck protest position.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/e581a88e67282529ba2c.xml",
+      "source_sha256": "29203073ef33dce07eab844b3f5ce44f86cf9a4be59f905c4de4aaccd0f0a840"
+    },
+    {
+      "url": "https://www.politiadefrontiera.ro/ro/main/i-informare-trafic-restrictionat-la-puncte-de-trecere-a-frontierei-din-sudul-tarii-cauzate-de-protestele-fermierilor-bulgari-34780.html",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Primary Romanian police notice explicitly pairs Giurgiu–Ruse, Calafat–Vidin, Vama Veche–Durankulak and Negru Vodă–Kardam; confirms road mode, not rail/ferry interchangeability. Used for geographic identity across episodes, not to establish March dates.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-137.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R42-002-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-ruse-giurgiu-bridge-reference",
+          "name": "Ruse–Giurgiu Danube Bridge road-route reference",
+          "coordinates": [
+            26.0063917,
+            43.8882761
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1319838585"
+          ],
+          "evidence_note": "Original OSM named Danube/Friendship Bridge structure links Ruse and Giurgiu; start_date1954. This combined road/rail structure locates only the affected road route. It is not the inland customs roundabout protest position, and no railway stoppage is inferred.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/2e7ea0824d6c5098dc7c.xml",
+              "sha256": "7c882b3e7ab6ad30563a474003c39f178888f5cb1c4c4e4eb25738c048cd322b",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "3",
+              "osm_timestamp": "2025-08-16T14:42:29Z",
+              "tags": {
+                "alt_name": "Мост на дружбата",
+                "alt_name:en": "Giurgiu-Rousse Friendship Bridge",
+                "bridge:structure": "truss",
+                "height": "30",
+                "int_name": "Giurgiu-Rousse Friendship Bridge",
+                "layer": "1",
+                "length": "2223",
+                "man_made": "bridge",
+                "name": "Дунав мост / Podul Prieteniei Giurgiu-Ruse",
+                "name:de": "Giurgiu-Russe-Freundschaftsbrücke",
+                "name:en": "Danube Bridge",
+                "start_date": "1954-06-20",
+                "wikidata": "Q203004",
+                "wikipedia": "en:Danube Bridge"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ruse–Giurgiu first reported September 18 farmer road block",
+      "date_scope_check": {
+        "start_earliest": "2023-09-18",
+        "start_latest": "2023-09-18",
+        "end_earliest": "2023-09-18",
+        "end_latest": "2023-09-18",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Named crossing/structure is an approximate road-route reference. Exact historical approach blockade position remains unresolved; no rail closure or full frontier closure inferred."
+      ]
+    },
+    {
+      "phase_id": "REC50-R42-002-P2",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-kardam-negru-voda-road-reference",
+          "name": "Kardam–Negru Vodă road checkpoint reference",
+          "coordinates": [
+            28.1472884,
+            43.7848743
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/958442692"
+          ],
+          "evidence_note": "Original OSM customs canopy explicitly named ГКПП Кардам (БГ), version2 March2022. Named road checkpoint northeast of Kardam village, distinct from Kardam railway station and railway post buildings. Romanian police independently pairs Kardam with Negru Vodă.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/55d68d196fd03ec8ff33.xml",
+              "sha256": "0a9d4179910097cad5bd863097d6483393e1b036de42c2a8400d0298677acf54",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "2",
+              "osm_timestamp": "2022-03-02T07:06:21Z",
+              "tags": {
+                "building": "roof",
+                "government": "customs",
+                "name": "ГКПП Кардам (БГ)",
+                "office": "government"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Kardam–Negru Voda vehicle entry restriction on September 18",
+      "date_scope_check": {
+        "start_earliest": "2023-09-18",
+        "start_latest": "2023-09-18",
+        "end_earliest": "2023-09-18",
+        "end_latest": "2023-09-18",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Named crossing/structure is an approximate road-route reference. Exact historical approach blockade position remains unresolved; no rail closure or full frontier closure inferred."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "1f56b098f6480eaccda81bcd03fe437b91d0f058e9d1c63de9abbcc4eeaf2f10"
+}

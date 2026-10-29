@@ -1,0 +1,127 @@
+{
+  "record_id": "REC50-R22-006",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Initial steel/ferrous rail-transit sanctions and a later observed cement train through Kena are separate phases. Neither passenger transit nor all cargo was generally blocked. Cement’s identified Kena post cannot automatically prove the steel phase’s complete gate roster.",
+  "source_checks": [
+    {
+      "url": "https://www.urm.lt/en/news/928/statement-on-the-transit-of-sanctioned-goods-by-rail-to-and-from-kaliningrad:35022",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Primary June 20 statement confirms steel/ferrous restrictions from June 17 and expressly says passenger and nonsanctioned transit continued; it supplies no specific rail-gate roster.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-127.json"
+    },
+    {
+      "url": "https://www.lrt.lt/en/news-in-english/19/1745645/lithuanian-railways-resumes-transit-of-sanctioned-goods-to-kaliningrad",
+      "access_status": "fresh_full_text_extract",
+      "finding": "July 25 report describes LTG July 22 conditional authorization under EC guidance, not first steel passage.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-114.json"
+    },
+    {
+      "url": "https://www.lrt.lt/en/news-in-english/19/1746506/first-russian-train-with-sanctioned-goods-reaches-lithuanian-border-as-kaliningrad-transit-resumes",
+      "access_status": "fresh_full_text_extract",
+      "finding": "July 26 early report explicitly identifies a five-wagon cement shipment still under checks at Kena.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-115.json"
+    },
+    {
+      "url": "https://www.baltictimes.com/first_train_with_sanctioned_russian_goods_transits_via_lithuania_to_kaliningrad/",
+      "access_status": "fresh_search_extract",
+      "finding": "Direct page 403; indexed later BNS report says cement train checked at Kena departed and describes an earlier first train. The first/second discrepancy remains.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-124.json"
+    },
+    {
+      "url": "https://doc.ltginfra.lt/en/infrastructure/MAP/Network_Statement/24-25_Network_statement_and_annexes-2025-10-13.pdf",
+      "access_status": "fresh_search_primary_extract",
+      "finding": "Later operator network statement names alternative Russian and Belarusian rail interfaces; it cannot establish the exact 2022 steel-cargo restriction roster.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-129.json"
+    },
+    {
+      "url": "https://pkpd.dedikuotas.lt/",
+      "access_status": "previously_inspected_same_pass_geographic_evidence",
+      "finding": "Named marker Kenos geležinkelio stoties PKP is explicitly road or railway-station border control. Official directorate homepage links this interactive map. Marker is a facility reference, not exact historical lane.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b0efb7f3919479de6a25.html",
+      "source_sha256": "106a1091b719ba20cd447ed681fe74ce9fb02a2ea26411866b3c7bf4640c32de",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/lithuania-official-map-coordinate-extract.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R22-006-P1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Initial steel and ferrous-metal rail-transit restriction through Lithuania to/from Kaliningrad",
+      "date_scope_check": {
+        "start_earliest": "2022-06-17",
+        "start_latest": "2022-06-17",
+        "end_earliest": "2022-07-22",
+        "end_latest": "2022-07-22",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Steel/ferrous policy geography is a transit corridor, but no steel-specific named crossing or source-backed exact corridor geometry established. Do not substitute all Lithuanian frontiers or passenger-only gate lists."
+      ]
+    },
+    {
+      "phase_id": "REC50-R22-006-P2",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-kena-rail",
+          "name": "Kena railway border checkpoint",
+          "coordinates": [
+            25.6856037,
+            54.640397
+          ],
+          "coordinate_method": "Literal Google Maps LatLng in responsible border-checkpoint directorate interactive map, reordered longitude/latitude",
+          "precision": "Facility reference only; published decimal precision is not historical lane or obstruction survey accuracy.",
+          "source_urls": [
+            "https://pkpd.dedikuotas.lt/",
+            "https://pkpd.lrv.lt/lt/"
+          ],
+          "evidence_note": "Named marker Kenos geležinkelio stoties PKP is explicitly road or railway-station border control. Official directorate homepage links this interactive map. Marker is a facility reference, not exact historical lane.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/lithuania-official-map-coordinate-extract.json",
+              "access_status": "fresh_primary_geographic_evidence"
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b0efb7f3919479de6a25.html",
+              "sha256": "106a1091b719ba20cd447ed681fe74ce9fb02a2ea26411866b3c7bf4640c32de",
+              "access_status": "fresh_raw_primary_geographic_evidence"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Cement cargo returning by rail through Lithuania to Kaliningrad, including a Kena-checked train",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": null,
+        "end_latest": "2022-07-26",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Kena is directly established for the cement train; onward exit gate and full transit extent are not explicitly located. Unknown onset and first/second train disagreement unchanged."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "ce8f86bc26142be9c00d9f46fd78f160ebf86bb057321e28af3601c263d2df2b"
+}

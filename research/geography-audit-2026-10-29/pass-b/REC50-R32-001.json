@@ -1,0 +1,86 @@
+{
+  "record_id": "REC50-R32-001",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Article 31 of Colombia decree 1702 ordered closure of authorised land and river border posts from October 28 at 18:00 to October 29, 2023 at 16:00, with force-majeure exceptions. Local reporting expressly identifies Rumichaca, Mataje and San Miguel for vehicles and pedestrians both directions. This is a nationwide set of authorised posts, not every metre of each national frontier.",
+  "source_checks": [
+    {
+      "url": "https://www.registraduria.gov.co/IMG/pdf/20231024_decreto-1702_2023.pdf",
+      "access_status": "full_retrieved",
+      "finding": "Primary PDF inspected, page 11 Article 31: authorised terrestrial and river posts, 22-hour ordered window and exceptions; no list or geometry for all posts."
+    },
+    {
+      "url": "https://www.eluniverso.com/noticias/ecuador/colombia-suspendera-la-movilidad-por-el-puente-internacional-de-rumichaca-el-fin-de-semana-por-elecciones-nota/?outputType=amp",
+      "access_status": "full_retrieved",
+      "finding": "Full El Universo report inspected: Colombian-side Rumichaca barriers; explicitly names Rumichaca, Mataje and San Miguel, vehicle and pedestrian flows in/out."
+    },
+    {
+      "url": "https://www.radioipiales.co/2023/10/cierre-de-la-frontera-desde-el-sabado-2/",
+      "access_status": "full_retrieved",
+      "finding": "Full local report inspected: Ipiales mayor announces Rumichaca closure during exact national window. Its decree-number phrasing is inconsistent with primary decree, which governs."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R32-001-P1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [
+        {
+          "name": "Rumichaca international road bridge",
+          "coordinates": [
+            -77.66410594444444,
+            0.8140088666666666
+          ],
+          "coordinate_method": "Directly inspected OSM way/1316055071 mean of geometry vertices; XML sha256 85649a6f65cc2ccedd77022f8559957365dee8e9c41775d8a71df69395bc520e",
+          "precision": "Road bridge representative, approximately 50 m; Colombian gate position not surveyed",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/1316055071/full"
+          ],
+          "evidence_note": "Source names Rumichaca and Colombian-side barriers; OSM bridge geometry independently matches original inventory post-rumichaca within metres.",
+          "existing_site_id": "post-rumichaca"
+        },
+        {
+          "proposed_site_id": "proposed-san-miguel-colombia-ecuador-road",
+          "name": "San Miguel international road bridge",
+          "coordinates": [
+            -76.87602299999999,
+            0.25131846666666663
+          ],
+          "coordinate_method": "Directly inspected OSM way/93534528 mean of geometry vertices; XML sha256 3ec09853c9e939ef4d3cbf4ec16e39ded1671fd8cff2d73b8d2353a1b6c1b16d",
+          "precision": "Road bridge representative, approximately 100 m; Colombian barrier position not surveyed",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/93534528/full"
+          ],
+          "evidence_note": "Source expressly names this Ecuador–Colombia bridge; OSM named E45 two-lane bridge over international river, separate from Nueva Loja bus stop with similar name."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Colombia’s authorised land and river border posts under Article 31 of decree 1702; local preannouncements explicitly name Rumichaca, Mataje and San Miguel.; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "ordered_window",
+        "start_earliest": "2023-10-28",
+        "start_latest": "2023-10-28",
+        "end_earliest": "2023-10-29",
+        "end_latest": "2023-10-29",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Mataje is named but exact bridge/control geometry not verified; no coordinates inferred from projected coordinates with unclear CRS or from nearby Río Mira bridge.",
+        "Other authorised terrestrial and river posts nationwide are not exhaustively located; no whole-frontier line is substituted.",
+        "Mapped points represent named bridges, not surveyed Colombian barricades."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Mataje is named but exact bridge/control geometry not verified; no coordinates inferred from projected coordinates with unclear CRS or from nearby Río Mira bridge.",
+    "Other authorised terrestrial and river posts nationwide are not exhaustively located; no whole-frontier line is substituted.",
+    "Mapped points represent named bridges, not surveyed Colombian barricades."
+  ]
+}

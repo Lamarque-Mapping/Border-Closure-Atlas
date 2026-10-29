@@ -1,0 +1,101 @@
+{
+  "record_id": "REC50-R33-001",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Sonamasjid–Mahadipur road freight interchange stopped for the 2022 Puja holiday. Internal loading/unloading continued; a passenger ban is not established. The shared road checkpoint, rather than every port activity, is represented.",
+  "source_checks": [
+    {
+      "url": "https://www.unb.com.bd/category/Bangladesh/trade-via-sonamasjid-land-port-resumes/102129",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Actual October 8 freight restart after September 30–October 7 interruption.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-5.json",
+      "sha256": "c2f1bc6f202d53d225bbf5dd05d4f9fdd55b1b104206351dc99731eacbe52adf"
+    },
+    {
+      "url": "https://unb.com.bd/category/bangladesh/trade-via-sonamasjid-land-port-to-remain-suspended-for-8-days/101642",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Advance holiday schedule says internal handling would continue.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-5.json",
+      "sha256": "c2f1bc6f202d53d225bbf5dd05d4f9fdd55b1b104206351dc99731eacbe52adf"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/5142350050",
+      "access_status": "fresh_OSM_XML_inspected",
+      "finding": "Named Mohodipur road border-control node predates 2022.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/ac9793e4de488fc4503e.xml",
+      "sha256": "ad1c7d66126cf14db2b13bd5fe259253edf6ddd818472704b5c00bd1f6b711ca",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/ac9793e4de488fc4503e.txt",
+      "text_sha256": "ad1c7d66126cf14db2b13bd5fe259253edf6ddd818472704b5c00bd1f6b711ca",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=88.137,24.838,88.150,24.847",
+      "access_status": "fresh_OSM_XML_inspected",
+      "finding": "Road node and named Sonamasjid port grounds on opposite sides distinguished.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/6e22fb1d075f515b1634.xml",
+      "sha256": "f6bf79219d6562b3f1d8c1b9b38503dc5c9847678bbe5f16994c2cd23afe483b",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/6e22fb1d075f515b1634.txt",
+      "text_sha256": "f6bf79219d6562b3f1d8c1b9b38503dc5c9847678bbe5f16994c2cd23afe483b",
+      "status": 200
+    },
+    {
+      "url": "https://www.unescap.org/sites/default/files/6.1.Bangladesh.pdf",
+      "access_status": "indexed_primary_source_table; direct_web_open_403",
+      "finding": "Bangladesh presentation table pairs Sonamosjid Land Port in Shibganj with Mahadipur in Maldah; PDF open returned 403, indexed table inspected.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-more-locations.json",
+      "sha256": "1c5fcd37480e233c37d21e77782074ade3680c3d2297fb58143cd97439c31ead"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R33-001-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-sonamasjid-mahadipur-road",
+          "name": "Sonamasjid–Mahadipur road crossing",
+          "coordinates": [
+            88.1411487,
+            24.8427106
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/5142350050",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=88.137,24.838,88.150,24.847",
+            "https://www.unescap.org/sites/default/files/6.1.Bangladesh.pdf"
+          ],
+          "evidence_note": "Named Mohodipur border-control node, last edited July 2020. The area XML links the road gate with the named Sonamasjid Land Port industrial grounds east of the frontier; Bangladesh’s UNESCAP presentation pairs Sonamosjid with Mahadipur. This represents cross-border freight interchange, not a closure of internal port handling.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/ac9793e4de488fc4503e.xml",
+          "sha256": "ad1c7d66126cf14db2b13bd5fe259253edf6ddd818472704b5c00bd1f6b711ca"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Sonamasjid–Mahadipur road freight interchange stopped for the 2022 Puja holiday. Internal loading/unloading continued; a passenger ban is not established. The shared road checkpoint, rather than every port activity, is represented.",
+      "date_scope_check": {
+        "start_earliest": "2022-09-30",
+        "start_latest": "2022-09-30",
+        "end_earliest": "2022-10-08",
+        "end_latest": "2022-10-08",
+        "last_confirmed": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Eight calendar-date differences for bilateral freight interchange; internal loading/unloading continued and passenger closure is not established. UNB advance and return reports share the same named C&F official. No measured-hour precision or geometry is claimed."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "11f03c039cef331469fa378fb7cb9afdb5eb8bdb679641893f88f90c8b2eabcd",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

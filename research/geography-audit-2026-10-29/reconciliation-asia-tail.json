@@ -1,0 +1,2468 @@
+{
+  "audit_id": "geography-2026-10-29",
+  "source_sha256": "d33692ed2f2a4ef3ea32be7171987d8840a5ad07e8ed9e9c0c6511d85ccbc033",
+  "status": "complete",
+  "decisions": [
+    {
+      "record_id": "R5-EA-005",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R5-EA-005.json",
+          "sha256": "a43b45cafb2236ed1333f067ac4a66a3171f6987849f301d6f2a9663798ee167"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R5-EA-005.json",
+          "sha256": "353902b41b399b1c323d6b6f93d75a91e613f04a2dd4a6857c99ebfd2c94bad0"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R5-EA-005-R1",
+          "decision": "map",
+          "category": "multiple_named_sites",
+          "complete": true,
+          "sites": [
+            {
+              "name": "PLBN Skouw border-post building",
+              "coordinates": [
+                140.9987767,
+                -2.6085816
+              ],
+              "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/way/312090467/full"
+              ],
+              "evidence_note": "OSM explicitly names Indonesian PLBN Skouw. Position is service building, not PNG Wutung gate; use only for Indonesian service phases.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/83b58852ce6205871dc2.xml",
+                  "sha256": "b5065050463b0eb8261b27852310fd0a4b27070c5e0db31c2abae89bfdd42591",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both passes locate the same named OSM outlines (Skouw 312090467, Sota 806707961, Yetetkun 973314719). Reconciliation inspected XML and recomputed B's unique-vertex means; the slight A/B coordinate differences result from ring-vertex treatment. B's source-derived points are retained without averaging candidate coordinates.",
+              "existing_site_id": "post-skouw-plbn"
+            },
+            {
+              "name": "Sota Indonesian border post",
+              "coordinates": [
+                141.0182738,
+                -8.42796
+              ],
+              "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+              "precision": "Representative point within the named border-post grounds, about 300 m; not an exact barrier",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/way/806707961/full"
+              ],
+              "evidence_note": "Named Sota Border area explicitly tagged border_control, connected to Jalan Akses PLBNT Sota. The named 2024 BNPP service order identifies this Indonesian post, not Sota village or a PNG counterpart.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/759870cdef6955c04823.xml",
+                  "sha256": "cc4e30866b39b002028baed764ed71cf69ac5b5a5c2b1c46bf4e5f6696bac2b7",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both passes locate the same named OSM outlines (Skouw 312090467, Sota 806707961, Yetetkun 973314719). Reconciliation inspected XML and recomputed B's unique-vertex means; the slight A/B coordinate differences result from ring-vertex treatment. B's source-derived points are retained without averaging candidate coordinates.",
+              "existing_site_id": "post-sota-plbn"
+            },
+            {
+              "name": "Yetetkun Indonesian border post",
+              "coordinates": [
+                140.993277,
+                -5.7165022
+              ],
+              "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+              "precision": "Representative point within named PLBN grounds, about 350 m; not an exact barrier",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/way/973314719/full"
+              ],
+              "evidence_note": "Explicit PLBN Yetetkun civic administration grounds, mapped before the November 2024 order. Provincial government records its October 2024 inauguration and manual crossing service.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/f6ee281a3eac1022c308.xml",
+                  "sha256": "e41d9c0a29e722437bfbf8eea6a67b59c2faa57894e18785ec9c548fc493c142",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both passes locate the same named OSM outlines (Skouw 312090467, Sota 806707961, Yetetkun 973314719). Reconciliation inspected XML and recomputed B's unique-vertex means; the slight A/B coordinate differences result from ring-vertex treatment. B's source-derived points are retained without averaging candidate coordinates.",
+              "existing_site_id": "post-yetetkun-plbn"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Scheduled 08:00–16:00 WIT November 27, an eight-hour restriction on non-emergency service. Ending date is partial-day window end, not actual reopening at 16:00 or November 28. Execution and subsequent ordinary service unknown.",
+          "rationale": "The reopened BNPP-attributed Askara release lists all three Indonesian PLBNs for the specific 27 November 2024 emergency-only 08:00–16:00 WIT service order. Both independent passes verify the same facilities and phase scope. Named OSM geometry predates the service day. Full spatial coverage of the scheduled measure is supported, retaining emergency exceptions and the native announced-window status."
+        }
+      ],
+      "review_evidence": [
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-tail-review/web-first-five.json",
+          "access": "full original-source web text; full PWD and WCO PDF extracts",
+          "sha256": "7e47682a577b31a6feac2ea335b328ba860107e9b06976fd79c9df7d03cabede"
+        }
+      ]
+    },
+    {
+      "record_id": "R5-SC-004",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R5-SC-004.json",
+          "sha256": "5ad9ee3781140c8a35b21b0a554350b2d42b1abbb9cf1b4a97e2722e4e091bb7"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R5-SC-004.json",
+          "sha256": "8c87de301b616d95f9a854026b509f300e21b682b5e5616c9470256291c21bc3"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R5-SC-004-R1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Jhulaghat pedestrian suspension bridge",
+              "coordinates": [
+                80.38277778,
+                29.5711111
+              ],
+              "coordinate_method": "Explicit latitude and longitude in Uttarakhand PWD bridge inventory ID 2136, inventory year 2022",
+              "precision": "Approximate bridge reference, about 100 m; inventory marked data not yet finalized",
+              "source_urls": [
+                "https://pwduk.in/im/bridgReport/2136/print",
+                "https://pithoragarh.nic.in/tourist-place/jhulaghat/"
+              ],
+              "evidence_note": "PWD identifies Jhulaghat pedestrian suspension bridge over Kali River; district government describes it as the entry bridge into Nepal. Inventory construction year differs from historical descriptions and is not used to date the restriction.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/web-jhulaghat.json",
+                  "sha256": "21cf36d3defacc503390d1b72c386344d895aa97a30abfbd03aee73f410363cc",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "A's OSM pedestrian span and B's PWD inventory point identify the same Jhulaghat suspension bridge over Kali, approximately 30 metres apart. A independently cites the PWD coordinate too. The explicit PWD coordinate is retained; no coordinate averaging.",
+              "existing_site_id": "post-jhulaghat-bridge"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Start hour unknown; order-only dates; November 2020 pensioner reopening result is a different event.",
+          "rationale": "The original RSS account preserved in A's full-text cache names the Jhulaghat transit and November 22–25 2019 election order with emergency discretion; B's indexed original corroborates that scope. Reopened official PWD inventory 2136 supplies an explicit bridge coordinate and pedestrian/suspension identity. The bridge facility is shared across both passes; provisional inventory quality and the native unobserved implementation/reopening qualifications remain."
+        }
+      ]
+    },
+    {
+      "record_id": "R5-SC-005",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R5-SC-005.json",
+          "sha256": "a8cf17e6c62e9b7c26ac44ba49e0b22f3c666d18ceafeea905152d4a59eb8343"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R5-SC-005.json",
+          "sha256": "c062566d0c847cd20e5ea2590a72c3a5117db91f9d858d99feb482a135c3662c"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R5-SC-005-R1",
+          "decision": "partial",
+          "category": "multiple_named_sites",
+          "complete": false,
+          "sites": [
+            {
+              "name": "Phuentsholing–Jaigaon Bhutan Gate",
+              "coordinates": [
+                89.3808099,
+                26.8612739
+              ],
+              "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+              "precision": "Main gateway area, about 150 m; adjacent pedestrian processing is within the area but not separately outlined",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/way/1342208102/full"
+              ],
+              "evidence_note": "Named Bhutan Gate outline next to an explicit border-control node and immigration office. NDTV independently identifies this Jaigaon gateway in the April 2026 closure. The point locates the main gateway area, not a dry port or the inland Rinchending checkpoint.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/d9f739fb3d6c4014714d.xml",
+                  "sha256": "21c15453021f35c2ea172209265d486557ce7500623b57f553731b851ca7a202",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both passes identify OSM way 1342208102 as the Bhutan Gate at Phuentsholing–Jaigaon. B's unique-vertex mean is verified from XML and retained. Samtse geometry appears in A alone; neither pass securely locates Lhamoizingkha.",
+              "existing_site_id": "post-phuentsholing-bhutan-gate"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "NDTV reports Jaigaon closed after 18:00 rather than 17:00 and specifies exemptions; other gates not independently observed. No actual April 23 reopening inferred.\n\nGeographic qualification: Only the shared Phuentsholing–Jaigaon main gateway is mapped. Samtse and Lhamoizingkha remain unlocated; no Allay freight-terminal coverage is implied. The official 17:00 start and NDTV 18:00 observation differ; no actual April 23 reopening is inferred.",
+          "rationale": "Reopened Samtse official notification lists all three gates for April 20–23 2026. Both passes substantiate the main Phuentsholing gate and its contemporary applicability, but the shared verified geometry covers just one of three named locations. Partial is a spatial subset of the unchanged announced interval."
+        }
+      ]
+    },
+    {
+      "record_id": "R5-SC-001",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R5-SC-001.json",
+          "sha256": "37d2462b4f40c23c97057e8da498056ce0f245ef1fde6557af54e061b8ebb084"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R5-SC-001.json",
+          "sha256": "d1b78379c9a1f044dbba113605d72d9f9e07bdf255709c2312f90012b0cc260f"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R5-SC-001-FU1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Jamunaha–Rupaidiha historic road crossing",
+              "coordinates": [
+                81.6004603,
+                28.0189568
+              ],
+              "coordinate_method": "Fresh OSM API XML node coordinates",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/3888116312",
+                "https://api.openstreetmap.org/api/0.6/node/3888116312/ways",
+                "https://api.openstreetmap.org/api/0.6/map?bbox=81.596,28.015,81.603,28.024"
+              ],
+              "evidence_note": "Border-control node shared by Ratna Rajmarg NH58 and Indian NH927 at the international boundary. Bounding XML contains named Rupaidiha immigration building, Nepalgunj customs office and Jamunaha police. This is the historic public road crossing, not the newer integrated cargo port.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/fa64ac3604a35761c3b3.xml",
+                  "sha256": "4307d6225cee060af9605b8cc16be8375e8e1595adb27b538f113e143e232be6",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "A and B independently select the identical OSM border-control node 3888116312 and exact coordinate; road topology places it at the historic NH58/NH927 boundary crossing, separate from the later western ICP.",
+              "existing_site_id": "post-jamunaha-rupaidiha-road"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "The March 25 and April 16, 2021 accounts separately document restricted Nepali shopping trips towards Rupaidiha, with different treatment of returnees and essential journeys. Neither establishes the first onset or continuous enforcement between observations. RSS reporting on July 29, 2021 describes Nepali locals crossing Jamunaha to shop in Rupaidiha. This supplies a scope-matched later-access bound, earlier than the previously used December 2022 report. It is not the exact reopening date, a formal repeal or proof of uninterrupted access thereafter. No continuous numeric duration is established.",
+          "rationale": "Inspected original March 25 and April 16 2021 report caches identify outbound Nepali shopping restrictions to Rupaidiha and returnee screening at Jamunaha. Both reconstructions support the historic public road crossing for each separate native observation. The two observations remain separate, with no inferred onset, continuous interval or exact reopening; current cargo-port geometry is not substituted."
+        },
+        {
+          "phase_id": "R5-SC-001-FU2",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Jamunaha–Rupaidiha historic road crossing",
+              "coordinates": [
+                81.6004603,
+                28.0189568
+              ],
+              "coordinate_method": "Fresh OSM API XML node coordinates",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/3888116312",
+                "https://api.openstreetmap.org/api/0.6/node/3888116312/ways",
+                "https://api.openstreetmap.org/api/0.6/map?bbox=81.596,28.015,81.603,28.024"
+              ],
+              "evidence_note": "Border-control node shared by Ratna Rajmarg NH58 and Indian NH927 at the international boundary. Bounding XML contains named Rupaidiha immigration building, Nepalgunj customs office and Jamunaha police. This is the historic public road crossing, not the newer integrated cargo port.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/fa64ac3604a35761c3b3.xml",
+                  "sha256": "4307d6225cee060af9605b8cc16be8375e8e1595adb27b538f113e143e232be6",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "A and B independently select the identical OSM border-control node 3888116312 and exact coordinate; road topology places it at the historic NH58/NH927 boundary crossing, separate from the later western ICP.",
+              "existing_site_id": "post-jamunaha-rupaidiha-road"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "The March 25 and April 16, 2021 accounts separately document restricted Nepali shopping trips towards Rupaidiha, with different treatment of returnees and essential journeys. Neither establishes the first onset or continuous enforcement between observations. RSS reporting on July 29, 2021 describes Nepali locals crossing Jamunaha to shop in Rupaidiha. This supplies a scope-matched later-access bound, earlier than the previously used December 2022 report. It is not the exact reopening date, a formal repeal or proof of uninterrupted access thereafter. No continuous numeric duration is established.",
+          "rationale": "Inspected original March 25 and April 16 2021 report caches identify outbound Nepali shopping restrictions to Rupaidiha and returnee screening at Jamunaha. Both reconstructions support the historic public road crossing for each separate native observation. The two observations remain separate, with no inferred onset, continuous interval or exact reopening; current cargo-port geometry is not substituted."
+        }
+      ]
+    },
+    {
+      "record_id": "R6-SC-001",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R6-SC-001.json",
+          "sha256": "b4f18a2f82a7ca641ee47f6c657ad8bf977109eca274d9f6e91895aa82eb1b7f"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R6-SC-001.json",
+          "sha256": "d956ff31d9b5e5fe450ffacfa0d947eb3bbbc3ced6964c7287df33bb23393c18"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R6-SC-001-REV1",
+          "decision": "partial",
+          "category": "multiple_named_sites",
+          "complete": false,
+          "sites": [
+            {
+              "name": "Torugart road boundary checkpoint",
+              "coordinates": [
+                75.3939316,
+                40.55168
+              ],
+              "coordinate_method": "Fresh OSM API XML node coordinates",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/2007687085"
+              ],
+              "evidence_note": "Explicit Torugart Border Point node with border_control and motor vehicle permissions, located at the pass. UNECE lists the paired Torugart road checkpoints at this pass; marker is a route boundary reference, not an inland customs office.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/3b2e09463d982f5ab0d3.xml",
+                  "sha256": "231bdcdfe7611e8bdfd03ddf0f12316e12fc24608ead0dc61c6fb0c24cfa07be",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both passes select the exact Torugart border-control node 2007687085 at [75.3939316,40.55168]. Irkeshtam does not agree: A selects Chinese port node 273356521, B the Kyrgyz road post 3072853603 several kilometres away; opposite-country controls are not collapsed.",
+              "existing_site_id": "post-torugart-road-boundary"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Modern legal segment, not original holiday closure or all-passenger/all-cargo operational ban. May 7 is a dated substantive report, not reopening. January 2022 repeal instrument is identified but its operative text/effective date remains uninspected.\n\nGeographic qualification: Torugart is the shared verified spatial subset. Irkeshtam remains held because independent candidates identify opposite-country controls. Preserve the February 3–May 7 2020 legal-policy phase, exemptions and report-date endpoint; this is not an all-traffic operational closure.",
+          "rationale": "Reopened WCO-hosted Kyrgyz Customs report explicitly restricts non-exempt persons at Irkeshtam-road and Torugart-road under order 27-r and separately discusses cargo algorithms. The exact shared Torugart route-boundary marker is supported throughout the native legal segment. Opposite-side Irkeshtam candidates are materially different and cannot form a two-pass-approved point."
+        }
+      ]
+    },
+    {
+      "record_id": "R6-SC-003",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R6-SC-003.json",
+          "sha256": "4922759304c0d51cd700a616d3f57caa8c2d073c09392a0e61d6ae96934b11b5"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R6-SC-003.json",
+          "sha256": "ba61af4d93efdfaa05e3a2e39c8b3a4ee727728b66f751f0a390241d39ce363d"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R6-SC-003-D1",
+          "decision": "hold",
+          "category": "single_site",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "IRICA/Mehr-derived reports share an official reporting origin. Road freight and other crossings are not included.",
+          "rationale": "The canonical scope is railway freight, not the Sarakhs road checkpoint. Original A explicitly withholds geometry because its reconstruction could not securely locate the railway facility; B alone proposes the Iranian railway station using indexed original/UNESCAP material and OSM. Rail identity cannot be supplied by a road point, and B-only geometry fails the two-independent-pass requirement. Preserve the April 1–2 onset bounds and June 18 wagon-exchange endpoint."
+        }
+      ]
+    },
+    {
+      "record_id": "R6-EA-007",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R6-EA-007.json",
+          "sha256": "f7a5902d156cb625e8e420ce718098ea7b6d95d8db012656089ff3143cfa72fd"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R6-EA-007.json",
+          "sha256": "982c5192215a238fa9faa13df8571979b2e29d944da561f0fc5b530b1ce5df98"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R6-EA-007-FU1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Myanmar–Laos Friendship Bridge",
+              "coordinates": [
+                100.5420917,
+                20.8707943
+              ],
+              "coordinate_method": "Coordinate of common node joining the two named OSM international bridge segments",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/way/758649002/full",
+                "https://api.openstreetmap.org/api/0.6/way/913615103/full"
+              ],
+              "evidence_note": "Shared node 8486844072 between the two explicitly named bridge segments (Myanmar NH29 and Lao road 17). KPL inauguration account pairs Kenglap with Houay Koum in Long district and establishes the same bridge in operation in May 2015.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/a82cbc3b74c5f944e3d6.xml",
+                  "sha256": "70c4d86f8334f570c18627d8aedee6cc2bb786c0ab254882f8a73dd1ab45d7b7",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "A's midpoint of OSM way 913615103 and B's shared node 8486844072 lie on the same explicitly named international bridge. Inspected both connecting XML spans: B chooses their actual common node, retained without averaging candidates. Lao official opening evidence establishes this same unique Kenglap–Houay Koum bridge in 2015.",
+              "existing_site_id": "post-kenglat-laos-bridge"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "R6-EA-007-FU1: May 13, 2022 marks restoration of conditional cargo permission at the Myanmar–Laos Friendship Bridge. The initial COVID closure date and actual first commercial passage are unknown. Only the driver and conductor were permitted at designated transfer places under vaccination and testing conditions; ordinary passenger entry and exit remained prohibited. The retrospective report supports a prolonged interruption, but not an exact total or uniform suspension of every category.\n\nLater actual goods access: the Trade Department reports Myanmar-to-Laos aquatic and agricultural exports through Kenglat during April–July 2023, establishing some outbound commercial access by July 31, 2023 at latest. It also reports 22 tonnes of tobacco exported in the first week of September 2023 (September 1–7). The Ministry of Information published this account on September 12; that is the report date, not the movement date. Neither interval establishes the first restored cargo crossing, unrestricted bilateral trade or passenger reopening.\n\nCNI’s January 2024 account describes a four-year closure, which conflicts with the documented May 2022 cargo permission and actual 2023 exports. Its January 25 reopening ceremony is not treated as the first cargo reopening or proof of continuous closure since 2020.",
+          "rationale": "Both original passes identify the same Mekong road bridge and conditional cargo-permission phase, and the inspected Myanmar state-TV report locates the May 2022 permission at Kyainglap. Lao official identity/history evidence distinguishes the bridge from Xieng Kok village and ferry. The native unknown onset, policy endpoint, continuing passenger ban and later actual cargo observations remain unchanged; no four-year uninterrupted all-traffic closure is inferred."
+        }
+      ]
+    },
+    {
+      "record_id": "R6-EA-001",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R6-EA-001.json",
+          "sha256": "bd60c98c68dffbe264951b5de68f87eab31baa80f3ab50ad9f4a2befe440f575"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R6-EA-001.json",
+          "sha256": "3fa7b79fe592550441852e26ad0fed88e051113dde8aa4f110e7a279cf5d0f06"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R6-EA-001-D1",
+          "decision": "hold",
+          "category": "multiple_named_sites",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "Formal passenger restriction confirmed through May 12, not reopening or uniform daily enforcement on every trail. March field refusal supports local implementation. Undated goods permission cannot supply a passenger endpoint; no later extension is inferred.",
+          "rationale": "Both original reconstructions agree the canonical passenger prohibition concerns Ta Rung, Cheng, Thanh and Cooc, as explicitly named by the government report, and that goods-only relaxation does not reopen passengers. Neither establishes independently verified control-site geometry for any of the four. Province centres, Lao Bao and the wider frontier would enlarge or replace the named scope, so all geometry remains held."
+        }
+      ]
+    },
+    {
+      "record_id": "R6-EA-006",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R6-EA-006.json",
+          "sha256": "8ae5a87da3b60937b692791b5f21bd8a8c34249b082805d4c7a2337fa6becc03"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R6-EA-006.json",
+          "sha256": "0055118ce0a689f733381603e61d4206aed934d1c2b1885021448593c69d863f"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R6-EA-006-R1",
+          "decision": "partial",
+          "category": "multiple_named_sites",
+          "complete": false,
+          "sites": [
+            {
+              "name": "Sota Indonesian border post",
+              "coordinates": [
+                141.0182738,
+                -8.42796
+              ],
+              "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+              "precision": "Representative point within the named border-post grounds, about 300 m; not an exact barrier",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/way/806707961/full"
+              ],
+              "evidence_note": "Named Sota Border area explicitly tagged border_control, connected to Jalan Akses PLBNT Sota. The named 2024 BNPP service order identifies this Indonesian post, not Sota village or a PNG counterpart.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/759870cdef6955c04823.xml",
+                  "sha256": "cc4e30866b39b002028baed764ed71cf69ac5b5a5c2b1c46bf4e5f6696bac2b7",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both passes locate the same OSM Sota border-control grounds (way 806707961); the verified unique-vertex mean from B is retained. The March source itself identifies the PLBN Sota gate, so this is not a backward projection from the 2024 election source.",
+              "existing_site_id": "post-sota-plbn"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "R6-EA-006-R1: Last substantive observation is March 19; March 20 publication does not extend it. Not reopening, not continuity to December or 2022.\n\nR6-EA-006-REV1: Sota only; overlaps the Sota portion of R6-EA-006-R1 and must not be added arithmetically to it. October 15 is last confirmation, not reopening. Later twice-weekly shopping entry existed by December 29; first permission date unresolved.\n\nPartial later access: a 29 December 2020 interview reports 15–20 nearby PNG residents already shopping at Sota twice weekly. This bounds the Sota shopping restriction by that date; the first permitted shopping day remains unknown. It does not establish reopening at Kali Torasi or Bupul or all-person daily entry at Sota. A planned renewed January 2021 ban is a separate episode.\n\nGeographic qualification: Only Sota is the shared located subset; Kali Torasi and Bupul are unlocated. Preserve March 17–19 2020 observation and the overlapping later Sota phase; no reopening or extension to later 2020 is inferred.",
+          "rationale": "Inspected full-text March 2020 original explicitly identifies PLBN Sota alongside Kali Torasi and Bupul and dates the order March 17 with March 19 confirmation. Both independent passes support the Sota crossing grounds for this period, but neither establishes the other two sites. The point is an approximate crossing-area reference, not an exact historical gate footprint."
+        },
+        {
+          "phase_id": "R6-EA-006-REV1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Sota Indonesian border post",
+              "coordinates": [
+                141.0182738,
+                -8.42796
+              ],
+              "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+              "precision": "Representative point within the named border-post grounds, about 300 m; not an exact barrier",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/way/806707961/full"
+              ],
+              "evidence_note": "Named Sota Border area explicitly tagged border_control, connected to Jalan Akses PLBNT Sota. The named 2024 BNPP service order identifies this Indonesian post, not Sota village or a PNG counterpart.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/759870cdef6955c04823.xml",
+                  "sha256": "cc4e30866b39b002028baed764ed71cf69ac5b5a5c2b1c46bf4e5f6696bac2b7",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "The same Sota control grounds are supported by both original passes. March's original names PLBN Sota; October's original says traditional Sota cross-border routes remain closed after the pandemic closure. The mapped point represents the named crossing area and does not locate every informal trail.",
+              "existing_site_id": "post-sota-plbn"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "R6-EA-006-R1: Last substantive observation is March 19; March 20 publication does not extend it. Not reopening, not continuity to December or 2022.\n\nR6-EA-006-REV1: Sota only; overlaps the Sota portion of R6-EA-006-R1 and must not be added arithmetically to it. October 15 is last confirmation, not reopening. Later twice-weekly shopping entry existed by December 29; first permission date unresolved.\n\nPartial later access: a 29 December 2020 interview reports 15–20 nearby PNG residents already shopping at Sota twice weekly. This bounds the Sota shopping restriction by that date; the first permitted shopping day remains unknown. It does not establish reopening at Kali Torasi or Bupul or all-person daily entry at Sota. A planned renewed January 2021 ban is a separate episode.",
+          "rationale": "The canonical phase is the overlapping Sota-only people-crossing restriction. The inspected March original fixes the named Sota gateway at the beginning; the inspected October 15 original explicitly says traditional Sota routes have not reopened. Both independent passes support that same crossing area. The October date remains last confirmation, with later twice-weekly shopping access bounded by December 29 and no precise reopening inferred."
+        }
+      ]
+    },
+    {
+      "record_id": "R6-EA-002",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R6-EA-002.json",
+          "sha256": "f3868950f9df77fa42fb4f507fa67d3ff5e3d50cfa3fac315e7a64f0611bfb05"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R6-EA-002.json",
+          "sha256": "4410ea8a359b2bb260aeb22c3245685c02984e9db7d08ae31d76196e649b08d8"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R6-EA-002-D1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Tan Thanh–Po Chai cargo road gate",
+              "coordinates": [
+                106.6826938,
+                22.0028832
+              ],
+              "coordinate_method": "Fresh OSM API XML node coordinates",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/5129681124"
+              ],
+              "evidence_note": "Explicit multilingual Tan Thanh border_control node. Vietnamese Ministry of Industry and Trade explicitly pairs Tan Thanh with Po Chai/Pu Zhai for this freight phase.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/5f13a4c89afd7a0189d1.xml",
+                  "sha256": "4b60e4d435d4741725116414eccd7e459ff5182fd67bb242c42f3ccddae43e17",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both independent passes select the exact named border-control node 5129681124 and [106.6826938,22.0028832]. XML multilingual identity agrees with the ministry's Tan Thanh–Po Chai pair.",
+              "existing_site_id": "post-tan-thanh-road"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Chinese reason was not initially announced to the local official; later ministry report supplies public-health attribution. Reopening remained low-capacity. Imports into Vietnam and empty-vehicle returns were possible by December 22–23; not a total two-way border closure.",
+          "rationale": "The inspected official ministry original identifies Tan Thanh–Po Chai, the December 18 2021 suspension and January 25 2022 restored export clearance. Both passes independently support the same road gate for the entire specified export spell. Preserve Vietnam-to-China freight scope, earlier inbound/empty-vehicle exceptions and low-capacity partial operational resumption; no railway or other Lang Son gate is included."
+        }
+      ]
+    },
+    {
+      "record_id": "R6-SC-006",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R6-SC-006.json",
+          "sha256": "dfd42ed199066bc614a425b5c74619a48396893305746a576a15cf7cdc559040"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R6-SC-006.json",
+          "sha256": "ec41e29603267aadf09949ddd88ea433f75381cd4433bc1b10233a93670ac2a7"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R6-SC-006-D1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Dera Baba Nanak Kartarpur passenger terminal",
+              "coordinates": [
+                75.0261097,
+                32.0464044
+              ],
+              "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/way/824588277/full"
+              ],
+              "evidence_note": "Explicit Immigration Complex, Dera Baba Nanak building and border_control outline. Indian MHA and LPAI identify the Indian passenger terminal as the processing point for the Kartarpur corridor opened in November 2019. Mapcarta country-label error is not adopted.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/87c01157bbc5323acb2b.xml",
+                  "sha256": "1e5f566a2648de51f2afe13746793f3cf2c11f2a15cf63df19accac40524356b",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both passes select the identical named Immigration Complex, Dera Baba Nanak outline (OSM way 824588277). Verified B's unique-vertex mean and retained it without averaging A's ring-weighted mean.",
+              "existing_site_id": "post-dera-baba-nanak-ptb"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Exact interval concerns India-side pilgrimage suspension, not a claim that both governments continuously closed every movement. Newspaper June-year wording differs from Pakistan’s official 2020 statement, so no bilateral reopening chronology inferred. Other pilgrimage routes and Pakistani domestic access to shrine are outside this record.",
+          "rationale": "Inspected official MHA onset and resumption releases identify the India-side Kartarpur pilgrimage corridor and continuously suspended service between March 16 2020 and November 17 2021. Both independent passes support the Indian processing facility, which LPAI identifies as opened in November 2019. The marker locates that service, preserving passenger cohort and return journey scope; it does not imply Pakistan-side domestic shrine restrictions or Attari coverage."
+        }
+      ]
+    },
+    {
+      "record_id": "R6-SC-005",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R6-SC-005.json",
+          "sha256": "934626b8b7beb36fa445bf4b7a93da774e2f57dbd60b33d847edbc7d9be032bc"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R6-SC-005.json",
+          "sha256": "bde52da73ad8b82a4854e94f3a43bb2c7659770478cafabc0586168a14b84a72"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R6-SC-005-D1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Kharlachi road border crossing",
+              "coordinates": [
+                69.9539961,
+                33.8290732
+              ],
+              "coordinate_method": "Fresh OSM API XML node coordinates",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/7329110727",
+                "https://api.openstreetmap.org/api/0.6/way/1466971322/full"
+              ],
+              "evidence_note": "Border-control node mapped in March 2020 is a vertex of the named Kharlachi Border Crossing area, way 1466971322. It locates the road crossing, not Kharlachi village or the nearby Borki route.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/d5af77710dfbd9b9ae0a.xml",
+                  "sha256": "2d5978f2184203a4949b6190ca9645e09deddf8a2358e8e90a4279120a810c1b",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "A locates the named Kharlachi crossing polygon; B identifies border-control node 7329110727, inspected as a vertex of that same polygon. The node was mapped in 2020, before the 2024 episode, and is selected directly rather than averaging candidate points.",
+              "existing_site_id": "post-kharlachi-road"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "R6-SC-005-D1: Contemporary TNN, The News and Pajhwok report 21 September as the closure date. This is preferred to APP’s internally inconsistent 9 September date alongside its nine-day duration. The News and Geo share a reporter; overlapping accounts are not counted as wholly independent. Reported nine-day wording is approximate and not a measured elapsed duration. The 1 October vehicle reopening is supported. Scope is Kharlachi, not the whole Pakistan–Afghanistan frontier; regional shortages are not attributed solely to this post.",
+          "rationale": "The inspected TNN original explicitly identifies the September 21 closure of Kharlachi and restored trade/vehicle movements on October 1; A's independent originals identify the same named crossing. Both candidates refer to the same facility, with positive polygon/node identity rather than just proximity. Preserve the conflicting APP onset wording and exclusion of other Kurram roads."
+        }
+      ]
+    },
+    {
+      "record_id": "R8-AS-001",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R8-AS-001.json",
+          "sha256": "14982fe3dd15b773e6c45ae32d6da026ce6e409e3b8cd5346c567198d5a4dc93"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R8-AS-001.json",
+          "sha256": "2be26846b1ad5203aa7582c75d57552668279d827c2681268ae1488a95015078"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R8-AS-001-FU1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Rishtan–Kaytpas road checkpoint, Uzbek side",
+              "coordinates": [
+                71.2733799,
+                40.3432613
+              ],
+              "coordinate_method": "Fresh OSM API XML node coordinates",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/1827188518"
+              ],
+              "evidence_note": "Explicit Rishton border_control node on the road south from Rishtan into Kyrgyzstan. Adjacent Kyrgyz node is currently labelled Kyrgyz-Kyshtak; original 2017 reports explicitly pair Rishtan with Kaytpas. The official indexed Kaytpas coordinate lies far away and is not adopted.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/8e47ef5f256177440567.xml",
+                  "sha256": "ee966b2f933584f95d9a0a0131e9a023fbe929100ce8128d394c17df4bdf25b7",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both original passes select the same explicitly named Uzbek Rishton border-control node 1827188518 and exact coordinate. Inspected Ozodlik accounts identify the Rishton–Kaytpas pair and distinguish Apkan. Fresh Kabar/Uzbek border-authority-attributed reporting confirms that pair; the conflicting official indexed Kaytpas coordinate is not adopted.",
+              "existing_site_id": "post-rishton-kaytpas-road"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "R8-AS-001-FU1: September 19 reporting confirms renewed closure after an intermediate opening. Exact reclosure onset and uninterrupted enforcement are unknown. A September 27 report states that Rishtan–Kaytpas resumed passage for Kyrgyz and Uzbek citizens from September 25, 2017, between 07:00 and 19:00. This is a qualified later-access bound for that citizen cohort, not an exact first-traveller observation or a continuous September 19–25 closure duration. Apkan remained closed; the complete Sokh–Rishtan route, freight and third-country eligibility are not established. Do not carry the 2013 closure uninterrupted to 2017.\n\nGeographic qualification: Approximate Uzbek-side Rishton facility reference only. The official indexed Kaytpas coordinate conflicts and is not used. Preserve the September 19 renewed-closure observation and September 25 citizen-only later-access bound; Apkan, the entire Sokh route and a continuous 2013–2017 closure are excluded.",
+          "rationale": "The original September 19 and 27 Ozodlik texts independently preserved by B describe the same specific Rishton–Kaytpas crossing before and after the reported reclosure. A also identifies this pair. Named-node geometry therefore applies to the native observation, not merely an unrelated later reopening site. No duration or wider route continuity is inferred."
+        }
+      ],
+      "review_evidence": [
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-tail-review/rishtan-identity-search.json",
+          "access": "fresh indexed search extracts; supplemental identity/history only",
+          "sha256": "7d628015a38887ee0b1a7ee55da992ae4f994ed640f9686f7ffc36d2f30f1456"
+        }
+      ]
+    },
+    {
+      "record_id": "R12-AS-001",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R12-AS-001.json",
+          "sha256": "1aebf7fb7f0f6317c57dc0f8989743b78da5f49ea1fd913794dd750a162f7288"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R12-AS-001.json",
+          "sha256": "041875905df5d5b0f1e83036136a770ad2c67d52e386911b88d165e3f0c1f23b"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R12-AS-001-D1",
+          "decision": "partial",
+          "category": "single_site",
+          "complete": false,
+          "sites": [
+            {
+              "name": "Ban Khao Din–Sampov Loun bridge, Cambodian end",
+              "coordinates": [
+                102.3588861,
+                13.4323333
+              ],
+              "coordinate_method": "Fresh OSM API XML node coordinates",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/7204472878"
+              ],
+              "evidence_note": "Explicit named Sampov Lun border_control immediately east of bridge way593089110; the west side has named Ban Khao Din Customs Clearing Point. Original Thai reporting identifies Cambodian bridgehead at this exact pair, not Ban Khao Din village or Phsar Prom.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/84227fbcdf7f5db7993e.xml",
+                  "sha256": "610d19749093342b568488a990c032caa9a0e765ab92f8397f225752e0e3da61",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both original passes select exact named Sampov Lun border-control node 7204472878. Inspected adjacent mapped bridge and named Thai customs pair establish the Cambodian bridge-approach identity.",
+              "existing_site_id": "post-khao-din-sampov-loun"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Shown as an episode occurring on this date, not a whole-day closure. Reports agree on date and10:00normal trader crossing, differ on06:00versus06:30onset. Similar named accounts form a shared lineage. No exact-hour duration or universal Thai gate closure inferred. Requests forwarded does not establish permanent import-rule change.\n\nGeographic qualification: The Cambodian crossing/bridge-approach reference is located; the exact historical crowd obstruction footprint remains unlocated. Preserve the same-day episode and conflicting approximate onset times.",
+          "rationale": "Inspected original Matichon full-text cache identifies the October 15 2017 Cambodian bridgehead obstruction at Ban Khao Din. Both reconstructions support the same named crossing area, but neither surveys the blocked portion of bridge or crowd footprint. Partial represents this located spatial reference only and does not turn the event into a universal Thai gate closure."
+        }
+      ]
+    },
+    {
+      "record_id": "R13-AS-001",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R13-AS-001.json",
+          "sha256": "3cc3ac556f2a4e32085822547540ee46db1fc382f07668c535ade373bd9fea5c"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R13-AS-001.json",
+          "sha256": "16ed553e5eb411942e4ff8e0205397c9d35b5a9051a916006e9042cd6db196d0"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R13-AS-001-D1",
+          "decision": "partial",
+          "category": "single_site",
+          "complete": false,
+          "sites": [
+            {
+              "name": "Ban Khao Din–Sampov Loun bridge, Cambodian end",
+              "coordinates": [
+                102.3588861,
+                13.4323333
+              ],
+              "coordinate_method": "Fresh OSM API XML node coordinates",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/7204472878"
+              ],
+              "evidence_note": "Explicit named Sampov Lun border_control immediately east of bridge way593089110; the west side has named Ban Khao Din Customs Clearing Point. Original Thai reporting identifies Cambodian bridgehead at this exact pair, not Ban Khao Din village or Phsar Prom.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/84227fbcdf7f5db7993e.xml",
+                  "sha256": "610d19749093342b568488a990c032caa9a0e765ab92f8397f225752e0e3da61",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both independent passes select exact Sampov Lun border-control node 7204472878 opposite Ban Khao Din customs. The January original explicitly names the pair and negotiation at their friendship bridge.",
+              "existing_site_id": "post-khao-din-sampov-loun"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Shown as an episode occurring on this date, not a whole-day closure. Accounts share named sources and are not treated as independent confirmations. Crowd estimates differ and are omitted. Around06:00 onset and around08:00 dispersal are reported clock times, not a measured duration. Temporary trading accommodation is not proof of a lasting hours policy.\n\nGeographic qualification: The Cambodian crossing/bridge-approach reference is located; the exact historical vendor obstruction footprint remains unlocated. Preserve the distinct January 5 same-day episode and approximate clock times.",
+          "rationale": "Inspected original January Matichon full-text cache identifies the trader blockade at the same named international bridge/crossing, separately from October's episode. Both passes substantiate the crossing reference; the precise obstruction extent is not located. Temporary trader accommodation and subsequent market activity are not converted into a permanent hours policy."
+        }
+      ]
+    },
+    {
+      "record_id": "R15-SM-003",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/R15-SM-003.json",
+          "sha256": "bd3991883e0128c90359770e660ae8f5ff29c982194aa23c5b325145fbb03ee7"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/R15-SM-003.json",
+          "sha256": "c1ace685035b4b265ad70a72fbea0ec4f920d1a4b4d47a3e4e03df0bcd4193a5"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "R15-SM-003-D1",
+          "decision": "hold",
+          "category": "single_site",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "Excludes the July 2 initial action, which was lifted. Not an uninterrupted July 2–5 period or a passenger closure; calendar boundaries do not claim two full 24-hour days. Informant independence across reports is not assumed.",
+          "rationale": "Both reconstructions identify renewed July 3–5 2018 India-to-Bangladesh cargo obstruction at Hili zero line, but only A accepts a road-number transition node as its geometry. B explicitly withholds a coordinate after inspecting topology and customs description. The untagged road node is not independently verified as the zero-line control/blockade point, and town, railway station or future ICP substitutions are rejected. Preserve the intervening July 2 opening."
+        }
+      ]
+    },
+    {
+      "record_id": "FU-COV-EAS-001",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/FU-COV-EAS-001.json",
+          "sha256": "952f377ee2402587b872afd90dabb64e48bbc9bf7c5e4663afe4ef28de9c95b5"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/FU-COV-EAS-001.json",
+          "sha256": "588888d69544531ce9cf8398509869210361e7f0b1f82f6cbb1aa0166d08e15c"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "FU-COV-EAS-001-FU1",
+          "decision": "partial",
+          "category": "single_site",
+          "complete": false,
+          "sites": [
+            {
+              "name": "Mae Sai–Tachileik Second Friendship Bridge",
+              "coordinates": [
+                99.9046332,
+                20.4485166
+              ],
+              "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/way/1414015772/full"
+              ],
+              "evidence_note": "Named Second Friendship Bridge over the Sai River. Thai Customs and IDE field-study sources distinguish the second Mae Sai bridge at San Phak Hi from the first bridge; Mae Sot bridges are a different border town.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/441a1965dcff0fc425e3.xml",
+                  "sha256": "e0d98cbaa6cfb10d35ebcb803a4047bc35fd0c70987b3affffaa6149a4b275f1",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "A's named road bridge way 406008983 and B's named structural outline 1414015772 identify the same Second Mae Sai–Tachileik Friendship Bridge. Inspected B outline; its unique-vertex mean is retained as a bridge-area reference, without averaging coordinates.",
+              "existing_site_id": "post-maesai-tachileik-bridge-2"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "FU-COV-EAS-001-FU1: February 20 is a closed-state observation; exact reopening and overnight continuity remain unknown. Cargo passage at the same second bridge is directly reported from 06:30 on February 23, bounding the earlier interruption by then.\n\nFU-COV-EAS-001-FU2: The February 21 closure lasted five to ten minutes around 11:00; no whole-day duration is inferred.\n\nA separate February 22 strike-related cessation affected cargo operators and warehouses. Keep it separate from the earlier protest blockades and from the COVID passenger restrictions.\n\nGeographic qualification: Only the named second bridge area is located; the precise Myanmar gate/barricade footprint remains unlocated. Keep February 20 and the five-to-ten-minute February 21 interruption separate, without overnight continuity or a whole-day duration.",
+          "rationale": "Both passes and the inspected Thai originals distinguish the second Mae Sai bridge from bridge I and from Mae Sot. The February 21 original explicitly describes the short Myanmar-side gate shutdown; February 20 is a separate closed-state observation. Shared geometry supports a spatial bridge reference, not the exact protest footprint or an expanded continuous interval."
+        },
+        {
+          "phase_id": "FU-COV-EAS-001-FU2",
+          "decision": "partial",
+          "category": "single_site",
+          "complete": false,
+          "sites": [
+            {
+              "name": "Mae Sai–Tachileik Second Friendship Bridge",
+              "coordinates": [
+                99.9046332,
+                20.4485166
+              ],
+              "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/way/1414015772/full"
+              ],
+              "evidence_note": "Named Second Friendship Bridge over the Sai River. Thai Customs and IDE field-study sources distinguish the second Mae Sai bridge at San Phak Hi from the first bridge; Mae Sot bridges are a different border town.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/441a1965dcff0fc425e3.xml",
+                  "sha256": "e0d98cbaa6cfb10d35ebcb803a4047bc35fd0c70987b3affffaa6149a4b275f1",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "A's named road bridge way 406008983 and B's named structural outline 1414015772 identify the same Second Mae Sai–Tachileik Friendship Bridge. Inspected B outline; its unique-vertex mean is retained as a bridge-area reference, without averaging coordinates.",
+              "existing_site_id": "post-maesai-tachileik-bridge-2"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "FU-COV-EAS-001-FU1: February 20 is a closed-state observation; exact reopening and overnight continuity remain unknown. Cargo passage at the same second bridge is directly reported from 06:30 on February 23, bounding the earlier interruption by then.\n\nFU-COV-EAS-001-FU2: The February 21 closure lasted five to ten minutes around 11:00; no whole-day duration is inferred.\n\nA separate February 22 strike-related cessation affected cargo operators and warehouses. Keep it separate from the earlier protest blockades and from the COVID passenger restrictions.\n\nGeographic qualification: Only the named second bridge area is located; the precise Myanmar gate/barricade footprint remains unlocated. Keep February 20 and the five-to-ten-minute February 21 interruption separate, without overnight continuity or a whole-day duration.",
+          "rationale": "Both passes and the inspected Thai originals distinguish the second Mae Sai bridge from bridge I and from Mae Sot. The February 21 original explicitly describes the short Myanmar-side gate shutdown; February 20 is a separate closed-state observation. Shared geometry supports a spatial bridge reference, not the exact protest footprint or an expanded continuous interval."
+        }
+      ]
+    },
+    {
+      "record_id": "C7-SC-002",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/C7-SC-002.json",
+          "sha256": "ffb37d2b9b3856b4564b6654ea8a0182e6b53dd595d2b69750ab14e98a1402a0"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/C7-SC-002.json",
+          "sha256": "6d0818d9a97b1c34cc19daadc426e4962f767097aeb51e6db120c3390fd7fdf5"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "C7-SC-002-P1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Abresham / Silk Bridge–Milak crossing",
+              "coordinates": [
+                61.8222017,
+                30.9665382
+              ],
+              "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/342627234",
+              "precision": "Bridge crossing-area reference, approximately 300 m; passenger desk and exact 2022 barrier position not asserted.",
+              "source_urls": [
+                "https://www.openstreetmap.org/way/342627234",
+                "https://api.openstreetmap.org/api/0.6/map?bbox=61.81,30.96,61.83,30.98",
+                "https://www.ecoi.net/en/file/local/2103762/General%2BCountry%2Bof%2BOrigin%2BReport%2BAfghanistan%2BJune%2B2023.pdf"
+              ],
+              "evidence_note": "AH71 bridge segment on Zaranj–Deleram road between mapped Milak terminal and Afghan customs; Dutch MFA country report explicitly equates Zaranj/Milak, Silk Bridge and Abresham.",
+              "osm_feature": "way/342627234",
+              "osm_version": "9",
+              "osm_timestamp": "2026-02-25T16:35:30Z",
+              "identity_tags": {
+                "bridge": "yes",
+                "highway": "primary",
+                "int_ref": "AH71",
+                "layer": "1",
+                "name": "جاده زرنج - دلارام",
+                "name:en": "Zaranj - Deleram road",
+                "name:fa": "جاده زرنج - دلارام",
+                "name:ru": "Дорога Зарандж - Делерам"
+              },
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-a/area-milak.xml",
+                  "sha256": "b1e9128bc01432e944a6ae1143c805c11768e4d7ca17a337972af207aef60845",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "A selects the old AH71 bridge and B its adjoining pre-2022 named Milak terminal. Reopened EUAA report explicitly equates Zaranj/Milak, Silk Bridge and Abresham. Inspected XML places the AH71 bridge directly at that terminal; these are components of the same named passenger crossing. The source-derived bridge coordinate from A is retained without averaging.",
+              "existing_site_id": "bridge-abresham-milak"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "C7-SC-002-P1: Exact onset is unknown; an approximate two-week description is not converted into a date. Khaama Press reports a Nimroz official's statement that legal passenger travel into Iran resumed on 18 July 2022; independently witnessed first passage and Iranian counterpart corroboration remain unavailable.\n\nEarlier temporary access: Salam Watandar reported on 6 July 2022 that Nimroz authorities had temporarily opened Abresham that morning for passengers with legal documents and transit vehicles on both sides until 21:00. This is an authority-reported temporary opening, not evidence of permanent restoration. A subsequent reclosure date is not established.\n\nContinuity: Do not treat the period before 18 July as one uninterrupted closure. The earlier temporary opening, unknown onset and approximate retrospective duration require separate observations; numeric duration remains withheld. Freight and reverse-direction scope for the 18 July report remain unestablished.",
+          "rationale": "Original Khaama and Salam Watandar texts identify passenger restriction and temporary/restored access at Abresham/Silk Bridge in July 2022. Both independent passes support this same paired crossing, with explicit official-report aliases and existing terminal/bridge geometry. The original retrospective interruption is geographically tied to this bridge, while native unknown onset, July 6 temporary access, July 18 reported restoration, and no continuity inference are preserved."
+        }
+      ],
+      "review_evidence": [
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-tail-review/c7-source-find.json",
+          "access": "reopened EUAA PDF targeted text; aliases at pages 49 and 55",
+          "sha256": "343d3901a9e736bbbfe89e7e9c0e6f905e76bfe2e92cc8ae75ecdebe05771592"
+        }
+      ]
+    },
+    {
+      "record_id": "C7-SC-003",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/C7-SC-003.json",
+          "sha256": "e88bdbf5bed367be86d9dfc19bb1fe82e64fe1b6e4526931bcbc42dbafb7eaaf"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/C7-SC-003.json",
+          "sha256": "be965aed2a9cbdce13fad4c6c31fe4b9af445b2d98e05bae8ef6682424d1f13e"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "C7-SC-003-P1",
+          "decision": "partial",
+          "category": "multiple_named_sites",
+          "complete": false,
+          "sites": [
+            {
+              "name": "Odzisi–Mosabruni / Razdakhan crossing",
+              "coordinates": [
+                44.4871514,
+                42.0682341
+              ],
+              "coordinate_method": "Fresh OSM API XML node coordinates",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/1203169771"
+              ],
+              "evidence_note": "OSM named Razdakhan-Mosabruni border_control; DRI 2024 report explicitly equates Odzisi-Mosabruni with Razdakhani. EUMM names Odzisi in the 2019, 2022 and 2026 phase evidence.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/3136f4dca29f516fb338.xml",
+                  "sha256": "f19d07825a2d92dbb28f11dfb4ce7cf2db0db05bc6fdecd3d49ca5c7b9dbcbdc",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both passes select identical Razdakhan-Mosabruni control node 1203169771 and coordinates. Historical membership in the civilian crossing category is independently supported by the 2017 implementation account and Council of Europe reporting, both reopened for reconciliation.",
+              "existing_site_id": "post-odzisi-mosabruni"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "C7-SC-003-P1: The KGB-announced window is 34 hours, from 20:00 on 24 May to 06:00 on 26 May 2019. Actual implementation at individual posts and completed reopening were not established. The duration describes the order, not verified elapsed closure.\n\nGeographic qualification: Odzisi–Mosabruni/Razdakhan is the shared verified subset; the complete affected civilian checkpoint roster is not geolocated. Preserve the May 24 20:00–May 26 06:00 order and unverified implementation/reopening.",
+          "rationale": "The reopened 2019 original orders civilian passage stopped through checkpoints, without naming the complete set. Reopened 2017 local implementation reporting names Razdakhan, and contemporary Council of Europe reporting describes civilian crossings at Odzisi/Mosabruni. Both original passes substantiate this member before the native order; only that spatial subset is approved, not an entire ABL line."
+        }
+      ],
+      "review_evidence": [
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-tail-review/c7-source-open.json",
+          "access": "full original articles reopened",
+          "sha256": "699680dacd4c42c0150c56bdddc6b80b3f35fe0e64a1506f366431d7b5968439"
+        },
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-tail-review/c7-source-find.json",
+          "access": "targeted Council of Europe PDF text reopened",
+          "sha256": "343d3901a9e736bbbfe89e7e9c0e6f905e76bfe2e92cc8ae75ecdebe05771592"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R11-001",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R11-001.json",
+          "sha256": "3f427285e819c311be870c424bd9a789636f23db401cbb8a90cbb7f9a2642f33"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R11-001.json",
+          "sha256": "213b56641bff2f625e66c3f613b4a8b9c6328afbe651535b4b36dedc17325396"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R11-001-P1",
+          "decision": "hold",
+          "category": "single_site",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "The centre was already reported closed for coronavirus prevention by 27 January 2020; this is a latest-onset bound, not an exact observed start. The report distinguishes an earlier holiday closure from 22 January, whose onset is not imported into this COVID phase. The earliest COVID-related onset and uninterrupted continuity are not established, so numeric duration remains withheld. Kazakh visitors were observed entering the Chinese section on 17 April 2023. The abandoned 8 January plan and the separate 24 April normal-operations announcement are not substituted for that scoped observed return. Ordinary road freight, rail traffic and commercial import permissions are outside this phase.",
+          "rationale": "The original records and both passes identify Kazakh visitors entering the Chinese section of the enclosed Khorgos centre, separate from ordinary road/rail traffic and domestic visitor entrances. A alone accepts a Kazakh retail-zone centroid with 2 km uncertainty; B expressly rejects both that centroid and the Chinese domestic entrance because neither locates the controlled inter-section passage. Thus no shared phase-specific geometry is approved. Preserve bounded onset, uncertain continuity and April 17 observed scoped return."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R11-002",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R11-002.json",
+          "sha256": "f6a8159763c0dd75f7294e6f11b99ca69657a2240a942315cdad42b6808c9982"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R11-002.json",
+          "sha256": "f60f5bd5b0c6aa48989595799190cf6613939966f70a8d88ae75a576dcef1b6a"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R11-002-P1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Manzhouli–Zabaykalsk railway boundary",
+              "coordinates": [
+                117.3395418,
+                49.6301082
+              ],
+              "coordinate_method": "Fresh OSM API XML node coordinates",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/9989738820"
+              ],
+              "evidence_note": "OSM railway=border node among the parallel 1435/1520mm tracks at the international gateway. Wikimedia geolocated railway-crossing photographs and UNESCAP railway study independently establish the named international rail connection before2021. Not the road port or tourist gate building.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/c9392d7cc1e1f2a2a080.xml",
+                  "sha256": "954409f2d26bea53d544e0c204e055a2f1b2e348c3762add736ee9ddfa70f878",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "A's explicitly georeferenced Manzhouli–Zabaykalsk railway crossing and B's railway=border node 9989738820 are approximately 22 metres apart at the same rail gateway. Inspected DMS source and OSM XML/parallel-track evidence; B's node coordinate is retained without averaging.",
+              "existing_site_id": "post-manzhouli-zabaykalsk-rail"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "REC50-R11-002-P1: CNR’s substantive indexed report gives the December onset and matching timber/mineral-powder arrivals on 14 January. Direct page access failed. The 44-day operational phase is limited to that returning cargo. Container traffic lies outside the cited selected non-container restriction; no uninterrupted container-service history or uniform endpoint for other commodities is inferred.\n\nREC50-R11-002-P2: The 13 January dispatch announces permission from 14 January midnight and describes preparations. Its republication on 14 January is not operational observation. Passenger restrictions under EA005 and rail cargo under P1 remain separate.\n\nThe first actual road-export passage is unverified. Selected rail commodities have different restoration dates, as specified below.\n\nThe January 17, 2022 Inner Mongolia Daily report hosted by People’s Daily states that bulk grain and fertilizer import business had resumed on December 30, 2021. This earlier commodity transition leaves timber/mineral-powder January 14 and road-export permission unchanged. LPG’s initial suspension remains unestablished. Direct People’s Daily access failed; substantive indexed text was inspected.",
+          "rationale": "Both independent passes distinguish the railway gateway from the road cargo port and support the timber/mineral-powder phase at that gateway. Inspected NHC onset reporting separates non-container rail imports; original indexed CNR evidence supplies the matching commodity return. Preserve December 1 2021–January 14 2022 and do not generalise to containers or other commodities."
+        },
+        {
+          "phase_id": "REC50-R11-002-P2",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Manzhouli road freight checkpoint",
+              "coordinates": [
+                117.3777412,
+                49.6279132
+              ],
+              "coordinate_method": "Fresh OSM API XML node coordinates",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/10548298273"
+              ],
+              "evidence_note": "Explicit border_control named international cargo checkpoint Manzhouli in Russian, within the named Manzhouli road port grounds. Passenger gates are separately mapped farther west; railway crossing lies about2.8km west.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/1701f3deef88ee9eb5bb.xml",
+                  "sha256": "d30d93015880bb4e1ef8ae1a838063a96fe6d2b5bda57530df8a7f7acd29e021",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both original passes select identical explicitly named international cargo border-control node 10548298273 at the Manzhouli road port. XML distinguishes the freight facility from passenger controls and the railway gateway.",
+              "existing_site_id": "post-manzhouli-road-cargo"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "REC50-R11-002-P1: CNR’s substantive indexed report gives the December onset and matching timber/mineral-powder arrivals on 14 January. Direct page access failed. The 44-day operational phase is limited to that returning cargo. Container traffic lies outside the cited selected non-container restriction; no uninterrupted container-service history or uniform endpoint for other commodities is inferred.\n\nREC50-R11-002-P2: The 13 January dispatch announces permission from 14 January midnight and describes preparations. Its republication on 14 January is not operational observation. Passenger restrictions under EA005 and rail cargo under P1 remain separate.\n\nThe first actual road-export passage is unverified. Selected rail commodities have different restoration dates, as specified below.\n\nThe January 17, 2022 Inner Mongolia Daily report hosted by People’s Daily states that bulk grain and fertilizer import business had resumed on December 30, 2021. This earlier commodity transition leaves timber/mineral-powder January 14 and road-export permission unchanged. LPG’s initial suspension remains unestablished. Direct People’s Daily access failed; substantive indexed text was inspected.",
+          "rationale": "Inspected NHC and January 13 CRI dispatches distinguish road-export suspension and January 14 trailer-exchange authorisation from railway imports. Both independent passes support the same cargo road facility for this legal-policy segment. The first actual road export remains unverified, and the date is not converted into an operational reopening."
+        },
+        {
+          "phase_id": "REC50-R11-002-AUDIT20261025-1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Manzhouli–Zabaykalsk railway boundary",
+              "coordinates": [
+                117.3395418,
+                49.6301082
+              ],
+              "coordinate_method": "Fresh OSM API XML node coordinates",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/9989738820"
+              ],
+              "evidence_note": "OSM railway=border node among the parallel 1435/1520mm tracks at the international gateway. Wikimedia geolocated railway-crossing photographs and UNESCAP railway study independently establish the named international rail connection before2021. Not the road port or tourist gate building.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/c9392d7cc1e1f2a2a080.xml",
+                  "sha256": "954409f2d26bea53d544e0c204e055a2f1b2e348c3762add736ee9ddfa70f878",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "A's explicitly georeferenced Manzhouli–Zabaykalsk railway crossing and B's railway=border node 9989738820 are approximately 22 metres apart at the same rail gateway. Inspected DMS source and OSM XML/parallel-track evidence; B's node coordinate is retained without averaging.",
+              "existing_site_id": "post-manzhouli-zabaykalsk-rail"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "REC50-R11-002-P1: CNR’s substantive indexed report gives the December onset and matching timber/mineral-powder arrivals on 14 January. Direct page access failed. The 44-day operational phase is limited to that returning cargo. Container traffic lies outside the cited selected non-container restriction; no uninterrupted container-service history or uniform endpoint for other commodities is inferred.\n\nREC50-R11-002-P2: The 13 January dispatch announces permission from 14 January midnight and describes preparations. Its republication on 14 January is not operational observation. Passenger restrictions under EA005 and rail cargo under P1 remain separate.\n\nThe first actual road-export passage is unverified. Selected rail commodities have different restoration dates, as specified below.\n\nThe January 17, 2022 Inner Mongolia Daily report hosted by People’s Daily states that bulk grain and fertilizer import business had resumed on December 30, 2021. This earlier commodity transition leaves timber/mineral-powder January 14 and road-export permission unchanged. LPG’s initial suspension remains unestablished. Direct People’s Daily access failed; substantive indexed text was inspected.",
+          "rationale": "Both passes independently support the rail gateway and the separately recorded grain/fertilizer import scope. The original indexed People’s Daily-hosted report gives December 30 restoration for these commodities; the January timber/mineral and road dates are not substituted. Preserve the native formal-policy interpretation and exclude LPG's unestablished initial suspension."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R11-003",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R11-003.json",
+          "sha256": "f6a81a4601a09ec98fdd715b26ffa677b80406c2ed359926d2e5e69dfb8b552f"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R11-003.json",
+          "sha256": "cf9d7a60006a235755bad15a6f76ba3f8c9220159f4a6b0552231b9913eb109b"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R11-003-P1",
+          "decision": "hold",
+          "category": "single_site",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "REC50-R11-003-P1: Reuters describes the 29–30 November midnight boundary; Interfax reports Russian Railways explicitly dating the Suifenhe suspension to 30 November 2021. A 9 December Logirus report, attributed to Russia’s Ministry of Industry and Trade and trade representation in China, corroborates 6 December permission for specified goods, retaining covered and temperature-controlled wagon restrictions. EastRussia independently reports the same permission date through Biang. Original Chinese notices and the first matching returning train remain unavailable, so this is a reported policy interval, not a verified operational reopening. The Logirus article contains an impossible retrospective reference to 30 December in its final paragraph; that date is not used. Container traffic and EA006 road-passenger restrictions are separate.",
+          "rationale": "Original scope is selected non-container railway imports through Grodekovo–Suifenhe. A alone proposes a south-yard polygon; B explicitly withholds geometry because historical freight-route/yard applicability is not established and identifies later tunnel changes. No shared geometry is available. Preserve the November 30–December 6 reported policy interval, wagon exceptions and road/passenger exclusions."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R11-004",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R11-004.json",
+          "sha256": "a41e2a11c06a616e8e127b1cca4c6d44d0ec46c3dbb22469a241bf2a216bd617"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R11-004.json",
+          "sha256": "6ff8445c3cabd94a1c745ee93dd3ed38c5625e6951e5b516cbaca68342d2a58f"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R11-004-P1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Erenhot / Erlian international railway port",
+              "coordinates": [
+                111.9811223,
+                43.6551908
+              ],
+              "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/277606205",
+              "precision": "Named international railway-station complex reference, approximately 1.5 km; specific broad-gauge import inspection facility remains unlocated.",
+              "source_urls": [
+                "https://www.openstreetmap.org/node/277606205",
+                "https://api.openstreetmap.org/api/0.6/map?bbox=111.96,43.64,112.02,43.72"
+              ],
+              "evidence_note": "Named Erenhot rail station node in rail-port station complex. Xinhua Finance closure report specifically attributes restriction and restoration to Erlian station; municipal government identifies it as international transshipment station. Marker does not claim exact border-line or freight disinfection gantry.",
+              "osm_feature": "node/277606205",
+              "osm_version": "15",
+              "osm_timestamp": "2025-02-27T14:43:27Z",
+              "identity_tags": {
+                "alt_name": "二连站",
+                "name": "二连",
+                "name:en": "Erenhot",
+                "name:ru": "Эрен-Хото",
+                "name:zh": "二连",
+                "public_transport": "station",
+                "railway": "station",
+                "uic_ref": "3300007",
+                "wikidata": "Q5964925",
+                "wikipedia": "zh:二连站"
+              },
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-a/area-erenhot-rail.xml",
+                  "sha256": "68839e0aca29e65cc7497fa375354063456fc724c7251bcb3202294a7e53d569",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both independent passes select exact Erenhot/Erlian railway station node 277606205 and [111.9811223,43.6551908]. Inspected name, railway and UIC tags; A's broader 1.5 km station-complex precision is retained because individual freight inspection sites are not located.",
+              "existing_site_id": "rail-erenhot"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Selected non-container rail imports were suspended from 28 November 2021, with permission for iron ore, coal and bagged goods in open wagons from 27 January 2022. This is a 60-day policy-date difference. An ore train was reported to have recently arrived by 7 February; its exact first arrival day remains unknown. EA029 concerns the separate China-to-Mongolia road-freight phase; its December dates are not rail endpoints. Container traffic and other commodity restoration dates are not generalised.",
+          "rationale": "Inspected CNFIN original attributes the November 28 suspension and January 27 permission to the Erenhot railway port/station and identifies the selected cargo. Both passes substantiate the same rail-station complex, supported by international transshipment descriptions. This is a railway facility reference, not a road port or exact disinfection gantry; no first returning train date is invented."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R12-005",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R12-005.json",
+          "sha256": "2661d55e10edc0baa12b15571de896abbc58ad2a133f8ead8d0e90d7541c345b"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R12-005.json",
+          "sha256": "eb8058a26dd88e56cd84f56621d3cb51a624d19e50df0b8ee680a62bde6f55aa"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R12-005-P1",
+          "decision": "hold",
+          "category": "single_site",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "30 August to 5 September gives six-calendar-day difference. One report calls it five days and morning resumption; others say noon/12:15. Retain the common calendar dates but do not select an exact clock duration. Passport-holder passage remained normal.",
+          "rationale": "The original UNB/BSS accounts identify Hili road goods interchange and normal passport-passenger passage. A alone accepts an untagged road-number transition node, while B explicitly rejects it as an unverified goods-control coordinate. No two-pass-supported site can be approved; the railway station, town and planned ICP are not substitutes. The August 30–September 5 2026 dates and clock discrepancy remain unchanged."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R17-001",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R17-001.json",
+          "sha256": "5e1b8a1fc3f3537dd28f8301124bd02b2322d725c60a21d9f651b25b292214ca"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R17-001.json",
+          "sha256": "36bb761560218cccc608df6bdad54b93ce8cab1589156c9324f7e47852739b83"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R17-001-P1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Kaplanbek–Navoi road checkpoint",
+              "coordinates": [
+                69.206589,
+                41.4562614
+              ],
+              "coordinate_method": "Fresh OSM API XML node coordinates",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/332389741"
+              ],
+              "evidence_note": "Explicit Qaplanbek/Kaplanbek border_control node, paired with Navoi/Zangiata by the official Uzbek checkpoint inventory and reconstruction reports. It is not the similarly named village or Tashkent taxi stand.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/d376a28682d298297e03.xml",
+                  "sha256": "cbd4bfb01e9746ceaa5ffab364afc3a3a90ecf4bcf47c55c97f255ccd75594a7",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both original passes select exact named Kaplanbek border-control node 332389741 and coordinates. Official rosters and the original reconstruction accounts pair Kaplanbek with Navoi/Zangiota; rebuilding expands the same checkpoint rather than identifying a replacement crossing.",
+              "existing_site_id": "post-kaplanbek-navoi-road"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Closed by 6 December 2022; the earlier December 1 announcement is not an observed exact onset. Limited personal passage is supported between the January 27 technical opening and the January 29 report of a first passenger. February 5 full capacity was prospective, and freight restoration is separate. Unknown onset prevents a numeric duration.",
+          "rationale": "Inspected December 6 2022 closure and January 29 2025 restoration accounts identify the same Kaplanbek–Navoi facility on either side of reconstruction. The source describes expansion of the checkpoint's grounds, so its crossing-area identity applies to the native phase. Preserve latest-onset bound, January 27–29 limited passenger-return interval and separate prospective full/freight capacity."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R17-002",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R17-002.json",
+          "sha256": "3828cf54bffb8a77d926d918b73371eddf3dc61b3894d201d1973d480d57c6fb"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R17-002.json",
+          "sha256": "1bd5346dc6157c3c545a780723ab5e858695730d9b62c905d0bf8e03ce90526c"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R17-002-P1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Zhibek Zholy–Gisht Kuprik road crossing",
+              "coordinates": [
+                69.3585889,
+                41.4714641
+              ],
+              "coordinate_method": "Fresh OSM API XML node coordinates",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/1544965729"
+              ],
+              "evidence_note": "Named Gisht Kuprik border_control, old name Chernyaevka, with foot and motor-vehicle tags in a2017 version. Official checkpoint roster pairs Gisht-Kuprik with Jibek Joli. Approximate established crossing reference despite reconstruction.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/60f68c71aa1a5e6fac1c.xml",
+                  "sha256": "90b3f8723ac3b350bb51cdbd2c75465ab58b8d5002f7759e36b208df33e47e19",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "A's named Jibek Joly control and B's named Gisht Kuprik control are about 76 metres apart within the explicitly paired crossing. Both sides are included in the native paired closure; B's pre-2025 node is retained without averaging.",
+              "existing_site_id": "post-zhibek-zholy-gishtkuprik-road"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "REC50-R17-002-P1: Closure from 5 February 2025 is recalled in September 2026 reporting. On 23 October 2026, Uzbek and Kazakh representatives were still coordinating simultaneous reopening: construction completion and readiness did not establish restored paired passage. The 625-day calendar separation to that later status report is a lower bound for the reported continuing restriction, not an exact elapsed-hour total or a reopening date. No operational reopening is established by the evidence cutoff of 26 October 2026.",
+          "rationale": "Inspected contemporaneous Kazinform notice explicitly pairs the two road gates for the February 5 2025 closure, and the October 23 2026 account still coordinates their simultaneous reopening. Both passes substantiate that same paired facility across reconstruction. Preserve pedestrian/vehicle scope and last-confirmed date; readiness and current OSM access tags do not establish operational reopening."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R17-003",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R17-003.json",
+          "sha256": "f233b6f11367beb2828998fd85dd71ddd2f664d35b7dedc19ea6bedd6c9c89bd"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R17-003.json",
+          "sha256": "69ebcf9fe5795b37bbc57032c1ea5bec8ef32266ab046d34224cc054e9031f8d"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R17-003-P1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Tazhen–Daut Ata road checkpoint",
+              "coordinates": [
+                55.9968423,
+                44.895754
+              ],
+              "coordinate_method": "Fresh OSM API XML node coordinates",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/10253448422"
+              ],
+              "evidence_note": "Named Tajen/Tazhen road border-control node, versionMay2024 before the passenger suspension. Dovut-Ata lies opposite; nearby Oazis railway station and Tazhen village are distinct.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/3b8a14b3b01bf11f7d34.xml",
+                  "sha256": "f2bf2952eeeb33efa90e4d2da0a793936ddcf2abc30a9a00d98b8b1bb2941108",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both candidates explicitly name Tajen/Tazhen on the Kazakh side of the same road crossing, roughly 36 metres apart and mapped before the 2025 work. B's directly sourced node is retained without averaging; current access tags are not used to reconstruct passenger permissions.",
+              "existing_site_id": "post-tazhen-daut-ata-road"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "People, passenger cars and buses are reported restricted from 1 February through 29 December 2025. Tazhen technical commissioning did not restore paired passage because Daut Ata still restricted this cohort. Heavy freight continued. The original light-freight restriction is not silently carried into the later scoped phase. An undated retrieved NewTimes account is not used to advance the numeric last-confirmed date.",
+          "rationale": "Inspected official onset/extension evidence names Tazhen–Daut Ata and the passenger cohort; both independent passes distinguish its road controls from Oazis rail and village points. The same facility is supported throughout the native February–December 2025 phase, including continued opposite-side restriction after commissioning. Heavy freight remains excluded and no technical opening is treated as paired restoration."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R17-004",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R17-004.json",
+          "sha256": "ba5bd1990cb5f27ff989f98d34ad8c8e295f24a70549f8b014d73faf2d397236"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R17-004.json",
+          "sha256": "829b25b76b0348133336b33d149e7367802dc4c85e93c5ce96d595e90117bd9d"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R17-004-P1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Atameken–Gulistan/Syrdarya road crossing",
+              "coordinates": [
+                68.560429,
+                40.8369832
+              ],
+              "coordinate_method": "Fresh OSM API XML node coordinates",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/2711451863"
+              ],
+              "evidence_note": "Explicit MAPP Atameken road border_control west of Uzbek Sirdaryo, not the unrelated Atameken village near Kazygurt. Official Uzbek roster pairs Atameken with Gulistan;2026 source calls the paired Uzbek facility Syrdarya.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/4d6ab6cef0e6cfa45d77.xml",
+                  "sha256": "b61282b286f2e3928c5cc2cf9df681e408b82b4b9e8dbc9c18db50166ef89b6a",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both original passes choose exact Atameken road-control node 2711451863. Official rosters and the original restoration account connect Gulistan/Syrdarya to this Atameken post, not the unrelated village near Kazygurt.",
+              "existing_site_id": "post-atameken-gulistan-road"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "REC50-R17-004-P1 and P2: The specific official passenger suspension effective 15 February 2023, later checkpoint-specific reporting, and the March 2026 account of the reconstruction restriction establish real sustained restrictions above 24 hours. These scoped accounts take precedence over the December 2025 commissioning article’s broad statement that passenger and freight traffic was uninterrupted across the modernization programme. That broad statement remains a conflicting description, not a basis for erasing the documented passenger bans. Precise uninterrupted elapsed durations remain unquantified.\n\nP1: Kazakh Atameken commissioning on 16 April 2025 did not restore paired personal passage while Uzbek bridge works continued. Actual personal and passenger-vehicle restoration at Uzbek Syrdarya is reported by 24 March 2026; the first day remains unknown.\n\nP2: Kazygurt’s December 2025 commissioning does not independently establish first restored paired ordinary passenger passage. The November account describes construction starting in March 2023; the contemporaneous official measure specifies passenger suspension from 15 February 2023. Heavy freight continued, and no network-wide closure is asserted.",
+          "rationale": "Inspected official February 2023 order and March 2026 Customs Committee-attributed report support the same Atameken–Syrdarya passenger facility from suspension to the reported later restored access. Preserve the native last-confirmed and ended-by bounds, conflicting broad commissioning narrative, continued heavy freight and absence of an exact continuous duration."
+        },
+        {
+          "phase_id": "REC50-R17-004-P2",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Kazygurt–S. Nazhimov road crossing",
+              "coordinates": [
+                69.4061729,
+                41.5252636
+              ],
+              "coordinate_method": "Fresh OSM API XML node coordinates",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/3870535802"
+              ],
+              "evidence_note": "Explicit MAPP Kazygurt road border_control with Maisky alias, version2024; mapped S.Nadzhimov post immediately southeast. Official passenger restriction names Kazygurt; Uzbek source identifies the paired S.Nazhimov facility.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/66238deb717beb21fbdd.xml",
+                  "sha256": "a03ea80844df6523085ebaa838f8c7331a3c3d1cbbbf12068773b0e4fbb9ecf4",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "A and B independently locate explicitly named MAPP Kazygurt/Maisky road controls about 57 metres apart within the same Kazakh post, immediately opposite S. Nadzhimov. Inspected XML names agree; B's node is selected directly, not averaged.",
+              "existing_site_id": "post-kazygurt-nazhimov-road"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "REC50-R17-004-P1 and P2: The specific official passenger suspension effective 15 February 2023, later checkpoint-specific reporting, and the March 2026 account of the reconstruction restriction establish real sustained restrictions above 24 hours. These scoped accounts take precedence over the December 2025 commissioning article’s broad statement that passenger and freight traffic was uninterrupted across the modernization programme. That broad statement remains a conflicting description, not a basis for erasing the documented passenger bans. Precise uninterrupted elapsed durations remain unquantified.\n\nP1: Kazakh Atameken commissioning on 16 April 2025 did not restore paired personal passage while Uzbek bridge works continued. Actual personal and passenger-vehicle restoration at Uzbek Syrdarya is reported by 24 March 2026; the first day remains unknown.\n\nP2: Kazygurt’s December 2025 commissioning does not independently establish first restored paired ordinary passenger passage. The November account describes construction starting in March 2023; the contemporaneous official measure specifies passenger suspension from 15 February 2023. Heavy freight continued, and no network-wide closure is asserted.",
+          "rationale": "The official February 15 2023 measure expressly names Kazygurt alongside Atameken, while later original reporting identifies the Uzbek S. Nazhimov counterpart. Both passes support this distinct paired road crossing for ordinary persons, cars and buses. Preserve November 25 2025 last confirmation; December commissioning is not converted to the first restored paired passenger passage."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R17-006",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R17-006.json",
+          "sha256": "9562a875c576298bb2c93a813f9264763a9647123406891daab2582cda1f5b0f"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R17-006.json",
+          "sha256": "beee3153611adc2d3361a4e56ec1e5ac0f5506b29bae1a344967a12b2a8fe4dd"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R17-006-P1",
+          "decision": "hold",
+          "category": "single_site",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "A September 12, 2024 correspondent report documents Ken-Sai/Uch-Kurgan operating again and retrospectively describes non-operation since 2009. A guide gives intermediate 2016–2018 closures/reopenings, whose underlying identity and events remain unresolved. Exact onset and uninterrupted total duration are withheld; the September restoration is not transferred from Kara-Suu. The original official rationale is uncoded.",
+          "rationale": "Both original passes withhold geometry for the correctly paired Ken-Sai/Uch-Kurgan road post. The original correspondent report identifies Nooken and September 12 2024 operation, but candidate indexed official coordinates point toward Kara-Suu and the historical control-site location remains unresolved. Rail stations and similarly named villages/posts are rejected. Hold is geographic, not based on the contested or unknown duration."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R23-001",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R23-001.json",
+          "sha256": "e3af2e63381e54cd1fb60c43ecd6c2237b64ec2b76d4061c115d7bf2e99be2f7"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R23-001.json",
+          "sha256": "8fe30b70b76b2d2a277510d676001180bcd546bf1f90f9b052df1ca0b5c0b2e1"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R23-001-P1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Ghulam Khan international road crossing",
+              "coordinates": [
+                70.0300178,
+                33.150938
+              ],
+              "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/3453046249",
+              "precision": "Crossing/customs-area reference, approximately 500 m; exact 2014 barrier footprint not established.",
+              "source_urls": [
+                "https://www.openstreetmap.org/node/3453046249",
+                "https://api.openstreetmap.org/api/0.6/map?bbox=70.01,33.13,70.05,33.16"
+              ],
+              "evidence_note": "Border-control node immediately adjacent to government-tax node9107501851 explicitly named Ghulam Khan border port. The named village lies roughly 2 km south and is not used. Radio Pakistan identifies international checkpost in North Waziristan.",
+              "osm_feature": "node/3453046249",
+              "osm_version": "5",
+              "osm_timestamp": "2020-03-24T18:22:31Z",
+              "identity_tags": {
+                "barrier": "border_control"
+              },
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-a/area-ghulam-khan-main.xml",
+                  "sha256": "d097b0f728ce86730ce53fded302239e0cb938ee870de63b5419a1d1ad1996f7",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both passes select exact border-control node 3453046249 at [70.0300178,33.150938], adjacent to the explicitly named Ghulam Khan government port office. Inspected both nodes and original crossing identity; A's conservative 500 m crossing-area precision is retained.",
+              "existing_site_id": "post-ghulam-khan"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "REC50-R23-001-P1: The inherited onset is reported as June 2014, retained at month precision rather than an invented day. The sustained restriction qualifies as longer than 24 hours. Actual loaded freight entered Afghanistan on 9 March 2018. March 7 was a plan; later April-trial and May-formal-opening descriptions do not replace actual March passage. Those differing milestones and possible intermediate operations prevent one exact continuous duration. The later weekly trade schedule and freight restoration do not establish general passenger reopening.",
+          "rationale": "The inspected Pakistan Radio original identifies Ghulam Khan international checkpost in North Waziristan, recalls the 2014 security-operation restriction and reports loaded vehicles entering Afghanistan on March 9 2018. Both original passes support the same road-port facility, distinct from the village to the south. Preserve month-precision onset, prior last confirmation, later opening milestones and freight-only direction; no exact continuous duration or general passenger reopening is inferred."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R23-002",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R23-002.json",
+          "sha256": "a535f9dd3df73d969bcab0df093543b556b7dcd4268287f24463d6150a238ae1"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R23-002.json",
+          "sha256": "21d814436a8e1ac3d163b0a3e4243a8f13ad9d75674975a6b84f052bdf9fb186"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R23-002-P1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Kharlachi road border crossing",
+              "coordinates": [
+                69.9539961,
+                33.8290732
+              ],
+              "coordinate_method": "Fresh OSM API XML node coordinates",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/7329110727",
+                "https://api.openstreetmap.org/api/0.6/way/1466971322/full"
+              ],
+              "evidence_note": "Border-control node mapped in March 2020 is a vertex of the named Kharlachi Border Crossing area, way 1466971322. It locates the road crossing, not Kharlachi village or the nearby Borki route.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/d5af77710dfbd9b9ae0a.xml",
+                  "sha256": "2d5978f2184203a4949b6190ca9645e09deddf8a2358e8e90a4279120a810c1b",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "A's named Kharlachi crossing polygon contains B's road-control node 7329110727 as a vertex. The node is independently mapped in March 2020 and retained directly; no candidate averaging.",
+              "existing_site_id": "post-kharlachi-road"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "118 calendar-day difference for the reported Kharlachi goods restriction from 15 March to 11 July 2020. March 15 comes from a retrospective named-trader account, supported by continuing June restriction and July reopening reports; it is not imported from another crossing. No passenger endpoint or measured elapsed-hour precision is claimed.",
+          "rationale": "Both original passes and the inspected contemporaneous accounts tie the March–July 2020 goods restriction to Kharlachi itself. The shared facility is the road crossing, not an inland Kurram road or village. Retain the retrospective March 15 onset, July 11 goods return and exclusion of passenger scope."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R23-006",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R23-006.json",
+          "sha256": "f592c9163468433b57231f86f72c1b31a444ea884f9b3b83d58fb60c93da5e32"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R23-006.json",
+          "sha256": "366d4c372924373f35a855cc40d85fde352546fa5c275285bd4bd81e4d3cbe2e"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R23-006-P1",
+          "decision": "hold",
+          "category": "single_site",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "REC50-R23-006-P1: Commercial restrictions are reported on 15 April and 18 December 2024. January ministry restoration reporting and incompatible retrospective durations prevent one continuous spell or an exact onset. Pakistan Today reports commercial resumption by 4 October 2025; this bounds later access but is not the exact first truck date. September ceremony and planned convoy dates are not substituted for observed first passage. A separate official customs suspension from 12 October 2025 must not be joined across this reopening. The original 2024 official rationale and restricting actor remain unresolved.",
+          "rationale": "Both passes withhold the 2024 commercial gate geometry. Official coordinates concern a new 2025 NLC terminal, while customs-area and border-gate evidence distinguish locations separated by a bazaar. Unnamed current compounds do not establish which 2024 facility was restricted. Preserve separate dated observations and later 2025 access without joining intervals; the contested chronology itself is not the reason for hold."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R27-001",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R27-001.json",
+          "sha256": "c3c14ad3153157f4979b5c46b505ceb49b61c91e999dec17a52e635bff1aa04f"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R27-001.json",
+          "sha256": "bc1c61e0faad32368b22a526c98047aa611b13f0659b576b31553c1dec5ae75a"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R27-001-P1",
+          "decision": "hold",
+          "category": "needs_review",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "REC50-R27-001-P1: The Armenian customs spokesperson reports a checkpoint-access blockage lasting about two to three hours from midnight on 15 September 2018, with the checkpoint open by the afternoon report. This does not qualify as longer than 24 hours. Customs permitted the protest and distinguished it from an intended obstruction of customs operations. No general passenger ban, all-lane customs shutdown or Georgian-truck-only rule is established. Exact minute timestamps, traffic cohorts and direction remain unknown.",
+          "rationale": "Both original passes recognize the Bagratashen–Sadakhlo road crossing, but the independent historical site support does not intersect. A selected the later replacement bridge and expressly disclaims that structure as evidence for the 2018 protest; its broad 700 m precision cannot turn that candidate into approval of the Armenian historical control. B alone supplies the versioned May 2018 terminal node and 2016 inauguration history. Those establish a credible B candidate but cannot repair a missing independent A historical-site verification. Hold for historical and side-specific geometry; retain the brief September 15 access obstruction, incomplete vehicle scope and customs-work qualification."
+        }
+      ],
+      "review_evidence": [
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-a/area-bagratashen.xml",
+          "access": "Original A current bridge geometry inspected; A explicitly withholds applicability of that replacement structure to the 2018 protest.",
+          "sha256": "4df31c70ca80aff78e7ebdba4bbb90b5d84d7b5aa0030ef9c3d0ee30c4ec41a0"
+        },
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-b/b43ed99ee586104c11c0.xml",
+          "access": "Original B May 2018 Armenian terminal-node candidate inspected; it remains only one independently approved historical site.",
+          "sha256": "7bd855d0b94584fef1285fb55fd17ceb3b85fee2ae933d14e45de3ae5865883b"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R27-002",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R27-002.json",
+          "sha256": "7f1e2268b089791f6c1a738bfcb161d5e4c874ba18ed5ded9a3a83f9d9d698a4"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R27-002.json",
+          "sha256": "e701a53bb06d940de8f510080b3168b920f49484b1ab32fb766e9910d3c04465"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R27-002-P1",
+          "decision": "partial",
+          "category": "single_site",
+          "complete": false,
+          "sites": [
+            {
+              "name": "Agarak–Meghri road checkpoint, Armenian side",
+              "coordinates": [
+                46.206445,
+                38.8537671
+              ],
+              "coordinate_method": "Fresh OSM API XML node coordinates",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/3143306729",
+                "https://api.openstreetmap.org/api/0.6/node/3143306729/history",
+                "https://api.openstreetmap.org/api/0.6/map?bbox=46.200,38.850,46.222,38.860",
+                "https://areg.am/en/meghricustomsdep"
+              ],
+              "evidence_note": "Armenian road border-control node unchanged since April 2015; area topology places it on the international road approaching the Aras bridge from the Armenian side, separate from the named Iranian Nurduz facilities. Original November 2024 reporting names Agarak as the blocked crossing. Reference is to the checkpoint approach, not a newly built 2026 terminal or a precisely identified protest barricade.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/b36ae40b4f2d5eddd394.xml",
+                  "sha256": "e4eb9f309d0033adb824082395e427991111a1702bb34966a3b0c0487439ecb5",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Positive shared Armenian geometry, not paired-crossing naming alone: A's original area-agarak.xml independently contains B's exact border-control node 3143306729 at [46.206445, 38.8537671], version 3 dated July 19, 2021. In that same A document the node connects through H-50/AH82 ways 338005834 and 179099491 to A's Aras bridge way 179099483. B's original full history independently confirms the same coordinate since April 2015. Both original event reconstructions identify Armenian trucker obstruction at Agarak. Select B's unchanged Armenian approach point, not the separate Iranian controls or a new terminal.",
+              "existing_site_id": "post-agarak-meghri-road"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Do not join the 17 November blockage, 20 November driver interviews and 26 November diplomatic response into one continuous closure. A driver’s reported return after paying for fuel and another’s return without his truck do not establish general clearance.\n\nGeographic qualification: Only the longstanding Armenian crossing approach is located. Exact protest lanes/barricade and reconstruction arrangements remain unlocated; new terminal footprints are excluded. The November 17 observation is not joined to later interviews or diplomatic responses.",
+          "rationale": "Both original passes identify the Armenian Agarak road-facility obstruction, and both independently retrieved geometry documents contain the same pre-episode Armenian control node. Inspection of A's original XML verifies the exact node as well as its direct H-50/AH82 connection to A's bridge candidate; B's history confirms no coordinate relocation since 2015. Thus this is shared historical Armenian approach geometry, not substitution of an opposite-country terminal. Approve that spatial approach subset only. Exact barricade/lane arrangements and rebuilt terminal footprints remain unlocated; the November 17 observation is not joined to later individual driver returns or diplomatic responses."
+        }
+      ],
+      "review_evidence": [
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-a/area-agarak.xml",
+          "access": "Original A XML inspected: exact B Armenian control node 3143306729 is present with pre-episode July 2021 version, directly connected to bridge via ways 338005834 and 179099491.",
+          "sha256": "bc26df1c8cc2999f6da728cf7556b1c550d1e066a8cbf8af8b8708ab7ec00879"
+        },
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-b/d0de978e5386b99db1ba.xml",
+          "access": "Original B full node history inspected: same Armenian control coordinate since April 2015; no new-terminal substitution.",
+          "sha256": "ec0aafb41673e801002318bc724f5e1a57ce67220d6388986144708cb6959afd"
+        },
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-b/web-r13-1.json",
+          "access": "Original independent-pass event article cache inspected: Armenian trucker obstruction at Agarak, not an Iranian control closure.",
+          "sha256": "bc49235b1b8fe608c2eff67de394017db13c8acb8f5b74e18dfb9c11dd6d440f"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R28-001",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R28-001.json",
+          "sha256": "8d78face5c4ee9445825aff0a91f2aaf803933c3325260314d98ca6d34a66a87"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R28-001.json",
+          "sha256": "48e27b0cdaf61cb1bd32ea1b00d614227a33efd6858616d8ac8a904423250623"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R28-001-P1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Mae Sot–Myawaddy Friendship Bridge II",
+              "coordinates": [
+                98.4882618,
+                16.7155252
+              ],
+              "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/way/1414223873/full"
+              ],
+              "evidence_note": "OSM footprint explicitly named Second Friendship Bridge; separate structure northwest of Bridge I; later binding requires original source explicitly name Bridge II.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/c57bda0eaeae93ec0c79.xml",
+                  "sha256": "ab8aa072b0e940323bede13ae0f57288bb5ebc21b850a3d1e12790efc6965c5f",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "A explicitly identifies the Mae Sot II checkpoint complex associated with the named cargo bridge; B independently locates that same bridge. Fresh third-review OSM full history confirms A's control node 10543474679 at exactly the selected A coordinate since January 2023, before the April 2024 phase. The named AH1/Highway 130 entrance roads directly link it to Bridge II; official Thai Customs/Immigration history establishes the integrated crossing opened in 2019. The original RFA cargo restriction applies to the bridge route, without an opposing-country-only admission scope. Select B's actual bridge outline point unchanged, not an average or a presumed Myanmar barricade.",
+              "existing_site_id": "post-maesot-myawaddy-bridge-2"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "REC50-R28-001-P1: RFA’s April 30 report describes trucks returning after ten days, and Eleven’s May 1 report explicitly gives April 20. GNLM’s May 8 retrospective gives April 11. Both concern Bridge II cargo, so the onset conflict remains visible; the matched April 30 truck return and sustained interruption support qualified visualization and greater-than-24-hour eligibility. Exact elapsed duration and imposing-side attribution remain unresolved. CNI’s May 5 combined account mentions April 21 for suspended activities at both bridges; it does not resolve the cargo-specific disagreement. Inland Asia Highway damage is separate from passage over the international bridge.\n\nREC50-R28-001-P2: Generic April 27 reopening and travel into Myanmar alone do not establish restored Thai admission for pass holders. May reports now supply document-specific conditional access, bounded by May 6 without claiming the first Thai readmission or restoration of every booklet type. IMNA’s March 1 UID date conflicts with MOI and Eleven’s May 1 account and is not used. The official rationale for the original Thai document refusal remains unknown; later Myanmar UID policy motives are not retroactively assigned to it. February 2026 guarantor conditions are a later observation, not evidence of uninterrupted April 2024–2026 restrictions.",
+          "rationale": "Both original reconstructions and the cached RFA account explicitly identify Friendship Bridge II cargo throughout the native April 2024 interruption. A's named Mae Sot II checkpoint and B's bridge are parts of that same cargo crossing, verified by the direct AH1/130 roads named for Bridge II, official 2019 opening history and A-terminal coordinate continuity since January 2023. The original phase is not restricted to an independently unlocated opposite-country admission control. Preserve conflicting April 11–20 onset bounds and April 30 truck return; the point represents Bridge II passage and excludes inland Asia Highway damage."
+        },
+        {
+          "phase_id": "REC50-R28-001-P2",
+          "decision": "hold",
+          "category": "needs_review",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "REC50-R28-001-P1: RFA’s April 30 report describes trucks returning after ten days, and Eleven’s May 1 report explicitly gives April 20. GNLM’s May 8 retrospective gives April 11. Both concern Bridge II cargo, so the onset conflict remains visible; the matched April 30 truck return and sustained interruption support qualified visualization and greater-than-24-hour eligibility. Exact elapsed duration and imposing-side attribution remain unresolved. CNI’s May 5 combined account mentions April 21 for suspended activities at both bridges; it does not resolve the cargo-specific disagreement. Inland Asia Highway damage is separate from passage over the international bridge.\n\nREC50-R28-001-P2: Generic April 27 reopening and travel into Myanmar alone do not establish restored Thai admission for pass holders. May reports now supply document-specific conditional access, bounded by May 6 without claiming the first Thai readmission or restoration of every booklet type. IMNA’s March 1 UID date conflicts with MOI and Eleven’s May 1 account and is not used. The official rationale for the original Thai document refusal remains unknown; later Myanmar UID policy motives are not retroactively assigned to it. February 2026 guarantor conditions are a later observation, not evidence of uninterrupted April 2024–2026 restrictions.",
+          "rationale": "The original April 21 account assigns temporary-pass/booklet admission refusal to Thailand at Friendship Bridge I while passport holders still pass. A selects the Myanmar approach control; B selects the bridge footprint. Neither original independent pair verifies the Thai admission-control site. Their shared route identity is not a spatial subset of the side-specific enforcement location, and partial cannot cure that scope mismatch. Hold the geography while preserving the April 21 cohort, passport exception, conditional access bound and contested native chronology."
+        }
+      ],
+      "review_evidence": [
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-tail-review/mae-sot-ii-link.xml",
+          "access": "fresh OSM XML; connected AH1/Highway 130 bridge approach",
+          "sha256": "0441a710334a97124220db9764dfff0ecf1322c466c475bb3fbb08bcbd1d3786"
+        },
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-tail-review/mae-sot-identity-search.json",
+          "access": "indexed official Customs and Immigration history; 2019 opening",
+          "sha256": "23d40a4cde1201dd87f7aab249d6adfd478f652e9cf891b68aee9e128c9fc5b8"
+        },
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-tail-review/mae-sot-ii-terminal-history.xml",
+          "access": "Fresh third-review full OSM node history: A Mae Sot II border-control coordinate unchanged from January 2023 through current version.",
+          "sha256": "9c9b1582a85c56271675936ae85dde5e1ae26215a971606a66dd8b279d2d71ec"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R28-002",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R28-002.json",
+          "sha256": "dea59005023581e8ecc479b85413b4c338a985d8b806b3fb104754e40102a732"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R28-002.json",
+          "sha256": "e2f86cf7474b2dff48effbe4c2903cebb3e8555585c004e7c8b09765201dde87"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R28-002-P1",
+          "decision": "partial",
+          "category": "multiple_named_sites",
+          "complete": false,
+          "sites": [
+            {
+              "name": "Teknaf land port / Naf River cargo facility",
+              "coordinates": [
+                92.279013,
+                20.903624
+              ],
+              "coordinate_method": "Direct published camera geotag of a personally photographed and explicitly identified Teknaf land-port entrance; used as a port-area reference, not a cargo-berth coordinate.",
+              "precision": "Approximate river-port complex reference, 600 m; exact May 2026 berth unlocated.",
+              "source_urls": [
+                "https://commons.wikimedia.org/wiki/File:Entrance_of_Teknaf_land_port.jpg",
+                "https://www.united.com.bd/our-concerns/united-landport-teknaf/"
+              ],
+              "evidence_note": "Own-work August 2021 photo identifies Teknaf land-port entrance and Maungdaw counterpart. Operator confirms Naf River cargo and passenger jetties within this port. OSM area XML shows piers immediately east/north. This is distinct from BGB jetty, Teknaf town ferry, and St Martin sea ferry terminal.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-82.json",
+                  "sha256": "4acbf8b81eebcd313fee1eb73678642e1c03d3ecf8910c04f5c2f770ee3ee6ae",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both original passes independently select the identical published August 2021 Teknaf entrance geotag. The third review inspected the cached Commons metadata and original May 2025 and May 2026 reports. The selected A coordinate and conservative 600 m facility precision are retained; no candidate averaging is used.",
+              "existing_site_id": "port-teknaf-river"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "The onset accounts describe different events: Jago News on May 28, 2025 quotes the port general manager saying trade had halted since April 12, while bdnews24 identifies April 12 as the last earlier wooden-boat arrival. Preserve both attributed accounts without treating a last-open observation as an exact closure start or calculating 384 continuous closed days. The exact transition after that arrival is not independently timed. April 14, 2026 was a reopening announcement, not actual return. TBS and BSS confirm the May 1 timber arrival but give different clocks, 13:30 and 13:10; BSS says unloading and customs assessment were still pending. DMG on May 5 reported no additional trip yet. By June 1, DMG via BNI described limited timber exports and small reverse potato/onion flows, mainly through a ULA-linked merchants’ association. That provides a bound for some reverse trade, not its first date, unrestricted private access or normal service. Yangon/Sittwe coastal shipping remains excluded; actor and authorization chronology remains attributed and incomplete. The May 28 contemporary report explicitly describes a 45-day halt, supporting the greater-than-24-hour threshold independently of uncertainty over the exact transition after April 12 and the later restoration sequence. This does not establish uninterrupted closure for every commodity until May 2026.",
+          "rationale": "Approve only the Teknaf port facility as the shared spatial subset of the Maungdaw–Teknaf river-cargo scope. The cached full May 2025 report already identifies this port and its stranded cargo, so its applicability does not depend only on the May 2026 endpoint. Cached May 1 reports identify arrival at the Teknaf jetty; neither pass locates the exact berth or independently establishes the Hainkhali/Kanyinchaung departure geometry. The entrance camera position is a port reference, not a river crossing, berth or maritime route. Retain unknown onset, clock disagreement, limited later cargo and announcement-versus-operation distinctions."
+        }
+      ],
+      "review_evidence": [
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-b/web-r13-3.json",
+          "access": "Original independent-pass cache inspected: substantive article text for the May 2025 halt and May 2026 arrival; not a new retrieval.",
+          "sha256": "10ad3698de3b8d4fcddd1a52973952e7ad662ac208527817c65bd500ca0727e0"
+        },
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-b/web-r13-extra.json",
+          "access": "Original independent-pass cache inspected: Commons photograph identity, August 2021 date and published camera location.",
+          "sha256": "2661ce5085402dc3f0793d05e0a87529e0fc403510c213a0fd3666f53143fb88"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R28-003",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R28-003.json",
+          "sha256": "a7458655821f4e089889d49e06e78d8cad29d4cab444652b51ce14a017df308d"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R28-003.json",
+          "sha256": "ea6899270e269f5300c36ced32fdcfe73b34b4f5594e82003779c4cae99ac707"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R28-003-P1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Singkhon Pass immigration crossing",
+              "coordinates": [
+                99.6465255,
+                11.7866465
+              ],
+              "coordinate_method": "Coordinates from explicitly versioned OSM node XML, independently compared with full node history",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/12194462826/1",
+                "https://api.openstreetmap.org/api/0.6/node/12194462826/history",
+                "https://api.openstreetmap.org/api/0.6/map?bbox=99.643,11.783,99.652,11.790"
+              ],
+              "evidence_note": "September 2024 border-control node at the international pass; current XML names Singkhon immigration. Nearby road ways explicitly carry Singkhon / Maw Daung Pass names, and the Thai border-station building is identified separately. This is the formal pass, not the unlocated goods-transfer area described as no-man’s-land.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/548c1786669b9795532d.xml",
+                  "sha256": "6c4fa96c620efaea15ce15c4d687c56ed2563148a4feaeadc439fa93456efb8d",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "A identifies the named Sing Khon station building; B identifies the adjacent border-control node approximately 26 m away. Inspection of both original XML documents and B's full node history confirms one formal pass facility. B's unchanged September 2024 coordinate is selected, not a mean of the two candidates.",
+              "existing_site_id": "post-singkhon-road"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "REC50-R28-003-P1: This is dated policy evidence, not observed universal cessation. Neither the last tin-import approval on 20 October 2025 nor later incomplete applications establish a general start date. No continuous interval is inferred across the later schedule and July planning report.\n\nREC50-R28-003-P2: The endpoint is a legal relaxation only; no first truck or trader passage is documented. A July meeting still discusses possible general reopening, so April permission must not become a universal operational endpoint. The relationship between the January observation and the later schedule is not a proven continuous spell.\n\nscope; chronology; attribution; geography: The schedule’s onset and its relationship to the January policy are unknown. April permission is not an observed full checkpoint reopening; July preparations do not supply a new closure date or prove continuous closure.\n\nAdditional later context: a 5 August 2026 provincial meeting, reported August 9, still reviewed possible general reopening and border documentation after repair of roads and utilities. This extends the documentary trail beyond the July 15 meeting, but does not establish uninterrupted closure since January or negate the separate April 17 limited goods-policy relaxation. Frontier’s February 17 reporting also describes a closed Thai border, without resolving every permitted community-trade exception.",
+          "rationale": "The cached full January 21 policy article identifies the formal Singkhon pass opposite Mudong and separately discusses exceptional community trade and emergency care. Both independent passes support this same formal station. The B node existed before the January 2026 observation; the later naming edit did not move it. Map the dated formal-pass policy only. No continuous closure is inferred from the last tin approval, later schedule or reopening preparations."
+        },
+        {
+          "phase_id": "REC50-R28-003-P2",
+          "decision": "hold",
+          "category": "needs_review",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "REC50-R28-003-P1: This is dated policy evidence, not observed universal cessation. Neither the last tin-import approval on 20 October 2025 nor later incomplete applications establish a general start date. No continuous interval is inferred across the later schedule and July planning report.\n\nREC50-R28-003-P2: The endpoint is a legal relaxation only; no first truck or trader passage is documented. A July meeting still discusses possible general reopening, so April permission must not become a universal operational endpoint. The relationship between the January observation and the later schedule is not a proven continuous spell.\n\nscope; chronology; attribution; geography: The schedule’s onset and its relationship to the January policy are unknown. April permission is not an observed full checkpoint reopening; July preparations do not supply a new closure date or prove continuous closure.\n\nAdditional later context: a 5 August 2026 provincial meeting, reported August 9, still reviewed possible general reopening and border documentation after repair of roads and utilities. This extends the documentary trail beyond the July 15 meeting, but does not establish uninterrupted closure since January or negate the separate April 17 limited goods-policy relaxation. Frontier’s February 17 reporting also describes a closed Thai border, without resolving every permitted community-trade exception.",
+          "rationale": "The original cached April report explicitly places the restricted goods transfer in a designated no-man's-land area. A offers a broad station-area reference but B withholds that distinct footprint. The shared formal immigration station cannot substitute for an unlocated goods-transfer area. This is a geometry and scope hold, not a consequence of unknown duration; the April 17 legal relaxation remains distinct from an observed first truck or full checkpoint reopening."
+        }
+      ],
+      "review_evidence": [
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-b/web-r13-4.json",
+          "access": "Original independent-pass cache inspected: full Thai TOPNEWS January observation and Daily News April order report; direct HTTP failures are not represented as successful new retrievals.",
+          "sha256": "acb02629d5657651c7ff7a7746ccf82655de38ff855583142e22b85bc427bc92"
+        },
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-b/7adf1d5d5c3a0f00ad94.xml",
+          "access": "Original OSM node history inspected: September 2024 border control and June 2026 naming edit have identical coordinates.",
+          "sha256": "98fe6495960c8c88ab7b80f177bd381d67379ad6408680fedef56914619b2b37"
+        },
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-a/area-singkhon-main.xml",
+          "access": "Original independent-pass area geometry inspected: explicitly named adjacent Sing Khon station building.",
+          "sha256": "6d7476b07ead9dd00b8f180519641b7559c565d9dc1c6e8d0f9835372e5848f8"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R33-001",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R33-001.json",
+          "sha256": "21f761d7a1d189a3ead0dde981b0096839df7732efc920c1dc58d1bcaa5854d1"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R33-001.json",
+          "sha256": "c25046764675f7c49ff33203043600ac4fb0d186d955c75c509caa0c65c0a1d1"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R33-001-P1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Sonamasjid–Mahadipur road crossing",
+              "coordinates": [
+                88.1411487,
+                24.8427106
+              ],
+              "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/5142350050",
+              "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+              "source_urls": [
+                "https://www.openstreetmap.org/node/5142350050",
+                "https://api.openstreetmap.org/api/0.6/map?bbox=88.13,24.82,88.17,24.86",
+                "https://www.bangladeshtradeportal.gov.bd/kcfinder/upload/files/Land%20Ports%20in%20a%20Brief.pdf"
+              ],
+              "evidence_note": "Explicitly named Mahadipur border-crossing node; Bangladesh trade-portal land-port list pairs it with Sonamasjid/Shibganj. Nearby unnamed control is on opposite approach.",
+              "osm_feature": "node/5142350050",
+              "osm_version": "3",
+              "osm_timestamp": "2020-07-18T05:04:07Z",
+              "identity_tags": {
+                "barrier": "border_control",
+                "name": "Mohodipur Border crossiong"
+              },
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-a/area-sonamasjid.xml",
+                  "sha256": "e616e4db17af35abd7e5b07e8aad2600dccacadcb0c571d1e55b1b9a73313b3c",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both original independent passes select exactly [88.1411487, 24.8427106] from named border-control node 5142350050, whose July 2020 version predates the holiday. The A 300 m crossing-area precision is retained. The official indexed port directory and Bangladesh's indexed UNESCAP table independently pair Sonamasjid with Mahadipur.",
+              "existing_site_id": "post-sonamasjid-mahadipur"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Eight calendar-date differences for bilateral freight interchange; internal loading/unloading continued and passenger closure is not established. UNB advance and return reports share the same named C&F official. No measured-hour precision or geometry is claimed.",
+          "rationale": "The cached full UNB advance and return reports identify the same Sonamasjid cross-border freight interchange, with actual October 8 cargo return after the September 30–October 7 holiday. Inspection of the named pre-episode road-control XML and both independent coordinate proposals supports the single paired crossing. Internal handling and passenger access must not be rendered as closed. Indexed official pairing evidence is distinguished from the full original event reports."
+        }
+      ],
+      "review_evidence": [
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-b/web-r13-5.json",
+          "access": "Original independent-pass cache inspected: full UNB advance and actual-return report text.",
+          "sha256": "c2f1bc6f202d53d225bbf5dd05d4f9fdd55b1b104206351dc99731eacbe52adf"
+        },
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-b/ac9793e4de488fc4503e.xml",
+          "access": "Original node XML inspected: named Mohodipur border control, unchanged since July 2020.",
+          "sha256": "ad1c7d66126cf14db2b13bd5fe259253edf6ddd818472704b5c00bd1f6b711ca"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R33-002",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R33-002.json",
+          "sha256": "31a2e94864e12d827f553ba3f504b67e0134ac9e81b15e54a50683734289603f"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R33-002.json",
+          "sha256": "7777f054e700cb690fc3ca97590ccdbccee7a48af6a2f0e34171bcc0be383285"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R33-002-P1",
+          "decision": "hold",
+          "category": "needs_review",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "Eight calendar-date differences for freight only; immigration continued normally. RisingBD advance wording gives 29 September, contrary to both the 30 September contemporaneous report and explicit retrospective BSS 30 September–7 October dates; the latter pair supports the adopted onset. Shared officials are not independent confirmations.",
+          "rationale": "Both original passes and the cached UNB/BSS articles establish the Hili freight holiday and continuing immigration, but only A accepts an untagged road-node candidate. B supplies no independently verified historical freight-gate geometry. A repeated location hypothesis does not become two-pass agreement. Retain the native September 30–October 8 operational chronology and passenger exception; hold only for unresolved site identity."
+        }
+      ],
+      "review_evidence": [
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-b/web-r13-5.json",
+          "access": "Original independent-pass cache inspected: substantive UNB September 30 notice and BSS October 8 return article; neither locates the gate.",
+          "sha256": "c2f1bc6f202d53d225bbf5dd05d4f9fdd55b1b104206351dc99731eacbe52adf"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R33-003",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R33-003.json",
+          "sha256": "bc5c382452c37ace6d6868e4483c1355568a3cc931bd81d455e3fdba32debf3d"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R33-003.json",
+          "sha256": "92d330c534da23818deb058072d936fa366b870c3ae8ed8da7330110fbd31bc1"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R33-003-P1",
+          "decision": "partial",
+          "category": "single_site",
+          "complete": false,
+          "sites": [
+            {
+              "name": "Banglabandha road freight port",
+              "coordinates": [
+                88.412678,
+                26.6296276
+              ],
+              "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+              "precision": "Approximate port grounds, about 300 m; not the historical gate or every loading bay",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/way/539400757/full"
+              ],
+              "evidence_note": "Named Banglabandha Land Port commercial grounds, OSM version dated May 2022 before the Puja interruption. The representative point is on the Bangladesh port complex, not the zero-point monument or an onward Nepal/Bhutan border.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/2a683009a179077f4412.xml",
+                  "sha256": "1161215a27e478ff408b085dbb08be96b4bbf7d853e7b699adb0d1f0861cac4d",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both original passes identify the Banglabandha–Phulbari road-port facility. A's bounding XML itself contains the same named May 2022 Banglabandha land-port polygon used by B, directly connected by its service road to N5/AH2 and the frontier road. A's proposed zero-point marker is about 440 m away and is tagged as a milestone, so it is not treated as a freight-control gate. Select B's documented port-grounds reference unchanged.",
+              "existing_site_id": "post-banglabandha-road-port"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "The original September 30–October 10 schedule is retained. A local October 10 report now confirms completed morning freight restart after September 30–October 9 interruption, supporting a linked ten-calendar-day operational phase. The advance eleven-day shorthand remains conflicting; passengers continued and Nepal/Bhutan remain onward trading partners.",
+          "rationale": "Approve only the identified Bangladesh port grounds within the paired cross-border goods-interchange scope. Inspection of A's original area XML and B's way/full XML verifies the same explicitly named pre-holiday port polygon and its road connection; the adjacent zero-point monument does not establish a gate position. The Indian-side goods controls and exact interruption footprint remain unlocated, hence partial spatial coverage. Cached advance and actual-return articles support both native overlapping phases for this same facility throughout September 30–October 10. Keep the ordered and operational phases separate, preserve traveller access and do not turn Nepal/Bhutan onward trade into adjoining border sites."
+        },
+        {
+          "phase_id": "REC50-R44-BANGLABANDHA-P1",
+          "decision": "partial",
+          "category": "single_site",
+          "complete": false,
+          "sites": [
+            {
+              "name": "Banglabandha road freight port",
+              "coordinates": [
+                88.412678,
+                26.6296276
+              ],
+              "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+              "precision": "Approximate port grounds, about 300 m; not the historical gate or every loading bay",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/way/539400757/full"
+              ],
+              "evidence_note": "Named Banglabandha Land Port commercial grounds, OSM version dated May 2022 before the Puja interruption. The representative point is on the Bangladesh port complex, not the zero-point monument or an onward Nepal/Bhutan border.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/2a683009a179077f4412.xml",
+                  "sha256": "1161215a27e478ff408b085dbb08be96b4bbf7d853e7b699adb0d1f0861cac4d",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both original passes identify the Banglabandha–Phulbari road-port facility. A's bounding XML itself contains the same named May 2022 Banglabandha land-port polygon used by B, directly connected by its service road to N5/AH2 and the frontier road. A's proposed zero-point marker is about 440 m away and is tagged as a milestone, so it is not treated as a freight-control gate. Select B's documented port-grounds reference unchanged.",
+              "existing_site_id": "post-banglabandha-road-port"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "Ten calendar-date differences, not measured hours. The actual-return account dates the holiday September 30–October 9 and restart October 10; advance eleven-day wording is not adopted. Travellers continued. Onward Nepal/Bhutan trade does not create additional adjoining boundaries.",
+          "rationale": "Approve only the identified Bangladesh port grounds within the paired cross-border goods-interchange scope. Inspection of A's original area XML and B's way/full XML verifies the same explicitly named pre-holiday port polygon and its road connection; the adjacent zero-point monument does not establish a gate position. The Indian-side goods controls and exact interruption footprint remain unlocated, hence partial spatial coverage. Cached advance and actual-return articles support both native overlapping phases for this same facility throughout September 30–October 10. Keep the ordered and operational phases separate, preserve traveller access and do not turn Nepal/Bhutan onward trade into adjoining border sites."
+        }
+      ],
+      "review_evidence": [
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-b/web-r13-6.json",
+          "access": "Original independent-pass cache inspected: full Dhaka Tribune advance notice and Bengali Ajker Patrika October 10 return report.",
+          "sha256": "c8115def260f142bf92136571e15eef313ee869fa9a5501dec51f713488054e1"
+        },
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-a/area-banglabandha-main.xml",
+          "access": "Original area XML inspected: named land-port polygon 539400757, zero-point milestone 5219525625, service road 1050948596 and N5/AH2 frontier approach.",
+          "sha256": "6b86367f1775ea640ce1a1c4ce35d2afa8b5e524a0ecc10778fa5cf3053e48ff"
+        },
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-b/2a683009a179077f4412.xml",
+          "access": "Original way/full XML inspected: named commercial port grounds, version dated May 2022, before both native holiday phases.",
+          "sha256": "1161215a27e478ff408b085dbb08be96b4bbf7d853e7b699adb0d1f0861cac4d"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R33-005",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R33-005.json",
+          "sha256": "70cb920bdf7eca9ed8e2985dba23998a3b0ecac0f08552ba7e5493fe8bc926b0"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R33-005.json",
+          "sha256": "82976bd9abfe02a5c881596f8cd330dbd0a073b330f6dc137af0fee01845026d"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R33-005-P1",
+          "decision": "map",
+          "category": "single_site",
+          "complete": true,
+          "sites": [
+            {
+              "name": "Jamunaha–Rupaidiha historic road crossing",
+              "coordinates": [
+                81.6004603,
+                28.0189568
+              ],
+              "coordinate_method": "Fresh OSM API XML node coordinates",
+              "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+              "source_urls": [
+                "https://api.openstreetmap.org/api/0.6/node/3888116312",
+                "https://api.openstreetmap.org/api/0.6/node/3888116312/ways",
+                "https://api.openstreetmap.org/api/0.6/map?bbox=81.596,28.015,81.603,28.024"
+              ],
+              "evidence_note": "Border-control node shared by Ratna Rajmarg NH58 and Indian NH927 at the international boundary. Bounding XML contains named Rupaidiha immigration building, Nepalgunj customs office and Jamunaha police. This is the historic public road crossing, not the newer integrated cargo port.",
+              "geographic_evidence": [
+                {
+                  "file": "research/geography-audit-2026-10-29/evidence/asia-b/fa64ac3604a35761c3b3.xml",
+                  "sha256": "4307d6225cee060af9605b8cc16be8375e8e1595adb27b538f113e143e232be6",
+                  "retrieved_date": "2026-10-29"
+                }
+              ],
+              "independent_agreement": "Both original independent passes select the identical Jamunaha–Rupaidiha road-crossing node 3888116312 and distinguish it from the later integrated cargo port. Fresh third-review node history shows the same road node since 2015, with only about 10 m of position adjustment in July 2022. The selected point remains an approximate facility reference rather than a claim about the February temporary barrier.",
+              "existing_site_id": "post-jamunaha-rupaidiha-road"
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "REC50-R33-005-P1: The police announcement sets a 60-hour window from 25 February 2022 at 18:00 to 28 February at 06:00. Gorkhapatra’s Nepali report quotes the Jamunaha police chief identifying an emergency-service exception. Three calendar-date differences are not three 24-hour blocks. Actual implementation and first reopening were not independently observed.",
+          "rationale": "The cached full February 25 police-announcement article explicitly identifies Jamunaha at Nepalgunj and the 60-hour election window. Both independent original area/node checks identify this longstanding international road transition with nearby Jamunaha police, Nepalgunj customs and Rupaidiha immigration. Historical road-node continuity supports the same crossing before the February phase even though the border-control tag was added later in 2022. Preserve the emergency exception, legal-announcement status and unobserved enforcement/reopening; three calendar-date differences do not become three full days."
+        }
+      ],
+      "review_evidence": [
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-b/web-r13-6.json",
+          "access": "Original independent-pass cache inspected: full Khabarhub February 25 police-announcement article. The inaccessible Gorkhapatra exception source is not claimed as freshly confirmed.",
+          "sha256": "c8115def260f142bf92136571e15eef313ee869fa9a5501dec51f713488054e1"
+        },
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-tail-review/jamunaha-node-history.xml",
+          "access": "Fresh third-review OSM full node history: longstanding road node; July 2022 coordinate adjustment approximately 10 m, not an ICP relocation.",
+          "sha256": "19ff464f2e296cc96ef3f1c72aceac3ebca451d07eb8e0d317552e8dd885d5bd"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R41-003",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R41-003.json",
+          "sha256": "2ce70e803b23e3021406b5cd8192ed57617b6a904182eb8f7b594138bdd247ca"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R41-003.json",
+          "sha256": "888ec09b9e901460f47ea1de5e288004cdc3b39b0a58a0ff31ec3bd99286f073"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R41-003-P1",
+          "decision": "hold",
+          "category": "needs_review",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "REC50-R41-003-P1: The official notice orders a 2–23 November 2020 window. Neither final-day boundary nor later fuel exception establishes general freight reopening. The November 23 observed fuel passage conflicts with a November 24 scheduled restart; petroleum access is periodic and limited.\n\nLater formal permissions: NARTAM’s 18 February 2021 update permits fodder imports at Tsagaannuur from February 23. Its 18 May update reports that, from May 10, Tsagaannuur–Tashanta could handle all types of goods during the second and fourth weeks of each month. These are commodity/schedule relaxations, not proof of daily unrestricted freight, a first observed truck, or continuous closure since November. The November 23 observed fuel entry and November 24 scheduled restart remain distinct.",
+          "rationale": "The inspected cached official November 3 notice supports the Tsagaannuur–Tashanta road agreement, and both passes correctly exclude the separately mentioned Handagayty measure. Their geometry is not a shared site: A selects the Mongolian Tsagaannuur customs complex, while B selects the Russian Tashanta terminal roughly 22 km away. Original XML verifies that these are distinct country-side facilities, not nearby representations of one terminal. Neither original pass independently selects the other's site, so paired-crossing naming alone cannot supply two-pass geometry agreement. Retain the November 2–23 order, petroleum exception and later commodity/schedule relaxations without equating them with unrestricted freight reopening."
+        }
+      ],
+      "review_evidence": [
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-b/web-r13-7.json",
+          "access": "Original independent-pass cache inspected: full Rosgranstroy official November 2020 notice. Later UNECE source was inaccessible in the pass and is not represented as fresh verification.",
+          "sha256": "669ad8c37515a6fe17679d831c6ce078c6861fed882240c45ad190820fd9d5bb"
+        },
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-a/area-tsagaannuur.xml",
+          "access": "Original geometry inspected: named Mongolian Tsagaannuur customs grounds, distinct from the Russian terminal.",
+          "sha256": "0c621ee64b15c0bef56dac047031fd165b3ace224a76101df5dd4f3fa3b019aa"
+        },
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-b/e7764ede03fe4323b402.xml",
+          "access": "Original geometry inspected: named Russian MAPP Tashanta node 915072817, January 2020 version.",
+          "sha256": "0b80ef2e8fa9694661b1cf068b2a345f95759920e37f17c0f0658df1c9ebe87a"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R47-003",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R47-003.json",
+          "sha256": "5057e70fd45707e0ce9f632b6ead8ea6f3641cd0db34d1a1ed0dc69709ebcccf"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R47-003.json",
+          "sha256": "a647149cb1d9feeeb2f8f5f651150d7f00bdd90a6f7e3921ca0afb4a9636451a"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R47-003-P1",
+          "decision": "hold",
+          "category": "needs_review",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "REC50-R47-003-P1: BGB-attributed land-admission denials are observed November 21 and December 1. Their first onset, intervening continuity and end are unknown; the wider policy coexisted with substantial actual entry. Naf River/sea interceptions and the separate return of people detained in 2015 are excluded. Inclusion is a government land-admission restriction, not an established closure of a particular formal gate. Exact sector binding remains unlocated.\n\nAmnesty’s wider account reports selective humanitarian admission from late November 2016, alongside continuing pushbacks. This is a qualification of the admission regime, not an exact endpoint for the Ukhia/Ghumdhum land observations. The separately recorded UNHCR “urges open borders” webpage is dated 29 August 2017 and concerns a later displacement episode; it does not verify a 2016 reopening.",
+          "rationale": "Both original independent passes withhold exact land geometry. The cached November and December reports identify several Ukhia/Ghumdhum land points without a formal gate or bounded affected sector, and distinguish these from Naf River boat interceptions. Neither town centroids, the Teknaf port nor an entire Bangladesh–Myanmar line is a supported substitute. Hold for unresolved spatial extent, retaining the dated intermittent land-admission observations, coexistence of actual entry and later selective humanitarian admission. Unknown onset and short or intermittent duration do not cause this geography hold."
+        }
+      ],
+      "review_evidence": [
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-b/web-r13-7.json",
+          "access": "Original independent-pass cache inspected: full Observer and Dhaka Tribune accounts separating unnamed land incidents from Naf River interceptions.",
+          "sha256": "669ad8c37515a6fe17679d831c6ce078c6861fed882240c45ad190820fd9d5bb"
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R48-001",
+      "reviewer": "geography_asia_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R48-001.json",
+          "sha256": "ba02f1340c32121f1e671ce8e9f13c2f0b61c7dabce77f17f7a54611fd3d9160"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R48-001.json",
+          "sha256": "d2bcea56e591cf2cea518c19f9826fce3924c531ab1acd52fc5211425780f5ca"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R48-001-P1",
+          "decision": "hold",
+          "category": "needs_review",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "REC50-R48-001-P1: GEODIS’s 20 August 2021 advisory explicitly separates suspended cross-border trucking from congested rail. Exact road onset, authority and cargo exceptions are unknown. NIA observes trains moving on August 16–17; these are not road reopening evidence. Later battery-only and rail-planning entries do not extend the entire road cohort.\n\nEarlier later-access bound: the Xinjiang Transport Department report published 29 October 2021 expressly lists Alashankou among road ports retaining freight clearance, in its first-three-quarter operational review. Use 2021-10-29 as a conservative later road-freight access bound, replacing the much later September 2026 bound. The report does not give the original August restart day, detailed commodity exceptions, or uninterrupted access during the quarter. Its general continuity wording does not erase GEODIS’s August 20 trucking suspension observation.",
+          "rationale": "The cached GEODIS August 20 section explicitly distinguishes suspended Alashankou trucking from congested rail, and the cached full Xinjiang report supports the later road-freight access bound. The original geometry proposals nevertheless identify different country-side road facilities about 5.7 km apart: A's Chinese Alashankou control and B's historical Kazakh MAPP Dostyk gate. Inspecting the XML confirms distinct controls, not one shared terminal; the independent site intersection is empty. Do not select either one-pass-only site or the later relocated Alakol terminal. Preserve unknown onset and the October 29 conservative road-access bound without treating railway operation as road reopening."
+        }
+      ],
+      "review_evidence": [
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-b/web-r13-body.json",
+          "access": "Original independent-pass cache inspected: GEODIS August 20, 2021 trucking suspension section and separate rail-congestion wording.",
+          "sha256": "d7027d4c0da33baee1866b980b99735e136573c05451c78a012bd26792238ac1"
+        },
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-b/web-r13-8.json",
+          "access": "Original independent-pass cache inspected: full Xinjiang transport report with October 29 publication date and explicitly road-port freight text; NIA rail account remains mode-specific.",
+          "sha256": "59a366df218273b498b84b8daf14a4bd4ff643e2e049891f9b3d0aeb3261b89b"
+        },
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-a/area-alashankou.xml",
+          "access": "Original XML inspected: Chinese Alashankou motor-road border control 1942796850.",
+          "sha256": "bdbfb0608d93182f92a585084ab21366bc16fe15da05fec527ed7742043c45a3"
+        },
+        {
+          "file": "research/geography-audit-2026-10-29/evidence/asia-b/53a4afebb0f8d9a26107.xml",
+          "access": "Original XML inspected: versioned October 2019 Kazakh MAPP Dostyk road control 2711001756.",
+          "sha256": "55d66c4361a5eb16ccd14fa73db69121811ae28c8f9b4a4d2f3a4069ccdb6b51"
+        }
+      ]
+    }
+  ]
+}

@@ -57,6 +57,8 @@ def build(output):
             mapped = [p for p in decided.values() if p['decision'] != 'hold']
             pending = not decision
             notes = []
+            if not event.get('duration_periods'):
+                notes.append('No canonical dated phase exists; a temporal map binding would require evidence for dates, not an invented interval.')
             for original in event.get('duration_periods', []):
                 phase_id = original['period_id']
                 phase = decided.get(phase_id, {})
@@ -111,7 +113,8 @@ def build(output):
               'geography-audit-phases.csv': csv_bytes(phases),
               'geography-audit-summary.json': json_bytes(summary)}
     members.update(common)
-    for name in ['README.md', 'audit-plan.json', 'reconciled-decisions.json']:
+    for name in ['README.md', 'audit-plan.json', 'reconciled-decisions.json',
+                 'new-site-metadata-corrections.json']:
         members[name] = (AUDIT/name).read_bytes()
     members['READ-ME-FIRST.txt'] = (
         'GEOGRAPHY AUDIT — 29 OCTOBER 2026\n\n'
@@ -128,6 +131,7 @@ def build(output):
         'Later-status and national-policy supplements are separate. '
         'Review completion does not imply full source access, independent reporting origins, or human verification. '
         'Use the retained original news and government URLs to check claims directly. '
+        'The metadata review records corrected country labels and duplicate-facility decisions. '
         'Publisher articles are not republished in this archive.\n').encode()
     output.mkdir(parents=True, exist_ok=True)
     for name, raw in common.items():

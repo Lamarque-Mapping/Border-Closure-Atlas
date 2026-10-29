@@ -1,0 +1,141 @@
+{
+  "record_id": "REC50-R28-001",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Two separate Myawaddy–Mae Sot facilities and traffic restrictions: Bridge II cargo interruption during April 2024 fighting, and Thai admission restrictions on temporary-pass/booklet holders at Bridge I from 21 April. Passport permission and later document-specific access are retained. Inland Asia Highway damage is outside these bridge points.",
+  "source_checks": [
+    {
+      "url": "https://www.rfa.org/english/news/myanmar/myanmar-thai-border-reopens-04302024074334.html",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Names cargo Friendship Bridge No. 2, with trucks returning on April 30 after ten days; distinguishes the passenger bridge.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-body.json",
+      "sha256": "d7027d4c0da33baee1866b980b99735e136573c05451c78a012bd26792238ac1"
+    },
+    {
+      "url": "https://elevenmyanmar.com/news/myawady-mae-sot-border-crossing-tightened-temporary-passes-suspended",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "April 21 article explicitly assigns temporary-pass refusal to Bridge No. 1 and states passports still allowed; Bridge No. 2 separately closed.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-body.json",
+      "sha256": "d7027d4c0da33baee1866b980b99735e136573c05451c78a012bd26792238ac1"
+    },
+    {
+      "url": "https://www.moi.gov.mm/moi%3Aeng/index.php/news/13757",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "May 1 UID requirement is later documentation policy, not evidence of the first Thai readmission or April onset.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-body.json",
+      "sha256": "d7027d4c0da33baee1866b980b99735e136573c05451c78a012bd26792238ac1"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1560879036/full",
+      "access_status": "fresh_OSM_XML_inspected",
+      "finding": "Named first Moei road bridge geometry inspected; distinct from Mae Sai.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/9957dc99f9645e7b0ebf.xml",
+      "sha256": "64b49b144bc15522f21ddaa7cc02adae212a6a811796f33ef4c43b1ed13dfdf9",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/9957dc99f9645e7b0ebf.txt",
+      "text_sha256": "64b49b144bc15522f21ddaa7cc02adae212a6a811796f33ef4c43b1ed13dfdf9",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1414223873/full",
+      "access_status": "fresh_OSM_XML_inspected",
+      "finding": "Named second Moei cargo bridge geometry inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/c57bda0eaeae93ec0c79.xml",
+      "sha256": "ab8aa072b0e940323bede13ae0f57288bb5ebc21b850a3d1e12790efc6965c5f",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/c57bda0eaeae93ec0c79.txt",
+      "text_sha256": "ab8aa072b0e940323bede13ae0f57288bb5ebc21b850a3d1e12790efc6965c5f",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R28-001-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-maesot-myawaddy-bridge-2",
+          "name": "Mae Sot–Myawaddy Friendship Bridge II",
+          "coordinates": [
+            98.4882618,
+            16.7155252
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/1414223873/full"
+          ],
+          "evidence_note": "OSM footprint explicitly named Second Friendship Bridge; separate structure northwest of Bridge I; later binding requires original source explicitly name Bridge II.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/c57bda0eaeae93ec0c79.xml",
+          "sha256": "ab8aa072b0e940323bede13ae0f57288bb5ebc21b850a3d1e12790efc6965c5f"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Bridge II cargo only. Conflicting April onset dates and April 30 observed truck return retained.",
+      "date_scope_check": {
+        "start_earliest": "2024-04-11",
+        "start_latest": "2024-04-20",
+        "end_earliest": "2024-04-30",
+        "end_latest": "2024-04-30",
+        "last_confirmed": null,
+        "temporal_display_rule": "",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "REC50-R28-001-P1: RFA’s April 30 report describes trucks returning after ten days, and Eleven’s May 1 report explicitly gives April 20. GNLM’s May 8 retrospective gives April 11. Both concern Bridge II cargo, so the onset conflict remains visible; the matched April 30 truck return and sustained interruption support qualified visualization and greater-than-24-hour eligibility. Exact elapsed duration and imposing-side attribution remain unresolved. CNI’s May 5 combined account mentions April 21 for suspended activities at both bridges; it does not resolve the cargo-specific disagreement. Inland Asia Highway damage is separate from passage over the international bridge.\n\nREC50-R28-001-P2: Generic April 27 reopening and travel into Myanmar alone do not establish restored Thai admission for pass holders. May reports now supply document-specific conditional access, bounded by May 6 without claiming the first Thai readmission or restoration of every booklet type. IMNA’s March 1 UID date conflicts with MOI and Eleven’s May 1 account and is not used. The official rationale for the original Thai document refusal remains unknown; later Myanmar UID policy motives are not retroactively assigned to it. February 2026 guarantor conditions are a later observation, not evidence of uninterrupted April 2024–2026 restrictions."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "REC50-R28-001-P2",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-maesot-myawaddy-bridge-1",
+          "name": "Mae Sot–Myawaddy Friendship Bridge I",
+          "coordinates": [
+            98.5165555,
+            16.6907206
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/1560879036/full"
+          ],
+          "evidence_note": "Named OSM bridge footprint on Moei River; Thai government description fixes Bridge I to Highway 105 and 1997 opening, separately from cargo Bridge II.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/9957dc99f9645e7b0ebf.xml",
+          "sha256": "64b49b144bc15522f21ddaa7cc02adae212a6a811796f33ef4c43b1ed13dfdf9"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Bridge I Thai admission for temporary passes/booklets; passport exception and conditional later access retained.",
+      "date_scope_check": {
+        "start_earliest": "2024-04-21",
+        "start_latest": "2024-04-21",
+        "end_earliest": "2024-04-21",
+        "end_latest": "2024-04-21",
+        "last_confirmed": "2024-04-21",
+        "temporal_display_rule": "held_evidence_do_not_animate_as_confirmed",
+        "held_status_preserved": false,
+        "contested": true,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "REC50-R28-001-P1: RFA’s April 30 report describes trucks returning after ten days, and Eleven’s May 1 report explicitly gives April 20. GNLM’s May 8 retrospective gives April 11. Both concern Bridge II cargo, so the onset conflict remains visible; the matched April 30 truck return and sustained interruption support qualified visualization and greater-than-24-hour eligibility. Exact elapsed duration and imposing-side attribution remain unresolved. CNI’s May 5 combined account mentions April 21 for suspended activities at both bridges; it does not resolve the cargo-specific disagreement. Inland Asia Highway damage is separate from passage over the international bridge.\n\nREC50-R28-001-P2: Generic April 27 reopening and travel into Myanmar alone do not establish restored Thai admission for pass holders. May reports now supply document-specific conditional access, bounded by May 6 without claiming the first Thai readmission or restoration of every booklet type. IMNA’s March 1 UID date conflicts with MOI and Eleven’s May 1 account and is not used. The official rationale for the original Thai document refusal remains unknown; later Myanmar UID policy motives are not retroactively assigned to it. February 2026 guarantor conditions are a later observation, not evidence of uninterrupted April 2024–2026 restrictions."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "9cb3765a67319b5f5b0f1a2a2e0a813064b275ae0d3b1391e8479b2c0734c67d",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

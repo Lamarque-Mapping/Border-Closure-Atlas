@@ -1,0 +1,84 @@
+{
+  "record_id": "REC50-R42-005",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "February20–23,2024 intermittent farmer action at Kalpaki inland road junction serving Greek Kakavia and Mertzani customs approaches. It did not establish simultaneous closure at both international gates. Buses/vulnerable travelers and temporary openings were permitted, and nearby detours had their own short restrictions.",
+  "source_checks": [
+    {
+      "url": "https://www.ertnews.gr/perifereiakoi-stathmoi/ioanina/ipeiros-agrotes-ekleisan-ton-dromo-pou-odigei-sta-teloneia-kakkavias-kai-mertzanis/",
+      "access_status": "full_retrieved",
+      "finding": "Full ERT report inspected: Kalpaki road to Kakavia/Mertzani closed from10:00 with a one-hour opening, buses/vulnerable groups permitted, later one-hour detour restrictions announced."
+    },
+    {
+      "url": "https://www.cnn.gr/ellada/story/406833/ioannina-entasi-me-agrotes-pou-thelisan-na-blokaroun-ton-komvo-sto-kalpaki",
+      "access_status": "full_retrieved",
+      "finding": "Full CNN report inspected: police stopped tractors at Kalpaki junction, later sit-in blocked road toward Kakavia/Konitsa."
+    },
+    {
+      "url": "https://www.epiruspost.gr/ston-komvo-kalpakioy-i-orgi-ton-agroto/",
+      "access_status": "full_retrieved",
+      "finding": "Full EpirusPost report inspected: junction blocked for hours, Kakavia and Konitsa traffic redirected via bypasses."
+    },
+    {
+      "url": "https://www.epiruspost.gr/kathimerina-sto-kalpaki-tin-deytera-st/",
+      "access_status": "full_retrieved",
+      "finding": "Full later EpirusPost report inspected: continuing daily symbolic Kalpaki blocks make Kakavia access difficult; no observed final reopening inferred."
+    },
+    {
+      "url": "https://epirusjournal.gr/synechizoun-ton-agona-tous-oi-agrotes-sygkentrosi-ston-komvo-kalpakiou/",
+      "access_status": "extract_only",
+      "finding": "Indexed February22 report inspected: police road measures locate Kalpaki junction at33rd km of Ioannina–Konitsa–Kakavia road; heavy vehicles also held at29th km. Additional29th-km site not assigned without coordinates."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=20.615,39.87,20.64,39.897",
+      "access_status": "full_retrieved",
+      "finding": "Direct OSM topology inspected: node295227450 joins EO20 and EO22; no country or village centroid used."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R42-005-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "proposed-kalpaki-eo20-eo22-junction",
+          "name": "Kalpaki EO20–EO22 junction, Greek inland approach",
+          "coordinates": [
+            20.6236337,
+            39.8895639
+          ],
+          "coordinate_method": "Directly inspected OSM node/295227450 node; XML sha256 f6ac837b33b673d638697982d2924bbc22d0517416fb32d0a6359fa6dab144ed; topology map XML sha25682c40db56bd5ad95a35012d6615edc2377750b178de35439b6b3554a3bf11dd8",
+          "precision": "Junction representative, approximately100m; rotating barricades and bypass closures not fully surveyed",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/295227450",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=20.615,39.87,20.64,39.897"
+          ],
+          "evidence_note": "Direct OSM map shows this node joining EO20 Kozanis–Ioanninon with EO22 Kalpakiou–Kakavias. Sources specify Kalpaki junction serving Kakavia and Konitsa/Mertzani; distinct from village centre and a proposed new northern roundabout."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Kalpaki road approach serving Kakavia and Mertzani customs crossings; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "intermittent_regime",
+        "start_earliest": "2024-02-20",
+        "start_latest": "2024-02-20",
+        "end_earliest": "2024-02-23",
+        "end_latest": "2024-02-23",
+        "last_confirmed": "2024-02-23",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Main junction located; exact temporary barricades, detour closure segments and29th-km heavy-vehicle holding point not mapped."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Main junction located; exact temporary barricades, detour closure segments and29th-km heavy-vehicle holding point not mapped."
+  ]
+}

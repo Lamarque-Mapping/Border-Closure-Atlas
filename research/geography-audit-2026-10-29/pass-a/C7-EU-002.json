@@ -1,0 +1,134 @@
+{
+  "record_id": "C7-EU-002",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Entry into Latvia by nonmotorized traffic restricted at three named road posts; motorized passage remains possible. Pāternieki faces Belarus, Terehova and Grebņeva face Russia. This is not a rail closure or an exit restriction.",
+  "source_checks": [
+    {
+      "url": "https://www.vestnesis.lv/op/2025/55B.1",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Official operative Order 166, paragraph at lines 1418–1425, names both frontiers and explicitly says entry only by motor vehicles from March 19.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-127.json"
+    },
+    {
+      "url": "https://www.iem.gov.lv/en/article/19-march-traffic-border-crossing-points-paternieki-terehova-and-grebneva-will-be-restricted",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Interior Ministry March 21 explanatory notice identifies the same three road posts and cycle/scooter concerns; broader wording does not override entry-specific operative text.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-115.json"
+    },
+    {
+      "url": "https://lvborder.lv/border-chekpoints/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Primary state transport directorate service gives checkpoint coordinates distinct from waiting areas; all three named sites independently matched. Current directory establishes location, not 2025 operation.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fa09ad9c9898c3201f26.html",
+      "source_sha256": "26d44f976589a3104467e78a6ab8949a8b995f7badcb064d96de965c109d824e",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-117.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "C7-EU-002-P1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-paternieki-road",
+          "name": "Pāternieki road border checkpoint",
+          "coordinates": [
+            27.62504916825354,
+            55.82073967935616
+          ],
+          "coordinate_method": "Published named checkpoint decimal coordinates, reordered longitude/latitude",
+          "precision": "Approximate facility reference; published decimal precision does not establish surveyed accuracy or a historical barrier footprint.",
+          "source_urls": [
+            "https://lvborder.lv/border-chekpoints/"
+          ],
+          "evidence_note": "State transport directorate queue service explicitly distinguishes the Belarus checkpoint from its nearby waiting area.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fa09ad9c9898c3201f26.html",
+              "sha256": "26d44f976589a3104467e78a6ab8949a8b995f7badcb064d96de965c109d824e",
+              "access_status": "fresh_raw_primary_geographic_evidence_inspected"
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-117.json",
+              "access_status": "fresh_primary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-terehova-road",
+          "name": "Terehova road border checkpoint",
+          "coordinates": [
+            28.187573835097062,
+            56.3548771627185
+          ],
+          "coordinate_method": "Published named checkpoint decimal coordinates, reordered longitude/latitude",
+          "precision": "Approximate facility reference; published decimal precision does not establish surveyed accuracy or a historical barrier footprint.",
+          "source_urls": [
+            "https://lvborder.lv/border-chekpoints/"
+          ],
+          "evidence_note": "State transport directorate queue service names this Russia-bound checkpoint separately from Maliņas and Lomoši waiting lots.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fa09ad9c9898c3201f26.html",
+              "sha256": "26d44f976589a3104467e78a6ab8949a8b995f7badcb064d96de965c109d824e",
+              "access_status": "fresh_raw_primary_geographic_evidence_inspected"
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-117.json",
+              "access_status": "fresh_primary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-grebneva-road",
+          "name": "Grebņeva road border checkpoint",
+          "coordinates": [
+            27.83031868786706,
+            56.86888113182786
+          ],
+          "coordinate_method": "Published named checkpoint decimal coordinates, reordered longitude/latitude",
+          "precision": "Approximate facility reference; published decimal precision does not establish surveyed accuracy or a historical barrier footprint.",
+          "source_urls": [
+            "https://lvborder.lv/border-chekpoints/"
+          ],
+          "evidence_note": "State transport directorate queue service names this Russia-bound checkpoint separately from three waiting lots.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fa09ad9c9898c3201f26.html",
+              "sha256": "26d44f976589a3104467e78a6ab8949a8b995f7badcb064d96de965c109d824e",
+              "access_status": "fresh_raw_primary_geographic_evidence_inspected"
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-117.json",
+              "access_status": "fresh_primary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Pedestrian and cycle entry at Pāternieki/Terehova/Grebņeva",
+      "date_scope_check": {
+        "start_earliest": "2025-03-19",
+        "start_latest": "2025-03-19",
+        "end_earliest": "2025-03-21",
+        "end_latest": "2025-03-21",
+        "last_confirmed": "2025-03-21",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "No final lifting date established; March 21 is a confirmation, not reopening. Current facility reference does not survey the historic pedestrian-control point."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "4c86bd286a4dc583fad685a9861c206efbaba3e03ef0ac66d9f26ed019db6e7a"
+}

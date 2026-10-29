@@ -1,0 +1,144 @@
+{
+  "record_id": "REC50-R33-003",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Banglabandha–Phulbari freight holiday. Advance schedule and linked observed-return phase concern the same road crossing and are not additive; passenger movement continued.",
+  "source_checks": [
+    {
+      "url": "https://www.ajkerpatrika.com/bangladesh/panchagarh/ajpeld1usxcrl",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "October 10 local report confirms actual morning freight restart after September 30–October 9 interruption.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-75.json",
+      "sha256": "8ccd05deacbb56fb8e82af7aff6924591ac81d56e5ba3fa54797bf064d0d82bf"
+    },
+    {
+      "url": "https://www.dhakatribune.com/bangladesh/295032/trade-via-banglabandha-land-port-to-remain",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Advance report names Banglabandha and Phulbari trader groups and states travellers continue normally.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-86.json",
+      "sha256": "b321f5f979a5b29b7e3e3dd546fe5cf803cea9b5bc5ddaf79339e4efcb3ff4eb"
+    },
+    {
+      "url": "https://www.bangladeshtradeportal.gov.bd/kcfinder/upload/files/LandportIndrouctionEnglish.pdf",
+      "access_status": "search_indexed_official_port_directory",
+      "finding": "Official directory explicitly pairs Banglabandha with Phulbari, India.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-77.json",
+      "sha256": "b28eb545c4a1896d7b12aa1269dbfabfc6d788872ab0622af2b4450f3c295cab"
+    },
+    {
+      "url": "https://www.thedailystar.net/business/news/trade-banglabandha-land-port-remain-suspended-11-days-3131951",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://online-bn.thedailystar.net/news/bangladesh/news-402816",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 403: Forbidden",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R33-003-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-banglabandha-phulbari",
+          "name": "Banglabandha–Phulbari zero point",
+          "coordinates": [
+            88.4147192,
+            26.6331379
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/5219525625",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/5219525625",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=88.4,26.62,88.43,26.64"
+          ],
+          "evidence_note": "Explicit named Banglabandha Zero Point immediately north of named land-port complex and south of mapped India-side controls. Official Bangladesh port directory pairs with Phulbari. Nepal/Bhutan are onward partners, not adjacent borders.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-banglabandha-main.xml",
+          "sha256": "6b86367f1775ea640ce1a1c4ce35d2afa8b5e524a0ecc10778fa5cf3053e48ff",
+          "osm_feature": "node/5219525625",
+          "osm_version": "1",
+          "osm_timestamp": "2017-11-09T10:33:51Z",
+          "identity_tags": {
+            "name": "Banglabandha Zero Point",
+            "railway": "milestone"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Freight exchange through Banglabandha–Phulbari under the local trader holiday arrangement",
+      "date_scope_check": {
+        "scope": "Freight exchange through Banglabandha–Phulbari under the local trader holiday arrangement",
+        "start_earliest": "2022-09-30",
+        "start_latest": "2022-09-30",
+        "end_earliest": "2022-10-10",
+        "end_latest": "2022-10-10",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "September 30–October 10 2022 retained for both canonical linked phases; actual morning restart October 10 follows September 30–October 9 holiday. Eleven-day shorthand not used; passengers normal."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "REC50-R44-BANGLABANDHA-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-banglabandha-phulbari",
+          "name": "Banglabandha–Phulbari zero point",
+          "coordinates": [
+            88.4147192,
+            26.6331379
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/5219525625",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/5219525625",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=88.4,26.62,88.43,26.64"
+          ],
+          "evidence_note": "Explicit named Banglabandha Zero Point immediately north of named land-port complex and south of mapped India-side controls. Official Bangladesh port directory pairs with Phulbari. Nepal/Bhutan are onward partners, not adjacent borders.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-banglabandha-main.xml",
+          "sha256": "6b86367f1775ea640ce1a1c4ce35d2afa8b5e524a0ecc10778fa5cf3053e48ff",
+          "osm_feature": "node/5219525625",
+          "osm_version": "1",
+          "osm_timestamp": "2017-11-09T10:33:51Z",
+          "identity_tags": {
+            "name": "Banglabandha Zero Point",
+            "railway": "milestone"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Banglabandha–Phulbari freight interchange during the September–October 2022 holiday",
+      "date_scope_check": {
+        "scope": "Banglabandha–Phulbari freight interchange during the September–October 2022 holiday",
+        "start_earliest": "2022-09-30",
+        "start_latest": "2022-09-30",
+        "end_earliest": "2022-10-10",
+        "end_latest": "2022-10-10",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "September 30–October 10 2022 retained for both canonical linked phases; actual morning restart October 10 follows September 30–October 9 holiday. Eleven-day shorthand not used; passengers normal."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

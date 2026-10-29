@@ -1,0 +1,114 @@
+{
+  "record_id": "REC50-R27-002",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Armenian truck-driver access obstruction at Agarak/Meghri–Norduz crossing over Iranian fuel and document rules. This concerns a specific road gate/access, not the entire Aras frontier.",
+  "source_checks": [
+    {
+      "url": "https://www.amnews.am/language/en/economy-eng-35/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "November 17 report identifies Agarak blocked by truck drivers and halted traffic; exact exemptions not given.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-74.json",
+      "sha256": "a1580c8595779bcdf90d84b8bdb52902673e3a6353377d44784d0923a74b1802"
+    },
+    {
+      "url": "https://www.jetro.go.jp/ext_images/_Reports/01/aed2fcbf2150368f/20170061.pdf",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "JETRO report page42 explicitly equates Meghri/Agarak–Norduz at the Aras border; geographic identity only.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-83.json",
+      "sha256": "c64baa02414046fdb6fa6b7717b6d5fcfee2e5c378386d1da1fe2d521ef2137e"
+    },
+    {
+      "url": "https://am.sputniknews.ru/20241117/armyanskie-voditeli-perekryli-dvizhenie-s-iranom-na-kpp-agarak-chto-proizoshlo--83092048.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://am.sputniknews.ru/20241120/novye-tseny-na-toplivo-na-granitse-irana-s-chem-stolknulis-voditeli-armyanskikh-gruzovikov-83201692.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://news.am/en/news/854261",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://radar.am/en/news/politics-2522131825/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R27-002-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-agarak-norduz",
+          "name": "Agarak / Meghri–Norduz road crossing",
+          "coordinates": [
+            46.2016754,
+            38.8516505
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/179099483",
+          "precision": "Crossing/access-area reference, approximately 700 m; exact protesting truck position and lanes not established.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/179099483",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=46.16,38.83,46.21,38.88",
+            "https://www.jetro.go.jp/ext_images/_Reports/01/aed2fcbf2150368f/20170061.pdf"
+          ],
+          "evidence_note": "Mapped Yerevan–Meghri highway bridge over the Aras between Armenian controls and explicitly named Iranian Norduz control. JETRO identifies Meghri–Agarak–Norduz as one paired border customs point.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-agarak.xml",
+          "sha256": "bc26df1c8cc2999f6da728cf7556b1c550d1e066a8cbf8af8b8708ab7ec00879",
+          "osm_feature": "way/179099483",
+          "osm_version": "18",
+          "osm_timestamp": "2025-07-02T15:07:54Z",
+          "identity_tags": {
+            "bridge": "yes",
+            "highway": "trunk",
+            "int_ref": "AH82",
+            "layer": "1",
+            "name": "Երևան-Մեղրի ավտոմայրուղի",
+            "name:en": "Yerevan-Meghri highway",
+            "name:hy": "Երևան-Մեղրի ավտոմայրուղի",
+            "name:ru": "шоссе Ереван-Мегри",
+            "oneway": "no",
+            "ref": "Հ-50",
+            "ref:en": "H-50",
+            "source": "GPS"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Crossing access obstructed by Armenian truck drivers; exact passenger and freight exemptions are unknown at Agarak / Meghri on the Armenia–Iran route",
+      "date_scope_check": {
+        "scope": "Crossing access obstructed by Armenian truck drivers; exact passenger and freight exemptions are unknown at Agarak / Meghri on the Armenia–Iran route",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2024-11-17",
+        "end_latest": "2024-11-17",
+        "last_confirmed": "2024-11-17",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "November 17 2024 observation only. Later interviews/diplomatic response do not prove continuity; individual drivers returning do not establish general reopening."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,63 @@
+{
+  "record_id": "REC50-R18-003",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Bagayeros disrupted the Pocitos/Yacuiba–Salvador Mazza international road bridge in July 2023, on the Argentine side according to the July 4 report. Freight and personal passage were affected; reopening traffic flowed both ways. This is one road crossing, not the nearby railway or the whole Bolivia–Argentina border.",
+  "source_checks": [
+    {
+      "url": "https://elpais.bo/tarija/20230704_bagayeros-cumplen-segundo-dia-de-bloqueo-del-puente-internacional-salvador-mazza-yacuiba.html",
+      "access_status": "full_retrieved",
+      "finding": "July 4 report inspected: second day of blockade, Argentine-side bagayeros and customs demands, effects on commerce and persons."
+    },
+    {
+      "url": "https://tarija200.com/post/levantan-el-bloqueo-en-el-puente-internacional-en-la-frontera-de-yacuiba-salvador-mazza",
+      "access_status": "full_retrieved",
+      "finding": "July 6 report inspected: blockade lifted around 19:00 following customs negotiations, trucks then passed in both directions; report says Monday start and three days, canonical dates retained."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R18-003-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "proposed-pocitos-salvador-mazza-road-bridge",
+          "name": "Pocitos–Salvador Mazza international road bridge",
+          "coordinates": [
+            -63.6838634,
+            -22.053081
+          ],
+          "coordinate_method": "Directly inspected OSM way/128949421 mean of geometry vertices; XML sha256 adf916259dffafae3f1908263b42ba553bbe717277a62c07e5e5761443e38c84",
+          "precision": "Road bridge representative, approximately 50 m; exact barricade or approach footprint not surveyed",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/128949421/full"
+          ],
+          "evidence_note": "Bridge geometry identifies the affected road crossing; source locates protesters on Argentine side, not necessarily the midpoint."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Freight passage disrupted by the bridge blockade; source also reports affected personal movement at Yacuiba–Salvador Mazza international bridge; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "bounded_interval",
+        "start_earliest": "2023-07-03",
+        "start_latest": "2023-07-03",
+        "end_earliest": "2023-07-04",
+        "end_latest": "2023-07-06",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "The exact Argentine-side barricade location is not established; point represents the affected bridge."
+      ]
+    }
+  ],
+  "unresolved": [
+    "The exact Argentine-side barricade location is not established; point represents the affected bridge."
+  ]
+}

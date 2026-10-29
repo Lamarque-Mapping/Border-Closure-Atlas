@@ -3,7 +3,7 @@
   "pass": "b",
   "agent": "/root/geography_asia_b",
   "review_date": "2026-10-29",
-  "verification_status": "unresolved",
+  "verification_status": "qualified",
   "record_scope_reconstruction": "Election suspension of simplified crossing services in Leningori/Akhalgori and Dzau, including Razdakhan and Pereu, superimposed on monthly limited openings.",
   "source_checks": [
     {
@@ -13,14 +13,68 @@
       "error": "<urlopen error timed out>",
       "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-central-1.json",
       "sha256": "865b9f40264021137f81c686a32bd2af79e2116df407a80b6a36d59c3fe9110b"
+    },
+    {
+      "url": "https://cominf.org/en/node/1166559168",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Original October 10 decision names Razdakhan and Pereu, establishing applicability of the independently located Razdakhan/Odzisi site.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-final-cc031.json",
+      "sha256": "e67de823955b7083f8c28572dc1877c679df82b0a67f48c4267501ad2c03f847"
+    },
+    {
+      "url": "https://cominf.org/node/1166559172",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Original Russian KGB notice names both sites and distinguishes October closure from October 25–28 enhanced security service; canonical controversy is retained.",
+      "error": "<urlopen error timed out>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-final-cc031.json",
+      "sha256": "e67de823955b7083f8c28572dc1877c679df82b0a67f48c4267501ad2c03f847"
+    },
+    {
+      "url": "https://democracyresearch.org/files/344web%20eng%201072024.pdf",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "DRI report explicitly identifies Odzisi–Mosabruni as Razdakhani, providing the alias link to the named OSM node.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/83a6631a9a16f3f0caca.pdf",
+      "sha256": "017bfa7289d61ac64549ea3df463ca5f7af0c85d0f0a5054895e0d6661e1cebb",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/83a6631a9a16f3f0caca.txt",
+      "text_sha256": "2709c01c4330bc80711efea8aafdccc749abe470f72687b8638d8bcf1455b6c2",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/1203169771",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Independently inspected Razdakhan-Mosabruni border-control node; location only, not proof of disputed closure dates.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3136f4dca29f516fb338.xml",
+      "sha256": "f19d07825a2d92dbb28f11dfb4ce7cf2db0db05bc6fdecd3d49ca5c7b9dbcbdc",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3136f4dca29f516fb338.txt",
+      "text_sha256": "f19d07825a2d92dbb28f11dfb4ce7cf2db0db05bc6fdecd3d49ca5c7b9dbcbdc",
+      "status": 200
     }
   ],
   "phase_decisions": [
     {
       "phase_id": "CC031-R1",
       "category": "multiple_named_sites",
-      "decision": "hold",
-      "sites": [],
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-odzisi-mosabruni",
+          "name": "Odzisi–Mosabruni / Razdakhan crossing",
+          "coordinates": [
+            44.4871514,
+            42.0682341
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/1203169771",
+            "https://democracyresearch.org/files/344web%20eng%201072024.pdf"
+          ],
+          "evidence_note": "OSM named Razdakhan-Mosabruni border_control; DRI 2024 report explicitly equates Odzisi-Mosabruni with Razdakhani. EUMM names Odzisi in the 2019, 2022 and 2026 phase evidence.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3136f4dca29f516fb338.xml",
+          "sha256": "f19d07825a2d92dbb28f11dfb4ce7cf2db0db05bc6fdecd3d49ca5c7b9dbcbdc"
+        }
+      ],
       "border_reference_ids": [],
       "complete": false,
       "phase_applicability": "Election suspension of simplified crossing services in Leningori/Akhalgori and Dzau, including Razdakhan and Pereu, superimposed on monthly limited openings.",
@@ -31,19 +85,22 @@
         "end_latest": "2024-10-28",
         "last_confirmed": null,
         "temporal_display_rule": "held_evidence_do_not_animate_as_confirmed",
-        "held_status_preserved": true,
+        "held_status_preserved": false,
         "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
-        "qualification": "Interfax assigns October 25–28 at 08:00 to crossing closure; the original October 10 KGB notice and its English translation assign those times to enhanced service and state that the crossings will not operate in October. Exact special-closure bounds remain unresolved."
+        "qualification": "Interfax assigns October 25–28 at 08:00 to crossing closure; the original October 10 KGB notice and its English translation assign those times to enhanced service and state that the crossings will not operate in October. Exact special-closure bounds remain unresolved.",
+        "contested": true,
+        "analysis_included": true,
+        "strictly_over_24_hours": null
       },
       "unresolved": [
-        "Canonical phase is contested and remains held. Pereu/Sinaguri/Karzmani aliases require exact phase-specific disambiguation; a verified Odzisi point does not authorize this held phase.",
-        "Existing contested, excluded or not-strictly-over-24-hours status is preserved; no geography approval."
+        "Only Razdakhan/Odzisi–Mosabruni is located. Pereu/Sinaguri/Karzmani aliases require exact phase-specific disambiguation and coordinates. Canonical date conflict remains unchanged."
       ]
     }
   ],
   "unresolved": [
-    "Canonical phase is contested and remains held. Pereu/Sinaguri/Karzmani aliases require exact phase-specific disambiguation; a verified Odzisi point does not authorize this held phase."
+    "Only Razdakhan/Odzisi–Mosabruni is located. Pereu/Sinaguri/Karzmani aliases require exact phase-specific disambiguation and coordinates. Canonical date conflict remains unchanged."
   ],
   "input_sha256": "c3f083c35a21cec01b9122bf8f124d02a1b03b08601e467a3c61e7d0b5cf22d0",
-  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted.",
+  "procedural_correction": "Final review applies the instruction that temporal controversy alone does not prevent supported geography. Previously held Razdakhan subset now partial; dates and other unresolved crossing unchanged."
 }

@@ -1,0 +1,90 @@
+{
+  "record_id": "REC50-R46-004",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "August22–28,2026 MAS sailing prohibition affected the Canawaima ferry route between Moleson Creek, Guyana, and South Drain, Suriname. The two landing sites represent the named international ferry link. This is not a closure of the entire river or all passenger crossings; Guyana continued immigration arrangements for small boats.",
+  "source_checks": [
+    {
+      "url": "https://dpi.gov.gy/statement-on-the-guyana-suriname-ferry-service-disruption/",
+      "access_status": "full_retrieved",
+      "finding": "Full primary Guyana statement inspected: MAS demanded repairs, replacement proposal refused; small-boat passengers could still process immigration at Moleson Creek and New Nickerie."
+    },
+    {
+      "url": "https://dpi.gov.gy/m-v-canwaima-ban-lifted/",
+      "access_status": "full_retrieved",
+      "finding": "Full primary August28 notice inspected: ban lifted and ferry service resumes that day on regular schedule, priority stranded passengers."
+    },
+    {
+      "url": "https://newsroom.gy/2026/08/22/guyana-suriname-ferry-service-temporarily-suspended/",
+      "access_status": "full_retrieved",
+      "finding": "Full August22 NewsRoom report inspected: technical suspension; route explicitly Moleson Creek–South Drain."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/29711119/ways",
+      "access_status": "full_retrieved",
+      "finding": "Direct OSM XML inspected: way29231080 route=ferry, operator=Canawaima Ferry Service, motor vehicles and foot allowed, endpoints321516712 and29711119. XML sha256 bfb8fbaff90dcaf008f7679f7b409e95a6bdaf8d9e09f9fbaf1cb25b72aca2a7."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/321516712/ways",
+      "access_status": "full_retrieved",
+      "finding": "Direct OSM XML independently confirms ferry endpoint and Corentyne Highway landing connection, sha2564d37bada0c8651aa8316d365ae0cd2fad2262b5ab1012bc7c266c52ac4e552e7."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R46-004-P1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "proposed-moleson-creek-canawaima-ferry",
+          "name": "Moleson Creek Canawaima ferry landing, Guyana",
+          "coordinates": [
+            -57.1697811,
+            5.7810106
+          ],
+          "coordinate_method": "Directly inspected OSM node/321516712 node; XML sha256 b55d02e87fb4f4676c0535e605e42221c962d58da91d7330eadc9ed66a36d832",
+          "precision": "Ferry-landing representative, approximately50m",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/321516712",
+            "https://api.openstreetmap.org/api/0.6/node/29711119/ways"
+          ],
+          "evidence_note": "OSM ferry way29231080 explicitly operated by Canawaima links this Corentyne Highway terminal to South Drain node29711119. The local node label Paramaribo Ferry is a destination label; primary reporting names Moleson Creek. Not all boats on the Corentyne."
+        },
+        {
+          "proposed_site_id": "proposed-south-drain-canawaima-ferry",
+          "name": "South Drain Canawaima ferry landing, Suriname",
+          "coordinates": [
+            -57.1361017,
+            5.7496831
+          ],
+          "coordinate_method": "Directly inspected OSM node/29711119 node; XML sha256 ed1f17e63388b63a7e12224349e9b1363b8f4cae263d14527a510a590b831f99",
+          "precision": "Ferry-landing representative, approximately50m",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/29711119",
+            "https://api.openstreetmap.org/api/0.6/node/29711119/ways"
+          ],
+          "evidence_note": "Named Canawaima Ferry Service terminal at Zuid Drainweg, opposite Moleson Creek via OSM ferry way29231080."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "MAS sailing prohibition affecting the Canawaima ferry between Moleson Creek and South Drain; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "policy_period",
+        "start_earliest": "2026-08-22",
+        "start_latest": "2026-08-22",
+        "end_earliest": "2026-08-28",
+        "end_latest": "2026-08-28",
+        "last_confirmed": "2026-08-25",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

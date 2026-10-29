@@ -1,0 +1,198 @@
+{
+  "record_id": "NP-COV-EUR-006",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Serbian campaign hascountry-level directionalstarts and manyterminals; Jan30AMSSsnapshot names25 terminals with twoexit-onlyexceptions. SeparatelyJan29evening–30afternoon Montenegrinfrontier action concernsGostun,Jabuka,Špiljaniroad routes.",
+  "source_checks": [
+    {
+      "url": "https://www.tanjug.rs/ekonomija/srbija/226648/mup-obustavljena-blokada-na-granicnim-prelazima/vest",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Police-attributedJan30statement endsblockade15:00; identifiesJan26noonexitstart andfollowingmidnightentrystart.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-102.json"
+    },
+    {
+      "url": "https://www.tanjug.rs/srbija/drustvo/226420/amss-teretni-terminali-u-blokadi-oprez-u-voznji-zbog-ocekivanih-otezanih-uslova/vest",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Jan3005:15policesnapshot lists23two-waycargo terminals includingKelebija,Gostun,Jabuka,Špiljani; Neštin,Vatinexitonly. Snapshotcannotprovecontinuousinitialcampaignatall25.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-100.json"
+    },
+    {
+      "url": "https://en.vijesti.me/news-b/economy-d/793559/Transporters-from-Serbia-unblocked-border-crossings-with-Montenegro",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Vijesti confirmedwithpolice andindustry: Montenegrofrontier freightblockedafter18:00Jan29 until15:00Jan30,bothdirections.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-105.json"
+    },
+    {
+      "url": "https://www.ofae.gr/en/nea/international-news/26-ianoyarioy-2026-enar3h-kinhtopoihsewn-serbwn-me/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "January20 associationannouncement forecastsallborders; prospectiveambition notusedasproofeverygateclosedfrom26th.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-111.json"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/5329297935",
+      "access_status": "fresh_raw_osm_inspected",
+      "finding": "Freshly inspected OSM node5329297935 explicitly namedKelebija/Tompa BorderCrossing, version2 timestamp2025-01-28. January30AMSSroster explicitly includesKelebija; no fullcampaigncontinuity inferred.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/d0f389a43e1a372725d4.xml",
+      "source_sha256": "edba9614b22b5fb32f38297caddac196261d371a53c683b5cc8c25b8d7340719"
+    },
+    {
+      "url": "https://mapcarta.com/N295259120",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Named Montenegro bordercontrol, not Dračenovachamlet. OfficialdirectorypairsŠpiljaniSerbia.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-103.json"
+    },
+    {
+      "url": "https://mapcarta.com/N1418772028",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Named Rančebordercontrol, Jabuka330meast. SecondarypagecountrySerbia inconsistent withofficialMontenegroRanče designation; paired-route referenceonly.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-103.json"
+    },
+    {
+      "url": "https://mapcarta.com/N289875361",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Named Montenegro roadcontrol; Vrbnicarailway1.25kmnorth excluded. OfficialdirectorypairsGostunSerbia.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-103.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-EUR-006-P01",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-tompa-kelebija-road",
+          "name": "Tompa–Kelebija road crossing area",
+          "coordinates": [
+            19.5570799,
+            46.1693524
+          ],
+          "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/5329297935",
+            "https://www.police.hu/hu/hirek-es-informaciok/legfrissebb-hireink/hatarrendeszet/szunetelt-a-belepo-teherforgalom-tompanal"
+          ],
+          "evidence_note": "Freshly inspected OSM node5329297935 explicitly namedKelebija/Tompa BorderCrossing, version2 timestamp2025-01-28. January30AMSSroster explicitly includesKelebija; no fullcampaigncontinuity inferred.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/d0f389a43e1a372725d4.xml",
+              "sha256": "edba9614b22b5fb32f38297caddac196261d371a53c683b5cc8c25b8d7340719",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Kelebija/Tompa cargo terminal independently named in January30 datedsnapshot only; point must not imply everyday/site ofJanuary26–30 campaign.",
+      "date_scope_check": {
+        "start_earliest": "2026-01-26",
+        "start_latest": "2026-01-26",
+        "end_earliest": "2026-01-30",
+        "end_latest": "2026-01-30",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Other24terminalcoordinates notallresolved; snapshot-onlysiteapplicability cannotestablishcontinuousper-gatephaseextent. Rootmustretainqualificationorholdbindingifrendererwouldimplywholeinterval."
+      ]
+    },
+    {
+      "phase_id": "NP-COV-EUR-006-P02",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-dracenovac-road",
+          "name": "Dračenovac road crossing",
+          "coordinates": [
+            20.3184,
+            42.90204
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 295259120; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N295259120",
+            "https://www.openstreetmap.org/node/295259120"
+          ],
+          "evidence_note": "Named Montenegro bordercontrol, not Dračenovachamlet. OfficialdirectorypairsŠpiljaniSerbia.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-103.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-rance-road",
+          "name": "Ranče road crossing",
+          "coordinates": [
+            19.47384,
+            43.33664
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 1418772028; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N1418772028",
+            "https://www.openstreetmap.org/node/1418772028"
+          ],
+          "evidence_note": "Named Rančebordercontrol, Jabuka330meast. SecondarypagecountrySerbia inconsistent withofficialMontenegroRanče designation; paired-route referenceonly.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-103.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-dobrakovo-road",
+          "name": "Dobrakovo road crossing",
+          "coordinates": [
+            19.78007,
+            43.14349
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 289875361; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N289875361",
+            "https://www.openstreetmap.org/node/289875361"
+          ],
+          "evidence_note": "Named Montenegro roadcontrol; Vrbnicarailway1.25kmnorth excluded. OfficialdirectorypairsGostunSerbia.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-103.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Serbian-side freight traffic at Montenegro frontier, both directions.",
+      "date_scope_check": {
+        "start_earliest": "2026-01-29",
+        "start_latest": "2026-01-29",
+        "end_earliest": "2026-01-30",
+        "end_latest": "2026-01-30",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Threepairedroutes locatedusingoppositeMontenegrocontrols; exactSerbian-sidebarriers unresolved. Shortdurationdoesnotexcludegeography."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "3d86794e4eeff47395de1048e35155d1542768362849eefc6a8c3308f4a4c5c3"
+}

@@ -1,0 +1,107 @@
+{
+  "record_id": "REC50-R48-001",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Carrier-reported Alashankou cross-border trucking suspension. Road control is geographically separate from Alashankou rail station and train congestion; later battery-only and rail-planning updates do not represent the original entire road cohort.",
+  "source_checks": [
+    {
+      "url": "https://geodis.com/customer-advisory-2022-2021-archives",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "August 20 archive entry explicitly separates suspended cross-border trucking through Alashankou from severely congested railway operations; adjacent later updates are narrower or plans.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-76.json",
+      "sha256": "34d1f19ab45d724787aaee146ac942fa6578882fcba27338c3cdaf17aecc61e9"
+    },
+    {
+      "url": "https://jtyst.xinjiang.gov.cn/xjjtysj/jttj/202112/be1520c8b367493b99fdc47451481517.shtml",
+      "access_status": "search_indexed_official_report",
+      "finding": "Substantive indexed Xinjiang transport report identifies Alashankou among road ports retaining freight clearance; direct page timeout. This supports later road access, not original restart day.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-85.json",
+      "sha256": "507e937f54d2100814d245332823e11d6bdfc100a21f166627a77ecec17e6e3d"
+    },
+    {
+      "url": "https://xj.cnr.cn/xjfw_1/dzxw/20210508/t20210508_525481108.shtml",
+      "access_status": "search_indexed_article",
+      "finding": "Contemporary May 2021 article specifically identifies Alashankou highway-port designated trailer-exchange area and Kazakh trucks, confirming road-freight facility identity only.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-81.json",
+      "sha256": "b8e29232b317052bba1835ea6ffdc163490ae7c9cc5a975d574eebd638fe7dfb"
+    },
+    {
+      "url": "https://www.nia.gov.cn/n741435/n741532/c1435466/content.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://m.mysteel.com/21/0818/09/3F3236FA0B1B4044_abc.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.alsk.gov.cn/alsk/c129990/202609/8f0ee74b5de744dba9486a82a2ed0967.shtml",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R48-001-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-alashankou-road",
+          "name": "Alashankou–Dostyk road crossing",
+          "coordinates": [
+            82.5670353,
+            45.1933217
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/1942796850",
+          "precision": "Road-control area reference, approximately 500 m; exact August 2021 freight barrier/closed lane not established.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1942796850",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=82.55,45.15,82.6,45.2"
+          ],
+          "evidence_note": "Explicitly named Alashankou border-control node with motor_vehicle/bicycle/foot access tags, on road-control side west of railway approach. The nearby Alashankou railway station node243517635 is not used.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-alashankou.xml",
+          "sha256": "bdbfb0608d93182f92a585084ab21366bc16fe15da05fec527ed7742043c45a3",
+          "osm_feature": "node/1942796850",
+          "osm_version": "5",
+          "osm_timestamp": "2014-05-14T12:00:47Z",
+          "identity_tags": {
+            "access:citizenship": "all",
+            "barrier": "border_control",
+            "bicycle": "yes",
+            "foot": "yes",
+            "motor_vehicle": "yes",
+            "name:ru": "Алашанькоу"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Carrier-reported cross-border trucking suspension through Alashankou",
+      "date_scope_check": {
+        "scope": "Carrier-reported cross-border trucking suspension through Alashankou",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2021-08-20",
+        "end_latest": "2021-10-29",
+        "last_confirmed": "2021-08-20",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "August 20 2021 suspended-trucking observation retained with unknown onset. October 29 2021 transport report is a conservative later road-access bound, not exact first reopening or proof of continuous quarter-long access; rail movements do not supply road endpoints."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

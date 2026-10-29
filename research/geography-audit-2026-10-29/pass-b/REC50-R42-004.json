@@ -1,0 +1,65 @@
+{
+  "record_id": "REC50-R42-004",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Greek farmer blockade prevented passenger and cargo vehicle movements through Evzoni–Bogorodica from January30 to February17,2017. Greek police locate the roadblock at km548 of Athens–Evzoni national road, starting15:00 January30, with diversion via Doirani. This is a Greek-side road obstruction, not the Macedonian customs building or nearby Idomeni railway.",
+  "source_checks": [
+    {
+      "url": "https://duma.mk/21853-2017-02-17-08-56-38/",
+      "access_status": "full_retrieved",
+      "finding": "Full February17 Duma/AMSM morning report inspected: all vehicle types still blocked; other regional road notices not part of this event."
+    },
+    {
+      "url": "https://www.ofae.gr/media/documents/2017/02/02/Greek_Farmers_strikes_1-2-17.pdf",
+      "access_status": "full_retrieved",
+      "finding": "Full one-page Greek Police table hosted by OFAE inspected: Kilkis row specifies km548 Athens–Evzoni road from15:00 January30 and Doirani alternative; unrelated road rows excluded."
+    },
+    {
+      "url": "https://www.ofae.gr/en/nea/driving-restrictions/sta/",
+      "access_status": "full_retrieved",
+      "finding": "Full OFAE February17 reopening notice inspected: Evzoni open for goods/passengers that morning, farmers withdrawing."
+    },
+    {
+      "url": "https://www.carina.mk/index.php/en/2016-08-15-20-09-54/2016-08-15-15-05-05/1153-2017-02-20-14-19-31",
+      "access_status": "inaccessible",
+      "finding": "Macedonian customs original URL returned502."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/3418920732",
+      "access_status": "full_retrieved",
+      "finding": "Direct OSM previously inspected in this pass: Greek freight-lane control node exists but does not establish km548 barricade or passenger scope; not assigned."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R42-004-P1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Bogorodica–Evzoni passenger and cargo vehicle blockade; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2017-01-30",
+        "start_latest": "2017-01-30",
+        "end_earliest": "2017-02-17",
+        "end_latest": "2017-02-17",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Geodetic position of the source-specified km548 roadblock has not been independently established. Existing customs and freight-only lane points are not substitutions.",
+        "Both-direction passenger/cargo phase retained; no rail restriction inferred from nearby Idomeni activity."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Geodetic position of the source-specified km548 roadblock has not been independently established. Existing customs and freight-only lane points are not substitutions.",
+    "Both-direction passenger/cargo phase retained; no rail restriction inferred from nearby Idomeni activity."
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "record_id": "REC50-R22-003",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Finland prohibited non-exempt imports of Russia-registered CN 8703 cars from September 16, 2023 through its external EU borders. The Finnish Customs release expressly includes the eastern Russian border AND the Norwegian border, because Norway is outside the EU; it does not establish a Sweden-border closure. Restrictions are on vehicle import and have exceptions, not a closure to all travelers.",
+  "source_checks": [
+    {
+      "url": "https://valtioneuvosto.fi/en/-/10184/restrictions-on-import-of-vehicles-registered-in-russia",
+      "access_status": "inaccessible",
+      "finding": "Government source URL returned 403."
+    },
+    {
+      "url": "https://www.sttinfo.fi/tiedote/70022378/cars-registered-in-russia-can-no-longer-enter-finland-as-of-midnight-today?lang=en",
+      "access_status": "full_retrieved",
+      "finding": "Full primary Finnish Customs release via STT inspected: September 16 midnight implementation, CN 8703 including motorhomes and small vans, exceptions, eastern and Norwegian borders explicitly covered."
+    },
+    {
+      "url": "https://valtioneuvosto.fi/-/2912305/rajaliikenne-hiljentynyt-entisestaan-tulli-on-kaannyttanyt-37-venajalle-rekisteroitya-autoa-viikonlopun-aikana?languageId=en_US",
+      "access_status": "inaccessible",
+      "finding": "Turnback follow-up URL returned 403; individual crossing distribution not independently recovered."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R22-003-P1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Non-exempt Russian-registered passenger-vehicle imports through Finland’s external-EU borders; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "confirmed_through",
+        "start_earliest": "2023-09-16",
+        "start_latest": "2023-09-16",
+        "end_earliest": "2024-03-12",
+        "end_latest": "2024-03-12",
+        "last_confirmed": "2024-03-12",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Original inventory contains context-frontier-fin-rus and context-frontier-fin-nor labels but no line geometry. Their complete border extent has not been inspected, so neither is bound merely from its label.",
+        "No source-supported complete set of affected land crossing coordinates is established; no national centroid or Russia-only line substituted."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Original inventory contains context-frontier-fin-rus and context-frontier-fin-nor labels but no line geometry. Their complete border extent has not been inspected, so neither is bound merely from its label.",
+    "No source-supported complete set of affected land crossing coordinates is established; no national centroid or Russia-only line substituted."
+  ]
+}

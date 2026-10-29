@@ -1,0 +1,131 @@
+{
+  "record_id": "FU-COV-NAM-007",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Two separate Ontario road-route episodes: February6 all-US-bound access obstruction to Blue Water Bridge; February13–14 Peace Bridge US-bound commercial suspension. Later February9–14 Sarnia blockade retained diversion and is not the same closure.",
+  "source_checks": [
+    {
+      "url": "https://publicorderemergencycommission.ca/files/documents/Final-Report/Vol-2-Report-of-the-Public-Inquiry-into-the-2022-Public-Order-Emergency.pdf",
+      "access_status": "fresh_raw_primary_text_inspected",
+      "finding": "Fresh rawPDF inspected pp308–309: identifies both roadPOEs, February6 dispersal after3.5hours and noimpactby7th; separately Peace commercial closure afternoon13th, reopenedby09:00Feb14. February12 security lockdown distinct.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/b93a9c0745c3c8e84931.pdf",
+      "source_sha256": "43eae183a505a304ba3a235936487212067043061b8130524db7ebcb13d0b143"
+    },
+    {
+      "url": "https://sarnianewstoday.ca/sarnia/news/2022/02/06/farm-convoy-heading-sarnia1",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Contemporary updated original says Highway402 reopenedSunday after nearly9hours; vehicles parked nearFrontStreet, highwayclosedModeland–bridge.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-099.json"
+    },
+    {
+      "url": "https://mapcarta.com/22318630",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Named Blue Water Bridge in Port Huron opposite Point Edward/Sarnia, confirmed by inquiry report. ActualFebruary6 obstruction on westboundHighway402 near FrontStreet, closureModelandRoad–bridge.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-107.json"
+    },
+    {
+      "url": "https://mapcarta.com/22607164",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Named international roadbridge atBuffalo, not same-named Derry/Calgary bridges. Inquiry identifies FortErie QEW approach and US-bound commercial suspension. Exact Canadian protest positions unlocated.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-107.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-NAM-007-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-blue-water-bridge-reference",
+          "name": "Blue Water Bridge route reference",
+          "coordinates": [
+            -82.4238,
+            42.9992
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta/GeoNames4986476 named bridge entry",
+          "precision": "Approximate bridge reference, not survey accuracy or exact Highway402 protest extent.",
+          "source_urls": [
+            "https://mapcarta.com/22318630",
+            "https://www.geonames.org/4986476/"
+          ],
+          "evidence_note": "Named Blue Water Bridge in Port Huron opposite Point Edward/Sarnia, confirmed by inquiry report. ActualFebruary6 obstruction on westboundHighway402 near FrontStreet, closureModelandRoad–bridge.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-107.json",
+              "access_status": "fresh_secondary_geographic_search_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Sarnia / Blue Water Bridge US-bound access",
+      "date_scope_check": {
+        "start_earliest": "2022-02-06",
+        "start_latest": "2022-02-06",
+        "end_earliest": "2022-02-06",
+        "end_latest": "2022-02-06",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Bridge reference only; Highway402 obstruction and closure corridor not mapped. Same-day final endpoint retained."
+      ]
+    },
+    {
+      "phase_id": "FU-COV-NAM-007-FU2",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-peace-bridge-buffalo-reference",
+          "name": "Peace Bridge Fort Erie–Buffalo reference",
+          "coordinates": [
+            -78.90591,
+            42.90657
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 368216246; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/22607164",
+            "https://www.openstreetmap.org/way/368216246"
+          ],
+          "evidence_note": "Named international roadbridge atBuffalo, not same-named Derry/Calgary bridges. Inquiry identifies FortErie QEW approach and US-bound commercial suspension. Exact Canadian protest positions unlocated.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-107.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Peace Bridge / Fort Erie US-bound commercial route",
+      "date_scope_check": {
+        "start_earliest": "2022-02-13",
+        "start_latest": "2022-02-13",
+        "end_earliest": null,
+        "end_latest": "2022-02-14",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Bridge reference only; commercial approach barrier unlocated. February12 incident not joined."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "64b780eadd10fc195f4d87504e790df460c0bf2abef1efb32833b3a37f3864d6"
+}

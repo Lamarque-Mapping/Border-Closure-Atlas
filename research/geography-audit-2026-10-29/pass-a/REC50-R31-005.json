@@ -1,0 +1,106 @@
+{
+  "record_id": "REC50-R31-005",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "February7 2020 interruption of non-emergency Seaway bridge-system traffic arising on the North Channel/Cornwall Island approach. The protest location is within Canada; it affected the international system without occupying the US-bound South Channel span.",
+  "source_checks": [
+    {
+      "url": "https://www.cornwallseawaynews.com/local/pipeline-protest-on-seaway-bridge-stops-traffic/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Full original locates protesters on North Bridge to Canadian Customs, quotes Cornwall police diversion at Brookdale/Water and tribal police emergency-only system closure; reports14:41–16:26.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-135.json"
+    },
+    {
+      "url": "https://www.wwnytv.com/2020/02/18/members-saint-regis-mohawk-community-were-part-bridge-protests/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "February18 WWNY distinguishes the February7 Seaway event from a later Thousand Islands action and says there was no official tribal representation in the latter.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-135.json"
+    },
+    {
+      "url": "https://www.indiantime.net/story/2020/02/13/news/demonstration-in-support-of-wetsuweten-nation/33690.html",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Indian Time reproduces council account: Akwesasne International Road occupation, walk over Cornwall bridge toward tollbooth, and reopening about16:30. This is not an exact match to the local14:41–16:26 clock.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-131.json"
+    },
+    {
+      "url": "https://www.newswire.ca/news-releases/the-federal-bridge-corporation-limited-announces-the-january-24th-opening-of-the-new-north-channel-bridge-at-the-seaway-international-crossing-in-cornwall-513595741.html",
+      "access_status": "fresh_search_primary_extract",
+      "finding": "Bridge operator January2014 announcement identifies the new low-level North Channel bridge, SIBC toll plaza and CBSA plaza; avoids substituting the demolished former high bridge.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-137.json"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/260062700/full",
+      "access_status": "fresh_raw_osm_inspected",
+      "finding": "Original OSM road bridge lies on the North Channel between Cornwall and Cornwall Island, separately from the southern international span and demolished high bridge. Current geometry is a reference, not a reconstruction of the 2020 toll-barrier footprint. Operator opening notice places the new low-level crossing in service in January2014.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/14a4a7750a516c7974e8.xml",
+      "source_sha256": "ac6cc1af438cbede960514a012f69ae3ae53c3a19a996c73fdff526d9f425a85"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R31-005-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-seaway-north-channel-reference",
+          "name": "Seaway North Channel road bridge reference",
+          "coordinates": [
+            -74.7399228,
+            45.0081086
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/260062700",
+            "https://www.newswire.ca/news-releases/the-federal-bridge-corporation-limited-announces-the-january-24th-opening-of-the-new-north-channel-bridge-at-the-seaway-international-crossing-in-cornwall-513595741.html"
+          ],
+          "evidence_note": "Original OSM road bridge lies on the North Channel between Cornwall and Cornwall Island, separately from the southern international span and demolished high bridge. Current geometry is a reference, not a reconstruction of the 2020 toll-barrier footprint. Operator opening notice places the new low-level crossing in service in January2014.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/14a4a7750a516c7974e8.xml",
+              "sha256": "ac6cc1af438cbede960514a012f69ae3ae53c3a19a996c73fdff526d9f425a85",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "11",
+              "osm_timestamp": "2026-09-10T15:18:12Z",
+              "tags": {
+                "bicycle": "no",
+                "bridge": "yes",
+                "foot": "no",
+                "highway": "primary",
+                "layer": "1",
+                "name": "Seaway International Bridge",
+                "NHS": "Feeder",
+                "sidewalk:left": "separate",
+                "sidewalk:right": "no",
+                "toll": "yes"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Non-emergency bridge-system traffic interrupted by a North Channel protest at Seaway International Bridge system / Cornwall–Cornwall Island approach",
+      "date_scope_check": {
+        "start_earliest": "2020-02-07",
+        "start_latest": "2020-02-07",
+        "end_earliest": "2020-02-07",
+        "end_latest": "2020-02-07",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "North Channel road structure is independently located; Cornwall Island four-corners road and tollbooth intervention footprint are not fully reconstructed. Preserve emergency exception and differing short-duration clocks."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "81767c3efd61f01608c9fa9c62e85fa57a009e7410b5157b6b3def0c28ab0e30"
+}

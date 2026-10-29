@@ -1,0 +1,136 @@
+{
+  "record_id": "NP-COV-EUR-008",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "AprilMontenegrofreightaction has separately documentedDračenovac passenger-inclusiveextension. Broaderannouncementincludedothercountries,butcurrentphaseislimitedtoSerbia/Bosnia; Januaryrosterisnotautomaticallyapplied.",
+  "source_checks": [
+    {
+      "url": "https://www.rts.rs/lat/vesti/region/5925736/blokada-granicni-prelaz-teretni-saobracaj.html",
+      "access_status": "fresh_full_text_extract",
+      "finding": "RTSApril14observes10:00freightblockade atSerbian/Bosnianfrontiers, passengerspassable andspecifiedcargoexceptions.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-103.json"
+    },
+    {
+      "url": "https://www.rts.rs/lat/vesti/region/5928573/blokada-granicnog-prelaza-u-crnoj-gori-dracevac.html",
+      "access_status": "fresh_full_text_extract",
+      "finding": "RTSApril17correspondentidentifiesDračenovac extensionafter10:00for2hours includingcars, thenparticipantsdispersed.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-101.json"
+    },
+    {
+      "url": "https://www.gov.me/clanak/saopstenje-415",
+      "access_status": "fresh_search_primary_extract",
+      "finding": "Directofficialpageunavailable; indexedpoliceprimarytextreports8locationsin6municipalities, unauthorizedextensionsRožaje,BijeloPolje,Tuzi, allcleared. Doesnotnameeverypostoruniformclock.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-112.json"
+    },
+    {
+      "url": "https://mzv.gov.cz/podgorica/cz/ekonomika_a_obchod/blokada_silnicni_nakladni_dopravy_na.mobi",
+      "access_status": "fresh_full_text_extract",
+      "finding": "CzechEmbassyadvanceannouncement listsallneighborcountries; forecastscopeiswiderthancurrentphaseandisnotappliedasactualsiteproof.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-111.json"
+    },
+    {
+      "url": "https://mapcarta.com/N295259120",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Named Montenegro bordercontrol, not Dračenovachamlet. OfficialdirectorypairsŠpiljaniSerbia.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-103.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-EUR-008-P01",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-dracenovac-road",
+          "name": "Dračenovac road crossing",
+          "coordinates": [
+            20.3184,
+            42.90204
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 295259120; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N295259120",
+            "https://www.openstreetmap.org/node/295259120"
+          ],
+          "evidence_note": "Named Montenegro bordercontrol, not Dračenovachamlet. OfficialdirectorypairsŠpiljaniSerbia.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-103.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Participating Montenegro crossings with Serbia and Bosnia",
+      "date_scope_check": {
+        "start_earliest": "2026-04-14",
+        "start_latest": "2026-04-14",
+        "end_earliest": null,
+        "end_latest": "2026-04-17",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Dračenovacexplicitlyidentifiedonly; fullparticipatingSerbia/Bosniaroosterandexactbarriersunresolved. Do notinheritJanuarynineposts."
+      ]
+    },
+    {
+      "phase_id": "NP-COV-EUR-008-P02",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-dracenovac-road",
+          "name": "Dračenovac road crossing",
+          "coordinates": [
+            20.3184,
+            42.90204
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 295259120; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N295259120",
+            "https://www.openstreetmap.org/node/295259120"
+          ],
+          "evidence_note": "Named Montenegro bordercontrol, not Dračenovachamlet. OfficialdirectorypairsŠpiljaniSerbia.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-103.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Dračenovac two-hour extension including passengers",
+      "date_scope_check": {
+        "start_earliest": "2026-04-17",
+        "start_latest": "2026-04-17",
+        "end_earliest": "2026-04-17",
+        "end_latest": "2026-04-17",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Dračenovacfacilityreference; exactroadprotestbarrierunlocated. Two-hourphaseeligible."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "962c89034896ddd389125fb2e71d67700f8165aaeb658b699b4c53238906efbc"
+}

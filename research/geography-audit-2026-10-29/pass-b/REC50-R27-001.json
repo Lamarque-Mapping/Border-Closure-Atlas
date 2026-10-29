@@ -1,0 +1,116 @@
+{
+  "record_id": "REC50-R27-001",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Short trucker protest affecting access to the Armenian Bagratashen road checkpoint opposite Sadakhlo on 15 September 2018. Customs’ spokesperson distinguishes the permitted protest from obstruction of customs work and reports clearance after roughly two to three hours. The reference locates the Armenian terminal; neither all lanes nor all passenger traffic are proven closed.",
+  "source_checks": [
+    {
+      "url": "https://news.am/en/news/471209",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Customs spokesperson identifies the Bagratashen access protest, approximate duration and already reopened access.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-1.json",
+      "sha256": "bc49235b1b8fe608c2eff67de394017db13c8acb8f5b74e18dfb9c11dd6d440f"
+    },
+    {
+      "url": "https://news.am/eng/news/471178.html",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Earlier newspaper account describes truckers’ grievances and threatened restrictions; it does not override the later customs qualification.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-1.json",
+      "sha256": "bc49235b1b8fe608c2eff67de394017db13c8acb8f5b74e18dfb9c11dd6d440f"
+    },
+    {
+      "url": "https://www.eeas.europa.eu/node/14250_en",
+      "access_status": "retrieved_indexed_primary_source_text",
+      "finding": "Official November 2016 inauguration identifies the new Bagratashen crossing facilities, predating the 2018 protest.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-armenia-history.json",
+      "sha256": "8334068ffdf4eb46dbd2553ff204a85681fbe5664c7a5c5b8a400992e2177978"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/5004660622/3",
+      "access_status": "fresh_OSM_XML_inspected",
+      "finding": "May 2018 Armenian terminal barrier coordinates independently inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/b43ed99ee586104c11c0.xml",
+      "sha256": "7bd855d0b94584fef1285fb55fd17ceb3b85fee2ae933d14e45de3ae5865883b",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/b43ed99ee586104c11c0.txt",
+      "text_sha256": "7bd855d0b94584fef1285fb55fd17ceb3b85fee2ae933d14e45de3ae5865883b",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/5004660622/history",
+      "access_status": "fresh_OSM_XML_inspected",
+      "finding": "2018 position within a few metres of current terminal barrier.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/a86ca0d5b746f8717d0a.xml",
+      "sha256": "602942d87bb20ae5b2c0697aeb898cf28908ebe213b5b2d46502407132ff38e6",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/a86ca0d5b746f8717d0a.txt",
+      "text_sha256": "602942d87bb20ae5b2c0697aeb898cf28908ebe213b5b2d46502407132ff38e6",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=44.832,41.228,44.844,41.237",
+      "access_status": "fresh_OSM_XML_inspected",
+      "finding": "M6/AH81 approach and border-control lanes establish the Armenian facility; opposite Georgian gate is not substituted.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/f4d60391a5b8a317ecb4.xml",
+      "sha256": "4373e6b4ece2401d3e67b4f47d33e0815a18fe0da16ad090c1fa9a00b674374a",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/f4d60391a5b8a317ecb4.txt",
+      "text_sha256": "4373e6b4ece2401d3e67b4f47d33e0815a18fe0da16ad090c1fa9a00b674374a",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R27-001-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-bagratashen-road",
+          "name": "Bagratashen road checkpoint, Armenian side",
+          "coordinates": [
+            44.83639,
+            41.2310697
+          ],
+          "coordinate_method": "Coordinates from explicitly versioned OSM node XML, independently compared with full node history",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/5004660622/3",
+            "https://api.openstreetmap.org/api/0.6/node/5004660622/history",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=44.832,41.228,44.844,41.237",
+            "https://www.eeas.europa.eu/node/14250_en"
+          ],
+          "evidence_note": "The May 2018 node is a border-control barrier in the Armenian terminal lanes on the Alaverdi–Bagratashen M6/AH81 road. Current area XML connects these lanes to the named Bagratashen–Sadakhlo road bridge. The 2016 official inauguration establishes that this terminal predates the September 2018 episode. The Georgian Sadakhlo gate and later replacement bridge are not used as the obstruction location.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/b43ed99ee586104c11c0.xml",
+          "sha256": "7bd855d0b94584fef1285fb55fd17ceb3b85fee2ae933d14e45de3ae5865883b"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Short trucker protest affecting access to the Armenian Bagratashen road checkpoint opposite Sadakhlo on 15 September 2018. Customs’ spokesperson distinguishes the permitted protest from obstruction of customs work and reports clearance after roughly two to three hours. The reference locates the Armenian terminal; neither all lanes nor all passenger traffic are proven closed.",
+      "date_scope_check": {
+        "start_earliest": "2018-09-15",
+        "start_latest": "2018-09-15",
+        "end_earliest": "2018-09-15",
+        "end_latest": "2018-09-15",
+        "last_confirmed": null,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "REC50-R27-001-P1: The Armenian customs spokesperson reports a checkpoint-access blockage lasting about two to three hours from midnight on 15 September 2018, with the checkpoint open by the afternoon report. This does not qualify as longer than 24 hours. Customs permitted the protest and distinguished it from an intended obstruction of customs operations. No general passenger ban, all-lane customs shutdown or Georgian-truck-only rule is established. Exact minute timestamps, traffic cohorts and direction remain unknown."
+      },
+      "unresolved": [
+        "Exact protest barricade and blocked approach lanes remain unlocated; facility reference only."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact protest barricade and blocked approach lanes remain unlocated; facility reference only."
+  ],
+  "input_sha256": "aefd0c49b17738089a5fb2e6327456c039e9965d34df677c169d26fb8620b825",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

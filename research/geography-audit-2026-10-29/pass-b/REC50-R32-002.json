@@ -1,0 +1,60 @@
+{
+  "record_id": "REC50-R32-002",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Canonical phase concerns ordinary pedestrians and vehicles at Venezuela’s principal San Antonio customs access to Simón Bolívar bridge, May 23–27, 2025. May 27 reporting describes removal of Venezuelan-side barriers before 06:00 and resumed bridge traffic. Other Táchira bridges also reopened, but are outside this phase’s specific San Antonio scope.",
+  "source_checks": [
+    {
+      "url": "https://primicia.com.ve/nacion/reabren-frontera-entre-venezuela-y-colombia/",
+      "access_status": "full_retrieved",
+      "finding": "Full report inspected: barriers removed from entrance of principal San Antonio customs before 06:00 on May 27; humanitarian channel operated during closure."
+    },
+    {
+      "url": "https://lanacionweb.com/frontera/puente-simon-bolivar-recobro-su-dinamismo/",
+      "access_status": "full_retrieved",
+      "finding": "Full La Nación report inspected: both Simón Bolívar lanes flowing May 27 after four-day closure; other bridges listed separately."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-72.456,7.813,-72.442,7.823",
+      "access_status": "full_retrieved",
+      "finding": "Direct OSM XML inspected: Simón Bolívar approach, SENIAT control and distinct Colombian CENAF. sha256 3aa364e111f9e847a2060f42f2a22f842aa312d8c39ad615cdacda4da9f8209c."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/271981213/full",
+      "access_status": "full_retrieved",
+      "finding": "Direct geometry identifies Entrada Zona Primaria Aduana de San Antonio, but tags specify private service driveway. This is not sufficient to identify the ordinary pedestrian/vehicle gate reported. XML sha256 0194003d660cd1721c3a80487a18531ec7487dbc9ff03c37bef44dfc637500ba."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R32-002-P1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ordinary pedestrian and vehicle passage at San Antonio’s principal customs access to the Simón Bolívar bridge on the Venezuela–Colombia frontier during the May 2025 election restriction.; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2025-05-23",
+        "start_latest": "2025-05-23",
+        "end_earliest": "2025-05-27",
+        "end_latest": "2025-05-27",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Precise ordinary-access barricade at the principal customs compound is not located. Private customs service driveway, office point and Colombian inspection post are rejected as unsupported substitutions.",
+        "No full Venezuela–Colombia border line or other Táchira bridge assigned to the narrower canonical phase."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Precise ordinary-access barricade at the principal customs compound is not located. Private customs service driveway, office point and Colombian inspection post are rejected as unsupported substitutions.",
+    "No full Venezuela–Colombia border line or other Táchira bridge assigned to the narrower canonical phase."
+  ]
+}

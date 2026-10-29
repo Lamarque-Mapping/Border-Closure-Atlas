@@ -1,0 +1,83 @@
+{
+  "record_id": "REC50-R33-001",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Sonamasjid–Mahadipur bilateral road goods interchange stopped for local Puja holiday. Internal port loading/unloading continued; passengers not established closed.",
+  "source_checks": [
+    {
+      "url": "https://www.unb.com.bd/category/Bangladesh/trade-via-sonamasjid-land-port-resumes/102129",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "October 8 return report gives September 30–October 7 holiday and actual incoming Indian cargo vehicles.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-76.json",
+      "sha256": "34d1f19ab45d724787aaee146ac942fa6578882fcba27338c3cdaf17aecc61e9"
+    },
+    {
+      "url": "https://unb.com.bd/category/bangladesh/trade-via-sonamasjid-land-port-to-remain-suspended-for-8-days/101642",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Advance notice preserves normal internal loading/unloading during cross-border holiday.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-88.json",
+      "sha256": "e64ec2c2273841f1f190074646331d7cbb59535dbb2636dc72b9962dbcfcc5c5"
+    },
+    {
+      "url": "https://www.bangladeshtradeportal.gov.bd/kcfinder/upload/files/Land%20Ports%20in%20a%20Brief.pdf",
+      "access_status": "search_indexed_official_port_directory",
+      "finding": "Official trade portal explicitly pairs Sonamasjid with Mahadipur, Maldah.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-78.json",
+      "sha256": "010050717630db63b6184a77e1541c21872c44f4db531e455d5937b27e4b7ace"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R33-001-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-sonamasjid-mahadipur",
+          "name": "Sonamasjid–Mahadipur road crossing",
+          "coordinates": [
+            88.1411487,
+            24.8427106
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/5142350050",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/5142350050",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=88.13,24.82,88.17,24.86",
+            "https://www.bangladeshtradeportal.gov.bd/kcfinder/upload/files/Land%20Ports%20in%20a%20Brief.pdf"
+          ],
+          "evidence_note": "Explicitly named Mahadipur border-crossing node; Bangladesh trade-portal land-port list pairs it with Sonamasjid/Shibganj. Nearby unnamed control is on opposite approach.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-sonamasjid.xml",
+          "sha256": "e616e4db17af35abd7e5b07e8aad2600dccacadcb0c571d1e55b1b9a73313b3c",
+          "osm_feature": "node/5142350050",
+          "osm_version": "3",
+          "osm_timestamp": "2020-07-18T05:04:07Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "Mohodipur Border crossiong"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Cross-border goods interchange through Sonamasjid during the local Puja holiday",
+      "date_scope_check": {
+        "scope": "Cross-border goods interchange through Sonamasjid during the local Puja holiday",
+        "start_earliest": "2022-09-30",
+        "start_latest": "2022-09-30",
+        "end_earliest": "2022-10-08",
+        "end_latest": "2022-10-08",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "September 30–October 8 2022 dates retained; return account observes Indian goods vehicles arriving October 8 morning. Shared C&F official not independent reporting origins."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

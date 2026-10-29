@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2607793 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <node id="254395191" visible="true" version="9" changeset="162350723" timestamp="2025-02-10T13:26:27Z" user="foreigner037" uid="12420295" lat="43.8963410" lon="25.9984127"/>
+ <node id="254395470" visible="true" version="12" changeset="162350723" timestamp="2025-02-10T13:26:27Z" user="foreigner037" uid="12420295" lat="43.8802022" lon="26.0143715"/>
+ <node id="263678315" visible="true" version="6" changeset="170526867" timestamp="2025-08-16T14:42:29Z" user="Zarrink" uid="20204688" lat="43.8963023" lon="25.9983244"/>
+ <node id="7432642470" visible="true" version="3" changeset="162350723" timestamp="2025-02-10T13:26:27Z" user="foreigner037" uid="12420295" lat="43.8802328" lon="26.0144433"/>
+ <node id="12213786724" visible="true" version="1" changeset="157331442" timestamp="2024-10-01T10:06:53Z" user="foreigner037" uid="12420295" lat="43.8801836" lon="26.0143224"/>
+ <node id="12213786725" visible="true" version="1" changeset="157331442" timestamp="2024-10-01T10:06:53Z" user="foreigner037" uid="12420295" lat="43.8802484" lon="26.0144787"/>
+ <node id="12213786726" visible="true" version="1" changeset="157331442" timestamp="2024-10-01T10:06:53Z" user="foreigner037" uid="12420295" lat="43.8963686" lon="25.9984874"/>
+ <node id="12213786728" visible="true" version="1" changeset="157331442" timestamp="2024-10-01T10:06:53Z" user="foreigner037" uid="12420295" lat="43.8962909" lon="25.9983048"/>
+ <way id="1319838585" visible="true" version="3" changeset="170526867" timestamp="2025-08-16T14:42:29Z" user="Zarrink" uid="20204688">
+  <nd ref="12213786724"/>
+  <nd ref="254395470"/>
+  <nd ref="7432642470"/>
+  <nd ref="12213786725"/>
+  <nd ref="12213786726"/>
+  <nd ref="254395191"/>
+  <nd ref="263678315"/>
+  <nd ref="12213786728"/>
+  <nd ref="12213786724"/>
+  <tag k="alt_name" v="Мост на дружбата"/>
+  <tag k="alt_name:en" v="Giurgiu-Rousse Friendship Bridge"/>
+  <tag k="bridge:structure" v="truss"/>
+  <tag k="height" v="30"/>
+  <tag k="int_name" v="Giurgiu-Rousse Friendship Bridge"/>
+  <tag k="layer" v="1"/>
+  <tag k="length" v="2223"/>
+  <tag k="man_made" v="bridge"/>
+  <tag k="name" v="Дунав мост / Podul Prieteniei Giurgiu-Ruse"/>
+  <tag k="name:de" v="Giurgiu-Russe-Freundschaftsbrücke"/>
+  <tag k="name:en" v="Danube Bridge"/>
+  <tag k="start_date" v="1954-06-20"/>
+  <tag k="wikidata" v="Q203004"/>
+  <tag k="wikipedia" v="en:Danube Bridge"/>
+ </way>
+</osm>

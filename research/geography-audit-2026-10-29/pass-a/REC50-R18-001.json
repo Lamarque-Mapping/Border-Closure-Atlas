@@ -1,0 +1,145 @@
+{
+  "record_id": "REC50-R18-001",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Two directions and locations require separation: January 17 Chile-bound obstruction at the exit of ACI Uspallata, and January 20 reported reciprocal blocking of Argentina-bound trucks on the Cristo Redentor–Los Libertadores system.",
+  "source_checks": [
+    {
+      "url": "https://www.elterritorio.com.ar/noticias/2022/01/21/735100-paralizados-en-el-paso-cristo-redentor",
+      "access_status": "fresh_full_text_extract",
+      "finding": "January 21 original reports deliberate blocking since the preceding day of trucks coming from Chile into Argentina, distinct from health-test queues. Exact barrier not specified.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-118.json"
+    },
+    {
+      "url": "https://www.diariouno.com.ar/politica/chile-duplicaria-la-atencion-la-aduana-pero-los-camioneros-no-cesaran-el-bloqueo-n992891",
+      "access_status": "fresh_full_text_extract",
+      "finding": "January 26 original confirms protesters remain stopped on the Chile-bound route and describes Uspallata separately from Los Libertadores congestion.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-118.json"
+    },
+    {
+      "url": "https://www.diariouno.com.ar/sociedad/camioneros-bloquearon-la-ruta-chile-un-piquete-las-demoras-la-aduana-chilena-n991350",
+      "access_status": "fresh_full_text_extract",
+      "finding": "January 18 original expressly locates protest at the exit of the Uspallata integrated-control area since late Monday; tourists and health testing are separate scopes.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-114.json"
+    },
+    {
+      "url": "https://www.argentina.gob.ar/noticias/situacion-de-transportistas-en-paso-cristo-redentor-los-libertadores",
+      "access_status": "fresh_full_text_extract",
+      "finding": "January 28 primary notice changes Chilean health protocols from January 29; it does not establish a common protest-clearing endpoint.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-124.json"
+    },
+    {
+      "url": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-761-2013-218124/texto",
+      "access_status": "fresh_raw_primary_text_inspected",
+      "finding": "Raw official table inspected: Uspallata cargo, Horcones and Los Libertadores have separate DMS coordinates and road addresses.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/6ae33eb6a0f045944644.html",
+      "source_sha256": "6ca5b1ca602405205ac89cf55a248c08156d9fe9d2b440419fa140255c2f59c2"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R18-001-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-los-libertadores-complex-reference",
+          "name": "Los Libertadores crossing-system reference",
+          "coordinates": [
+            -70.11823055555556,
+            -32.846072222222226
+          ],
+          "coordinate_method": "Convert explicitly published south/west DMS to signed decimal longitude/latitude",
+          "precision": "Approximate facility reference; published decimal precision does not establish surveyed accuracy or a historical barrier footprint.",
+          "source_urls": [
+            "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-761-2013-218124/texto"
+          ],
+          "evidence_note": "Official 2013 resolution locates Los Libertadores separately from Uspallata. Used only as named corridor reference for Argentina-bound truck obstruction; its actual protest barrier is unknown.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/6ae33eb6a0f045944644.html",
+              "sha256": "6ca5b1ca602405205ac89cf55a248c08156d9fe9d2b440419fa140255c2f59c2",
+              "access_status": "fresh_raw_primary_geographic_evidence_inspected"
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-123.json",
+              "access_status": "fresh_primary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Freight entering Argentina from Chile, deliberately obstructed by protesting truckers",
+      "date_scope_check": {
+        "start_earliest": "2022-01-20",
+        "start_latest": "2022-01-20",
+        "end_earliest": "2022-01-26",
+        "end_latest": "2022-01-26",
+        "last_confirmed": "2022-01-26",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Los Libertadores is a corridor reference, not proven location of Argentine protesters or current complex footprint. No all-system operational closure implied."
+      ]
+    },
+    {
+      "phase_id": "REC50-R18-001-R2P2",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-uspallata-cargo-complex",
+          "name": "Uspallata integrated cargo-control complex",
+          "coordinates": [
+            -69.37416666666665,
+            -32.594661111111115
+          ],
+          "coordinate_method": "Convert explicitly published south/west DMS to signed decimal longitude/latitude",
+          "precision": "Approximate facility reference; published decimal precision does not establish surveyed accuracy or a historical barrier footprint.",
+          "source_urls": [
+            "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-761-2013-218124/texto"
+          ],
+          "evidence_note": "2013 official resolution separately locates Uspallata cargo complex at RN7 km1150/1151 and distinguishes Horcones and Los Libertadores. 2022 protest report expressly locates Chile-bound obstruction at its exit.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/6ae33eb6a0f045944644.html",
+              "sha256": "6ca5b1ca602405205ac89cf55a248c08156d9fe9d2b440419fa140255c2f59c2",
+              "access_status": "fresh_raw_primary_geographic_evidence_inspected"
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-123.json",
+              "access_status": "fresh_primary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Chile-bound freight leaving the Uspallata integrated-control area on the Argentine approach to Cristo Redentor",
+      "date_scope_check": {
+        "start_earliest": "2022-01-17",
+        "start_latest": "2022-01-17",
+        "end_earliest": "2022-01-26",
+        "end_latest": "2022-01-26",
+        "last_confirmed": "2022-01-26",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Cargo complex independently located, but exact exit barrier not surveyed. Dates and last-confirmed qualification retained."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "cf551acc7725366bfdec9d3e66f901516158d377ed181f3e9427338701c31720"
+}

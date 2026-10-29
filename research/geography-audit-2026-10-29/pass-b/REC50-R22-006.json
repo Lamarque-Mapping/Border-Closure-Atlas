@@ -1,0 +1,101 @@
+{
+  "record_id": "REC50-R22-006",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Lithuanian restrictions applied to sanctioned rail freight in transit to/from Kaliningrad; passengers and non-sanctioned goods continued. The initial steel/ferrous phase and subsequent cement-train return are distinct. Kena, on the Lithuania–Belarus rail corridor, is expressly named in July 26 cement checks; neither Medininkai road post nor all land borders substitute for this rail route.",
+  "source_checks": [
+    {
+      "url": "https://www.urm.lt/en/news/928/statement-on-the-transit-of-sanctioned-goods-by-rail-to-and-from-kaliningrad:35022",
+      "access_status": "full_retrieved",
+      "finding": "Full primary foreign-ministry statement inspected: June 17 steel and ferrous-metal restrictions; passengers and non-sanctioned rail goods unaffected."
+    },
+    {
+      "url": "https://www.lrt.lt/en/news-in-english/19/1746506/first-russian-train-with-sanctioned-goods-reaches-lithuanian-border-as-kaliningrad-transit-resumes",
+      "access_status": "inaccessible",
+      "finding": "Original long LRT URL could not be retrieved."
+    },
+    {
+      "url": "https://www.lrt.lt/en/news-in-english/19/1746506/first-russian-train-with-sanctioned-goods-",
+      "access_status": "extract_only",
+      "finding": "Indexed extract inspected: five-wagon cement shipment at Kena border post undergoing checks; full retrieval did not yield the article."
+    },
+    {
+      "url": "https://www.baltictimes.com/first_train_with_sanctioned_russian_goods_transits_via_lithuania_to_kaliningrad/",
+      "access_status": "extract_only",
+      "finding": "Direct URL 403, but indexed BNS extract inspected: first train already passed; second five-wagon cement train checked and released at Kena July 26."
+    },
+    {
+      "url": "https://pkpd.lrv.lt/lt/veiklos-sritys/pasienio-kontroles-punktu-darbo-laiko-leidziamu-asmenu-ir-transporto-priemoniu-vykimo-per-juos-sarasas/",
+      "access_status": "full_retrieved",
+      "finding": "Full primary table inspected: Kena and Kybartai railway stations explicitly railway-mode border/customs posts; current identity evidence, not proof every post carried the 2022 affected traffic."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R22-006-P1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Initial steel and ferrous-metal rail-transit restriction through Lithuania to/from Kaliningrad; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "policy_period",
+        "start_earliest": "2022-06-17",
+        "start_latest": "2022-06-17",
+        "end_earliest": "2022-07-22",
+        "end_latest": "2022-07-22",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Initial phase route and all affected rail inspection points are not exhaustively established; do not generalize to Lithuania–Russia and Lithuania–Belarus whole-frontier lines."
+      ]
+    },
+    {
+      "phase_id": "REC50-R22-006-P2",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "proposed-kena-rail-border-station",
+          "name": "Kena railway border station",
+          "coordinates": [
+            25.68873476,
+            54.63941357
+          ],
+          "coordinate_method": "Directly inspected OSM way/199277281 mean of geometry vertices; XML sha256 5220d280fc2fe6f7e842bb9ea83d5746b27e9c5564b6d049daec3ae3e57717a1",
+          "precision": "Railway station representative, approximately 500 m; customs yard extent unresolved",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/199277281/full"
+          ],
+          "evidence_note": "Kena is expressly named for the cement-train check. Primary Lithuanian border directorate identifies Kenos geležinkelio stoties PKP as railway mode; point is station-building representative rather than the exact customs inspection track."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Only the canonical cement-train return phase: Kena inspection on entry from Belarus toward Kaliningrad. A station representative does not assert the entire route or a road crossing closure.",
+      "date_scope_check": {
+        "canonical_kind": "bounded_interval",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": null,
+        "end_latest": "2022-07-26",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Kena station is established for the cement train; precise customs track and the entire transit route including Kaliningrad-side terminal are unresolved."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Initial phase route and all affected rail inspection points are not exhaustively established; do not generalize to Lithuania–Russia and Lithuania–Belarus whole-frontier lines."
+  ]
+}

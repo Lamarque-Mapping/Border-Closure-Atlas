@@ -1,0 +1,180 @@
+{
+  "record_id": "REC50-R28-003",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Two different policy scopes at Singkhon opposite Mawtaung/Mudong: unavailable formal opening and a limited goods-transfer schedule in the claimed border area. Shared crossing-area marker does not equate these policies with universal physical closure.",
+  "source_checks": [
+    {
+      "url": "https://huahintoday.com/hua-hin-news/thai-myanmar-border-security-meeting-held-in-prachuap-khiri-khan/",
+      "access_status": "search_indexed_article",
+      "finding": "Substantive indexed January 21 meeting account distinguishes formal opening, community trade and emergency care; names opposite Mudong. Direct page timeout.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-79.json",
+      "sha256": "c87630b18ccf425a724702dc854ce08b09c0328eb05846c64e14c0ce41637976"
+    },
+    {
+      "url": "https://www.dailynews.co.th/news/5791785/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "April 18 account quotes governor, specific claimed-border-area transfer hours and order effective April 17; no first observed passage.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-79.json",
+      "sha256": "c87630b18ccf425a724702dc854ce08b09c0328eb05846c64e14c0ce41637976"
+    },
+    {
+      "url": "https://huahintoday.com/hua-hin-news/singkhon-border-crossing-reopening-preparations-reviewed/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "August 5 meeting reported August 9 still reviews possible reopening; identifies Maw Daung opposite Singkhon.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-86.json",
+      "sha256": "b321f5f979a5b29b7e3e3dd546fe5cf803cea9b5bc5ddaf79339e4efcb3ff4eb"
+    },
+    {
+      "url": "https://www.customs.go.th/cont_strc_simple_with_date.php?current_id=14232a324148505f4a464b47464b4a",
+      "access_status": "search_indexed_official_article",
+      "finding": "Official 2024 inspection distinguishes Singkhon control facilities and claimed cargo-transfer space.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-87.json",
+      "sha256": "a1f4754658edc7776b7306f8611954c899de3e166782c47bdac5e620f83b2e73"
+    },
+    {
+      "url": "https://www.customs.go.th/data_files/a847df1389ed07e36d50e90a4feed5f4/customs_aug2557/assets/common/downloads/customs_bulletin_aug2557.pdf",
+      "access_status": "search_indexed_official_bulletin",
+      "finding": "Official customs bulletin pairs Singkhon at Khlong Wan with Mudong, Myanmar.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-87.json",
+      "sha256": "a1f4754658edc7776b7306f8611954c899de3e166782c47bdac5e620f83b2e73"
+    },
+    {
+      "url": "https://www.topnews.co.th/news/1462495",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 403: Forbidden",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://huahintoday.com/hua-hin-news/singkhon-border-checkpoint-reopening-preparations-reviewed/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.frontiermyanmar.net/en/holding-the-line-in-mawdaung/",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-d815f271fe4d0d8eac.bin",
+      "sha256": "67c13fc47cc916756446494da117a8f51d17fcabf96bb03081f0f824bd5d555c"
+    },
+    {
+      "url": "https://www.appicnews.com/regular-trade-resumes-at-sinkhorn-checkpoint-in-prachuap-khiri-khan/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R28-003-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-singkhon-mawtaung",
+          "name": "Singkhon–Mawtaung / Mudong crossing",
+          "coordinates": [
+            99.6465839,
+            11.7864207
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/1022443377",
+          "precision": "Named crossing-area reference, approximately 1 km; designated goods-transfer area boundaries not surveyed.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1022443377",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=99.63,11.77,99.66,11.8"
+          ],
+          "evidence_note": "Explicit named Sing Khon Border Crossing Station; Thai customs and provincial reports place it opposite Mudong/Maw Daung. Distinct from town market and Myanmar inland immigration office.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-singkhon-main.xml",
+          "sha256": "6d7476b07ead9dd00b8f180519641b7559c565d9dc1c6e8d0f9835372e5848f8",
+          "osm_feature": "way/1022443377",
+          "osm_version": "5",
+          "osm_timestamp": "2026-07-29T06:32:33Z",
+          "identity_tags": {
+            "building": "government_office",
+            "layer": "1",
+            "name": "จุดผ่านแดนด่านสิงขร",
+            "name:en": "Sing Khon Border Crossing Station",
+            "name:th": "จุดผ่านแดนด่านสิงขร"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Singkhon formal opening unavailable at the 21 January 2026 provincial meeting; limited community trade and emergency medical pathways discussed separately.",
+      "date_scope_check": {
+        "scope": "Singkhon formal opening unavailable at the 21 January 2026 provincial meeting; limited community trade and emergency medical pathways discussed separately.",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2026-01-21",
+        "end_latest": "2026-01-21",
+        "last_confirmed": "2026-01-21",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "January 21 2026 policy observation only; last tin-import approval October 20 2025 is not a universal closure start. Community trade/emergency medical exceptions retained."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "REC50-R28-003-P2",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-singkhon-mawtaung",
+          "name": "Singkhon–Mawtaung / Mudong crossing",
+          "coordinates": [
+            99.6465839,
+            11.7864207
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/1022443377",
+          "precision": "Named crossing-area reference, approximately 1 km; designated goods-transfer area boundaries not surveyed.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1022443377",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=99.63,11.77,99.66,11.8"
+          ],
+          "evidence_note": "Explicit named Sing Khon Border Crossing Station; Thai customs and provincial reports place it opposite Mudong/Maw Daung. Distinct from town market and Myanmar inland immigration office.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-singkhon-main.xml",
+          "sha256": "6d7476b07ead9dd00b8f180519641b7559c565d9dc1c6e8d0f9835372e5848f8",
+          "osm_feature": "way/1022443377",
+          "osm_version": "5",
+          "osm_timestamp": "2026-07-29T06:32:33Z",
+          "identity_tags": {
+            "building": "government_office",
+            "layer": "1",
+            "name": "จุดผ่านแดนด่านสิงขร",
+            "name:en": "Sing Khon Border Crossing Station",
+            "name:th": "จุดผ่านแดนด่านสิงขร"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Singkhon goods-transfer schedule restricted to Tuesday and Saturday mornings before a formal relaxation effective 17 April 2026.",
+      "date_scope_check": {
+        "scope": "Singkhon goods-transfer schedule restricted to Tuesday and Saturday mornings before a formal relaxation effective 17 April 2026.",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2026-04-17",
+        "end_latest": "2026-04-17",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Unknown onset of Tuesday/Saturday 08:00–12:00 goods schedule; April 17 legal relaxation not first truck or general border reopening. Later August planning does not prove continuous closure."
+      },
+      "unresolved": [
+        "Exact claimed-area goods-transfer footprint not located; point represents named crossing area only."
+      ]
+    }
+  ],
+  "unresolved": []
+}

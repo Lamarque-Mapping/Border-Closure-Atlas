@@ -1,0 +1,70 @@
+{
+  "record_id": "REC50-R32-003",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Venezuelan-side San Antonio principal customs gate to Simón Bolívar bridge, ordinary pedestrians and vehicles, July 26–28, 2025, with humanitarian exceptions. Local actual-passage reports distinguish two-day implementation from the broader Gazette strict-control window. Other bridges are context only for this phase.",
+  "source_checks": [
+    {
+      "url": "https://www.el-carabobeno.com/reabierta-la-frontera-en-el-estado-tachira-tras-48-horas-por-elecciones-municipales/",
+      "access_status": "extract_only",
+      "finding": "Direct page returned 403; indexed extract inspected: barriers removed at principal San Antonio customs at 06:00 July 28; cars and pedestrians resumed after two-day implementation, explicitly distinguishes Gazette window."
+    },
+    {
+      "url": "https://ciudadmcy.info.ve/reabierta-frontera-colombo-venezolana-tras-elecciones-municipales",
+      "access_status": "full_retrieved",
+      "finding": "Full Ciudad MCY article inspected: July 28 reopening but internally mixes 48 hours and a Friday-start wider window; does not supersede canonical actual San Antonio dates."
+    },
+    {
+      "url": "https://www.semana.com/nacion/cucuta/articulo/venezuela-reabre-frontera-con-colombia-tras-cierre-temporal-por-elecciones-municipales/202512/",
+      "access_status": "full_retrieved",
+      "finding": "Full Semana report inspected: Colombian services remained operational; broad border wording and endpoint inconsistent with local San Antonio report, not used to widen geometry."
+    },
+    {
+      "url": "https://lamananadigital.com/puente-simon-bolivar-retoma-su-dinamismo-en-la-frontera-con-colombia/",
+      "access_status": "full_retrieved",
+      "finding": "Full July 28 report inspected: actual resumed vehicles/pedestrians at Simón Bolívar after 48 hours."
+    },
+    {
+      "url": "https://lamananadigital.com/se-mantiene-abierta-la-frontera-en-tachira/",
+      "access_status": "extract_only",
+      "finding": "Direct 429; indexed report inspected: Friday July 25 principal San Antonio customs barriers removed at 06:00 and crossing remained open, supporting canonical separation from Gazette interval."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/271981213/full",
+      "access_status": "full_retrieved",
+      "finding": "Direct OSM private customs-service entrance geometry inspected; ordinary gate identity cannot be inferred solely from customs name. sha256 0194003d660cd1721c3a80487a18531ec7487dbc9ff03c37bef44dfc637500ba."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R32-003-P1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "San Antonio customs access to Simón Bolívar bridge between Venezuela and Colombia; ordinary pedestrians and vehicles, excluding documented humanitarian passage.; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2025-07-26",
+        "start_latest": "2025-07-26",
+        "end_earliest": "2025-07-28",
+        "end_latest": "2025-07-28",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Exact ordinary pedestrian/vehicle barricade at San Antonio customs unresolved; private service entrance and bridge midpoint are not substituted.",
+        "Humanitarian channel retained as exception; no inference of total cross-border closure or revised chronology."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact ordinary pedestrian/vehicle barricade at San Antonio customs unresolved; private service entrance and bridge midpoint are not substituted.",
+    "Humanitarian channel retained as exception; no inference of total cross-border closure or revised chronology."
+  ]
+}

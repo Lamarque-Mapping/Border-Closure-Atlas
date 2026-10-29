@@ -1,0 +1,72 @@
+{
+  "record_id": "C7-EU-004",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Heavy-truck obstruction on the A63 at Biriatou on the France–Spain road route, approximately 03:00–06:00 on December 22 2018. Other border actions in the same article are separate.",
+  "source_checks": [
+    {
+      "url": "https://www.letemps.ch/monde/gilets-jaunes-lacte-vi-mobilise-un-dixieme-deces-perpignan",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Original AFP/Le Temps paragraph at line 135 identifies heavy vehicles, A63 at Biriatou and clearance around 06:00 after a 03:00 start; does not fix direction or precise toll lane.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-115.json"
+    },
+    {
+      "url": "https://mapcarta.com/N280351090",
+      "access_status": "previously_inspected_same_pass_geographic_evidence",
+      "finding": "Named Péage deBiriatou node operated by AutoroutesduSuddeFrance; not Behobia roadbridge or villagecentre. Page regional attributionIrun inconsistent; explicit toll identity and original Basque notice used.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-080.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "C7-EU-004-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-biriatou-toll",
+          "name": "Biriatou motorway toll plaza",
+          "coordinates": [
+            -1.74964,
+            43.34125
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 280351090; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N280351090",
+            "https://www.openstreetmap.org/node/280351090"
+          ],
+          "evidence_note": "Named Péage deBiriatou node operated by AutoroutesduSuddeFrance; not Behobia roadbridge or villagecentre. Page regional attributionIrun inconsistent; explicit toll identity and original Basque notice used.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-080.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Heavy-truck obstruction at Biriatou on the A63 France–Spain approach",
+      "date_scope_check": {
+        "start_earliest": "2018-12-22",
+        "start_latest": "2018-12-22",
+        "end_earliest": "2018-12-22",
+        "end_latest": "2018-12-22",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Biriatou toll is an attributable route reference; report does not establish that the exact 2018 barrier occupied this toll node. Direction remains as qualified in canonical phase."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "186d45821d82e9e2cea782af0dfcbb3b5073f20da5a1554a8e28b309c28a27b4"
+}

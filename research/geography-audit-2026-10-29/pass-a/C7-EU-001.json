@@ -1,0 +1,138 @@
+{
+  "record_id": "C7-EU-001",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Three Turkish Cypriot-side suspensions present at the beginning of 2021: Lefka–Apliki, Deryneia and Kato Pyrgos–Karavostasi/Limnitis. Green Line crossing routes, not interstate frontiers. These are not automatically continuous with the separate 2020 closures.",
+  "source_checks": [
+    {
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52022DC0258",
+      "access_status": "fresh_search_primary_extract",
+      "finding": "EUR-Lex direct page challenged, but indexed primary report specifies these three Turkish Cypriot suspensions at reporting-period start and reopening from June 4; Ledra Street was a separate Republic decision.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-117.json"
+    },
+    {
+      "url": "https://uncyprustalks.unmissions.org/en/cyprus/press-releases/statement-united-nations-spokesperson-cyprus-2nd-june-2021",
+      "access_status": "fresh_search_primary_extract",
+      "finding": "Direct UN page returned 403; indexed full statement establishes June 4 coordinated reopening under Orange testing conditions, not unrestricted crossing.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-117.json"
+    },
+    {
+      "url": "https://en.famagusta.news/local/deryneia/deryneia-posoi-perasan-apo-ta-odofragmata-deryneias-kai-strovilion",
+      "access_status": "fresh_full_text_extract",
+      "finding": "June 5 Famagusta News full article, credited to KYPE and quoting police, reports actual first-day crossings at Lefka, Limnitis and Deryneia. No new closure-onset date supplied.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-134.json"
+    },
+    {
+      "url": "https://mapcarta.com/N11533577126",
+      "access_status": "previously_inspected_same_pass_geographic_evidence",
+      "finding": "Named southern checkpoint, distinct from northern Derinya office310m away; GreenLine is de facto divide, not interstate border.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-053.json"
+    },
+    {
+      "url": "https://mapcarta.com/W779189106",
+      "access_status": "previously_inspected_same_pass_geographic_evidence",
+      "finding": "Named Aplic/Aplıç border-gate government building supports route identity; exact Republic-side barrier not identified.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-057.json"
+    },
+    {
+      "url": "https://mapcarta.com/W449489111",
+      "access_status": "previously_inspected_same_pass_geographic_evidence",
+      "finding": "Named KatoPyrgos government checkpoint on route to Limnitis; northern refusal/checkpoint location not separately established.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-059.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "C7-EU-001-P1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-deryneia-green-line",
+          "name": "Deryneia Green Line crossing",
+          "coordinates": [
+            33.96037,
+            35.07207
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 11533577126; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N11533577126",
+            "https://www.openstreetmap.org/node/11533577126"
+          ],
+          "evidence_note": "Named southern checkpoint, distinct from northern Derinya office310m away; GreenLine is de facto divide, not interstate border.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-053.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-apliki-green-line-reference",
+          "name": "Lefka–Apliki Green Line crossing reference",
+          "coordinates": [
+            32.83994,
+            35.08276
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 779189106; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W779189106",
+            "https://www.openstreetmap.org/way/779189106"
+          ],
+          "evidence_note": "Named Aplic/Aplıç border-gate government building supports route identity; exact Republic-side barrier not identified.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-057.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-kato-pyrgos-green-line-reference",
+          "name": "Kato Pyrgos–Limnitis Green Line crossing reference",
+          "coordinates": [
+            32.69446,
+            35.17587
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 449489111; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W449489111",
+            "https://www.openstreetmap.org/way/449489111"
+          ],
+          "evidence_note": "Named KatoPyrgos government checkpoint on route to Limnitis; northern refusal/checkpoint location not separately established.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-059.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Turkish Cypriot-side suspension at Lefka–Apliki, Deryneia and Kato Pyrgos–Karavostasi (Limnitis)",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": "2021-01-01",
+        "end_earliest": "2021-06-04",
+        "end_latest": "2021-06-04",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "All three routes located. Deryneia and Kato Pyrgos references are southern facilities, so exact Turkish Cypriot suspension points are not fully located."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "eb0c3f85e7f73307be870c025fbcefc734cf987dcd1e28b054cc136d1c83fe73"
+}

@@ -1,0 +1,92 @@
+{
+  "format": "geography-audit-gzip-chunks",
+  "version": 1,
+  "chunk_max_bytes": 160000,
+  "files": [
+    {
+      "path": "source/crossings/locations.json",
+      "bytes": 2436351,
+      "sha256": "9242fc39b1dd12d15abcab50c6e4e73f7e737d4aa2098dae4cb7167fdab2c49c",
+      "gzip_bytes": 372689,
+      "gzip_sha256": "a3be29e283c8f83642733d4164d11486e9472731a5ba805ce017026b9ef40de7",
+      "chunks": [
+        {
+          "file": "crossing-locations-a3be29e283c8f836.json.gz.part000",
+          "bytes": 160000,
+          "sha256": "113fe72308d90e8e41a14dc83127931fb02a76ec42fe57fd2c4eff2022d03691"
+        },
+        {
+          "file": "crossing-locations-a3be29e283c8f836.json.gz.part001",
+          "bytes": 160000,
+          "sha256": "7a808bc0c8a37af83fdf2f856d2a63f92b4a6bf74d25b1b7267133527dff6476"
+        },
+        {
+          "file": "crossing-locations-a3be29e283c8f836.json.gz.part002",
+          "bytes": 52689,
+          "sha256": "d71fe0a6641c04903c9f40fea5ce25a4179c0e7ebbdde03fed8a0a1c5f1395c8"
+        }
+      ]
+    },
+    {
+      "path": "source/crossings/scope-review.json",
+      "bytes": 721302,
+      "sha256": "6b805d876fd2ff3220e54d7f558bd340863e9651d2137f0a1ec73fe9a021ccfc",
+      "gzip_bytes": 95342,
+      "gzip_sha256": "cfc2fb2269d508fc48d374a03701818180c491eb5dd8d9dae41503b77a989fa0",
+      "chunks": [
+        {
+          "file": "crossing-scope-review-cfc2fb2269d508fc.json.gz.part000",
+          "bytes": 95342,
+          "sha256": "cfc2fb2269d508fc48d374a03701818180c491eb5dd8d9dae41503b77a989fa0"
+        }
+      ]
+    },
+    {
+      "path": "research/geography-audit-2026-10-29/reconciled-decisions.json",
+      "bytes": 1804437,
+      "sha256": "fcd15d9acc9493c867517f34e9030e5dd6831071e1a8e0131e22c75517c995d1",
+      "gzip_bytes": 277453,
+      "gzip_sha256": "943f5024d99db7d2b7a940de18fe125cd2f607a6fb28bb3dd98b54e7aa75886d",
+      "chunks": [
+        {
+          "file": "audit-decisions-943f5024d99db7d2.json.gz.part000",
+          "bytes": 160000,
+          "sha256": "6aefc576d0b53dfe9501e59915b87818ed8c7e1bac1847394a7428b804e9c7d0"
+        },
+        {
+          "file": "audit-decisions-943f5024d99db7d2.json.gz.part001",
+          "bytes": 117453,
+          "sha256": "1efe415944cb3b311da43a874f7a804ae26833794312538673df29c02c4b7826"
+        }
+      ]
+    },
+    {
+      "path": "research/geography-audit-2026-10-29/reconciliation-americas-europe.json",
+      "bytes": 558437,
+      "sha256": "e6da139cfc4456d39f738b9860186bcada969da076247042752e82c470705275",
+      "gzip_bytes": 76690,
+      "gzip_sha256": "24ee66f8fefd34950959cc75c0dee6fc786718805af5ebed8e4a1e763944999f",
+      "chunks": [
+        {
+          "file": "review-americas-europe-24ee66f8fefd3495.json.gz.part000",
+          "bytes": 76690,
+          "sha256": "24ee66f8fefd34950959cc75c0dee6fc786718805af5ebed8e4a1e763944999f"
+        }
+      ]
+    },
+    {
+      "path": "research/geography-audit-2026-10-29/reconciliation-africa-middle-east.json",
+      "bytes": 416285,
+      "sha256": "85e7eb60f41c95430b50390973523365796300ba645202bb65cd305485f90edb",
+      "gzip_bytes": 68923,
+      "gzip_sha256": "3a98de2ba0ce7dede8c84de20969e6d9b65351fac7261e3a05560414ad3d3ceb",
+      "chunks": [
+        {
+          "file": "review-africa-middle-east-3a98de2ba0ce7ded.json.gz.part000",
+          "bytes": 68923,
+          "sha256": "3a98de2ba0ce7dede8c84de20969e6d9b65351fac7261e3a05560414ad3d3ceb"
+        }
+      ]
+    }
+  ]
+}

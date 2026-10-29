@@ -1,0 +1,65 @@
+{
+  "record_id": "REC50-R47-001",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Adré road crossing from Chad into West Darfur, Sudan. The 2024 humanitarian permission regime and the WFP food-truck operational return are distinct phases at the same named route. Neither covers all traffic or all agencies, and exceptional March/April aid prevents a continuous zero-aid interval.",
+  "source_checks": [
+    {
+      "url": "https://logcluster.org/sites/default/files/public/2025-03/250306sudanlcoperation-overviewjanuary-december-2024.pdf",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Original operational overview PDF text inspected, p.3: February 21 note withdrew prior Chad-to-Sudan authorization; March 13 limited permission for sixty Adré trucks; August 16 new three-month authorization. No exact exhaustion date of earlier exception or border-control coordinates.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-40.json"
+    },
+    {
+      "url": "https://sudan.un.org/en/276741-top-un-official-sudan-hails-re-opening-adre-border-crossing-point-chad-darfur",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full primary August 16 statement identifies Adré Chad-to-Darfur route and welcomes authorization; supplies are ready to move, so it is permission rather than observation of first convoy.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-49.json"
+    },
+    {
+      "url": "https://www.wfp.org/news/first-wfp-trucks-cross-sudans-reopened-adre-border-food-communities-risk-famine",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full relevant original operational statement inspected: August 21 publication dates WFP food trucks crossing Tuesday evening, August20. It separately acknowledges March and April WFP convoys during official closure; no all-agency or final-delivery inference.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-39.json"
+    },
+    {
+      "url": "https://mapcarta.com/12837016",
+      "access_status": "indexed_geography_lead_inspected_rejected_city_centroid",
+      "finding": "Indexed Adré coordinate is explicitly a city/place node, not the border control. Rejected as a crossing coordinate. Unsourced travel-site coordinates and generic town proximity do not establish the humanitarian route facility.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-42.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R47-001-P1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: single_site. Chad-to-Darfur humanitarian permit regime, February 21 through August 15–16 authorization, with March/April exceptions. Hold exact geography because named Adré control point has not been independently located; no whole Sudan–Chad frontier substitute.",
+      "unresolved": [
+        "Source-backed coordinate of Adré aid-truck border facility unresolved.",
+        "Permission and physical control are distinct; no universal or continuous traffic stoppage."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"policy_period\", \"start_earliest\": \"2024-02-21\", \"start_latest\": \"2024-02-21\", \"end_earliest\": \"2024-08-15\", \"end_latest\": \"2024-08-16\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": true}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: REC50-R47-001-P1: The February withdrawal had documented March/April exceptions. August 15–16 permission is distinct from actual WFP food-truck entry on August 20. The initial restriction was administrative; physical control of the crossing was separately attributed to the RSF. No continuous all-aid or all-traffic closure is claimed.\n\nREC50-R47-001-P2: Endpoint-only observation. The last March/April exceptional shipment and onset of the subsequent WFP interruption are not dated. No complete February–August operational spell, all-agency return, or arrival at final destinations is inferred."
+    },
+    {
+      "phase_id": "REC50-R47-001-P2",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: single_site. WFP food-truck return August 20 only; onset of preceding interruption unknown. Same named road route but no point approved from town-centre lead.",
+      "unresolved": [
+        "Exact road crossing coordinate remains unresolved.",
+        "No restoration date for all aid agencies, all road traffic or final delivery inferred."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"bounded_interval\", \"start_earliest\": null, \"start_latest\": null, \"end_earliest\": \"2024-08-20\", \"end_latest\": \"2024-08-20\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: REC50-R47-001-P1: The February withdrawal had documented March/April exceptions. August 15–16 permission is distinct from actual WFP food-truck entry on August 20. The initial restriction was administrative; physical control of the crossing was separately attributed to the RSF. No continuous all-aid or all-traffic closure is claimed.\n\nREC50-R47-001-P2: Endpoint-only observation. The last March/April exceptional shipment and onset of the subsequent WFP interruption are not dated. No complete February–August operational spell, all-agency return, or arrival at final destinations is inferred."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

@@ -1,0 +1,73 @@
+{
+  "record_id": "REC50-R31-005",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "February 7, 2020 protest on the North Channel road bridge in the Seaway system between Cornwall and Cornwall Island, inside Canada. Reported authority closure extended to non-emergency north/south bridge-system traffic. Do not collapse this to the South Channel international boundary span or the Thousand Islands protest reported separately later in February.",
+  "source_checks": [
+    {
+      "url": "https://www.cornwallseawaynews.com/local/pipeline-protest-on-seaway-bridge-stops-traffic/",
+      "access_status": "full_retrieved",
+      "finding": "Full contemporary local article inspected: protesters in middle of North Bridge toward Canadian Customs, 14:41–16:26; police diversion at Brookdale/Water; tribal police statement mentions four corners on Cornwall Island and system closure except emergencies."
+    },
+    {
+      "url": "https://www.cornwallnewswatch.com/2020/02/07/seaway-bridge-closed-to-traffic-due-to-protest/",
+      "access_status": "inaccessible",
+      "finding": "Original Newswatch URL returned 502."
+    },
+    {
+      "url": "https://www.wwnytv.com/2020/02/18/members-saint-regis-mohawk-community-were-part-bridge-protests/",
+      "access_status": "full_retrieved",
+      "finding": "Full WWNY report inspected: February 7 Seaway event distinguished from February 17 Thousand Islands action."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-74.75,45.003,-74.73,45.021",
+      "access_status": "full_retrieved",
+      "finding": "Direct OSM XML inspected: active North Channel road bridge, separate parallel sidewalk, mainland Canadian toll/customs and abandoned western rail bridge. sha256 016212a7eadae5e45cdfe892fe07fddd70ceb785f9f97edd77bded90ae9b9f1f."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R31-005-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "proposed-seaway-north-channel-road",
+          "name": "Seaway North Channel road bridge, Cornwall–Cornwall Island",
+          "coordinates": [
+            -74.73990344,
+            45.00815348
+          ],
+          "coordinate_method": "Directly inspected OSM way/260062700 mean of geometry vertices; XML sha256 1fbf879eaf0a5182138703f40e003edd295daa64c179f664b2aa7a3b9b46e977",
+          "precision": "North Channel span representative, approximately 100 m; precise protest and authority closure footprints unresolved",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/260062700/full"
+          ],
+          "evidence_note": "Direct OSM map shows North Channel road span between Cornwall mainland and Cornwall Island, south of Canadian toll/customs plaza; not the international South Channel span, nor abandoned railway bridge."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Non-emergency bridge-system traffic interrupted by a North Channel protest at Seaway International Bridge system / Cornwall–Cornwall Island approach; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2020-02-07",
+        "start_latest": "2020-02-07",
+        "end_earliest": "2020-02-07",
+        "end_latest": "2020-02-07",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "North Channel span verified, but separate operational barriers elsewhere in the bridge system and the four-corners protest reference are not located; point is not complete system geometry."
+      ]
+    }
+  ],
+  "unresolved": [
+    "North Channel span verified, but separate operational barriers elsewhere in the bridge system and the four-corners protest reference are not located; point is not complete system geometry."
+  ]
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2623179 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <node id="1084431632" visible="true" version="6" changeset="156109601" timestamp="2024-09-02T17:26:39Z" user="Kevin Gaffney" uid="9356557" lat="0.2517849" lon="-76.8760179"/>
+ <node id="1084431634" visible="true" version="7" changeset="156109601" timestamp="2024-09-02T17:26:39Z" user="Kevin Gaffney" uid="9356557" lat="0.2508449" lon="-76.8760142">
+  <tag k="access" v="yes"/>
+  <tag k="barrier" v="border_control"/>
+  <tag k="bicycle" v="yes"/>
+  <tag k="foot" v="yes"/>
+  <tag k="motorcar" v="yes"/>
+  <tag k="name" v="Aduana"/>
+  <tag k="source" v="Bing"/>
+ </node>
+ <node id="12152007525" visible="true" version="1" changeset="156109601" timestamp="2024-09-02T17:26:39Z" user="Kevin Gaffney" uid="9356557" lat="0.2513256" lon="-76.8760369"/>
+ <way id="93534528" visible="true" version="7" changeset="156109601" timestamp="2024-09-02T17:26:39Z" user="Kevin Gaffney" uid="9356557">
+  <nd ref="1084431634"/>
+  <nd ref="12152007525"/>
+  <nd ref="1084431632"/>
+  <tag k="bridge" v="yes"/>
+  <tag k="highway" v="primary"/>
+  <tag k="lanes" v="2"/>
+  <tag k="lanes:backward" v="1"/>
+  <tag k="lanes:forward" v="1"/>
+  <tag k="layer" v="1"/>
+  <tag k="name" v="Puente Internacional San Miguel"/>
+  <tag k="ref" v="E45"/>
+  <tag k="road_shield_color" v="blue"/>
+ </way>
+</osm>

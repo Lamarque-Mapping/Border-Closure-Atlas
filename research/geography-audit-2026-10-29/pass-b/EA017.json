@@ -49,6 +49,16 @@
       "text_sha256": "f5cd404b1999692fcc9ec728006b90c1aa0f6ad948c34a0b21e2d3a22b66a8e8",
       "status": 200,
       "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-ea-followup-2.json"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/545957507/full",
+      "access_status": "fresh_OSM_XML_inspected",
+      "finding": "Later independent discovery locates Indonesian PLBN Motaain. The March 2020 original article instead identifies Timorese Batugade refusal while Indonesian services continued; it cannot replace that control point or the four-post Timorese legal scope.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/54d915ca284d1fb4cd62.xml",
+      "sha256": "538c1e0498991d5de3dc3c852627934f499d7b6994e14b6d3625050457fe021d",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/54d915ca284d1fb4cd62.txt",
+      "text_sha256": "538c1e0498991d5de3dc3c852627934f499d7b6994e14b6d3625050457fe021d",
+      "status": 200
     }
   ],
   "phase_decisions": [
@@ -126,5 +136,6 @@
     "The four land-control facility coordinates have not been independently checked; no whole Indonesia–Timor-Leste boundary is substituted."
   ],
   "input_sha256": "3d37b8de18f8acbd5c81a46f931a0efd8cc7e9aa1c96ffdd51da1745b8666f5d",
-  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted.",
+  "repeated_site_review": "Motaain location reviewed and rejected as an automatic substitute for Timorese inward controls. Existing held decisions remain unchanged."
 }

@@ -1,0 +1,101 @@
+{
+  "record_id": "REC50-R43-003",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Burkina Faso national outward commodity and authorization restrictions, with four distinct phases and a documented 2026 flour permission gap. No post is named by these policy sources; restrictions do not establish an all-traffic frontier closure.",
+  "source_checks": [
+    {
+      "url": "https://www.fao.org/giews/food-prices/food-policies/detail/fr/c/1492068/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full FAO policy account independently identifies millet, maize and sorghum grain export restriction from January 1,2021 and flour restriction announced February 23,2022. No named post or physical enforcement extent.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-40.json"
+    },
+    {
+      "url": "https://faso7.com/2021/12/27/burkina-faso-prix-des-cereales-le-ministere-du-commerce-rappelle-les-commercants-a-lordre/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full contemporary December 27 report reiterates July 7 ASE suspension covering millet, maize, sorghum and cowpea and says not lifted. Does not prove cowpea covered from January or locate customs enforcement.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-47.json"
+    },
+    {
+      "url": "https://www.commerce.gov.bf/fileadmin/user_upload/storage/fichiers/COMMUNIQUE_SUSPENSION_DES_ASE_DE_MIL_MAI__S_ET_SORGHO.pdf",
+      "access_status": "inaccessible_502",
+      "finding": "Original ministry PDF unavailable, 502. Not described as full-text inspected.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-49.json"
+    },
+    {
+      "url": "https://www.actualite.bf/commerce-le-gouvernement-interdit-lexportation-du-niebe-et-des-cereales-au-burkina-faso/",
+      "access_status": "indexed_original_communique_reproduction_inspected_direct_page_inaccessible",
+      "finding": "Substantive indexed reproduction of November 13,2024 joint communiqué inspected: cites December 19,2023 measure and explicitly lists cowpea, rice, millet, maize, sorghum throughout national territory. Direct retrieval failed403. Not an independent second origin for the same communiqué.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-48.json"
+    },
+    {
+      "url": "https://fr.apanews.net/business/burkina-reprise-des-exportations-de-farine-de-cereales/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full relevant report describes July 21,2026 lifting of flour export suspension while special export permits remain required. This creates a permission gap before the new October phase, not a continuous flour prohibition.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-40.json"
+    },
+    {
+      "url": "https://www.aib.media/?p=169920",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full original AIB October 9,2026 report describes renewed flour/derivative export and ASE suspension and appeal to frontier control/security services. Does not identify posts or initial enforcement day. AI-labelled illustrative image supplies no geographical evidence.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-38.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R43-003-P1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: wider_border. P1 special export authorization/commodity scope only. Preserve January grain restriction, later July cowpea evidence and December 27 confirmation. No physical closure polygon or gate list inferred.",
+      "unresolved": [
+        "Post-level enforcement and exact territorial operational extent unresolved."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"confirmed_through\", \"start_earliest\": \"2021-01-01\", \"start_latest\": \"2021-01-01\", \"end_earliest\": \"2021-12-27\", \"end_latest\": \"2021-12-27\", \"last_confirmed\": \"2021-12-27\", \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": true}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: REC50-R43-003-P1: The ministry’s July 2021 enforcement report explicitly dates permit suspension to 1 January 2021, corroborating FAO. This primary retrospective statement resolves the earlier uncertainty about whether the rule began only in December. The separately cited December notice remains inaccessible and is not needed to establish the January onset. July reporting confirms previously issued permits could not be used; cowpea is securely documented by July, without assuming it was covered from January. Truck interceptions establish some enforcement, not closure of every gate.\n\nREC50-R43-003-P2: February 23, 2022 is the reported flour announcement. APA reports a ministry lifting dated July 21, 2026, retaining special export permits. No first shipment or uniform enforcement is established. The new October 9 suspension is separate; the July–October permission gap must be retained.\n\nREC50-R43-003-P3: The November 13, 2024 reminder identifies the December 19, 2023 communiqué. Contemporary December reporting corroborates a cereal-export prohibition and suspension of permit issuance. Earlier August 11, 2023 special permits were exceptionally authorized only for Niger-bound millet, maize, sorghum and cowpea. Their later continuation and interaction with the December rule are unresolved; no general repeal or actual shipment is inferred.\n\nThe February 24, 2025 ministry report separately records a maize seizure and continuing cereal/flour restrictions without identifying the destination. Each observation retains its own commodity and date scope; no uninterrupted 2021–2026 operational closure is assigned."
+    },
+    {
+      "phase_id": "REC50-R43-003-P2",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: wider_border. P2 millet/maize/sorghum flour only. Native onset remains unknown despite February 23 announcement; July 21,2026 policy lifting retains permit requirements. No gate implementation or precise reopening inferred.",
+      "unresolved": [
+        "No named border facility coordinates or enforcement extent."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"policy_period\", \"start_earliest\": null, \"start_latest\": null, \"end_earliest\": \"2026-07-21\", \"end_latest\": \"2026-07-21\", \"last_confirmed\": \"2022-02-23\", \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": true}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: REC50-R43-003-P1: The ministry’s July 2021 enforcement report explicitly dates permit suspension to 1 January 2021, corroborating FAO. This primary retrospective statement resolves the earlier uncertainty about whether the rule began only in December. The separately cited December notice remains inaccessible and is not needed to establish the January onset. July reporting confirms previously issued permits could not be used; cowpea is securely documented by July, without assuming it was covered from January. Truck interceptions establish some enforcement, not closure of every gate.\n\nREC50-R43-003-P2: February 23, 2022 is the reported flour announcement. APA reports a ministry lifting dated July 21, 2026, retaining special export permits. No first shipment or uniform enforcement is established. The new October 9 suspension is separate; the July–October permission gap must be retained.\n\nREC50-R43-003-P3: The November 13, 2024 reminder identifies the December 19, 2023 communiqué. Contemporary December reporting corroborates a cereal-export prohibition and suspension of permit issuance. Earlier August 11, 2023 special permits were exceptionally authorized only for Niger-bound millet, maize, sorghum and cowpea. Their later continuation and interaction with the December rule are unresolved; no general repeal or actual shipment is inferred.\n\nThe February 24, 2025 ministry report separately records a maize seizure and continuing cereal/flour restrictions without identifying the destination. Each observation retains its own commodity and date scope; no uninterrupted 2021–2026 operational closure is assigned."
+    },
+    {
+      "phase_id": "REC50-R43-003-P3",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: wider_border. P3 December 19,2023 national cereal policy, confirmed November 13,2024 with explicit rice/millet/maize/sorghum/cowpea. Preserve limited August 2023 Niger-bound exception and unresolved later relationship; no default all-gate closure.",
+      "unresolved": [
+        "Post implementation and continuation of exceptional Niger permits remain unresolved."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"policy_period\", \"start_earliest\": \"2023-12-19\", \"start_latest\": \"2023-12-19\", \"end_earliest\": \"2024-11-13\", \"end_latest\": \"2024-11-13\", \"last_confirmed\": \"2024-11-13\", \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": true}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: REC50-R43-003-P1: The ministry’s July 2021 enforcement report explicitly dates permit suspension to 1 January 2021, corroborating FAO. This primary retrospective statement resolves the earlier uncertainty about whether the rule began only in December. The separately cited December notice remains inaccessible and is not needed to establish the January onset. July reporting confirms previously issued permits could not be used; cowpea is securely documented by July, without assuming it was covered from January. Truck interceptions establish some enforcement, not closure of every gate.\n\nREC50-R43-003-P2: February 23, 2022 is the reported flour announcement. APA reports a ministry lifting dated July 21, 2026, retaining special export permits. No first shipment or uniform enforcement is established. The new October 9 suspension is separate; the July–October permission gap must be retained.\n\nREC50-R43-003-P3: The November 13, 2024 reminder identifies the December 19, 2023 communiqué. Contemporary December reporting corroborates a cereal-export prohibition and suspension of permit issuance. Earlier August 11, 2023 special permits were exceptionally authorized only for Niger-bound millet, maize, sorghum and cowpea. Their later continuation and interaction with the December rule are unresolved; no general repeal or actual shipment is inferred.\n\nThe February 24, 2025 ministry report separately records a maize seizure and continuing cereal/flour restrictions without identifying the destination. Each observation retains its own commodity and date scope; no uninterrupted 2021–2026 operational closure is assigned."
+    },
+    {
+      "phase_id": "REC50-R43-003-P4",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: wider_border. P4 new flour/derivative and permit suspension confirmed October 9,2026. Do not fill July–October permission gap or supply an onset or >24-hour determination.",
+      "unresolved": [
+        "Physical gate enforcement and first operational denial remain unresolved."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"confirmed_through\", \"start_earliest\": null, \"start_latest\": null, \"end_earliest\": \"2026-10-09\", \"end_latest\": \"2026-10-09\", \"last_confirmed\": \"2026-10-09\", \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: REC50-R43-003-P1: The ministry’s July 2021 enforcement report explicitly dates permit suspension to 1 January 2021, corroborating FAO. This primary retrospective statement resolves the earlier uncertainty about whether the rule began only in December. The separately cited December notice remains inaccessible and is not needed to establish the January onset. July reporting confirms previously issued permits could not be used; cowpea is securely documented by July, without assuming it was covered from January. Truck interceptions establish some enforcement, not closure of every gate.\n\nREC50-R43-003-P2: February 23, 2022 is the reported flour announcement. APA reports a ministry lifting dated July 21, 2026, retaining special export permits. No first shipment or uniform enforcement is established. The new October 9 suspension is separate; the July–October permission gap must be retained.\n\nREC50-R43-003-P3: The November 13, 2024 reminder identifies the December 19, 2023 communiqué. Contemporary December reporting corroborates a cereal-export prohibition and suspension of permit issuance. Earlier August 11, 2023 special permits were exceptionally authorized only for Niger-bound millet, maize, sorghum and cowpea. Their later continuation and interaction with the December rule are unresolved; no general repeal or actual shipment is inferred.\n\nThe February 24, 2025 ministry report separately records a maize seizure and continuing cereal/flour restrictions without identifying the destination. Each observation retains its own commodity and date scope; no uninterrupted 2021–2026 operational closure is assigned."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

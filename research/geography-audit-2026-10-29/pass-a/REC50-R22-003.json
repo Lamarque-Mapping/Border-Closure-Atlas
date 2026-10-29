@@ -1,0 +1,73 @@
+{
+  "record_id": "REC50-R22-003",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Russian-registered non-exempt passenger-vehicle import restriction through Finland’s external EU frontier: Russia and Norway are expressly named by Customs. Sweden is not added. This policy differs from later physical road-post closures.",
+  "source_checks": [
+    {
+      "url": "https://www.sttinfo.fi/tiedote/70022378/cars-registered-in-russia-can-no-longer-enter-finland-as-of-midnight-today?lang=en",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Customs September 15 primary release states September 16 start, vehicle commodity scope and exceptions; explicitly says enforcement at both Russian and Norwegian borders because Norway is outside the EU.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-118.json"
+    },
+    {
+      "url": "https://valtioneuvosto.fi/-/2912305/rajaliikenne-hiljentynyt-entisestaan-tulli-on-kaannyttanyt-37-venajalle-rekisteroitya-autoa-viikonlopun-aikana?languageId=en_US",
+      "access_status": "inaccessible",
+      "finding": "Original government operational-refusal follow-up returned 403; no fresh full-text claim or new site-specific refusal count made.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-127.json"
+    },
+    {
+      "url": "https://tulli.fi/documents/2912305/3847316/Policy%2Bregarding%2Bcars%2Bunder%2BRussian%2Bregistration%2Bin%2BFinland%2Bas%2Bof%2B16%2BMarch%2B2024_press%2Brelease%2Bappendix%2B%281%29.pdf/10fdad5e-fce6-8747-e256-e1ad242fe733/Policy%2Bregarding%2Bcars%2Bunder%2BRussian%2Bregistration%2Bin%2BFinland%2Bas%2Bof%2B16%2BMarch%2B2024_press%2Brelease%2Bappendix%2B%281%29.pdf?t=1710250685816",
+      "access_status": "inaccessible",
+      "finding": "March 12 appendix returned 403. Canonical last-confirmed date is retained, not independently re-dated.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-130.json"
+    },
+    {
+      "url": "https://www.sttinfo.fi/files/69819633/70122297/71963/en",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Fresh Customs March 18 PDF lists documents and exceptions after March 16; documentation/removal rules are not a reopening.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-128.json"
+    },
+    {
+      "url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+      "access_status": "fresh_raw_primary_geographic_inspected",
+      "finding": "Fresh original Natural Earth 5.1.0 shapefile inspected by bilateral country attributes and all coordinates compared at 5 decimal places to existing geometries. Finland–Norway/Russia and six non-Russian Ukrainian frontiers match. Russia–Ukraine context also contains a disputed convention segment and is not approved as national-policy extent.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/c776a4f3cc92e6abb998.zip",
+      "source_sha256": "16ead035f539c8b6c23650c5845d86ad3556553e7456bdf9b4730210f26aacbe",
+      "derived_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/natural-earth-finland-ukraine-source-features.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R22-003-P1",
+      "category": "wider_border",
+      "decision": "map",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-fin-rus",
+        "context-frontier-fin-nor"
+      ],
+      "complete": true,
+      "phase_applicability": "The two explicitly named land frontiers as legal import-policy references only; no assertion of physical closure at every post.",
+      "date_scope_check": {
+        "start_earliest": "2023-09-16",
+        "start_latest": "2023-09-16",
+        "end_earliest": "2024-03-12",
+        "end_latest": "2024-03-12",
+        "last_confirmed": "2024-03-12",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "No complete post-by-post refusal roster or uninterrupted post-2024 enforcement established. Generalized land lines omit water-indicator segments and are not a continuous barrier footprint."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "aaf9b0e29c1505af2b8a70a09e30eee0197cd623881fa46a6522ffb8c7b4d29d"
+}

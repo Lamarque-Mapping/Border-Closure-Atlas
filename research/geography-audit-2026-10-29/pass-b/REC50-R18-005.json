@@ -1,0 +1,63 @@
+{
+  "record_id": "REC50-R18-005",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Yacuiba and San José de Pocitos civic blockade of the international road bridge to Salvador Mazza, May 31–June 2, 2021. It prevented freight that was otherwise permitted through the pandemic regime. This event is distinct from the continuing legal passenger restriction and from separate Villazón or Bermejo protests.",
+  "source_checks": [
+    {
+      "url": "https://eldeber.com.bo/tarija/civicos-de-yacuiba-y-san-jose-de-pocitos-levantan-bloqueo-en-puente-binacional-pero-se-mantiene-la-p_233942/",
+      "access_status": "full_retrieved",
+      "finding": "Full El Deber report inspected: bridge connects Yacuiba/Pocitos with Salvador Mazza; protest lifted after dialogue invitation and freight access restored, pandemic restriction continued."
+    },
+    {
+      "url": "https://yacuibanoticias.com/2021/05/31/organizaciones-y-civicos-bloquean-el-puente-internacional-en-yacuiba-en-demanda-de-la-apertura-de-fronteras/",
+      "access_status": "inaccessible",
+      "finding": "Original article URL returned 404; no independent content recovered from this URL."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R18-005-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "proposed-pocitos-salvador-mazza-road-bridge",
+          "name": "Pocitos–Salvador Mazza international road bridge",
+          "coordinates": [
+            -63.6838634,
+            -22.053081
+          ],
+          "coordinate_method": "Directly inspected OSM way/128949421 mean of geometry vertices; XML sha256 adf916259dffafae3f1908263b42ba553bbe717277a62c07e5e5761443e38c84",
+          "precision": "Road bridge representative, approximately 50 m; exact barricade or approach footprint not surveyed",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/128949421/full"
+          ],
+          "evidence_note": "The bridge is the affected freight passage; separate pandemic passenger closure is not inferred from the protest footprint."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Access for permitted international freight through the binational bridge at Yacuiba–Salvador Mazza international bridge; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "bounded_interval",
+        "start_earliest": "2021-05-31",
+        "start_latest": "2021-05-31",
+        "end_earliest": "2021-06-01",
+        "end_latest": "2021-06-02",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Exact Bolivian-side blockade position on the bridge or immediate approach remains unresolved."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact Bolivian-side blockade position on the bridge or immediate approach remains unresolved."
+  ]
+}

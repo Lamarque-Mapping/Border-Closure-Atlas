@@ -1,0 +1,120 @@
+{
+  "record_id": "REC50-R28-003",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Singkhon formal road-crossing policy and a separate limited goods-transfer schedule opposite Mudong/Mawtaung. The January 2026 observation concerns inability to open the formal checkpoint. The later Tuesday/Saturday transfer window concerns a no-man’s-land area whose footprint is not established. April permission is a legal relaxation, not a demonstrated full operational reopening.",
+  "source_checks": [
+    {
+      "url": "https://www.topnews.co.th/news/1462495",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Thai article describes the closed formal Singkhon checkpoint, lack of recognized counterpart at Mudong, and separate community trade/medical exceptions.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-4.json",
+      "sha256": "acb02629d5657651c7ff7a7746ccf82655de38ff855583142e22b85bc427bc92"
+    },
+    {
+      "url": "https://www.dailynews.co.th/news/5791785/",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Reports previous Tuesday/Saturday 08:00–12:00 transfer arrangements in no-man’s-land and order 4/2569 effective April 17, requiring notice for goods.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-4.json",
+      "sha256": "acb02629d5657651c7ff7a7746ccf82655de38ff855583142e22b85bc427bc92"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/12194462826/history",
+      "access_status": "fresh_OSM_XML_inspected",
+      "finding": "Actual pass border-control point existed in 2024; current name is Singkhon immigration.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/7adf1d5d5c3a0f00ad94.xml",
+      "sha256": "98fe6495960c8c88ab7b80f177bd381d67379ad6408680fedef56914619b2b37",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/7adf1d5d5c3a0f00ad94.txt",
+      "text_sha256": "98fe6495960c8c88ab7b80f177bd381d67379ad6408680fedef56914619b2b37",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=99.643,11.783,99.652,11.790",
+      "access_status": "fresh_OSM_XML_inspected",
+      "finding": "Named pass roads and formal station identify the crossing; an eastern border post is separate. No transfer-yard identity inferred.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/141aa850a3c423841628.xml",
+      "sha256": "e3d7f7d2b2626376acc29bbb9cf9484312c65e0806b97ed6aee3a59233642ca9",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/141aa850a3c423841628.txt",
+      "text_sha256": "e3d7f7d2b2626376acc29bbb9cf9484312c65e0806b97ed6aee3a59233642ca9",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R28-003-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-singkhon-road",
+          "name": "Singkhon Pass immigration crossing",
+          "coordinates": [
+            99.6465255,
+            11.7866465
+          ],
+          "coordinate_method": "Coordinates from explicitly versioned OSM node XML, independently compared with full node history",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/12194462826/1",
+            "https://api.openstreetmap.org/api/0.6/node/12194462826/history",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=99.643,11.783,99.652,11.790"
+          ],
+          "evidence_note": "September 2024 border-control node at the international pass; current XML names Singkhon immigration. Nearby road ways explicitly carry Singkhon / Maw Daung Pass names, and the Thai border-station building is identified separately. This is the formal pass, not the unlocated goods-transfer area described as no-man’s-land.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/548c1786669b9795532d.xml",
+          "sha256": "6c4fa96c620efaea15ce15c4d687c56ed2563148a4feaeadc439fa93456efb8d"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Formal Singkhon road-crossing policy at the dated January observation; no universal cessation or continuous interval inferred.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2026-01-21",
+        "end_latest": "2026-01-21",
+        "last_confirmed": "2026-01-21",
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "REC50-R28-003-P1: This is dated policy evidence, not observed universal cessation. Neither the last tin-import approval on 20 October 2025 nor later incomplete applications establish a general start date. No continuous interval is inferred across the later schedule and July planning report.\n\nREC50-R28-003-P2: The endpoint is a legal relaxation only; no first truck or trader passage is documented. A July meeting still discusses possible general reopening, so April permission must not become a universal operational endpoint. The relationship between the January observation and the later schedule is not a proven continuous spell.\n\nscope; chronology; attribution; geography: The schedule’s onset and its relationship to the January policy are unknown. April permission is not an observed full checkpoint reopening; July preparations do not supply a new closure date or prove continuous closure.\n\nAdditional later context: a 5 August 2026 provincial meeting, reported August 9, still reviewed possible general reopening and border documentation after repair of roads and utilities. This extends the documentary trail beyond the July 15 meeting, but does not establish uninterrupted closure since January or negate the separate April 17 limited goods-policy relaxation. Frontier’s February 17 reporting also describes a closed Thai border, without resolving every permitted community-trade exception."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "REC50-R28-003-P2",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Singkhon formal road-crossing policy and a separate limited goods-transfer schedule opposite Mudong/Mawtaung. The January 2026 observation concerns inability to open the formal checkpoint. The later Tuesday/Saturday transfer window concerns a no-man’s-land area whose footprint is not established. April permission is a legal relaxation, not a demonstrated full operational reopening.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2026-04-17",
+        "end_latest": "2026-04-17",
+        "last_confirmed": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "REC50-R28-003-P1: This is dated policy evidence, not observed universal cessation. Neither the last tin-import approval on 20 October 2025 nor later incomplete applications establish a general start date. No continuous interval is inferred across the later schedule and July planning report.\n\nREC50-R28-003-P2: The endpoint is a legal relaxation only; no first truck or trader passage is documented. A July meeting still discusses possible general reopening, so April permission must not become a universal operational endpoint. The relationship between the January observation and the later schedule is not a proven continuous spell.\n\nscope; chronology; attribution; geography: The schedule’s onset and its relationship to the January policy are unknown. April permission is not an observed full checkpoint reopening; July preparations do not supply a new closure date or prove continuous closure.\n\nAdditional later context: a 5 August 2026 provincial meeting, reported August 9, still reviewed possible general reopening and border documentation after repair of roads and utilities. This extends the documentary trail beyond the July 15 meeting, but does not establish uninterrupted closure since January or negate the separate April 17 limited goods-policy relaxation. Frontier’s February 17 reporting also describes a closed Thai border, without resolving every permitted community-trade exception."
+      },
+      "unresolved": [
+        "No-man’s-land goods-transfer area is not geolocated; the formal immigration point is not automatically the same facility."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "814c4af066d531f877434c7fee069a1918859e25e278762a42d6cae8b7962693",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

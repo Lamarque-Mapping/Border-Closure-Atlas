@@ -43,18 +43,20 @@
         "end_latest": "2022-06-01",
         "last_confirmed": null,
         "temporal_display_rule": "held_evidence_do_not_animate_as_confirmed",
-        "held_status_preserved": true,
+        "held_status_preserved": false,
         "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
-        "qualification": "This is an authority-reported operational endpoint, not an independently observed first truck. Cargo transfer, rail and non-contact handovers continued; other Turkmen frontiers are not assigned this duration. CAREC dates March23; the contemporary Mission/IRU foreign-truck rule is effective March24. Retain this unresolved difference and withhold numeric duration."
+        "qualification": "This is an authority-reported operational endpoint, not an independently observed first truck. Cargo transfer, rail and non-contact handovers continued; other Turkmen frontiers are not assigned this duration. CAREC dates March23; the contemporary Mission/IRU foreign-truck rule is effective March24. Retain this unresolved difference and withhold numeric duration.",
+        "contested": true,
+        "analysis_included": true,
+        "strictly_over_24_hours": null
       },
       "unresolved": [
-        "Canonical phase remains contested. Farap road and Sarakhs road facilities are not independently located; rail points must not be substituted.",
-        "Existing contested, excluded or not-strictly-over-24-hours status is preserved; no geography approval."
+        "Farap and Sarakhs road facilities are not independently located; rail points must not be substituted. Canonical temporal controversy remains unchanged and is not itself a geography exclusion."
       ]
     }
   ],
   "unresolved": [
-    "Canonical phase remains contested. Farap road and Sarakhs road facilities are not independently located; rail points must not be substituted."
+    "Farap and Sarakhs road facilities are not independently located; rail points must not be substituted. Canonical temporal controversy remains unchanged and is not itself a geography exclusion."
   ],
   "input_sha256": "67980307d3ef1f04c1406a026467b2af25ca1c913b8e126648fa9aa0892ddbbc",
   "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."

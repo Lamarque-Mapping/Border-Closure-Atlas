@@ -1,0 +1,181 @@
+{
+  "record_id": "REC50-R32-001",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Article31 of Decree1702 imposes a22-hour legal restriction at Colombia’s authorized land and fluvial posts. Local notices name Rumichaca, Mataje and San Miguel road bridges with emergency exceptions; these three do not exhaust the national scope. The record is an announced legal restriction, not direct proof of operation at every gate.",
+  "source_checks": [
+    {
+      "url": "https://www.registraduria.gov.co/IMG/pdf/20231024_decreto-1702_2023.pdf",
+      "access_status": "fresh_primary_pdf_text_extract",
+      "finding": "Official PDF article31 at page10 specifies authorized land and river posts from October28 at18:00 to October29 at16:00, subject to force-majeure exceptions.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-131.json"
+    },
+    {
+      "url": "https://www.eluniverso.com/noticias/ecuador/colombia-suspendera-la-movilidad-por-el-puente-internacional-de-rumichaca-el-fin-de-semana-por-elecciones-nota/?outputType=amp",
+      "access_status": "fresh_search_extract",
+      "finding": "October24 original explicitly names Rumichaca, Mataje and San Miguel, pedestrian/vehicle prohibition and22-hour schedule; it is a preannouncement.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-143.json"
+    },
+    {
+      "url": "https://www.radioipiales.co/2023/10/cierre-de-la-frontera-desde-el-sabado-2/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Ipiales local announcement concerns Rumichaca; the separate longer alcohol ban is not a border-closure endpoint.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-131.json"
+    },
+    {
+      "url": "https://plc.mintransporte.gov.co/Portals/0/Estudios%20BID/Libro%20Blanco.pdf?ver=2018-12-14-113134-343",
+      "access_status": "fresh_search_primary_extract",
+      "finding": "Primary transport White Paper separately describes68.3m international Mataje bridge and longer Río Mira bridge; supports feature identity, not the2023 operation.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-140.json"
+    },
+    {
+      "url": "https://mintransporte.gov.co/publicaciones/10138/en-la-zona-futuro-del-pacifico-narinense-gobierno-del-presidente-ivan-duque-marquez-entrega-el-nuevo-corredor-binacional-espriella-rio-mataje/",
+      "access_status": "fresh_search_primary_extract",
+      "finding": "2021 primary completion announcement identifies the ceremony on the border bridge over Río Mataje and road connection with Ecuador.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-142.json"
+    },
+    {
+      "url": "https://www.openstreetmap.org/way/1316055071",
+      "access_status": "previously_inspected_same_pass_geographic_evidence",
+      "finding": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/792c56b993d6369cfbc7.xml"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/700891308/full",
+      "access_status": "fresh_raw_osm_inspected",
+      "finding": "Original OSM primary-road bridge named Espriella–Río Mataje, with 2019 endpoint coordinates and 2022 feature version, crosses the named Colombia–Ecuador boundary and Río Mataje in the adjoining raw map. This is the approximately68m international bridge, distinct from the much longer Río Mira bridge on the same corridor.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/7e72f2d90d6bafddaef0.xml",
+      "source_sha256": "77013876334b92057f18dc75987da58614635a286b4182fcfe71165c80caaf90"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/93534528/full",
+      "access_status": "fresh_raw_osm_inspected",
+      "finding": "Original OSM bridge is explicitly named Puente Internacional San Miguel on road E45, adjoining Aduana border-control node1084431634. Distinct from the San Miguel CEBAF approximately2.5km south and from a Lago Agrio bus stop bearing the bridge destination name.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/e73acff4527c7030b32e.xml",
+      "source_sha256": "a27a4074f8a8318a24cad7917a8dd07eee0d01f6032674a54d825b7099520695"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R32-001-P1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-rumichaca",
+          "name": "Rumichaca road bridge",
+          "coordinates": [
+            -77.664073,
+            0.814031
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM international road bridge footprint.",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1316055071",
+            "https://mintransporte.gov.co/publicaciones/1390/colombia-y-ecuador-firman-convenio-de-cooperacion-para-construccion-del-nuevo-puente-rumichaca/"
+          ],
+          "evidence_note": "Fresh underlying OSM XML inspected together with named crossing in event source. Road crossing reference, not railway, ferry, or exact historical barrier.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/792c56b993d6369cfbc7.xml",
+              "sha256": "ce8270e22ad76c4b8439b2def9659b1e740cdee90ac75a3746ab33c1c23e4d9c",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-mataje-road-bridge",
+          "name": "Mataje international road bridge",
+          "coordinates": [
+            -78.7097246,
+            1.3577364
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/700891308",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=-78.72,1.35,-78.70,1.37",
+            "https://plc.mintransporte.gov.co/Portals/0/Estudios%20BID/Libro%20Blanco.pdf?ver=2018-12-14-113134-343"
+          ],
+          "evidence_note": "Original OSM primary-road bridge named Espriella–Río Mataje, with 2019 endpoint coordinates and 2022 feature version, crosses the named Colombia–Ecuador boundary and Río Mataje in the adjoining raw map. This is the approximately68m international bridge, distinct from the much longer Río Mira bridge on the same corridor.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/7e72f2d90d6bafddaef0.xml",
+              "sha256": "77013876334b92057f18dc75987da58614635a286b4182fcfe71165c80caaf90",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "6",
+              "osm_timestamp": "2022-03-26T02:41:26Z",
+              "tags": {
+                "bridge": "yes",
+                "highway": "primary",
+                "layer": "1",
+                "name": "Espriella - Río Mataje"
+              }
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fb3ad15f1823896468d5.xml",
+              "sha256": "93f6a49c466f52b171aac2570a30a057ff8b2054eb547a19656650150674dc1b",
+              "method": "Named road bridge and international boundary/river identity inspected together."
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-san-miguel-road-bridge",
+          "name": "San Miguel international road bridge",
+          "coordinates": [
+            -76.8760256,
+            0.2513149
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/93534528"
+          ],
+          "evidence_note": "Original OSM bridge is explicitly named Puente Internacional San Miguel on road E45, adjoining Aduana border-control node1084431634. Distinct from the San Miguel CEBAF approximately2.5km south and from a Lago Agrio bus stop bearing the bridge destination name.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/e73acff4527c7030b32e.xml",
+              "sha256": "a27a4074f8a8318a24cad7917a8dd07eee0d01f6032674a54d825b7099520695",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "7",
+              "osm_timestamp": "2024-09-02T17:26:39Z",
+              "tags": {
+                "bridge": "yes",
+                "highway": "primary",
+                "lanes": "2",
+                "lanes:backward": "1",
+                "lanes:forward": "1",
+                "layer": "1",
+                "name": "Puente Internacional San Miguel",
+                "ref": "E45",
+                "road_shield_color": "blue"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Colombia’s authorised land and river border posts under Article 31 of decree 1702; local preannouncements explicitly name Rumichaca, Mataje and San Miguel.",
+      "date_scope_check": {
+        "start_earliest": "2023-10-28",
+        "start_latest": "2023-10-28",
+        "end_earliest": "2023-10-29",
+        "end_latest": "2023-10-29",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "All three named road routes located; full nationwide land/river post roster and actual implementation remain unverified. No whole-boundary substitute or uninterrupted operational closure inferred."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "31657c22ad7c85587016496abb99d75feda0947ea6599eee95a3a599705f3fc2"
+}

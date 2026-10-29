@@ -1,0 +1,115 @@
+{
+  "record_id": "REC50-R28-002",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Naf River cargo interchange from the Maungdaw area to Teknaf land port, with a contemporary 2025 halt and a May 2026 timber arrival. Teknaf’s Bangladesh terminal can be referenced at its documented entrance. Myanmar reports identify Hainkhali canal and Kanyinchaung jetty without an established common berth coordinate; Yangon/Sittwe coastal shipping and St Martin tourist ferries are excluded.",
+  "source_checks": [
+    {
+      "url": "https://www.jagonews24.com/en/biz-econ/news/83051",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "May 28 report quotes Teknaf operator on a prolonged halt; alternative last-open April 12 account and uncertain exact transition remain unchanged.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-3.json",
+      "sha256": "10ad3698de3b8d4fcddd1a52973952e7ad662ac208527817c65bd500ca0727e0"
+    },
+    {
+      "url": "https://www.tbsnews.net/bangladesh/wood-laden-boat-myanmar-docks-teknaf-ending-year-long-halt-1426816",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "May 1 timber arrival at Teknaf jetty from Hainkhali canal; no exact coordinates and no general normal-service claim.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-3.json",
+      "sha256": "10ad3698de3b8d4fcddd1a52973952e7ad662ac208527817c65bd500ca0727e0"
+    },
+    {
+      "url": "https://www.bssnews.net/others/383315",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Corroborates timber boat arrival while unloading/customs still pending; different clock does not change geometry.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-3.json",
+      "sha256": "10ad3698de3b8d4fcddd1a52973952e7ad662ac208527817c65bd500ca0727e0"
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/resumed-bangladesh-arakan-border-trade-still-fails-attract-private-entrepreneurs",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "June account names Kanyinchaung jetty and limited goods/participants, insufficient to assume all Myanmar landing names identical.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-3.json",
+      "sha256": "10ad3698de3b8d4fcddd1a52973952e7ad662ac208527817c65bd500ca0727e0"
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File%3AEntrance_of_Teknaf_land_port.jpg",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Original 2021 photograph description and GPS metadata locate the Teknaf port entrance at 20.903624,92.279013.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-extra.json",
+      "sha256": "2661ce5085402dc3f0793d05e0a87529e0fc403510c213a0fd3666f53143fb88"
+    },
+    {
+      "url": "https://www.united.com.bd/our-concerns/united-landport-teknaf/",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Port operator identifies the Naf River trade facility and distinct passenger/cargo jetties.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-locations.json",
+      "sha256": "50a748c943b400352b0989a3face00f565f7209bad7c71ecc68b59cecb5f3d62"
+    },
+    {
+      "url": "https://www.bangladeshtradeportal.gov.bd/kcfinder/upload/files/LandportIndrouctionEnglish.pdf",
+      "access_status": "retrieved_indexed_primary_source_extract",
+      "finding": "Government port description pairs Teknaf land port with Maungdaw and locates it five kilometres from Teknaf centre.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-more-locations.json",
+      "sha256": "1c5fcd37480e233c37d21e77782074ade3680c3d2297fb58143cd97439c31ead"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R28-002-P1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-teknaf-river-port",
+          "name": "Teknaf land-port entrance, Naf River cargo terminal",
+          "coordinates": [
+            92.279013,
+            20.903624
+          ],
+          "coordinate_method": "Published GPS camera coordinates of a named original photograph of the port entrance, dated 5 August 2021; entrance used as a facility reference",
+          "precision": "Approximately 150 m for the port entrance; not an exact cargo berth or river crossing track",
+          "source_urls": [
+            "https://commons.wikimedia.org/wiki/File%3AEntrance_of_Teknaf_land_port.jpg",
+            "https://www.united.com.bd/our-concerns/united-landport-teknaf/",
+            "https://www.bangladeshtradeportal.gov.bd/kcfinder/upload/files/LandportIndrouctionEnglish.pdf"
+          ],
+          "evidence_note": "The photographer identifies the Teknaf land-port entrance opposite Maungdaw and supplies camera GPS/EXIF; the operator identifies the Naf River freight port and separate cargo/passenger facilities. The nearby St Martin ferry landing and conflicting town-centre Wikipedia coordinates are excluded. Only the Bangladesh terminal is located; Myanmar departure jetty identity is incomplete.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-extra.json",
+          "sha256": "2661ce5085402dc3f0793d05e0a87529e0fc403510c213a0fd3666f53143fb88"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Naf River cargo interchange from the Maungdaw area to Teknaf land port, with a contemporary 2025 halt and a May 2026 timber arrival. Teknaf’s Bangladesh terminal can be referenced at its documented entrance. Myanmar reports identify Hainkhali canal and Kanyinchaung jetty without an established common berth coordinate; Yangon/Sittwe coastal shipping and St Martin tourist ferries are excluded.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2026-05-01",
+        "end_latest": "2026-05-01",
+        "last_confirmed": "2025-05-28",
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "The onset accounts describe different events: Jago News on May 28, 2025 quotes the port general manager saying trade had halted since April 12, while bdnews24 identifies April 12 as the last earlier wooden-boat arrival. Preserve both attributed accounts without treating a last-open observation as an exact closure start or calculating 384 continuous closed days. The exact transition after that arrival is not independently timed. April 14, 2026 was a reopening announcement, not actual return. TBS and BSS confirm the May 1 timber arrival but give different clocks, 13:30 and 13:10; BSS says unloading and customs assessment were still pending. DMG on May 5 reported no additional trip yet. By June 1, DMG via BNI described limited timber exports and small reverse potato/onion flows, mainly through a ULA-linked merchants’ association. That provides a bound for some reverse trade, not its first date, unrestricted private access or normal service. Yangon/Sittwe coastal shipping remains excluded; actor and authorization chronology remains attributed and incomplete. The May 28 contemporary report explicitly describes a 45-day halt, supporting the greater-than-24-hour threshold independently of uncertainty over the exact transition after April 12 and the later restoration sequence. This does not establish uninterrupted closure for every commodity until May 2026."
+      },
+      "unresolved": [
+        "Myanmar departure jetty coordinates and Hainkhali/Kanyinchaung relationship are unresolved. The Bangladesh point represents the port entrance, not an exact cargo berth or a mapped river route."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Myanmar departure jetty coordinates and Hainkhali/Kanyinchaung relationship are unresolved. The Bangladesh point represents the port entrance, not an exact cargo berth or a mapped river route."
+  ],
+  "input_sha256": "c3cd67d86fd38b07cf026bc3ccaef3df74939f2ca52b9bd1e8e877269e8f6ffc",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

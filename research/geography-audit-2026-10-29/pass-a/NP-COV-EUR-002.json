@@ -1,0 +1,78 @@
+{
+  "record_id": "NP-COV-EUR-002",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Croatian road closure at Maljevac–VelikaKladuša covered alltraffic after migrants obstructed Bosnian approach. October26 Bosnian-sideopening did not end Croatian closure.",
+  "source_checks": [
+    {
+      "url": "https://mup.gov.hr/vijesti-8/stanje-na-granicnom-prijelazu-maljevac/282362?big=1",
+      "access_status": "fresh_full_text_extract",
+      "finding": "PrimaryMUP updatesOct24–26 state roadclosed alltraffic since10:00Oct24, migrants150mfromboundary, alternativepassengerBogovolja andgoodsLičkoPetrovoSelo.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-099.json"
+    },
+    {
+      "url": "https://vijesti.hrt.hr/hrvatska/otvoren-prijelaz-maljevac-696468",
+      "access_status": "fresh_full_text_extract",
+      "finding": "October30 HRT quotesMUP reopening18:00 and explicitly distinguishes earlierBosnian-sideopening.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-111.json"
+    },
+    {
+      "url": "https://mapcarta.com/N132727143",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Explicit paired border-control node, not VelikaKladuša or Maljevac town centre. Croatian roadclosure applies to this road crossing.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-101.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-EUR-002-P01",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-maljevac-road",
+          "name": "Maljevac–Velika Kladuša road crossing",
+          "coordinates": [
+            15.7923,
+            45.19757
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 132727143; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N132727143",
+            "https://www.openstreetmap.org/node/132727143"
+          ],
+          "evidence_note": "Explicit paired border-control node, not VelikaKladuša or Maljevac town centre. Croatian roadclosure applies to this road crossing.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-101.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "All traffic at Maljevac–Velika Kladuša",
+      "date_scope_check": {
+        "start_earliest": "2018-10-24",
+        "start_latest": "2018-10-24",
+        "end_earliest": "2018-10-30",
+        "end_latest": "2018-10-30",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Crossing-area marker only; exact approach blockade footprint not surveyed. Clock bounds and calendar-day qualification retained."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "774e9c04ace710ca786f0964babb71f5039ee34d7a08840745740962eae9ce99"
+}

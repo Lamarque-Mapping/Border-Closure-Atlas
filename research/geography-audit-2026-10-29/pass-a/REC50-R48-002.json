@@ -1,0 +1,75 @@
+{
+  "record_id": "REC50-R48-002",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "A formal import/entry restriction on Russian-registered road vehicles through both Latvia–Russia and Latvia–Belarus border crossings. The original government announcement expressly identifies both frontiers. This is not a general persons ban, internal EU-border restriction, rail closure or blanket closure of every gate.",
+  "source_checks": [
+    {
+      "url": "https://www.vid.gov.lv/en/article/persons-vehicles-registered-russian-federation-are-banned-entering-latvia",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Primary State Revenue Service English announcement published September13 states effective18:00 September12 and explicitly names Latvian–Russian and Latvian–Belarusian posts. It explains refusal/return, diplomatic-use exemption and permitted reverse exit when the car is transport rather than declared goods.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-146.json"
+    },
+    {
+      "url": "https://www.mfa.gov.lv/lv/biezak-uzdotie-jautajumi",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Official MFA FAQ updated September2 2025, question1, repeats September12 2023 vehicle prohibition at both Russian and Belarusian frontiers. Inspected current text is distinct from the record’s prior October25 retrieval observation.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-151.json"
+    },
+    {
+      "url": "https://www.mfa.gov.lv/lv/media/8460/download?attachment=",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Official MFA sanctions FAQ PDF question43, page11, expressly repeats the same September12 rule at Latvia–Russia and Latvia–Belarus posts. Its subsequent February2024 domestic-use/transit provisions are a separate policy context, not a new2023 frontier or reopening.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-155.json"
+    },
+    {
+      "url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+      "access_status": "fresh_raw_geographic_dataset_inspected",
+      "finding": "Fresh Natural Earth5.1.0 features61 and233 inspected for RUS/LVA and BLR/LVA attributes. Existing context-frontier-lva-rus and context-frontier-blr-lva coordinates match original bilateral features at5 decimals; derived comparison saved. Generalized references only.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/c776a4f3cc92e6abb998.zip",
+      "source_sha256": "16ead035f539c8b6c23650c5845d86ad3556553e7456bdf9b4730210f26aacbe"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R48-002-P1",
+      "category": "wider_border",
+      "decision": "map",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-lva-rus",
+        "context-frontier-blr-lva"
+      ],
+      "complete": true,
+      "phase_applicability": "Both expressly named external land frontiers for entry into Latvia/EU in Russian-registered vehicles. Frontier lines are legal-policy references, not an assertion that every crossing, person or traffic mode was physically closed. Diplomatic and reverse-exit exceptions remain as recorded.",
+      "date_scope_check": {
+        "start_earliest": "2023-09-12",
+        "start_latest": "2023-09-12",
+        "end_earliest": "2026-10-25",
+        "end_latest": "2026-10-25",
+        "last_confirmed": "2026-10-25",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Primary VID announcement establishes September12 2023 at18:00. MFA FAQ inspected now retains both-frontier scope; page update September2 2025 is not the canonical October25 2026 retrieval observation. Preserve native evidence dates and numeric-duration withholding; no inference of unchanged daily enforcement."
+      },
+      "unresolved": [
+        "First physical refusal and full amendment/exception chronology remain unknown. Generalized reference geometry does not enumerate operational posts or historical gate footprints."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "4ee49042fa1288432f432154a60f07c9e985257655859f6b5a4c134077812d8d",
+  "geographic_reference_evidence": [
+    {
+      "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/natural-earth-baltic-vehicle-policy-source-features.json",
+      "sha256": "8ad377ab7e17bd49f95033648505b05e4981c549789edf3426d8f34aec0bf51f",
+      "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+      "coordinate_method": "Existing generalized frontier geometries independently matched to original Natural Earth source features and bilateral attributes.",
+      "precision": "1:10m-scale generalized legal-frontier reference, not a physical barrier footprint."
+    }
+  ]
+}

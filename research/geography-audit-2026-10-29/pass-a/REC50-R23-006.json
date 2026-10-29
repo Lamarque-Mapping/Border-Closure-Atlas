@@ -1,0 +1,94 @@
+{
+  "record_id": "REC50-R23-006",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Commercial restriction observations at Angoor Adda, Lower South Waziristan, during 2024. Original reports establish the crossing, but available precise official coordinates describe a new 2025 terminal, not the 2024 control footprint.",
+  "source_checks": [
+    {
+      "url": "https://epaper.dawn.com/DetailImage.php?StoryImage=16_04_2024_008_005",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "April 15 jirga demands Angoor Adda commercial-route restoration; sit-in duration is not independently a closure onset.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-83.json",
+      "sha256": "c64baa02414046fdb6fa6b7717b6d5fcfee2e5c378386d1da1fe2d521ef2137e"
+    },
+    {
+      "url": "https://www.dawn.com/news/1879577/closure-of-angoor-adda-border-protested",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "December 18 demand concerns this commercial crossing; retrospective duration is unconfirmed.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-74.json",
+      "sha256": "a1580c8595779bcdf90d84b8bdb52902673e3a6353377d44784d0923a74b1802"
+    },
+    {
+      "url": "https://swn.af/en/2024/01/afghanistan-pakistan-border-crossings-reopen-after-eleven-day-closure/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Ministry spokesperson includes Angur Ada in January vehicle reopening, preventing automatic continuity of later retrospective claims.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-83.json",
+      "sha256": "c64baa02414046fdb6fa6b7717b6d5fcfee2e5c378386d1da1fe2d521ef2137e"
+    },
+    {
+      "url": "https://www.pakistantoday.com.pk/2025/10/04/cross-border-trade-resumes-at-angoor-adda-terminal-as-nlc-completes-facility-in-30-days",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Reports resumed trade at reconstructed terminal by October 4, with no exact first passage.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-82.json",
+      "sha256": "4acbf8b81eebcd313fee1eb73678642e1c03d3ecf8910c04f5c2f770ee3ee6ae"
+    },
+    {
+      "url": "https://download1.fbr.gov.pk/SROs/20258819849122621471(I)2025.pdf",
+      "access_status": "full_scanned_pdf_visually_read",
+      "finding": "FBR notice August 8 2025 declares new NLC terminal and four coordinate corners (32°30′46.6–57.3″N, 69°16′26.2–42.8″E); Afghan border approximately 700 m west. This is not proof of the 2024 gate footprint.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/angoor-fbr-1471-2025.pdf",
+      "sha256": "6ca38583c5acdf6daf562a84fe3817ff2d377843b37da11936bc906aea45f1af"
+    },
+    {
+      "url": "https://logcluster.org/en/node/45647",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://pid.gov.pk/site/press_detail/30722",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.arabnews.pk/pakistan/pakistan-reopens-angoor-adda-border-with-afghanistan-after-two-year-closure-2617499",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R23-006-P1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Angoor Adda commercial restriction observations amid document-rule disputes and reopening demands",
+      "date_scope_check": {
+        "scope": "Angoor Adda commercial restriction observations amid document-rule disputes and reopening demands",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2024-12-18",
+        "end_latest": "2024-12-18",
+        "last_confirmed": "2024-12-18",
+        "analysis_included": true,
+        "contested": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "held_evidence_do_not_animate_as_confirmed",
+        "assessment": "April 15 and December 18 2024 observations retained with unknown onset/continuity. January reopening conflicts with continuous retrospective claims. Later commercial return by October 4 2025 does not establish first truck; subsequent October 12 closure stays separate."
+      },
+      "unresolved": [
+        "Exact 2024 gate remains unlocated. Current OSM unnamed control compounds north of the town cannot securely be matched. FBR 2025 terminal coordinates are independently verified, but historical applicability to the 2024 crossing is not established; town centroid and third-party unsourced gate coordinate rejected."
+      ]
+    }
+  ],
+  "unresolved": []
+}

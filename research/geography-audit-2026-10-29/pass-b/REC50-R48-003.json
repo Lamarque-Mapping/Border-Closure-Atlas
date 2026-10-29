@@ -1,0 +1,62 @@
+{
+  "record_id": "REC50-R48-003",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Lithuania’s September11,2023 rule barred ordinary import of Russia-registered cars through Lithuanian border customs posts, including temporary import regardless of owner/driver citizenship. Qualified Kaliningrad transit remained possible with the owner present, simplified transit document and maximum24-hour transit. This passenger-vehicle road rule is distinct from2022 rail-cargo restrictions and does not establish closure of all Lithuania–Russia or Lithuania–Belarus movement.",
+  "source_checks": [
+    {
+      "url": "https://lrmuitine.lt/web/guest/naujienos/aktualijos/aktualija?_EXT_WPLISTALLNEWS_obj_id=090004d2801c0361&p_p_id=EXT_WPLISTALLNEWS&p_p_lifecycle=0",
+      "access_status": "full_retrieved",
+      "finding": "Full primary Lithuanian Customs notice inspected: September11 start, passenger cars/campers/minibuses under ten seats; nationality-independent restriction; Kaliningrad transit exception with owner, document and24-hour limit; pre-existing cars required to leave within six months."
+    },
+    {
+      "url": "https://www.lrt.lt/en/news-in-english/19/2079643/lithuania-denies-entry-to-58-russian-cars-in-past-week",
+      "access_status": "extract_only",
+      "finding": "Direct LRT restricted/robots failure; indexed September18 BNS article inspected:58 drivers turned back in first week, no individual gate roster supplied."
+    },
+    {
+      "url": "https://www.lrt.lt/en/news-in-english/19/2088440/lithuania-gives-6-months-for-russian-cars-to-leave",
+      "access_status": "extract_only",
+      "finding": "Direct LRT restricted/robots failure; indexed September29 article inspected: rule and qualified transit continue, six-month departure requirement separate from entry restriction."
+    },
+    {
+      "url": "https://www.lrt.lt/en/news-in-english/19/2079643/lithuania-dienies-entry-to-58-russian-cars-in-past-week",
+      "access_status": "extract_only",
+      "finding": "Indexed misspelled duplicate inspected; same58-turnback report, not an independent additional geographic source."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R48-003-P1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Lithuanian entry restriction on Russian-registered cars, apart from qualified Kaliningrad transit; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "confirmed_through",
+        "start_earliest": "2023-09-11",
+        "start_latest": "2023-09-11",
+        "end_earliest": "2023-09-29",
+        "end_latest": "2023-09-29",
+        "last_confirmed": "2023-09-29",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Sources establish a national border-customs vehicle-import rule but do not enumerate the specific gates responsible for58 turnbacks. Exact affected gate geometry for this phase is not reconstructed.",
+        "No road-post coordinate is inferred from Kena/Stasylos railway stations or from Kaliningrad regional centroid; no broad frontier line assigned without verified geometry and matching legal extent.",
+        "Canonical September11–29 confirmed-through phase retained;24-hour transit exception is not a geographic exclusion or new closure duration."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Sources establish a national border-customs vehicle-import rule but do not enumerate the specific gates responsible for58 turnbacks. Exact affected gate geometry for this phase is not reconstructed.",
+    "No road-post coordinate is inferred from Kena/Stasylos railway stations or from Kaliningrad regional centroid; no broad frontier line assigned without verified geometry and matching legal extent.",
+    "Canonical September11–29 confirmed-through phase retained;24-hour transit exception is not a geographic exclusion or new closure duration."
+  ]
+}

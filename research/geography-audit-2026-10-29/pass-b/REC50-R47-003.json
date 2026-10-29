@@ -1,0 +1,67 @@
+{
+  "record_id": "REC50-R47-003",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Dated BGB land-admission denials of Rohingya at unnamed Ukhia/Ghumdhum sectors in November–December 2016. Reports also discuss Naf River interceptions, which are a different mode and excluded from this land record. Wider border policy coexisted with entry and later selective admission; no particular formal gate or complete frontier segment is established.",
+  "source_checks": [
+    {
+      "url": "https://www.observerbd.com/news/44822",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Reports people turned back at several Ghumdhum land points, separately from Naf River boats; does not name a specific gate.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-7.json",
+      "sha256": "669ad8c37515a6fe17679d831c6ce078c6861fed882240c45ad190820fd9d5bb"
+    },
+    {
+      "url": "https://www.dhakatribune.com/amp/bangladesh/11012/bgb-sends-back-119-rohingyas",
+      "access_status": "retrieved_web_full_article_text",
+      "finding": "Identifies Ukhia/Ghumdhum land incidents without exact sites; boat incidents and older detainee returns cannot supply this geometry.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-7.json",
+      "sha256": "669ad8c37515a6fe17679d831c6ce078c6861fed882240c45ad190820fd9d5bb"
+    },
+    {
+      "url": "https://www.amnesty.org/en/wp-content/uploads/2021/05/ASA1653622016ENGLISH.pdf",
+      "access_status": "retrieved_PDF_relevant_page_text",
+      "finding": "Inspected report pages 40–41 distinguish broader restrictive policy, continued actual entry and predominant Naf River boat arrivals. This is not a source locating the specific land denials.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r13-body.json",
+      "sha256": "d7027d4c0da33baee1866b980b99735e136573c05451c78a012bd26792238ac1"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R47-003-P1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Dated BGB land-admission denials of Rohingya at unnamed Ukhia/Ghumdhum sectors in November–December 2016. Reports also discuss Naf River interceptions, which are a different mode and excluded from this land record. Wider border policy coexisted with entry and later selective admission; no particular formal gate or complete frontier segment is established.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2016-12-01",
+        "end_latest": "2016-12-01",
+        "last_confirmed": "2016-12-01",
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "REC50-R47-003-P1: BGB-attributed land-admission denials are observed November 21 and December 1. Their first onset, intervening continuity and end are unknown; the wider policy coexisted with substantial actual entry. Naf River/sea interceptions and the separate return of people detained in 2015 are excluded. Inclusion is a government land-admission restriction, not an established closure of a particular formal gate. Exact sector binding remains unlocated.\n\nAmnesty’s wider account reports selective humanitarian admission from late November 2016, alongside continuing pushbacks. This is a qualification of the admission regime, not an exact endpoint for the Ukhia/Ghumdhum land observations. The separately recorded UNHCR “urges open borders” webpage is dated 29 August 2017 and concerns a later displacement episode; it does not verify a 2016 reopening."
+      },
+      "unresolved": [
+        "Exact affected land sectors and their extents remain unlocated. No formal checkpoint coordinate or whole Bangladesh–Myanmar border substitution is justified."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact affected land sectors and their extents remain unlocated. No formal checkpoint coordinate or whole Bangladesh–Myanmar border substitution is justified."
+  ],
+  "input_sha256": "1a45b8ff0579a3092efba85e1b81c03aae4bc573a52e3e5d1468e6a6be8ff7ce",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

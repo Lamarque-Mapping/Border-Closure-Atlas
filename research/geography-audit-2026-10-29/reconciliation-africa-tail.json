@@ -1,0 +1,920 @@
+{
+  "audit_id": "geography-2026-10-29",
+  "source_sha256": "d33692ed2f2a4ef3ea32be7171987d8840a5ad07e8ed9e9c0c6511d85ccbc033",
+  "status": "completed",
+  "decisions": [
+    {
+      "record_id": "C7-EH-001",
+      "reviewer": "geography_africa_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/C7-EH-001.json",
+          "sha256": "4eb804304e87100a5070f207218a451f991d983f9d2c2a1b66c96a776da6e648"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/C7-EH-001.json",
+          "sha256": "fcbbdb3f9e4133fa83632324808e4997c38ca5ec03e5ad1ebb2797ffb33c9f6b"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "C7-EH-001-P1",
+          "decision": "hold",
+          "category": "single_site",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "Reported November 20, 2023 suspension concerns Sudanese passengers entering Eritrea via Laffa only. Freight and other nationalities, onset, lifting and continuity remain unresolved. The English Dabanga report is the same reporting origin as the Arabic account. The later Sudan-entry flow and prospective trade preparations cannot restore the opposite admission regime.",
+          "rationale": "Both reconstructions identify the Laffa/Al Laffa road route, but only B supplies geometry: an unnamed OSM border-control node first mapped in January 2024. A recovers no validated control location. B links the paired Laffa/Talatasher corridor through indexed UNHCR/IRIN accounts; its exact Eritrean 2023 admission desk is still unlocated. Independent point support is therefore absent, and neither settlement centroids nor the wider Eritrea–Sudan frontier may replace this single-site phase.",
+          "canonical_phase_scope": "Reported Eritrean suspension of Sudanese entry at Laffa",
+          "canonical_qualification_retained": "Observation date only. Neither initial enforcement nor lifting recovered. Gallabat’s Sunday onset is not borrowed, and the two Dabanga language versions are not independent origins. No all-traffic or continuous-duration inference. R37 endpoint check: December 2023 trade-opening preparations are prospective, the September Sudan-side reopening order predates this episode, and later movements into Sudan run in the opposite direction. None establishes restored Sudanese admission to Eritrea.",
+          "canonical_date_scope": {
+            "kind": "confirmed_through",
+            "start_earliest": null,
+            "start_latest": null,
+            "end_earliest": "2023-11-20",
+            "end_latest": "2023-11-20",
+            "last_confirmed": "2023-11-20",
+            "analysis_included": true,
+            "contested": false,
+            "strictly_over_24_hours": null,
+            "temporal_display_rule": "dated_evidence_only_no_continuity_inference"
+          },
+          "independent_decisions": {
+            "a": "hold",
+            "b": "map"
+          }
+        }
+      ],
+      "review_evidence": [
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-35.json",
+          "sha256": "c6488565be0c1412a7c671e7b574f50b2a55bb2e5de3a89ce1df11f0970391dc",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Dabanga cached original body separates the Laffa Sudanese-entry restriction from the different Gallabat event."
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-b/272e1d681b1e0b943807.json",
+          "sha256": "800bacd753574b670fe100cd63839460cb9df249f2a97e47995075737404dde5",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Original OSM JSON contains multiple unnamed control nodes, including B candidate 11502634715. This is B-only geometry and not approved."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R26-004",
+      "reviewer": "geography_africa_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R26-004.json",
+          "sha256": "1941ca0edb6e5816aba2cc3004587e377d57437eb5b79cea0fef6e3df316ee3a"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R26-004.json",
+          "sha256": "4285df598db1396ea1699fcf2c11a05fa70d629a4407ed1f56f1cac0e7282131"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R26-004-P1",
+          "decision": "partial",
+          "category": "multiple_named_sites",
+          "complete": false,
+          "sites": [
+            {
+              "proposed_site_id": "post-goli-anzida",
+              "name": "Mahagi–Goli / Anzida road crossing area",
+              "coordinates": [
+                31.02969,
+                2.37673
+              ],
+              "coordinate_method": "Published AU-PIDA Appendix A E41 coordinate, independently transcribed by both passes; cached original PDF page visually inspected in reconciliation.",
+              "precision": "Illustrative crossing-area reference only; numerical decimal precision is not a survey accuracy claim or an exact DGDA/OCC office location. No source-published error radius is inferred.",
+              "source_urls": [
+                "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+                "https://7sur7.cd/2020/05/14/ituri-insecurite-les-activites-douanieres-larret-au-poste-frontalier-de-mahagi-pour"
+              ],
+              "evidence_note": "Appendix A row E41 identifies Mahagi–Goli at latitude 2.37673, longitude 31.02969. Reconciliation visually verifies PDF page 81 (printed page 79), correcting B’s printed-page-80 locator without changing coordinates. The contemporaneous account names Goli (Anzida) and Karombo DRC service offices separately. Only Goli/Anzida is represented; this illustrative paired road-crossing reference neither locates the exact DRC offices nor represents the separate RN27 barricade or Karombo. No matching Goli/Anzida production site was found, so a new ID is proposed.",
+              "geographic_evidence": [
+                {
+                  "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/pida-original-text.txt",
+                  "sha256": "98451216c05eab194ec577670f81979a7944ee5560d41e0ea9c43eb94d347983",
+                  "inspection": "cached original evidence inspected in reconciliation",
+                  "finding": "A inspected original cached text; its PDF binary was truncated and not renderable in that pass."
+                },
+                {
+                  "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-b/25782abcef016f49e77a.pdf",
+                  "sha256": "35e1b5d512bfc882baf263b1abe002d0c99331d0b2b8e08fcb0f354ab504cbed",
+                  "inspection": "cached original evidence inspected in reconciliation",
+                  "finding": "B original PDF is complete enough to extract and render Appendix A; exact E41 row verified."
+                },
+                {
+                  "path": "research/geography-audit-2026-10-29/evidence/africa-tail-review/pida-e41-page81.png",
+                  "sha256": "1380735789d06d2b9d03df61554cbbaf793854ff7aa069664c451bf299aba17a",
+                  "inspection": "cached original evidence inspected in reconciliation",
+                  "finding": "Reconciliation rendering of original Appendix A, PDF page 81, printed page 79, visually inspected."
+                }
+              ],
+              "independent_a_site_evidence": {
+                "proposed_site_id": "post-mahagi-goli",
+                "coordinates": [
+                  31.02969,
+                  2.37673
+                ],
+                "identity": "Mahagi–Goli / Anzida road crossing"
+              },
+              "independent_b_site_evidence": {
+                "proposed_site_id": "post-goli-anzida",
+                "coordinates": [
+                  31.02969,
+                  2.37673
+                ],
+                "identity": "Goli / Anzida customs crossing"
+              }
+            }
+          ],
+          "border_reference_ids": [],
+          "qualification": "May 14, 2020 DGDA/OCC office stoppage observation only. Goli/Anzida is an approximate crossing-area subset; Karombo and exact office footprints remain unlocated. The local advocate’s broader no-entry/no-exit claim remains attributed, and neither a universal passenger/vehicle prohibition nor a continuous 2020–2021 stoppage is inferred.",
+          "rationale": "Both passes independently recover the same two named customs-service locations from the contemporary account and agree exactly on the published Mahagi–Goli coordinate. Reconciliation verifies its original table row and selects that common spatial subset only. Karombo is unlocated by both passes. RN27 obstruction approximately ten kilometres from the posts is a separate internal road event and is excluded.",
+          "canonical_phase_scope": "Karombo and Goli/Anzida customs and control offices closed in response to a civil-society peace appeal.",
+          "canonical_qualification_retained": "The full May 14, 2020 account names closed DGDA and OCC offices. A local rights advocate also reports no entry or exit and says only intelligence services were operating; this is an attributed claim, not independently verified universal passenger or vehicle denial. Later evidence matches Karombo DGDA activity and subsequently customs offices at both posts, without separately verifying every OCC function. No continuous May 2020–December 2021 stoppage or exact first reopening is inferred. The December 2021 Okapi report was available as substantive indexed text; its direct retrieval failed.",
+          "canonical_date_scope": {
+            "kind": "confirmed_through",
+            "start_earliest": null,
+            "start_latest": null,
+            "end_earliest": "2020-05-14",
+            "end_latest": "2020-05-14",
+            "last_confirmed": "2020-05-14",
+            "analysis_included": true,
+            "contested": false,
+            "strictly_over_24_hours": null,
+            "temporal_display_rule": "dated_evidence_only_no_continuity_inference"
+          },
+          "independent_decisions": {
+            "a": "partial",
+            "b": "partial"
+          }
+        }
+      ],
+      "review_evidence": [
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-34.json",
+          "sha256": "fe3e4b0b122eb613f204a712cb9f312bc0a3779df3fd748132bb2dd601c67504",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Original 7sur7 account explicitly names the two closed border-service offices and separately describes the RN27 blockade. The wider movement assertion is attributed to a local advocate."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R36-001",
+      "reviewer": "geography_africa_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R36-001.json",
+          "sha256": "4ac721490f46562289d361fe153434c3eef7ef2d4529a2752dd85f51b076e948"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R36-001.json",
+          "sha256": "c7904a6b3e6919418196f54da781ec1dc66e4451b008b1a1778e159c9aeefc9f"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R36-001-P1",
+          "decision": "map",
+          "category": "wider_border",
+          "complete": true,
+          "sites": [],
+          "border_reference_ids": [
+            "context-frontier-caf-cmr",
+            "context-frontier-cmr-cog",
+            "context-frontier-cmr-gab",
+            "context-frontier-cmr-gnq",
+            "context-frontier-cmr-nga",
+            "context-frontier-cmr-tcd"
+          ],
+          "qualification": "February 7–10, 2020 scheduled national land-border order. International flights are expressly exempt; the February 8–9 domestic road/rail/air circulation ban is separate. Individual gate implementation, traffic cohorts and actual reopening remain unverified. Existing Natural Earth 1:10m frontier references are generalized present-day territorial policy references, with water-indicator segments omitted; they do not show gate positions, surveyed boundaries, or every location physically closed. Complete refers only to the canonical national land-policy domain.",
+          "rationale": "Both independent reconstructions select the identical six Cameroon bilateral frontier IDs for the national land-border policy. Cached original Xinhua reporting quotes the national order and flight exception; the Presidency geographic description confirms the six neighbours. All selected IDs resolve to matching existing line geometries. No road, rail or ferry post is invented and no scheduled endpoint is converted into an operational reopening.",
+          "canonical_phase_scope": "National land-border closure order; crossing-level operation not established",
+          "canonical_qualification_retained": "International flights are expressly exempted in the reported order. The February 8–9 domestic circulation ban is separate; no complete operational duration.",
+          "canonical_date_scope": {
+            "kind": "ordered_window",
+            "start_earliest": "2020-02-07",
+            "start_latest": "2020-02-07",
+            "end_earliest": "2020-02-10",
+            "end_latest": "2020-02-10",
+            "last_confirmed": null,
+            "analysis_included": true,
+            "contested": false,
+            "strictly_over_24_hours": null,
+            "temporal_display_rule": "dated_evidence_only_no_continuity_inference"
+          },
+          "independent_decisions": {
+            "a": "map",
+            "b": "map"
+          }
+        }
+      ],
+      "review_evidence": [
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-33.json",
+          "sha256": "244c7311503dcdbfad73a143efb91d2cd74c0a7955fdd1f8e52b5725490a450f",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Original Xinhua report quotes national border schedule, exempts flights and separately describes domestic circulation restrictions."
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-41.json",
+          "sha256": "1cbf24ada8e5a324e85b97cc3a6efc28ed606a9884547ceaf8776a5a40d2ab64",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Presidency confirms six Cameroon neighbours; Natural Earth producer documentation explains generalized land boundaries and de facto convention."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R36-002",
+      "reviewer": "geography_africa_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R36-002.json",
+          "sha256": "5317d51151b1826b659bd12df55f489dc5380e66c790b3593cd2c804fc80e479"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R36-002.json",
+          "sha256": "d4194daa075afd6e5bc5a646965eaac25c7be465952438c0719c6bd28002e800"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R36-002-P1",
+          "decision": "map",
+          "category": "wider_border",
+          "complete": true,
+          "sites": [],
+          "border_reference_ids": [
+            "context-frontier-caf-cmr",
+            "context-frontier-cmr-cog",
+            "context-frontier-cmr-gab",
+            "context-frontier-cmr-gnq",
+            "context-frontier-cmr-nga",
+            "context-frontier-cmr-tcd"
+          ],
+          "qualification": "October 10–13, 2025 scheduled national land-border order only. The 48-hour headline/28-hour body discrepancy is retained; user-uploaded Scribd OCR supports 48 hours but is not an official-host or independently verified signed-page image. Domestic circulation exceptions do not automatically attach to the distinct border article. Actual gate enforcement and reopening remain unknown. Existing Natural Earth 1:10m frontier references are generalized present-day territorial policy references, with water-indicator segments omitted; they do not show gate positions, surveyed boundaries, or every location physically closed. Complete refers only to the canonical national land-policy domain.",
+          "rationale": "Both independent reconstructions select the same six Cameroon frontier references. The original contemporary report explicitly identifies all land frontiers with neighbours; the reproduced Article 2 distinguishes the national border schedule from Article 3 domestic controls. Generalized policy extent is common to both passes even though temporal reporting and document-provenance qualifications remain. Existing line identity was checked, and no point-site or all-gate operational claim is added.",
+          "canonical_phase_scope": "National land-border closure order; crossing-level operation not established",
+          "canonical_qualification_retained": "The 48/28-hour reporting discrepancy is retained; order text and another indexed report support the 48-hour schedule. No observed reopening; domestic transport exceptions do not automatically apply to the separate border article. The inspected order text is a user-uploaded Scribd reproduction; no official-host copy or signed-page image was independently verified.",
+          "canonical_date_scope": {
+            "kind": "ordered_window",
+            "start_earliest": "2025-10-10",
+            "start_latest": "2025-10-10",
+            "end_earliest": "2025-10-13",
+            "end_latest": "2025-10-13",
+            "last_confirmed": null,
+            "analysis_included": true,
+            "contested": false,
+            "strictly_over_24_hours": null,
+            "temporal_display_rule": "dated_evidence_only_no_continuity_inference"
+          },
+          "independent_decisions": {
+            "a": "map",
+            "b": "map"
+          }
+        }
+      ],
+      "review_evidence": [
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-35.json",
+          "sha256": "c6488565be0c1412a7c671e7b574f50b2a55bb2e5de3a89ce1df11f0970391dc",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Original Actu Cameroun body has 28H while headline says 48H; it explicitly says all land frontiers to October 13."
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-45.json",
+          "sha256": "35dac82034687403a0fa02a5ded4c827cf57bf92cdf138535688b5d086648f07",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Scribd cached OCR of user-uploaded order: Article 2 is national border schedule, Article 3 is domestic circulation and its exceptions. Official provenance remains unverified."
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-41.json",
+          "sha256": "1cbf24ada8e5a324e85b97cc3a6efc28ed606a9884547ceaf8776a5a40d2ab64",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Presidency confirms Cameroon neighbour set; Natural Earth producer documentation qualifies existing line geometry."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R36-003",
+      "reviewer": "geography_africa_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R36-003.json",
+          "sha256": "2ac19204c54b5458619e6e184da4255c7542cd305254a4a85d229f8806eb85ed"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R36-003.json",
+          "sha256": "79f7bf1fbe87dabe1b5bf7f832f2aeb3db5a83e564e1a9cd9677de0164844cee"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R36-003-P1",
+          "decision": "map",
+          "category": "wider_border",
+          "complete": true,
+          "sites": [],
+          "border_reference_ids": [
+            "context-frontier-ago-cog",
+            "context-frontier-caf-cog",
+            "context-frontier-cmr-cog",
+            "context-frontier-cod-cog",
+            "context-frontier-cog-gab"
+          ],
+          "qualification": "July 10, 2022 ordered 06:00–18:00 land-border policy window only. The short-duration classification remains false for strictly over 24 hours. Neither later election rounds nor actual closure, traffic cohorts, exemptions or observed restoration at individual posts are inferred. Existing Natural Earth 1:10m frontier references are generalized present-day territorial policy references, with water-indicator segments omitted; they do not show gate positions, surveyed boundaries, or every location physically closed. Complete refers only to the canonical national land-policy domain.",
+          "rationale": "Both independent reconstructions agree on the five Republic of Congo frontier lines. Reconciliation inspects the cached official Journal Officiel, printed page 1160, Arrêté 5608 Article 1, which directly establishes the national border order for the first legislative round/local election. Adjacent domestic-circulation exceptions belong to another instrument. The embassy neighbour list and existing geometry identity confirm the five-line land-policy set; twelve-hour duration does not exclude its geography.",
+          "canonical_phase_scope": "National land-border closure order; crossing-level operation not established",
+          "canonical_qualification_retained": "REC50-R36-003-P1: Twelve-hour ordered window; excluded from multi-day operational duration statistics. No extension to a different election round.\n\noperational chronology; traffic scope; geography; source provenance: The July 2022 report establishes a twelve-hour ordered window only. Actual enforcement, affected traffic cohorts and return at particular crossing points are unverified; no extension to a different election round is established.\n\nPrimary instrument verified: Arrêté 5608 of 7 July 2022, published in Journal Officiel no. 29, page 1160, Article 1, orders national borders closed on 10 July 2022 from 06:00 to 18:00 for local elections and the first legislative round. It does not name exceptions or posts. This confirms a scheduled 12-hour window, not observed enforcement or a later election-round extension.",
+          "canonical_date_scope": {
+            "kind": "ordered_window",
+            "start_earliest": "2022-07-10",
+            "start_latest": "2022-07-10",
+            "end_earliest": "2022-07-10",
+            "end_latest": "2022-07-10",
+            "last_confirmed": null,
+            "analysis_included": true,
+            "contested": false,
+            "strictly_over_24_hours": false,
+            "temporal_display_rule": "announced_window_layer_only"
+          },
+          "independent_decisions": {
+            "a": "map",
+            "b": "map"
+          }
+        }
+      ],
+      "review_evidence": [
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-35.json",
+          "sha256": "c6488565be0c1412a7c671e7b574f50b2a55bb2e5de3a89ce1df11f0970391dc",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Original official gazette text, printed page 1160, Article 1 of Arrêté 5608: July 10 national borders scheduled closed 06:00–18:00; adjacent domestic instrument is separate."
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-41.json",
+          "sha256": "1cbf24ada8e5a324e85b97cc3a6efc28ed606a9884547ceaf8776a5a40d2ab64",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Congo embassy identifies five land neighbours; Natural Earth producer documentation explains generalized frontier references."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R38-005",
+      "reviewer": "geography_africa_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R38-005.json",
+          "sha256": "14afd5cdbb7e2c9b4eb6a7abef0b553243b6452de5a671342857e9c2e8488171"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R38-005.json",
+          "sha256": "4cc7971ee56df8f123ba72b6bf7b8da369c2c9c5e0f5099d4bb59ae68ad0b013"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R38-005-P1",
+          "decision": "hold",
+          "category": "single_site",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "April 20, 2026 is endpoint-only formal ordinary civilian/commercial road access restoration. Original onset, continuous exclusion and initiating authority remain unknown. The April 20 tanker-export statements are prospective; the separately dated May 1 tanker movement is not first passenger access. Humanitarian truck consignments in 2018–2020 prevent a universal thirteen-year closure interpretation.",
+          "rationale": "Both passes identify the Rabia–al-Yarubiyah road route and distinguish the parallel railway. Only B supplies a named road-control point: current OSM Iraqi Rabia node 2355879679 opposite separately named Syrian controls. A rejects a different nearby GeoNames border-station lead near the railway and approves no road geometry. These candidates are neither averaged nor equated, and B’s sound road identity remains one-pass-only geometry. Reconciliation preserves the hold and the distinction between the formal 2026 endpoint and the separate UN mechanism.",
+          "canonical_phase_scope": "Endpoint-only formal restoration of ordinary civilian and commercial access at Rabia–al-Yarubiyah.",
+          "canonical_qualification_retained": "REC50-R38-005-P1: Formal restoration is dated April 20, 2026. The inherited interruption is described approximately and as largely closed; exact onset, continuous exclusion and the original imposing order remain unknown. Contemporary April 20 Reuters soundbites still describe Rabia tanker exports prospectively. Rudaw on May 6 quotes deputy crossing director Basim Muhammad explicitly dating the first 70-tanker batch to May 1; SANA’s May 9 account separately repeats the Border Ports Authority’s May 1 announcement. This supplies a scoped operational date without asserting first passenger access or universal normal trade. UN humanitarian consignments crossed in March 2018–January 2020, so the inherited interruption cannot mean exclusion of all traffic. Carnegie research attributes blocked ordinary reopening to Baghdad’s position toward the Syrian authorities; it does not recover the original closure order.\n\nREC50-R47-R38-005-P1: The January 16 UN briefing confirms that medical shipments had ceased. The Secretary-General’s February 21 report, using information through February 19, states that UN cross-border operations into the northeast no longer occurred following resolution 2504. This supports a multi-day service cessation and extends the evidence limit; the exact first missed shipment and matching restoration remain unknown. NGO operations and aid sent within Syria are different services. Neither April 2026 ordinary reopening nor May 1 tanker passage establishes restoration of this UN shipment mechanism.",
+          "canonical_date_scope": {
+            "kind": "policy_period",
+            "start_earliest": null,
+            "start_latest": null,
+            "end_earliest": "2026-04-20",
+            "end_latest": "2026-04-20",
+            "last_confirmed": null,
+            "analysis_included": true,
+            "contested": false,
+            "strictly_over_24_hours": null,
+            "temporal_display_rule": "legal_policy_layer_only_not_operational_closure"
+          },
+          "independent_decisions": {
+            "a": "hold",
+            "b": "map"
+          }
+        },
+        {
+          "phase_id": "REC50-R47-R38-005-P1",
+          "decision": "hold",
+          "category": "single_site",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "The early-2020 Iraq-to-northeast-Syria UN medical/humanitarian mechanism is a distinct service, with the February 19 evidence limit and unknown first missed shipment/restoration preserved. NGO operations, aid sent within Syria, April 2026 ordinary restoration and May 1 tanker passage do not restore that mechanism. A had indexed January UN briefing text and a blocked original PDF; B preserved a fuller cached UN report extraction, though its later fresh open failed.",
+          "rationale": "The inspected Secretary-General report S/2020/139 identifies truck transshipment at Ya‘rubiyah and distinguishes Walid and Fish Khabur, supporting road/service identity rather than rail or a generic Iraq–Syria closure. The exact UN transshipment location is not independently placed by A; B alone supplies the Iraqi road-control coordinate. Neither B’s modern node nor an OSM closure annotation establishes the historical service footprint or continuity. No common independently reconstructed point is approved.",
+          "canonical_phase_scope": "UN medical/humanitarian shipments through al-Yarubiyah from Iraq into northeast Syria after removal of the cross-border mandate.",
+          "canonical_qualification_retained": "REC50-R38-005-P1: Formal restoration is dated April 20, 2026. The inherited interruption is described approximately and as largely closed; exact onset, continuous exclusion and the original imposing order remain unknown. Contemporary April 20 Reuters soundbites still describe Rabia tanker exports prospectively. Rudaw on May 6 quotes deputy crossing director Basim Muhammad explicitly dating the first 70-tanker batch to May 1; SANA’s May 9 account separately repeats the Border Ports Authority’s May 1 announcement. This supplies a scoped operational date without asserting first passenger access or universal normal trade. UN humanitarian consignments crossed in March 2018–January 2020, so the inherited interruption cannot mean exclusion of all traffic. Carnegie research attributes blocked ordinary reopening to Baghdad’s position toward the Syrian authorities; it does not recover the original closure order.\n\nREC50-R47-R38-005-P1: The January 16 UN briefing confirms that medical shipments had ceased. The Secretary-General’s February 21 report, using information through February 19, states that UN cross-border operations into the northeast no longer occurred following resolution 2504. This supports a multi-day service cessation and extends the evidence limit; the exact first missed shipment and matching restoration remain unknown. NGO operations and aid sent within Syria are different services. Neither April 2026 ordinary reopening nor May 1 tanker passage establishes restoration of this UN shipment mechanism.",
+          "canonical_date_scope": {
+            "kind": "confirmed_through",
+            "start_earliest": null,
+            "start_latest": null,
+            "end_earliest": "2020-02-19",
+            "end_latest": "2020-02-19",
+            "last_confirmed": "2020-02-19",
+            "analysis_included": true,
+            "contested": false,
+            "strictly_over_24_hours": true,
+            "temporal_display_rule": "dated_evidence_only_no_continuity_inference"
+          },
+          "independent_decisions": {
+            "a": "hold",
+            "b": "map"
+          }
+        }
+      ],
+      "review_evidence": [
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-37.json",
+          "sha256": "99147146f3d0d8c92f426cb0278d2009aa04b60ffc7631aa0475acf6b1dda099",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Original SANA report identifies April 20 paired road crossing restoration, recently rehabilitated internal roads/passenger halls/customs, and expected people/goods movement."
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-47.json",
+          "sha256": "dffe51650cfccf7fb29c3461766335f306dd6ad1966b82bec77a982afd4db57c",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Indexed original January 16 UN briefing says medical shipments through al-Yarubiyah ended; indexed access is not full-page access."
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-32.json",
+          "sha256": "256bfe4643b09fe5af5bb53086e20d9c007487e8e4ae8885c9ef59eb6adf5203",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Cached original UN report S/2020/139 paragraphs 20–23 identifies truck transshipment in 2018–2020 and separates nearby Walid/Fish Khabur routes. Subsequent retrieval limits remain recorded in the passes."
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-b/60df0b45dc09852fa432.json",
+          "sha256": "356abdd4dd9b2441c9a3e9f9125ce63c3384054a3430098502ee32eda942db04",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Original OSM JSON distinguishes Iraqi Rabia node and Syrian Yaaroubia controls. It is only B’s point reconstruction; closure notes are not chronology evidence."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R43-002",
+      "reviewer": "geography_africa_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R43-002.json",
+          "sha256": "c998fa0969bd745359ff746199aa000929c6c553dcfc4d78703a72865a4bc6a1"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R43-002.json",
+          "sha256": "962acc7e6c4df6f3cecdae4aa8618a7f7e5963c358a9df78adc2225d36bf1130"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R43-002-P1",
+          "decision": "hold",
+          "category": "wider_border",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "Specified Mali outward cottonseed, cottonseed cake, millet, sorghum, maize and local-rice policy only, under the December 6, 2021 order. May 16, 2023 remains a policy evidence limit, not reopening. The later Niger-related cereal relaxation has unresolved instrument, dates, commodities and destination scope and is not a blanket repeal or cotton-input endpoint.",
+          "rationale": "Both source reconstructions support national commodity policy, and the cached original Mali WTO presentation verifies the instrument and six goods. Only B translates it to seven whole-frontier reference lines; A explicitly withholds geometry because it reconstructs no bounded implementation. The two passes therefore do not provide an agreed line proposal under the required common-geometry rule. This hold does not dispute national policy scope and does not require gate closure as proof of a policy; it retains the unresolved geographic representation instead of treating one-pass lines as independently approved.",
+          "canonical_phase_scope": "Mali exports of the listed cereals and cotton inputs under order 2021-5126/MIC-MEF-SG",
+          "canonical_qualification_retained": "REC50-R43-002-P1: The December 6, 2021 order is formal policy evidence. The exact later presentation is linked from WTO's official May 16, 2023 meeting agenda and states the restriction remains in force; this date is supported by meeting provenance, not its filename. Goods are cottonseed, cottonseed cake, millet, sorghum, maize and local rice. No continuous all-post enforcement is inferred.\n\nThe World Bank's 2024 Niger update reports cereal-export relaxation by Mali in solidarity with Niger. The precise Malian instrument, effective date, commodities and other destinations remain unestablished, so this is not coded as a blanket repeal or an endpoint for cotton inputs.",
+          "canonical_date_scope": {
+            "kind": "policy_period",
+            "start_earliest": "2021-12-06",
+            "start_latest": "2021-12-06",
+            "end_earliest": "2023-05-16",
+            "end_latest": "2023-05-16",
+            "last_confirmed": "2023-05-16",
+            "analysis_included": true,
+            "contested": false,
+            "strictly_over_24_hours": true,
+            "temporal_display_rule": "dated_evidence_only_no_continuity_inference"
+          },
+          "independent_decisions": {
+            "a": "hold",
+            "b": "map"
+          }
+        }
+      ],
+      "review_evidence": [
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-37.json",
+          "sha256": "99147146f3d0d8c92f426cb0278d2009aa04b60ffc7631aa0475acf6b1dda099",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Original Mali ministry WTO presentation names order 2021-5126/MIC-MEF-SG of December 6, 2021, lists the six commodities and says the restriction remains in force. It contains no border-post or physical interdiction geometry."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R43-003",
+      "reviewer": "geography_africa_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R43-003.json",
+          "sha256": "bc75c243978ff38fe1f1fb9d41b1f912b69c0121a822bc756772b042a5a31fbd"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R43-003.json",
+          "sha256": "c3e902233b1503b04aa78e66ead92e04726791722331d3d4418b65eea477ca24"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R43-003-P1",
+          "decision": "hold",
+          "category": "wider_border",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "January 1–December 27, 2021 special export-authorisation phase for millet, maize and sorghum. July evidence identifies cowpea without backdating it to January. The separately cited ministry notice was inaccessible in both geography passes; available FAO and contemporaneous ministry-reporting evidence remain distinguished. Truck interceptions establish some enforcement, not every gate closed.",
+          "rationale": "Cached original FAO text and contemporaneous December reporting identify the supported export-permit policy and later commodity evidence. No named enforcement site is independently located. Both reconstructions establish national commodity/permit policy but disagree about mapping it to all six Burkina Faso frontier references: A explicitly holds geography, while B alone proposes the lines. No common independently accepted line geometry is approved here; this is not a denial of the national policy or a claim that a policy line requires all gates physically closed.",
+          "canonical_phase_scope": "Suspension of issuance of special export permits for local cereals; millet, maize and sorghum independently identified by FAO.",
+          "canonical_qualification_retained": "REC50-R43-003-P1: The ministry’s July 2021 enforcement report explicitly dates permit suspension to 1 January 2021, corroborating FAO. This primary retrospective statement resolves the earlier uncertainty about whether the rule began only in December. The separately cited December notice remains inaccessible and is not needed to establish the January onset. July reporting confirms previously issued permits could not be used; cowpea is securely documented by July, without assuming it was covered from January. Truck interceptions establish some enforcement, not closure of every gate.\n\nREC50-R43-003-P2: February 23, 2022 is the reported flour announcement. APA reports a ministry lifting dated July 21, 2026, retaining special export permits. No first shipment or uniform enforcement is established. The new October 9 suspension is separate; the July–October permission gap must be retained.\n\nREC50-R43-003-P3: The November 13, 2024 reminder identifies the December 19, 2023 communiqué. Contemporary December reporting corroborates a cereal-export prohibition and suspension of permit issuance. Earlier August 11, 2023 special permits were exceptionally authorized only for Niger-bound millet, maize, sorghum and cowpea. Their later continuation and interaction with the December rule are unresolved; no general repeal or actual shipment is inferred.\n\nThe February 24, 2025 ministry report separately records a maize seizure and continuing cereal/flour restrictions without identifying the destination. Each observation retains its own commodity and date scope; no uninterrupted 2021–2026 operational closure is assigned.",
+          "canonical_date_scope": {
+            "kind": "confirmed_through",
+            "start_earliest": "2021-01-01",
+            "start_latest": "2021-01-01",
+            "end_earliest": "2021-12-27",
+            "end_latest": "2021-12-27",
+            "last_confirmed": "2021-12-27",
+            "analysis_included": true,
+            "contested": false,
+            "strictly_over_24_hours": true,
+            "temporal_display_rule": "legal_policy_layer_only_not_operational_closure"
+          },
+          "independent_decisions": {
+            "a": "hold",
+            "b": "map"
+          }
+        },
+        {
+          "phase_id": "REC50-R43-003-P2",
+          "decision": "hold",
+          "category": "wider_border",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "Millet, maize and sorghum flour phase: February 23, 2022 is the announcement, canonical onset remains unknown, and July 21, 2026 is reported policy lifting with special permits still required. First shipments and uniform enforcement are unknown. The July–October permission gap is retained.",
+          "rationale": "The original FAO note separates flour from grain restrictions; original APA reporting describes the July 21 lifting. These policy sources supply no common point or independently agreed frontier geometry for this phase. Both reconstructions establish national commodity/permit policy but disagree about mapping it to all six Burkina Faso frontier references: A explicitly holds geography, while B alone proposes the lines. No common independently accepted line geometry is approved here; this is not a denial of the national policy or a claim that a policy line requires all gates physically closed.",
+          "canonical_phase_scope": "Reported prohibition on exports of millet, maize and sorghum flour announced 23 February 2022.",
+          "canonical_qualification_retained": "REC50-R43-003-P1: The ministry’s July 2021 enforcement report explicitly dates permit suspension to 1 January 2021, corroborating FAO. This primary retrospective statement resolves the earlier uncertainty about whether the rule began only in December. The separately cited December notice remains inaccessible and is not needed to establish the January onset. July reporting confirms previously issued permits could not be used; cowpea is securely documented by July, without assuming it was covered from January. Truck interceptions establish some enforcement, not closure of every gate.\n\nREC50-R43-003-P2: February 23, 2022 is the reported flour announcement. APA reports a ministry lifting dated July 21, 2026, retaining special export permits. No first shipment or uniform enforcement is established. The new October 9 suspension is separate; the July–October permission gap must be retained.\n\nREC50-R43-003-P3: The November 13, 2024 reminder identifies the December 19, 2023 communiqué. Contemporary December reporting corroborates a cereal-export prohibition and suspension of permit issuance. Earlier August 11, 2023 special permits were exceptionally authorized only for Niger-bound millet, maize, sorghum and cowpea. Their later continuation and interaction with the December rule are unresolved; no general repeal or actual shipment is inferred.\n\nThe February 24, 2025 ministry report separately records a maize seizure and continuing cereal/flour restrictions without identifying the destination. Each observation retains its own commodity and date scope; no uninterrupted 2021–2026 operational closure is assigned.",
+          "canonical_date_scope": {
+            "kind": "policy_period",
+            "start_earliest": null,
+            "start_latest": null,
+            "end_earliest": "2026-07-21",
+            "end_latest": "2026-07-21",
+            "last_confirmed": "2022-02-23",
+            "analysis_included": true,
+            "contested": false,
+            "strictly_over_24_hours": true,
+            "temporal_display_rule": "dated_evidence_only_no_continuity_inference"
+          },
+          "independent_decisions": {
+            "a": "hold",
+            "b": "map"
+          }
+        },
+        {
+          "phase_id": "REC50-R43-003-P3",
+          "decision": "hold",
+          "category": "wider_border",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "December 19, 2023 cereal-export policy and November 13, 2024 reminder remain distinct observations. The reminder explicitly lists cowpea, rice, millet, maize and sorghum. Both passes had indexed substantive communiqué reproductions with direct-page limits; those are not independent original issuances. The continuation of August 2023 Niger-only exceptional permits remains unresolved.",
+          "rationale": "The cached indexed joint-communiqué reproduction establishes national policy wording and its instrument link, but neither exact enforcement sites nor the later status of the Niger exception is established. The November commodity list is not used to invent uniform gate operation over the earlier native interval. Both reconstructions establish national commodity/permit policy but disagree about mapping it to all six Burkina Faso frontier references: A explicitly holds geography, while B alone proposes the lines. No common independently accepted line geometry is approved here; this is not a denial of the national policy or a claim that a policy line requires all gates physically closed.",
+          "canonical_phase_scope": "Cereal export prohibition under communiqué dated 2023-12-19 and publicly reported 2023-12-20; November 2024 reminder explicitly includes rice, millet, maize, sorghum and cowpea.",
+          "canonical_qualification_retained": "REC50-R43-003-P1: The ministry’s July 2021 enforcement report explicitly dates permit suspension to 1 January 2021, corroborating FAO. This primary retrospective statement resolves the earlier uncertainty about whether the rule began only in December. The separately cited December notice remains inaccessible and is not needed to establish the January onset. July reporting confirms previously issued permits could not be used; cowpea is securely documented by July, without assuming it was covered from January. Truck interceptions establish some enforcement, not closure of every gate.\n\nREC50-R43-003-P2: February 23, 2022 is the reported flour announcement. APA reports a ministry lifting dated July 21, 2026, retaining special export permits. No first shipment or uniform enforcement is established. The new October 9 suspension is separate; the July–October permission gap must be retained.\n\nREC50-R43-003-P3: The November 13, 2024 reminder identifies the December 19, 2023 communiqué. Contemporary December reporting corroborates a cereal-export prohibition and suspension of permit issuance. Earlier August 11, 2023 special permits were exceptionally authorized only for Niger-bound millet, maize, sorghum and cowpea. Their later continuation and interaction with the December rule are unresolved; no general repeal or actual shipment is inferred.\n\nThe February 24, 2025 ministry report separately records a maize seizure and continuing cereal/flour restrictions without identifying the destination. Each observation retains its own commodity and date scope; no uninterrupted 2021–2026 operational closure is assigned.",
+          "canonical_date_scope": {
+            "kind": "policy_period",
+            "start_earliest": "2023-12-19",
+            "start_latest": "2023-12-19",
+            "end_earliest": "2024-11-13",
+            "end_latest": "2024-11-13",
+            "last_confirmed": "2024-11-13",
+            "analysis_included": true,
+            "contested": false,
+            "strictly_over_24_hours": true,
+            "temporal_display_rule": "legal_policy_layer_only_not_operational_closure"
+          },
+          "independent_decisions": {
+            "a": "hold",
+            "b": "map"
+          }
+        },
+        {
+          "phase_id": "REC50-R43-003-P4",
+          "decision": "hold",
+          "category": "wider_border",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "New flour/derivative export and special-permit suspension observed October 9, 2026 only. Unknown operational onset, lifting and duration remain unchanged; the earlier July–October permission gap is not filled. AIB’s illustrative image is not geographic evidence.",
+          "rationale": "The cached original AIB body identifies a new nationwide flour and derivative policy and suspended permits. No named facility or common reconstructed enforcement location is supplied. Both reconstructions establish national commodity/permit policy but disagree about mapping it to all six Burkina Faso frontier references: A explicitly holds geography, while B alone proposes the lines. No common independently accepted line geometry is approved here; this is not a denial of the national policy or a claim that a policy line requires all gates physically closed.",
+          "canonical_phase_scope": "New suspension of exports and special permits for millet, maize and sorghum flour and derivatives.",
+          "canonical_qualification_retained": "REC50-R43-003-P1: The ministry’s July 2021 enforcement report explicitly dates permit suspension to 1 January 2021, corroborating FAO. This primary retrospective statement resolves the earlier uncertainty about whether the rule began only in December. The separately cited December notice remains inaccessible and is not needed to establish the January onset. July reporting confirms previously issued permits could not be used; cowpea is securely documented by July, without assuming it was covered from January. Truck interceptions establish some enforcement, not closure of every gate.\n\nREC50-R43-003-P2: February 23, 2022 is the reported flour announcement. APA reports a ministry lifting dated July 21, 2026, retaining special export permits. No first shipment or uniform enforcement is established. The new October 9 suspension is separate; the July–October permission gap must be retained.\n\nREC50-R43-003-P3: The November 13, 2024 reminder identifies the December 19, 2023 communiqué. Contemporary December reporting corroborates a cereal-export prohibition and suspension of permit issuance. Earlier August 11, 2023 special permits were exceptionally authorized only for Niger-bound millet, maize, sorghum and cowpea. Their later continuation and interaction with the December rule are unresolved; no general repeal or actual shipment is inferred.\n\nThe February 24, 2025 ministry report separately records a maize seizure and continuing cereal/flour restrictions without identifying the destination. Each observation retains its own commodity and date scope; no uninterrupted 2021–2026 operational closure is assigned.",
+          "canonical_date_scope": {
+            "kind": "confirmed_through",
+            "start_earliest": null,
+            "start_latest": null,
+            "end_earliest": "2026-10-09",
+            "end_latest": "2026-10-09",
+            "last_confirmed": "2026-10-09",
+            "analysis_included": true,
+            "contested": false,
+            "strictly_over_24_hours": null,
+            "temporal_display_rule": "dated_evidence_only_no_continuity_inference"
+          },
+          "independent_decisions": {
+            "a": "hold",
+            "b": "map"
+          }
+        }
+      ],
+      "review_evidence": [
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-40.json",
+          "sha256": "5c31e4ebacd93f1d217f298c5fc9ef917a25688c4febc94fcd1ba1364a8a1e29",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Original FAO policy note separates January 2021 grain from February 2022 flour measures; original APA report records July 21, 2026 lifting with special permits retained."
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-47.json",
+          "sha256": "dffe51650cfccf7fb29c3461766335f306dd6ad1966b82bec77a982afd4db57c",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Contemporaneous December 2021 Faso7 article identifies July permit suspension and December continuation, including later cowpea evidence and an attributed seizure report."
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-48.json",
+          "sha256": "a5a163fb6ddb7a3059d3234905fdf86d7add632ba30c06a93c62885244ffe67f",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Indexed substantive November 2024 joint-communiqué reproduction names the December 19, 2023 instrument and national commodity scope; full direct-page access was unavailable."
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-38.json",
+          "sha256": "c678aa5f7a495ea6fd63a9c6c3967c8be5459d47201dfe63fda5f2264db066f9",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Original AIB October 9, 2026 report explicitly describes the new flour/derivative and permit suspension nationwide."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R43-004",
+      "reviewer": "geography_africa_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R43-004.json",
+          "sha256": "a14e9dab36bf32eca7042eb3265ad51a3827c0a528531c697be48e59e85cdcba"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R43-004.json",
+          "sha256": "93382dd3e2591a55a604f04c17b36cdc2bd2bf49b29e8877b760f37a5a5f0490"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R43-004-P1",
+          "decision": "hold",
+          "category": "multiple_named_sites",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "December 1, 2022 directive concerns outward grain/soybean export prevention at Tatale, Wonjuga, Bunkpurugu and Saboba customs stations. First actual denials are unknown. The visible licensing instrument is not independently a blanket prohibition, and later national bans do not prove continuous enforcement at these four posts.",
+          "rationale": "Both passes hold all four exact customs/control coordinates. The original report names the stations, while primary immigration directories identify border/sector offices with insufficient coordinates or proof of equivalence to the 2022 customs premises. A’s unverified Tatale immigration-point lead has side/facility uncertainty and no accepted original-node verification; neither towns, command offices, bus stations nor the whole Ghana–Togo frontier replace the four facilities.",
+          "canonical_phase_scope": "Grain and soybean export-prevention directive to Tatale, Wonjuga, Bunkpurugu and Saboba customs stations",
+          "canonical_qualification_retained": "The December 2022 directive names Tatale, Wonjuga, Bunkpurugu and Saboba, but does not establish the first actual denial at these stations. The visible L.I.2467 text concerns export licensing and does not alone establish a blanket prohibition.\n\nThe separately announced August 26, 2024 grain ban includes corn and rice. The December 2024 USDA report describes continuing corn restrictions on page 11 and stricter enforcement of the existing export ban in its rice section on page 15. Its projected rice-export quantity is a forecast, not an observed shipment or reopening.\n\nUSDA’s April 3, 2026 report, page 11 and footnote 10, separately describes corn, rice and soybean export restrictions in March 2026. This is a month-level policy observation, not an exact March 31 event, a forecast treated as evidence, or proof of continuous enforcement at the four 2022 stations. Exact lifting and gate-level operational history remain unknown.",
+          "canonical_date_scope": {
+            "kind": "policy_period",
+            "start_earliest": null,
+            "start_latest": null,
+            "end_earliest": "2022-12-01",
+            "end_latest": "2022-12-01",
+            "last_confirmed": "2022-12-01",
+            "analysis_included": true,
+            "contested": false,
+            "strictly_over_24_hours": null,
+            "temporal_display_rule": "dated_evidence_only_no_continuity_inference"
+          },
+          "independent_decisions": {
+            "a": "hold",
+            "b": "hold"
+          }
+        },
+        {
+          "phase_id": "REC50-R43-004-P2",
+          "decision": "hold",
+          "category": "wider_border",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "Separate national August 26, 2024 grain-export policy, with corn and rice explicitly supported. Later USDA policy observations and trade forecasts are not gate closure or reopening observations, nor proof of uninterrupted operation of the four 2022 stations. No new end date or March 31 event is inferred.",
+          "rationale": "Both source reconstructions agree the later measure is national and that drought-affected regions describe its cause rather than geographic limits. B alone proposes all three Ghana land-frontier references; A expressly withholds geometry and supplies no common mapped extent. Under the common-geometry requirement the one-pass frontier set is held, while national policy scope remains intact. This does not conflate administrative coverage with every physical gate closed and does not inherit the earlier four-station geometry.",
+          "canonical_phase_scope": "Grain-export prohibition announced 26 August 2024, with corn and rice explicitly supported",
+          "canonical_qualification_retained": "The December 2022 directive names Tatale, Wonjuga, Bunkpurugu and Saboba, but does not establish the first actual denial at these stations. The visible L.I.2467 text concerns export licensing and does not alone establish a blanket prohibition.\n\nThe separately announced August 26, 2024 grain ban includes corn and rice. The December 2024 USDA report describes continuing corn restrictions on page 11 and stricter enforcement of the existing export ban in its rice section on page 15. Its projected rice-export quantity is a forecast, not an observed shipment or reopening.\n\nUSDA’s April 3, 2026 report, page 11 and footnote 10, separately describes corn, rice and soybean export restrictions in March 2026. This is a month-level policy observation, not an exact March 31 event, a forecast treated as evidence, or proof of continuous enforcement at the four 2022 stations. Exact lifting and gate-level operational history remain unknown.",
+          "canonical_date_scope": {
+            "kind": "policy_period",
+            "start_earliest": "2024-08-26",
+            "start_latest": "2024-08-26",
+            "end_earliest": null,
+            "end_latest": null,
+            "last_confirmed": null,
+            "analysis_included": true,
+            "contested": false,
+            "strictly_over_24_hours": true,
+            "temporal_display_rule": "dated_evidence_only_no_continuity_inference"
+          },
+          "independent_decisions": {
+            "a": "hold",
+            "b": "map"
+          }
+        }
+      ],
+      "review_evidence": [
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-37.json",
+          "sha256": "99147146f3d0d8c92f426cb0278d2009aa04b60ffc7631aa0475acf6b1dda099",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Original MyJoyOnline report names four GRA customs station heads and the grain/soybean directive; it does not locate their exact facilities."
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-49.json",
+          "sha256": "9e763635a25e991f707f31853fd9139e0d06220908f6f9bbd4259a934821a4f8",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Primary Ghana Immigration directories distinguish Tatale/Saboba border posts and Bunkpurugu/Wonjuga sector commands. No exact equivalence to four historical customs premises is established."
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-38.json",
+          "sha256": "c678aa5f7a495ea6fd63a9c6c3967c8be5459d47201dfe63fda5f2264db066f9",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Original GNA August 26, 2024 national export-ban report treats drought regions as food-shortage context, not the boundary of the policy."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R43-005",
+      "reviewer": "geography_africa_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R43-005.json",
+          "sha256": "6d2e7ced6e90e2f0f9f8aabea19e3e38a45cf302b85abdf59b6cbd66cfe1db53"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R43-005.json",
+          "sha256": "39f24e56201774892a95b0a37e9e58c32957cc4ab547bf64baff03a2911af0bc"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R43-005-P1",
+          "decision": "hold",
+          "category": "wider_border",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "Burkina Faso inward poultry and avian products from Benin, Togo and Côte d’Ivoire only. The derived August 20, 2021 ministry-announcement observation is not an established first denial. Lifting, physical implementation, all modes and all-post coverage remain unknown; unaffected origins, other cargo and travellers are outside the established restriction.",
+          "rationale": "Both passes independently hold geography. The inspected original Anadolu report identifies a country-of-origin commodity rule and reinforced frontier surveillance, but does not identify entry routes or posts. Origin countries cannot be converted into three adjacent bilateral frontier lines: affected consignments may arrive through other routes. No point, whole-frontier set or continuous enforcement is inferred.",
+          "canonical_phase_scope": "Burkina Faso import prohibition on poultry and avian products from the three named origins",
+          "canonical_qualification_retained": "REC50-R43-005-P1: Friday derives to the 20 August 2021 ministry announcement, not a known first physical border denial. The measure covers only poultry and avian products from Benin, Togo and Côte d’Ivoire in this reconstruction. Frontier-control reinforcement supplies the land-policy nexus; lifting and all-post implementation remain unknown.",
+          "canonical_date_scope": {
+            "kind": "policy_period",
+            "start_earliest": null,
+            "start_latest": null,
+            "end_earliest": "2021-08-20",
+            "end_latest": "2021-08-20",
+            "last_confirmed": "2021-08-20",
+            "analysis_included": true,
+            "contested": false,
+            "strictly_over_24_hours": null,
+            "temporal_display_rule": "dated_evidence_only_no_continuity_inference"
+          },
+          "independent_decisions": {
+            "a": "hold",
+            "b": "hold"
+          }
+        }
+      ],
+      "review_evidence": [
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-39.json",
+          "sha256": "1b4c6a916c8d0f1a7f870da45f9253adbd607236e38f6e3725bf9b903be7b6f5",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Original Anadolu body identifies the three avian-product origins and frontier-control reinforcement, without enumerating entry posts or routes."
+        }
+      ]
+    },
+    {
+      "record_id": "REC50-R47-001",
+      "reviewer": "geography_africa_tail_review",
+      "review_date": "2026-10-29",
+      "audit_passes": [
+        {
+          "path": "research/geography-audit-2026-10-29/pass-a/REC50-R47-001.json",
+          "sha256": "aade73c6597697ec93d5fe2736c276cef97ad2fcbe45b48b09681b9e7cfadc79"
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/pass-b/REC50-R47-001.json",
+          "sha256": "81ff1cd648d7d6ef67257b7cbfda89ab8cf8e38a2880390c841c532d797b7a5a"
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "REC50-R47-001-P1",
+          "decision": "hold",
+          "category": "single_site",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "Sudan-side Chad-to-Darfur humanitarian permit policy, February 21 through August 15–16, 2024, with documented March/April exceptions. Administrative authority is separate from the reported RSF physical control. August permission does not establish actual convoy passage, and no all-aid, all-traffic or all-frontier continuous closure is inferred.",
+          "rationale": "Both independent reconstructions identify Adré’s road humanitarian corridor and distinguish Tine. A rejects the Adré city-centre lead and supplies no validated border-control coordinate. B alone proposes the bounding-box centre of an unnamed Sudan-side control compound from OSM road/boundary context, without an independently named historical clearance desk. The common-geometry requirement is unmet; neither the one-pass compound nor the town or whole Chad–Sudan frontier is approved.",
+          "canonical_phase_scope": "Sudan-side authorisation for Chad-to-Darfur humanitarian consignments through Adré",
+          "canonical_qualification_retained": "REC50-R47-001-P1: The February withdrawal had documented March/April exceptions. August 15–16 permission is distinct from actual WFP food-truck entry on August 20. The initial restriction was administrative; physical control of the crossing was separately attributed to the RSF. No continuous all-aid or all-traffic closure is claimed.\n\nREC50-R47-001-P2: Endpoint-only observation. The last March/April exceptional shipment and onset of the subsequent WFP interruption are not dated. No complete February–August operational spell, all-agency return, or arrival at final destinations is inferred.",
+          "canonical_date_scope": {
+            "kind": "policy_period",
+            "start_earliest": "2024-02-21",
+            "start_latest": "2024-02-21",
+            "end_earliest": "2024-08-15",
+            "end_latest": "2024-08-16",
+            "last_confirmed": null,
+            "analysis_included": true,
+            "contested": false,
+            "strictly_over_24_hours": true,
+            "temporal_display_rule": "dated_evidence_only_no_continuity_inference"
+          },
+          "independent_decisions": {
+            "a": "hold",
+            "b": "partial"
+          }
+        },
+        {
+          "phase_id": "REC50-R47-001-P2",
+          "decision": "hold",
+          "category": "single_site",
+          "complete": false,
+          "sites": [],
+          "border_reference_ids": [],
+          "qualification": "WFP food-truck entry endpoint on August 20, 2024 only; the last March/April exceptional convoy and onset of the subsequent interruption remain undated. This does not establish all-agency return, unrestricted traffic or delivery to final destinations. Permission and operational entry retain separate phases.",
+          "rationale": "Both reconstructions identify the WFP return at the same Adré road corridor, but only B locates an approximate unnamed control compound. A’s geographic gap remains. Even for this endpoint-only phase there is no common independently reconstructed facility coordinate; B’s candidate cannot be promoted into an earlier February–August operational footprint or an exact convoy barrier. Hold geography without changing the dated WFP observation or unknown preceding onset.",
+          "canonical_phase_scope": "WFP food-truck entry through Adré following renewed Sudanese permission",
+          "canonical_qualification_retained": "REC50-R47-001-P1: The February withdrawal had documented March/April exceptions. August 15–16 permission is distinct from actual WFP food-truck entry on August 20. The initial restriction was administrative; physical control of the crossing was separately attributed to the RSF. No continuous all-aid or all-traffic closure is claimed.\n\nREC50-R47-001-P2: Endpoint-only observation. The last March/April exceptional shipment and onset of the subsequent WFP interruption are not dated. No complete February–August operational spell, all-agency return, or arrival at final destinations is inferred.",
+          "canonical_date_scope": {
+            "kind": "bounded_interval",
+            "start_earliest": null,
+            "start_latest": null,
+            "end_earliest": "2024-08-20",
+            "end_latest": "2024-08-20",
+            "last_confirmed": null,
+            "analysis_included": true,
+            "contested": false,
+            "strictly_over_24_hours": null,
+            "temporal_display_rule": "dated_evidence_only_no_continuity_inference"
+          },
+          "independent_decisions": {
+            "a": "hold",
+            "b": "partial"
+          }
+        }
+      ],
+      "review_evidence": [
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-40.json",
+          "sha256": "5c31e4ebacd93f1d217f298c5fc9ef917a25688c4febc94fcd1ba1364a8a1e29",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Original Logistics Cluster operational overview identifies February 21 withdrawal, March 13 sixty-truck Adré exception and August 16 authorization; no exact exception-exhaustion date."
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-39.json",
+          "sha256": "1b4c6a916c8d0f1a7f870da45f9253adbd607236e38f6e3725bf9b903be7b6f5",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Original WFP release dates its food-truck crossing to Tuesday August 20 and separately acknowledges March/April convoys. Tine is an alternative route, not this event site."
+        },
+        {
+          "path": "research/geography-audit-2026-10-29/evidence/africa_middle_east-b/e7ef35e77922f14f53a7.json",
+          "sha256": "12bcb951b6eba0febb2c881d6109a052884b75b7bd9928e6461ed29ca123066d",
+          "inspection": "cached original evidence inspected in reconciliation",
+          "finding": "Original OSM JSON contains unnamed control polygon 1038722129 and separate trunk road/boundary features. It is B-only approximate facility geometry, not independently located in A."
+        }
+      ]
+    }
+  ]
+}

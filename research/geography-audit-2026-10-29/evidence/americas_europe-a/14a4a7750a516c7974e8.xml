@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2623191 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <node id="2655422003" visible="true" version="6" changeset="133854900" timestamp="2023-03-19T11:58:54Z" user="HaPe-CZ" uid="11276832" lat="45.0096688" lon="-74.7393924"/>
+ <node id="2655422005" visible="true" version="3" changeset="130986049" timestamp="2023-01-07T15:48:52Z" user="Himké" uid="444259" lat="45.0089676" lon="-74.7396199"/>
+ <node id="2655422006" visible="true" version="3" changeset="130986049" timestamp="2023-01-07T15:48:52Z" user="Himké" uid="444259" lat="45.0081841" lon="-74.7398903"/>
+ <node id="2655422008" visible="true" version="3" changeset="130986049" timestamp="2023-01-07T15:48:52Z" user="Himké" uid="444259" lat="45.0073985" lon="-74.7401614"/>
+ <node id="2655422009" visible="true" version="4" changeset="133854900" timestamp="2023-03-19T11:58:54Z" user="HaPe-CZ" uid="11276832" lat="45.0065484" lon="-74.7404532"/>
+ <way id="260062700" visible="true" version="11" changeset="188830762" timestamp="2026-09-10T15:18:12Z" user="Himké" uid="444259">
+  <nd ref="2655422003"/>
+  <nd ref="2655422005"/>
+  <nd ref="2655422006"/>
+  <nd ref="2655422008"/>
+  <nd ref="2655422009"/>
+  <tag k="bicycle" v="no"/>
+  <tag k="bridge" v="yes"/>
+  <tag k="foot" v="no"/>
+  <tag k="highway" v="primary"/>
+  <tag k="layer" v="1"/>
+  <tag k="name" v="Seaway International Bridge"/>
+  <tag k="NHS" v="Feeder"/>
+  <tag k="sidewalk:left" v="separate"/>
+  <tag k="sidewalk:right" v="no"/>
+  <tag k="toll" v="yes"/>
+ </way>
+</osm>

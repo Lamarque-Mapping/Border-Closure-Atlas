@@ -1,0 +1,94 @@
+{
+  "record_id": "REC50-R32-003",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ordinary pedestrian/vehicle access through San Antonio customs onto Simón Bolívar road bridge stopped for the July2025 municipal election weekend, while documented medical, ambulance and repatriation passage continued. The narrower July26–28 operation is distinct from July25 enhanced controls and broader policy descriptions.",
+  "source_checks": [
+    {
+      "url": "https://lanacionweb.com/frontera/120-pacientes-un-trasbordo-y-una-repatriacion-por-el-canal-humanitario/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Fresh original by Jonathan Maldonado describes Saturday patients arriving at San Antonio customs, temporary fence removal after17:00 for an ambulance and coffin transfer on Simón Bolívar bridge. Monday reopening was prospective in this report.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-144.json"
+    },
+    {
+      "url": "https://www.el-carabobeno.com/reabierta-la-frontera-en-el-estado-tachira-tras-48-horas-por-elecciones-municipales/",
+      "access_status": "fresh_search_extract",
+      "finding": "Direct page returned403; indexed original credits La Nación and reports actual July28 06:00 fence removal at San Antonio customs after48hours; explains enhanced-control/full-closure confusion.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-142.json"
+    },
+    {
+      "url": "https://fronteradigital.com.ve/index.php/entrada/61787",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Broader republished report describes over72hours and startJuly25, conflicting with narrow customs observations. It is not used to expand this phase or overwrite its dates.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-132.json"
+    },
+    {
+      "url": "https://www.openstreetmap.org/way/871456442",
+      "access_status": "previously_inspected_same_pass_geographic_evidence",
+      "finding": "Named OSM bridge across Táchira River between San Antonio del Táchira and La Parada; no substitution of the Francisco de Paula Santander or Atanasio Girardot bridges.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fc7c61ad8e72edc57152.xml"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R32-003-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-simon-bolivar-road",
+          "name": "Simón Bolívar international road bridge",
+          "coordinates": [
+            -72.450854,
+            7.8179153
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM feature geometry",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/871456442"
+          ],
+          "evidence_note": "Named OSM bridge across Táchira River between San Antonio del Táchira and La Parada; no substitution of the Francisco de Paula Santander or Atanasio Girardot bridges.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fc7c61ad8e72edc57152.xml",
+              "sha256": "b8a9fa4f8f15575fd029e2ab1515a443b0ccad9b09fcb001d5f3b987d5abd9a0",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "6",
+              "osm_timestamp": "2025-11-21T13:12:51Z",
+              "tags": {
+                "layer": "1",
+                "man_made": "bridge",
+                "name": "Puente Internacional Simón Bolívar",
+                "wikidata": "Q3396757",
+                "wikimedia_commons": "Category:Puente Internacional Simón Bolívar",
+                "wikipedia": "es:Puente Internacional Simón Bolívar"
+              }
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "San Antonio customs access to Simón Bolívar bridge between Venezuela and Colombia; ordinary pedestrians and vehicles, excluding documented humanitarian passage.",
+      "date_scope_check": {
+        "start_earliest": "2025-07-26",
+        "start_latest": "2025-07-26",
+        "end_earliest": "2025-07-28",
+        "end_latest": "2025-07-28",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Bridge independently identified; exact San Antonio customs fence is not separately located. Current bridge footprint is a reference, and humanitarian exceptions/chronology qualification remain unchanged."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "eac94491087ef0c4aeaa17d2b043843cf8d862b130a3fa62310999f67d2c7907"
+}
