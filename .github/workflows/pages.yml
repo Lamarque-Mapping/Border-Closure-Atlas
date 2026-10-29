@@ -31,7 +31,7 @@ jobs:
           node-version: '22'
       - name: Validate the checked-in reader and build research data
         run: |
-          python -m pip install --disable-pip-version-check openpyxl==3.1.5
+          python -m pip install --disable-pip-version-check openpyxl==3.1.5 fiona==1.10.1
           python scripts/prepare-release-workbook.py
           python scripts/import-workbook.py
           python scripts/build-analysis.py
@@ -42,6 +42,8 @@ jobs:
           node scripts/build-crossing-geography.cjs
           node scripts/build-status-review.cjs
           node scripts/build-evidence-pages.cjs
+          python scripts/build-gis-downloads.py
+          python scripts/verify-gis-downloads.py
           node --check dist/duration.js
           node --check dist/app.js
           node --check dist/export.js

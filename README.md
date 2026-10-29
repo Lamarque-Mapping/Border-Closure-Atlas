@@ -198,7 +198,8 @@ reviewed bindings enter the public crossing layer.
 
 ## Rebuild the hosted site
 
-The build uses Python 3 and Node.js. Spreadsheet checks also use openpyxl. The
+The build uses Python 3 and Node.js. Spreadsheet checks also use openpyxl;
+GIS download verification uses Fiona/GDAL (the CI versions are pinned in the workflow). The
 website itself is static and requires no API keys, database or external tile
 server. Evidence links require an internet connection.
 
@@ -213,6 +214,8 @@ node scripts/build-national-data.cjs
 node scripts/build-crossing-geography.cjs
 node scripts/build-status-review.cjs
 node scripts/build-evidence-pages.cjs
+python scripts/build-gis-downloads.py
+python scripts/verify-gis-downloads.py
 node scripts/build-hosted.cjs
 ```
 
@@ -246,6 +249,18 @@ source research or the historical programme preparer.
 research archive manifest. `build-analysis-data.cjs` generates the light Analysis
 payload and updates its fingerprints. The evidence-page builder generates the
 readable crossing and national-policy source pages.
+
+The Dataset page also offers GeoPackage and GeoJSON ZIP downloads. These use
+the current phase-specific crossing and wider-border mapping decisions, with
+all record, phase and source tables retained, including unmapped records. The
+download panel discloses spatial coverage. The export is for the historical
+land register; national-policy and later-status supplements remain separate.
+`export-gis.cjs` projects that geography without inferring dates or coordinates;
+`build-gis-downloads.py` packages it with field descriptions and an interpretation
+guide. `verify-gis-downloads.py` reads both spatial formats through GDAL and
+checks coordinates, attributes, full text, release hashes and download links.
+The original `build_gis.py` export workflow predates this release; only its
+generic GeoPackage table writer is reused by the current download builder.
 
 `dist/data.js` is the complete generated browser-data model. Hosted pages open the
 light map or Analysis payload and request full evidence when needed. The hosted
