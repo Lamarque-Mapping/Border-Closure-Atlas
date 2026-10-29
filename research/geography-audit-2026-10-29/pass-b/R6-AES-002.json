@@ -1,0 +1,71 @@
+{
+  "record_id": "R6-AES-002",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Vioolsdrif South African road port, at the northern end of the N7, for the May 13 cargo interruption during staff protest. Noordoewer is the opposite Namibian post.",
+  "source_checks": [
+    {
+      "url": "https://www.timeslive.co.za/news/south-africa/2020-05-13-officials-close-sa-namibia-border-post-over-lack-of-water/",
+      "access_status": "full_text_web",
+      "finding": "Report quotes a clearance agent saying officials shut the Vioolsdrift gates at noon; caption and text identify trucks and the N7 site.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-28.json",
+      "evidence_sha256": "1c07142f5092770e8492f2cff7df774d6a784569ff6e9b17db1afebaaaebb00f"
+    },
+    {
+      "url": "https://neweralive.na/vioolsdrift-border-post-reopens/",
+      "access_status": "inaccessible",
+      "finding": "Original reopening article returned HTTP 403; the existing short-duration qualification is retained, not independently revised.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-28.json",
+      "evidence_sha256": "1c07142f5092770e8492f2cff7df774d6a784569ff6e9b17db1afebaaaebb00f"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-AES-002-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-vioolsdrif",
+          "name": "Vioolsdrif South African border control",
+          "coordinates": [
+            17.6244504,
+            -28.7686558
+          ],
+          "coordinate_method": "Original OSM node coordinate from independently fetched API JSON",
+          "precision": "approximate crossing facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/map.json?bbox=17.62,-28.77,17.635,-28.755",
+            "https://www.openstreetmap.org/node/3963300657"
+          ],
+          "evidence_note": "Node explicitly tagged country ZA and Vioolsdrif, with nearby Customs and Immigration and heavy-vehicle inspection facilities on the N7. The separate Noordoewer node lies north across the Orange River; it is not substituted for this South African event. Inspected OSM tags: {\"barrier\": \"border_control\", \"country\": \"ZA\", \"name\": \"Vioolsdrif\"}. Geographic evidence only; no historical restriction or current operational status inferred.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/b84490094d0f71f4e647.json",
+          "evidence_sha256": "2bc20b5e05645f90f8693fab69813898b95fd85fd6b59e4165b0b63439519363",
+          "osm_version": 1,
+          "osm_timestamp": "2016-01-24T06:52:37Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Vioolsdrif South African road port, at the northern end of the N7, for the May 13 cargo interruption during staff protest. Noordoewer is the opposite Namibian post. Current phase only: Vioolsdrift cargo interruption on 13 May 2020.",
+      "date_scope_check": {
+        "start_earliest": "2020-05-13",
+        "start_latest": "2020-05-13",
+        "end_earliest": "2020-05-13",
+        "end_latest": "2020-05-13",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Episode on May 13, not a whole-day closure; approximately noon to by 22:00 per direct accounts. New Era's TimesLive-derived Tuesday-evening wording conflicts with the original and Wednesday police account; it is not independent onset evidence. Concurrent passenger COVID restrictions remain separate.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

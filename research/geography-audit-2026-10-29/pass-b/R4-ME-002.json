@@ -26,33 +26,43 @@
       "finding": "Original archived field report page 9 provides a labelled crossing coordinate; page 10 describes document-check access. Published in 2010, so it supplies approximate crossing identity rather than a 2019 cargo-lane reconstruction.",
       "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-27.json",
       "evidence_sha256": "21c6d85fd376da7e1ca7a6ac5b503911f34fe82f59287e83008604f142a7aea3"
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/map.json?bbox=46.035,33.115,46.070,33.135",
+      "access_status": "full_original_osm_json",
+      "finding": "Named Iranian border terminal polygon with Mehran aliases in Persian, English and Arabic. The same extract separately identifies the Iraqi Zerbatya terminal and connecting roads. This supersedes the less precise 2010 field-report candidate. Inspected OSM tags: {\"addr:province\": \"ایلام\", \"addr:state\": \"مهران\", \"alt_name\": \"پایانه مرزی مهران\", \"alt_name:ar\": \"منفذ مهران الحدودي;معبر مهران الحدودي\", \"alt_name:en\": \"Mehran border post\", \"barrier\": \"border_control\", \"highway\": \"services\", \"loc_name\": \"مرز مهران\", \"name\": \"پایانه مرزی شهید سلیمانی مهران\", \"name:ar\": \"معبر الشهيد قاسم سليماني الحدودي\", \"name:en\": \"Qasem Soleimani border terminal\", \"name:fa\": \"پایانه مرزی شهید سلیمانی مهران\"}. Geographic evidence only; no historical restriction or current operational status inferred.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/633c419823475309a475.json",
+      "evidence_sha256": "faeb66f3811d248815e231eba926ef92c800553f129c39ff6831922daef7d69a"
     }
   ],
   "phase_decisions": [
     {
       "phase_id": "R4-ME-002-D1",
       "category": "single_site",
-      "decision": "partial",
+      "decision": "map",
       "sites": [
         {
           "proposed_site_id": "post-mehran-zurbatiyah",
-          "name": "Mehran / Zurbatiyah crossing area",
+          "name": "Mehran / Zurbatiyah road crossing",
           "coordinates": [
-            46.051842,
-            33.123581
+            46.0537989,
+            33.120876
           ],
-          "coordinate_method": "DMS conversion from published 2010 field-report coordinate on printed page 9: 33 degrees 7 minutes 24.89 seconds N, 46 degrees 3 minutes 6.63 seconds E",
-          "precision": "approximate historic crossing area; several hundred metres, not a surveyed 2019 cargo lane",
+          "coordinate_method": "Bounding-box centre of original OSM facility polygon from independently fetched API JSON",
+          "precision": "approximate facility area; not a surveyed historic gate",
           "source_urls": [
-            "https://www.occrp.org/documents/big-trouble-big-tobacco/OCCRP-Follow-16.pdf"
+            "https://www.openstreetmap.org/api/0.6/map.json?bbox=46.035,33.115,46.070,33.135",
+            "https://www.openstreetmap.org/way/1044090770"
           ],
-          "evidence_note": "Original 2010 Al Thuraya field report preserved by OCCRP labels the location Mehran Border crossing and the following page describes covered document-check access. This is geographically distinct from Mehran town. Historic geometry does not establish the 2019 restriction or exact truck entry lane.",
-          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-27.json",
-          "evidence_sha256": "21c6d85fd376da7e1ca7a6ac5b503911f34fe82f59287e83008604f142a7aea3"
+          "evidence_note": "Named Iranian border terminal polygon with Mehran aliases in Persian, English and Arabic. The same extract separately identifies the Iraqi Zerbatya terminal and connecting roads. This supersedes the less precise 2010 field-report candidate. Inspected OSM tags: {\"addr:province\": \"ایلام\", \"addr:state\": \"مهران\", \"alt_name\": \"پایانه مرزی مهران\", \"alt_name:ar\": \"منفذ مهران الحدودي;معبر مهران الحدودي\", \"alt_name:en\": \"Mehran border post\", \"barrier\": \"border_control\", \"highway\": \"services\", \"loc_name\": \"مرز مهران\", \"name\": \"پایانه مرزی شهید سلیمانی مهران\", \"name:ar\": \"معبر الشهيد قاسم سليماني الحدودي\", \"name:en\": \"Qasem Soleimani border terminal\", \"name:fa\": \"پایانه مرزی شهید سلیمانی مهران\"}. Geographic evidence only; no historical restriction or current operational status inferred.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/633c419823475309a475.json",
+          "evidence_sha256": "faeb66f3811d248815e231eba926ef92c800553f129c39ff6831922daef7d69a",
+          "osm_version": 6,
+          "osm_timestamp": "2025-11-16T14:02:21Z"
         }
       ],
       "border_reference_ids": [],
-      "complete": false,
+      "complete": true,
       "phase_applicability": "Mehran / Zurbatiyah road port. The restriction concerns direct Iranian and transit truck entry into Iraq, while unloading to Iraqi trucks at the terminal remained permitted. Current phase only: Direct Iranian/transit truck entry into Iraq at Mehran, excluding transshipment",
       "date_scope_check": {
         "start_earliest": "2019-10-30",
@@ -68,12 +78,8 @@
         "qualification_retained": "R4-ME-002-D1: Confirmed through November 3 only, not a reopening or later persistence claim. The Persian customs interview was recovered in this audit as a substantive indexed extract: ordinary cargo transshipment continued, while direct truck delivery at Mehran remained suspended. This is official-interview evidence, not direct gate observation. Passenger accounts conflict and remain excluded. The November 25 general reopening account also says loaded trucks had continued to pass, without distinguishing truck nationality or transshipment; it cannot securely date the end of this direct-entry restriction. English and Persian relays of the same officials are not independent confirmations.",
         "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
       },
-      "unresolved": [
-        "Historic crossing-area coordinate is available, but the particular 2019 Iranian truck entry facility/lane has not been independently isolated."
-      ]
+      "unresolved": []
     }
   ],
-  "unresolved": [
-    "Historic crossing-area coordinate is available, but the particular 2019 Iranian truck entry facility/lane has not been independently isolated."
-  ]
+  "unresolved": []
 }

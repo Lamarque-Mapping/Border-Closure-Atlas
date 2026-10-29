@@ -1,0 +1,162 @@
+{
+  "record_id": "R3-SC-006",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Admission-document condition concerned Kyrgyz citizens entering Uzbekistan at Dostuk–Dustlik road crossing near Osh. It was not a complete physical shutdown or identical uninterrupted rule since an assumed 2000/2010 onset.",
+  "source_checks": [
+    {
+      "url": "https://ru.archive.kabar.kg/news/v-oshe-na-kyrgyzsko-uzbekskoi-granitce-ofitcial-no-otkrylsia-kpp-dostuk/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Kabar correspondent September 6 locates Dostuk between Osh and Andijan and observes travellers crossing without telegrams. This supports gate identity and scoped easing, not unknown onset.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-35.json",
+      "sha256": "31c698c5ab743ec148499db45f0d1fb4d4aacb828c44c51dc81994d0b8b07335"
+    },
+    {
+      "url": "https://www.rferl.org/a/kyrgyzstan-uzbekistan-major-border-checkpoint-reopened/28720427.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://cabar.asia/en/commodity-turnover-at-dostuk-checkpoint-silence-boom-decline",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://en.archive.kabar.kg/news/ambassador-kyrgyz-citizens-are-able-to-enter-uzbekistan-without-restrictions-through-dostuk-checkpoint/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://vesti.kg/obshchestvo/item/47636-propusknoy-punkt-dostuk-rabotaet-v-obyichnom-rezhime.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://24.kg/obschestvo/66866_kpp_dostuk_ivslujbu_ivdrujbu/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://uztag.info/ru/news/kpp-dostuk-avtodorozhnyy-na-kyrgyzsko-uzbekskoy-granitse-vozobnovlyaet-rabotu-v-kruglosutochnom-rezhime",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://24.kg/obschestvo/66866_kpp_dostuk_ivslujbu_ivdrujbu/amp/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.gov.kg/ru/post/s/russkiy-vitse-premer-ministr-duyshenbek-zilaliev-s-segodnyashnego-dnya-kpp-dostuk-avtodorozhnyiy-vozobnovlyaet-rabotu-v-kruglosutochnom-rezhime-i-v-uproshhennom-poryadke",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://kloop.kg/blog/2017/09/06/otkrytie-kpp-dostuk-kyrgyzstan-i-uzbekistan-oslabili-kontrol-na-granitse/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://subscribe.ru/archive/news.world.turkestan/201709/08090202.html/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.azattyqasia.org/a/28721899.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.azattyqasia.org/a/kyrgyzstan_osh_dostuk/24652065.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.azattyqasia.org/a/25072773.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-SC-006-FU1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-dostuk-dustlik",
+          "name": "Dostuk–Dustlik road crossing",
+          "coordinates": [
+            72.7613952,
+            40.5716394
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/10709406721",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/10709406721",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=72.751,40.565,72.77,40.58"
+          ],
+          "evidence_note": "Explicit named Dostuk Port of Entry border-control node opposite named Dustlik road terminal. Osh–Andijan official report confirms identity; no rail substitution.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-dostuk-gate.xml",
+          "sha256": "6fe77c90646e615a6f3d93916614f949a2fa852d17f20915afa6de3d49342768",
+          "osm_feature": "node/10709406721",
+          "osm_version": "3",
+          "osm_timestamp": "2025-02-26T12:20:18Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "Достук",
+            "name:en": "Dostuk Port of Entry",
+            "opening_hours": "Mo-Su sunrise-18:00",
+            "source": "UNOSAT, e-geos ; http://www.iom.elcat.kg/projects-dostuk.htm"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Dostuk admission-document condition for Kyrgyz citizens entering Uzbekistan.",
+      "date_scope_check": {
+        "scope": "Dostuk admission-document condition for Kyrgyz citizens entering Uzbekistan.",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2017-09-06",
+        "end_latest": "2017-09-07",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Unknown onset retained. September 6 observed passport-only crossings and September 7 formal account remain different bounds. Earlier conditional-admission episodes do not establish uninterrupted continuity."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -24,6 +24,7 @@ for(const pass of ['a','b']){
       if(JSON.stringify(expected)!==JSON.stringify(actual))issues.push('phase coverage');
       for(const p of row.phase_decisions||[]){
         if(!['map','partial','hold'].includes(p.decision))issues.push('phase decision');
+        if(!['single_site','multiple_named_sites','wider_border','needs_review'].includes(p.category))issues.push('geography category');
         if(!p.phase_applicability||!p.date_scope_check)issues.push('phase applicability/date checks');
         if(p.decision!=='hold'&&!(p.sites?.length||p.border_reference_ids?.length))issues.push('mapping recommendation without geometry');
         if(records.get(id).duration_periods?.find(q=>q.period_id===p.phase_id)?.analysis_included===false&&p.decision!=='hold')issues.push('excluded phase proposed');

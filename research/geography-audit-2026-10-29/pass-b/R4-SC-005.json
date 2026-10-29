@@ -1,0 +1,87 @@
+{
+  "record_id": "R4-SC-005",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Jhulaghat pedestrian suspension bridge over the Kali River, connecting Baitadi with Pithoragarh. The recorded election order and emergency exceptions are retained without claiming an observed reopening.",
+  "source_checks": [
+    {
+      "url": "https://english.ratopati.com/story/10760",
+      "access_status": "indexed_extract_only",
+      "finding": "Indexed original RSS report gives October 3–5 order for Baitadi; emergency passage allowed and Darchula dates separate.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-29.json",
+      "sha256": "1242a24433bd2bcaf1725d931e156763e8d267545f2380a209dada1a7556b6e8"
+    },
+    {
+      "url": "https://pwduk.in/im/bridgReport/2136/print",
+      "access_status": "full_text_pdf_extract",
+      "finding": "Official bridge inventory supplies coordinates and pedestrian suspension-bridge identity; provisional data status retained.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-jhulaghat.json",
+      "sha256": "21cf36d3defacc503390d1b72c386344d895aa97a30abfbd03aee73f410363cc"
+    },
+    {
+      "url": "https://pithoragarh.nic.in/tourist-place/jhulaghat/",
+      "access_status": "full_text_web",
+      "finding": "District government explicitly identifies the hanging bridge as entry to Nepal.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-jhulaghat.json",
+      "sha256": "21cf36d3defacc503390d1b72c386344d895aa97a30abfbd03aee73f410363cc"
+    },
+    {
+      "url": "https://english.khabarhub.com/2019/05/47967/",
+      "access_status": "full_text_web",
+      "finding": "October 5 report explicitly confirms closure of the Jhoolaghat bridge; reported reopening expectations remain unverified.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r5-5.json",
+      "sha256": "2043de89ea154d282d35716e408f0951def81456b66979876d80fca9f406ab7b"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-SC-005-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-jhulaghat-bridge",
+          "name": "Jhulaghat pedestrian suspension bridge",
+          "coordinates": [
+            80.38277778,
+            29.5711111
+          ],
+          "coordinate_method": "Explicit latitude and longitude in Uttarakhand PWD bridge inventory ID 2136, inventory year 2022",
+          "precision": "Approximate bridge reference, about 100 m; inventory marked data not yet finalized",
+          "source_urls": [
+            "https://pwduk.in/im/bridgReport/2136/print",
+            "https://pithoragarh.nic.in/tourist-place/jhulaghat/"
+          ],
+          "evidence_note": "PWD identifies Jhulaghat pedestrian suspension bridge over Kali River; district government describes it as the entry bridge into Nepal. Inventory construction year differs from historical descriptions and is not used to date the restriction.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-jhulaghat.json",
+          "sha256": "21cf36d3defacc503390d1b72c386344d895aa97a30abfbd03aee73f410363cc"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Jhulaghat pedestrian suspension bridge over the Kali River, connecting Baitadi with Pithoragarh. The recorded election order and emergency exceptions are retained without claiming an observed reopening.",
+      "date_scope_check": {
+        "start_earliest": "2019-10-03",
+        "start_latest": "2019-10-03",
+        "end_earliest": "2019-10-05",
+        "end_latest": "2019-10-06",
+        "last_confirmed": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Nepali officials scheduled October 3 at 17:00 through October 5 at 17:00; Indian district reporting instead gives early October 6. Closure implementation is documented, but actual reopening is not. Emergency passage remained discretionary; later Darchula restrictions are separate."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "52820e655b2e98618ad32fd31b0d8516a5d91d133a535e32305fe749cfb1979d",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

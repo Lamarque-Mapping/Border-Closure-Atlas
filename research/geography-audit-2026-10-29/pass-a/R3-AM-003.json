@@ -1,0 +1,72 @@
+{
+  "record_id": "R3-AM-003",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "LaPrensa identifies protesters blocking LaAmistad bridge sector atElAmatillo, separately from ElPoy policewarning. Only the selected ElAmatillo bridge episode belongs here.",
+  "source_checks": [
+    {
+      "url": "https://www.laprensa.hn/honduras/cierre-fronteras-honduras-el_salvador-manifestaciones-crisis-protestas-JYLP1137284",
+      "access_status": "fresh_full_text_extract",
+      "finding": "December22 report explicitly distinguishes ElPoy warning and ElAmatillo protesters atPuenteLaAmistad, dispersed withtear gas.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-050.json"
+    },
+    {
+      "url": "https://mapcarta.com/es/W1206127046",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Published coordinate explicitly names LaAmistad bridge customs/migration facility, separate from oldElAmatillo facilities.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-055.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-AM-003-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-amatillo-amistad-customs-reference",
+          "name": "La Amistad bridge customs reference at El Amatillo",
+          "coordinates": [
+            -87.77083,
+            13.59042
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 1206127046; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W1206127046",
+            "https://www.openstreetmap.org/way/1206127046"
+          ],
+          "evidence_note": "Explicit bridge-named migration/customs building; distinct from ElAmatillo old town crossing/offices1km north. Exact Honduran protest footprint unlocated.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-055.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "La Amistad bridge at El Amatillo",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2017-12-22",
+        "end_latest": "2017-12-22",
+        "last_confirmed": "2017-12-22",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Reference is Salvadoran bridge-named facility; bridge centre and exact Honduran demonstration barrier unlocated."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "094bc3cf86d82b98f63d4a0ec286bb72eaf3781daac2673ab5d4982129496fab"
+}

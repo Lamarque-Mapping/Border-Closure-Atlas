@@ -1,0 +1,51 @@
+{
+  "record_id": "R5-EA-001",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "One unnamed Border Guard Force river crossing near Myawaddy–Mae Sot, associated with vehicle smuggling. Reporter was refused access on foot; another disused crossing is separately mentioned.",
+  "source_checks": [
+    {
+      "url": "https://www.irrawaddy.com/news/burma/army-shutters-myawaddy-checkpoint-clampdown-auto-smuggling.html",
+      "access_status": "full_text_web",
+      "finding": "The original article describes one of two BGF checkpoints and the Moei River but supplies no gate name, number or exact location.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r5-2.json",
+      "sha256": "084287aab91d3456fa3da826ac1bcf8b413dcccba5531e3ceb1302d0b588f6f0"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-EA-001-FU1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "One unnamed Border Guard Force river crossing near Myawaddy–Mae Sot, associated with vehicle smuggling. Reporter was refused access on foot; another disused crossing is separately mentioned.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2018-03-26",
+        "end_latest": "2018-03-26",
+        "last_confirmed": "2018-03-26",
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Date of observation only; unnamed gate cannot be matched to later numbered-gate reopenings. March 25 meeting is not substituted for first enforcement."
+      },
+      "unresolved": [
+        "The unnamed BGF crossing cannot be matched to Bridge I, Bridge II or a later numbered river gate. No coordinate approved."
+      ]
+    }
+  ],
+  "unresolved": [
+    "The unnamed BGF crossing cannot be matched to Bridge I, Bridge II or a later numbered river gate. No coordinate approved."
+  ],
+  "input_sha256": "16e364af8273a1788b9df3846dbc1f69f27cbfa83c5dfb9190f076544a0efabb",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

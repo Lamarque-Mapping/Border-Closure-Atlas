@@ -1,0 +1,182 @@
+{
+  "record_id": "R2-EA-013",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Two distinct passenger-category relaxations at Mong Cai–Dongxing: home-return permission did not admit ordinary individual visitors; individual opening did not yet admit organised groups. Both belong to Bac Luan I passenger crossing.",
+  "source_checks": [
+    {
+      "url": "https://en.vietnamplus.vn/mong-cai-dongxing-international-border-gate-resumes-entry-exit-activities-post248687.vnp",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "February 21 report describes actual individual entry/exit and operating hours.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-30.json",
+      "sha256": "f7fca7e103eb32277afac0f52c70d7577bf3f74b1c4ed71ffeeaf863bc38eb65"
+    },
+    {
+      "url": "https://en.vietnamplus.vn/mong-cai-intl-border-gate-welcomes-first-foreign-tourist-group-post-covid-19-post249901.vnp",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "March 15 group arrival report explicitly contrasts January 8 home returns and February 21 individuals.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-30.json",
+      "sha256": "f7fca7e103eb32277afac0f52c70d7577bf3f74b1c4ed71ffeeaf863bc38eb65"
+    },
+    {
+      "url": "https://vietnamnet.vn/en/vietnam-news-headlines-february-21-2023-2112638.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://mongcai.gov.vn/vi-vn/tin/ngay-dau-khoi-phuc-hoat-dong-co-333-nguoi-xuat-nhap-canh-qua-cua-khau-quoc-te-mong-cai-p475179-c58053-n279384",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.quangninh.gov.vn/Sites/en-us/Trang/ChiTietTinTuc.aspx?nid=6251",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://en.nhandan.vn/mong-cai-dongxing-international-border-gate-resumes-entry-exit-activities-post122731.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://mongcai.gov.vn/vi-vn/tin/khoi-phuc-hoat-dong-xuat-nhap-canh-qua-cap-cua-khau-mong-caidong-hung-p24021-c58053-n702279",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EA-013-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-mong-cai-dongxing-bac-luan-i",
+          "name": "Mong Cai–Dongxing, Bac Luan I bridge",
+          "coordinates": [
+            107.968448,
+            21.5375017
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/163976113",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/163976113",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=107.95,21.51,107.98,21.54"
+          ],
+          "evidence_note": "Named Beilun bridge links Dongxing and Mong Cai passenger controls. Ordinary passenger phases concern first bridge, separately from cargo bridge II and Km3+4 pontoon.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-mong-cai-i.xml",
+          "sha256": "51b47e8f47a821cb900fdcfd96d31305644a7b9d9f4abb276aecd21d792a7949",
+          "osm_feature": "way/163976113",
+          "osm_version": "17",
+          "osm_timestamp": "2026-04-07T15:36:31Z",
+          "identity_tags": {
+            "access": "permit",
+            "bridge": "yes",
+            "foot": "yes",
+            "highway": "tertiary",
+            "layer": "1",
+            "lit": "yes",
+            "name": "Cầu Bắc Luân - 北仑桥",
+            "name:en": "Beilun Bridge",
+            "name:vi": "Cầu Bắc Luân",
+            "name:zh": "北仑桥",
+            "name:zh-Hans": "北仑桥",
+            "name:zh-Hant": "北崙橋",
+            "sidewalk": "both",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Mong Cai–Dongxing, ordinary individual visitors excluded while citizens' home returns allowed",
+      "date_scope_check": {
+        "scope": "Mong Cai–Dongxing, ordinary individual visitors excluded while citizens' home returns allowed",
+        "start_earliest": "2023-01-08",
+        "start_latest": "2023-01-08",
+        "end_earliest": "2023-02-21",
+        "end_latest": "2023-02-21",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "R2-EA-013-R2",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-mong-cai-dongxing-bac-luan-i",
+          "name": "Mong Cai–Dongxing, Bac Luan I bridge",
+          "coordinates": [
+            107.968448,
+            21.5375017
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/163976113",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/163976113",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=107.95,21.51,107.98,21.54"
+          ],
+          "evidence_note": "Named Beilun bridge links Dongxing and Mong Cai passenger controls. Ordinary passenger phases concern first bridge, separately from cargo bridge II and Km3+4 pontoon.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-mong-cai-i.xml",
+          "sha256": "51b47e8f47a821cb900fdcfd96d31305644a7b9d9f4abb276aecd21d792a7949",
+          "osm_feature": "way/163976113",
+          "osm_version": "17",
+          "osm_timestamp": "2026-04-07T15:36:31Z",
+          "identity_tags": {
+            "access": "permit",
+            "bridge": "yes",
+            "foot": "yes",
+            "highway": "tertiary",
+            "layer": "1",
+            "lit": "yes",
+            "name": "Cầu Bắc Luân - 北仑桥",
+            "name:en": "Beilun Bridge",
+            "name:vi": "Cầu Bắc Luân",
+            "name:zh": "北仑桥",
+            "name:zh-Hans": "北仑桥",
+            "name:zh-Hant": "北崙橋",
+            "sidewalk": "both",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Mong Cai–Dongxing, organised tourist groups excluded while individual entry/exit allowed",
+      "date_scope_check": {
+        "scope": "Mong Cai–Dongxing, organised tourist groups excluded while individual entry/exit allowed",
+        "start_earliest": "2023-02-21",
+        "start_latest": "2023-02-21",
+        "end_earliest": "2023-03-15",
+        "end_latest": "2023-03-15",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

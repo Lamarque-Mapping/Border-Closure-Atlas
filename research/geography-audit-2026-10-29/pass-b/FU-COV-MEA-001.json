@@ -1,0 +1,83 @@
+{
+  "record_id": "FU-COV-MEA-001",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Iraq-to-Jordan oil consignments on the Iraqi Trebil approach during the October 2023 protests. This is narrower than closure of all traffic at Trebil and does not locate the obstruction in Ramadi, where tankers returned for safety.",
+  "source_checks": [
+    {
+      "url": "https://www.alhadath.net/2023/10/25/-حشود-عراقية-تمنع-تصدير-النفط-الى-الأردن-",
+      "access_status": "full_text_web",
+      "finding": "Report identifies oil tankers threatened near Trebil, distinguishes continuing ordinary cargo traffic, and reports the safety return to Ramadi. The exact protest roadblock location is not supplied.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-34.json",
+      "evidence_sha256": "e04b146531b628b1b84c5155d356f5cdf0dae4008547403b9f3c8ef531ec0198"
+    },
+    {
+      "url": "https://petra.gov.jo/ar/index.php/ar/news/الطاقة-دخول-كامل-صهاريج-النفط-العراقي-إلى-المملكة",
+      "access_status": "full_text_web",
+      "finding": "Official Jordanian report states that the affected October tankers entered through Trebil, including the final 33; this is delivery completion, not proof of uninterrupted gate closure followed by a single reopening.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-34.json",
+      "evidence_sha256": "e04b146531b628b1b84c5155d356f5cdf0dae4008547403b9f3c8ef531ec0198"
+    },
+    {
+      "url": "https://logcluster.org/en/documents/trebil-also-known-al-karamah-jordanian-side",
+      "access_status": "indexed_source_excerpt",
+      "finding": "Logistics Cluster explicitly pairs Trebil on the Iraqi side with Al Karamah on the Jordanian side on the Baghdad–Ramadi road corridor.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-38.json",
+      "evidence_sha256": "4fb9cb6a29f6a8b4ec113edbbba1f56d4c0502d607a5f35e8f65481bde7f0ed9"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-MEA-001-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-trebil-iraq",
+          "name": "Trebil / Turaybil Iraqi road terminal",
+          "coordinates": [
+            39.0116135,
+            32.7423951
+          ],
+          "coordinate_method": "Original OSM node coordinate from independently fetched API JSON",
+          "precision": "approximate crossing facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/map.json?bbox=39.0,32.735,39.025,32.75",
+            "https://www.openstreetmap.org/node/5689369841",
+            "https://logcluster.org/en/documents/trebil-also-known-al-karamah-jordanian-side"
+          ],
+          "evidence_note": "Named Iraqi border-port directorate in the original OSM extract, surrounded by road border-control nodes and customs buildings. The original Logistics Cluster geography identifies Trebil on the Iraqi side and Al Karamah on the Jordanian side. This marker represents the Iraqi terminal area; the 2023 protest roadblock is not located at this office by the source. Inspected OSM tags: {\"amenity\": \"police\", \"name\": \"مديريه منفذ طريبيل\", \"name:en\": \"Border port trubeel\"}. Geographic evidence only; no historical restriction or current operational status inferred.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/342edd416dc92ce95d7a.json",
+          "evidence_sha256": "39ab16a754b4ea9070b8bd0449a88c8d4abc54b3398c7fa1519d212788d71c75",
+          "osm_version": 1,
+          "osm_timestamp": "2018-06-14T03:26:39Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Iraq-to-Jordan oil consignments on the Iraqi Trebil approach during the October 2023 protests. This is narrower than closure of all traffic at Trebil and does not locate the obstruction in Ramadi, where tankers returned for safety. Current phase only: Intermittent obstruction of Iraq-to-Jordan oil consignments on the Trebil approach, ending by completion of affected October deliveries",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": "2023-10-25",
+        "end_earliest": null,
+        "end_latest": "2023-10-27",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "October 27 is an episode-completion upper bound, not exact first reopening or a claim of continuous blockage. October 26 mixed observations and imprecise earliest onset remain; ordinary goods were not the restricted category.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Trebil terminal is verified; the Iraqi approach-road obstruction position and length remain unlocated. No Jordanian control-point substitution."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Trebil terminal is verified; the Iraqi approach-road obstruction position and length remain unlocated. No Jordanian control-point substitution."
+  ]
+}

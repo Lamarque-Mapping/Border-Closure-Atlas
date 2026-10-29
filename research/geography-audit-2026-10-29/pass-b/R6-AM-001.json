@@ -1,0 +1,48 @@
+{
+  "record_id": "R6-AM-001",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Dominican-side ordinary Haitian market-participant admission at Dajabón–Ouanaminthe only. November market return is a pilot which might later be replicated elsewhere; it does not reopen every bilateral crossing.",
+  "source_checks": [
+    {
+      "url": "https://www.diariolibre.com/actualidad/reanudan-mercado-binacional-de-dajabon-LE22513796",
+      "access_status": "full_retrieved",
+      "finding": "Diario Libre describes Haitians entering the Dajabón binational market, 150 CESFRONT officers and pilot protocol after eight months."
+    },
+    {
+      "url": "https://www.diariolibre.com/actualidad/la-republica-dominicana-mantiene-las-restricciones-en-frontera-con-haiti-EE19847113",
+      "access_status": "full_retrieved",
+      "finding": "July1 report explicitly says Dominican land restrictions continued despite Haitian reopening."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-AM-001-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ordinary Haitian market-participant entry at Dajabon–Ouanaminthe; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "policy_period",
+        "start_earliest": "2020-03-19",
+        "start_latest": "2020-03-19",
+        "end_earliest": "2020-11-06",
+        "end_latest": "2020-11-06",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Formal bridge and market admission gate need distinction; no exact market-entry control coordinate established in inspected evidence."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Formal bridge and market admission gate need distinction; no exact market-entry control coordinate established in inspected evidence."
+  ]
+}

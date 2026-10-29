@@ -1,0 +1,63 @@
+{
+  "record_id": "R5-AM-004",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "November 29 vehicle-access obstruction near Santa Rosa on Tacna–Arica road, demanding continuous border opening; source midday clearance terminates this recorded morning episode.",
+  "source_checks": [
+    {
+      "url": "https://andina.pe/agencia/noticia-tacna-transportistas-piden-restablecer-atencion-sin-interrupciones-frontera-chile-964794.aspx",
+      "access_status": "full_retrieved",
+      "finding": "Andina identifies Santa Rosa complex access, PNP arrangements, and normalization around midday after meeting."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/3049681797",
+      "access_status": "full_retrieved",
+      "finding": "Directly inspected OSM node/3049681797 node; XML sha256 69fbb84609a2d9aeb804507c7b4e46ca245572785b85f3f70ee8683843c3d349"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-AM-004-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-santa-rosa-road",
+          "name": "Santa Rosa road control, Peru",
+          "coordinates": [
+            -70.3145184,
+            -18.3072394
+          ],
+          "coordinate_method": "Directly inspected OSM node/3049681797 node; XML sha256 69fbb84609a2d9aeb804507c7b4e46ca245572785b85f3f70ee8683843c3d349",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/3049681797"
+          ],
+          "evidence_note": "Named vehicle border-control node for Santa Rosa. Source describes transporters obstructing access near this complex; point is not complete queue/road-block extent."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Reported morning vehicle-access obstruction at Santa Rosa, ending at Andina's midday clearance milestone; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2023-11-29",
+        "start_latest": "2023-11-29",
+        "end_earliest": "2023-11-29",
+        "end_latest": "2023-11-29",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Crossing-area point verified; exact protesters location and full approach queue extent not surveyed."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Crossing-area point verified; exact protesters location and full approach queue extent not surveyed."
+  ]
+}

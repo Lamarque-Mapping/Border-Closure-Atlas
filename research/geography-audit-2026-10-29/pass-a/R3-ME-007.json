@@ -1,0 +1,53 @@
+{
+  "record_id": "R3-ME-007",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Safwan road-port protest obstruction on the Iraqi side of the Abdali corridor; first same-day commercial reopening only, not a national frontier closure.",
+  "source_checks": [
+    {
+      "url": "https://www.aa.com.tr/en/middle-east/iraqi-protesters-close-border-crossing-with-kuwait/1203876",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Contemporary account names Safwan and July 14 protest closure.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-3.json"
+    },
+    {
+      "url": "https://www.elwatannews.com/news/details/3521996",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "July 14 military-source report says intervention that afternoon restored commercial traffic after several hours.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-9.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-ME-007-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-safwan",
+          "name": "Safwan road border post (Iraqi side)",
+          "coordinates": [
+            47.7142429,
+            30.1032484
+          ],
+          "coordinate_method": "Bounding-box centre of named facility way, calculated from independently inspected cached original OSM XML nodes.",
+          "precision": "Approximately 500 m crossing area; not a surveyed historical barrier or blockade footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/way/409262253/full"
+          ],
+          "evidence_note": "Cached original OSM way 409262253, version 8, timestamp 2025-12-06T12:37:32Z; tags {\"area\": \"yes\", \"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"منفذ سفوان الحدودي\", \"name:ar\": \"منفذ سفوان الحدودي\", \"name:en\": \"Safwan Border Post\"}. Reference geography only; closure scope is independently reconstructed from historical sources.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/9d386d652781a93a.raw",
+          "evidence_sha256": "95151ed004903c845be3336e72c7283ef7920965827ac93c569b250771326499"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "First July 14 same-day spell; exact crowd/barrier footprint not claimed. Do not infer all passenger reopening or merge later closed-status reports.",
+      "unresolved": [],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"same_day\", \"start_earliest\": \"2018-07-14\", \"start_latest\": \"2018-07-14\", \"end_earliest\": \"2018-07-14\", \"end_latest\": \"2018-07-14\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: No precise hours or full passenger restoration established. Later closed-status report remains unreconciled; this is only the first same-day spell."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

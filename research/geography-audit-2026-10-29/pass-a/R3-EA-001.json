@@ -1,0 +1,67 @@
+{
+  "record_id": "R3-EA-001",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Local reports call the intermittent crossing Voen Kham, while the separate military account places disputed woodland seven kilometres from Trapaing Kriel and denies border closure. The riverside outpost, river crossing and international road checkpoint cannot be assumed identical.",
+  "source_checks": [
+    {
+      "url": "https://opendevelopmentmekong.net/news/laos-cambodia-border-closed-over-tensions/",
+      "access_status": "syndicated_excerpt_full_read",
+      "finding": "Read syndicated Phnom Penh Post excerpt identifying Voen Kham and O Svay/Deum Lvea riverside dispute, with brief repeated stoppages.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-36.json",
+      "sha256": "8acf8e52b87c7d93058ca76dc16a6b4a5dce2fd5e838cb96d246a3a410c372a7"
+    },
+    {
+      "url": "https://english.cambodiadaily.com/2017/04/06/military-tension-on-laos-border-de-escalated-for-khmer-new-year/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Full report gives military denial and locates disputed woodland about seven kilometres from Trapaing Kriel.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-34.json",
+      "sha256": "5ee1f76891605d67e6a76748dd3999f029f675845e2d9b31559f2bff553c68fe"
+    },
+    {
+      "url": "https://www.phnompenhpost.com/national/laos-cambodia-border-closed-over-tensions",
+      "access_status": "inaccessible",
+      "finding": "Original page returns 403; syndicated excerpt used transparently.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-37.json",
+      "sha256": "9113023bf340ecc78efa5825dae1f527a547504cbd931a42d672f18b1207c771"
+    },
+    {
+      "url": "https://m.phnompenhpost.com/national/laos-cambodia-border-closed-over-tensions",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EA-001-R1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Crossing called Voen Kham by Phnom Penh Post local officials; Trapaing Kriel naming in other report unresolved",
+      "date_scope_check": {
+        "scope": "Crossing called Voen Kham by Phnom Penh Post local officials; Trapaing Kriel naming in other report unresolved",
+        "start_earliest": "2017-04-02",
+        "start_latest": "2017-04-02",
+        "end_earliest": "2017-04-03",
+        "end_latest": "2017-04-03",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": [
+        "Voen Kham/Trapaing Kriel identity remains unresolved; no exact gate or access road can safely be selected.",
+        "Intermittent April 2–3 observations and commander denial remain; no two-day continuous interval inferred."
+      ]
+    }
+  ],
+  "unresolved": []
+}

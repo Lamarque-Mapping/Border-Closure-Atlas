@@ -1,0 +1,48 @@
+{
+  "record_id": "R7-EUAM-003",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "April5 vehicle blockade at Bermejo–Aguas Blancas road bridge, additional to domestic Bermejo approach block. Chalanas ferry was interrupted by high water, explicitly not the protest cause; excluded from this phase.",
+  "source_checks": [
+    {
+      "url": "https://elpais.bo/tarija/20190405_bagayeros-bloquean-ingreso-a-bermejo.html",
+      "access_status": "full_retrieved",
+      "finding": "El País identifies added international bridge blockade and explicitly distinguishes high-river ferry interruption."
+    },
+    {
+      "url": "https://fmalba.com.ar/internacionales-bagayeros-levantan-bloqueo-en-bermejo-e-ingresan-a-cuarto-intermedio/",
+      "access_status": "full_retrieved",
+      "finding": "FM Alba identifies international Bermejo–Aguas Blancas bridge and late-afternoon negotiated pause."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R7-EUAM-003-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Initial April 5 vehicle bridge blockade at Bermejo–Aguas Blancas to the negotiated late-afternoon pause; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2019-04-05",
+        "start_latest": "2019-04-05",
+        "end_earliest": "2019-04-05",
+        "end_latest": "2019-04-05",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Named international road bridge identity established; exact bridge geometry not returned by location search and no town/ferry surrogate adopted."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Named international road bridge identity established; exact bridge geometry not returned by location search and no town/ferry surrogate adopted."
+  ]
+}

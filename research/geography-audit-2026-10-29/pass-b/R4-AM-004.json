@@ -1,0 +1,59 @@
+{
+  "record_id": "R4-AM-004",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Union blockade of Salvadoran La Hachadura customs installations, affecting Guatemala-to-El Salvador operations at its Pedro de Alvarado road connection.",
+  "source_checks": [
+    {
+      "url": "https://emisorasunidas.com/2019/03/19/sindicalistas-salvadorenos-cierran-aduana-de-la-achadura-fronteriza-con-jutiapa/",
+      "access_status": "full_retrieved",
+      "finding": "March 19 report quotes Guatemala SAT and identifies Salvadoran customs facilities and Guatemala–El Salvador direction."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/388313799/full",
+      "access_status": "full_retrieved",
+      "finding": "Directly inspected OSM way/388313799 mean of geometry vertices; XML sha256 ddc4956eba6953937a7a2490e3f899ba05162836618740904845d80f7679deb2"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-AM-004-FU1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-la-hachadura-customs",
+          "name": "La Hachadura Salvadoran customs facility",
+          "coordinates": [
+            -90.08711423076923,
+            13.85990966923077
+          ],
+          "coordinate_method": "Directly inspected OSM way/388313799 mean of geometry vertices; XML sha256 ddc4956eba6953937a7a2490e3f899ba05162836618740904845d80f7679deb2",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/388313799/full"
+          ],
+          "evidence_note": "Named government customs building on Carretera del Litoral in La Hachadura; source explicitly targets Salvadoran customs installations connecting Pedro de Alvarado."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "La Hachadura customs facilities / Pedro de Alvarado connection; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "bounded_interval",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2019-03-19",
+        "end_latest": "2019-05-08",
+        "last_confirmed": "2019-03-19",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

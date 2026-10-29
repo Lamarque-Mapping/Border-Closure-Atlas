@@ -1,0 +1,62 @@
+{
+  "record_id": "R5-AWN-004",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ordinary passenger and vehicle access through Ras Jedir was obstructed on the Libyan approach road in the Boukamech/Abu Kamash area. Known port is locatable; exact protest barriers and road extent remain unlocated.",
+  "source_checks": [
+    {
+      "url": "https://o2efm.radioexpressfm.com/fr/actualites/ras-jedir-le-passage-frontalier-totalement-paralyse/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "August 23 full report confirms passenger disruption both sides, Libyan residents blocking access roads, and diversion to Dhehiba-Wazen. Freight restart agreement was not implemented.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-21.json"
+    },
+    {
+      "url": "https://o2efm.radioexpressfm.com/fr/actualites/reouverture-du-passage-frontalier-de-ras-jedir/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "August 28 full report identifies Boukamech road clearing and normal passenger/vehicle traffic. Its four-day shorthand conflicts with canonical August 22 onset and does not justify changing it.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-23.json"
+    },
+    {
+      "url": "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+      "access_status": "cached_original_text_extract_inspected",
+      "finding": "Published row N4 Ras Adjir, latitude 33.14795 longitude 11.55929. Preserved original text was inspected; cached PDF binary is truncated and could not be rendered, so this is not fresh full-PDF visual verification. Illustrative location only.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/pida-original-text.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-AWN-004-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-ras-jedir",
+          "name": "Ras Jedir / Ras Adjir road crossing",
+          "coordinates": [
+            11.55929,
+            33.14795
+          ],
+          "coordinate_method": "Coordinate row transcribed from independently inspected cached original AU-PIDA report text extraction, Appendix A.",
+          "precision": "Illustrative border crossing area, approximately 5 km; not a surveyed historical gate.",
+          "source_urls": [
+            "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "Published row N4 Ras Adjir, latitude 33.14795 longitude 11.55929. Preserved original text was inspected; cached PDF binary is truncated and could not be rendered, so this is not fresh full-PDF visual verification. Illustrative location only.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/pida-original-text.txt",
+          "evidence_sha256": "98451216c05eab194ec577670f81979a7944ee5560d41e0ea9c43eb94d347983"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: road_approach_blockade. Known port represents affected destination during canonical August 22–28 bounds; ordinary passenger/vehicle access only. Dhehiba-Wazen is an alternative, not another closed site.",
+      "unresolved": [
+        "Exact Boukamech/Abu Kamash barrier sites and approach-road extent are not established by a coordinate source.",
+        "Four-day retrospective description does not resolve the onset conflict."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"bounded_interval\", \"start_earliest\": \"2024-08-22\", \"start_latest\": \"2024-08-22\", \"end_earliest\": \"2024-08-28\", \"end_latest\": \"2024-08-28\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: The 28 August account calls the closure four days, inconsistent with the explicit Thursday-evening 22 August onset. The precisely anchored contemporary date is retained, with that shorthand disclosed. Protester obstruction and the later reported official outward suspension are distinct mechanisms; no exact elapsed-hour count is certified. The endpoint concerns passengers and ordinary vehicles, not restored commercial freight. Dhehiba–Wazen was an alternative. The official UN PDF was unavailable in this round."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

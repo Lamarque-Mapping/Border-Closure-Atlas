@@ -1,0 +1,62 @@
+{
+  "record_id": "R10-WA-001",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Gbalamuya official Guinea–Sierra Leone crossing during the disputed deportation handover, paired with Pamelap in Guinea.",
+  "source_checks": [
+    {
+      "url": "https://sierraloaded.sl/news/police-deportation-sierra-leoneans-guinea/",
+      "access_status": "full_text_web",
+      "finding": "Report reproduces Sierra Leone police account naming Gbalamuya and the temporary closure during the December 10–11 handover dispute.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-28.json",
+      "evidence_sha256": "1c07142f5092770e8492f2cff7df774d6a784569ff6e9b17db1afebaaaebb00f"
+    },
+    {
+      "url": "https://mail.nra.gov.sl/contact-us/border-post-offices",
+      "access_status": "indexed_excerpt_full_page_inaccessible",
+      "finding": "Official directory is indexed as Gbalamuya Border Post Office, Kambia; full map page was inaccessible (web timeout/direct 503). Its unseen marker is not claimed as inspected.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-34.json",
+      "evidence_sha256": "b916e01c5fee546278b86831eba0dbc2fefce724e684adf34906a1933158c873"
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/map.json?bbox=-12.97,9.16,-12.95,9.18",
+      "access_status": "full_original_osm_json",
+      "finding": "Original extract contains an unnamed customs node 3372404751 labelled under construction near Pamelap. It lacks a Gbalamuya name and independently verified phase-specific checkpoint identity, so it remains a lead.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/e4189e926a0d2f4ca8ff.json",
+      "evidence_sha256": "64da27838115a41893be1eb9f7df9481dd3b56aa2eb7ec8afdcee9ef6645d6cf"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R10-WA-001-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Gbalamuya official Guinea–Sierra Leone crossing during the disputed deportation handover, paired with Pamelap in Guinea. Current phase only: Reported temporary Gbalamuya crossing suspension during the deportation-handover standoff",
+      "date_scope_check": {
+        "start_earliest": "2024-12-11",
+        "start_latest": "2024-12-11",
+        "end_earliest": "2024-12-11",
+        "end_latest": "2024-12-13",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Zero-to-two calendar-day boundary range, not precise hours. Tuesday references describe tensions/arrival rather than overriding the explicit Wednesday closure notice. One police-notice lineage; full direction/category coverage is unknown and Guinea disputes the notification account.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "The exact named Gbalamuya operating checkpoint could not be independently tied to the available anonymous/under-construction map feature. Town-centre substitution rejected."
+      ]
+    }
+  ],
+  "unresolved": [
+    "The exact named Gbalamuya operating checkpoint could not be independently tied to the available anonymous/under-construction map feature. Town-centre substitution rejected."
+  ]
+}

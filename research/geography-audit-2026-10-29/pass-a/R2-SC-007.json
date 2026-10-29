@@ -1,0 +1,67 @@
+{
+  "record_id": "R2-SC-007",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "The scoped July phase is Isfara–Vorukh enclave-access road traffic. Interfax distinguishes that road from Batken–Isfara, and the canonical record retains the competing Batken/Isfana–Osh naming. A town point or national border would distort this road-corridor scope.",
+  "source_checks": [
+    {
+      "url": "https://interfax.com/newsroom/top-stories/19603/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Full text reports Border Service announcement reopening Isfara–Vorukh and Batken–Isfara July 25, without coordinates or exact blocked endpoints.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-29.json",
+      "sha256": "30ab3181a8ce98ffc4a4cb16850c25389218eec2acc8b2c2aeada4b6bd345289"
+    },
+    {
+      "url": "https://for.kg/news-591535-en.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://akipress.com/news%3A622557%3ABatken-Isfana_and_Isfara-Vorukh_roads_reopened/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://asiaplus.news/en/2019/07/25/vorukh-isfara-road-reopens-tajik-authorities-take-seriously-wounded-persons-out-of-vorukh/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-SC-007-D1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Isfara–Vorukh enclave-access road traffic only",
+      "date_scope_check": {
+        "scope": "Isfara–Vorukh enclave-access road traffic only",
+        "start_earliest": "2019-07-22",
+        "start_latest": "2019-07-22",
+        "end_earliest": "2019-07-25",
+        "end_latest": "2019-07-25",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": [
+        "No exact roadblock point or bounded affected segment is established.",
+        "Other corridor names and July 24 opening are excluded from this scoped phase."
+      ]
+    }
+  ],
+  "unresolved": []
+}

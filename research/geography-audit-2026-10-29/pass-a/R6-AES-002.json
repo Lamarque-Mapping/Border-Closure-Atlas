@@ -1,0 +1,58 @@
+{
+  "record_id": "R6-AES-002",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Cargo interruption caused by water-supply protest by South African immigration staff at Vioolsdrift on N7, paired with Namibia Noordoewer. Separate COVID passenger policy is not this phase.",
+  "source_checks": [
+    {
+      "url": "https://www.timeslive.co.za/news/south-africa/2020-05-13-officials-close-sa-namibia-border-post-over-lack-of-water/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full May 13 article inspected: officials shut gates around noon, trucks queued on both sides, named Vioolsdrift northern N7. Article supports onset and location, not reopening time.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-20.json"
+    },
+    {
+      "url": "https://neweralive.na/vioolsdrift-border-post-reopens/",
+      "access_status": "inaccessible",
+      "finding": "Original New Era endpoint retrieval in batch18 returned 403; no fresh endpoint verification claimed. Canonical same-day timing and qualification retained.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-18.json"
+    },
+    {
+      "url": "https://mapcarta.com/N3963300657",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Inspected specifically named border checkpoint node 3963300657 beside heavy/light vehicle inspection and customs; distinct from village and opposite Namibian Noordoewer terminal.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-23.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-AES-002-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-vioolsdrift",
+          "name": "Vioolsdrift South African road border checkpoint",
+          "coordinates": [
+            17.62445,
+            -28.76866
+          ],
+          "coordinate_method": "Transcribed coordinates from inspected Mapcarta rendering of the specifically named OSM facility; original API unavailable in web retrieval.",
+          "precision": "Approximately 1 km crossing area; no exact historical gate or damage footprint claimed.",
+          "source_urls": [
+            "https://mapcarta.com/N3963300657"
+          ],
+          "evidence_note": "Inspected specifically named border checkpoint node 3963300657 beside heavy/light vehicle inspection and customs; distinct from village and opposite Namibian Noordoewer terminal.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-23.json"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Modal scope: road_cargo_interruption. Canonical May 13 same-day cargo interruption remains eligible for geography. Point is the South African checkpoint where staff closed gates; no Namibian authority closure inferred.",
+      "unresolved": [],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"same_day\", \"start_earliest\": \"2020-05-13\", \"start_latest\": \"2020-05-13\", \"end_earliest\": \"2020-05-13\", \"end_latest\": \"2020-05-13\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: Episode on May 13, not a whole-day closure; approximately noon to by 22:00 per direct accounts. New Era's TimesLive-derived Tuesday-evening wording conflicts with the original and Wednesday police account; it is not independent onset evidence. Concurrent passenger COVID restrictions remain separate."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

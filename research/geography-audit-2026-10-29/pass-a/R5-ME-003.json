@@ -1,0 +1,53 @@
+{
+  "record_id": "R5-ME-003",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "One Iraqi road border port, Al-Shib/Sheeb opposite Iran, restricted for ordinary passenger departures Iraq to Iran. Freight remained exempt; Shalamcheh was a separate port named in the onset report.",
+  "source_checks": [
+    {
+      "url": "https://www.aa.com.tr/en/middle-east/iraq-reopens-border-crossing-with-iran/1654746",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full relevant original report inspected: Border Ports Commission announced al-Shib passenger departures restored November 25 after November 16 suspension. One official reporting lineage, no independent daily gate log.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-17.json"
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/way/534919135/full",
+      "access_status": "cached_original_osm_xml_inspected",
+      "finding": "Cached original OSM way 534919135, version 5, timestamp 2026-09-12T04:43:21Z; tags {\"area\": \"yes\", \"barrier\": \"border_control\", \"building\": \"yes\", \"government\": \"border_control\", \"layer\": \"1\", \"name\": \"منفذ الشیب الحدودی\", \"name:ar\": \"منفذ الشیب الحدودی\", \"name:en\": \"Al-Shib Border Crossing\", \"name:fa\": \"پایانه مرزی شیب\", \"opening_hours\": \"closed\", \"police\": \"checkpoint\", \"wikidata\": \"Q29514074\", \"wikipedia\": \"ar:منفذ الشيب الحدودي\"}. Reference geography only; closure scope is independently reconstructed from historical sources.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/1538898844739a23.raw"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-ME-003-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-al-shib",
+          "name": "Al-Shib / Sheeb road passenger crossing",
+          "coordinates": [
+            47.789851,
+            31.8526883
+          ],
+          "coordinate_method": "Bounding-box centre of named facility way, calculated from independently inspected cached original OSM XML nodes.",
+          "precision": "Approximately 500 m crossing area; not a surveyed historical barrier or blockade footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/way/534919135/full"
+          ],
+          "evidence_note": "Cached original OSM way 534919135, version 5, timestamp 2026-09-12T04:43:21Z; tags {\"area\": \"yes\", \"barrier\": \"border_control\", \"building\": \"yes\", \"government\": \"border_control\", \"layer\": \"1\", \"name\": \"منفذ الشیب الحدودی\", \"name:ar\": \"منفذ الشیب الحدودی\", \"name:en\": \"Al-Shib Border Crossing\", \"name:fa\": \"پایانه مرزی شیب\", \"opening_hours\": \"closed\", \"police\": \"checkpoint\", \"wikidata\": \"Q29514074\", \"wikipedia\": \"ar:منفذ الشيب الحدودي\"}. Reference geography only; closure scope is independently reconstructed from historical sources.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/1538898844739a23.raw",
+          "evidence_sha256": "c5c68539b0eea43600d1bdc0fcc413a0aaf13d1f169e5053c71b8d4546bad96f"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Modal scope: road_passenger_departures. Only ordinary Iraq-to-Iran passenger departures for the canonical November 16–25 interval. The current OSM closed tag is not historical closure evidence.",
+      "unresolved": [],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"closed_interval\", \"start_earliest\": \"2019-11-16\", \"start_latest\": \"2019-11-16\", \"end_earliest\": \"2019-11-25\", \"end_latest\": \"2019-11-25\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: Endpoints and November 16 onset rely on the Border Ports Commission account, reproduced by INA and Anadolu. No independent daily gate record recovered. Two historical NINA URLs now serve unrelated 2026 content and are withdrawn from active phase support; their prior access history remains archived."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

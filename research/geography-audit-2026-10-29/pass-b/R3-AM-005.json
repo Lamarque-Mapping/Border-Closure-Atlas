@@ -1,0 +1,144 @@
+{
+  "record_id": "R3-AM-005",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Paso Canoas road access before Panamanian customs; blockade of vehicles and freight rather than administrative closing of all border posts.",
+  "source_checks": [
+    {
+      "url": "https://semanariouniversidad.com/pais/manifestantes-mantienen-bloqueado-el-paso-en-la-frontera-costarricense-en-paso-canoas/",
+      "access_status": "full_retrieved",
+      "finding": "8 October report explicitly places obstruction in front of Panamanian customs; customs authorities were working."
+    },
+    {
+      "url": "https://www.telemetro.com/nacionales/2020/10/16/reinicio-el-transito-del-transporte-de-carga-por-paso-canoas/3350786.html",
+      "access_status": "extract_only",
+      "finding": "Retrieved dated headline about freight resumption, but body absent; not independent operational-clock verification."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/234963318/full",
+      "access_status": "full_retrieved",
+      "finding": "OSM way/234963318; directly inspected XML; sha256 20e44d8981fa6254f3c4a2e43c175094fdc8a36ef5adfacb1187bac3e9d3c376"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-AM-005-R2P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-paso-canoas-panama",
+          "name": "Paso Canoas Panamanian customs road approach",
+          "coordinates": [
+            -82.83842312222222,
+            8.53396128888889
+          ],
+          "coordinate_method": "OSM way/234963318; directly inspected XML; sha256 20e44d8981fa6254f3c4a2e43c175094fdc8a36ef5adfacb1187bac3e9d3c376",
+          "precision": "Crossing-facility representative, approximately 100 m; not barrier-footprint survey",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/234963318/full"
+          ],
+          "evidence_note": "OSM named Aduanas - Migración Panameña building on Carretera Interamericana, paired with source placing obstruction before Panamanian customs. New Costa Rican customs facility several km away is not substituted."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Paso Canoas road and freight crossing; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "bounded_interval",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2020-10-04",
+        "end_latest": "2020-10-04",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Site marker identifies customs approach, not surveyed location or extent of each successive physical barricade. Chronology and separate spells retained from canonical input."
+      ]
+    },
+    {
+      "phase_id": "R3-AM-005-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-paso-canoas-panama",
+          "name": "Paso Canoas Panamanian customs road approach",
+          "coordinates": [
+            -82.83842312222222,
+            8.53396128888889
+          ],
+          "coordinate_method": "OSM way/234963318; directly inspected XML; sha256 20e44d8981fa6254f3c4a2e43c175094fdc8a36ef5adfacb1187bac3e9d3c376",
+          "precision": "Crossing-facility representative, approximately 100 m; not barrier-footprint survey",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/234963318/full"
+          ],
+          "evidence_note": "OSM named Aduanas - Migración Panameña building on Carretera Interamericana, paired with source placing obstruction before Panamanian customs. New Costa Rican customs facility several km away is not substituted."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Paso Canoas road before Panamanian customs; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "confirmed_through",
+        "start_earliest": "2020-10-04",
+        "start_latest": "2020-10-04",
+        "end_earliest": "2020-10-08",
+        "end_latest": "2020-10-08",
+        "last_confirmed": "2020-10-08",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Site marker identifies customs approach, not surveyed location or extent of each successive physical barricade. Chronology and separate spells retained from canonical input."
+      ]
+    },
+    {
+      "phase_id": "R3-AM-005-C7P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-paso-canoas-panama",
+          "name": "Paso Canoas Panamanian customs road approach",
+          "coordinates": [
+            -82.83842312222222,
+            8.53396128888889
+          ],
+          "coordinate_method": "OSM way/234963318; directly inspected XML; sha256 20e44d8981fa6254f3c4a2e43c175094fdc8a36ef5adfacb1187bac3e9d3c376",
+          "precision": "Crossing-facility representative, approximately 100 m; not barrier-footprint survey",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/234963318/full"
+          ],
+          "evidence_note": "OSM named Aduanas - Migración Panameña building on Carretera Interamericana, paired with source placing obstruction before Panamanian customs. New Costa Rican customs facility several km away is not substituted."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Physical barriers at Paso Canoas crossing approach; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "bounded_interval",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2020-10-15",
+        "end_latest": "2020-10-15",
+        "last_confirmed": "2020-10-13",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Site marker identifies customs approach, not surveyed location or extent of each successive physical barricade. Chronology and separate spells retained from canonical input."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Site marker identifies customs approach, not surveyed location or extent of each successive physical barricade. Chronology and separate spells retained from canonical input."
+  ]
+}

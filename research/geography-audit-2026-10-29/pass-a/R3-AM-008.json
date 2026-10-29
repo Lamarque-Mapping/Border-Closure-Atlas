@@ -1,0 +1,78 @@
+{
+  "record_id": "R3-AM-008",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "School-reconstruction protest initially obstructed junction servingSuchiateI/II, then concentrated atSuchiateII freight port oppositeTecunUmanII. A Mexican freight-port reference is partial geography for selected freight access phase.",
+  "source_checks": [
+    {
+      "url": "https://www.prensalibre.com/ciudades/san-marcos/manifestacion-padres-familia-complica-el-paso-en-frontera-entre-guatemala-y-mexico/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "March19 account identifies common accessjunction forSuchiate1and2.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-050.json"
+    },
+    {
+      "url": "https://www.prensalibre.com/ciudades/san-marcos/culmina-protesta-en-la-frontera-entre-guatemala-y-mexico-se-reportan-perdidas-millonarias/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Follow-up distinguishes laterSuchiateII concentration andTecunUmanIIcargo. Texts dateheaderMarch20 but bodyThursday16:00 clearance; chronology disagreement preserved.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-059.json"
+    },
+    {
+      "url": "https://mapcarta.com/N11036355428",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named PuertoFronterizoSuchiateII government-office reference, bridge450m east.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-056.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-AM-008-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-suchiate-ii-road-reference",
+          "name": "Suchiate II freight port reference",
+          "coordinates": [
+            -92.15373,
+            14.70221
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 11036355428; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N11036355428",
+            "https://www.openstreetmap.org/node/11036355428"
+          ],
+          "evidence_note": "Named Mexican freight-port government office oppositeTecunUmanII; not SuchiateI passenger route. Actual approach intersection blockage not surveyed.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-056.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Suchiate II freight access affected by the school-reconstruction blockade",
+      "date_scope_check": {
+        "start_earliest": "2019-03-19",
+        "start_latest": "2019-03-19",
+        "end_earliest": "2019-03-21",
+        "end_latest": "2019-03-21",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Common accessjunction and changing protest footprint unlocated; point references affected freight port only."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "4447c95b83aa589572b3faa64e1ddba1cc2b41a8b3ba75517d06de52863e9097"
+}

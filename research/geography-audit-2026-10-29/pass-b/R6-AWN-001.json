@@ -1,0 +1,55 @@
+{
+  "record_id": "R6-AWN-001",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Amchidé–Banki formal commercial road crossing, whose May 2019 ceremony is the retained endpoint. Other Nigeria–Cameroon corridors are not included.",
+  "source_checks": [
+    {
+      "url": "https://www.aa.com.tr/fr/afrique/cameroun-nig%C3%A9ria-r%C3%A9ouverture-de-laxe-amchid%C3%A9-banki-/1480065",
+      "access_status": "full_text_web",
+      "finding": "Anadolu correspondent observed the official May 15 reopening of the Amchidé–Banki road axis; text specifically identifies commercial traffic.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-28.json",
+      "evidence_sha256": "1c07142f5092770e8492f2cff7df774d6a784569ff6e9b17db1afebaaaebb00f"
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/map.json?bbox=14.130,11.24,14.155,11.275",
+      "access_status": "full_original_osm_json",
+      "finding": "Original local road/settlement/boundary extract was inspected but did not identify a named official control facility. A town or arbitrary boundary intersection is not promoted to a post.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/11d08d3e1fe1e767d465.json",
+      "evidence_sha256": "a1ea0d591a251c318411626ddc86b2c6f22b0abfe6bc6ba99a6fd1a032b78849"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-AWN-001-R1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Amchidé–Banki formal commercial road crossing, whose May 2019 ceremony is the retained endpoint. Other Nigeria–Cameroon corridors are not included. Current phase only: Formal Banki–Amchidé commercial crossing closure",
+      "date_scope_check": {
+        "start_earliest": "2014-01-01",
+        "start_latest": "2014-12-31",
+        "end_earliest": "2019-05-15",
+        "end_latest": "2019-05-15",
+        "last_confirmed": null,
+        "endpoint_status": "legal_effective",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "R6-AWN-001-R1: Onset uses the expressly reported year, not back-calculation from five years. May endpoint is the official commercial reopening ceremony; no exhaustive actual-passage record. Maiduguri–Banki road reopening in 2018 is an internal road phase.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "The exact formal commercial gate and its control point remain unverified within the adjoining settlements."
+      ]
+    }
+  ],
+  "unresolved": [
+    "The exact formal commercial gate and its control point remain unverified within the adjoining settlements."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "record_id": "R3-ME-004",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Arida coastal road crossing and its El Kabir river bridge, for Lebanese returnees from Syria. Damage to nearby Abboudieh and Jisr Qmar does not expand this scoped phase.",
+  "source_checks": [
+    {
+      "url": "https://today.lorientlejour.com/article/1437893/arida-border-post-in-north-lebanon-reopens.html",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "On-scene minister describes preliminary restoration December 2 after November 26–27 damage; identifies bridge, General Security post and limited returnee purpose.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-12.json"
+    },
+    {
+      "url": "https://mapcarta.com/N11056661683",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Specifically named immigration facility with published coordinates inspected; API unavailable.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-13.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-ME-004-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-arida",
+          "name": "Arida road crossing (El Aarida immigration centre)",
+          "coordinates": [
+            35.97569,
+            34.6353
+          ],
+          "coordinate_method": "Transcribed coordinates from inspected Mapcarta rendering of the specifically named OSM facility; original API unavailable in web retrieval.",
+          "precision": "Approximately 1 km crossing area; no exact historical gate or damage footprint claimed.",
+          "source_urls": [
+            "https://mapcarta.com/N11056661683"
+          ],
+          "evidence_note": "Named El Aarida immigration centre, OSM node 11056661683, at coastal El Kabir river crossing. Historical reports separately identify damaged bridge and General Security post. Exact reconstructed lane is not mapped.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-13.json"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Only the canonical November 26 to December 1–2 returnee phase. No full road/vehicle restoration inferred.",
+      "unresolved": [],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"bounded_interval\", \"start_earliest\": \"2024-11-26\", \"start_latest\": \"2024-11-27\", \"end_earliest\": \"2024-12-01\", \"end_latest\": \"2024-12-02\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: First limited returnee access is bounded December 1–2. This covers Lebanese returnees travelling Syria to Lebanon only; no full vehicle or system restoration is inferred."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

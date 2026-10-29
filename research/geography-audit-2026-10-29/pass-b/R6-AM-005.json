@@ -1,0 +1,63 @@
+{
+  "record_id": "R6-AM-005",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "February17 protesters interrupted both approaches to the Canadian span of Thousand Islands bridge system; associated northbound I81 diversion and entry suspension do not turn all spans into a single barrier location.",
+  "source_checks": [
+    {
+      "url": "https://www.wwnytv.com/2020/02/17/protest-blocks-canadian-access-ti-bridge/",
+      "access_status": "full_retrieved",
+      "finding": "WWNY quotes bridge authority identifying Canadian span, protesters at both ends; Highway137 and northbound I81 affected."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/22777208/full",
+      "access_status": "full_retrieved",
+      "finding": "Directly inspected OSM way/22777208 mean of geometry vertices; XML sha256 8017696cc9f2452c8cefa23fce960a586aa9103f9f8ad0482aae40610882ccee"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-AM-005-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-thousand-islands-canadian-span",
+          "name": "Thousand Islands Bridge Canadian span, Highway137",
+          "coordinates": [
+            -75.9828388,
+            44.363578700000005
+          ],
+          "coordinate_method": "Directly inspected OSM way/22777208 mean of geometry vertices; XML sha256 8017696cc9f2452c8cefa23fce960a586aa9103f9f8ad0482aae40610882ccee",
+          "precision": "Span representative approximately250m",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/22777208/full"
+          ],
+          "evidence_note": "OSM named suspension road span on Highway137 in Canada; matches source Canadian span, not US span or boundary inspection plaza."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Thousand Islands episode on 17 February 2020.; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2020-02-17",
+        "start_latest": "2020-02-17",
+        "end_earliest": "2020-02-17",
+        "end_latest": "2020-02-17",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Marker identifies the Canadian span; exact two crowd positions and separate US traffic-control barricade are not represented."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Marker identifies the Canadian span; exact two crowd positions and separate US traffic-control barricade are not represented."
+  ]
+}

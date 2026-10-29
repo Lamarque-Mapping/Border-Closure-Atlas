@@ -1,0 +1,74 @@
+{
+  "record_id": "R6-EA-002",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Vietnam-to-China cargo exports through Tan Thanh–Po Chai road gate, including fresh produce. Imports and empty returns were treated separately; staged reopening is retained.",
+  "source_checks": [
+    {
+      "url": "https://moit.gov.vn/en/news/ministerial-leaders-activities/china-resumes-customs-clearance-of-goods-at-po-chai-border-gate.html",
+      "access_status": "indexed_extract_only",
+      "finding": "Indexed ministry original explicitly pairs Tan Thanh–Po Chai, dates December 18 suspension and January 25 restored clearance with transfer controls. Direct open timed out.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-32.json",
+      "sha256": "8b626b1efbea2b0d5cb44de008b4723dc7546cd8bb3bc48f1c72d53c35b305d9"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/5129681124",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named multilingual road border-control node inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/5f13a4c89afd7a0189d1.xml",
+      "sha256": "4b60e4d435d4741725116414eccd7e459ff5182fd67bb242c42f3ccddae43e17",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/5f13a4c89afd7a0189d1.txt",
+      "text_sha256": "4b60e4d435d4741725116414eccd7e459ff5182fd67bb242c42f3ccddae43e17",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-EA-002-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-tan-thanh-road",
+          "name": "Tan Thanh–Po Chai cargo road gate",
+          "coordinates": [
+            106.6826938,
+            22.0028832
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/5129681124"
+          ],
+          "evidence_note": "Explicit multilingual Tan Thanh border_control node. Vietnamese Ministry of Industry and Trade explicitly pairs Tan Thanh with Po Chai/Pu Zhai for this freight phase.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/5f13a4c89afd7a0189d1.xml",
+          "sha256": "4b60e4d435d4741725116414eccd7e459ff5182fd67bb242c42f3ccddae43e17"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Vietnam-to-China cargo exports through Tan Thanh–Po Chai road gate, including fresh produce. Imports and empty returns were treated separately; staged reopening is retained.",
+      "date_scope_check": {
+        "start_earliest": "2021-12-18",
+        "start_latest": "2021-12-18",
+        "end_earliest": "2022-01-25",
+        "end_latest": "2022-01-25",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Chinese reason was not initially announced to the local official; later ministry report supplies public-health attribution. Reopening remained low-capacity. Imports into Vietnam and empty-vehicle returns were possible by December 22–23; not a total two-way border closure."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "1adc9389744ee23dac544313ed6ccdb652f9e2d855e39fc21d57cb3c1acd57bf",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

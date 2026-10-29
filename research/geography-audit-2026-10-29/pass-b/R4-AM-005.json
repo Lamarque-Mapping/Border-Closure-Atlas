@@ -1,0 +1,145 @@
+{
+  "record_id": "R4-AM-005",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Separate Ecuadorian gate restrictions at Macará–La Tina and Lalamor–Zapotillo, La Balsa, Jimbura, and San Miguel. Rumichaca and Huaquillas expressly remained open; San Miguel reporting locates an additional block at CEBAF 3 km before bridge. July returns differ by gate.",
+  "source_checks": [
+    {
+      "url": "https://www.eluniverso.com/noticias/ecuador/ecuador-reduce-pasos-fronterizos-internacionales-estos-seran-los-unicos-habilitados-desde-el-24-de-diciembre-nota/",
+      "access_status": "full_retrieved",
+      "finding": "December 24 announcement leaves only Rumichaca and Huaquillas authorized."
+    },
+    {
+      "url": "https://cronica.com.ec/2026/07/17/la-balsa-y-jimbura-reclaman-apertura-de-frontera-cierre-profundiza-la-crisis/",
+      "access_status": "full_retrieved",
+      "finding": "July 17 local report explicitly differentiates Macará July 7, Lalamor July 8 returns from continued La Balsa and Jimbura restrictions."
+    },
+    {
+      "url": "https://www.ecuavisa.com/seguridad/puente-san-miguel-paso-fronterizo-irrespetado-14-cruces-informales-sucumbios-20260401-0087.html",
+      "access_status": "full_retrieved",
+      "finding": "April report places San Miguel physical block at Ecuadorian CEBAF three km before international bridge and distinguishes informal boat routes."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-AM-005-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ordinary non-exempt road-vehicle passage at Macara only; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2025-12-24",
+        "start_latest": "2025-12-24",
+        "end_earliest": "2026-07-07",
+        "end_latest": "2026-07-07",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Precise formal bridge/control-area coordinates have not been independently established for each gate. San Miguel CEBAF approach versus bridge requires two-feature distinction; no full Ecuador frontier line or reused Rumichaca marker allowed."
+      ]
+    },
+    {
+      "phase_id": "R4-AM-005-AUDIT20261025-1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ordinary non-exempt vehicle passage at Lalamor–Zapotillo; earlier pedestrian access excluded; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2025-12-24",
+        "start_latest": "2025-12-24",
+        "end_earliest": "2026-07-08",
+        "end_latest": "2026-07-08",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Precise formal bridge/control-area coordinates have not been independently established for each gate. San Miguel CEBAF approach versus bridge requires two-feature distinction; no full Ecuador frontier line or reused Rumichaca marker allowed."
+      ]
+    },
+    {
+      "phase_id": "R4-AM-005-R2P1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "San Miguel formal road crossing: ordinary non-exempt movement; controlled crude transport and special permits excluded; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "confirmed_through",
+        "start_earliest": "2025-12-24",
+        "start_latest": "2025-12-24",
+        "end_earliest": "2026-07-09",
+        "end_latest": "2026-07-09",
+        "last_confirmed": "2026-07-09",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Precise formal bridge/control-area coordinates have not been independently established for each gate. San Miguel CEBAF approach versus bridge requires two-feature distinction; no full Ecuador frontier line or reused Rumichaca marker allowed."
+      ]
+    },
+    {
+      "phase_id": "R4-AM-005-R2P2",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "La Balsa formal international bridge: ordinary cross-border passage; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "confirmed_through",
+        "start_earliest": "2025-12-24",
+        "start_latest": "2025-12-24",
+        "end_earliest": "2026-07-17",
+        "end_latest": "2026-07-17",
+        "last_confirmed": "2026-07-17",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Precise formal bridge/control-area coordinates have not been independently established for each gate. San Miguel CEBAF approach versus bridge requires two-feature distinction; no full Ecuador frontier line or reused Rumichaca marker allowed."
+      ]
+    },
+    {
+      "phase_id": "R4-AM-005-R2P3",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Jimbura formal international bridge: ordinary cross-border passage; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "confirmed_through",
+        "start_earliest": "2025-12-24",
+        "start_latest": "2025-12-24",
+        "end_earliest": "2026-07-17",
+        "end_latest": "2026-07-17",
+        "last_confirmed": "2026-07-17",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Precise formal bridge/control-area coordinates have not been independently established for each gate. San Miguel CEBAF approach versus bridge requires two-feature distinction; no full Ecuador frontier line or reused Rumichaca marker allowed."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Precise formal bridge/control-area coordinates have not been independently established for each gate. San Miguel CEBAF approach versus bridge requires two-feature distinction; no full Ecuador frontier line or reused Rumichaca marker allowed."
+  ]
+}

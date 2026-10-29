@@ -1,0 +1,79 @@
+{
+  "record_id": "R6-AWN-002",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Limited goods/person passage at the El Beid road bridge joining Fotokol and Gambaru. The contemporary source describes transshipment on selected days, not fully restored loaded-truck passage.",
+  "source_checks": [
+    {
+      "url": "https://cameroun24.net/article/36368-Fronti_C3_A8re_Cameroun__E2_80_93_Nigeria__3A_Fotokol_revit.html?lang=fr&pr=50261",
+      "access_status": "full_text_web",
+      "finding": "Contemporary Cameroon Tribune reporting reproduced here identifies the 141 m El Beid bridge; the local official explains goods crossed by carts, bicycles and porters on Monday/Wednesday/Saturday, while loaded trucks did not cross.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-35.json",
+      "evidence_sha256": "da0e9328b8271dbfa709afa654039649716388d982ff1d15570e95169bc13a69"
+    },
+    {
+      "url": "https://www.businessincameroon.com/cooperation/1512-6771-road-traffic-between-cameroon-and-nigeria-reopened-after-several-months-of-interruption-dye-to-boko-haram",
+      "access_status": "inaccessible",
+      "finding": "Original URL returned HTTP 403.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-28.json",
+      "evidence_sha256": "1c07142f5092770e8492f2cff7df774d6a784569ff6e9b17db1afebaaaebb00f"
+    },
+    {
+      "url": "https://issafrica.org/iss-today/balancing-economics-and-security-on-the-nigeria-cameroon-border",
+      "access_status": "full_text_web",
+      "finding": "Later ISS retrospective describes a 2021 reopening; it is not allowed to erase the separately documented limited 2016 passage.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-29.json",
+      "evidence_sha256": "6afccf722d1178296720edc9e6925ef6d907e93e79420ad5db40bc9b2a521b96"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-AWN-002-C7P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-fotokol-gambaru-elbeid",
+          "name": "Fotokol–Gambaru, El Beid bridge",
+          "coordinates": [
+            14.2224139,
+            12.3743221
+          ],
+          "coordinate_method": "Bounding-box centre of original OSM road/bridge centreline from independently fetched API JSON",
+          "precision": "approximate bridge/road area; not a surveyed historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/map.json?bbox=14.21,12.36,14.24,12.39",
+            "https://www.openstreetmap.org/way/233065796",
+            "https://www.openstreetmap.org/way/233065804"
+          ],
+          "evidence_note": "Named Elbeid bridge on the Trans-Sahelian Highway. Adjacent OSM way 233065804 is the other section of the same road bridge; the reporting identifies this 141 m bridge as the limited crossing. Coordinate is within the bridge area, not a town centroid. Inspected OSM tags: {\"bridge\": \"yes\", \"highway\": \"trunk\", \"int_name\": \"Trans-Sahelian Highway\", \"int_ref\": \"TAH 5\", \"lanes\": \"2\", \"layer\": \"1\", \"name\": \"Pont de l'Elbeid\", \"name:fr\": \"Pont de l'Elbeid\", \"oneway\": \"no\", \"surface\": \"paved\"}. Geographic evidence only; no historical restriction or current operational status inferred.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/46d3b3f60f50b57b5baa.json",
+          "evidence_sha256": "06bd46bb07b99136c720c63ae0d52bbc790442591c50d1fc8005ea54b01947b5",
+          "osm_version": 3,
+          "osm_timestamp": "2021-04-04T12:02:47Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Limited goods/person passage at the El Beid road bridge joining Fotokol and Gambaru. The contemporary source describes transshipment on selected days, not fully restored loaded-truck passage. Current phase only: Limited Fotokol–Gambaru passage of goods and people by December12,2016",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": null,
+        "end_latest": "2016-12-12",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Endpoint upper bound only; original onset and first reopening day are unknown. Separate reporting describes restricted trading days and cargo transshipment, so no full loaded-truck or all-traffic reopening is inferred. Later2017/2021 milestones are not merged.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

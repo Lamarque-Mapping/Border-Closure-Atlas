@@ -1,0 +1,59 @@
+{
+  "record_id": "R6-EU-006",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Canonical phase only covers France-bound freight obstruction at Biriatou toll plaza. Spanish tractors at Zaisa and other France/Andorra frontier actions are separately located background, not this phase.",
+  "source_checks": [
+    {
+      "url": "https://www.rtve.es/noticias/20240604/agricultores-levantan-bloqueos-fronterizos-tras-protesta-24-horas/16132364.shtml",
+      "access_status": "full_retrieved",
+      "finding": "RTVE identifies French farmers blocking Biriatou toll for trucks and Spanish tractors at Zaisa, with progressive clearance; post-closure queues not continued blockade."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/36331924/full",
+      "access_status": "full_retrieved",
+      "finding": "Directly inspected OSM way/36331924 mean of geometry vertices; XML sha256 0ece98ea5545d4f35c52f4736b479eadf0a956d60ecf75ab648fdb2741285548"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-EU-006-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-biriatou-toll",
+          "name": "Biriatou motorway toll plaza",
+          "coordinates": [
+            -1.7492839000000002,
+            43.340947530769235
+          ],
+          "coordinate_method": "Directly inspected OSM way/36331924 mean of geometry vertices; XML sha256 0ece98ea5545d4f35c52f4736b479eadf0a956d60ecf75ab648fdb2741285548",
+          "precision": "Toll plaza representative about100m",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/36331924/full"
+          ],
+          "evidence_note": "OSM toll-booth building named Biriatou operated by Autoroutes du Sud de la France, sourced from French cadastre. RTVE specifically locates truck obstruction at this toll plaza."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "France-bound freight obstruction at Biriatou during the coordinated farmer action; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2024-06-03",
+        "start_latest": "2024-06-03",
+        "end_earliest": "2024-06-04",
+        "end_latest": "2024-06-04",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

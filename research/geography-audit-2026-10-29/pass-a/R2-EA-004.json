@@ -1,0 +1,60 @@
+{
+  "record_id": "R2-EA-004",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Naung Taung/Nawngtawng–Pingmong goods crossing and its river quays west of the Shweli/Ruili River form a gate-plus-access case. March quay closures and April gate restriction may be different mechanisms.",
+  "source_checks": [
+    {
+      "url": "https://www.bnionline.net/en/news/china-myanmar-border-gate-namhkam-reopens-after-tnla-closure-shan-state-china-border",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Shan Herald account identifies Nawngtawng–Pingmong, goods-only passage, April 29 opening and March 11 quay closures.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-33.json",
+      "sha256": "79aaecbfded571c6b514d8e2f6c668040f4ac9777efc22750e0822537b06a27d"
+    },
+    {
+      "url": "https://www.irrawaddy.com/news/burma/myanmar-china-border-gate-reopens-as-tnla-ssa-tensions-defused-in-namhkam.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Full text identifies gate west of Shweli and April 5 tariff-confrontation closure. This differs from March quay onset and supplies no exact gate coordinates.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-37.json",
+      "sha256": "9113023bf340ecc78efa5825dae1f527a547504cbd931a42d672f18b1207c771"
+    },
+    {
+      "url": "https://cnimyanmar.com/index.php/english-edition/22095-how-is-tnla-opening-namkham-border-trade",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EA-004-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Naung Taung / Nawngtawng gate, Namhkam, west of Shweli River; Cross-border cargo, including mineral ore, charcoal and building materials.; Myanmar exports and Chinese imports.",
+      "date_scope_check": {
+        "scope": "Naung Taung / Nawngtawng gate, Namhkam, west of Shweli River; Cross-border cargo, including mineral ore, charcoal and building materials.; Myanmar exports and Chinese imports.",
+        "start_earliest": "2024-03-11",
+        "start_latest": "2024-04-05",
+        "end_earliest": "2024-04-29",
+        "end_latest": "2024-04-29",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": [
+        "No source-backed coordinate positively identifies Nawngtawng gate or the Nawng Hsawng/Mangai quays.",
+        "Do not substitute Namhkam town, Muse main gate or a generic Shweli crossing."
+      ]
+    }
+  ],
+  "unresolved": []
+}

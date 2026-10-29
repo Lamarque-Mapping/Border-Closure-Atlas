@@ -1,0 +1,47 @@
+{
+  "record_id": "R2-ME-005",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Shalamcheh road passenger crossing, Iraq-to-Iran restriction; freight and trade continued, and a separate railway alignment is outside this evidence.",
+  "source_checks": [
+    {
+      "url": "https://www.euronews.com/2019/11/23/iraq-iran-border-crossing-reopens-after-week-long-closure-statement",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Reuters statement account names Shalamcheh and week-long traveller closure, reopening November 23; goods unaffected.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-3.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-ME-005-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-shalamcheh",
+          "name": "Shalamcheh road border post",
+          "coordinates": [
+            48.0293192,
+            30.5024401
+          ],
+          "coordinate_method": "Bounding-box centre of named facility way, calculated from independently inspected cached original OSM XML nodes.",
+          "precision": "Approximately 1 km; centre of customs facility; not rail infrastructure or exact historical passenger gate.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/way/1451074497/full"
+          ],
+          "evidence_note": "Cached original OSM way 1451074497, version 4, timestamp 2026-10-18T12:17:28Z; tags {\"area\": \"yes\", \"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"پایانه مرزی شلمچه\", \"name:ar\": \"منفذ الشلامجه الحدودي\", \"name:en\": \"Shalamcheh Border Post\", \"name:fa\": \"پایانه مرزی شلمچه\"}. Reference geography only; closure scope is independently reconstructed from historical sources.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/cfa51d091b3aa812.raw",
+          "evidence_sha256": "784365d651759a215a1755bb2ba63603316d252bf9c546ad609984b2504375c9"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Apply only to canonical Iraq-to-Iran passenger phase November 16–23, not freight or independently unverified reverse-direction restoration.",
+      "unresolved": [],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"closed_interval\", \"start_earliest\": \"2019-11-16\", \"start_latest\": \"2019-11-16\", \"end_earliest\": \"2019-11-23\", \"end_latest\": \"2019-11-23\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: Seven-day interval applies to Iraq→Iran passenger movement. Reuters describes travellers from both countries but does not separately establish reverse-direction restoration; goods and trade unaffected. Shafaq and Reuters share the Iraqi authority source."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

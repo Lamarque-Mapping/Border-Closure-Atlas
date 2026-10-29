@@ -1,0 +1,63 @@
+{
+  "record_id": "R7-EUAM-001",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "January31 brief vehicle blockade at Greek Promachonas approach of Kulata–Promachonas road crossing. Other Bulgarian–Greek crossings specifically available.",
+  "source_checks": [
+    {
+      "url": "https://presscenters.com/News/97925/vuzstanoveno-e-normalnoto-preminavane-prez-gkpp-kulata--promahon",
+      "access_status": "full_retrieved",
+      "finding": "Published border-police notice gives normal passage at14:15, suspension one hour earlier and alternative posts operating."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/203847518/full",
+      "access_status": "full_retrieved",
+      "finding": "Directly inspected OSM way/203847518 mean of geometry vertices; XML sha256 0964a6e8e71c3f6fb523dcd53726ece6fde9fcaa2a59664801d73fcd8a2417d4"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R7-EUAM-001-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-promachonas-road",
+          "name": "Promachonas road customs, Greek side of Kulata",
+          "coordinates": [
+            23.3621002,
+            41.375864993939395
+          ],
+          "coordinate_method": "Directly inspected OSM way/203847518 mean of geometry vertices; XML sha256 0964a6e8e71c3f6fb523dcd53726ece6fde9fcaa2a59664801d73fcd8a2417d4",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/203847518/full"
+          ],
+          "evidence_note": "Named Promachonas customs building; historic border-control annotation retained. Does not refer to Kulata or Promachonas railway stations."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Kulata episode on 31 January 2017.; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2017-01-31",
+        "start_latest": "2017-01-31",
+        "end_earliest": "2017-01-31",
+        "end_latest": "2017-01-31",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Customs location verified; exact farmer barricade position on Greek approach not surveyed."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Customs location verified; exact farmer barricade position on Greek approach not surveyed."
+  ]
+}

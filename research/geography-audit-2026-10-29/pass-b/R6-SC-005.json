@@ -1,0 +1,85 @@
+{
+  "record_id": "R6-SC-005",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Kharlachi road vehicle and freight passage during September 2024 Kurram clashes, ending with vehicles moving October 1. Other routes and broad regional shortages are outside this crossing scope.",
+  "source_checks": [
+    {
+      "url": "https://tnnenglish.com/pak-afghan-kharlachi-border-reopens-after-nine-day-closure-due-to-tribal-clashes",
+      "access_status": "full_text_web",
+      "finding": "TNN names September 21 closure and actual loaded vehicles crossing on October 1; conflicting APP date is not adopted.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r6-4.json",
+      "sha256": "0237a2af68d896799c7658610436a933cad6c19a9de7e156fcd6a0672d571842"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/7329110727",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Kharlachi area and its 2020 border-control node inspected; village and nearby Borki route excluded.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d5af77710dfbd9b9ae0a.xml",
+      "sha256": "2d5978f2184203a4949b6190ca9645e09deddf8a2358e8e90a4279120a810c1b",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d5af77710dfbd9b9ae0a.txt",
+      "text_sha256": "2d5978f2184203a4949b6190ca9645e09deddf8a2358e8e90a4279120a810c1b",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1466971322/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Kharlachi area and its 2020 border-control node inspected; village and nearby Borki route excluded.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/6b7e344feada8c1972be.xml",
+      "sha256": "7a978da75217a9b0227d09ebfa544b4470c6c066516220d407c3f3d735c4a5eb",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/6b7e344feada8c1972be.txt",
+      "text_sha256": "7a978da75217a9b0227d09ebfa544b4470c6c066516220d407c3f3d735c4a5eb",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-SC-005-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kharlachi-road",
+          "name": "Kharlachi road border crossing",
+          "coordinates": [
+            69.9539961,
+            33.8290732
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/7329110727",
+            "https://api.openstreetmap.org/api/0.6/way/1466971322/full"
+          ],
+          "evidence_note": "Border-control node mapped in March 2020 is a vertex of the named Kharlachi Border Crossing area, way 1466971322. It locates the road crossing, not Kharlachi village or the nearby Borki route.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d5af77710dfbd9b9ae0a.xml",
+          "sha256": "2d5978f2184203a4949b6190ca9645e09deddf8a2358e8e90a4279120a810c1b"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kharlachi road vehicle and freight passage during September 2024 Kurram clashes, ending with vehicles moving October 1. Other routes and broad regional shortages are outside this crossing scope.",
+      "date_scope_check": {
+        "start_earliest": "2024-09-21",
+        "start_latest": "2024-09-21",
+        "end_earliest": "2024-10-01",
+        "end_latest": "2024-10-01",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "R6-SC-005-D1: Contemporary TNN, The News and Pajhwok report 21 September as the closure date. This is preferred to APP’s internally inconsistent 9 September date alongside its nine-day duration. The News and Geo share a reporter; overlapping accounts are not counted as wholly independent. Reported nine-day wording is approximate and not a measured elapsed duration. The 1 October vehicle reopening is supported. Scope is Kharlachi, not the whole Pakistan–Afghanistan frontier; regional shortages are not attributed solely to this post."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "412a1dfba8dcd42f124c67558d326f6fcbbaf681680503e584bf1403c458c737",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

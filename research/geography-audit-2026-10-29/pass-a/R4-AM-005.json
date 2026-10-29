@@ -1,0 +1,276 @@
+{
+  "record_id": "R4-AM-005",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Five formal Ecuador road crossings have different reopening histories. Macará and Lalamor vehicles resume July7/8 after earlier pedestrian allowance; SanMiguel retains permitted exceptions; LaBalsa and Jimbura still closed at July17 report.",
+  "source_checks": [
+    {
+      "url": "https://www.ecuavisa.com/ecuador/paso-fronterizo-loja-piura-macara-20251226-0027.html",
+      "access_status": "fresh_full_text_extract",
+      "finding": "December26 report describes December24 Macará closure while Rumichaca/Huaquillas retained, with Loja–Piura transport affected.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-064.json"
+    },
+    {
+      "url": "https://gobernacionloja.gob.ec/gobierno-nacional-refuerza-el-control-y-la-seguridad-en-macara-y-zapotillo-ante-la-reapertura-peatonal-de-la-frontera/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Loja government July4 notice explicitly reopens pedestrian access, not ordinary vehicle traffic.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-067.json"
+    },
+    {
+      "url": "https://hora32.com.ec/en-el-puente-internacional-de-lalamor-zapotillo-empieza-tambien-a-fluir-el-transito/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "July9 on-site report dates Lalamor bridge pedestrian/vehicle flow to July8 about13:40 and Macará to July7 night.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-070.json"
+    },
+    {
+      "url": "https://www.ecuavisa.com/seguridad/puente-san-miguel-paso-fronterizo-irrespetado-14-cruces-informales-sucumbios-20260401-0087.html",
+      "access_status": "fresh_full_text_extract",
+      "finding": "April1 report locates SanMiguel blockade at CEBAF3km before bridge; special permits and crude movement exceptions remain. Informal river routes are separate.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-070.json"
+    },
+    {
+      "url": "https://cronica.com.ec/2026/07/17/la-balsa-y-jimbura-reclaman-apertura-de-frontera-cierre-profundiza-la-crisis/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "July17 report distinguishes still-closed LaBalsa and Jimbura bridges from reopened Macará/Lalamor.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-068.json"
+    },
+    {
+      "url": "https://mapcarta.com/N2493525075",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named ControlMacara border node adjacent to customs and migration,3km southwest of Macará town; not town centre. Exact bridge closure barrier not independently located.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-073.json"
+    },
+    {
+      "url": "https://mapcarta.com/W1151406106",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named PuenteInternacionalAlamor adjacent to ElAlamor Peruvian control and Lalamor Ecuador customs170m east; identity matches July8 Lalamor reopening report.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-075.json"
+    },
+    {
+      "url": "https://mapcarta.com/N13907959633",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Explicit named CEBAF office south of river. Original Ecuavisa report places closure at CEBAF about3km before bridge; office coordinate represents control complex, not bridge or precise barrier.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-075.json"
+    },
+    {
+      "url": "https://mapcarta.com/N2979352070",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named Peru frontier-police station next to migration and border barrier, with Ecuador immigration150m north. Partial route reference; Ecuador bridge barrier not directly mapped.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-074.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-AM-005-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-macara-road-control",
+          "name": "Macará road border-control reference",
+          "coordinates": [
+            -79.96619,
+            -4.39247
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 2493525075; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N2493525075",
+            "https://www.openstreetmap.org/node/2493525075"
+          ],
+          "evidence_note": "Named ControlMacara border node adjacent to customs and migration,3km southwest of Macará town; not town centre. Exact bridge closure barrier not independently located.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-073.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ordinary non-exempt road-vehicle passage at Macara only",
+      "date_scope_check": {
+        "start_earliest": "2025-12-24",
+        "start_latest": "2025-12-24",
+        "end_earliest": "2026-07-07",
+        "end_latest": "2026-07-07",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Named crossing/control reference only; exact closure barrier or bridge footprint remains unresolved."
+      ]
+    },
+    {
+      "phase_id": "R4-AM-005-AUDIT20261025-1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-lalamor-alamor-road-bridge",
+          "name": "Lalamor–El Alamor international bridge",
+          "coordinates": [
+            -80.39678,
+            -4.47726
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 1151406106; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W1151406106",
+            "https://www.openstreetmap.org/way/1151406106"
+          ],
+          "evidence_note": "Named PuenteInternacionalAlamor adjacent to ElAlamor Peruvian control and Lalamor Ecuador customs170m east; identity matches July8 Lalamor reopening report.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-075.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary non-exempt vehicle passage at Lalamor–Zapotillo; earlier pedestrian access excluded",
+      "date_scope_check": {
+        "start_earliest": "2025-12-24",
+        "start_latest": "2025-12-24",
+        "end_earliest": "2026-07-08",
+        "end_latest": "2026-07-08",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Bridge reference is source-backed; earlier pedestrian reopening does not end vehicle phase."
+      ]
+    },
+    {
+      "phase_id": "R4-AM-005-R2P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-san-miguel-cebaf-reference",
+          "name": "San Miguel CEBAF road-control reference",
+          "coordinates": [
+            -76.87297,
+            0.22836
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 13907959633; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N13907959633",
+            "https://www.openstreetmap.org/node/13907959633"
+          ],
+          "evidence_note": "Explicit named CEBAF office south of river. Original Ecuavisa report places closure at CEBAF about3km before bridge; office coordinate represents control complex, not bridge or precise barrier.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-075.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "San Miguel formal road crossing: ordinary non-exempt movement; controlled crude transport and special permits excluded",
+      "date_scope_check": {
+        "start_earliest": "2025-12-24",
+        "start_latest": "2025-12-24",
+        "end_earliest": "2026-07-09",
+        "end_latest": "2026-07-09",
+        "last_confirmed": "2026-07-09",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Named crossing/control reference only; exact closure barrier or bridge footprint remains unresolved."
+      ]
+    },
+    {
+      "phase_id": "R4-AM-005-R2P2",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-la-balsa-road-reference",
+          "name": "La Balsa international road crossing reference",
+          "coordinates": [
+            -79.1156,
+            -4.9786
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 2979352070; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N2979352070",
+            "https://www.openstreetmap.org/node/2979352070"
+          ],
+          "evidence_note": "Named Peru frontier-police station next to migration and border barrier, with Ecuador immigration150m north. Partial route reference; Ecuador bridge barrier not directly mapped.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-074.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "La Balsa formal international bridge: ordinary cross-border passage",
+      "date_scope_check": {
+        "start_earliest": "2025-12-24",
+        "start_latest": "2025-12-24",
+        "end_earliest": "2026-07-17",
+        "end_latest": "2026-07-17",
+        "last_confirmed": "2026-07-17",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Named crossing/control reference only; exact closure barrier or bridge footprint remains unresolved."
+      ]
+    },
+    {
+      "phase_id": "R4-AM-005-R2P3",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Jimbura formal international bridge: ordinary cross-border passage",
+      "date_scope_check": {
+        "start_earliest": "2025-12-24",
+        "start_latest": "2025-12-24",
+        "end_earliest": "2026-07-17",
+        "end_latest": "2026-07-17",
+        "last_confirmed": "2026-07-17",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Jimbura bridge identity is named in original reporting, but attributable exact bridge/control coordinates remain unlocated; Jimbura village centre rejected."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "efbab0fb36ad447688185b07f410eebfc8fff8693069f8d1a8f97024261800c9"
+}

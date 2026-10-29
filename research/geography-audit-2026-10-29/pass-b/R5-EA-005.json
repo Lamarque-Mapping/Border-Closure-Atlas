@@ -1,0 +1,133 @@
+{
+  "record_id": "R5-EA-005",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Indonesian Skouw, Sota and Yetetkun crossing-service order for November 27, 2024, 08:00–16:00 WIT: ordinary service excluded, emergency crossings retained. Each point represents its named Indonesian PLBN grounds.",
+  "source_checks": [
+    {
+      "url": "https://www.askara.co/read/2024/11/27/51369/hari-pencoblos-27-november-2024an-pilkada-plbn-tetap-laksanakan-pelayanan-perlintasan",
+      "access_status": "full_text_web",
+      "finding": "BNPP release explicitly lists all three posts and the emergency-only service hours.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r5-4.json",
+      "sha256": "72b96a3c05d661edb6a1915a4e0435d2f41f03d0ac8a45c3f6c8414af6126bb9"
+    },
+    {
+      "url": "https://www.papuaselatan.go.id/berita/jokowi-resmikan-plbn-yetetkun-dihadiri-pj-gubernur-papsel",
+      "access_status": "indexed_extract_only",
+      "finding": "Provincial government records October 2, 2024 inauguration and manual service at Yetetkun before this order.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-28.json",
+      "sha256": "6716fe5be818bb36a7ca7f5aa44a278217572cb193a5aafb81f17f6fcb0252c1"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/312090467/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named post outline inspected; grounds reference, not a town coordinate.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/83b58852ce6205871dc2.xml",
+      "sha256": "b5065050463b0eb8261b27852310fd0a4b27070c5e0db31c2abae89bfdd42591",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/83b58852ce6205871dc2.txt",
+      "text_sha256": "b5065050463b0eb8261b27852310fd0a4b27070c5e0db31c2abae89bfdd42591",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/806707961/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named post outline inspected; grounds reference, not a town coordinate.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/759870cdef6955c04823.xml",
+      "sha256": "cc4e30866b39b002028baed764ed71cf69ac5b5a5c2b1c46bf4e5f6696bac2b7",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/759870cdef6955c04823.txt",
+      "text_sha256": "cc4e30866b39b002028baed764ed71cf69ac5b5a5c2b1c46bf4e5f6696bac2b7",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/973314719/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named post outline inspected; grounds reference, not a town coordinate.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/f6ee281a3eac1022c308.xml",
+      "sha256": "e41d9c0a29e722437bfbf8eea6a67b59c2faa57894e18785ec9c548fc493c142",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/f6ee281a3eac1022c308.txt",
+      "text_sha256": "e41d9c0a29e722437bfbf8eea6a67b59c2faa57894e18785ec9c548fc493c142",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-EA-005-R1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-skouw-plbn",
+          "name": "PLBN Skouw border-post building",
+          "coordinates": [
+            140.9987767,
+            -2.6085816
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/312090467/full"
+          ],
+          "evidence_note": "OSM explicitly names Indonesian PLBN Skouw. Position is service building, not PNG Wutung gate; use only for Indonesian service phases.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/83b58852ce6205871dc2.xml",
+          "sha256": "b5065050463b0eb8261b27852310fd0a4b27070c5e0db31c2abae89bfdd42591"
+        },
+        {
+          "proposed_site_id": "post-sota-plbn",
+          "name": "Sota Indonesian border post",
+          "coordinates": [
+            141.0182738,
+            -8.42796
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Representative point within the named border-post grounds, about 300 m; not an exact barrier",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/806707961/full"
+          ],
+          "evidence_note": "Named Sota Border area explicitly tagged border_control, connected to Jalan Akses PLBNT Sota. The named 2024 BNPP service order identifies this Indonesian post, not Sota village or a PNG counterpart.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/759870cdef6955c04823.xml",
+          "sha256": "cc4e30866b39b002028baed764ed71cf69ac5b5a5c2b1c46bf4e5f6696bac2b7"
+        },
+        {
+          "proposed_site_id": "post-yetetkun-plbn",
+          "name": "Yetetkun Indonesian border post",
+          "coordinates": [
+            140.993277,
+            -5.7165022
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Representative point within named PLBN grounds, about 350 m; not an exact barrier",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/973314719/full"
+          ],
+          "evidence_note": "Explicit PLBN Yetetkun civic administration grounds, mapped before the November 2024 order. Provincial government records its October 2024 inauguration and manual crossing service.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/f6ee281a3eac1022c308.xml",
+          "sha256": "e41d9c0a29e722437bfbf8eea6a67b59c2faa57894e18785ec9c548fc493c142"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Indonesian Skouw, Sota and Yetetkun crossing-service order for November 27, 2024, 08:00–16:00 WIT: ordinary service excluded, emergency crossings retained. Each point represents its named Indonesian PLBN grounds.",
+      "date_scope_check": {
+        "start_earliest": "2024-11-27",
+        "start_latest": "2024-11-27",
+        "end_earliest": "2024-11-27",
+        "end_latest": "2024-11-27",
+        "last_confirmed": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Scheduled 08:00–16:00 WIT November 27, an eight-hour restriction on non-emergency service. Ending date is partial-day window end, not actual reopening at 16:00 or November 28. Execution and subsequent ordinary service unknown."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "bcbc2b3dcfff8cd5908f5a04623cbe32f3a3cafa025aa9756af1b5f7138269cd",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

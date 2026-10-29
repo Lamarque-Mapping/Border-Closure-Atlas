@@ -1,0 +1,108 @@
+{
+  "record_id": "R3-SC-008",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "June 26 Sonauli observation covers vehicles/freight; checked pedestrians continued. No Biratnagar/Morang schedule transferred to Sonauli.",
+  "source_checks": [
+    {
+      "url": "https://www.business-standard.com/article/pti-stories/indo-nepal-border-sealed-ahead-of-nepal-civic-polls-117062600786_1.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "PTI full text explicitly names Sonauli 08:00 vehicle stop, truck queues and checked pedestrian passage.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-40.json",
+      "sha256": "a8650d676449f33a03ded9e72fab507f5097e3e239ceb800c16436302d8f7a86"
+    },
+    {
+      "url": "https://economictimes.indiatimes.com/news/politics-and-nation/indo-nepal-border-closed-ahead-of-civic-polls-in-nepal/articleshow/59324255.cms?from=mdr",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.business-standard.com/article/news-ani/indo-nepal-border-sealed-due-to-local-polls-117062600542_1.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://english.ratopati.com/story/63/border-sealed-off-for-local-polls",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://english.onlinekhabar.com/border-points-sealed-for-nepal-elections.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://kathmandupost.com/national/2017/03/27/dpm-nidhi-hands-over-rs-1m-to-ssb-firing-victims-family",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-SC-008-FU1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-sonauli-belahiya",
+          "name": "Sonauli–Belahiya",
+          "coordinates": [
+            83.4698147,
+            27.4759208
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/566994247",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/566994247",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=83.45,27.45,83.49,27.49"
+          ],
+          "evidence_note": "Explicit named India Nepal Border Sonauli road-control node matched to same-day PTI vehicle queue report.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-sonauli.xml",
+          "sha256": "815fa007d38c784723d31da5b2fa07ed28b7e89a2fb4a5d50deb702dad6c61a8",
+          "osm_feature": "node/566994247",
+          "osm_version": "5",
+          "osm_timestamp": "2020-09-06T14:04:42Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "bicycle": "yes",
+            "foot": "yes",
+            "horse": "yes",
+            "motorcar": "yes",
+            "motorcycle": "yes",
+            "name": "India Nepal Border, Sonauli"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Vehicle and freight passage at Sonauli only",
+      "date_scope_check": {
+        "scope": "Vehicle and freight passage at Sonauli only",
+        "start_earliest": "2017-06-26",
+        "start_latest": "2017-06-26",
+        "end_earliest": "2017-06-26",
+        "end_latest": "2017-06-26",
+        "last_confirmed": "2017-06-26",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Same-day onset/state observation retained; duration remains unestablished, but all durations are eligible for supported geography."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

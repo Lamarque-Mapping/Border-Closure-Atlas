@@ -1,0 +1,175 @@
+{
+  "record_id": "R2-EA-009",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Both cargo phases concern Bac Phong Sinh–Li Huo. September 26 observed inbound trucks and September 28 renewed scheduled suspension are separate. Current administrative Lihuo-channel terminology does not relocate this gate to Hoanh Mo.",
+  "source_checks": [
+    {
+      "url": "https://baoquangninh.vn/cua-khau-bac-phong-sinh-thong-quan-tro-lai-sau-hon-7-thang-tam-dung-hoat-dong-post3206014.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Full body pairs Bac Phong Sinh and Ly Hoa, reports two inbound trucks September 26 and February 24 onset; differing canonical February 23 bound retained.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-35.json",
+      "sha256": "31c698c5ab743ec148499db45f0d1fb4d4aacb828c44c51dc81994d0b8b07335"
+    },
+    {
+      "url": "https://www.vietnamplus.vn/lai-tam-dung-thong-quan-cua-khau-bac-phong-sinh-de-phong-dich-covid-19-post820690.amp",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Named deputy district chairman reports September 28 renewed stop through October 7, with October 8 anticipated only. Same gate pair explicit.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-36.json",
+      "sha256": "8acf8e52b87c7d93058ca76dc16a6b4a5dce2fd5e838cb96d246a3a410c372a7"
+    },
+    {
+      "url": "https://www.quangninh.gov.vn/Sites/en-us/Trang/ChiTietTinTuc.aspx?nid=5993",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://quangninh.gov.vn/chuyen-de/giamdocvoicutri/Trang/ChiTietTinTuc.aspx?nid=117378",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.quangninh.gov.vn/Trang/ChiTietTinTuc.aspx?nid=113326",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://phunumoi.net.vn/cua-khau-bac-phong-sinh-lai-tam-dung-thong-quan-de-phong-dich-covid-19-d257897.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://thanhnien.vn/trung-quoc-mo-cua-cua-khau-bac-phong-sinh-van-diu-hiu-giua-mua-tieu-thu-nong-san-1851541135.htm",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://quangninh.gov.vn/So/socongthuong/Trang/ChiTietTinTuc.aspx?nid=3725",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EA-009-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-bac-phong-sinh-lihuo",
+          "name": "Bac Phong Sinh–Li Huo",
+          "coordinates": [
+            107.7183133,
+            21.6245137
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/5792283587",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/5792283587",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=107.705,21.61,107.735,21.64"
+          ],
+          "evidence_note": "Explicit named Vietnam border-control node opposite named Lihuo Channel control. Li He/Li Huo/Ly Hoa are the Chinese counterpart in reopened reporting; not Hoanh Mo–Dongzhong principal gate.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-bac-phong-sinh.xml",
+          "sha256": "30eea0cb7aac6b0676f6b561568962232a92e795b31381efac4c14d77c3f5c49",
+          "osm_feature": "node/5792283587",
+          "osm_version": "2",
+          "osm_timestamp": "2020-07-22T14:41:45Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "Cửa khẩu Bắc Phong Sinh",
+            "name:en": "Bắc Phong Sinh Border Control",
+            "name:vi": "Cửa khẩu Bắc Phong Sinh",
+            "name:zh": "北风生口岸",
+            "wikidata": "Q30920660",
+            "wikipedia": "vi:Cửa khẩu Bắc Phong Sinh"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Bac Phong Sinh (Vietnam)–Li He (China); Cargo customs clearance.; Both-way suspension reported; first observed trucks travelled China to Vietnam.",
+      "date_scope_check": {
+        "scope": "Bac Phong Sinh (Vietnam)–Li He (China); Cargo customs clearance.; Both-way suspension reported; first observed trucks travelled China to Vietnam.",
+        "start_earliest": "2022-02-23",
+        "start_latest": "2022-02-24",
+        "end_earliest": "2022-09-26",
+        "end_latest": "2022-09-26",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "R2-EA-009-C3",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-bac-phong-sinh-lihuo",
+          "name": "Bac Phong Sinh–Li Huo",
+          "coordinates": [
+            107.7183133,
+            21.6245137
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/5792283587",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/5792283587",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=107.705,21.61,107.735,21.64"
+          ],
+          "evidence_note": "Explicit named Vietnam border-control node opposite named Lihuo Channel control. Li He/Li Huo/Ly Hoa are the Chinese counterpart in reopened reporting; not Hoanh Mo–Dongzhong principal gate.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-bac-phong-sinh.xml",
+          "sha256": "30eea0cb7aac6b0676f6b561568962232a92e795b31381efac4c14d77c3f5c49",
+          "osm_feature": "node/5792283587",
+          "osm_version": "2",
+          "osm_timestamp": "2020-07-22T14:41:45Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "Cửa khẩu Bắc Phong Sinh",
+            "name:en": "Bắc Phong Sinh Border Control",
+            "name:vi": "Cửa khẩu Bắc Phong Sinh",
+            "name:zh": "北风生口岸",
+            "wikidata": "Q30920660",
+            "wikipedia": "vi:Cửa khẩu Bắc Phong Sinh"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Bac Phong Sinh–Li Huo cargo customs clearance scheduled suspension",
+      "date_scope_check": {
+        "scope": "Bac Phong Sinh–Li Huo cargo customs clearance scheduled suspension",
+        "start_earliest": "2022-09-28",
+        "start_latest": "2022-09-28",
+        "end_earliest": "2022-10-08",
+        "end_latest": "2022-10-08",
+        "last_confirmed": "2022-09-28",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "announced_window_layer_only",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

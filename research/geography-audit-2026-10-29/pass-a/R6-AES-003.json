@@ -1,0 +1,74 @@
+{
+  "record_id": "R6-AES-003",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Zimbabwe tourist admission restriction at two road entry points: Victoria Falls on Zambia frontier and Kazungula on Botswana frontier. This Kazungula is the Zimbabwe–Botswana road post, not the Zambia–Botswana bridge/OSBP.",
+  "source_checks": [
+    {
+      "url": "https://www.zimlive.com/zimbabwe-re-opens-victoria-falls-land-borders-to-fully-vaccinated-tourists/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full July28 report quotes July27 Cabinet decision: tourist entry through Victoria Falls and Kazungula only for fully vaccinated visitors. Policy decision, not independently observed first arrivals; cargo and returning citizens separate.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-20.json"
+    },
+    {
+      "url": "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+      "access_status": "cached_original_text_extract_inspected",
+      "finding": "Published row S25 Victoria Falls, latitude -17.92810 longitude 25.85713. Preserved original text was inspected; cached PDF binary is truncated and could not be rendered, so this is not fresh full-PDF visual verification. Illustrative location only.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/pida-original-text.txt"
+    },
+    {
+      "url": "https://mapcarta.com/N3345684009",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Named Kazungula Border Zimbabwe IN checkpoint, node3345684009; nearby Zimbabwe OUT and Botswana road gates establish road-pair identity. Distinct from Zambia–Botswana bridge; source country label not used to adjudicate exact sovereign side.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-23.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-AES-003-R1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "name": "Victoria Falls–Livingstone road border crossing",
+          "coordinates": [
+            25.85713,
+            -17.9281
+          ],
+          "coordinate_method": "Coordinate row transcribed from independently inspected cached original AU-PIDA report text extraction, Appendix A.",
+          "precision": "Illustrative border crossing area, approximately 5 km; not a surveyed historical gate.",
+          "source_urls": [
+            "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "Published row S25 Victoria Falls, latitude -17.92810 longitude 25.85713. Preserved original text was inspected; cached PDF binary is truncated and could not be rendered, so this is not fresh full-PDF visual verification. Illustrative location only.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/pida-original-text.txt",
+          "evidence_sha256": "98451216c05eab194ec577670f81979a7944ee5560d41e0ea9c43eb94d347983",
+          "proposed_site_id": "post-victoria-falls"
+        },
+        {
+          "proposed_site_id": "post-kazungula-zimbabwe-botswana",
+          "name": "Kazungula Zimbabwe–Botswana road border crossing",
+          "coordinates": [
+            25.26475,
+            -17.81437
+          ],
+          "coordinate_method": "Transcribed coordinates from inspected Mapcarta rendering of the specifically named OSM facility; original API unavailable in web retrieval.",
+          "precision": "Approximately 1 km crossing area; no exact historical gate or damage footprint claimed.",
+          "source_urls": [
+            "https://mapcarta.com/N3345684009"
+          ],
+          "evidence_note": "Named Kazungula Border Zimbabwe IN checkpoint, node3345684009; nearby Zimbabwe OUT and Botswana road gates establish road-pair identity. Distinct from Zambia–Botswana bridge; source country label not used to adjudicate exact sovereign side.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-23.json"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Modal scope: road_tourist_admission_policy. Only canonical January2 to July27–30 policy bounds for the two named posts and fully vaccinated tourist exception. No general tourist, unvaccinated or railway reopening inferred.",
+      "unresolved": [],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"policy_period\", \"start_earliest\": \"2021-01-02\", \"start_latest\": \"2021-01-02\", \"end_earliest\": \"2021-07-27\", \"end_latest\": \"2021-07-30\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: Formal onset derives from January 2 immediate land-entry instruction. July 27 approval to July 30 destination-sector report bounds the relaxation; no clock time or independently observed first passenger is established. Only fully vaccinated tourist admission at Victoria Falls and Kazungula is ended; other categories and ports remain outside this endpoint."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

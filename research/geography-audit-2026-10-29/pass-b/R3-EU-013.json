@@ -1,0 +1,48 @@
+{
+  "record_id": "R3-EU-013",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Seven Russian rail control posts, including inland rail inspection stations, are named: Vyborg, Vyartsilya, Lyuttya, St Petersburg–Finlyandsky, Svetogorsk, Pechory-Pskovskie and Pytalovo. No road-post or full-frontier substitution.",
+  "source_checks": [
+    {
+      "url": "https://www.rosgranstroy.ru/press-center/news/priostanovleno-dvizhenie-cherez-zheleznodorozhnye-punkty-propuska-na-granice-s-finlyandiey-estoniey-i-latviey",
+      "access_status": "full_retrieved",
+      "finding": "Rosgranstroy July 1 2026 notice reproduces the seven-post list by neighboring country and commencement under June 30 order 1674-r."
+    },
+    {
+      "url": "https://news.err.ee/1610067124/russia-temporarily-closes-rail-border-crossings-with-estonia-latvia-and-finland",
+      "access_status": "extract_only",
+      "finding": "ERR introductory text corroborates rail suspension; inspected extract does not independently locate rail inspection facilities."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EU-013-FU1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Seven named rail border posts: Vyborg, Värtsilä, Lyttä, St Petersburg–Finlyandsky and Svetogorsk facing Finland; Pechory-Pskovskie facing Estonia; Pytalovo facing Latvia.; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "confirmed_through",
+        "start_earliest": "2026-07-01",
+        "start_latest": "2026-07-01",
+        "end_earliest": "2026-10-26",
+        "end_latest": "2026-10-26",
+        "last_confirmed": "2026-10-26",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Seven exact rail inspection/control footprints require official checkpoint location matching. Names may refer to inland stations; Koidula ROAD point and national boundary centroids rejected."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Seven exact rail inspection/control footprints require official checkpoint location matching. Names may refer to inland stations; Koidula ROAD point and national boundary centroids rejected."
+  ]
+}

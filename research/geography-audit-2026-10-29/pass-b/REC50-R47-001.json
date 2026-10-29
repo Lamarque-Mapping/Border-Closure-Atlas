@@ -1,0 +1,141 @@
+{
+  "record_id": "REC50-R47-001",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Adré road humanitarian corridor from Chad into Darfur, for Sudan-side permission and the separate WFP food-truck entry endpoint. Tine is an alternative crossing, not the geographic site of this record.",
+  "source_checks": [
+    {
+      "url": "https://sudan.un.org/en/276741-top-un-official-sudan-hails-re-opening-adre-border-crossing-point-chad-darfur",
+      "access_status": "full_text_fresh_fetch",
+      "finding": "Fresh original UN Sudan press release dated August 16, 2024 identifies Sudan’s permission for humanitarian aid through Adré and the February withdrawal. It contrasts the alternative Tine route; it does not independently resolve every intervening exception.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/e5ff0fcc0c469d1b28c8.html",
+      "evidence_sha256": "38acc61ff885df246a66564b31660dc54ff0235a8c41d1ac36a5c138f04af44f"
+    },
+    {
+      "url": "https://www.wfp.org/news/first-wfp-trucks-cross-sudans-reopened-adre-border-food-communities-risk-famine",
+      "access_status": "full_text_web",
+      "finding": "Original WFP August 21 release says the first trucks after renewed permission crossed Tuesday evening, August 20. This is a WFP delivery observation, not a general endpoint for every organization.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-32.json",
+      "evidence_sha256": "256bfe4643b09fe5af5bb53086e20d9c007487e8e4ae8885c9ef59eb6adf5203"
+    },
+    {
+      "url": "https://logcluster.org/sites/default/files/public/2023-06/sudan-bulletin-ndeg-3-ciqpsannexes_220620.pdf",
+      "access_status": "indexed_source_excerpt",
+      "finding": "Indexed original Logistics Cluster bulletin identifies the legal humanitarian import corridor through Adré to El Geneina and border customs offices; this independently identifies the road corridor used to interpret the OSM control compound.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-35.json",
+      "evidence_sha256": "f0ec6d051ef245d9bb146d233d4dc0e2112fb238ff84d8fee5f70e82b285da20"
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/map.json?bbox=22.22,13.44,22.24,13.47",
+      "access_status": "full_original_osm_json",
+      "finding": "Original border-control compound, its road connections, and the separately tagged Chad–Sudan boundary were inspected. The compound lies east of the boundary on the Adré–El Geneina corridor; its lack of a name prevents claiming an exact independently named 2024 gate.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/e7ef35e77922f14f53a7.json",
+      "evidence_sha256": "12bcb951b6eba0febb2c881d6109a052884b75b7bd9928e6461ed29ca123066d"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R47-001-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-adre-sudan",
+          "name": "Adré crossing, Sudan-side road control area",
+          "coordinates": [
+            22.2319623,
+            13.4577506
+          ],
+          "coordinate_method": "Bounding-box centre of original OSM facility polygon from independently fetched API JSON",
+          "precision": "approximate facility area; not a surveyed historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/map.json?bbox=22.22,13.44,22.24,13.47",
+            "https://www.openstreetmap.org/way/1038722129",
+            "https://www.openstreetmap.org/way/1187877614",
+            "https://www.openstreetmap.org/way/1168565803",
+            "https://logcluster.org/sites/default/files/public/2023-06/sudan-bulletin-ndeg-3-ciqpsannexes_220620.pdf"
+          ],
+          "evidence_note": "Original border-control polygon on the Abéché–Adré–El Geneina trunk-road corridor, east of the mapped Chad–Sudan boundary. The adjoining road and track connect to the control compound; the UN Logistics Cluster separately identifies the Adré–El Geneina humanitarian corridor. The polygon is unnamed, so this is a qualified crossing-area location, not independently proven coordinates of the precise 2024 clearance desk or convoy barrier. Inspected OSM tags: {\"barrier\": \"border_control\", \"layer\": \"1\"}. Geographic evidence only; no historical restriction or current operational status inferred.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/e7ef35e77922f14f53a7.json",
+          "evidence_sha256": "12bcb951b6eba0febb2c881d6109a052884b75b7bd9928e6461ed29ca123066d",
+          "osm_version": 5,
+          "osm_timestamp": "2023-08-26T18:05:11Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Sudan-side humanitarian authorization through the Adré corridor; March/April exceptions and the August permission date remain preserved. Current phase only: Sudan-side authorisation for Chad-to-Darfur humanitarian consignments through Adré",
+      "date_scope_check": {
+        "start_earliest": "2024-02-21",
+        "start_latest": "2024-02-21",
+        "end_earliest": "2024-08-15",
+        "end_latest": "2024-08-16",
+        "last_confirmed": null,
+        "endpoint_status": "legal_effective",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "REC50-R47-001-P1: The February withdrawal had documented March/April exceptions. August 15–16 permission is distinct from actual WFP food-truck entry on August 20. The initial restriction was administrative; physical control of the crossing was separately attributed to the RSF. No continuous all-aid or all-traffic closure is claimed.\n\nREC50-R47-001-P2: Endpoint-only observation. The last March/April exceptional shipment and onset of the subsequent WFP interruption are not dated. No complete February–August operational spell, all-agency return, or arrival at final destinations is inferred.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "The road-control area is supported by its network and frontier context, but the unnamed OSM compound is not independently tied to the exact 2024 convoy clearance desk. Both phases are therefore partial crossing-area proposals."
+      ]
+    },
+    {
+      "phase_id": "REC50-R47-001-P2",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-adre-sudan",
+          "name": "Adré crossing, Sudan-side road control area",
+          "coordinates": [
+            22.2319623,
+            13.4577506
+          ],
+          "coordinate_method": "Bounding-box centre of original OSM facility polygon from independently fetched API JSON",
+          "precision": "approximate facility area; not a surveyed historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/map.json?bbox=22.22,13.44,22.24,13.47",
+            "https://www.openstreetmap.org/way/1038722129",
+            "https://www.openstreetmap.org/way/1187877614",
+            "https://www.openstreetmap.org/way/1168565803",
+            "https://logcluster.org/sites/default/files/public/2023-06/sudan-bulletin-ndeg-3-ciqpsannexes_220620.pdf"
+          ],
+          "evidence_note": "Original border-control polygon on the Abéché–Adré–El Geneina trunk-road corridor, east of the mapped Chad–Sudan boundary. The adjoining road and track connect to the control compound; the UN Logistics Cluster separately identifies the Adré–El Geneina humanitarian corridor. The polygon is unnamed, so this is a qualified crossing-area location, not independently proven coordinates of the precise 2024 clearance desk or convoy barrier. Inspected OSM tags: {\"barrier\": \"border_control\", \"layer\": \"1\"}. Geographic evidence only; no historical restriction or current operational status inferred.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/e7ef35e77922f14f53a7.json",
+          "evidence_sha256": "12bcb951b6eba0febb2c881d6109a052884b75b7bd9928e6461ed29ca123066d",
+          "osm_version": 5,
+          "osm_timestamp": "2023-08-26T18:05:11Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "WFP’s August 20 food-truck entry uses the Adré road corridor. It does not establish reopening for all organizations or all consignments. Current phase only: WFP food-truck entry through Adré following renewed Sudanese permission",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2024-08-20",
+        "end_latest": "2024-08-20",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "REC50-R47-001-P1: The February withdrawal had documented March/April exceptions. August 15–16 permission is distinct from actual WFP food-truck entry on August 20. The initial restriction was administrative; physical control of the crossing was separately attributed to the RSF. No continuous all-aid or all-traffic closure is claimed.\n\nREC50-R47-001-P2: Endpoint-only observation. The last March/April exceptional shipment and onset of the subsequent WFP interruption are not dated. No complete February–August operational spell, all-agency return, or arrival at final destinations is inferred.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "The road-control area is supported by its network and frontier context, but the unnamed OSM compound is not independently tied to the exact 2024 convoy clearance desk. Both phases are therefore partial crossing-area proposals."
+      ]
+    }
+  ],
+  "unresolved": [
+    "The road-control area is supported by its network and frontier context, but the unnamed OSM compound is not independently tied to the exact 2024 convoy clearance desk. Both phases are therefore partial crossing-area proposals."
+  ]
+}

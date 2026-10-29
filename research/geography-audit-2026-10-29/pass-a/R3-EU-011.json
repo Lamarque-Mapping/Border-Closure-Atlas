@@ -1,0 +1,284 @@
+{
+  "record_id": "R3-EU-011",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Farmers restricted freight on Hrebenne, Dorohusk, Zosin and Dołhobyczów approaches; Dołhobyczów has two episodes separated by Easter suspension. At Dorohusk the police identify Okopy DK12/DW816 junction, not the checkpoint gate.",
+  "source_checks": [
+    {
+      "url": "https://lubelska.policja.gov.pl/lub/aktualnosci/143748%2CProtesty-rolnicze-na-Wezle-Rudnik-S1719-i-3-przejsciach-granicznych.html",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Police notice identifies Hrebenne DK17, Dorohusk approach at Okopy DK12/DW816, Dołhobyczów, and Zosin suspension March21 20:00. Authorized future protest dates do not prove continuous obstruction.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-064.json"
+    },
+    {
+      "url": "https://www.pravda.com.ua/eng/news/2024/04/02/7449248/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "April2 report resumes Dołhobyczów–Uhryniv truck quotas at09:00 after March28 Easter suspension; cars/buses remain unaffected.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-072.json"
+    },
+    {
+      "url": "https://www.pravda.com.ua/eng/news/2024/04/16/7451475/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "April16 border-guard interview reports Dołhobyczów normal truck passage restored13:50 Kyiv time both directions.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-072.json"
+    },
+    {
+      "url": "https://kolejkanagranicy.pl/en/przejscie/dolhobyczow-uhrynow",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Published pair-specific road-crossing coordinate. Service attribution is secondary and does not identify historical protest position.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-074.json"
+    },
+    {
+      "url": "https://mapcarta.com/W147216458",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named paired road checkpoint on E372, distinct from separate rail station. Reference may fall on Ukrainian facility side; Polish approach blockade not located.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-067.json"
+    },
+    {
+      "url": "https://mapcarta.com/W83894710",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named road border station rather than rail crossing. Exact Polish protest location several kilometres away is not represented; inconsistent page regional categorization not used as authority.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-066.json"
+    },
+    {
+      "url": "https://mapcarta.com/N5135908161",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named road border-control node. Lane-specific historical freight restriction and inland protest position are not established from geographic metadata.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-066.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EU-011-R1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-hrebenne-road-reference",
+          "name": "Hrebenne–Rava-Ruska road checkpoint reference",
+          "coordinates": [
+            23.58862,
+            50.27635
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 147216458; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W147216458",
+            "https://www.openstreetmap.org/way/147216458"
+          ],
+          "evidence_note": "Named paired road checkpoint on E372, distinct from separate rail station. Reference may fall on Ukrainian facility side; Polish approach blockade not located.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-067.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Farmers' selective truck-throughput restriction regime at Hrebenne–Rava-Ruska approach only",
+      "date_scope_check": {
+        "start_earliest": "2024-02-09",
+        "start_latest": "2024-02-09",
+        "end_earliest": "2024-04-28",
+        "end_latest": "2024-04-29",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Reference identifies affected road crossing only; exact inland protest barrier unlocated. Dates and changing freight exemptions remain canonical."
+      ]
+    },
+    {
+      "phase_id": "R3-EU-011-R2",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-dorohusk-road-reference",
+          "name": "Dorohusk–Yahodyn road checkpoint reference",
+          "coordinates": [
+            23.80362,
+            51.18167
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 83894710; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W83894710",
+            "https://www.openstreetmap.org/way/83894710"
+          ],
+          "evidence_note": "Named road border station rather than rail crossing. Exact Polish protest location several kilometres away is not represented; inconsistent page regional categorization not used as authority.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-066.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Farmers’ commercial-freight restrictions at Dorohusk–Yahodyn",
+      "date_scope_check": {
+        "start_earliest": "2024-02-09",
+        "start_latest": "2024-02-09",
+        "end_earliest": "2024-04-22",
+        "end_latest": "2024-04-22",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Reference identifies affected road crossing only; exact inland protest barrier unlocated. Dates and changing freight exemptions remain canonical."
+      ]
+    },
+    {
+      "phase_id": "R3-EU-011-R3",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-zosin-road-reference",
+          "name": "Zosin–Ustyluh road checkpoint reference",
+          "coordinates": [
+            24.13579,
+            50.85975
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 5135908161; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N5135908161",
+            "https://www.openstreetmap.org/node/5135908161"
+          ],
+          "evidence_note": "Named road border-control node. Lane-specific historical freight restriction and inland protest position are not established from geographic metadata.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-066.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Farmers’ commercial-freight restrictions at Zosin–Ustyluh",
+      "date_scope_check": {
+        "start_earliest": "2024-02-12",
+        "start_latest": "2024-02-12",
+        "end_earliest": "2024-03-21",
+        "end_latest": "2024-03-21",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Reference identifies affected road crossing only; exact inland protest barrier unlocated. Dates and changing freight exemptions remain canonical."
+      ]
+    },
+    {
+      "phase_id": "R3-EU-011-R4",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-dolhobyczow-road-reference",
+          "name": "Dołhobyczów–Uhryniv road crossing reference",
+          "coordinates": [
+            24.09043,
+            50.57805
+          ],
+          "coordinate_method": "Published named international-road crossing coordinate in current border-queue service; underlying API geometry not obtained",
+          "precision": "Approximate paired crossing reference only; not surveyed protest barrier or historic facility footprint.",
+          "source_urls": [
+            "https://kolejkanagranicy.pl/en/przejscie/dolhobyczow-uhrynow"
+          ],
+          "evidence_note": "Page explicitly pairs Dołhobyczów and Uhryniv and labels road/international. Current traffic estimates are not used as historical closure evidence. Independent Polish police and Ukrainian border-guard reporting establish affected crossing identity.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-074.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Farmers’ commercial-freight restrictions at Dołhobyczów–Uhryniv",
+      "date_scope_check": {
+        "start_earliest": "2024-02-12",
+        "start_latest": "2024-02-12",
+        "end_earliest": "2024-03-28",
+        "end_latest": "2024-03-28",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Reference identifies affected road crossing only; exact inland protest barrier unlocated. Dates and changing freight exemptions remain canonical."
+      ]
+    },
+    {
+      "phase_id": "R3-EU-011-R5",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-dolhobyczow-road-reference",
+          "name": "Dołhobyczów–Uhryniv road crossing reference",
+          "coordinates": [
+            24.09043,
+            50.57805
+          ],
+          "coordinate_method": "Published named international-road crossing coordinate in current border-queue service; underlying API geometry not obtained",
+          "precision": "Approximate paired crossing reference only; not surveyed protest barrier or historic facility footprint.",
+          "source_urls": [
+            "https://kolejkanagranicy.pl/en/przejscie/dolhobyczow-uhrynow"
+          ],
+          "evidence_note": "Page explicitly pairs Dołhobyczów and Uhryniv and labels road/international. Current traffic estimates are not used as historical closure evidence. Independent Polish police and Ukrainian border-guard reporting establish affected crossing identity.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-074.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Farmers’ commercial-freight restrictions at Dołhobyczów–Uhryniv",
+      "date_scope_check": {
+        "start_earliest": "2024-04-02",
+        "start_latest": "2024-04-02",
+        "end_earliest": "2024-04-16",
+        "end_latest": "2024-04-16",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Reference identifies affected road crossing only; exact inland protest barrier unlocated. Dates and changing freight exemptions remain canonical."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "430153726b1bf982697cd9d57b8399aa10572de6379dfaa53fed93953ece30c2"
+}

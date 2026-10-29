@@ -1,0 +1,82 @@
+{
+  "record_id": "R5-EA-002",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "First Thai–Myanmar Friendship Bridge visitor permission from Thailand into Myanmar during March 25–26, 2023 fighting. Myanmar returnees, Bridge II cargo and the opposite travel direction remain separate.",
+  "source_checks": [
+    {
+      "url": "https://www.nationthailand.com/thailand/general/40026031",
+      "access_status": "full_text_web",
+      "finding": "Nation reports Thai and foreign visitor trips halted; its separate cargo queue paragraph refers to Bridge II.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r5-3.json",
+      "sha256": "e941669c6b6622ce79b18a2c37e04a946c87f0924eb65e96854ba13d06697d04"
+    },
+    {
+      "url": "https://www.nationthailand.com/thailand/general/40026050",
+      "access_status": "full_text_web",
+      "finding": "Nation locates the immigration checkpoint at Friendship Bridge in Ban Rim Moei, describes restored March 26 permission, and says no tourists used it that day.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r5-3.json",
+      "sha256": "e941669c6b6622ce79b18a2c37e04a946c87f0924eb65e96854ba13d06697d04"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1560879036/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Explicit First Friendship Bridge geometry inspected; distinct from Bridge II.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/9957dc99f9645e7b0ebf.xml",
+      "sha256": "64b49b144bc15522f21ddaa7cc02adae212a6a811796f33ef4c43b1ed13dfdf9",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/9957dc99f9645e7b0ebf.txt",
+      "text_sha256": "64b49b144bc15522f21ddaa7cc02adae212a6a811796f33ef4c43b1ed13dfdf9",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-EA-002-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-maesot-myawaddy-bridge-1",
+          "name": "Mae Sot–Myawaddy Friendship Bridge I",
+          "coordinates": [
+            98.5165555,
+            16.6907206
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/1560879036/full"
+          ],
+          "evidence_note": "Named OSM bridge footprint on Moei River; Thai government description fixes Bridge I to Highway 105 and 1997 opening, separately from cargo Bridge II.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/9957dc99f9645e7b0ebf.xml",
+          "sha256": "64b49b144bc15522f21ddaa7cc02adae212a6a811796f33ef4c43b1ed13dfdf9"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "First Thai–Myanmar Friendship Bridge visitor permission from Thailand into Myanmar during March 25–26, 2023 fighting. Myanmar returnees, Bridge II cargo and the opposite travel direction remain separate.",
+      "date_scope_check": {
+        "start_earliest": "2023-03-25",
+        "start_latest": "2023-03-25",
+        "end_earliest": "2023-03-26",
+        "end_latest": "2023-03-26",
+        "last_confirmed": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "R5-EA-002-D1: Permission/availability endpoint only: tourists declined to use it that day, so no first visitor passage is established. Myanmar returnees were excepted. Later March 28 narrative overlaps the same incident and is not treated as a new closure; Bridge II cargo and inland roads are separate.\n\nAdditional within-day distinction: Eleven Media reports movement toward Thailand restored around 10:30 on March 25 after a morning blockage. That direction-specific account does not establish an earlier end of the restriction on Thai and foreign visitors entering Myanmar, for which The Nation reports restored permission on March 26 and no actual visitor crossings that day. The March 28 report recounts fighting beginning March 25, not a separately established new closure."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "4a39c1408d35ecf72740b025abccf0b7ba0db82801c93615feec9b52e7b41ab5",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

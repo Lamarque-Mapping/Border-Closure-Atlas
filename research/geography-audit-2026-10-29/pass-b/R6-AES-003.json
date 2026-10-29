@@ -1,0 +1,87 @@
+{
+  "record_id": "R6-AES-003",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Victoria Falls–Livingstone and Kazungula Botswana–Zimbabwe road posts, for admission of fully vaccinated tourists. The Botswana–Zambia Kazungula bridge is a separate crossing.",
+  "source_checks": [
+    {
+      "url": "https://www.zimlive.com/zimbabwe-re-opens-victoria-falls-land-borders-to-fully-vaccinated-tourists/",
+      "access_status": "full_text_web",
+      "finding": "Minister’s quoted announcement names Victoria Falls and Kazungula and limits reopening to fully vaccinated tourists; goods, returning citizens and foreign departures were outside the general restriction.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-28.json",
+      "evidence_sha256": "1c07142f5092770e8492f2cff7df774d6a784569ff6e9b17db1afebaaaebb00f"
+    },
+    {
+      "url": "https://www.botswanatourism.co.bw/index.php/travel-info/ports-entry",
+      "access_status": "indexed_source_excerpt",
+      "finding": "Official Botswana Tourism list explicitly separates Kazungula Road under Botswana/Zimbabwe from Kazungula Ferry under Botswana/Zambia.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-28.json",
+      "evidence_sha256": "fbc2882d2374da76db76b89f045b23969efe8aad06ac74c72ac431f4e0b3e805"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-AES-003-R1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-victoria-falls",
+          "name": "Victoria Falls / Livingstone",
+          "coordinates": [
+            25.85713,
+            -17.9281
+          ],
+          "coordinate_method": "Published AU-PIDA illustrative border-post coordinate, independently read in original report Appendix A",
+          "precision": "approximate crossing area; illustrative published marker, not surveyed gate",
+          "source_urls": [
+            "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "Appendix A, S25, printed page 79; longitude/latitude transcribed in lon,lat order. Report identifies crossing name but does not establish historic operation or exact obstruction.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/25782abcef016f49e77a.pdf",
+          "evidence_sha256": "35e1b5d512bfc882baf263b1abe002d0c99331d0b2b8e08fcb0f354ab504cbed"
+        },
+        {
+          "proposed_site_id": "post-kazungula-botswana-zimbabwe",
+          "name": "Kazungula Botswana–Zimbabwe road crossing",
+          "coordinates": [
+            25.2647491,
+            -17.8143708
+          ],
+          "coordinate_method": "Original OSM node coordinate from independently fetched API JSON",
+          "precision": "approximate crossing facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/3345684009.json",
+            "https://www.openstreetmap.org/node/3345684009"
+          ],
+          "evidence_note": "Original node explicitly names Zimbabwe entry control. This is the road crossing south of the Zambezi, distinct from Botswana–Zambia ferry and bridge. Inspected OSM tags: {\"barrier\": \"border_control\", \"name\": \"Kazungula Border Zimbabwe IN\", \"opening_hours\": \"06:00-18:00\"}. Geographic evidence only; no historical restriction or current operational status inferred.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/eada0fcec4ae4cad89fa.json",
+          "evidence_sha256": "522c42215b342fcbb8e5e0e0043df1a8e6c469d0aafa0e22fae9d2dff10473cb",
+          "osm_version": 3,
+          "osm_timestamp": "2015-02-13T09:31:48Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Victoria Falls–Livingstone and Kazungula Botswana–Zimbabwe road posts, for admission of fully vaccinated tourists. The Botswana–Zambia Kazungula bridge is a separate crossing. Current phase only: Zimbabwe nonessential tourist admission restriction at Victoria Falls and Kazungula, ending only for fully vaccinated tourists",
+      "date_scope_check": {
+        "start_earliest": "2021-01-02",
+        "start_latest": "2021-01-02",
+        "end_earliest": "2021-07-27",
+        "end_latest": "2021-07-30",
+        "last_confirmed": null,
+        "endpoint_status": "legal_effective",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Formal onset derives from January 2 immediate land-entry instruction. July 27 approval to July 30 destination-sector report bounds the relaxation; no clock time or independently observed first passenger is established. Only fully vaccinated tourist admission at Victoria Falls and Kazungula is ended; other categories and ports remain outside this endpoint.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

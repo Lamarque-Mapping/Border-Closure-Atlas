@@ -1,0 +1,38 @@
+{
+  "record_id": "R6-AES-005",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Official Musosa road frontier crossing in Moba territory, Tanganyika, DR Congo, facing Kaputa district of Zambia. Informal paths involved in the precipitating incident are separate.",
+  "source_checks": [
+    {
+      "url": "https://www.radiookapi.net/2025/09/05/actualite/societe/reouverture-de-la-frontiere-rdc-zambie-au-village-musosa-apres-8-jours",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full report inspected: administrator observed September3 reopening of official Musosa post after August27 incident; names Moba/Kaputa and distinguishes clandestine routes. Eight-day wording not converted to another start date.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-18.json"
+    },
+    {
+      "url": "https://mapcarta.com/32443098",
+      "access_status": "fresh_search_extract_inspected",
+      "finding": "Search result is a Musosa locality, not an identified official crossing gate; town coordinates rejected.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-24.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-AES-005-D1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: road_official_crossing. Canonical August27–September3 only; no railway/ferry or general DR Congo–Zambia closure.",
+      "unresolved": [
+        "Exact official Musosa gate coordinates are not established; locality point is insufficient."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"closed_interval\", \"start_earliest\": \"2025-08-27\", \"start_latest\": \"2025-08-27\", \"end_earliest\": \"2025-09-03\", \"end_latest\": \"2025-09-03\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: The report’s headline says eight days, while its stated closure and reopening dates differ by seven calendar days. Informal paths are outside this scope; one reporting lineage. The publisher’s counting method is not established."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

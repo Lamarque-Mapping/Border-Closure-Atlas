@@ -1,0 +1,124 @@
+{
+  "record_id": "R2-EA-008",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Cargo restoration concerns Bac Luan II bridge only, with cold-chain goods excluded initially. Citywide June restoration and pontoon tonnage must not be transferred to this bridge or passenger admission.",
+  "source_checks": [
+    {
+      "url": "https://mongcai.gov.vn/vi-vn/tin/ngay-dau-thong-quan-tro-lai-tai-cua-khau-cau-bac-luan-ii--46-xe-duoc-thong-quan/45018-58053-851157",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Official city full report names Bac Luan II, April 26 cargo restoration, four stages and 46 vehicles. Conflicting counts/clock accounts in canonical record remain unharmonised.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-33.json",
+      "sha256": "79aaecbfded571c6b514d8e2f6c668040f4ac9777efc22750e0822537b06a27d"
+    },
+    {
+      "url": "https://mongcai.gov.vn/vi-vn/tin/chinh-thuc-thong-quan-tro-lai-cua-khau-cau-bac-luan-ii/402494-58053-284265",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://baoxaydung.vn/thua-thot-phuong-tien-ngay-dau-thong-quan-tro-lai-cua-khau-cau-bac-luan-ii-192550394.htm",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://quangninh.gov.vn/chuyen-de/giamdocvoicutri/Trang/ChiTietTinTuc.aspx?nid=117378",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://english.baoquangninh.vn/customs-clearance-via-bac-luan-2-bridge-border-gate-to-be-resumed-in-4-stages-from-april-26-post3184418.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://mongcai.gov.vn/vi-vn/tin/chinh-thuc-thong-quan-tro-lai-cua-khau-ka-long-p45018-c19424-n236725",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www2.en.baochinhphu.vn/quang-ninh-xuat-nhap-khau-qua-cua-khau-tai-mong-cai-tro-lai-binh-thuong-102220622173321637.htm",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EA-008-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "crossing-mong-cai-bac-luan-ii",
+          "name": "Mong Cai–Dongxing, Bac Luan II",
+          "coordinates": [
+            107.9927813,
+            21.5476425
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/528516795",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/528516795",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=107.98,21.54,108.02,21.58"
+          ],
+          "evidence_note": "Explicitly named Second Beilun Bridge is the cargo route identified by the city release. Separate from passenger bridge I and Km3+4 pontoon.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-mong-cai-ii.xml",
+          "sha256": "4336e86810cb5cfce09a323eaf7c9389f21c27605c0354c33c0e98dd98660e48",
+          "osm_feature": "way/528516795",
+          "osm_version": "10",
+          "osm_timestamp": "2025-12-03T16:32:08Z",
+          "identity_tags": {
+            "access": "no",
+            "bridge": "yes",
+            "highway": "trunk",
+            "lanes": "2",
+            "layer": "1",
+            "lit": "yes",
+            "motor_vehicle": "permit",
+            "name": "Cầu Bắc Luân II - 北仑河二桥",
+            "name:en": "Second Beilun Bridge",
+            "name:vi": "Cầu Bắc Luân II",
+            "name:zh": "北仑河二桥",
+            "name:zh-Hans": "北仑河二桥",
+            "name:zh-Hant": "北崙河二橋",
+            "oneway": "yes",
+            "sidewalk": "no",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Dongxing–Mong Cai, Bac Luan II bridge; Cargo and associated vehicles; general passenger admission not established.; Bilateral cargo clearance.",
+      "date_scope_check": {
+        "scope": "Dongxing–Mong Cai, Bac Luan II bridge; Cargo and associated vehicles; general passenger admission not established.; Bilateral cargo clearance.",
+        "start_earliest": "2022-02-25",
+        "start_latest": "2022-02-25",
+        "end_earliest": "2022-04-26",
+        "end_latest": "2022-04-26",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

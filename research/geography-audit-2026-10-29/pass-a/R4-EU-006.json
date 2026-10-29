@@ -1,0 +1,72 @@
+{
+  "record_id": "R4-EU-006",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "December1 episode throttles commercial truck approach at VyšnéNemecké–Uzhhorod, with cargo exemptions and continued limited throughput. It is not a passenger closure or a whole Slovakia–Ukraine frontier restriction.",
+  "source_checks": [
+    {
+      "url": "https://spravy.stvr.sk/2023/12/unia-autodopravcov-zablokovala-hranicny-priechod-vysne-nemecke-obmedzenie-ma-trvat-do-odvolania/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "STVR December1 reports15:00 UNAS blockade, four ordinary trucks/hour and aid/military/live-animal/fuel/fresh-food exceptions; customs processing continued.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-065.json"
+    },
+    {
+      "url": "https://mapcarta.com/N2360532116",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named VyšnéNemecké(TIR) Slovak truck checkpoint; not Uzhhorod passenger/rail facility. Actual protesters on road approach not independently located.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-067.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-EU-006-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-vysne-nemecke-truck-reference",
+          "name": "Vyšné Nemecké road truck checkpoint reference",
+          "coordinates": [
+            22.26581,
+            48.65662
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 2360532116; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N2360532116",
+            "https://www.openstreetmap.org/node/2360532116"
+          ],
+          "evidence_note": "Named VyšnéNemecké(TIR) Slovak truck checkpoint; not Uzhhorod passenger/rail facility. Actual protesters on road approach not independently located.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-067.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Intentional throttling of freight access at one international road crossing; Ordinary commercial trucks, prominently on the route into Ukraine; not all passenger movement; Freight access at the crossing; evidence particularly documents Slovak-side queues toward Ukraine, not identical restriction in both directions",
+      "date_scope_check": {
+        "start_earliest": "2023-12-01",
+        "start_latest": "2023-12-01",
+        "end_earliest": "2023-12-04",
+        "end_latest": "2023-12-04",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact Slovak approach barrier is not located; reference is affected freight checkpoint only."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "5b7fd8390a98559a74a601c2ee85bfc5b2d6182c03053354bb3aa101a9ae03ee"
+}

@@ -1,0 +1,95 @@
+{
+  "record_id": "R4-SC-003",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "March 2018 Russian-election order applies to simplified citizen crossing points on the South Ossetian ABL. Known Razdakhan simplified crossing can be mapped as partial coverage; order does not enumerate all operating posts.",
+  "source_checks": [
+    {
+      "url": "https://www.kavkaz-uzel.eu/articles/317905",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Full text quotes KGB order for simplified crossings and exact scheduled clocks.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-43.json",
+      "sha256": "9ea343b69ef09d4884867e7241ec6014bd441fda9a89aec3b9e15b1d3d9ac2b7"
+    },
+    {
+      "url": "https://www.kavkaz-uzel.eu/articles/300644",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Prior-year implementation report establishes Razdakhan as an operational simplified citizen crossing; used for scope identity, not proof of 2018 enforcement.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-44.json",
+      "sha256": "a0d6d47ad2d8d17e44648762a554a5afe9ac14ac920967664489af35ced64a06"
+    },
+    {
+      "url": "https://1tv.ge/lang/ru/news/na-vremja-vyborov-prezidenta-rossii-de-fakto-vlasti-okkupirovannogo-ckhinvali-zakroet-granicu-s-gruziej/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://news.rambler.ru/conflicts/39375183-yuzhnaya-osetiya-zakroet-granitsu-s-gruziey-na-vremya-vyborov-prezidenta/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-SC-003-R1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-odzisi-mosabruni",
+          "name": "Odzisi–Mosabruni (Razdakhan)",
+          "coordinates": [
+            44.4871514,
+            42.0682341
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/1203169771",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1203169771",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=44.46,42.06,44.51,42.11"
+          ],
+          "evidence_note": "Named Razdakhan-Mosabruni border-control node corresponds to Leningor/Akhalgori simplified crossing. Distinct from Sinagur/Perevi.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-odzisi.xml",
+          "sha256": "2cd4f92f03a5fbd209ac81a4b5e7ad1a7e489eb1155aec431b468abf0945da71",
+          "osm_feature": "node/1203169771",
+          "osm_version": "4",
+          "osm_timestamp": "2025-10-24T20:38:43Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "Уадзæн пункт \"Раздæхæн\" - საბაჟო გამშვები პუნქტი \"მოსაბრუნი\"",
+            "name:en": "Border Crossing Point \"Razdakhan-Mosabruni\"",
+            "name:ka": "საბაჟო გამშვები პუნქტი \"მოსაბრუნი\"",
+            "name:os": "Уадзæн пункт \"Раздæхæн\"",
+            "name:ru": "КПП «Раздахан-Мосабруни»"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Simplified civilian crossing points between South Ossetia and Georgian-administered territory under Russian-election security order",
+      "date_scope_check": {
+        "scope": "Simplified civilian crossing points between South Ossetia and Georgian-administered territory under Russian-election security order",
+        "start_earliest": "2018-03-17",
+        "start_latest": "2018-03-17",
+        "end_earliest": "2018-03-19",
+        "end_latest": "2018-03-19",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "assessment": "March 17 21:00 to March 19 06:00 announced window retained; no actual opening or enforcement inferred."
+      },
+      "unresolved": [
+        "All simplified posts in force in March 2018 are not exhaustively enumerated or geolocated."
+      ]
+    }
+  ],
+  "unresolved": []
+}

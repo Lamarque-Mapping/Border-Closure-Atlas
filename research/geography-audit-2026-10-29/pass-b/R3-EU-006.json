@@ -1,0 +1,83 @@
+{
+  "record_id": "R3-EU-006",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Exactly Cahul–Oancea and Lipcani–Rădăuți-Prut international ROAD posts. March 15 Border Police notice names these two closed since 16:00 March 14 while other Romania posts remain active.",
+  "source_checks": [
+    {
+      "url": "https://www.border.gov.md/ro/punctele-de-trecere-a-frontierei-cahul-oancea-si-lipcani-radauti-prut-si-au-sistat-temporar-activitatea",
+      "access_status": "inaccessible",
+      "finding": "Anti-bot verification page, no substantive text."
+    },
+    {
+      "url": "https://border.gov.md/ro/masuri-noi-si-restrictii-de-circulatie-prin-punctele-de-trecere-a-frontierei-de-stat",
+      "access_status": "full_retrieved",
+      "finding": "Official March 15 notice independently supplies names, road mode, closure timestamp and alternative active posts."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/2445073660",
+      "access_status": "full_retrieved",
+      "finding": "OSM node/2445073660; directly inspected XML; sha256 aa34f952028cb4446ad7c7342bbce395eb1a8494119411ecd58a0ba55571b338"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/8445852281",
+      "access_status": "full_retrieved",
+      "finding": "OSM node/8445852281; directly inspected XML; sha256 57dfa5c1078c187ec9697fe811b7b43fbe6c5b6dbd162cf4fb5516813682e234"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EU-006-R1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-cahul-oancea-road",
+          "name": "Cahul–Oancea road crossing, Moldovan control",
+          "coordinates": [
+            28.1252719,
+            45.9168708
+          ],
+          "coordinate_method": "OSM node/2445073660; directly inspected XML; sha256 aa34f952028cb4446ad7c7342bbce395eb1a8494119411ecd58a0ba55571b338",
+          "precision": "Crossing-facility representative, approximately 100 m; not barrier-footprint survey",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/2445073660"
+          ],
+          "evidence_note": "Road control on R34.1 within Cahul customs access; paired with March 15 official closed-post list."
+        },
+        {
+          "proposed_site_id": "post-lipcani-radauti-prut-road",
+          "name": "Lipcani–Rădăuți-Prut road crossing, Moldovan control",
+          "coordinates": [
+            26.8018713,
+            48.2562496
+          ],
+          "coordinate_method": "OSM node/8445852281; directly inspected XML; sha256 57dfa5c1078c187ec9697fe811b7b43fbe6c5b6dbd162cf4fb5516813682e234",
+          "precision": "Crossing-facility representative, approximately 100 m; not barrier-footprint survey",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/8445852281"
+          ],
+          "evidence_note": "Border-control node inside named OSM Lipcani–Rădăuți-Prut road post; road L36 crossing rather than town centroid or railway."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Initial Romanian-directed suspension of Cahul–Oancea and Lipcani–Rădăuți-Prut road crossing operations; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "ordered_window",
+        "start_earliest": "2020-03-14",
+        "start_latest": "2020-03-14",
+        "end_earliest": "2020-04-13",
+        "end_latest": "2020-04-13",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

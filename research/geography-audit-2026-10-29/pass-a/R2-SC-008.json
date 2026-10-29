@@ -1,0 +1,235 @@
+{
+  "record_id": "R2-SC-008",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The district election order names Rasuwagadhi and Kimathanka; the added operational freight observation applies only to Rasuwagadhi. Historical Rasuwagadhi vehicle bridge is distinguished from the 2019 replacement and derelict footbridge.",
+  "source_checks": [
+    {
+      "url": "https://kathmandupost.com/national/2017/11/24/border-with-china-sealed-for-72-hrs",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Contemporaneous report explicitly names the two crossings and district-official 72-hour order.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-33.json",
+      "sha256": "79aaecbfded571c6b514d8e2f6c668040f4ac9777efc22750e0822537b06a27d"
+    },
+    {
+      "url": "https://www.myrepublica.nagariknetwork.com/news/rasuwa-border-reopens",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Full report describes Rasuwa 72-hour restriction and actual trucks in both directions November 27.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-36.json",
+      "sha256": "8acf8e52b87c7d93058ca76dc16a6b4a5dce2fd5e838cb96d246a3a410c372a7"
+    },
+    {
+      "url": "https://kathmandupost.com/national/2018/11/17/friendship-bridge-construction-starts-in-rasuwagadhi",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Full 2018 report says vehicles use Bailey bridge over old damaged bridge and replacement is five metres northeast; establishes approximate historical area match.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-38.json",
+      "sha256": "a16fd551b606ea10896ea76b3d92521414f95376cf4d60771bfc3ab167803032"
+    },
+    {
+      "url": "https://giwmscdntwo.gov.np/media/pdf_upload/Annual%20Report%202023-2024_16ovpix.pdf",
+      "access_status": "search_indexed_pdf_passage",
+      "finding": "Official foreign-affairs report indexed passage explicitly pairs Chentang with Kimathanka; geographic corroboration only.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-38.json",
+      "sha256": "a16fd551b606ea10896ea76b3d92521414f95376cf4d60771bfc3ab167803032"
+    },
+    {
+      "url": "https://journals.ed.ac.uk/himalaya/article/download/6583/8866/",
+      "access_status": "search_indexed_pdf_passage",
+      "finding": "Fieldwork caption locates Kimathanka–Chentang crossing at Kamuchangu River Friendship Bridge; direct PDF later timed out, indexed caption only.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-38.json",
+      "sha256": "a16fd551b606ea10896ea76b3d92521414f95376cf4d60771bfc3ab167803032"
+    },
+    {
+      "url": "https://timesofindia.indiatimes.com/world/nepal-closes-border-with-china-india-ahead-of-nov-26-polls/articleshow/61780606.cms",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://myrepublica.nagariknetwork.com/news/rasuwa-border-reopens",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-SC-008-R1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "crossing-rasuwagadhi-bridge-area",
+          "name": "Rasuwagadhi–Kerung vehicle bridge area",
+          "coordinates": [
+            85.3780675,
+            28.278665
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/1443180803",
+          "precision": "Approximate historical crossing area, 100 m; 2017 Bailey bridge was adjacent, not the mapped 2019 structure.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1443180803",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=85.36,28.26,85.4,28.3",
+            "https://kathmandupost.com/national/2018/11/17/friendship-bridge-construction-starts-in-rasuwagadhi"
+          ],
+          "evidence_note": "OSM geometry is the 2019 replacement. Contemporary 2018 construction report places it five metres northeast of the old vehicle/Bailey bridge used before 2019; therefore used only as an approximate crossing-area reference for 2017, not as the 2017 structure.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-rasuwagadhi.xml",
+          "sha256": "385a8f7e86fd314b5e20980a8ccaa003b4dcdab43480c9ac8b6775762f7d50e7",
+          "osm_feature": "way/1443180803",
+          "osm_version": "13",
+          "osm_timestamp": "2026-09-02T18:24:39Z",
+          "identity_tags": {
+            "alt_name:en": "Rasuwagadhi Friendship Bridge",
+            "damage:event": "7·8吉隆口岸泥石流",
+            "damage:type": "landslide",
+            "destroyed:bridge": "yes",
+            "destroyed:highway": "primary",
+            "end_date": "2025-07-08",
+            "lanes": "2",
+            "layer": "1",
+            "name": "热索桥 रसुवागढी मितेरी पुल",
+            "name:en": "Resuo Bridge",
+            "name:ko": "레수오 다리",
+            "name:ne": "रसुवागढी मितेरी पुल",
+            "name:zh": "热索桥",
+            "name:zh-Hans": "热索桥",
+            "name:zh-Hant": "熱索橋",
+            "start_date": "2019-06-05",
+            "was:divider": "double_solid_line",
+            "was:driving_side": "left",
+            "was:foot": "designated",
+            "was:lane_markings": "yes",
+            "was:maxspeed:designed": "60",
+            "was:motor_vehicle": "designated",
+            "was:sidewalk:both": "yes",
+            "was:smoothness": "good",
+            "was:surface": "concrete",
+            "was:width": "12"
+          }
+        },
+        {
+          "proposed_site_id": "post-kimathanka-chentang",
+          "name": "Kimathanka–Chentang crossing area",
+          "coordinates": [
+            87.4235025,
+            27.8612138
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/1384413902",
+          "precision": "Approximate crossing area, 500 m; historical 2017 barrier/bridge footprint not surveyed.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1384413902",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=87.407,27.845,87.435,27.873"
+          ],
+          "evidence_note": "Named Chentang port government building near local border bridge. Nepal Foreign Affairs annual report identifies Chentang opposite Kimathanka; field-research caption places crossing at Kamuchangu Friendship Bridge. Current facility is an approximate area marker, not a claim that this building existed in 2017.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-kimathanka-gate.xml",
+          "sha256": "23fd8e72d7e0792b85aa9f229635a0dd2bf1aa7dd5c36842a7909f959bfa6edd",
+          "osm_feature": "way/1384413902",
+          "osm_version": "1",
+          "osm_timestamp": "2025-05-07T17:54:58Z",
+          "identity_tags": {
+            "building": "yes",
+            "name": "陈塘镇口岸",
+            "office": "government"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Rasuwagadhi and Kimathanka under named district election order",
+      "date_scope_check": {
+        "scope": "Rasuwagadhi and Kimathanka under named district election order",
+        "start_earliest": "2017-11-24",
+        "start_latest": "2017-11-24",
+        "end_earliest": "2017-11-27",
+        "end_latest": "2017-11-27",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "announced_window_layer_only",
+        "assessment": "Scheduled 72-hour order November 24–27 retained. Kimathanka reopening is not independently observed."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "REC50-R33-R2SC008-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "crossing-rasuwagadhi-bridge-area",
+          "name": "Rasuwagadhi–Kerung vehicle bridge area",
+          "coordinates": [
+            85.3780675,
+            28.278665
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/1443180803",
+          "precision": "Approximate historical crossing area, 100 m; 2017 Bailey bridge was adjacent, not the mapped 2019 structure.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1443180803",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=85.36,28.26,85.4,28.3",
+            "https://kathmandupost.com/national/2018/11/17/friendship-bridge-construction-starts-in-rasuwagadhi"
+          ],
+          "evidence_note": "OSM geometry is the 2019 replacement. Contemporary 2018 construction report places it five metres northeast of the old vehicle/Bailey bridge used before 2019; therefore used only as an approximate crossing-area reference for 2017, not as the 2017 structure.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-rasuwagadhi.xml",
+          "sha256": "385a8f7e86fd314b5e20980a8ccaa003b4dcdab43480c9ac8b6775762f7d50e7",
+          "osm_feature": "way/1443180803",
+          "osm_version": "13",
+          "osm_timestamp": "2026-09-02T18:24:39Z",
+          "identity_tags": {
+            "alt_name:en": "Rasuwagadhi Friendship Bridge",
+            "damage:event": "7·8吉隆口岸泥石流",
+            "damage:type": "landslide",
+            "destroyed:bridge": "yes",
+            "destroyed:highway": "primary",
+            "end_date": "2025-07-08",
+            "lanes": "2",
+            "layer": "1",
+            "name": "热索桥 रसुवागढी मितेरी पुल",
+            "name:en": "Resuo Bridge",
+            "name:ko": "레수오 다리",
+            "name:ne": "रसुवागढी मितेरी पुल",
+            "name:zh": "热索桥",
+            "name:zh-Hans": "热索桥",
+            "name:zh-Hant": "熱索橋",
+            "start_date": "2019-06-05",
+            "was:divider": "double_solid_line",
+            "was:driving_side": "left",
+            "was:foot": "designated",
+            "was:lane_markings": "yes",
+            "was:maxspeed:designed": "60",
+            "was:motor_vehicle": "designated",
+            "was:sidewalk:both": "yes",
+            "was:smoothness": "good",
+            "was:surface": "concrete",
+            "was:width": "12"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Observed Rasuwa/Rasuwagadhi freight return after the November 2017 election restriction",
+      "date_scope_check": {
+        "scope": "Observed Rasuwa/Rasuwagadhi freight return after the November 2017 election restriction",
+        "start_earliest": "2017-11-24",
+        "start_latest": "2017-11-24",
+        "end_earliest": "2017-11-27",
+        "end_latest": "2017-11-27",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Republica observed Rasuwa trucks after Sunday-midnight restoration; onset derived from reported 72 hours remains approximate. No Kimathanka/all-passenger endpoint inferred."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [
+    "Kimathanka marker identifies present port area; exact 2017 gate footprint not established."
+  ]
+}

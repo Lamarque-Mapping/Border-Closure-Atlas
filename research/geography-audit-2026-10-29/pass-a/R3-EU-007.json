@@ -1,0 +1,50 @@
+{
+  "record_id": "R3-EU-007",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "March15 notice closes all local/interstate Moldova–Ukraine posts plus twelve international mode-specific entries: Ocnita–Sokireani road; Larga–Kelmenti road/rail; Criva–Mamaliga rail; Vulcanesti–Vinogradovka road; Basarabeasca–Serpniovo1 road; Cosauti–Iampoli river; Unguri–Bronnita road; CeadirLunga–NovieTroiani road; Pervomaisc–Kuciurgan road; GoianulNou–Platonovo road; Hristovaia–Bolgan road. Several same-name road/rail counterparts remain open, precluding frontier substitution.",
+  "source_checks": [
+    {
+      "url": "https://border.gov.md/ro/masuri-noi-si-restrictii-de-circulatie-prin-punctele-de-trecere-a-frontierei-de-stat",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Full official March15 notice explicitly lists closed versusactive posts and modes fromMarch17; Ocnita rail andCriva roadactive whileoppositesclosed.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-051.json"
+    },
+    {
+      "url": "https://www.border.gov.md/informare-doua-puncte-de-trecere-frontierei-moldo-ucrainene-isi-reiau-activitatea",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Official November notice reopensBasarabeasca/CeadirLunga roadNovember12 08:00 and supplies thenactive roster, evidencing differingpost histories.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-060.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EU-007-FU1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Moldova–Ukraine local/interstate posts and named international road, rail and river posts in March 15 notice",
+      "date_scope_check": {
+        "start_earliest": "2020-03-17",
+        "start_latest": "2020-03-17",
+        "end_earliest": null,
+        "end_latest": "2021-05-24",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Complete local/interstate roster and exact named mode-specific facilities unlocated; no currentwholeborderline oropencounterpartcoordinatesareacceptable substitutes."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "5af9945d9c6a6f1ca2dad85624ea19bfbeac39be0ad1d8f7d291c5a2e4f45a7f"
+}

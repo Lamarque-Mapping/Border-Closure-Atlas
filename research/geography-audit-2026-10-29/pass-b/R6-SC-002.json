@@ -1,0 +1,84 @@
+{
+  "record_id": "R6-SC-002",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Kulma–Karasu freight handling during renewed late-2020 suspension and later transshipment restoration. Tajik truck or passenger admission is not inferred from cargo handling.",
+  "source_checks": [
+    {
+      "url": "https://asiaplus.news/en/2021/04/21/traffic-via-kulma-bcp-along-tajikistan-china-border-restored/",
+      "access_status": "full_text_web",
+      "finding": "Asia-Plus identifies the only overland crossing, renewed closure since October, and restored handling by April 21; pass location is explicit.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r6-2.json",
+      "sha256": "de320daf347fb491511f424044f821a673aa25b8616ca26ce1498adf5fa51aeb"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/2248936130",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Kulma border-control node dated before the phase inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/da54615467d8b5b84146.xml",
+      "sha256": "0b1c2839202a0ba857a6e189cba26b419ed53759bf424e116425161d88b04be8",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/da54615467d8b5b84146.txt",
+      "text_sha256": "0b1c2839202a0ba857a6e189cba26b419ed53759bf424e116425161d88b04be8",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=74.795,38.145,74.808,38.153",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named customs enclosure and two Kulma road-control nodes distinguish actual post from saddle and distant Chinese facility.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/0f434438134e686717e7.xml",
+      "sha256": "0bc1b4cc6fa0283e43ffa453d25dcf1831840c2a1afecdec4f391db7ae8ec561",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/0f434438134e686717e7.txt",
+      "text_sha256": "0bc1b4cc6fa0283e43ffa453d25dcf1831840c2a1afecdec4f391db7ae8ec561",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-SC-002-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kulma-road",
+          "name": "Kulma Tajik road checkpoint",
+          "coordinates": [
+            74.8008895,
+            38.1495899
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/2248936130"
+          ],
+          "evidence_note": "Explicit Kulma border_control node at the pass, version dated February 2020. Bounding XML identifies the Kulma Pass customs enclosure; distinct from Chinese Karasu processing 14 km downhill.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/da54615467d8b5b84146.xml",
+          "sha256": "0b1c2839202a0ba857a6e189cba26b419ed53759bf424e116425161d88b04be8"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kulma–Karasu freight handling during renewed late-2020 suspension and later transshipment restoration. Tajik truck or passenger admission is not inferred from cargo handling.",
+      "date_scope_check": {
+        "start_earliest": "2020-10-01",
+        "start_latest": "2020-10-31",
+        "end_earliest": "2021-04-01",
+        "end_latest": "2021-04-21",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Month-level bounds, not exact daily observation. All reports are Asia-Plus and recurring chronology may be reused; testimony differs but is not multiple independent outlets. Restored transshipment does not mean Tajik trucks or passengers were admitted."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "ed438ac055c184aeb13965859eb635f216434c9ca212c81de954ae0a339251c0",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

@@ -1,0 +1,74 @@
+{
+  "record_id": "R5-AWN-003",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Togolese election land-border policy, but this operational phase is restricted to the two road crossings with reported April 30 traffic: Aflao on Ghana frontier and Hilacondji/Sanveecondji on Benin frontier.",
+  "source_checks": [
+    {
+      "url": "https://loeildusahara.com/togo-les-frontieres-terrestres-rouvertes-ce-30-avril/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full relevant report inspected: national April 29 polling order, followed by early April 30 observed traffic at Aflao and same finding at Hilacondji. Does not prove every Togolese post reopened.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-17.json"
+    },
+    {
+      "url": "https://mapcarta.com/N14140322711",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Named Ghana Immigration Service–Aflao Border Post, OSM node 14140322711; used as paired road crossing reference, not attribution of the Togolese closure to Ghana.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-22.json"
+    },
+    {
+      "url": "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+      "access_status": "cached_original_text_extract_inspected",
+      "finding": "Published row W15 Hillacondji–Sanveekondji, latitude 6.24110 longitude 1.62903. Preserved original text was inspected; cached PDF binary is truncated and could not be rendered, so this is not fresh full-PDF visual verification. Illustrative location only.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/pida-original-text.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-AWN-003-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-aflao",
+          "name": "Aflao road border crossing",
+          "coordinates": [
+            1.19907,
+            6.1132
+          ],
+          "coordinate_method": "Transcribed coordinates from inspected Mapcarta rendering of the specifically named OSM facility; original API unavailable in web retrieval.",
+          "precision": "Approximately 1 km crossing area; no exact historical gate or damage footprint claimed.",
+          "source_urls": [
+            "https://mapcarta.com/N14140322711"
+          ],
+          "evidence_note": "Named Ghana Immigration Service–Aflao Border Post, OSM node 14140322711; used as paired road crossing reference, not attribution of the Togolese closure to Ghana.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-22.json"
+        },
+        {
+          "name": "Hilacondji–Sanveecondji road crossing",
+          "coordinates": [
+            1.62903,
+            6.2411
+          ],
+          "coordinate_method": "Coordinate row transcribed from independently inspected cached original AU-PIDA report text extraction, Appendix A.",
+          "precision": "Illustrative border crossing area, approximately 5 km; not a surveyed historical gate.",
+          "source_urls": [
+            "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "Published row W15 Hillacondji–Sanveekondji, latitude 6.24110 longitude 1.62903. Preserved original text was inspected; cached PDF binary is truncated and could not be rendered, so this is not fresh full-PDF visual verification. Illustrative location only.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/pida-original-text.txt",
+          "evidence_sha256": "98451216c05eab194ec577670f81979a7944ee5560d41e0ea9c43eb94d347983",
+          "proposed_site_id": "post-hilacondji-sanveecondji"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Modal scope: road_election_restriction. Both named road crossings only, April 29–30. Midnight/23:59 order remains policy timing; no inferred exact operational hours or all-frontier endpoint.",
+      "unresolved": [],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"closed_interval\", \"start_earliest\": \"2024-04-29\", \"start_latest\": \"2024-04-29\", \"end_earliest\": \"2024-04-30\", \"end_latest\": \"2024-04-30\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: A May publication date is not the reopening date. The national order is broader than the observed endpoints; identical implementation at every land post is not established. Reopening republications are not independent observations."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

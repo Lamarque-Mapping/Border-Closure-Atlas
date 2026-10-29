@@ -1,0 +1,64 @@
+{
+  "record_id": "R16-SM-005",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Sarfait/Sarfeet–Hawf road crossing between Yemen and Oman, for the reported crossing-service suspension after an armed confrontation. The marker represents the crossing area, not the arrest location.",
+  "source_checks": [
+    {
+      "url": "https://www.yemenmonitor.com/en/Details/ArtMID/908/ArticleID/144765",
+      "access_status": "full_text_web",
+      "finding": "Original report identifies the wanted leader attempting entry into Oman through Sarfait and the local temporary security closure. It supports the named crossing; the retained timing uncertainty remains unchanged.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-30.json",
+      "evidence_sha256": "75402f19430ac612c5cd52888397acf866d1ef29569358f7f6404f8a7d9537e7"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R16-SM-005-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-sarfait-hawf",
+          "name": "Sarfait / Sarfeet–Hawf crossing",
+          "coordinates": [
+            53.0992821,
+            16.6710831
+          ],
+          "coordinate_method": "Original OSM node coordinate from independently fetched API JSON",
+          "precision": "approximate crossing facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/map.json?bbox=53.09,16.66,53.11,16.68",
+            "https://www.openstreetmap.org/node/6960189085"
+          ],
+          "evidence_note": "Border-control checkpoint on AlGhaydah–Sarfayt Road, with named Sarfeet Yemeni Border locality immediately south and separately named Omani border-post polygon to the northeast. Approximate paired crossing area, not the exact incident or arrest point. Inspected OSM tags: {\"barrier\": \"border_control\", \"police\": \"checkpoint\"}. Geographic evidence only; no historical restriction or current operational status inferred.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/bf32d58550edaf083fb2.json",
+          "evidence_sha256": "aab0470c0d1d201f98451b76549612d16ef588ffe7cfcbc6c994758477c59be1",
+          "osm_version": 3,
+          "osm_timestamp": "2025-02-25T11:26:29Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Sarfait/Sarfeet–Hawf road crossing between Yemen and Oman, for the reported crossing-service suspension after an armed confrontation. The marker represents the crossing area, not the arrest location. Current phase only: Reported Sarfait crossing-service suspension after the armed confrontation",
+      "date_scope_check": {
+        "start_earliest": "2025-07-07",
+        "start_latest": "2025-07-08",
+        "end_earliest": "2025-07-08",
+        "end_latest": "2025-07-09",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Reported operational bounds, not exact reopening on publication day. Detailed direction/category exceptions remain unitemised and all-category implementation is not independently verified. July 7 detention is not itself the closure date; no extension to cutoff or exact hours is claimed.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

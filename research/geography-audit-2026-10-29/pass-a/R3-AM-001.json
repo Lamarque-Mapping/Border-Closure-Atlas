@@ -1,0 +1,130 @@
+{
+  "record_id": "R3-AM-001",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Renewed January blockade and later negotiated weekly passage concernDesaguadero corridor with both Carancas/new bridge and pedestrian crossing. New roadbridge reference supplies partial geography; separate traveller eligibility and weekly regime retained.",
+  "source_checks": [
+    {
+      "url": "https://www.noticiasfides.com/nacional/sociedad/reactivan-bloqueo-en-desaguadero-y-cierran-la-frontera-con-calaminas-palos-y-fierros",
+      "access_status": "fresh_full_text_extract",
+      "finding": "ANF January4 observes renewed blockage ofvehiclesandpeople withsheetmetal/tires, afterDecembertruce.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-057.json"
+    },
+    {
+      "url": "https://rpp.pe/peru/puno/puno-desde-esta-medianoche-hasta-el-lunes-se-reabriran-los-puentes-internacionales-de-desaguadero-noticia-1474383",
+      "access_status": "fresh_full_text_extract",
+      "finding": "RPP March23 names Carancas internationalbridge(s) and pedestrianbridge, reopeninguntilMonday27 thenTuesday/Wednesday strike; not universalcontinuous reopening.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-055.json"
+    },
+    {
+      "url": "https://www.gob.pe/institucion/migraciones/noticias/787685-migraciones-reanuda-acciones-de-control-migratorio-en-el-centro-binacional-de-atencion-fronteriza-cebaf-desaguadero",
+      "access_status": "inaccessible",
+      "finding": "Official CEBAF reopening source returned418; nofreshsource claim.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-050.json"
+    },
+    {
+      "url": "https://mapcarta.com/es/W480096907",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named new roadbridge and nearbyPuenteNuevo customs distinguish facilityfromcentralpedestrianbridge.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-056.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-AM-001-R2OBS1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-desaguadero-new-road-bridge",
+          "name": "Desaguadero new international road bridge",
+          "coordinates": [
+            -69.03518,
+            -16.5804
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 480096907; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W480096907",
+            "https://www.openstreetmap.org/way/480096907"
+          ],
+          "evidence_note": "Named international bridge next toPuenteNuevo customs; distinct from central pedestrian crossing and westernCEBAF.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-056.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Renewed Desaguadero bridge blockade affecting vehicles and people.",
+      "date_scope_check": {
+        "start_earliest": "2023-01-04",
+        "start_latest": "2023-01-04",
+        "end_earliest": "2023-01-04",
+        "end_latest": "2023-01-04",
+        "last_confirmed": "2023-01-04",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Central pedestrian bridge, CEBAF access and exact blockade positions unresolved; one bridge reference does not describe complete corridor."
+      ]
+    },
+    {
+      "phase_id": "R3-AM-001-REV1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-desaguadero-new-road-bridge",
+          "name": "Desaguadero new international road bridge",
+          "coordinates": [
+            -69.03518,
+            -16.5804
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 480096907; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W480096907",
+            "https://www.openstreetmap.org/way/480096907"
+          ],
+          "evidence_note": "Named international bridge next toPuenteNuevo customs; distinct from central pedestrian crossing and westernCEBAF.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-056.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Desaguadero corridor negotiated weekly passenger-access restriction regime; bridge eligibility varies by traveler",
+      "date_scope_check": {
+        "start_earliest": "2023-03-23",
+        "start_latest": "2023-03-23",
+        "end_earliest": "2023-03-30",
+        "end_latest": "2023-03-30",
+        "last_confirmed": "2023-03-30",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Central pedestrian bridge, CEBAF access and exact blockade positions unresolved; one bridge reference does not describe complete corridor."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "bc3462b3b3cfd26613e9fbc619144c6d6bd55dd5f6323bfbe38eedc3d6ca3800"
+}

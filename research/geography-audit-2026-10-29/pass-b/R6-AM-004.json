@@ -1,0 +1,73 @@
+{
+  "record_id": "R6-AM-004",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "February 16 2020 Canadian-side road approach protest at Rainbow Bridge, Niagara Falls; not a Canada-wide boundary closure or the nearby Peace Bridge.",
+  "source_checks": [
+    {
+      "url": "https://www.btpm.org/local/2020-02-17/protesters-shut-down-rainbow-bridge",
+      "access_status": "full_retrieved",
+      "finding": "BTPM article headline and concluding passage identify Rainbow but one paragraph says Peace Bridge; inconsistency retained."
+    },
+    {
+      "url": "https://iacenter.org/2020/02/19/anti-pipeline-protests-block-traffic-at-niagara-falls/",
+      "access_status": "full_retrieved",
+      "finding": "Named eyewitness report/photo explicitly gives Rainbow Bridge Canadian side, march from Highway420, around15:00."
+    },
+    {
+      "url": "https://www.cbsa-asfc.gc.ca/transparency-transparence/pd-dp/bbp-rpp/secu/2020-02-26/issues-enjeux-eng.html",
+      "access_status": "inaccessible",
+      "finding": "Page initially retrieved; targeted Rainbow retrieval timed out, so no uninspected corroboration claimed."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/162149070/full",
+      "access_status": "full_retrieved",
+      "finding": "Directly inspected OSM way/162149070 mean of geometry vertices; XML sha256 904321f7ec1353d578764c5946bec18adc219f3d18cc0eab767d67bc3d824ff8"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-AM-004-V1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-rainbow-canadian-approach",
+          "name": "Rainbow Bridge Canadian approach",
+          "coordinates": [
+            -79.06938196666667,
+            43.091347766666665
+          ],
+          "coordinate_method": "Directly inspected OSM way/162149070 mean of geometry vertices; XML sha256 904321f7ec1353d578764c5946bec18adc219f3d18cc0eab767d67bc3d824ff8",
+          "precision": "Road approach segment representative, approximately 200 m",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/162149070/full"
+          ],
+          "evidence_note": "OSM road segment named Rainbow Bridge Approach, ref 420; coordinates are Canadian western approach segment. Eyewitness source explicitly locates Canadian-side obstruction."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Physical protest obstruction of Canadian-side vehicular access to Rainbow Bridge; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2020-02-16",
+        "start_latest": "2020-02-16",
+        "end_earliest": "2020-02-16",
+        "end_latest": "2020-02-16",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Exact protest crowd footprint unknown; BTPM Peace/Rainbow inconsistency noted, resolved for area identity by eyewitness report rather than silently ignored."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact protest crowd footprint unknown; BTPM Peace/Rainbow inconsistency noted, resolved for area identity by eyewitness report rather than silently ignored."
+  ]
+}

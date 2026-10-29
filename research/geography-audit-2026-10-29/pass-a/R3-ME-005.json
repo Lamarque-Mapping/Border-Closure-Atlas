@@ -1,0 +1,52 @@
+{
+  "record_id": "R3-ME-005",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Renewed Arida road/bridge interruption December 6, followed by limited private passenger-vehicle restoration June 3. It is a separate episode from late-November damage and early-December returnee passage.",
+  "source_checks": [
+    {
+      "url": "https://today.lorientlejour.com/article/1463091/reopening-of-the-arida-border-crossing-you-can-smell-syria-from-here.html",
+      "access_status": "fresh_accessible_article_excerpt_inspected",
+      "finding": "Accessible article excerpt documents cars at General Security checkpoint June 3, temporary exit-lane route and goods trucks still excluded. December 6 closure cited.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-10.json"
+    },
+    {
+      "url": "https://mapcarta.com/N11056661683",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Arida immigration-centre location inspected.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-13.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-ME-005-FU1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-arida",
+          "name": "Arida road crossing (El Aarida immigration centre)",
+          "coordinates": [
+            35.97569,
+            34.6353
+          ],
+          "coordinate_method": "Transcribed coordinates from inspected Mapcarta rendering of the specifically named OSM facility; original API unavailable in web retrieval.",
+          "precision": "Approximately 1 km crossing area; no exact historical gate or damage footprint claimed.",
+          "source_urls": [
+            "https://mapcarta.com/N11056661683"
+          ],
+          "evidence_note": "Named El Aarida immigration centre, OSM node 11056661683, at coastal El Kabir river crossing. Historical reports separately identify damaged bridge and General Security post. Exact reconstructed lane is not mapped.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-13.json"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Passenger-vehicle permission phase only; pedestrian exceptions and cargo exclusion preserved. Marker is facility vicinity, not destroyed embankment footprint.",
+      "unresolved": [],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"policy_period\", \"start_earliest\": \"2024-12-06\", \"start_latest\": \"2024-12-06\", \"end_earliest\": \"2025-06-03\", \"end_latest\": \"2025-06-03\", \"last_confirmed\": \"2024-12-06\", \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: The December 6, 2024 formal restriction and contemporaneous road interruption followed renewed strikes. December 2 vehicle passage predates this episode and cannot end it. Reports of a December 13 opening lack sufficient vehicle/category detail to establish a matching endpoint; one-way pedestrian movement into Syria was documented by January 2. UNHCR regional flash update 30, dated June 6, 2025, reports that Arida resumed traffic on June 3 for Syrian and Lebanese nationals in private vehicles. On-scene June 3 reporting documents passenger and taxi activity, while a General Security officer says goods trucks still could not use the temporary route. June 3 is therefore a scoped passenger-vehicle restoration; cargo remains separate. Earlier exceptions and the insufficiently specified December opening prevent an uninterrupted all-traffic December–June closure or numeric duration."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

@@ -1,0 +1,95 @@
+{
+  "record_id": "REC50-R43-004",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The December 2022 directive names four Ghana–Togo customs stations, while the August 2024 grain-export prohibition is national. These require different geographic representations.",
+  "source_checks": [
+    {
+      "url": "https://www.myjoyonline.com/enforce-ban-on-export-of-cereals-gra-to-customs-division/",
+      "access_status": "full_text_web",
+      "finding": "Original report identifies Tatale, Wonjuga, Bunkpurugu and Saboba customs stations receiving the grain/soybean export-prevention directive. It does not establish a general closure of the whole Ghana–Togo frontier.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-32.json",
+      "evidence_sha256": "256bfe4643b09fe5af5bb53086e20d9c007487e8e4ae8885c9ef59eb6adf5203"
+    },
+    {
+      "url": "https://gna.org.gh/2024/08/govt-bans-export-of-grains-to-avert-potential-food-crises/",
+      "access_status": "full_text_web",
+      "finding": "Original national news-agency report records the minister’s August 26, 2024 immediate grain-export ban for national food availability. The eight drought-affected regions are its cause, not the territorial limit of the export policy.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-35.json",
+      "evidence_sha256": "f0ec6d051ef245d9bb146d233d4dc0e2112fb238ff84d8fee5f70e82b285da20"
+    },
+    {
+      "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Ghana+Grain+and+Feed+-+Update+-+2024_Accra_Ghana_GH2024-0015.pdf",
+      "access_status": "full_text_pdf_fresh_fetch",
+      "finding": "Fresh original USDA report body independently inspected: cover and pages 10–15 describe the August 26 national corn/rice export ban. Trade forecasts are not proof of actual gate closure or reopening.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/db723c3e68eb29102144.pdf",
+      "evidence_sha256": "ac5179c1aac732482eee5c7d50a51d6374c6c55c99d5bf2a66e48444242d8fd7"
+    },
+    {
+      "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Grain+and+Feed+Annual_Accra_Ghana_GH2026-0011",
+      "access_status": "full_text_pdf_fresh_fetch",
+      "finding": "Fresh original USDA report independently inspected: page 11 states continued corn restrictions through March 2026; rice discussion describes continuing export restrictions. These are policy observations, not proof of uninterrupted implementation at each station.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/e99663922696aaf40b33.pdf",
+      "evidence_sha256": "a22d064531190399d099d4476d7dce9ba9aab5b3e312599c631580e677df3451"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R43-004-P1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Directive restricted to the four named customs stations: Tatale, Wonjuga, Bunkpurugu and Saboba. Current phase only: Grain and soybean export-prevention directive to Tatale, Wonjuga, Bunkpurugu and Saboba customs stations",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2022-12-01",
+        "end_latest": "2022-12-01",
+        "last_confirmed": "2022-12-01",
+        "endpoint_status": "last_confirmed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "The December 2022 directive names Tatale, Wonjuga, Bunkpurugu and Saboba, but does not establish the first actual denial at these stations. The visible L.I.2467 text concerns export licensing and does not alone establish a blanket prohibition.\n\nThe separately announced August 26, 2024 grain ban includes corn and rice. The December 2024 USDA report describes continuing corn restrictions on page 11 and stricter enforcement of the existing export ban in its rice section on page 15. Its projected rice-export quantity is a forecast, not an observed shipment or reopening.\n\nUSDA’s April 3, 2026 report, page 11 and footnote 10, separately describes corn, rice and soybean export restrictions in March 2026. This is a month-level policy observation, not an exact March 31 event, a forecast treated as evidence, or proof of continuous enforcement at the four 2022 stations. Exact lifting and gate-level operational history remain unknown.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Exact customs-facility coordinates for these four named stations were not independently verified. Town or bus-station markers are not accepted, and no whole-frontier substitution is justified."
+      ]
+    },
+    {
+      "phase_id": "REC50-R43-004-P2",
+      "category": "wider_border",
+      "decision": "map",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-gha-tgo",
+        "context-frontier-bfa-gha",
+        "context-frontier-civ-gha"
+      ],
+      "complete": true,
+      "phase_applicability": "National corn/rice export policy represented across Ghana’s three land-frontier segments. This is administrative coverage, not evidence of all-purpose physical closure at all gates. Current phase only: Grain-export prohibition announced 26 August 2024, with corn and rice explicitly supported",
+      "date_scope_check": {
+        "start_earliest": "2024-08-26",
+        "start_latest": "2024-08-26",
+        "end_earliest": null,
+        "end_latest": null,
+        "last_confirmed": null,
+        "endpoint_status": "last_confirmed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "The December 2022 directive names Tatale, Wonjuga, Bunkpurugu and Saboba, but does not establish the first actual denial at these stations. The visible L.I.2467 text concerns export licensing and does not alone establish a blanket prohibition.\n\nThe separately announced August 26, 2024 grain ban includes corn and rice. The December 2024 USDA report describes continuing corn restrictions on page 11 and stricter enforcement of the existing export ban in its rice section on page 15. Its projected rice-export quantity is a forecast, not an observed shipment or reopening.\n\nUSDA’s April 3, 2026 report, page 11 and footnote 10, separately describes corn, rice and soybean export restrictions in March 2026. This is a month-level policy observation, not an exact March 31 event, a forecast treated as evidence, or proof of continuous enforcement at the four 2022 stations. Exact lifting and gate-level operational history remain unknown.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

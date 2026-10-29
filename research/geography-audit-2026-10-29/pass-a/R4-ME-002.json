@@ -1,0 +1,38 @@
+{
+  "record_id": "R4-ME-002",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Mehran–Zurbatiyah road freight crossing: direct Iranian/transit-truck entry suspended while cargo transfer to Iraqi trucks continued. It is not a total customs or passenger closure.",
+  "source_checks": [
+    {
+      "url": "https://asrkhabar.com/fa/news/165403/فعالیت-تجاری-هیچ-مرزی-با-عراق-متوقف-نیس/",
+      "access_status": "inaccessible",
+      "finding": "Direct page unavailable.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-14.json"
+    },
+    {
+      "url": "https://asrkhabar.com/fa/news/165403/%D9%81%D8%B9%D8%A7%D9%84%DB%8C%D8%AA-%D8%AA%D8%AC%D8%A7%D8%B1%DB%8C-%D9%87%DB%8C%DA%86-%D9%85%D8%B1%D8%B2%DB%8C-%D8%A8%D8%A7-%D8%B9%D8%B1%D8%A7%D9%82-%D9%85%D8%AA%D9%88%D9%82%D9%81-%D9%86%DB%8C%D8%B3/",
+      "access_status": "fresh_search_extract_inspected",
+      "finding": "Persian customs interview extract explicitly separates routine transshipment from suspended direct truck delivery at Mehran, dated 1398/08/12.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-15.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-ME-002-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Direct-entry freight phase through November 3 confirmation only.",
+      "unresolved": [
+        "Exact road commercial-control point not established; town centre and town border-regiment police station are rejected substitutes."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"confirmed_through\", \"start_earliest\": \"2019-10-30\", \"start_latest\": \"2019-10-30\", \"end_earliest\": \"2019-11-03\", \"end_latest\": \"2019-11-03\", \"last_confirmed\": \"2019-11-03\", \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": true}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: R4-ME-002-D1: Confirmed through November 3 only, not a reopening or later persistence claim. The Persian customs interview was recovered in this audit as a substantive indexed extract: ordinary cargo transshipment continued, while direct truck delivery at Mehran remained suspended. This is official-interview evidence, not direct gate observation. Passenger accounts conflict and remain excluded. The November 25 general reopening account also says loaded trucks had continued to pass, without distinguishing truck nationality or transshipment; it cannot securely date the end of this direct-entry restriction. English and Persian relays of the same officials are not independent confirmations."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

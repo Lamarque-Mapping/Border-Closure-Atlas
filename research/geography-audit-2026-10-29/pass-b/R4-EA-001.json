@@ -1,0 +1,74 @@
+{
+  "record_id": "R4-EA-001",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Indonesian PLBN Skouw public crossing services under the recorded same-day order. The named Indonesian control facility is the location; PNG Wutung is not substituted.",
+  "source_checks": [
+    {
+      "url": "https://www.antaranews.com/berita/628203/beranda-pelayanan-di-plbn-skouw-papua-ditutup-sementara",
+      "access_status": "full_text_web",
+      "finding": "Antara names PLBN Skouw arrival/departure service suspension for the May 9, 2017 inauguration day.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r5-1.json",
+      "sha256": "482e8693f189b32d7d73dd4af27bc086047033abea40d607a9ebebb0e1f3a0a6"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/312090467/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Indonesian PLBN building outline previously inspected independently; the 2017 report also establishes inauguration at this facility.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/83b58852ce6205871dc2.xml",
+      "sha256": "b5065050463b0eb8261b27852310fd0a4b27070c5e0db31c2abae89bfdd42591",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/83b58852ce6205871dc2.txt",
+      "text_sha256": "b5065050463b0eb8261b27852310fd0a4b27070c5e0db31c2abae89bfdd42591",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-EA-001-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-skouw-plbn",
+          "name": "PLBN Skouw border-post building",
+          "coordinates": [
+            140.9987767,
+            -2.6085816
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/312090467/full"
+          ],
+          "evidence_note": "OSM explicitly names Indonesian PLBN Skouw. Position is service building, not PNG Wutung gate; use only for Indonesian service phases.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/83b58852ce6205871dc2.xml",
+          "sha256": "b5065050463b0eb8261b27852310fd0a4b27070c5e0db31c2abae89bfdd42591"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Indonesian PLBN Skouw public crossing services under the recorded same-day order. The named Indonesian control facility is the location; PNG Wutung is not substituted.",
+      "date_scope_check": {
+        "start_earliest": "2017-05-09",
+        "start_latest": "2017-05-09",
+        "end_earliest": "2017-05-09",
+        "end_latest": "2017-05-09",
+        "last_confirmed": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "One calendar date of ordered no-service, May 9, with unknown hours. End-inclusive denotes that scheduled service date only; it does not assert 24 elapsed hours, enforcement all day, or actual May 10 resumption."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "d87424f4c8c364885c4e3b16a980cf57bf342cc359ecf352b0bd2867de7ab2be",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

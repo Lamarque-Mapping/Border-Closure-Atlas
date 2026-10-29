@@ -1,0 +1,86 @@
+{
+  "record_id": "R5-SC-005",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Three Bhutan exit/entry locations named in the April 20–23, 2026 order: Lhamoizingkha, Phuentsholing and Samtse. Main Phuentsholing–Jaigaon gateway is independently located; tourist and essential-service exceptions and conflicting start hours remain.",
+  "source_checks": [
+    {
+      "url": "https://samtse.gov.bt/2026/04/public-notification/",
+      "access_status": "full_text_web",
+      "finding": "Official Samtse notice explicitly lists three gates and 17:00 April 20 to 18:00 April 23 schedule.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r5-4.json",
+      "sha256": "72b96a3c05d661edb6a1915a4e0435d2f41f03d0ac8a45c3f6c8414af6126bb9"
+    },
+    {
+      "url": "https://ndtv.in/india/bhutan-gate-in-jaigaon-sealed-ahead-of-phase-1-voting-in-bengal-movement-restricted-11384959",
+      "access_status": "full_text_web",
+      "finding": "NDTV locates the Bhutan Gate at Jaigaon, reports 18:00 closure and tourist/essential exceptions.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r5-5.json",
+      "sha256": "2043de89ea154d282d35716e408f0951def81456b66979876d80fca9f406ab7b"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1342208102/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Bhutan Gate outline and nearby border-control/immigration features inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d9f739fb3d6c4014714d.xml",
+      "sha256": "21c15453021f35c2ea172209265d486557ce7500623b57f553731b851ca7a202",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d9f739fb3d6c4014714d.txt",
+      "text_sha256": "21c15453021f35c2ea172209265d486557ce7500623b57f553731b851ca7a202",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-SC-005-R1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-phuentsholing-bhutan-gate",
+          "name": "Phuentsholing–Jaigaon Bhutan Gate",
+          "coordinates": [
+            89.3808099,
+            26.8612739
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Main gateway area, about 150 m; adjacent pedestrian processing is within the area but not separately outlined",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/1342208102/full"
+          ],
+          "evidence_note": "Named Bhutan Gate outline next to an explicit border-control node and immigration office. NDTV independently identifies this Jaigaon gateway in the April 2026 closure. The point locates the main gateway area, not a dry port or the inland Rinchending checkpoint.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d9f739fb3d6c4014714d.xml",
+          "sha256": "21c15453021f35c2ea172209265d486557ce7500623b57f553731b851ca7a202"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Three Bhutan exit/entry locations named in the April 20–23, 2026 order: Lhamoizingkha, Phuentsholing and Samtse. Main Phuentsholing–Jaigaon gateway is independently located; tourist and essential-service exceptions and conflicting start hours remain.",
+      "date_scope_check": {
+        "start_earliest": "2026-04-20",
+        "start_latest": "2026-04-20",
+        "end_earliest": "2026-04-23",
+        "end_latest": "2026-04-23",
+        "last_confirmed": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "NDTV reports Jaigaon closed after 18:00 rather than 17:00 and specifies exemptions; other gates not independently observed. No actual April 23 reopening inferred."
+      },
+      "unresolved": [
+        "Exact Lhamoizingkha and Samtse control-site coordinates remain unverified; only the Phuentsholing main gateway area is approved."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact Lhamoizingkha and Samtse control-site coordinates remain unverified; only the Phuentsholing main gateway area is approved."
+  ],
+  "input_sha256": "f3cef91f71099b4658b029039cbd0e568134c6b3abd5efd3981571e7b4b97f3a",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

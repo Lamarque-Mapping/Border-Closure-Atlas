@@ -1,0 +1,91 @@
+{
+  "record_id": "R2-EA-010",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "July 4–5 halt concerns import/export customs at road gate II Kim Thanh–Hekou. Passenger access is outside the observed cargo scope.",
+  "source_checks": [
+    {
+      "url": "https://nhandan.vn/cua-khau-kim-thanh-thong-quan-tro-lai-post704081.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Full body names international road gate II and quotes economic-zone official on July 4 morning halt and July 5 19:30 cargo restoration. This does not settle other reported clocks.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-34.json",
+      "sha256": "5ee1f76891605d67e6a76748dd3999f029f675845e2d9b31559f2bff553c68fe"
+    },
+    {
+      "url": "https://tuoitre.vn/cua-khau-kim-thanh-thong-quan-tro-lai-20220705170853178.htm",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://news.tuoitre.vn/saigontimes/customs-clearance-at-lao-cai-border-gate-resumes-105119191.htm",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://en.baobacninhtv.vn/reopening-of-kim-thanh-border-gate-in-lao-cai-eases-lychee-consumption-postid88178.bbg",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EA-010-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kim-thanh-ii-hekou",
+          "name": "Kim Thanh II–Hekou road crossing",
+          "coordinates": [
+            103.940421,
+            22.5236786
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/665997590",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/665997590",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=103.92,22.51,103.97,22.55"
+          ],
+          "evidence_note": "Named Kim Thanh checkpoint matched to official road-gate-II reporting; not old Hekou rail crossing.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-kim-thanh.xml",
+          "sha256": "ab221dada2c743d29add4a82817fa6cd4bfc0fe4de4c42588d4058a4929ef217",
+          "osm_feature": "way/665997590",
+          "osm_version": "4",
+          "osm_timestamp": "2026-08-19T17:43:42Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "building": "yes",
+            "name": "Cửa khẩu Kim Thành",
+            "name:en": "Kim Thanh Border Checkpoint"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kim Thanh II–Hekou road cargo customs clearance, imports and exports; passenger access excluded.",
+      "date_scope_check": {
+        "scope": "Kim Thanh II–Hekou road cargo customs clearance, imports and exports; passenger access excluded.",
+        "start_earliest": "2022-07-04",
+        "start_latest": "2022-07-04",
+        "end_earliest": "2022-07-05",
+        "end_latest": "2022-07-05",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "July 4 morning onset and July 5 restoration are supported, but reopening clock conflicts remain. Preserve >24-hour assessment and all original bounds without inventing exact elapsed hours."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

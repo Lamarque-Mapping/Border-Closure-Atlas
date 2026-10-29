@@ -1,0 +1,58 @@
+{
+  "record_id": "R3-ME-009",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Kuwait-side Abdali passenger and freight road-port suspension after drone damage; Safwan is the opposite Iraqi approach, not the struck terminal.",
+  "source_checks": [
+    {
+      "url": "https://ina.iq/en/local/50709-kuwait-reopens-abdali-border-crossing-with-iraq.html",
+      "access_status": "inaccessible_403",
+      "finding": "Original INA endpoint page inaccessible 403.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-10.json"
+    },
+    {
+      "url": "https://www.al-monitor.com/originals/2026/07/main-land-crossing-between-kuwait-and-iraq-reopens-iraqs-state-news-agency-says",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Reuters relay identifies Kuwait Abdali closure after Thursday attack and reopening Sunday July 26; attack date alone not onset proof.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-12.json"
+    },
+    {
+      "url": "https://mapcarta.com/N7897546485",
+      "access_status": "fresh_search_extract_inspected",
+      "finding": "Named Kuwaiti-side border-control coordinate available in geography extract.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-4.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-ME-009-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-abdali",
+          "name": "Abdali–Safwan road crossing (Kuwaiti control)",
+          "coordinates": [
+            47.71009,
+            30.09149
+          ],
+          "coordinate_method": "Transcribed coordinates from inspected Mapcarta rendering of the specifically named OSM facility; original API unavailable in web retrieval.",
+          "precision": "Approximately 1 km crossing area; no exact historical gate or damage footprint claimed.",
+          "source_urls": [
+            "https://mapcarta.com/N7897546485"
+          ],
+          "evidence_note": "Mapcarta identifies OSM node 7897546485 as Kuwaiti-side Safwan border control; historical Reuters account locates shutdown at Kuwait Abdali. Do not substitute Iraqi Safwan town or port.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-4.json"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kuwaiti road-port crossing area for bounded July 23–25 onset and July 26 endpoint; retain original attack and duration qualifications.",
+      "unresolved": [],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"bounded_interval\", \"start_earliest\": \"2026-07-23\", \"start_latest\": \"2026-07-25\", \"end_earliest\": \"2026-07-26\", \"end_latest\": \"2026-07-26\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": true}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: R3-ME-009-D1: Broad onset bounds retain the discrepancy between a traveller's three-day wait and the mayor's two-day shutdown; attack time is not assumed to be closure time. The mayor's explicit two-day closure account supports greater-than-24-hour eligibility independently of exact onset uncertainty. Exact elapsed hours remain unknown. Reuters reports share one lineage. The closure was described as precautionary after damage from drones; responsibility for the attack is not independently established here. The 964media account reports Kuwait's attribution to Iran and its proxies, rather than establishing that allegation as fact."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

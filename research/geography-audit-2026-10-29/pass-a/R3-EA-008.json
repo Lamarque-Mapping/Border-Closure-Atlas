@@ -1,0 +1,96 @@
+{
+  "record_id": "R3-EA-008",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Province-level March observation concerns ten traditional/local Houaphanh posts, excluding four major crossings. Fresh Vietnamese reporting supplies a candidate roster: Namtai/Thong Thu, Thalao/Kheo, Meuangkeu, Phiengpheua/Kham, Mongnam/Pa Khom, Nakhang/Keo Muong, Sobdoung/Na Cai, Pao, Yothtiew and Daendin/Huoi Moi. This is distinct from a national ten-entry-point order.",
+  "source_checks": [
+    {
+      "url": "https://www.rfa.org/english/news/laos/checkpoints-03162020164126.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "RFA March 13 provincial confirmation differentiates ten local/traditional posts from four remaining open; no individual names.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-40.json",
+      "sha256": "a8650d676449f33a03ded9e72fab507f5097e3e239ceb800c16436302d8f7a86"
+    },
+    {
+      "url": "https://dansinh.dantri.com.vn/dien-dan-dan-sinh/lao-tam-thoi-dong-cua-10-diem-qua-bien-gioi-voi-viet-nam-tranh-dich-covid-19-20200316213206279.htm",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Full article attributes candidate roster to notice 139 and pairs several Vietnamese counterparts. It separately lists four still-open major crossings.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-46.json",
+      "sha256": "ad292cae3a027185c21b8350460fd13bb47ef59ce9556943a566c3667f55c3ab"
+    },
+    {
+      "url": "https://vov.vn/kinh-te/tinh-huaphan-lao-tam-dung-thong-quan-10-cua-khau-phu-voi-viet-nam-1021693.vov",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "VOV March 14 report confirms provincial March 13 order and open exceptions Nam Soy, Somvang, Ban Darn and Pahang.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-48.json",
+      "sha256": "ece5e3b2d5d85d7bde51aaa792e16c09df770f55beab27d6d92e8bccec51aa28"
+    },
+    {
+      "url": "https://en.vietnamplus.vn/covid-19-laos-closes-border-gates-post170160.vnp",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://dansinh.dantri.com.vn/dien-dan-dan-sinh/lao-tam-thoi-dong-cua-10-diem-qua-bien-gioi-voi-viet-nam-tranh-dich-covid-19-20200316213206279.htm/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://laotradeportal.gov.la/en-gb/site/display/2152",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://vietnamnet.vn/en/vietnam-news-headlines-march-25-825557.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://en.vietnamplus.vn/laos-re-opens-all-local-border-checkpoints-post236657.vnp",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EA-008-FU1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ten unnamed Houaphanh local/traditional Vietnam-frontier posts",
+      "date_scope_check": {
+        "scope": "Ten unnamed Houaphanh local/traditional Vietnam-frontier posts",
+        "start_earliest": "2020-03-13",
+        "start_latest": "2020-03-13",
+        "end_earliest": "2020-03-13",
+        "end_latest": "2020-03-13",
+        "last_confirmed": "2020-03-13",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": [
+        "Newly recovered roster still requires individual coordinate/identity checks; no province or whole-frontier substitute.",
+        "Pao/Yothtiew punctuation and transliteration require reconciliation against original provincial notice.",
+        "No reopening or continuous closure beyond onset observation established."
+      ]
+    }
+  ],
+  "unresolved": []
+}

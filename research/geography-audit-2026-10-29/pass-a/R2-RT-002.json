@@ -1,0 +1,131 @@
+{
+  "record_id": "R2-RT-002",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Both phases concern KatoPyrgos residents using Limnitis route across the de facto divide, including northern-side closure and subsequent testing-related return restrictions. KatoPyrgos checkpoint locates the route but not the exact northern refusal barrier.",
+  "source_checks": [
+    {
+      "url": "https://www.exteriores.gob.es/Embajadas/nicosia/es/Comunicacion/Noticias/Paginas/Articulos/20200305_NOT1.aspx",
+      "access_status": "fresh_raw_full_text_inspected",
+      "finding": "Spanish embassy notice specifically names northern-side Limnitis/Yesilirmak closure March12.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/abe1722f241e8c61a338.html",
+      "source_sha256": "51782de47c9864e14f1940ef39c11209d68e18a10d8d0f125e253285695ba9a5"
+    },
+    {
+      "url": "https://archive.cyprus-mail.com/2020/06/26/coronavirus-limnitis-crossing-point-reopens/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "June26 account identifies opening09:30 after months closure on TurkishCypriot side; commuters use route via north toNicosia.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-049.json"
+    },
+    {
+      "url": "https://archive.cyprus-mail.com/2020/07/09/coronavirus-turkish-cypriots-change-crossing-point-entry-requirements-yet-again/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "July9 revised testing arrangements explicitly resolve KatoPyrgos/Tylliria commuter problem; preserves special-group eligibility rather than general admission.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-051.json"
+    },
+    {
+      "url": "https://mapcarta.com/W449489111",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named KatoPyrgos checkpoint building coordinate, different from Limnitis village centre.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-059.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-RT-002-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-kato-pyrgos-green-line-reference",
+          "name": "Kato Pyrgos–Limnitis Green Line crossing reference",
+          "coordinates": [
+            32.69446,
+            35.17587
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 449489111; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W449489111",
+            "https://www.openstreetmap.org/way/449489111"
+          ],
+          "evidence_note": "Named KatoPyrgos government checkpoint on route to Limnitis; northern refusal/checkpoint location not separately established.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-059.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Limnitis–Kato Pyrgos Green Line crossing; de facto divide, not an internationally recognised interstate border; Ordinary passenger and commuter crossing; Both directions through the specified crossing",
+      "date_scope_check": {
+        "start_earliest": "2020-03-12",
+        "start_latest": "2020-03-12",
+        "end_earliest": "2020-06-26",
+        "end_latest": "2020-06-26",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Northern gate location and exact refusal point unresolved; southern checkpoint is route reference only."
+      ]
+    },
+    {
+      "phase_id": "R2-RT-002-C7P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-kato-pyrgos-green-line-reference",
+          "name": "Kato Pyrgos–Limnitis Green Line crossing reference",
+          "coordinates": [
+            32.69446,
+            35.17587
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 449489111; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W449489111",
+            "https://www.openstreetmap.org/way/449489111"
+          ],
+          "evidence_note": "Named KatoPyrgos government checkpoint on route to Limnitis; northern refusal/checkpoint location not separately established.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-059.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Return passage for affected Kato Pyrgos commuters through the Limnitis route under changed testing requirements",
+      "date_scope_check": {
+        "start_earliest": "2020-07-06",
+        "start_latest": "2020-07-06",
+        "end_earliest": null,
+        "end_latest": "2020-07-09",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Northern gate location and exact refusal point unresolved; southern checkpoint is route reference only."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "bb9f9befd9045d74fe1889624021ec8290a7770bd6b3f655ce639bf7876d9acb"
+}

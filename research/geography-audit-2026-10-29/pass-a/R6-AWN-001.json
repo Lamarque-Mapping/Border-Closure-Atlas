@@ -1,0 +1,44 @@
+{
+  "record_id": "R6-AWN-001",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Formal commercial road crossing at Banki–Amchidé on Nigeria–Cameroon frontier. The internal Maiduguri–Banki road reopening is a different event.",
+  "source_checks": [
+    {
+      "url": "https://www.aa.com.tr/fr/afrique/cameroun-nig%C3%A9ria-r%C3%A9ouverture-de-laxe-amchid%C3%A9-banki-/1480065",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full original May16 2019 field report inspected: reopening ceremony on Wednesday15 at Amchidé–Banki, customs/immigration services restored, other corridors still closed. Five-year shorthand does not refine year-only2014 onset.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-21.json"
+    },
+    {
+      "url": "https://issafrica.org/iss-today/balancing-economics-and-security-on-the-nigeria-cameroon-border",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full research commentary confirms Banki closure2014/reopening2019 and distinguishes Fotokol2021; not a precise gate coordinate source.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-21.json"
+    },
+    {
+      "url": "https://www.ecoi.net/en/file/local/1039264/1930_1467965682_nga-banki-interagency-assessment-report-28062016.pdf",
+      "access_status": "fresh_search_extract_inspected",
+      "finding": "Indexed original assessment describes town location, not the specific commercial crossing; insufficient to position gate.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-24.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-AWN-001-R1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: road_commercial_policy. Canonical year-bounded2014 onset to formal May15 2019 reopening, not a continuous measured physical-closure claim.",
+      "unresolved": [
+        "Named crossing identity is clear but gate coordinate source has not been verified."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"policy_period\", \"start_earliest\": \"2014-01-01\", \"start_latest\": \"2014-12-31\", \"end_earliest\": \"2019-05-15\", \"end_latest\": \"2019-05-15\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": true}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: R6-AWN-001-R1: Onset uses the expressly reported year, not back-calculation from five years. May endpoint is the official commercial reopening ceremony; no exhaustive actual-passage record. Maiduguri–Banki road reopening in 2018 is an internal road phase."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

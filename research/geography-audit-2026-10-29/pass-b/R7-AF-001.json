@@ -1,0 +1,69 @@
+{
+  "record_id": "R7-AF-001",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Congolese traders’ ordinary road access through Luvo/Lufu to the Angolan cross-border market. The report concerns both gate access and associated commerce.",
+  "source_checks": [
+    {
+      "url": "https://www.novojornal.co.ao/internacional/detalhe/fronteira-e-mercado-transfronteirico-do-luvo-reabrem-depois-de-20-dias-encerrados-por-causa-das-eleicoes-14125.html",
+      "access_status": "full_text_web",
+      "finding": "Reporter observed reopening of the Luvo frontier and market after the election closure, with predominantly Congolese traders attending; identifies Luvo north of Mbanza Congo.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-28.json",
+      "evidence_sha256": "1c07142f5092770e8492f2cff7df774d6a784569ff6e9b17db1afebaaaebb00f"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R7-AF-001-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-luvo-lufu",
+          "name": "Luvo / Lufu road border post",
+          "coordinates": [
+            14.0838961,
+            -5.8490072
+          ],
+          "coordinate_method": "Original OSM node coordinate from independently fetched API JSON",
+          "precision": "approximate crossing facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/4717807001.json",
+            "https://www.openstreetmap.org/node/4717807001",
+            "https://www.openstreetmap.org/api/0.6/map.json?bbox=14.075,-5.855,14.090,-5.84"
+          ],
+          "evidence_note": "Named Angolan border post, independently inspected. The surrounding separate API extract places the Luvo/Lufu international river and road bridge north of the post. This does not locate the entire associated market. Inspected OSM tags: {\"amenity\": \"police\", \"name\": \"Posto de fronteira do Luvo\", \"name:pt\": \"Posto de fronteira do Luvo\"}. Geographic evidence only; no historical restriction or current operational status inferred.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/dd514523fd273182128d.json",
+          "evidence_sha256": "6a8f20aea23208a57ee0f22a256a48ff53eff33b1a969c794127dc885f360c29",
+          "osm_version": 1,
+          "osm_timestamp": "2017-03-05T07:50:42Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Congolese traders’ ordinary road access through Luvo/Lufu to the Angolan cross-border market. The report concerns both gate access and associated commerce. Current phase only: Congolese traders' ordinary access through Luvo/Luvu to the associated Angolan market",
+      "date_scope_check": {
+        "start_earliest": "2017-08-01",
+        "start_latest": "2017-08-31",
+        "end_earliest": "2017-09-02",
+        "end_latest": "2017-09-02",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Onset remains month precision; twenty-day retrospective wording is not used to invent a start. The endpoint is observed trader access, not every category/direction. Independence of repeated retrospective duration claims is unknown and exceptions are not reconstructed.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Named border post is located, but the 2017 market extent and any separate market entry barrier are not reconstructed."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Named border post is located, but the 2017 market extent and any separate market entry barrier are not reconstructed."
+  ]
+}

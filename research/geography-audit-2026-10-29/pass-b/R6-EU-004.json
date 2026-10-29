@@ -1,0 +1,43 @@
+{
+  "record_id": "R6-EU-004",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "England-only regulation8 outbound travel prohibition without reasonable excuse; departure/embarkation points include rail/tunnel travel. Not UK-wide and not an international land-boundary segment.",
+  "source_checks": [
+    {
+      "url": "https://www.cps.gov.uk/prosecution-guidance/coronavirus-health-protection-coronavirus-restrictions-steps-england",
+      "access_status": "full_retrieved",
+      "finding": "CPS text explicitly distinguishes England regulations and overseas-departure regulation8, exempt persons and later removal by amendment."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-EU-004-D1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "England’s explicit prohibition on overseas departure without reasonable excuse, including Channel Tunnel travel.; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "policy_period",
+        "start_earliest": "2021-03-29",
+        "start_latest": "2021-03-29",
+        "end_earliest": "2021-05-17",
+        "end_latest": "2021-05-17",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Active international rail departure terminals and Folkestone shuttle terminal need source-derived geometry and period-specific station applicability. A France–UK boundary line or country centroid would be wrong."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Active international rail departure terminals and Folkestone shuttle terminal need source-derived geometry and period-specific station applicability. A France–UK boundary line or country centroid would be wrong."
+  ]
+}

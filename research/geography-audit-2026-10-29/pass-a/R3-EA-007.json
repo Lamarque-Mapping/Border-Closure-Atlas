@@ -1,0 +1,118 @@
+{
+  "record_id": "R3-EA-007",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Current dated phase is the ordinary Thakhek–Nakhon Phanom municipal passenger ferry only. The other three local posts in the parent title and Third Friendship Bridge receive no phase binding; exceptional stranded-national returns remain exceptions.",
+  "source_checks": [
+    {
+      "url": "https://www.nationthailand.com/in-focus/30384315",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "March 17 Thakhek port suspension reported with Third Friendship Bridge remaining an alternative.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-40.json",
+      "sha256": "a8650d676449f33a03ded9e72fab507f5097e3e239ceb800c16436302d8f7a86"
+    },
+    {
+      "url": "https://www.banmuang.co.th/news/region/298912",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "October 3 report observes passenger traffic at municipal tourism pier on Sunthon Wichit Road, paired with Thakhek.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-41.json",
+      "sha256": "2f527d7c81baaf4dba60e70a67b687dc2b610a8306f78000ff6b721fa550236c"
+    },
+    {
+      "url": "https://laws.md.go.th/mrc/detail.php?id=Total_waterborne_cross-border_transport_of_cargo_and_passengers&page=page",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Official Marine Department identifies municipal jetty as permanent border crossing to Thakhek.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-45.json",
+      "sha256": "74f4c400e2c9aa0cb5998ab6a01d1ab1e987c84b6127a2fe21ae519782555e7a"
+    },
+    {
+      "url": "https://laws.md.go.th/mrc/detail.php?id=23",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Official port directory supplies Google Maps place link.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-48.json",
+      "sha256": "ece5e3b2d5d85d7bde51aaa792e16c09df770f55beab27d6d92e8bccec51aa28"
+    },
+    {
+      "url": "https://goo.gl/maps/87hYiqcBURAPrbyi7",
+      "access_status": "official_link_redirect_coordinate_only",
+      "finding": "Redirect exposes place-specific coordinates; destination full map inaccessible. Viewport centre deliberately rejected.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-49.json",
+      "sha256": "502991eab6f02c4d94aa5379990165a52794bcab46df7448cdc842364344feb8"
+    },
+    {
+      "url": "https://www.thaipost.net/main/detail/60131",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://nbtworld.prd.go.th/th/news/detail/tcatg221003151413484",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://thethaiger.com/news/world/laos-closes-checkpoint-at-thai-border",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.posttoday.com/politics/618001",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EA-007-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "crossing-nakhon-phanom-thakhek-passenger-ferry",
+          "name": "Nakhon Phanom municipal passenger pier–Thakhek",
+          "coordinates": [
+            104.7887484,
+            17.4031673
+          ],
+          "coordinate_method": "Direct place latitude/longitude encoded as !3d17.4031673!4d104.7887484 in Google Maps redirect linked by Thai Marine Department port directory; NOT the viewport @ coordinates.",
+          "precision": "Officially linked pier-area marker; approximate 150 m, not surveyed berth or historical floating landing.",
+          "source_urls": [
+            "https://laws.md.go.th/mrc/detail.php?id=23",
+            "https://goo.gl/maps/87hYiqcBURAPrbyi7",
+            "https://laws.md.go.th/mrc/detail.php?id=Total_waterborne_cross-border_transport_of_cargo_and_passengers&page=page"
+          ],
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-49.json",
+          "sha256": "502991eab6f02c4d94aa5379990165a52794bcab46df7448cdc842364344feb8",
+          "evidence_note": "Marine Department identifies municipal tourism jetty as permanent crossing opposite Thakhek. Banmuang October 3 account identifies same municipal pier on Sunthon Wichit Road. Official Google redirect yields place coordinates though destination page inaccessible. Distinct from old car-ferry terminal and Third Friendship Bridge."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary Thakhek–Nakhon Phanom municipal passenger-ferry service; excluding exceptional return of stranded Thai/Lao nationals",
+      "date_scope_check": {
+        "scope": "Ordinary Thakhek–Nakhon Phanom municipal passenger-ferry service; excluding exceptional return of stranded Thai/Lao nationals",
+        "start_earliest": "2020-03-17",
+        "start_latest": "2020-03-17",
+        "end_earliest": "2022-10-03",
+        "end_latest": "2022-10-03",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

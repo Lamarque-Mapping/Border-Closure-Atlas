@@ -1,0 +1,208 @@
+{
+  "record_id": "R2-EU-008",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Initial non-exempt Serbian-goods import ban covered Kosovo crossings; only Merdare subsequently admitted the goods under enhanced checks. Continuation elsewhere must not map Merdare again or imply passenger closure.",
+  "source_checks": [
+    {
+      "url": "https://www.kosovo-online.com/en/news/society/jarinje-implementation-decision-kosovo-government-banning-import-serbian-goods-has",
+      "access_status": "fresh_full_text_extract",
+      "finding": "June14 field report observes first Serbian-goods truck rejected atJarinje18:00 and separately last truckMerdare16:00; passenger checks intensified but not blanket admission ban.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-057.json"
+    },
+    {
+      "url": "https://www.aa.com.tr/en/europe/kosovo-lifts-import-ban-on-serbian-goods-serbia-welcomes-decision/3354567",
+      "access_status": "fresh_full_text_extract",
+      "finding": "AA October7 identifies Merdare-only permitted import and prior raw-material exemption.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-049.json"
+    },
+    {
+      "url": "https://www.slobodnaevropa.org/a/kosovo-srbija-promet-robe/33151208.html",
+      "access_status": "fresh_full_text_extract",
+      "finding": "RFE/RL October8 observes firsttruckmanualcontrol atMerdare; other crossings awaitscanners, confirming continued routing restriction.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-059.json"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/13959887212",
+      "access_status": "fresh_raw_geographic_evidence",
+      "finding": "Merdare border node inspected previously.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/df62ae678cf5b7dbebda.xml",
+      "source_sha256": "a5ce2017cf7192e6294f83cb1a8606189d95c46f123aced36e4e7d2f1dad670c"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1090470176/full",
+      "access_status": "fresh_raw_geographic_evidence",
+      "finding": "Jarinje compound inspected previously.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/e550548276a6624ff36e.xml",
+      "source_sha256": "0b9ff98eb566020b284719d8a5d7dfc54461797599d76e3159d251849aa26edd"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/4760799314",
+      "access_status": "fresh_raw_geographic_evidence",
+      "finding": "Brnjak border node inspected previously.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fdda20fe4f37634dba3e.xml",
+      "source_sha256": "930cfec5f78e06d3bdd62084033b226c435a57d807aa506e0cf39d51639ed6b0"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EU-008-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-merdare",
+          "name": "Merdare",
+          "coordinates": [
+            21.243304,
+            42.936672
+          ],
+          "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/13959887212"
+          ],
+          "evidence_note": "Named Merdare OSM border node previously inspected; relevant only to selected Serbian-goods import scope.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/df62ae678cf5b7dbebda.xml",
+              "sha256": "a5ce2017cf7192e6294f83cb1a8606189d95c46f123aced36e4e7d2f1dad670c",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        },
+        {
+          "existing_site_id": "post-jarinje",
+          "name": "Jarinje",
+          "coordinates": [
+            20.69965,
+            43.226642
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM checkpoint compound",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1090470176"
+          ],
+          "evidence_note": "Named Jarinje compound OSM geometry previously inspected; partial route-ban representation.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/e550548276a6624ff36e.xml",
+              "sha256": "0b9ff98eb566020b284719d8a5d7dfc54461797599d76e3159d251849aa26edd",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        },
+        {
+          "existing_site_id": "post-brnjak",
+          "name": "Brnjak",
+          "coordinates": [
+            20.548653,
+            42.961697
+          ],
+          "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/4760799314"
+          ],
+          "evidence_note": "Named Brnjak OSM border-control node previously inspected; partial route-ban representation.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fdda20fe4f37634dba3e.xml",
+              "sha256": "930cfec5f78e06d3bdd62084033b226c435a57d807aa506e0cf39d51639ed6b0",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Kosovo prohibition of non-exempt Serbian-origin imports, ending here only for Merdare",
+      "date_scope_check": {
+        "start_earliest": "2023-06-14",
+        "start_latest": "2023-06-14",
+        "end_earliest": "2024-10-08",
+        "end_latest": "2024-10-08",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Full historical customs-authorized import post roster unlocated; three supported crossing references are not complete national coverage."
+      ]
+    },
+    {
+      "phase_id": "R2-EU-008-C7P1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-jarinje",
+          "name": "Jarinje",
+          "coordinates": [
+            20.69965,
+            43.226642
+          ],
+          "coordinate_method": "Bounding-box centre of named OSM checkpoint compound",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1090470176"
+          ],
+          "evidence_note": "Named Jarinje compound OSM geometry previously inspected; partial route-ban representation.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/e550548276a6624ff36e.xml",
+              "sha256": "0b9ff98eb566020b284719d8a5d7dfc54461797599d76e3159d251849aa26edd",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        },
+        {
+          "existing_site_id": "post-brnjak",
+          "name": "Brnjak",
+          "coordinates": [
+            20.548653,
+            42.961697
+          ],
+          "coordinate_method": "OSM mapped border-control node; reference crossing area only",
+          "precision": "Approximate crossing-area reference; decimal storage precision is not survey accuracy or an exact historical obstruction footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/4760799314"
+          ],
+          "evidence_note": "Named Brnjak OSM border-control node previously inspected; partial route-ban representation.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/fdda20fe4f37634dba3e.xml",
+              "sha256": "930cfec5f78e06d3bdd62084033b226c435a57d807aa506e0cf39d51639ed6b0",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Serbian-origin finished-goods import routing prohibition at Kosovo crossings other than Merdare",
+      "date_scope_check": {
+        "start_earliest": "2024-10-08",
+        "start_latest": "2024-10-08",
+        "end_earliest": "2026-01-28",
+        "end_latest": "2026-01-28",
+        "last_confirmed": "2026-01-28",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Other nonMerdare goods-routing posts not individually reconstructed; northern post references do not exhaust national restriction."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "ef28c08fa6529de16ba4960ba6ec9082818db1c6ab1b3e82b1a31ecbe3923b1a"
+}

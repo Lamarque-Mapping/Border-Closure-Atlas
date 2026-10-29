@@ -1,0 +1,147 @@
+{
+  "record_id": "R5-SC-001",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Two separate observations of Nepali local shopping trips prohibited through Jamunaha towards Rupaidiha in March and April 2021. Returning travellers and essential journeys have different treatment; no continuity between observations is inferred.",
+  "source_checks": [
+    {
+      "url": "https://english.nepalnews.com/s/nation/banke-administration-halts-mobility-at-nepalindia-border/",
+      "access_status": "full_text_web",
+      "finding": "NepalNews reports prohibition of Nepali shopping mobility to Rupaidiha and separately describes returnee testing at Jamunaha.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r6-1.json",
+      "sha256": "5b89ddfcdbfc1a5147a39327b69630d32a1f02cfc860e7119d4a34f53b1b5933"
+    },
+    {
+      "url": "https://thehimalayantimes.com/nepal/district-risk-management-centre-in-banke-prohibits-movement-to-rupaidiha-india",
+      "access_status": "full_text_web",
+      "finding": "Himalayan Times independently identifies the April observation at Jamunaha/Rupaidiha with different returnee treatment.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r6-1.json",
+      "sha256": "5b89ddfcdbfc1a5147a39327b69630d32a1f02cfc860e7119d4a34f53b1b5933"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/3888116312",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Historic public road border-control node inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/fa64ac3604a35761c3b3.xml",
+      "sha256": "4307d6225cee060af9605b8cc16be8375e8e1595adb27b538f113e143e232be6",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/fa64ac3604a35761c3b3.txt",
+      "text_sha256": "4307d6225cee060af9605b8cc16be8375e8e1595adb27b538f113e143e232be6",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/3888116312/ways",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Node connects named Ratna Rajmarg to Indian NH927.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/36ebfc2eaed4fd0da0ce.xml",
+      "sha256": "97857b7765d7edefcc47d8723c53af466ac4722a94076bef5c3a37f418c273ae",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/36ebfc2eaed4fd0da0ce.txt",
+      "text_sha256": "97857b7765d7edefcc47d8723c53af466ac4722a94076bef5c3a37f418c273ae",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=81.596,28.015,81.603,28.024",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Nearby named immigration/customs/police features corroborate crossing identity.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/97413a4cc09e3f914a6b.xml",
+      "sha256": "aac5bd2625412c4e7fda04d2954487600c0a8c0ff147cfcb6febe28337b1ab12",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/97413a4cc09e3f914a6b.txt",
+      "text_sha256": "aac5bd2625412c4e7fda04d2954487600c0a8c0ff147cfcb6febe28337b1ab12",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-SC-001-FU1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-jamunaha-rupaidiha-road",
+          "name": "Jamunaha–Rupaidiha historic road crossing",
+          "coordinates": [
+            81.6004603,
+            28.0189568
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/3888116312",
+            "https://api.openstreetmap.org/api/0.6/node/3888116312/ways",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=81.596,28.015,81.603,28.024"
+          ],
+          "evidence_note": "Border-control node shared by Ratna Rajmarg NH58 and Indian NH927 at the international boundary. Bounding XML contains named Rupaidiha immigration building, Nepalgunj customs office and Jamunaha police. This is the historic public road crossing, not the newer integrated cargo port.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/fa64ac3604a35761c3b3.xml",
+          "sha256": "4307d6225cee060af9605b8cc16be8375e8e1595adb27b538f113e143e232be6"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Two separate observations of Nepali local shopping trips prohibited through Jamunaha towards Rupaidiha in March and April 2021. Returning travellers and essential journeys have different treatment; no continuity between observations is inferred.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2021-03-25",
+        "end_latest": "2021-03-25",
+        "last_confirmed": "2021-03-25",
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "The March 25 and April 16, 2021 accounts separately document restricted Nepali shopping trips towards Rupaidiha, with different treatment of returnees and essential journeys. Neither establishes the first onset or continuous enforcement between observations. RSS reporting on July 29, 2021 describes Nepali locals crossing Jamunaha to shop in Rupaidiha. This supplies a scope-matched later-access bound, earlier than the previously used December 2022 report. It is not the exact reopening date, a formal repeal or proof of uninterrupted access thereafter. No continuous numeric duration is established."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "R5-SC-001-FU2",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-jamunaha-rupaidiha-road",
+          "name": "Jamunaha–Rupaidiha historic road crossing",
+          "coordinates": [
+            81.6004603,
+            28.0189568
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/3888116312",
+            "https://api.openstreetmap.org/api/0.6/node/3888116312/ways",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=81.596,28.015,81.603,28.024"
+          ],
+          "evidence_note": "Border-control node shared by Ratna Rajmarg NH58 and Indian NH927 at the international boundary. Bounding XML contains named Rupaidiha immigration building, Nepalgunj customs office and Jamunaha police. This is the historic public road crossing, not the newer integrated cargo port.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/fa64ac3604a35761c3b3.xml",
+          "sha256": "4307d6225cee060af9605b8cc16be8375e8e1595adb27b538f113e143e232be6"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Two separate observations of Nepali local shopping trips prohibited through Jamunaha towards Rupaidiha in March and April 2021. Returning travellers and essential journeys have different treatment; no continuity between observations is inferred.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2021-04-16",
+        "end_latest": "2021-04-16",
+        "last_confirmed": "2021-04-16",
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "The March 25 and April 16, 2021 accounts separately document restricted Nepali shopping trips towards Rupaidiha, with different treatment of returnees and essential journeys. Neither establishes the first onset or continuous enforcement between observations. RSS reporting on July 29, 2021 describes Nepali locals crossing Jamunaha to shop in Rupaidiha. This supplies a scope-matched later-access bound, earlier than the previously used December 2022 report. It is not the exact reopening date, a formal repeal or proof of uninterrupted access thereafter. No continuous numeric duration is established."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "adbd9820ec30e4192cc0b9c940c0498cd4e68fdecfe55479728eb016a9e1591f",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

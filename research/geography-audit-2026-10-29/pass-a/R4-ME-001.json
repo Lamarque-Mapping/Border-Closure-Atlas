@@ -1,0 +1,52 @@
+{
+  "record_id": "R4-ME-001",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Khosravi road departure route for Iranian Arbaeen pilgrims bound through Baghdad. Chazzabeh was a distinct earlier-restored crossing and is outside the retained phase.",
+  "source_checks": [
+    {
+      "url": "https://www.tasnimnews.ir/en/news/2019/10/07/2113276/iran-s-khosravi-border-crossing-reopens-to-pilgrims-visiting-iraq",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Named Khosravi pilgrim departures stopped Thursday; Monday morning reopening after alternate route discussion. It does not resolve conflicting Sunday account.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-12.json"
+    },
+    {
+      "url": "https://mapcarta.com/W1092589506",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Named Khosravi border-post location and separate neighbouring control inspected.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-13.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-ME-001-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-khosravi",
+          "name": "Khosravi–Al Muntharyah road crossing",
+          "coordinates": [
+            45.47027,
+            34.38369
+          ],
+          "coordinate_method": "Transcribed coordinates from inspected Mapcarta rendering of the specifically named OSM facility; original API unavailable in web retrieval.",
+          "precision": "Approximately 1 km crossing area; no exact historical gate or damage footprint claimed.",
+          "source_urls": [
+            "https://mapcarta.com/W1092589506"
+          ],
+          "evidence_note": "Named Khosravi Border Post way 1092589506; distinct from neighbouring Al-Muntharyah control 570 m away. Mapcarta administrative country label is not used to resolve boundary/terminal attribution.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-13.json"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Only Khosravi departing-pilgrim phase, preserving October 2–3 start and October 6–7 restoration bounds; no freight or reverse-flow restriction.",
+      "unresolved": [],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"bounded_interval\", \"start_earliest\": \"2019-10-02\", \"start_latest\": \"2019-10-03\", \"end_earliest\": \"2019-10-06\", \"end_latest\": \"2019-10-07\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": true}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: R4-ME-001-R1: Restriction on departing pilgrims using the Baghdad route, not proof of a physically sealed gate. Anadolu’s October 6 Persian report is a same-day reopening announcement; its English report and Iran Press describe Sunday reopening. Tasnim and AFP/ISNA reporting describe Monday morning reopening, with the latter reporting that a group of pilgrims departed. Thus passage is documented by October 7, while the exact first resumption within October 6–7 and clock times remain uncertain. Chazzabeh reopened earlier according to Reuters and is excluded from this Khosravi interval, as are freight and reverse-direction movement."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

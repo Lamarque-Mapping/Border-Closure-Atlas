@@ -1,0 +1,32 @@
+{
+  "record_id": "W-033",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Two distinct transit road gates: Tsamiya–Segbana on Nigeria–Benin and Kamba–Tunga Jado on Nigeria–Niger. This is a Cotonou-to-Niger trucking corridor, not the direct Benin–Niger border.",
+  "source_checks": [
+    {
+      "url": "https://www.premiumtimesng.com/news/top-news/855518-nigeria-reopens-border-with-niger-hundreds-of-trucks-exit.html",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "NAN account identifies two posts, actual truck clearance, and passage via Kamba toward Tunga Jado on February 9; closure onset remains unspecified.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-1.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "W-033-FU1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: multiple_sites. Only the reported 2026 transit-truck restriction; do not inherit 2019 national border regime.",
+      "unresolved": [
+        "No independently sourced coordinate for either exact road gate recovered. Searches identify towns and planned infrastructure, insufficient to locate historical controls."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"closed_interval\", \"start_earliest\": null, \"start_latest\": null, \"end_earliest\": \"2026-02-09\", \"end_latest\": \"2026-02-09\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": true}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: NAN and contemporary Nigerian local reporting quote the customs controller describing the Nigerian reopening decision and actual February 9, 2026 truck clearance; NAN also quotes a Niger representative welcoming that decision. Anadolu independently attributes the months-long measure to Nigeria. This supports recording Nigerian involvement, rather than treating it as solely Niger-imposed.\n\nBanouto attributes the preceding blockage to Niger while describing the Nigerian reopening. Its disagreement remains visible; separate concurrent measures may have been conflated. No original closure order or precise onset was recovered. Officials’ descriptions of months of disruption establish a >24-hour restriction, but neither the three-month shorthand nor broad seven-year retrospective accounts establish an exact continuous interval. The 2019 trade regime, 2022 Kamba permission and direct Benin–Niger frontier restriction remain separate."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

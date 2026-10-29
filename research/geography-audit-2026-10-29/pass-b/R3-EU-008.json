@@ -1,0 +1,43 @@
+{
+  "record_id": "R3-EU-008",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Advance-clearance restrictions for movement to and from left-bank Nistru localities and Bender, an internal de facto/security-zone regime rather than Moldova–Ukraine state frontier.",
+  "source_checks": [
+    {
+      "url": "https://gov.md/en/comunicate-de-presa-bpr/free-movement-transnistrian-region-has-been-extended-until-1-july",
+      "access_status": "full_retrieved",
+      "finding": "27 May official retrospective identifies March 17 2020–April 29 2021 restrictions and exclusion of advance crisis-center coordination from April 30."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EU-008-D1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Advance-clearance regime for crossing the Nistru security zone; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "policy_period",
+        "start_earliest": "2020-03-17",
+        "start_latest": "2020-03-17",
+        "end_earliest": "2021-04-30",
+        "end_latest": "2021-04-30",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "No approved geometry representing this internal de facto control zone, including Bender on right bank, occurs in original inventory. A Moldova–Ukraine boundary or simple entire-river line would be wrong."
+      ]
+    }
+  ],
+  "unresolved": [
+    "No approved geometry representing this internal de facto control zone, including Bender on right bank, occurs in original inventory. A Moldova–Ukraine boundary or simple entire-river line would be wrong."
+  ]
+}

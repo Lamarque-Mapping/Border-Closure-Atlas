@@ -1,0 +1,53 @@
+{
+  "record_id": "R4-AWN-004",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Guerguerat passenger road restriction with Mauritanian repatriation and freight exceptions; April restoration refers to passenger travel in both directions.",
+  "source_checks": [
+    {
+      "url": "https://afrique.le360.ma/maroc-mauritanie/politique/2022/04/06/37591-maroc-mauritanie-ouverture-integrale-du-passage-de-guerguerat-mais-lobligation-du-test/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Correspondent and transporters report opening since Monday April 4 to all passenger nationalities both ways, with continued health requirements.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-13.json"
+    },
+    {
+      "url": "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+      "access_status": "cached_original_text_extract_inspected",
+      "finding": "Published N1 crossing-corridor marker inspected; not exact customs gate.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/pida-original-text.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-AWN-004-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "existing_site_id": "post-guerguerat",
+          "name": "Guerguerat / Dakhla–Nouadhibou road crossing corridor",
+          "coordinates": [
+            -16.94722,
+            21.3338
+          ],
+          "coordinate_method": "Coordinate row transcribed from independently inspected cached original AU-PIDA report text extraction, Appendix A.",
+          "precision": "Illustrative border crossing area, approximately 5 km; not a surveyed historical gate.",
+          "source_urls": [
+            "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "Published row N1 Dakla - Nouadhibou; latitude 21.33380, longitude -16.94722. Preserved original text was inspected; cached PDF binary is truncated and could not be rendered, so this is not fresh full-PDF visual verification. Illustrative location only.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/pida-original-text.txt",
+          "evidence_sha256": "98451216c05eab194ec577670f81979a7944ee5560d41e0ea9c43eb94d347983"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "November 30–April 4 ordinary passenger phase only, excluding repatriation and freight. No retrospective two-year continuous closure inference.",
+      "unresolved": [],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"closed_interval\", \"start_earliest\": \"2021-11-30\", \"start_latest\": \"2021-11-30\", \"end_earliest\": \"2022-04-04\", \"end_latest\": \"2022-04-04\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: December 8 Mauritanian repatriation exception and freight are excluded from this stable scope. Health conditions continued after reopening; intended two-week expiry is not used. Retrospective two-year shorthand is not accepted as continuous closure across earlier openings."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

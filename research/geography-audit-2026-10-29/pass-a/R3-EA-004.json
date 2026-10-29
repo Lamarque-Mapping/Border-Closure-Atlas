@@ -1,0 +1,98 @@
+{
+  "record_id": "R3-EA-004",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Goods processing at Motaain–Batugade was scheduled to stop while pilgrim passenger operations continued. Personal baggage allowances do not reopen ordinary freight.",
+  "source_checks": [
+    {
+      "url": "https://bnpp.go.id/berita/plbn-motaain-pastikan-siap-layani-peziarah-saat-kunjungan-paus-fransiskus-ke-timor-leste",
+      "access_status": "inaccessible",
+      "finding": "Original BNPP page timed out; syndicated official account used.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-40.json",
+      "sha256": "a8650d676449f33a03ded9e72fab507f5097e3e239ceb800c16436302d8f7a86"
+    },
+    {
+      "url": "https://www.askara.co/read/2024/09/05/49003/plbn-motaain-pastikan-siap-layani-peziarah-saat-kunjungan-paus-fransiskus-ke-timor-leste",
+      "access_status": "syndicated_official_account_full_text",
+      "finding": "BNPP manager quote specifies September 8–11 goods stoppage and September 12 expected normalisation; named Motaain–Batugade pair.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-42.json",
+      "sha256": "39d4b9fbfda3ebaccedce00a9a0cb184e5d2e883b6201969ec6b02ef1fba06b0"
+    },
+    {
+      "url": "https://kupang.antaranews.com/berita/137379/plbn-mota-ain-dibuka-selama-18-jam-menjelang-kunjungan-paus",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.antaranews.com/berita/4312711/jelang-kunjungan-paus-plbn-mota-ain-dibuka-selama-18-jam",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://rm.id/baca-berita/nasional/235122/misa-paus-fransiskus-di-dili-plbn-motaain-buka-hingga-tengah-malam",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EA-004-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-motaain-batugade",
+          "name": "Motaain–Batugade",
+          "coordinates": [
+            124.9509469,
+            -8.9598411
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/545957507",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/545957507",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=124.93,-8.98,124.97,-8.94"
+          ],
+          "evidence_note": "Named PLBN Motaain terminal paired explicitly with Batugade in official-attributed release. Freight service suspension differs from passenger operations at same crossing.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-motaain.xml",
+          "sha256": "2fbb87173ab073610196cf2ba00d0800355d35ef654b9f8891cee4b63eca9fcb",
+          "osm_feature": "way/545957507",
+          "osm_version": "5",
+          "osm_timestamp": "2020-11-02T04:00:29Z",
+          "identity_tags": {
+            "government": "customs",
+            "name": "Pos Lintas Batas Negara Motaain",
+            "office": "government",
+            "short_name": "PLBN Motaain"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Motaain–Batugade goods processing suspended during pilgrim operations",
+      "date_scope_check": {
+        "scope": "Motaain–Batugade goods processing suspended during pilgrim operations",
+        "start_earliest": "2024-09-08",
+        "start_latest": "2024-09-08",
+        "end_earliest": "2024-09-12",
+        "end_latest": "2024-09-12",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "assessment": "September 8–11 freight suspension and September 12 scheduled normalisation retained; no observed reopening claimed."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,103 @@
+{
+  "record_id": "R2-SC-005",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Election-security announcement covers simplified crossing points on the South Ossetian administrative boundary with Georgian-administered territory. Odzisi is individually located; the five-post enumeration is not proof all five were operational.",
+  "source_checks": [
+    {
+      "url": "https://www.eng.kavkaz-uzel.eu/articles/47403",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Reopened report attributes June 8–11 all-crossings closure to KGB election announcement.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-30.json",
+      "sha256": "f7fca7e103eb32277afac0f52c70d7577bf3f74b1c4ed71ffeeaf863bc38eb65"
+    },
+    {
+      "url": "https://civil.ge/archives/307477",
+      "access_status": "inaccessible",
+      "finding": "Original full page timed out; no full-text access claimed.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-32.json",
+      "sha256": "93d3633a75477eff043abf6eb4d73286fe3a005cd0042a9cebdd06653551efed"
+    },
+    {
+      "url": "https://civil.ge/archives/318739",
+      "access_status": "search_indexed_text",
+      "finding": "Later 2019 EUMM-attributed list identifies five ABL crossings including Odzisi; used for geographic identity, not election implementation.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-31.json",
+      "sha256": "f3abe7e20c9a880b7db14fe2ac9e998228a7ba327c3aa8143f90eb139984bdb5"
+    },
+    {
+      "url": "https://www.eumm.eu/en/press_and_public_information/press_releases/36637/?month=11&year=2019",
+      "access_status": "search_indexed_text",
+      "finding": "EUMM directly identifies Odzisi and Sinaguri as ABL crossing points in September 2019. Geographic corroboration only.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-31.json",
+      "sha256": "f3abe7e20c9a880b7db14fe2ac9e998228a7ba327c3aa8143f90eb139984bdb5"
+    },
+    {
+      "url": "https://www.eurasiandaily.ru/ru/ampnews/2019/06/08/granicu-yuzhnoy-osetii-s-gruziey-zakryli-na-vremya-vyborov-v-parlament",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-SC-005-R1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-odzisi-mosabruni",
+          "name": "Odzisi–Mosabruni (Razdakhan)",
+          "coordinates": [
+            44.4871514,
+            42.0682341
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/1203169771",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1203169771",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=44.46,42.06,44.51,42.11"
+          ],
+          "evidence_note": "Named Razdakhan-Mosabruni border-control node; EUMM reporting identifies Odzisi as a South Ossetian ABL crossing. One of the five posts within announced all-posts scope, without inferring operation at all five.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-odzisi.xml",
+          "sha256": "2cd4f92f03a5fbd209ac81a4b5e7ad1a7e489eb1155aec431b468abf0945da71",
+          "osm_feature": "node/1203169771",
+          "osm_version": "4",
+          "osm_timestamp": "2025-10-24T20:38:43Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "Уадзæн пункт \"Раздæхæн\" - საბაჟო გამშვები პუნქტი \"მოსაბრუნი\"",
+            "name:en": "Border Crossing Point \"Razdakhan-Mosabruni\"",
+            "name:ka": "საბაჟო გამშვები პუნქტი \"მოსაბრუნი\"",
+            "name:os": "Уадзæн пункт \"Раздæхæн\"",
+            "name:ru": "КПП «Раздахан-Мосабруни»"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Simplified crossing points between South Ossetia and Georgian-administered territory covered by the election security order",
+      "date_scope_check": {
+        "scope": "Simplified crossing points between South Ossetia and Georgian-administered territory covered by the election security order",
+        "start_earliest": "2019-06-08",
+        "start_latest": "2019-06-08",
+        "end_earliest": "2019-06-11",
+        "end_latest": "2019-06-11",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": [
+        "Sinaguri, Karzmani, Zardiantkari and Ergneti historical crossing-area coordinates not established here.",
+        "Ordered June 8–11 window is not observed enforcement or actual reopening."
+      ]
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,103 @@
+{
+  "record_id": "R5-EU-005",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Renewed Vyšné Nemecké truck restriction specifically Ukraine-to-Slovakia. Passenger traffic and Slovakia-to-Ukraine exit explicitly unblocked; keep complete blockage and residual restricted phase separate.",
+  "source_checks": [
+    {
+      "url": "https://spravy.stvr.sk/2023/12/hranicny-priechod-vysne-nemecke-je-pre-kamiony-z-ukrajiny-znova-zablokovany-az-do-odvolania/",
+      "access_status": "full_retrieved",
+      "finding": "STVR December 11 explicitly states inbound truck blockage by car/tractor and exceptions for passengers/opposite direction."
+    },
+    {
+      "url": "https://www.ssc.sk/files/documents/technicke-predpisy/rozborove_ulohy/2020_ru_vazenie_vozidiel_dialnice_cesty_1_trieda.pdf",
+      "access_status": "full_retrieved",
+      "finding": "Named freight inspection facility coordinate independently established."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-EU-005-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-vysne-nemecke-road",
+          "name": "Vyšné Nemecké–Uzhhorod road freight control area",
+          "coordinates": [
+            22.264937,
+            48.656108
+          ],
+          "coordinate_method": "GPS table 3, page 16 of Slovak Road Administration 2020 weighing-site study; independently corroborated customs service operator address/GPS nearby",
+          "precision": "Freight inspection area, about 150 m; not exact protest tractor position",
+          "source_urls": [
+            "https://www.ssc.sk/files/documents/technicke-predpisy/rozborove_ulohy/2020_ru_vazenie_vozidiel_dialnice_cesty_1_trieda.pdf",
+            "https://www.sic.sk/p/120/vysne-nemecke"
+          ],
+          "evidence_note": "I/19 named border crossing weighing facilities, Slovak side; source establishes road freight rather than rail post."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ukraine-to-Slovakia truck blockage at Vyšné Nemecké, ending at first partial truck resumption.; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2023-12-11",
+        "start_latest": "2023-12-11",
+        "end_earliest": "2023-12-13",
+        "end_latest": "2023-12-13",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Freight facility marker supports crossing identity but not exact tractor barrier. Residual phase location retained only for same named direction, without inferring a renewed total closure."
+      ]
+    },
+    {
+      "phase_id": "R5-EU-005-R2P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-vysne-nemecke-road",
+          "name": "Vyšné Nemecké–Uzhhorod road freight control area",
+          "coordinates": [
+            22.264937,
+            48.656108
+          ],
+          "coordinate_method": "GPS table 3, page 16 of Slovak Road Administration 2020 weighing-site study; independently corroborated customs service operator address/GPS nearby",
+          "precision": "Freight inspection area, about 150 m; not exact protest tractor position",
+          "source_urls": [
+            "https://www.ssc.sk/files/documents/technicke-predpisy/rozborove_ulohy/2020_ru_vazenie_vozidiel_dialnice_cesty_1_trieda.pdf",
+            "https://www.sic.sk/p/120/vysne-nemecke"
+          ],
+          "evidence_note": "I/19 named border crossing weighing facilities, Slovak side; source establishes road freight rather than rail post."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Residual restriction on Ukraine-to-Slovakia trucks after first partial resumption; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2023-12-13",
+        "start_latest": "2023-12-13",
+        "end_earliest": "2023-12-14",
+        "end_latest": "2023-12-14",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Freight facility marker supports crossing identity but not exact tractor barrier. Residual phase location retained only for same named direction, without inferring a renewed total closure."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Freight facility marker supports crossing identity but not exact tractor barrier. Residual phase location retained only for same named direction, without inferring a renewed total closure."
+  ]
+}

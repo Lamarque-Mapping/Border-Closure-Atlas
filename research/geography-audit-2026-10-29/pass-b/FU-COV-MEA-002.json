@@ -1,0 +1,76 @@
+{
+  "record_id": "FU-COV-MEA-002",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Shahn/ Shihan Yemeni land-port customs area on the M100 road to Al Mazyunah, Oman. Traders protested Yemeni customs charges at the port; this is not a closure established at the Omani terminal.",
+  "source_checks": [
+    {
+      "url": "https://almawqeapost.net/news/70275",
+      "access_status": "full_text_web",
+      "finding": "Full original March 6, 2022 article states that traders closed Shahn land port and vowed to continue until their customs-fee demands were met. It supplies no exact barrier location or verified reopening.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-36.json",
+      "evidence_sha256": "ee45e913edfbc7399db34100809086777471714bd4f6c320ea1c54b295399eb1"
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/map.json?bbox=52.48,17.76,52.58,17.82",
+      "access_status": "full_original_osm_json",
+      "finding": "Independently read the M100 control node and adjacent Shahn customs address. Earlier extracts of the Omani Al Mazyunah facility were rejected as the wrong side of the reported protest.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/b7ebbaeae0b441180d55.json",
+      "evidence_sha256": "b2848db79fbbd4e484314d226bef6c76a769be8931745afbf69342575f920aeb"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-MEA-002-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-shahn-yemen",
+          "name": "Shahn / Shihan Yemeni road control",
+          "coordinates": [
+            52.5539202,
+            17.8036693
+          ],
+          "coordinate_method": "Original OSM node coordinate from independently fetched API JSON",
+          "precision": "approximate crossing facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/map.json?bbox=52.48,17.76,52.58,17.82",
+            "https://www.openstreetmap.org/node/1930059120",
+            "https://www.openstreetmap.org/node/6423557180"
+          ],
+          "evidence_note": "Original control node on the named Shahn–Al Mazyunah M100 road. Adjacent money-exchange node 6423557180 explicitly gives its address as Yemen–Oman border, Shahn customs. This is the Yemeni inland control area, distinct from Shihan town and the separate Omani Al Mazyunah facility near 52.626,17.839. The exact 2022 protest barrier within the customs area remains unknown. Inspected OSM tags: {\"barrier\": \"border_control\"}. Geographic evidence only; no historical restriction or current operational status inferred.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/b7ebbaeae0b441180d55.json",
+          "evidence_sha256": "b2848db79fbbd4e484314d226bef6c76a769be8931745afbf69342575f920aeb",
+          "osm_version": 3,
+          "osm_timestamp": "2017-03-21T23:09:39Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Shahn/ Shihan Yemeni land-port customs area on the M100 road to Al Mazyunah, Oman. Traders protested Yemeni customs charges at the port; this is not a closure established at the Omani terminal. Current phase only: Shahn land crossing",
+      "date_scope_check": {
+        "start_earliest": "2022-03-06",
+        "start_latest": "2022-03-06",
+        "end_earliest": "2022-03-06",
+        "end_latest": "2022-03-06",
+        "last_confirmed": "2022-03-06",
+        "endpoint_status": "last_confirmed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Single-day closed-state evidence; the threatened open-ended sit-in does not prove subsequent uninterrupted closure. No numeric duration. Oman-side counterpart name and exact physical gate are not established by these reports.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "The Yemeni Shahn customs/control area is located, but the protest barrier within it is not separately identified. Open-ended reporting is not converted to continuous closure."
+      ]
+    }
+  ],
+  "unresolved": [
+    "The Yemeni Shahn customs/control area is located, but the protest barrier within it is not separately identified. Open-ended reporting is not converted to continuous closure."
+  ]
+}

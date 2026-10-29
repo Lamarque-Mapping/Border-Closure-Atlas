@@ -1,0 +1,128 @@
+{
+  "record_id": "R3-EA-003",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Circular-defined inward service at Salele and Sakato was diverted to Batugade during papal-visit preparations. Outward movement remained allowed. Oesilo appears in the minister quote but is outside this canonical two-post phase.",
+  "source_checks": [
+    {
+      "url": "https://id.tatoli.tl/2024/08/26/timor-leste-akan-tutup-perbatasan-darat-pada-01-14-september/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Timorese state agency quotes minister and circular separately: inward Salele/Sakato rerouting, outward permission, scheduled normalisation September 14.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-40.json",
+      "sha256": "a8650d676449f33a03ded9e72fab507f5097e3e239ceb800c16436302d8f7a86"
+    },
+    {
+      "url": "https://www.askara.co/read/2024/09/05/49003/plbn-motaain-pastikan-siap-layani-peziarah-saat-kunjungan-paus-fransiskus-ke-timor-leste",
+      "access_status": "syndicated_official_account_full_text",
+      "finding": "Full BNPP-attributed account explicitly pairs Salele–Motamasin and Sakato–Wini.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-42.json",
+      "sha256": "39d4b9fbfda3ebaccedce00a9a0cb184e5d2e883b6201969ec6b02ef1fba06b0"
+    },
+    {
+      "url": "https://bnpp.go.id/berita/plbn-motaain-pastikan-siap-layani-peziarah-saat-kunjungan-paus-fransiskus-ke-timor-leste",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://id.tatoli.tl/2024/09/02/jelang-kunjungan-paus-sejumlah-ruas-jalan-di-dili-akan-ditutup-mulai-07-11-september/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://bnpp.go.id/berita/paus-fransiskus-kunjungi-dili-ri-timor-leste-sepakat-hanya-buka-perlintasan-plbn-motaain-batu-gede",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EA-003-R1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-motamasin-salele",
+          "name": "Motamasin–Salele",
+          "coordinates": [
+            125.0849824,
+            -9.4519206
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/658027880",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/658027880",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=125.06,-9.47,125.09,-9.44"
+          ],
+          "evidence_note": "Named Indonesian PLBN terminal paired explicitly with Salele in BNPP-attributed account; reference for Timorese inward service, not a claim Indonesian exit processing closed.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-motamasin-east.xml",
+          "sha256": "05e36044f3cecfa982e5e98d1833667dcbcee6dbead85b59d1d7705edc500a5a",
+          "osm_feature": "way/658027880",
+          "osm_version": "4",
+          "osm_timestamp": "2025-10-06T14:55:46Z",
+          "identity_tags": {
+            "access": "permissive",
+            "alt_name": "PLBN Motamasin",
+            "area": "yes",
+            "barrier": "border_control",
+            "bicycle": "no",
+            "horse": "no",
+            "name": "Pos Lintas Batas Negara Motamasin"
+          }
+        },
+        {
+          "proposed_site_id": "post-wini-sakato",
+          "name": "Wini–Sakato",
+          "coordinates": [
+            124.4790877,
+            -9.1771147
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/346764139",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/346764139",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=124.45,-9.19,124.49,-9.16"
+          ],
+          "evidence_note": "Named PLBN Wini paired explicitly with Sakato; counterpart crossing-area reference for inward Timorese restriction.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-wini.xml",
+          "sha256": "9bc69a672228856905750782d352691c80bbfe6f45da4d6531d59825d8be938a",
+          "osm_feature": "way/346764139",
+          "osm_version": "4",
+          "osm_timestamp": "2022-01-27T04:52:26Z",
+          "identity_tags": {
+            "building": "yes",
+            "government": "customs",
+            "name": "Pos Lintas Batas Negara Wini",
+            "office": "government",
+            "short_name": "PLBN Wini"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Timorese inward service at Salele and Sakato suspended; entrants rerouted to Batugade",
+      "date_scope_check": {
+        "scope": "Timorese inward service at Salele and Sakato suspended; entrants rerouted to Batugade",
+        "start_earliest": "2024-09-01",
+        "start_latest": "2024-09-01",
+        "end_earliest": "2024-09-14",
+        "end_latest": "2024-09-14",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "assessment": "Original September 1–14 schedule retained, despite shorter BNPP reporting. No actual September 14 restoration proved."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

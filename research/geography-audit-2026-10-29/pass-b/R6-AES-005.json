@@ -1,0 +1,55 @@
+{
+  "record_id": "R6-AES-005",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Musosa official crossing in Moba territory, Tanganyika, opposite the Kaputa area of Zambia. This is a specific locality crossing, not the whole DRC–Zambia frontier.",
+  "source_checks": [
+    {
+      "url": "https://www.radiookapi.net/2025/09/05/actualite/societe/reouverture-de-la-frontiere-rdc-zambie-au-village-musosa-apres-8-jours",
+      "access_status": "full_text_web",
+      "finding": "Original report identifies Musosa, Moba and the Kaputa side, with the territorial administrator observing reopening September 3.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-28.json",
+      "evidence_sha256": "1c07142f5092770e8492f2cff7df774d6a784569ff6e9b17db1afebaaaebb00f"
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/map.json?bbox=29.62,-8.40,29.65,-8.37",
+      "access_status": "full_original_osm_json",
+      "finding": "Original extract identifies Musosa village and a surveyed primary school but no identifiable border facility. Neither village nor school is used as the crossing.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/2343d517c9d145055242.json",
+      "evidence_sha256": "fee31d2c1710c1d0b3f0d3b0b829843b2039e82e383f188515856105feeb3dcb"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-AES-005-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Musosa official crossing in Moba territory, Tanganyika, opposite the Kaputa area of Zambia. This is a specific locality crossing, not the whole DRC–Zambia frontier. Current phase only: Musosa official crossing between DR Congo and Zambia.",
+      "date_scope_check": {
+        "start_earliest": "2025-08-27",
+        "start_latest": "2025-08-27",
+        "end_earliest": "2025-09-03",
+        "end_latest": "2025-09-03",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "The report’s headline says eight days, while its stated closure and reopening dates differ by seven calendar days. Informal paths are outside this scope; one reporting lineage. The publisher’s counting method is not established.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Exact Musosa regular crossing/control facility remains unverified."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact Musosa regular crossing/control facility remains unverified."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "record_id": "R7-AF-001",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Luvo/Luvu border post and associated Angolan market north of Mbanza Kongo, Zaire province, paired with Congolese Lufu/Lufo. Phase is ordinary Congolese trader access into Angola, not every direction or all Angola–DRC crossings.",
+  "source_checks": [
+    {
+      "url": "https://www.novojornal.co.ao/internacional/detalhe/fronteira-e-mercado-transfronteirico-do-luvo-reabrem-depois-de-20-dias-encerrados-por-causa-das-eleicoes-14125.html",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full original September4 on-site report inspected: hundreds Congolese entering Angola and thousands at market since SaturdaySeptember2, after election-related twenty-day closure. Exact onset not stated. Market alternates sides.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-20.json"
+    },
+    {
+      "url": "https://www.wcoesarocb.org/wp-content/uploads/2015/03/WCO-ESA-ROCB-Annual-Report-2023-2024-V-2.0.pdf",
+      "access_status": "fresh_search_extract_inspected",
+      "finding": "Original WCO annual report indexed extract identifies Luvo customs opposite Lufo, and new2024 construction project. No verified historical2017 gate/market coordinates.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-24.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R7-AF-001-D1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: road_trader_market_access. Retain August month-wide onset uncertainty and September2 scoped endpoint; no arithmetic invention of onset from twenty-day shorthand.",
+      "unresolved": [
+        "Exact2017 border-control/market location and extent remain unverified; modern construction is not evidence of historical gate position."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"bounded_interval\", \"start_earliest\": \"2017-08-01\", \"start_latest\": \"2017-08-31\", \"end_earliest\": \"2017-09-02\", \"end_latest\": \"2017-09-02\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: Onset remains month precision; twenty-day retrospective wording is not used to invent a start. The endpoint is observed trader access, not every category/direction. Independence of repeated retrospective duration claims is unknown and exceptions are not reconstructed."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

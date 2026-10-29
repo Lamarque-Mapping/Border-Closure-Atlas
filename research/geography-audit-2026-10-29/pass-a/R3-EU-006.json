@@ -1,0 +1,108 @@
+{
+  "record_id": "R3-EU-006",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Initial March14 suspension names Cahul–Oancea andLipcani–RadautiPrut internationalroadposts only. Romanian police officialmap gives namedroadfacility references; separate November2020/June2021 reopening dates must remain distinct.",
+  "source_checks": [
+    {
+      "url": "https://border.gov.md/ro/masuri-noi-si-restrictii-de-circulatie-prin-punctele-de-trecere-a-frontierei-de-stat",
+      "access_status": "fresh_full_text_extract",
+      "finding": "March15 officialnotice lists both Romanianroadpostsclosed16:00March14, withotherroad/railpostsexplicitlyactive.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-051.json"
+    },
+    {
+      "url": "https://www.border.gov.md/veste-buna-la-nceput-de-saptamana-punctul-de-trecere-frontierei-cahul-oancea-isi-reia-activitatea",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Cahul notice resumespassengerandfreightNovember16 at20:00 whileadmissionrestrictionsremain.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-060.json"
+    },
+    {
+      "url": "https://border.gov.md/informare-punctul-de-trecere-frontierei-lipcani-radauti-prut-isi-reia-activitatea",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Lipcani notice resumespersonsandfreightJune12 2021 at08:00, distinctfromCahul.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-060.json"
+    },
+    {
+      "url": "https://www.politiadefrontiera.ro/ro/maps/mp-26.html",
+      "access_status": "fresh_raw_primary_geographic_evidence",
+      "finding": "Rawofficialmap inspected: OanceaRutier lat45.917580585779945 lon28.11954973403931; RadautiPrutRutier lat48.25223488996587 lon26.803325397415165.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/23fbf20e2169ecf5cbf3.html",
+      "source_sha256": "b7b460fb58ec699cdcfa7a345d26d10f7fd34a9fa69c519edaeadcc635d14cbc"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EU-006-R1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-oancea-road",
+          "name": "Punctul de Trecere a Frontierei Oancea Rutier",
+          "coordinates": [
+            28.1195497,
+            45.9175806
+          ],
+          "coordinate_method": "Published border-police map marker latitude/longitude, reordered and rounded7decimals",
+          "precision": "Authority facility reference; map marker is not surveyed historical closure barrier or roadalignment.",
+          "source_urls": [
+            "https://www.politiadefrontiera.ro/ro/maps/mp-26.html",
+            "https://www.politiadefrontiera.ro/ro/main/pg-puncte-de-trecere-a-frontierei-situate-in-judetele-botosani-iasi-vaslui-galati-si-braila-300.html"
+          ],
+          "evidence_note": "Named Rutier road marker, distinct from any railway entry. Map linked from officialborder-police geographic directory.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/23fbf20e2169ecf5cbf3.html",
+              "sha256": "b7b460fb58ec699cdcfa7a345d26d10f7fd34a9fa69c519edaeadcc635d14cbc",
+              "access_status": "fresh_raw_primary_geographic_evidence"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-radauti-prut-road",
+          "name": "Punctul de Trecere a Frontierei Radauti Prut Rutier",
+          "coordinates": [
+            26.8033254,
+            48.2522349
+          ],
+          "coordinate_method": "Published border-police map marker latitude/longitude, reordered and rounded7decimals",
+          "precision": "Authority facility reference; map marker is not surveyed historical closure barrier or roadalignment.",
+          "source_urls": [
+            "https://www.politiadefrontiera.ro/ro/maps/mp-26.html",
+            "https://www.politiadefrontiera.ro/ro/main/pg-puncte-de-trecere-a-frontierei-situate-in-judetele-botosani-iasi-vaslui-galati-si-braila-300.html"
+          ],
+          "evidence_note": "Named Rutier road marker, distinct from any railway entry. Map linked from officialborder-police geographic directory.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/23fbf20e2169ecf5cbf3.html",
+              "sha256": "b7b460fb58ec699cdcfa7a345d26d10f7fd34a9fa69c519edaeadcc635d14cbc",
+              "access_status": "fresh_raw_primary_geographic_evidence"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Initial Romanian-directed suspension of Cahul–Oancea and Lipcani–Rădăuți-Prut road crossing operations",
+      "date_scope_check": {
+        "start_earliest": "2020-03-14",
+        "start_latest": "2020-03-14",
+        "end_earliest": "2020-04-13",
+        "end_latest": "2020-04-13",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "announced_window_layer_only",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Native aggregated phase dates retained; no claim bothpostswereclosedthroughidenticalendpoint. Currentmarkerslocatefacilitiesonly."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "a5336f5dcf708906f947875c8015922a8c11be309910743562194b439ed699c9"
+}

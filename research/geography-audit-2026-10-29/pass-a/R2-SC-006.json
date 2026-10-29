@@ -1,0 +1,94 @@
+{
+  "record_id": "R2-SC-006",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "March 2019 restriction affected the disputed local section and Vorukh access roads near Ak-Sai/Kok-Tash. Neither the whole international frontier nor the centroid of the enclave represents the affected roadblocks.",
+  "source_checks": [
+    {
+      "url": "https://www.rferl.org/a/kyrgyz-tajik-negotiators-reach-agreement-reopen-border-crossing-after-deadly-clashes/29828634.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Full report locates reopening in the disputed local section after March 13 clashes and March 18 talks; it does not identify a surveyed checkpoint or bounded closure polyline.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-29.json",
+      "sha256": "30ab3181a8ce98ffc4a4cb16850c25389218eec2acc8b2c2aeada4b6bd345289"
+    },
+    {
+      "url": "https://www.qubodiyon.tj/node/312",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.qubodiyon.tj/node/314",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://shahrituz.tj/node/324",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://cabar.asia/en/the-road-of-contention-the-authorities-of-kyrgyzstan-and-tajikistan-begin-negotiations-after-a-border-conflict",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.azattyqasia.org/a/kyrgyzstan-tajikistan-border-open/29828220.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://khuroson.tj/en/2019/03/14/press-statement-of-the-main-directorate-of-the-border-troops-of-the-state-committee-for-national-security-of-tajikistan/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://24.kg/english/112254_Road_on_Kyrgyzstan-Tajikistan_border_opened_situation_is_stable/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-SC-006-D1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Disputed local border section and access routes around Vorukh; Residents and cross-border road users.; Not directionally disaggregated in retrieved evidence",
+      "date_scope_check": {
+        "scope": "Disputed local border section and access routes around Vorukh; Residents and cross-border road users.; Not directionally disaggregated in retrieved evidence",
+        "start_earliest": "2019-03-13",
+        "start_latest": "2019-03-13",
+        "end_earliest": "2019-03-18",
+        "end_latest": "2019-03-18",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": [
+        "Exact blocked road section/endpoints and crossing identities are not fixed by reopened report. Need a contemporary route map or explicit gate identity."
+      ]
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,89 @@
+{
+  "record_id": "R6-SC-003",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Sarakhs international railway freight service between Iran and Turkmenistan. The Iranian border-station point represents the railway facility; new road-bridge opening is outside this phase.",
+  "source_checks": [
+    {
+      "url": "https://iranpress.com/content/20273/sarakhs-railway-border-temporarily-closed",
+      "access_status": "indexed_extract_only",
+      "finding": "Indexed original reports the railway closure; direct open failed. April wording differs across sources and canonical bounds are retained.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-32.json",
+      "sha256": "8b626b1efbea2b0d5cb44de008b4723dc7546cd8bb3bc48f1c72d53c35b305d9"
+    },
+    {
+      "url": "https://iranpress.com/content/23142/iran-railway-border-with-turkmenistan-reopens",
+      "access_status": "indexed_extract_only",
+      "finding": "Indexed original records actual June 18 movements of 30 outbound and 17 inbound freight wagons.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-32.json",
+      "sha256": "8b626b1efbea2b0d5cb44de008b4723dc7546cd8bb3bc48f1c72d53c35b305d9"
+    },
+    {
+      "url": "https://www.unescap.org/sites/default/files/Study%20on%20Railway%20Border%20crossings%2046218.pdf",
+      "access_status": "indexed_extract_only",
+      "finding": "Railway study identifies the Sarakhs border station and break-of-gauge operation, based on Iranian Railways 2017 information.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-31.json",
+      "sha256": "3cab475dd6da5d0c4cfb9cd48e054213c8fc26f2f7d956adc98a4c3c7445e940"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/3849836297",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named railway station node inspected; road facility not substituted.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/2bca7223b558dabb9108.xml",
+      "sha256": "f2e08f20cc4d4d52518493871adc586a6372e08eec2b381764d1d8ebb8505ddb",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/2bca7223b558dabb9108.txt",
+      "text_sha256": "f2e08f20cc4d4d52518493871adc586a6372e08eec2b381764d1d8ebb8505ddb",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-SC-003-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-sarakhs-rail-station",
+          "name": "Sarakhs international rail station",
+          "coordinates": [
+            61.1047085,
+            36.4705055
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Representative railway-station point, about 200 m; not an exact rail border-line intersection",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/3849836297"
+          ],
+          "evidence_note": "Named Sarakhs railway station. UNESCAP railway study identifies Sarakhs as the international break-of-gauge border station operating since 1996, distinct from the road bridge.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/2bca7223b558dabb9108.xml",
+          "sha256": "f2e08f20cc4d4d52518493871adc586a6372e08eec2b381764d1d8ebb8505ddb"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Sarakhs international railway freight service between Iran and Turkmenistan. The Iranian border-station point represents the railway facility; new road-bridge opening is outside this phase.",
+      "date_scope_check": {
+        "start_earliest": "2020-04-01",
+        "start_latest": "2020-04-02",
+        "end_earliest": "2020-06-18",
+        "end_latest": "2020-06-18",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "IRICA/Mehr-derived reports share an official reporting origin. Road freight and other crossings are not included."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "ca2bc244602e1f4a2e82a745cf1aa3f8ddaf6b375637e98b6096028698b3af33",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

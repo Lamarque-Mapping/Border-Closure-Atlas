@@ -1,0 +1,91 @@
+{
+  "record_id": "R2-EA-007",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Fresh-fruit/agricultural exports at Kim Thanh II–Hekou have a later distinct suspension and June pilot reopening; other cargo easing does not end this commodity phase.",
+  "source_checks": [
+    {
+      "url": "https://baochinhphu.vn/trung-quoc-thi-diem-nhap-khau-tro-lai-hoa-qua-tuoi-viet-nam-102220628081108434.htm",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Government report explicitly names road gate II Kim Thanh, February 17 agricultural stop and June 27 pilot for dragon fruit, lychee and mango.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-29.json",
+      "sha256": "30ab3181a8ce98ffc4a4cb16850c25389218eec2acc8b2c2aeada4b6bd345289"
+    },
+    {
+      "url": "https://baochinhphu.vn/trung-quoc-tam-ngung-nhap-khau-hang-hoa-qua-cua-khau-ha-khau-lao-cai-102220217170434898.htm",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://vtv.vn/kinh-te/cua-khau-kim-thanh-ii-thong-quan-tro-lai-20220410072718688.htm",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://baolaocai.vn/tao-thuan-loi-trong-xuat-nhap-khau-post359659.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EA-007-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kim-thanh-ii-hekou",
+          "name": "Kim Thanh II–Hekou road crossing",
+          "coordinates": [
+            103.940421,
+            22.5236786
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/665997590",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/665997590",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=103.92,22.51,103.97,22.55"
+          ],
+          "evidence_note": "Named Kim Thanh border checkpoint on the newer road crossing, paired with Hekou/Beishan. Explicit government and provincial reporting identify road gate II; distinct from old Lao Cai–Hekou railway crossing.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-kim-thanh.xml",
+          "sha256": "ab221dada2c743d29add4a82817fa6cd4bfc0fe4de4c42588d4058a4929ef217",
+          "osm_feature": "way/665997590",
+          "osm_version": "4",
+          "osm_timestamp": "2026-08-19T17:43:42Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "building": "yes",
+            "name": "Cửa khẩu Kim Thành",
+            "name:en": "Kim Thanh Border Checkpoint"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "New ordinary fresh-fruit/agricultural exports from Vietnam into China at Hekou–Kim Thanh II",
+      "date_scope_check": {
+        "scope": "New ordinary fresh-fruit/agricultural exports from Vietnam into China at Hekou–Kim Thanh II",
+        "start_earliest": "2022-02-17",
+        "start_latest": "2022-02-18",
+        "end_earliest": "2022-06-27",
+        "end_latest": "2022-06-27",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

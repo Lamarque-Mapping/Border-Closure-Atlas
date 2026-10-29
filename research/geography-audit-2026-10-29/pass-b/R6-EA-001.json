@@ -1,0 +1,51 @@
+{
+  "record_id": "R6-EA-001",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Ordinary passenger prohibition at four Quang Tri auxiliary gates: Ta Rung, Cheng, Thanh and Cooc. Goods-only relaxation does not end the passenger restriction. Border patrol barriers along informal trails are not equivalent to the four gates.",
+  "source_checks": [
+    {
+      "url": "https://baochinhphu.vn/quang-tri-mo-lai-4-cua-khau-phu-voi-lao-102272480.htm",
+      "access_status": "full_text_web",
+      "finding": "Government report explicitly lists all four auxiliary gates and permits goods while forbidding people; its February 4 wording does not change existing February 3 phase bounds.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r6-3.json",
+      "sha256": "2d2cabbec0c6ec297ead4f6dcea9cfec0350942207428d66444db14042b22c90"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-EA-001-D1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ordinary passenger prohibition at four Quang Tri auxiliary gates: Ta Rung, Cheng, Thanh and Cooc. Goods-only relaxation does not end the passenger restriction. Border patrol barriers along informal trails are not equivalent to the four gates.",
+      "date_scope_check": {
+        "start_earliest": "2020-02-03",
+        "start_latest": "2020-02-04",
+        "end_earliest": "2020-05-12",
+        "end_latest": "2020-05-12",
+        "last_confirmed": "2020-05-12",
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Formal passenger restriction confirmed through May 12, not reopening or uniform daily enforcement on every trail. March field refusal supports local implementation. Undated goods permission cannot supply a passenger endpoint; no later extension is inferred."
+      },
+      "unresolved": [
+        "Exact control-site coordinates for the four named auxiliary gates remain unverified. Search results for similarly named places elsewhere are rejected; no province or whole-border geometry substituted."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact control-site coordinates for the four named auxiliary gates remain unverified. Search results for similarly named places elsewhere are rejected; no province or whole-border geometry substituted."
+  ],
+  "input_sha256": "f6c43bc2a4563221efdc85e02102c0435f36a3c3506422f061dec09b4f193039",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

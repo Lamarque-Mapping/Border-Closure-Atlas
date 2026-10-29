@@ -1,0 +1,64 @@
+{
+  "record_id": "R6-EU-005",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Kastanies–Pazarkule specific civilian road/pedestrian gate unavailable after February2020 confrontation, later restricted passenger reopening; no whole Evros-border closure.",
+  "source_checks": [
+    {
+      "url": "https://www.newsbomb.gr/en/story/1058466/kastanies-customs-post-closed-after-large-numbers-of-people-seek-to-enter-greece-from-turkey",
+      "access_status": "full_retrieved",
+      "finding": "Newsbomb/ANA identifies Kastanies customs closure after crowd gathered on Turkish side."
+    },
+    {
+      "url": "https://www.trthaber.com/haber/turkiye/pazarkule-sinir-kapisi-yeniden-acildi-593089.html",
+      "access_status": "full_retrieved",
+      "finding": "TRT reports Pazarkule service resuming after approximately16 months and distinguishes alternative İpsala."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1183497389/full",
+      "access_status": "full_retrieved",
+      "finding": "Directly inspected OSM way/1183497389 mean of geometry vertices; XML sha256 dfb3843fdfa2d9db63288f7d0e5282bc0759388c2f2e4982c3c7cc4821d3997a"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-EU-005-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kastanies-road",
+          "name": "Kastanies–Pazarkule, Greek road control",
+          "coordinates": [
+            26.481538714285712,
+            41.64981362857143
+          ],
+          "coordinate_method": "Directly inspected OSM way/1183497389 mean of geometry vertices; XML sha256 dfb3843fdfa2d9db63288f7d0e5282bc0759388c2f2e4982c3c7cc4821d3997a",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/1183497389/full"
+          ],
+          "evidence_note": "Named Kastanies border-control building area on Greek road approach, separate from nearby railway halt and distant motorway junction. Current facility representative, not surveyed 2020 barrier."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kastanies–Pazarkule gate unavailable for ordinary authorized civilian passenger crossings, ending with restricted passenger operation; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2020-02-28",
+        "start_latest": "2020-02-28",
+        "end_earliest": "2021-07-03",
+        "end_latest": "2021-07-03",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,147 @@
+{
+  "record_id": "R3-EA-009",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Separate Attapeu and Sekong provincial observations must remain distinct. VOV identifies Attapeu posts Phounhang, Pho 1/Vangtat, Sepien and Pho 2–6, and Sekong posts Daktaook, Dakpar, Tavang and Kako. Only Tavang–A Dot receives a positively matched coordinate here; Phoukeua remains an exception.",
+  "source_checks": [
+    {
+      "url": "https://www.rfa.org/english/news/laos/checkpoints-03162020164126.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Provincial confirmations distinguish Attapeu eight and Sekong four, with Phoukeua open.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-41.json",
+      "sha256": "2f527d7c81baaf4dba60e70a67b687dc2b610a8306f78000ff6b721fa550236c"
+    },
+    {
+      "url": "https://vov.vn/kinh-te/lao-tam-dung-thong-quan-mot-so-cua-khau-phu-voi-viet-nam-va-campuchia-1022589.vov",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Full VOV report supplies the two provincial rosters, with Phoukeua and Nongnokkhien as alternatives.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-46.json",
+      "sha256": "ad292cae3a027185c21b8350460fd13bb47ef59ce9556943a566c3667f55c3ab"
+    },
+    {
+      "url": "https://dansinh.dantri.com.vn/dien-dan-dan-sinh/lao-tam-thoi-dong-cua-10-diem-qua-bien-gioi-voi-viet-nam-tranh-dich-covid-19-20200316213206279.htm",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Contemporary article pairs Sekong Tavang with A Dot and other Vietnamese counterparts.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-46.json",
+      "sha256": "ad292cae3a027185c21b8350460fd13bb47ef59ce9556943a566c3667f55c3ab"
+    },
+    {
+      "url": "https://hue.gov.vn/Chinh-quyen/Trang-tin-PCT-Ha-Van-Tuan/Tin-video/tb/Khao-sat-xac-dinh-lai-pham-vi-dia-ban-hoat-dong-hai-quan-tai-cua-khau-A-Dot-va-Hong-Van-925321",
+      "access_status": "search_indexed_text",
+      "finding": "Official indexed survey gives boundary pillar 666 location; direct page only returned navigation. Used as geographic context, not historical closure.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-47.json",
+      "sha256": "521da361fcbb02a88a79698a19dd901bfdf0b12b4da7e951ce529e2e39ae27f3"
+    },
+    {
+      "url": "https://en.vietnamplus.vn/covid-19-laos-closes-border-gates-post170160.vnp",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://vov.gov.vn/lao-tam-dung-thong-quan-mot-so-cua-khau-phu-voi-viet-nam-va-campuchia-dtnew-154609",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.vientianetimes.org.la/freeContent/FreeConten_Laos_orders_53.php",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://en.vietnamplus.vn/laos-re-opens-all-local-border-checkpoints-post236657.vnp",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EA-009-FU1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Eight smaller Attapeu Vietnam/Cambodia-frontier posts",
+      "date_scope_check": {
+        "scope": "Eight smaller Attapeu Vietnam/Cambodia-frontier posts",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2020-03-16",
+        "end_latest": "2020-03-16",
+        "last_confirmed": "2020-03-16",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": [
+        "Eight Attapeu sites have newly recovered names but no positively matched crossing coordinates. Pho numbering alone cannot locate gates."
+      ]
+    },
+    {
+      "phase_id": "R3-EA-009-FU2",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-a-dot-tavang",
+          "name": "A Dot–Ta Vang",
+          "coordinates": [
+            107.3719583,
+            16.0725936
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/227927905",
+          "precision": "Crossing facility reference, 300 m; about 650 m inland from published pillar 666.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/227927905",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=107.36,16.05,107.39,16.08"
+          ],
+          "evidence_note": "Named A Dot border-control building. Contemporary Dan Sinh pairs Tavang with A Dot; VOV includes Tavang among Sekong closures. Marker is customs/control facility north of boundary pillar 666, not the pillar itself.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-a-dot-tavang.xml",
+          "sha256": "8336bcc29314c6f917f394bcd266274a7a4fb2c02963f21e4e2982baaeebca6a",
+          "osm_feature": "way/227927905",
+          "osm_version": "2",
+          "osm_timestamp": "2026-09-21T13:49:15Z",
+          "identity_tags": {
+            "area": "yes",
+            "barrier": "border_control",
+            "building": "yes",
+            "name": "Cửa khẩu A Dớt"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Four smaller Sekong Vietnam-frontier posts",
+      "date_scope_check": {
+        "scope": "Four smaller Sekong Vietnam-frontier posts",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2020-03-16",
+        "end_latest": "2020-03-16",
+        "last_confirmed": "2020-03-16",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": [
+        "Daktaook/Nam Giang, Dakpar/Dak Blo and Kako coordinates not securely matched.",
+        "Nam Giang draft coordinate text has invalid seconds and was rejected rather than silently corrected."
+      ]
+    }
+  ],
+  "unresolved": []
+}

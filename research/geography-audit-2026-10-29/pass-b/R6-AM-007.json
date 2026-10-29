@@ -1,0 +1,43 @@
+{
+  "record_id": "R6-AM-007",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "November28 intermittent road obstruction at Línea de la Concordia on Chilean side, distinct from Peru refusal of undocumented entrants and freight queues attributable to customs processing.",
+  "source_checks": [
+    {
+      "url": "https://radiouno.pe/noticias/259824/migrantes-abren-y-cierran-frontera-entre-peru-y-chile/",
+      "access_status": "full_retrieved",
+      "finding": "Radio Uno distinguishes repeated road blocks/partial clearance, Chilean police removing stones, and Peruvian-side immigration refusal."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-AM-007-RREV1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Observed November 28 recurrent migrant obstruction of vehicle road access on Chilean side of Concordia between Chacalluta and Santa Rosa; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "intermittent_regime",
+        "start_earliest": "2025-11-28",
+        "start_latest": "2025-11-28",
+        "end_earliest": "2025-11-28",
+        "end_latest": "2025-11-28",
+        "last_confirmed": "2025-11-28",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Exact Chilean-side road barrier coordinate not established; inspected Santa Rosa Peruvian booth does not prove this location. No continuous beyond-observation duration inferred."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact Chilean-side road barrier coordinate not established; inspected Santa Rosa Peruvian booth does not prove this location. No continuous beyond-observation duration inferred."
+  ]
+}

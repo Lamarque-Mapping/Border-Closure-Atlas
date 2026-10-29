@@ -1,0 +1,43 @@
+{
+  "record_id": "R5-AM-003",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Short June 22 migrant obstruction on Chilean-side international road at Línea de la Concordia, between Chacalluta and Santa Rosa. Carabineros removed road obstruction; ongoing migrant denial of entry is a separate activity.",
+  "source_checks": [
+    {
+      "url": "https://radiouno.pe/noticias/175298/migrantes-repiten-bloqueo-frontera-peru-y-chile/",
+      "access_status": "full_retrieved",
+      "finding": "Radio Uno explicitly gives Chilean territory, road between countries and nearly twenty-minute interruption starting before 07:30."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-AM-003-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Santa Rosa episode on 22 June 2023.; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2023-06-22",
+        "start_latest": "2023-06-22",
+        "end_earliest": "2023-06-22",
+        "end_latest": "2023-06-22",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "No exact coordinate of Chilean-side road obstruction; Santa Rosa Peruvian control booths do not identify this barricade."
+      ]
+    }
+  ],
+  "unresolved": [
+    "No exact coordinate of Chilean-side road obstruction; Santa Rosa Peruvian control booths do not identify this barricade."
+  ]
+}

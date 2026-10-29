@@ -1,0 +1,94 @@
+{
+  "record_id": "R4-SC-001",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Ak-Tash–Birlishken was the short direct route for Barak residents; Dostuk and Kyzyl-Kiya were alternatives. Present Ak-Tash village location does not identify the historical simplified gate, especially after later territorial changes.",
+  "source_checks": [
+    {
+      "url": "https://www.azattyqasia.org/amp/kyrgyzstan_uzbekistan_border_barak/24902675.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "February 15 2013 full article explicitly gives January 16 closure and exceptional funeral/illness passage, distinguishing alternative Dostuk.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-42.json",
+      "sha256": "39d4b9fbfda3ebaccedce00a9a0cb184e5d2e883b6201969ec6b02ef1fba06b0"
+    },
+    {
+      "url": "https://www.gov.kg/ru/post/s/barak-eksklavyinyin-zhashoochularyinyin-toskoolduksuz-t-s-ch-n-ak-tash-tk-rm-punktunun-ishi-kalyibyina-keltirildi",
+      "access_status": "search_indexed_full_release",
+      "finding": "Official indexed release pairs Ak-Tash–Birlishken, December 25 resident-passage reopening and one-kilometre connection, while spring-2013 onset differs from contemporary evidence. Direct open timed out.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-42.json",
+      "sha256": "39d4b9fbfda3ebaccedce00a9a0cb184e5d2e883b6201969ec6b02ef1fba06b0"
+    },
+    {
+      "url": "https://www.azattyqasia.org/a/24901903.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.dcaf.ch/sites/default/files/publications/documents/MappingFragileAreasCaseStudies.pdf",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://fergana.agency/news/103914/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://24.kg/obschestvo/105060_zarabotal_punkt_propuska_ak-tash_onbyil_zakryit_pyat_let/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://kun.uz/en/news/2018/12/27/uzbek-kyrgyz-border-checkpoint-restarts-operation-after-a-five-year-pause",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://akipress.com/news%3A614693%3AAk-Tash_border_crossing_points_reopened_on_Kyrgyz-Uzbek_border/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-SC-001-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ordinary non-emergency direct passage by Barak residents through Ak-Tash–Birlishken",
+      "date_scope_check": {
+        "scope": "Ordinary non-emergency direct passage by Barak residents through Ak-Tash–Birlishken",
+        "start_earliest": "2013-01-16",
+        "start_latest": "2013-01-16",
+        "end_earliest": "2018-12-25",
+        "end_latest": "2018-12-25",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": [
+        "No positively identified historical Ak-Tash–Birlishken checkpoint coordinate obtained. Raw OSM area has no named gate; village centroid rejected."
+      ]
+    }
+  ],
+  "unresolved": []
+}

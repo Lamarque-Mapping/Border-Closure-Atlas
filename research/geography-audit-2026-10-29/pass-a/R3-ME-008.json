@@ -1,0 +1,47 @@
+{
+  "record_id": "R3-ME-008",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Short overnight protest blockade at Safwan road-port approach, separate from nearby gas-company roads and the wider Safwan sit-in.",
+  "source_checks": [
+    {
+      "url": "https://baghdadtoday.news/101841-.html",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "November 21 early report says protesters moved from local offices to the port at night and reopened it when withdrawing; nearby oil/gas-road blockades are separate.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-3.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-ME-008-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-safwan",
+          "name": "Safwan road border post (Iraqi side)",
+          "coordinates": [
+            47.7142429,
+            30.1032484
+          ],
+          "coordinate_method": "Bounding-box centre of named facility way, calculated from independently inspected cached original OSM XML nodes.",
+          "precision": "Approximately 500 m crossing area; not a surveyed historical barrier or blockade footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/way/409262253/full"
+          ],
+          "evidence_note": "Cached original OSM way 409262253, version 8, timestamp 2025-12-06T12:37:32Z; tags {\"area\": \"yes\", \"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"منفذ سفوان الحدودي\", \"name:ar\": \"منفذ سفوان الحدودي\", \"name:en\": \"Safwan Border Post\"}. Reference geography only; closure scope is independently reconstructed from historical sources.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/9d386d652781a93a.raw",
+          "evidence_sha256": "95151ed004903c845be3336e72c7283ef7920965827ac93c569b250771326499"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "November 20–21 overnight crossing interruption only. Preserve strictly_over_24_hours false and no invented exact clocks.",
+      "unresolved": [],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"closed_interval\", \"start_earliest\": \"2019-11-20\", \"start_latest\": \"2019-11-20\", \"end_earliest\": \"2019-11-21\", \"end_latest\": \"2019-11-21\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": false}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: R3-ME-008-D1: Shafaq’s November 23 account dates the blockade to Wednesday night and reopening to Thursday, corresponding to November 20–21, 2019. Baghdad Today independently published a reopening account early on November 21, after protesters withdrew from the gate. The border-authority interview relayed by Arab Times confirms a short interruption and resumed passenger and commercial movement in both directions, but does not independently supply its event date. The Wednesday-night to early-Thursday-morning chronology, reinforced by the official description of only a few hours, establishes a spell below 24 hours. Exact clocks remain unknown; crossing a calendar date does not make this a greater-than-24-hour closure. The linked Safwan sit-in’s own November 19 statements express solidarity with Baghdad protesters and opposition to political-party control and delay; these are attributed local demands, not proof that every nationwide protest demand motivated the gate blockade."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

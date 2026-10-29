@@ -1,0 +1,68 @@
+{
+  "record_id": "FU-COV-SCA-001",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ramatlabama South African road approach and port on the N18, obstructed by truckers on May 21, 2024. Botswana-side controls and the parallel railway are distinct.",
+  "source_checks": [
+    {
+      "url": "https://www.mmegi.bw/ampArticle/112956",
+      "access_status": "full_text_web",
+      "finding": "Original Mmegi account quotes BURS that roads to Ramatlabama were inaccessible due to a South African trucker strike, then reports the same-day reopening. Other regional crossings are alternatives, not included closure sites.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-30.json",
+      "evidence_sha256": "75402f19430ac612c5cd52888397acf866d1ef29569358f7f6404f8a7d9537e7"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-SCA-001-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-ramatlabama",
+          "name": "Ramatlabama South African road control",
+          "coordinates": [
+            25.5754574,
+            -25.6488589
+          ],
+          "coordinate_method": "Original OSM node coordinate from independently fetched API JSON",
+          "precision": "approximate crossing facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/map.json?bbox=25.57,-25.65,25.58,-25.63",
+            "https://www.openstreetmap.org/node/1733604574"
+          ],
+          "evidence_note": "Southern Ramatlabama road control on N18, south of the national boundary. Botswana A1 controls and parallel railway are separate features in the original extract. Inspected OSM tags: {\"access\": \"permissive\", \"barrier\": \"border_control\", \"name\": \"Ramatlabama Border Control\"}. Geographic evidence only; no historical restriction or current operational status inferred.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/55b69e9f9cc5e35b60a1.json",
+          "evidence_sha256": "c1c1a01dbd183a429cb16e9d655fc78ff22cbbf7a7b4bafec270dea421126a59",
+          "osm_version": 7,
+          "osm_timestamp": "2020-06-08T21:46:08Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ramatlabama South African road approach and port on the N18, obstructed by truckers on May 21, 2024. Botswana-side controls and the parallel railway are distinct. Current phase only: Ramatlabama road-border operations following the South African approach-road trucker blockade on 21 May 2024",
+      "date_scope_check": {
+        "start_earliest": "2024-05-21",
+        "start_latest": "2024-05-21",
+        "end_earliest": "2024-05-21",
+        "end_latest": "2024-05-21",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Reported same-calendar-day closure and BURS reopening status; no elapsed hours or whole-day duration. Passenger/freight, direction-specific and emergency exemptions remain unestablished. The reported authority status is not independent observation of the first returning vehicle, and the two reports partly share BURS provenance.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "South African road port is verified; the exact blockade position and approach-road length are not recovered. Short duration remains eligible for geographic display."
+      ]
+    }
+  ],
+  "unresolved": [
+    "South African road port is verified; the exact blockade position and approach-road length are not recovered. Short duration remains eligible for geographic display."
+  ]
+}

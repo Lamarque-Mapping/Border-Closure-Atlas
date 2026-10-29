@@ -1,0 +1,62 @@
+{
+  "record_id": "R3-RT-001",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Government notices distinguish the closed Mauren and Schellenberg local road crossings from Schaanwald and Ruggell, which remain open for specified movement. Municipal centres and Schaanwald cannot substitute for the two local gates.",
+  "source_checks": [
+    {
+      "url": "https://regierung.li/medienportal-medium/16182/223302/1/medienmitteilung%20",
+      "access_status": "fresh_full_text_extract",
+      "finding": "March16 release explicitly closes Mauren and Schellenberg from March18; Ruggell and Schaanwald remain available to commuters and goods.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-063.json"
+    },
+    {
+      "url": "https://www.liechtenstein.li/liechtenstein_news/coronavirus-massnahmen-werden-morgen-montag-16-maerz-2020-verschaerft",
+      "access_status": "fresh_full_text_extract",
+      "finding": "March15 notice specifies March18 midnight for the two road closures, separately from March16 bus/rail suspension.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-064.json"
+    },
+    {
+      "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20005809",
+      "access_status": "fresh_search_extract",
+      "finding": "Treaty search extract identifies Nofels-Fresch–Schellenberg customs zone and Tosters–Mauren station, but does not supply coordinates.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-070.json"
+    },
+    {
+      "url": "https://mapcarta.com/de/W977906817",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named Zoll building at NoflerStrasse67 found, but relationship to the treaty crossing below HinterSchellenberg is insufficient; not adopted. Schaanwald results identify a separately open crossing.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-075.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-RT-001-D1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Mauren and Schellenberg local crossing closures",
+      "date_scope_check": {
+        "start_earliest": "2020-03-18",
+        "start_latest": "2020-03-18",
+        "end_earliest": "2020-05-17",
+        "end_latest": "2020-05-17",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact coordinates and identity of both local closed gates remain unverified; no municipality-centre substitution."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "2c8f119a8252af90688acf60bd51a82e78a9da8335e62792c7459dd0558ef66f"
+}

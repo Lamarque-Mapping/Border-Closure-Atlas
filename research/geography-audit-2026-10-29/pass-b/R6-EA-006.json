@@ -1,0 +1,127 @@
+{
+  "record_id": "R6-EA-006",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Merauke order covers Sota, Kali Torasi and Bupul people crossings; a separate overlapping phase confirms Sota traditional cross-border access remained restricted. Domestic tourism at the new PLBN grounds is not international reopening.",
+  "source_checks": [
+    {
+      "url": "https://cenderawasihpos.jawapos.com/lintas-papua/merauke/20/03/2020/cegah-corona-lintas-perbatasan-negara-ditutup/",
+      "access_status": "full_text_web",
+      "finding": "Original March report identifies all three crossings and explicitly locates the Sota gate at PLBN Sota.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r6-3.json",
+      "sha256": "2d2cabbec0c6ec297ead4f6dcea9cfec0350942207428d66444db14042b22c90"
+    },
+    {
+      "url": "https://arsip.jubi.id/papua-jalur-pelintas-batas-tradisional-di-sota/",
+      "access_status": "full_text_web",
+      "finding": "Jubi October 15 confirms traditional Sota crossing remains closed while discussing future twice-weekly shopping permission.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r6-5.json",
+      "sha256": "540472401ff77b619f872fb931af40d567068f7bf14cd72f0f4bf23d1236f2ce"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/806707961/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Sota border-control grounds outline was mapped in May 2020; crossing-area reference only.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/759870cdef6955c04823.xml",
+      "sha256": "cc4e30866b39b002028baed764ed71cf69ac5b5a5c2b1c46bf4e5f6696bac2b7",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/759870cdef6955c04823.txt",
+      "text_sha256": "cc4e30866b39b002028baed764ed71cf69ac5b5a5c2b1c46bf4e5f6696bac2b7",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-EA-006-R1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-sota-plbn",
+          "name": "Sota Indonesian border post",
+          "coordinates": [
+            141.0182738,
+            -8.42796
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Representative point within the named border-post grounds, about 300 m; not an exact barrier",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/806707961/full"
+          ],
+          "evidence_note": "Named Sota Border area explicitly tagged border_control, connected to Jalan Akses PLBNT Sota. The named 2024 BNPP service order identifies this Indonesian post, not Sota village or a PNG counterpart.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/759870cdef6955c04823.xml",
+          "sha256": "cc4e30866b39b002028baed764ed71cf69ac5b5a5c2b1c46bf4e5f6696bac2b7"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Merauke order covers Sota, Kali Torasi and Bupul people crossings; a separate overlapping phase confirms Sota traditional cross-border access remained restricted. Domestic tourism at the new PLBN grounds is not international reopening.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-17",
+        "start_latest": "2020-03-17",
+        "end_earliest": "2020-03-19",
+        "end_latest": "2020-03-19",
+        "last_confirmed": "2020-03-19",
+        "temporal_display_rule": "",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "R6-EA-006-R1: Last substantive observation is March 19; March 20 publication does not extend it. Not reopening, not continuity to December or 2022.\n\nR6-EA-006-REV1: Sota only; overlaps the Sota portion of R6-EA-006-R1 and must not be added arithmetically to it. October 15 is last confirmation, not reopening. Later twice-weekly shopping entry existed by December 29; first permission date unresolved.\n\nPartial later access: a 29 December 2020 interview reports 15–20 nearby PNG residents already shopping at Sota twice weekly. This bounds the Sota shopping restriction by that date; the first permitted shopping day remains unknown. It does not establish reopening at Kali Torasi or Bupul or all-person daily entry at Sota. A planned renewed January 2021 ban is a separate episode."
+      },
+      "unresolved": [
+        "Kali Torasi and Bupul exact control sites remain unverified."
+      ]
+    },
+    {
+      "phase_id": "R6-EA-006-REV1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-sota-plbn",
+          "name": "Sota Indonesian border post",
+          "coordinates": [
+            141.0182738,
+            -8.42796
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Representative point within the named border-post grounds, about 300 m; not an exact barrier",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/806707961/full"
+          ],
+          "evidence_note": "Named Sota Border area explicitly tagged border_control, connected to Jalan Akses PLBNT Sota. The named 2024 BNPP service order identifies this Indonesian post, not Sota village or a PNG counterpart.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/759870cdef6955c04823.xml",
+          "sha256": "cc4e30866b39b002028baed764ed71cf69ac5b5a5c2b1c46bf4e5f6696bac2b7"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Sota-only traditional international crossing. The point locates the same Sota border-control grounds; the source does not identify every informal trail.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-17",
+        "start_latest": "2020-03-17",
+        "end_earliest": "2020-10-15",
+        "end_latest": "2020-10-15",
+        "last_confirmed": "2020-10-15",
+        "temporal_display_rule": "",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "R6-EA-006-R1: Last substantive observation is March 19; March 20 publication does not extend it. Not reopening, not continuity to December or 2022.\n\nR6-EA-006-REV1: Sota only; overlaps the Sota portion of R6-EA-006-R1 and must not be added arithmetically to it. October 15 is last confirmation, not reopening. Later twice-weekly shopping entry existed by December 29; first permission date unresolved.\n\nPartial later access: a 29 December 2020 interview reports 15–20 nearby PNG residents already shopping at Sota twice weekly. This bounds the Sota shopping restriction by that date; the first permitted shopping day remains unknown. It does not establish reopening at Kali Torasi or Bupul or all-person daily entry at Sota. A planned renewed January 2021 ban is a separate episode."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [
+    "Kali Torasi and Bupul exact control sites remain unverified."
+  ],
+  "input_sha256": "b2afa45c910687bd0cad30712abc38c54c102b1ec2d41737c3f6f815c666c047",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

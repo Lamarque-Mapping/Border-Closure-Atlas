@@ -1,0 +1,71 @@
+{
+  "record_id": "R3-AM-011",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Two distinct 29 April obstructions on the Panamericana between Santa Rosa (Peru) and Chacalluta (Chile); initial clearance followed by renewed afternoon obstruction with only Arica-to-Tacna cleared at 17:58. Road corridor, not full Chile–Peru frontier.",
+  "source_checks": [
+    {
+      "url": "https://rpp.pe/peru/tacna/tacna-migrantes-liberan-la-panamericana-sur-tras-bloquear-la-via-por-mas-de-seis-horas-noticia-1481598",
+      "access_status": "full_retrieved",
+      "finding": "RPP reports six-hour obstruction and afternoon clearance on road connecting the two complexes."
+    },
+    {
+      "url": "https://larepublica.pe/sociedad/2023/04/29/crisis-migratoria-en-frontera-peru-chile-en-vivo-situacion-de-migrantes-estado-de-emergencia-en-tacna-y-ultimas-noticias-en-directo-cancilleria-dina-boluarte-migraciones-policias-carabineros-gabriel-boric-lrnd-2229578",
+      "access_status": "full_retrieved",
+      "finding": "Dated 29 April entries at 13:53 and 17:58 distinguish clearance and recurrence; opposite lane still blocked at latter observation."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-AM-011-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Initial April 29 two-way road obstruction between Santa Rosa and Chacalluta, ending at the early-afternoon clearance; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2023-04-29",
+        "start_latest": "2023-04-29",
+        "end_earliest": "2023-04-29",
+        "end_latest": "2023-04-29",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Precise obstruction position on the road between the two separated complexes is not geolocated in the inspected sources. No town, airport, or national-border centroid substituted."
+      ]
+    },
+    {
+      "phase_id": "R3-AM-011-R2OBS1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Road connection between Santa Rosa and Chacalluta; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "confirmed_through",
+        "start_earliest": "2023-04-29",
+        "start_latest": "2023-04-29",
+        "end_earliest": "2023-04-29",
+        "end_latest": "2023-04-29",
+        "last_confirmed": "2023-04-29",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Precise obstruction position on the road between the two separated complexes is not geolocated in the inspected sources. No town, airport, or national-border centroid substituted."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Precise obstruction position on the road between the two separated complexes is not geolocated in the inspected sources. No town, airport, or national-border centroid substituted."
+  ]
+}

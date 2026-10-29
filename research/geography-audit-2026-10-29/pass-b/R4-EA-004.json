@@ -1,0 +1,74 @@
+{
+  "record_id": "R4-EA-004",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Thai outbound traveller restriction at the main Three Pagodas crossing during November 2019 fighting. Refugees entering Thailand and other traffic categories are not assumed stopped.",
+  "source_checks": [
+    {
+      "url": "https://thethaiger.com/news/world/mon-refugees-continue-to-flee-myanmar-to-thailand",
+      "access_status": "full_text_web",
+      "finding": "Thaiger reports the pass closed since Wednesday fighting and authorities preventing Thais crossing into Myanmar. Its Bangkok Post-derived origin is retained.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r5-1.json",
+      "sha256": "482e8693f189b32d7d73dd4af27bc086047033abea40d607a9ebebb0e1f3a0a6"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/960997867",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Main Three Pagodas road border-control node inspected; appropriate to the stated ordinary traveller crossing, not an unnamed truck gate.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/24cb3f6f7637e28b7492.xml",
+      "sha256": "3278c59c6fe9de52b6e188b5460b09bd74fa5fce79fc21040331777f3629c2d2",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/24cb3f6f7637e28b7492.txt",
+      "text_sha256": "3278c59c6fe9de52b6e188b5460b09bd74fa5fce79fc21040331777f3629c2d2",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-EA-004-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-three-pagodas-road",
+          "name": "Three Pagodas Pass local road checkpoint",
+          "coordinates": [
+            98.3867661,
+            15.3021754
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/960997867"
+          ],
+          "evidence_note": "Road border_control node immediately north of the three pagodas; small-area OSM extract separates the node from the pagoda monuments. Thai tourism authority identifies Highway 323 ending at this pass; original July 2017 reporting identifies the local commuter checkpoint.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/24cb3f6f7637e28b7492.xml",
+          "sha256": "3278c59c6fe9de52b6e188b5460b09bd74fa5fce79fc21040331777f3629c2d2"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Thai outbound traveller restriction at the main Three Pagodas crossing during November 2019 fighting. Refugees entering Thailand and other traffic categories are not assumed stopped.",
+      "date_scope_check": {
+        "start_earliest": "2019-11-27",
+        "start_latest": "2019-11-27",
+        "end_earliest": "2019-11-29",
+        "end_latest": "2019-11-29",
+        "last_confirmed": "2019-11-29",
+        "temporal_display_rule": "",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "R4-EA-004-R1: Underlying reporting shares Bangkok Post origin; indexed access. Does not infer all freight, refugee or Myanmar worker closure; March 2020 reopening unrelated.\n\ncontinuity: Thaiger's November 29 report describes Three Pagodas closure since Wednesday fighting, specifically preventing Thais entering Myanmar while Mon civilians fled into Thailand. This supports the selective November 27–29 observation; freight and returnee access cannot be assumed closed.\n\nSource correction: the Irrawaddy article dated 18 October 2019 concerns earlier Karen–Mon fighting and predates this November 27 episode. It supplies no evidence of this closure’s continuity or reopening. December 4 villagers returning within Myanmar likewise does not establish restored Thai outbound ordinary-traveller access."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "1485b6ff8d5303470b01c14bb80edcccfb461578f7329c2709b3a0ea1ddcd59f",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

@@ -1,0 +1,80 @@
+{
+  "record_id": "R5-AWN-003",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Two reported election-closure sites: Aflao with Ghana and Hilacondji with Benin. The observed April 30 resumption binds these sites only.",
+  "source_checks": [
+    {
+      "url": "https://loeildusahara.com/togo-les-frontieres-terrestres-rouvertes-ce-30-avril/",
+      "access_status": "full_text_web",
+      "finding": "Original report separately describes resumed entries, exits and commerce at Aflao and the same observation at Hilacondji on April 30.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-28.json",
+      "evidence_sha256": "1c07142f5092770e8492f2cff7df774d6a784569ff6e9b17db1afebaaaebb00f"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-AWN-003-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-aflao",
+          "name": "Aflao / Kodjoviakope road crossing",
+          "coordinates": [
+            1.1990681,
+            6.1131958
+          ],
+          "coordinate_method": "Original OSM node coordinate from independently fetched API JSON",
+          "precision": "approximate crossing facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/map.json?bbox=1.195,6.109,1.203,6.12",
+            "https://www.openstreetmap.org/node/14140322711"
+          ],
+          "evidence_note": "Named Ghana Immigration Service Aflao Border Post beside five mapped border controls and the Ghana–Togo national boundary. Facility, not Aflao town centroid. Inspected OSM tags: {\"addr:country\": \"GH\", \"addr:district\": \"Ketu South Municipal\", \"addr:ghanapostgps\": \"VZ-0326-9469\", \"addr:postcode\": \"VZ0326\", \"addr:region\": \"Volta\", \"addr:town\": \"Aflao\", \"contact:facebook\": \"gis.gov.gh\", \"contact:instagram\": \"gha_immigration\", \"contact:pobox\": \"P. O. Box 52 Aflao\", \"contact:twitter\": \"Gha_Immigration\", \"contact:youtube\": \"Gha_Immigration\", \"email\": \"gisaflao@ghanaimmigration.org;info@immigration.gov.gh\", \"government\": \"immigration\", \"name\": \"Ghana Immigration Service - Aflao Border Post\", \"office\": \"government\", \"phone\": \"+233 30 222 4445\", \"website\": \"https://gis.gov.gh/\"}. Geographic evidence only; no historical restriction or current operational status inferred.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/b12a9b34550d6f9932ce.json",
+          "evidence_sha256": "b9df5e6678933265cfc52c4409737af784bff51745bc057abcb40c23ca41e62e",
+          "osm_version": 2,
+          "osm_timestamp": "2026-09-03T10:26:02Z"
+        },
+        {
+          "proposed_site_id": "post-hilacondji-sanveecondji",
+          "name": "Hilacondji / Sanveecondji",
+          "coordinates": [
+            1.62903,
+            6.2411
+          ],
+          "coordinate_method": "Published AU-PIDA illustrative border-post coordinate, independently read in original report Appendix A",
+          "precision": "approximate crossing area; illustrative published marker, not surveyed gate",
+          "source_urls": [
+            "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "Appendix A, W15, printed page 80; longitude/latitude transcribed in lon,lat order. Report identifies crossing name but does not establish historic operation or exact obstruction.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/25782abcef016f49e77a.pdf",
+          "evidence_sha256": "35e1b5d512bfc882baf263b1abe002d0c99331d0b2b8e08fcb0f354ab504cbed"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Two reported election-closure sites: Aflao with Ghana and Hilacondji with Benin. The observed April 30 resumption binds these sites only. Current phase only: Election-related land restriction as reported at Aflao and Hilacondji, to observed 30 April resumption.",
+      "date_scope_check": {
+        "start_earliest": "2024-04-29",
+        "start_latest": "2024-04-29",
+        "end_earliest": "2024-04-30",
+        "end_latest": "2024-04-30",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "A May publication date is not the reopening date. The national order is broader than the observed endpoints; identical implementation at every land post is not established. Reopening republications are not independent observations.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,61 @@
+{
+  "record_id": "R3-EU-013",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Rosgranstroy names seven rail posts suspended from July1 2026: Vyborg, Värtsilä, Lyttä, StPetersburg–Finlyandsky, Svetogorsk, Pechory-Pskovskie and Pytalovo. The administrative railway-post facilities are not synonymous with road crossings or entire international frontiers.",
+  "source_checks": [
+    {
+      "url": "https://www.rosgranstroy.ru/press-center/news/priostanovleno-dvizhenie-cherez-zheleznodorozhnye-punkty-propuska-na-granice-s-finlyandiey-estoniey-i-latviey",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Original agency notice explicitly names seven railway posts and government order1674-r of June30, covering persons, vehicles, goods and cargo from July1.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-064.json"
+    },
+    {
+      "url": "https://rosgranstroy.ru/checkpoints/272",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Agency directory identifies Pytalovo railway post, counterpart Karsava, freight/passenger and address Kaupuža2A. No readable geographic coordinates; current functioning label is not a post-suspension reopening notice.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-069.json"
+    },
+    {
+      "url": "https://rosgranstroy.ru/checkpoints/272",
+      "access_status": "inaccessible",
+      "finding": "Raw HTTP retrieval403; interactive-map coordinates not retrieved."
+    },
+    {
+      "url": "https://base.garant.ru/414470465/",
+      "access_status": "inaccessible",
+      "finding": "Legal-document source denied access; no full-text claim.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-064.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EU-013-FU1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Seven named rail border posts: Vyborg, Värtsilä, Lyttä, St Petersburg–Finlyandsky and Svetogorsk facing Finland; Pechory-Pskovskie facing Estonia; Pytalovo facing Latvia.",
+      "date_scope_check": {
+        "start_earliest": "2026-07-01",
+        "start_latest": "2026-07-01",
+        "end_earliest": "2026-10-26",
+        "end_latest": "2026-10-26",
+        "last_confirmed": "2026-10-26",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact administrative rail-post geometries are unresolved for all seven; town/railway-station centres and road crossings cannot substitute."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "1ab8f47a30445fb1aba3ba470d8ec780ba2f003ff2abbb9f16826be8688d0f78"
+}

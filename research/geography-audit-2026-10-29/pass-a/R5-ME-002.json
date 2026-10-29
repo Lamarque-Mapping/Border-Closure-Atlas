@@ -1,0 +1,53 @@
+{
+  "record_id": "R5-ME-002",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Vehicle-class restriction on Saudi exit toward Yemen through Al-Wadiah; qualifying owner-driven SUVs are the restored cohort, with Shas/Hilux and heavy equipment distinct.",
+  "source_checks": [
+    {
+      "url": "https://www.sabanew.net/story/ar/35451",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "July 7 official visit describes ongoing Saudi ban on SUVs and heavy equipment and diplomatic efforts.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-14.json"
+    },
+    {
+      "url": "https://www.sabanew.net/story/ar/35519",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "July 9 port director confirms more than fifty qualifying owner-driven SUVs entering Yemen; exceptions remain for named vehicle classes.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-14.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-ME-002-NP1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-al-wadiah",
+          "name": "Al-Wadiah land crossing (Yemeni immigration facility)",
+          "coordinates": [
+            47.0113562,
+            16.9403092
+          ],
+          "coordinate_method": "Coordinates transcribed from independently inspected cached original OSM node XML.",
+          "precision": "Approximately 1 km; named immigration office locates the road crossing area, not a Saudi historical barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/map?bbox=47.00,16.93,47.03,16.96"
+          ],
+          "evidence_note": "Cached original OSM node 10138647617, version 1, timestamp 2022-10-29T22:27:59Z; tags {\"name\": \"مكتب الهجرة والجوازات اليمني منفذ الوديعه البري\", \"name:en\": \"The Yemeni Immigration and Passports Office, Al-Wadiah Land Port\", \"office\": \"government\", \"opening_hours\": \"24/7\"}. Reference geography only; closure scope is independently reconstructed from historical sources.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/bb205cbbe365db64.raw",
+          "evidence_sha256": "83900a3f5e48f743af57eeb76922b542579022295f2abe44c96bf024c0adedaa"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Map disputed-evidence-only canonical SUV phase at Al-Wadiah; preserve contested status and unresolved early July 6 report. Geographic identity does not resolve duration or activate held animation.",
+      "unresolved": [],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"bounded_interval\", \"start_earliest\": \"2018-07-05\", \"start_latest\": \"2018-07-05\", \"end_earliest\": null, \"end_latest\": \"2018-07-09\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": true, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: R5-ME-002-NP1: The embassy dates the restriction to the evening of July 5, 2018. Al Wattan reports travellers describing passage restored on July 6 afternoon, whereas SABA records continuing diplomatic efforts on July 7 and more than fifty qualifying owner-driven SUVs entering Yemen on July 9. The early report does not identify the same ownership or vehicle subclasses precisely enough to reconcile continuity. July 9 is a supported passage bound, not necessarily the first reopening. Shas/Hilux and heavy-equipment endpoints remain unknown. The official purpose is unestablished; no motive is inferred. Numeric duration and animation remain held because same-cohort continuity is unresolved."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

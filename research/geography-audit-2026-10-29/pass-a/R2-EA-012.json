@@ -1,0 +1,271 @@
+{
+  "record_id": "R2-EA-012",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Initial Singapore visitor prohibition is national; mapped coverage here is its Malaysian land-entry component at Woodlands road/rail and Tuas road. Later VTL bus eligibility applies specifically to Causeway/Woodlands, not automatically Tuas or rail.",
+  "source_checks": [
+    {
+      "url": "https://www.moh.gov.sg/newsroom/additional-border-control-measures-to-reduce-further-importation-of-covid-19-cases/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "MOH initial entry/transit prohibition distinguishes short-term visitors from returning residents and pass holders.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-29.json",
+      "sha256": "30ab3181a8ce98ffc4a4cb16850c25389218eec2acc8b2c2aeada4b6bd345289"
+    },
+    {
+      "url": "https://www.pmo.gov.sg/newsroom/singapore-and-malaysia-to-launch-vtl-land-nov-2021/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "PMO launch explicitly specifies designated buses across Causeway and describes Tuas as a future extension.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-29.json",
+      "sha256": "30ab3181a8ce98ffc4a4cb16850c25389218eec2acc8b2c2aeada4b6bd345289"
+    },
+    {
+      "url": "https://www.ica.gov.sg/news-and-publications/newsroom/media-release/statement-on-clearance-of-travellers-for-land-border-reopening",
+      "access_status": "search_indexed_full_release",
+      "finding": "Official indexed release names both Woodlands and Tuas and over 11,000 April 1 travellers; does not separate direction or immigration category. Direct redirected page inaccessible.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-32.json",
+      "sha256": "93d3633a75477eff043abf6eb4d73286fe3a005cd0042a9cebdd06653551efed"
+    },
+    {
+      "url": "https://www.mti.gov.sg/newsroom/written-reply-to-pq-on-vtl-1/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://amcham.com.my/wp-content/uploads/MEDIA-RELEASE_ALL-CATEGORIES-OF-TRAVELLERS-WHO-ARE-MALAYSIAN-AND-SINGAPOREAN-CITIZENS-AND-PERMANENT-RESIDENTS-WILL-BE-ELIGIBLE-UNDER-VTL-LAND-EFFECTIVE-20-DECEMBER-2021_FINAL_14-DECEMBER-2021.pdf",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.miti.gov.my/index.php/pages/view/8230",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.meti.gov.sg/newsroom/reopening-of-land-borders-between-singapore-and-malaysia-from-1-april-2022/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.mti.gov.sg/-/media/MTI/Newsroom/Press-Releases/2021/12/Media-Statement-on-Update-to-VTL-Land-Categories-of-Travellers.pdf",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.channelnewsasia.com/singapore/singapore-malaysia-citizens-expanded-land-vtl-december-20-2378591",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EA-012-AUDIT20261025-1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-woodlands-road",
+          "name": "Woodlands road checkpoint / Causeway",
+          "coordinates": [
+            103.7682331,
+            1.4455961
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/1483314927",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1483314927",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=103.755,1.435,103.78,1.455"
+          ],
+          "evidence_note": "Explicitly named Woodlands bus border-control node. PMO specifies designated VTL buses across Causeway; point represents road complex, not rail.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-woodlands.xml",
+          "sha256": "7fe0f59f8a2f4f58a95902bf22e19133a7facf864671ac8d5e0ac9e500e56acf",
+          "osm_feature": "node/1483314927",
+          "osm_version": "6",
+          "osm_timestamp": "2019-12-22T14:59:50Z",
+          "identity_tags": {
+            "access": "yes",
+            "barrier": "border_control",
+            "horse": "no",
+            "motor_vehicle": "yes",
+            "name": "Woodlands (bus)",
+            "name:es": "Woodlands (autobuses)",
+            "name:fr": "Woodlands (bus)",
+            "name:ms": "Woodlands (bas)",
+            "name:pl": "Woodlands (autobusy)"
+          }
+        },
+        {
+          "proposed_site_id": "post-woodlands-rail",
+          "name": "Woodlands Train Checkpoint",
+          "coordinates": [
+            103.769993,
+            1.4450308
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/2014918590",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/2014918590",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=103.755,1.435,103.78,1.455"
+          ],
+          "evidence_note": "Explicit named rail checkpoint, kept distinct from road bus controls. National visitor prohibition covers land entry regardless conveyance; no claim of operating rail services throughout.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-woodlands.xml",
+          "sha256": "7fe0f59f8a2f4f58a95902bf22e19133a7facf864671ac8d5e0ac9e500e56acf",
+          "osm_feature": "node/2014918590",
+          "osm_version": "10",
+          "osm_timestamp": "2024-11-19T15:58:07Z",
+          "identity_tags": {
+            "name": "Woodlands Train Checkpoint",
+            "name:en": "Woodlands Train Checkpoint",
+            "name:fr": "Poste frontière ferroviaire Woodlands",
+            "name:ja": "ウッドランズ・トレイン・チェックポイント",
+            "name:ms": "Pemeriksaan Kereta Api Woodlands",
+            "name:pl": "Kolejowe przejście graniczne Woodlands",
+            "name:ta": "உட்லேண்ட்ஸ் தொடருந்து சோதனைச் சாவடி",
+            "name:th": "จุดผ่านรถไฟวุดแลนด์",
+            "name:zh": "兀兰火车关卡",
+            "name:zh-Hans": "兀兰火车关卡",
+            "name:zh-Hant": "兀蘭關卡",
+            "operator": "KTM",
+            "public_transport": "station",
+            "railway": "station",
+            "station": "train",
+            "train": "yes",
+            "wheelchair": "yes",
+            "wikidata": "Q6132101",
+            "wikipedia": "en:Woodlands Train Checkpoint"
+          }
+        },
+        {
+          "proposed_site_id": "crossing-tuas-second-link",
+          "name": "Tuas / Malaysia–Singapore Second Link",
+          "coordinates": [
+            103.6259112,
+            1.3562464
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/32877236",
+          "precision": "Approximate Second Link bridge reference, 500 m; not Tuas checkpoint building.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/32877236",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=103.6,1.335,103.63,1.365"
+          ],
+          "evidence_note": "Named motorway bridge provides a crossing-area reference for the Tuas land link; not the terminal booth. ICA independently names Tuas and Woodlands as the two land checkpoints.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-tuas.xml",
+          "sha256": "584ae7fdfa4a7ae2830e9d3fd82dc285665a0c5d522894ede841ada04fbf87a4",
+          "osm_feature": "way/32877236",
+          "osm_version": "13",
+          "osm_timestamp": "2024-09-24T12:43:09Z",
+          "identity_tags": {
+            "access": "yes",
+            "bicycle": "no",
+            "bridge": "yes",
+            "cycleway": "no",
+            "foot": "no",
+            "highway": "motorway",
+            "horse": "no",
+            "lanes": "3",
+            "layer": "1",
+            "lit": "yes",
+            "name": "Laluan Kedua Malaysia–Singapura",
+            "name:en": "Malaysia–Singapore Second Link",
+            "name:id": "Penghubung Kedua Malaysia–Singapura",
+            "name:ms": "Laluan Kedua Malaysia–Singapura",
+            "name:pl": "Drugi łącznik Malezja–Singapur",
+            "name:zh": "马新第二通道",
+            "oneway": "yes",
+            "seamark:bridge:clearance_height": "9",
+            "seamark:type": "bridge",
+            "surface": "asphalt",
+            "toll": "yes",
+            "wikipedia": "en:Malaysia–Singapore Second Link"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Malaysian land-entry component only of national visitor rule; air and sea are outside this atlas component.",
+      "date_scope_check": {
+        "scope": "Short-term visitors prohibited from entry and transit into Singapore, including land admission, under the Ministry of Health announcement.",
+        "start_earliest": "2020-03-23",
+        "start_latest": "2020-03-23",
+        "end_earliest": "2020-03-23",
+        "end_latest": "2022-04-01",
+        "last_confirmed": "2020-03-23",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "March 23 initial announcement is an onset observation. Amendment/exception chain is incomplete; no continuous prohibition through April 2022 is inferred. Existing temporal display rule and bounds retained."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "R2-EA-012-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-woodlands-road",
+          "name": "Woodlands road checkpoint / Causeway",
+          "coordinates": [
+            103.7682331,
+            1.4455961
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/1483314927",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1483314927",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=103.755,1.435,103.78,1.455"
+          ],
+          "evidence_note": "Explicitly named Woodlands bus border-control node. PMO specifies designated VTL buses across Causeway; point represents road complex, not rail.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-woodlands.xml",
+          "sha256": "7fe0f59f8a2f4f58a95902bf22e19133a7facf864671ac8d5e0ac9e500e56acf",
+          "osm_feature": "node/1483314927",
+          "osm_version": "6",
+          "osm_timestamp": "2019-12-22T14:59:50Z",
+          "identity_tags": {
+            "access": "yes",
+            "barrier": "border_control",
+            "horse": "no",
+            "motor_vehicle": "yes",
+            "name": "Woodlands (bus)",
+            "name:es": "Woodlands (autobuses)",
+            "name:fr": "Woodlands (bus)",
+            "name:ms": "Woodlands (bas)",
+            "name:pl": "Woodlands (autobusy)"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Designated VTL land buses across Causeway, Malaysian short-term visitors without Singapore resident/long-pass eligibility.",
+      "date_scope_check": {
+        "scope": "Designated VTL land buses into Singapore: Malaysian short-term visitors without Singapore residence/long-term-pass eligibility",
+        "start_earliest": "2021-11-29",
+        "start_latest": "2021-11-29",
+        "end_earliest": "2021-12-20",
+        "end_latest": "2021-12-20",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "November 29–December 20 formal eligibility interval retained; December 20 is category permission, not observed first crossing. No VTL rail or Tuas binding."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

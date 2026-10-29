@@ -1,0 +1,32 @@
+{
+  "record_id": "W-008",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The dated operational evidence concerns Guinea-side Pamelap at the Sierra Leone road route. National coup closure and earlier Senegal/Bissau restrictions cannot be collapsed into this local interval.",
+  "source_checks": [
+    {
+      "url": "https://laguinee.info/2021/09/17/la-frontiere-terrestre-guinee-sierra-leone-ouverte-la-zone-sous-haute-securite/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Pamelap correspondent dates implementation to 06:00 September 17 following September 16 announcement; closure described from coup day.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-1.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "W-008-REV1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Pamelap road crossing only for September 5–17, 2021.",
+      "unresolved": [
+        "Cached OSM map contains Pamelap Police and an unnamed customs point labelled under construction; neither proves the historic Guinea-side gate identity. Settlement coordinates conflict across sources and are rejected."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"closed_interval\", \"start_earliest\": \"2021-09-05\", \"start_latest\": \"2021-09-05\", \"end_earliest\": \"2021-09-17\", \"end_latest\": \"2021-09-17\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": true}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: Reuters reported a broad September 6 announcement allowing commercial and humanitarian exchanges. A September 13 timetable envisaged Sierra Leone reopening before September 15; subsequent CNRD authorization was issued September 16. The Pamelap correspondent reports local implementation from 06:00 on September 17. Announcements and planned dates do not replace this scoped local account. Exact onset hour, exception implementation and category coverage remain unknown. Earlier Senegal and Guinea-Bissau restrictions must not be assigned a new September 5 onset or joined into a uniform national interval."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

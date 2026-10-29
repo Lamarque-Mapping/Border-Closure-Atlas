@@ -1,0 +1,64 @@
+{
+  "record_id": "R5-EU-004",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Canonical phase is ordinary passenger admission into Greece at Evzoni from North Macedonia only. Broader Albania/North Macedonia order includes rail and road but must not broaden the phase beyond Evzoni.",
+  "source_checks": [
+    {
+      "url": "https://www.ynanp.gr/media/documents/%CE%A6%CE%B5%CE%BA_860%CE%92.pdf",
+      "access_status": "full_retrieved",
+      "finding": "Greek decree restricts admission from Albania and North Macedonia with Greek/resident and freight exceptions; initial specified legal window preserved."
+    },
+    {
+      "url": "https://services.naftemporiki.gr/story/1726286/boreia-makedonia-anoiksan-ta-sunora-me-ellada",
+      "access_status": "full_retrieved",
+      "finding": "May14 report says only Evzoni opened among Evzoni/Niki/Doirani and retains restrictions for Albanian citizens; supports narrow endpoint scope."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/2294293336",
+      "access_status": "full_retrieved",
+      "finding": "Directly inspected OSM node/2294293336 node; XML sha256 7e763189ecdfd424dc4dcc14be9eb399df79ca7f707c36796b69101cd2e19413"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-EU-004-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-evzoni-road",
+          "name": "Evzoni–Bogorodica passenger road crossing",
+          "coordinates": [
+            22.5520862,
+            41.1276996
+          ],
+          "coordinate_method": "Directly inspected OSM node/2294293336 node; XML sha256 7e763189ecdfd424dc4dcc14be9eb399df79ca7f707c36796b69101cd2e19413",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/2294293336"
+          ],
+          "evidence_note": "Explicit passenger car, bus and pedestrian control node at Evzoni, Greece. Nearby freight-only node3418920732 inspected and deliberately not used for passenger phase."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary non-exempt passenger-entry restriction into Greece through Evzoni from North Macedonia; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "policy_period",
+        "start_earliest": "2020-03-15",
+        "start_latest": "2020-03-15",
+        "end_earliest": "2021-05-14",
+        "end_latest": "2021-05-14",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

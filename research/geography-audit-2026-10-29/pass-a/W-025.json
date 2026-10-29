@@ -1,0 +1,38 @@
+{
+  "record_id": "W-025",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Local Nongoa–Yenga/Koindu river landing restriction on the Makona river; the original report specifically describes a closed débarcadère and civilian movement, not all Guinea–Sierra Leone roads.",
+  "source_checks": [
+    {
+      "url": "https://www.africaguinee.com/litige-autour-de-yenga-la-frontiere-guinee-sierra-leone-aurait-ete-fermee-a-nongoa/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Regional correspondent reports Nongoa landing closed April 27 and local civilian crossings barred; supports river landing/ferry character.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-2.json"
+    },
+    {
+      "url": "https://sierraloaded.sl/news/sierra-leone-guinea-reopen-yenga-border/",
+      "access_status": "inaccessible_timeout",
+      "finding": "Endpoint source request timed out; native notice-based June 24 endpoint retained without renewed verification.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-9.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "W-025-R1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Official Koindu–Nongoa river crossing restriction; preserve April 27–28 onset conflict and notice-based endpoint.",
+      "unresolved": [
+        "No exact landing or ferry-terminal coordinates established; Yenga and Nongoa settlement centres would be misleading."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"policy_period\", \"start_earliest\": \"2025-04-27\", \"start_latest\": \"2025-04-28\", \"end_earliest\": \"2026-06-24\", \"end_latest\": \"2026-06-24\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": true}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: Contemporary Africa Guinee May 2 report dates Nongoa landing/civilian closure April 27, whereas later official-notice chronology uses April 28. Formal June 24 reopening remains notice-attributed; independent field movement observed August 28. No exact operational interval certified.\n\nW-025-R1: Onset conflict retained; initial order unavailable. Exact endpoint follows one notice lineage. Clandestine passage occurred; no zero-passage interval asserted."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

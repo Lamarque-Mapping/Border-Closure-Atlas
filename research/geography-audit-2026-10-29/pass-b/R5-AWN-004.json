@@ -1,0 +1,72 @@
+{
+  "record_id": "R5-AWN-004",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ras Jedir passenger/vehicle access via the Libyan approach road in the Boukamech area; the obstruction is geographically broader than the gate.",
+  "source_checks": [
+    {
+      "url": "https://www.webdo.tn/fr/actualite/national/tunisie-le-trafic-reprend-au-poste-frontalier-de-ras-jedir/216044/",
+      "access_status": "full_text_web",
+      "finding": "Report identifies the main-road blockade in Boukamech and August 28 clearance by Libyan authorities, reopening travel in both directions.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-29.json",
+      "evidence_sha256": "6afccf722d1178296720edc9e6925ef6d907e93e79420ad5db40bc9b2a521b96"
+    },
+    {
+      "url": "https://www.mosaiquefm.net/fr/actualite-regional-tunisie/1306457/reprise-du-trafic-au-passage-de-ras-jedir",
+      "access_status": "partial_empty",
+      "finding": "Only a three-line web response was returned; no substantive route detail was accessible there.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-28.json",
+      "evidence_sha256": "1c07142f5092770e8492f2cff7df774d6a784569ff6e9b17db1afebaaaebb00f"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-AWN-004-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "existing_site_id": "post-ras-jedir",
+          "name": "Ras Jedir",
+          "coordinates": [
+            11.55929,
+            33.14795
+          ],
+          "coordinate_method": "Published AU-PIDA illustrative border-post coordinate, independently read in original report Appendix A",
+          "precision": "approximate crossing area; illustrative published marker, not surveyed gate",
+          "source_urls": [
+            "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "PDF page 82, N4; longitude/latitude transcribed in lon,lat order. Report identifies crossing name but does not establish historic operation or exact obstruction.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/25782abcef016f49e77a.pdf",
+          "evidence_sha256": "35e1b5d512bfc882baf263b1abe002d0c99331d0b2b8e08fcb0f354ab504cbed"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ras Jedir passenger/vehicle access via the Libyan approach road in the Boukamech area; the obstruction is geographically broader than the gate. Current phase only: Ordinary passenger/vehicle access to Ras Jedir through the obstructed approach road",
+      "date_scope_check": {
+        "start_earliest": "2024-08-22",
+        "start_latest": "2024-08-22",
+        "end_earliest": "2024-08-28",
+        "end_latest": "2024-08-28",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "The 28 August account calls the closure four days, inconsistent with the explicit Thursday-evening 22 August onset. The precisely anchored contemporary date is retained, with that shorthand disclosed. Protester obstruction and the later reported official outward suspension are distinct mechanisms; no exact elapsed-hour count is certified. The endpoint concerns passengers and ordinary vehicles, not restored commercial freight. Dhehiba–Wazen was an alternative. The official UN PDF was unavailable in this round.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Ras Jedir crossing is located, but the exact Boukamech roadblock position and affected road length are not reconstructed."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Ras Jedir crossing is located, but the exact Boukamech roadblock position and affected road length are not reconstructed."
+  ]
+}

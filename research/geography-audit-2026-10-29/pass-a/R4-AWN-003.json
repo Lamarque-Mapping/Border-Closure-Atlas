@@ -1,0 +1,53 @@
+{
+  "record_id": "R4-AWN-003",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Guerguerat road crossing between Moroccan-administered Western Sahara and Mauritania; ordinary passenger restriction, with goods trucks excepted.",
+  "source_checks": [
+    {
+      "url": "https://fr.le360.ma/politique/coronavirus-le-passage-del-guerguerat-ferme-des-ce-mercredi-soir-sauf-pour-les-camions-de-211113/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "March 18 evening order bars private/passenger vehicles in both directions while freight continues; named passage confirmed.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-13.json"
+    },
+    {
+      "url": "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+      "access_status": "cached_original_text_extract_inspected",
+      "finding": "Appendix A N1 published Dakhla–Nouadhibou corridor marker; approximate area only, cached binary cannot render.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/pida-original-text.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-AWN-003-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "existing_site_id": "post-guerguerat",
+          "name": "Guerguerat / Dakhla–Nouadhibou road crossing corridor",
+          "coordinates": [
+            -16.94722,
+            21.3338
+          ],
+          "coordinate_method": "Coordinate row transcribed from independently inspected cached original AU-PIDA report text extraction, Appendix A.",
+          "precision": "Illustrative border crossing area, approximately 5 km; not a surveyed historical gate.",
+          "source_urls": [
+            "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "Published row N1 Dakla - Nouadhibou; latitude 21.33380, longitude -16.94722. Preserved original text was inspected; cached PDF binary is truncated and could not be rendered, so this is not fresh full-PDF visual verification. Illustrative location only.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/pida-original-text.txt",
+          "evidence_sha256": "98451216c05eab194ec577670f81979a7944ee5560d41e0ea9c43eb94d347983"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Passenger formal-policy interval only; disputed-territory label preserved. No 2020 protest blockade duration added.",
+      "unresolved": [],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"policy_period\", \"start_earliest\": \"2020-03-18\", \"start_latest\": \"2020-03-18\", \"end_earliest\": \"2021-11-09\", \"end_latest\": \"2021-11-10\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: Formal passenger permission period, not observed first traffic or all-traffic closure. Freight remained permitted; separate protest blockade overlaps geographically but is not added to this duration. Disputed-territory description is retained."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

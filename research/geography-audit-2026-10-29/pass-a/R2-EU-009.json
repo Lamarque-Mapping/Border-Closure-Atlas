@@ -1,0 +1,105 @@
+{
+  "record_id": "R2-EU-009",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Latvian cabinet decision suspends exactly Vientuļi and Pededze crossings fromOctober16 2023. Published named checkpoint-building references locate each Latvian road facility.",
+  "source_checks": [
+    {
+      "url": "https://www.mk.gov.lv/en/article/operation-vientuli-and-pededze-border-crossing-points-latvia-russia-border-be-suspended-16-october",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Cabinet October12 decision explicitly names both posts and October16 effective date; response to Russia routing Ukrainianpassport entrants throughVientuli.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-051.json"
+    },
+    {
+      "url": "https://www.mfa.gov.lv/en/article/vientuli-and-pededze-border-crossing-points-latvias-border-russia-be-closed-16-october-ministry-interior",
+      "access_status": "inaccessible",
+      "finding": "Foreign ministry direct open timed out; cabinet reproduction inspected instead.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-049.json"
+    },
+    {
+      "url": "https://mapcarta.com/W503518753",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named Vientuli building coordinate, border checkpoint identity distinct from locality.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-052.json"
+    },
+    {
+      "url": "https://mapcarta.com/W508488119",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named Pededze building coordinate, paired RussianBrunishevo nearby separately.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-052.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EU-009-R1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-vientuli-road",
+          "name": "Vientuļi road checkpoint",
+          "coordinates": [
+            27.77236,
+            57.13586
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 503518753; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W503518753",
+            "https://www.openstreetmap.org/way/503518753"
+          ],
+          "evidence_note": "Named Latvian checkpoint building, between named lane nodes; not Russian Ludonka.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-052.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        },
+        {
+          "proposed_site_id": "post-pededze-road",
+          "name": "Pededze road checkpoint",
+          "coordinates": [
+            27.47374,
+            57.53276
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 508488119; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W508488119",
+            "https://www.openstreetmap.org/way/508488119"
+          ],
+          "evidence_note": "Named Latvian checkpoint building, distinct from Russian Brunishevo and Pededze village6km south.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-052.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Suspension of Vientuļi and Pededze road border crossing operations on Latvian–Russian frontier",
+      "date_scope_check": {
+        "start_earliest": "2023-10-16",
+        "start_latest": "2023-10-16",
+        "end_earliest": "2025-03-18",
+        "end_latest": "2025-03-18",
+        "last_confirmed": "2025-03-18",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Source published secondary coordinates; current opening-hours metadata is not historical operation evidence. Last-confirmed date retained."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "540b24247a8d9748951b351b364bd691ce6895b300802bc412a42121dd8410f3"
+}

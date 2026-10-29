@@ -1,0 +1,112 @@
+{
+  "record_id": "R3-EU-004",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Selective freight blockades before Polish ROAD posts: Korczowa, Hrebenne and Dorohusk. Four canonical phases keep Korczowa distinct and Dorohusk interrupted spells separate.",
+  "source_checks": [
+    {
+      "url": "https://www.gov.pl/web/infrastruktura/polscy-przewoznicy-zawieszaja-protesty-przed-drogowymi--przejsciami-granicznymi-z-ukraina",
+      "access_status": "full_retrieved",
+      "finding": "Ministry January 16 agreement names all three road-post approaches, protests from November 6 and suspension rather than end of all policy dispute."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EU-004-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Selective commercial-freight approach blockade at Korczowa only; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2023-11-06",
+        "start_latest": "2023-11-06",
+        "end_earliest": "2024-01-16",
+        "end_latest": "2024-01-16",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Crossing identities established, but exact road approach/barrier locations for the separately timed phases are not established by inspected ministry notice. Do not replace by towns, rail stations or full Poland–Ukraine line."
+      ]
+    },
+    {
+      "phase_id": "R3-EU-004-R1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Commercial-freight access at Hrebenne–Rava-Ruska; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "intermittent_regime",
+        "start_earliest": "2023-11-06",
+        "start_latest": "2023-11-06",
+        "end_earliest": "2024-01-16",
+        "end_latest": "2024-01-16",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Crossing identities established, but exact road approach/barrier locations for the separately timed phases are not established by inspected ministry notice. Do not replace by towns, rail stations or full Poland–Ukraine line."
+      ]
+    },
+    {
+      "phase_id": "R3-EU-004-R2",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Commercial-freight access at Dorohusk–Yahodyn; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "intermittent_regime",
+        "start_earliest": "2023-11-06",
+        "start_latest": "2023-11-06",
+        "end_earliest": "2023-12-11",
+        "end_latest": "2023-12-11",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Crossing identities established, but exact road approach/barrier locations for the separately timed phases are not established by inspected ministry notice. Do not replace by towns, rail stations or full Poland–Ukraine line."
+      ]
+    },
+    {
+      "phase_id": "R3-EU-004-R3",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Commercial-freight access at Dorohusk–Yahodyn; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "intermittent_regime",
+        "start_earliest": "2023-12-18",
+        "start_latest": "2023-12-18",
+        "end_earliest": "2024-01-16",
+        "end_latest": "2024-01-16",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Crossing identities established, but exact road approach/barrier locations for the separately timed phases are not established by inspected ministry notice. Do not replace by towns, rail stations or full Poland–Ukraine line."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Crossing identities established, but exact road approach/barrier locations for the separately timed phases are not established by inspected ministry notice. Do not replace by towns, rail stations or full Poland–Ukraine line."
+  ]
+}

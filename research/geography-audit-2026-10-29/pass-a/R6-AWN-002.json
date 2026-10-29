@@ -1,0 +1,45 @@
+{
+  "record_id": "R6-AWN-002",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Fotokol–Gambaru road bridge over El Beïd, with limited goods/people passage rather than full loaded-truck reopening. Not the later2021 reopening.",
+  "source_checks": [
+    {
+      "url": "https://cameroun24.net/article/36368-Fronti_C3_A8re_Cameroun__E2_80_93_Nigeria__3A_Fotokol_revit.html?lang=fr&pr=50261",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full reproduced Cameroon Tribune report inspected: names141m ElBeïd bridge, permits goods Monday/Wednesday/Saturday by cart,bicycle,head porter; no loaded trucks. Describes2016/2017 school year and December17 event; supports identity and restriction but not independently exact December12 endpoint.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-23.json"
+    },
+    {
+      "url": "https://www.pndp.org/documents/PCD_Fotokol.pdf",
+      "access_status": "fresh_search_extract_inspected",
+      "finding": "Indexed original municipal table names PONT ELBEIT with compact numeric coordinate fields1222456/1413344. Coordinate notation and relation to historical bridge have not been resolved; not converted speculatively.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-24.json"
+    },
+    {
+      "url": "https://www.businessincameroon.com/cooperation/1512-6771-road-traffic-between-cameroon-and-nigeria-reopened-after-several-months-of-interruption-dye-to-boko-haram",
+      "access_status": "inaccessible",
+      "finding": "Original endpoint URL returned403 in batch20; no fresh verification of December12 claimed.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-20.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-AWN-002-C7P1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: road_bridge_limited_goods_people. Preserve unknown onset and upper-bound-only December12 2016 endpoint. Loaded trucks remain excluded; limited market-day passage does not mean full reopening.",
+      "unresolved": [
+        "Precise bridge coordinate not verified: municipal numeric fields ambiguous; no town centroid or full border substitute.",
+        "Fresh access to exact December12 endpoint source unavailable."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"bounded_interval\", \"start_earliest\": null, \"start_latest\": null, \"end_earliest\": null, \"end_latest\": \"2016-12-12\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: Endpoint upper bound only; original onset and first reopening day are unknown. Separate reporting describes restricted trading days and cargo transshipment, so no full loaded-truck or all-traffic reopening is inferred. Later2017/2021 milestones are not merged."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

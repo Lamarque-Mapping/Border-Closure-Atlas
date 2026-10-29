@@ -1,0 +1,79 @@
+{
+  "record_id": "R3-SC-002",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Primary-election restriction was at Samdrup Jongkhar main entrance for ordinary visitors, not every Bhutan gate.",
+  "source_checks": [
+    {
+      "url": "https://nenow.in/north-east-news/bhutan-election-border-gate-close-for-visitors.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Full report names main Samdrup Jongkhar entrance and describes visitors turned away; page separates 2018 publication and 2021 update.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-40.json",
+      "sha256": "a8650d676449f33a03ded9e72fab507f5097e3e239ceb800c16436302d8f7a86"
+    },
+    {
+      "url": "https://www.ecb.bt/third-parliamentary-elections-2018-national-assembly-poll-day-for-the-primary-round/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-SC-002-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-samdrup-jongkhar",
+          "name": "Samdrup Jongkhar–Darranga main gate",
+          "coordinates": [
+            91.5022946,
+            26.7926375
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/4513452253",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/4513452253",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=91.49,26.78,91.52,26.82"
+          ],
+          "evidence_note": "Named Bhutan Gate road-control node at Samdrup Jongkhar entrance, matching photograph/caption and local main-gate report.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-samdrup.xml",
+          "sha256": "43194f1fc912790ab9a9d03cadf050f19b649d827bfa166b0cf9201d088225f4",
+          "osm_feature": "node/4513452253",
+          "osm_version": "2",
+          "osm_timestamp": "2017-04-06T12:28:47Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "bicycle": "yes",
+            "foot": "yes",
+            "horse": "no",
+            "motor_vehicle": "yes",
+            "name": "Bhutan Gate"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Samdrup Jongkhar main gate only",
+      "date_scope_check": {
+        "scope": "Samdrup Jongkhar main gate only",
+        "start_earliest": "2018-09-14",
+        "start_latest": "2018-09-14",
+        "end_earliest": "2018-09-16",
+        "end_latest": "2018-09-16",
+        "last_confirmed": "2018-09-16",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "assessment": "September 14 Friday-evening onset and September 16 observation retained. Planned Sunday-evening opening is not confirmed; 2021 page update is not event date."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

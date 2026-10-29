@@ -1,0 +1,126 @@
+{
+  "record_id": "R2-SC-001",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Foreign Office election schedule covers exactly Chaman and Kharlachi; Torkham explicitly remains open.",
+  "source_checks": [
+    {
+      "url": "https://www.app.com.pk/national/pak-afghan-border-at-chaman-kharlachi-to-be-closed-on-july-24-25-fo/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Official APP full body quotes Foreign Office specifying Chaman/Kharlachi and explicitly excluding Torkham.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-34.json",
+      "sha256": "5ee1f76891605d67e6a76748dd3999f029f675845e2d9b31559f2bff553c68fe"
+    },
+    {
+      "url": "https://tribune.com.pk/story/1765409/chaman-border-crossing-closed-two-days",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.radio.gov.pk/24-07-2018/pak-afghan-border-at-chaman-to-be-closed",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.thenews.com.pk/latest/345703-elections-2018-pak-afghan-border-closed-for-3-days-over-security-reasons",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.xinhuanet.com/english/2018-07/24/c_137345081.htm",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-SC-001-R1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-chaman-spin-boldak",
+          "name": "Chaman–Spin Boldak Friendship Gate",
+          "coordinates": [
+            66.4384054,
+            30.9548251
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/1018387592",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1018387592",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=66.433,30.95,66.444,30.96"
+          ],
+          "evidence_note": "Mapped border-control area matched with named Chaman Friendship Gate reports.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-chaman.xml",
+          "sha256": "c880649ab528c0e599dd9681fcd1a6c99d8cb7e998d734daf83a05d79bcc7126",
+          "osm_feature": "way/1018387592",
+          "osm_version": "1",
+          "osm_timestamp": "2022-01-04T22:16:19Z",
+          "identity_tags": {
+            "area": "yes",
+            "barrier": "border_control",
+            "bicycle": "yes",
+            "building": "yes",
+            "foot": "yes",
+            "motor_vehicle": "yes"
+          }
+        },
+        {
+          "proposed_site_id": "post-kharlachi",
+          "name": "Kharlachi border crossing",
+          "coordinates": [
+            69.9553811,
+            33.8301185
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/1466971322",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1466971322",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=69.943,33.815,69.973,33.845"
+          ],
+          "evidence_note": "Explicit named Kharlachi Border Crossing area, distinct from village centroid; paired cross-border road control.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-kharlachi-gate.xml",
+          "sha256": "fe7433bec523e683889934198e7f09c4210eb8f10c454d66098293871633611a",
+          "osm_feature": "way/1466971322",
+          "osm_version": "2",
+          "osm_timestamp": "2026-04-25T20:55:10Z",
+          "identity_tags": {
+            "area": "yes",
+            "barrier": "border_control",
+            "name": "خرلاچی بارڈر کراسنگ",
+            "name:en": "Kharlachi Border Crossing"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Chaman and Kharlachi only; Torkham excluded",
+      "date_scope_check": {
+        "scope": "Chaman and Kharlachi only; Torkham excluded",
+        "start_earliest": "2018-07-24",
+        "start_latest": "2018-07-24",
+        "end_earliest": "2018-07-25",
+        "end_latest": "2018-07-25",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "assessment": "July 24 and 25 inclusive schedule retained; conflicting July 26 press wording and lack of observed reopening unresolved. Short/unknown exact clocks do not bar geography."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

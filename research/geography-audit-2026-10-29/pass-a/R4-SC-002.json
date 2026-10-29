@@ -1,0 +1,88 @@
+{
+  "record_id": "R4-SC-002",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "April 2017 security order covers simplified citizen crossings. Contemporary implementation report identifies Razdakhan and Sinagur/Perevi; only Razdakhan is positively geolocated.",
+  "source_checks": [
+    {
+      "url": "https://www.kavkaz-uzel.com/articles/300402/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Full announcement gives simplified-crossing order and scheduled clocks.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-43.json",
+      "sha256": "9ea343b69ef09d4884867e7241ec6014bd441fda9a89aec3b9e15b1d3d9ac2b7"
+    },
+    {
+      "url": "https://www.kavkaz-uzel.eu/articles/300644",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Contemporary correspondent account explicitly names two simplified crossings: Razdakhan and Perevi near Sinagur.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-44.json",
+      "sha256": "a0d6d47ad2d8d17e44648762a554a5afe9ac14ac920967664489af35ced64a06"
+    },
+    {
+      "url": "https://amp.kavkaz-uzel.eu/articles/300402",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-SC-002-R1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-odzisi-mosabruni",
+          "name": "Odzisi–Mosabruni (Razdakhan)",
+          "coordinates": [
+            44.4871514,
+            42.0682341
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/1203169771",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1203169771",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=44.46,42.06,44.51,42.11"
+          ],
+          "evidence_note": "Named Razdakhan-Mosabruni border-control node corresponds to Leningor/Akhalgori simplified crossing. Distinct from Sinagur/Perevi.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-odzisi.xml",
+          "sha256": "2cd4f92f03a5fbd209ac81a4b5e7ad1a7e489eb1155aec431b468abf0945da71",
+          "osm_feature": "node/1203169771",
+          "osm_version": "4",
+          "osm_timestamp": "2025-10-24T20:38:43Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "Уадзæн пункт \"Раздæхæн\" - საბაჟო გამშვები პუნქტი \"მოსაბრუნი\"",
+            "name:en": "Border Crossing Point \"Razdakhan-Mosabruni\"",
+            "name:ka": "საბაჟო გამშვები პუნქტი \"მოსაბრუნი\"",
+            "name:os": "Уадзæн пункт \"Раздæхæн\"",
+            "name:ru": "КПП «Раздахан-Мосабруни»"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Simplified citizen crossing points between South Ossetia and Georgian-administered territory under presidential-election security order",
+      "date_scope_check": {
+        "scope": "Simplified citizen crossing points between South Ossetia and Georgian-administered territory under presidential-election security order",
+        "start_earliest": "2017-04-07",
+        "start_latest": "2017-04-07",
+        "end_earliest": "2017-04-10",
+        "end_latest": "2017-04-10",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "assessment": "April 7 20:00–April 10 20:00 ordered window retained. Implementation report does not turn scheduled end into observed reopening."
+      },
+      "unresolved": [
+        "Sinagur/Perevi historical crossing location remains unresolved."
+      ]
+    }
+  ],
+  "unresolved": []
+}

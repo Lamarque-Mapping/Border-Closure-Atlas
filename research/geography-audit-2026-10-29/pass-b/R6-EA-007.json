@@ -1,0 +1,92 @@
+{
+  "record_id": "R6-EA-007",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Myanmar–Laos Friendship Bridge at Kenglat/Kenglap–Houay Koum. May 13, 2022 restored conditional cargo permission; ordinary passenger entry/exit remained prohibited. Later cargo observations do not establish the first shipment or uniform reopening.",
+  "source_checks": [
+    {
+      "url": "https://www.gnlm.com.mm/myanmar-laos-friendship-bridge-reopens/",
+      "access_status": "indexed_extract_only",
+      "finding": "Indexed GNLM text identifies Kenglat bridge and limited driver/conductor cargo permission; direct page returned 403.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-32.json",
+      "sha256": "8b626b1efbea2b0d5cb44de008b4723dc7546cd8bb3bc48f1c72d53c35b305d9"
+    },
+    {
+      "url": "https://kpl.gov.la/En/Detail.aspx?id=3238",
+      "access_status": "indexed_extract_only",
+      "finding": "KPL describes May 2015 opening, exact village pair, road 17/National Road 4 connection and 691.6 m bridge.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-31.json",
+      "sha256": "3cab475dd6da5d0c4cfb9cd48e054213c8fc26f2f7d956adc98a4c3c7445e940"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/758649002/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named bridge segment and shared connecting-node coordinates inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/a82cbc3b74c5f944e3d6.xml",
+      "sha256": "70c4d86f8334f570c18627d8aedee6cc2bb786c0ab254882f8a73dd1ab45d7b7",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/a82cbc3b74c5f944e3d6.txt",
+      "text_sha256": "70c4d86f8334f570c18627d8aedee6cc2bb786c0ab254882f8a73dd1ab45d7b7",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/913615103/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named bridge segment and shared connecting-node coordinates inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/b3144324355556e08ed2.xml",
+      "sha256": "0e516929d9b5b3e3def1ba184a18c440bd561774bd91686b958ae8be8edfb326",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/b3144324355556e08ed2.txt",
+      "text_sha256": "0e516929d9b5b3e3def1ba184a18c440bd561774bd91686b958ae8be8edfb326",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-EA-007-FU1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kenglat-laos-bridge",
+          "name": "Myanmar–Laos Friendship Bridge",
+          "coordinates": [
+            100.5420917,
+            20.8707943
+          ],
+          "coordinate_method": "Coordinate of common node joining the two named OSM international bridge segments",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/758649002/full",
+            "https://api.openstreetmap.org/api/0.6/way/913615103/full"
+          ],
+          "evidence_note": "Shared node 8486844072 between the two explicitly named bridge segments (Myanmar NH29 and Lao road 17). KPL inauguration account pairs Kenglap with Houay Koum in Long district and establishes the same bridge in operation in May 2015.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/a82cbc3b74c5f944e3d6.xml",
+          "sha256": "70c4d86f8334f570c18627d8aedee6cc2bb786c0ab254882f8a73dd1ab45d7b7"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Myanmar–Laos Friendship Bridge at Kenglat/Kenglap–Houay Koum. May 13, 2022 restored conditional cargo permission; ordinary passenger entry/exit remained prohibited. Later cargo observations do not establish the first shipment or uniform reopening.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2022-05-13",
+        "end_latest": "2022-05-13",
+        "last_confirmed": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "R6-EA-007-FU1: May 13, 2022 marks restoration of conditional cargo permission at the Myanmar–Laos Friendship Bridge. The initial COVID closure date and actual first commercial passage are unknown. Only the driver and conductor were permitted at designated transfer places under vaccination and testing conditions; ordinary passenger entry and exit remained prohibited. The retrospective report supports a prolonged interruption, but not an exact total or uniform suspension of every category.\n\nLater actual goods access: the Trade Department reports Myanmar-to-Laos aquatic and agricultural exports through Kenglat during April–July 2023, establishing some outbound commercial access by July 31, 2023 at latest. It also reports 22 tonnes of tobacco exported in the first week of September 2023 (September 1–7). The Ministry of Information published this account on September 12; that is the report date, not the movement date. Neither interval establishes the first restored cargo crossing, unrestricted bilateral trade or passenger reopening.\n\nCNI’s January 2024 account describes a four-year closure, which conflicts with the documented May 2022 cargo permission and actual 2023 exports. Its January 25 reopening ceremony is not treated as the first cargo reopening or proof of continuous closure since 2020."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "fd79465b008c2577da3a44ce13f57fd0adf1f4fc9c9b73d4f6afac5fe1966545",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

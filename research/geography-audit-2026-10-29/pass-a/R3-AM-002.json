@@ -1,0 +1,62 @@
+{
+  "record_id": "R3-AM-002",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Canonical phase concerns inability of Desaguadero/PuertoAcosta customs administration to operate, which is not automatically the physical closure of a single Desaguadero bridge. Accessible news establishes regional blockades but not administrative facility scope.",
+  "source_checks": [
+    {
+      "url": "https://www.aduana.gob.bo/sites/default/files/archivos/circular2742019.pdf",
+      "access_status": "inaccessible",
+      "finding": "Original circularPDF timed out; full resolution text not inspected.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-050.json"
+    },
+    {
+      "url": "https://comunicacion.crdascz.com/img/documentos/b221_circular2742019.pdf",
+      "access_status": "inaccessible",
+      "finding": "Independent mirror returned502; exact declaration scope remains inaccessible.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-055.json"
+    },
+    {
+      "url": "https://larepublica.pe/sociedad/2019/11/13/frontera-puno-bolivia-permanece-cerrada-por-conflictos-en-el-vecino-pais-lrsd",
+      "access_status": "fresh_full_text_extract",
+      "finding": "November13 news confirms reduced Desaguadero trade and roadblocks cited byBolivianmigration; no exact customsadministration footprint orPuertoAcosta post identified.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-057.json"
+    },
+    {
+      "url": "https://www.aduana.gob.bo/NOR_circulares?field_fechacir_value%5Bvalue%5D=&field_resumen_value=&field_tipocir_value=&or=&order=field_resumen&page=42&sort=desc&title=",
+      "access_status": "fresh_search_extract",
+      "finding": "Official catalog confirms circular274/2019 datedDecember5 as administrative resolutions but not body/location details.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-057.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-AM-002-D1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Desaguadero/Puerto Acosta customs administration's documented inability to operate",
+      "date_scope_check": {
+        "start_earliest": "2019-11-12",
+        "start_latest": "2019-11-12",
+        "end_earliest": "2019-11-23",
+        "end_latest": "2019-11-23",
+        "last_confirmed": "2019-11-23",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Administrative inability scope cannot be geolocated tobridge solely from news; originalresolution andPuertoAcosta facility scope unresolved."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "02c080a19c1be00e109f72dd22cc123d3a52d87336a7ec9711d6869c2b688ae3"
+}

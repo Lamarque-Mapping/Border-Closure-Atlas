@@ -1,0 +1,53 @@
+{
+  "record_id": "R3-RT-001",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Only Mauren–Tosters and Schellenberg–Nofels-Fresch local road crossings; Schaanwald and Ruggell were explicitly left open. Blanket Austrian entry restrictions are a different scope.",
+  "source_checks": [
+    {
+      "url": "https://www.liechtenstein.li/liechtenstein_news/coronavirus-massnahmen-werden-morgen-montag-16-maerz-2020-verschaerft",
+      "access_status": "full_retrieved",
+      "finding": "March 15 notice specifies closing Mauren and Schellenberg at March 18 00:00 and leaving Schaanwald/Ruggell open."
+    },
+    {
+      "url": "https://vorarlberg.orf.at/stories/3049065/",
+      "access_status": "full_retrieved",
+      "finding": "ORF reports all Vorarlberg gates open May 17 while broader entry conditions remain."
+    },
+    {
+      "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20005809",
+      "access_status": "extract_only",
+      "finding": "Indexed treaty independently pairs Tosters–Mauren and Nofels-Fresch–Schellenberg, describing road control areas."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-RT-001-D1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Mauren and Schellenberg local crossing closures; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2020-03-18",
+        "start_latest": "2020-03-18",
+        "end_earliest": "2020-05-17",
+        "end_latest": "2020-05-17",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "OSM search around municipalities returned Schaanwald control, explicitly an open alternative, and nearby rail border; rejected both. Exact two local road gate coordinates require further source-backed matching."
+      ]
+    }
+  ],
+  "unresolved": [
+    "OSM search around municipalities returned Schaanwald control, explicitly an open alternative, and nearby rail border; rejected both. Exact two local road gate coordinates require further source-backed matching."
+  ]
+}

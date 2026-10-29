@@ -1,0 +1,98 @@
+{
+  "record_id": "R2-EA-003",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Payathonzu informal trading-post restrictions distinguish large cargo trucks from small vehicles and pedestrian access. A later vehicle observation is not continuous evidence from July 2. Multiple known local Three Pagodas gates prevent an unqualified match to the principal mapped control.",
+  "source_checks": [
+    {
+      "url": "https://www.bnionline.net/en/news/both-thai-authorities-and-armed-groups-temporarily-block-three-pagodas-pass",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "IMNA account specifies informal Payathonzu trading post and large cargo containers while individuals carry goods; no gate coordinate or discriminating local name.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-39.json",
+      "sha256": "4fd560b4031d84c85721491368592d3535762739f3afda39aca5831e6ea7a169"
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/traders-continue-operations-compromising-dkba-despite-payathonzu-border-trade-post-closure",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "July 2 IMNA report distinguishes large 12-wheelers from negotiated small-truck access.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-33.json",
+      "sha256": "79aaecbfded571c6b514d8e2f6c668040f4ac9777efc22750e0822537b06a27d"
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/three-pagodas-pass-border-gate-reopened-after-two-month-closure",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "August KIC account describes pedestrian restoration and continuing vehicle restriction; cannot fill the earlier observational gaps.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-34.json",
+      "sha256": "5ee1f76891605d67e6a76748dd3999f029f675845e2d9b31559f2bff553c68fe"
+    },
+    {
+      "url": "https://www.mizzimaweekly.com/wp-content/uploads/2024/07/Mizzima-Weekly_Issue-13-Vol-1_July-4-2024.pdf",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://karennews.org/2024/08/three-pagodas-pass-border-gate-reopened-after-two-month-closure/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EA-003-R1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Payathonzu/Three Pagodas informal trade post, large cargo-container/12-wheel trucks",
+      "date_scope_check": {
+        "scope": "Payathonzu/Three Pagodas informal trade post, large cargo-container/12-wheel trucks",
+        "start_earliest": "2024-06-17",
+        "start_latest": "2024-06-17",
+        "end_earliest": "2024-07-02",
+        "end_latest": "2024-07-02",
+        "last_confirmed": "2024-07-02",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": [
+        "Reports do not positively equate the informal trade post with a particular mapped local gate. Principal Three Pagodas node, BGF and Nyaung Ben Dout alternatives remain distinct."
+      ]
+    },
+    {
+      "phase_id": "R2-EA-003-NP1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Three Pagodas vehicle restriction after pedestrian reopening",
+      "date_scope_check": {
+        "scope": "Three Pagodas vehicle restriction after pedestrian reopening",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2024-08-20",
+        "end_latest": "2024-08-20",
+        "last_confirmed": "2024-08-20",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": [
+        "Reports do not positively equate the informal trade post with a particular mapped local gate. Principal Three Pagodas node, BGF and Nyaung Ben Dout alternatives remain distinct."
+      ]
+    }
+  ],
+  "unresolved": []
+}

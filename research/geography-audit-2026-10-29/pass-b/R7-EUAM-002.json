@@ -1,0 +1,68 @@
+{
+  "record_id": "R7-EUAM-002",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "June13 evening obstruction at Paraguayan bridgehead of Posadas–Encarnación/San Roque González de Santa Cruz road bridge; Monday attempted midspan action explicitly separate.",
+  "source_checks": [
+    {
+      "url": "https://www.primeraedicion.com.ar/nota/248830/por-segundo-dia-mototaxistas-cortaron-el-puente-posadas-encarnacion/",
+      "access_status": "full_retrieved",
+      "finding": "Primera Edición says Tuesday19:00 protesters stayed at Paraguayan head, stopping any vehicle; earlier Monday midspan action quickly dispersed."
+    },
+    {
+      "url": "https://misionesonline.net/2017/06/13/se-levanto-corte-puente-posadas-encarnacion-realizaban-los-mototaxistas-paraguayos-protestaban-controles-del-lado-argentino/",
+      "access_status": "full_retrieved",
+      "finding": "MisionesOnline reports same-evening lifting."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/23632469/full",
+      "access_status": "full_retrieved",
+      "finding": "Directly inspected OSM way/23632469 mean of geometry vertices; XML sha256 ab2e34d0efb071bf2226c869584bcf8a8bf5f9943294b7f5ef8d089ba12637f6; chosen east/north endpoint node6607009471, not vertex mean."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R7-EUAM-002-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-san-roque-paraguay-approach",
+          "name": "San Roque González bridge Paraguay-side approach",
+          "coordinates": [
+            -55.8556976,
+            -27.3667797
+          ],
+          "coordinate_method": "Directly inspected OSM way/23632469 mean of geometry vertices; XML sha256 ab2e34d0efb071bf2226c869584bcf8a8bf5f9943294b7f5ef8d089ba12637f6; chosen east/north endpoint node6607009471, not vertex mean.",
+          "precision": "Bridgehead representative about200m",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/23632469/full"
+          ],
+          "evidence_note": "Named international ROAD bridge on Encarnación side; first geometry endpoint is eastern/Paraguayan end. Separate from neighboring rail bridge and Argentine midspan action previous day."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Posadas mototaxi episode on Tuesday 13 June 2017; Monday is not joined into a continuous period.; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2017-06-13",
+        "start_latest": "2017-06-13",
+        "end_earliest": "2017-06-13",
+        "end_latest": "2017-06-13",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Eastern bridge-segment endpoint is a crossing-area representative; precise crowd placement at customs/bridgehead not surveyed."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Eastern bridge-segment endpoint is a crossing-area representative; precise crowd placement at customs/bridgehead not surveyed."
+  ]
+}

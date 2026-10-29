@@ -1,0 +1,76 @@
+{
+  "record_id": "R5-EA-003",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Availability of Chinshwehaw commercial post services, ending with March 11, 2024 office/post reopening. The blocked Lashio approach prevented actual trade; post availability does not equal restored freight flow.",
+  "source_checks": [
+    {
+      "url": "https://english.shannews.org/archives/26983",
+      "access_status": "full_text_web",
+      "finding": "SHAN residents and MNDAA confirm the named post resumed operation March 11.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r5-3.json",
+      "sha256": "e941669c6b6622ce79b18a2c37e04a946c87f0924eb65e96854ba13d06697d04"
+    },
+    {
+      "url": "https://www.irrawaddy.com/business/myanmar-junta-blocks-flow-of-exports-to-checkpoint-on-china-border.html",
+      "access_status": "full_text_web",
+      "finding": "Irrawaddy distinguishes open Chin Shwe Haw crossing from the junta-blocked Lashio road and absent trade.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r5-4.json",
+      "sha256": "72b96a3c05d661edb6a1915a4e0435d2f41f03d0ac8a45c3f6c8414af6126bb9"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/806992480/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Chinese Mengding Qingshuihe checkpoint outline inspected as a lead; not adopted as the Myanmar commercial office.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/b1f40a04ebdd8450d2df.xml",
+      "sha256": "edb4e5b63d36e5d6434ec3ef96280596ea64a6cdb66cd3d82c5f4e72b249cc45",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/b1f40a04ebdd8450d2df.txt",
+      "text_sha256": "edb4e5b63d36e5d6434ec3ef96280596ea64a6cdb66cd3d82c5f4e72b249cc45",
+      "status": 200
+    },
+    {
+      "url": "https://faolex.fao.org/docs/pdf/bi-231407.pdf",
+      "access_status": "indexed_extract_only",
+      "finding": "Bilateral agreement pairs Mengding Qingshuihe with Chinshwehaw, but does not resolve the exact Myanmar office or old/new gate geometry.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-29.json",
+      "sha256": "1242a24433bd2bcaf1725d931e156763e8d267545f2380a209dada1a7556b6e8"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-EA-003-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Availability of Chinshwehaw commercial post services, ending with March 11, 2024 office/post reopening. The blocked Lashio approach prevented actual trade; post availability does not equal restored freight flow.",
+      "date_scope_check": {
+        "start_earliest": "2023-10-01",
+        "start_latest": "2023-10-27",
+        "end_earliest": "2024-03-11",
+        "end_latest": "2024-03-11",
+        "last_confirmed": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "R5-EA-003-D1: October 1–27, 2023 onset bounds and the March 11, 2024 post-availability endpoint remain. SHAN residents and MNDAA confirm the office/post reopened March 11; Irrawaddy March 15 says no trade flowed because the junta blocked the Lashio road. Reported absence of recorded trade in April 1–May 17 is a later commercial observation, not proof that the gate itself stayed shut. The exact first restored cargo movement is unresolved. RFA’s December 2023 report mixes Kyin San Kyawt and Chinshwehaw geography, so that named-gate detail is not adopted.\n\nLater goods evidence: SHAN’s 2025-03-24 report describes coal shipments from Myanmar to China through Chinshwehaw. It also reports Chinese permission for coal, sugarcane and corn imports from November 2024, while its opening paragraph dates coal movement from September 2024. Because these retrospective dates differ, 2025-03-24 is used only as a conservative later bound for some outgoing goods, not as the exact reopening day. This does not prove restoration of Chinese exports to Myanmar, all cargo categories, passenger movement or uninterrupted access. Distinct later China-side restrictions must not be merged with the October 2023–March 2024 post-availability phase.\n\nA contemporary October 27, 2023 DMG report quotes a Chinshwehaw resident that the Chinese border crossing was already closed. This narrows the latest possible onset to October 27, but does not establish the first closure hour or replace the March 11 post-availability endpoint with an observed cargo restart."
+      },
+      "unresolved": [
+        "Myanmar Chinshwehaw commercial post coordinate and relationship to the two nearby Qingshuihe gate features remain unresolved. Chinese building or town centroid is not substituted."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Myanmar Chinshwehaw commercial post coordinate and relationship to the two nearby Qingshuihe gate features remain unresolved. Chinese building or town centroid is not substituted."
+  ],
+  "input_sha256": "0c99799abacf0d1c47def71c2cf40122fdfee1269db984dbdae0318a81ab991c",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

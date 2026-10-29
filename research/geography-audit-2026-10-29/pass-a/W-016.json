@@ -1,0 +1,57 @@
+{
+  "record_id": "W-016",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Sequential restrictions on the same regular Illela–Birni N’Konni road route: Nigerian sanctions implementation followed by Niger-side continuation after Nigerian permission. Informal permeability is distinct.",
+  "source_checks": [
+    {
+      "url": "https://www.thisdaylive.com/2023/08/04/coup-nigeria-closes-border-with-niger-republic/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Customs chief at Illela describes closure but allows returning Nigerians; no precise universal onset.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-9.json"
+    },
+    {
+      "url": "https://punchng.com/customs-reopen-niger-republic-land-border/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Official Illela reopening permission March 14.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-2.json"
+    },
+    {
+      "url": "https://guardian.ng/news/niger-reopens-border-with-nigeria/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "AFP witness at Birni N’Konni reports paved-road traffic both directions March 22 after Niger kept its side shut.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-2.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "W-016-R1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Nigeria-side regular Illela gate sanctions phase only.",
+      "unresolved": [
+        "No source-backed exact border post point recovered; multiple unrelated Illela settlements in geography results are not substituted."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"policy_period\", \"start_earliest\": \"2023-07-30\", \"start_latest\": \"2023-08-04\", \"end_earliest\": \"2024-03-14\", \"end_latest\": \"2024-03-14\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": true}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: W-016-R1: THISDAY’s August 4 report quotes the Illela customs chief allowing returning Nigerians to enter; its application throughout the phase or at other posts is unquantified. The reported seven-month closure does not establish an exact onset. ICIR’s investigation, published February 15, 2024, describes an August 24, 2023 visit with the regular gate barricaded while unofficial routes remained permeable. W-015 overlaps and is not additive.\n\nW-016-R2: March 14 begins this continuation after Nigeria’s permission, not Niger’s original closure. AFP reported actual traffic in both directions on March 22; its witness placed reopening at midnight, whereas Punch quoted a community source saying noon. The calendar date is supported, but the precise hour is unresolved. This scoped return does not establish reopening of every Nigeria–Niger gate or closure of all informal routes."
+    },
+    {
+      "phase_id": "W-016-R2",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Niger-side regular road continuation March 14–22 only.",
+      "unresolved": [
+        "Birni N’Konni town point does not locate its specific border control. Do not use bilateral frontier as fallback."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"closed_interval\", \"start_earliest\": \"2024-03-14\", \"start_latest\": \"2024-03-14\", \"end_earliest\": \"2024-03-22\", \"end_latest\": \"2024-03-22\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": true}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: W-016-R1: THISDAY’s August 4 report quotes the Illela customs chief allowing returning Nigerians to enter; its application throughout the phase or at other posts is unquantified. The reported seven-month closure does not establish an exact onset. ICIR’s investigation, published February 15, 2024, describes an August 24, 2023 visit with the regular gate barricaded while unofficial routes remained permeable. W-015 overlaps and is not additive.\n\nW-016-R2: March 14 begins this continuation after Nigeria’s permission, not Niger’s original closure. AFP reported actual traffic in both directions on March 22; its witness placed reopening at midnight, whereas Punch quoted a community source saying noon. The calendar date is supported, but the precise hour is unresolved. This scoped return does not establish reopening of every Nigeria–Niger gate or closure of all informal routes."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

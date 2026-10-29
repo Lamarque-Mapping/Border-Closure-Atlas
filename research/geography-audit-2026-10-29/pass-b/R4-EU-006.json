@@ -1,0 +1,64 @@
+{
+  "record_id": "R4-EU-006",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "December 1–4 selective freight approach blockade at Vyšné Nemecké–Uzhhorod. STVR says customs itself still processes trucks, four ordinary trucks per hour permitted, special loads excepted; chiefly Slovak-side approach into Ukraine.",
+  "source_checks": [
+    {
+      "url": "https://spravy.stvr.sk/2023/12/unia-autodopravcov-zablokovala-hranicny-priechod-vysne-nemecke-obmedzenie-ma-trvat-do-odvolania/",
+      "access_status": "full_retrieved",
+      "finding": "STVR December 1 identifies crossing, 15:00 start, freight quota, exemptions and continuing customs operations."
+    },
+    {
+      "url": "https://www.ssc.sk/files/documents/technicke-predpisy/rozborove_ulohy/2020_ru_vazenie_vozidiel_dialnice_cesty_1_trieda.pdf",
+      "access_status": "full_retrieved",
+      "finding": "Table 3 directly lists named I/19 border freight weighing facility at 48.656108,22.264937."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-EU-006-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-vysne-nemecke-road",
+          "name": "Vyšné Nemecké–Uzhhorod road freight control area",
+          "coordinates": [
+            22.264937,
+            48.656108
+          ],
+          "coordinate_method": "GPS table 3, page 16 of Slovak Road Administration 2020 weighing-site study; independently corroborated customs service operator address/GPS nearby",
+          "precision": "Freight inspection area, about 150 m; not exact protest tractor position",
+          "source_urls": [
+            "https://www.ssc.sk/files/documents/technicke-predpisy/rozborove_ulohy/2020_ru_vazenie_vozidiel_dialnice_cesty_1_trieda.pdf",
+            "https://www.sic.sk/p/120/vysne-nemecke"
+          ],
+          "evidence_note": "I/19 named border crossing weighing facilities, Slovak side; source establishes road freight rather than rail post."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Intentional throttling of freight access at one international road crossing; Ordinary commercial trucks, prominently on the route into Ukraine; not all passenger movement; Freight access at the crossing; evidence particularly documents Slovak-side queues toward Ukraine, not identical restriction in both directions; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2023-12-01",
+        "start_latest": "2023-12-01",
+        "end_earliest": "2023-12-04",
+        "end_latest": "2023-12-04",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Marker represents freight facility; precise protest barrier on its Slovak approach is not surveyed in source."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Marker represents freight facility; precise protest barrier on its Slovak approach is not surveyed in source."
+  ]
+}

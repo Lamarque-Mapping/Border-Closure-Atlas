@@ -1,0 +1,78 @@
+{
+  "record_id": "R5-EU-004",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Non-exempt passenger entry to Greece at Evzoni road crossing is distinct from rail, Niki and Doirani. Reopening onMay14 remains subject to documentary/health and opening-hour conditions.",
+  "source_checks": [
+    {
+      "url": "https://services.naftemporiki.gr/story/1726286/boreia-makedonia-anoiksan-ta-sunora-me-ellada",
+      "access_status": "fresh_full_text_extract",
+      "finding": "May14 account reports Evzoni customs reopening14:00 after a year, daily07–23, with vaccine/PCR/recovery evidence; Niki and Doirani remain closed.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-070.json"
+    },
+    {
+      "url": "https://www.carina.mk/index.php/sq/2016-08-15-20-09-55/2016-08-15-15-05-6/2921-izvestuvanje-za-sostojba-na-gp-bogorodica-evzoni-2",
+      "access_status": "inaccessible",
+      "finding": "NorthMacedonian customs source failed502; initial legal scope not freshly recovered from it.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-065.json"
+    },
+    {
+      "url": "https://mapcarta.com/W783378352",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named Greek border-checkpoint compound distinct from toll station2km south and Idomeni railway3km west. Original reopening report explicitly names Evzoni customs.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-069.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-EU-004-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-evzoni-road",
+          "name": "Evzoni road border checkpoint",
+          "coordinates": [
+            22.55158,
+            41.12768
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 783378352; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W783378352",
+            "https://www.openstreetmap.org/way/783378352"
+          ],
+          "evidence_note": "Named Greek border-checkpoint compound distinct from toll station2km south and Idomeni railway3km west. Original reopening report explicitly names Evzoni customs.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-069.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary non-exempt passenger-entry restriction into Greece through Evzoni from North Macedonia",
+      "date_scope_check": {
+        "start_earliest": "2020-03-15",
+        "start_latest": "2020-03-15",
+        "end_earliest": "2021-05-14",
+        "end_latest": "2021-05-14",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Facility identity and reopening supported; initial legal dates/exemptions remain canonical rather than re-derived from inaccessible gazette."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "4df86fa787d0fb380cc8f0253d6e6828cc9c65983998ee12b2bda0e4be9cda04"
+}

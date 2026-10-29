@@ -1,0 +1,83 @@
+{
+  "record_id": "R6-AM-004",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "February16 short protest obstructs Canadian vehicular access to RainbowBridge at NiagaraFalls. The CBSA briefing resolves a PeaceBridge wording error in one paragraph of local reporting; no duration exclusion is applied.",
+  "source_checks": [
+    {
+      "url": "https://www.btpm.org/local/2020-02-17/protesters-shut-down-rainbow-bridge",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Local report repeatedly identifies RainbowBridge and hours-long Sunday obstruction, but one paragraph says PeaceBridge; ambiguity explicitly retained until CBSA corroboration.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-068.json"
+    },
+    {
+      "url": "https://cbsa.gc.ca/transparency-transparence/pd-dp/bbp-rpp/secu/2020-02-26/issues-enjeux-eng.html",
+      "access_status": "fresh_search_extract",
+      "finding": "Original CBSA indexed extract explicitly names RainbowBridge February16 and ThousandIslands February17, temporary vehicular-access closures and alternate bridge routes.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-073.json"
+    },
+    {
+      "url": "https://www.cbsa-asfc.gc.ca/transparency-transparence/pd-dp/bbp-rpp/secu/2020-02-26/issues-enjeux-eng.html",
+      "access_status": "inaccessible",
+      "finding": "Direct original-host page timed out; indexed alternate official host used, not claimed full-page access.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-072.json"
+    },
+    {
+      "url": "https://mapcarta.com/22612372",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Published bridge identity and coordinates with GeoNames/Wikidata attribution.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-070.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-AM-004-V1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-rainbow-road-bridge-reference",
+          "name": "Rainbow International Bridge reference",
+          "coordinates": [
+            -79.06754,
+            43.09006
+          ],
+          "coordinate_method": "Published Mapcarta GeoNames5133347 / WikidataQ717285 bridge coordinate",
+          "precision": "Approximate bridge reference; not exact Canadian approach obstruction.",
+          "source_urls": [
+            "https://mapcarta.com/22612372"
+          ],
+          "evidence_note": "Named NiagaraFalls international road bridge, distinct from PeaceBridge. Original CBSA briefing independently names RainbowBridge February16.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-070.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Physical protest obstruction of Canadian-side vehicular access to Rainbow Bridge",
+      "date_scope_check": {
+        "start_earliest": "2020-02-16",
+        "start_latest": "2020-02-16",
+        "end_earliest": "2020-02-16",
+        "end_latest": "2020-02-16",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Canadian approach protest position not surveyed; bridge reference only. Short duration remains eligible for All view."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "43ff6ddc12f82b35821e32be93bb426b3a8c63b680c1fb1130ab2fa9e2ea8536"
+}

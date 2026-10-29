@@ -1,0 +1,107 @@
+{
+  "record_id": "R6-SC-001",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Kyrgyz order 27-r on non-exempt persons at Irkeshtam-road and Torugart-road. Cargo handover rules are separate and do not imply every shipment stopped throughout the legal interval.",
+  "source_checks": [
+    {
+      "url": "https://www.wcoomd.org/-/media/wco/public/ru/pdf/topics/facilitation/activities-and-programmes/covid_19/kyrgyzstan_ru.pdf?la=fr",
+      "access_status": "full_text_pdf_extract",
+      "finding": "Kyrgyz Customs report hosted by WCO names both road posts, February 3 order and enumerated exemptions; later paragraphs separately describe cargo algorithms.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r6-1.json",
+      "sha256": "5b89ddfcdbfc1a5147a39327b69630d32a1f02cfc860e7119d4a34f53b1b5933"
+    },
+    {
+      "url": "https://unece.org/DAM/trans/main/wp24/Logistics_and_Transport_Competitiveness_in_Kyrgyzstan_2019_RU.pdf",
+      "access_status": "indexed_extract_only",
+      "finding": "Contemporary UNECE inventory pairs the two road posts with their Chinese counterparts and pass locations.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-34.json",
+      "sha256": "a04fcc761c706d4c1da7c606444632cbdc3995fff4cf67aa0989234129d68c3e"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/3072853603",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named road checkpoint coordinates and tags inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/55454b8ea48a4e160499.xml",
+      "sha256": "01713088189f86f1c352981117a3f7a249f31345c18c00593ba5f2523980556b",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/55454b8ea48a4e160499.txt",
+      "text_sha256": "01713088189f86f1c352981117a3f7a249f31345c18c00593ba5f2523980556b",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/2007687085",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named road checkpoint coordinates and tags inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3b2e09463d982f5ab0d3.xml",
+      "sha256": "231bdcdfe7611e8bdfd03ddf0f12316e12fc24608ead0dc61c6fb0c24cfa07be",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3b2e09463d982f5ab0d3.txt",
+      "text_sha256": "231bdcdfe7611e8bdfd03ddf0f12316e12fc24608ead0dc61c6fb0c24cfa07be",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-SC-001-REV1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-irkeshtam-road",
+          "name": "Irkeshtam Kyrgyz road checkpoint",
+          "coordinates": [
+            73.9009335,
+            39.679416
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/3072853603"
+          ],
+          "evidence_note": "Explicitly named КПП Иркештам-автодорожный border_control node. Name exactly matches the Kyrgyz Customs order; separate Chinese control point lies several kilometres northeast.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/55454b8ea48a4e160499.xml",
+          "sha256": "01713088189f86f1c352981117a3f7a249f31345c18c00593ba5f2523980556b"
+        },
+        {
+          "proposed_site_id": "post-torugart-road-boundary",
+          "name": "Torugart road boundary checkpoint",
+          "coordinates": [
+            75.3939316,
+            40.55168
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/2007687085"
+          ],
+          "evidence_note": "Explicit Torugart Border Point node with border_control and motor vehicle permissions, located at the pass. UNECE lists the paired Torugart road checkpoints at this pass; marker is a route boundary reference, not an inland customs office.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3b2e09463d982f5ab0d3.xml",
+          "sha256": "231bdcdfe7611e8bdfd03ddf0f12316e12fc24608ead0dc61c6fb0c24cfa07be"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kyrgyz order 27-r on non-exempt persons at Irkeshtam-road and Torugart-road. Cargo handover rules are separate and do not imply every shipment stopped throughout the legal interval.",
+      "date_scope_check": {
+        "start_earliest": "2020-02-03",
+        "start_latest": "2020-02-03",
+        "end_earliest": "2020-05-07",
+        "end_latest": "2020-05-07",
+        "last_confirmed": "2020-05-07",
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Modern legal segment, not original holiday closure or all-passenger/all-cargo operational ban. May 7 is a dated substantive report, not reopening. January 2022 repeal instrument is identified but its operative text/effective date remains uninspected."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "008e1cedc0524eb12ae9beb850f016b359d55a93f8d3f35783016d4eae7e6279",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

@@ -1,0 +1,89 @@
+{
+  "record_id": "R6-SC-006",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "India-side Kartarpur corridor pilgrimage suspension, represented by Dera Baba Nanak passenger terminal. Pakistani domestic shrine access, Pakistan-side permissions and Attari journeys are outside this phase.",
+  "source_checks": [
+    {
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1609253&lang=2&reg=48",
+      "access_status": "full_text_web",
+      "finding": "Official MHA release suspends Kartarpur travel/registration from March 16, 2020.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r6-4.json",
+      "sha256": "0237a2af68d896799c7658610436a933cad6c19a9de7e156fcd6a0672d571842"
+    },
+    {
+      "url": "https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1772262&lang=2&reg=48",
+      "access_status": "full_text_web",
+      "finding": "Official MHA release identifies corridor resumption from November 17, 2021 and the Dera Baba Nanak boundary agreement.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r6-5.json",
+      "sha256": "540472401ff77b619f872fb931af40d567068f7bf14cd72f0f4bf23d1236f2ce"
+    },
+    {
+      "url": "https://lpai.gov.in/en/dera-baba-nanak",
+      "access_status": "indexed_extract_only",
+      "finding": "LPAI identifies the passenger terminal, November 2019 inauguration and COVID movement suspension.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-32.json",
+      "sha256": "8b626b1efbea2b0d5cb44de008b4723dc7546cd8bb3bc48f1c72d53c35b305d9"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/824588277/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Indian immigration complex outline inspected; Pakistani terminal and shrine are distinct features.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/87c01157bbc5323acb2b.xml",
+      "sha256": "1e5f566a2648de51f2afe13746793f3cf2c11f2a15cf63df19accac40524356b",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/87c01157bbc5323acb2b.txt",
+      "text_sha256": "1e5f566a2648de51f2afe13746793f3cf2c11f2a15cf63df19accac40524356b",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-SC-006-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-dera-baba-nanak-ptb",
+          "name": "Dera Baba Nanak Kartarpur passenger terminal",
+          "coordinates": [
+            75.0261097,
+            32.0464044
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/824588277/full"
+          ],
+          "evidence_note": "Explicit Immigration Complex, Dera Baba Nanak building and border_control outline. Indian MHA and LPAI identify the Indian passenger terminal as the processing point for the Kartarpur corridor opened in November 2019. Mapcarta country-label error is not adopted.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/87c01157bbc5323acb2b.xml",
+          "sha256": "1e5f566a2648de51f2afe13746793f3cf2c11f2a15cf63df19accac40524356b"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "India-side Kartarpur corridor pilgrimage suspension, represented by Dera Baba Nanak passenger terminal. Pakistani domestic shrine access, Pakistan-side permissions and Attari journeys are outside this phase.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-16",
+        "start_latest": "2020-03-16",
+        "end_earliest": "2021-11-17",
+        "end_latest": "2021-11-17",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Exact interval concerns India-side pilgrimage suspension, not a claim that both governments continuously closed every movement. Newspaper June-year wording differs from Pakistan’s official 2020 statement, so no bilateral reopening chronology inferred. Other pilgrimage routes and Pakistani domestic access to shrine are outside this record."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "ca68269f45c4b9602784b9ad7a5d9f039710655dbc2a97bac6c3f6a6f27a992c",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

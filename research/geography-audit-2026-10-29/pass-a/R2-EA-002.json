@@ -1,0 +1,49 @@
+{
+  "record_id": "R2-EA-002",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Canonical record has no dated phases. Three Pagodas local gates must not be collapsed: the Thai BGF gate, Myanmar Nyaung Ben Dout gate and long-closed principal gate are distinct. No phase or date is invented for the same-day record.",
+  "source_checks": [
+    {
+      "url": "https://www.bnionline.net/en/news/two-illegal-border-gates-three-pagodas-pass-closed",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Reopened contemporaneous account distinguishes BGF concrete blocks on February 25 from Nyaung Ben Dout closure the following day and the principal gate closed since 2007.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-31.json",
+      "sha256": "f3abe7e20c9a880b7db14fe2ac9e998228a7ba327c3aa8143f90eb139984bdb5"
+    },
+    {
+      "url": "https://www.irrawaddy.com/news/burma/myanmar-authorities-close-thai-border-1000s-unable-work-textile-factories.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://monnews.org/2020/02/28/two-illegal-border-gates-in-three-pagodas-pass-closed/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/three-pagoda-pass-thai-myanmar-border-reopened",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://monnews.org/2020/03/03/three-pagoda-pass-thai-myanmar-border-reopened/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [],
+  "unresolved": [
+    "No canonical dated phase is available to bind. Exact same-day local crossing point remains unitemised."
+  ]
+}

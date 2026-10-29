@@ -1,0 +1,59 @@
+{
+  "record_id": "R5-ME-006",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Shalamcheh road passenger crossing between Iraq and Iran, same-day April 4, 2026 interruption after an attack on the Iranian passenger terminal. Initial trade suspension is not a freight reopening endpoint.",
+  "source_checks": [
+    {
+      "url": "https://www.bernama.com/en/news.php?id=2541133",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full report inspected, Anadolu/INA relay states trade and passenger traffic suspended after attack on Iranian side.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-17.json"
+    },
+    {
+      "url": "https://qna.org.qa/en/news/news-details?date=4%2F04%2F2026&id=iraq-passenger-traffic-returns-to-shalamcheh-border-crossing-with-iran",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full relevant QNA article inspected: INA-carried Border Ports Authority statement says passenger traffic returned to normal April 4. Does not establish freight restoration or independent observed vehicle movement.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-21.json"
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/way/1451074497/full",
+      "access_status": "cached_original_osm_xml_inspected",
+      "finding": "Cached original OSM way 1451074497, version 4, timestamp 2026-10-18T12:17:28Z; tags {\"area\": \"yes\", \"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"پایانه مرزی شلمچه\", \"name:ar\": \"منفذ الشلامجه الحدودي\", \"name:en\": \"Shalamcheh Border Post\", \"name:fa\": \"پایانه مرزی شلمچه\"}. Reference geography only; closure scope is independently reconstructed from historical sources.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/cfa51d091b3aa812.raw"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R5-ME-006-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-shalamcheh",
+          "name": "Shalamcheh road border post",
+          "coordinates": [
+            48.0293192,
+            30.5024401
+          ],
+          "coordinate_method": "Bounding-box centre of named facility way, calculated from independently inspected cached original OSM XML nodes.",
+          "precision": "Approximately 500 m crossing area; not a surveyed historical barrier or blockade footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/way/1451074497/full"
+          ],
+          "evidence_note": "Cached original OSM way 1451074497, version 4, timestamp 2026-10-18T12:17:28Z; tags {\"area\": \"yes\", \"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"پایانه مرزی شلمچه\", \"name:ar\": \"منفذ الشلامجه الحدودي\", \"name:en\": \"Shalamcheh Border Post\", \"name:fa\": \"پایانه مرزی شلمچه\"}. Reference geography only; closure scope is independently reconstructed from historical sources.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/cfa51d091b3aa812.raw",
+          "evidence_sha256": "784365d651759a215a1755bb2ba63603316d252bf9c546ad609984b2504375c9"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Modal scope: road_passenger_suspension. Same-day passenger phase maps at the port despite strictly_over_24_hours false. Point locates paired crossing area, not exact attacked building or blast footprint.",
+      "unresolved": [],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"same_day\", \"start_earliest\": \"2026-04-04\", \"start_latest\": \"2026-04-04\", \"end_earliest\": \"2026-04-04\", \"end_latest\": \"2026-04-04\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": false}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: R5-ME-006-D1: The passenger episode occurred within April 4, not over a whole day. QNA relays the Iraqi Border Ports Authority through INA; Reuters also cites security sources. The Wall Street Journal separately reports that Khuzestan official Lofteh Derokvandi told IRNA that pilgrim and trader crossings had resumed and commercial activity was continuing. This is evidence of commercial operation by April 4 evening, but does not identify the first truck, precise interruption hours or identical conditions in both directions. The underlying IRNA report has not been recovered independently."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

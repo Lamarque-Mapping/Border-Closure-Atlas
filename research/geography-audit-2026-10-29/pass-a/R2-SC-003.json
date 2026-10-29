@@ -1,0 +1,152 @@
+{
+  "record_id": "R2-SC-003",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Afghan parliamentary-election restriction at Torkham and Chaman affects ordinary pedestrians and cargo with emergency exceptions. Each gate has its own reopening account; no entire-frontier extent implied.",
+  "source_checks": [
+    {
+      "url": "https://www.radio.gov.pk/21-10-2018/pak-afghan-border-at-torkham-reopened",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Official broadcaster reports October 21 Torkham traffic resumption after election closure.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-38.json",
+      "sha256": "a16fd551b606ea10896ea76b3d92521414f95376cf4d60771bfc3ab167803032"
+    },
+    {
+      "url": "https://www.dawn.com/news/1440546",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Reports Chaman Friendship Gate reopening on Sunday, with trade resumption.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-34.json",
+      "sha256": "5ee1f76891605d67e6a76748dd3999f029f675845e2d9b31559f2bff553c68fe"
+    },
+    {
+      "url": "https://mofa.gov.pk/afghan-request-for-closure-of-friendship-gates-at-chaman-torkham",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://tribune.com.pk/story/1830756/two-days-hiatus-pak-afghan-border-crossing-torkham-reopened?amp=1",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://tribune.com.pk/story/1830756/two-days-hiatus-pak-afghan-border-crossing-torkham-reopened",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.thenews.com.pk/amp/383229-torkham-border-closed-for-two-days-for-afghan-elections",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://tribune.com.pk/story/1829487/pak-afghan-border-closed-two-days",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://tribune.com.pk/story/1830109/1-torkham-border-crossing-remains-closed-afghan-elections",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-SC-003-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-torkham",
+          "name": "Torkham",
+          "coordinates": [
+            71.0943599,
+            34.1217551
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/3309508316",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/3309508316",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=71.085,34.11,71.103,34.13"
+          ],
+          "evidence_note": "Explicit named Torkham Border control node; independently retrieved raw coordinate agrees with inventory lead.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-torkham.xml",
+          "sha256": "0f6a7ca9ae0d4d50e1b110c198dc3ab960a0e98f869556e24e928730fcc28d3b",
+          "osm_feature": "node/3309508316",
+          "osm_version": "3",
+          "osm_timestamp": "2026-06-07T09:06:47Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "تورخم",
+            "name:de": "Torcham",
+            "name:en": "Torkham Border",
+            "name:fa": "تورخم",
+            "name:hi": "तोरख़म",
+            "name:ps": "تورخم",
+            "wikidata": "Q7830301",
+            "wikipedia": "en:Torkham"
+          }
+        },
+        {
+          "proposed_site_id": "post-chaman-spin-boldak",
+          "name": "Chaman–Spin Boldak Friendship Gate",
+          "coordinates": [
+            66.4384054,
+            30.9548251
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/1018387592",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1018387592",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=66.433,30.95,66.444,30.96"
+          ],
+          "evidence_note": "Mapped border-control area matched with named Chaman Friendship Gate reports.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-chaman.xml",
+          "sha256": "c880649ab528c0e599dd9681fcd1a6c99d8cb7e998d734daf83a05d79bcc7126",
+          "osm_feature": "way/1018387592",
+          "osm_version": "1",
+          "osm_timestamp": "2022-01-04T22:16:19Z",
+          "identity_tags": {
+            "area": "yes",
+            "barrier": "border_control",
+            "bicycle": "yes",
+            "building": "yes",
+            "foot": "yes",
+            "motor_vehicle": "yes"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary pedestrian and cargo traffic at Torkham and Chaman, excluding emergency cases",
+      "date_scope_check": {
+        "scope": "Ordinary pedestrian and cargo traffic at Torkham and Chaman, excluding emergency cases",
+        "start_earliest": "2018-10-19",
+        "start_latest": "2018-10-19",
+        "end_earliest": "2018-10-21",
+        "end_latest": "2018-10-21",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

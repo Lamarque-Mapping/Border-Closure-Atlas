@@ -1,0 +1,48 @@
+{
+  "record_id": "R3-EU-010",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "French compelling-reason requirement for UK journeys is a nationality/vaccination-sensitive travel rule. Recorded land component is Channel Tunnel passenger travel, not a sovereign land-boundary closure.",
+  "source_checks": [
+    {
+      "url": "https://www.info.gouv.fr/communique/12604-le-gouvernement-renforce-les-mesures-de-controle-sanitaire-aux-frontieres-avec-le-royaume-uni",
+      "access_status": "full_retrieved",
+      "finding": "December 16 notice requires compelling reasons for vaccinated and unvaccinated UK travel, with French-national/family exceptions."
+    },
+    {
+      "url": "https://www.info.gouv.fr/communique/12631-assouplissement-des-mesures-sanitaires-aux-frontieres-avec-le-royaume-uni-pour-les-personnes",
+      "access_status": "full_retrieved",
+      "finding": "January 13 notice removes compelling-reason requirement for vaccinated arrivals from next Friday, retains unvaccinated restrictions."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EU-010-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "French compelling-reason requirement for vaccinated arrivals from the UK, including the Channel Tunnel land component; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "policy_period",
+        "start_earliest": "2021-12-18",
+        "start_latest": "2021-12-18",
+        "end_earliest": "2022-01-14",
+        "end_latest": "2022-01-14",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Inspected policy notices contain no tunnel geometry or checkpoint coordinates. No France–UK land-border geometry exists in original inventory; terminal/route representation remains to be independently sourced."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Inspected policy notices contain no tunnel geometry or checkpoint coordinates. No France–UK land-border geometry exists in original inventory; terminal/route representation remains to be independently sourced."
+  ]
+}

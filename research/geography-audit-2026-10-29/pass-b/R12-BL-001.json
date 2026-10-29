@@ -1,0 +1,75 @@
+{
+  "record_id": "R12-BL-001",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Zambian Kazungula checkpoint controlling livestock/meat imports from Botswana in 2019. The applicable route was the ferry-era Botswana–Zambia crossing, distinct from Zimbabwe’s road post and the later bridge.",
+  "source_checks": [
+    {
+      "url": "https://www.lusakatimes.com/2019/01/22/zambia-bans-the-importation-of-meat-products-from-south-africa/",
+      "access_status": "full_text_web",
+      "finding": "Veterinary official says checkpoints were mounted at Kazungula–Botswana, Livingstone–Zimbabwe and Chirundu; the retained phase selects Kazungula only.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-28.json",
+      "evidence_sha256": "1c07142f5092770e8492f2cff7df774d6a784569ff6e9b17db1afebaaaebb00f"
+    },
+    {
+      "url": "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+      "access_status": "full_text_pdf_fresh_fetch",
+      "finding": "Original report describes the pre-bridge Kazungula ferry and states the new OSBP/bridge infrastructure was completed in 2021; therefore its current illustrative bridge marker cannot locate the 2019 restriction.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/25782abcef016f49e77a.pdf",
+      "evidence_sha256": "35e1b5d512bfc882baf263b1abe002d0c99331d0b2b8e08fcb0f354ab504cbed"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R12-BL-001-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-kazungula-zambia-ferry",
+          "name": "Kazungula, former Zambian ferry terminal",
+          "coordinates": [
+            25.2657236,
+            -17.7902148
+          ],
+          "coordinate_method": "Original OSM node coordinate from independently fetched API JSON",
+          "precision": "approximate crossing facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/map.json?bbox=25.255,-17.795,25.28,-17.78",
+            "https://www.openstreetmap.org/node/2029950586"
+          ],
+          "evidence_note": "Named ferry terminal on the northern Zambezi bank. The same original extract separately shows the newer road/rail bridge and its controls. The node locates the ferry-era crossing area, not a 2019 livestock inspection desk. Inspected OSM tags: {\"amenity\": \"ferry_terminal\", \"ferry\": \"yes\", \"name\": \"Kazungula Ferry\", \"public_transport\": \"station\"}. Geographic evidence only; no historical restriction or current operational status inferred.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/c15af419e0cd8542208c.json",
+          "evidence_sha256": "9c9a96b5752a8a2eb43b0607b25388bf038f9f2304423a2092bbcfe332542ebc",
+          "osm_version": 7,
+          "osm_timestamp": "2024-12-03T15:22:06Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Zambian Kazungula checkpoint controlling livestock/meat imports from Botswana in 2019. The applicable route was the ferry-era Botswana–Zambia crossing, distinct from Zimbabwe’s road post and the later bridge. Current phase only: Kazungula checkpoint enforcing Zambian prohibition of South African livestock and meat products",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2019-01-22",
+        "end_latest": "2019-01-22",
+        "last_confirmed": "2019-01-22",
+        "endpoint_status": "last_confirmed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Dated implementation confirmation, not original onset. National January ban and later policies are not precise Kazungula start/end; cargo-category restriction only, not general border closure.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "The former Zambian ferry terminal area is verified. The exact 2019 livestock inspection checkpoint on its approach is not independently isolated."
+      ]
+    }
+  ],
+  "unresolved": [
+    "The former Zambian ferry terminal area is verified. The exact 2019 livestock inspection checkpoint on its approach is not independently isolated."
+  ]
+}

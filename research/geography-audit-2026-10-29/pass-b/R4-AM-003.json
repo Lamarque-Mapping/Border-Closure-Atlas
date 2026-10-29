@@ -1,0 +1,64 @@
+{
+  "record_id": "R4-AM-003",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Guyana ordinary-travel restriction at the Takutu bridge between Lethem and Bonfim; Thursday supplies allowed and Friday personal travel added in October 2021. This one-gate phase is narrower than national March advisory.",
+  "source_checks": [
+    {
+      "url": "https://dpi.gov.gy/ministry-of-foreign-affairs-press-release/",
+      "access_status": "full_retrieved",
+      "finding": "National March 27 advisory suspends cross-border travel; not a crossing-specific operational start clock."
+    },
+    {
+      "url": "https://newsroom.gy/2021/10/01/guyana-brazil-crossing-goods-to-be-transported-on-thursdays-people-can-move-on-fridays/",
+      "access_status": "full_retrieved",
+      "finding": "October 1 notice explicitly names Takutu bridge, Lethem, goods Thursdays, persons Fridays."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/538576946/full",
+      "access_status": "full_retrieved",
+      "finding": "Directly inspected OSM way/538576946 mean of geometry vertices; XML sha256 f0cc74d1003dc4f3aafd4f06905c4e81d8b20403b7de97c087dd252990dafe24"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R4-AM-003-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-takutu-bridge",
+          "name": "Takutu / Tacutu road bridge, Guyanese segment",
+          "coordinates": [
+            -59.810717,
+            3.38076005
+          ],
+          "coordinate_method": "Directly inspected OSM way/538576946 mean of geometry vertices; XML sha256 f0cc74d1003dc4f3aafd4f06905c4e81d8b20403b7de97c087dd252990dafe24",
+          "precision": "Bridge-segment representative, approximately 200 m",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/538576946/full"
+          ],
+          "evidence_note": "Named two-lane primary road bridge; representative of Lethem–Bonfim international road crossing, Guyanese bridge segment. Not the Bonfim protest/fiscal-post obstruction."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Guyana's restricted ordinary-travel regime at Lethem–Bonfim, ending here at added Friday personal-travel access; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "policy_period",
+        "start_earliest": "2020-03-01",
+        "start_latest": "2020-03-27",
+        "end_earliest": "2021-10-01",
+        "end_latest": "2021-10-01",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

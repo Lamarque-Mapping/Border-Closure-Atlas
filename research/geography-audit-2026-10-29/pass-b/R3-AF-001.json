@@ -3,7 +3,7 @@
   "pass": "b",
   "agent": "geography_africa_middle_east_b",
   "review_date": "2026-10-29",
-  "verification_status": "unresolved",
+  "verification_status": "qualified",
   "record_scope_reconstruction": "Tchissanda–Kamako regular crossing and associated border-market restriction between Lunda Norte and Kasai. This is not the entire Angola–DRC frontier.",
   "source_checks": [
     {
@@ -26,14 +26,41 @@
       "finding": "Underlying GeoNames entry for a secondary gazetteer lead could not be opened. Secondary point alone is not accepted as independent verification.",
       "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-25.json",
       "evidence_sha256": "82c3d7f63bfe35d75fe7875d898bfa648930bfa7d9d6e5a9ba89cf5c88abb984"
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/map.json?bbox=20.862,-7.291,20.878,-7.28",
+      "access_status": "full_original_osm_json",
+      "finding": "Angolan immigration and foreigners-service building explicitly tagged government=border_control; adjacent DRC immigration building way 1040531112, named Chissanda residential area and Kamako locality independently inspected. This verifies the regular crossing area, not the whole market footprint. Inspected OSM tags: {\"building\": \"yes\", \"government\": \"border_control\", \"name\": \"Serviço de Migração e Estrangeiros (SME)\", \"office\": \"government\"}. Geographic evidence only; no historical restriction or current operational status inferred.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/18ed415a33142194eadf.json",
+      "evidence_sha256": "cdab70d801cb2eb3c804df2c4569ed4ce94f2c9685f7724dca75bb42c96101b8"
     }
   ],
   "phase_decisions": [
     {
       "phase_id": "R3-AF-001-D1",
       "category": "single_site",
-      "decision": "hold",
-      "sites": [],
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-tchissanda-kamako",
+          "name": "Tchissanda / Chissanda–Kamako road crossing",
+          "coordinates": [
+            20.8704773,
+            -7.2862631
+          ],
+          "coordinate_method": "Bounding-box centre of original OSM facility polygon from independently fetched API JSON",
+          "precision": "approximate facility area; not a surveyed historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/map.json?bbox=20.862,-7.291,20.878,-7.28",
+            "https://www.openstreetmap.org/way/555442136"
+          ],
+          "evidence_note": "Angolan immigration and foreigners-service building explicitly tagged government=border_control; adjacent DRC immigration building way 1040531112, named Chissanda residential area and Kamako locality independently inspected. This verifies the regular crossing area, not the whole market footprint. Inspected OSM tags: {\"building\": \"yes\", \"government\": \"border_control\", \"name\": \"Serviço de Migração e Estrangeiros (SME)\", \"office\": \"government\"}. Geographic evidence only; no historical restriction or current operational status inferred.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/18ed415a33142194eadf.json",
+          "evidence_sha256": "cdab70d801cb2eb3c804df2c4569ed4ce94f2c9685f7724dca75bb42c96101b8",
+          "osm_version": 2,
+          "osm_timestamp": "2022-03-15T13:43:37Z"
+        }
+      ],
       "border_reference_ids": [],
       "complete": false,
       "phase_applicability": "Tchissanda–Kamako regular crossing and associated border-market restriction between Lunda Norte and Kasai. This is not the entire Angola–DRC frontier. Current phase only: Formal regular-crossing/market restriction at Tchissanda–Kamako",
@@ -52,11 +79,11 @@
         "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
       },
       "unresolved": [
-        "Exact regular crossing/control point and market footprint remain unverified. Nearby Tchissanda locality and Kamako town centres are not substitutes."
+        "Regular crossing area is located, but the associated 2017 border-market footprint remains unverified."
       ]
     }
   ],
   "unresolved": [
-    "Exact regular crossing/control point and market footprint remain unverified. Nearby Tchissanda locality and Kamako town centres are not substitutes."
+    "Regular crossing area is located, but the associated 2017 border-market footprint remains unverified."
   ]
 }

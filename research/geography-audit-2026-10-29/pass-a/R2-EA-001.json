@@ -1,0 +1,73 @@
+{
+  "record_id": "R2-EA-001",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Adult worker departures via Nyaung Ben Dout local gate are distinct from the Thai BGF gate and principal Three Pagodas crossing. Schoolchildren exception and gate-specific reopening are retained.",
+  "source_checks": [
+    {
+      "url": "https://www.bnionline.net/en/news/three-pagoda-pass-thai-myanmar-border-reopened",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Full report identifies Nyaung Ben Dout reopening while Thai BGF concrete blocks remain; publication-day language must not override original Mon News chronology.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-29.json",
+      "sha256": "30ab3181a8ce98ffc4a4cb16850c25389218eec2acc8b2c2aeada4b6bd345289"
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/two-illegal-border-gates-three-pagodas-pass-closed",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Distinct BGF and Nyaung Ben Dout closures independently establish why a generic Three Pagodas marker would be misleading.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-31.json",
+      "sha256": "f3abe7e20c9a880b7db14fe2ac9e998228a7ba327c3aa8143f90eb139984bdb5"
+    },
+    {
+      "url": "https://www.irrawaddy.com/news/burma/myanmar-authorities-close-thai-border-1000s-unable-work-textile-factories.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://monnews.org/2020/03/03/three-pagoda-pass-thai-myanmar-border-reopened/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://monnews.org/2020/02/28/two-illegal-border-gates-in-three-pagodas-pass-closed/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EA-001-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Myanmar adult workers departing for Thailand through Nyaung Ben Dout",
+      "date_scope_check": {
+        "scope": "Myanmar adult workers departing for Thailand through Nyaung Ben Dout",
+        "start_earliest": "2020-02-26",
+        "start_latest": "2020-02-26",
+        "end_earliest": "2020-03-03",
+        "end_latest": "2020-03-03",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Geography applies only to the canonical scoped phase. Numeric date bounds and >24-hour flags are preserved; a sourced place does not establish continuity, a new start, a reopening, or extension past last confirmation."
+      },
+      "unresolved": [
+        "Exact Nyaung Ben Dout gate location not positively matched to a coordinate source. Generic Three Pagodas border-control node is rejected."
+      ]
+    }
+  ],
+  "unresolved": []
+}

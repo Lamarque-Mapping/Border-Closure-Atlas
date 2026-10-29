@@ -1,0 +1,240 @@
+{
+  "record_id": "R3-EU-004",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Four phases concern selective freight access to three road crossings, with two separate Dorohusk episodes. Checkpoint references identify affected routes, not exact inland protest barriers.",
+  "source_checks": [
+    {
+      "url": "https://www.gov.pl/web/infrastruktura/polscy-przewoznicy-zawieszaja-protesty-przed-drogowymi--przejsciami-granicznymi-z-ukraina",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Transport ministry names the three road protests begun November6 and suspended January16; suspension until March1 was planned, not independent evidence of later reopening.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-063.json"
+    },
+    {
+      "url": "https://www.gov.pl/web/gddkia-rzeszow/protest-na-granicy-polsko-ukrainskiej-w-korczowej",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Road authority places Korczowa protest on truck approach, with A4 mainline unaffected and humanitarian/live-animal exemptions.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-063.json"
+    },
+    {
+      "url": "https://mvs.gov.ua/en/news/rux-vantazivok-punktom-propusku-dorogusk-iagodin-vidnovleno-polski-perevizniki-zaversili-protest",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Interior ministry reports December11 14:00 Kyiv resumption at Dorohusk after first blockade.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-068.json"
+    },
+    {
+      "url": "https://www.pravda.com.ua/eng/news/2023/12/18/7433556/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "December18 report identifies renewed Dorohusk truck blockade several kilometres from checkpoint, with directional quotas and exemptions.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-068.json"
+    },
+    {
+      "url": "https://mapcarta.com/W504117408",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named road border station, not railway. Secondary page country/category metadata inconsistent; paired road identity supported by original Polish road-authority notice. Exact truck-approach blockade is outside the checkpoint and unlocated.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-067.json"
+    },
+    {
+      "url": "https://mapcarta.com/W147216458",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named paired road checkpoint on E372, distinct from separate rail station. Reference may fall on Ukrainian facility side; Polish approach blockade not located.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-067.json"
+    },
+    {
+      "url": "https://mapcarta.com/W83894710",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named road border station rather than rail crossing. Exact Polish protest location several kilometres away is not represented; inconsistent page regional categorization not used as authority.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-066.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EU-004-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-korczowa-road-reference",
+          "name": "Korczowa road checkpoint reference",
+          "coordinates": [
+            23.11146,
+            49.95554
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 504117408; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W504117408",
+            "https://www.openstreetmap.org/way/504117408"
+          ],
+          "evidence_note": "Named road border station, not railway. Secondary page country/category metadata inconsistent; paired road identity supported by original Polish road-authority notice. Exact truck-approach blockade is outside the checkpoint and unlocated.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-067.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Selective commercial-freight approach blockade at Korczowa only",
+      "date_scope_check": {
+        "start_earliest": "2023-11-06",
+        "start_latest": "2023-11-06",
+        "end_earliest": "2024-01-16",
+        "end_latest": "2024-01-16",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact Polish-side approach protest footprint is unlocated; checkpoint is route reference only."
+      ]
+    },
+    {
+      "phase_id": "R3-EU-004-R1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-hrebenne-road-reference",
+          "name": "Hrebenne–Rava-Ruska road checkpoint reference",
+          "coordinates": [
+            23.58862,
+            50.27635
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 147216458; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W147216458",
+            "https://www.openstreetmap.org/way/147216458"
+          ],
+          "evidence_note": "Named paired road checkpoint on E372, distinct from separate rail station. Reference may fall on Ukrainian facility side; Polish approach blockade not located.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-067.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Commercial-freight access at Hrebenne–Rava-Ruska",
+      "date_scope_check": {
+        "start_earliest": "2023-11-06",
+        "start_latest": "2023-11-06",
+        "end_earliest": "2024-01-16",
+        "end_latest": "2024-01-16",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact Polish-side approach protest footprint is unlocated; checkpoint is route reference only."
+      ]
+    },
+    {
+      "phase_id": "R3-EU-004-R2",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-dorohusk-road-reference",
+          "name": "Dorohusk–Yahodyn road checkpoint reference",
+          "coordinates": [
+            23.80362,
+            51.18167
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 83894710; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W83894710",
+            "https://www.openstreetmap.org/way/83894710"
+          ],
+          "evidence_note": "Named road border station rather than rail crossing. Exact Polish protest location several kilometres away is not represented; inconsistent page regional categorization not used as authority.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-066.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Commercial-freight access at Dorohusk–Yahodyn",
+      "date_scope_check": {
+        "start_earliest": "2023-11-06",
+        "start_latest": "2023-11-06",
+        "end_earliest": "2023-12-11",
+        "end_latest": "2023-12-11",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact Polish-side approach protest footprint is unlocated; checkpoint is route reference only."
+      ]
+    },
+    {
+      "phase_id": "R3-EU-004-R3",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-dorohusk-road-reference",
+          "name": "Dorohusk–Yahodyn road checkpoint reference",
+          "coordinates": [
+            23.80362,
+            51.18167
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 83894710; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W83894710",
+            "https://www.openstreetmap.org/way/83894710"
+          ],
+          "evidence_note": "Named road border station rather than rail crossing. Exact Polish protest location several kilometres away is not represented; inconsistent page regional categorization not used as authority.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-066.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Commercial-freight access at Dorohusk–Yahodyn",
+      "date_scope_check": {
+        "start_earliest": "2023-12-18",
+        "start_latest": "2023-12-18",
+        "end_earliest": "2024-01-16",
+        "end_latest": "2024-01-16",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact Polish-side approach protest footprint is unlocated; checkpoint is route reference only."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "b795f3b13fbde472fdde056c54889456c88ecb8b5fc000a2a766f1bd2071eba3"
+}

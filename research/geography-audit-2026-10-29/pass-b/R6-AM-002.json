@@ -1,0 +1,58 @@
+{
+  "record_id": "R6-AM-002",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Haitian-side passenger rule on Dominican land frontier, with goods exception. Canonical phase identifies four formal posts (Malpasse, Belladère, Ouanaminthe, Anse-à-Pitre); current retrieved reports confirm national rule and formal return permission but do not individually geolocate all four.",
+  "source_checks": [
+    {
+      "url": "https://eldia.com.do/haiti-cierra-su-frontera-con-rd-por-coronavirus-arrecian-medidas/",
+      "access_status": "full_retrieved",
+      "finding": "El Día specifies Haiti closure with merchandise transport/limited crew exception."
+    },
+    {
+      "url": "https://rnhaiti.com/2020/07/02/le-president-jovenel-moise-annonce-la-reprise-graduelle-des-activites-sur-le-territoire/",
+      "access_status": "inaccessible",
+      "finding": "Original Radio Nationale URL inaccessible."
+    },
+    {
+      "url": "https://www.exteriores.gob.es/Embajadas/puertoprincipe/es/Comunicacion/Noticias/Paginas/Articulos/Suspensi%C3%B3n-vuelos-desde-Hait%C3%AD.aspx",
+      "access_status": "inaccessible",
+      "finding": "Spanish Embassy original URL returns403."
+    },
+    {
+      "url": "https://www.diariolibre.com/actualidad/la-republica-dominicana-mantiene-las-restricciones-en-frontera-con-haiti-EE19847113",
+      "access_status": "full_retrieved",
+      "finding": "Diario Libre July1 distinguishes Haitian formal reopening from continued Dominican restrictions; no bilateral operational reopening inferred."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-AM-002-D1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Haitian-side passenger restriction at Malpasse, Belladere, Ouanaminthe and Anse-a-Pitre; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "policy_period",
+        "start_earliest": "2020-03-16",
+        "start_latest": "2020-03-17",
+        "end_earliest": "2020-06-30",
+        "end_latest": "2020-06-30",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Four formal crossing coordinates and individual mode/inspection-side identities unverified; mapping whole frontier would broaden canonical named-site phase."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Four formal crossing coordinates and individual mode/inspection-side identities unverified; mapping whole frontier would broaden canonical named-site phase."
+  ]
+}

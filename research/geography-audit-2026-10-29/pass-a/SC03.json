@@ -1,0 +1,99 @@
+{
+  "record_id": "SC03",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Three named road crossings, Kasumbalesa, Mokambo and Sakania; formal Zambian precautionary closure and joint permission to reopen, not a whole DRC frontier or verified railway suspension.",
+  "source_checks": [
+    {
+      "url": "https://www.aa.com.tr/en/africa/zambia-democratic-republic-of-congo-agree-to-reopen-borders-tuesday/3302211",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Communique account names all three gates and Tuesday reopening agreement; no observation of passage at all three.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-1.json"
+    },
+    {
+      "url": "https://nxt.l2b.co.za/projects/mokombo-border-post-upgrade-zambia/37170",
+      "access_status": "fresh_search_extract_inspected",
+      "finding": "Published border-post GPS coordinates identify Mokambo road facility.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-6.json"
+    },
+    {
+      "url": "https://nrfa.org.zm/tolling-footprint-reaches-mokambo-border-post/",
+      "access_status": "fresh_search_extract_inspected",
+      "finding": "Road agency identifies the Mokambo road crossing near Mufulira.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-6.json"
+    },
+    {
+      "url": "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+      "access_status": "cached_original_text_extract_inspected",
+      "finding": "Appendix A independently identifies S17 Kasumbalesa and its published coordinates. PDF binary truncated; no rendered-page claim.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/pida-original-text.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SC03-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "existing_site_id": "post-kasumbalesa",
+          "name": "Kasumbalesa road border crossing",
+          "coordinates": [
+            27.79587,
+            -12.26492
+          ],
+          "coordinate_method": "Coordinate row transcribed from independently inspected cached original AU-PIDA report text extraction, Appendix A.",
+          "precision": "Illustrative border crossing area, approximately 1 km; not an exact 2024 gate.",
+          "source_urls": [
+            "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "Published row S17 Kasumbalesa; latitude -12.26492, longitude 27.79587. Preserved original text was inspected; cached PDF binary is truncated and could not be rendered, so this is not fresh full-PDF visual verification. Illustrative location only.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/pida-original-text.txt",
+          "evidence_sha256": "98451216c05eab194ec577670f81979a7944ee5560d41e0ea9c43eb94d347983"
+        },
+        {
+          "proposed_site_id": "post-mokambo",
+          "name": "Mokambo road border post",
+          "coordinates": [
+            28.3411715,
+            -12.4356359
+          ],
+          "coordinate_method": "Transcribed published GPS coordinate for border-post infrastructure upgrade, corroborated with NRFA identification of the Mufulira road entry.",
+          "precision": "Approximately 500 m crossing area; infrastructure-project reference, not the August 2024 barrier.",
+          "source_urls": [
+            "https://nxt.l2b.co.za/projects/mokombo-border-post-upgrade-zambia/37170",
+            "https://nrfa.org.zm/tolling-footprint-reaches-mokambo-border-post/"
+          ],
+          "evidence_note": "L2B identifies the road border post and explicitly gives latitude/longitude. NRFA identifies this post as the road entry about 20 km from Mufulira. Nearby Mokambo railway station is not used.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-6.json"
+        },
+        {
+          "proposed_site_id": "post-sakania",
+          "name": "Sakania / Lukangaba road border customs office",
+          "coordinates": [
+            28.5408808,
+            -12.8546611
+          ],
+          "coordinate_method": "Coordinates transcribed from independently inspected cached original OSM node XML.",
+          "precision": "Approximately 500 m crossing area; not a surveyed historical barrier or blockade footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/11071097105"
+          ],
+          "evidence_note": "Cached original OSM node 11071097105, version 2, timestamp 2025-03-25T10:19:20Z; tags {\"alt_name\": \"Poste Frontière de Lukangaba\", \"government\": \"customs\", \"name\": \"Poste Frontière de Sakania\", \"name:en\": \"Sakania Border Office\", \"office\": \"government\"}. Reference geography only; closure scope is independently reconstructed from historical sources.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/9ad1a66c5914d70c.raw",
+          "evidence_sha256": "22e0e087f85c92911c0300c5321bf8c73f7b90f120d759eb956058785b5e5189"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Modal scope: multiple_sites. All three named road crossing areas for the formal August 10–13 policy phase only; actual all-post traffic restoration is not inferred.",
+      "unresolved": [
+        "Sakania road customs office locates the crossing area, not the separate railway facility."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"policy_period\", \"start_earliest\": \"2024-08-10\", \"start_latest\": \"2024-08-10\", \"end_earliest\": \"2024-08-13\", \"end_latest\": \"2024-08-13\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: Formal policy dates only. DW's morning Kasumbalesa report does not verify first passage at every post, and 06:00 was an expected time. Actual all-three-post restoration remains unestablished."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

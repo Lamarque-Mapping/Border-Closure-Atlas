@@ -1,0 +1,79 @@
+{
+  "record_id": "REC50-R26-004",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Two named customs/control offices, Karombo and Goli/Anzida, in the Mahagi border area. The peace appeal closed these offices; a separate RN27 barricade near Mahagi is not either customs office.",
+  "source_checks": [
+    {
+      "url": "https://7sur7.cd/2020/05/14/ituri-insecurite-les-activites-douanieres-larret-au-poste-frontalier-de-mahagi-pour",
+      "access_status": "full_text_web",
+      "finding": "Full original May 14, 2020 report explicitly says Karombo and Goli/Anzida customs and control offices stopped activity in response to the peace appeal. It separately describes the RN27 road barricade.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-30.json",
+      "evidence_sha256": "75402f19430ac612c5cd52888397acf866d1ef29569358f7f6404f8a7d9537e7"
+    },
+    {
+      "url": "https://buniaactualite.cd/mahagi-montee-en-fleche-des-recettes-douanieres-au-poste-de-la-dgda-karombo/",
+      "access_status": "indexed_source_excerpt",
+      "finding": "Original indexed article identifies the DGDA Karombo customs post in Mahagi territory, but supplies no precise checkpoint coordinate.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-34.json",
+      "evidence_sha256": "b916e01c5fee546278b86831eba0dbc2fefce724e684adf34906a1933158c873"
+    },
+    {
+      "url": "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+      "access_status": "full_text_pdf_fresh_fetch",
+      "finding": "Independently inspected Appendix A E41, which names Goli and gives its illustrative crossing-area coordinates. This locates Goli only, not Karombo.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/25782abcef016f49e77a.pdf",
+      "evidence_sha256": "35e1b5d512bfc882baf263b1abe002d0c99331d0b2b8e08fcb0f354ab504cbed"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R26-004-P1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-goli-anzida",
+          "name": "Goli / Anzida customs crossing",
+          "coordinates": [
+            31.02969,
+            2.37673
+          ],
+          "coordinate_method": "Published AU-PIDA illustrative border-post coordinate, independently read in original report Appendix A",
+          "precision": "approximate crossing area; illustrative published marker, not surveyed gate",
+          "source_urls": [
+            "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "Appendix A, E41, printed page 80; longitude/latitude transcribed in lon,lat order. Report identifies crossing name but does not establish historic operation or exact obstruction.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/25782abcef016f49e77a.pdf",
+          "evidence_sha256": "35e1b5d512bfc882baf263b1abe002d0c99331d0b2b8e08fcb0f354ab504cbed"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Two named customs/control offices, Karombo and Goli/Anzida, in the Mahagi border area. The peace appeal closed these offices; a separate RN27 barricade near Mahagi is not either customs office. Current phase only: Karombo and Goli/Anzida customs and control offices closed in response to a civil-society peace appeal.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2020-05-14",
+        "end_latest": "2020-05-14",
+        "last_confirmed": "2020-05-14",
+        "endpoint_status": "last_confirmed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "The full May 14, 2020 account names closed DGDA and OCC offices. A local rights advocate also reports no entry or exit and says only intelligence services were operating; this is an attributed claim, not independently verified universal passenger or vehicle denial. Later evidence matches Karombo DGDA activity and subsequently customs offices at both posts, without separately verifying every OCC function. No continuous May 2020–December 2021 stoppage or exact first reopening is inferred. The December 2021 Okapi report was available as substantive indexed text; its direct retrieval failed.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Goli/Anzida crossing area is located. Exact Karombo control-office geography remains unresolved; Mahagi town and the nearby RN27 protest are not substitutes."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Goli/Anzida crossing area is located. Exact Karombo control-office geography remains unresolved; Mahagi town and the nearby RN27 protest are not substitutes."
+  ]
+}

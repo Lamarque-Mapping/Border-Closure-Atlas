@@ -1,0 +1,55 @@
+{
+  "record_id": "R15-AN-001",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Northern Togo–Ghana frontier used by people leaving Mango for the Chereponi area during the 2017 unrest. Reporting describes bush routes and a temporary frontier closure without naming a regular crossing or defining the closed segment.",
+  "source_checks": [
+    {
+      "url": "https://togoactualite.com/togolais-fuient-ghana-repression-regime-de-faure-gnassingbe/",
+      "access_status": "full_text_web",
+      "finding": "Full article reproducing the November 2017 Le Monde field report describes departures from Mango, Chereponi reception, bush routes and a temporarily closed frontier. No named gate or boundary endpoints are supplied.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-34.json",
+      "evidence_sha256": "e04b146531b628b1b84c5155d356f5cdf0dae4008547403b9f3c8ef531ec0198"
+    },
+    {
+      "url": "https://information.tv5monde.com/afrique/reportage-au-ghana-chereponi-le-village-des-exiles-de-la-crise-togolaise-27727",
+      "access_status": "full_text_web",
+      "finding": "Original field report identifies Chereponi and refugees from Mango using informal routes; it does not identify the regular crossing affected.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-30.json",
+      "evidence_sha256": "75402f19430ac612c5cd52888397acf866d1ef29569358f7f6404f8a7d9537e7"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R15-AN-001-NP1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Northern Togo–Ghana frontier used by people leaving Mango for the Chereponi area during the 2017 unrest. Reporting describes bush routes and a temporary frontier closure without naming a regular crossing or defining the closed segment. Current phase only: Northern Togo–Ghana frontier near Mango/Chereponi",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2017-11-12",
+        "end_latest": "2017-11-12",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "R15-AN-001-NP1: November 12, 2017 is a relative-date normalization of the reported Sunday reopening. The Togo Actualite reprint and Le Monde archive independently establish the same November 17 publication date and matching author/title; the original Le Monde article body was not separately retrieved. The record concerns the northern frontier near Mango/Chereponi, not Aflao or the entire national border.\n\nOriginal closure onset, named gate, affected categories and official closure motive remain unresolved. Unrest and refugee flight supply context only. Informal crossings reported by TV5Monde do not establish official gate access or a complete physical seal. No earlier continuous interval or numeric duration is calculated.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Exact northern frontier segment and any regular crossing facility remain unresolved. Mango and Chereponi town coordinates are not crossing coordinates; the evidence does not justify the whole Ghana–Togo frontier."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact northern frontier segment and any regular crossing facility remain unresolved. Mango and Chereponi town coordinates are not crossing coordinates; the evidence does not justify the whole Ghana–Togo frontier."
+  ]
+}

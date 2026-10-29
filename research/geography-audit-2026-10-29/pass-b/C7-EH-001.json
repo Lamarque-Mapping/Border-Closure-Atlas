@@ -1,0 +1,82 @@
+{
+  "record_id": "C7-EH-001",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Laffa/Al Laffa road crossing opposite Talatasher on the Sudan–Eritrea frontier, for the reported November 2023 suspension of Sudanese entry into Eritrea.",
+  "source_checks": [
+    {
+      "url": "https://www.dabangasudan.org/en/all-news/article/ten-killed-and-over-6000-displaced-in-south-darfur",
+      "access_status": "full_text_web",
+      "finding": "Original article names Laffa and Eritrea’s suspension of Sudanese entry owing to overcrowding. Its separate Gallabat–Ethiopia goods restriction is not assigned to this crossing.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-30.json",
+      "evidence_sha256": "75402f19430ac612c5cd52888397acf866d1ef29569358f7f6404f8a7d9537e7"
+    },
+    {
+      "url": "https://www.unhcr.org/news/eritreans-stream-home-ahead-rainy-season",
+      "access_status": "indexed_source_excerpt_full_page_inaccessible",
+      "finding": "UNHCR indexed article describes departure formalities at Laffa and transfer at the Eritrean checkpoint in 2004. The full-page attempt returned HTTP 429; the indexed passage verifies paired crossing identity, not the 2023 restriction.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-36.json",
+      "evidence_sha256": "1060b190e479916eb995a7a89624241bee041b9e734347e09cb411f6a25a7c00"
+    },
+    {
+      "url": "https://www.globalsecurity.org/military/library/news/2003/06/mil-030625-irin08.htm",
+      "access_status": "indexed_preserved_article_excerpt",
+      "finding": "Preserved IRIN report explicitly identifies Laffa on the Sudanese side and Talatasher on the Eritrean side of the return corridor.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-36.json",
+      "evidence_sha256": "1060b190e479916eb995a7a89624241bee041b9e734347e09cb411f6a25a7c00"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "C7-EH-001-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-laffa-talatasher",
+          "name": "Laffa / Talatasher crossing",
+          "coordinates": [
+            36.4903083,
+            15.2139827
+          ],
+          "coordinate_method": "Original OSM node coordinate from independently fetched API JSON",
+          "precision": "approximate crossing facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/map.json?bbox=36.48,15.20,36.50,15.23",
+            "https://www.openstreetmap.org/node/11502634715"
+          ],
+          "evidence_note": "Original extract shows control nodes between named Al-Laffa and Talatasher settlements on the Al Lafa Road corridor and the Eritrea–Sudan boundary. UNHCR independently identifies the Laffa departure formalities and Eritrean transfer checkpoint. This is distinct from Aligider/Tesseney town markers. Inspected OSM tags: {\"barrier\": \"border_control\"}. Geographic evidence only; no historical restriction or current operational status inferred.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/272e1d681b1e0b943807.json",
+          "evidence_sha256": "800bacd753574b670fe100cd63839460cb9df249f2a97e47995075737404dde5",
+          "osm_version": 1,
+          "osm_timestamp": "2024-01-09T08:41:49Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Laffa/Al Laffa road crossing opposite Talatasher on the Sudan–Eritrea frontier, for the reported November 2023 suspension of Sudanese entry into Eritrea. Current phase only: Reported Eritrean suspension of Sudanese entry at Laffa",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2023-11-20",
+        "end_latest": "2023-11-20",
+        "last_confirmed": "2023-11-20",
+        "endpoint_status": "last_confirmed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Observation date only. Neither initial enforcement nor lifting recovered. Gallabat’s Sunday onset is not borrowed, and the two Dabanga language versions are not independent origins. No all-traffic or continuous-duration inference. R37 endpoint check: December 2023 trade-opening preparations are prospective, the September Sudan-side reopening order predates this episode, and later movements into Sudan run in the opposite direction. None establishes restored Sudanese admission to Eritrea.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "The marker locates the paired road-control area; the precise Eritrean immigration desk responsible for the 2023 decision is not identified. Aligider/Tesseney town markers are not substituted."
+      ]
+    }
+  ],
+  "unresolved": [
+    "The marker locates the paired road-control area; the precise Eritrean immigration desk responsible for the 2023 decision is not identified. Aligider/Tesseney town markers are not substituted."
+  ]
+}
