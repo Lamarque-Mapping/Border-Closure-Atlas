@@ -1,0 +1,69 @@
+{
+  "record_id": "NA004",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Guerguerat road through the approximately5km disputed Western Sahara buffer strip toward Mauritania; customs-area marker only partially represents road blockade.",
+  "source_checks": [
+    {
+      "url": "https://www.lavanguardia.com/internacional/20201114/49465098707/se-retoma-el-trafico-de-camiones-entre-el-sahara-occidental-y-mauritania.html?facet=amp",
+      "access_status": "full_text_web",
+      "finding": "EFE on-site report describes resumed trucks in both directions, 5km strip between Moroccan customs and Mauritania frontier, trucks near northern customs and Birguendouz.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-17.json",
+      "evidence_sha256": "ae7d78b909b8ec9a00fffb5d9dd336426b2b558500d9c46ed198b5922b480e2c"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NA004-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-guerguerat-road",
+          "name": "Guerguerat road crossing complex",
+          "coordinates": [
+            -16.9604374,
+            21.3627343
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/2577090295",
+            "https://www.openstreetmap.org/api/0.6/node/2577090295",
+            "https://www.openstreetmap.org/api/0.6/map?bbox=-16.965,21.357,-16.95,21.371"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\", \"motorcar\": \"yes\", \"motorcycle\": \"yes\"}. This is geographic evidence only, not historical closure evidence. Node is within named Poste Frontiere El Guerguarat complex with customs and borderpolice; represented without sovereignty determination. Exact buffer-strip blockade is separate.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/336e0554be17be3e7ab4.html",
+          "evidence_sha256": "ec389cf6854f1c1deafd5d795f6f4958c2adc5f180a63a82bc3857c76004c096",
+          "osm_version": "4",
+          "osm_timestamp": "2023-11-23T20:39:33Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Guerguerat road through the approximately5km disputed Western Sahara buffer strip toward Mauritania; customs-area marker only partially represents road blockade. Current phase only: Road through the disputed Western Sahara buffer strip to Mauritania; civilian and commercial traffic was obstructed, with the endpoint specifically supported by restored truck traffic in both directions.",
+      "date_scope_check": {
+        "start_earliest": "2020-10-21",
+        "start_latest": "2020-10-21",
+        "end_earliest": "2020-11-14",
+        "end_latest": "2020-11-14",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "NA004-D1: UN/MINURSO independently reported civilian obstruction on October 21. AFP and EFE report truck traffic restored on November 14, with EFE specifying both directions. A separately observed first passenger movement is not established. Polisario’s own contemporary position is documented in its letter circulated as UN document S/2020/1048; circulation does not make that party’s legal and political claims UN findings. Attribution does not establish every protester’s affiliation or motivation.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Road obstruction/earthworks extent within disputed buffer strip not separately positioned. Crossing marker is partial; no entire-frontier substitute or sovereignty inference."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Road obstruction/earthworks extent within disputed buffer strip not separately positioned. Crossing marker is partial; no entire-frontier substitute or sovereignty inference."
+  ]
+}

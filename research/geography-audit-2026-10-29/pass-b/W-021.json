@@ -1,0 +1,48 @@
+{
+  "record_id": "W-021",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Unspecified partial Guinea-Bissau–Senegal frontier closure nearMedinaGounass after communalclashes.",
+  "source_checks": [
+    {
+      "url": "https://www.channelstv.com/2024/06/19/guinea-bissau-part-closes-senegal-border-over-clashes/",
+      "access_status": "full_text_web",
+      "finding": "AFP interview directlyquotes decision toclose thispartofborder afterreinforcements; no namedposts or segmentendpoints.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-19.json",
+      "evidence_sha256": "523b22fc934a509bf5a951d696838b268ee5cd14ef55f1ca06188ea0f3fc7509"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "W-021-FU1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Unspecified partial Guinea-Bissau–Senegal frontier closure nearMedinaGounass after communalclashes. Current phase only: Unspecified part of Guinea-Bissau–Senegal border near Medina Gounass; exact posts unknown",
+      "date_scope_check": {
+        "start_earliest": "2024-06-17",
+        "start_latest": "2024-06-19",
+        "end_earliest": "2024-06-19",
+        "end_latest": "2024-06-19",
+        "last_confirmed": "2024-06-19",
+        "endpoint_status": "last_confirmed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "W-021-FU1: The order followed June 17 clashes and was reported as enforced by June 19, giving onset bounds only. Xinhua dates the order to Wednesday June 19; AFP’s wording retrospectively links the decision to Monday’s violence. The president attributed it to preventing reinforcements and further violence. Exact posts and wider traffic scope remain unidentified. No matched reopening or gate-level evidence was recovered. June 19 is a dated official-confirmation observation, not proof of an indefinite continuing restriction or a complete duration.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Exactpartofthefrontier and postsnotidentified; towncentroid orfull300kmfrontier wouldoverstate scope."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exactpartofthefrontier and postsnotidentified; towncentroid orfull300kmfrontier wouldoverstate scope."
+  ]
+}

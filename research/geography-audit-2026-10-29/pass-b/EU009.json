@@ -1,0 +1,214 @@
+{
+  "record_id": "EU009",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Four separate temporal phases at same two roadposts, Medininkai andŠalčininkai. Alltraffic, exceptionqualifiedordinaryroad andolderpedestrianrestrictions differ.",
+  "source_checks": [
+    {
+      "url": "https://sumin.lrv.lt/en/news/the-salcininkai-and-medininkai-border-checkpoints-with-belarus-are-being-closed-for-one-month-Q0kK/",
+      "access_status": "full_text_web",
+      "finding": "30Oct ministry identifiesfullŠalčininkaisuspension andMedininkaiexceptions, notuniversal closure.",
+      "direct_fetch_status": "inaccessible"
+    },
+    {
+      "url": "https://lrv.lt/en/news/government-reopens-the-salcininkai-and-medininkai-border-crossing-points-with-belarus-BJy6/",
+      "access_status": "full_text_web",
+      "finding": "19Nov government states20Nov00:00resumption, vehicleonly, ending additionalordinaryroadrestriction.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/82be418598893cc5f4df.raw",
+      "sha256": "684ea52141f85c929e4f8ae037f204f9abf0fec30e7404acec2e2ce255e24c72"
+    },
+    {
+      "url": "https://vrm.lrv.lt/en/news/salcininkai-border-checkpoint-closes-only-certain-travelers-allowed-through-medininkai-5cYH/",
+      "access_status": "full_text_web",
+      "finding": "27Oct ministry says bothclosed Sundayevening26Oct, Medininkaiexemptcategories stillpossible.",
+      "direct_fetch_status": "inaccessible"
+    },
+    {
+      "url": "https://vsat.lrv.lt/lt/naujienos/penktadienio-vakare-uzdaryti-medininku-ir-salcininku-pasienio-kontroles-punktai-JaT/",
+      "access_status": "full_text_web",
+      "finding": "VSAT24Oct records21:30suspensionbothposts andrecalls22Oct02:30–09:00 distinctclosure.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/19c828a13aa71584f2f2.raw",
+      "sha256": "55c24d5702201f5bb243491be0899a76f9a5f79dbd8c8fec16e83a76a57a1be9"
+    },
+    {
+      "url": "https://vsat.lrv.lt/lt/naujienos/eismas-per-medininku-ir-salcininku-pasienio-kontroles-punktus-atnaujintas-foto-Huz/",
+      "access_status": "full_text_web",
+      "finding": "VSAT25Oct statesnoon resumptionbothposts after24Oct21:30 suspension.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/85aa04cbd380ffb535ff.raw",
+      "sha256": "c3b50cf6930f6bc7a3e3498801368d7245fff03e9589bab22cd9c6234ffd4243"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU009-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-medininkai-kamenny-log",
+          "name": "Medininkai–Kamenny Log road crossing",
+          "coordinates": [
+            25.693,
+            54.54644
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/W332001950",
+            "https://www.openstreetmap.org/way/332001950"
+          ],
+          "evidence_note": "Named customs commercial compound, passenger and TIR checkpoint nodes120–140m west. PKPD official Pasieniečių26 address and EU listing identify pair. Covers road post generally, not individual pedestrian lane."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Medininkai only; Šalčininkai unlocated. Preserve phase-specific exceptions.",
+      "date_scope_check": "30Oct–20Nov additionalrestriction;20Novcars-only resumption.",
+      "canonical_dates": {
+        "kind": "closed_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2025-10-30",
+        "start_latest": "2025-10-30",
+        "end_earliest": "2025-11-20",
+        "end_latest": "2025-11-20",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "EU009-R1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-medininkai-kamenny-log",
+          "name": "Medininkai–Kamenny Log road crossing",
+          "coordinates": [
+            25.693,
+            54.54644
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/W332001950",
+            "https://www.openstreetmap.org/way/332001950"
+          ],
+          "evidence_note": "Named customs commercial compound, passenger and TIR checkpoint nodes120–140m west. PKPD official Pasieniečių26 address and EU listing identify pair. Covers road post generally, not individual pedestrian lane."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Medininkai only; Šalčininkai unlocated. Preserve phase-specific exceptions.",
+      "date_scope_check": "22Oct02:30–09:00 single-dayclosure; shortduration remains eligibleforAllview.",
+      "canonical_dates": {
+        "kind": "same_day",
+        "measure_type": "operational_spell",
+        "start_earliest": "2025-10-22",
+        "start_latest": "2025-10-22",
+        "end_earliest": "2025-10-22",
+        "end_latest": "2025-10-22",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "same_day_no_elapsed_duration",
+        "policy_only": false
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "EU009-R2",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-medininkai-kamenny-log",
+          "name": "Medininkai–Kamenny Log road crossing",
+          "coordinates": [
+            25.693,
+            54.54644
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/W332001950",
+            "https://www.openstreetmap.org/way/332001950"
+          ],
+          "evidence_note": "Named customs commercial compound, passenger and TIR checkpoint nodes120–140m west. PKPD official Pasieniečių26 address and EU listing identify pair. Covers road post generally, not individual pedestrian lane."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Medininkai only; Šalčininkai unlocated. Preserve phase-specific exceptions.",
+      "date_scope_check": "26OctSundayevening to30Oct formalphase, qualifiedMedininkai exceptions.",
+      "canonical_dates": {
+        "kind": "closed_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2025-10-26",
+        "start_latest": "2025-10-26",
+        "end_earliest": "2025-10-30",
+        "end_latest": "2025-10-30",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "EU009-R3",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-medininkai-kamenny-log",
+          "name": "Medininkai–Kamenny Log road crossing",
+          "coordinates": [
+            25.693,
+            54.54644
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/W332001950",
+            "https://www.openstreetmap.org/way/332001950"
+          ],
+          "evidence_note": "Named customs commercial compound, passenger and TIR checkpoint nodes120–140m west. PKPD official Pasieniečių26 address and EU listing identify pair. Covers road post generally, not individual pedestrian lane."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Medininkai only; Šalčininkai unlocated. Preserve phase-specific exceptions.",
+      "date_scope_check": "24Oct21:30to25Oct12:00 separateclosure, notmergedwith22or26Oct.",
+      "canonical_dates": {
+        "kind": "closed_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2025-10-24",
+        "start_latest": "2025-10-24",
+        "end_earliest": "2025-10-25",
+        "end_latest": "2025-10-25",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "no_numeric_duration",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [
+    "Šalčininkai exactcheckpoint coordinate notestablished; town anddistrict-controlpoints rejected."
+  ],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/EU009.json",
+  "canonical_input_sha256": "84f5cf82a56d74fbd27f8ea5b1bdd3cbe3a6bffbadf23652cc3e0119812f57db",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

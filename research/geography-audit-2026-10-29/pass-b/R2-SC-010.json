@@ -1,0 +1,90 @@
+{
+  "record_id": "R2-SC-010",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "KaraSuu–Qorasuv checkpointpedestrianpassage forKyrgyz/Uzbekcitizens only; notvehicles,cargo orDostuk. Fourteen-yearclosurestartbounds/motiveremainqualified;September12 actualpedestrianrestoration.",
+  "source_checks": [
+    {
+      "url": "https://www.azattyqasia.org/a/na-kyrgyzsko-uzbekskoy-granitse-otkrylsya-ne-rabotavshiy-s-2010-goda-punkt-propuska-kara-suu-/33117033.html",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "ReporterobservesKaraSuuandoppositeQoraSuv reopeningSeptember12 after14years.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r2-2.json",
+      "sha256": "2a8668e3f182de7df5bc67c0194ec5e63f65880f1d642611e17fb667b0fb18eb"
+    },
+    {
+      "url": "https://economist.kg/society/2024/09/12/obnovliennyi-punkt-propuska-kara-suu-budiet-rabotat-tolko-dniem-poghranichnaia-sluzhba/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "BorderService expresslylimits todaytimebilateralcitizens;vehiclesanimalscargoexceptpersonalitemsprohibited.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r2-2.json",
+      "sha256": "2a8668e3f182de7df5bc67c0194ec5e63f65880f1d642611e17fb667b0fb18eb"
+    },
+    {
+      "url": "https://www.gov.kg/ru/post/s/24530-kyrgyzstan-menen-ozbekstandyn-mamlekettik-cek-arasyndagy-kara-suu-unaazol-kozomoldoo-otkoruu-punktu-kairadan-iske-kirgizildi",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "CabinetreopeningstatementidentifiesKaraSuu roadcategorypost.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-18.json",
+      "sha256": "d129d24ae4046e115d173db2fa701344daa14f8f20dba29bdc6111c14fa26192"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=72.88,40.71,72.9,40.735",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "NamedKaraSuu bordernode andoppositeQorasuvnodes inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d1510b576f68acb30173.xml",
+      "sha256": "22cab07e8eb485d503f86368104447b6a45d4ecdff2cc9540fce4ffe4086c1ef",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d1510b576f68acb30173.txt",
+      "text_sha256": "22cab07e8eb485d503f86368104447b6a45d4ecdff2cc9540fce4ffe4086c1ef",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-SC-010-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kara-suu-pedestrian",
+          "name": "Kara-Suu–Qorasuv pedestrian checkpoint",
+          "coordinates": [
+            72.8931531,
+            40.7176133
+          ],
+          "coordinate_method": "Fresh OSM bbox XML, explicitly named border_control node1864595511",
+          "precision": "Checkpoint-area reference within100m; not original2010 barrier survey",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/map?bbox=72.88,40.71,72.9,40.735",
+            "https://www.openstreetmap.org/node/1864595511"
+          ],
+          "evidence_note": "ExplicitKaraSuuBorderCrossing name and source tag to2024reopening report; Qorasuvcontrols nearby north. Government andBorderService distinguish pedestrianbilateral citizens fromDostuk andvehicles.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d1510b576f68acb30173.xml",
+          "sha256": "22cab07e8eb485d503f86368104447b6a45d4ecdff2cc9540fce4ffe4086c1ef"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "KaraSuu–Qorasuv checkpointpedestrianpassage forKyrgyz/Uzbekcitizens only; notvehicles,cargo orDostuk. Fourteen-yearclosurestartbounds/motiveremainqualified;September12 actualpedestrianrestoration.",
+      "date_scope_check": {
+        "start_earliest": "2010-02-06",
+        "start_latest": "2010-03-01",
+        "end_earliest": "2024-09-12",
+        "end_latest": "2024-09-12",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Onset bound covers an evolving returnee exception, not one exact universal closure instant. Fourteen/fifteen-year rounded conflict retained. Endpoint only daytime bilateral-citizen pedestrians. Alleged renovation was not observed at March 4 visit; original motive remains contested."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "35ff829681505d039b5769546759aeeedaa750ede32e17ee94952e06ab9ee62b",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

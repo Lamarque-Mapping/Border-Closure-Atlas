@@ -1,0 +1,71 @@
+{
+  "record_id": "R6-EU-004",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "England overseas-departure rule prohibited departure without reasonable excuse, including Channel Tunnel passenger journeys. England-only legal scope is retained; Folkestone passenger-shuttle terminal locates one relevant departure route.",
+  "source_checks": [
+    {
+      "url": "https://www.cps.gov.uk/cy/node/14109",
+      "access_status": "fresh_full_text_extract",
+      "finding": "CPS guidance describes regulation8 overseas departure prohibition and schedule5/6 exceptions. England measure, no inference to Northern Ireland or other UK jurisdictions.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-024.json"
+    },
+    {
+      "url": "https://www.leshuttle.com/uk-en/support/articles/how-do-i-get-to-the-terminal-208586225",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Operator GPS reference identifies Folkestone passenger shuttle approach, not freight or Eurostar station.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-027.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-EU-004-D1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-channel-tunnel-folkestone-passenger",
+          "name": "Channel Tunnel — Folkestone passenger terminal",
+          "coordinates": [
+            1.119278,
+            51.093389
+          ],
+          "coordinate_method": "Published GPS position from the passenger shuttle operator, longitude/latitude order",
+          "precision": "Operator navigation point for passenger terminal approach; not historical inspection booth or tunnel alignment.",
+          "source_urls": [
+            "https://www.leshuttle.com/uk-en/support/articles/how-do-i-get-to-the-terminal-208586225"
+          ],
+          "evidence_note": "Operator identifies M20 junction 11A passenger check-in access and distinguishes freight/service roads. Vehicle shuttle rail terminal; not Dover ferry or Eurostar station.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-027.json",
+              "access_status": "fresh_full_text_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "England’s explicit prohibition on overseas departure without reasonable excuse, including Channel Tunnel travel.",
+      "date_scope_check": {
+        "start_earliest": "2021-03-29",
+        "start_latest": "2021-03-29",
+        "end_earliest": "2021-05-17",
+        "end_latest": "2021-05-17",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "All other international departure sites not reconstructed; policy dates preserved, no first leisure train or operational closure inferred."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "52bf683f8583f08f6bf2370a4b3e7be28b164f476b0b9958b4d7fc131b9cfb4f"
+}

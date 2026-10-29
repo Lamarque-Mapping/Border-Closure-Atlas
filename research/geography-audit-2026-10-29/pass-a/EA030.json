@@ -1,0 +1,124 @@
+{
+  "record_id": "EA030",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Zokhawthar–Rikhawdar/Khawmawi crossing over Tiau River. This is the named bridge gate with adjacent connections, not all India–Myanmar frontier. Limited April 20 medical/student/essential access does not imply normal travel.",
+  "source_checks": [
+    {
+      "url": "https://www.indiatodayne.in/mizoram/story/mizoram-friendship-gate-at-zokhawthar-opens-for-the-public-985210-2024-04-21",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Explicit April 20 bridge reopening with medical/student/emergency exceptions and strict Assam Rifles supervision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-16.json",
+      "sha256": "f11952f7748922f4b70666314b9472c1e2f67091735faafcb9e3ae27a78b09ea"
+    },
+    {
+      "url": "https://shillongcustoms.gov.in/documents/circulars/2010/facility_08_2010.pdf",
+      "access_status": "search_extract",
+      "finding": "Official customs area definition uses bridge over Tiau at Zokhawthar as zero point.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-17.json",
+      "sha256": "f226cf9aeee89c8f20e346fe23f507e235e93543370c0257a5bf79a627f61c40"
+    },
+    {
+      "url": "https://rajbhavan.mizoram.gov.in/governor-hari-babu-kambhampati-visits-zokhawthar-land-custom-station-at-the-indo-myanmar-border/",
+      "access_status": "search_extract",
+      "finding": "Governor visit directly describes existing Friendship Bailey Bridge at Zokhawthar LCS.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-17.json",
+      "sha256": "f226cf9aeee89c8f20e346fe23f507e235e93543370c0257a5bf79a627f61c40"
+    },
+    {
+      "url": "https://timesofindia.indiatimes.com/city/guwahati/assam-rifles-keeps-mizoram-myanmar-border-gate-closed-even-after-election-locals-unhappy/articleshow/109473777.cms",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://eng.mizzima.com/2024/04/24/9276",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.indiatodayne.in/amp/mizoram/story/mizoram-friendship-gate-at-zokhawthar-opens-for-the-public-985210-2024-04-21",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://timesofindia.indiatimes.com/city/guwahati/assam-rifles-keeps-mizoram-myanmar-border-gate-closed-even-after-election-locals-unhappy/amp_articleshow/109473777.cms",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.indiatodayne.in/amp/mizoram/story/mizoram-myanmar-border-to-remain-open-fmr-in-place-as-before-995393-2024-04-30",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://northeastlivetv.com/topnews/mizoram-zokhawthar-bridge-closed-due-to-ls-polls-reopens/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA030-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-zokhawthar-rikhawdar",
+          "name": "Zokhawthar–Rikhawdar Tiau bridge gate",
+          "coordinates": [
+            93.388307,
+            23.3631199
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/9917419013",
+          "precision": "Crossing/adjacent bridge complex reference, 200 m; exact lane/barrier changes not inferred.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/9917419013",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=93.37,23.35,93.4,23.38",
+            "https://shillongcustoms.gov.in/documents/circulars/2010/facility_08_2010.pdf"
+          ],
+          "evidence_note": "Border-control node on NH6 bridge crossing mapped Tiau boundary river, next to older narrow bridge. Official Mizoram visit and customs notification identify Zokhawthar LCS at bridge zero point.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-zokhawthar.xml",
+          "sha256": "50b4514d9bd52a64ab76528b6cc3caf869e75fd9c0979d4717397bb931cc9335",
+          "osm_feature": "node/9917419013",
+          "osm_version": "1",
+          "osm_timestamp": "2022-07-28T16:40:02Z",
+          "identity_tags": {
+            "barrier": "border_control"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Zokhawthar–Rikhawdar gate restrictions affecting ordinary movement and trade, to limited medical/student/essential access on 20 April.",
+      "date_scope_check": {
+        "scope": "Zokhawthar–Rikhawdar gate restrictions affecting ordinary movement and trade, to limited medical/student/essential access on 20 April.",
+        "start_earliest": "2024-04-16",
+        "start_latest": "2024-04-17",
+        "end_earliest": "2024-04-20",
+        "end_latest": "2024-04-20",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Retain April 16–17 onset bounds; April 19 17:00 complete tightening is separate. April 20 limited opening ends selected phase; proposed May 1 closure was later cancelled and is not mapped as an implemented closure."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

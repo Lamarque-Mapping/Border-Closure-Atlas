@@ -1,0 +1,44 @@
+{
+  "record_id": "R3-EU-008",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Tiraspol advance-clearance restrictions affect crossing the Nistru security zone within Moldova; this is not the Moldova–Ukraine international frontier.",
+  "source_checks": [
+    {
+      "url": "https://gov.md/en/comunicate-de-presa-bpr/bureau-reintegration-disapproves-extension-quarantine-localities",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Official bureau reports extension through May15 2021 of restrictions introduced March17 2020, affecting residents on both Nistru banks; confirms internal security-zone scope.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-023.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EU-008-D1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Advance-clearance regime for crossing the Nistru security zone",
+      "date_scope_check": {
+        "start_earliest": "2020-03-17",
+        "start_latest": "2020-03-17",
+        "end_earliest": "2021-04-30",
+        "end_latest": "2021-04-30",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "No reviewed internal security-zone line or crossing roster/coordinate evidence; international border geometry would be wrong."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "3211acc96ab3897e41c72b144bb7ba32ce40b23f4926c0f7d79992a285c0f564"
+}

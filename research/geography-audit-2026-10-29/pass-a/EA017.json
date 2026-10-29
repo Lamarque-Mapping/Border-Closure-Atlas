@@ -1,0 +1,309 @@
+{
+  "record_id": "EA017",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "First phase directly observes Indonesian travellers refused admission at Motaain–Batugade. Later legal phase explicitly enumerates Motain, Suai Salele, Sakato and Oesilo with weekly entry/exit hours. Three posts are positively located; Oesilo/Napan has an unnamed candidate control but insufficient independently named geographic identity. March 2022 daily-entry observation names Batugade/Bobonaro, not a demonstrated complete reopening at every post.",
+  "source_checks": [
+    {
+      "url": "https://www.antaranews.com/berita/1367290/timor-leste-lakukan-lockdown-wni-tertahan-di-perbatasan",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "Immigration source directly identifies March 19 Motaain refusal and Batugade counterpart.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-03801756441300e0b2.bin",
+      "sha256": "c6c8223bc9bdac7b85e389c425bbc8f1a5dbdb1c7638b460f0f824f206f5839c"
+    },
+    {
+      "url": "https://www.laohamutuk.org/Justice/2022/PresElec/DL26-2021%20on%20exceptional%20and%20temporary%20health%20surveillance%20measuresEn.pdf",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "Article 18 expressly lists four posts and the weekly Monday-exit/Wednesday-entry schedule, with exceptions.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-d5eaaf6b1a08e3ef89.bin",
+      "sha256": "162b8184c933cae0f7d8d0d33fd7f34f0799d30ea7e632402a7740f90be789a2"
+    },
+    {
+      "url": "https://en.tatoli.tl/2022/03/28/indonesian-citizens-are-free-to-enter-timor-leste-in-every-day/18/",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "March 28 reporting dates daily eligible-Indonesian entry from March 21 and specifically mentions Batugade and Bobonaro.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-04f28a7ca92b8972d5.bin",
+      "sha256": "8d34d6058dbbd1f519a05a41c787d7d65227faeae7d8b21c943139cad7d32044"
+    },
+    {
+      "url": "https://en.antaranews.com/news/374289/indonesia-timor-leste-extend-hours-at-four-border-checkpoints",
+      "access_status": "search_extract",
+      "finding": "Immigration official enumerates all four paired names. Used for geographic identity, not retroactive 2021 operating status.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-18.json",
+      "sha256": "9ecfac46efc9034d5e83596b5414f263e36f7eae9715fd66889ba4e6b494bff2"
+    },
+    {
+      "url": "https://timor-leste.gov.tl/?lang=en&p=23927",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-5002e7f9c63101986c.bin",
+      "sha256": "d64b71f36619ac152f9daed0a89530d12abd05a49a2bd705348ee5336376c4a3"
+    },
+    {
+      "url": "https://id.tatoli.tl/2022/03/28/mulai-21-maret-wni-bebas-melintasi-batas-timor-leste/",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-bb967509e70595d394.bin",
+      "sha256": "36215d441e87d33d09c34ff4099614a17a36679104ab39a976ee49a48e80bcf6"
+    },
+    {
+      "url": "https://www.antaranews.com/berita/2783633/plbn-motaain-pelayanan-lintas-batas-kembali-dibuka-secara-normal",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-b262168a211bfad558.bin",
+      "sha256": "7c0bcfe0da9fe6c2e10905aacfb7d8d2a41c057603978113295a28dcf5fac424"
+    },
+    {
+      "url": "https://timor-leste.gov.tl/?p=30240",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-280a8c6444d0a23b36.bin",
+      "sha256": "aeb13c3c066e192154de296970ad57620abc6c7870e134d09ad2511cf75a2fe3"
+    },
+    {
+      "url": "https://mj.gov.tl/jornal/?q=node/13",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-81eebb03f68a964bcb.bin",
+      "sha256": "b18db016cc527b39927de1ef37275d0145b35728cd02eea351f36cef54698d6c"
+    },
+    {
+      "url": "https://www.antaranews.com/berita/1367114/timor-leste-tutup-perbatasan-cegah-covid-19-masuk",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-c4493facff473ab581.bin",
+      "sha256": "f5210c8a713dcba79bafa7eba43240226a6ffee925d2dbdbc59be4f00d3c66f1"
+    },
+    {
+      "url": "https://timor-leste.gov.tl/?lang=en&p=30240",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-60ea5c55c355384299.bin",
+      "sha256": "389f37e59fca5c3077c7e6c3e230e53d34fd167f180e1ca665e8d2f33b5ed366"
+    },
+    {
+      "url": "https://mj.gov.tl/jornal/public/docs/2022/serie_1/SERIE_I_NO_12_A.pdf",
+      "access_status": "fresh_pdf_full_text",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-202918f1d30409d33e.bin",
+      "sha256": "782f2ef010b55d1765da4d4fa5987e0bb0660d00836a1fb1b04f50736a0bf3db"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA017-AUDIT20261025-1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-motaain-batugade",
+          "name": "Motaain–Batugade road checkpoint",
+          "coordinates": [
+            124.9509469,
+            -8.9598411
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/545957507",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/545957507",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=124.93,-8.98,124.97,-8.94"
+          ],
+          "evidence_note": "Named PLBN Motaain customs complex; Antara directly identifies Batugade immigration opposite.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-motaain.xml",
+          "sha256": "2fbb87173ab073610196cf2ba00d0800355d35ef654b9f8891cee4b63eca9fcb",
+          "osm_feature": "way/545957507",
+          "osm_version": "5",
+          "osm_timestamp": "2020-11-02T04:00:29Z",
+          "identity_tags": {
+            "government": "customs",
+            "name": "Pos Lintas Batas Negara Motaain",
+            "office": "government",
+            "short_name": "PLBN Motaain"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Indonesian travellers refused Timor-Leste admission at Motaain–Batugade",
+      "date_scope_check": {
+        "scope": "Indonesian travellers refused Timor-Leste admission at Motaain–Batugade",
+        "start_earliest": "2020-03-19",
+        "start_latest": "2020-03-19",
+        "end_earliest": "2020-03-19",
+        "end_latest": "2020-03-19",
+        "last_confirmed": "2020-03-19",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "March 19 2020 is one dated refusal observation, not proof of uninterrupted 2020–2022 closure."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "EA017-R1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-motaain-batugade",
+          "name": "Motaain–Batugade road checkpoint",
+          "coordinates": [
+            124.9509469,
+            -8.9598411
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/545957507",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/545957507",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=124.93,-8.98,124.97,-8.94"
+          ],
+          "evidence_note": "Named PLBN Motaain customs complex; Antara directly identifies Batugade immigration opposite.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-motaain.xml",
+          "sha256": "2fbb87173ab073610196cf2ba00d0800355d35ef654b9f8891cee4b63eca9fcb",
+          "osm_feature": "way/545957507",
+          "osm_version": "5",
+          "osm_timestamp": "2020-11-02T04:00:29Z",
+          "identity_tags": {
+            "government": "customs",
+            "name": "Pos Lintas Batas Negara Motaain",
+            "office": "government",
+            "short_name": "PLBN Motaain"
+          }
+        },
+        {
+          "proposed_site_id": "post-wini-sakato",
+          "name": "Wini–Sakato road checkpoint",
+          "coordinates": [
+            124.4790877,
+            -9.1771147
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/346764139",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/346764139",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=124.45,-9.19,124.49,-9.16",
+            "https://en.antaranews.com/news/374289/indonesia-timor-leste-extend-hours-at-four-border-checkpoints"
+          ],
+          "evidence_note": "Named PLBN Wini complex; Atambua immigration official explicitly pairs Sakato–Wini.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-wini.xml",
+          "sha256": "9bc69a672228856905750782d352691c80bbfe6f45da4d6531d59825d8be938a",
+          "osm_feature": "way/346764139",
+          "osm_version": "4",
+          "osm_timestamp": "2022-01-27T04:52:26Z",
+          "identity_tags": {
+            "building": "yes",
+            "government": "customs",
+            "name": "Pos Lintas Batas Negara Wini",
+            "office": "government",
+            "short_name": "PLBN Wini"
+          }
+        },
+        {
+          "proposed_site_id": "post-motamasin-salele",
+          "name": "Motamasin–Salele road checkpoint",
+          "coordinates": [
+            125.0849824,
+            -9.4519206
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/658027880",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/658027880",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=125.06,-9.47,125.09,-9.44",
+            "https://en.antaranews.com/news/374289/indonesia-timor-leste-extend-hours-at-four-border-checkpoints"
+          ],
+          "evidence_note": "Named PLBN Motamasin mapped complex, distinct from lighthouse or unrelated Salele village coordinate. Atambua immigration official pairs Salele–Motamasin.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-motamasin-east.xml",
+          "sha256": "05e36044f3cecfa982e5e98d1833667dcbcee6dbead85b59d1d7705edc500a5a",
+          "osm_feature": "way/658027880",
+          "osm_version": "4",
+          "osm_timestamp": "2025-10-06T14:55:46Z",
+          "identity_tags": {
+            "access": "permissive",
+            "alt_name": "PLBN Motamasin",
+            "area": "yes",
+            "barrier": "border_control",
+            "bicycle": "no",
+            "horse": "no",
+            "name": "Pos Lintas Batas Negara Motamasin"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Weekly-hours legal restriction at Timor-Leste land posts under Decree 26/2021 Article 18, until repeal by Decree 12/2022",
+      "date_scope_check": {
+        "scope": "Weekly-hours legal restriction at Timor-Leste land posts under Decree 26/2021 Article 18, until repeal by Decree 12/2022",
+        "start_earliest": "2021-11-29",
+        "start_latest": "2021-11-29",
+        "end_earliest": "2022-03-18",
+        "end_latest": "2022-03-18",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "November 29 2021–March 18 2022 legal envelope governs Monday exits and Wednesday entries with ministerial exceptions, not continuous closure or summed closed days."
+      },
+      "unresolved": [
+        "Oesilo–Napan historical gate identity/point needs confirmation."
+      ]
+    },
+    {
+      "phase_id": "EA017-C7P1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-motaain-batugade",
+          "name": "Motaain–Batugade road checkpoint",
+          "coordinates": [
+            124.9509469,
+            -8.9598411
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/545957507",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/545957507",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=124.93,-8.98,124.97,-8.94"
+          ],
+          "evidence_note": "Named PLBN Motaain customs complex; Antara directly identifies Batugade immigration opposite.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-motaain.xml",
+          "sha256": "2fbb87173ab073610196cf2ba00d0800355d35ef654b9f8891cee4b63eca9fcb",
+          "osm_feature": "way/545957507",
+          "osm_version": "5",
+          "osm_timestamp": "2020-11-02T04:00:29Z",
+          "identity_tags": {
+            "government": "customs",
+            "name": "Pos Lintas Batas Negara Motaain",
+            "office": "government",
+            "short_name": "PLBN Motaain"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Reported return to daily land entry for eligible Indonesian citizens into Timor-Leste",
+      "date_scope_check": {
+        "scope": "Reported return to daily land entry for eligible Indonesian citizens into Timor-Leste",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2022-03-21",
+        "end_latest": "2022-03-21",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "March 21 daily eligible-Indonesian entry is endpoint-only; March 18 legal repeal is not observed physical reopening."
+      },
+      "unresolved": [
+        "Batugade is identified; wider Bobonaro/other-post daily operations not resolved into an exhaustive named site set."
+      ]
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,64 @@
+{
+  "record_id": "SC16",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ngueli/Kousseri road bridge ordinary unauthorized travel restriction on Cameroonian side; Chadian-side reopening was earlier.",
+  "source_checks": [
+    {
+      "url": "https://www.lepaystchad.com/le-pont-ngueli-officiellement-reouvert/",
+      "access_status": "full_text_web",
+      "finding": "Local report names bridge, Cameroonian prefect reopening June20 and Chadian-side reopening preceding Thursday. No all-Cameroon endpoint inferred.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-17.json",
+      "evidence_sha256": "ae7d78b909b8ec9a00fffb5d9dd336426b2b558500d9c46ed198b5922b480e2c"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SC16-C1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-ngueli-kousseri",
+          "name": "Ngueli / Kousseri bridge",
+          "coordinates": [
+            15.0536919,
+            12.068539
+          ],
+          "coordinate_method": "Bounding-box midpoint of fresh original OSM named road-bridge centreline",
+          "precision": "approximate bridge centre; does not distinguish adjacent older bridge or individual controls",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/23192897",
+            "https://www.openstreetmap.org/api/0.6/way/23192897/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"bridge\": \"yes\", \"highway\": \"trunk\", \"layer\": \"1\", \"name\": \"Pont Ngueli جسر انكلي\", \"name:ar\": \"جسر انكلي\", \"name:en\": \"Ngueli Bridge\", \"name:fr\": \"Pont de N'Gueli\", \"surface\": \"asphalt\", \"wikidata\": \"Q3397073\", \"wikipedia\": \"fr:Pont de N'Gueli\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/9a88d9aaec03db45d17f.html",
+          "evidence_sha256": "d9f1c2ab419c4edd8d800d130b76be453c77bae5a6775e5f2369ea69406a86c0",
+          "osm_version": "14",
+          "osm_timestamp": "2023-07-11T17:32:21Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ngueli/Kousseri road bridge ordinary unauthorized travel restriction on Cameroonian side; Chadian-side reopening was earlier. Current phase only: Cameroonian ordinary non-authorized traveler restriction at Ngueli/Kousseri bridge; medical/administrative exceptions excluded.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-18",
+        "start_latest": "2020-03-18",
+        "end_earliest": "2021-06-20",
+        "end_latest": "2021-06-20",
+        "last_confirmed": null,
+        "endpoint_status": "legal_effective",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": null,
+        "qualification_retained": "Formal ordinary-person access segment, not absence of every physical crossing or freight. Chad's June 17 opening did not remove Cameroon refusal; exceptional students/emergencies excluded. No national endpoint inferred.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

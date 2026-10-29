@@ -1,0 +1,79 @@
+{
+  "record_id": "R2-EU-012",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Three brief21Mar2017 activistblocks ofTurkey→Bulgaria passengerroad approaches: KapitanAndreevo, MalkoTarnovo,Lesovo. Notstateclosure orrail.",
+  "source_checks": [
+    {
+      "url": "https://btvnovinite.bg/bulgaria/blokada-na-patja-za-gkpp-malko-tarnovo.html",
+      "access_status": "full_text_web",
+      "finding": "bTV original updatedbody saysMalkoabout1h, Kapitanfourhoursfrom10, Lesovotwoblocks20mintotal; inboundcars/buses, Turkeyboundbusesanddiplomaticballots passed.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EU-012-D1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-kapitan-andreevo-road",
+          "name": "Kapitan Andreevo–Kapıkule road crossing",
+          "coordinates": [
+            26.34864,
+            41.71903
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/N1064597616",
+            "https://www.openstreetmap.org/node/1064597616"
+          ],
+          "evidence_note": "Named road checkpoint adjoining passenger/truck control buildings; Kapıkule railway station separatelylisted. Approximate approach reference; exact protest line unmeasured."
+        },
+        {
+          "proposed_site_id": "post-malko-tarnovo-road",
+          "name": "Malko Tarnovo–Dereköy road crossing",
+          "coordinates": [
+            27.46189,
+            41.96951
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/W1137857770",
+            "https://www.openstreetmap.org/way/1137857770"
+          ],
+          "evidence_note": "Named BCCP MalkoTarnovo government compound onE87, separate Turkish Dereköy gate300m southwest. Source identifies approach blockade; exact crowd position unmeasured."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Twoofthree crossingareas located; exactcrowdline andLesovogeometry unresolved.",
+      "date_scope_check": "All21Mar2017only; differinghoursdonotexpandintomultidayepisode.",
+      "canonical_dates": {
+        "kind": "same_day",
+        "measure_type": "operational_spell",
+        "start_earliest": "2017-03-21",
+        "start_latest": "2017-03-21",
+        "end_earliest": "2017-03-21",
+        "end_latest": "2017-03-21",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "same_day_no_elapsed_duration",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [
+    "Lesovo exactpostcoordinate remainsunverified; noTurkeyborderline substituted."
+  ],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R2-EU-012.json",
+  "canonical_input_sha256": "00c62e577e83184bcbab12ee3e729b062af9106c5c9ef496384d9e6423e4f263",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

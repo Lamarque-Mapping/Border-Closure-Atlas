@@ -1,0 +1,87 @@
+{
+  "record_id": "ME027",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The Israeli-controlled cargo ban affected Kerem Shalom, Erez and Erez West/Zikim, the three aid entry points identified in contemporaneous OCHA logistics reporting. Rafah is not substituted.",
+  "source_checks": [
+    {
+      "url": "https://www.ochaopt.org/content/gaza-humanitarian-response-update-2-15-march-2025",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "OCHA lists pre-suspension convoys to Erez West, Erez and Kerem Shalom and states cargo could not be collected at any crossing after March2; names Zikim and Erez separately.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-24.txt"
+    },
+    {
+      "url": "https://www.ochaopt.org/content/humanitarian-situation-update-290-gaza-strip",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "OCHA distinguishes permission on May18, incoming supplies through Kerem Shalom, and subsequent May21 collection/distribution.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-19.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME027-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "existing_site_id": "post-kerem-shalom",
+          "name": "Kerem Shalom crossing",
+          "coordinates": [
+            34.2695531,
+            31.2212547
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/328444065"
+          ],
+          "evidence_note": "OSM node 328444065, version 25, timestamp 2026-05-27T15:50:13Z. Identity tags: {\"alt_name:en\": \"Kerem Abu Salem Crossing\", \"barrier\": \"border_control\", \"motor_vehicle\": \"no\", \"name\": \"מעבר כרם שלום معبر كرم أبو سالم\", \"name:ar\": \"معبر كرم أبو سالم\", \"name:en\": \"Kerem Shalom Crossing\", \"name:fr\": \"Poste-frontière de Kerem Shalom\", \"name:he\": \"מעבר כרם שלום\", \"name:ja\": \"カレム・シャローム検問所\", \"wikidata\": \"Q6393780\", \"wikipedia\": \"en:Kerem Shalom border crossing\", \"wikipedia:en\": \"Kerem Shalom border crossing\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/2e33c643af3d09cc.raw",
+          "evidence_sha256": "b3c3b973a1d5513ec0735a3e2c6b5cb8e63f62a21f69f6b0060b5e8482bd19e0"
+        },
+        {
+          "existing_site_id": "post-erez-beit-hanoun",
+          "name": "Erez / Beit Hanoun crossing",
+          "coordinates": [
+            34.54328,
+            31.5582864
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/334719553"
+          ],
+          "evidence_note": "OSM node 334719553, version 29, timestamp 2024-04-14T13:58:53Z. Identity tags: {\"barrier\": \"border_control\", \"bicycle\": \"no\", \"foot\": \"yes\", \"horse\": \"no\", \"motor_vehicle\": \"private\", \"name\": \"מעבר ארז\", \"name:ar\": \"معبر إيريز\", \"name:en\": \"Erez Crossing\", \"name:fr\": \"Poste-frontière d'Erez\", \"name:he\": \"מעבר ארז\", \"name:ja\": \"エレツ検問所\", \"wikidata\": \"Q2319323\", \"wikipedia\": \"en:Erez Crossing\", \"wikipedia:en\": \"Erez Crossing\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/2c1002ac8c3c2877.raw",
+          "evidence_sha256": "942966040a7765dee83af703418ed7679084204e2244a16e3c6f3b4b409ee5cf"
+        },
+        {
+          "proposed_site_id": "zikim",
+          "name": "Erez West / Zikim aid crossing",
+          "coordinates": [
+            34.4949982,
+            31.5931444
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/12403280153"
+          ],
+          "evidence_note": "OSM node 12403280153, version 1, timestamp 2024-12-07T20:09:36Z. Identity tags: {\"barrier\": \"border_control\", \"name\": \"מעבר ארז מערב\", \"name:en\": \"Erez West Crossing\", \"name:he\": \"מעבר ארז מערב\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/7486f9b2a3695cd0.raw",
+          "evidence_sha256": "f5cd6b4dce537963aafaa36c9430c5511dadde30bac5838034af32b0b16d8ff7"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "All three named aid-entry points locate the common ban. May19 first limited entry is not a claim that every point reopened or that aid had reached recipients.",
+      "date_scope_check": "Canonical closed_interval: start 2025-03-02–2025-03-02; endpoint 2025-05-19–2025-05-19; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": [
+        "This pass inspected May21 operational summary; canonical May19 first-entry date retained without moving it to permission or distribution dates."
+      ]
+    }
+  ],
+  "unresolved": []
+}

@@ -21,18 +21,64 @@
       "direct_fetch_status": "full_text_html",
       "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/c1e7e24a5431bbd6cadf.raw",
       "sha256": "787e832a3382c023f2f8a8f6da2deab84329e525148cdfcb861047d5412cba62"
+    },
+    {
+      "url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+      "access_status": "cached_versioned_geography",
+      "finding": "Independently inspected legacy frontier-portugal-spain geometry in dist/data.js: NaturalEarth5.1.0 sourcefeatures211,513,514,515, five lineparts bbox[-8.7508,37.19282,-6.20595,42.15363]. Includes disputed classification; generalized legal scope reference.",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/portugal-spain-geometry.json",
+      "sha256": "89be18d9a563e28fdc05422f7ef4d51c036d6c45c9b6149419af7017bd4728a9",
+      "geometry_metadata": {
+        "location_id": "frontier-portugal-spain",
+        "name": "Portugal–Spain",
+        "location_type": "frontier",
+        "precision": "generalized policy coverage",
+        "source_name": "Natural Earth Admin 0 boundary lines, 1:10 million",
+        "source_version": "5.1.0",
+        "source_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+        "license": "Public domain",
+        "retrieved": "2026-10-22",
+        "geometry_reference": "Current Natural Earth reference geometry, not historical boundary reconstruction",
+        "review_note": "Policy extent reference, not proof of obstruction at every point",
+        "source_feature_ids": [
+          "ne_10m_admin_0_boundary_lines_land_211",
+          "ne_10m_admin_0_boundary_lines_land_513",
+          "ne_10m_admin_0_boundary_lines_land_514",
+          "ne_10m_admin_0_boundary_lines_land_515"
+        ],
+        "source_feature_classes": [
+          "Disputed (please verify)",
+          "International boundary (verify)"
+        ],
+        "disputed_source_feature_ids": [
+          "ne_10m_admin_0_boundary_lines_land_211"
+        ],
+        "excluded_water_indicator_ids": [],
+        "coverage_note": "Only source TYPE=Land segments are depicted. Water-indicator segments are omitted. The geometry does not enumerate crossing facilities.",
+        "bbox": [
+          -8.7508,
+          37.19282,
+          -6.20595,
+          42.15363
+        ],
+        "label": "Portugal–Spain",
+        "display_role": "frontier_context",
+        "countries": []
+      }
     }
   ],
   "phase_decisions": [
     {
       "phase_id": "EU025-D1",
       "category": "wider_border",
-      "decision": "hold",
+      "decision": "map",
       "sites": [],
-      "border_reference_ids": [],
-      "complete": false,
-      "phase_applicability": "Portugal–Spain bilateral non-essential land-movement restriction, using Portuguese local calendar dates.",
-      "date_scope_check": "Existing dates, uncertainty and duration eligibility retained. Geography remains held pending the identified evidence gap.",
+      "border_reference_ids": [
+        "frontier-portugal-spain"
+      ],
+      "complete": true,
+      "phase_applicability": "Whole bilateral nonessential land-movement policy, with nine authorized points and freight exceptions; no claim every crossing physically shut.",
+      "date_scope_check": "Canonical policy/observation bounds preserved. Generalized boundary references locate legal scope, not uniform physical closure or uninterrupted operations.",
       "canonical_dates": {
         "kind": "policy_period",
         "measure_type": "formal_policy_period",
@@ -46,14 +92,10 @@
         "calculation_rule": "calendar_bounds",
         "policy_only": true
       },
-      "unresolved": [
-        "No existing Portugal–Spain bilateralreference identified ininventory; nineauthorizedpoints arenot aclosedgate enumeration. Needattributablewholefrontiergeometry."
-      ]
+      "unresolved": []
     }
   ],
-  "unresolved": [
-    "Verifiedbroadscope; existingexactgeometryID absent."
-  ],
+  "unresolved": [],
   "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/EU025.json",
   "canonical_input_sha256": "65bbaa03eddf8526aa1071d8000c72a1bfa8db92e9264579171af58dc4a9492f",
   "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."

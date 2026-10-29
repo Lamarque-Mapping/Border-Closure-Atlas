@@ -1,0 +1,71 @@
+{
+  "record_id": "R3-EU-010",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "French compelling-reason admission rule for UK arrivals is an all-mode policy. The Folkestone passenger shuttle terminal provides a partial reference for the Channel Tunnel vehicle-passenger rail component, without implying the physical tunnel closed.",
+  "source_checks": [
+    {
+      "url": "https://www.info.gouv.fr/communique/12604-le-gouvernement-renforce-les-mesures-de-controle-sanitaire-aux-frontieres-avec-le-royaume-uni",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Official announcement restores compelling reasons for travel to/from UK from Saturday00:00, bars tourism/business, retains citizen/family and compelling-reason categories; tests and isolation separately apply.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-024.json"
+    },
+    {
+      "url": "https://www.leshuttle.com/uk-en/support/articles/how-do-i-get-to-the-terminal-208586225",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Operator explicitly publishes passenger terminal GPS coordinates and motorway approach; freight terminal distinguished.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-027.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R3-EU-010-D1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-channel-tunnel-folkestone-passenger",
+          "name": "Channel Tunnel — Folkestone passenger terminal",
+          "coordinates": [
+            1.119278,
+            51.093389
+          ],
+          "coordinate_method": "Published GPS position from the passenger shuttle operator, longitude/latitude order",
+          "precision": "Operator navigation point for passenger terminal approach; not historical inspection booth or tunnel alignment.",
+          "source_urls": [
+            "https://www.leshuttle.com/uk-en/support/articles/how-do-i-get-to-the-terminal-208586225"
+          ],
+          "evidence_note": "Operator identifies M20 junction 11A passenger check-in access and distinguishes freight/service roads. Vehicle shuttle rail terminal; not Dover ferry or Eurostar station.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-027.json",
+              "access_status": "fresh_full_text_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "French compelling-reason requirement for vaccinated arrivals from the UK, including the Channel Tunnel land component",
+      "date_scope_check": {
+        "start_earliest": "2021-12-18",
+        "start_latest": "2021-12-18",
+        "end_earliest": "2022-01-14",
+        "end_latest": "2022-01-14",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "All-mode policy is wider than one shuttle terminal; Eurostar, ferry and aviation locations not mapped. Terminal location does not independently prove historical enforcement or exact passenger lane."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "b55b2cb8bacf0ece71c5b813d6111f00737cd59fe50ef30dc7b9cb4422671a47"
+}

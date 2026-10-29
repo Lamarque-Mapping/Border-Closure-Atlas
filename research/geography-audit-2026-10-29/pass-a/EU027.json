@@ -1,0 +1,50 @@
+{
+  "record_id": "EU027",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Portugal–Spain bilateral land frontier is the geographic policy scope; approved reference is a generalized frontier, with crossing authorizations and movement exemptions retained. This does not depict every road as physically shut.",
+  "source_checks": [
+    {
+      "url": "https://portugal.gov.pt/gc22/comunicacao/comunicados/controlo-de-pessoas-nas-fronteiras-terrestres-e-fluviais-mantem-se-ate-5-de-abril",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Official March17 2021 notice extends controls until April5; permitted movement at authorized land posts, with freight, frontier/seasonal workers, emergencies and return exceptions; passenger river movement suspended.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-023.json"
+    },
+    {
+      "url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+      "access_status": "cached_local_geographic_evidence",
+      "finding": "Existing Natural Earth derived features inspected in source/geography-reference.json: named frontier MultiLineStrings, metadata gives version 5.1.0, 1:10m generalized policy coverage. These are present-day context, not historical lane closures.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/natural-earth-selected-existing.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU027-D1",
+      "category": "wider_border",
+      "decision": "map",
+      "sites": [],
+      "border_reference_ids": [
+        "frontier-portugal-spain"
+      ],
+      "complete": true,
+      "phase_applicability": "Nonessential travel at authorised Portugal–Spain land-road crossings in both directions; source-specific exemptions retained.",
+      "date_scope_check": {
+        "start_earliest": "2021-01-31",
+        "start_latest": "2021-01-31",
+        "end_earliest": "2021-05-01",
+        "end_latest": "2021-05-01",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Source confirms bilateral geographic scope and particular official dates. Canonical full policy period and exemptions remain unchanged; this geometry is policy coverage only, not continuous operational closure."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "d10a2bdadda3d4e1b03a670aed0bec55633c19257e1a388ecb09fb8aac27a176"
+}

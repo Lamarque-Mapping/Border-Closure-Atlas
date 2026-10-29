@@ -1,0 +1,163 @@
+{
+  "record_id": "SC21",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Six named Namibian land ports for passengers: Oshikango, Katwitwi, Wenela, Buitepos, Ariamsvlei, Noordoewer. Essential trade and discretionary admissions remain exceptions; sea ports omitted.",
+  "source_checks": [
+    {
+      "url": "https://namibia.un.org/en/38975-namibias-national-response-measures-covid19",
+      "access_status": "full_text_web",
+      "finding": "Original UN-hosted national response explicitly lists six landposts and Luderitz/WalvisBay; other clauses preserve special admissions and trade.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-18.json",
+      "evidence_sha256": "09855cc0804ea556cb2dfc766c35a35ba51f267a14fe4110239957795e9f58e1"
+    },
+    {
+      "url": "https://openjicareport.jica.go.jp/pdf/11991007_02.pdf",
+      "access_status": "indexed_original_pdf",
+      "finding": "JICA original report indexed footnote37 distinguishes Namibian Wenela control from town and Zambian Katima Mulilo counterpart.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-21.json",
+      "evidence_sha256": "86329adb86b22b413b2993b1b021cb732f7b0325fca3a9c15e85c9108ae25cf0"
+    },
+    {
+      "url": "https://mha.gov.na/katwitwi",
+      "access_status": "indexed_official_page",
+      "finding": "Official indexed control coordinate read; direct open times out.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-17.json",
+      "evidence_sha256": "3d6dd63d300f6802ce5f2e1afe58a553caa0dee439bb870928c871194db20124"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SC21-FU1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-oshikango-santa-clara",
+          "name": "Oshikango / Santa Clara",
+          "coordinates": [
+            15.8911,
+            -17.39076
+          ],
+          "coordinate_method": "Published AU-PIDA illustrative border-post coordinate, independently read in original report Appendix A",
+          "precision": "approximate crossing area; illustrative published marker, not surveyed gate",
+          "source_urls": [
+            "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "Appendix A S9, PDF81; longitude/latitude transcribed in lon,lat order. Report identifies crossing name but does not establish historic operation or exact obstruction.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/25782abcef016f49e77a.pdf",
+          "evidence_sha256": "35e1b5d512bfc882baf263b1abe002d0c99331d0b2b8e08fcb0f354ab504cbed"
+        },
+        {
+          "proposed_site_id": "post-katwitwi",
+          "name": "Katwitwi / Katuitui",
+          "coordinates": [
+            18.410805092,
+            -17.3973427589
+          ],
+          "coordinate_method": "Namibia Ministry of Home Affairs published border-control coordinate, transcribed from indexed official page",
+          "precision": "approximate official border-control reference; not surveyed gate",
+          "source_urls": [
+            "https://mha.gov.na/katwitwi"
+          ],
+          "evidence_note": "Official MHAISS page explicitly identifies Katuitui(Katwitwi) border control Namibia–Angola and coordinate. Direct page timeout; indexed official paragraph inspected. Not village coordinate.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-17.json",
+          "evidence_sha256": "3d6dd63d300f6802ce5f2e1afe58a553caa0dee439bb870928c871194db20124"
+        },
+        {
+          "proposed_site_id": "post-wenela-katima-mulilo",
+          "name": "Wenela / Katima Mulilo",
+          "coordinates": [
+            24.24588,
+            -17.47362
+          ],
+          "coordinate_method": "Published AU-PIDA illustrative border-post coordinate, independently read in original report Appendix A",
+          "precision": "approximate crossing area; illustrative published marker, not surveyed gate",
+          "source_urls": [
+            "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+            "https://openjicareport.jica.go.jp/pdf/11991007_02.pdf"
+          ],
+          "evidence_note": "Appendix A S8, PDF81; JICA report footnote37 establishes Wenela as Namibian side of Katima Mulilo crossing; longitude/latitude transcribed in lon,lat order. Report identifies crossing name but does not establish historic operation or exact obstruction.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/25782abcef016f49e77a.pdf",
+          "evidence_sha256": "35e1b5d512bfc882baf263b1abe002d0c99331d0b2b8e08fcb0f354ab504cbed"
+        },
+        {
+          "proposed_site_id": "post-buitepos-mamuno",
+          "name": "Buitepos / Mamuno Trans-Kalahari",
+          "coordinates": [
+            19.99909,
+            -22.28087
+          ],
+          "coordinate_method": "Published AU-PIDA illustrative border-post coordinate, independently read in original report Appendix A",
+          "precision": "approximate crossing area; illustrative published marker, not surveyed gate",
+          "source_urls": [
+            "https://www.au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+            "https://www.omahekerc.gov.na/buitepos-settlement"
+          ],
+          "evidence_note": "Appendix A S4, PDF81; official Omaheke council identifies Buitepos as Trans-Kalahari exit to Botswana; longitude/latitude transcribed in lon,lat order. Report identifies crossing name but does not establish historic operation or exact obstruction.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/25782abcef016f49e77a.pdf",
+          "evidence_sha256": "35e1b5d512bfc882baf263b1abe002d0c99331d0b2b8e08fcb0f354ab504cbed"
+        },
+        {
+          "proposed_site_id": "post-ariamsvlei",
+          "name": "Ariamsvlei / Nakop road",
+          "coordinates": [
+            19.8503262,
+            -28.1176248
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/995503634",
+            "https://www.openstreetmap.org/api/0.6/node/995503634"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\", \"country\": \"NA\", \"name\": \"Ariamsvlei Border Control\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/cf510259df642e628bc1.html",
+          "evidence_sha256": "fcdcc8582b23089b41532daa45646a468f3180fd3b6714c14d86c500fad0a025",
+          "osm_version": "4",
+          "osm_timestamp": "2019-04-17T12:25:20Z"
+        },
+        {
+          "proposed_site_id": "post-noordoewer",
+          "name": "Noordoewer / Vioolsdrif road",
+          "coordinates": [
+            17.6220133,
+            -28.7569633
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/459439978",
+            "https://www.openstreetmap.org/api/0.6/node/459439978"
+          ],
+          "evidence_note": " OSM tags inspected: {\"access\": \"yes\", \"barrier\": \"border_control\", \"country\": \"NA\", \"foot\": \"yes\", \"name\": \"Noordoewer\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/c30361cdcd6d93d3efa2.html",
+          "evidence_sha256": "bc54fb5c3e3ba8dd7991dbe0882ec007531dacd1600f0adcd97a8d55bf07e144",
+          "osm_version": "10",
+          "osm_timestamp": "2024-09-12T05:46:33Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Six named Namibian land ports for passengers: Oshikango, Katwitwi, Wenela, Buitepos, Ariamsvlei, Noordoewer. Essential trade and discretionary admissions remain exceptions; sea ports omitted. Current phase only: Namibian passenger restrictions at Oshikango, Katwitwi, Wenela, Buitepos, Ariamsvlei and Noordoewer, with essential trade and authorized admissions excepted.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-24",
+        "start_latest": "2020-03-24",
+        "end_earliest": "2020-03-24",
+        "end_latest": "2020-03-24",
+        "last_confirmed": "2020-03-24",
+        "endpoint_status": "last_confirmed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "SC21-FU1: Reuters explicitly dates the national travel ban to March 24 with immediate effect; the same-day UN account identifies the six land posts. This establishes a reported formal onset, not the first observed refusal at every gate. The initial 30-day announced restriction supports greater-than-24-hour policy eligibility, while the complete renewal chain and exact operational duration remain unknown. Essential trade and supplies, reciprocal business/trade missions, specially approved admissions and controlled returning nationals/residents were excepted. September 18 easing still required bilateral implementation. October 14 permission covers Katima Mulilo/Wenela, Ariamsvlei and Noordoewer; Walvis Bay is a harbour and excluded from this land scope. Other posts and first actual passages remain unresolved.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

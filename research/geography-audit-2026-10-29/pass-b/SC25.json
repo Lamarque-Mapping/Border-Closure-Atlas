@@ -1,0 +1,65 @@
+{
+  "record_id": "SC25",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Kye-Ossi–Ebebiyin road gate, with restored twice-weekly permitted passage; nearby Gabon crossing not included.",
+  "source_checks": [
+    {
+      "url": "https://actucameroun.com/2018/04/25/la-frontiere-cameroun-guinee-equatoriale-partiellement-rouverte/",
+      "access_status": "full_text_web",
+      "finding": "Full article names Kye-Ossi, April17 partial reopening Tuesdays/Fridays, ordinary goods/persons.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-18.json",
+      "evidence_sha256": "09855cc0804ea556cb2dfc766c35a35ba51f267a14fe4110239957795e9f58e1"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SC25-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kye-ossi-ebebiyin",
+          "name": "Kye-Ossi / Ebebiyin",
+          "coordinates": [
+            11.336976,
+            2.1728622
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/6133635878",
+            "https://www.openstreetmap.org/api/0.6/node/6133635878",
+            "https://www.openstreetmap.org/api/0.6/map?bbox=11.33,2.17,11.345,2.185"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\"}. This is geographic evidence only, not historical closure evidence. Main-road border_control beside immigration police and customs on Cameroon–Equatorial Guinea boundary south of Kye-Ossi market, not eastward Gabon crossing.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/712a1212dabf0cd2dfa2.html",
+          "evidence_sha256": "219bf52bbdfb38e9ebece6e95bf4b427ffea56937ce639ab9681ee39e91ce33c",
+          "osm_version": "2",
+          "osm_timestamp": "2023-08-30T09:23:57Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kye-Ossi–Ebebiyin road gate, with restored twice-weekly permitted passage; nearby Gabon crossing not included. Current phase only: Ordinary passage restriction at Kye-Ossi–Ebebiyin, to restored twice-weekly permitted opening.",
+      "date_scope_check": {
+        "start_earliest": "2017-12-24",
+        "start_latest": "2017-12-28",
+        "end_earliest": "2018-04-17",
+        "end_latest": "2018-04-17",
+        "last_confirmed": null,
+        "endpoint_status": "legal_effective",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "SC25-D1: Formal partial-access endpoint April 17, 2018, not unrestricted all-day operation. Actu Cameroun dates closure December 28, 2017; the wider December 24–28 onset bound is retained pending reconciliation, and December 24 is also the reported coup-attempt date in other sources. Actual movement is independently documented by VOA on June 5/6, 2018. January 26, 2019 reported barrier removal is a later milestone, not the first passage after an uninterrupted year. Initial exemptions and exact first April passage remain unknown.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

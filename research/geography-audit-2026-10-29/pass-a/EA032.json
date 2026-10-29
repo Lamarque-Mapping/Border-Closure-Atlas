@@ -1,0 +1,90 @@
+{
+  "record_id": "EA032",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Myanmar export passage at Kyin San Kyawt, Chinese counterpart Wanding Mangman. The main Wanding–Pangsai bridge and Muse city gates are different channels. Fruit and seafood exports were the selected traffic.",
+  "source_checks": [
+    {
+      "url": "https://www.rfa.org/english/news/myanmar/myanmar-army-shuts-down-border-crossing-12272018161751.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Contemporary report names export-only Kyin San Kyawt entrance to Wanding about ten miles from Muse.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-16.json",
+      "sha256": "f11952f7748922f4b70666314b9472c1e2f67091735faafcb9e3ae27a78b09ea"
+    },
+    {
+      "url": "https://www.xinhuanet.com/english/2019-01/10/c_137734535.htm",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Commerce assistant secretary confirms January 10 temporary reopening and extended daily hours.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-16.json",
+      "sha256": "f11952f7748922f4b70666314b9472c1e2f67091735faafcb9e3ae27a78b09ea"
+    },
+    {
+      "url": "https://news.cnr.cn/kuaixun/20211127/t20211127_525672120.shtml",
+      "access_status": "search_extract",
+      "finding": "Chinese report identifies Mangman–Jinsanjiao/Henong channel pair; separate from Wanding town bridge.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-17.json",
+      "sha256": "f226cf9aeee89c8f20e346fe23f507e235e93543370c0257a5bf79a627f61c40"
+    },
+    {
+      "url": "https://www.rfa.org/english/news/myanmar/myanmar-holds-talks-with-china-to-reopen-border-crossing-01082019165648.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA032-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kyinsankyawt-mangman",
+          "name": "Kyin San Kyawt–Wanding Mangman cargo gate",
+          "coordinates": [
+            98.0015462,
+            24.051089
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/11389643215",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/11389643215",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=97.99,24.045,98.01,24.06",
+            "https://news.cnr.cn/kuaixun/20211127/t20211127_525672120.shtml"
+          ],
+          "evidence_note": "OSM names Myanmar side Jinsanjiao/Golden Triangle port, opposite explicitly named Wanding Mangman. Chinese Xinhua/CNR reports identify this pairing and distinguish the separate Wanding town bridge/Pangsai channel.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-kyinsan-gate.xml",
+          "sha256": "f89ce481c85d5afab68ffb3ce6224c258b370e9cdd6b251dfd8d55b83f04f3df",
+          "osm_feature": "node/11389643215",
+          "osm_version": "2",
+          "osm_timestamp": "2025-11-27T09:59:17Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "金三角口岸"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Myanmar export passage through Kyin San Kyawt, to the reported temporary reopening.",
+      "date_scope_check": {
+        "scope": "Myanmar export passage through Kyin San Kyawt, to the reported temporary reopening.",
+        "start_earliest": "2018-12-01",
+        "start_latest": "2018-12-27",
+        "end_earliest": "2019-01-10",
+        "end_latest": "2019-01-10",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "RFA December 27 reports closure in previous week; Xinhua later names December 27. Keep December onset bounds and January 10 2019 temporary reopening, not a precise universal gate interval."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

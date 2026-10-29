@@ -1,0 +1,85 @@
+{
+  "record_id": "NA003",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Melilla/Beni Enzar commercial-customs consignments through first documented trial export; regular opening in 2025 is not substituted for the January2023 experimental endpoint.",
+  "source_checks": [
+    {
+      "url": "https://mptmd.gob.es/portal/delegaciones_gobierno/delegaciones/melilla/actualidad/2023/01/2023-01-27",
+      "access_status": "navigation_or_partial_text",
+      "finding": "Official page resolved but rendered extract largely navigation; not counted as substantive verification.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-17.json",
+      "evidence_sha256": "ae7d78b909b8ec9a00fffb5d9dd336426b2b558500d9c46ed198b5922b480e2c"
+    },
+    {
+      "url": "https://www.europapress.es/ceuta-y-melilla/noticia-melilla-reabre-fase-prueba-aduana-comercial-marruecos-cuatro-anos-medio-cerrada-20230127184110.html",
+      "access_status": "title_or_partial_text",
+      "finding": "Original EuropaPress title visible but searched excerpt lacked article body.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-20.json",
+      "evidence_sha256": "fcbb2883b16bf63ebbb0cd1f76826ebef63d3a07af68d02f48d59f26bf496d4b"
+    },
+    {
+      "url": "https://www.elespanol.com/espana/20230127/espana-marruecos-practican-prueba-aduanas-ceuta-melilla/736926684_0.html",
+      "access_status": "indexed_full_article",
+      "finding": "Indexed published agency account quotes Melilla delegate: first aluminium consignment at13:30 January27 experimental; separate Ceuta pilot.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-21.json",
+      "evidence_sha256": "5a0911c6575f74c1694bcb68f521b7edd08f658ff64e2f65e613b7a851b6da90"
+    },
+    {
+      "url": "https://www.lamoncloa.gob.es/lang/en/gobierno/news/paginas/2022/20220512_morocco-borders.aspx",
+      "access_status": "full_text_web",
+      "finding": "Official Spanish reopening account names Melilla road gate Beni Enzar.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-17.json",
+      "evidence_sha256": "ae7d78b909b8ec9a00fffb5d9dd336426b2b558500d9c46ed198b5922b480e2c"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NA003-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-beni-enzar",
+          "name": "Melilla / Beni Enzar",
+          "coordinates": [
+            -2.9334654,
+            35.2672608
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/301837571",
+            "https://www.openstreetmap.org/api/0.6/way/301837571/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"addr:city\": \"Beni Enzar بني انصار\", \"addr:city:ar\": \"بني انصار\", \"addr:city:es\": \"Beni Enzar\", \"addr:street\": \"Avenida Hasán II شارع الحسن الثاني\", \"addr:street:ar\": \"شارع الحسن الثاني\", \"addr:street:es\": \"Avenida Hasán II\", \"building\": \"roof\", \"layer\": \"1\", \"name\": \"Paso fronterizo de Beni Enzar\", \"name:es\": \"Paso fronterizo de Beni Enzar\", \"name:fr\": \"Poste frontière du Maroc à Bni Nsar\", \"wikidata\": \"Q17500153\", \"wikimedia_commons\": \"Category:Beni Ensar-Melilla border crossing\", \"wikipedia\": \"es:Paso fronterizo de Beni Enzar\", \"wikipedia:es\": \"Paso fronterizo de Beni Enzar\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/8d57a65efd86d8fe05be.html",
+          "evidence_sha256": "ccf5a1a51e04b3f781c396bf9b95b8ebd4181bcb06694a974ea6693b32b7c219",
+          "osm_version": "9",
+          "osm_timestamp": "2023-11-25T15:34:39Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Melilla/Beni Enzar commercial-customs consignments through first documented trial export; regular opening in 2025 is not substituted for the January2023 experimental endpoint. Current phase only: Commercial customs consignments at Melilla/Beni Enzar until first documented trial export",
+      "date_scope_check": {
+        "start_earliest": "2018-08-01",
+        "start_latest": "2018-08-01",
+        "end_earliest": "2023-01-27",
+        "end_latest": "2023-01-27",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "NA003-R1: The 1 August 2018 onset is retained with explicit source priority: a contemporary 14 August account of Melilla’s government declaration dates implementation to 1 August, and the Spanish government’s indexed parliamentary response says it learned of and sought confirmation of the measure that day. Later 30 August press-conference reports instead describe closure since 31 July; the one-day discrepancy remains recorded, without displacing the more directly documented implementation date or inventing a notice/effect distinction.\n\nThe Moroccan spokesperson attributed the measure to developing Nador port commerce; this does not establish every motive or justify an inferred sovereignty-dispute purpose. The first documented experimental export crossed from Melilla to Morocco at approximately 13:30 on 27 January 2023. This scoped endpoint does not establish unrestricted, full-day or bilateral commercial restoration. Passenger passage remains outside this phase. Reports based on the same government statement are not independent corroboration.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

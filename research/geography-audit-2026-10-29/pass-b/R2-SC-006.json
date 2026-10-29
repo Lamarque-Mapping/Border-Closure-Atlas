@@ -1,0 +1,51 @@
+{
+  "record_id": "R2-SC-006",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Local disputed bordersection and accessroads aroundVorukh, reopened after negotiationsMarch18. Original report says roads/checkpoints without enumerating exact temporarybarriers; not all Kyrgyz–Tajik posts.",
+  "source_checks": [
+    {
+      "url": "https://www.rferl.org/a/kyrgyz-tajik-negotiators-reach-agreement-reopen-border-crossing-after-deadly-clashes/29828634.html",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "RFERL reportsMarch13 closure andMarch18agreement; quotation says roadsopen withnocheckpoints, not a uniquelynamedformalport.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r2-1.json",
+      "sha256": "bb40f06d522798f925c61dd45833e13c4064f339503eb94d364178b010285ce7"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-SC-006-D1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Local disputed bordersection and accessroads aroundVorukh, reopened after negotiationsMarch18. Original report says roads/checkpoints without enumerating exact temporarybarriers; not all Kyrgyz–Tajik posts.",
+      "date_scope_check": {
+        "start_earliest": "2019-03-13",
+        "start_latest": "2019-03-13",
+        "end_earliest": "2019-03-18",
+        "end_latest": "2019-03-18",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Detailed attribution of violence contested; no claim that every Kyrgyz–Tajik crossing shut. Exact reopening scope follows local RFE/RL report. Not established"
+      },
+      "unresolved": [
+        "Exact temporaryroadbarrier locations and closedsection geometry unresolved; no wholeborder substitution."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact temporaryroadbarrier locations and closedsection geometry unresolved; no wholeborder substitution."
+  ],
+  "input_sha256": "626e71b9126083a3a5c047e5278887c279d7712b16759a9467b26650c645383c",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

@@ -1,0 +1,56 @@
+{
+  "record_id": "NA004",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Guerguerat road obstruction in the approximately5km buffer corridor between Moroccan customs in Western Sahara and Mauritanian frontier; restoration specifically evidenced by trucks in both directions.",
+  "source_checks": [
+    {
+      "url": "https://www.lavanguardia.com/internacional/20201114/49465098707/se-retoma-el-trafico-de-camiones-entre-el-sahara-occidental-y-mauritania.html?facet=amp",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "EFE report distinguishes November13 military removal and November14 afternoon truck passage; describes October21 road blockade and the buffer corridor.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-20.txt"
+    },
+    {
+      "url": "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+      "access_status": "fresh_official_pdf_table_inspected",
+      "finding": "AppendixA N1 locates the Dakhla–Nouadhibou crossing corridor; this is approximate location evidence, not obstruction-footprint proof.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/27ad209394e33af2.raw"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NA004-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "guerg",
+          "name": "Dakhla–Nouadhibou / Guerguerat crossing corridor",
+          "coordinates": [
+            -16.94722,
+            21.3338
+          ],
+          "coordinate_method": "Coordinate pair transcribed from AU-PIDA OSBP Status Report Appendix A, reference N1; independently read published table.",
+          "precision": "Approximate named crossing area; 1 km interpretive precision, not the exact gate.",
+          "source_urls": [
+            "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "Appendix A explicitly pairs Dakhla–Nouadhibou / Guerguerat crossing corridor with this latitude/longitude. Modern infrastructure reference only; not closure evidence.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/27ad209394e33af2.raw"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Approximate named corridor reference only; no entire Western Sahara frontier replacement and no sovereignty claim.",
+      "date_scope_check": "Canonical closed_interval: start 2020-10-21–2020-10-21; endpoint 2020-11-14–2020-11-14; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": [
+        "Exact protest/roadblock footprint within buffer strip remains unresolved."
+      ]
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,78 @@
+{
+  "record_id": "R2-SC-005",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Election security order covers simplified crossingpoints across SouthOssetia administrativeboundaryJune8–11. CivilGeorgia listsEUMM five-point inventory; Odzisi verified, otherpoints and operationalstatus differ. This is announcedpolicy, not observed universalclosure.",
+  "source_checks": [
+    {
+      "url": "https://civil.ge/archives/307477",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Announcement06:00June8–06:00June11; listsSinaguri,Karzmani,Zardiaantkari,Ergneti,Odzisi usingEUMM.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r2-1.json",
+      "sha256": "bb40f06d522798f925c61dd45833e13c4064f339503eb94d364178b010285ce7"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/1203169771",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "NamedRazdakhanMosabruni bordercontrol independentlymatchedOdzisi; facilityonly, not allfive.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3136f4dca29f516fb338.xml",
+      "sha256": "f19d07825a2d92dbb28f11dfb4ce7cf2db0db05bc6fdecd3d49ca5c7b9dbcbdc",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3136f4dca29f516fb338.txt",
+      "text_sha256": "f19d07825a2d92dbb28f11dfb4ce7cf2db0db05bc6fdecd3d49ca5c7b9dbcbdc",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-SC-005-R1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-odzisi-mosabruni",
+          "name": "Odzisi–Mosabruni / Razdakhan crossing",
+          "coordinates": [
+            44.4871514,
+            42.0682341
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/1203169771"
+          ],
+          "evidence_note": "OSM named Razdakhan-Mosabruni border_control; DRI 2024 report explicitly equates Odzisi-Mosabruni with Razdakhani. EUMM names Odzisi in the 2019, 2022 and 2026 phase evidence.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3136f4dca29f516fb338.xml",
+          "sha256": "f19d07825a2d92dbb28f11dfb4ce7cf2db0db05bc6fdecd3d49ca5c7b9dbcbdc"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Election security order covers simplified crossingpoints across SouthOssetia administrativeboundaryJune8–11. CivilGeorgia listsEUMM five-point inventory; Odzisi verified, otherpoints and operationalstatus differ. This is announcedpolicy, not observed universalclosure.",
+      "date_scope_check": {
+        "start_earliest": "2019-06-08",
+        "start_latest": "2019-06-08",
+        "end_earliest": "2019-06-11",
+        "end_latest": "2019-06-11",
+        "last_confirmed": null,
+        "temporal_display_rule": "announced_window_layer_only",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "06:00 to 06:00 Moscow time. Does not prove enforcement or actual reopening. Announcement enumeration of five posts may include already non-operating routes."
+      },
+      "unresolved": [
+        "Remainingfour crossingcoordinates and already-inactive status unresolved; onepointdoesnotcoverentireorder."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Remainingfour crossingcoordinates and already-inactive status unresolved; onepointdoesnotcoverentireorder."
+  ],
+  "input_sha256": "de8c4c2fe8b220d7f996515da8c64ab06fa81c4d462a72f6ea0f8af0bd5d437d",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

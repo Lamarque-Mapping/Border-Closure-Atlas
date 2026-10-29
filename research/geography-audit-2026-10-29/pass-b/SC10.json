@@ -1,0 +1,55 @@
+{
+  "record_id": "SC10",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "National Equatorial Guinea land-border election order with a Cameroon-specific selected-merchant endpoint. Complete normal restoration or Gabon endpoint is not established.",
+  "source_checks": [
+    {
+      "url": "https://www.guineaecuatorialpress.com/noticias/guinea_ecuatorial_cerrara_sus_fronteras_el_31_de_octubre_hasta_la_celebracion_de_las_elecciones",
+      "access_status": "full_text_web",
+      "finding": "Official national decision closes landfrontiers fromOctober31 until after voting; does not identify named gate.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-22.json",
+      "evidence_sha256": "2cea952cedd0180b2b454e94ad79fa65a940f27e29922d746884230444bfc5a7"
+    },
+    {
+      "url": "https://www.voanews.com/amp/cameroon-merchants-say-equatorial-guinea-partially-reopens-border-/6846960.html",
+      "access_status": "full_text_web",
+      "finding": "Full VOA article says selected Cameroon/Chad/Nigeria merchants enteredWednesday fromCameroon; no specific Kye-Ossi gate named.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-18.json",
+      "evidence_sha256": "09855cc0804ea556cb2dfc766c35a35ba51f267a14fe4110239957795e9f58e1"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SC10-D1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "National Equatorial Guinea land-border election order with a Cameroon-specific selected-merchant endpoint. Complete normal restoration or Gabon endpoint is not established. Current phase only: Election-related land-border restriction, with the endpoint limited to selected merchants entering from Cameroon.",
+      "date_scope_check": {
+        "start_earliest": "2022-10-31",
+        "start_latest": "2022-10-31",
+        "end_earliest": "2022-11-23",
+        "end_latest": "2022-11-23",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "SC10-D1: October 31 is preferred because it is the intended start in the October 25 official instruction and is independently supported by AFP’s November 1 report quoting an Ebebiyín local official that the frontier had been closed since Monday morning. VOA’s November 23 retrospective October 30 date remains a documented discrepancy. November 7 field reporting identifies disrupted passage on the Kiossi–Ebebiyín corridor, including merchants and Equatorial Guinean returnees; it does not prove that November 3 was the initial national onset. The November 23 endpoint concerns selected merchants entering from Cameroon, not proof that every post or traveller category reopened, or that the Gabon border simultaneously restored access. Exact first-passage clocks and complete exception coverage remain unknown.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "National order is clear but current endpoint only selected merchants from Cameroon; phase-specific geographic/time extent remains unresolved. Do not automatically bind earlier Kye-Ossi record or all Gabon frontier."
+      ]
+    }
+  ],
+  "unresolved": [
+    "National order is clear but current endpoint only selected merchants from Cameroon; phase-specific geographic/time extent remains unresolved. Do not automatically bind earlier Kye-Ossi record or all Gabon frontier."
+  ]
+}

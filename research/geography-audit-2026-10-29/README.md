@@ -23,6 +23,19 @@ the record universe and original release fingerprint. Run
 `node scripts/geography-audit-progress.cjs` to count saved, complete and paired
 checkpoints. Its optional `--pairs` output is a comparison aid, not approval.
 
+`baseline-map-bindings.json` preserves the original all-duration and >24h
+geography separately. `verify-geography-audit.cjs` checks the two independent
+reviewers and evidence hashes for each accepted addition, phase ownership,
+and unchanged geometry for every previously mapped record. `reconciled-decisions.json`
+is the coordinator's explicit decision log; `apply-geography-audit.cjs` applies
+only supported decisions from that log.
+
+Referenced publisher pages are working evidence, not republished articles.
+Some local evidence paths therefore are not public downloads; the original
+source links, access status and findings remain in each audit file. Retained
+OpenStreetMap XML is © OpenStreetMap contributors, under the ODbL:
+https://www.openstreetmap.org/copyright
+
 Only reconciled, evidence-supported decisions enter production geography.
 Missing or disputed dates do not acquire invented continuous intervals or
 reopening dates. Single crossings never receive a whole-frontier substitute.

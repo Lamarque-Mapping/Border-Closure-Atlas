@@ -1,0 +1,81 @@
+{
+  "record_id": "R2-EA-006",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Hekou–KimThanhII refrigerateddragonfruitimportstoppage, notallLaoCaigoods oroldpassenger/railcrossing. Smallnonrefrigeratedtrucksandotherproduceexceptionsremainoutsidephase.",
+  "source_checks": [
+    {
+      "url": "https://en.vietnamplus.vn/china-reopens-one-more-border-gate-with-vietnam-for-fresh-fruit-imports-post220595.vnp",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "MinistryexplicitlypairsHekougatewithKimThanhII,freshfruit banJuly18 andlimitedJanuary12return.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r2-3.json",
+      "sha256": "7bce6c49486f0369fecc02e1070233cab2fdf4b97c08328850c0babde2f90b50"
+    },
+    {
+      "url": "https://en.nhandan.vn/kim-thanh-international-border-crossing-opens-in-lao-cai-post7909.html",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "2012openingnoticeidentifiesinternationalgateNo2KimThanh, predating2021phase.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-18.json",
+      "sha256": "d129d24ae4046e115d173db2fa701344daa14f8f20dba29bdc6111c14fa26192"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/665997590/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "NamedKimThanh border_controlbuildinginspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3865b4fe267fdd2fd1f3.xml",
+      "sha256": "43448a4f00317784559083d5d8cb8afec07df15befa339e300810226ba2ad5ef",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3865b4fe267fdd2fd1f3.txt",
+      "text_sha256": "43448a4f00317784559083d5d8cb8afec07df15befa339e300810226ba2ad5ef",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EA-006-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kim-thanh-2-road",
+          "name": "Kim Thanh II–Hekou road checkpoint",
+          "coordinates": [
+            103.9404498,
+            22.523659
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/665997590/full"
+          ],
+          "evidence_note": "Named KimThanh border_control building, separate from old LaoCai/Hekou passengerbridge andrailway. Ministry explicitly pairs KimThanhII with Hekou freshfruitgate;2012 opening predatesphase.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3865b4fe267fdd2fd1f3.xml",
+          "sha256": "43448a4f00317784559083d5d8cb8afec07df15befa339e300810226ba2ad5ef"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Hekou–KimThanhII refrigerateddragonfruitimportstoppage, notallLaoCaigoods oroldpassenger/railcrossing. Smallnonrefrigeratedtrucksandotherproduceexceptionsremainoutsidephase.",
+      "date_scope_check": {
+        "start_earliest": "2021-07-18",
+        "start_latest": "2021-07-18",
+        "end_earliest": "2022-01-12",
+        "end_latest": "2022-01-12",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "R2-EA-006-D1: September 1 reported small non-refrigerated fruit access, including observed banana trucks August 29–31; those movements are excluded. Announced August 17 expiry was conditional, not an observed reopening. January 12 was a few trial clearances, not normal capacity."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "0d556e316afc5f20db1b0b3cf3542189d589007bf546550dc6d86b539343c88a",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

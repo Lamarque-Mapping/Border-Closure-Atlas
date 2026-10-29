@@ -1,0 +1,48 @@
+{
+  "record_id": "EU038",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Original900m Värska–Ulitina road traversesRussian SaatseBoot twice. Distinct fromSaatse–Krupp formalborderpost.",
+  "source_checks": [
+    {
+      "url": "https://www.kriis.ee/en/travelling-crossing-state-border/road-passing-through-saatse-boot",
+      "access_status": "full_text_web",
+      "finding": "OfficialKriis states10Oct2025closure of900m transit road, previouslyvehicleonly; detours viaTreski/Matsuri/Sesniki andforestroad.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU038-R1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Original Värska–Ulitina road transit through the Saatse Boot in Russian territory, blocked by Estonian authorities",
+      "date_scope_check": "Existing dates, uncertainty and duration eligibility retained. Geography remains held pending the identified evidence gap.",
+      "canonical_dates": {
+        "kind": "confirmed_through",
+        "measure_type": "operational_spell",
+        "start_earliest": "2025-10-10",
+        "start_latest": "2025-10-10",
+        "end_earliest": "2026-09-22",
+        "end_latest": "2026-09-22",
+        "last_confirmed": "2026-09-22",
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "no_numeric_duration",
+        "policy_only": false
+      },
+      "unresolved": [
+        "Attributable geometry of original900m road and actualbarrier positions not verified; namedSaatse checkpoint27.81635,57.89343 is a different facility and rejected."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/EU038.json",
+  "canonical_input_sha256": "878563e589d727eed18b6f94075b10bc0d33375aed18393ffa482d62abe479a4",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

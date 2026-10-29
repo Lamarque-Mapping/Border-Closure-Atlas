@@ -1,0 +1,59 @@
+{
+  "record_id": "R2-EA-001",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "MyanmarNyaungBenDoutgateforadultworkersdepartingThreePagodastowardThaifactories. SchoolchildrenexceptionandThaiBGFconcretebarrier areseparate; do notusemainpassroadpointasexactNyaungBenDoutgate.",
+  "source_checks": [
+    {
+      "url": "https://www.irrawaddy.com/news/burma/myanmar-authorities-close-thai-border-1000s-unable-work-textile-factories.html",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Irrawaddy distinguishesWednesdayMyanmarclosure,ThaiTuesday same-dayreopeningandFridaychildrenexception.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r2-3.json",
+      "sha256": "7bce6c49486f0369fecc02e1070233cab2fdf4b97c08328850c0babde2f90b50"
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/three-pagoda-pass-thai-myanmar-border-reopened",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "BNIidentifiesNyaungBenDoutreopeningandstillblockedBGFcheckpoint. Publicationdate wordingdiffers; canonicaldateunchanged.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r2-3.json",
+      "sha256": "7bce6c49486f0369fecc02e1070233cab2fdf4b97c08328850c0babde2f90b50"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EA-001-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "MyanmarNyaungBenDoutgateforadultworkersdepartingThreePagodastowardThaifactories. SchoolchildrenexceptionandThaiBGFconcretebarrier areseparate; do notusemainpassroadpointasexactNyaungBenDoutgate.",
+      "date_scope_check": {
+        "start_earliest": "2020-02-26",
+        "start_latest": "2020-02-26",
+        "end_earliest": "2020-03-03",
+        "end_latest": "2020-03-03",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Original publication date governs the same-origin report. Adult-worker Myanmar gate scope excludes schoolchildren, other informal routes and the still-blocked Thai BGF checkpoint."
+      },
+      "unresolved": [
+        "NyaungBenDoutnamedlocalgateprecisecoordinate unresolved; genericThreePagodaspointnotapprovedforthisinformalspecificgate."
+      ]
+    }
+  ],
+  "unresolved": [
+    "NyaungBenDoutnamedlocalgateprecisecoordinate unresolved; genericThreePagodaspointnotapprovedforthisinformalspecificgate."
+  ],
+  "input_sha256": "d7cbe6b5e2449b476adce091fcb9402b25de8d9759f82f601bff574c222ac3b8",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

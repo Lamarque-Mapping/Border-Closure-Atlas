@@ -1,0 +1,101 @@
+{
+  "record_id": "EA012",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Only Manhkar–Namtit gate is selected; Chinshwehaw/Qingshuihe, Panghseng, Kyinsankyawt and other Shan posts are contextual. Chinese Mangka is paired with Namtit/Nangteung, but the targeted OSM map contains nearby Qingshuihe control rather than an identified Mangka gate; that nearby control cannot substitute.",
+  "source_checks": [
+    {
+      "url": "https://www.bnionline.net/en/news/china-shuts-border-gate-uwsa-controlled-namtit-town",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Shan reporting specifically names Manhkar and medical/supply effects; Pangkham and Shawba remained open then.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-16.json",
+      "sha256": "f11952f7748922f4b70666314b9472c1e2f67091735faafcb9e3ae27a78b09ea"
+    },
+    {
+      "url": "https://english.shannews.org/archives/27697",
+      "access_status": "search_extract",
+      "finding": "Indexed article explicitly reports January 20 Manhkar–Namtit fuel restoration.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-17.json",
+      "sha256": "f226cf9aeee89c8f20e346fe23f507e235e93543370c0257a5bf79a627f61c40"
+    },
+    {
+      "url": "https://www.wenlvnews.com/p/741842.html",
+      "access_status": "search_extract",
+      "finding": "Tourism report locates Mangka channel at boundary marker 146 but gives no numeric gate coordinate.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-19.json",
+      "sha256": "d9a85160dccf24f09d0f4c7af54af0f66c03463576b11abbbb289a7d0084fd9d"
+    },
+    {
+      "url": "https://www.rfa.org/english/myanmar/2024/12/02/myanmar-border-controls/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.rfa.org/english/myanmar/2024/10/24/myanmar-china-closes-border/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://ispmyanmar.com/mp-84/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.nationthailand.com/news/asean/40040958",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/china-reopens-border-crossings-mndaa-controlled-areas",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://myanmar-now.org/en/news/kokang-army-to-withdraw-from-lashio-under-chinese-brokered-ceasefire-with-myanmar-junta/",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-29a16261d65c681e94.bin",
+      "sha256": "f71652c03871c92e7f388fe98e27845a41e5e933fbbd2b792802b179ea270a1d"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA012-R1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Manhkar–Namtit gate; reported complete closure affecting supplies and medical travel",
+      "date_scope_check": {
+        "scope": "Manhkar–Namtit gate; reported complete closure affecting supplies and medical travel",
+        "start_earliest": "2024-08-24",
+        "start_latest": "2024-08-24",
+        "end_earliest": "2024-08-28",
+        "end_latest": "2024-08-28",
+        "last_confirmed": "2024-08-28",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "",
+        "assessment": "August 24–28 2024 confirms closure at Manhkar only. January 20 2025 partial fuel/goods reopening is later evidence, not proof of uninterrupted five-month complete closure or all-person reopening."
+      },
+      "unresolved": [
+        "Manhkar/Mangka–Namtit exact gate coordinate unresolved; neither Mangka town nor nearby Qingshuihe checkpoint is accepted."
+      ]
+    }
+  ],
+  "unresolved": []
+}

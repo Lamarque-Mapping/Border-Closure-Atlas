@@ -1,0 +1,48 @@
+{
+  "record_id": "ME006",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Endpoint-only official restoration at Al Qaim–Al Bukamal for civilians and trade, distinct from preceding military/government access.",
+  "source_checks": [
+    {
+      "url": "https://www.euronews.com/2019/09/30/iraq-reopens-syria-crossing-in-win-for-mutual-ally-iran",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Reuters ceremony report names paired towns and officials declaring crossing open to travellers and trade September30. Historical eight-year description does not establish a precise onset.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-22.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME006-C7P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "qaim",
+          "name": "Al Qaim–Al Bukamal road crossing",
+          "coordinates": [
+            40.9763645,
+            34.3947597
+          ],
+          "coordinate_method": "Centre of the bounding box of the freshly retrieved named OSM way; approximate facility marker",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/way/1040981865/full"
+          ],
+          "evidence_note": "OSM way 1040981865, version 4, timestamp 2025-12-12T10:08:51Z. Identity tags: {\"landuse\": \"commercial\", \"name\": \"معبر القائم الحدودي\", \"name:ar\": \"معبر القائم الحدودي\", \"name:en\": \"Al-Qa'im Border Crossing\", \"name:fa\": \"پایانه مرزی قائم\", \"name:fr\": \"Passage de la frontière d'Al-Qaïm\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/db13ee2f91da3aed.raw",
+          "evidence_sha256": "34a89960e9cf66a44396e4e1b84290efbf572283b2126ac5ce040dd372238f1d"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Endpoint-only permission geography. No onset derived from town capture, regional conflict, or modern terminal tags.",
+      "date_scope_check": "Canonical policy_period: start None–None; endpoint 2019-09-30–2019-09-30; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

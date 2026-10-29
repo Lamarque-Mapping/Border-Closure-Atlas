@@ -1,0 +1,87 @@
+{
+  "record_id": "EU006",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Two Lithuanian roadposts: Šumskas–Loša andTverečius–Vidzy, not theirtowncentres or thewhole frontier.",
+  "source_checks": [
+    {
+      "url": "https://vrm.lrv.lt/lt/naujienos/uzdaromi-sumsko-ir-tvereciaus-pasienio-kontroles-punktai/",
+      "access_status": "full_text_cached_this_pass",
+      "finding": "Official18Aug article describes both closures and redirectsflows toMedininkai; Šumskaslightvehicles, Tverečiuslight/emptyfreight.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/1a91ce5880bd8c68599c.raw",
+      "sha256": "4e5003e4311818b5283c46b6a0a2e5003eb233d98b3b209960cd3a74331b8a41"
+    },
+    {
+      "url": "https://vrm.lrv.lt/en/news/the-operation-of-the-lavoriskes-and-raigardas-border-crossing-points-will-be-terminated-from-1-march/",
+      "access_status": "full_text_web",
+      "finding": "Ministry22Feb2024 retrospectivelyexplicit18Aug2023 closure and remainingfourroadposts.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/c96182fb9ce62187da93.raw",
+      "sha256": "4c6472d8e25d7fb1539b7b881eb5ccef06a81562bf62e3286ce494c53f106c65"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU006-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-sumskas-losha",
+          "name": "Šumskas–Loša road crossing",
+          "coordinates": [
+            25.75703,
+            54.59148
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/N4937071806",
+            "https://www.openstreetmap.org/node/4937071806"
+          ],
+          "evidence_note": "Named ≤3.5t checkpoint beside Loša control, not Šumskas town. Official ministry names the road post closed18Aug2023; PKPD locates it at Laukininkai."
+        },
+        {
+          "proposed_site_id": "post-tverecius-vidzy",
+          "name": "Tverečius–Vidzy road crossing",
+          "coordinates": [
+            26.63496,
+            55.32201
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/N2605982053",
+            "https://www.openstreetmap.org/node/2605982053"
+          ],
+          "evidence_note": "Named border checkpoint opposite Vidzy, town2.5km southwest. Building W492599644 corroborates within20m; PKPD locates Padysnio18."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Both named roadposts only.",
+      "date_scope_check": "18Aug2023onset retained;30Oct2025 remains laterconfirmation, not reopening.",
+      "canonical_dates": {
+        "kind": "confirmed_through",
+        "measure_type": "operational_spell",
+        "start_earliest": "2023-08-18",
+        "start_latest": "2023-08-18",
+        "end_earliest": "2025-10-30",
+        "end_latest": "2025-10-30",
+        "last_confirmed": "2025-10-30",
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/EU006.json",
+  "canonical_input_sha256": "735d3ccb3034e41aa75c15044b9b795c7647d822f614fb12f30d77ab35ea08ee",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

@@ -1,0 +1,58 @@
+{
+  "record_id": "ME029",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Qaa–Jousiyeh road access was severed by a strike on Syrian territory near the guards and a bridge; exact damaged approach segment is not located by the named checkpoint.",
+  "source_checks": [
+    {
+      "url": "https://today.lorientlejour.com/article/1432882/lebanons-eastern-border-crossings-with-syria-shut-after-israeli-strike.html",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "25 October report locates damage on Syrian side and explicitly describes vehicles and trucks unable to use severed road.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-18.txt"
+    },
+    {
+      "url": "https://www.lbcgroup.tv/news/lebanon-news/820049/qaa-jusiyah-land-border-crossing-between-lebanon-and-syria-reopens-say/en",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Minister announces Qaa–Jusiyah reopening. This does not resolve every earlier returnee exception or contested chronology.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-18.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME029-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "qaa",
+          "name": "Qaa–Jousiyeh road crossing area",
+          "coordinates": [
+            36.544381,
+            34.4231347
+          ],
+          "coordinate_method": "Coordinates transcribed from freshly retrieved OSM API node",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/node/1551036786",
+            "https://www.openstreetmap.org/api/0.6/map?bbox=36.52,34.40,36.56,34.44"
+          ],
+          "evidence_note": "OSM node 1551036786, version 4, timestamp 2018-03-07T15:27:57Z. Identity tags: {\"barrier\": \"border_control\", \"bicycle\": \"yes\", \"foot\": \"yes\", \"horse\": \"yes\", \"motorcar\": \"yes\", \"motorcycle\": \"yes\", \"name\": \"Al Qa\", \"name:en\": \"Al Qa\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/d28403a51f2d4ad7.raw",
+          "evidence_sha256": "a03627ad3d590387bdeee2b7d82f1a141eb6b89435432e29be904f353018859c"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Supported crossing-area reference; preserve disputed date flags. Do not depict checkpoint itself as bomb-impact coordinate.",
+      "date_scope_check": "Canonical closed_interval: start 2024-10-25–2024-10-25; endpoint 2024-12-01–2024-12-01; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": [
+        "Exact bombed bridge/road obstruction footprint unresolved."
+      ]
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,51 @@
+{
+  "record_id": "R2-SC-007",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "SelectedIsfara–Vorukh enclave-access roadtraffic, separate fromBatken–Isfara/Oshcorridor. Closure concernedroad accessafterlocalclash, not aninternationalfrontier-wide suspension.",
+  "source_checks": [
+    {
+      "url": "https://interfax.com/newsroom/top-stories/19603/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "BorderService tellsInterfax IsfaraVorukh andBatkenIsfara roadtraffic restoredJuly25 afterJuly22 interruption. Selectedphase keepsfirstrouteonly.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r2-1.json",
+      "sha256": "bb40f06d522798f925c61dd45833e13c4064f339503eb94d364178b010285ce7"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-SC-007-D1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "SelectedIsfara–Vorukh enclave-access roadtraffic, separate fromBatken–Isfara/Oshcorridor. Closure concernedroad accessafterlocalclash, not aninternationalfrontier-wide suspension.",
+      "date_scope_check": {
+        "start_earliest": "2019-07-22",
+        "start_latest": "2019-07-22",
+        "end_earliest": "2019-07-25",
+        "end_latest": "2019-07-25",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Official operational account, not independent daily observation. Excludes the differently named Batken/Isfana–Osh corridor reported unblocked late July 24; route-name discrepancies are retained rather than averaged."
+      },
+      "unresolved": [
+        "Specific blockadepositions/closedroadextent not provided; enclavecentroid or formalborderpost would beunsupported."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Specific blockadepositions/closedroadextent not provided; enclavecentroid or formalborderpost would beunsupported."
+  ],
+  "input_sha256": "d363741e5ba31b89c2dddbc2e3599df111f8dd10809e858e3b8f48b208f7673d",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

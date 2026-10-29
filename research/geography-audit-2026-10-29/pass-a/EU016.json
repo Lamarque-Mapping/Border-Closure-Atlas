@@ -1,0 +1,79 @@
+{
+  "record_id": "EU016",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Swedish special admission ban targets arrivals from Denmark, with citizens and permitted categories exempt. Øresund fixed link is a qualified land-route reference; ferry/air entry and exact road or railway control sites are not supplied by this point.",
+  "source_checks": [
+    {
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/statens-offentliga-utredningar/sverige-under-pandemin_h9b389/html/",
+      "access_status": "fresh_search_extract",
+      "finding": "Official retrospective confirms December21 decision denying entry to foreign arrivals from Denmark/UK.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-025.json"
+    },
+    {
+      "url": "https://wiki.unece.org/pages/viewpage.action?navigatingVersions=true&pageId=128421230",
+      "access_status": "fresh_versioned_source_extract",
+      "finding": "Archived border-observatory version lists December22 ban and residence/work, transport, diplomatic, urgent-family and Bornholm exceptions; snapshot not entire period verification.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-025.json"
+    },
+    {
+      "url": "https://mapcarta.com/W370256014",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Combined fixed motorway/rail bridge geometry reference shown; underlying OSM XML could not be retrieved.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-028.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU016-R1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-oresund-bridge-reference",
+          "name": "Øresund Bridge — fixed road and rail link reference",
+          "coordinates": [
+            12.86376,
+            55.56946
+          ],
+          "coordinate_method": "Published Mapcarta reference coordinate attributed to OSM way 370256014; original XML inaccessible",
+          "precision": "Approximate bridge reference, not Lernacken checkpoint location or the full bridge/tunnel alignment.",
+          "source_urls": [
+            "https://mapcarta.com/W370256014",
+            "https://www.openstreetmap.org/way/370256014",
+            "https://www.oresundsbron.com/en/about-oresundsbron/about-us/facts-about-oresundsbron/the-toll-station"
+          ],
+          "evidence_note": "Mapcarta names combined railway/motorway bridge and underlying man_made=bridge feature. Official operator places toll station at Lernacken outside Malmö; no claim that this point is the checkpoint.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-028.json",
+              "access_status": "fresh_full_text_of_secondary_OSM_representation"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Swedish special entry ban for arrivals from Denmark, excluding Swedish citizens and permitted categories",
+      "date_scope_check": {
+        "start_earliest": "2020-12-22",
+        "start_latest": "2020-12-22",
+        "end_earliest": "2021-03-31",
+        "end_latest": "2021-03-31",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Full Denmark-arrival route set and exact Lernacken/Hyllie control positions not reconstructed. End date and changing exemptions preserved from canonical record, not re-proved by one archival snapshot."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "a3ddbdeba439441f5db74008071d4acab33def985f58048d14df86bc1d93dc78"
+}

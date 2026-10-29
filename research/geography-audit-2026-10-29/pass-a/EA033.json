@@ -1,0 +1,153 @@
+{
+  "record_id": "EA033",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Only Kyinsankyawt cargo gate is selected for the November 26 2021 endpoint. China-side Wanding Mangman and Myanmar Jinsanjiao/Henong form this channel; Pangsai–Wanding town bridge is excluded from that reopening.",
+  "source_checks": [
+    {
+      "url": "https://news.cnr.cn/kuaixun/20211127/t20211127_525672120.shtml",
+      "access_status": "search_extract",
+      "finding": "November 27 Chinese broadcaster reports actual November 26 Mangman and opposite Jinsanjiao cargo restoration after 136 days, using contactless containers.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-17.json",
+      "sha256": "f226cf9aeee89c8f20e346fe23f507e235e93543370c0257a5bf79a627f61c40"
+    },
+    {
+      "url": "https://www.moi.gov.mm/moi%3Aeng/news/11742",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "Myanmar official report retrospectively gives November 26 2021 and separately May 2022 driver substitution and January 2023 Mang Wein resumption.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-48048c4aa90e515c0c.bin",
+      "sha256": "e41c519e2d3a153f87fd26d025f23066f4cb3246558bd262d6a6e0cc95252a6b"
+    },
+    {
+      "url": "https://www.moi.gov.mm/moi%3Aeng/news/4027",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-2bbba18b7e8d4a964d.bin",
+      "sha256": "793e785056a37c8ac23afd08ff147f00960d474eb11a7972fc3eda5331e5b3ad"
+    },
+    {
+      "url": "https://myanmar-now.org/en/news/limited-trade-to-restart-on-china-myanmar-border/?tztc=1",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-14b52ed6b2b2a1134d.bin",
+      "sha256": "08124eecbc4a727dd17919f602d0eda4301b25ed124ba2a8bce24de8059f8054"
+    },
+    {
+      "url": "https://www.moi.gov.mm/moi:eng/news/9216",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-c2c9d6b3b396a1d410.bin",
+      "sha256": "5f4b51ec1d9b85d87c9ad0f9753e2dcbb05da477dca2bd6af8ef3ef3aa825ad7"
+    },
+    {
+      "url": "https://www.moi.gov.mm/moi%3Aeng/news/9127",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-af798fa5bf4cfe84b3.bin",
+      "sha256": "ce9aac905da6abc8a918e13f18b9658129b61d40a64682714758bf687c8b039c"
+    },
+    {
+      "url": "https://myanmar-now.org/en/news/limited-trade-to-restart-on-china-myanmar-border/",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-cb1b7de95ca7e54b75.bin",
+      "sha256": "aee2ce057a81a1dbc9d479a0df0fb6e1d8d4cc00e921c042bba41d4b4406450a"
+    },
+    {
+      "url": "https://ispmyanmar.com/myanmar-china-border-trade-crisis-continues/",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-98774d5791bf9d6420.bin",
+      "sha256": "efd3ff8aa6c440eb56a151a5e16228d37ddf7670ce4cf30dcae8ef8d39768f12"
+    },
+    {
+      "url": "https://mdn.gov.mm/en/chinese-drivers-bring-back-myanmar-watermelon-unloading-goods",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-2f9b5fe4a9497c45a8.bin",
+      "sha256": "6f2dfa937d1f22ccc3c5109158490ddb19f9b60b44b9e3b0c2202e770aa27fa2"
+    },
+    {
+      "url": "https://www.moi.gov.mm/moi:eng/news/4027",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-72ad94ac649cc43730.bin",
+      "sha256": "274a9aac249582fe308377645746ce2ad862c0d59dd7513987f5bcebc715fb71"
+    },
+    {
+      "url": "https://mdn.gov.mm/en/about-40-trucks-myanmar-products-exported-daily-china-through-kyinsankyawt-trade-post",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-61925c9e9bb74d7aca.bin",
+      "sha256": "c9b876d5aa0eab94f0fadbe4d14647a9842f04dce5f4a891b2eb8a2a0dbb335a"
+    },
+    {
+      "url": "https://www.moi.gov.mm/moi:eng/news/9127",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-f870dc4960c13472b7.bin",
+      "sha256": "054496402d5f0e75193f20fe2c51133450b5d8054d93a8f172e96611ab236d45"
+    },
+    {
+      "url": "https://www.mizzima.com/article/china-myanmar-border-trade-gates-reopen-8-january-after-3-year-covid-closure",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 403: Forbidden",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA033-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kyinsankyawt-mangman",
+          "name": "Kyin San Kyawt–Wanding Mangman cargo gate",
+          "coordinates": [
+            98.0015462,
+            24.051089
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/11389643215",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/11389643215",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=97.99,24.045,98.01,24.06",
+            "https://news.cnr.cn/kuaixun/20211127/t20211127_525672120.shtml"
+          ],
+          "evidence_note": "OSM names Myanmar side Jinsanjiao/Golden Triangle port, opposite explicitly named Wanding Mangman. Chinese Xinhua/CNR reports identify this pairing and distinguish the separate Wanding town bridge/Pangsai channel.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-kyinsan-gate.xml",
+          "sha256": "f89ce481c85d5afab68ffb3ce6224c258b370e9cdd6b251dfd8d55b83f04f3df",
+          "osm_feature": "node/11389643215",
+          "osm_version": "2",
+          "osm_timestamp": "2025-11-27T09:59:17Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "金三角口岸"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kyinsankyawt cargo-gate closure, to the limited container/driver-substitution reopening.",
+      "date_scope_check": {
+        "scope": "Kyinsankyawt cargo-gate closure, to the limited container/driver-substitution reopening.",
+        "start_earliest": "2021-07-08",
+        "start_latest": "2021-07-08",
+        "end_earliest": "2021-11-26",
+        "end_latest": "2021-11-26",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Keep July 8–November 26 2021 scoped cargo interval. CNR describes contactless container transfer; subsequent driver substitution and residual limits do not mean ordinary passenger reopening. State-media date errors and shared lineage remain qualified."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

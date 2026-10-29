@@ -1,0 +1,54 @@
+{
+  "record_id": "NA003",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Commercial customs at Beni Enzar–Melilla, not the whole city border or a continuing ban on passenger movement.",
+  "source_checks": [
+    {
+      "url": "https://mptmd.gob.es/portal/delegaciones_gobierno/delegaciones/melilla/actualidad/2023/01/2023-01-27",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Spanish government records first experimental aluminium consignment crossing at about13:30; explicitly first step toward full customs operation.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-21.txt"
+    },
+    {
+      "url": "https://www.europapress.es/nacional/noticia-tercera-operacion-aduanas-ceuta-melilla-primera-vez-paso-mercancias-marruecos-20230526205652.html",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Later account distinguishes August2018 customs closure, January27 trial and further trials from full normalization.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-24.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NA003-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "beni",
+          "name": "Beni Enzar–Melilla road border crossing",
+          "coordinates": [
+            -2.9334654,
+            35.2672608
+          ],
+          "coordinate_method": "Centre of the bounding box of the freshly retrieved named OSM way; approximate facility marker",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/way/301837571/full"
+          ],
+          "evidence_note": "OSM way 301837571, version 9, timestamp 2023-11-25T15:34:39Z. Identity tags: {\"addr:city\": \"Beni Enzar بني انصار\", \"addr:city:ar\": \"بني انصار\", \"addr:city:es\": \"Beni Enzar\", \"addr:street\": \"Avenida Hasán II شارع الحسن الثاني\", \"addr:street:ar\": \"شارع الحسن الثاني\", \"addr:street:es\": \"Avenida Hasán II\", \"building\": \"roof\", \"layer\": \"1\", \"name\": \"Paso fronterizo de Beni Enzar\", \"name:es\": \"Paso fronterizo de Beni Enzar\", \"name:fr\": \"Poste frontière du Maroc à Bni Nsar\", \"wikidata\": \"Q17500153\", \"wikimedia_commons\": \"Category:Beni Ensar-Melilla border crossing\", \"wikipedia\": \"es:Paso fronterizo de Beni Enzar\", \"wikipedia:es\": \"Paso fronterizo de Beni Enzar\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/8d57a65efd86d8fe.raw",
+          "evidence_sha256": "54f8c3b50082652164f65b78efac540af0494dbeec1d727628b68d7536ab3e75"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Named road border complex locates the commercial customs function at approximate crossing-area precision; endpoint is first trial export, not unrestricted freight.",
+      "date_scope_check": "Canonical closed_interval: start 2018-08-01–2018-08-01; endpoint 2023-01-27–2023-01-27; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,60 @@
+{
+  "record_id": "ME003",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Al Qaim–Al Bukamal road crossing for ordinary cargo and civilians, with authorised returnee and humanitarian movement exceptions retained.",
+  "source_checks": [
+    {
+      "url": "https://www.aa.com.tr/en/middle-east/iraq-says-border-crossing-with-syria-closed-after-assad-s-fall/3418302",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "8 December report explicitly identifies Al Qaim and the initial official closure statement.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-18.txt"
+    },
+    {
+      "url": "https://www.thestar.com.my/news/world/2025/06/14/iraq-reopens-syria-crossing-for-trade-and-passenger-traffic",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Reuters reports border authority declaration that regular cargo and civilian movement resumed June14.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-23.txt"
+    },
+    {
+      "url": "https://ina.iq/en/local/40476-bpa-announce-the-resumption-of-trade-exchange-movements-at-the-al-qaim-border-crossing.html",
+      "access_status": "inaccessible_http403",
+      "finding": "Original INA page inaccessible; Reuters report independently inspected."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME003-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "qaim",
+          "name": "Al Qaim–Al Bukamal road crossing",
+          "coordinates": [
+            40.9763645,
+            34.3947597
+          ],
+          "coordinate_method": "Centre of the bounding box of the freshly retrieved named OSM way; approximate facility marker",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/way/1040981865/full"
+          ],
+          "evidence_note": "OSM way 1040981865, version 4, timestamp 2025-12-12T10:08:51Z. Identity tags: {\"landuse\": \"commercial\", \"name\": \"معبر القائم الحدودي\", \"name:ar\": \"معبر القائم الحدودي\", \"name:en\": \"Al-Qa'im Border Crossing\", \"name:fa\": \"پایانه مرزی قائم\", \"name:fr\": \"Passage de la frontière d'Al-Qaïm\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/db13ee2f91da3aed.raw",
+          "evidence_sha256": "34a89960e9cf66a44396e4e1b84290efbf572283b2126ac5ce040dd372238f1d"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Road terminal identity established. June14 is regular-operation endpoint; limited Iraqi returnee/humanitarian permissions remain exceptions, not earlier complete reopening.",
+      "date_scope_check": "Canonical closed_interval: start 2024-12-08–2024-12-08; endpoint 2025-06-14–2025-06-14; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,80 @@
+{
+  "record_id": "SC20",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Mhlumeni–Goba road port; consequential Eswatini closure and later Mozambican readiness/reopening report are not every Mozambique border or railway.",
+  "source_checks": [
+    {
+      "url": "https://gov.sz/index.php?catid=127&id=2434%3Aministerial-guidelines-following-ministry-of-public-service&view=article",
+      "access_status": "inaccessible_timeout",
+      "finding": "Both forms of original official Eswatini page timed out; not full-text checked.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-19.json",
+      "evidence_sha256": "523b22fc934a509bf5a951d696838b268ee5cd14ef55f1ca06188ea0f3fc7509"
+    },
+    {
+      "url": "https://clubofmozambique.com/news/mozambique-border-with-eswatini-reopens/",
+      "access_status": "full_text_web",
+      "finding": "Migration spokesman identifies Goba main Eswatini crossing, after18monthclosure, personnel/computer readiness; preserve current endpoint qualification.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-18.json",
+      "evidence_sha256": "09855cc0804ea556cb2dfc766c35a35ba51f267a14fe4110239957795e9f58e1"
+    },
+    {
+      "url": "https://water.igad.int/resources/138581mul-regional-Afrique.pdf",
+      "access_status": "indexed_original_study",
+      "finding": "Geological Survey author explicitly locates Mhlumeni borderpost and Siteki–Goba road; coordinates approximate minute-level.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-22.json",
+      "evidence_sha256": "2cea952cedd0180b2b454e94ad79fa65a940f27e29922d746884230444bfc5a7"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SC20-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-mhlumeni-goba",
+          "name": "Mhlumeni / Goba",
+          "coordinates": [
+            32.0839764,
+            -26.2575586
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/849970194",
+            "https://www.openstreetmap.org/api/0.6/node/849970194",
+            "https://www.openstreetmap.org/api/0.6/map?bbox=32.077,-26.263,32.09,-26.25",
+            "https://water.igad.int/resources/138581mul-regional-Afrique.pdf"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\"}. This is geographic evidence only, not historical closure evidence. Road control at Mhlumeni/Goba locality pair; adjacent opposite-side node849981467 is distinct. Geology ministry study locates Mhlumeni borderpost about26°16S32°05E and names Siteki–Goba tarred road.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/efb4d4286585b7d3617b.html",
+          "evidence_sha256": "b6bea3b5853a855463ab11ca084113d600259d2a68998231eaa8703247eb81e7",
+          "osm_version": "5",
+          "osm_timestamp": "2026-04-02T15:41:56Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Mhlumeni–Goba road port; consequential Eswatini closure and later Mozambican readiness/reopening report are not every Mozambique border or railway. Current phase only: Consequential Mhlumeni–Goba port closure reported by Eswatini",
+      "date_scope_check": {
+        "start_earliest": "2020-04-03",
+        "start_latest": "2020-04-03",
+        "end_earliest": "2020-04-06",
+        "end_latest": "2020-04-06",
+        "last_confirmed": "2020-04-06",
+        "endpoint_status": "last_confirmed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "Goba reopening announced November 4 2021 (reported November 5) after approximately 18 months closure, with staff/equipment ready. Actual first passage not observed; do not treat announcement as actual reopening.\n\nSC20-R1: Indexed government text only; direct retrieval timed out. Observation end is not reopening. Later Goba closed status is not used to lengthen this segment.\n\nend: November 4 permission/readiness report does not observe first traffic.\n\nsource verification: Exact April 3 onset still lacks full-text access to the Eswatini statement; later full retrospective corroborates occurrence but not that exact date.\n\nLater access: a December 19, 2021 report quotes SENAMI recording 2,470 travellers at Goba during December 13–17. This establishes resumed passenger movement by December 17, without dating the first November reopening. The December 13 High Commission report gives operating arrangements and forecasts, not a direct count of completed Goba crossings.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

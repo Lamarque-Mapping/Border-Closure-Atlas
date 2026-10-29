@@ -1,0 +1,59 @@
+{
+  "record_id": "ME031",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "The canonical cohort is Kuwaiti citizens returning through Nuwaiseeb; the national announcement alone must not bind the endpoint to all Kuwait posts.",
+  "source_checks": [
+    {
+      "url": "https://www.alraimedia.com/article/1513387/محليات/أخبار-محلية/إغلاق-مطار-الكويت-والمنافذ-الحدودية-البرية-والبحرية-حتى-1-يناير",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "21 December cabinet report orders land/sea closure from 23:00 with freight exemption.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-24.txt"
+    },
+    {
+      "url": "https://www.alraimedia.com/article/1514983/محليات/وزير-الداخلية-يتفقد-منفذ-النويصيب-الحدودي",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Interior minister inspected Nuwaiseeb to receive returning citizens from Saudi Arabia.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-23.txt"
+    },
+    {
+      "url": "https://www.alraimedia.com/article/1515019/محليات/افتتاح-محدود-للمنافذ-البرية-بين-الكويت-والسعودية",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "2 January report specifies limited Nuwaiseeb operation from 09:00 to 15:00.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-22.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME031-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "nuwaiseeb",
+          "name": "Nuwaiseeb road border post",
+          "coordinates": [
+            48.3910162,
+            28.541359
+          ],
+          "coordinate_method": "Centre of the bounding box of the freshly retrieved named OSM way; approximate facility marker",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/way/1456475679/full"
+          ],
+          "evidence_note": "OSM way 1456475679, version 1, timestamp 2025-12-06T12:37:32Z. Identity tags: {\"area\": \"yes\", \"barrier\": \"border_control\", \"highway\": \"services\", \"name\": \"منفذ النويصيب الحدودي\", \"name:ar\": \"مركز منفذ النويصيب الحدودي\", \"name:en\": \"Nuwaiseeb Border Post\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/f67bc98e77f057fe.raw",
+          "evidence_sha256": "14a3e0d501a6baab618ee42beffd74d47b0fe503ce5e27950d6d3c6da4693e2a"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Returning Kuwaiti citizens at Nuwaiseeb only; preserve limited-hours restoration and freight exception.",
+      "date_scope_check": "Canonical closed_interval: start 2020-12-21–2020-12-21; endpoint 2021-01-02–2021-01-02; last confirmed None. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

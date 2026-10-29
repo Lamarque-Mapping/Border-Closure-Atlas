@@ -1,0 +1,55 @@
+{
+  "record_id": "W-033",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Tsamiya–Kamba transit corridor for Cotonou-origin freight bound for Niger, with distinct Benin/Nigeria entry and Niger/Nigeria exit controls.",
+  "source_checks": [
+    {
+      "url": "https://banouto.bj/societe/article/20260211-transit-nigeria-niger-le-corridor-tsamiya-kamba-rouvre-apres-trois-mois-de-blocage-des-camions",
+      "access_status": "full_text_web",
+      "finding": "Article identifies2000trucks fromCotonou stranded after Niger-side Kamba closure and corridor reopeningFebruary9. Scope is transit route, not whole Nigeria–Benin/Niger borders.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-17.json",
+      "evidence_sha256": "ae7d78b909b8ec9a00fffb5d9dd336426b2b558500d9c46ed198b5922b480e2c"
+    },
+    {
+      "url": "https://arogboibevoice.com/customs-reopens-kamba-tsamiya-borders-following-security-talks/",
+      "access_status": "indexed_article",
+      "finding": "Customs statement separately names Tsamiya processing and movement to Niger throughKamba.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-21.json",
+      "evidence_sha256": "86329adb86b22b413b2993b1b021cb732f7b0325fca3a9c15e85c9108ae25cf0"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "W-033-FU1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Tsamiya–Kamba transit corridor for Cotonou-origin freight bound for Niger, with distinct Benin/Nigeria entry and Niger/Nigeria exit controls. Current phase only: Tsamiya–Kamba corridor restrictions affecting Cotonou-origin trucks destined for Niger",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2026-02-09",
+        "end_latest": "2026-02-09",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "NAN and contemporary Nigerian local reporting quote the customs controller describing the Nigerian reopening decision and actual February 9, 2026 truck clearance; NAN also quotes a Niger representative welcoming that decision. Anadolu independently attributes the months-long measure to Nigeria. This supports recording Nigerian involvement, rather than treating it as solely Niger-imposed.\n\nBanouto attributes the preceding blockage to Niger while describing the Nigerian reopening. Its disagreement remains visible; separate concurrent measures may have been conflated. No original closure order or precise onset was recovered. Officials’ descriptions of months of disruption establish a >24-hour restriction, but neither the three-month shorthand nor broad seven-year retrospective accounts establish an exact continuous interval. The 2019 trade regime, 2022 Kamba permission and direct Benin–Niger frontier restriction remain separate.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Exact Tsamiya and Kamba control coordinates and intervening authorized corridor not verified. Same-name Tsamiya ward in Sokoto is rejected as wrong location."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact Tsamiya and Kamba control coordinates and intervening authorized corridor not verified. Same-name Tsamiya ward in Sokoto is rejected as wrong location."
+  ]
+}

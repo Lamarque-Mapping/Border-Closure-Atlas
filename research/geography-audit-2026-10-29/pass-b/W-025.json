@@ -1,0 +1,75 @@
+{
+  "record_id": "W-025",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Official Yenga–Koindu–Nongoa Makona River crossing; source describes boats, not an alreadyexistinginternationalroadbridge. Nongoa customs is partial approachreference.",
+  "source_checks": [
+    {
+      "url": "https://www.africaguinee.com/guinee-sierra-leone-a-nongoa-la-reouverture-de-la-frontiere-fait-revivre-les-echanges-et-les-liens-familiaux-immersion/",
+      "access_status": "full_text_web",
+      "finding": "CorrespondentAugust28 observesboats andgoods onMakona, reports officialJune24 openingpublicizedJuly6.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-17.json",
+      "evidence_sha256": "ae7d78b909b8ec9a00fffb5d9dd336426b2b558500d9c46ed198b5922b480e2c"
+    },
+    {
+      "url": "https://www.mru.int/fr/wp-content/uploads/2024/09/MRU-Yenga-Mission-Report-PRINT-VERSION.pdf",
+      "access_status": "indexed_original_report",
+      "finding": "MRU report says majorcrossingatriverinYengavillage and boats only; proposedbridgeisfutureproject.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/geo-search-19.json",
+      "evidence_sha256": "e162e4f1bbd1166702cba0a0181a1f23b7cdcd48b2dfe6f61cfa5515bcf6c559"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "W-025-R1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-nongoa-customs",
+          "name": "Nongoa customs checkpoint on Yenga route",
+          "coordinates": [
+            -10.3313367,
+            8.5015243
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/4534784654",
+            "https://www.openstreetmap.org/api/0.6/node/4534784654"
+          ],
+          "evidence_note": " OSM tags inspected: {\"addr:city\": \"Nongoa\", \"addr:state\": \"Gueckedou\", \"man_made\": \"yes\", \"military\": \"checkpoint\", \"name\": \"Poste de contrôle douane\", \"source\": \"Red Cross Field Survey\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/4a625404652cc1239852.html",
+          "evidence_sha256": "109b7d34f149c08af7334dc714427cbfa2a9530309f539d0e9590c3a84e2a56c",
+          "osm_version": "1",
+          "osm_timestamp": "2016-12-02T20:15:24Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Official Yenga–Koindu–Nongoa Makona River crossing; source describes boats, not an alreadyexistinginternationalroadbridge. Nongoa customs is partial approachreference. Current phase only: Official Koindu–Nongoa crossing restriction at Yenga along Makona River",
+      "date_scope_check": {
+        "start_earliest": "2025-04-27",
+        "start_latest": "2025-04-28",
+        "end_earliest": "2026-06-24",
+        "end_latest": "2026-06-24",
+        "last_confirmed": null,
+        "endpoint_status": "legal_effective",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "Contemporary Africa Guinee May 2 report dates Nongoa landing/civilian closure April 27, whereas later official-notice chronology uses April 28. Formal June 24 reopening remains notice-attributed; independent field movement observed August 28. No exact operational interval certified.\n\nW-025-R1: Onset conflict retained; initial order unavailable. Exact endpoint follows one notice lineage. Clandestine passage occurred; no zero-passage interval asserted.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Customs approachcheckpoint verified byRedCross-field-surveyOSM; exactboatlanding andrivercrossingposition stillunresolved. No new bridge assumed."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Customs approachcheckpoint verified byRedCross-field-surveyOSM; exactboatlanding andrivercrossingposition stillunresolved. No new bridge assumed."
+  ]
+}

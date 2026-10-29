@@ -1,0 +1,107 @@
+{
+  "record_id": "EA034",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "The dispute concerned the local Three Pagodas/Payathonzu gate beside the Thai road/drain works. It affected commuters and visitors; September evidence says large goods still restricted, so commuter reopening is not a full cargo reopening.",
+  "source_checks": [
+    {
+      "url": "https://www.bnionline.net/en/news/karen-state/item/3303-thailand-halts-drainage-construction-at-three-pagodas-pass-after-flood-problems.html",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "KIC July 28 report describes road-drain works, flooding into Payathonzu and Myanmar closure of the local border checkpoint.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-343944824700e4a964.bin",
+      "sha256": "3d1ef0ffd5b9089a077b730a6678010da5986482e4e575f5eb006fc59f14e08c"
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/karen-state/item/3444-thailand-requests-upgrading-three-pagodas-pass-to-an-official-permanent-border-crossing.html",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "KIC retrospective says commuters resumed after July 26 talks, with large goods still restricted.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-d6a30cededc8db807a.bin",
+      "sha256": "ef88b0bca2ab0484b25ab5111c7095a2f3bdcd0df1f9f37633202a2f82408361"
+    },
+    {
+      "url": "https://www.thaipbs.or.th/program/WanmaiThaiPBS/watch/43393",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Thai PBS July 27 text says gate would reopen that day after a full-day restriction; no exact clock confirmed.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-20.json",
+      "sha256": "20bda51c628dc912a605c5c380a05ca2f5fdd76232bd0903e1571b03b176c5a6"
+    },
+    {
+      "url": "https://karennews.org/2017/09/thailand-requests-upgrading-three-pagodas-pass-to-an-official-permanent-border-crossing/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://mgronline.com/local/detail/9600000076036",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.thaich8.com/news_detail/42409",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA034-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-three-pagodas-local",
+          "name": "Three Pagodas Pass / Payathonzu local crossing",
+          "coordinates": [
+            98.3867661,
+            15.3021754
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/960997867",
+          "precision": "Local crossing-area reference, 300 m; contemporary position within this gateway is approximate.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/960997867",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=98.37,15.29,98.4,15.32"
+          ],
+          "evidence_note": "Border-control node at end of Thai Route 323 immediately north of three mapped pagodas and named Three Pagodas Pass attraction. Contemporary Thai PBS locates disputed local gate in Sangkhlaburi; not an unrelated formal freight port.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-three-pagodas.xml",
+          "sha256": "b519715a9e1f0eb2a0fddf07dbd850a6571160f9d119b98769b77a0f88d5e47c",
+          "osm_feature": "node/960997867",
+          "osm_version": "6",
+          "osm_timestamp": "2026-04-30T16:29:11Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "bicycle": "yes",
+            "foot": "yes",
+            "motorcar": "yes",
+            "motorcycle": "yes",
+            "note": "Open only for Thai and Myanmar citizens"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Local commuter and visitor passage at Three Pagodas Pass during the drainage/construction dispute.",
+      "date_scope_check": {
+        "scope": "Local commuter and visitor passage at Three Pagodas Pass during the drainage/construction dispute.",
+        "start_earliest": "2017-07-26",
+        "start_latest": "2017-07-26",
+        "end_earliest": "2017-07-26",
+        "end_latest": "2017-07-27",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "July 26 onset and July 26–27 reopened-day disagreement retained. Strictly greater than 24 hours is unestablished, but this short phase has supported geography for All view."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

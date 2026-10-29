@@ -62,6 +62,7 @@ jobs:
           node scripts/verify-status-review.cjs
           node scripts/verify-map-export.cjs
           node scripts/verify-crossing-map.cjs
+          node scripts/verify-geography-audit.cjs
           node scripts/verify-phase-onsets.cjs
           python scripts/verify-workbook.py
           python scripts/verify-workbook-package.py

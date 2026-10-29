@@ -1,0 +1,50 @@
+{
+  "record_id": "ME035",
+  "pass": "a",
+  "agent": "/root/geography_africa_middle_east_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "October restriction at Sheeb–Chazabeh, a particular paired road crossing, with technical/logistical and security explanations. Other Iranian crossings must not inherit it.",
+  "source_checks": [
+    {
+      "url": "https://en.964media.com/54067/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Government explanation identifies Sheib in Maysan and counterpart Chazabeh; cites closure for goods/travellers while reporting other posts open and some conflicting passenger claims.",
+      "retrieval_http_status": "000",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/web-batch-19.txt"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "ME035-FU1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "sheeb",
+          "name": "Al Sheeb–Chazabeh road crossing",
+          "coordinates": [
+            47.789851,
+            31.8526883
+          ],
+          "coordinate_method": "Centre of the bounding box of the freshly retrieved named OSM way; approximate facility marker",
+          "precision": "Approximately 300 m; source node identifies a crossing area, not a reconstructed historic barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/api/0.6/way/534919135/full"
+          ],
+          "evidence_note": "OSM way 534919135, version 5, timestamp 2026-09-12T04:43:21Z. Identity tags: {\"area\": \"yes\", \"barrier\": \"border_control\", \"building\": \"yes\", \"government\": \"border_control\", \"layer\": \"1\", \"name\": \"منفذ الشیب الحدودی\", \"name:ar\": \"منفذ الشیب الحدودی\", \"name:en\": \"Al-Shib Border Crossing\", \"name:fa\": \"پایانه مرزی شیب\", \"opening_hours\": \"closed\", \"police\": \"checkpoint\", \"wikidata\": \"Q29514074\", \"wikipedia\": \"ar:منفذ الشيب الحدودي\"}. This is location evidence only; event applicability is assessed separately.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a/1538898844739a23.raw",
+          "evidence_sha256": "c5c68539b0eea43600d1bdc0fcc413a0aaf13d1f169e5053c71b8d4546bad96f"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Geography supported for the recorded observation interval. No ongoing-closure extension beyond October25 and no extrapolation to all Iran crossings.",
+      "date_scope_check": "Canonical policy_period: start 2026-10-21–2026-10-21; endpoint 2026-10-25–2026-10-25; last confirmed 2026-10-25. No end date is inferred from the current geography or extended to the review date. Retain existing over-24-hour eligibility and uncertainty; no interval is promoted or lengthened by this review.",
+      "unresolved": [
+        "This pass independently read onset/explanation, not the separate October25 continuation report."
+      ]
+    }
+  ],
+  "unresolved": []
+}

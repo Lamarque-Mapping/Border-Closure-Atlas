@@ -1,0 +1,116 @@
+{
+  "record_id": "R2-AM-005",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Twelve migrationposts: Paraguachón; SimónBolívar; FranciscoPaulaSantander; PuertoSantander; JoséAntonioPáez; PuertoCarreño river; PuertoInírida river; Leticia river; PuertoLeguízamo river; Rumichaca; Chiles–Tufiño; SanMiguel. Not wholecoast orPanamafrontier.",
+  "source_checks": [
+    {
+      "url": "https://www.elpais.com.co/amp/colombia/ordenan-cierre-de-fronteras-de-por-paro-nacional-del-21-de-noviembre.html",
+      "access_status": "full_text_web",
+      "finding": "ElPaís originalbody enumerates12 posts bycountry andforce-majeure exception;00:00Wednesday20Novto05:00Friday22Nov.",
+      "direct_fetch_status": "inaccessible"
+    },
+    {
+      "url": "https://www.eluniverso.com/noticias/2019/11/19/nota/7611629/colombia-rumichaca-ecuador-protestas-marchas-21-noviembre/",
+      "access_status": "full_text_web",
+      "finding": "ElUniverso19Nov namesRumichaca, Chiles–Tufiño andSanMiguel; announced53hourspan.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-AM-005-R1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-simon-bolivar-bridge",
+          "name": "Simón Bolívar international road bridge",
+          "coordinates": [
+            -72.45085,
+            7.81792
+          ],
+          "coordinate_method": "OSM bridge reference coordinates reproduced by Mapcarta",
+          "precision": "approximate bridge area, about 100 m; not customs gate footprint",
+          "source_urls": [
+            "https://mapcarta.com/19864652",
+            "https://www.openstreetmap.org/way/871456442"
+          ],
+          "evidence_note": "Inspected geographical page names OSM way 871456442 as the road bridge over the Táchira linking San Antonio and La Parada; excludes same-name Barranquilla bridge. Original event accounts name the same international bridge."
+        },
+        {
+          "proposed_site_id": "post-francisco-paula-santander-bridge",
+          "name": "Francisco de Paula Santander international bridge",
+          "coordinates": [
+            -72.462778,
+            7.916389
+          ],
+          "coordinate_method": "DMS conversion from inspected Wikidata coordinate",
+          "precision": "approximate bridge; 210m span; secondary coordinate evidence",
+          "source_urls": [
+            "https://www.wikidata.org/wiki/Q6091179",
+            "https://en.wikipedia.org/wiki/Francisco_de_Paula_Santander_International_Bridge"
+          ],
+          "evidence_note": "Inspected Q6091179 revision2134981114: 7°54′59″N 72°27′46.001″W; named road bridge across Táchira linking Cúcuta and Ureña. Different from same-name Magdalena bridge. Wikidata coordinate statement has no cited reference: qualified geographic reference, not a surveyed checkpoint."
+        },
+        {
+          "existing_site_id": "post-rumichaca",
+          "name": "Rumichaca road bridge",
+          "coordinates": [
+            -77.664073,
+            0.814031
+          ],
+          "coordinate_method": "Independent inspection of preserved versioned OSM source metadata; no fresh OSM API retrieval claimed",
+          "precision": "approximate named crossing area; historical obstruction footprint not surveyed",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1316055071",
+            "https://mintransporte.gov.co/publicaciones/1390/colombia-y-ecuador-firman-convenio-de-cooperacion-para-construccion-del-nuevo-puente-rumichaca/"
+          ],
+          "evidence_note": "Named bridgegeometry independentlyinspected inpriorPassB source metadata.",
+          "cached_source_metadata": {
+            "evidence_file": "west-osm-evidence/rumichaca.xml",
+            "licence": "Open Database License (ODbL); © OpenStreetMap contributors",
+            "osm_id": 1316055071,
+            "osm_type": "way",
+            "tags": {
+              "layer": "1",
+              "man_made": "bridge",
+              "name": "Puente Internacional Rumichaca",
+              "wikipedia": "es:Puente internacional de Rumichaca"
+            },
+            "timestamp": "2026-06-08T12:42:34Z",
+            "version": 2
+          },
+          "cached_evidence_path": "source/crossings/locations.json",
+          "cached_evidence_sha256": "5f0bde9c0572849301d20ad36461997221bdf93c427c07f99dd08a8f2a7425bc"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Threeof12namedposts located. Riverportfacilities not replacedbylocalitycentroids.",
+      "date_scope_check": "20–22Nov2019bounds retained; announcedend doesnotestablish individualfirstvehicle.",
+      "canonical_dates": {
+        "kind": "ordered_window",
+        "measure_type": "ordered_window",
+        "start_earliest": "2019-11-20",
+        "start_latest": "2019-11-20",
+        "end_earliest": "2019-11-22",
+        "end_latest": "2019-11-22",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [
+    "Nine remaining namedroad/river facilities unlocated."
+  ],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R2-AM-005.json",
+  "canonical_input_sha256": "198de41b3e8806189195113d92079c0eda6c3f534658f2d116364840cbc275c9",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

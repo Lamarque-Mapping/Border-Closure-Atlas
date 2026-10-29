@@ -1,0 +1,80 @@
+{
+  "record_id": "EU016",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Special Swedish admission ban for arrivals fromDenmark. Øresund bridge is located as one fixed road/rail link; ferry andair arrivals are broader than this point.",
+  "source_checks": [
+    {
+      "url": "https://www.krisinformation.se/en/news/2020/december/entry-ban-from-uk-and-denmark/",
+      "access_status": "inaccessible_redirect",
+      "finding": "URL redirects to technical-outage backup page; historical article inaccessible.",
+      "direct_fetch_status": "inaccessible"
+    },
+    {
+      "url": "https://www.svt.se/nyheter/lokalt/skane/sverige-stanger-gransen-mot-danmark",
+      "access_status": "full_text_web",
+      "finding": "SVT21–22Dec reports midnight22Dec implementation and Swedish citizen, resident, worker, freight exceptions.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/427d0e12ad5293ca2aa4.raw",
+      "sha256": "aa7426490e10af14f25d1855a99253f5ee74ab76bc8d8b4478c0531513b76819"
+    },
+    {
+      "url": "https://www.swedenabroad.se/en/embassies/north-macedonia-skopje/current/news/the-general-entry-ban-to-sweden-extended-to-31-may-2021/",
+      "access_status": "full_text_web",
+      "finding": "Embassy25Mar explicitly lifts separate Denmark/Norway restrictions31Mar, retains negative tests.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/85d3d902c074a6b18c65.raw",
+      "sha256": "5ab558f02f7f6f1b756d1ea55ae8a92e393c58634ee4ff9907a6487ab65c598e"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU016-R1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "link-oresund-bridge",
+          "name": "Øresund fixed road and rail bridge",
+          "coordinates": [
+            12.827,
+            55.57518
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/W912575183",
+            "https://www.openstreetmap.org/way/912575183"
+          ],
+          "evidence_note": "Named Øresund bridge component with WikidataQ297871. Link joins Denmark andSweden with E20 andrail; point is an approximate bridge reference, not Lernacken inspection booth."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Øresund fixedlink subset of Denmark-arrival policy; no ferry terminal inventory inferred.",
+      "date_scope_check": "22Dec–31Mar separate entry-ban dates retained; later testing not same ban.",
+      "canonical_dates": {
+        "kind": "policy_period",
+        "measure_type": "formal_policy_period",
+        "start_earliest": "2020-12-22",
+        "start_latest": "2020-12-22",
+        "end_earliest": "2021-03-31",
+        "end_latest": "2021-03-31",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": true
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [
+    "Ferry ports and exact Swedish inspection point remain unresolved."
+  ],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/EU016.json",
+  "canonical_input_sha256": "a3ddbdeba439441f5db74008071d4acab33def985f58048d14df86bc1d93dc78",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

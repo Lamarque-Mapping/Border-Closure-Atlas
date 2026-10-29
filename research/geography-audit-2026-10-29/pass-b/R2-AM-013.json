@@ -1,0 +1,69 @@
+{
+  "record_id": "R2-AM-013",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "EaglePass international railwaybridge, north/south railfreight, separate fromsameannouncement roadBridge1.",
+  "source_checks": [
+    {
+      "url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/37187cd",
+      "access_status": "full_text_web",
+      "finding": "CBP20Sep afternoon suspension explicitlydistinguishesBridge1 andinternationalrailwaybridge.",
+      "direct_fetch_status": "inaccessible"
+    },
+    {
+      "url": "https://www.up.com/customers/announcements/customernews/allcustomernews/CN2023-57.html",
+      "access_status": "full_text_web",
+      "finding": "UP23Sep saysrailinterchange reopenedmidnight andembargolifted; backlogclearance later.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-AM-013-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-eagle-pass-rail",
+          "name": "Eagle Pass–Piedras Negras railway bridge",
+          "coordinates": [
+            -100.50879,
+            28.69653
+          ],
+          "coordinate_method": "OSM-derived Mapcarta bridge geometry representative point",
+          "precision": "approximate rail span, around100m",
+          "source_urls": [
+            "https://mapcarta.com/W1374920650",
+            "https://www.openstreetmap.org/way/1374920650",
+            "https://www.eaglepasstx.gov/DocumentCenter/View/4019"
+          ],
+          "evidence_note": "Named Union Pacific International Railroad Bridge. Municipal permit identifies sole single-track railway bridge used by UPRR and BNSF to Ferromex; distinct from adjacent Camino Real road bridge."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Railwaybridge only, not EaglePass roadports.",
+      "date_scope_check": "20Sepafternoon–23Sepmidnight railinterval retained; noElPaso inclusion.",
+      "canonical_dates": {
+        "kind": "closed_interval",
+        "measure_type": "operational_spell",
+        "start_earliest": "2023-09-20",
+        "start_latest": "2023-09-20",
+        "end_earliest": "2023-09-23",
+        "end_latest": "2023-09-23",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": true,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/R2-AM-013.json",
+  "canonical_input_sha256": "6ef198c671ddab167292a2d6655788c7c26215c130ec298f86883dd405571e2f",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

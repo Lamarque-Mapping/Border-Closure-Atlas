@@ -1,0 +1,64 @@
+{
+  "record_id": "SC02",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "South African Onverwacht/Nsalitje secondary road port alone; not every South African frontier or other primary ports.",
+  "source_checks": [
+    {
+      "url": "https://iol.co.za/news/south-africa/2022-07-29-all-south-african-land-border-posts-to-be-opened-on-august-1-as-covid-19-shutdown-ends/",
+      "access_status": "full_text_web",
+      "finding": "Article quotes reopening notice and specifically names Onverwacht/Nsalitje near Pongola among secondary ports previously closed; Maloma workers distinguished from other major crossings.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-19.json",
+      "evidence_sha256": "523b22fc934a509bf5a951d696838b268ee5cd14ef55f1ca06188ea0f3fc7509"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SC02-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-onverwacht-nsalitje",
+          "name": "Onverwacht / Nsalitje",
+          "coordinates": [
+            31.6438287,
+            -27.3164583
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1315374769",
+            "https://www.openstreetmap.org/api/0.6/node/1315374769"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\", \"name\": \"Onverwacht Border Control\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/f423574b368111518e7e.html",
+          "evidence_sha256": "1b3cd2adfcaaf883e98f11d8a37c51af56e732a4ed1d5a96b2643d39a2c26894",
+          "osm_version": "3",
+          "osm_timestamp": "2013-12-04T06:08:59Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "South African Onverwacht/Nsalitje secondary road port alone; not every South African frontier or other primary ports. Current phase only: South African formal closure of Onverwacht/Nsalitje secondary port",
+      "date_scope_check": {
+        "start_earliest": "2020-03-16",
+        "start_latest": "2020-03-16",
+        "end_earliest": "2022-08-01",
+        "end_latest": "2022-08-01",
+        "last_confirmed": null,
+        "endpoint_status": "legal_effective",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "SC02-R1: March16 is administrative commencement in the official SARS notice, not an observed gate clock time. August1,2022 is legal reopening permission; actual first passage and exceptional permits remain unverified.\n\nsource_access/start: Original named March 26 legal text not yet retrieved full.\n\nsource verification: Exact March 26 named original legal text remains indexed-only after fresh restricted-URL failure; later full 2021 list and full IOL retrospective support scope/continuity but do not replace the initial instrument.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

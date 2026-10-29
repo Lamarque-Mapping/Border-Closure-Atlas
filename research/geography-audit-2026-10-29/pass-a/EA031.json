@@ -1,0 +1,59 @@
+{
+  "record_id": "EA031",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "The selected returnee endpoint is Banteay Meanchey–Sa Kaeo province border, not every Cambodian–Thai crossing. CamboJA names the province pair but not a complete gate set. O’Smach is in a different province and resumed a day later.",
+  "source_checks": [
+    {
+      "url": "https://cambojanews.com/cambodian-migrant-workers-start-coming-home-as-border-reopens/",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "CamboJA quotes provincial official: Banteay–Sa Kaeo border reopened August 12; separately dates O’Smach August 13.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-f5f257f3251d4e862b.bin",
+      "sha256": "b2c52a0ee98baef2604582ffa37374ac5123e1f5d351af91373f6260fce4552e"
+    },
+    {
+      "url": "https://cambojanews.com/govt-locks-down-border-provinces-and-announces-new-nationwide-restrictions-amid-fears-of-spreading-delta-variant/",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-df86c0e427d1498fde.bin",
+      "sha256": "aaf05581303b300506e03c070c48329e8d74d9b65244a3ecce3090a3bc8bb892"
+    },
+    {
+      "url": "https://www.thejakartapost.com/seasia/2021/07/29/cambodia-to-impose-covid-19-lockdowns-in-areas-bordering-thailand.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 403: Forbidden",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA031-D1",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ordinary returnee admission into Cambodia through Banteay Meanchey, to the first reported resumed returns.",
+      "date_scope_check": {
+        "scope": "Ordinary returnee admission into Cambodia through Banteay Meanchey, to the first reported resumed returns.",
+        "start_earliest": "2021-07-29",
+        "start_latest": "2021-07-30",
+        "end_earliest": "2021-08-12",
+        "end_latest": "2021-08-12",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "July 29–30 restriction and August 12 Banteay returnee resumption retained; August 13 O’Smach cannot receive the same endpoint. Goods/emergency exceptions remain."
+      },
+      "unresolved": [
+        "No exact affected admission-post set or source-backed provincial frontier segment identified. Poipet alone and full Cambodia–Thailand border are unsupported substitutes."
+      ]
+    }
+  ],
+  "unresolved": []
+}

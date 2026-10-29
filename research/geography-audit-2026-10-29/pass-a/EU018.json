@@ -1,0 +1,60 @@
+{
+  "record_id": "EU018",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Serbian official announcement closes all passenger border crossings across modes from 08:00 20 March 2020 while allowing trucks. Generalized external-frontier references locate the land-policy component only; no individual operational post closure is inferred.",
+  "source_checks": [
+    {
+      "url": "https://www.srbija.gov.rs/vest/en/151884/all-border-crossings-for-passenger-trafficclosed.php",
+      "access_status": "fresh_full_text_extract",
+      "finding": "20 March notice explicitly names all road, rail, air and water passenger crossings and truck exception. This supports national land scope but not every later phase exception.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/2e77d299f666ca5db595.html",
+      "source_sha256": "94ce151784e3eb399f3f6509703be796fe0da0382af346a7ccecab7ab1392e2b",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-025.json"
+    },
+    {
+      "url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+      "access_status": "cached_local_geographic_evidence",
+      "finding": "Existing Natural Earth derived features inspected in source/geography-reference.json: named frontier MultiLineStrings, metadata gives version 5.1.0, 1:10m generalized policy coverage. These are present-day context, not historical lane closures.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/natural-earth-selected-existing.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU018-D1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-bgr-srb",
+        "context-frontier-bih-srb",
+        "context-frontier-hrv-srb",
+        "context-frontier-hun-srb",
+        "context-frontier-mkd-srb",
+        "context-frontier-mne-srb",
+        "context-frontier-rou-srb"
+      ],
+      "complete": false,
+      "phase_applicability": "Serbia’s tightened passenger-admission phase including citizens/residents, followed by conditional admission and removal of the remaining permit requirement",
+      "date_scope_check": {
+        "start_earliest": "2020-03-20",
+        "start_latest": "2020-03-20",
+        "end_earliest": null,
+        "end_latest": "2020-05-22",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Kosovo administrative-line applicability is not independently resolved from the Serbian national-border wording; that segment omitted. Air/water terminals and individual posts not mapped. Later admission changes and original endpoints remain qualified."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "1821844526d99d98733c7e9233bc5cd71a46ddef6f1ac2ce75693d06635bf7cb"
+}

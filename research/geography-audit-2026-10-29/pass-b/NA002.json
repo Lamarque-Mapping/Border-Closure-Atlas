@@ -1,0 +1,83 @@
+{
+  "record_id": "NA002",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "First authorized passenger reopening at El Tarajal(Ceuta) and Beni Enzar(Melilla), with EU-resident/Schengen cohort limits.",
+  "source_checks": [
+    {
+      "url": "https://www.lamoncloa.gob.es/lang/en/gobierno/news/paginas/2022/20220512_morocco-borders.aspx",
+      "access_status": "full_text_web",
+      "finding": "Official May12 statement explicitly names both gates and initial17May00:00 cohort; subsequent frontier-worker stage is distinct.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-17.json",
+      "evidence_sha256": "ae7d78b909b8ec9a00fffb5d9dd336426b2b558500d9c46ed198b5922b480e2c"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NA002-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-el-tarajal",
+          "name": "Ceuta / El Tarajal",
+          "coordinates": [
+            -5.3450146,
+            35.8692499
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/378675804",
+            "https://www.openstreetmap.org/api/0.6/way/378675804/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"amenity\": \"police\", \"name\": \"Aduana-Paso Fronterizo del Tarajal\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/9e621c61347d29815255.html",
+          "evidence_sha256": "1409a08e4d4be599565d0decfca992c4340f322f5bafad6afa71e02f89f64606",
+          "osm_version": "2",
+          "osm_timestamp": "2016-01-08T21:14:41Z"
+        },
+        {
+          "proposed_site_id": "post-beni-enzar",
+          "name": "Melilla / Beni Enzar",
+          "coordinates": [
+            -2.9334654,
+            35.2672608
+          ],
+          "coordinate_method": "Bounding-box centre of fresh original OSM mapped facility polygon",
+          "precision": "approximate facility polygon centre; not an exact historic gate",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/301837571",
+            "https://www.openstreetmap.org/api/0.6/way/301837571/full"
+          ],
+          "evidence_note": " OSM tags inspected: {\"addr:city\": \"Beni Enzar بني انصار\", \"addr:city:ar\": \"بني انصار\", \"addr:city:es\": \"Beni Enzar\", \"addr:street\": \"Avenida Hasán II شارع الحسن الثاني\", \"addr:street:ar\": \"شارع الحسن الثاني\", \"addr:street:es\": \"Avenida Hasán II\", \"building\": \"roof\", \"layer\": \"1\", \"name\": \"Paso fronterizo de Beni Enzar\", \"name:es\": \"Paso fronterizo de Beni Enzar\", \"name:fr\": \"Poste frontière du Maroc à Bni Nsar\", \"wikidata\": \"Q17500153\", \"wikimedia_commons\": \"Category:Beni Ensar-Melilla border crossing\", \"wikipedia\": \"es:Paso fronterizo de Beni Enzar\", \"wikipedia:es\": \"Paso fronterizo de Beni Enzar\"}. This is geographic evidence only, not historical closure evidence.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/8d57a65efd86d8fe05be.html",
+          "evidence_sha256": "ccf5a1a51e04b3f781c396bf9b95b8ebd4181bcb06694a974ea6693b32b7c219",
+          "osm_version": "9",
+          "osm_timestamp": "2023-11-25T15:34:39Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "First authorized passenger reopening at El Tarajal(Ceuta) and Beni Enzar(Melilla), with EU-resident/Schengen cohort limits. Current phase only: Ordinary authorised passenger passage at Ceuta and Melilla, to initial EU-resident/Schengen-authorised traveller restoration.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-13",
+        "start_latest": "2020-03-13",
+        "end_earliest": "2022-05-17",
+        "end_latest": "2022-05-17",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "NA002-D1: Contemporary reporting places the Moroccan land-border closure overnight March 12–13, 2020, with Tarajal closed at 06:00 on March 13. Spanish citizens leaving Morocco through Tarajal remained an initial exception. The March 13 calendar onset concerns ordinary passage and does not assert that every exception stopped simultaneously. May 17, 2022 is the first staged EU-resident/Schengen-authorised passenger restoration, observed by AP; commercial customs and the later cross-border-worker stage remain separate. Spanish local May 17 corresponds to late May 16 in Morocco. The 795-day figure is a calendar-date difference, not measured hours or unrestricted all-category closure.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,74 @@
+{
+  "record_id": "AM035",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Surinamese restriction concerns Maroni river crossings; the inspected July 2021 on-site account identifies Albina opposite Saint-Laurent, continuing COVID rules despite public reopening reports. Only the Albina terminal can be proposed; no entire French Guiana–Suriname boundary substitution.",
+  "source_checks": [
+    {
+      "url": "https://www.franceguyane.fr/actualite/international/reouverture-dalbina-comment-cela-se-passe-dans-la-pratique-2892.php",
+      "access_status": "fresh_source_extract",
+      "finding": "Reporter visited Albina: military police said they lacked new instructions, would turn French arrivals back, while river traffic/reopening announcement was conditional. This later observation does not resolve original start or uninterrupted duration.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/8f44b635e1c7ee544dca.html",
+      "source_sha256": "e239c1ab8f8c08097807cfdda2d6feb9aa3780519e771071009b8c57edc04749",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-025.json"
+    },
+    {
+      "url": "https://mapcarta.com/N3633279406",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Albina named ferry terminal at 5.49526,-54.05666, attributed OSM node 3633279406. Original OSM endpoint unavailable; secondary representation only.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-028.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "AM035-D1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-albina-ferry-reference",
+          "name": "Albina ferry terminal",
+          "coordinates": [
+            -54.05666,
+            5.49526
+          ],
+          "coordinate_method": "Published Mapcarta coordinate attributed to OSM ferry_terminal node 3633279406; original XML inaccessible",
+          "precision": "Approximate named ferry-terminal reference; no inferred route or opposite landing.",
+          "source_urls": [
+            "https://mapcarta.com/N3633279406",
+            "https://www.openstreetmap.org/node/3633279406"
+          ],
+          "evidence_note": "Named passenger ship terminal in Albina, amenity=ferry_terminal/public_transport=station. This is a partial river-crossing reference only, not the entire Maroni frontier or every pirogue landing.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-028.json",
+              "access_status": "fresh_full_text_of_secondary_OSM_representation"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Suriname-imposed restriction at the French Guiana–Suriname Maroni frontier, with later hearing evidence of continued border restrictions.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-14",
+        "start_latest": "2020-03-14",
+        "end_earliest": "2020-07-21",
+        "end_latest": "2022-04-13",
+        "last_confirmed": "2020-07-21",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Maroni reach, pirogue landing coverage and opposite terminal not reconstructed; July observation is not a revised reopening date."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "70d1a0b14621e788d6ad37d663c5439fd5a7a4d5e3c49d306ddbd1ec0ee43b35"
+}

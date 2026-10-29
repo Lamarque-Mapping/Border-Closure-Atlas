@@ -1,0 +1,55 @@
+{
+  "record_id": "W-008",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Guinean Pamelap road crossing with Sierra Leone per local correspondent; national reopening title narrowed to this specific observation.",
+  "source_checks": [
+    {
+      "url": "https://laguinee.info/2021/09/17/la-frontiere-terrestre-guinee-sierra-leone-ouverte-la-zone-sous-haute-securite/",
+      "access_status": "full_text_web",
+      "finding": "Correspondent atPamelap reports effective opening6am and strongGuinean military presence.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-17.json",
+      "evidence_sha256": "ae7d78b909b8ec9a00fffb5d9dd336426b2b558500d9c46ed198b5922b480e2c"
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/map?bbox=-12.965,9.168,-12.95,9.18",
+      "access_status": "fresh_original_osm_xml",
+      "finding": "Inspected namedPamelap police and nearby customs checkpoint still tagged underconstruction; not enough to establish historical Guinean entrycontrol.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/a4582253915d1f08449d.html",
+      "evidence_sha256": "ca2e00544532992b29f904ff324938832bf8823b50907ac7850cc79c56dccbc8"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "W-008-REV1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Guinean Pamelap road crossing with Sierra Leone per local correspondent; national reopening title narrowed to this specific observation. Current phase only: Guinea-side Pamelap crossing with Sierra Leone as described by the local reopening correspondent",
+      "date_scope_check": {
+        "start_earliest": "2021-09-05",
+        "start_latest": "2021-09-05",
+        "end_earliest": "2021-09-17",
+        "end_latest": "2021-09-17",
+        "last_confirmed": null,
+        "endpoint_status": "observed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "Reuters reported a broad September 6 announcement allowing commercial and humanitarian exchanges. A September 13 timetable envisaged Sierra Leone reopening before September 15; subsequent CNRD authorization was issued September 16. The Pamelap correspondent reports local implementation from 06:00 on September 17. Announcements and planned dates do not replace this scoped local account. Exact onset hour, exception implementation and category coverage remain unknown. Earlier Senegal and Guinea-Bissau restrictions must not be assigned a new September 5 onset or joined into a uniform national interval.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Pamelap village/police are locatable, but exact Guinean-side crossing control is not independently established; nearby Gbalamuya construction marker may be opposite side."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Pamelap village/police are locatable, but exact Guinean-side crossing control is not independently established; nearby Gbalamuya construction marker may be opposite side."
+  ]
+}

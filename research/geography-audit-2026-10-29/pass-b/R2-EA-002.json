@@ -1,0 +1,25 @@
+{
+  "record_id": "R2-EA-002",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Thai-side same-dayThreePagodaslocal closure is distinguishedfromMyanmaradult-workerrestrictionandseparateBGFgateblockade. Canonicalinputhasno includeddatedphase; nogeometrybindingcreated.",
+  "source_checks": [
+    {
+      "url": "https://www.irrawaddy.com/news/burma/myanmar-authorities-close-thai-border-1000s-unable-work-textile-factories.html",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "OriginalIrrawaddy specificallysaysThai authoritiesclosedTuesdayand reopenedlaterthatday,MyanmarclosedWednesday.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r2-3.json",
+      "sha256": "7bce6c49486f0369fecc02e1070233cab2fdf4b97c08328850c0babde2f90b50"
+    }
+  ],
+  "phase_decisions": [],
+  "unresolved": [
+    "No canonical phase available; no synthetic interval orphaseadded.",
+    "No active dated phase in the canonical input; nothing is approved for geometry."
+  ],
+  "input_sha256": "1d4d85a65ecc97ac5d69f3fd04a46413005daf00bf9b60167b1478ddfcd11e4a",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

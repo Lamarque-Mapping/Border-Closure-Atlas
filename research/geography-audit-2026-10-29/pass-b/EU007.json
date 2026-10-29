@@ -1,0 +1,190 @@
+{
+  "record_id": "EU007",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Three distinct mode-specific restrictions: Lavoriškės/Raigardas road closure; Medininkai/Šalčininkai footcycle ban; Kena/Kybartai railway boarding restrictions.",
+  "source_checks": [
+    {
+      "url": "https://vrm.lrv.lt/en/news/the-operation-of-the-lavoriskes-and-raigardas-border-crossing-points-will-be-terminated-from-1-march/",
+      "access_status": "full_text_web",
+      "finding": "Ministry22Feb2024 gives allthree measures effective1Mar and exceptional railboarding decided byborderguard.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/c96182fb9ce62187da93.raw",
+      "sha256": "4c6472d8e25d7fb1539b7b881eb5ccef06a81562bf62e3286ce494c53f106c65"
+    },
+    {
+      "url": "https://lrv.lt/en/news/government-reopens-the-salcininkai-and-medininkai-border-crossing-points-with-belarus-BJy6/",
+      "access_status": "full_text_web",
+      "finding": "19Nov2025 reopening notice expressly permits Medininkai/Šalčininkai onlybycar from20Nov; pedestrian exclusion continues.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/82be418598893cc5f4df.raw",
+      "sha256": "684ea52141f85c929e4f8ae037f204f9abf0fec30e7404acec2e2ce255e24c72"
+    },
+    {
+      "url": "https://pkpd.lrv.lt/lt/veiklos-sritys/administruojami-pasienio-kontroles-punktai/",
+      "access_status": "full_text_web",
+      "finding": "PKPDcurrent directory independently identifiesroadposts andaddresses; road Kybartai address is distinctfrom railstation.",
+      "direct_fetch_status": "inaccessible"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU007-R1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-lavoriskes-kotlovka",
+          "name": "Lavoriškės–Kotlovka road crossing",
+          "coordinates": [
+            25.74221,
+            54.71671
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/W1547394369",
+            "https://www.openstreetmap.org/way/1547394369"
+          ],
+          "evidence_note": "Named Lithuanian checkpoint compound adjoining Kotlovka. Mirror country label Belarus is not relied upon; PKPD and ministry identify Lithuanian road post."
+        },
+        {
+          "proposed_site_id": "post-raigardas-privalka",
+          "name": "Raigardas–Privalka road crossing",
+          "coordinates": [
+            23.97454,
+            53.94254
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/W312990359",
+            "https://www.openstreetmap.org/way/312990359"
+          ],
+          "evidence_note": "Named checkpoint building at Gardino130 Jaskonys, matching official PKPD address; Privalka controls410m west. Not Raigardas bus stop in Druskininkai."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Both closedroadposts; no othercrossings included.",
+      "date_scope_check": "1Mar2024to30Oct2025 confirmationbound retained, not reopening.",
+      "canonical_dates": {
+        "kind": "confirmed_through",
+        "measure_type": "operational_spell",
+        "start_earliest": "2024-03-01",
+        "start_latest": "2024-03-01",
+        "end_earliest": "2025-10-30",
+        "end_latest": "2025-10-30",
+        "last_confirmed": "2025-10-30",
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": false
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "EU007-C7P1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-medininkai-kamenny-log",
+          "name": "Medininkai–Kamenny Log road crossing",
+          "coordinates": [
+            25.693,
+            54.54644
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/W332001950",
+            "https://www.openstreetmap.org/way/332001950"
+          ],
+          "evidence_note": "Named customs commercial compound, passenger and TIR checkpoint nodes120–140m west. PKPD official Pasieniečių26 address and EU listing identify pair. Covers road post generally, not individual pedestrian lane."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Medininkai located; Šalčininkai exactpoint remains unresolved. Pedestrian/cycle restriction only.",
+      "date_scope_check": "1Mar2024to20Nov2025 retained as confirmation; governmentreopening preserves vehicle-only limitation.",
+      "canonical_dates": {
+        "kind": "confirmed_through",
+        "measure_type": "formal_policy_period",
+        "start_earliest": "2024-03-01",
+        "start_latest": "2024-03-01",
+        "end_earliest": "2025-11-20",
+        "end_latest": "2025-11-20",
+        "last_confirmed": "2025-11-20",
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "no_numeric_duration",
+        "policy_only": true
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "EU007-C7P2",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kena-rail",
+          "name": "Kena railway border station",
+          "coordinates": [
+            25.68894,
+            54.63926
+          ],
+          "coordinate_method": "Coordinates transcribed from inspected OSM-derived Mapcarta named feature",
+          "precision": "approximate named crossing area; precise historical barrier footprint not surveyed",
+          "source_urls": [
+            "https://mapcarta.com/N5111637638",
+            "https://www.openstreetmap.org/node/5111637638"
+          ],
+          "evidence_note": "Named border checkpoint directly adjoining Kena railway station N57185717 (54.63956,25.68921); EU official listing identifies Kena–Gudagojis as railway. Not Kena village centroid or distant detention facility."
+        },
+        {
+          "proposed_site_id": "post-kybartai-rail",
+          "name": "Kybartai railway border station",
+          "coordinates": [
+            22.75917,
+            54.64028
+          ],
+          "coordinate_method": "Published station coordinate with geotagged original photograph corroboration",
+          "precision": "approximate railway station platform area,150m",
+          "source_urls": [
+            "https://en.wikipedia.org/wiki/Kybartai_railway_station",
+            "https://commons.wikimedia.org/wiki/File:Kybartai,_stotis.JPG"
+          ],
+          "evidence_note": "Named border railway station onKaunas–Kybartai line, Chernyshevskoye2km west. Published station coordinate corroborated by independently geotagged station photograph54.640977,22.758498 within100m. Roadcheckpoint onBasanavičiaus not substituted."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Railway boarding/alighting at bothstations; trains andfreight not entirelyclosed.",
+      "date_scope_check": "1Mar2024 observationonly; no reopening orend inferred.",
+      "canonical_dates": {
+        "kind": "confirmed_through",
+        "measure_type": "formal_policy_period",
+        "start_earliest": "2024-03-01",
+        "start_latest": "2024-03-01",
+        "end_earliest": "2024-03-01",
+        "end_latest": "2024-03-01",
+        "last_confirmed": "2024-03-01",
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "no_numeric_duration",
+        "policy_only": true
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [
+    "Šalčininkai geography searches returned district border-zone checkpoint and towncentroids, allrejected."
+  ],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/EU007.json",
+  "canonical_input_sha256": "e4aceb668dc2b15d67cdf90a4b004a4960d389a408ec37cba6a48c179ebc2b87",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

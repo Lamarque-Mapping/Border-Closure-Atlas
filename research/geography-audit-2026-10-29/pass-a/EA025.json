@@ -1,0 +1,134 @@
+{
+  "record_id": "EA025",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ordinary industrial cross-border access to Kaesong was cut via the western Gyeongui road corridor. The southern transit-control complex is a geographically identified access site; the factory estate, Panmunjom diplomatic site and Dorasan railway station are not substituted.",
+  "source_checks": [
+    {
+      "url": "https://en.yna.co.kr/view/AEN20160211009352315",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "Contemporary Yonhap reports expulsion and industrial closure, with final departure time uncertain.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-41071240571b291769.bin",
+      "sha256": "2cc38f23c86b761c02e355e6c28a0153ca12c65c3922022711d41592528c64b5"
+    },
+    {
+      "url": "https://www.nkleadershipwatch.org/2016/02/11/cprk-issues-statement-on-the-closure-of-kaesong-industrial-zone/",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "Republished DPRK statement specifically cuts west-coast roads near KIZ across demarcation line.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-bf61a13a660abdbade.bin",
+      "sha256": "07158fa9769e232888e08c8cf01a2d84467f933fb204fb8af78c13d0ad363585"
+    },
+    {
+      "url": "https://www.koreatimes.co.kr/amp/foreignaffairs/northkorea/20260210/s-korea-hopes-for-prompt-reopening-of-inter-korean-factory-zone-in-kaesong-ministry",
+      "access_status": "full_text_read_from_fresh_http_retrieval",
+      "finding": "Tenth-anniversary ministry account calls complex shuttered; ordinary industry not reopened.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-99939bd5b8b4695a0c.bin",
+      "sha256": "405bd85a847812f29f3c80adc1b89db576ade7a5a34f43cf265423c4a2d1502b"
+    },
+    {
+      "url": "https://www.unikorea.go.kr/web/unikorea/contents/cooperation_TransitOffice",
+      "access_status": "search_extract",
+      "finding": "Official ministry describes Gyeongui Paju and Donghae Goseong transit offices, associated roads and distinct railway history.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-15.json",
+      "sha256": "4686e7fafe9e5ecc2055dcf29056a815a91291abd9ab8ec04b3f93f00a4438da"
+    },
+    {
+      "url": "https://m-en.yna.co.kr/view/AEN20260210005151315",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-154a5339ca3c59407b.bin",
+      "sha256": "d77dedc175909308353a2f8387890fbbfdd9393a35212c4ed8e269bb37988607"
+    },
+    {
+      "url": "https://en.yna.co.kr/view/AEN20180914001054315",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-2119276808afc218de.bin",
+      "sha256": "9f566626503a4bdbd027b69940bfe7c40f451b76389bf711bb677e9e12b51be4"
+    },
+    {
+      "url": "https://en.yna.co.kr/view/AEN20260210005100315",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-cc13f09069dd2b967d.bin",
+      "sha256": "7b4f815650b8211f66712d97326b3984adc5c3acafebb346a31ec08b75a4aa7e"
+    },
+    {
+      "url": "https://beyondparallel.csis.org/kaesong-industrial-complex-not-operational-despite-minor-activity/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://isearch.ccourt.go.kr/download.do?filePath=%2Fst_xml%2Fsdata3%2Fccourt%2FxmlData_new%2FxmlFile%2F0%2F010400%2F2022%2Fpdf%2Fe2016m364_1.pdf",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA025-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-gyeongui-interkorean-road",
+          "name": "Gyeongui Inter-Korean Transit Office / Kaesong road access",
+          "coordinates": [
+            126.7093521,
+            37.9029949
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/92854802",
+          "precision": "Approximate southern access-control complex, 500 m; not the industrial estate or exact Military Demarcation Line barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/92854802",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=126.7,37.895,126.72,37.91"
+          ],
+          "evidence_note": "Explicitly named road transit building with vehicle-permit border controls and AH1 approach to Gaeseong in raw XML. Ministry identifies Gyeongui office in Paju as western inter-Korean crossing facility; rail station separately excluded.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-dorasan-road.xml",
+          "sha256": "002f669e161b0b8e2f59d814f797612eec9e7138158753da474c1c7ca4414504",
+          "osm_feature": "way/92854802",
+          "osm_version": "4",
+          "osm_timestamp": "2024-03-09T05:31:10Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "building": "yes",
+            "layer": "1",
+            "name": "경의선남북출입사무소",
+            "name:en": "Gyeongui Line Inter-Korean Transit Office",
+            "name:ko": "경의선남북출입사무소",
+            "name:ko-Hani": "京義線南北出入事務所",
+            "name:zh": "京义线南北出入事务所",
+            "name:zh-Hans": "京义线南北出入事务所",
+            "name:zh-Hant": "京義線南北出入事務所",
+            "wikidata": "Q16095114",
+            "wikipedia": "ko:남북출입사무소"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary cross-border industrial access for the Kaesong complex, confirmed through the tenth-anniversary ministry account.",
+      "date_scope_check": {
+        "scope": "Ordinary cross-border industrial access for the Kaesong complex, confirmed through the tenth-anniversary ministry account.",
+        "start_earliest": "2016-02-11",
+        "start_latest": "2016-02-11",
+        "end_earliest": "2026-02-10",
+        "end_latest": "2026-02-10",
+        "last_confirmed": "2026-02-10",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "assessment": "February 11 2016 North Korean expulsion/road block is distinct from Seoul February 10 decision. February 10 2026 ministry account confirms industrial closure only; 2018 liaison and ceremonial visits do not reopen ordinary industrial access."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

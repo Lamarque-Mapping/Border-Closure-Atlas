@@ -1,0 +1,69 @@
+{
+  "record_id": "R2-SC-011",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Ruk/Roki roadcheckpoint betweenRussian-controlledNorthOssetia andde factoSouthOssetia;April5 policytoeasingSeptember15 forRussian/SouthOssetiancitizens. Thirdcountrynationalsandexceptionsretainseparatescope.",
+  "source_checks": [
+    {
+      "url": "https://cominf.org/en/archive/all/2020/4/6",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "De factoauthorityarchive explicitly namesmultilateralRuckcheckpoint effectiveApril5 20:00; initialweekonly.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r2-1.json",
+      "sha256": "bb40f06d522798f925c61dd45833e13c4064f339503eb94d364178b010285ce7"
+    },
+    {
+      "url": "https://cominf.org/en/node/1166532610",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "KGBreport saysrestrictionliftedSeptember15 forRSO/RFcitizens,thirdcountryrestrictionsremain.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r2-4.json",
+      "sha256": "db90e0b319db5b73b73937df8994ee6a71f55ee38abdaadd04c17773afe7f077"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-SC-011-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ruk/Roki roadcheckpoint betweenRussian-controlledNorthOssetia andde factoSouthOssetia;April5 policytoeasingSeptember15 forRussian/SouthOssetiancitizens. Thirdcountrynationalsandexceptionsretainseparatescope.",
+      "date_scope_check": {
+        "start_earliest": "2020-04-05",
+        "start_latest": "2020-04-05",
+        "end_earliest": "2020-09-15",
+        "end_latest": "2020-09-15",
+        "last_confirmed": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Policy period, not a universal physical closure. Returnees, official/diplomatic groups, servicemen, bereavement and authorised medical cases were exempt; third-country restrictions persisted. Overlapping Russian policy is not additional closed-days."
+      },
+      "unresolved": [
+        "Rukfacilitycoordinate unverified; NizhnyZaramagRussianpost andRokiPass/tunnelarenotassumedidentical."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Rukfacilitycoordinate unverified; NizhnyZaramagRussianpost andRokiPass/tunnelarenotassumedidentical."
+  ],
+  "input_sha256": "d8d77c0e332a153187033fee09a5d497bd680a0184eb145fa9f03db7857bef6c",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted.",
+  "additional_evidence": [
+    {
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-18.json",
+      "sha256": "d129d24ae4046e115d173db2fa701344daa14f8f20dba29bdc6111c14fa26192"
+    },
+    {
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-19.json",
+      "sha256": "ff740076bd201a94f41b1f6964ad3b45ea9fe628373577258e84ed0ab7fd4d12"
+    }
+  ]
+}

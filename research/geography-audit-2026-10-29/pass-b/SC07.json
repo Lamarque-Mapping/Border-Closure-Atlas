@@ -1,0 +1,55 @@
+{
+  "record_id": "SC07",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Humanitarian return corridor called Wour on Chad–Libya route; source does not locate a control at Wour village or all1400km frontier.",
+  "source_checks": [
+    {
+      "url": "https://www.lorientlejour.com/article/1038462/tchad-reouverture-partielle-de-la-frontiere-avec-la-libye.html",
+      "access_status": "full_text_web",
+      "finding": "Minister says a corridor opened at Wour for Chadian nationals wanting home; rest of frontier remains secured.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-17.json",
+      "evidence_sha256": "ae7d78b909b8ec9a00fffb5d9dd336426b2b558500d9c46ed198b5922b480e2c"
+    },
+    {
+      "url": "https://www.libyanexpress.com/chad-reopens-border-crossing-with-libya/",
+      "access_status": "indexed_article",
+      "finding": "Full indexed AFP-derived account specifies one Wour return corridor while rest of boundary stays shut.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-22.json",
+      "evidence_sha256": "2cea952cedd0180b2b454e94ad79fa65a940f27e29922d746884230444bfc5a7"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "SC07-D1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Humanitarian return corridor called Wour on Chad–Libya route; source does not locate a control at Wour village or all1400km frontier. Current phase only: Chadian restriction on return through Wour, to restored humanitarian return permission.",
+      "date_scope_check": {
+        "start_earliest": "2017-01-05",
+        "start_latest": "2017-01-05",
+        "end_earliest": "2017-02-28",
+        "end_latest": "2017-03-03",
+        "last_confirmed": null,
+        "endpoint_status": "legal_effective",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "SC07-D1: Formal return-corridor phase only: first actual crossing is not observed. The rest of the Libya frontier and other traveller categories remained restricted. AFP and its reprints are one origin. Later FEWS NET market evidence demonstrates some resumed trade by April 2017, but supplies neither an exact reopening date nor the scope of remaining passenger restrictions.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": [
+        "Exact border control and authorized route north of Wour unresolved; town/army-garrison centroid is not crossing evidence."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact border control and authorized route north of Wour unresolved; town/army-garrison centroid is not crossing evidence."
+  ]
+}

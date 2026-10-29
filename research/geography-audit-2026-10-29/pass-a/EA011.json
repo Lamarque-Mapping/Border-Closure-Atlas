@@ -1,0 +1,109 @@
+{
+  "record_id": "EA011",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Canonical phase is narrowed to Laiza–Nabang ordinary goods and visit categories. Broader Kachin lists provide context; Kan Paik Ti had distinct earlier partial access. The mapped road crossing is not a substitute for every Kachin post.",
+  "source_checks": [
+    {
+      "url": "https://www.bnionline.net/en/news/china-reopens-border-trading-gates-kachin-state-maintains-fuel-export-ban",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "KIO spokesperson identifies October 24 23:59 reopening, food/construction and visits, with fuel/electronics restrictions.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-16.json",
+      "sha256": "f11952f7748922f4b70666314b9472c1e2f67091735faafcb9e3ae27a78b09ea"
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/chinese-fuel-tankers-start-entering-kachin-state-border-trading-posts",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "NMG quotes KIO: limited tankers via Laiza–Nabang road, possible company use, retail supply uncertain.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-20.json",
+      "sha256": "20bda51c628dc912a605c5c380a05ca2f5fdd76232bd0903e1571b03b176c5a6"
+    },
+    {
+      "url": "https://www.rfa.org/english/myanmar/2024/12/02/myanmar-border-controls/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.bnionline.net/en/news/chinese-border-closures-cause-price-rises-myitkyina-city",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://eng.mizzima.com/2025/10/30/27768",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.irrawaddy.com/news/myanmar-china-watch/china-reopens-four-border-gates-in-myanmars-kachin-state-controlled-by-kia.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://mmpeacemonitor.org/en/en-news/some-china-myanmar-border-gates-reopen-in-kachin-state/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA011-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-laiza-nabang",
+          "name": "Laiza–Nabang road crossing",
+          "coordinates": [
+            97.5593246,
+            24.7526937
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/667353874",
+          "precision": "Crossing-area reference, 500 m; node lacks a name, identity rests on road topology and named paired settlements.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/667353874",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=97.54,24.74,97.59,24.78"
+          ],
+          "evidence_note": "Border-control node at international road joining Laiza and separately named Nabang town/bus station in XML. NMG explicitly identifies Laiza–Nabang road; only this road gate, not all Kachin ports.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-laiza.xml",
+          "sha256": "399cf9265301a0569805b001660fe3196e26a6f114b82a37e4716ca6e1ea533b",
+          "osm_feature": "node/667353874",
+          "osm_version": "3",
+          "osm_timestamp": "2013-11-20T21:10:02Z",
+          "identity_tags": {
+            "barrier": "border_control"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Laiza ordinary goods/visit categories reportedly restored in October 2025; fuel and electronics are excluded from this endpoint.",
+      "date_scope_check": {
+        "scope": "Laiza ordinary goods/visit categories reportedly restored in October 2025; fuel and electronics are excluded from this endpoint.",
+        "start_earliest": "2024-10-18",
+        "start_latest": "2024-10-19",
+        "end_earliest": "2025-10-24",
+        "end_latest": "2025-10-26",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "",
+        "assessment": "Retain October 18–19 2024 onset and October 24–26 2025 reported endpoint range. Fuel/electronics excluded from that reopening; November 26 limited fuel tankers do not establish retail access or a general policy repeal."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

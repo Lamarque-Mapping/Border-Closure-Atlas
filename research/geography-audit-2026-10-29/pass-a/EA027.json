@@ -1,0 +1,174 @@
+{
+  "record_id": "EA027",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Three separate Mong Cai–Dongxing customs channels: Bac Luan I, Bac Luan II and Km3+4 pontoon. All three are named by the Vietnamese ministry report. Customs clearance is goods/trucks in both directions, not general passenger restoration.",
+  "source_checks": [
+    {
+      "url": "https://en.vietnamplus.vn/customs-clearance-resumed-at-border-gates-crossings-with-china-post220472.vnp",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Ministry report names all three channels and dates customs restart, prioritising stranded farm/frozen goods.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-16.json",
+      "sha256": "f11952f7748922f4b70666314b9472c1e2f67091735faafcb9e3ae27a78b09ea"
+    },
+    {
+      "url": "https://www.quangninh.gov.vn/Sites/en-us/Trang/ChiTietTinTuc.aspx?nid=4104",
+      "access_status": "search_extract",
+      "finding": "Provincial government locates 114 m Km3+4 pontoon in Hai Yen and identifies management/operator responsibilities.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-15.json",
+      "sha256": "4686e7fafe9e5ecc2055dcf29056a815a91291abd9ab8ec04b3f93f00a4438da"
+    },
+    {
+      "url": "https://www.quangninh.gov.vn/Sites/en-us/Trang/ChiTietTinTuc.aspx?nid=5655",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-17c728efb3f7d6bd89.bin",
+      "sha256": "d323d8794bcf982f710fb67924ce83ce7f8a2e9e04029631c6c679d0a2d825fd"
+    },
+    {
+      "url": "https://en.vietnamplus.vn/quang-ninh-sees-clearance-of-nearly-200-trucks-via-border-gates-crossings-with-china-post220487.vnp",
+      "access_status": "fresh_html_retrieved_not_yet_substantively_checked",
+      "finding": "Original URL reopened; response retained, but not independently used as substantive support in this geography decision.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/http-47e3b69a56899f371f.bin",
+      "sha256": "d6f35bca93c6baa260b176141d949e0854069d94829e7c0f68ec45a85bdda72d"
+    },
+    {
+      "url": "https://quangninh.gov.vn/So/socongthuong/Trang/ChiTietTinTuc.aspx?nid=3268",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error timed out>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EA027-D1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-mong-cai-bac-luan-i",
+          "name": "Mong Cai–Dongxing Bac Luan I bridge",
+          "coordinates": [
+            107.968448,
+            21.5375017
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/163976113",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/163976113",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=107.95,21.51,107.98,21.54"
+          ],
+          "evidence_note": "Explicitly named Beilun Bridge between named Dongxing and Mong Cai border controls; first bridge separate from Bac Luan II.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-mong-cai-i.xml",
+          "sha256": "51b47e8f47a821cb900fdcfd96d31305644a7b9d9f4abb276aecd21d792a7949",
+          "osm_feature": "way/163976113",
+          "osm_version": "17",
+          "osm_timestamp": "2026-04-07T15:36:31Z",
+          "identity_tags": {
+            "access": "permit",
+            "bridge": "yes",
+            "foot": "yes",
+            "highway": "tertiary",
+            "layer": "1",
+            "lit": "yes",
+            "name": "Cầu Bắc Luân - 北仑桥",
+            "name:en": "Beilun Bridge",
+            "name:vi": "Cầu Bắc Luân",
+            "name:zh": "北仑桥",
+            "name:zh-Hans": "北仑桥",
+            "name:zh-Hant": "北崙橋",
+            "sidewalk": "both",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "proposed_site_id": "post-mong-cai-bac-luan-ii",
+          "name": "Mong Cai–Dongxing Bac Luan II bridge",
+          "coordinates": [
+            107.9927813,
+            21.5476425
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/528516795",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/528516795",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=107.98,21.54,108.02,21.58"
+          ],
+          "evidence_note": "Explicitly named second Beilun bridge, distinct from first bridge and pontoon crossing.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-mong-cai-ii.xml",
+          "sha256": "4336e86810cb5cfce09a323eaf7c9389f21c27605c0354c33c0e98dd98660e48",
+          "osm_feature": "way/528516795",
+          "osm_version": "10",
+          "osm_timestamp": "2025-12-03T16:32:08Z",
+          "identity_tags": {
+            "access": "no",
+            "bridge": "yes",
+            "highway": "trunk",
+            "lanes": "2",
+            "layer": "1",
+            "lit": "yes",
+            "motor_vehicle": "permit",
+            "name": "Cầu Bắc Luân II - 北仑河二桥",
+            "name:en": "Second Beilun Bridge",
+            "name:vi": "Cầu Bắc Luân II",
+            "name:zh": "北仑河二桥",
+            "name:zh-Hans": "北仑河二桥",
+            "name:zh-Hant": "北崙河二橋",
+            "oneway": "yes",
+            "sidewalk": "no",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "proposed_site_id": "post-mong-cai-km3-4-pontoon",
+          "name": "Mong Cai–Dongxing Km 3+4 pontoon crossing",
+          "coordinates": [
+            107.9464793,
+            21.5541762
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/1081196693",
+          "precision": "Approximate pontoon-bridge reference, 500 m; temporary bridge alignment may change.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1081196693",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=107.92,21.55,107.97,21.6",
+            "https://www.quangninh.gov.vn/Sites/en-us/Trang/ChiTietTinTuc.aspx?nid=4104"
+          ],
+          "evidence_note": "OSM named Floating B. crosses boundary river northwest of Bac Luan I at Hai Yen. Provincial/municipal sources explicitly identify Km3+4 pontoon at Hai Yen/Thanh Dat ICD.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-mongcai-pontoon.xml",
+          "sha256": "f751d842188a09143d64d51184d297579a5a5a0d68905b5d7af16ceaa02cea62",
+          "osm_feature": "way/1081196693",
+          "osm_version": "2",
+          "osm_timestamp": "2025-02-19T20:33:33Z",
+          "identity_tags": {
+            "bridge": "yes",
+            "highway": "unclassified",
+            "layer": "1",
+            "name": "Floating B.",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Dongxing–Mong Cai: Bac Luan I, Bac Luan II, Km 3+4 pontoon crossings; Goods and trucks; passenger policy not established here; Both-way customs processing",
+      "date_scope_check": {
+        "scope": "Dongxing–Mong Cai: Bac Luan I, Bac Luan II, Km 3+4 pontoon crossings; Goods and trucks; passenger policy not established here; Both-way customs processing",
+        "start_earliest": "2021-12-21",
+        "start_latest": "2021-12-21",
+        "end_earliest": "2022-01-10",
+        "end_latest": "2022-01-10",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "December 21 2021 suspension and January 10 2022 customs restart apply to these named goods channels. One VNA/ministry lineage; January 5 reopening of other province pairs does not change these endpoints."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

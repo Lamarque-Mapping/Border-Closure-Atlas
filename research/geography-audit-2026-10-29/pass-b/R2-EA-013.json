@@ -1,0 +1,130 @@
+{
+  "record_id": "R2-EA-013",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "MongCai–Dongxing passengercohorts atBacLuanI: January8home-returns-only, February21individualtravel, March15groups. BacLuanIIcargo andKm3+4pontoon notpartofthese passengerphases.",
+  "source_checks": [
+    {
+      "url": "https://www.quangninh.gov.vn/Sites/en-us/Trang/ChiTietTinTuc.aspx?nid=6251",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Provinceexplicitlydescribes3stagepermissionsandobserved38membertourgroupMarch15.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r2-2.json",
+      "sha256": "2a8668e3f182de7df5bc67c0194ec5e63f65880f1d642611e17fb667b0fb18eb"
+    },
+    {
+      "url": "https://en.nhandan.vn/mong-cai-dongxing-international-border-gate-resumes-entry-exit-activities-post122731.html",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "February21opening hours07:00–20:00 anddocuments/healthconditions.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r2-2.json",
+      "sha256": "2a8668e3f182de7df5bc67c0194ec5e63f65880f1d642611e17fb667b0fb18eb"
+    },
+    {
+      "url": "https://logistics.gov.vn/dich-vu-logistics/cang-bien/tinh-quang-ninh-khoi-phuc-hoat-dong-xuat-nhap-canh-qua-cua-khau-quoc-te-mong-cai-tu-21-2-2023",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Officialministrylogisticsnotice explicitlyidentifiesBacLuanIand excludesgrouptoursduringindividualphase.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-20.json",
+      "sha256": "5ee20f78f076abcbe162cb505634cb19664e90e246a8bb14e1b7fbd778e58181"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/286780025/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "OriginalnamedBeilunbridgegeometryinspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/7a05f171397ed695f3ac.xml",
+      "sha256": "76022c878b7e4af28c4c93d00ff36ba4143ef0c5c91ea5291265b2e9e2e5e122",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/7a05f171397ed695f3ac.txt",
+      "text_sha256": "76022c878b7e4af28c4c93d00ff36ba4143ef0c5c91ea5291265b2e9e2e5e122",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EA-013-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-bac-luan-bridge-1",
+          "name": "Bac Luan I / Beilun Bridge",
+          "coordinates": [
+            107.9685364,
+            21.5373825
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/286780025/full"
+          ],
+          "evidence_note": "Named original Beilun bridge, distinct fromSecondBeilun. Ministry logistics notice explicitly identifiesBacLuanI forFebruary2023passengers.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/7a05f171397ed695f3ac.xml",
+          "sha256": "76022c878b7e4af28c4c93d00ff36ba4143ef0c5c91ea5291265b2e9e2e5e122"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "MongCai–Dongxing passengercohorts atBacLuanI: January8home-returns-only, February21individualtravel, March15groups. BacLuanIIcargo andKm3+4pontoon notpartofthese passengerphases.",
+      "date_scope_check": {
+        "start_earliest": "2023-01-08",
+        "start_latest": "2023-01-08",
+        "end_earliest": "2023-02-21",
+        "end_latest": "2023-02-21",
+        "last_confirmed": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "January 8 repatriation phase, not original pandemic onset. Individual permissions start February 21 at 07:00 Vietnam time; travel documents and health conditions remain. Provincial direct open timed out; official indexed text inspected."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "R2-EA-013-R2",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-bac-luan-bridge-1",
+          "name": "Bac Luan I / Beilun Bridge",
+          "coordinates": [
+            107.9685364,
+            21.5373825
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/286780025/full"
+          ],
+          "evidence_note": "Named original Beilun bridge, distinct fromSecondBeilun. Ministry logistics notice explicitly identifiesBacLuanI forFebruary2023passengers.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/7a05f171397ed695f3ac.xml",
+          "sha256": "76022c878b7e4af28c4c93d00ff36ba4143ef0c5c91ea5291265b2e9e2e5e122"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "MongCai–Dongxing passengercohorts atBacLuanI: January8home-returns-only, February21individualtravel, March15groups. BacLuanIIcargo andKm3+4pontoon notpartofthese passengerphases.",
+      "date_scope_check": {
+        "start_earliest": "2023-02-21",
+        "start_latest": "2023-02-21",
+        "end_earliest": "2023-03-15",
+        "end_latest": "2023-03-15",
+        "last_confirmed": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Organised Chinese outbound group tours to Vietnam start March 15, with arrivals observed that morning. Endpoint is category relaxation, not all-day closure; exact first group crossing time unavailable. Individuals already permitted."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "5d020de361c64b543be7438528c1b4ee3bee5ff4a66697f78f6182f681f9ed1d",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

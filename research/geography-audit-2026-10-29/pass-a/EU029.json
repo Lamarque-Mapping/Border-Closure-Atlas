@@ -1,0 +1,52 @@
+{
+  "record_id": "EU029",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Order763-r governs Russian road, rail, pedestrian, river and mixed checkpoints plus the Russia–Belarus land section. It is national across Europe and Asia with evolving exemptions; a handful of nearby frontier references would not reconstruct its complete territorial and mode scope.",
+  "source_checks": [
+    {
+      "url": "https://www.garant.ru/products/ipo/prime/doc/73711716/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Reproduced original order paragraph1 specifies restriction from 00:00 Moscow March30 2020 across the listed checkpoint modes, and expressly the Belarus land section. Original exception list exists; consolidated national geographical coverage not reconstructed.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-025.json"
+    },
+    {
+      "url": "https://dublin.kdmid.ru/en/info/news/736/",
+      "access_status": "inaccessible_substantive_content",
+      "finding": "Current response is maintenance/Sorry Page; no substantive historical evidence obtained.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/8c5e21569737dc88f94a.html",
+      "source_sha256": "d548baae2f1193f7b997e43bd84a1496afe215592eceb12bc202aa8407d8d9a5",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-023.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU029-D1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Legal life of Russia's national land-checkpoint COVID restriction regime under Order 763-r, including its evolving exceptions.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-30",
+        "start_latest": "2020-03-30",
+        "end_earliest": "2022-07-15",
+        "end_latest": "2022-07-15",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Complete national Europe/Asia frontier scope and disputed-territory treatment need explicit geography review; no arbitrary country subset approved."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "e0dba0dba0136fdb35dd781da6bdcf25ac861d1a7ae42476d517ceb7f8133d6d"
+}

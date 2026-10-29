@@ -1,0 +1,164 @@
+{
+  "record_id": "R2-EA-012",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Singaporelandadmissionpolicyhas2scopes: initialshort-termvisitorprohibitionwithunreconstructedexceptionchain, andCauseway-onlydesignatedVTLbuseligibilitywindow. RoadWoodlands/Tuas differfromWoodlandsTrainCheckpoint.",
+  "source_checks": [
+    {
+      "url": "https://www.pmo.gov.sg/newsroom/singapore-and-malaysia-to-launch-vtl-land-nov-2021/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "PMOlaunchesVTLacrossCausewayNovember29 andsaysTuasrestorationlater; designatedbuses/residencecategories.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r2-3.json",
+      "sha256": "7bce6c49486f0369fecc02e1070233cab2fdf4b97c08328850c0babde2f90b50"
+    },
+    {
+      "url": "https://www.moh.gov.sg/newsroom/additional-border-control-measures-to-reduce-further-importation-of-covid-19-cases/",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "MOHshorttermvisitorentry/transitprohibitionfromMarch23 23:59; limitedworkpassandresidentexceptions.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r2-4.json",
+      "sha256": "db90e0b319db5b73b73937df8994ee6a71f55ee38abdaadd04c17773afe7f077"
+    },
+    {
+      "url": "https://www.ica.gov.sg/news-and-publications/newsroom/media-release/statement-on-clearance-of-travellers-for-land-border-reopening",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "ICAobservesApril1 clearanceatWoodlandsandTuas; totalsnotbycohort/direction.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r2-4.json",
+      "sha256": "db90e0b319db5b73b73937df8994ee6a71f55ee38abdaadd04c17773afe7f077"
+    },
+    {
+      "url": "https://www.ica.gov.sg/about-us/our-checkpoints",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "Officialcheckpointlist separatesroadWoodlands21addressfromtrain11address, andTuas.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-19.json",
+      "sha256": "ff740076bd201a94f41b1f6964ad3b45ea9fe628373577258e84ed0ab7fd4d12"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/450538612/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Namedroadbuildingaddressmatchinspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/6c8b885d7ae6a79bfc33.xml",
+      "sha256": "d81391351a500e8223586f6b0b6aa0a1a9d991400622ef0679820f56b9533fb2",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/6c8b885d7ae6a79bfc33.txt",
+      "text_sha256": "d81391351a500e8223586f6b0b6aa0a1a9d991400622ef0679820f56b9533fb2",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/174286639/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Namedroadcheckpointareainspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/01daae138a5446a52999.xml",
+      "sha256": "c40986803c1a8d80c0fd957f3022a855fc9ffa73939e1b450cf2cdc02acf89dc",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/01daae138a5446a52999.txt",
+      "text_sha256": "c40986803c1a8d80c0fd957f3022a855fc9ffa73939e1b450cf2cdc02acf89dc",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R2-EA-012-AUDIT20261025-1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-woodlands-road",
+          "name": "Woodlands road checkpoint",
+          "coordinates": [
+            103.7686314,
+            1.4459281
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/450538612/full"
+          ],
+          "evidence_note": "Named roadcheckpoint governmentbuilding at21WoodlandsCrossing matchesICAofficialaddress. DistinctWoodlandsTrainCheckpoint at11WoodlandsCrossing.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/6c8b885d7ae6a79bfc33.xml",
+          "sha256": "d81391351a500e8223586f6b0b6aa0a1a9d991400622ef0679820f56b9533fb2"
+        },
+        {
+          "proposed_site_id": "post-tuas-road",
+          "name": "Tuas road checkpoint",
+          "coordinates": [
+            103.6363613,
+            1.3486736
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/174286639/full"
+          ],
+          "evidence_note": "Named Tuas border_control footprint, SecondLink road route; ICA reports actualApril1 passenger clearanceatthischeckpoint.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/01daae138a5446a52999.xml",
+          "sha256": "c40986803c1a8d80c0fd957f3022a855fc9ffa73939e1b450cf2cdc02acf89dc"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Singaporelandadmissionpolicyhas2scopes: initialshort-termvisitorprohibitionwithunreconstructedexceptionchain, andCauseway-onlydesignatedVTLbuseligibilitywindow. RoadWoodlands/Tuas differfromWoodlandsTrainCheckpoint.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-23",
+        "start_latest": "2020-03-23",
+        "end_earliest": "2020-03-23",
+        "end_latest": "2022-04-01",
+        "last_confirmed": "2020-03-23",
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "R2-EA-012-R1: Only VTL route eligibility; other approved Safe Travel Lanes may exist. December 20 is announced effective permission, not first observed traveller.\n\nThe March 2020 initial visitor prohibition and November 2021 VTL eligibility window are distinct phases. The first policy’s complete exception and amendment chain is not reconstructed; no continuous 2020–2022 duration is inferred.\n\nThe March 24, 2022 trade ministry announcement broadens land entry from March 31 at 23:59 for fully vaccinated travellers and children aged 12 or below. ICA reports more than 11,000 travellers cleared at Woodlands and Tuas by 07:00 on April 1. The total is not broken down by immigration category or direction. Travel-document requirements and specified work-pass approvals remained; this is scoped easing, not removal of every entry condition."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "R2-EA-012-R1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-woodlands-road",
+          "name": "Woodlands road checkpoint",
+          "coordinates": [
+            103.7686314,
+            1.4459281
+          ],
+          "coordinate_method": "Mean of unique vertices in fresh OSM named feature outline",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/450538612/full"
+          ],
+          "evidence_note": "Named roadcheckpoint governmentbuilding at21WoodlandsCrossing matchesICAofficialaddress. DistinctWoodlandsTrainCheckpoint at11WoodlandsCrossing.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/6c8b885d7ae6a79bfc33.xml",
+          "sha256": "d81391351a500e8223586f6b0b6aa0a1a9d991400622ef0679820f56b9533fb2"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "DesignatedVTLbusesacrossCauseway/Woodlands only. PMOexpresslydefersTuas; no train/ferrybinding.",
+      "date_scope_check": {
+        "start_earliest": "2021-11-29",
+        "start_latest": "2021-11-29",
+        "end_earliest": "2021-12-20",
+        "end_latest": "2021-12-20",
+        "last_confirmed": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "R2-EA-012-R1: Only VTL route eligibility; other approved Safe Travel Lanes may exist. December 20 is announced effective permission, not first observed traveller.\n\nThe March 2020 initial visitor prohibition and November 2021 VTL eligibility window are distinct phases. The first policy’s complete exception and amendment chain is not reconstructed; no continuous 2020–2022 duration is inferred.\n\nThe March 24, 2022 trade ministry announcement broadens land entry from March 31 at 23:59 for fully vaccinated travellers and children aged 12 or below. ICA reports more than 11,000 travellers cleared at Woodlands and Tuas by 07:00 on April 1. The total is not broken down by immigration category or direction. Travel-document requirements and specified work-pass approvals remained; this is scoped easing, not removal of every entry condition."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "e1baa69965b840ee9ed088980c6fef7e1c264a451714fd2bd26004ef50e57be1",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

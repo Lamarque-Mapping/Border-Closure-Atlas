@@ -1,0 +1,84 @@
+{
+  "record_id": "EU031",
+  "pass": "b",
+  "agent": "geography_americas_europe_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Order188-r annex enumerates road, railway andair checkpoints. Selectedphase excludesair and separately separates Kuchurhan railway512100 fromroad512000. Belarus/Russia/Transnistrian-segment locality labels alone do not establish exactsitecoordinates.",
+  "source_checks": [
+    {
+      "url": "https://zakon.cc/law/document/read/188-2022-%D1%80",
+      "access_status": "full_text_cached_this_pass",
+      "finding": "Inspected original legalannex text: Kuchurhan road512000 retained,512100 deleted by920-r10Oct2023; multiple road/rail controlposts andseparateairentries.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/1a37928cf4b3eec0677a.raw",
+      "sha256": "b580f310c0218d38ef7c37343faa9f02634033d4661ad258fbac7eec508221f5"
+    },
+    {
+      "url": "https://zakon.cc/law/document/read/920-2023-%D1%80",
+      "access_status": "inaccessible",
+      "finding": "Originalamendment URL catalogued; directfetch didnotyieldbody inthispass.",
+      "direct_fetch_status": "full_text_html",
+      "evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/americas_europe-b/6c6974aa80e6ef38c356.raw",
+      "sha256": "c631031db642d35349273a9f32615e393e6988df2111979f4fdf08bc5ab54741"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU031-R1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ukrainian suspension of the road and railway checkpoints listed in Order 188-r on the Russia, Belarus and Transnistrian frontiers, excluding Kuchurhan railway entry 512100; air entries excluded.",
+      "date_scope_check": "Existing dates, uncertainty and duration eligibility retained. Geography remains held pending the identified evidence gap.",
+      "canonical_dates": {
+        "kind": "confirmed_through",
+        "measure_type": "formal_policy_period",
+        "start_earliest": "2022-02-28",
+        "start_latest": "2022-02-28",
+        "end_earliest": "2026-10-26",
+        "end_latest": "2026-10-26",
+        "last_confirmed": "2026-10-26",
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "no_numeric_duration",
+        "policy_only": true
+      },
+      "unresolved": [
+        "Full annex road/rail post set not geographically reconstructed; whole bilateral frontiers would add unnamedextents."
+      ]
+    },
+    {
+      "phase_id": "EU031-R2",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Kuchurhan international railway checkpoint, annex entry 512100: suspension under Order 188-r only.",
+      "date_scope_check": "Existing dates, uncertainty and duration eligibility retained. Geography remains held pending the identified evidence gap.",
+      "canonical_dates": {
+        "kind": "policy_period",
+        "measure_type": "formal_policy_period",
+        "start_earliest": "2022-02-28",
+        "start_latest": "2022-02-28",
+        "end_earliest": "2023-10-10",
+        "end_latest": "2023-10-10",
+        "last_confirmed": null,
+        "contested": false,
+        "complete_operational": false,
+        "calculation_rule": "calendar_bounds",
+        "policy_only": true
+      },
+      "unresolved": [
+        "Kuchurhan rail512100 exact railway controlsite distinct from road512000; attributable coordinates unresolved."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "canonical_input_path": "/workspace/scratch/684c27d5985c/geography-audit-input/EU031.json",
+  "canonical_input_sha256": "ed0cd930a1266da4f10fd0b30d6fcfa2946cd7097a598aa8cc1e6cb5ca087145",
+  "independence_note": "Pass B reconstructed from original cited-source access and attributable geographical evidence; no pass-A findings read."
+}

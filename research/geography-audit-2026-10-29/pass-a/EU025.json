@@ -1,0 +1,50 @@
+{
+  "record_id": "EU025",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Portugal–Spain bilateral land frontier is the geographic policy scope; approved reference is a generalized frontier, with crossing authorizations and movement exemptions retained. This does not depict every road as physically shut.",
+  "source_checks": [
+    {
+      "url": "https://portugal.gov.pt/gc22/comunicacao/noticias/fronteiras-com-espanha-fechadas-a-partir-de-16-de-marco",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Official March notice: controls from 23:00 Portuguese time March16; authorized land posts with goods, cross-border workers and family/health exceptions; other passenger modes suspended.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-023.json"
+    },
+    {
+      "url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_boundary_lines_land.zip",
+      "access_status": "cached_local_geographic_evidence",
+      "finding": "Existing Natural Earth derived features inspected in source/geography-reference.json: named frontier MultiLineStrings, metadata gives version 5.1.0, 1:10m generalized policy coverage. These are present-day context, not historical lane closures.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/natural-earth-selected-existing.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "EU025-D1",
+      "category": "wider_border",
+      "decision": "map",
+      "sites": [],
+      "border_reference_ids": [
+        "frontier-portugal-spain"
+      ],
+      "complete": true,
+      "phase_applicability": "Portugal–Spain bilateral non-essential land-movement restriction, using Portuguese local calendar dates.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-16",
+        "start_latest": "2020-03-16",
+        "end_earliest": "2020-07-01",
+        "end_latest": "2020-07-01",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Source confirms bilateral geographic scope and particular official dates. Canonical full policy period and exemptions remain unchanged; this geometry is policy coverage only, not continuous operational closure."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "65bbaa03eddf8526aa1071d8000c72a1bfa8db92e9264579171af58dc4a9492f"
+}

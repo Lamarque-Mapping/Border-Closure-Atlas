@@ -1,0 +1,85 @@
+{
+  "record_id": "R10-EU-001",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Swedish December28–January21 negative-test-only selected admission phase includes Øresund; January5 reporting specifically locates road checks at Lernacken toll station. Bridge midpoint is qualified context only, not a checkpoint coordinate.",
+  "source_checks": [
+    {
+      "url": "https://www.swedenabroad.se/en/embassies/ukraine-kyiv/current/news/new-entry-rules-to-sweden-as-of-28-december-2021/",
+      "access_status": "fresh_search_extract",
+      "finding": "Official December23 notice announces negative result within48h for December28 arrivals.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-025.json"
+    },
+    {
+      "url": "https://www.government.se/articles/2022/01/several-new-measures-against-covid-19-introduced-in-january-2022/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Official January31 account says48h-specific test requirement ceased January21; EEA/Nordic entrants again could present vaccination, recovery or72h negative test.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-025.json"
+    },
+    {
+      "url": "https://www.newsoresund.se/koer-vid-inresa-till-sverige-trots-att-97-procent-av-passagerarna-over-oresundsbron-har-korrekta-handlingar/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "January5 report explicitly describes almost100% Swedish checks at Lernacken, queues and exemptions; not total bridge closure.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-027.json"
+    },
+    {
+      "url": "https://mapcarta.com/W370256014",
+      "access_status": "fresh_secondary_geographic_extract",
+      "finding": "Published named combined road/rail bridge reference coordinate; underlying OSM inaccessible.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-028.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R10-EU-001-D1",
+      "category": "wider_border",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-oresund-bridge-reference",
+          "name": "Øresund Bridge — fixed road and rail link reference",
+          "coordinates": [
+            12.86376,
+            55.56946
+          ],
+          "coordinate_method": "Published Mapcarta reference coordinate attributed to OSM way 370256014; original XML inaccessible",
+          "precision": "Approximate bridge reference, not Lernacken checkpoint location or the full bridge/tunnel alignment.",
+          "source_urls": [
+            "https://mapcarta.com/W370256014",
+            "https://www.openstreetmap.org/way/370256014",
+            "https://www.oresundsbron.com/en/about-oresundsbron/about-us/facts-about-oresundsbron/the-toll-station"
+          ],
+          "evidence_note": "Mapcarta names combined railway/motorway bridge and underlying man_made=bridge feature. Official operator places toll station at Lernacken outside Malmö; no claim that this point is the checkpoint.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-028.json",
+              "access_status": "fresh_full_text_of_secondary_OSM_representation"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Selected Swedish negative-test-only 48-hour admission phase for non-exempt EEA/Nordic arrivals, including Oresund",
+      "date_scope_check": {
+        "start_earliest": "2021-12-28",
+        "start_latest": "2021-12-28",
+        "end_earliest": "2022-01-21",
+        "end_latest": "2022-01-21",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Exact Lernacken checkpoint and all other EEA/Nordic arrival routes not reconstructed; bridge reference does not locate specific control lanes."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "de4daf41801e2152e2eaacf31a6710b2ad7a032c22562b20f421b70b30f7e3da"
+}

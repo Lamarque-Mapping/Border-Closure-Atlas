@@ -1,0 +1,72 @@
+{
+  "record_id": "NA012",
+  "pass": "b",
+  "agent": "geography_africa_middle_east_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ghadames–Debdeb ordinary passenger restriction observed August5,2024 and preceding preparations. Earlier reopening announcement was postponed.",
+  "source_checks": [
+    {
+      "url": "https://alwasat.ly/news/libya/447295",
+      "access_status": "full_text_web",
+      "finding": "AlWasat August5 reports facilities rehabilitation and explicitly says crossing remains closed to ordinary citizen travel despite November2023 protocol.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-20.json",
+      "evidence_sha256": "fcbb2883b16bf63ebbb0cd1f76826ebef63d3a07af68d02f48d59f26bf496d4b"
+    },
+    {
+      "url": "https://lana.gov.ly/post.php?id=296966&lang=en",
+      "access_status": "full_text_web",
+      "finding": "LANA December11 says planned opening postponed for technical/administrative arrangements, with no new date.",
+      "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/web-batch-19.json",
+      "evidence_sha256": "523b22fc934a509bf5a951d696838b268ee5cd14ef55f1ca06188ea0f3fc7509"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NA012-C7P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-ghadames-debdeb",
+          "name": "Ghadames / Debdeb",
+          "coordinates": [
+            9.442513,
+            30.0101738
+          ],
+          "coordinate_method": "Fresh original OSM API node coordinates",
+          "precision": "approximate named facility area; no survey accuracy claimed",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/6004717560",
+            "https://www.openstreetmap.org/api/0.6/node/6004717560",
+            "https://www.openstreetmap.org/api/0.6/map?bbox=9.435,30.0,9.449,30.012"
+          ],
+          "evidence_note": " OSM tags inspected: {\"barrier\": \"border_control\"}. This is geographic evidence only, not historical closure evidence. Unlabelled border-control node lies on named Ghadames–Algerian Libyan border road (way636820321); this is the crossing north of Debdeb, not either town centroid.",
+          "evidence_file": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/africa_middle_east-b/3524f1123a6d0fce4d93.html",
+          "evidence_sha256": "aae9e3140e80440238ceb86b90260edc82e4ae84edea4dd7bb86f89c6d0c2eae",
+          "osm_version": "1",
+          "osm_timestamp": "2018-10-22T11:08:00Z"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ghadames–Debdeb ordinary passenger restriction observed August5,2024 and preceding preparations. Earlier reopening announcement was postponed. Current phase only: Ordinary non-exempt passenger restriction at Ghadames–Debdeb, observed August 5, 2024 and documented in preceding reopening preparations.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2024-08-05",
+        "end_latest": "2024-08-05",
+        "last_confirmed": "2024-08-05",
+        "endpoint_status": "last_confirmed",
+        "analysis_included": true,
+        "contested": false,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "strictly_over_24_hours": true,
+        "qualification_retained": "NA012-C7P1 records an August 5, 2024 observation that Ghadames–Debdeb remained closed to citizen travel for security reasons on the Libyan side. LANA’s August 3, 2023 report also distinguishes passenger reopening preparations from existing commercial traffic. Anadolu identifies May 2014 as Ghadames–Debdeb’s historical closure, while its 2011 closure and 2015 local exceptions concern Tin Al Koum and Tarat; LANA’s broad frontier summary is less gate-specific. These historical accounts do not establish one continuous Ghadames passenger interval: a June 2020 contemporary report describes limited exceptional departures and stranded Libyans awaiting further permission. The planned December 12, 2023 reopening was expressly postponed. Indexed regional reporting dated August 5, 2026 still describes preparations with no announced reopening date, not observed gate-level passage. The repeated descriptions of an ordinary passenger restriction pending reopening in August and December 2023 and still closed in August 2024 support a restriction longer than 24 hours, independently of the unknown exact onset. Authorized exceptional departures do not contradict the non-exempt passenger restriction. First ordinary passenger restoration, exact onset of the present spell and continuous numeric duration remain unresolved.",
+        "review_limit": "No dates, unknown reopenings, duration classifications or continuity assumptions changed by this geographic review."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}
