@@ -1,0 +1,93 @@
+{
+  "record_id": "REC50-R23-002",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Kharlachi bilateral road goods trade during the2020 COVID restriction. Passenger eligibility is outside this phase; later Kharlachi clashes are separate episodes.",
+  "source_checks": [
+    {
+      "url": "https://www.dawn.com/news/1565641/kurram-traders-want-kharlachi-border-crossing-reopened",
+      "access_status": "full_text_web",
+      "finding": "June original names Kharlachi goods closure and traders’ demand for access.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r12-5.json",
+      "sha256": "2868770dcf0d3ed38fa893f34a02f657c79e16a778916eb05174661dc4cd3c72"
+    },
+    {
+      "url": "https://www.dawn.com/news/1568453",
+      "access_status": "full_text_web",
+      "finding": "July original confirms Kharlachi trade reopening.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r12-5.json",
+      "sha256": "2868770dcf0d3ed38fa893f34a02f657c79e16a778916eb05174661dc4cd3c72"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/7329110727",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Kharlachi crossing area and road-control node mapped in March2020 inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d5af77710dfbd9b9ae0a.xml",
+      "sha256": "2d5978f2184203a4949b6190ca9645e09deddf8a2358e8e90a4279120a810c1b",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d5af77710dfbd9b9ae0a.txt",
+      "text_sha256": "2d5978f2184203a4949b6190ca9645e09deddf8a2358e8e90a4279120a810c1b",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1466971322/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Kharlachi crossing area and road-control node mapped in March2020 inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/6b7e344feada8c1972be.xml",
+      "sha256": "7a978da75217a9b0227d09ebfa544b4470c6c066516220d407c3f3d735c4a5eb",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/6b7e344feada8c1972be.txt",
+      "text_sha256": "7a978da75217a9b0227d09ebfa544b4470c6c066516220d407c3f3d735c4a5eb",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R23-002-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kharlachi-road",
+          "name": "Kharlachi road border crossing",
+          "coordinates": [
+            69.9539961,
+            33.8290732
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/7329110727",
+            "https://api.openstreetmap.org/api/0.6/way/1466971322/full"
+          ],
+          "evidence_note": "Border-control node mapped in March 2020 is a vertex of the named Kharlachi Border Crossing area, way 1466971322. It locates the road crossing, not Kharlachi village or the nearby Borki route.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d5af77710dfbd9b9ae0a.xml",
+          "sha256": "2d5978f2184203a4949b6190ca9645e09deddf8a2358e8e90a4279120a810c1b"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kharlachi bilateral road goods trade during the2020 COVID restriction. Passenger eligibility is outside this phase; later Kharlachi clashes are separate episodes.",
+      "date_scope_check": {
+        "start_earliest": "2020-03-15",
+        "start_latest": "2020-03-15",
+        "end_earliest": "2020-07-11",
+        "end_latest": "2020-07-11",
+        "last_confirmed": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "118 calendar-day difference for the reported Kharlachi goods restriction from 15 March to 11 July 2020. March 15 comes from a retrospective named-trader account, supported by continuing June restriction and July reopening reports; it is not imported from another crossing. No passenger endpoint or measured elapsed-hour precision is claimed."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "b4fc81fe74ed65508ff537acb2de18796681cd5f5404883b761436f65cd5aba1",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

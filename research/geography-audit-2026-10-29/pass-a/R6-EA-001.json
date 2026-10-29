@@ -1,0 +1,87 @@
+{
+  "record_id": "R6-EA-001",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Four auxiliary gates are explicitly named: Ta Rung, Cheng, Thanh and Cooc, paired with Savannakhet/Salavan. The canonical passenger phase is narrower than the broader trails-and-river-points parent narrative.",
+  "source_checks": [
+    {
+      "url": "https://baochinhphu.vn/quang-tri-mo-lai-4-cua-khau-phu-voi-lao-102272480.htm",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Government report names all four auxiliary gates and explicitly says only goods permitted, passengers still barred.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-56.json",
+      "sha256": "a80cca5cc79b8292408ced4a9d351a8e387c7cdf4ffe115102ff12e3c275f218"
+    },
+    {
+      "url": "https://qppl.dienbien.gov.vn/qlvb/vbpq.nsf/3d0f058120469ad34725726600365420/9CCA8D25109604DB47258A2100056CD7/%24file/4180_BNG-UBBG_28.8.23.pdf",
+      "access_status": "inaccessible",
+      "finding": "Official geographic lead could not be retrieved; no coordinate support claimed.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-60.json",
+      "sha256": "943e136442b40b9d9961f3e65db9bcab99ba85a4a609418826840f037ea81f0a"
+    },
+    {
+      "url": "https://ubmttqvn.quangtri.gov.vn/index.php/dan-toc-ton-giao/no-luc-phong-chong-covid-19-tren-tuyen-bien-gioi-viet-lao-3683.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://tienphong.vn/dai-nang-dam-suong-ngan-dai-dich-post1262885.tpo",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://en.baochinhphu.vn/quang-tri-re-opens-four-auxiliary-border-gates-with-laos-11138194.htm",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://baoquangtri.vn/thoi-su/202206/chinh-phu-lao-nhat-tri-mo-lai-cua-khau-quoc-te-phuc-vu-xuat-nhap-canh-2201009/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://xanhx.vn/viet-nam-ewec/hoi-dam-thuong-nien-cong-tac-bien-gioi-hai-tinh-quang-tri-savannakhet-22799.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-EA-001-D1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ordinary passenger prohibition at the four Quang Tri auxiliary gates covered by the May goods-only relaxation",
+      "date_scope_check": {
+        "scope": "Ordinary passenger prohibition at the four Quang Tri auxiliary gates covered by the May goods-only relaxation",
+        "start_earliest": "2020-02-03",
+        "start_latest": "2020-02-04",
+        "end_earliest": "2020-05-12",
+        "end_latest": "2020-05-12",
+        "last_confirmed": "2020-05-12",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "February 3–4 onset bounds through May 12 passenger prohibition retained. Goods-only relaxation is not passenger reopening or proof every trail was sealed daily."
+      },
+      "unresolved": [
+        "Individual control coordinates were not independently matched. A Ta Rung search lead and area XML did not identify its gate; district centres, Lao Bao and whole frontier are rejected substitutes."
+      ]
+    }
+  ],
+  "unresolved": []
+}

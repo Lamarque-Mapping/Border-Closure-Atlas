@@ -1,0 +1,68 @@
+{
+  "record_id": "NP-COV-EUR-007",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "North Macedonian road-cargo campaign at DeveBair, Delchevo, NovoSelo, Dojran, Bogorodica, Medzhitlija, Kjafasan, Blace, Blato, Stenje. Greek pairs Bogorodica–Evzoni, Medzhitlija–Niki, StarDojran–Doirani are distinct; no railway or national perimeter closure.",
+  "source_checks": [
+    {
+      "url": "https://miamail.mia.mk/en/story/macedonian-transporters-lift-blockades-at-border-crossings",
+      "access_status": "extract_only",
+      "finding": "Direct502; indexed MIA original text inspected, explicitly lists ten freight terminals and association announcement ending January29 at20:00. Weekday typo not treated as new date."
+    },
+    {
+      "url": "https://www.ofae.gr/en/nea/international-news/termatismos-kinhtopoihsewn-metaforewn-boreias-make-1/",
+      "access_status": "full_retrieved",
+      "finding": "Full haulier notice citing Greek embassy reports freight restored at all Greece–NorthMacedonia crossings January29 at21:00Greektime."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/334629692/full",
+      "access_status": "full_retrieved",
+      "finding": "Direct named Bogorodica government border-control geometry inspected; distinct from Greek Evzoni."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-EUR-007-P01",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "geo-bogorodica-road-control",
+          "name": "Bogorodica North Macedonian road control",
+          "coordinates": [
+            22.549032840000002,
+            41.1341784
+          ],
+          "coordinate_method": "Directly inspected OSM way/334629692 mean of geometry vertices; XML sha256 68314217c50beab648670481df3debeb2deb79c9049bd9b3daf38c1fca408565",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/334629692/full"
+          ],
+          "evidence_note": "Named North Macedonian border-control building at Gevgelija, north of Greek Evzoni; representative gate only."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Participating North Macedonia land cargo terminals. Reuters directly documents Gevgelija/Bogorodica. The association’s January 29 account names Deve Bair, Delchevo, Novo Selo, Dojran, Bogorodica, Medzhitlija, Kjafasan, Blace, Blato and Stenje. Greek-frontier pairs are Bogorodica–Evzoni, Medzhitlija–Niki and Star Dojran–Doirani.; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2026-01-26",
+        "start_latest": "2026-01-26",
+        "end_earliest": "2026-01-29",
+        "end_latest": "2026-01-29",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Bogorodica gate representative only; nine other cargo terminals and precise protest lane positions not independently geolocated. No all-border line substituted."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Bogorodica gate representative only; nine other cargo terminals and precise protest lane positions not independently geolocated. No all-border line substituted."
+  ]
+}

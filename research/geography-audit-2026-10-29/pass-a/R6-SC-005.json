@@ -1,0 +1,98 @@
+{
+  "record_id": "R6-SC-005",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Vehicle passage at the Kharlachi international crossing during Kurram clashes. Wider district road closures and shortages are not additional border geometry.",
+  "source_checks": [
+    {
+      "url": "https://www.app.com.pk/domestic/kharlachi-border-reopens-after-nine-days-closure/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "APP reports actual stranded vehicles moving October 1, but onset wording conflicts internally.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-57.json",
+      "sha256": "1f3e321ab030b165eaf713cc804c4d1648ffa2e71d1b39cd3777d22d4e1c5f52"
+    },
+    {
+      "url": "https://www.geo.tv/latest/566788-pak-afghan-kharlachi-border-reopens-as-clashes-between-parachinar-tribes-stop",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Full October 1 account specifically locates reopened crossing at Kharlachi Kurram and distinguishes district road closures.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-62.json",
+      "sha256": "02ae7475fe430eae73ad83735afaea58080f77bf4f0f5c21b6b3328b0cf63a41"
+    },
+    {
+      "url": "https://www.thenews.com.pk/print/1235871-pak-afghan-kharlachi-border-point-reopens-for-trade",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://pajhwok.com/2024/10/02/kharlachi-crossing-reopens-for-af-pak-trade/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://tnnenglish.com/pak-afghan-kharlachi-border-reopens-after-nine-day-closure-due-to-tribal-clashes",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-SC-005-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kharlachi",
+          "name": "Kharlachi international road crossing",
+          "coordinates": [
+            69.9553811,
+            33.8301185
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/1466971322",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/1466971322",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=69.943,33.815,69.973,33.845"
+          ],
+          "evidence_note": "Explicit named Kharlachi Border Crossing area, distinct from Kharlachi village and inland Parachinar routes.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-kharlachi-gate.xml",
+          "sha256": "fe7433bec523e683889934198e7f09c4210eb8f10c454d66098293871633611a",
+          "osm_feature": "way/1466971322",
+          "osm_version": "2",
+          "osm_timestamp": "2026-04-25T20:55:10Z",
+          "identity_tags": {
+            "area": "yes",
+            "barrier": "border_control",
+            "name": "خرلاچی بارڈر کراسنگ",
+            "name:en": "Kharlachi Border Crossing"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Vehicle passage at Kharlachi during the September clash-related suspension",
+      "date_scope_check": {
+        "scope": "Vehicle passage at Kharlachi during the September clash-related suspension",
+        "start_earliest": "2024-09-21",
+        "start_latest": "2024-09-21",
+        "end_earliest": "2024-10-01",
+        "end_latest": "2024-10-01",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "September 21 to October 1 2024 canonical dates retained. APP September 9 is internally inconsistent with its nine-day description; no date change inferred from geography."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,86 @@
+{
+  "record_id": "REC50-R23-006",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Angoor Adda commercial restriction observations in2024, bounded by later trade restoration in2025. Conflicting retrospective durations prevent continuity; the new NLC terminal and October2025 renewed customs suspension are separate.",
+  "source_checks": [
+    {
+      "url": "https://www.dawn.com/news/1879577/closure-of-angoor-adda-border-protested",
+      "access_status": "full_text_web",
+      "finding": "Original identifies Angoor Adda reopening demands in Lower South Waziristan.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r12-5.json",
+      "sha256": "2868770dcf0d3ed38fa893f34a02f657c79e16a778916eb05174661dc4cd3c72"
+    },
+    {
+      "url": "https://www.pakistantoday.com.pk/2025/10/04/cross-border-trade-resumes-at-angoor-adda-terminal-as-nlc-completes-facility-in-30-days",
+      "access_status": "full_text_web",
+      "finding": "Pakistan Today original describes reconstructed NLC terminal and commercial return by October2025; it does not establish exact first truck passage.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r12-5.json",
+      "sha256": "2868770dcf0d3ed38fa893f34a02f657c79e16a778916eb05174661dc4cd3c72"
+    },
+    {
+      "url": "https://download1.fbr.gov.pk/Docs/2021891183146360Yearbook-2020-21-F9.pdf",
+      "access_status": "indexed_extract_only",
+      "finding": "Federal Customs yearbook distinguishes the customs area1km from the actual border crossing, with a bazaar between; new terminal cannot be substituted retrospectively.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-55.json",
+      "sha256": "01f087a02b429adba3e1e126d474035345e1fd5944c142111a11c2aefb36b33a"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/784074801/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Unnamed border-control enclosure east of another control area inspected; exact2024 commercial facility identity remains unconfirmed.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/5bb211a2b8d297b5a968.xml",
+      "sha256": "f86dd65d767aa5895f251bba2fec37930cc6389699e2aed31c489b5ec4f5e0dc",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/5bb211a2b8d297b5a968.txt",
+      "text_sha256": "f86dd65d767aa5895f251bba2fec37930cc6389699e2aed31c489b5ec4f5e0dc",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/784074802/full",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Second unnamed control area about1km west inspected; no evidence selects this as the named2024 commercial restriction site.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/f3ee14a1fe362ff258bc.xml",
+      "sha256": "a581220c66292b5985dab487642463756974219d9edc3e316ebce6279752d448",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/f3ee14a1fe362ff258bc.txt",
+      "text_sha256": "a581220c66292b5985dab487642463756974219d9edc3e316ebce6279752d448",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R23-006-P1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Angoor Adda commercial restriction observations in2024, bounded by later trade restoration in2025. Conflicting retrospective durations prevent continuity; the new NLC terminal and October2025 renewed customs suspension are separate.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2024-12-18",
+        "end_latest": "2024-12-18",
+        "last_confirmed": "2024-12-18",
+        "temporal_display_rule": "held_evidence_do_not_animate_as_confirmed",
+        "held_status_preserved": false,
+        "contested": true,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "REC50-R23-006-P1: Commercial restrictions are reported on 15 April and 18 December 2024. January ministry restoration reporting and incompatible retrospective durations prevent one continuous spell or an exact onset. Pakistan Today reports commercial resumption by 4 October 2025; this bounds later access but is not the exact first truck date. September ceremony and planned convoy dates are not substituted for observed first passage. A separate official customs suspension from 12 October 2025 must not be joined across this reopening. The original 2024 official rationale and restricting actor remain unresolved."
+      },
+      "unresolved": [
+        "Need a named, dated location match distinguishing the2024 border gate, customs area and2025 reconstructed terminal. Village coordinates and unnamed enclosures are not adopted."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Need a named, dated location match distinguishing the2024 border gate, customs area and2025 reconstructed terminal. Village coordinates and unnamed enclosures are not adopted."
+  ],
+  "input_sha256": "170a8472943720b0d140b3e8b06567a765880ebe85fabae38a60b2f7e7e5f168",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

@@ -1,0 +1,121 @@
+{
+  "record_id": "REC50-R17-001",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Kaplanbek–Navoi ordinary road passage during reconstruction. Limited initial passenger opening is distinct from restoration of freight capacity.",
+  "source_checks": [
+    {
+      "url": "https://kazpravda.kz/n/kaplanbek-zakryt-vremenno/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "December 6 report says checkpoint already closed, with persons/vehicles diverted.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-65.json",
+      "sha256": "8c11382896da8f464ddc543d2a3ee5f4f9538a61ceb05c897be4336a0690343c"
+    },
+    {
+      "url": "https://uz.kursiv.media/2025-01-29/kpp-navoi-vozobnovil-rabotu-foto/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "January 29 report/photos of initial passengers at paired Navoi, freight restrictions remain.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-69.json",
+      "sha256": "8084682c8c14d13f911da3336768ad196a4020aae108246e270d48d1a26c5196"
+    },
+    {
+      "url": "https://cgr.qoldau.kz/kz/registry/checkpoint/list/238236183776000000/view",
+      "access_status": "search_indexed_official_registry",
+      "finding": "Official registry pairs Kaplanbek with Navoi.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-68.json",
+      "sha256": "89ec3e3476d65b3cd05d3e6eda7c39bfba14116fc672225f68b39eeabb4e777f"
+    },
+    {
+      "url": "https://www.zakon.kz/sobytiia/6031000-kgd-punkt-propuska-kaplanbek--zangiota-budet-polnostyu-zakryt-s-1-dekabrya.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://t.me/s/kgdmfrk/8534",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://t.me/customschannel/42573",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.inform.kz/amp/nazvana-data-otkritiya-punkta-propuska-zhibek-zholi-na-granitse-s-suzbekistanom-310ac2",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R17-001-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kaplanbek-navoi",
+          "name": "Kaplanbek–Navoi road crossing",
+          "coordinates": [
+            69.206589,
+            41.4562614
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/332389741",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/332389741",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=69.2,41.45,69.22,41.46"
+          ],
+          "evidence_note": "Explicit Qaplanbek control node opposite mapped Navoi customs node2616919020; official Qoldau checkpoint registry pairs Kaplanbek–Navoi. Not Kazygurt or Zhibek Zholy.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-kaplanbek-main.xml",
+          "sha256": "16ea9420953bc397cd0fd9ed76856b16dd16d0621fd99e10e9b3c4dfb4584f1f",
+          "osm_feature": "node/332389741",
+          "osm_version": "32",
+          "osm_timestamp": "2025-10-12T19:54:42Z",
+          "identity_tags": {
+            "access:citizenship": "all",
+            "barrier": "border_control",
+            "bicycle": "yes",
+            "foot": "yes",
+            "int_name": "Qaplanbek",
+            "motor_vehicle": "yes",
+            "name": "Қапланбек",
+            "name:en": "Qaplanbek",
+            "name:kk": "Қапланбек",
+            "name:ru": "Капланбек",
+            "name:uz": "Qoplonbek",
+            "opening_hours": "24/7",
+            "vehicle": "yes"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary personal passage at Kaplanbek–Navoi/Zangiota; partial passenger restoration only",
+      "date_scope_check": {
+        "scope": "Ordinary personal passage at Kaplanbek–Navoi/Zangiota; partial passenger restoration only",
+        "start_earliest": null,
+        "start_latest": "2022-12-06",
+        "end_earliest": "2025-01-27",
+        "end_latest": "2025-01-29",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Closed by December 6 2022, exact onset unresolved. January 27–29 2025 initial passenger restoration bounded; not unrestricted commercial-truck reopening."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

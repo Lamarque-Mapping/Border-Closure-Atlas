@@ -1,0 +1,104 @@
+{
+  "record_id": "NP-COV-EUR-008",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "April2026 Montenegro freight campaign on participating Serbia/Bosnia crossing routes, then separate April17 two-hour passenger-inclusive extension at Dracenovac. Serbian transporters did not join the initial Montenegrin action.",
+  "source_checks": [
+    {
+      "url": "https://www.rts.rs/lat/vesti/region/5925736/blokada-granicni-prelaz-teretni-saobracaj.html",
+      "access_status": "full_retrieved",
+      "finding": "Full RTS report describes freight blockade beginning10:00 on routes toward Serbia and Bosnia; passengers and specified goods excepted; says Serbian association would not block."
+    },
+    {
+      "url": "https://www.rts.rs/lat/vesti/region/5928573/blokada-granicnog-prelaza-u-crnoj-gori-dracevac.html",
+      "access_status": "full_retrieved",
+      "finding": "Full RTS report identifies Dracenovac extension after scheduled10:00 finish, two additional hours including passengers and subsequent dispersal."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/295259120",
+      "access_status": "full_retrieved",
+      "finding": "Direct named international Dracenovac control node with road/foot access tags; mode and side matched."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-EUR-008-P01",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "geo-dracenovac-road-control",
+          "name": "Dracenovac Montenegrin road control",
+          "coordinates": [
+            20.3184032,
+            42.9020386
+          ],
+          "coordinate_method": "Directly inspected OSM node/295259120 node; XML sha256 190db0ef49263024a7a5bb0998733984aed009679552087aa5ea10997bbfe64d",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/295259120"
+          ],
+          "evidence_note": "Named international road border-control on Montenegro side of Dracenovac–Spiljani; source matches two-hour extension including passenger traffic."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Participating Montenegro crossings with Serbia and Bosnia; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "bounded_interval",
+        "start_earliest": "2026-04-14",
+        "start_latest": "2026-04-14",
+        "end_earliest": null,
+        "end_latest": "2026-04-17",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Only Dracenovac identified geometrically; full participating campaign roster and road block positions remain unresolved."
+      ]
+    },
+    {
+      "phase_id": "NP-COV-EUR-008-P02",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "geo-dracenovac-road-control",
+          "name": "Dracenovac Montenegrin road control",
+          "coordinates": [
+            20.3184032,
+            42.9020386
+          ],
+          "coordinate_method": "Directly inspected OSM node/295259120 node; XML sha256 190db0ef49263024a7a5bb0998733984aed009679552087aa5ea10997bbfe64d",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/295259120"
+          ],
+          "evidence_note": "Named international road border-control on Montenegro side of Dracenovac–Spiljani; source matches two-hour extension including passenger traffic."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Dračenovac two-hour extension including passengers; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2026-04-17",
+        "start_latest": "2026-04-17",
+        "end_earliest": "2026-04-17",
+        "end_latest": "2026-04-17",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [
+    "Only Dracenovac identified geometrically; full participating campaign roster and road block positions remain unresolved."
+  ]
+}

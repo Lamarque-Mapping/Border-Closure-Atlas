@@ -1,0 +1,62 @@
+{
+  "record_id": "REC50-R26-004",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Two DRC customs-service locations, Karombo and Goli/Anzida in Mahagi territory. Separate internal RN27 blockade near Mahagi is not a third border post. Goli can be located approximately from the published crossing marker; Karombo remains unlocated in this reconstruction.",
+  "source_checks": [
+    {
+      "url": "https://7sur7.cd/2020/05/14/ituri-insecurite-les-activites-douanieres-larret-au-poste-frontalier-de-mahagi-pour",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full May 14 report explicitly names closed DGDA/OCC offices at Karombo and Goli/Anzida; wider no-entry/no-exit is attributed to a local advocate. RN27 road interruption about 10 km from Mahagi is distinct.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-34.json"
+    },
+    {
+      "url": "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf",
+      "access_status": "cached_original_text_extract_inspected",
+      "finding": "AU-PIDA original Appendix A row E41 independently inspected: Mahagi–Goli latitude 2.37673 longitude 31.02969. Approximate paired crossing reference; no exact DGDA or OCC office footprint. Cached PDF binary is truncated, so no full PDF visual verification claimed.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/pida-original-text.txt"
+    },
+    {
+      "url": "https://www.afro.who.int/countries/uganda/news/uganda-health-workers-respond-swiftly-suspected-ebola-death?form=FUNKUKTZPCK",
+      "access_status": "indexed_original_extract_inspected",
+      "finding": "Primary WHO indexed account independently names Padea/Karombo border checkpoint in Zombo district, corroborating paired identity but supplying no exact Karombo customs-office coordinates.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-43.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R26-004-P1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "name": "Mahagi–Goli / Anzida road border crossing",
+          "coordinates": [
+            31.02969,
+            2.37673
+          ],
+          "coordinate_method": "Coordinate row transcribed from independently inspected cached original AU-PIDA report text extraction, Appendix A.",
+          "precision": "Illustrative border crossing area, approximately 5 km; not a surveyed historical gate.",
+          "source_urls": [
+            "https://au-pida.org/events/wp-content/uploads/2024/11/One-Stop-Border-Post-OSBP-Status-Report.pdf"
+          ],
+          "evidence_note": "Published row E41 Mahagi–Goli. Preserved original text was inspected; cached PDF binary is truncated and could not be rendered, so this is not fresh full-PDF visual verification. Illustrative location only.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/pida-original-text.txt",
+          "evidence_sha256": "98451216c05eab194ec577670f81979a7944ee5560d41e0ea9c43eb94d347983",
+          "proposed_site_id": "post-mahagi-goli"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: multiple_named_sites. May 14, 2020 DGDA/OCC service closure observation. Partial named-site set: approximate Goli/Anzida crossing only; no claim of universal passenger ban or a continuous 2020–2021 stoppage.",
+      "unresolved": [
+        "Karombo/Padea customs location needs source-backed coordinates.",
+        "Exact DRC DGDA/OCC facilities and internal approach blockade remain unlocated."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"confirmed_through\", \"start_earliest\": null, \"start_latest\": null, \"end_earliest\": \"2020-05-14\", \"end_latest\": \"2020-05-14\", \"last_confirmed\": \"2020-05-14\", \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: The full May 14, 2020 account names closed DGDA and OCC offices. A local rights advocate also reports no entry or exit and says only intelligence services were operating; this is an attributed claim, not independently verified universal passenger or vehicle denial. Later evidence matches Karombo DGDA activity and subsequently customs offices at both posts, without separately verifying every OCC function. No continuous May 2020–December 2021 stoppage or exact first reopening is inferred. The December 2021 Okapi report was available as substantive indexed text; its direct retrieval failed."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

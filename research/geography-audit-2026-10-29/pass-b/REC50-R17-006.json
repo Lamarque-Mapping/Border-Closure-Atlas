@@ -1,0 +1,77 @@
+{
+  "record_id": "REC50-R17-006",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Ken-Sai road checkpoint in Nooken district paired with Uch-Kurgan in Namangan, restored September12,2024. The inherited onset and possible intermediate openings stay uncertain; Kara-Suu is a different crossing.",
+  "source_checks": [
+    {
+      "url": "https://www.azattyqasia.org/a/33117179.html",
+      "access_status": "full_text_web",
+      "finding": "Azattyk correspondent original identifies Ken-Sai/Uch-Kurgan actual September12 operations and retrospective2009 non-operation.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r12-4.json",
+      "sha256": "1c55eaa50418eb8c441bb34e01d6a35f6a01e623d378348d08ae2a8fe155438f"
+    },
+    {
+      "url": "https://24.kg/english/304889_Ken-Sai_-_Avtodorozhny_checkpoint_resumes_work/",
+      "access_status": "indexed_extract_only",
+      "finding": "Border Service account locates the road checkpoint in Kyzyl-Tuu, Nooken and distinguishes Kara-Suu.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-54.json",
+      "sha256": "98c407e26800b46d93865cbaac355795982edfeb3a73038b3f9e2cf3457a493e"
+    },
+    {
+      "url": "https://digitalborder.gps.gov.kg/ru/home/checkpoints",
+      "access_status": "indexed_extract_only",
+      "finding": "Indexed Ken-Sai coordinate40.707451,72.91015 lies by Kara-Suu and conflicts with the Nooken/Uch-Kurgan scope; rejected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/ffb1bf1e1a4d93bf9649.html",
+      "sha256": "c6f27903eebd1eaed759473e75782ea4157fdfbe2286504fb8570fb0c410a109",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/ffb1bf1e1a4d93bf9649.txt",
+      "text_sha256": "f34c899b1b922a89ae3c7e3c0d98ee29360c81271a29c79b9a9af6b9242b954d",
+      "status": 200,
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-51.json"
+    },
+    {
+      "url": "https://www.tashkenttimes.uz/national/12482-new-border-checkpoint-to-open-between-uzbekistan-and-kyrgyzstan",
+      "access_status": "indexed_extract_only",
+      "finding": "Construction account places Uch-Kurgan at10km of Uch-Kurgan–Madaniyat road, Buston; locality alone does not locate the control gate.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-53.json",
+      "sha256": "248dbb31af5e5865a4bba200e4ac961c8bee391fa454436819f9259b6120b356"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R17-006-P1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ken-Sai road checkpoint in Nooken district paired with Uch-Kurgan in Namangan, restored September12,2024. The inherited onset and possible intermediate openings stay uncertain; Kara-Suu is a different crossing.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2024-09-12",
+        "end_latest": "2024-09-12",
+        "last_confirmed": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": true,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "A September 12, 2024 correspondent report documents Ken-Sai/Uch-Kurgan operating again and retrospectively describes non-operation since 2009. A guide gives intermediate 2016–2018 closures/reopenings, whose underlying identity and events remain unresolved. Exact onset and uninterrupted total duration are withheld; the September restoration is not transferred from Kara-Suu. The original official rationale is uncoded."
+      },
+      "unresolved": [
+        "Coordinates for the correctly paired Ken-Sai/Uch-Kurgan road gate remain unresolved. Conflicting indexed official coordinate, several Kyzyl-Tuu villages and separate railway post are not adopted."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Coordinates for the correctly paired Ken-Sai/Uch-Kurgan road gate remain unresolved. Conflicting indexed official coordinate, several Kyzyl-Tuu villages and separate railway post are not adopted."
+  ],
+  "input_sha256": "c0fac7a462934b19e8ac4e36dcfa1967b7f6e4e1de5e7be87761eadf971f0a1a",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

@@ -1,0 +1,115 @@
+{
+  "record_id": "FU-COV-EUR-002",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Portuguese farmer blockades affect two specified Spanish-access roads: Paymogo HU7400 bridge and Rosal N433–Ficalho N260. These are separate phases; no all-border closure inferred.",
+  "source_checks": [
+    {
+      "url": "https://www.europapress.es/andalucia/huelva-00354/noticia-agricultores-portugueses-cortan-carreteras-acceso-frontera-rosal-paymogo-huelva-20240201133915.html",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Government-subdelegation reporting names Paymogo bridge obstruction on Portuguese side affecting HU7400 and separate Rosal N433, with emergency exception.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-086.json"
+    },
+    {
+      "url": "https://eco.sapo.pt/2024/02/03/agricultores-em-ficalho-beja-desmobilizaram-e-vao-reunir-se-com-ministra/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "GNR-sourced February3 report says Ficalho traffic resumed close to midnight Friday.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-092.json"
+    },
+    {
+      "url": "https://www.antram.pt/conteudo/3896-portugal-protestos-dos-agricultores",
+      "access_status": "fresh_full_text_extract",
+      "finding": "ANTRAM/GNR updates identify N260 two-way closure and continued Ficalho closure February2 evening.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-094.json"
+    },
+    {
+      "url": "https://mapcarta.com/W1165573088",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named Puente Internacional del Chanza / Rio Chança bridge west of Paymogo on Minas de Santo Domingo route; not town centroid.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-090.json"
+    },
+    {
+      "url": "https://siaia.apambiente.pt/AIADOC/AIA2290/eia-adt-06.10.2010-final2019411141125.pdf",
+      "access_status": "fresh_raw_primary_text_inspected",
+      "finding": "Inspected EIA heritage site49 names Ficalho frontier buildings on IP8 with UTM653650/4203039 and653648/4203094. Datum/zone for these coordinates not established; other sections use other systems, so no conversion assumed.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/3def06ab63700dbbbf04.pdf",
+      "source_sha256": "980c7554f5a9f209f6a3d5753cba92eb163b5b951bc56c42d5fb8a6d5981da21"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-EUR-002-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-paymogo-chanza-bridge",
+          "name": "Paymogo international Chanza bridge",
+          "coordinates": [
+            -7.4109,
+            37.76174
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 1165573088; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W1165573088",
+            "https://www.openstreetmap.org/way/1165573088"
+          ],
+          "evidence_note": "Named Puente Internacional del Chanza / Rio Chança bridge west of Paymogo on Minas de Santo Domingo route; not town centroid.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-090.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Paymogo–Minas de Santo Domingo bridge / HU-7400 approach",
+      "date_scope_check": {
+        "start_earliest": "2024-02-01",
+        "start_latest": "2024-02-01",
+        "end_earliest": "2024-02-02",
+        "end_latest": "2024-02-02",
+        "last_confirmed": "2024-02-02",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Bridge reference located; exact Portuguese protest barrier not located."
+      ]
+    },
+    {
+      "phase_id": "FU-COV-EUR-002-FU2",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Rosal de la Frontera–Vila Verde de Ficalho road / N-433 approach",
+      "date_scope_check": {
+        "start_earliest": "2024-02-01",
+        "start_latest": "2024-02-01",
+        "end_earliest": "2024-02-02",
+        "end_latest": "2024-02-03",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Named road identity supported, but source UTM CRS incomplete and exact crossing coordinate not independently recovered. Village coordinates rejected."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "9ab861f0a31bcd2c4a9246ed352dcd5297c94f5acb6d9765d39f72ca588ee74f"
+}

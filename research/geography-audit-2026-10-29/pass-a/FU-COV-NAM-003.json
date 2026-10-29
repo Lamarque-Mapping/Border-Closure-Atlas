@@ -1,0 +1,78 @@
+{
+  "record_id": "FU-COV-NAM-003",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "December2025 farmer action obstructs Agua Prieta–Douglas cargo access at existing RHC port. Adjacent Naco port and planned new Douglas commercial facility are outside scope.",
+  "source_checks": [
+    {
+      "url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/3fedf8e",
+      "access_status": "fresh_full_text_extract",
+      "finding": "December8 CBP primary notice says RHC2601 operates normally after Mexican protestsDecember3/4; Naco2403 unaffected. It does not establish exactDecember4 reopening clock.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-087.json"
+    },
+    {
+      "url": "https://www.gsa.gov/real-estate/ongoing-construction-projects/raul-hector-castro-land-port-of-entry",
+      "access_status": "fresh_search_extract",
+      "finding": "GSA identifies existing15PanAmericanAvenue port and future cargo facility4.5miles west, preventing location conflation.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-092.json"
+    },
+    {
+      "url": "https://mapcarta.com/W162155433",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named existing Douglas POE building at Pan American Avenue; Mexican customs southwest. Future separate commercial port4.5miles away is not substituted.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-093.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-NAM-003-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-douglas-rhc-reference",
+          "name": "Raul Hector Castro / Douglas port reference",
+          "coordinates": [
+            -109.56024,
+            31.33455
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 162155433; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W162155433",
+            "https://www.openstreetmap.org/way/162155433"
+          ],
+          "evidence_note": "Named existing Douglas POE building at Pan American Avenue; Mexican customs southwest. Future separate commercial port4.5miles away is not substituted.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-093.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Agua Prieta–Douglas cargo crossing",
+      "date_scope_check": {
+        "start_earliest": "2025-12-03",
+        "start_latest": "2025-12-03",
+        "end_earliest": "2025-12-04",
+        "end_latest": "2025-12-04",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "US port reference locates route; exact Mexican cargo protest barrier not located."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "d0984be6b69d8e4070f9f5ed6b2ddecb89a954fcd0574a011fc4159347b874f6"
+}

@@ -1,0 +1,80 @@
+{
+  "record_id": "R16-EU-008",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ukraine-to-Romania freight admission on the Dyakove–Halmeu road route was suspended while tractors obstructed the Romanian approach. Passenger road traffic continued; nearby Halmeu railway facility is outside scope.",
+  "source_checks": [
+    {
+      "url": "https://en.interfax.com.ua/news/general/961325.html",
+      "access_status": "fresh_full_text_extract",
+      "finding": "January18 report quotes customs on farm machinery before Halmeu and protective Ukrainian suspension of departing trucks to avoid blocking passenger vehicles.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-095.json"
+    },
+    {
+      "url": "https://www.pravda.com.ua/eng/news/2024/01/20/7438152/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "January20 notification restores Halmeu, the final Romanian truck blockade after Vicovu and Siret. Notification time is not exact first vehicle passage.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-086.json"
+    },
+    {
+      "url": "https://www.politiadefrontiera.ro/ro/maps/mp-20.html",
+      "access_status": "fresh_raw_primary_map_inspected",
+      "finding": "Official directory distinguishes Halmeu Rutier road marker from Halmeu Feroviar rail marker about1.2km southwest. Ukrainian protective truck suspension relates to paired Dyakove road route.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/e0dd9f380e5363c51f2c.html",
+      "source_sha256": "7c744517c4161515acc90307aba5ff4c53bf1416d24b25dd59d9534aad161d7e"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R16-EU-008-D1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-halmeu-road",
+          "name": "Halmeu road border station",
+          "coordinates": [
+            23.0015945,
+            47.9957888
+          ],
+          "coordinate_method": "Named Halmeu Rutier marker in official Romanian Border Police map JavaScript, rounded to seven decimals",
+          "precision": "Official crossing-area marker; not survey precision or exact tractor obstruction.",
+          "source_urls": [
+            "https://www.politiadefrontiera.ro/ro/maps/mp-20.html",
+            "https://www.politiadefrontiera.ro/ro/main/pg-puncte-de-trecere-a-frontierei-situate-in-judetele-satu-mare-maramures-si-suceava-305.html"
+          ],
+          "evidence_note": "Official directory distinguishes Halmeu Rutier road marker from Halmeu Feroviar rail marker about1.2km southwest. Ukrainian protective truck suspension relates to paired Dyakove road route.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/e0dd9f380e5363c51f2c.html",
+              "sha256": "7c744517c4161515acc90307aba5ff4c53bf1416d24b25dd59d9534aad161d7e",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ukraine-to-Romania freight admission at Dyakove–Halmeu during the truck blockade and protective Ukrainian suspension.",
+      "date_scope_check": {
+        "start_earliest": "2024-01-18",
+        "start_latest": "2024-01-18",
+        "end_earliest": "2024-01-20",
+        "end_latest": "2024-01-20",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Road crossing located; exact Romanian machinery barrier and Ukrainian suspension gate not separately mapped."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "35e7093157ad4da96fb3a366fb2cd52b068832ad3cf9323eb7e6a032ff989200"
+}

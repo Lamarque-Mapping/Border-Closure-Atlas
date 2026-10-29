@@ -1,0 +1,39 @@
+{
+  "record_id": "C7-EH-001",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Laffa/Al Laffa road crossing between Kassala, Sudan, and Eritrea on the Kassala–Teseney corridor. Reported restriction is Sudanese admission into Eritrea, not Sudan-side entry and not all traffic.",
+  "source_checks": [
+    {
+      "url": "https://www.dabangasudan.org/en/all-news/article/ten-killed-and-over-6000-displaced-in-south-darfur",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full relevant English report identifies suspension of Sudanese entry through Laffa because of overcrowding. Publication is November 21; canonical November 20 observation is retained without borrowing Gallabat Sunday onset.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-35.json"
+    },
+    {
+      "url": "https://dtm.iom.int/reports/dtm-sudan-cross-border-monitoring-report-6",
+      "access_status": "indexed_original_extract_inspected_direct_page_inaccessible",
+      "finding": "Indexed original IOM description identifies Al Laffa as Kassala/Eritrea cross-border point, but direct page retrieval failed 403. Later inflows into Sudan are opposite direction and cannot date restored Sudanese admission to Eritrea. No crossing coordinates recovered.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-45.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "C7-EH-001-P1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: single_site. Single named road crossing, Sudanese entry into Eritrea only, November 20 observation. Hold because no independently validated border-control location was recovered; do not substitute Kassala, Teseney or Laffa village centroid.",
+      "unresolved": [
+        "Source-backed coordinates of the actual Laffa border post remain unresolved.",
+        "No onset, lifting or continuous duration established."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"confirmed_through\", \"start_earliest\": null, \"start_latest\": null, \"end_earliest\": \"2023-11-20\", \"end_latest\": \"2023-11-20\", \"last_confirmed\": \"2023-11-20\", \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: Observation date only. Neither initial enforcement nor lifting recovered. Gallabat’s Sunday onset is not borrowed, and the two Dabanga language versions are not independent origins. No all-traffic or continuous-duration inference. R37 endpoint check: December 2023 trade-opening preparations are prospective, the September Sudan-side reopening order predates this episode, and later movements into Sudan run in the opposite direction. None establishes restored Sudanese admission to Eritrea."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

@@ -1,0 +1,103 @@
+{
+  "record_id": "REC50-R17-002",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Paired Zhibek Zholy–Gishtkuprik pedestrian/vehicle road passage during reconstruction. Nearby rail crossings and freight alternatives are separate.",
+  "source_checks": [
+    {
+      "url": "https://qazinform.com/news/kazakhstan-closes-zhibek-zholy-checkpoint-on-border-with-uzbekistan-0d2d25",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "February 4 contemporaneous notice explicitly pairs gates and announces closure February 5 for persons on foot/by vehicles, railway alternatives separate.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-71.json",
+      "sha256": "d5e86dfaee5753409420ee78ef4f9db315a7e031528f70a9a9bbbb2d57ed2a20"
+    },
+    {
+      "url": "https://www.uzdaily.uz/en/uzbekistan-and-kazakhstan-coordinate-border-crossing-reopening/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "October 23 representatives still coordinate simultaneous reopening despite construction completion.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-70.json",
+      "sha256": "a46c78caf7876557198ab9a43fd6fd163763b3bfe0c653928dc0205e310112f0"
+    },
+    {
+      "url": "https://kun.uz/en/news/2026/09/29/gishtkuprik-border-crossing-with-kazakhstan-to-reopen-by-year-end",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.inform.kz/amp/nazvana-data-otkritiya-punkta-propuska-zhibek-zholi-na-granitse-s-suzbekistanom-310ac2",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R17-002-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-zhibek-zholy-gishtkuprik",
+          "name": "Zhibek Zholy–Gishtkuprik road crossing",
+          "coordinates": [
+            69.3590214,
+            41.4720664
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/2268852888",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/2268852888",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=69.33,41.45,69.38,41.49"
+          ],
+          "evidence_note": "Named Jibek Joly border control opposite named Gishtkuprik node245023861; contemporary authority notice confirms exact pair.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-gishtkuprik.xml",
+          "sha256": "e704bf728c3abbf1daafd8f4ba8a8d878d0e1d28fd90495566e2c9319d492615",
+          "osm_feature": "node/2268852888",
+          "osm_version": "22",
+          "osm_timestamp": "2026-09-23T21:59:50Z",
+          "identity_tags": {
+            "access:citizenship": "all",
+            "barrier": "border_control",
+            "foot": "yes",
+            "hgv": "no",
+            "horse": "no",
+            "int_name": "Jibek-Jolı",
+            "motor_vehicle": "yes",
+            "name": "Жібек-Жолы",
+            "name:en": "Jibek-Jolı (Chernyaevka)",
+            "name:kk": "Жібек-Жолы",
+            "name:ru": "Жибек-Жолы (Черняевка)",
+            "name:uz": "Jibek-Joly",
+            "note": "opened for cars on 2016-10-10, ref: http://titus.kz/?previd=80736",
+            "old_name": "Черняевка",
+            "opening_hours": "24/7",
+            "source:access": "http://titus.kz/?previd=80736"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Zhibek Zholy–Gishtkuprik road crossing, pedestrians and vehicles",
+      "date_scope_check": {
+        "scope": "Zhibek Zholy–Gishtkuprik road crossing, pedestrians and vehicles",
+        "start_earliest": "2025-02-05",
+        "start_latest": "2025-02-05",
+        "end_earliest": "2026-10-23",
+        "end_latest": "2026-10-23",
+        "last_confirmed": "2026-10-23",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "assessment": "February 5 2025 onset and October 23 2026 continuing paired-reopening coordination retained. Completed construction is not operational reopening; no extension beyond last confirmation."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

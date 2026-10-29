@@ -1,0 +1,137 @@
+{
+  "record_id": "REC50-R17-003",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ordinary persons, cars and buses at paired Tazhen–Daut Ata road gate; heavy freight continued. Railway travel is outside the phase.",
+  "source_checks": [
+    {
+      "url": "https://www.gov.kz/org/kgd/press/news/details/927631?lang=ru",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Official January 30 announcement sets February 1 restriction on persons/selected vehicles; heavy freight distinguished.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-65.json",
+      "sha256": "8c11382896da8f464ddc543d2a3ee5f4f9538a61ceb05c897be4336a0690343c"
+    },
+    {
+      "url": "https://www.gov.kz/org/kgd/press/news/details/1134521?lang=ru",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "December 29 official statement says Tazhen commissioned but Daut Ata still restricts persons/cars/buses while heavy trucks pass.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-69.json",
+      "sha256": "8084682c8c14d13f911da3336768ad196a4020aae108246e270d48d1a26c5196"
+    },
+    {
+      "url": "https://www.gov.kz/org/kgd/press/news/details/998331?lang=ru",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.inform.kz/amp/nazvana-data-otkritiya-punkta-propuska-zhibek-zholi-na-granitse-s-suzbekistanom-310ac2",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.inform.kz/ru/uzbekistan-prodlevaet-ogranichenie-v-punkte-propuska-daut-ata-na-granitse-s-kazahstanom-1da583",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://newtimes.kz/obshchestvo/223184-nas-vysadili-iz-poezda-inostrantsy-s-velosipedami-zastriali-v-beineu",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://oxusroad.com/ru/destinations/nukus/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.caj.uz/en/borders",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://newtimes.kz/novosti?page=22",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R17-003-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-tazhen-daut-ata",
+          "name": "Tazhen–Daut Ata road crossing",
+          "coordinates": [
+            55.9971034,
+            44.8960252
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/1285739939",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1285739939",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=55.98,44.88,56.02,44.91"
+          ],
+          "evidence_note": "Named Tajen road-control node opposite mapped Dauit Ata node3412554861; nearby Oazis railway station is distinct.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-tazhen-main.xml",
+          "sha256": "9d807d17d698f42cfc49899c5ffa2b6a897e0c20e9263e0f060ddd6de9d4e8a9",
+          "osm_feature": "node/1285739939",
+          "osm_version": "19",
+          "osm_timestamp": "2024-12-14T17:03:08Z",
+          "identity_tags": {
+            "access:citizenship": "all",
+            "barrier": "border_control",
+            "bicycle": "yes",
+            "foot": "yes",
+            "int_name": "Täjen",
+            "motorcar": "yes",
+            "motorcycle": "yes",
+            "name": "Тәжен",
+            "name:be": "Тажэн",
+            "name:en": "Tajen",
+            "name:kk": "Тәжен",
+            "name:ru": "Тажен",
+            "name:tt": "Тәҗен",
+            "name:uk": "Тажен",
+            "opening_hours": "24/7"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary persons, passenger cars and buses at Tazhen–Daut Ata",
+      "date_scope_check": {
+        "scope": "Ordinary persons, passenger cars and buses at Tazhen–Daut Ata",
+        "start_earliest": "2025-02-01",
+        "start_latest": "2025-02-01",
+        "end_earliest": "2025-12-29",
+        "end_latest": "2025-12-29",
+        "last_confirmed": "2025-12-29",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "February 1–December 29 2025 confirmed restriction retained. Tazhen technical launch did not restore Daut Ata paired passage. Initial light-goods restriction not silently extended into later passenger scope."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

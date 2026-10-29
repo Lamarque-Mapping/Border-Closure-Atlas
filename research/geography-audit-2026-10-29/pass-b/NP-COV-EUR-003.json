@@ -1,0 +1,63 @@
+{
+  "record_id": "NP-COV-EUR-003",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "July2 2018 veterans blocked road access to Bijaca on Bosnian side; same-day return before19:00. Separate from other WestHerzegovina road protests.",
+  "source_checks": [
+    {
+      "url": "https://www.slobodnaevropa.org/a/29333690.html",
+      "access_status": "full_retrieved",
+      "finding": "Full RFE/RL report says crossing blocked at noon and functional again shortly before19:00 after demonstrators moved from road; mentions broader protests only as context."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/2424868070",
+      "access_status": "full_retrieved",
+      "finding": "Inspected Bijaca road-control node with motorcar/motorcycle access tags."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-EUR-003-P01",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "geo-bijaca-road-checkpoint",
+          "name": "Bijaca road checkpoint approach",
+          "coordinates": [
+            17.5749337,
+            43.1232343
+          ],
+          "coordinate_method": "Directly inspected OSM node/2424868070 node; XML sha256 ecf57debd957204dfba6f4832c483b84971f34a95b6d983f0f50347d8c4a7568",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/2424868070"
+          ],
+          "evidence_note": "Named Bosnian Bijaca road control, distinct from Croatian NovaSela counterpart. Representative gate for nearby protest road obstruction, not exact veteran positions."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Road access at Bijača; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2018-07-02",
+        "start_latest": "2018-07-02",
+        "end_earliest": "2018-07-02",
+        "end_latest": "2018-07-02",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Gate representative located; exact approach barricade extent and detailed traffic exceptions not independently established."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Gate representative located; exact approach barricade extent and detailed traffic exceptions not independently established."
+  ]
+}

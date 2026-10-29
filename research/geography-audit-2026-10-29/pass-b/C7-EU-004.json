@@ -1,0 +1,63 @@
+{
+  "record_id": "C7-EU-004",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Heavy trucks obstructed on French A63 at Biriatou in early hours December22 2018; not all road vehicles or entire Franco-Spanish frontier.",
+  "source_checks": [
+    {
+      "url": "https://medias24.com/agence-presse/gilets-jaunes-lacte-vi-peu-mobilisateur-manifestation-surprise-dans-paris/",
+      "access_status": "full_retrieved",
+      "finding": "Full AFP text inspected: about50 protesters blocked heavytrucks from03:00, gendarmes cleared A63 nearBiriatou around06:00. Same-day scope retained."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/36331924/full",
+      "access_status": "full_retrieved",
+      "finding": "Directly inspected Biriatou toll area, ASF operator; no railway or river-crossing conflation."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "C7-EU-004-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "geo-biriatou-toll",
+          "name": "Biriatou A63 toll and road approach",
+          "coordinates": [
+            -1.7492839000000002,
+            43.340947530769235
+          ],
+          "coordinate_method": "Directly inspected OSM way/36331924 mean of geometry vertices; XML sha256 0ece98ea5545d4f35c52f4736b479eadf0a956d60ecf75ab648fdb2741285548",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/36331924/full"
+          ],
+          "evidence_note": "Named French Biriatou toll on A63 locates corridor; December2018 report says A63 at Biriatou, not exact toll lane."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Heavy-truck obstruction at Biriatou on the A63 France–Spain approach; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2018-12-22",
+        "start_latest": "2018-12-22",
+        "end_earliest": "2018-12-22",
+        "end_latest": "2018-12-22",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Known toll locates A63 corridor but original wording does not fix exact2018 barricade at this toll footprint; representative only."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Known toll locates A63 corridor but original wording does not fix exact2018 barricade at this toll footprint; representative only."
+  ]
+}

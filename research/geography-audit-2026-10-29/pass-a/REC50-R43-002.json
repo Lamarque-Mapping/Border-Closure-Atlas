@@ -1,0 +1,33 @@
+{
+  "record_id": "REC50-R43-002",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Mali national outward restriction on specified cereals and cotton inputs. This is a commodity/export-policy domain in a landlocked country; the inspected source does not identify an exhaustive set of posts or physical interdiction sites.",
+  "source_checks": [
+    {
+      "url": "https://www.wto.org/english/tratop_e/agric_e/dd160523_mli_e.pdf",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Original Mali ministry presentation to WTO, May 16 2023, text inspected. Identifies order 2021-5126/MIC-MEF-SG dated December 6, 2021 covering cottonseed/cake, millet, sorghum, maize and local rice; measure reported still in force. No named crossing implementation or mapped enforcement boundary supplied.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-37.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R43-002-P1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: wider_border. National outward commodity policy from December 6,2021, last confirmed May 16,2023. Hold physical geography because no gate or geographically bounded implementation is identified; no all-cargo/passenger closure or resumption inferred.",
+      "unresolved": [
+        "Specific enforcement locations and full operational frontier extent unresolved.",
+        "May 16 is evidence limit rather than reopening."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"policy_period\", \"start_earliest\": \"2021-12-06\", \"start_latest\": \"2021-12-06\", \"end_earliest\": \"2023-05-16\", \"end_latest\": \"2023-05-16\", \"last_confirmed\": \"2023-05-16\", \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": true}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: REC50-R43-002-P1: The December 6, 2021 order is formal policy evidence. The exact later presentation is linked from WTO's official May 16, 2023 meeting agenda and states the restriction remains in force; this date is supported by meeting provenance, not its filename. Goods are cottonseed, cottonseed cake, millet, sorghum, maize and local rice. No continuous all-post enforcement is inferred.\n\nThe World Bank's 2024 Niger update reports cereal-export relaxation by Mali in solidarity with Niger. The precise Malian instrument, effective date, commodities and other destinations remain unestablished, so this is not coded as a blanket repeal or an endpoint for cotton inputs."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

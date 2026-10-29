@@ -1,0 +1,96 @@
+{
+  "record_id": "C7-SC-002",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Legal Afghan passenger exit to Iran at Abresham/Silk Bridge, paired with Milak. Temporary July 6 passenger/transit permission prevents assuming continuous closure before July 18.",
+  "source_checks": [
+    {
+      "url": "https://www.khaama.com/abresham-crossing-between-afghanistan-amp-iran-reopens-after-nearly-two-weeks-57459/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Nimroz official describes July 18 legal passenger travel into Iran at Abresham aka Silk Bridge.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-57.json",
+      "sha256": "1f3e321ab030b165eaf713cc804c4d1648ffa2e71d1b39cd3777d22d4e1c5f52"
+    },
+    {
+      "url": "https://swn.af/en/2022/07/the-silk-bridge-border-crossing-with-iran-temporarily-opened/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "July 6 report records temporary legal-passenger/transit opening through 21:00; no permanent restoration proved.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-61.json",
+      "sha256": "1849b29606a23a78b37162ba34f498bf8322063b261c6b40b59b97c59839bfa8"
+    },
+    {
+      "url": "https://www.ecoi.net/en/file/local/2103762/General%2BCountry%2Bof%2BOrigin%2BReport%2BAfghanistan%2BJune%2B2023.pdf",
+      "access_status": "search_indexed_official_report_passage",
+      "finding": "Dutch MFA country report indexed passage explicitly equates southern Zaranj/Milak crossing with Silk Bridge/Abresham. Full PDF reopened in batch63.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-62.json",
+      "sha256": "02ae7475fe430eae73ad83735afaea58080f77bf4f0f5c21b6b3328b0cf63a41"
+    },
+    {
+      "url": "https://www.tolonews.com/index.php/node/178802",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "C7-SC-002-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "bridge-abresham-milak",
+          "name": "Abresham / Silk Bridge–Milak crossing",
+          "coordinates": [
+            61.8222017,
+            30.9665382
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/342627234",
+          "precision": "Bridge crossing-area reference, approximately 300 m; passenger desk and exact 2022 barrier position not asserted.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/342627234",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=61.81,30.96,61.83,30.98",
+            "https://www.ecoi.net/en/file/local/2103762/General%2BCountry%2Bof%2BOrigin%2BReport%2BAfghanistan%2BJune%2B2023.pdf"
+          ],
+          "evidence_note": "AH71 bridge segment on Zaranj–Deleram road between mapped Milak terminal and Afghan customs; Dutch MFA country report explicitly equates Zaranj/Milak, Silk Bridge and Abresham.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-milak.xml",
+          "sha256": "b1e9128bc01432e944a6ae1143c805c11768e4d7ca17a337972af207aef60845",
+          "osm_feature": "way/342627234",
+          "osm_version": "9",
+          "osm_timestamp": "2026-02-25T16:35:30Z",
+          "identity_tags": {
+            "bridge": "yes",
+            "highway": "primary",
+            "int_ref": "AH71",
+            "layer": "1",
+            "name": "جاده زرنج - دلارام",
+            "name:en": "Zaranj - Deleram road",
+            "name:fa": "جاده زرنج - دلارام",
+            "name:ru": "Дорога Зарандж - Делерам"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Abresham passenger restriction ending with reported July18 restoration",
+      "date_scope_check": {
+        "scope": "Abresham passenger restriction ending with reported July18 restoration",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2022-07-18",
+        "end_latest": "2022-07-18",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Unknown onset, July 18 official-reported passenger restoration retained. Approximate two weeks is not converted to dates; first independently observed movement remains unknown."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

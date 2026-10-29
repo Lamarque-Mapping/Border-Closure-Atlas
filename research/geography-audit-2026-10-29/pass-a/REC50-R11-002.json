@@ -1,0 +1,195 @@
+{
+  "record_id": "REC50-R11-002",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Three commodity/mode phases: selected timber/mineral rail imports, road cargo exports, and earlier-restored bulk grain/fertilizer rail imports. Two distinct facilities are required; restoration permissions are not interchangeable.",
+  "source_checks": [
+    {
+      "url": "https://en.nhc.gov.cn/2021-12/06/c_85287.htm",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "National Health Commission-hosted report distinguishes manual-handled rail cargo and road operations.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-64.json",
+      "sha256": "e62ceb0d53c9a094d3256c42dedfb2d3a23159904a5a55d5b0178596a5038275"
+    },
+    {
+      "url": "https://inews.nmgnews.com.cn/system/2022/01/14/013253397.shtml",
+      "access_status": "search_indexed_article",
+      "finding": "Substantive CNR indexed report records matching timber and mineral-powder trains received January 14 by 10:00 and December 1/3 mode-specific suspensions. Direct access failed.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-72.json",
+      "sha256": "8ef851f2a8f2f70c26066e6173eeff9ad2cdc60c4ba8445552173ec19fda054b"
+    },
+    {
+      "url": "https://nm.people.com.cn/n2/2022/0117/c347199-35098234.html",
+      "access_status": "search_indexed_article",
+      "finding": "Substantive January 17 report gives December 30 bulk grain/fertilizer restoration; direct page 502.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-72.json",
+      "sha256": "8ef851f2a8f2f70c26066e6173eeff9ad2cdc60c4ba8445552173ec19fda054b"
+    },
+    {
+      "url": "https://city.cri.cn/20220114/2a3bae4b-2377-c8b6-2210-1c42f3e0ceeb.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "January 13 dispatch announces January 14 midnight road export permission and preparations, not observed road passage.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-69.json",
+      "sha256": "8084682c8c14d13f911da3336768ad196a4020aae108246e270d48d1a26c5196"
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Category:Manzhouli-Zabaykalsk_railway_crossing",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Named railway-crossing coordinate and distinct road/rail identity inspected.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-71.json",
+      "sha256": "d5e86dfaee5753409420ee78ef4f9db315a7e031528f70a9a9bbbb2d57ed2a20"
+    },
+    {
+      "url": "https://www.sohu.com/a/638000746_121106854",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.sohu.com/a/680328619_120817739",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R11-002-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "rail-manzhouli-zabaykalsk",
+          "name": "Manzhouli–Zabaykalsk railway crossing",
+          "coordinates": [
+            117.33928055555555,
+            49.6302
+          ],
+          "coordinate_method": "Converted explicitly published DMS coordinates of named Wikimedia Commons railway-crossing category to WGS84 decimal longitude/latitude.",
+          "precision": "Approximate railway-crossing-area reference, 500 m; community georeference, not surveyed historic control desk.",
+          "source_urls": [
+            "https://commons.wikimedia.org/wiki/Category:Manzhouli-Zabaykalsk_railway_crossing"
+          ],
+          "evidence_note": "Category explicitly identifies China–Russia railway border crossing and associated railway-gate photographs, distinct from road cargo control approximately 3 km east. Retained OSM rail-border-area XML independently shows Russia/China rail approach topology, but no tagged international boundary geometry was returned.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-71.json",
+          "sha256": "d5e86dfaee5753409420ee78ef4f9db315a7e031528f70a9a9bbbb2d57ed2a20"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Manzhouli non-container timber and mineral-powder rail imports requiring manual handling, to their reported return on 14 January 2022",
+      "date_scope_check": {
+        "scope": "Manzhouli non-container timber and mineral-powder rail imports requiring manual handling, to their reported return on 14 January 2022",
+        "start_earliest": "2021-12-01",
+        "start_latest": "2021-12-01",
+        "end_earliest": "2022-01-14",
+        "end_latest": "2022-01-14",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "",
+        "assessment": "December 1 2021–January 14 2022 matching timber/mineral-powder arrivals; container movement outside selected suspension."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "REC50-R11-002-P2",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-manzhouli-road-cargo",
+          "name": "Manzhouli road freight control",
+          "coordinates": [
+            117.3777412,
+            49.6279132
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/10548298273",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/10548298273",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=117.35,49.61,117.39,49.65"
+          ],
+          "evidence_note": "Named China border-control node explicitly tagged in Russian as international freight checkpoint; passenger controls lie separately west. Not railway station.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-manzhouli-road.xml",
+          "sha256": "1e7eb6225461b5f8265bc25584d4dfc177e07508f369edc6f8162a411da42cb0",
+          "osm_feature": "node/10548298273",
+          "osm_version": "2",
+          "osm_timestamp": "2024-01-21T01:26:23Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "name": "中国边防口岸控制区",
+            "name:en": "China Border Control",
+            "name:ru": "Международный грузовой пункт пропуска Маньчжурия",
+            "name:zh": "中国边防口岸控制区",
+            "name:zh-Hans": "中国边防口岸控制区",
+            "name:zh-Hant": "中國邊防口岸控制區"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Manzhouli road-port goods export suspension, to effective authorisation for trailer-exchange exports",
+      "date_scope_check": {
+        "scope": "Manzhouli road-port goods export suspension, to effective authorisation for trailer-exchange exports",
+        "start_earliest": "2021-12-03",
+        "start_latest": "2021-12-03",
+        "end_earliest": "2022-01-14",
+        "end_latest": "2022-01-14",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "December 3 2021–January 14 2022 effective trailer-exchange export permission. January 13 dispatch republished January 14 is not actual first-truck observation."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "REC50-R11-002-AUDIT20261025-1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "rail-manzhouli-zabaykalsk",
+          "name": "Manzhouli–Zabaykalsk railway crossing",
+          "coordinates": [
+            117.33928055555555,
+            49.6302
+          ],
+          "coordinate_method": "Converted explicitly published DMS coordinates of named Wikimedia Commons railway-crossing category to WGS84 decimal longitude/latitude.",
+          "precision": "Approximate railway-crossing-area reference, 500 m; community georeference, not surveyed historic control desk.",
+          "source_urls": [
+            "https://commons.wikimedia.org/wiki/Category:Manzhouli-Zabaykalsk_railway_crossing"
+          ],
+          "evidence_note": "Category explicitly identifies China–Russia railway border crossing and associated railway-gate photographs, distinct from road cargo control approximately 3 km east. Retained OSM rail-border-area XML independently shows Russia/China rail approach topology, but no tagged international boundary geometry was returned.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-71.json",
+          "sha256": "d5e86dfaee5753409420ee78ef4f9db315a7e031528f70a9a9bbbb2d57ed2a20"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Selected non-container rail imports of bulk grain and fertilizer.",
+      "date_scope_check": {
+        "scope": "Selected non-container rail imports of bulk grain and fertilizer.",
+        "start_earliest": "2021-12-01",
+        "start_latest": "2021-12-01",
+        "end_earliest": "2021-12-30",
+        "end_latest": "2021-12-30",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "December 1–30 2021 bulk grain/fertilizer rail scope only. LPG restoration mention does not independently establish initial LPG suspension."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

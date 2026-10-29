@@ -1,0 +1,72 @@
+{
+  "record_id": "FU-COV-NAM-005",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "November24–26 Nogales cargo obstruction moved from GaritaIII/Mariposa to Mexican export access. Clearing the protest and next-day US Thanksgiving operating schedule are separate facts.",
+  "source_checks": [
+    {
+      "url": "https://nuevodia.mx/nogales/2025/11/27/transportistas-desalojan-bloqueo-agricola-reanudan-cruces-garita-mariposa.html",
+      "access_status": "fresh_full_text_extract",
+      "finding": "OriginalNovember27 report describes intermittentMonday/Tuesday action, Wednesday relocation to export access, forced clearance17:27, and processing extension20:30.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-087.json"
+    },
+    {
+      "url": "https://mapcarta.com/N4095009746",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named Mariposa US POE office, distinct from Morley downtown gate. Mexican export-customs obstruction shifted; this is route reference only.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-094.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-NAM-005-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-mariposa-commercial-route-reference",
+          "name": "Nogales Mariposa port reference",
+          "coordinates": [
+            -110.96632,
+            31.33415
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 4095009746; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N4095009746",
+            "https://www.openstreetmap.org/node/4095009746"
+          ],
+          "evidence_note": "Named Mariposa US POE office, distinct from Morley downtown gate. Mexican export-customs obstruction shifted; this is route reference only.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-094.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Mariposa commercial-vehicle access at Nogales, including shifted obstruction at Mexican export customs",
+      "date_scope_check": {
+        "start_earliest": "2025-11-24",
+        "start_latest": "2025-11-24",
+        "end_earliest": "2025-11-26",
+        "end_latest": "2025-11-26",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "US route reference only; changing Mexican export entry barrier positions unlocated."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "b02f45692de0a0dbbc802cdfb4416d18d8f7909f5a90c5bbc88698a437f5ecfa"
+}

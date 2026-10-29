@@ -1,0 +1,161 @@
+{
+  "record_id": "R6-EA-006",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "March Merauke order names Sota, Kali Torasi and Bupul international people crossings. Later confirmed phase is Sota only; tourist access to PLBN grounds is distinct from international passage.",
+  "source_checks": [
+    {
+      "url": "https://cenderawasihpos.jawapos.com/lintas-papua/merauke/20/03/2020/cegah-corona-lintas-perbatasan-negara-ditutup/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "March 19 official interview explicitly names three posts, March 17 order, and prohibition on people in both directions.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-56.json",
+      "sha256": "a80cca5cc79b8292408ced4a9d351a8e387c7cdf4ffe115102ff12e3c275f218"
+    },
+    {
+      "url": "https://arsip.jubi.id/papua-jalur-pelintas-batas-tradisional-di-sota/",
+      "access_status": "search_indexed_article",
+      "finding": "Indexed October 15 interview confirms traditional Sota residents still barred; direct full page timed out.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-62.json",
+      "sha256": "02ae7475fe430eae73ad83735afaea58080f77bf4f0f5c21b6b3328b0cf63a41"
+    },
+    {
+      "url": "https://cenderawasihpos.jawapos.com/berita-utama/30/12/2020/sejak-januari-2020-akses-pintu-perbatasan-sudah-tutup/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.ceposonline.com/nasional/1993201768/plbn-sota-sudah-buka-lima-hari-bagi-warga-png",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://cenderawasihpos.jawapos.com/lintas-papua/merauke/30/06/2020/plbn-sota-kembali-dibuka-untuk-umum/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://arsip.jubi.id/eliminasi-covid-merauke-tutup-perbatasan-ri-png-papua/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-EA-006-R1",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-sota",
+          "name": "Sota international crossing",
+          "coordinates": [
+            141.0183839,
+            -8.4278208
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/806707961",
+          "precision": "Sota crossing area, approximately 500 m; current facility footprint does not prove exact 2020 barrier location.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/806707961",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=141.0,-8.45,141.04,-8.41"
+          ],
+          "evidence_note": "Named Sota border-control building in crossing area. March 2020 official interview explicitly identifies PLBN Sota; October report concerns Sota traditional resident passage. Point is area reference and does not claim all informal paths passed this building.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-sota.xml",
+          "sha256": "8e89b0f6319e04344aa91d7e9550dc912e8ee291d4b1d3d533e3b056a7645c52",
+          "osm_feature": "way/806707961",
+          "osm_version": "1",
+          "osm_timestamp": "2020-05-21T07:45:44Z",
+          "identity_tags": {
+            "area": "yes",
+            "barrier": "border_control",
+            "building": "yes",
+            "foot": "yes",
+            "layer": "1",
+            "name": "Sota Border"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Sota, Kali Torasi and Bupul international people crossings under Merauke deputy-regent order",
+      "date_scope_check": {
+        "scope": "Sota, Kali Torasi and Bupul international people crossings under Merauke deputy-regent order",
+        "start_earliest": "2020-03-17",
+        "start_latest": "2020-03-17",
+        "end_earliest": "2020-03-19",
+        "end_latest": "2020-03-19",
+        "last_confirmed": "2020-03-19",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "",
+        "assessment": "March 17–19 observation retained, not extended to December or later reopening."
+      },
+      "unresolved": [
+        "Kali Torasi river crossing landing and Bupul traditional gate not securely geolocated."
+      ]
+    },
+    {
+      "phase_id": "R6-EA-006-REV1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-sota",
+          "name": "Sota international crossing",
+          "coordinates": [
+            141.0183839,
+            -8.4278208
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/806707961",
+          "precision": "Sota crossing area, approximately 500 m; current facility footprint does not prove exact 2020 barrier location.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/806707961",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=141.0,-8.45,141.04,-8.41"
+          ],
+          "evidence_note": "Named Sota border-control building in crossing area. March 2020 official interview explicitly identifies PLBN Sota; October report concerns Sota traditional resident passage. Point is area reference and does not claim all informal paths passed this building.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-sota.xml",
+          "sha256": "8e89b0f6319e04344aa91d7e9550dc912e8ee291d4b1d3d533e3b056a7645c52",
+          "osm_feature": "way/806707961",
+          "osm_version": "1",
+          "osm_timestamp": "2020-05-21T07:45:44Z",
+          "identity_tags": {
+            "area": "yes",
+            "barrier": "border_control",
+            "building": "yes",
+            "foot": "yes",
+            "layer": "1",
+            "name": "Sota Border"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Sota traditional international people crossing between Merauke and Papua New Guinea",
+      "date_scope_check": {
+        "scope": "Sota traditional international people crossing between Merauke and Papua New Guinea",
+        "start_earliest": "2020-03-17",
+        "start_latest": "2020-03-17",
+        "end_earliest": "2020-10-15",
+        "end_latest": "2020-10-15",
+        "last_confirmed": "2020-10-15",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "",
+        "assessment": "Sota-only confirmation through October 15 retained; later twice-weekly shopping access does not establish first permission date. Overlapping phase not additive."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

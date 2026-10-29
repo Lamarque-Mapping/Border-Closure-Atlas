@@ -1,0 +1,71 @@
+{
+  "record_id": "REC50-R38-005",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Rabia–al-Yarubiyah road crossing on the Iraq–Syria frontier, not the adjacent railway. Distinct ordinary civilian/commercial restoration in April 2026 and interruption of the UN Iraq-to-northeast-Syria medical/humanitarian mechanism observed in early 2020. No 13-year all-traffic closure inferred.",
+  "source_checks": [
+    {
+      "url": "https://sana.sy/en/syria/2311750/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full original April 20, 2026 state-agency report identifies the paired crossing, ordinary people/goods restoration and upgrades to internal roads, passenger halls and customs. Does not establish exact inherited onset or rail closure.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-37.json"
+    },
+    {
+      "url": "https://www.un.org/sg/en/content/highlight/2020-01-16.html",
+      "access_status": "indexed_original_extract_inspected_direct_page_blocked",
+      "finding": "Indexed original January 16 briefing explicitly says medical shipments through Al Yarubiyah have ended; direct page is a bot-check wall. Scope is the UN humanitarian service, not all border traffic.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-47.json"
+    },
+    {
+      "url": "https://digitallibrary.un.org/record/3853093/files/S_2020_139-EN.pdf",
+      "access_status": "inaccessible_403",
+      "finding": "Original UN PDF direct access failed 403. No claim of independently inspecting its full text in this geography pass. Canonical February 19 evidence cutoff is preserved, not newly extended.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-43.json"
+    },
+    {
+      "url": "https://logcluster.org/en/documents/al-yaroubiyeh-also-known-rabiah-iraqi-side",
+      "access_status": "indexed_original_extract_inspected",
+      "finding": "Original Logistics Cluster reference identifies Al-Yaroubiyeh/Rabiah as truck/vehicle entry point and customs route from Qamishly/Aleppo toward Mosul. It establishes road identity but does not supply a validated control-point coordinate.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-42.json"
+    },
+    {
+      "url": "https://mapcarta.com/13112916",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "GeoNames-derived Makhfar Hudud Rabiah border-post point is 36.80299 N,42.07359 E, with railway 210 m away. This is not sufficient to identify the historical road passenger/customs facility rather than a boundary station or railway vicinity; proposed coordinate is rejected pending specific road-facility evidence.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-45.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R38-005-P1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: single_site. April 20, 2026 endpoint-only formal restoration of ordinary road civilian/commercial access. A general gazetteer border station near a railway is not accepted as exact road-crossing identity.",
+      "unresolved": [
+        "Source-backed road customs/passenger terminal coordinates unresolved.",
+        "May 1 tanker service and 2020 UN mechanism are not the April 20 ordinary-access endpoint."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"policy_period\", \"start_earliest\": null, \"start_latest\": null, \"end_earliest\": \"2026-04-20\", \"end_latest\": \"2026-04-20\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: REC50-R38-005-P1: Formal restoration is dated April 20, 2026. The inherited interruption is described approximately and as largely closed; exact onset, continuous exclusion and the original imposing order remain unknown. Contemporary April 20 Reuters soundbites still describe Rabia tanker exports prospectively. Rudaw on May 6 quotes deputy crossing director Basim Muhammad explicitly dating the first 70-tanker batch to May 1; SANA’s May 9 account separately repeats the Border Ports Authority’s May 1 announcement. This supplies a scoped operational date without asserting first passenger access or universal normal trade. UN humanitarian consignments crossed in March 2018–January 2020, so the inherited interruption cannot mean exclusion of all traffic. Carnegie research attributes blocked ordinary reopening to Baghdad’s position toward the Syrian authorities; it does not recover the original closure order.\n\nREC50-R47-R38-005-P1: The January 16 UN briefing confirms that medical shipments had ceased. The Secretary-General’s February 21 report, using information through February 19, states that UN cross-border operations into the northeast no longer occurred following resolution 2504. This supports a multi-day service cessation and extends the evidence limit; the exact first missed shipment and matching restoration remain unknown. NGO operations and aid sent within Syria are different services. Neither April 2026 ordinary reopening nor May 1 tanker passage establishes restoration of this UN shipment mechanism."
+    },
+    {
+      "phase_id": "REC50-R47-R38-005-P1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: single_site. UN Iraq-to-northeast-Syria medical/humanitarian service interruption, native January–February 2020 observations only. No mapping to railway or to the later commercial restoration.",
+      "unresolved": [
+        "UN report full text not accessible in this geography pass.",
+        "Exact road crossing/transshipment facility coordinate remains unresolved."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"confirmed_through\", \"start_earliest\": null, \"start_latest\": null, \"end_earliest\": \"2020-02-19\", \"end_latest\": \"2020-02-19\", \"last_confirmed\": \"2020-02-19\", \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": true}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: REC50-R38-005-P1: Formal restoration is dated April 20, 2026. The inherited interruption is described approximately and as largely closed; exact onset, continuous exclusion and the original imposing order remain unknown. Contemporary April 20 Reuters soundbites still describe Rabia tanker exports prospectively. Rudaw on May 6 quotes deputy crossing director Basim Muhammad explicitly dating the first 70-tanker batch to May 1; SANA’s May 9 account separately repeats the Border Ports Authority’s May 1 announcement. This supplies a scoped operational date without asserting first passenger access or universal normal trade. UN humanitarian consignments crossed in March 2018–January 2020, so the inherited interruption cannot mean exclusion of all traffic. Carnegie research attributes blocked ordinary reopening to Baghdad’s position toward the Syrian authorities; it does not recover the original closure order.\n\nREC50-R47-R38-005-P1: The January 16 UN briefing confirms that medical shipments had ceased. The Secretary-General’s February 21 report, using information through February 19, states that UN cross-border operations into the northeast no longer occurred following resolution 2504. This supports a multi-day service cessation and extends the evidence limit; the exact first missed shipment and matching restoration remain unknown. NGO operations and aid sent within Syria are different services. Neither April 2026 ordinary reopening nor May 1 tanker passage establishes restoration of this UN shipment mechanism."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

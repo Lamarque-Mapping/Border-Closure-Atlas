@@ -1,0 +1,88 @@
+{
+  "record_id": "REC50-R23-001",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ghulam Khan Pakistan-to-Afghanistan loaded freight at first reported March 2018 return. Passenger access and later export/import weekly schedules are separate.",
+  "source_checks": [
+    {
+      "url": "https://radio.gov.pk/09-03-2018/ghulam-khan-check-post-in-nwa-reopens-for-pak-afghan-trade",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "State broadcaster reports loaded trade vehicles entering Afghanistan Friday March 9 and 2014 security-operation closure context.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-65.json",
+      "sha256": "8c11382896da8f464ddc543d2a3ee5f4f9538a61ceb05c897be4336a0690343c"
+    },
+    {
+      "url": "https://www.thenews.com.pk/print/290613-ghulam-khan-border-crossing-reopened",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://h.aa.com.tr/en/asia-pacific/pakistan-reopens-key-trade-route-with-afghanistan/1133889",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.dawn.com/news/1393192/ghulam-khan-route-to-open-on-7th",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R23-001-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-ghulam-khan",
+          "name": "Ghulam Khan international road crossing",
+          "coordinates": [
+            70.0300178,
+            33.150938
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/3453046249",
+          "precision": "Crossing/customs-area reference, approximately 500 m; exact 2014 barrier footprint not established.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/3453046249",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=70.01,33.13,70.05,33.16"
+          ],
+          "evidence_note": "Border-control node immediately adjacent to government-tax node9107501851 explicitly named Ghulam Khan border port. The named village lies roughly 2 km south and is not used. Radio Pakistan identifies international checkpost in North Waziristan.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-ghulam-khan-main.xml",
+          "sha256": "d097b0f728ce86730ce53fded302239e0cb938ee870de63b5419a1d1ad1996f7",
+          "osm_feature": "node/3453046249",
+          "osm_version": "5",
+          "osm_timestamp": "2020-03-24T18:22:31Z",
+          "identity_tags": {
+            "barrier": "border_control"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ghulam Khan freight from Pakistan into Afghanistan at first reported March 2018 return",
+      "date_scope_check": {
+        "scope": "Ghulam Khan freight from Pakistan into Afghanistan at first reported March 2018 return",
+        "start_earliest": "2014-06-01",
+        "start_latest": "2014-06-30",
+        "end_earliest": "2018-03-09",
+        "end_latest": "2018-03-09",
+        "last_confirmed": "2018-03-05",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "June 2014 month-precision onset retained. Actual loaded vehicles March 9 2018; March 7 plan and later formal/trial milestones do not replace actual passage. Exact continuity remains uncertain."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

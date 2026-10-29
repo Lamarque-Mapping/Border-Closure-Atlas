@@ -1,0 +1,53 @@
+{
+  "record_id": "NP-COV-EUR-001",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Albanian authorities temporarily stopped vehicle entry from Kosovo at Vermice–Morine on March31 2018 during Kalimash toll protests; later Albanian-plated vehicles admitted. Toll plaza at Kalimash is cause/location of different protest, not the entry gate.",
+  "source_checks": [
+    {
+      "url": "https://www.koha.net/arberi/kufirin-mund-ta-kalojne-vetem-automjetet-me-targa-te-shqiperise",
+      "access_status": "full_retrieved",
+      "finding": "Full March31 16:01 report identifies Albania-imposed closure at paired Vermice–Morine and Albanian-plate exception after nearly3hours."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/170278350/full",
+      "access_status": "full_retrieved",
+      "finding": "Current named Morine police canopy inspected but not assigned: historical control reconstruction needed."
+    },
+    {
+      "url": "https://www.kryeministria.al/en/newsroom/morine-godina-e-re-i-paraprin-pikes-se-perbashket-kufitare-shqiperi-kosove/",
+      "access_status": "extract_only",
+      "finding": "Official November2 2018 indexed statement describes newly operational reconstructed complex and future joint facilities; establishes reason not to assume current canopy exactly locates March entry control."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-EUR-001-P01",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Vehicle entry into Albania at Morinë; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2018-03-31",
+        "start_latest": "2018-03-31",
+        "end_earliest": "2018-03-31",
+        "end_latest": "2018-03-31",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "2018 March Albanian entry-control geometry unverified across later reconstruction/joint-control changes. Current Morine canopy and Kosovo post are not automatically equivalent."
+      ]
+    }
+  ],
+  "unresolved": [
+    "2018 March Albanian entry-control geometry unverified across later reconstruction/joint-control changes. Current Morine canopy and Kosovo post are not automatically equivalent."
+  ]
+}

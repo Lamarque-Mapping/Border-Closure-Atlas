@@ -1,0 +1,76 @@
+{
+  "record_id": "FU-COV-NAM-006",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Mexicali east commercial customs road crossing; agricultural machinery obstructed freight, with partial release of vehicles already inside Mexican export customs distinct from wider cross-border return.",
+  "source_checks": [
+    {
+      "url": "https://oem.com.mx/lavozdelafrontera/local/liberan-garita-de-exportacion-de-mexicali-sera-de-manera-parcial-27178790",
+      "access_status": "inaccessible",
+      "finding": "Direct original returned403; internal-yard limited release not independently re-read."
+    },
+    {
+      "url": "https://zetatijuana.com/2025/12/liberan-parcialmente-aduana-comercial-en-mexicali/",
+      "access_status": "full_retrieved",
+      "finding": "Full December8 article reports machinery removed after11:00, import-to-Mexico gate reopening, commercial/export impact and onsetDecember4; conditional removal not proof every lane immediately open."
+    },
+    {
+      "url": "https://www.elimparcial.com/mxl/mexicali/2025/12/09/agricultores-retiran-bloqueo-de-garita-comercial/",
+      "access_status": "full_retrieved",
+      "finding": "Full December9 report records customs doors opened for cargo after Monday negotiations; describes different count/onset language, retained without chronology rewrite."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-NAM-006-FU1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Mexicali–Calexico east commercial crossing (exact lane/approach coordinates unresolved); geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "bounded_interval",
+        "start_earliest": "2025-12-04",
+        "start_latest": "2025-12-04",
+        "end_earliest": "2025-12-07",
+        "end_latest": "2025-12-08",
+        "last_confirmed": "2025-12-07",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Specific Mexican east cargo gate, export-yard exit and approach coordinates not established; Calexico West passenger port cannot substitute. C7P1 internal-yard scope remains canonical but original supporting article inaccessible."
+      ]
+    },
+    {
+      "phase_id": "FU-COV-NAM-006-C7P1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Trucks already inside Mexican export customs at Mexicali, permitted to leave during partial lifting; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "bounded_interval",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2025-12-08",
+        "end_latest": "2025-12-08",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Specific Mexican east cargo gate, export-yard exit and approach coordinates not established; Calexico West passenger port cannot substitute. C7P1 internal-yard scope remains canonical but original supporting article inaccessible."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Specific Mexican east cargo gate, export-yard exit and approach coordinates not established; Calexico West passenger port cannot substitute. C7P1 internal-yard scope remains canonical but original supporting article inaccessible."
+  ]
+}

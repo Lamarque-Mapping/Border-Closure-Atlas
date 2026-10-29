@@ -1,0 +1,96 @@
+{
+  "record_id": "NP-COV-EUR-006",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Serbian freight-terminal campaign is a set of participating road facilities with differing directions/timing, not identical full-border closure. January30 AMSS roster: Batrovci, Sid, Bogojevo, BackaPalanka, Bezdan, Ljuba, Sot, Horgos, Kelebija, BackiBreg, VrskaCuka, Gradina, Strezimirovci, Ribarci, Mokranje, SrpskaCrnja, Kaludjerovo, Djerdap, Presevo, ProhorPcinjski, Gostun, Jabuka, Spiljani; Nestin and Vatin exit-only. Separate Montenegro-frontier phase began after Montenegrin protesters ceased.",
+  "source_checks": [
+    {
+      "url": "https://www.tanjug.rs/srbija/drustvo/226420/amss-teretni-terminali-u-blokadi-oprez-u-voznji-zbog-ocekivanih-otezanih-uslova/vest",
+      "access_status": "full_retrieved",
+      "finding": "Full January30 AMSS/BorderPolice report supplies named roster, both-direction majority and Nestin/Vatin outbound-only; passenger terminals have no waiting."
+    },
+    {
+      "url": "https://en.vijesti.me/news-b/economy-d/793559/Transporters-from-Serbia-unblocked-border-crossings-with-Montenegro",
+      "access_status": "full_retrieved",
+      "finding": "Full Vijesti report says Serbian Montenegro-frontier blockade began January29 after18:00, endedJanuary30 at15:00; both goods directions."
+    },
+    {
+      "url": "https://www.ofae.gr/en/nea/international-news/26-ianoyarioy-2026-enar3h-kinhtopoihsewn-serbwn-me/",
+      "access_status": "full_retrieved",
+      "finding": "Full haulier advance notice states intention to block goods including transit and named exceptions; not itself proof all gates acted identically."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/5329297935",
+      "access_status": "full_retrieved",
+      "finding": "Direct named Kelebija/Tompa border-control XML coordinates match original site inventory."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-EUR-006-P01",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "name": "Kelebija–Tompa road crossing",
+          "coordinates": [
+            19.5570799,
+            46.1693524
+          ],
+          "coordinate_method": "Directly inspected OSM node/5329297935 node; XML sha256 01c87f749946531c1cfcf354c7c6fa233f4b4807581a425f295f7b8b0dfabf58",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/5329297935"
+          ],
+          "evidence_note": "Named paired road-control node matches original inventory identity only after independent OSM inspection and AMSS report explicitly lists Kelebija. This is a gate representative, not a surveyed Serbian cargo protest lane.",
+          "existing_site_id": "post-tompa-kelebija-road"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Participating Serbian cargo terminals; country-level campaign, not an identical schedule at each gate.; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2026-01-26",
+        "start_latest": "2026-01-26",
+        "end_earliest": "2026-01-30",
+        "end_latest": "2026-01-30",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Only Kelebija gate representative geolocated; remaining cargo access geometries and exact per-gate start times unresolved."
+      ]
+    },
+    {
+      "phase_id": "NP-COV-EUR-006-P02",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Serbian-side freight traffic at Montenegro frontier, both directions.; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2026-01-29",
+        "start_latest": "2026-01-29",
+        "end_earliest": "2026-01-30",
+        "end_latest": "2026-01-30",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Montenegro-frontier Serbian-side Gostun/Jabuka/Spiljani cargo-control positions not independently geolocated; Hungarian Kelebija point inapplicable to P02."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Only Kelebija gate representative geolocated; remaining cargo access geometries and exact per-gate start times unresolved."
+  ]
+}

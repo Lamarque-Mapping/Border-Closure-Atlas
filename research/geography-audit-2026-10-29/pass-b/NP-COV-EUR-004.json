@@ -1,0 +1,63 @@
+{
+  "record_id": "NP-COV-EUR-004",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Montenegrin non-exempt freight protest at nine named land-gate routes: DebeliBrijeg–Karasovici, IlinoBrdo–Klobuk, Vracenovici–Deleusa, Metaljka, Dracenovac–Spiljani, Rance–Jabuka, Dobrakovo–Gostun, Kula–Kulina, Bozaj–HaniHotit. Actual blockades include domestic pull-offs/approaches; Bar maritime terminal excluded.",
+  "source_checks": [
+    {
+      "url": "https://glashrvatske.hrt.hr/en/foreign/trucks-block-freight-traffic-at-croatia-s-borders-with-bosnia-and-herzegovina-and-montenegro-12540359",
+      "access_status": "full_retrieved",
+      "finding": "Full HRT reports nine named land gates and cargo exceptions but contains erroneous neighbour assignments (IlinoBrdo/Vitaljina; Dracenovac/Rance with Bosnia). Names cross-checked against official list, not copied as geography."
+    },
+    {
+      "url": "https://www.gov.me/en/article/border-crossing-points",
+      "access_status": "full_retrieved",
+      "finding": "Official crossing table independently distinguishes road/goods pairings and separate passenger-only gates; confirms IlinoBrdo–Klobuk(BiH), Dracenovac–Spiljani and Rance–Jabuka(Serbia)."
+    },
+    {
+      "url": "https://en.vijesti.me/news-b/economy-d/792898/Transporters-began-a-border-blockade-of-freight-traffic--and-the-entrance-to-the-port-of-Bar-was-also-blocked.",
+      "access_status": "full_retrieved",
+      "finding": "Full linked original report locates Bozaj-route trucks at exitTuzi severalkm away, Dobrakovo-route protest at Konatari2km away, Metaljka-route at DajevicaHan, and Rance; passengers/certain goods excepted."
+    },
+    {
+      "url": "https://en.vijesti.me/news-b/economy-d/793348/Transporters%27-Association-suspends-border-blockades-of-freight-traffic",
+      "access_status": "full_retrieved",
+      "finding": "Full January29 report confirms Montenegro suspension after negotiations; not evidence that later Serbian-side restrictions also ceased."
+    },
+    {
+      "url": "https://www.gov.me/clanak/saopstenje-392",
+      "access_status": "inaccessible",
+      "finding": "Repeated direct retrieval timeout."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-EUR-004-P01",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Nine reported Montenegro land cargo posts: Debeli Brijeg–Karasovići (Croatia); Ilino Brdo–Klobuk, Vraćenovići–Deleuša and Metaljka–Metaljka (Bosnia and Herzegovina); Dračenovac–Špiljani, Ranče–Jabuka and Dobrakovo–Gostun (Serbia); Kula–Kulina (Kosovo); Božaj–Hani Hotit (Albania). Port Bar is outside this land-border record.; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2026-01-26",
+        "start_latest": "2026-01-26",
+        "end_earliest": "2026-01-29",
+        "end_latest": "2026-01-29",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Nine approach/terminal geometries not independently verified; source explicitly places several blockades away from control posts. Full national frontier would overstate freight-only participating-route scope."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Nine approach/terminal geometries not independently verified; source explicitly places several blockades away from control posts. Full national frontier would overstate freight-only participating-route scope."
+  ]
+}

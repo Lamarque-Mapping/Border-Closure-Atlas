@@ -1,0 +1,130 @@
+{
+  "record_id": "R6-EA-002",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Vietnam-to-China freight suspension at Tan Thanh–Po Chai. Opposite-direction imports and empty vehicles could move earlier, so point is attached only to export phase.",
+  "source_checks": [
+    {
+      "url": "https://moit.gov.vn/en/news/ministerial-leaders-activities/china-resumes-customs-clearance-of-goods-at-po-chai-border-gate.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Ministry explicitly pairs Vietnamese Tan Thanh with Chinese Po Chai, giving December 18 suspension and January 25 clearance restoration.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-56.json",
+      "sha256": "a80cca5cc79b8292408ced4a9d351a8e387c7cdf4ffe115102ff12e3c275f218"
+    },
+    {
+      "url": "https://news.tuoitre.vn/thousands-of-fruit-carrying-trucks-stranded-at-vietnam-china-border-gates-over-sluggish-produce-clearance-10364798.htm",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.vietnamplus.vn/hai-cua-khau-chi-ma-va-tan-thanh-thuc-hien-thong-quan-tro-lai/770432.vnp",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://tuoitre.vn/cua-khau-chi-ma-thong-quan-tro-lai-lap-them-tram-phun-khu-khuan-o-tan-thanh-20211222180125292.htm",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://tienphong.vn/cua-khau-chi-ma-mo-cua-tro-lai-chi-co-7-xe-trung-quoc-vao-viet-nam-post1403889.tpo",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://baochinhphu.vn/lang-son-tam-dung-tiep-nhan-xe-cho-hoa-qua-tuoi-den-cua-khau-tu-17-1-102220113133507293.htm",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://moit.gov.vn/tin-tuc/hoat-dong/trung-quoc-khoi-phuc-thong-quan-tai-po-chai.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://vtv.vn/kinh-te/cua-khau-tan-thanh-thong-quan-tro-lai-20220125132115225.htm",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://baotintuc.vn/kinh-te/cua-khau-chi-ma-tan-thanh-thong-quan-tro-lai-20220126174427269.htm",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-EA-002-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-tan-thanh-po-chai",
+          "name": "Tan Thanh–Po Chai (Pu Zhai)",
+          "coordinates": [
+            106.6826938,
+            22.0028832
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/5129681124",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/5129681124",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=106.67,21.99,106.7,22.02"
+          ],
+          "evidence_note": "Explicit named Tan Thanh border-control node paired with Po Chai by Vietnamese Ministry of Industry and Trade. Not Huu Nghi or Dong Dang railway.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-tan-thanh-main.xml",
+          "sha256": "3b6ff0a252725b2e29016aae7fb2d0a9a2cd28e74a44d247d2f02b8043a0b175",
+          "osm_feature": "node/5129681124",
+          "osm_version": "3",
+          "osm_timestamp": "2020-07-15T11:31:18Z",
+          "identity_tags": {
+            "alt_name": "译新清口岸",
+            "barrier": "border_control",
+            "name": "Cửa khẩu Tân Thanh",
+            "name:en": "Tan Thanh Pass Border Control",
+            "name:vi": "Cửa khẩu Tân Thanh",
+            "name:zh": "新青口岸",
+            "wikidata": "Q30920763",
+            "wikipedia": "vi:Cửa khẩu Tân Thanh"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Vietnamese exports through Tan Thanh–Po Chai (Pu Zhai); Vietnam-to-China freight, including fresh agricultural produce.; Vietnam to China.",
+      "date_scope_check": {
+        "scope": "Vietnamese exports through Tan Thanh–Po Chai (Pu Zhai); Vietnam-to-China freight, including fresh agricultural produce.; Vietnam to China.",
+        "start_earliest": "2021-12-18",
+        "start_latest": "2021-12-18",
+        "end_earliest": "2022-01-25",
+        "end_latest": "2022-01-25",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "December 18 2021 to January 25 2022 retained; low-capacity conditional resumption is not unrestricted two-way reopening."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

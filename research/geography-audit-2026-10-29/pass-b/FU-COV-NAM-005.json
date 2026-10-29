@@ -1,0 +1,48 @@
+{
+  "record_id": "FU-COV-NAM-005",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Intermittent November24–26 2025 freight obstruction at Nogales III/Mariposa on Mexican side, shifting to Mexican export access on November26. Separate from downtown Nogales passenger ports and Thanksgiving service schedule.",
+  "source_checks": [
+    {
+      "url": "https://nuevodia.mx/nogales/2025/11/27/transportistas-desalojan-bloqueo-agricola-reanudan-cruces-garita-mariposa.html",
+      "access_status": "full_retrieved",
+      "finding": "Full local report identifies NogalesIII/Mariposa, intermittent Monday/Tuesday obstruction, shift Wednesday to export access, and forced removal17:27 restoring both directions. Thursday holiday is a separate mechanism."
+    },
+    {
+      "url": "https://www.inversion.nogalessonora.gob.mx/nog/aduanas.html",
+      "access_status": "extract_only",
+      "finding": "Municipal indexed directory locates Mariposa on Periferico Luis Donaldo Colosio but supplies no verified export-entrance coordinate."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-NAM-005-FU1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Mariposa commercial-vehicle access at Nogales, including shifted obstruction at Mexican export customs; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "intermittent_regime",
+        "start_earliest": "2025-11-24",
+        "start_latest": "2025-11-24",
+        "end_earliest": "2025-11-26",
+        "end_latest": "2025-11-26",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Exact Mexican export-access point and prior obstruction position not geolocated. US inspection terminal or downtown DeConcini port would give wrong side/facility."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact Mexican export-access point and prior obstruction position not geolocated. US inspection terminal or downtown DeConcini port would give wrong side/facility."
+  ]
+}

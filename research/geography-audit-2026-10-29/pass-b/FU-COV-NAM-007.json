@@ -1,0 +1,76 @@
+{
+  "record_id": "FU-COV-NAM-007",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Two Canada-to-US road access suspensions: February6 Highway402 westbound near FrontStreet at Sarnia, and February13–14 PeaceBridge US-bound commercial route. Later Sarnia highway detours are separate, not uninterrupted bridge closure.",
+  "source_checks": [
+    {
+      "url": "https://sarnianewstoday.ca/sarnia/news/2022/02/06/farm-convoy-heading-sarnia1",
+      "access_status": "full_retrieved",
+      "finding": "Full February6 local report identifies farm vehicles near FrontStreet and closure from ModelandRoad to BlueWaterBridge; outbound US traffic diverted."
+    },
+    {
+      "url": "https://publicorderemergencycommission.ca/files/documents/Final-Report/Vol-2-Report-of-the-Public-Inquiry-into-the-2022-Public-Order-Emergency.pdf",
+      "access_status": "extract_only",
+      "finding": "Original inquiry PDF indexed chapter11 page309 inspected: February6 westbound402 interruption; later blockade allowed detours. PeaceBridge police-directed commercial suspension February13 afternoon, return by9amFebruary14."
+    },
+    {
+      "url": "https://www.publicsafety.gc.ca/cnt/trnsprnc/brfng-mtrls/prlmntry-bndrs/20221013/03-en.aspx",
+      "access_status": "full_retrieved",
+      "finding": "Official general overview names protests at Sarnia and FortErie but does not locate exact barrier geometry."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-NAM-007-FU1",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Sarnia / Blue Water Bridge US-bound access; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2022-02-06",
+        "start_latest": "2022-02-06",
+        "end_earliest": "2022-02-06",
+        "end_latest": "2022-02-06",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Exact FrontStreet/402 obstruction and Canadian PeaceBridge commercial closure point not geolocated. River midspan markers would not identify source-supported road-control positions. Timing discrepancies between overview/primary chapter/local report retained; no endpoint changed."
+      ]
+    },
+    {
+      "phase_id": "FU-COV-NAM-007-FU2",
+      "category": "multiple_named_sites",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Peace Bridge / Fort Erie US-bound commercial route; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "bounded_interval",
+        "start_earliest": "2022-02-13",
+        "start_latest": "2022-02-13",
+        "end_earliest": null,
+        "end_latest": "2022-02-14",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Exact FrontStreet/402 obstruction and Canadian PeaceBridge commercial closure point not geolocated. River midspan markers would not identify source-supported road-control positions. Timing discrepancies between overview/primary chapter/local report retained; no endpoint changed."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Exact FrontStreet/402 obstruction and Canadian PeaceBridge commercial closure point not geolocated. River midspan markers would not identify source-supported road-control positions. Timing discrepancies between overview/primary chapter/local report retained; no endpoint changed."
+  ]
+}

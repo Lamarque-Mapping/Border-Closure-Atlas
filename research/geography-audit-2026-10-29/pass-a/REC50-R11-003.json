@@ -1,0 +1,114 @@
+{
+  "record_id": "REC50-R11-003",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Selected non-container rail imports at Suifenhe–Grodekovo rail-port system. Suifenhe south-yard marker identifies the documented international freight facility; road-passenger gates are separate.",
+  "source_checks": [
+    {
+      "url": "https://www.interfax.ru/business/805805",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Russian Railways-attributed report explicitly dates Grodekovo–Suifenhe selected cargo suspension to November 30.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-64.json",
+      "sha256": "e62ceb0d53c9a094d3256c42dedfb2d3a23159904a5a55d5b0178596a5038275"
+    },
+    {
+      "url": "https://logirus.ru/news/infrastructure/grodekovo-_tronulos_v_storonu_kitaya.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "December 9 account reports December 6 permission for selected cargo with covered/isothermal wagon exceptions; final-paragraph date typo not used.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-69.json",
+      "sha256": "8084682c8c14d13f911da3336768ad196a4020aae108246e270d48d1a26c5196"
+    },
+    {
+      "url": "https://tradeinservices.mofcom.gov.cn/article/lingyu/gjhdai/202105/116184.html",
+      "access_status": "search_indexed_government_hosted_article",
+      "finding": "Ministry-hosted May 2021 account explicitly locates incoming international freight in Suifenhe south yard. Geographic identity only.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-73.json",
+      "sha256": "37b422d02ac1ea032ccad0aad091f204665354b82f3af884bf6103087c8c4c23"
+    },
+    {
+      "url": "https://www.thestandard.com.hk/china/article/183682/Chinese-city-on-Russian-border-halts-rail-imports-over-Covid-fears",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.scmp.com/news/article/3157860/2-border-cities-northern-china-limit-rail-imports-over-covid-19-outbreak",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.mucaizhijia.com/news/details/1122_1.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.eastrussia.ru/news/v-suyfenkhe-vozobnovili-vvoz-gruzov-ne-v-konteynerakh/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R11-003-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "rail-suifenhe",
+          "name": "Suifenhe international railway port / south yard",
+          "coordinates": [
+            131.1486358,
+            44.3892859
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/145784063",
+          "precision": "Rail-port south-yard area reference, approximately 1 km. Specific commodity unloading siding and border zero-point not established.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/145784063",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=131.12,44.36,131.2,44.44",
+            "https://tradeinservices.mofcom.gov.cn/article/lingyu/gjhdai/202105/116184.html"
+          ],
+          "evidence_note": "Explicitly named Suifenhe South Yard railway-landuse polygon. Ministry of Commerce report describes an international inbound freight train arriving in this yard in May 2021. Marker locates the rail-port operational complex, not new passenger terminal, highway port, or exact international boundary.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-suifenhe-rail.xml",
+          "sha256": "ab7493e2c17fdf6e390a46daff5dee33a966df634cfa76ec257d850e0e65a5ac",
+          "osm_feature": "way/145784063",
+          "osm_version": "7",
+          "osm_timestamp": "2025-11-12T14:25:11Z",
+          "identity_tags": {
+            "landuse": "railway",
+            "name": "绥芬河南场",
+            "name:ru": "Южное поле Суйфэньхэ"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Suifenhe selected non-container rail imports requiring manual handling, with subsequent permission for selected cargo and continuing wagon exceptions.",
+      "date_scope_check": {
+        "scope": "Suifenhe selected non-container rail imports requiring manual handling, with subsequent permission for selected cargo and continuing wagon exceptions.",
+        "start_earliest": "2021-11-30",
+        "start_latest": "2021-11-30",
+        "end_earliest": "2021-12-06",
+        "end_latest": "2021-12-06",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "legal_policy_layer_only_not_operational_closure",
+        "assessment": "November 30–December 6 2021 reported policy interval retained; December 6 permission is not first matching train. Covered and temperature-controlled wagon restrictions persisted. Impossible retrospective December 30 date in Logirus is rejected."
+      },
+      "unresolved": [
+        "Exact affected unloading sidings are not identified; point represents named rail-port freight complex."
+      ]
+    }
+  ],
+  "unresolved": []
+}

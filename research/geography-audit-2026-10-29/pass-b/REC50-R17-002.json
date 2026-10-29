@@ -1,0 +1,82 @@
+{
+  "record_id": "REC50-R17-002",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Zhibek Zholy–Gisht Kuprik/Chernyaevka road and pedestrian crossing during reconstruction from February2025. October2026 coordinated-opening discussions are not evidence of restored paired movement.",
+  "source_checks": [
+    {
+      "url": "https://qazinform.com/news/kazakhstan-closes-zhibek-zholy-checkpoint-on-border-with-uzbekistan-0d2d25",
+      "access_status": "full_text_web",
+      "finding": "Kazinform original reports paired Gisht-Kuprik works and Zhibek Zholy closure from February5.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r12-2.json",
+      "sha256": "3ffda10582b49088a67f99be1d66bbd9d21d4e1374c69c422f667e33aa3cd324"
+    },
+    {
+      "url": "https://www.uzdaily.uz/en/uzbekistan-and-kazakhstan-coordinate-border-crossing-reopening/",
+      "access_status": "full_text_web",
+      "finding": "UzDaily October23 original says the two states are still coordinating a simultaneous reopening date.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r12-2.json",
+      "sha256": "3ffda10582b49088a67f99be1d66bbd9d21d4e1374c69c422f667e33aa3cd324"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/1544965729",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Gisht Kuprik road/pedestrian border-control node was present in2017; reconstruction footprint is not inferred.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/60f68c71aa1a5e6fac1c.xml",
+      "sha256": "90b3f8723ac3b350bb51cdbd2c75465ab58b8d5002f7759e36b208df33e47e19",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/60f68c71aa1a5e6fac1c.txt",
+      "text_sha256": "90b3f8723ac3b350bb51cdbd2c75465ab58b8d5002f7759e36b208df33e47e19",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R17-002-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-zhibek-zholy-gishtkuprik-road",
+          "name": "Zhibek Zholy–Gisht Kuprik road crossing",
+          "coordinates": [
+            69.3585889,
+            41.4714641
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/1544965729"
+          ],
+          "evidence_note": "Named Gisht Kuprik border_control, old name Chernyaevka, with foot and motor-vehicle tags in a2017 version. Official checkpoint roster pairs Gisht-Kuprik with Jibek Joli. Approximate established crossing reference despite reconstruction.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/60f68c71aa1a5e6fac1c.xml",
+          "sha256": "90b3f8723ac3b350bb51cdbd2c75465ab58b8d5002f7759e36b208df33e47e19"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Zhibek Zholy–Gisht Kuprik/Chernyaevka road and pedestrian crossing during reconstruction from February2025. October2026 coordinated-opening discussions are not evidence of restored paired movement.",
+      "date_scope_check": {
+        "start_earliest": "2025-02-05",
+        "start_latest": "2025-02-05",
+        "end_earliest": "2026-10-23",
+        "end_latest": "2026-10-23",
+        "last_confirmed": "2026-10-23",
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "REC50-R17-002-P1: Closure from 5 February 2025 is recalled in September 2026 reporting. On 23 October 2026, Uzbek and Kazakh representatives were still coordinating simultaneous reopening: construction completion and readiness did not establish restored paired passage. The 625-day calendar separation to that later status report is a lower bound for the reported continuing restriction, not an exact elapsed-hour total or a reopening date. No operational reopening is established by the evidence cutoff of 26 October 2026."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "d3e6c7fc03f759d7245805c91b95730e4623aa744ccbcd9a017f15a7526fade0",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

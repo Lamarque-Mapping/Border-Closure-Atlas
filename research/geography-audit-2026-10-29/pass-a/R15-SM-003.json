@@ -1,0 +1,130 @@
+{
+  "record_id": "R15-SM-003",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Renewed incoming cargo blockade at Hili zero-line road began after an earlier action was lifted. Rail station and July 2 customs-office protest are distinct from current July 3–5 phase.",
+  "source_checks": [
+    {
+      "url": "https://www.banglatribune.com/amp/country/339063/ভারতীয়-ট্রাক-চালক-ও-হেলপারদের-বাধায়-হিলিতে",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Full July 3 article locates renewed obstruction at zero line, states ten trucks entered before it, and explicitly says previous action was lifted.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-59.json",
+      "sha256": "68f9336d4234fdeee89cc95129e969b1dd5d0f97d343199792c54d9c2b88316b"
+    },
+    {
+      "url": "https://www.banglatribune.com/amp/country/339875/হিলিতে-আমদানি-রফতানি-কার্যক্রম-ফের-শুরু",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "July 5 report observes 10:30 cargo entry after blockade removal, identifying zero line again.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-59.json",
+      "sha256": "68f9336d4234fdeee89cc95129e969b1dd5d0f97d343199792c54d9c2b88316b"
+    },
+    {
+      "url": "https://lpai.gov.in/sites/default/files/2023-11/2.pdf",
+      "access_status": "search_indexed_official_map_description",
+      "finding": "Indexed official planning map distinguishes existing zero point/LCS and proposed new ICP route. Direct PDF exceeded web tool size; used as context only.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-60.json",
+      "sha256": "943e136442b40b9d9961f3e65db9bcab99ba85a4a609418826840f037ea81f0a"
+    },
+    {
+      "url": "https://www.banglatribune.com/country/rangpur/338729/%E0%A6%85%E0%A6%AC%E0%A6%B0%E0%A7%8B%E0%A6%A7%E0%A7%87%E0%A6%B0-%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A6%A3%E0%A7%87-%E0%A6%B9%E0%A6%BF%E0%A6%B2%E0%A6%BF-%E0%A6%B8%E0%A7%8D%E0%A6%A5%E0%A6%B2%E0%A6%AC%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A6%B0-%E0%A6%A6%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%86%E0%A6%AE%E0%A6%A6%E0%A6%BE%E0%A6%A8%E0%A6%BF-%E0%A6%B0%E0%A6%AB%E0%A6%A4%E0%A6%BE%E0%A6%A8%E0%A6%BF",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.banglatribune.com/amp/country/339063/%E0%A6%AD%E0%A6%BE%E0%A6%B0%E0%A6%A4%E0%A7%80%E0%A7%9F-%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%95-%E0%A6%9A%E0%A6%BE%E0%A6%B2%E0%A6%95-%E0%A6%93-%E0%A6%B9%E0%A7%87%E0%A6%B2%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AC%E0%A6%BE%E0%A6%A7%E0%A6%BE%E0%A7%9F-%E0%A6%B9%E0%A6%BF%E0%A6%B2%E0%A6%BF%E0%A6%A4%E0%A7%87",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.banglatribune.com/amp/country/339875/%E0%A6%B9%E0%A6%BF%E0%A6%B2%E0%A6%BF%E0%A6%A4%E0%A7%87-%E0%A6%86%E0%A6%AE%E0%A6%A6%E0%A6%BE%E0%A6%A8%E0%A6%BF-%E0%A6%B0%E0%A6%AB%E0%A6%A4%E0%A6%BE%E0%A6%A8%E0%A6%BF-%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%AE-%E0%A6%AB%E0%A7%87%E0%A6%B0-%E0%A6%B6%E0%A7%81%E0%A6%B0%E0%A7%81",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.itvbd.com/country/32955/%E0%A6%B9%E0%A6%BF%E0%A6%B2%E0%A6%BF-%E0%A6%B8%E0%A7%8D%E0%A6%A5%E0%A6%B2%E0%A6%AC%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A6%B0%E0%A7%87-%E0%A6%86%E0%A7%9C%E0%A6%BE%E0%A6%87%E0%A6%B6-%E0%A6%9A%E0%A6%BE%E0%A6%B2%E0%A6%AC%E0%A6%BE%E0%A6%B9%E0%A7%80-%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%95-%E0%A6%86%E0%A6%9F%E0%A6%95%E0%A6%BE",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.itvbd.com/amp/economy/33129/%E0%A6%B9%E0%A6%BF%E0%A6%B2%E0%A6%BF-%E0%A6%B8%E0%A7%8D%E0%A6%A5%E0%A6%B2%E0%A6%AC%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A6%B0%E0%A7%87-%E0%A6%86%E0%A6%AE%E0%A6%A6%E0%A6%BE%E0%A6%A8%E0%A6%BF-%E0%A6%B6%E0%A7%81%E0%A6%B0%E0%A7%81-%E0%A6%B9%E0%A6%93%E0%A7%9F%E0%A6%BE%E0%A7%9F-%E0%A6%AA%E0%A7%87%E0%A6%81%E0%A7%9F%E0%A6%BE%E0%A6%9C%E0%A7%87%E0%A6%B0-%E0%A6%A6%E0%A6%BE%E0%A6%AE",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.thedailystar.net/backpage/hili-land-port-indian-drivers-block-road-unloading-183-trucks-1599019",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.thedailystar.net/historical/country?archive=2014-02-07&page=927",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R15-SM-003-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-hili-zero-line",
+          "name": "Hili road crossing / zero-line area",
+          "coordinates": [
+            89.0067033,
+            25.2811846
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/3306585529",
+          "precision": "Approximate road crossing-area reference, 500 m; not surveyed zero-line pillar or exact protest position.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/3306585529",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=88.99,25.27,89.03,25.31"
+          ],
+          "evidence_note": "Topological transition between OSM Indian NH512 way323884653 and Bangladeshi N521 way226279197, immediately beside mapped international boundary and Hili rail line. Bangla Tribune specifically places renewed blockade at port zero line. Current OSM boundary is generalized and does not share this road node.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-hili.xml",
+          "sha256": "7374fd91891fffd7f23b79fee39f71aac856f35385506db3959b1715c1c7a3bb",
+          "osm_feature": "node/3306585529",
+          "osm_version": "2",
+          "osm_timestamp": "2022-03-20T09:23:59Z",
+          "identity_tags": {
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Renewed India-to-Bangladesh incoming cargo blockade at Hili from July 3",
+      "date_scope_check": {
+        "scope": "Renewed India-to-Bangladesh incoming cargo blockade at Hili from July 3",
+        "start_earliest": "2018-07-03",
+        "start_latest": "2018-07-03",
+        "end_earliest": "2018-07-05",
+        "end_latest": "2018-07-05",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "July 3–5 2018 retained with intervening prior opening; no passenger closure or two full elapsed days inferred."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

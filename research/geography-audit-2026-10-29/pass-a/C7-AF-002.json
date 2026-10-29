@@ -1,0 +1,52 @@
+{
+  "record_id": "C7-AF-002",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "National DRC international-departure health eligibility policy for exposure-defined cohorts, with distinct June 24 and July 17 regimes. Neither is a uniform all-passenger closure or an instruction identifying a finite set of border posts.",
+  "source_checks": [
+    {
+      "url": "https://www.scribd.com/document/1055335479/Arrete-Ministe-riel-15-du-24-juin-2026-portant-ente-rinement-de-certaines-mesures-de-sante-publique-de-coulant-du-plan-de-pre-paration-a-la-17e-MV",
+      "access_status": "fresh_text_extract_of_user_uploaded_original_inspected",
+      "finding": "Third-party-hosted original decree OCR inspected. Articles 2–4 distinguish contacts, response personnel and others who had been in affected provinces; authorization exceptions differ. National land/river/air controls do not identify particular posts or establish physical closure.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-40.json"
+    },
+    {
+      "url": "https://actualite.cd/2026/07/25/ebola-en-rdc-une-evaluation-individuelle-de-risque-imposee-toute-personne-ayant-sejourne",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Contemporaneous full relevant July 25 report describes July 17 replacement with individual A/B/C assessment. Only A is restricted/isolation subject to stated exception; B/C movement is conditional. No named land posts or uniform border closure established.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-34.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "C7-AF-002-P1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: wider_border. June 24–July 17 cohort-specific international departure eligibility. Hold physical geography: affected province residence is a personal eligibility test, not the geographical extent of a frontier blockade.",
+      "unresolved": [
+        "No land-post implementation or bounded physical restriction extent established.",
+        "No automatic use of all DRC adjacent borders or affected-province outlines."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"policy_period\", \"start_earliest\": \"2026-06-24\", \"start_latest\": \"2026-06-24\", \"end_earliest\": \"2026-07-17\", \"end_latest\": \"2026-07-17\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": true}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: C7-AF-002-P1: The June 24 decree is available as a third-party-hosted copy. Articles 2–4 distinguish contacts, responders and others with recent presence in affected provinces; contacts and responders had express authorisation exceptions. Article 11 makes the decree effective on signature. Its July 17 replacement is supported by contemporary reporting, not the original amendment.\n\nC7-AF-002-P2: Contemporary reports describe the July 17 risk-based successor and its effect on signature, with confirmation on July 25. The original amendment and a later endpoint remain unrecovered. October ECDC reporting repeats the earlier June decree and does not independently confirm continuation of the amended regime. Neither phase establishes enforcement at named land posts or a uniform all-passenger closure."
+    },
+    {
+      "phase_id": "C7-AF-002-P2",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Modal scope: wider_border. July 17 successor confirmed July 25 only; risk A restrictions and B/C permission preserved. No October extension inferred from repetition of the earlier decree.",
+      "unresolved": [
+        "Original amendment and named-post enforcement not independently established."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"confirmed_through\", \"start_earliest\": \"2026-07-17\", \"start_latest\": \"2026-07-17\", \"end_earliest\": \"2026-07-25\", \"end_latest\": \"2026-07-25\", \"last_confirmed\": \"2026-07-25\", \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": true}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: C7-AF-002-P1: The June 24 decree is available as a third-party-hosted copy. Articles 2–4 distinguish contacts, responders and others with recent presence in affected provinces; contacts and responders had express authorisation exceptions. Article 11 makes the decree effective on signature. Its July 17 replacement is supported by contemporary reporting, not the original amendment.\n\nC7-AF-002-P2: Contemporary reports describe the July 17 risk-based successor and its effect on signature, with confirmation on July 25. The original amendment and a later endpoint remain unrecovered. October ECDC reporting repeats the earlier June decree and does not independently confirm continuation of the amended regime. Neither phase establishes enforcement at named land posts or a uniform all-passenger closure."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

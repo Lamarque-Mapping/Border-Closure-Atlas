@@ -1,0 +1,50 @@
+{
+  "record_id": "REC50-R36-003",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Republic of Congo national land-border component of July 10, 2022 election order. Five territorial neighbour frontiers are applicable as policy extent; no named crossing-level operation is established.",
+  "source_checks": [
+    {
+      "url": "https://www.sgg.cg/JO/2022/congo-jo-2022-29.pdf",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Original official gazette text independently inspected at printed p.1160: Arrêté 5608 July 7, Article 1 closes national borders July 10 06:00–18:00 for local elections and first legislative round. Adjacent domestic circulation exceptions belong to another instrument.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-35.json"
+    },
+    {
+      "url": "https://www.ambacongo-us.org/fr/le-congo/geographie",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Embassy geographical description independently identifies the five neighbours: Cameroon, Central African Republic, Gabon, DRC and Angola. This matches the five selected existing boundary references; coastline is outside the land-border component.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-41.json"
+    },
+    {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-boundary-lines/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Original producer documentation identifies 1:10m land boundary dataset, version 5.1.0, de facto convention. Existing inventory references carry this source ZIP. No new vertices or gate coordinates derived; nationwide policy scope only, not a survey or evidence of gate enforcement.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-41.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R36-003-P1",
+      "category": "wider_border",
+      "decision": "map",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-ago-cog",
+        "context-frontier-caf-cog",
+        "context-frontier-cmr-cog",
+        "context-frontier-cod-cog",
+        "context-frontier-cog-gab"
+      ],
+      "complete": true,
+      "phase_applicability": "Modal scope: wider_border. July 10 06:00–18:00 ordered land-border scope, strictly_over_24_hours false retained. No later round, full-day closure, gate enforcement or observed reopening inferred.",
+      "unresolved": [
+        "Gate traffic cohorts, implementation and actual return remain unverified."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"ordered_window\", \"start_earliest\": \"2022-07-10\", \"start_latest\": \"2022-07-10\", \"end_earliest\": \"2022-07-10\", \"end_latest\": \"2022-07-10\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": false}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: REC50-R36-003-P1: Twelve-hour ordered window; excluded from multi-day operational duration statistics. No extension to a different election round.\n\noperational chronology; traffic scope; geography; source provenance: The July 2022 report establishes a twelve-hour ordered window only. Actual enforcement, affected traffic cohorts and return at particular crossing points are unverified; no extension to a different election round is established.\n\nPrimary instrument verified: Arrêté 5608 of 7 July 2022, published in Journal Officiel no. 29, page 1160, Article 1, orders national borders closed on 10 July 2022 from 06:00 to 18:00 for local elections and the first legislative round. It does not name exceptions or posts. This confirms a scheduled 12-hour window, not observed enforcement or a later election-round extension."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

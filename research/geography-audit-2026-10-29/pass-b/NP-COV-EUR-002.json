@@ -1,0 +1,59 @@
+{
+  "record_id": "NP-COV-EUR-002",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "All road traffic through Maljevac–Velika Kladusa international crossing closed from October24 2018 during confrontation on Bosnian side. Not a whole Croatia–Bosnia frontier closure.",
+  "source_checks": [
+    {
+      "url": "https://mup.gov.hr/vijesti-8/stanje-na-granicnom-prijelazu-maljevac/282362?big=1",
+      "access_status": "full_retrieved",
+      "finding": "Full Croatian police dated updates state road through Maljevac closed to all traffic from10:00October24 and remained closed October25–26. Bogovolja passengers/LickoPetrovoSelo freight are alternatives, not affected gates."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/2211664270",
+      "access_status": "full_retrieved",
+      "finding": "Directly inspected named border-control node matches the paired crossing identity."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-EUR-002-P01",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "geo-maljevac-road-checkpoint",
+          "name": "Maljevac–Velika Kladusa road checkpoint",
+          "coordinates": [
+            15.792624,
+            45.1977021
+          ],
+          "coordinate_method": "Directly inspected OSM node/2211664270 node; XML sha256 66794eef71fab56523700fa17e4f5e65f89ace651b26fee3f775d6af06394a52",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/2211664270"
+          ],
+          "evidence_note": "Named road crossing on Croatian side; official statement identifies closure of road through this international crossing, with other gates offered as alternatives."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "All traffic at Maljevac–Velika Kladuša; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2018-10-24",
+        "start_latest": "2018-10-24",
+        "end_earliest": "2018-10-30",
+        "end_latest": "2018-10-30",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

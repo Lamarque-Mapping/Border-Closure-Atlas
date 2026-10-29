@@ -1,0 +1,71 @@
+{
+  "record_id": "REC50-R03-001",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Nationwide Ukrainian outward-travel legal restriction on non-exempt male citizens, first18–60 and later23–60 after18–22 exemption. A population/direction rule over state-border exit controls, not a physical closure of every Ukrainian gate or a claim about occupation control.",
+  "source_checks": [
+    {
+      "url": "https://mvs.gov.ua/en/news/shhodo-obmezen-v-peretini-kordonu-na-viyizd-z-ukrayini-okremoyu-kategorijeyu-gromadyan",
+      "access_status": "full_retrieved",
+      "finding": "Full InteriorMinistry original states temporary departure prohibition for Ukrainian male citizens18–60 under martiallaw, nationally rather than namedgate."
+    },
+    {
+      "url": "https://www.kmu.gov.ua/en/news/roziasnennia-mvs-shchodo-vyizdu-za-kordon-cholovikiv-vikom-18-22-rokiv-vkliuchno",
+      "access_status": "full_retrieved",
+      "finding": "Full Cabinet explanation permits18–22 inclusive to travel with required documents, except specified officeholders on officialbusiness; no gate-specific relaxation."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R03-001-P1",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ukrainian male citizens aged 18–60: general outward-travel restriction under martial law, with exemptions; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "policy_period",
+        "start_earliest": "2022-02-24",
+        "start_latest": "2022-02-24",
+        "end_earliest": "2025-08-28",
+        "end_latest": "2025-08-28",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "No line reference approved: original inventory has seven frontier-context labels without inspectable geometry, and policy legal extent must be distinguished from de facto control and temporarily inoperative frontiers. Need complete source-supported legal-boundary/operational-exit representation rather than selected gate or countrycentroid."
+      ]
+    },
+    {
+      "phase_id": "REC50-R03-001-P2",
+      "category": "wider_border",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Remaining general outward restriction for non-exempt Ukrainian male citizens aged 23–60 after the 18–22 exemption; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "confirmed_through",
+        "start_earliest": "2025-08-28",
+        "start_latest": "2025-08-28",
+        "end_earliest": "2025-09-11",
+        "end_latest": "2025-09-11",
+        "last_confirmed": "2025-09-11",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "No line reference approved: original inventory has seven frontier-context labels without inspectable geometry, and policy legal extent must be distinguished from de facto control and temporarily inoperative frontiers. Need complete source-supported legal-boundary/operational-exit representation rather than selected gate or countrycentroid."
+      ]
+    }
+  ],
+  "unresolved": [
+    "No line reference approved: original inventory has seven frontier-context labels without inspectable geometry, and policy legal extent must be distinguished from de facto control and temporarily inoperative frontiers. Need complete source-supported legal-boundary/operational-exit representation rather than selected gate or countrycentroid."
+  ]
+}

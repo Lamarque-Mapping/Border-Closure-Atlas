@@ -1,0 +1,89 @@
+{
+  "record_id": "REC50-R17-001",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ordinary personal passage at Kaplanbek–Navoi/Zangiota during reconstruction, ending with limited passenger restoration in January2025. Technical opening, first observed passenger and prospective full capacity remain distinct.",
+  "source_checks": [
+    {
+      "url": "https://kazpravda.kz/n/kaplanbek-zakryt-vremenno/",
+      "access_status": "full_text_web",
+      "finding": "Kazpravda original confirms Kaplanbek closed for reconstruction affecting pedestrians and vehicles.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r12-1.json",
+      "sha256": "b4dc431352d766bb5d0f2f006c3515c85c9e8c49e4e52d3e699346d3faec97c9"
+    },
+    {
+      "url": "https://uz.kursiv.media/2025-01-29/kpp-navoi-vozobnovil-rabotu-foto/",
+      "access_status": "full_text_web",
+      "finding": "Kursiv original names Navoi, reconstruction and a first passenger; no general freight restoration inferred.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r12-2.json",
+      "sha256": "3ffda10582b49088a67f99be1d66bbd9d21d4e1374c69c422f667e33aa3cd324"
+    },
+    {
+      "url": "https://uztradeinfo.uz/menu/27",
+      "access_status": "indexed_extract_only",
+      "finding": "Official Uzbek roster pairs Zangiata with Kaplanbek and classifies the crossing as automobile.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-47.json",
+      "sha256": "936760b2ec2a3a5ad235a5b9da82a3e1ec4d69940ca9202e2a330a5c9b2928ff"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/332389741",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Explicit Kaplanbek road-control node inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d376a28682d298297e03.xml",
+      "sha256": "cbd4bfb01e9746ceaa5ffab364afc3a3a90ecf4bcf47c55c97f255ccd75594a7",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d376a28682d298297e03.txt",
+      "text_sha256": "cbd4bfb01e9746ceaa5ffab364afc3a3a90ecf4bcf47c55c97f255ccd75594a7",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R17-001-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kaplanbek-navoi-road",
+          "name": "Kaplanbek–Navoi road checkpoint",
+          "coordinates": [
+            69.206589,
+            41.4562614
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/332389741"
+          ],
+          "evidence_note": "Explicit Qaplanbek/Kaplanbek border_control node, paired with Navoi/Zangiata by the official Uzbek checkpoint inventory and reconstruction reports. It is not the similarly named village or Tashkent taxi stand.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/d376a28682d298297e03.xml",
+          "sha256": "cbd4bfb01e9746ceaa5ffab364afc3a3a90ecf4bcf47c55c97f255ccd75594a7"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ordinary personal passage at Kaplanbek–Navoi/Zangiota during reconstruction, ending with limited passenger restoration in January2025. Technical opening, first observed passenger and prospective full capacity remain distinct.",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": "2022-12-06",
+        "end_earliest": "2025-01-27",
+        "end_latest": "2025-01-29",
+        "last_confirmed": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Closed by 6 December 2022; the earlier December 1 announcement is not an observed exact onset. Limited personal passage is supported between the January 27 technical opening and the January 29 report of a first passenger. February 5 full capacity was prospective, and freight restoration is separate. Unknown onset prevents a numeric duration."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "02110c8d6c69bbc380229f68a4a6272cc8d0ae4db3556adc22804e5c5980cdea",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

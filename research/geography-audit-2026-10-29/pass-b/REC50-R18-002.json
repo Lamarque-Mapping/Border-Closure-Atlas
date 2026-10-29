@@ -1,0 +1,68 @@
+{
+  "record_id": "REC50-R18-002",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Yacuiba District1 sewer-project protest at international road bridge near Bolivian police/migration post on May29 2023. Initial24hour announcement did not prevent same-day observed reopening.",
+  "source_checks": [
+    {
+      "url": "https://elpais.bo/tarija/20230529_bloquean-el-puente-internacional-en-yacuiba-por-un-proyecto-de-alcantarillado.html",
+      "access_status": "full_retrieved",
+      "finding": "Full ElPais report identifies bridge to SalvadorMazza and barrier near police/migration;24hours described as announced plan."
+    },
+    {
+      "url": "https://www.diarioelgranchaco.com/2023/05/el-puente-esta-expedito-autoridades.html",
+      "access_status": "full_retrieved",
+      "finding": "Full May30 ElGranChaco text reports precedingMonday midday agreement and first resumed buses/smallvehicles; no unrestricted freight inference."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/128949421/full",
+      "access_status": "full_retrieved",
+      "finding": "Direct OSM roadbridge geometry RN34/F9, two lanes, bidirectional, named international bridge; distinguishes parallel pedestrian ways."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R18-002-P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "geo-yacuiba-salvador-mazza-road-bridge",
+          "name": "Yacuiba–Salvador Mazza international road bridge",
+          "coordinates": [
+            -63.6838634,
+            -22.053081
+          ],
+          "coordinate_method": "Directly inspected OSM way/128949421 mean of geometry vertices; XML sha256 adf916259dffafae3f1908263b42ba553bbe717277a62c07e5e5761443e38c84",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/way/128949421/full"
+          ],
+          "evidence_note": "Two-lane RN34/F9 trunk bridge explicitly named ProfesorSalvadorMazza; separate pedestrian sidewalks and Argentine customs building are not selected."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Bridge traffic, with observed resumed passage specifically of passenger buses and small vehicles at Yacuiba–Salvador Mazza international bridge; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "same_day",
+        "start_earliest": "2023-05-29",
+        "start_latest": "2023-05-29",
+        "end_earliest": "2023-05-29",
+        "end_latest": "2023-05-29",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Bridge representative located; exact Bolivian police/migration-end barricade not surveyed, and returningvehicle direction not established."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Bridge representative located; exact Bolivian police/migration-end barricade not surveyed, and returningvehicle direction not established."
+  ]
+}

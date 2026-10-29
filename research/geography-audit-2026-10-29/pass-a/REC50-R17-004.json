@@ -1,0 +1,179 @@
+{
+  "record_id": "REC50-R17-004",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Shared reconstruction measure covers two distinct paired road crossings; each phase binds only its own pair. Heavy freight continued and no frontier-wide closure follows.",
+  "source_checks": [
+    {
+      "url": "https://www.gov.kz/org/kgd/press/news/details/508408?lang=ru",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Contemporaneous official measure applies from February 15 to both named posts for persons/cars/buses/light freight, heavy trucks allowed.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-65.json",
+      "sha256": "8c11382896da8f464ddc543d2a3ee5f4f9538a61ceb05c897be4336a0690343c"
+    },
+    {
+      "url": "https://daryo.uz/en/2026/03/24/syrdarya-customs-post-in-uzbekistan-reopens-after-kazakh-checkpoint-reconstruction",
+      "access_status": "search_indexed_article",
+      "finding": "Substantive indexed Customs Committee account says Syrdarya personal/passenger-vehicle service restored by March 24, pairs it to Atameken, and distinguishes 2023 heavy-freight exception. Direct original URL timeout.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-72.json",
+      "sha256": "8ef851f2a8f2f70c26066e6173eeff9ad2cdc60c4ba8445552173ec19fda054b"
+    },
+    {
+      "url": "https://www.gov.kz/org/kgd/press/news/details/542671?lang=ru",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.inform.kz/amp/nazvana-data-otkritiya-punkta-propuska-zhibek-zholi-na-granitse-s-suzbekistanom-310ac2",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://primeminister.kz/en/news/new-high-tech-border-crossing-points-kazygurt-and-temir-baba-opened-30844",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://daryo.uz/en/2026/03/24/syrdarya-customs-post-in-uzbekistan-reopens-after-kazakh-checkpoint-reconstruction/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://t.me/customschannel/61214",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R17-004-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-atameken-gulistan",
+          "name": "Atameken–Gulistan / Syrdarya road crossing",
+          "coordinates": [
+            68.560429,
+            40.8369832
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/2711451863",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/2711451863",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=68.55,40.82,68.58,40.85"
+          ],
+          "evidence_note": "Named Atameken border-control node opposite named Syrdariya control node2711477153. Not Atameken settlement near Tashkent; Uzbek customs March account explicitly pairs Syrdarya–Atameken.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-atameken-main.xml",
+          "sha256": "0e058f5ee62eb3e933b3ea86c2da884dcf00d94546c86b8d0b89c4da9755979f",
+          "osm_feature": "node/2711451863",
+          "osm_version": "14",
+          "osm_timestamp": "2023-08-21T02:42:16Z",
+          "identity_tags": {
+            "access:citizenship": "all",
+            "barrier": "border_control",
+            "bicycle": "yes",
+            "fixme": "working daytime, find out exact times",
+            "foot": "yes",
+            "hgv": "yes",
+            "motorcar": "yes",
+            "motorcycle": "yes",
+            "motor_vehicle": "yes",
+            "name": "МАПП Атамекен",
+            "name:ru": "МАПП Атамекен",
+            "opening_hours": "Mo-Su 08:00-20:00"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Atameken–Gulistan/Uzbek Syrdarya ordinary personal passage under the shared reconstruction measure",
+      "date_scope_check": {
+        "scope": "Atameken–Gulistan/Uzbek Syrdarya ordinary personal passage under the shared reconstruction measure",
+        "start_earliest": "2023-02-15",
+        "start_latest": "2023-02-15",
+        "end_earliest": "2025-11-25",
+        "end_latest": "2026-03-24",
+        "last_confirmed": "2025-11-25",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "February 15 2023 passenger suspension, actual restoration by March 24 2026 with unknown first day. April 2025 Kazakh commissioning not paired reopening."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "REC50-R17-004-P2",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kazygurt-nazhimov",
+          "name": "Kazygurt–S. Nadzhimov road crossing",
+          "coordinates": [
+            69.4060523,
+            41.524762
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/1286092438",
+          "precision": "Crossing-area reference; approximate to 300 m; not an exact historical barrier footprint.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/1286092438",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=69.39,41.51,69.42,41.54"
+          ],
+          "evidence_note": "Explicit named Kazygurt control node opposite S. Nadzhimov node1286092405; distinct from Kaplanbek/Navoi and Zhibek/Gishtkuprik.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-kazygurt-main.xml",
+          "sha256": "399c5a97472aa44583c2789e0a6e65894a7700efe4ec917e506b91338442b486",
+          "osm_feature": "node/1286092438",
+          "osm_version": "29",
+          "osm_timestamp": "2024-10-21T14:03:40Z",
+          "identity_tags": {
+            "access:citizenship": "all",
+            "alt_name": "Майский",
+            "barrier": "border_control",
+            "bicycle": "yes",
+            "foot": "yes",
+            "hgv": "yes",
+            "motor_vehicle": "yes",
+            "name": "МАПП Казыгурт",
+            "name:ru": "МАПП Казыгурт",
+            "opening_hours": "24/7",
+            "source": "Постановление Правительства Республики Казахстан от 9 июля 2013 года № 697",
+            "source:access": "http://adilet.zan.kz/rus/docs/P1700000433",
+            "source:description": "http://forums.drom.ru/travel/t1151747832-p21.html#post1182149631"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kazygurt–S. Nadzhimov/Nazhimov ordinary persons, cars and buses under the shared reconstruction measure",
+      "date_scope_check": {
+        "scope": "Kazygurt–S. Nadzhimov/Nazhimov ordinary persons, cars and buses under the shared reconstruction measure",
+        "start_earliest": "2023-02-15",
+        "start_latest": "2023-02-15",
+        "end_earliest": "2025-11-25",
+        "end_latest": "2025-11-25",
+        "last_confirmed": "2025-11-25",
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "assessment": "February 15 2023 suspension through November 25 2025 last confirmation. December commissioning not verified first paired passage. Broad uninterrupted-programme wording remains conflicting; exact duration unquantified."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

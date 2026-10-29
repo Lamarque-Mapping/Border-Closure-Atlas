@@ -1,0 +1,89 @@
+{
+  "record_id": "REC50-R11-004",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Erenhot–Zamyn-Uud railway imports of selected non-container iron ore, coal and bagged goods. January27,2022 is policy permission; a later ore-train observation has no precise first-arrival date. The December road-freight resumption does not end this rail phase.",
+  "source_checks": [
+    {
+      "url": "https://www.cnfin.com/cy-lb/detail/20220210/3532683_1.html",
+      "access_status": "full_text_web",
+      "finding": "Original CNFIN report identifies November28 suspension, January27 selected rail import permission and recently arrived ore train.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r12-1.json",
+      "sha256": "b4dc431352d766bb5d0f2f006c3515c85c9e8c49e4e52d3e699346d3faec97c9"
+    },
+    {
+      "url": "https://www.mucaizhijia.com/news/details/1122_1.html",
+      "access_status": "indexed_extract_only",
+      "finding": "Trade report December11 reopening paragraph explicitly concerns Erenhot road cargo, not railway imports.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-42.json",
+      "sha256": "f3cf94052d07a3c8a78efca8c92af18e93e1e02c7e0fa10cd00ce12b5c51c224"
+    },
+    {
+      "url": "https://www.unescap.org/sites/default/files/Study%20on%20Railway%20Border%20crossings%2046218.pdf",
+      "access_status": "indexed_extract_only",
+      "finding": "UNESCAP identifies Erenhot border station, rail cargo trans-loading and inspection authorities.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-50.json",
+      "sha256": "36c9669d9a11c3f307747e66d70a67cf373e756793badaf24f22a114b2fa5ae0"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/277606205",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named international rail station node inspected; separate road crossing rejected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/5ddbfdfc5387f1e46539.xml",
+      "sha256": "22cc3fc5bc2b23725bdb05fafa324bcba393f39d59ce25496d4e1efa8a265c28",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/5ddbfdfc5387f1e46539.txt",
+      "text_sha256": "22cc3fc5bc2b23725bdb05fafa324bcba393f39d59ce25496d4e1efa8a265c28",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R11-004-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-erenhot-rail-station",
+          "name": "Erenhot international rail station",
+          "coordinates": [
+            111.9811223,
+            43.6551908
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Railway-station reference point, approximately300m; does not locate each freight handling yard",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/277606205"
+          ],
+          "evidence_note": "Named Erenhot/Erlian railway station with UIC3300007. UNESCAP railway study explicitly identifies Erenhot station as the border inspection and rail trans-loading facility on the Zamyn-Uud route. This represents the rail station complex, not the separate highway port.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/5ddbfdfc5387f1e46539.xml",
+          "sha256": "22cc3fc5bc2b23725bdb05fafa324bcba393f39d59ce25496d4e1efa8a265c28"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Erenhot–Zamyn-Uud railway imports of selected non-container iron ore, coal and bagged goods. January27,2022 is policy permission; a later ore-train observation has no precise first-arrival date. The December road-freight resumption does not end this rail phase.",
+      "date_scope_check": {
+        "start_earliest": "2021-11-28",
+        "start_latest": "2021-11-28",
+        "end_earliest": "2022-01-27",
+        "end_latest": "2022-01-27",
+        "last_confirmed": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "Selected non-container rail imports were suspended from 28 November 2021, with permission for iron ore, coal and bagged goods in open wagons from 27 January 2022. This is a 60-day policy-date difference. An ore train was reported to have recently arrived by 7 February; its exact first arrival day remains unknown. EA029 concerns the separate China-to-Mongolia road-freight phase; its December dates are not rail endpoints. Container traffic and other commodity restoration dates are not generalised."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "318cbef0abc61482b266b24d77edba7ca3752455ccc86ff5e2f3c35ca7b12239",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

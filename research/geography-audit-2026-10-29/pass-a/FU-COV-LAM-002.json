@@ -1,0 +1,99 @@
+{
+  "record_id": "FU-COV-LAM-002",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "November30 2017 political protesters occupied Agua Caliente road route linking Esquipulas and Honduras. Exact protest location relative to Honduran customs is not established.",
+  "source_checks": [
+    {
+      "url": "https://prensacomunitaria.org/2017/12/chiquimula-fue-cerrada-la-frontera-agua-caliente-con-honduras/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "December1 original carries November30 event date and describes Honduran protesters at Agua Caliente affecting international cargo; no independently secure exact end.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-087.json"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/3784049876",
+      "access_status": "fresh_raw_osm_inspected",
+      "finding": "Named Aduana border_control node version2 from2015 on named CA10 Ocotepeque–Agua Caliente road way742745126. This Honduran control is northeast of boundary; bare existing boundary node13099237846 is not used as gate proof.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/5ce0fa56ec8cd584759b.xml",
+      "source_sha256": "4933f099f2c1072792858934fbf5abc3e01ea3e39a82dfa8373f09d14cc15c34"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/742745126/full",
+      "access_status": "fresh_raw_osm_inspected",
+      "finding": "Road tags explicitly name Carretera Ocotepeque–Agua Caliente CA10, with named customs node embedded.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/94266d0be31c1aabed6b.xml",
+      "source_sha256": "196ac7a13c1932a8a41e70c88ae00559ab089cacf81f4c15bbf52ded87b749cd"
+    },
+    {
+      "url": "https://inm.gob.hn/en/delegaciones",
+      "access_status": "fresh_search_extract",
+      "finding": "Official migration directory identifies Agua Caliente in Ocotepeque on Guatemala border.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-092.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-LAM-002-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-agua-caliente-honduras-control",
+          "name": "Agua Caliente Honduran customs road control",
+          "coordinates": [
+            -89.2790155,
+            14.5351256
+          ],
+          "coordinate_method": "OSM named node coordinates",
+          "precision": "Approximate crossing/structure reference; not a survey of the historical gate or protest barrier.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/3784049876",
+            "https://www.openstreetmap.org/way/742745126",
+            "https://inm.gob.hn/en/delegaciones"
+          ],
+          "evidence_note": "Named Aduana border_control node version2 from2015 on named CA10 Ocotepeque–Agua Caliente road way742745126. This Honduran control is northeast of boundary; bare existing boundary node13099237846 is not used as gate proof.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/5ce0fa56ec8cd584759b.xml",
+              "sha256": "4933f099f2c1072792858934fbf5abc3e01ea3e39a82dfa8373f09d14cc15c34",
+              "retrieved_date": "2026-10-29",
+              "osm_version": "2",
+              "osm_timestamp": "2015-10-26T20:08:47Z",
+              "tags": {
+                "barrier": "border_control",
+                "name": "Aduana"
+              }
+            },
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/94266d0be31c1aabed6b.xml",
+              "sha256": "196ac7a13c1932a8a41e70c88ae00559ab089cacf81f4c15bbf52ded87b749cd",
+              "retrieved_date": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Agua Caliente crossing",
+      "date_scope_check": {
+        "start_earliest": "2017-11-30",
+        "start_latest": "2017-11-30",
+        "end_earliest": "2017-11-30",
+        "end_latest": "2017-11-30",
+        "last_confirmed": "2017-11-30",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Named customs route reference only; precise2017 obstruction and duration remain unresolved."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "249751bec27ebb9648c653866152ebec873d8df3d0377e2ac86a1bcc7e625942"
+}

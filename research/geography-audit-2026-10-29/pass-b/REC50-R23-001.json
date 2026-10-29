@@ -1,0 +1,111 @@
+{
+  "record_id": "REC50-R23-001",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Ghulam Khan road freight from North Waziristan into Afghanistan, restored with loaded trucks in March2018. Inherited2014 onset, March plans and later formal-opening milestones remain separate; ordinary passenger restoration is not inferred.",
+  "source_checks": [
+    {
+      "url": "https://radio.gov.pk/09-03-2018/ghulam-khan-check-post-in-nwa-reopens-for-pak-afghan-trade",
+      "access_status": "full_text_web",
+      "finding": "Pakistan Radio original identifies North Waziristan Ghulam Khan post, Friday bilateral trade return and2014 military-operation closure.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r12-4.json",
+      "sha256": "1c55eaa50418eb8c441bb34e01d6a35f6a01e623d378348d08ae2a8fe155438f"
+    },
+    {
+      "url": "https://www.thenews.com.pk/print/290613-ghulam-khan-border-crossing-reopened",
+      "access_status": "inaccessible_web",
+      "finding": "The News URL returned403; not independently verified in this retrieval.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r12-4.json",
+      "sha256": "1c55eaa50418eb8c441bb34e01d6a35f6a01e623d378348d08ae2a8fe155438f"
+    },
+    {
+      "url": "https://www.ecoi.net/en/document/2024722.html",
+      "access_status": "retrieved_web_text_or_indexed_extract",
+      "finding": "AAN identifies Ghulam Khan as the Gurbaz–North Waziristan road crossing, distinct from other formal posts.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-sites-56.json",
+      "sha256": "033c689855ec73a1adcd7107a113e9124ed06f24ed0a6f954998de1196a0262a"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/3453046249",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Road border-control and adjacent named Ghulam Khan port office inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/9a2213e1a3e92868fefc.xml",
+      "sha256": "8661c8e67627d92798cc1bf0bb2c6a2e2aaaa4db3c8a5db43a2dd4160db7d20a",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/9a2213e1a3e92868fefc.txt",
+      "text_sha256": "8661c8e67627d92798cc1bf0bb2c6a2e2aaaa4db3c8a5db43a2dd4160db7d20a",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/9107501851",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Road border-control and adjacent named Ghulam Khan port office inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/8cdff91efd3f5b369588.xml",
+      "sha256": "03dc3b365b3dd4cb6de200233b712d5d4ce110179ee7af4faa941824591b585c",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/8cdff91efd3f5b369588.txt",
+      "text_sha256": "03dc3b365b3dd4cb6de200233b712d5d4ce110179ee7af4faa941824591b585c",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=70.018,33.135,70.037,33.152",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Road border-control and adjacent named Ghulam Khan port office inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/70b4fff9ad3032effefb.xml",
+      "sha256": "e2e7fa89fbad60b0dca89cd6f8bfa2fef6f786d2975092eeba9196edf2edea15",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/70b4fff9ad3032effefb.txt",
+      "text_sha256": "e2e7fa89fbad60b0dca89cd6f8bfa2fef6f786d2975092eeba9196edf2edea15",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R23-001-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-ghulam-khan-road",
+          "name": "Ghulam Khan road border gate",
+          "coordinates": [
+            70.0300178,
+            33.150938
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/3453046249",
+            "https://api.openstreetmap.org/api/0.6/node/9107501851",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=70.018,33.135,70.037,33.152"
+          ],
+          "evidence_note": "Road border_control node adjacent to explicitly named Ghulam Khan port government office node9107501851 and on the international trunk road. This lies north of Ghulam Khan village; AAN and Pakistan Radio establish the Gurbaz–North Waziristan trade crossing, not a town point.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/9a2213e1a3e92868fefc.xml",
+          "sha256": "8661c8e67627d92798cc1bf0bb2c6a2e2aaaa4db3c8a5db43a2dd4160db7d20a"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ghulam Khan road freight from North Waziristan into Afghanistan, restored with loaded trucks in March2018. Inherited2014 onset, March plans and later formal-opening milestones remain separate; ordinary passenger restoration is not inferred.",
+      "date_scope_check": {
+        "start_earliest": "2014-06-01",
+        "start_latest": "2014-06-30",
+        "end_earliest": "2018-03-09",
+        "end_latest": "2018-03-09",
+        "last_confirmed": "2018-03-05",
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "REC50-R23-001-P1: The inherited onset is reported as June 2014, retained at month precision rather than an invented day. The sustained restriction qualifies as longer than 24 hours. Actual loaded freight entered Afghanistan on 9 March 2018. March 7 was a plan; later April-trial and May-formal-opening descriptions do not replace actual March passage. Those differing milestones and possible intermediate operations prevent one exact continuous duration. The later weekly trade schedule and freight restoration do not establish general passenger reopening."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "f23dc7d8efc6d9f7ee5ec44ab9da497df1dace7b96066c27cd0840a5d03a2258",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

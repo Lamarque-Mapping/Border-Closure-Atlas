@@ -1,0 +1,154 @@
+{
+  "record_id": "REC50-R11-001",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Visitor passage within the enclosed bilateral Khorgos cooperation centre, specifically Kazakhstan to its Chinese section. A named centre-area marker is supportable, with the inter-section first-line gate still unlocated.",
+  "source_checks": [
+    {
+      "url": "https://tengrinews.kz/kazakhstan_news/xorgos-budet-zakryt-do-15-fevralia-389805/",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Full January 27 report distinguishes current health closure from earlier January 22 holiday closure.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-71.json",
+      "sha256": "d5e86dfaee5753409420ee78ef4f9db315a7e031528f70a9a9bbbb2d57ed2a20"
+    },
+    {
+      "url": "https://english.ts.cn/system/2023/04/20/036853869.shtml",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Actual Kazakh visitors entered Chinese section April 17; report describes the bilateral enclosed centre.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-64.json",
+      "sha256": "e62ceb0d53c9a094d3256c42dedfb2d3a23159904a5a55d5b0178596a5038275"
+    },
+    {
+      "url": "https://www.xinjiang.gov.cn/xinjiang/gzk/202112/0be00016c3db4f2b9bb06e65e2bcfea7.shtml",
+      "access_status": "search_indexed_official_regulation",
+      "finding": "Official regulation defines first line as connection between national centre sections, second line as Chinese-mainland entrance.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-73.json",
+      "sha256": "37b422d02ac1ea032ccad0aad091f204665354b82f3af884bf6103087c8c4c23"
+    },
+    {
+      "url": "https://astanatimes.com/2023/04/khorgos-international-center-to-resume-work-this-month/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.zakon.kz/ekonomika-biznes/6390998-mtsps-khorgos-vozobnovlyaet-rabotu-spustya-tri-goda.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.xinjiang.gov.cn/xinjiang/dzdt/202304/a8ef818460fb4d2aaf1d525b9c1545fb.shtml",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.zakon.kz/ekonomika-biznes/6391032-mtsps-khorgos-otkroyut-24-aprelya-no-ne-dlya-vsekh.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.zakon.kz/sobytiia/6380696-khorgos-ne-smozhet-vozobnovit-rabotu-v-namechennyy-srok.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://mcps.kz/news/news_post/8-yanvarya-planiruetsya-vozobnovit-rabotu-mcps-horgos",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://tengrinews.kz/kazakhstan_news/horgos-rekomenduyut-zakryit-do-1-marta-391231/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://tengrinews.kz/kazakhstan_news/horgos-zakryit-do-osobogo-rasporyajeniya-392759/amp/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.zakon.kz/redaktsiia-zakonkz/5011560-informatsiyu-o-vozmozhnom-otkrytii.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R11-001-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "centre-khorgos-icbc",
+          "name": "Khorgos International Centre for Border Cooperation",
+          "coordinates": [
+            80.3963444,
+            44.2144625
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/186629617",
+          "precision": "Cooperation-centre area reference, approximate to 2 km; exact first-line inter-section visitor passage remains unlocated.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/186629617",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=80.36,44.21,80.43,44.25",
+            "https://www.xinjiang.gov.cn/xinjiang/gzk/202112/0be00016c3db4f2b9bb06e65e2bcfea7.shtml"
+          ],
+          "evidence_note": "Explicitly named enclosed cooperation-centre retail polygon, on its Kazakh side. Bilateral centre identity and first-line versus second-line distinction checked against Xinjiang regulations. Area reference identifies the centre only; it is not a claim that Kazakh visitors crossed at this centroid. Ordinary Khorgos road checkpoint, Altynkol rail port and mainland Chinese entrance are different facilities.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-khorgos-centre.xml",
+          "sha256": "9c3b91107adb2c91b9ae32a0ad4b6aa2d62baf3da9940c0e6d5384e61ea056a1",
+          "osm_feature": "way/186629617",
+          "osm_version": "11",
+          "osm_timestamp": "2025-06-23T07:48:27Z",
+          "identity_tags": {
+            "int_name": "Qorğas xalıqaralıq şekaralıq ıntımaqtastıq ortalığı",
+            "landuse": "retail",
+            "name": "Қорғас халықаралық шекаралық ынтымақтастық орталығы",
+            "name:en": "Qorğas International Center for Border Cooperation",
+            "name:kk": "Қорғас халықаралық шекаралық ынтымақтастық орталығы",
+            "name:ru": "Международный центр приграничного сотрудничества «Хоргос»",
+            "name:zh": "哈尔戈兹国际边境合作中心",
+            "source": "http://www.mcps-khorgos.kz/en/project/geographical"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kazakh visitor passage into the Chinese section of the Khorgos International Centre for Border Cooperation",
+      "date_scope_check": {
+        "scope": "Kazakh visitor passage into the Chinese section of the Khorgos International Centre for Border Cooperation",
+        "start_earliest": null,
+        "start_latest": "2020-01-27",
+        "end_earliest": "2023-04-17",
+        "end_latest": "2023-04-17",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Coronavirus closure already reported January 27 2020; January 22 holiday onset is not imported. Actual Kazakh visitors entered Chinese section April 17 2023; January plan and April 24 general announcement are not this endpoint. Earliest onset and continuity remain unknown."
+      },
+      "unresolved": [
+        "Marker locates named centre area, not exact inter-section first-line checkpoint."
+      ]
+    }
+  ],
+  "unresolved": []
+}

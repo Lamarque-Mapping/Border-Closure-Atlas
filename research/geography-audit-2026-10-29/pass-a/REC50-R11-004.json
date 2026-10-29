@@ -1,0 +1,113 @@
+{
+  "record_id": "REC50-R11-004",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Erenhot rail-port selected non-container imports, distinct from EA029 road-freight episode. Railway-station-complex marker is qualified because the exact broad-gauge disinfection control is unlocated.",
+  "source_checks": [
+    {
+      "url": "https://www.cnfin.com/cy-lb/detail/20220210/3532683_1.html",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Xinhua Finance account quotes Erlian railway station, suspension November 28 and permission January 27 following disinfection upgrade; recently arrived ore train by February 7.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-64.json",
+      "sha256": "e62ceb0d53c9a094d3256c42dedfb2d3a23159904a5a55d5b0178596a5038275"
+    },
+    {
+      "url": "https://www.elht.gov.cn/mobile/c/2026-04-09/113685.shtml",
+      "access_status": "search_indexed_official_article",
+      "finding": "Municipal report identifies Erenhot rail port and paired Zamyn-Uud railway operations, distinct from road port.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-73.json",
+      "sha256": "37b422d02ac1ea032ccad0aad091f204665354b82f3af884bf6103087c8c4c23"
+    },
+    {
+      "url": "https://www.sohu.com/a/504751675_120545367",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.scmp.com/news/article/3157860/2-border-cities-northern-china-limit-rail-imports-over-covid-19-outbreak",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://www.mucaizhijia.com/news/details/1122_1.html",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://m.cctat.cn/public/index.php/index/shows?catid=52&id=21260",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: HTTP Error 503: Service Unavailable",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R11-004-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "rail-erenhot",
+          "name": "Erenhot / Erlian international railway port",
+          "coordinates": [
+            111.9811223,
+            43.6551908
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/277606205",
+          "precision": "Named international railway-station complex reference, approximately 1.5 km; specific broad-gauge import inspection facility remains unlocated.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/277606205",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=111.96,43.64,112.02,43.72"
+          ],
+          "evidence_note": "Named Erenhot rail station node in rail-port station complex. Xinhua Finance closure report specifically attributes restriction and restoration to Erlian station; municipal government identifies it as international transshipment station. Marker does not claim exact border-line or freight disinfection gantry.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-erenhot-rail.xml",
+          "sha256": "68839e0aca29e65cc7497fa375354063456fc724c7251bcb3202294a7e53d569",
+          "osm_feature": "node/277606205",
+          "osm_version": "15",
+          "osm_timestamp": "2025-02-27T14:43:27Z",
+          "identity_tags": {
+            "alt_name": "二连站",
+            "name": "二连",
+            "name:en": "Erenhot",
+            "name:ru": "Эрен-Хото",
+            "name:zh": "二连",
+            "public_transport": "station",
+            "railway": "station",
+            "uic_ref": "3300007",
+            "wikidata": "Q5964925",
+            "wikipedia": "zh:二连站"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Erenhot rail imports of selected non-container cargo, scoped to iron ore, coal and bagged goods in open wagons covered by the January permission",
+      "date_scope_check": {
+        "scope": "Erenhot rail imports of selected non-container cargo, scoped to iron ore, coal and bagged goods in open wagons covered by the January permission",
+        "start_earliest": "2021-11-28",
+        "start_latest": "2021-11-28",
+        "end_earliest": "2022-01-27",
+        "end_latest": "2022-01-27",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "November 28 2021–January 27 2022 permission interval for ore, coal and bagged open-wagon goods. Ore arrival reported by February 7 does not reveal first arrival day."
+      },
+      "unresolved": [
+        "Point is rail-port station-complex reference, not exact broad-gauge disinfection/checking position."
+      ]
+    }
+  ],
+  "unresolved": []
+}

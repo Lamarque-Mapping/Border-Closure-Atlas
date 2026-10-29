@@ -11,6 +11,7 @@ assert.equal(data.meta.source_sha256,plan.source_sha256);assert.equal(audit.sour
 const events=new Map(data.events.map(e=>[e.id,e])),scopeIDs=new Set(Object.values(plan.groups).flat());
 assert.equal(scopeIDs.size,plan.baseline.unmapped_records);
 const decisions=new Map(audit.decisions.map(d=>[d.record_id,d]));assert.equal(decisions.size,audit.decisions.length,'unique reconciled records');
+if(audit.status==='complete')assert.equal(decisions.size,scopeIDs.size,'complete audit covers every assigned record');
 const applied=new Set();
 for(const decision of decisions.values()){
  assert(scopeIDs.has(decision.record_id),'only assigned previously unmapped records');
@@ -19,6 +20,7 @@ for(const decision of decisions.values()){
   const row=JSON.parse(bytes);assert.equal(row.record_id,decision.record_id);return row;
  });
  assert.deepEqual(rows.map(r=>r.pass).sort(),['a','b']);assert.notEqual(rows[0].agent,rows[1].agent);
+ assert.deepEqual(decision.phases.map(p=>p.phase_id).sort(),(events.get(decision.record_id).duration_periods||[]).map(p=>p.period_id).sort(),'every canonical phase receives a disposition');
  for(const p of decision.phases){
   const original=events.get(decision.record_id).duration_periods.find(q=>q.period_id===p.phase_id);assert(original,'canonical phase');
   if(p.decision==='hold')continue;

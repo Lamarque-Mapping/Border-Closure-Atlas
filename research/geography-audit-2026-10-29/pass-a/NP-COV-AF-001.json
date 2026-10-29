@@ -1,0 +1,50 @@
+{
+  "record_id": "NP-COV-AF-001",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "National land-border component of Congo election order; whole land-frontier policy extent across the five independently verified neighbouring states. This is an announced 12-hour order, not point-level observed enforcement.",
+  "source_checks": [
+    {
+      "url": "https://sgg.cg/JO/2026/congo-jo-2026-9.pdf",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Original official gazette text inspected, printed p.194, Arrêté 221 dated 20 February 2026, Article 1. Orders closure on 15 March 06:00–18:00. Heading also names March 12 ballot but Article 1 does not impose March 12 closure.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-34.json"
+    },
+    {
+      "url": "https://www.ambacongo-us.org/fr/le-congo/geographie",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Embassy geographical description independently identifies the five neighbours: Cameroon, Central African Republic, Gabon, DRC and Angola. This matches the five selected existing boundary references; coastline is outside the land-border component.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-41.json"
+    },
+    {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-boundary-lines/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Original producer documentation identifies 1:10m land boundary dataset, version 5.1.0, de facto convention. Existing inventory references carry this source ZIP. No new vertices or gate coordinates derived; nationwide policy scope only, not a survey or evidence of gate enforcement.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-41.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-AF-001-P01",
+      "category": "wider_border",
+      "decision": "map",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-ago-cog",
+        "context-frontier-caf-cog",
+        "context-frontier-cmr-cog",
+        "context-frontier-cod-cog",
+        "context-frontier-cog-gab"
+      ],
+      "complete": true,
+      "phase_applicability": "Modal scope: wider_border. Both directions under the explicit nationwide order, land-border component only. Complete refers to the five territorial land-frontier references; no sea/air geometry and no observed gate enforcement or actual resumption inferred. Preserve March 15 06:00–18:00 and strictly_over_24_hours false.",
+      "unresolved": [
+        "Actual gate implementation, exceptions and resumption are not established."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"ordered_window\", \"start_earliest\": \"2026-03-15\", \"start_latest\": \"2026-03-15\", \"end_earliest\": \"2026-03-15\", \"end_latest\": \"2026-03-15\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": false}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: NP-COV-AF-001-P01: Original instrument now verified in Journal Officiel no. 9 of February 26, 2026, page 194: Arrêté 221 of February 20 orders closure on March 15 from 06:00 to 18:00. This is a scheduled 12-hour order, not a whole-day or observed implementation claim. Gate-level enforcement, exceptions and actual resumption remain unresolved."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

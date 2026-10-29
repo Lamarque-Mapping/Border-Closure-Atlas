@@ -1,0 +1,87 @@
+{
+  "record_id": "C7-AF-001",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Mananga road crossing between South Africa and Eswatini. June 29 customs closure status and July 1 EFF obstruction are distinct canonical observations at the same identified crossing, with no continuous bridge to September permission.",
+  "source_checks": [
+    {
+      "url": "https://www.sars.gov.za/latest-news/customs-borders-and-ports-closures-2/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Primary SARS notice explicitly names Mananga closed until further notice on June 29; no first onset or cause. Page-level July 2 date does not supply continued closure. Golela notice on same page is separate.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-33.json"
+    },
+    {
+      "url": "https://www.sowetan.co.za/news/south-africa/2021-07-02-eff-helps-swazis-shut-mananga-border-with-sa/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Full relevant contemporaneous report dates EFF closure to Thursday morning July 1. Matsamo traffic and informal routes are separately discussed; do not expand the Mananga event to those routes or to all Eswatini borders.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-35.json"
+    },
+    {
+      "url": "https://biggameparks.org/img/cms/tabs/1%20Suggested%20Borders_2.pdf",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Original 2015 border table identifies the paired road post and published GPS reference. No historical barrier footprint claimed.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-41.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "C7-AF-001-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-mananga",
+          "name": "Mananga road border post (South Africa–Eswatini)",
+          "coordinates": [
+            31.7613,
+            -25.9331
+          ],
+          "coordinate_method": "GPS coordinates transcribed from Big Game Parks original Suggested Borders 2015 PDF, page 2 border-post table.",
+          "precision": "Approximately 500 m shared road-crossing area; not an exact historical protest barrier or a merged terminal footprint.",
+          "source_urls": [
+            "https://biggameparks.org/img/cms/tabs/1%20Suggested%20Borders_2.pdf"
+          ],
+          "evidence_note": "Primary operator visitor table explicitly pairs Mananga with Mananga and gives 25.9331 S, 31.7613 E. Table is reference geography predating the 2021 events; hours there are not applied to the event.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-41.json"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Modal scope: single_site. June 29 port closure observation only; movement cohorts and direction unitemized. Unknown onset and restoration remain unknown; no continuous June–September interval.",
+      "unresolved": [],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"confirmed_through\", \"start_earliest\": null, \"start_latest\": null, \"end_earliest\": \"2021-06-29\", \"end_latest\": \"2021-09-20\", \"last_confirmed\": \"2021-06-29\", \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: C7-AF-001-P1: First onset, reopening, movement exceptions and cause are not supplied. Page-wide July 2 date is not a later confirmation. Do not join continuously to the EFF episode.\n\nC7-AF-001-P2: Protest onset is dated to the morning of July 1, 2021 by Sowetan; exact start/end hours and continuity from June 29 remain unestablished.\n\nonset: The June 29 closure supplies no first onset. The separate protest is reported to begin on the morning of July 1, without an exact hour.\n\nendpoint: Neither Mananga observation dates exact restoration; the September 20 announcement provides later permission only.\n\nscope: Movement exceptions to the June 29 closure status are not supplied.\n\nrationale: The June 29 customs closure notice supplies no cause; the July 1 EFF motive cannot be inherited by that earlier observation.\n\ncontinuity: Continuity between the June 29 closure status and the July 1 EFF obstruction is unestablished.\n\nNew source clarification: Sowetan, July 2, explicitly dates the protest shutdown to Thursday morning, July 1. This resolves its onset day, not its exact hour or end; the earlier June 29 observation remains separate. The September 20 tourism-minister announcement lists Mananga open."
+    },
+    {
+      "phase_id": "C7-AF-001-P2",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-mananga",
+          "name": "Mananga road border post (South Africa–Eswatini)",
+          "coordinates": [
+            31.7613,
+            -25.9331
+          ],
+          "coordinate_method": "GPS coordinates transcribed from Big Game Parks original Suggested Borders 2015 PDF, page 2 border-post table.",
+          "precision": "Approximately 500 m shared road-crossing area; not an exact historical protest barrier or a merged terminal footprint.",
+          "source_urls": [
+            "https://biggameparks.org/img/cms/tabs/1%20Suggested%20Borders_2.pdf"
+          ],
+          "evidence_note": "Primary operator visitor table explicitly pairs Mananga with Mananga and gives 25.9331 S, 31.7613 E. Table is reference geography predating the 2021 events; hours there are not applied to the event.",
+          "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-41.json"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Modal scope: single_site. July 1 EFF obstruction at Mananga only; approximate crossing-area locator does not locate each protester. No inherited June 29 motive or continuous interval to September.",
+      "unresolved": [
+        "Exact approach-road obstruction footprint and end time are unreported."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"confirmed_through\", \"start_earliest\": \"2021-07-01\", \"start_latest\": \"2021-07-01\", \"end_earliest\": \"2021-07-01\", \"end_latest\": \"2021-09-20\", \"last_confirmed\": \"2021-07-01\", \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: C7-AF-001-P1: First onset, reopening, movement exceptions and cause are not supplied. Page-wide July 2 date is not a later confirmation. Do not join continuously to the EFF episode.\n\nC7-AF-001-P2: Protest onset is dated to the morning of July 1, 2021 by Sowetan; exact start/end hours and continuity from June 29 remain unestablished.\n\nonset: The June 29 closure supplies no first onset. The separate protest is reported to begin on the morning of July 1, without an exact hour.\n\nendpoint: Neither Mananga observation dates exact restoration; the September 20 announcement provides later permission only.\n\nscope: Movement exceptions to the June 29 closure status are not supplied.\n\nrationale: The June 29 customs closure notice supplies no cause; the July 1 EFF motive cannot be inherited by that earlier observation.\n\ncontinuity: Continuity between the June 29 closure status and the July 1 EFF obstruction is unestablished.\n\nNew source clarification: Sowetan, July 2, explicitly dates the protest shutdown to Thursday morning, July 1. This resolves its onset day, not its exact hour or end; the earlier June 29 observation remains separate. The September 20 tourism-minister announcement lists Mananga open."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

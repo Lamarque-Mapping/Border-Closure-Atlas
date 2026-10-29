@@ -1,0 +1,72 @@
+{
+  "record_id": "NP-COV-AM-002",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Mexican-side cargo-processing/transport disruption feeding imports into Belize through northern SantaElena corridor, with alleged extortion mechanism. This is not a closure of CorozalFreeZone shopping, nor every Mexico–Belize movement.",
+  "source_checks": [
+    {
+      "url": "https://www.7newsbelize.com/sstory.php?nid=77695",
+      "access_status": "full_retrieved",
+      "finding": "Full March23 report describes cargo unable to cross, perishables on Mexican side and threats to Mexican brokers; does not geolocate physical gate or barrier."
+    },
+    {
+      "url": "https://www.sanpedrosun.com/business-and-economy/2026/03/26/belize-mexico-border-disruption-eased-for-cargo-transportation/",
+      "access_status": "full_retrieved",
+      "finding": "Full March26 report says cargo movement restoredMarch24 after stakeholder meeting; CorozalFreeZone says operations and visitor shopping remained uninterrupted and issue was Mexican-side."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-AM-002-P01",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Mexican-side cargo processing at the Santa Elena northern border crossing, affecting imports into Belize; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2026-03-18",
+        "start_latest": "2026-03-18",
+        "end_earliest": "2026-03-24",
+        "end_latest": "2026-03-24",
+        "last_confirmed": "2026-03-23",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Evidence locates Mexican cargo-processing corridor but not a particular modern/old bridge, customs yard or obstruction coordinate. SantaElena town or Belize passenger facility would misplace this mechanism. Restoration phase shares same unresolved spatial scope."
+      ]
+    },
+    {
+      "phase_id": "NP-COV-AM-002-P02",
+      "category": "needs_review",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Reported restoration of inbound cargo; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "bounded_interval",
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2026-03-24",
+        "end_latest": "2026-03-24",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": false,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Evidence locates Mexican cargo-processing corridor but not a particular modern/old bridge, customs yard or obstruction coordinate. SantaElena town or Belize passenger facility would misplace this mechanism. Restoration phase shares same unresolved spatial scope.",
+        "Explicit analysis exclusion; retained phase without mapping."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Evidence locates Mexican cargo-processing corridor but not a particular modern/old bridge, customs yard or obstruction coordinate. SantaElena town or Belize passenger facility would misplace this mechanism. Restoration phase shares same unresolved spatial scope."
+  ]
+}

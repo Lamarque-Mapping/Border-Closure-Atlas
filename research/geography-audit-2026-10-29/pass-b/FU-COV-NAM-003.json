@@ -1,0 +1,53 @@
+{
+  "record_id": "FU-COV-NAM-003",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "unresolved",
+  "record_scope_reconstruction": "Mexican-side agricultural protest affecting Agua Prieta–Douglas commercial cargo crossing December3–4 2025; CBP identifies Douglas RHC2601 and explicitly says Naco unaffected.",
+  "source_checks": [
+    {
+      "url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/3fedf8e",
+      "access_status": "full_retrieved",
+      "finding": "CBP December8 bulletin confirms interruptions December3–4 from protest in Mexico, normal Douglas operations now, and Naco unaffected."
+    },
+    {
+      "url": "https://www.nmas.com.mx/sociedad/bloqueo-agricultores-hoy-lista-de-autopistas-liberadas-tras-avalarse-ley-de-aguas/",
+      "access_status": "full_retrieved",
+      "finding": "Full N+ December4 report explicitly records afternoon removal at Agua Prieta–Douglas."
+    },
+    {
+      "url": "https://mapcarta.com/W583564586",
+      "access_status": "extract_only",
+      "finding": "Indexed building candidate is historic Aduana Agua Prieta government office; this does not establish the commercial-lane protest location."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-NAM-003-FU1",
+      "category": "single_site",
+      "decision": "hold",
+      "sites": [],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Agua Prieta–Douglas cargo crossing; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2025-12-03",
+        "start_latest": "2025-12-03",
+        "end_earliest": "2025-12-04",
+        "end_latest": "2025-12-04",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Mexican commercial gate/approach coordinates not independently established. Historic customs office, passenger canopy and proposed Agua Prieta II project are not interchangeable cargo-obstruction points."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Mexican commercial gate/approach coordinates not independently established. Historic customs office, passenger canopy and proposed Agua Prieta II project are not interchangeable cargo-obstruction points."
+  ]
+}

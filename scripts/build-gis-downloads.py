@@ -11,6 +11,7 @@ import subprocess
 import tempfile
 import zipfile
 from build_gis import initialise, add_table
+from build_geography_audit_report import build as build_geography_audit, NAME as AUDIT_NAME
 
 ROOT = Path(__file__).resolve().parents[1]
 NAMES = {'geopackage': 'Global_Border_Closures_GeoPackage.zip',
@@ -50,6 +51,7 @@ def build():
     data = json.loads(subprocess.check_output(['node', str(ROOT/'scripts/export-gis.cjs')]))
     output = ROOT/'dist/downloads'
     output.mkdir(parents=True, exist_ok=True)
+    audit_members, geography_audit = build_geography_audit(output)
     tables = data['tables']
     layers = {name: rows for name, rows in data['layers'].items() if rows}
     counts = data['meta']['counts']
@@ -77,7 +79,7 @@ def build():
         assert not db.execute('PRAGMA foreign_key_check').fetchall()
         db.close()
         readme = (ROOT/'scripts/GIS_DOWNLOAD_README.txt').read_text().replace('CURRENT MAPPING COVERAGE', coverage)
-        common = {'README.txt': readme.encode('utf-8'),
+        common = {**audit_members, 'README.txt': readme.encode('utf-8'),
                   'manifest.json': encoded(data['meta']), 'fields.json': encoded(descriptors),
                   'research-method.json': encoded(data['method'])}
         archive(output/NAMES['geopackage'], {**common, gpkg.name: gpkg.read_bytes()})
@@ -94,6 +96,19 @@ def build():
     html, count = re.subn(r'(<p class="figure-note" id="gis-coverage">).*?(</p>)',
                          lambda match: match[1]+coverage+match[2], html)
     assert count == 1, 'Dataset must disclose GIS coverage'
+    audit_counts = geography_audit['counts']
+    audit_text = (f"Geography audit: {audit_counts['both_passes_saved']} of {audit_counts['assigned_records']} "
+                  'previously unmapped records have two separately saved AI source reconstructions; '
+                  f"{audit_counts['reconciled_records']} have been reconciled, adding geography for "
+                  f"{audit_counts['newly_mapped_records']} records. "
+                  'The audit download retains both reviews, source links, partial coverage and unresolved cases.')
+    html, count = re.subn(r'(<p class="figure-note" id="geography-audit-coverage">).*?(</p>)',
+                         lambda match: match[1]+audit_text+match[2], html)
+    assert count == 1, 'Dataset must disclose geography audit coverage'
+    audit_hash = hashlib.sha256((output/AUDIT_NAME).read_bytes()).hexdigest()
+    html, count = re.subn(r'href="downloads/'+re.escape(AUDIT_NAME)+r'(?:\?v=[^"<> ]*)?"',
+                         'href="downloads/'+AUDIT_NAME+'?v='+audit_hash+'"', html)
+    assert count == 1, 'Dataset must expose geography audit download'
     for item in manifest['downloads'].values():
         pattern = re.escape(item['path']) + r'(?:\?v=[^"<> ]*)?'
         html, count = re.subn(r'href="'+pattern+r'"', 'href="'+item['path']+'?v='+item['sha256']+'"', html)

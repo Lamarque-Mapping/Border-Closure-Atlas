@@ -29,6 +29,7 @@ for(const pass of ['a','b']){
         if(p.decision!=='hold'&&!(p.sites?.length||p.border_reference_ids?.length))issues.push('mapping recommendation without geometry');
         if(records.get(id).duration_periods?.find(q=>q.period_id===p.phase_id)?.analysis_included===false&&p.decision!=='hold')issues.push('excluded phase proposed');
         for(const s of p.sites||[])if(!Array.isArray(s.coordinates)||s.coordinates.length!==2||!s.coordinates.every(Number.isFinite)||!s.source_urls?.length||!s.coordinate_method||!s.precision)issues.push('site coordinates/provenance incomplete');
+        for(const s of p.sites||[])if(s.coordinates?.length===2&&(Math.abs(s.coordinates[0])>180||Math.abs(s.coordinates[1])>90))issues.push('invalid WGS84 coordinate');
       }
       rows.set(id,{row,issues,sha256:crypto.createHash('sha256').update(text).digest('hex')});
       if(issues.length)problems.push({pass,id,issues:[...new Set(issues)]});

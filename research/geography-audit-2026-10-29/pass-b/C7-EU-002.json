@@ -1,0 +1,92 @@
+{
+  "record_id": "C7-EU-002",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Nonmotorized entry restriction at three named Latvian road posts Paternieki(Belarus), Terehova and Grebneva(Russia), from March19 2025. Motor-vehicle passage continued; no entire Latvia–Russia/Belarus closure.",
+  "source_checks": [
+    {
+      "url": "https://www.iem.gov.lv/en/article/19-march-traffic-border-crossing-points-paternieki-terehova-and-grebneva-will-be-restricted",
+      "access_status": "full_retrieved",
+      "finding": "Full InteriorMinistry notice names exactthree posts, March19 onset and motorvehicles-only rule motivated by bicycle/scooter/other crossing concerns."
+    },
+    {
+      "url": "https://likumi.lv/ta/id/359394-par-prasibas-noteiksanu-iecelosanai-tikai-ar-mehaniskajiem-transportlidzekliem-robezskersosanas-vietas-paternieki-terehova-un-grebneva",
+      "access_status": "inaccessible",
+      "finding": "Direct legal order timedout; canonical entry-only phase retained, not widened using general wording of English explanation."
+    },
+    {
+      "url": "https://lvrobeza.lv/en/border-chekpoints/",
+      "access_status": "full_retrieved",
+      "finding": "Full state service page inspected: three crossing headings, neighbouringcountry, directcoordinates, and separately labelled waitingareas. Provider AutotransportaDirekcija/LVRTC."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "C7-EU-002-P1",
+      "category": "multiple_named_sites",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "geo-paternieki-latvian-road-control",
+          "name": "Paternieki Latvian road control",
+          "coordinates": [
+            27.62504916825354,
+            55.82073967935616
+          ],
+          "coordinate_method": "Published decimal coordinates under named crossing heading in state electronic-queue service; latitude/longitude order converted to lon,lat",
+          "precision": "Control-complex representative approximately100m, not specific pedestrian lane",
+          "source_urls": [
+            "https://lvrobeza.lv/en/border-chekpoints/"
+          ],
+          "evidence_note": "Latvian control toward Belarus; named post coordinates, not separate waitingarea or TIR-only lane."
+        },
+        {
+          "proposed_site_id": "geo-terehova-latvian-road-control",
+          "name": "Terehova Latvian road control",
+          "coordinates": [
+            28.187573835097062,
+            56.3548771627185
+          ],
+          "coordinate_method": "Published decimal coordinates under named crossing heading in state electronic-queue service; latitude/longitude order converted to lon,lat",
+          "precision": "Control-complex representative approximately100m, not specific pedestrian lane",
+          "source_urls": [
+            "https://lvrobeza.lv/en/border-chekpoints/"
+          ],
+          "evidence_note": "Latvian control toward Russia; not Burachki or nearby Malinas truckparking."
+        },
+        {
+          "proposed_site_id": "geo-grebneva-latvian-road-control",
+          "name": "Grebneva Latvian road control",
+          "coordinates": [
+            27.83031868786706,
+            56.86888113182786
+          ],
+          "coordinate_method": "Published decimal coordinates under named crossing heading in state electronic-queue service; latitude/longitude order converted to lon,lat",
+          "precision": "Control-complex representative approximately100m, not specific pedestrian lane",
+          "source_urls": [
+            "https://lvrobeza.lv/en/border-chekpoints/"
+          ],
+          "evidence_note": "Latvian control toward Russia; not waitingareas several km away."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Pedestrian and cycle entry at Pāternieki/Terehova/Grebņeva; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "confirmed_through",
+        "start_earliest": "2025-03-19",
+        "start_latest": "2025-03-19",
+        "end_earliest": "2025-03-21",
+        "end_latest": "2025-03-21",
+        "last_confirmed": "2025-03-21",
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

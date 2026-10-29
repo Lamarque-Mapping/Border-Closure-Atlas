@@ -1,0 +1,84 @@
+{
+  "record_id": "R12-AS-001",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Cambodian vendors obstructed the Cambodian bridgehead of Ban Khao Din–Sampov Loun crossing. This is a trader blockade, not universal closure ordered at the Thai gate.",
+  "source_checks": [
+    {
+      "url": "https://www.matichon.co.th/region/news_696820",
+      "access_status": "search_indexed_article",
+      "finding": "Fresh indexed original identifies October 15 blockade at Cambodian friendship-bridge head, Ban Khao Din. Direct page repeatedly timed out.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-61.json",
+      "sha256": "1849b29606a23a78b37162ba34f498bf8322063b261c6b40b59b97c59839bfa8"
+    },
+    {
+      "url": "https://www.matichon.co.th/local/news_417140",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Separate January report establishes the precise Ban Khao Din–Sampov Loun bridge pair, used only for geographic identity.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-58.json",
+      "sha256": "db0c1e30b4ff3cab998e953cced4d2407adbeb554e007555668f44a2614590ce"
+    },
+    {
+      "url": "https://www.thairath.co.th/news/local/central/1099302",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R12-AS-001-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-ban-khao-din-sampov-loun",
+          "name": "Ban Khao Din–Sampov Loun crossing",
+          "coordinates": [
+            102.3588861,
+            13.4323333
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/7204472878",
+          "precision": "Crossing/bridge-approach reference, approximately 200 m; exact crowd footprint not surveyed.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/7204472878",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=102.35,13.42,102.37,13.44"
+          ],
+          "evidence_note": "Named Cambodian Sampov Lun control opposite mapped Ban Khao Din customs clearing point. Contemporary January account explicitly pairs these places and locates negotiation on their friendship bridge.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-khao-din-main.xml",
+          "sha256": "44b2c516f79b22b92211225337de900512570bddce1b8a7066a0a4a19c0fdddc",
+          "osm_feature": "node/7204472878",
+          "osm_version": "2",
+          "osm_timestamp": "2020-02-11T20:44:37Z",
+          "identity_tags": {
+            "barrier": "border_control",
+            "int_name": "Sâmpŏulun",
+            "name": "សំពៅលូន",
+            "name:en": "Sampov Lun"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Ban Khao Din episode on 15 October 2017.",
+      "date_scope_check": {
+        "scope": "Ban Khao Din episode on 15 October 2017.",
+        "start_earliest": "2017-10-15",
+        "start_latest": "2017-10-15",
+        "end_earliest": "2017-10-15",
+        "end_latest": "2017-10-15",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "October 15 2017 episode only; differing 06:00/06:30 onset, 10:00 restoration and no measured exact duration retained."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

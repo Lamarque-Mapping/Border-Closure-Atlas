@@ -1,0 +1,98 @@
+{
+  "record_id": "R6-SC-006",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "India-side visa-free pilgrimage corridor service from Dera Baba Nanak to Kartarpur shrine, including return journeys. Pakistan domestic shrine access and alternative pilgrimage routes remain outside scope.",
+  "source_checks": [
+    {
+      "url": "https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1772262&lang=2&reg=48",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "Indian Home Ministry release supplies suspension/resumption dates and Dera Baba Nanak international-boundary corridor identity.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-56.json",
+      "sha256": "a80cca5cc79b8292408ced4a9d351a8e387c7cdf4ffe115102ff12e3c275f218"
+    },
+    {
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1609253&lang=2&reg=48",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://indianexpress.com/article/cities/amritsar/28-sikh-pilgrims-arrive-in-pakistan-kartarpur-corridor-on-1st-day-of-reopening-7627912/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://pid.gov.pk/site/press_detail/18359",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://mofa.gov.pk/press-releases/first-anniversary-of-the-opening-of-kartarpur-corridor",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R6-SC-006-D1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kartarpur-dera-baba-nanak",
+          "name": "Dera Baba Nanak–Kartarpur corridor",
+          "coordinates": [
+            75.0260629,
+            32.0464016
+          ],
+          "coordinate_method": "Arithmetic mean of mapped OSM way vertices from fresh XML, approximate crossing-area marker (not survey centroid): way/824588277",
+          "precision": "Corridor processing-area reference, approximately 500 m, not exact international zero-point line.",
+          "source_urls": [
+            "https://www.openstreetmap.org/way/824588277",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=74.99,32.03,75.06,32.09"
+          ],
+          "evidence_note": "Named Immigration Complex Dera Baba Nanak at Indian corridor end; correct pilgrimage service facility, distinct from shrine, Jassar rail bridge and Attari.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-kartarpur.xml",
+          "sha256": "f29c51ae08fc2a2c7eaf681293d000bfc18453f276216f4dba4c62375605c486",
+          "osm_feature": "way/824588277",
+          "osm_version": "8",
+          "osm_timestamp": "2026-01-06T12:46:31Z",
+          "identity_tags": {
+            "area": "yes",
+            "barrier": "border_control",
+            "building": "yes",
+            "name": "Immigration Complex, Dera Baba Nanak"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kartarpur visa-free pilgrimage corridor; Pilgrims travelling from India through Kartarpur corridor; Pilgrim journeys India to Pakistan and return",
+      "date_scope_check": {
+        "scope": "Kartarpur visa-free pilgrimage corridor; Pilgrims travelling from India through Kartarpur corridor; Pilgrim journeys India to Pakistan and return",
+        "start_earliest": "2020-03-16",
+        "start_latest": "2020-03-16",
+        "end_earliest": "2021-11-17",
+        "end_latest": "2021-11-17",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "assessment": "March 16 2020 suspension and November 17 2021 restoration retained. Pakistani earlier permission does not imply India resumed service."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

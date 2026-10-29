@@ -1,0 +1,95 @@
+{
+  "record_id": "REC50-R12-005",
+  "pass": "a",
+  "agent": "/root/geography_asia_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Hili road-port bilateral freight strike; passport passengers continued. The six-day reported episode does not cover the neighbouring railway.",
+  "source_checks": [
+    {
+      "url": "https://www.bssnews.net/others/421339",
+      "access_status": "full_text_reopened_via_web",
+      "finding": "BSS September 5 observes resumed bilateral trucks, describes August 30 onset and uninterrupted passport passenger movement.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-65.json",
+      "sha256": "8c11382896da8f464ddc543d2a3ee5f4f9538a61ceb05c897be4336a0690343c"
+    },
+    {
+      "url": "https://lpai.gov.in/sites/default/files/2023-11/2.pdf",
+      "access_status": "search_indexed_official_map_description",
+      "finding": "Indexed planning map distinguishes existing zero line/LCS from proposed ICP; oversized direct PDF unavailable.",
+      "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/web-batch-60.json",
+      "sha256": "943e136442b40b9d9961f3e65db9bcab99ba85a4a609418826840f037ea81f0a"
+    },
+    {
+      "url": "https://unb.com.bd/category/Bangladesh/indian-exporters-strike-halts-trade-at-hili-land-port/194189",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://bdnews24.com/business/26136f913446",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    },
+    {
+      "url": "https://en.sarabangla.net/news/post-25578/hili-land-port-resumes-trade-after-5-day-halt/",
+      "access_status": "inaccessible",
+      "finding": "Original URL reopened; retrieval failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "evidence_path": null,
+      "sha256": null
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R12-005-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-hili-zero-line",
+          "name": "Hili road crossing / zero-line area",
+          "coordinates": [
+            89.0067033,
+            25.2811846
+          ],
+          "coordinate_method": "Direct WGS84 longitude/latitude of freshly retrieved OSM node/3306585529",
+          "precision": "Approximate road crossing-area reference, 500 m; exact zero-line pillar or protest footprint not surveyed.",
+          "source_urls": [
+            "https://www.openstreetmap.org/node/3306585529",
+            "https://api.openstreetmap.org/api/0.6/map?bbox=88.99,25.27,89.03,25.31"
+          ],
+          "evidence_note": "Topological transition between Indian NH512 way323884653 and Bangladeshi N521 way226279197, next to mapped frontier and railway. Cargo road crossing, not rail station or future ICP.",
+          "evidence_path": "research/geography-audit-2026-10-29/evidence/asia-a/area-hili.xml",
+          "sha256": "7374fd91891fffd7f23b79fee39f71aac856f35385506db3959b1715c1c7a3bb",
+          "osm_feature": "node/3306585529",
+          "osm_version": "2",
+          "osm_timestamp": "2022-03-20T09:23:59Z",
+          "identity_tags": {
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Bilateral goods interchange at Hili during the August–September 2026 exporters strike",
+      "date_scope_check": {
+        "scope": "Bilateral goods interchange at Hili during the August–September 2026 exporters strike",
+        "start_earliest": "2026-08-30",
+        "start_latest": "2026-08-30",
+        "end_earliest": "2026-09-05",
+        "end_latest": "2026-09-05",
+        "last_confirmed": null,
+        "analysis_included": true,
+        "contested": false,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "evidence_only_pending_geographic_review",
+        "assessment": "August 30–September 5 2026 dates retained; BSS observes actual trucks entering both directions. Six calendar days is not exact elapsed hours."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": []
+}

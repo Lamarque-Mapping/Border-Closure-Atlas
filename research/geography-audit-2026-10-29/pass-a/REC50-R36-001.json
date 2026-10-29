@@ -1,0 +1,51 @@
+{
+  "record_id": "REC50-R36-001",
+  "agent": "geography_africa_middle_east_a2",
+  "review_date": "2026-10-29",
+  "verification_status": "verified",
+  "record_scope_reconstruction": "Explicit Cameroon national land-border election order, represented by all six independently identified land-frontier policy references. Actual operation of individual road, rail or river posts was not established.",
+  "source_checks": [
+    {
+      "url": "https://www.xinhuanet.com/english/2020-02/08/c_138764561.htm",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Contemporaneous February 7 dispatch reports closure 48 hours before February 9 poll and reopening next day. International flights exempt; separate February 8–9 domestic circulation ban must not be merged.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-33.json"
+    },
+    {
+      "url": "https://prc.cm/fr/le-cameroun/presentation",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Presidency geographical description independently identifies all six land neighbours: Chad, Central African Republic, Congo, Gabon, Equatorial Guinea and Nigeria. The six references represent the national land-border policy domain, not every post closure.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-41.json"
+    },
+    {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-boundary-lines/",
+      "access_status": "fresh_web_text_extract_inspected",
+      "finding": "Original producer documentation identifies 1:10m land boundary dataset, version 5.1.0, de facto convention. Existing inventory references carry this source ZIP. No new vertices or gate coordinates derived; nationwide policy scope only, not a survey or evidence of gate enforcement.",
+      "evidence_file": "research/geography-audit-2026-10-29/evidence/africa_middle_east-a2/web-batch-41.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R36-001-P1",
+      "category": "wider_border",
+      "decision": "map",
+      "sites": [],
+      "border_reference_ids": [
+        "context-frontier-caf-cmr",
+        "context-frontier-cmr-cog",
+        "context-frontier-cmr-gab",
+        "context-frontier-cmr-gnq",
+        "context-frontier-cmr-nga",
+        "context-frontier-cmr-tcd"
+      ],
+      "complete": true,
+      "phase_applicability": "Modal scope: wider_border. February 7–10 ordered national land-border window, both directions. Complete territorial scope only, not proof of universal physical denial or actual reopening. International flight exemption retained; no domestic travel geometry.",
+      "unresolved": [
+        "Gate-level enforcement, exemptions and actual resumption remain unresolved."
+      ],
+      "date_scope_check": "Canonical dates and flags preserved: {\"kind\": \"ordered_window\", \"start_earliest\": \"2020-02-07\", \"start_latest\": \"2020-02-07\", \"end_earliest\": \"2020-02-10\", \"end_latest\": \"2020-02-10\", \"last_confirmed\": null, \"analysis_included\": true, \"contested\": false, \"strictly_over_24_hours\": null}. Geography does not supply onset, reopening, continuous enforcement or extension to review date. Native qualification: International flights are expressly exempted in the reported order. The February 8–9 domestic circulation ban is separate; no complete operational duration."
+    }
+  ],
+  "unresolved": [],
+  "pass": "a"
+}

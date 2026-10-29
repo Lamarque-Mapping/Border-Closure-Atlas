@@ -1,0 +1,68 @@
+{
+  "record_id": "NP-COV-EUR-005",
+  "pass": "b",
+  "agent": "geography_americas_europe_b2",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Participating Bosnian road freight terminals on EU/Croatia frontier; cargo-only campaign includes Bijaca and Gradiska, with passenger and specified cargo exceptions.",
+  "source_checks": [
+    {
+      "url": "https://n1info.ba/english/news/transport-operators-begin-blockade-of-freight-border-terminals-with-the-eu/",
+      "access_status": "full_retrieved",
+      "finding": "Full January26 N1/FENA report identifies noon beginning at Bosnia-EU freight terminals and imports/exports; does not enumerate every affected terminal."
+    },
+    {
+      "url": "https://glashrvatske.hrt.hr/en/foreign/trucks-block-freight-traffic-at-croatia-s-borders-with-bosnia-and-herzegovina-and-montenegro-12540359",
+      "access_status": "full_retrieved",
+      "finding": "Full HRT explicitly identifies Gradiska and Bijaca; Bijaca trucks about100m from gate, passenger/emergency/military/medical/livestock passage allowed."
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/2424868070",
+      "access_status": "full_retrieved",
+      "finding": "Named Bijaca road-control node inspected and matched to expressly reported terminal."
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "NP-COV-EUR-005-P01",
+      "category": "multiple_named_sites",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "geo-bijaca-road-checkpoint",
+          "name": "Bijaca Bosnian road cargo approach",
+          "coordinates": [
+            17.5749337,
+            43.1232343
+          ],
+          "coordinate_method": "Directly inspected OSM node/2424868070 node; XML sha256 ecf57debd957204dfba6f4832c483b84971f34a95b6d983f0f50347d8c4a7568",
+          "precision": "Crossing-area representative, approximately 100 m; not surveyed obstruction footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/2424868070"
+          ],
+          "evidence_note": "HRT specifically names Bijaca protest about100m from crossing; node represents gate area only, not all Bosnian terminals."
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Participating land-border cargo terminals in Bosnia and Herzegovina; geographic evidence applies only to this recorded scope.",
+      "date_scope_check": {
+        "canonical_kind": "closed_interval",
+        "start_earliest": "2026-01-26",
+        "start_latest": "2026-01-26",
+        "end_earliest": "2026-01-30",
+        "end_latest": "2026-01-30",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "assessment": "Canonical chronology retained. Duration, short/same-day status, uncertainty or contested dates are not geographic exclusions. No new endpoint inferred."
+      },
+      "unresolved": [
+        "Bijaca only partially located at gate representative; full participating-terminal roster and each cargo access point unverified. No whole Bosnia border line."
+      ]
+    }
+  ],
+  "unresolved": [
+    "Bijaca only partially located at gate representative; full participating-terminal roster and each cargo access point unverified. No whole Bosnia border line."
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "record_id": "FU-COV-LAM-001",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Two separate October2023 cargo protests affect Las Manos Honduras–Nicaragua road customs. Light vehicles and some perishable cargo exceptions do not imply full closure.",
+  "source_checks": [
+    {
+      "url": "https://proceso.hn/continua-bloqueada-la-aduana-las-manos-zona-fronteriza-entre-honduras-y-nicaragua/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "October19 report places renewed freight blockade since Wednesday night, while light vehicles and perishable exceptions continue.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-086.json"
+    },
+    {
+      "url": "https://hch.tv/normalizado-el-paso-en-frontera-las-manos-luego-que-rastreros-recularan-con-toma/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "October12 report says truckers withdrew; describes earlyThursday beginning, differing from canonicalOctober11 start, which remains qualified.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-088.json"
+    },
+    {
+      "url": "https://hch.tv/normalizada-circulacion-del-transporte-de-carga-en-fronteras-tras-eliminacion-de-visas/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "October25 report says Las Manos freight movement normalized Tuesday night after visa agreement, supporting scopedOctober24 ending.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-097.json"
+    },
+    {
+      "url": "https://mapcarta.com/N6515656585",
+      "access_status": "fresh_geographic_extract",
+      "finding": "Named Aduana next to Honduran migration, near Las Manos border node2778106804; Nicaraguan immigration130m southeast. Protest approach not exact.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-091.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-LAM-001-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-las-manos-honduras-customs",
+          "name": "Las Manos Honduran customs reference",
+          "coordinates": [
+            -86.57072,
+            13.79381
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 6515656585; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N6515656585",
+            "https://www.openstreetmap.org/node/6515656585"
+          ],
+          "evidence_note": "Named Aduana next to Honduran migration, near Las Manos border node2778106804; Nicaraguan immigration130m southeast. Protest approach not exact.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-091.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Las Manos cargo protest obstruction",
+      "date_scope_check": {
+        "start_earliest": "2023-10-11",
+        "start_latest": "2023-10-12",
+        "end_earliest": null,
+        "end_latest": "2023-10-12",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Customs complex reference only; exact changing truck protest positions not located. Separate phases and date qualifications retained."
+      ]
+    },
+    {
+      "phase_id": "FU-COV-LAM-001-FU2",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-las-manos-honduras-customs",
+          "name": "Las Manos Honduran customs reference",
+          "coordinates": [
+            -86.57072,
+            13.79381
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 6515656585; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N6515656585",
+            "https://www.openstreetmap.org/node/6515656585"
+          ],
+          "evidence_note": "Named Aduana next to Honduran migration, near Las Manos border node2778106804; Nicaraguan immigration130m southeast. Protest approach not exact.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-091.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Las Manos cargo protest obstruction",
+      "date_scope_check": {
+        "start_earliest": "2023-10-18",
+        "start_latest": "2023-10-19",
+        "end_earliest": "2023-10-24",
+        "end_latest": "2023-10-24",
+        "last_confirmed": "2023-10-21",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Customs complex reference only; exact changing truck protest positions not located. Separate phases and date qualifications retained."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "821f9c62026b06405930bf6a757369520204c0c7f01a29d116b1875ffe2bd64f"
+}

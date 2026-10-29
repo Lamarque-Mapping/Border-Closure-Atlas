@@ -1,0 +1,78 @@
+{
+  "record_id": "R16-EU-007",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Intermittent January 2024 protest affects eligible empty trucks on Vicovu de Sus–Krasnoilsk road route; cars and pedestrians are not included in the freight obstruction.",
+  "source_checks": [
+    {
+      "url": "https://customs.gov.ua/news/zagalne-20/post/trivaie-blokuvannia-rumunskimi-straikariami-rukhu-vantazhivok-pered-punktami-propusku-siret-porubne-ta-vikovu-de-sus-krasnoyilsk-1450",
+      "access_status": "fresh_full_text_extract",
+      "finding": "January17 Ukrainian customs explicitly names this road post and Siret separately, describes truck queues before checkpoints, and says cars continue in both directions.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-086.json"
+    },
+    {
+      "url": "https://www.pravda.com.ua/eng/news/2024/01/19/7437958/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "January19 restoration report says only empty lorries may use Krasnoilsk. Geography does not remove documented overnight protest pause.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-092.json"
+    },
+    {
+      "url": "https://mapcarta.com/W1162384072",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named Vama Vicovu de Sus border building, 220m south of Krasnoilsk control; town and inland police headquarters rejected. Reference for Romanian approach blockade, not its precise barrier.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-094.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "R16-EU-007-R1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-vicovu-de-sus-road",
+          "name": "Vicovu de Sus road customs reference",
+          "coordinates": [
+            25.62114,
+            47.94657
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 1162384072; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W1162384072",
+            "https://www.openstreetmap.org/way/1162384072"
+          ],
+          "evidence_note": "Named Vama Vicovu de Sus border building, 220m south of Krasnoilsk control; town and inland police headquarters rejected. Reference for Romanian approach blockade, not its precise barrier.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-094.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Protester obstruction of eligible empty-truck traffic at Vicovu de Sus–Krasnoilsk only",
+      "date_scope_check": {
+        "start_earliest": "2024-01-15",
+        "start_latest": "2024-01-15",
+        "end_earliest": "2024-01-19",
+        "end_latest": "2024-01-19",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "intermittent_envelope_no_continuous_closed_state",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Romanian customs reference located; exact tractor barrier and queue extent not located. Intermittent dates retained."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "3bcbd744a0b504912984212e119e142405cdfe8cd8de9efc4a7e71be8406de19"
+}

@@ -1,0 +1,82 @@
+{
+  "record_id": "REC50-R17-003",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Tazhen–Daut Ata ordinary people, cars and buses during reconstruction. Heavy freight continued; earlier light-truck wording is not extended into the narrower later phase. Commissioning of one side is not paired restoration.",
+  "source_checks": [
+    {
+      "url": "https://www.gov.kz/org/kgd/press/news/details/927631?lang=ru",
+      "access_status": "full_text_web",
+      "finding": "Official Kazakhstan notice explicitly pairs Tazhen–Daut Ata and lists restricted passenger/light-vehicle cohorts from February1,2025.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r12-2.json",
+      "sha256": "3ffda10582b49088a67f99be1d66bbd9d21d4e1374c69c422f667e33aa3cd324"
+    },
+    {
+      "url": "https://www.gov.kz/org/kgd/press/news/details/998331?lang=ru",
+      "access_status": "full_text_web",
+      "finding": "Official extension confirms continuing restriction and negotiated extension through September; canonical later status remains unchanged.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r12-3.json",
+      "sha256": "e260e8ff62cc59d812c8d3b599b11448ddc0b4b367227f52ef934a28aea6d8ee"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/10253448422",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named road checkpoint coordinates predate2025 works; rail and village markers rejected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3b8a14b3b01bf11f7d34.xml",
+      "sha256": "f2bf2952eeeb33efa90e4d2da0a793936ddcf2abc30a9a00d98b8b1bb2941108",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3b8a14b3b01bf11f7d34.txt",
+      "text_sha256": "f2bf2952eeeb33efa90e4d2da0a793936ddcf2abc30a9a00d98b8b1bb2941108",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R17-003-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-tazhen-daut-ata-road",
+          "name": "Tazhen–Daut Ata road checkpoint",
+          "coordinates": [
+            55.9968423,
+            44.895754
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/10253448422"
+          ],
+          "evidence_note": "Named Tajen/Tazhen road border-control node, versionMay2024 before the passenger suspension. Dovut-Ata lies opposite; nearby Oazis railway station and Tazhen village are distinct.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/3b8a14b3b01bf11f7d34.xml",
+          "sha256": "f2bf2952eeeb33efa90e4d2da0a793936ddcf2abc30a9a00d98b8b1bb2941108"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Tazhen–Daut Ata ordinary people, cars and buses during reconstruction. Heavy freight continued; earlier light-truck wording is not extended into the narrower later phase. Commissioning of one side is not paired restoration.",
+      "date_scope_check": {
+        "start_earliest": "2025-02-01",
+        "start_latest": "2025-02-01",
+        "end_earliest": "2025-12-29",
+        "end_latest": "2025-12-29",
+        "last_confirmed": "2025-12-29",
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "People, passenger cars and buses are reported restricted from 1 February through 29 December 2025. Tazhen technical commissioning did not restore paired passage because Daut Ata still restricted this cohort. Heavy freight continued. The original light-freight restriction is not silently carried into the later scoped phase. An undated retrieved NewTimes account is not used to advance the numeric last-confirmed date."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "0ce87c79ad7b5999d4bf9309790dc762833f8d507302be39a2d5bdcf5caa0ae5",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

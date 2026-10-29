@@ -1,0 +1,234 @@
+{
+  "record_id": "FU-COV-EUR-001",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "December22 short episodes involve three distinct road facilities: Le Boulou A9 toll, Ventimiglia A10 toll plaza, and Strasbourg Pont de l’Europe approach. Two Ventimiglia phases describe traffic categories at the same plaza. No coastal, tram or rail crossing is substituted.",
+  "source_checks": [
+    {
+      "url": "https://www.publicsenat.fr/actualites/politique/des-centaines-de-gilets-jaunes-deloges-d-un-peage-a-la-frontiere-franco-espagnole",
+      "access_status": "fresh_full_text_extract",
+      "finding": "AFP report describes initial Le Boulou sliproad gathering then last mainline toll before Spain, selective truck obstruction and police afternoon clearance.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-095.json"
+    },
+    {
+      "url": "https://www.primocanale.it/archivio-news/203721-manifestazione-dei-gilet-gialli-alla-frontiera-di-ventimiglia-traffico-tornato-regolare.html",
+      "access_status": "fresh_search_extract",
+      "finding": "Original indexed text recovered after direct429: around150 protesters occupied A10 toll plaza from noon to shortly after15:00; heavy vehicles stopped for leaflets; coastal diversions are separate.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-097.json"
+    },
+    {
+      "url": "https://www.dna.fr/actualite/2018/12/22/gilets-jaunes-deux-interpellations-a-strasbourg-apres-un-blocage-avant-le-pont-de-l-europe",
+      "access_status": "fresh_full_text_extract",
+      "finding": "Original full text identifies morning avenue Vitry-le-François barricade behind Rhéna clinic07:30–08:45; afternoon bridge filtering and police interruption are distinct. Pflimlin was not blocked.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-098.json"
+    },
+    {
+      "url": "https://mapcarta.com/N36967365",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named Péage du Perthus mainline ASF toll, distinct from Le Boulou exit toll550m southwest; original report identifies last mainline toll before Spain after initial sliproad action.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-090.json"
+    },
+    {
+      "url": "https://mapcarta.com/W415636880",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Named steel road bridge, not Beatus Rhenanus tram bridge or railway bridge. Morning barricade on avenue Vitry-le-François lies west of this bridge reference.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-091.json"
+    },
+    {
+      "url": "https://mapy.com/en/?id=1072185692&source=osm",
+      "access_status": "fresh_search_geographic_extract",
+      "finding": "Mapy names Ventimiglia–Confine di stato / Barriera Ventimiglia; toll provider places state-border barrier atkm152. Original2018 report explicitly says A10 toll plaza in Italy, not coastal Ponte San Ludovico. Current plaza modernized2025; exact2018 footprint remains qualified.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-097.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-EUR-001-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-le-boulou-perthus-mainline-toll",
+          "name": "Le Boulou / Perthus A9 mainline toll",
+          "coordinates": [
+            2.82181,
+            42.52759
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 36967365; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N36967365",
+            "https://www.openstreetmap.org/node/36967365"
+          ],
+          "evidence_note": "Named Péage du Perthus mainline ASF toll, distinct from Le Boulou exit toll550m southwest; original report identifies last mainline toll before Spain after initial sliproad action.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-090.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Le Boulou toll on France–Spain A9 approach",
+      "date_scope_check": {
+        "start_earliest": "2018-12-22",
+        "start_latest": "2018-12-22",
+        "end_earliest": "2018-12-22",
+        "end_latest": "2018-12-22",
+        "last_confirmed": "2018-12-22",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Mainline plaza located; initial sliproad position not precisely located."
+      ]
+    },
+    {
+      "phase_id": "FU-COV-EUR-001-FU2",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-ventimiglia-motorway-toll-reference",
+          "name": "Ventimiglia motorway state-border toll reference",
+          "coordinates": [
+            7.5935092,
+            43.8003161
+          ],
+          "coordinate_method": "Published WGS84 coordinate for named toll in Mapy OSM representation",
+          "precision": "Approximate toll-plaza reference; historical2018 lane array not reconstructed.",
+          "source_urls": [
+            "https://mapy.com/en/?id=1072185692&source=osm",
+            "https://www.telepass.com/it/privati/servizi/telepedaggio/a10-genova-ventimiglia"
+          ],
+          "evidence_note": "Mapy names Ventimiglia–Confine di stato / Barriera Ventimiglia; toll provider places state-border barrier atkm152. Original2018 report explicitly says A10 toll plaza in Italy, not coastal Ponte San Ludovico. Current plaza modernized2025; exact2018 footprint remains qualified.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-097.json",
+              "access_status": "fresh_secondary_geographic_search_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ventimiglia motorway border crossing, freight obstruction",
+      "date_scope_check": {
+        "start_earliest": "2018-12-22",
+        "start_latest": "2018-12-22",
+        "end_earliest": "2018-12-22",
+        "end_latest": "2018-12-22",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Current toll reference only; historical plaza/lane obstruction not reconstructed."
+      ]
+    },
+    {
+      "phase_id": "FU-COV-EUR-001-FU3",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-ventimiglia-motorway-toll-reference",
+          "name": "Ventimiglia motorway state-border toll reference",
+          "coordinates": [
+            7.5935092,
+            43.8003161
+          ],
+          "coordinate_method": "Published WGS84 coordinate for named toll in Mapy OSM representation",
+          "precision": "Approximate toll-plaza reference; historical2018 lane array not reconstructed.",
+          "source_urls": [
+            "https://mapy.com/en/?id=1072185692&source=osm",
+            "https://www.telepass.com/it/privati/servizi/telepedaggio/a10-genova-ventimiglia"
+          ],
+          "evidence_note": "Mapy names Ventimiglia–Confine di stato / Barriera Ventimiglia; toll provider places state-border barrier atkm152. Original2018 report explicitly says A10 toll plaza in Italy, not coastal Ponte San Ludovico. Current plaza modernized2025; exact2018 footprint remains qualified.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-097.json",
+              "access_status": "fresh_secondary_geographic_search_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Ventimiglia motorway border crossing",
+      "date_scope_check": {
+        "start_earliest": "2018-12-22",
+        "start_latest": "2018-12-22",
+        "end_earliest": "2018-12-22",
+        "end_latest": "2018-12-22",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Same toll reference as freight phase; no separate coastal crossing inferred."
+      ]
+    },
+    {
+      "phase_id": "FU-COV-EUR-001-FU4",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-pont-europe-road-reference",
+          "name": "Pont de l’Europe Strasbourg–Kehl road bridge",
+          "coordinates": [
+            7.80204,
+            48.57376
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of way 415636880; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/W415636880",
+            "https://www.openstreetmap.org/way/415636880"
+          ],
+          "evidence_note": "Named steel road bridge, not Beatus Rhenanus tram bridge or railway bridge. Morning barricade on avenue Vitry-le-François lies west of this bridge reference.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-091.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Pont de l’Europe road approach, Strasbourg",
+      "date_scope_check": {
+        "start_earliest": "2018-12-22",
+        "start_latest": "2018-12-22",
+        "end_earliest": "2018-12-22",
+        "end_latest": "2018-12-22",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": false,
+        "temporal_display_rule": "day_marker_no_whole_day_duration",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Bridge route reference only; exact morning avenue Vitry-le-François barricade not located. Short phases remain eligible."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "121cf5c39a5735ee800b73d8d566b68b40b9bcf5c63bb31bb15180b84b853fc2"
+}

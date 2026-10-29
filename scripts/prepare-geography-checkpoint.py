@@ -14,6 +14,8 @@ SOURCE_FILES = [
     'scripts/geography-audit-progress.cjs', 'scripts/apply-geography-audit.cjs',
     'scripts/verify-geography-audit.cjs', 'scripts/prepare-geography-checkpoint.py',
     'scripts/build-crossing-geography.cjs', 'scripts/verify-crossing-map.cjs',
+    'scripts/build_geography_audit_report.py', 'scripts/build-gis-downloads.py',
+    'scripts/verify-gis-downloads.py', 'scripts/analysis-template.html',
 ]
 AUDIT_FILES = ['README.md', 'audit-plan.json', 'baseline-map-bindings.json',
                'reconciled-decisions.json', 'integration-receipt.json']
@@ -46,6 +48,7 @@ def main():
                         paths.add(file)
     paths.update(Path(p) for p in SOURCE_FILES)
     paths.update(AUDIT/p for p in AUDIT_FILES)
+    paths.update(p.relative_to(ROOT) for p in (ROOT/AUDIT).glob('reconciliation-*.json'))
     previous = json.loads(args.previous_hashes.read_text()) if args.previous_hashes and args.previous_hashes.exists() else {}
     entries, hashes = [], {}
     for file in sorted(paths):

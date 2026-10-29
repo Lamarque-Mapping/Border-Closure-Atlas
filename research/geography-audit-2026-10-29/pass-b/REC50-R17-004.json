@@ -1,0 +1,148 @@
+{
+  "record_id": "REC50-R17-004",
+  "pass": "b",
+  "agent": "/root/geography_asia_b",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Two separately bound ordinary-passenger restrictions under the February15,2023 modernization order: Atameken–Gulistan/Syrdarya and Kazygurt–S.Nazhimov. Heavy freight continued. Atameken restoration and Kazygurt commissioning are not interchangeable endpoints.",
+  "source_checks": [
+    {
+      "url": "https://www.gov.kz/org/kgd/press/news/details/508408?lang=ru",
+      "access_status": "full_text_web",
+      "finding": "Official Kazakhstan order explicitly limits Atameken and Kazygurt to freight vehicles and suspends people, cars, buses and light vehicles.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r12-3.json",
+      "sha256": "e260e8ff62cc59d812c8d3b599b11448ddc0b4b367227f52ef934a28aea6d8ee"
+    },
+    {
+      "url": "https://www.gov.kz/org/kgd/press/news/details/542671?lang=ru",
+      "access_status": "inaccessible_web",
+      "finding": "Official follow-up URL inaccessible in this retrieval; no new claim drawn from it.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r12-3.json",
+      "sha256": "e260e8ff62cc59d812c8d3b599b11448ddc0b4b367227f52ef934a28aea6d8ee"
+    },
+    {
+      "url": "https://daryo.uz/en/2026/03/24/syrdarya-customs-post-in-uzbekistan-reopens-after-kazakh-checkpoint-reconstruction/",
+      "access_status": "full_text_web",
+      "finding": "Daryo original distinguishes restored Uzbek Syrdarya passenger traffic from the two2023 restrictions and continued heavy freight.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/web-r12-3.json",
+      "sha256": "e260e8ff62cc59d812c8d3b599b11448ddc0b4b367227f52ef934a28aea6d8ee"
+    },
+    {
+      "url": "https://uztradeinfo.uz/menu/27",
+      "access_status": "indexed_extract_only",
+      "finding": "Official roster pairs Atameken with Gulistan, Kazygurt with Tashkent; later local names are cross-checked against the original2026 report.",
+      "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/search-sites-47.json",
+      "sha256": "936760b2ec2a3a5ad235a5b9da82a3e1ec4d69940ca9202e2a330a5c9b2928ff"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/2711451863",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Atameken road-control node inspected, not unrelated village.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/4d6ab6cef0e6cfa45d77.xml",
+      "sha256": "b61282b286f2e3928c5cc2cf9df681e408b82b4b9e8dbc9c18db50166ef89b6a",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/4d6ab6cef0e6cfa45d77.txt",
+      "text_sha256": "b61282b286f2e3928c5cc2cf9df681e408b82b4b9e8dbc9c18db50166ef89b6a",
+      "status": 200
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/node/3870535802",
+      "access_status": "full_text_fresh_direct_retrieval",
+      "finding": "Named Kazygurt/Maisky road-control node inspected.",
+      "raw_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/66238deb717beb21fbdd.xml",
+      "sha256": "a03ea80844df6523085ebaa838f8c7331a3c3d1cbbbf12068773b0e4fbb9ecf4",
+      "text_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/66238deb717beb21fbdd.txt",
+      "text_sha256": "a03ea80844df6523085ebaa838f8c7331a3c3d1cbbbf12068773b0e4fbb9ecf4",
+      "status": 200
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "REC50-R17-004-P1",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-atameken-gulistan-road",
+          "name": "Atameken–Gulistan/Syrdarya road crossing",
+          "coordinates": [
+            68.560429,
+            40.8369832
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/2711451863"
+          ],
+          "evidence_note": "Explicit MAPP Atameken road border_control west of Uzbek Sirdaryo, not the unrelated Atameken village near Kazygurt. Official Uzbek roster pairs Atameken with Gulistan;2026 source calls the paired Uzbek facility Syrdarya.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/4d6ab6cef0e6cfa45d77.xml",
+          "sha256": "b61282b286f2e3928c5cc2cf9df681e408b82b4b9e8dbc9c18db50166ef89b6a"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Atameken–Gulistan/Uzbek Syrdarya ordinary passenger phase only.",
+      "date_scope_check": {
+        "start_earliest": "2023-02-15",
+        "start_latest": "2023-02-15",
+        "end_earliest": "2025-11-25",
+        "end_latest": "2026-03-24",
+        "last_confirmed": "2025-11-25",
+        "temporal_display_rule": "scoped_interval_with_endpoint_uncertainty",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "REC50-R17-004-P1 and P2: The specific official passenger suspension effective 15 February 2023, later checkpoint-specific reporting, and the March 2026 account of the reconstruction restriction establish real sustained restrictions above 24 hours. These scoped accounts take precedence over the December 2025 commissioning article’s broad statement that passenger and freight traffic was uninterrupted across the modernization programme. That broad statement remains a conflicting description, not a basis for erasing the documented passenger bans. Precise uninterrupted elapsed durations remain unquantified.\n\nP1: Kazakh Atameken commissioning on 16 April 2025 did not restore paired personal passage while Uzbek bridge works continued. Actual personal and passenger-vehicle restoration at Uzbek Syrdarya is reported by 24 March 2026; the first day remains unknown.\n\nP2: Kazygurt’s December 2025 commissioning does not independently establish first restored paired ordinary passenger passage. The November account describes construction starting in March 2023; the contemporaneous official measure specifies passenger suspension from 15 February 2023. Heavy freight continued, and no network-wide closure is asserted."
+      },
+      "unresolved": []
+    },
+    {
+      "phase_id": "REC50-R17-004-P2",
+      "category": "single_site",
+      "decision": "map",
+      "sites": [
+        {
+          "proposed_site_id": "post-kazygurt-nazhimov-road",
+          "name": "Kazygurt–S. Nazhimov road crossing",
+          "coordinates": [
+            69.4061729,
+            41.5252636
+          ],
+          "coordinate_method": "Fresh OSM API XML node coordinates",
+          "precision": "Approximate crossing area, about 100 m; not the historical barrier footprint",
+          "source_urls": [
+            "https://api.openstreetmap.org/api/0.6/node/3870535802"
+          ],
+          "evidence_note": "Explicit MAPP Kazygurt road border_control with Maisky alias, version2024; mapped S.Nadzhimov post immediately southeast. Official passenger restriction names Kazygurt; Uzbek source identifies the paired S.Nazhimov facility.",
+          "raw_evidence_path": "/workspace/scratch/684c27d5985c/border-closure-atlas/research/geography-audit-2026-10-29/evidence/asia-b/66238deb717beb21fbdd.xml",
+          "sha256": "a03ea80844df6523085ebaa838f8c7331a3c3d1cbbbf12068773b0e4fbb9ecf4"
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": true,
+      "phase_applicability": "Kazygurt–S.Nazhimov ordinary persons, cars and buses only; no first reopening date inferred from commissioning.",
+      "date_scope_check": {
+        "start_earliest": "2023-02-15",
+        "start_latest": "2023-02-15",
+        "end_earliest": "2025-11-25",
+        "end_latest": "2025-11-25",
+        "last_confirmed": "2025-11-25",
+        "temporal_display_rule": "censored_interval_stop_at_last_confirmation_unknown_afterward",
+        "held_status_preserved": false,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "finding": "Geography review only. Current phase bounds, traffic exceptions, uncertain onset, reopening status and >24-hour decision are retained; current map features are not evidence of historical operation.",
+        "qualification": "REC50-R17-004-P1 and P2: The specific official passenger suspension effective 15 February 2023, later checkpoint-specific reporting, and the March 2026 account of the reconstruction restriction establish real sustained restrictions above 24 hours. These scoped accounts take precedence over the December 2025 commissioning article’s broad statement that passenger and freight traffic was uninterrupted across the modernization programme. That broad statement remains a conflicting description, not a basis for erasing the documented passenger bans. Precise uninterrupted elapsed durations remain unquantified.\n\nP1: Kazakh Atameken commissioning on 16 April 2025 did not restore paired personal passage while Uzbek bridge works continued. Actual personal and passenger-vehicle restoration at Uzbek Syrdarya is reported by 24 March 2026; the first day remains unknown.\n\nP2: Kazygurt’s December 2025 commissioning does not independently establish first restored paired ordinary passenger passage. The November account describes construction starting in March 2023; the contemporaneous official measure specifies passenger suspension from 15 February 2023. Heavy freight continued, and no network-wide closure is asserted."
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "9870654ac91917b29b000475ec10058a45e11e52a9fb0ef90542bf6232a7f01e",
+  "independence_statement": "Pass B reconstruction from original-source retrievals and coordinate evidence; no pass A files or judgments consulted."
+}

@@ -1,0 +1,124 @@
+{
+  "record_id": "FU-COV-NAM-006",
+  "pass": "a",
+  "agent": "geography_americas_europe_a",
+  "review_date": "2026-10-29",
+  "verification_status": "qualified",
+  "record_scope_reconstruction": "Mexicali east commercial approach protest and limited release of trucks already inside Mexican export customs are overlapping but separate scopes. Passenger downtown gates are outside this record.",
+  "source_checks": [
+    {
+      "url": "https://zetatijuana.com/2025/12/liberan-parcialmente-aduana-comercial-en-mexicali/",
+      "access_status": "fresh_full_text_extract",
+      "finding": "December8 original describes machinery partially withdrawn after11:00, import access into Mexico, and blockade begunDecember4; no exact first full-opening minute.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-087.json"
+    },
+    {
+      "url": "https://oem.com.mx/lavozdelafrontera/local/liberan-garita-de-exportacion-de-mexicali-sera-de-manera-parcial-27178790",
+      "access_status": "fresh_search_extract",
+      "finding": "Directpage403; fresh indexed original confirms only trucks already inside customs in Mexico could exit during partial lifting.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-097.json"
+    },
+    {
+      "url": "https://mapcarta.com/N3766890312",
+      "access_status": "fresh_geographic_extract",
+      "finding": "Named Calexico East border checkpoint near East Carr Road office. Page regional attribution Mexico is inconsistent with US port name; point used only as paired crossing reference, not Mexican export-yard barrier.",
+      "web_evidence_file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-097.json"
+    }
+  ],
+  "phase_decisions": [
+    {
+      "phase_id": "FU-COV-NAM-006-FU1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-calexico-east-route-reference",
+          "name": "Calexico East port route reference",
+          "coordinates": [
+            -115.38871,
+            32.67498
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 3766890312; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N3766890312",
+            "https://www.openstreetmap.org/node/3766890312"
+          ],
+          "evidence_note": "Named Calexico East border checkpoint near East Carr Road office. Page regional attribution Mexico is inconsistent with US port name; point used only as paired crossing reference, not Mexican export-yard barrier.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-097.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Mexicali–Calexico east commercial crossing (exact lane/approach coordinates unresolved)",
+      "date_scope_check": {
+        "start_earliest": "2025-12-04",
+        "start_latest": "2025-12-04",
+        "end_earliest": "2025-12-07",
+        "end_latest": "2025-12-08",
+        "last_confirmed": "2025-12-07",
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": true,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Paired east crossing reference only; Mexican export-yard location and exact commercial lane barriers unresolved. Unknown onset of narrow phase and broader date uncertainty retained."
+      ]
+    },
+    {
+      "phase_id": "FU-COV-NAM-006-C7P1",
+      "category": "single_site",
+      "decision": "partial",
+      "sites": [
+        {
+          "proposed_site_id": "post-calexico-east-route-reference",
+          "name": "Calexico East port route reference",
+          "coordinates": [
+            -115.38871,
+            32.67498
+          ],
+          "coordinate_method": "Published coordinate in Mapcarta representation of node 3766890312; original source geometry not freshly retrieved",
+          "precision": "Approximate named feature reference, not surveyed historical gate or barrier; published decimal precision is not accuracy.",
+          "source_urls": [
+            "https://mapcarta.com/N3766890312",
+            "https://www.openstreetmap.org/node/3766890312"
+          ],
+          "evidence_note": "Named Calexico East border checkpoint near East Carr Road office. Page regional attribution Mexico is inconsistent with US port name; point used only as paired crossing reference, not Mexican export-yard barrier.",
+          "geographic_evidence": [
+            {
+              "file": "research/geography-audit-2026-10-29/evidence/americas_europe-a/web-batch-097.json",
+              "access_status": "fresh_secondary_geographic_extract"
+            }
+          ]
+        }
+      ],
+      "border_reference_ids": [],
+      "complete": false,
+      "phase_applicability": "Trucks already inside Mexican export customs at Mexicali, permitted to leave during partial lifting",
+      "date_scope_check": {
+        "start_earliest": null,
+        "start_latest": null,
+        "end_earliest": "2025-12-08",
+        "end_latest": "2025-12-08",
+        "last_confirmed": null,
+        "contested": false,
+        "analysis_included": true,
+        "strictly_over_24_hours": null,
+        "temporal_display_rule": "dated_evidence_only_no_continuity_inference",
+        "assessment": "Dates, movement exceptions, endpoint qualification and >24-hour status remain as recorded; geographic reference does not independently establish uninterrupted closure or extend last-confirmed observations."
+      },
+      "unresolved": [
+        "Paired east crossing reference only; Mexican export-yard location and exact commercial lane barriers unresolved. Unknown onset of narrow phase and broader date uncertainty retained."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "input_sha256": "8452c1dca109da0fd19c73a8d65cdce06dbccc7171ea6c85c1551314b7bfdfed"
+}

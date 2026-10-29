@@ -25,6 +25,26 @@ assert manifest['counts'] == expected['meta']['counts']
 html = (ROOT/'dist/analysis.html').read_text()
 assert f"{manifest['counts']['mapped_records']} of {manifest['counts']['included_records']} included records" in html
 assert 'mapping work is incomplete' in html
+audit_summary = json.loads((DOWNLOADS/'geography-audit-summary.json').read_text())
+assert audit_summary['source_sha256'] == expected['meta']['source_sha256']
+assert audit_summary['counts']['assigned_records'] == 387
+assert (audit_summary['baseline']['mapped_records'] + audit_summary['counts']['newly_mapped_records']) == manifest['counts']['mapped_records']
+audit_zip = DOWNLOADS/'Global_Border_Closures_Geography_Audit.zip'
+assert ('href="downloads/'+audit_zip.name+'?v='+hashlib.sha256(audit_zip.read_bytes()).hexdigest()+'"') in html
+with zipfile.ZipFile(audit_zip) as z:
+    assert z.testzip() is None
+    assert json.loads(z.read('geography-audit-summary.json')) == audit_summary
+    audit_rows = list(csv.DictReader(io.StringIO(z.read('geography-audit-records.csv').decode('utf-8-sig'))))
+    assert len(audit_rows) == len({r['record_id'] for r in audit_rows}) == 387
+    assert sum(r['both_passes_saved'] == 'True' for r in audit_rows) == audit_summary['counts']['both_passes_saved']
+    for d in json.loads(z.read('reconciled-decisions.json'))['decisions']:
+        reviewers = []
+        for ref in d['audit_passes']:
+            key = ref['path'].split('geography-audit-2026-10-29/', 1)[1]
+            raw = z.read(key)
+            assert hashlib.sha256(raw).hexdigest() == ref['sha256']
+            reviewers.append(json.loads(raw)['agent'])
+        assert len(set(reviewers)) == 2
 
 with tempfile.TemporaryDirectory(prefix='verify-atlas-gis-') as temp:
     folder = Path(temp)
@@ -38,6 +58,7 @@ with tempfile.TemporaryDirectory(prefix='verify-atlas-gis-') as temp:
             assert z.testzip() is None
             assert json.loads(z.read('manifest.json')) == expected['meta']
             assert json.loads(z.read('research-method.json')) == expected['method']
+            assert json.loads(z.read('geography-audit-summary.json')) == audit_summary
             assert 'last_confirmed is an observation date, NOT a reopening' in z.read('README.txt').decode()
             z.extractall(folder/format)
     gpkg = folder/'geopackage/Global_Border_Closures.gpkg'
