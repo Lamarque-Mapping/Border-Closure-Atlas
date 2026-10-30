@@ -205,7 +205,7 @@ const csv=parseCSV(withMapping.content),legacyCSV=parseCSV(withoutMapping.conten
 assert.equal(csv.length,includedCount+1,'one header and the exact included population of correctly parsed data rows');
 assert.equal(csvIndex.size,includedCount,'no CSV record IDs are lost or duplicated');
 assert(csv.every(row=>row.length===headers.length),'multiline evidence never breaks the CSV column layout');
-const mappingColumn=headers.indexOf('Map location status');assert(mappingColumn>=0);assert.equal(headers.at(-1),'Later-status evidence');
+const mappingColumn=headers.indexOf('Map location status');assert(mappingColumn>=0);assert(headers.includes('Later-status evidence'));assert.equal(headers.at(-1),'Case description');
 assert.equal(csvIndex.get(maz.id)[mappingColumn],'Crossing mapped','mapped named crossing is described accurately');
 const awaiting=singles.map(row=>byID.get(row.record_id)).find(e=>!ids(e).length);
 assert(awaiting,'at least one explicitly unresolved whole record is available for the CSV check');

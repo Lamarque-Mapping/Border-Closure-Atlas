@@ -79,6 +79,9 @@ times. Lists and nested source histories are JSON text, except countries,
 continents, rationales and source_ids (semicolon-separated), and URL lists
 (newline-separated). GeoPackage keeps full text without shapefile field-name
 or text-length truncation. fields.json lists the stored columns and types.
+The case_description field contains the individually written case summary,
+checked in two passes by different AI agents against saved source evidence.
+It does not replace the phase scope, chronology or source-access qualifications.
 CSV files are UTF-8; formula-like text is prefixed with an apostrophe for safe
 spreadsheet opening. The GeoPackage and GeoJSON preserve the original text.
 

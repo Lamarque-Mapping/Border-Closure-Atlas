@@ -8,11 +8,11 @@ const current=summary.describe({...sc12,event_hash:oldHash});
 assert(!current.includes('252-day period'),'SC12 cannot revive the old operational-duration paragraph');
 assert(current.includes('rule in force')&&current.includes('freight'),'audited policy scope and exceptions remain explicit');
 assert.equal(current,summary.describe({...sc12,audit_current:true,audited_reader:undefined,event_hash:oldHash}),'compact audit flag preserves current summary');
-const qualified={...sc12,audit_current:true,scope:'Old parent scope',official_rationale:'Old motive',duration_periods:[{scope:'Birch checkpoint passengers; freight and returning residents excepted.',measure_type:'formal_policy_period'}]};
+const qualified={...sc12,record_summary:undefined,audit_current:true,scope:'Old parent scope',official_rationale:'Old motive',duration_periods:[{scope:'Birch checkpoint passengers; freight and returning residents excepted.',measure_type:'formal_policy_period'}]};
 const text=summary.describe(qualified);
 assert(text.includes('passengers; freight and returning residents excepted.'),'a semicolon cannot discard an exception');
 assert(!text.includes('Old parent scope')&&!text.includes('Old motive'),'legacy parent attributes cannot override audited phase scope');
-assert(summary.describe(data.events.find(e=>e.id==='R16-AN-001')).includes('cargo could cross after transshipment'),'a freight-vehicle restriction must retain the cargo exception');
+assert(/cargo|goods/i.test(summary.describe(data.events.find(e=>e.id==='R16-AN-001')))&&/transfer|transship/i.test(summary.describe(data.events.find(e=>e.id==='R16-AN-001'))),'a freight-vehicle restriction must retain the cargo-transfer exception');
 
 const sa025=data.events.find(e=>e.id==='SA025'),road=sa025.duration_periods.find(p=>p.period_id==='SA025-D1');
 const rail=sa025.duration_periods.find(p=>p.analysis_included!==false);

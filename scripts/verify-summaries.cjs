@@ -20,8 +20,9 @@ const legacyHashes={GL01:'9c9e6a17200b78097bc980979d975661bc85edd31191ddbb0c650d
 for(const [id,hash] of Object.entries(legacyHashes)){
  const e=byID.get(id);assert(e.audited_reader,id+' current accepted reader is retained');
  assert.notEqual(e.event_hash,hash,id+' source identity changed with audited evidence');
- assert.equal(S.describe(e),S.describe({...e,event_hash:'replacement-audited-record'}),id+' current fields drive the replacement summary');
- assert.equal(S.describe(e),S.describe({...e,event_hash:hash}),id+' cannot revive its old editorial paragraph');
+ const fallback=S.describe({...e,record_summary:undefined});
+ assert.equal(fallback,S.describe({...e,event_hash:'replacement-audited-record'}),id+' changed source identity invalidates reviewed prose');
+ assert.equal(fallback,S.describe({...e,event_hash:hash}),id+' cannot revive its old editorial paragraph');
  assert.equal(S.describe({...e,audit_current:true,audited_reader:undefined,event_hash:hash}),S.describe({...e,audit_current:true,audited_reader:undefined,event_hash:'replacement-audited-record'}),id+' compact audit flag also blocks old editorial prose');
 }
 assert(!S.describe(byID.get('EU022')).includes('later tightening and final repeal are not fully reconstructed'),'documented policy easing does not retain the obsolete research gap');
@@ -31,7 +32,12 @@ assert(!S.describe(byID.get('SA025')).includes('This entry is excluded from the 
 const sa025=byID.get('SA025'),eligibleRail=sa025.duration_periods.filter(p=>p.analysis_included!==false);
 assert.equal(S.describe(sa025),S.describe(sa025,{periods:eligibleRail}),'SA025 default summary uses the eligible rail evidence without excluded road qualifications');
 assert.equal(S.describe(sa025,{periods:sa025.duration_periods}),S.describe(sa025,{periods:eligibleRail}),'explicit summary periods cannot reintroduce excluded road evidence');
-for(const e of D.events.filter(e=>e.inclusion_status==='Excluded'||e.inclusion_status==='Quarantined'))assert(S.describe(e).includes('excluded from the analysis'),e.id+' actual exclusion remains explicit');
+for(const e of D.events.filter(e=>e.inclusion_status==='Excluded'||e.inclusion_status==='Quarantined')){
+ assert(e.quarantined&&e.excluded_from_map&&e.quarantine_reason,e.id+' exclusion label and reason remain available to the interface');
+ assert(S.describe({...e,record_summary:undefined}).includes('excluded from the analysis'),e.id+' fallback also preserves exclusion');
+}
+assert(/reportedly announced/.test(S.describe(byID.get('GL18')))&&/implementation.*not been established/.test(S.describe(byID.get('GL18'))),'an unimplemented report is not rewritten as a confirmed closure');
+assert(/cancelled/.test(S.describe(byID.get('SUP-004'))),'a cancelled order is not rewritten as an implemented closure');
 // Parent fields can name a broader set of crossings and traffic than the phase.
 const narrow={id:'test',scope:'International border',crossings:'Apex checkpoint; Birch checkpoint',movement:'Passengers and freight',official_rationale:'Security concerns',context:'Outdated all-border closure',uncertainty:'',duration_periods:[{scope:'Birch checkpoint only',movement:'Passengers',measure_type:'operational_spell',observed_reopening:'Yes',qualification:'Cargo remained exempt.'}]};
 const narrowText=S.describe(narrow);assert(narrowText.includes('passengers at Birch checkpoint'));assert(!narrowText.includes('Apex'));assert(!narrowText.includes('Passengers and freight'));assert(!narrowText.includes('Outdated'));assert(narrowText.includes('Cargo remained exempt'));

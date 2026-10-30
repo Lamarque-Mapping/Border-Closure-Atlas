@@ -21,10 +21,14 @@ const METRICS=window.BorderAnalysisMetrics;
 const REGIONS=window.BorderAnalysisRegions;
 const cleanText = value => String(value==null?"":value).replace(/(\d)(calendar)/gi,"$1 $2").replace(/\bcalendar-day differences?\b/gi,"days").replace(/;\s*scoped endpoint only\b/gi,"; for the stated movement and location").replace(/\bcalendar(?:-date)? (days?)\b/gi,"$1").replace(/\s+to (?:the )?scoped endpoint\b/gi,"").replace(/\bscoped endpoint(s?)\b/gi,"endpoint$1").replace(/\bFormal policy:\s*/gi,"Policy: ").replace(/\b(days?) in policy period\b/gi,"$1").replace(/\boperational continuity not established\b/gi,"continuous closure not confirmed").replace(/\boperational continuity\b/gi,"continuous closure").replace(/\b1 days\b/g,"1 day");
 function analysisEvent(e){
+ const extraSources=window.BorderSummary.evidenceURLs(e).filter(url=>!e.sources.some(s=>s.url===url)).map(url=>({
+  ...(e.later_status_review?.sources||[]).find(s=>s.url===url),url,
+  source_type:'Evidence retained for the case description',content_access:'Saved claim assessment or later-status evidence; this prose review did not retrieve the page anew.'
+ }));
  const d={"Countries or territories":e.countries.join("; "),"Imposing authority":e.imposing_authority,"Geographical scope":e.scope,"Crossing points":e.crossings,Direction:e.direction,"Affected people or goods":e.movement,Exceptions:e.exceptions,"Enforcement evidence":e.enforcement,"Consequences evidence":e.consequences,"Last confirmed closed":e.last_confirmed_closed,"Record type":e.record_type,"Status observation":e.status_observation,Relationship:e.relationship};
  return {...e,research_area:REGIONS.area(e),codes:e.rationales,status:e.current_review.outcome,justification:e.official_rationale,policy:e.policy_group,dimensions:d,
   claims:e.current_review.claims.map(c=>({Field:c.field,"Evidence assessment":c.assessment,"Assessment note":c.note})),
-  sources:e.sources.map(s=>({"Source ID":s.source_id,Publisher:s.publisher,"Original reporting source":s.origin,Title:s.title,"Publication date":s.publication_date,"Source type":s.source_type,"Access level":s.content_access,"Supports fields":(s.supports||[]).join("; "),"Evidence note":s.evidence_note,URL:s.url,access_history:s.access_history||[]}))};
+  sources:[...e.sources,...extraSources].map(s=>({"Source ID":s.source_id,Publisher:s.publisher,"Original reporting source":s.origin,Title:s.title,"Publication date":s.publication_date,"Source type":s.source_type,"Access level":s.content_access,"Supports fields":(s.supports||[]).join("; "),"Evidence note":s.evidence_note,URL:s.url,access_history:s.access_history||[]}))};
 }
 // National histories remain separate from land-closure statistics.
 const EVENTS = shared.events.filter(e=>e.record_kind!=='national_policy'&&e.record_kind!=='border_status').map(analysisEvent);
@@ -359,8 +363,8 @@ async function withResearch(buttonID,action){
 }
 function exportRecordRows(full,selected,filename){
  const byID=new Map(full.events.map(e=>[e.id,analysisEvent(e)]));
- const headings=['ID','Region','Episode','Countries','Crossings','Current timing','Current review','Included','Rationales','Rationale attribution','Scope','Direction','Affected movement','Exceptions','Current uncertainty','Any dated evidence','Complete operational duration','Exact operational duration','Original start (historical)','Original endpoint (historical)','Source URLs','Research area'];
- downloadCSV(filename,[headings,...selected.map(e=>byID.get(e.id)).map(e=>[e.id,e.region,e.title,e.countries.join('; '),e.crossings,cleanText(e.current_timing),e.status,!e.quarantined,e.codes.join('; '),e.rationale_assignments.map(a=>a['Broad rationale']+': '+a['Evidence attribution']).join(' | '),e.scope,e.direction,e.movement,e.exceptions,e.uncertainty,e.timing_coverage.any_dated_evidence,e.timing_coverage.operational_complete,e.timing_coverage.operational_exact_complete,e.historical.start,e.historical.end,e.sources.map(s=>s.URL).join(' | '),e.research_area])]);
+ const headings=['ID','Region','Episode','Countries','Crossings','Current timing','Current review','Included','Rationales','Rationale attribution','Scope','Direction','Affected movement','Exceptions','Current uncertainty','Any dated evidence','Complete operational duration','Exact operational duration','Original start (historical)','Original endpoint (historical)','Source URLs','Research area','Case description'];
+ downloadCSV(filename,[headings,...selected.map(e=>byID.get(e.id)).map(e=>[e.id,e.region,e.title,e.countries.join('; '),e.crossings,cleanText(e.current_timing),e.status,!e.quarantined,e.codes.join('; '),e.rationale_assignments.map(a=>a['Broad rationale']+': '+a['Evidence attribution']).join(' | '),e.scope,e.direction,e.movement,e.exceptions,e.uncertainty,e.timing_coverage.any_dated_evidence,e.timing_coverage.operational_complete,e.timing_coverage.operational_exact_complete,e.historical.start,e.historical.end,e.sources.map(s=>s.URL).join(' | '),e.research_area,window.BorderSummary.describe(e)])]);
 }
 $("exportRows").addEventListener("click",()=>withResearch('exportRows',full=>exportRecordRows(full,filtered,filteredFilename('border-closures-current.csv',$("durationFilter").value))));
 $("exportAllRows").addEventListener("click",()=>withResearch('exportAllRows',full=>exportRecordRows(full,INCLUDED,'border-closures-included-records.csv')));

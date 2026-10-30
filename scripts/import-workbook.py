@@ -15,6 +15,7 @@ import json
 import re
 from pathlib import Path
 from release_common import DATA_PATH, MANIFEST_PATH, load_json, native_sheets, read_manifest, sha256
+from record_descriptions import attach_descriptions
 
 ROOT = Path(__file__).resolve().parents[1]
 CATEGORY_ORDER = ['Security', 'Health and biosecurity', 'Trade and protectionism', 'Migration',
@@ -514,6 +515,7 @@ def main():
         release=load_json(args.release)
         data,report=compile_release(release,load_json(args.reference),args.release.name,sha256(args.release),
             manifest,load_json(ROOT/manifest['files']['methodology']['path']))
+        attach_descriptions(data)
     args.output.mkdir(parents=True, exist_ok=True)
     (args.output/'data.js').write_text('window.BORDER_DATA = '+json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')+';\n')
     write(ROOT/'source/workbook-import-report.json', report)

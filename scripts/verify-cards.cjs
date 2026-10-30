@@ -11,7 +11,7 @@ const rosso=data.events.find(e=>e.id==='R16-AN-001'),html=context.locationRecord
 assert(html.includes('March 2018 – 11 Jul 2025'));
 assert(!html.includes('(reopened)'),'a formal transport agreement is not an observed reopening');
 assert(html.includes('Policy documented for 2659–2689 days; this does not measure continuous closure.'));
-assert(html.includes('Senegalese freight vehicles; cargo could cross after transshipment'),'the immediate paragraph distinguishes vehicle restrictions from permitted transferred cargo');
+assert(html.includes('Senegalese freight vehicles')&&/cargo for transfer to local trucks/.test(html)&&/goods themselves continued moving/.test(html),'the immediate paragraph distinguishes vehicle restrictions from permitted transferred cargo');
 assert(!html.includes('Unknown'));assert(!html.includes('Green point'));
 assert(html.includes('https://www.wto.org/english/tratop_e/tpr_e/s371_e.pdf'));
 assert(html.includes('https://ami.mr/fr/archives/275255'));
@@ -37,7 +37,7 @@ assert(context.locationRecordHTML(unresolved).includes('Dates and duration are n
 const through=data.events.find(e=>e.id==='R8-AS-001');
 assert(context.locationRecordHTML(through).includes('Evidence dated: 19 Sept 2017'));
 assert(context.locationRecordHTML(through).includes('These reports do not establish a continuous closure between the dates.'),'Kaytpas dated reports must not imply uninterrupted closure or a measured duration');
-assert(context.locationRecordHTML(through).includes('excludes Apkan as a separate gate'),'Kaytpas evidence must not become a reopening of the full Sokh route');
+assert(/Apkan.*(?:closed|separate)|(?:closed|separate).*Apkan/.test(context.locationRecordHTML(through)),'Kaytpas evidence must not become a reopening of the full Sokh route');
 for(const type of ['formal_policy_period','ordered_window','intermittent_regime']){
  const e=data.events.find(e=>C.periods(e).some(p=>p.measure_type===type));
  const markup=context.locationRecordHTML(e);assert(markup.includes(C.measureLabel(type)));assert(!markup.includes('numeric duration withheld'));

@@ -1,4 +1,4 @@
-/* Display-only event descriptions from the current workbook fields.
+/* Individually reviewed case descriptions, with a source-field fallback.
  * The workbook, its dates and its research qualifications remain unchanged. */
 (function(root){
   'use strict';
@@ -9,6 +9,8 @@
   const sentence=s=>{s=clean(s).replace(/[;,:\s]+$/,'');return s?(/[.!?]$/.test(s)?s:s+'.'):'';};
   const lowerFirst=s=>s.replace(/^(All|Among|Authorized|Bilateral|Border|Both|Cargo|Commercial|Cross-border|Dispute|Entry|Exit|Foreign|Foreigners|Freight|Goods|Incoming|Intentional|International|Lack|Land|Movement|National|Non-essential|Non-exempt|Opposition|Ordinary|Outgoing|Participating|Passenger|Passengers|Pedestrian|People|Precautionary|Regional|Reported|Road|Security|Selected|Selective|The|Travel|Travellers|Trucks|Two|Users|Vehicles|Whole)\b/,m=>m.toLowerCase());
   const sentences=value=>clean(value).split(/(?<=[.!?])\s+(?=[A-Z“"0-9])/).map(clean).filter(Boolean);
+  const reviewed=e=>e?.record_summary?.source_event_hash===e?.event_hash&&e?.record_summary?.passes===2?e.record_summary:null;
+  const evidenceURLs=e=>array(reviewed(e)?.evidence_urls);
   const firstClause=value=>clean(value).split(';')[0].replace(/[.\s]+$/,'');
   function readable(value){
     return clean(value)
@@ -107,6 +109,10 @@
   function describe(e,options={}){
     if(!e)return '';
     if(e.record_kind==='national_policy')return e.national_summary;
+    if(reviewed(e)?.text)return reviewed(e).text;
+    // Compact browsing rows load their individually reviewed prose with the
+    // source details. Do not flash an obsolete mechanical description first.
+    if(e.details_file)return '';
     const periods=(Array.isArray(options.periods)?options.periods:array(e.duration_periods)).filter(p=>p.analysis_included!==false);
     if(e.audit_current||e.audited_reader){
       // Accepted scope includes its own exclusions and direction limits. Keep
@@ -161,7 +167,7 @@
     if(qualification&&!parts.includes(qualification)&&words(parts.join(' '))<85)parts.push(qualification);
     return parts.join(' ');
   }
-  const api=Object.freeze({describe});
+  const api=Object.freeze({describe,evidenceURLs});
   if(typeof module!=='undefined'&&module.exports)module.exports=api;
   else root.BorderSummary=api;
 })(typeof window!=='undefined'?window:globalThis);

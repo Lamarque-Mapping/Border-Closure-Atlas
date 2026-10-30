@@ -3,6 +3,7 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const C=require('../dist/core.js'),D=require('../dist/duration.js'),R=require('./analysis-regions.js');
+const S=require('../dist/record-summary.js');
 const root=path.resolve(__dirname,'..');
 const BASE='https://lamarque-mapping.github.io/Border-Closure-Atlas/';
 const unique=values=>[...new Set(values.filter(Boolean))];
@@ -26,9 +27,9 @@ function build(data,review,statusSource){
   for(const e of data.events){
     const included=!C.excluded(e),reader=e.audited_reader||{};
     const recordURL=BASE+'#dataset/record-'+encodeURIComponent(e.id);
-    const allURLs=urls([...(e.source_urls||[]),...(e.sources||[]).map(s=>s.url),
+    const allURLs=urls([...(e.source_urls||[]),...S.evidenceURLs(e),...(e.sources||[]).map(s=>s.url),
       ...(e.duration_periods||[]).flatMap(p=>p.source_urls||[])]);
-    const record={record_id:e.id,title:e.title,countries:textList(e.countries),
+    const record={record_id:e.id,title:e.title,case_description:S.describe(e),countries:textList(e.countries),
       research_area:R.area(e),original_region:e.region,continents:textList(e.continents),
       included:Number(included),over_24h:Number(included&&D.matches(e,'over1')),
       crossing_scope:reader['Crossing and scope']||e.scope,
@@ -73,7 +74,7 @@ function build(data,review,statusSource){
         const window=(statusSource.geography_windows||[]).find(w=>w.record_id===e.id&&w.phase_id===p.period_id&&w.location_id===id);
         layers[layer].push({type:'Feature',geometry:g,properties:{...props,
           feature_id:e.id+'|'+p.period_id+'|'+id,
-          title:e.title,countries:record.countries,research_area:record.research_area,
+          title:e.title,case_description:record.case_description,countries:record.countries,research_area:record.research_area,
           location_id:id,location_name:loc.label||loc.name||id,
           geometry_role:referenceIDs.has(id)?'Known border only; exact crossing or extent unresolved':layer==='crossing_points'?'Approximate crossing reference':layer==='border_lines'?'Wider border reference':'Country/area context only',
           geometry_precision:loc.precision||'Generalised reference',
@@ -108,7 +109,7 @@ function build(data,review,statusSource){
     study_window:[data.meta.window_start,data.meta.window_end],source_sha256:data.meta.source_sha256,
     data_state_sha256:data.meta.data_state_sha256,crs:'EPSG:4326',coordinate_order:'longitude, latitude',
     scope:'Historical land-border register, all dates and durations. National-policy and later-status supplements are separate.',
-    counts,website:BASE},layers,tables:{records,phases,sources,unmapped_phases:unmapped},method:data.meta.release_method};
+    counts,description_review:data.meta.description_review||null,website:BASE},layers,tables:{records,phases,sources,unmapped_phases:unmapped},method:data.meta.release_method};
 }
 function current(){
   const data=JSON.parse(fs.readFileSync(path.join(root,'dist/data.js'),'utf8').replace(/^window.BORDER_DATA = /,'').replace(/;\s*$/,''));

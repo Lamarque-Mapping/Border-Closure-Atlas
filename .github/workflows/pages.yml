@@ -75,6 +75,10 @@ jobs:
           node scripts/verify-analysis-regions.cjs
           node scripts/verify-analysis-duration-filter.cjs
           node scripts/verify-audited-presentation.cjs
+          node scripts/verify-summaries.cjs
+          node scripts/verify-reviewed-descriptions.cjs
+          node scripts/verify-record-export.cjs
+          node scripts/verify-cards.cjs
           node scripts/verify-phase-rationales.cjs
           node scripts/verify-map-duration.cjs
           node scripts/verify-border-history.cjs

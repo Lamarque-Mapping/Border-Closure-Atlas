@@ -8,8 +8,8 @@
   const safeURL=value=>{try{const u=new URL(value);return /^https?:$/.test(u.protocol)?u.href:null;}catch{return null;}};
   const locationTitle=(p,id)=>String(p.label||p.name||id).replace(/ — (?:frontier|geographic) context$/,'');
   function eventSources(e){
-    const details=new Map(C.array(e.sources).map(s=>[safeURL(s.url),s])),seen=new Set();
-    return C.array(e.source_urls).map(s=>{const url=safeURL(typeof s==='string'?s:s.url);if(!url||seen.has(url))return null;seen.add(url);const d=details.get(url)||{},publisher=d.publisher||new URL(url).hostname.replace(/^www\./,'');return {url,label:d.title||(typeof s==='object'&&(s.title||s.label))||publisher,publisher,date:d.publication_date};}).filter(Boolean);
+    const details=new Map([...C.array(e.sources),...C.array(e.later_status_review?.sources)].map(s=>[safeURL(s.url),s])),seen=new Set();
+    return [...C.array(e.source_urls),...C.array(window.BorderSummary?.evidenceURLs(e))].map(s=>{const url=safeURL(typeof s==='string'?s:s.url);if(!url||seen.has(url))return null;seen.add(url);const d=details.get(url)||{},publisher=d.publisher||new URL(url).hostname.replace(/^www\./,'');return {url,label:d.title||(typeof s==='object'&&(s.title||s.label))||publisher,publisher,date:d.publication_date};}).filter(Boolean);
   }
   function shortSourceName(source){
     const publisher=source.publisher||new URL(source.url).hostname.replace(/^www\./,'');

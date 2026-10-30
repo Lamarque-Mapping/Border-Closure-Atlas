@@ -61,6 +61,17 @@ rules and departure restrictions do not independently create a country outline.
 The original UK policy evidence remains available; qualifying land records retain
 their ordinary inclusion criteria.
 
+## Case-description review — 30 October 2026
+
+All 829 case descriptions were individually rewritten from the saved source
+evidence and current audited phases, then checked by a different AI agent.
+The two passes are a prose and claim-consistency review, not a new full-register
+web scrape. The descriptions explain the event before its evidence limitations.
+The [review files](research/description-review-2026-10-30/) retain both passes and
+supporting links. Source fingerprints prevent a description from silently
+following a changed record. The same accepted text appears in Map and Dataset,
+record CSV exports and GIS downloads; dates, coding and geometry are unchanged.
+
 ## Downloads and source data
 
 - **Global_Border_Closures_Master_2016_2026.xlsx** is the reader workbook, with two

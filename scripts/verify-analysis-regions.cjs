@@ -39,15 +39,15 @@ const rendered=fs.readFileSync(path.join(root,'dist/analysis.html'),'utf8');
 assert(rendered.includes(fs.readFileSync(path.join(__dirname,'analysis-regions.js'),'utf8').trim()),'published page bundles the tested grouping');
 // Execute the actual adapter and record export, preserving the original Region column.
 let exported;
-const context={REGIONS:R,cleanText:String,downloadCSV:(filename,rows)=>{exported={filename,rows};}};
+const context={REGIONS:R,window:{BorderSummary:require('../dist/record-summary.js')},cleanText:String,downloadCSV:(filename,rows)=>{exported={filename,rows};}};
 vm.createContext(context);
 vm.runInContext(ui.slice(ui.indexOf('function analysisEvent('),ui.indexOf('// National histories'))+'\n'+ui.slice(ui.indexOf('function exportRecordRows('),ui.indexOf('$("exportRows").addEventListener')),context);
 context.exportRecordRows(full,Object.keys(expected).map(id=>byID.get(id)),'regions.csv');
 const header=exported.rows[0];
 assert.equal(header[1],'Region','existing CSV columns keep their positions');
-assert.equal(header.at(-1),'Research area');
+assert(header.includes('Research area'));assert.equal(header.at(-1),'Case description');
 for(const row of exported.rows.slice(1)){
  assert.equal(row[1],fullByID.get(row[0]).region,'original workbook label retained');
- assert.equal(row.at(-1),expected[row[0]],'derived research area exported');
+ assert.equal(row[header.indexOf('Research area')],expected[row[0]],'derived research area exported');
 }
 console.log('Research areas passed: all records assigned consistently, territory and transregional examples, no double counting across six populations, one chart, original labels preserved in record CSVs.');
