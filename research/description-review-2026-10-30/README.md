@@ -21,7 +21,7 @@ sections rather than the opening paragraph.
 `assignments.json` and `baseline.json` preserve the scope and original record
 identities. The pass folders are checkpoints until every record has both passes.
 `scripts/assemble-record-descriptions.py` requires complete, distinct-reviewer
-coverage before assembling `source/record-descriptions.json`. The importer checks
+coverage before assembling `source/record-descriptions.json.gz`. The importer checks
 each paragraph's source fingerprint before attaching it to website records.
 Native dates, phases, sources, rationale codes and geographic bindings are not
 changed by the prose overlay. Map and Dataset descriptions, record CSV exports
