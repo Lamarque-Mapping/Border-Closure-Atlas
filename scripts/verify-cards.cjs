@@ -16,6 +16,7 @@ for(const row of compactData.events){
  for(const item of [row,...filtered,...scoped]){
   const loading=context.locationRecordHTML(item);
   assert(loading.includes('aria-busy="true"')&&loading.includes('Loading closure details…'),row.id+' waits for its complete record');
+  assert(loading.includes('data-record-id="'+row.id+'"'),row.id+' remains keyboard-accessible while loading');
   assert(!/location-period|location-summary|location-rationales|location-sources/.test(loading),row.id+' cannot display provisional details');
  }
 }
