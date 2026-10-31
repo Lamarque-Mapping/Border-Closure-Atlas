@@ -325,6 +325,9 @@
     return '<div class="location-period"><span class="location-period-label">'+escape(periodLabel(p))+'</span><span class="location-period-dates">'+escape(cardPeriodDates(p))+'</span><p class="location-period-duration">'+escape(periodDuration(p))+'</p></div>';
   }
   function locationRecordHTML(e){
+    // Browsing rows omit source and timing details. Rendering them as complete
+    // cards briefly shows fallback wording before the reviewed record arrives.
+    if(e.details_file)return '<article data-location-record-id="'+escape(e.id)+'" aria-busy="true"><h3 class="location-closure-title">'+escape(publicText(e.title||e.id,'title',e.id))+'</h3><p class="location-details-status" role="status">Loading closure details…</p></article>';
     const periods=cardPeriods(e),sources=cardSources(e);
     const endpointURL=C.array(e.sources).filter(s=>C.array(s.supports).includes('end')).map(s=>safeURL(s.url)).find(url=>url&&url!==sources[0]?.url&&sources.some(s=>s.url===url));
     const linked=sources.length?[sources[0],...(endpointURL?[sources.find(s=>s.url===endpointURL)]:sources.slice(1,2))]:[];

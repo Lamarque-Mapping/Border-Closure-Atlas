@@ -7,6 +7,18 @@ context.K=K;context.window=context;context.BorderSummary=require(base+'record-su
 vm.runInContext(app.slice(app.indexOf('  function eventSources('),app.indexOf('  const playIcon')),context);
 vm.runInContext(app.slice(app.indexOf('  function dateText('),app.indexOf('  function dateRange(')),context);
 vm.runInContext(app.slice(app.indexOf('  function cardBoundary('),app.indexOf('  function openLocationCard(')),context);
+// A cold popup must not flash incomplete dates or old fallback prose. Exercise
+// actual compact records, including their duration/location-scoped copies.
+const compactData=JSON.parse(fs.readFileSync(base+'map-data.js','utf8').replace(/^window.BORDER_DATA = /,'').trim().replace(/;$/,''));
+for(const row of compactData.events){
+ const filtered=C.filterEvents({...compactData,events:[row]},{mode:'all',duration:'over1'});
+ const scoped=C.mapLocationsFor(row,compactData,{mode:'all'}).flatMap(id=>C.recordsForLocation([row],id,compactData,{mode:'all'}));
+ for(const item of [row,...filtered,...scoped]){
+  const loading=context.locationRecordHTML(item);
+  assert(loading.includes('aria-busy="true"')&&loading.includes('Loading closure details…'),row.id+' waits for its complete record');
+  assert(!/location-period|location-summary|location-rationales|location-sources/.test(loading),row.id+' cannot display provisional details');
+ }
+}
 const rosso=data.events.find(e=>e.id==='R16-AN-001'),html=context.locationRecordHTML(rosso);
 assert(html.includes('March 2018 – 11 Jul 2025'));
 assert(!html.includes('(reopened)'),'a formal transport agreement is not an observed reopening');
